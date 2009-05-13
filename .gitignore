@@ -1,0 +1,7 @@
+_site/
+
+*.(orig|rej)
+*.swp
+*.tmp
+
+README.html
