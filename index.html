@@ -1,0 +1,22 @@
+---
+layout: default
+title: JNRowe
+---
+
+<h1>Journal</h1>
+<ul class="posts">
+    {% for post in site.posts %}
+    <li>
+      <span>{{ post.date | date_to_string }}</span> -
+      “<a href="{{ post.url }}">{{ post.title }}</a>”
+    </li>
+      {% endfor %}
+</ul>
+
+<h1>Projects</h1>
+<ul class="posts">
+    <li>
+        <a href="http://github.com/JNRowe/jnrowe.github.com">This site</a>: The source to this site
+    </li>
+</ul>
+
