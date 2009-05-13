@@ -1,0 +1,56 @@
+@charset "UTF-8";
+
+/*
+ * microformats.css
+ * (C) 2004-2009 James Rowe.
+ * 
+ * This style sheet is licensed under the Creative Commons
+ * Attribution-ShareAlike 3.0, for more information check the Creative
+ * Commons website(http://creativecommons.org/licenses/by-sa/3.0/).
+ */
+
+/* geo */
+span.geo {
+    font-size: xx-small;
+}
+
+/* hCal */
+div#events ul {
+    list-style-type: none
+}
+
+li.vevent span.summary {
+    font-size: large;
+}
+
+/* xoxo */
+.xoxo {
+    list-style: decimal;
+}
+
+.xoxo ol,
+.xoxo ul {
+    list-style: lower-latin;
+}
+
+ol[compact="compact"], 
+ul[compact="compact"] {
+    display: none;
+}
+
+/* xfn */
+a[rel~="friend"]:after {
+    content: "*";
+}
+
+a[rel~="met"]:after {
+    content: "+";
+}
+
+/* hatom */
+.entry-summary, .entry-title {
+    display: none;
+}
+
+/* vim: set sw=4 sts=4 et tw=80 fileencoding=utf-8: */
+
