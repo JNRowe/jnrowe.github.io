@@ -1,0 +1,27 @@
+---
+layout: post
+title: Welcome to the new journal
+description: Testing Jekyll on GitHub
+---
+
+h2. {{ page.title }}
+
+Welcome to the "new journal":http://jnrowe.github.com/, powered by "Jekyll":http://github.com/mojombo/jekyll and running on the marvellous "GitHub":http://github.com.
+
+I've decided to @push@ the repository already despite it being entirely incomplete, I think it will make me more likely to work on it.
+
+h3. Pros
+
+There are definitely a lot of really cool things to like about GitHub pages, among them:
+
+* Integrated version control through "git":http://www.git-scm.com/
+* Incredibly simple setup, just create a repository and @push@ to update
+
+h3. Cons
+
+There are a few things that I'd like to see improved, some of them I'm planning to fix myself and a few I unfortunately can't fix locally.
+
+The biggest issue for me, and unfortunately the one I can't fix locally, is that supported markup seems to be limited to "Textile":http://hobix.com/textile/ and "Markdown":http://www.deveiate.org/projects/BlueCloth, neither of which I find to be very user friendly.  It is a shame "reST":http://docutils.sourceforge.net/docs/user/rst/ isn't supported, especially as GitHub already supports it for @README.rst@ files in repositories.
+
+For local testing the Jekyll toolchain is nice, but unfortunately the dependencies are hard to find unless you're willing and able to use "rubygems":http://rubyforge.org/projects/rubygems/ to install software.  The @gem@ usage pretty much guarantees I'm not going to be able to play with this everywhere I'd like to.  If you're happy with @gem@ though the installation process is simple.
+
