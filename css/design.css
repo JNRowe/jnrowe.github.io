@@ -11,7 +11,7 @@
 
 html, body {
     background-color: rgb(77, 104, 132);
-    background-image: url("/_static/body_background.png");
+    background-image: url("/static/body_background.png");
     background-repeat: repeat-x;
     color: rgb(0, 0, 0);
     font-family: "Verdana", "Arial", sans-serif;
@@ -28,7 +28,7 @@ h1.masthead a {
 
 div.breadcrumbs {
     background-color: rgb(241, 241, 241);
-    background-image: url("/_static/meta_background.png");
+    background-image: url("/static/meta_background.png");
     background-position: right;
     background-repeat: repeat-y;
     color: rgb(93, 93, 93);
@@ -83,7 +83,7 @@ a.rights {
 
 div.page_meta, ul.meta {
     background-color: rgb(241, 241, 241);
-    background-image: url("/_static/meta_background.png");
+    background-image: url("/static/meta_background.png");
     background-position: right;
     background-repeat: repeat-y;
     color: rgb(93, 93, 93);
