@@ -1,0 +1,46 @@
+---
+layout: nil
+---
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet href="/static/atom.css" type="text/css"?>
+<?xml-stylesheet href="/static/pygments.css" type="text/css"?>
+<feed xmlns="http://www.w3.org/2005/Atom"
+    xmlns:dc="http://purl.org/dc/elements/1.1/"
+    xml:base="http://jnrowe.github.com/"
+    xml:lang="en-gb">
+    <title type="text">JNRowe</title>
+    <subtitle type="text">Dumping ground</subtitle>
+    <id>http://jnrowe.github.com/</id>
+    <link rel="alternate" type="application/xhtml+xml" href="/index.html" />
+    <link rel="self" href="/updates.atom" />
+    <icon>/static/icon.png</icon>
+    <author>
+        <name>James Rowe</name>
+        <uri>http://jnrowe.github.com/</uri>
+        <email>jnrowe@gmail.com</email>
+    </author>
+    <generator uri="http://github.com/mojombo/jekyll">Jekyll</generator>
+    <rights type="xhtml">
+        <div xmlns="http://www.w3.org/1999/xhtml">
+            Copyright &#169; 2009, James Rowe
+        </div>
+    </rights>
+    <updated>{{ site.time | date_to_xmlschema }}</updated>
+
+    {% for post in site.posts %}
+    <entry>
+        <title>{{ post.title }}</title>
+        <link href="http://jnrowe.github.com{{ post.url }}"/>
+        <published>{{ post.date | date_to_xmlschema }}</updated>
+        {% if page.updated != "" %}
+        <updated>{{ post.updated | date_to_xmlschema }}</updated>
+        {% else %}
+        <updated>{{ post.date | date_to_xmlschema }}</updated>
+        {% endif %}
+        <id>http://jnrowe.github.com{{ post.id }}</id>
+        <content type="html">{{ post.content }}</content>
+    </entry>
+    {% endfor %}
+</feed>
+
+<!-- vim: set ft=liquid sw=4 sts=4 et tw=80 fileencoding=utf-8: -->
