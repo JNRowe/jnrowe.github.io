@@ -25,4 +25,8 @@ h2. Projects
 * "pytemplate":http://github.com/JNRowe/pytemplate/: Personal package template for Python, with distutils setup
 * "upoints":http://github.com/JNRowe/upoints/: upoints is a collection of GPL v3 licensed modules for working with points on Earth, or other near spherical objects.
 
+h3. Git mirrors of project I'm hacking on
+
+*(mirrors) "Bugs Everywhere":http://github.com/JNRowe/Bugs-Everywhere/: Mirror of the "upstream":http://bugseverywhere.org/be/show/HomePage bzr tree
+
 p(index-copy). <small>© <a class="rights" href="/copyright.html" title="Copyright info" accesskey="8">Copyright</a> 2009, James Rowe</small>
