@@ -17,13 +17,13 @@ h2. Journal
 h2. Projects
 
 *(projects) "BFM":http://github.com/JNRowe/bfm/: This program is a dockapp-style CPU, memory, swap and load average monitor.
-* "dotbash":http://github.com/JNRowe/dotbash/: Shared bash configuration files
+* "dotbash":http://github.com/JNRowe/dotbash/: Shared "bash":http://cnswww.cns.cwru.edu/~chet/bash/bashtop.html configuration files
 * "fixes-overlay":http://github.com/JNRowe/fixes-overlay/: Small package fixes languishing in the "Gentoo BTS":http://bugs.gentoo.org
-* "jnrowe.github.com":http://github.com/JNRowe/jnrowe.github.com: My user pages repository(<em>this site</em>)
-* "misc-overlay":http://github.com/JNRowe/misc-overlay/: Gentoo overlay -- miscellaneous packages
-* "pyisbn":http://github.com/JNRowe/pyisbn/: A Python module for working with 10- and 13-digit ISBNs
-* "pytemplate":http://github.com/JNRowe/pytemplate/: Personal package template for Python, with distutils setup
-* "upoints":http://github.com/JNRowe/upoints/: upoints is a collection of GPL v3 licensed modules for working with points on Earth, or other near spherical objects.
+* "jnrowe.github.com":http://github.com/JNRowe/jnrowe.github.com: My user pages repository(_this site_)
+* "misc-overlay":http://github.com/JNRowe/misc-overlay/: "Gentoo":http://www.gentoo.org/ overlay -- miscellaneous packages
+* "pyisbn":http://github.com/JNRowe/pyisbn/: A "Python":http://python.org module for working with 10- and 13-digit ISBN(International Standard Book Number)s
+* "pytemplate":http://github.com/JNRowe/pytemplate/: Personal package template for "Python":http://python.org/, with @distutils@ setup
+* "upoints":http://github.com/JNRowe/upoints/: upoints is a collection of "GPL v3":http://www.fsf.org/licensing/licenses/gpl.html licensed modules for working with points on Earth, or other near spherical objects.
 
 h3. Git mirrors of project I'm hacking on
 
