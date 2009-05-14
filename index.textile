@@ -1,0 +1,28 @@
+---
+layout: default
+title: JNRowe
+---
+
+h2. Journal
+
+<ul class="posts">
+    {% for post in site.posts %}
+    <li>
+      <span>{{ post.date | date_to_string }}</span> -
+      “<a href="{{ post.url }}">{{ post.title }}</a>”
+    </li>
+    {% endfor %}
+</ul>
+
+h2. Projects
+
+*(projects) "BFM":http://github.com/JNRowe/bfm/: This program is a dockapp-style CPU, memory, swap and load average monitor.
+* "dotbash":http://github.com/JNRowe/dotbash/: Shared bash configuration files
+* "fixes-overlay":http://github.com/JNRowe/fixes-overlay/: Small package fixes languishing in the "Gentoo BTS":http://bugs.gentoo.org
+* "jnrowe.github.com":http://github.com/JNRowe/jnrowe.github.com: My user pages repository(<em>this site</em>)
+* "misc-overlay":http://github.com/JNRowe/misc-overlay/: Gentoo overlay -- miscellaneous packages
+* "pyisbn":http://github.com/JNRowe/pyisbn/: A Python module for working with 10- and 13-digit ISBNs
+* "pytemplate":http://github.com/JNRowe/pytemplate/: Personal package template for Python, with distutils setup
+* "upoints":http://github.com/JNRowe/upoints/: upoints is a collection of GPL v3 licensed modules for working with points on Earth, or other near spherical objects.
+
+p(index-copy). <small>© <a class="rights" href="/copyright.html" title="Copyright info" accesskey="8">Copyright</a> 2009, James Rowe</small>
