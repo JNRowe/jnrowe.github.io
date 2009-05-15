@@ -1,6 +1,7 @@
 ---
 layout: default
 title: JNRowe
+no-disqus: true
 ---
 
 h2. Journal
