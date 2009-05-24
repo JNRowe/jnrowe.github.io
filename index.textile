@@ -27,6 +27,11 @@ h2. Projects
 * "pytemplate":http://github.com/JNRowe/pytemplate/: Personal package template for "Python":http://python.org/, with @distutils@ setup
 * "upoints":http://github.com/JNRowe/upoints/: upoints is a collection of "GPL v3":http://www.fsf.org/licensing/licenses/gpl.html licensed modules for working with points on Earth, or other near spherical objects.
 
+h3. GitHub forks I'm hacking on
+
+*(projects) "pitz":http://github.com/JNRowe/pitz/tree: A python implementation of "ditz":http://ditz.rubyforge.org [ "_origin_":http://github.com/mw44118/pitz/tree ]
+* "termstyle":http://github.com/JNRowe/termstyle/tree: A dirt-simple terminal-colour library for python [ "_origin_":http://github.com/gfxmonk/termstyle/tree ]
+
 h3. Git mirrors of project I'm hacking on
 
 *(mirrors) "Bugs Everywhere":http://github.com/JNRowe/Bugs-Everywhere/: Mirror of the "upstream":http://bugseverywhere.org/be/show/HomePage bzr tree
