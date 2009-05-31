@@ -29,7 +29,6 @@ h2. Projects
 
 h3. GitHub forks I'm hacking on
 
-*(projects) "pitz":http://github.com/JNRowe/pitz/tree: A python implementation of "ditz":http://ditz.rubyforge.org [ "_origin_":http://github.com/mw44118/pitz/tree ]
 * "termstyle":http://github.com/JNRowe/termstyle/tree: A dirt-simple terminal-colour library for python [ "_origin_":http://github.com/gfxmonk/termstyle/tree ]
 
 h3. Git mirrors of project I'm hacking on
