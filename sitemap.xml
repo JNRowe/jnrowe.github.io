@@ -12,7 +12,7 @@ layout: nil
     <url>
         <loc>http://jnrowe.github.com{{post.url }}</loc>
         <lastmod>{{ post.date | date_to_xmlschema }}</lastmod>
-        <priority>{% if post.priority != "" %}{{ post.priority }}{% else %}0.5000{% endif %}</priority>
+        <priority>{% if post.priority %}{{ post.priority }}{% else %}0.5000{% endif %}</priority>
     </url>
     {% endfor %}
 </urlset>
