@@ -1,0 +1,28 @@
+---
+layout: post
+title: Tip-a-day - Theming mutt
+description: Switching mutt themes based on term type
+---
+
+h2. {{ page.title }}
+
+Jeff, a work colleague, asks via IRC:
+
+bq. Can I make mutt use a blue statusbar in X and red in console?
+A different colour would make it easier to read with a transparent
+urxvt.
+
+"mutt":http://www.mutt.org/ has access to environment variables when
+reading its configurations files, so setting the theme based on term
+type is extremely easy.
+
+First separate all your common settings in to one file, say
+@~/.mutt/colour_defaults.rc@.  Then add your per term settings to a file
+named @~/.mutt/colour_$TERM.rc@.  Telling mutt to use the correct theme
+is now as simple as adding the following to your @~/.muttrc@:
+
+<pre class="highlight">
+source ~/.mutt/colour_defaults.rc
+source ~/.mutt/colour_$TERM.rc
+</pre>
+
