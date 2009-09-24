@@ -14,8 +14,8 @@ bq. Can I make mutt use a blue statusbar in X and red in console? A different co
 
 First separate all your common settings in to one file, say @~/.mutt/colour_defaults.rc@.  Then add your per term settings to a file named @~/.mutt/colour_$TERM.rc@.  Telling mutt to use the correct theme is now as simple as adding the following to your @~/.muttrc@:
 
-<pre class="highlight">
+{% highlight sh %}
 source ~/.mutt/colour_defaults.rc
 source ~/.mutt/colour_$TERM.rc
-</pre>
+{% endhighlight %}
 
