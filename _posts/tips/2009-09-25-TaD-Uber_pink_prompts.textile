@@ -39,7 +39,7 @@ done
 {% endhighlight %}
 
 <div class="thumb">
-!/images/2009-09-25-256_colours.png!
+!/images/2009-09-25-256_colours.png(xterm's 256 colour palette)!
 </div>
 
 There is one other important point to make here, you must set the prompt based on terminal type now as some terminals and the console won't recognise the sequences correctly.  Test the terminal type by checking @$TERM@ in your startup scripts, or if you're convinced all your terminals are 256 colour capable you can simply check for @$DISPLAY@ instead.
