@@ -18,26 +18,26 @@ h2. Journal
 h2. Projects
 
 *(projects) "BFM":http://github.com/JNRowe/bfm/: This program is a dockapp-style CPU, memory, swap and load average monitor.
-* "cupage":http://github.com/JNRowe/cupage/: A tool to check for updates on web pages
-* "dotbash":http://github.com/JNRowe/dotbash/: Shared "bash":http://cnswww.cns.cwru.edu/~chet/bash/bashtop.html configuration files
-* "fixes-overlay":http://github.com/JNRowe/fixes-overlay/: Small package fixes languishing in the "Gentoo BTS":http://bugs.gentoo.org
-* "jnrowe.github.com":http://github.com/JNRowe/jnrowe.github.com: My user pages repository(_this site_)
-* "local-bin":http://github.com/JNRowe/misc-overlay/: Tat from my @~/bin@
-* "misc-overlay":http://github.com/JNRowe/misc-overlay/: "Gentoo":http://www.gentoo.org/ overlay -- miscellaneous packages
-* "pages_layouts":http://github.com/JNRowe/pages_layouts: Shared layouts submodule for jekyll
-* "pyisbn":http://github.com/JNRowe/pyisbn/: A "Python":http://python.org module for working with 10- and 13-digit ISBN(International Standard Book Number)s
-* "pytemplate":http://github.com/JNRowe/pytemplate/: Personal package template for "Python":http://python.org/, with @distutils@ setup
-* "readyset":http://github.com/JNRowe/readyset: Ready-to-use Software Engineering Templates
-* "unotes":http://github.com/JNRowe/unotes: μnotes
-* "upoints":http://github.com/JNRowe/upoints/: upoints is a collection of "GPL v3":http://www.fsf.org/licensing/licenses/gpl.html licensed modules for working with points on Earth, or other near spherical objects.
+*(projects) "cupage":http://github.com/JNRowe/cupage/: A tool to check for updates on web pages
+*(projects) "dotbash":http://github.com/JNRowe/dotbash/: Shared "bash":http://cnswww.cns.cwru.edu/~chet/bash/bashtop.html configuration files
+*(projects) "fixes-overlay":http://github.com/JNRowe/fixes-overlay/: Small package fixes languishing in the "Gentoo BTS":http://bugs.gentoo.org
+*(projects) "jnrowe.github.com":http://github.com/JNRowe/jnrowe.github.com: My user pages repository(_this site_)
+*(projects) "local-bin":http://github.com/JNRowe/misc-overlay/: Tat from my @~/bin@
+*(projects) "misc-overlay":http://github.com/JNRowe/misc-overlay/: "Gentoo":http://www.gentoo.org/ overlay -- miscellaneous packages
+*(projects) "pages_layouts":http://github.com/JNRowe/pages_layouts: Shared layouts submodule for jekyll
+*(projects) "pyisbn":http://github.com/JNRowe/pyisbn/: A "Python":http://python.org module for working with 10- and 13-digit ISBN(International Standard Book Number)s
+*(projects) "pytemplate":http://github.com/JNRowe/pytemplate/: Personal package template for "Python":http://python.org/, with @distutils@ setup
+*(projects) "readyset":http://github.com/JNRowe/readyset: Ready-to-use Software Engineering Templates
+*(projects) "unotes":http://github.com/JNRowe/unotes: μnotes
+*(projects) "upoints":http://github.com/JNRowe/upoints/: upoints is a collection of "GPL v3":http://www.fsf.org/licensing/licenses/gpl.html licensed modules for working with points on Earth, or other near spherical objects.
 
 h3. GitHub forks I'm hacking on
 
-* "termstyle":http://github.com/JNRowe/termstyle: A dirt-simple terminal-colour library for python [ "_origin_":http://github.com/gfxmonk/termstyle ]
+*(forks) "termstyle":http://github.com/JNRowe/termstyle: A dirt-simple terminal-colour library for python [ "_origin_":http://github.com/gfxmonk/termstyle ]
 
 h3. Git mirrors of project I'm hacking on
 
 *(mirrors) "Bugs Everywhere":http://github.com/JNRowe/Bugs-Everywhere/: Mirror of the "upstream":http://bugseverywhere.org/be/show/HomePage bzr tree
-* "enlightenment-overlay":http://github.com/JNRowe/enlightenment-overlay: Mirror of Vapier's "enlightenment overlay":http://overlays.gentoo.org/dev/vapier/wiki/enlightenment for Gentoo
+*(mirrors) "enlightenment-overlay":http://github.com/JNRowe/enlightenment-overlay: Mirror of Vapier's "enlightenment overlay":http://overlays.gentoo.org/dev/vapier/wiki/enlightenment for Gentoo
 
 p(index-copy). <small>© <a class="rights" href="/copyright.html" title="Copyright info" accesskey="8">Copyright</a> 2009, James Rowe</small>
