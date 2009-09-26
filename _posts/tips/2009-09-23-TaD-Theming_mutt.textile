@@ -2,6 +2,7 @@
 layout: post
 title: Tip-a-day - Theming mutt
 description: Switching mutt themes based on term type
+categories: [mutt, tad, theme, tips]
 ---
 
 h2. {{ page.title }}
