@@ -8,3 +8,10 @@ h2. {{ page.title }}
 
 I've decided to attempt to get myself back in to the habit of posting public blog entries, and a series of short tips seems like an easy way to do it.  Every day for the next month I plan on posting a small tip and trick of some kind.  Many are likely to be based around using Linux in some shape or form as my plan is to use this to answer the problems in emails and IRC messages from work colleagues.
 
+h3. Tips
+
+* "Theming mutt":/mutt/tad/theme/tips/2009/09/23/TaD-Theming_mutt.html - Switching mutt themes based on term type
+* "Compiling C source in vim":/mutt/tad/tips/2009/09/24/TaD-Compiling_in_vim.html - Compiling source without a Makefile
+* "Uber pink prompts":/bash/prompts/tad/tips/2009/09/25/TaD-Uber_pink_prompts.html - Using the extended xterm colour sequences in prompts
+* "'Kick me' birthday reminders":/abook/bash/python/remind/tad/tips/2009/09/26/TaD-Kick_me_birthday_reminders.html - Automated birthday reminders with abook and remind
+
