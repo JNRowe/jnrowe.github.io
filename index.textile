@@ -34,7 +34,7 @@ h3. GitHub forks I'm hacking on
 
 *(forks) "termstyle":http://github.com/JNRowe/termstyle: A dirt-simple terminal-colour library for python [ "_origin_":http://github.com/gfxmonk/termstyle ]
 
-h3. Git mirrors of project I'm hacking on
+h3. Git mirrors of projects I'm hacking on
 
 *(mirrors) "Bugs Everywhere":http://github.com/JNRowe/Bugs-Everywhere/: Mirror of the "upstream":http://bugseverywhere.org/be/show/HomePage bzr tree
 *(mirrors) "enlightenment-overlay":http://github.com/JNRowe/enlightenment-overlay: Mirror of Vapier's "enlightenment overlay":http://overlays.gentoo.org/dev/vapier/wiki/enlightenment for Gentoo
