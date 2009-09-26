@@ -17,6 +17,7 @@ h2. Journal
 h2. Projects
 
 *(projects) "BFM":http://github.com/JNRowe/bfm/: This program is a dockapp-style CPU, memory, swap and load average monitor.
+*(projects) "bwatch":http://github.com/JNRowe/bwatch: Simple bandwidth watching tool
 *(projects) "cupage":http://github.com/JNRowe/cupage/: A tool to check for updates on web pages
 *(projects) "dotbash":http://github.com/JNRowe/dotbash/: Shared "bash":http://cnswww.cns.cwru.edu/~chet/bash/bashtop.html configuration files
 *(projects) "fixes-overlay":http://github.com/JNRowe/fixes-overlay/: Small package fixes languishing in the "Gentoo BTS":http://bugs.gentoo.org
@@ -30,8 +31,9 @@ h2. Projects
 *(projects) "unotes":http://github.com/JNRowe/unotes: μnotes
 *(projects) "upoints":http://github.com/JNRowe/upoints/: upoints is a collection of "GPL v3":http://www.fsf.org/licensing/licenses/gpl.html licensed modules for working with points on Earth, or other near spherical objects.
 
-h3. GitHub forks I'm hacking on
+h3. Forks I'm hacking on
 
+*(forks) "hpodder":http://github.com/JNRowe/hpodder: Hpodder is a tool to scan and download podcasts [ "_origin_":http://software.complete.org/software/projects/show/hpodder ]
 *(forks) "termstyle":http://github.com/JNRowe/termstyle: A dirt-simple terminal-colour library for python [ "_origin_":http://github.com/gfxmonk/termstyle ]
 
 h3. Git mirrors of projects I'm hacking on
