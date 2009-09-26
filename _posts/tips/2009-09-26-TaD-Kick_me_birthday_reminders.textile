@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Tip-a-day - "Kick me" birthday reminders
-description: 
+title: Tip-a-day - 'Kick me' birthday reminders
+description: Automated birthday reminders with abook and remind
 categories: [abook, bash, remind, python, tad, tips]
 ---
 
