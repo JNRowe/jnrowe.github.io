@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Tip-a-day - Compiling C source in vim
-description: Switching mutt themes based on term type
+description: Compiling source without a Makefile
 categories: [mutt, tad, tips]
 ---
 
