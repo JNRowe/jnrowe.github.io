@@ -14,4 +14,5 @@ h3. Tips
 * "Compiling C source in vim":/mutt/tad/tips/2009/09/24/TaD-Compiling_in_vim.html - Compiling source without a Makefile
 * "Uber pink prompts":/bash/prompts/tad/tips/2009/09/25/TaD-Uber_pink_prompts.html - Using the extended xterm colour sequences in prompts
 * "'Kick me' birthday reminders":/abook/bash/python/remind/tad/tips/2009/09/26/TaD-Kick_me_birthday_reminders.html - Automated birthday reminders with abook and remind
+* "Bugzilla mail with real names":/bugzilla/mail/mailfilter/python/tad/tips/2009/09/27/TaD-Bugzilla_real_names.html - Adding real names to bugzilla mail
 
