@@ -33,12 +33,12 @@ h2. Projects
 
 h3. Forks I'm hacking on
 
-*(forks) "hpodder":http://github.com/JNRowe/hpodder: Hpodder is a tool to scan and download podcasts [ "_origin_":http://software.complete.org/software/projects/show/hpodder ]
+*(forks) "hpodder":http://github.com/JNRowe/hpodder: Hpodder is a tool to scan and download podcasts [ "_origin_":http://software.complete.org/software/projects/show/hpodder !/static/remote.png!]
 *(forks) "termstyle":http://github.com/JNRowe/termstyle: A dirt-simple terminal-colour library for python [ "_origin_":http://github.com/gfxmonk/termstyle ]
 
 h3. Git mirrors of projects I'm hacking on
 
-*(mirrors) "Bugs Everywhere":http://github.com/JNRowe/Bugs-Everywhere/: Mirror of the "upstream":http://bugseverywhere.org/be/show/HomePage bzr tree
-*(mirrors) "enlightenment-overlay":http://github.com/JNRowe/enlightenment-overlay: Mirror of Vapier's "enlightenment overlay":http://overlays.gentoo.org/dev/vapier/wiki/enlightenment for Gentoo
+*(mirrors) "Bugs Everywhere":http://github.com/JNRowe/Bugs-Everywhere/: Mirror of the "upstream":http://bugseverywhere.org/be/show/HomePage !/static/remote.png! bzr tree
+*(mirrors) "enlightenment-overlay":http://github.com/JNRowe/enlightenment-overlay: Mirror of Vapier's "enlightenment overlay":http://overlays.gentoo.org/dev/vapier/wiki/enlightenment !/static/remote.png! for Gentoo
 
 p(index-copy). <small>© <a class="rights" href="/copyright.html" title="Copyright info" accesskey="8">Copyright</a> 2009, James Rowe</small>
