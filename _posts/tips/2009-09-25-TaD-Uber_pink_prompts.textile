@@ -23,6 +23,7 @@ Using mrxvt, or any other terminal that supports the xterm's 256 colour mode, we
 {% highlight bash %}
 export PS1='\[\e[01;33m\]\u@\h\[\e[38;5;199m\] \w\$\[\e[00m\] '
 {% endhighlight %}
+p>. "Fork this code":http://gist.github.com/198009
 
 The important change here is the use of @\e[38;5;199m@, which tells mrxvt to select colour 199 from its extended 256 colour range.  Colours 196 through 201 are varying levels of pink.  To see a quick table of the full colour range you can use the following little loop:
 
@@ -37,6 +38,7 @@ do
     printf "\n"
 done
 {% endhighlight %}
+p>. "Fork this code":http://gist.github.com/198010
 
 <div class="thumb">
 !/images/2009-09-25-256_colours.png(xterm's 256 colour palette)!

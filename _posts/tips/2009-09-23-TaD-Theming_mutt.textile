@@ -19,4 +19,5 @@ First separate all your common settings in to one file, say @~/.mutt/colour_defa
 source ~/.mutt/colour_defaults.rc
 source ~/.mutt/colour_$TERM.rc
 {% endhighlight %}
+p>. "Fork this code":http://gist.github.com/198012
 

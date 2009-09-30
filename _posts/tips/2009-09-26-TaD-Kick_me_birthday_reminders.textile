@@ -26,6 +26,7 @@ Now the birthday trick is a cool one, @abook@ has a number of custom fields you 
 {% highlight text %}
 customfield 2 Birthday
 {% endhighlight %}
+p>. "Fork this code":http://gist.github.com/198015
 
 A little @python@ script is all that is needed to generate a reminder input file from our address book now.
 
@@ -66,6 +67,7 @@ for record in birthdays:
     else:
         print >>stderr, "Error in birthday format for %s, must be YYYY-MM-DD" % name
 {% endhighlight %}
+p>. "Fork this code":http://gist.github.com/198018
 
 I use the following "make":http://www.gnu.org/software/make/make.html snippet in my @~/Makefile@ to generate the @~/.reminders.d/birthdays@ file:
 
@@ -74,12 +76,14 @@ I use the following "make":http://www.gnu.org/software/make/make.html snippet in
 	$(info - Generating remind's birthdays file)
 	$(word 2, $^) >$@
 {% endhighlight %}
+p>. "Fork this code":http://gist.github.com/198019
 
 And finally, we need to tell @remind@ to include our newly created file by editing @~/.reminders@:
 
 {% highlight text %}
 INCLUDE /home/jay/.reminders.d/birthdays
 {% endhighlight %}
+p>. "Fork this code":http://gist.github.com/198020
 
 <div class="thumb">
 !/images/2009-09-26-remind_screenshot.png(shell login screenshot)!

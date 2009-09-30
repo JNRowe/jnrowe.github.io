@@ -21,6 +21,7 @@ autocmd FileType c,cpp
     \   let &makeprg="make %<" |
     \ endif
 {% endhighlight %}
+p>. "Fork this code":http://gist.github.com/198024
 
 The @%<@ in our @makeprg@ definition refers to the current file with its extension stripped.  We specifically only change the behaviour if no @Makefile@ exists so that we don't interfere with the normal usage of the @:make@ command.
 
