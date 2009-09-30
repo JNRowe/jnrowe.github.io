@@ -23,6 +23,7 @@ As you can see in the screenshot on the right my wibox appears to be using the s
 convert /home/jay/.themes/expose/gtk-2.0/bc.xpm -scale 1024x20! bc.png
 composite  -gravity north bc.png backdrop.png backdrop_new.png
 {% endhighlight %}
+p>. "Fork this code":http://gist.github.com/198013
 
 The initial @convert@ command resizes @bc.xpm@ from the expose theme to 1024x20 pixels, 1024 being the screen width and 20 being the height of my main wibox in awesome.  We must suffix the @-scale@ option's argument with @!@ to tell @convert@ to ignore the image's aspect ratio when resizing, without this the command will not produce an image at the size we expect.
 
@@ -33,6 +34,7 @@ With that done we have an image with our normal wallpaper and wibox sized chunk 
 {% highlight lua %}
 mywibox[s] = wibox({ position = "top", fg = beautiful.fg_normal, bg = "#00000000" })
 {% endhighlight %}
+p>. "Fork this code":http://gist.github.com/198014
 
 Colours are specified in the de facto standard format of @#(red)(green)(blue)(alpha)@, the '00' value for alpha in the above example means we want a fully transparent theme background.  You could include some colour values and varying levels of alpha transparency to tint the background image, however that could also be achieved with ImageMagick when building the background image if it is desired.
 
