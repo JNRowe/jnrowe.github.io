@@ -1,0 +1,74 @@
+---
+layout: post
+title: Tip-a-day - Custom keybindings in the GTK file dialogs
+description: Adding custom location bindings to the GTK file chooser
+categories: [gtk, keybindings, tad, tips]
+---
+
+h2. {{ page.title }}
+
+In "Fancy awesome theming":/awesome/gtk/python/tad/themes/tips/vim/2009/09/28/TaD-Fancy_awesome_theming.html I included a screenshot that, by accident more than design, spawned today's tip.
+
+<div class="thumb">
+!/images/2009-10-01-gtkrc-mini.png(gtkrc in vim screenshot)!:/images/2009-09-28-awesome_theming.png
+</div>
+
+Laura Biddulph sent me a SMS(Short Message Service) message that read:
+
+bq. Thanks! I saw your @gtkrc@, and now I have keybound faves in the file dialog.
+
+The @gtkrc@ being referenced is my "GTK+":http://www.gtk.org/ configuration file that could be seen in the right hand "vim":http://www.vim.org/ window of the screenshot from that earlier post.  It was actually open in that screenshot because I was changing my GTK+ theme, and not being a "gnome":http://www.gnome.org/ user the simplest way to change it is via my @~/.gtkrc-2.0@.  So the question becomes, what were the options in that screenshot, and are there any other cool and useful things you can do there?
+
+{% highlight cpp %}
+gtk-theme-name = "expose"
+gtk-icon-theme-name = "hicolor"
+gtk-key-theme-name = "Emacs"
+
+binding "some-shortcuts" {
+    bind "<Alt>T" {
+        "location-popup" ("/home/jay/urls")
+    }
+    bind "<Alt>M" {
+        "location-popup" ("/var/lib/repo/jnrowe-misc")
+    }
+}
+class "GtkFileChooserDefault" binding "some-shortcuts"
+{% endhighlight %}
+p>. "Fork this code":http://gist.github.com/199268
+
+Ignoring the @vim@ "modeline":http://vimdoc.sourceforge.net/htmldoc/options.html#modeline from the screenshot the first few settings are basic theme related options.  @gtk-theme-name@ and @gtk-icon-theme-name@ set the style and icon groups for GTK+ apps respectively.  @gtk-key-theme-name@ sets the default keybindings for GTK+ apps.  By setting it to @Emacs@ we have access to the "normal" keybindings we expect if we use "bash":http://cnswww.cns.cwru.edu/~chet/bash/bashtop.html or other common Linux tools, such as @C-w@ to delete the word under the cursor.  You can read more about @gtk-key-theme-name@ in "an old posting of mine":http://www.jnrowe.ukfsn.org/articles/configs/gtk.html.
+
+All of the settings above are configurable with a GUI(Graphical User Interface) if you use gnome or "xfce":http://www.xfce.org/, but for those of who don't use those desktop environments editing the @~/.gtkrc-2.0@ is a reasonable solution.
+
+<div class="thumb">
+!/images/2009-10-01-GTK_filechooser-mini.png(GTK file chooser screenshot)!:/images/2009-10-01-GTK_filechooser.png
+</div>
+
+The "some-shortcuts" section is the interesting one for today, it is telling GTK+ applications that we want to have our own extra keybindings available when opening or saving files.  @GTKFileChooser@ is the modern GTK+ file dialog, and it already has a set of useful keybindings including:
+
+|_. Key |_. Purpose |
+| @M-<Home>@ | Jump to your home directory |
+| @M-D@ | Jump to your @~/Desktop@ directory |
+| @M-<Up>@ | Go to current directory's parent |
+| @C-L@ | Display the text location entry box |
+
+We could actually use the file chooser's bookmark feature, and access the bookmarks with @M-1@ through @M-9@ and @M-0@ for bookmark number 10 from the dialog.  However, I find it more practical to be able to use mnemonic names for favourite locations.  You could even use both if you have an excellent memory and a lot of favourite locations!
+
+If you wish to add your own bindings the format is hopefully quite self-explanatory, just don't forget to link your bindings to the correct class or they will not work.
+
+You can also change the default bindings by specifying them in the configuration file, for example to use @M-<left>@ and @M-<right>@ to skip backward and forward along the directory path:
+
+{% highlight cpp %}
+    bind "<Alt>Left" {
+        "up-folder" ()
+    }
+    bind "<Alt>Right" {
+        "down-folder" ()
+    }
+{% endhighlight %}
+p>. "Fork this code":http://gist.github.com/199269
+
+Whether you find @up@ and @down@ or @left@ and @right@ easier to remember depends on how you visualise the path, I personally prefer the defaults in this instance but the choice is entirely yours.
+
+If you decide to significantly modify the bindings you may even find it easier to split the @~/.gtkrc-2.0@ in to chunks to make it easier to manage or share, for this you can use the @include@ directive.  An example would be: @include "~/.gtk_bindings"@.
+
