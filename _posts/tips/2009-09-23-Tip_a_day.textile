@@ -6,7 +6,7 @@ description: Getting back in to the posting habit with mini-tips
 
 h2. {{ page.title }}
 
-I've decided to attempt to get myself back in to the habit of posting public blog entries, and a series of short tips seems like an easy way to do it.  Every day for the next month I plan on posting a small tip and trick of some kind.  Many are likely to be based around using Linux in some shape or form as my plan is to use this to answer the problems in emails and IRC messages from work colleagues.
+I've decided to attempt to get myself back in to the habit of posting public blog entries, and a series of short tips seems like an easy way to do it.  Every day for the next month I plan on posting a small tip or trick of some kind.  Many are likely to be based around using Linux in some shape or form as my plan is to use this to answer the problems from emails and IRC messages.
 
 h3. Tips
 
