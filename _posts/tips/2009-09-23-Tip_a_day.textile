@@ -17,4 +17,5 @@ h3. Tips
 * "Bugzilla mail with real names":/bugzilla/mail/mailfilter/python/tad/tips/2009/09/27/TaD-Bugzilla_real_names.html - Adding real names to bugzilla mail
 * "Fancy awesome theming":/awesome/gtk/python/tad/themes/tips/vim/2009/09/28/TaD-Fancy_awesome_theming.html - Making awesome look even prettier
 * "Beyond simple tab completion":/bash/completion/readline/tad/tips/2009/09/30/TaD-Beyond_tab_completion.html -  Extra completion options with readline applications
+* "Custom keybindings in the GTK file dialogs":/gtk/keybindings/tad/tips/2009/10/01/TaD-Custom_locations_in_the_GTK_filechooser.html – Adding custom location bindings to the GTK file chooser
 
