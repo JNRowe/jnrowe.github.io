@@ -18,4 +18,5 @@ h3. Tips
 * "Fancy awesome theming":/awesome/gtk/python/tad/themes/tips/vim/2009/09/28/TaD-Fancy_awesome_theming.html - Making awesome look even prettier
 * "Beyond simple tab completion":/bash/completion/readline/tad/tips/2009/09/30/TaD-Beyond_tab_completion.html -  Extra completion options with readline applications
 * "Custom keybindings in the GTK file dialogs":/gtk/keybindings/tad/tips/2009/10/01/TaD-Custom_locations_in_the_GTK_filechooser.html – Adding custom location bindings to the GTK file chooser
+* "Toggling settings in vim":/keybindings/tad/tips/vim/2009/10/02/TaD-Toggling_settings_in_vim.html - Toggling settings with keybindings in vim
 
