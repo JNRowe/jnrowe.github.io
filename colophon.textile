@@ -3,6 +3,7 @@ layout: post
 title: Colophon
 description: How this site is built
 categories: [home, jnrowe, main, site]
+date: 2009-09-29
 ---
 
 h2. {{ page.title }}
