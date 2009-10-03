@@ -4,6 +4,7 @@ title: Copyright information
 description: Copyright conditions for this site, and git repository it is hosted in
 categories: [copyright, site]
 no-disqus: true
+date: 2009-09-25
 ---
 
 
