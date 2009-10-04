@@ -8,15 +8,13 @@ I've decided to attempt to get myself back in to the habit of posting public blo
 
 h3. Tips
 
-* "Theming mutt":/mutt/tad/theme/tips/2009/09/23/TaD-Theming_mutt.html - Switching mutt themes based on term type
-* "Compiling C source in vim":/mutt/tad/tips/2009/09/24/TaD-Compiling_in_vim.html - Compiling source without a Makefile
-* "Uber pink prompts":/bash/prompts/tad/tips/2009/09/25/TaD-Uber_pink_prompts.html - Using the extended xterm colour sequences in prompts
-* "'Kick me' birthday reminders":/abook/bash/python/remind/tad/tips/2009/09/26/TaD-Kick_me_birthday_reminders.html - Automated birthday reminders with abook and remind
-* "Bugzilla mail with real names":/bugzilla/mail/mailfilter/python/tad/tips/2009/09/27/TaD-Bugzilla_real_names.html - Adding real names to bugzilla mail
-* "Fancy awesome theming":/awesome/gtk/python/tad/themes/tips/vim/2009/09/28/TaD-Fancy_awesome_theming.html - Making awesome look even prettier
-* "Beyond simple tab completion":/bash/completion/readline/tad/tips/2009/09/30/TaD-Beyond_tab_completion.html -  Extra completion options with readline applications
-* "Custom keybindings in the GTK file dialogs":/gtk/keybindings/tad/tips/2009/10/01/TaD-Custom_locations_in_the_GTK_filechooser.html – Adding custom location bindings to the GTK file chooser
-* "Toggling settings in vim":/keybindings/tad/tips/vim/2009/10/02/TaD-Toggling_settings_in_vim.html - Toggling settings with keybindings in vim
-* "Disabling cursor blinking in GTK+":/cursor/gtk/tad/tips/2009/10/03/TaD-Disabling_cursor_blinking_in_GTK.html - No more blinking GTK+ cursor
-* "Simple notifications in awesome":/awesome/lua/tad/tips/2009/10/04/TaD-Simple_notifications_in_awesome.html -  Pretty and easy notification popups
+<ul class="posts">
+    {% for post in site.posts reversed %}
+      {% if post.categories contains "tad" %}
+        <li>
+          <a href="{{ post.url }}">{{ post.title }}</a> - {{ post.description }}
+        </li>
+      {% endif %}
+    {% endfor %}
+</ul>
 
