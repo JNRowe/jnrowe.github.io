@@ -5,8 +5,6 @@ description: Compiling source without a Makefile
 categories: [mutt, tad, tips]
 ---
 
-h2. {{ page.title }}
-
 The fabulous Miss Biddulph asks via the EADS Linux list:
 
 bq. Is there a way to make vim compile C files without a makefile?

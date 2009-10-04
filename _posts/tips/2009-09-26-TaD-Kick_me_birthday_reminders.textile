@@ -5,8 +5,6 @@ description: Automated birthday reminders with abook and remind
 categories: [abook, bash, remind, python, tad, tips]
 ---
 
-h2. {{ page.title }}
-
 Tony Collins asks on the EADS Linux list:
 
 bq.  I almost forgot the wife’s birthday last week, not wanting to do that again I’m turning to technology not deeper consideration.  So guys, how do you manage it?

@@ -5,8 +5,6 @@ description: Producing better, per filetype, output with git diff
 categories: [diff, git, tad, tips]
 ---
 
-h2. {{ page.title }}
-
 Earlier this week Luke Cox asked in response to a patch I sent:
 
 bq. What version of "git":http://www.git-scm.com/ are you using?  Mine doesn't seem to produce the right location output for @format-patch@.

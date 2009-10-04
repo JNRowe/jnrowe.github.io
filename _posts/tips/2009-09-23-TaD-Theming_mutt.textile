@@ -5,8 +5,6 @@ description: Switching mutt themes based on term type
 categories: [mutt, tad, theme, tips]
 ---
 
-h2. {{ page.title }}
-
 Jeff, a work colleague, asks via IRC:
 
 bq. Can I make mutt use a blue statusbar in X and red in console? A different colour would make it easier to read with a transparent urxvt.

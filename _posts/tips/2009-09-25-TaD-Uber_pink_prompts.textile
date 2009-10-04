@@ -5,8 +5,6 @@ description: Using the extended xterm colour sequences in prompts
 categories: [bash, prompts, tad, tips]
 ---
 
-h2. {{ page.title }}
-
 cookiemon5ter asks in @#gentoo@ on Freenode:
 
 bq. < *cookiemon5ter* > anyone know where to get a list of color codes for bash or know the code for pink :p

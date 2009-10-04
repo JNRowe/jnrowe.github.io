@@ -5,8 +5,6 @@ description: Pretty and easy notification popups
 categories: [awesome, lua, tad, tips]
 ---
 
-h2. {{ page.title }}
-
 On seeing my window notifications in "awesome":http://awesome.naquadah.org/ from a screencast for a new project at work Matt Cooper asks:
 
 <div class="thumb">

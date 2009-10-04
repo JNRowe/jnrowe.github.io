@@ -5,8 +5,6 @@ description: Toggling settings with keybindings in vim
 categories: [keybindings, tad, tips, vim]
 ---
 
-h2. {{ page.title }}
-
 As you can never have enough keybinding tips and "vim":http://www.vim.org helps to prove that, the tip for today answers Joshua's question from @##purplism@
 
 bq. can you toggle settings in vim with a key?

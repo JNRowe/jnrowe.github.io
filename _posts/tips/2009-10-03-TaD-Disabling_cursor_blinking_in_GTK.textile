@@ -5,8 +5,6 @@ description: No more blinking GTK+ cursor
 categories: [cursor, gtk, tad, tips]
 ---
 
-h2. {{ page.title }}
-
 Darren Roberts asks via the EADS Linux list:
 
 bq. In "pidgin":http://pidgin.im/ how can I stop the cursor blinking?
