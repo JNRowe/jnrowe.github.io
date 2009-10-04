@@ -20,4 +20,5 @@ h3. Tips
 * "Custom keybindings in the GTK file dialogs":/gtk/keybindings/tad/tips/2009/10/01/TaD-Custom_locations_in_the_GTK_filechooser.html – Adding custom location bindings to the GTK file chooser
 * "Toggling settings in vim":/keybindings/tad/tips/vim/2009/10/02/TaD-Toggling_settings_in_vim.html - Toggling settings with keybindings in vim
 * "Disabling cursor blinking in GTK+":/cursor/gtk/tad/tips/2009/10/03/TaD-Disabling_cursor_blinking_in_GTK.html - No more blinking GTK+ cursor
+* "Simple notifications in awesome":/awesome/lua/tad/tips/2009/10/04/TaD-Simple_notifications_in_awesome.html -  Pretty and easy notification popups
 
