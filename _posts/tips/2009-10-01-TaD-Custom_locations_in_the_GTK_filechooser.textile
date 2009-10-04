@@ -17,7 +17,9 @@ Laura Biddulph sent me a SMS(Short Message Service) message that read:
 
 bq. Thanks! I saw your @gtkrc@, and now I have keybound faves in the file dialog.
 
-The @gtkrc@ being referenced is my "GTK+":http://www.gtk.org/ configuration file that could be seen in the right hand "vim":http://www.vim.org/ window of the screenshot from that earlier post.  It was actually open in that screenshot because I was changing my GTK+ theme, and not being a "gnome":http://www.gnome.org/ user the simplest way to change it is via my @~/.gtkrc-2.0@.  So the question becomes, what were the options in that screenshot, and are there any other cool and useful things you can do there?
+The @gtkrc@ being referenced is my "GTK+":http://www.gtk.org/ configuration file that could be seen in the right hand "vim":http://www.vim.org/ window of the screenshot from that earlier post.  It was actually open in that screenshot because I was changing my GTK+ theme, and not being a "gnome":http://www.gnome.org/ user the simplest way to change it is via my @~/.gtkrc-2.0@.  And, if you're using "KDE":http://www.kde.org/ and wish to the settings for GTK+ applications you sould edit @~/.gtkrc-2.0-kde@.
+
+So the question becomes, what were the options in that screenshot, and are there any other cool and useful things you can do there?
 
 {% highlight cpp %}
 gtk-theme-name = "expose"
