@@ -5,8 +5,6 @@ description: Making awesome look even prettier
 categories: [awesome, gtk, themes, python, tad, tips, vim]
 ---
 
-h2. {{ page.title }}
-
 <div class="thumb">
 !/images/2009-09-28-awesome_theming-mini.png(Awesome screenshot)!:/images/2009-09-28-awesome_theming.png
 </div>

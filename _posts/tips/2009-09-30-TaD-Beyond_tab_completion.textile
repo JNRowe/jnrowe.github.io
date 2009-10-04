@@ -5,8 +5,6 @@ description: Extra completion options with readline applications
 categories: [bash, completion, readline, tad, tips]
 ---
 
-h2. {{ page.title }}
-
 Matt Taylor wrote on the EADS Linux list:
 
 bq. @wildmenu@ is to "vim":http://www.vim.org/ as @$x@ is to "bash":http://cnswww.cns.cwru.edu/~chet/bash/bashtop.html.  Define @$x@ :)

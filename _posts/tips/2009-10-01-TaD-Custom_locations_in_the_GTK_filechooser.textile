@@ -5,8 +5,6 @@ description: Adding custom location bindings to the GTK file chooser
 categories: [gtk, keybindings, tad, tips]
 ---
 
-h2. {{ page.title }}
-
 In "Fancy awesome theming":/awesome/gtk/python/tad/themes/tips/vim/2009/09/28/TaD-Fancy_awesome_theming.html I included a screenshot that, by accident more than design, spawned today's tip.
 
 <div class="thumb">

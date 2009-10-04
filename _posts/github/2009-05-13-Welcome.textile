@@ -4,8 +4,6 @@ title: Welcome to the new journal
 description: Testing Jekyll on GitHub
 ---
 
-h2. {{ page.title }}
-
 Welcome to the "new journal":http://jnrowe.github.com/, powered by "Jekyll":http://github.com/mojombo/jekyll and running on the marvellous "GitHub":http://github.com.
 
 I've decided to @push@ the repository already despite it being entirely incomplete, I think it will make me more likely to work on it.
