@@ -43,5 +43,15 @@ p.attention, p.caution, p.danger, p.error, p.warning {
     background-color: rgb(255, 187, 187);
 }
 
+blockquote p:before {
+    content: "\201C";
+}
+blockquote p {
+    font-family: "cursive";
+}
+blockquote p:after {
+    content: "\201D";
+}
+
 /* vim: set sw=4 sts=4 et tw=80 fileencoding=utf-8: */
 
