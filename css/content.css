@@ -20,5 +20,28 @@ div.thumb {
     float: right;
 }
 
+p.attention, p.caution, p.danger, p.error, p.hint, p.important, p.note,
+p.warning, div.sidebar {
+    border: 0.2em solid;
+    margin: 1em;
+    padding: 0.3em;
+}
+
+p.hint, p.note, p.important, div.sidebar, p.attention, p.caution, p.danger,
+p.error, p.warning {
+    color: rgb(0, 0, 0);
+}
+p.hint, p.note {
+    background-color: rgb(187, 255, 187);
+}
+
+p.important, div.sidebar {
+    background-color: rgb(255, 255, 187);
+}
+
+p.attention, p.caution, p.danger, p.error, p.warning {
+    background-color: rgb(255, 187, 187);
+}
+
 /* vim: set sw=4 sts=4 et tw=80 fileencoding=utf-8: */
 
