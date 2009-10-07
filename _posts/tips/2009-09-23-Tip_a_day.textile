@@ -18,3 +18,5 @@ h3. Tips
     {% endfor %}
 </ul>
 
+There is an "Atom":http://www.atomenabled.org/ feed specifically for the tips "available":/tips.atom.
+
