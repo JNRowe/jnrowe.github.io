@@ -4,17 +4,8 @@ alternate: /index.html
 id: http://jnrowe.github.com/updates.atom
 url: /updates.atom
 ---
-{% for post in site.posts limit:15 %}
-<entry>
-    <title>{{ post.title }}</title>
-    <link href="http://jnrowe.github.com{{ post.url }}"/>
-    <updated>{{ post.date | date_to_xmlschema }}</updated>
-    <id>http://jnrowe.github.com{{ post.id }}</id>
-    <content type="xhtml">
-        <div xmlns="http://www.w3.org/1999/xhtml">
-            {{ post.content }}
-        </div>
-    </content>
-</entry>
+
+{% for post in site.categories.tad %}
+{% include atom_entry %}
 {% endfor %}
 

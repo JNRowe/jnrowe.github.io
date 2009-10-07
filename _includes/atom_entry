@@ -1,0 +1,15 @@
+<entry>
+    <title>{{ post.title }}</title>
+    <link href="http://jnrowe.github.com{{ post.url }}"/>
+    <updated>{{ post.date | date_to_xmlschema }}</updated>
+    <id>http://jnrowe.github.com{{ post.id }}</id>
+    <content type="xhtml">
+        <div xmlns="http://www.w3.org/1999/xhtml">
+            {{ post.content }}
+        </div>
+    </content>
+</entry>
+
+{% comment %}
+<!-- vim: set ft=liquid sw=4 sts=4 et tw=80 fileencoding=utf-8: -->
+{% endcomment %}
