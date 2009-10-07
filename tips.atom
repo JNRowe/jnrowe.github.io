@@ -1,47 +1,21 @@
 ---
-layout: nil
+layout: feed
+subtitle: Tips feed
+alternate: /2009/09/23/Tip_a_day.html
+id: http://jnrowe.github.com/tips.atom
+url: /tips.atom
 ---
-<?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet href="/static/atom.css" type="text/css"?>
-<?xml-stylesheet href="/static/pygments.css" type="text/css"?>
-<feed xmlns="http://www.w3.org/2005/Atom"
-    xmlns:dc="http://purl.org/dc/elements/1.1/"
-    xml:base="http://jnrowe.github.com/"
-    xml:lang="en-gb">
-    <title type="text">JNRowe</title>
-    <subtitle type="text">Tips feed</subtitle>
-    <id>http://jnrowe.github.com/2009/09/23/Tip_a_day.html</id>
-    <link rel="alternate" type="application/xhtml+xml" href="/2009/09/23/Tip_a_day.html" />
-    <link rel="self" href="/tips.atom" />
-    <icon>/static/icon.png</icon>
-    <author>
-        <name>James Rowe</name>
-        <uri>http://jnrowe.github.com/</uri>
-        <email>jnrowe@gmail.com</email>
-    </author>
-    <generator uri="http://github.com/mojombo/jekyll">Jekyll</generator>
-    <rights type="xhtml">
+{% for post in site.categories.tad %}
+<entry>
+    <title>{{ post.title }}</title>
+    <link href="http://jnrowe.github.com{{ post.url }}"/>
+    <updated>{{ post.date | date_to_xmlschema }}</updated>
+    <id>http://jnrowe.github.com{{ post.id }}</id>
+    <content type="xhtml">
         <div xmlns="http://www.w3.org/1999/xhtml">
-            Copyright &#169; 2009, James Rowe
+            {{ post.content }}
         </div>
-    </rights>
-    <updated>{{ site.time | date_to_xmlschema }}</updated>
+    </content>
+</entry>
+{% endfor %}
 
-    {% for post in site.categories.tad %}
-    <entry>
-        <title>{{ post.title }}</title>
-        <link href="http://jnrowe.github.com{{ post.url }}"/>
-        <updated>{{ post.date | date_to_xmlschema }}</updated>
-        <id>http://jnrowe.github.com{{ post.id }}</id>
-        <content type="xhtml">
-            <div xmlns="http://www.w3.org/1999/xhtml">
-                {{ post.content }}
-            </div>
-        </content>
-    </entry>
-    {% endfor %}
-</feed>
-
-{% comment %}
-<!-- vim: set ft=liquid sw=4 sts=4 et tw=80 fileencoding=utf-8: -->
-{% endcomment %}
