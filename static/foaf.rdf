@@ -1,7 +1,7 @@
 ---
 layout: foaf_base
 title: FOAF description
-creator_location: #jnrowe
+creator_location: "#jnrowe"
 created: 2006-04-06 00:00:00 UTC
 modified: 2007-11-08 16:39:34 UTC
 file_description: FOAF description of James Rowe
