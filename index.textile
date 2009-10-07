@@ -1,6 +1,8 @@
 ---
 layout: default
 no-disqus: true
+description: Front page
+categories: [index, jnrowe]
 ---
 
 h2. Journal
