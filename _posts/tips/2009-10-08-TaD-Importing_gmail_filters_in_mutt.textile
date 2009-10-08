@@ -57,7 +57,6 @@ color index brightgreen default ~fjoe@example.com
 score ~fjohndoe@example.com +20
 set index_format="%Z %2N %?H?%-16.12H&%D? %-16.16F  %s"
 {% endhighlight %}
-p>. "Fork this code":
 
 <div class="thumb">
 !/images/2009-10-08-mutt_screenshot.png(colouring and scoring in mutt)!
@@ -79,7 +78,7 @@ doc.elements.each('feed/entry') do |entry|
     puts "score ~f#{addy} 20"
 end
 {% endhighlight %}
-p>. "Fork this code":
+p>. "Fork this code":http://gist.github.com/205052
 
 Calling that script on the example data from above yields a small @mutt@ configuration file that we can include in our mutt setup by adding @source <file_location>@ to our @~/.muttrc@.
 
