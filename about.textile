@@ -15,7 +15,8 @@ The main purpose of this site is a dumping ground for things that either not imp
 h3. Site links
 
 * <a href="http://geourl.org/near?p=jnrowe.github.com" class="geourl" title="check out my neighbours in meatspace">GeoURL</a>
-*  <a href="/updates.atom" class="feed">Atom</a> feed
+* Main <a href="/updates.atom" class="feed">Atom</a> feed
+* List of "available feeds":/feeds.html on this site
 * "Colophon":/colophon.html
 * Check:
 ** "XHTML(eXtensible HyperText Markup Language) 1.0":http://validator.w3.org/check?uri=http%3A%2F%2Fjnrowe.github.com%2F;outline=1
