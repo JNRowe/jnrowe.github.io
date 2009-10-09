@@ -1,4 +1,5 @@
 pygments: true
-disqus: true
+server_port: 8080
 
+disqus: true
 
