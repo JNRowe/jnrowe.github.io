@@ -1,0 +1,17 @@
+---
+layout: post
+title: Feeds on this site
+description: Atom feeds that can be found on this site
+categories: [atom, feeds, home, jnrowe, main, site]
+date: 2009-10-09
+---
+
+The following  "Atom":http://www.atomenabled.org feeds are available for this site:
+
+{% comment %}
+This really sucks, but it appears not to be possible to use categories
+on files that aren't in _posts.
+{% endcomment %}
+*(feed) "Main feed":/updates.atom - Full feed for all categories
+*(feed) "Tips feed":/tips.atom - Feed solely for the tips category
+
