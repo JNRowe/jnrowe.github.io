@@ -1,0 +1,32 @@
+---
+layout: post
+title: Site glossary
+description: Glossary of the terms and acronyms used on this site
+categories: [accessibility, home, site]
+date: 2009-10-11
+---
+
+
+h3. Introduction
+
+This page should contain a list of terms and acronyms used on this site.  They are generated automatically, will grow quite large and probably contains many items you are already familiar with, but that is why browsers have a search function.
+
+h3. Acronyms
+
+I try not to gratuitously use acronyms that aren't in common use, but I guess it all depends on where, and with whom, you draw the line for "common use".
+
+The following list is automatically generated from the pages on this site that contain @<acro>@ tags.
+
+<dl class="glossary">
+{% comment %}anchor{% endcomment %}
+<dt>*BTS*</dt> <dd>(Bug Tracking System)</dd>
+<dt>*CSS*</dt> <dd>(Cascading Style Sheets)</dd>
+<dt>*GUI*</dt> <dd>(Graphical User Interface)</dd>
+<dt>*ISBN*</dt> <dd>(International Standard Book Number)</dd>
+<dt>*MDA*</dt> <dd>(Mail Delivery Agent)</dd>
+<dt>*SMS*</dt> <dd>(Short Message Service)</dd>
+<dt>*URL*</dt> <dd>(Uniform Resource Locator)</dd>
+<dt>*UUID*</dt> <dd>(Universally Unique IDentifier)</dd>
+<dt>*VCS*</dt> <dd>(Version Control System)</dd>
+{% comment %}endanchor{% endcomment %}
+</dl>
