@@ -57,7 +57,7 @@ toppkgclean() {
     done
 }
 {% endhighlight %}
-p>. "Fork this code":
+p>. "Fork this code":http://gist.github.com/207305
 
 bq. Is it possible to use bash completion to complete package names for use in @package.keywords@?
 
@@ -88,7 +88,7 @@ arch_unmask() {
 }
 complete -F _emerge arch_unmask
 {% endhighlight %}
-p>. "Fork this code":
+p>. "Fork this code":http://gist.github.com/207306
 
 p(note). If you're using our Gentoo boxes at the office the function will be much faster if you replace the call to @portageq@ by @/var/lib/repos/*@, as our package trees are always installed there.  The @portageq@ call is mainly there for users who use @/usr/portage@ and @/usr/local/portage@, or other such monstrosities.
 
