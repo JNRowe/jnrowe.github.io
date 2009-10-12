@@ -53,5 +53,9 @@ blockquote p:after {
     content: "\201D";
 }
 
+li.feed {
+    list-style-image: url("/static/atom_icon.png");
+}
+
 /* vim: set sw=4 sts=4 et tw=80 fileencoding=utf-8: */
 
