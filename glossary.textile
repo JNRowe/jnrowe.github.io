@@ -26,9 +26,11 @@ The following list is automatically generated from the pages on this site that c
 <dt>*ISBN*</dt> <dd>(International Standard Book Number)</dd>
 <dt>*MDA*</dt> <dd>(Mail Delivery Agent)</dd>
 <dt>*PNG*</dt> <dd>(Portable Network Graphics)</dd>
+<dt>*RPC*</dt> <dd>(Remote Procedure Call)</dd>
 <dt>*SMS*</dt> <dd>(Short Message Service)</dd>
 <dt>*URL*</dt> <dd>(Uniform Resource Locator)</dd>
 <dt>*UUID*</dt> <dd>(Universally Unique IDentifier)</dd>
 <dt>*VCS*</dt> <dd>(Version Control System)</dd>
+<dt>*XML*</dt> <dd>(Extensible Markup Language)</dd>
 {% comment %}endanchor{% endcomment %}
 </dl>
