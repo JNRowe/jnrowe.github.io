@@ -2,7 +2,7 @@
 layout: post
 title: Tip-a-day - Visual vim mode identifier
 description: Changing the cursor colour to reflect mode
-categories: [cursort, tad, tips, vim]
+categories: [cursor, tad, tips, vim]
 ---
 
 Paul Kerry rants about his problems with "vim":http://www.vim.org/ over the cooler today, and as a long time @vim@ user I found it hard not to respond to some of the points.
