@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Tip-a-day - Instant web server
-description:
+description: Quick and easy file serving
 categories: [busybox, python, tad, tips]
 ---
 
