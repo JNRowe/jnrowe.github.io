@@ -30,7 +30,7 @@ mkdir e220_drivers; cd e220_drivers
 mount -t vfat /dev/sr2 /mnt/huawei
 for file in $(find *.cab); do unpack $file; done
 {% endhighlight %}
-p>. "Fork this code":
+p>. "Fork this code":http://gist.github.com/212738
 
 The @unpack@ tool from above is just a wrapper around common archivers, and the tool you actually need to extract the @cab@ files is "unshield":http://synce.sourceforge.net/synce/unshield.php.  Contrary to my first idea "cabextract":http://www.cabextract.org.uk/ doesn't work, as these files are actually made by installshield.
 
@@ -65,7 +65,7 @@ OK 'AT+CGDCONT=1,"IP","3internet"'
 OK ATD*99#
 CONNECT ""
 {% endhighlight %}
-p>. "Fork this code":
+p>. "Fork this code":http://gist.github.com/212739
 
 Exchange your APN for @3internet@ in the example above, if it differs.
 
@@ -89,7 +89,7 @@ persist
 crtscts
 lcp-echo-failure 0
 {% endhighlight %}
-p>. "Fork this code":
+p>. "Fork this code":http://gist.github.com/212740
 
 You may have to change your device settings if the dongle doesn't show up as @/dev/ttyUSB0@, but other than that the file should be correct.
 
