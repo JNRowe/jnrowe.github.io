@@ -15,7 +15,7 @@ date: 2009-10-04
       <img src="http://www.google.com/logos/logo_25wht.gif" alt="Google" />
     </a>
     <input alt="Search string" type="search" name="q" size="31" maxlength="255"
-        accesskey="4" />
+        accesskey="4" placeholder="Search topic" />
     <input alt="Submit search" type="submit" name="btnG" value="Search" />
     <input alt="" type="hidden" name="domains"
         value="http://jnrowe.github.com/" />
