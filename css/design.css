@@ -17,6 +17,11 @@ html, body {
     font-family: "Verdana", "Arial", sans-serif;
 }
 
+/* Work around HTML5 display problems */
+article, footer, header, nav {
+    display:block;
+}
+
 h1.masthead {
     font-size: xx-large;
     text-align: right;
@@ -81,7 +86,7 @@ a.rights {
     text-transform: uppercase;
 }
 
-div.page_meta, ul.meta {
+.page_meta, ul.meta {
     background-color: rgb(241, 241, 241);
     background-image: url("/static/meta_background.png");
     background-position: right;
@@ -90,7 +95,7 @@ div.page_meta, ul.meta {
     font-size: small;
 }
 
-div.page_meta ul, ul.meta {
+.page_meta ul, ul.meta {
     list-style-type: none;
 }
 
