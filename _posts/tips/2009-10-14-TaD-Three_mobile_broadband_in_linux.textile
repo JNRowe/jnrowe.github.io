@@ -17,13 +17,13 @@ h3. The route to fail
 
 If, like me, you'd prefer not to install NetworkManager you can manually configure the device using "pppd":http://www.samba.org/ppp, and life is even easier now than it was when I did it as there is plenty more information available(including this I guess).
 
-h4. Finding the APN
+h4. Finding the APN(Access Point Name)
 
-The first thing you need is your provider's APN, and the easiest place to find it is from the "NetworkManager database":http://live.gnome.org/NetworkManager/MobileBroadband/ServiceProviders.  If yours is not there you'll have to dig further.  When I originally got my device that database was practically empty, so I had to resort to other means to find the APN.
+The first thing you need is your provider's APN(Access Point Name), and the easiest place to find it is from the "NetworkManager database":http://live.gnome.org/NetworkManager/MobileBroadband/ServiceProviders.  If yours is not there you'll have to dig further.  When I originally got my device that database was practically empty, so I had to resort to other means to find the APN(Access Point Name).
 
-We can extract the APN from the Windows driver that came with the device.  The driver can be found on the device itself because it also acts a small SCSI(Small Computer Systems Interface) device with a filesystem.  It is actually pretty clever, assuming it works as advertised, as it can self-install its own driver when plugged in.
+We can extract the APN(Access Point Name) from the Windows driver that came with the device.  The driver can be found on the device itself because it also acts a small SCSI(Small Computer Systems Interface) device with a filesystem.  It is actually pretty clever, assuming it works as advertised, as it can self-install its own driver when plugged in.
 
-If we find the device name with @dmesg@ we can mount it, and pull the APN from the Windows driver:
+If we find the device name with @dmesg@ we can mount it, and pull the APN(Access Point Name) from the Windows driver:
 
 {% highlight bash %}
 mkdir e220_drivers; cd e220_drivers
@@ -34,7 +34,7 @@ p>. "Fork this code":http://gist.github.com/212738
 
 The @unpack@ tool from above is just a wrapper around common archivers, and the tool you actually need to extract the @cab@ files is "unshield":http://synce.sourceforge.net/synce/unshield.php.  Contrary to my first idea "cabextract":http://www.cabextract.org.uk/ doesn't work, as these files are actually made by installshield.
 
-With the APN in hand all we need to do now is configure our system.
+With the APN(Access Point Name) in hand all we need to do now is configure our system.
 
 h4. Kernel
 
@@ -67,7 +67,7 @@ CONNECT ""
 {% endhighlight %}
 p>. "Fork this code":http://gist.github.com/212739
 
-Exchange your APN for @3internet@ in the example above, if it differs.
+Exchange your APN(Access Point Name) for @3internet@ in the example above, if it differs.
 
 It is also possible, yet unlikely, that you'll have to call a different number to @*99#@.  If this was the case you would have found that out from extracting the data from the drivers or looking your network up in the NetworkManager database.
 
