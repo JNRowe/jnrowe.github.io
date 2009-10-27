@@ -1,6 +1,10 @@
     <url>
         <loc>http://jnrowe.github.com{{post.url }}</loc>
+        {% if post.date %}
         <lastmod>{{ post.date | date_to_xmlschema }}</lastmod>
+        {% else %}
+        <lastmod>{{ site.time | date_to_xmlschema }}</lastmod>
+        {% endif %}
         {% if post.priority %}
         <priority>{{ post.priority }}</priority>
         {% endif %}
