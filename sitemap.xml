@@ -8,12 +8,6 @@ layout: nil
     xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
 
     {% for post in site.posts %}
-    <url>
-        <loc>http://jnrowe.github.com{{post.url }}</loc>
-        <lastmod>{{ post.date | date_to_xmlschema }}</lastmod>
-        {% if post.priority %}
-        <priority>{{ post.priority }}</priority>
-        {% endif %}
-    </url>
+    {% include sitemap_entry %}
     {% endfor %}
 </urlset>
