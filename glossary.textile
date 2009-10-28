@@ -23,6 +23,8 @@ The following list is automatically generated from the pages on this site that c
 <dt>*BTS*</dt> <dd>(Bug Tracking System)</dd>
 <dt>*CSS*</dt> <dd>(Cascading Style Sheets)</dd>
 <dt>*CSV*</dt> <dd>(Comma Separated Values)</dd>
+<dt>*EWMH*</dt> <dd>(Extended Window Manager Hints)</dd>
+<dt>*FOAF*</dt> <dd>(Friend of a Friend)</dd>
 <dt>*GUI*</dt> <dd>(Graphical User Interface)</dd>
 <dt>*ISBN*</dt> <dd>(International Standard Book Number)</dd>
 <dt>*LED*</dt> <dd>(Light Emitting Diode)</dd>
