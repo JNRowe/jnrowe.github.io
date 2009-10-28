@@ -24,6 +24,7 @@ h2. Projects
 *(projects) "dotbash":http://github.com/JNRowe/dotbash/: Shared "bash":http://cnswww.cns.cwru.edu/~chet/bash/bashtop.html configuration files
 *(projects) "fixes-overlay":http://github.com/JNRowe/fixes-overlay/: Small package fixes languishing in the "Gentoo BTS":http://bugs.gentoo.org
 *(projects) "jnrowe.github.com":http://github.com/JNRowe/jnrowe.github.com: My user pages repository(_this site_)
+*(projects) "litter":http://github.com/JNRowe/litter: "twitter":http://twitter.com viewer
 *(projects) "local-bin":http://github.com/JNRowe/misc-overlay/: Tat from my @~/bin@
 *(projects) "misc-overlay":http://github.com/JNRowe/misc-overlay/: "Gentoo":http://www.gentoo.org/ overlay -- miscellaneous packages
 *(projects) "pages_layouts":http://github.com/JNRowe/pages_layouts: Shared layouts submodule for jekyll
@@ -35,6 +36,7 @@ h2. Projects
 h3. Forks I'm hacking on
 
 *(forks) "hpodder":http://github.com/JNRowe/hpodder: Hpodder is a tool to scan and download podcasts [ "_origin_":http://software.complete.org/software/projects/show/hpodder !/static/remote.png!]
+*(forks) "oh-my-zsh":http://github.com/JNRowe/oh-my-zsh: A community-driven framework for managing your zsh configuration [ "_origin_":http://github.com/robbyrussell/oh-my-zsh ]
 *(forks) "termstyle":http://github.com/JNRowe/termstyle: A dirt-simple terminal-colour library for python [ "_origin_":http://github.com/gfxmonk/termstyle ]
 
 h3. Git mirrors of projects I'm hacking on
