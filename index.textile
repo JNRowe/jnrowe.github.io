@@ -41,7 +41,7 @@ h3. Forks I'm hacking on
 
 h3. Git mirrors of projects I'm hacking on
 
-*(mirrors) "Bugs Everywhere":http://github.com/JNRowe/Bugs-Everywhere/: Mirror of the "upstream":http://bugseverywhere.org/be/show/HomePage !/static/remote.png! bzr tree
+*(mirrors) "Bugs Everywhere":http://github.com/JNRowe/Bugs-Everywhere/: Mirror of the "upstream":http://bugseverywhere.org/be/show/HomePage !/static/remote.png! @bzr@ tree
 *(mirrors) "enlightenment-overlay":http://github.com/JNRowe/enlightenment-overlay: Mirror of Vapier's "enlightenment overlay":http://overlays.gentoo.org/dev/vapier/wiki/enlightenment !/static/remote.png! for Gentoo
 *(mirrors) "readyset":http://github.com/JNRowe/readyset: Mirror of the "upstream":http://readyset.tigris.org/ !/static/remote.png! @svn@ tree
 
