@@ -93,11 +93,13 @@ hasMet:
 
 ---
 
-  <foaf:PersonalProfileDocument rdf:about="http://www.jnrowe.ukfsn.org/data/foaf.rdf">
+  <foaf:PersonalProfileDocument rdf:about="http://jnrowe.github.com/static/foaf.rdf">
     <foaf:maker rdf:resource="#jnrowe" />
     <foaf:primaryTopic rdf:resource="#jnrowe" />
     <rdfs:seeAlso rdf:resource="http://xmlns.com/foaf/0.1/" />
-    <wot:assurance rdf:resource="http://www.jnrowe.ukfsn.org/data/foaf.rdf.asc" />
+    <!-- Broken currently
+    <wot:assurance rdf:resource="http://jnrowe.github.com/static/foaf.rdf.asc" />
+    -->
   </foaf:PersonalProfileDocument>
 
   <foaf:Person rdf:ID="jnrowe">
@@ -118,8 +120,8 @@ hasMet:
     <foaf:mbox_sha1sum>{{ address }}</foaf:mbox_sha1sum>
 {% endfor %}
 
-    <foaf:homepage rdf:resource="http://www.jnrowe.ukfsn.org/" http:rel="home me" />
-    <foaf:openid rdf:resources="http://www.jnrowe.ukfsn.org/" />
+    <foaf:homepage rdf:resource="http://jnrowe.github.com/" http:rel="home me" />
+    <foaf:openid rdf:resources="http://jnrowe.github.com/" />
     <!-- Skip until #428911 is resolved. -->
     <!--
     <rdfs:seeAlso>
@@ -185,17 +187,19 @@ hasMet:
     </contact:nearestAirport>
 
     <!-- my signature -->
-    <wot:pubkeyAddress rdf:resource="http://www.jnrowe.ukfsn.org/_static/gpg.asc" />
+    <wot:pubkeyAddress rdf:resource="http://jnrowe.github.com/static/gpg.asc" />
     <wot:hex_id>08A9F6A3</wot:hex_id>
     <wot:length>1024</wot:length>
     <wot:fingerprint>E3C1 1059 6C03 8F16 BB66  D0E6 B950 479D 08A9 F6A3</wot:fingerprint>
 
     <!-- Signature to verify this document -->
+    <!-- Broken currently
     <wot:assurance rdf:resource="http://www.jnrowe.ukfsn.org/data/foaf.rdf.asc" />
+    -->
 
-    <foaf:weblog rdf:resource="http://www.jnrowe.ukfsn.org/">
+    <foaf:weblog rdf:resource="http://jnrowe.github.com/">
       <rdfs:seeAlso>
-        <atom:feed rdf:about="http://www.jnrowe.ukfsn.org/updates.atom">
+        <atom:feed rdf:about="http://jnrowe.github.com/updates.atom">
           <foaf:maker rdf:resource="#jnrowe" />
         </atom:feed>
       </rdfs:seeAlso>
