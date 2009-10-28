@@ -1,5 +1,15 @@
 ---
 layout: nil
+static:
+    - {url: /about.html, date: 2009-09-25}
+    - {url: /accessibility.html, date: 2009-10-04}
+    - {url: /colophon.html, date: 2009-09-29}
+    - {url: /contents.html, date: }
+    - {url: /copyright.html, date: 2009-09-25}
+    - {url: /feeds.html, date: 2009-10-09}
+    - {url: /glossary.html, date: 2009-10-11}
+    - {url: /index.html, date: }
+    - {url: /search.html, date: 2009-10-04}
 ---
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset
@@ -7,13 +17,11 @@ layout: nil
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
 
-    {% for post in site.posts %}
-    <url>
-        <loc>http://jnrowe.github.com{{post.url }}</loc>
-        <lastmod>{{ post.date | date_to_xmlschema }}</lastmod>
-        {% if post.priority %}
-        <priority>{{ post.priority }}</priority>
-        {% endif %}
-    </url>
+    {% for post in page.static %}
+    {% include sitemap_entry %}
+    {% endfor %}
+
+    {% for post in page.static %}
+    {% include sitemap_entry %}
     {% endfor %}
 </urlset>
