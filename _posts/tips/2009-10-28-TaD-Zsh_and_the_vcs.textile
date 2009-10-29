@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Tip-a-day - Zsh and the VCS(Version Control System)
-description: Display VCS(Version Control System) data in the prompt
+title: Tip-a-day - Zsh and the VCS
+description: Display VCS data in the prompt
 categories: [git, hg, tad, tips, vcs, zsh]
 ---
 
