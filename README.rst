@@ -16,10 +16,7 @@ licensed under the `GPL version 3`_.
 If you find any problems with this repository either drop me an email_
 or file an issue_.  Locally bugs are managed with ditz_, so if you're
 working with a clone of the repository you can report, list and fix bugs
-directly from the source tree [#]_ .
-
-.. [#] There is a Git mirror of `Bugs Everywhere`_ available at
-       http://github.com/JNRowe/Bugs-Everywhere .
+directly from the source tree.
 
 .. _email: jnrowe@gmail.com
 .. _issue: http://github.com/JNRowe/jnrowe.github.com/issues
