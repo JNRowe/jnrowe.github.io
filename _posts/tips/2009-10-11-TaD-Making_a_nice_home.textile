@@ -42,7 +42,9 @@ CTAGS := exuberant-ctags
 
 
 TARGETS := $(patsubst /usr/lib/%, tags/%.ctags, $(wildcard /usr/lib/python*)) \
-           docs/tags
+           doc/tags
+
+all: $(TARGETS)
 
 tags/%.ctags: /usr/lib/%
 	$(CTAGS) --exclude=test_* --exclude=tests.py --exclude=test.py \
