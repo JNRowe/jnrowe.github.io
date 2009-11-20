@@ -33,6 +33,7 @@ h2. Projects
 *(projects) "snipmate-snippets":http://github.com/JNRowe/snipmate-snippets: Personal snippets for the fantastic "snipmate":http://www.vim.org/scripts/script.php?script_id=2540 vim plugin
 *(projects) "unotes":http://github.com/JNRowe/unotes: μnotes
 *(projects) "upoints":http://github.com/JNRowe/upoints/: upoints is a collection of "GPL v3":http://www.fsf.org/licensing/licenses/gpl.html licensed modules for working with points on Earth, or other near spherical objects.
+*(projects) "vim-configs":http://github.com/JNRowe/vim-configs: Personal vim configs
 
 h3. Forks I'm hacking on
 
