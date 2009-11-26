@@ -38,7 +38,6 @@ h2. Projects
 h3. Forks I'm hacking on
 
 *(forks) "hpodder":http://github.com/JNRowe/hpodder: Hpodder is a tool to scan and download podcasts [ "_origin_":http://software.complete.org/software/projects/show/hpodder !/static/remote.png!]
-*(forks) "notmuch":http://github.com/JNRowe/notmuch: Thread-based email index, search, and tagging [ "_origin_":http://notmuchmail.org/ !/static/remote.png!]
 *(forks) "oh-my-zsh":http://github.com/JNRowe/oh-my-zsh: A community-driven framework for managing your zsh configuration [ "_origin_":http://github.com/robbyrussell/oh-my-zsh ]
 *(forks) "termstyle":http://github.com/JNRowe/termstyle: A dirt-simple terminal-colour library for python [ "_origin_":http://github.com/gfxmonk/termstyle ]
 
