@@ -13,7 +13,7 @@ My answer is to combine the excellent "abook":http://abook.sourceforge.net/ and 
 
 For those that haven't used it, @abook@ is a simple "ncurses":http://dickey.his.com/ncurses/ based address book.  For some years now I’ve been using @abook@ to manage my personal address book, as it is both small and quite featureful.  The address file is in a standard @ini@ format that I can easily import from and export to practically anything with only a small "Python":http://www.python.org/ script using "ConfigParser":file://localhost/usr/share/doc/python-docs-2.6.2-r1/html/library/configparser.html.
 
-@remind@ is a functional to the point of insanity text based reminder tool.  I use it mainly to remind me of tasks that need completing when I login, although I do have a hook in "awesome":http://awesome.naquadah.org/ to display the @remind@ output at other times.  Again the file format is quite sensible which make writing importers and exporters simple enough.  As an example, I generate my @~/.reminders.d/meetings@ file from an "hCalender":http://microformats.org/wiki/hcalendar page.
+@remind@ is a functional **to the point of insanity** text-based reminder tool.  I use it mainly to remind me of tasks that need completing when I login, although I do have a hook in "awesome":http://awesome.naquadah.org/ to display the @remind@ output at other times.  Again the file format is quite sensible which makes writing importers and exporters simple enough.  As an example, I generate my @~/.reminders.d/meetings@ file from an "hCalender":http://microformats.org/wiki/hcalendar page.
 
 <div class="thumb">
 !/images/2009-09-26-abook_screenshot-mini.png(abook displaying custom tab)!
