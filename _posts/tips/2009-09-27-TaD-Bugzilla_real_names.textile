@@ -23,7 +23,7 @@ p>. "Fork this code":http://gist.github.com/198021
 
 This tells @maildrop@ to pass all mails less than 32k in size through @lbdq-fetchaddr@, and we specify a nice ISO-8601 time format for easy sorting and parsing should the need arise.  Now every mail that is delivered with @maildrop@ and isn't too large will have the sender name and address recorded in @~/.lbdb/m_inmail.list@.
 
-Now on to the actual filtering script, which is is written in "Python":http://www.python.org/.  It only uses modules from the Python standard library, so you don't need to install anything else.  I have tested it with 25000 unique entries in @~/.lbdb/m_inmail.list@ and it still takes less than a third of a second to run the filter on my desktop, so processing the database each time we start up isn't really an issue.  Also, the few small tests I've done suggest that using "real" database engines doesn't help and the only way to speed it up significantly would be to write a small daemon to process the mail which seems more than a little overkill to me.
+Now on to the actual filtering script, which is is written in "Python":http://www.python.org/.  It only uses modules from the Python standard library, so you don't need to install anything else.  I have tested it with 25000 unique entries in @~/.lbdb/m_inmail.list@ and it still takes less than a thirtieth of a second to run the filter on my desktop, so processing the database each time we start up isn't really an issue.  Also, the few small tests I've done suggest that using "real" database engines doesn't help and the only way to speed it up significantly would be to write a small daemon to process the mail which seems more than a little overkill to me.
 
 {% highlight python %}
 #! /usr/bin/python -tt
