@@ -46,5 +46,5 @@ h3. The problems
 
 Back to the original question and Rach was looking for a way to stop the window from showing up, the immediate response to the annoying window problem is to find its process id and send it a @SIGTERM@.  It seems like a reasonable idea, but I've been choosing the @urxvtd@ examples on purpose to prove a point.
 
-@urxvtd@ is the terminal daemon provided by "rxvt-unicode":http://software.schmorp.de/, all terminals that are spawned by it will have the same @_NET_WM_PID@ value and @WM_COMMAND@ string.  This isn't just an issue with @urxvtd@ either, it happens with all applications that operate in this way.  Sending a @SIGTERM@ to every terminal opened by @urxvtd@ probably isn't what we would want to do, so as always you should think very carefully before sending terminate signals.
+@urxvtd@ is the terminal daemon provided by "rxvt-unicode":http://software.schmorp.de/, all terminals that are spawned by it will have the same @_NET_WM_PID@ value and @WM_COMMAND@ string.  This isn't just an issue with @urxvtd@ either, it happens with all applications that operate in this way.  Sending a @SIGTERM@ to every terminal opened by @urxvtd@ probably isn't what we would want to do, so you should always think very carefully before sending terminate signals.
 
