@@ -47,7 +47,7 @@ blockquote p:before {
     content: "\201C";
 }
 blockquote p {
-    font-family: "cursive";
+    font-family: cursive;
 }
 blockquote p:after {
     content: "\201D";
