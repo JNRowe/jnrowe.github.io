@@ -21,7 +21,7 @@ static:
     {% include sitemap_entry %}
     {% endfor %}
 
-    {% for post in page.static %}
+    {% for post in site.posts %}
     {% include sitemap_entry %}
     {% endfor %}
 </urlset>
