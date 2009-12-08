@@ -16,6 +16,8 @@ h2. Journal
     {% endfor %}
 </ul>
 
+<p><a href="/contents.html">All posts</a></p>
+
 h2. Projects
 
 *(projects) "BFM":http://github.com/JNRowe/bfm/: This program is a dockapp-style CPU, memory, swap and load average monitor.
