@@ -148,7 +148,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .index-copy {
-    align: right;
+    text-align: right;
 }
 
 /* vim: set sw=4 sts=4 et tw=80 fileencoding=utf-8: */
