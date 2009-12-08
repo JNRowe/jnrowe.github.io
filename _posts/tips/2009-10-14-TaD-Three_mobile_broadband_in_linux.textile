@@ -99,7 +99,7 @@ h4. passwords
 
 We don't need to add an entry to @chap-secrets@ or @pap-secrets@ as authentication isn't required, but if you're following along having chosen to use a configuration tool such as "pppconfig":http://http.us.debian.org/debian/pool/main/p/pppconfig/ just enter any values you wish as they're silently ignored.
 
-I'm told the same applies to "wvdial":http://alumnit.ca/wiki/?WvDial, so it it complains about requiring a password just add an empty or random string to stop the errors.
+I'm told the same applies to "wvdial":http://alumnit.ca/wiki/?WvDial, so if it complains about requiring a password just add an empty or random string to stop the errors.
 
 h4. Testing the connection
 

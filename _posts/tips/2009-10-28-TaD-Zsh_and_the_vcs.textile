@@ -38,7 +38,7 @@ p>. "Fork this code":http://gist.github.com/220796
 
 Once we've configured @vcs_info@ we just need to include @${vcs_info_msg_0_}@ somewhere in our prompt to display the VCS(Version Control System) and current branch name.
 
-@vcs_info@ works quite well, and supports many different systems(both common and uncommon).  As the code snippet shows I enable support for "git":http://www.git-scm.com/ exclusively.  I've used it with "mercurial(hg)":http://www.selenic.com/mercurial/ too, and works well.  "darcs":http://darcs.net also appears to work well, but it isn't a system I use often enough to have tested it thoroughly.
+@vcs_info@ works quite well, and supports many different systems(both common and uncommon).  As the code snippet shows I enable support for "git":http://www.git-scm.com/ exclusively.  I've used it with "mercurial(hg)":http://www.selenic.com/mercurial/ too, and it works well.  "darcs":http://darcs.net also appears to work well, but it isn't a system I use often enough to have tested it thoroughly.
 
 I tested @bzr@ support while writing this but it is totally unusable because of just how slow @bzr@ is.  On my system it adds close to one and half seconds to every prompt display, although that could be improved if I wasn't using conservative CPU scaling to save power.  As a comparison the @git@ info takes less than a tenth of a second to calculate on the same system, and @mercurial@ around three times that which is most definitely still usable.
 

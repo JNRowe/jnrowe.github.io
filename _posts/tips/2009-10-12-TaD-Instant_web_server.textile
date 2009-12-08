@@ -13,7 +13,7 @@ There were a couple of predictable rants about the benefits and drawbacks of thr
 
 Matt Turner's reply sums up the general feeling quite nicely:
 
-bq. Just use whatever server you have installed already.  If don't have _any_ installed grab "nginx":http://nginx.net/ as it works well and is quite small.
+bq. Just use whatever server you have installed already.  If you don't have _any_ installed grab "nginx":http://nginx.net/ as it works well and is quite small.
 
 I agree with Matt's answer but I want to point a couple of possibly non-obvious web servers that they, and you, are likely to have installed already.
 
