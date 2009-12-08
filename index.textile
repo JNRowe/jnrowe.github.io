@@ -24,7 +24,7 @@ h2. Projects
 *(projects) "bwatch":http://github.com/JNRowe/bwatch: Simple bandwidth watching tool
 *(projects) "cupage":http://github.com/JNRowe/cupage/: A tool to check for updates on web pages
 *(projects) "dotbash":http://github.com/JNRowe/dotbash/: Shared "bash":http://cnswww.cns.cwru.edu/~chet/bash/bashtop.html configuration files
-*(projects) "fixes-overlay":http://github.com/JNRowe/fixes-overlay/: Small package fixes languishing in the "Gentoo BTS":http://bugs.gentoo.org
+*(projects) "fixes-overlay":http://github.com/JNRowe/fixes-overlay/: Small package fixes languishing in the "Gentoo BTS":http://bugs.gentoo.org [ "_documentation_":/fixes-overlay/ ]
 *(projects) "jnrowe.github.com":http://github.com/JNRowe/jnrowe.github.com: My user pages repository(_this site_)
 *(projects) "litter":http://github.com/JNRowe/litter: "twitter":http://twitter.com viewer
 *(projects) "local-bin":http://github.com/JNRowe/misc-overlay/: Tat from my @~/bin@
