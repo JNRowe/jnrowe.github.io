@@ -21,6 +21,7 @@ h2. Journal
 h2. Projects
 
 *(projects) "BFM":http://github.com/JNRowe/bfm/: This program is a dockapp-style CPU, memory, swap and load average monitor.
+*(projects) "blanco":http://github.com/JNRowe/blanco: _"Hey, remember me?"_
 *(projects) "bwatch":http://github.com/JNRowe/bwatch: Simple bandwidth watching tool
 *(projects) "cupage":http://github.com/JNRowe/cupage/: A tool to check for updates on web pages
 *(projects) "dotbash":http://github.com/JNRowe/dotbash/: Shared "bash":http://cnswww.cns.cwru.edu/~chet/bash/bashtop.html configuration files
