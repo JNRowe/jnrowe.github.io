@@ -37,7 +37,7 @@ if __name__ == "__main__":
         addressbook = None
     parse(addressbook)
 {% endhighlight %}
-p>. "Fork this code":http://gist.github.com/
+p>. "Fork this code":http://gist.github.com/340873
 
 The script requires the excellent "configobj":http://www.voidspace.org.uk/python/configobj.html module.  You could also use the "ConfigParser":http://docs.python.org/library/configparser.html module from the Python standard library, but @configobj@ allows my laziness to shine through with its simple dictionary-based access to the parsed data.
 
@@ -49,7 +49,7 @@ As I've "mentioned before":/2009/10/11/TaD-Making_a_nice_home.html all these tas
 .sup/contacts.txt: .abook/addressbook
     python sup_contacts.py $< >$@
 {% endhighlight %}
-p>. "Fork this code":http://gist.github.com/
+p>. "Fork this code":http://gist.github.com/340875
 
 Using this method allows us to continue using @abook@ while having simple access to our contacts from within @sup@.  This is incredibly useful as it means we can continue to use @abook@ for "other things":/2009/09/26/TaD-Kick_me_birthday_reminders.html too.
 
