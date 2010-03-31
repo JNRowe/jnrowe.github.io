@@ -69,7 +69,7 @@ hpodder.db.txt: hpodder.db
 	$(info - Dumping hpodder podcasts list)
 	sqlite3 $< 'SELECT feedurl FROM podcasts' >$@
 {% endhighlight %}
-p>. "Fork this code":
+p>. "Fork this code":http://gist.github.com/350683
 
 It uses the command line @sqlite@ client to select just the feed URLs from the database and dump them to a file.  The simple text output it produces is perfect for storing under version control for backup, or feeding back to @hpodder@ should the worst happen.
 
