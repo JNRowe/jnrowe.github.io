@@ -1,0 +1,96 @@
+---
+layout: post
+title: winwrangler - Tiling for the masses
+description: A simple tool to give basic tiling support to window managers
+categories: [tiling, winwrangler, wnck]
+---
+
+Today's random package from the "overlay":http://github.com/JNRowe/misc-overlay is "winwrangler":https://launchpad.net/winwrangler, a simple tool to give some tiling support to window managers without that functionality.  It won't give you the window mangling features of something like "awesome":http://awesome.naquadah.org/, but it is a useful tool for easily modifying the layout on supported window managers.
+
+I was introduced to @winwrangler@ at FILU's fantastic post-"FOSDEM":http://fosdem.org/ meeting, which seems to be an excuse for the FILU members who couldn't make it to FOSDEM to hear all the gossip.  It seems like quite a few people appreciate the idea of tiling window managers and don't wish to change their current window manager, @winwrangler@ makes it possible for them to have a few of the features a tiling window manager provides.
+
+I personally use @winwrangler@ with "metacity":http://blogs.gnome.org/metacity/ or "xfwm4":http://www.xfce.org/projects/xfwm4/, and find it to be quite useful.  It doesn't make me want to give up on real tiling window managers though, but makes those tiling incapable ones much more bearable.
+
+h3. Installation
+
+You can find an ebuild for @winwrangler@ in "my overlay":http://github.com/JNRowe/misc-overlay/blob/master/x11-misc/winwrangler/winwrangler-0.2.4.ebuild.  If you're using my overlay then installation is very simple:
+
+{% highlight text %}
+$ sudo emerge winwrangler
+{% endhighlight %}
+
+If you don't wish to use the overlay then you'll need to install the dependencies first yourself.  You'll need @gtkhotkey@(must be a v0.2 release), "@libwnck@":http://ftp.gnome.org/pub/GNOME/sources/libwnck and all the usual dependencies for building apps against "GTK+":http://www.gtk.org/ such as "@pkgconfig@":http://pkgconfig.freedesktop.org/wiki/.
+
+h3. Usage
+
+To use @winwrangler@ you call the @winwrangler@ command with various arguments, and realistically you'll likely want to add bindings for the commands you frequently use to your windows managers keyboard bindings.  To test @winwrangler@ you can call it from a shell prompt:
+
+{% highlight text %}
+$ winwrangler --layout tile
+{% endhighlight %}
+
+The @-l tile@ tells @winwrangler@ that you wish to tile all the windows on the current desktop evenly.  There is also a @twothirds@ layout which causes your active window to take two thirds of the screen and the other windows to be evenly tiled across the remaining third.
+
+There is also functionality for moving between windows that can be useful if your window manager doesn't already support that.  Confusingly they are also activated with the @--layout@ option:
+
+{% highlight text %}
+$ winwrangler --layout activate_left
+$ winwrangler --layout activate_down
+{% endhighlight %}
+
+There is also a daemon mode which makes @winwrangler@ listen for keypresses and react accordingly, but that functionality is likely already provided by your window manager.  If you're using my ebuild you'll have to enable the @daemon@ @USE@ flag to get this functionality.  Many window managers will report key clashes to you if you set the bindings yourself, and that in itself is a great reason to prefer that over the daemon mode.
+
+The bindings I personally use are:
+
+|_. Key            |_. Command                     |
+| Mod4       grave | winwrangler -l twothirds      |
+| Mod4 Shift grave | winwrangler -l expand         |
+| Mod4       Left  | winwrangler -l activate_left  |
+| Mod4       Right | winwrangler -l activate_right |
+| Mod4       Up    | winwrangler -l activate_up    |
+| Mod4       Down  | winwrangler -l activate_down  |
+
+I keep the same basic key configuration across all the window managers I use -- including those that support tiling internally such as @awesome@ -- so that my muscle memory takes over for arranging windows.
+
+@Mod4@, the Windows key, and @`@ are quite easy to reach on my UK keyboard layout as my left thumb can reach just far enough left to hit @Mod$@ without needing to take my hands off the home row.  Try to find a combination that is comfortable for you, I'm sure it will vary depending on your layout.
+
+h3. Problems
+
+@winwrangler@ isn't without its share of problems unfortunately.  For starters the project appears to be abandoned and there are a number of bugs, some of which aren't really the fault of @winwrangler@.
+
+h4. Window manager support
+
+The biggest problem in my opinion is the lack of support for certain window managers, @winwrangler@ will not work with "enlightenment 17":http://enlightenment.org for example.  It does however work with most common, standards compliant window managers.  @winwrangler@ uses "libwnck":http://library.gnome.org/devel/libwnck/stable/ for window mangling, so we can easily test whether our window manager will work from a "Python":http://www.python.org/ interpreter using the bindings for @libwnck@:
+
+{% highlight python %}
+>>> import wnck
+>>> s = wnck.screen_get_default()
+>>> s.force_update()
+>>> s.get_windows()
+[<wnck.Window object at 0x10399b0 (WnckWindow at 0x10b8240)>,
+ <wnck.Window object at 0x1039cd0 (WnckWindow at 0x10b8ce0)>]
+{% endhighlight %}
+p>. "Fork this code":http://gist.github.com/355241
+
+If you get a list of @wnck.Window@ objects from the @s.get_windows()@ call then @winwrangler@ should work with your chosen window manager.  If you get an empty list from @s.get_windows()@ then your window manager will not work @winwrangler@.
+
+h4. Mishandling window types
+
+Certain window types are mishandled, it is not unusual for @winwrangler@ to try to rearrange pagers or other dialogs.  Often this is because applications don't export the correct properties for @winwrangler@ to do the right thing, and sometimes this is because @winwrangler@ fails to filter them correctly.
+
+It has never been that much of a problem to me, but I've heard other people complain about it a lot.  If you use applications like "tint2":http://code.google.com/p/tint2/ or "gkrellm":http://www.gkrellm.net/ this may be a problem for you.
+
+h4. Development progress
+
+Both @winwrangler@ and @gtkhotkey@ appear to be dead, with no code improvements since the middle of 2009.  Inconveniently the projects are hosted on launchpad, so I'd be surprised if it can attract enough attention to fix bugs or move forward.  I know the people who were talking about it in the post-FOSDEM meeting were discussing it with the intent of either forking it or rewriting it from scratch, and that was considered necessary in part because of its use of launchpad.  Such a fork may even have happened, as I've not kept up with the mailing list or been to the meetings.
+
+h4. Problems in dependencies
+
+@gtkhotkey@ suffers from a broken "XDG basedir":http://standards.freedesktop.org/basedir-spec/basedir-spec-latest.html implementation, choosing to use the default @~/.config@ directory and ignoring the @XDG_@ prefixed environment variables prescribed in the specification.  This is only a problem if you choose to use the daemon mode however.
+
+As a sidenote, my co-workers will not suffer from this bug as Mr Leighy is keeping a shadowed @gtkhotkey@ ebuild to fix this and a few other problems.
+
+h3. Conclusions
+
+Despite the problems @winwrangler@ is still very useful.  I'd recommend it to people who would like some new layout options for their windows, that is what this entry is after all.
+
