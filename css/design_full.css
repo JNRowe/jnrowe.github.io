@@ -1,0 +1,155 @@
+@charset "UTF-8";
+
+/*
+ * design.css
+ * (C) 2004-2009 James Rowe.
+ *
+ * This style sheet is licensed under the Creative Commons
+ * Attribution-ShareAlike 3.0, for more information check the Creative
+ * Commons website(http://creativecommons.org/licenses/by-sa/3.0/).
+ */
+
+html, body {
+    background-color: rgb(77, 104, 132);
+    background-image: url("/static/body_background.png");
+    background-repeat: repeat-x;
+    color: rgb(0, 0, 0);
+    font-family: "Verdana", "Arial", sans-serif;
+}
+
+/* Work around HTML5 display problems */
+article, footer, header, nav {
+    display:block;
+}
+
+h1.masthead {
+    font-size: xx-large;
+    text-align: right;
+}
+h1.masthead a {
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+}
+
+div.breadcrumbs {
+    background-color: rgb(241, 241, 241);
+    background-image: url("/static/meta_background.png");
+    background-position: right;
+    background-repeat: repeat-y;
+    color: rgb(93, 93, 93);
+    font-size: smaller;
+}
+div.breadcrumbs h3 {
+    display: none;
+}
+div.breadcrumbs ul {
+    display: inline;
+    padding: 0;
+}
+div.breadcrumbs li {
+    display: inline;
+    list-style: none;
+}
+div.breadcrumbs .bounce {
+    float: right;
+}
+div.breadcrumbs .first {
+    margin-right: 1em
+}
+
+div.quicksearch {
+    background-color: rgb(255, 255, 187);
+    border: 0.1em dashed;
+    clear: right;
+    color: rgb(0, 0, 0);
+    float: right;
+    margin: 1em;
+    padding: 0.1em 0.3em;
+    width: 13em;
+}
+
+div#corewrapper {
+    margin: auto;
+}
+
+div#content {
+    background-color: rgb(250, 250, 250);
+    border: solid 0 0.2em 0.2em 0 rgb(0, 0, 0);
+    color: rgb(0, 0, 0);
+    margin: 1em 2em;
+    padding: 1em 2em;
+}
+
+a.rights {
+    font-size: small;
+    text-align: right;
+    text-transform: uppercase;
+}
+
+.page_meta, ul.meta {
+    background-color: rgb(241, 241, 241);
+    background-image: url("/static/meta_background.png");
+    background-position: right;
+    background-repeat: repeat-y;
+    color: rgb(93, 93, 93);
+    font-size: small;
+}
+
+.page_meta ul, ul.meta {
+    list-style-type: none;
+}
+
+.hreview .last {
+    text-align: right;
+}
+
+.skipvisual {
+    display: none;
+}
+
+a.feed, a.geourl {
+    border: 0.1em solid;
+    color: rgb(255, 255, 255);
+    font-family: "Verdana", "Arial", sans-serif;
+    font-size: small;
+    font-weight: bold;
+    padding: 0 0.3em;
+    text-decoration: none;
+}
+a.feed {
+    background-color: rgb(255, 96, 0);
+    border-color: rgb(240, 192, 144) rgb(96,48,0) rgb(48,48,0) rgb(255,144,96);
+}
+a.feed:hover {
+    border-color: rgb(48, 48, 0) rgb(255,144,96) rgb(240,192,144) rgb(96,48,0);
+}
+
+a.geourl {
+    background-color: rgb(140, 163, 195);
+    border-color: rgb(192, 192, 240) rgb(80,80,160) rgb(80,80,160) rgb(192,192,240);
+}
+a.geourl:hover {
+    border-color: rgb(80, 80, 160) rgb(192,192,240) rgb(192,192,240) rgb(80,80,160);
+}
+
+.printonly {
+    display: none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    text-shadow: rgb(220, 220, 220) 0.15em 0.15em;
+}
+
+.github-ribbon {
+    border: 0;
+    left: 0;
+    position: absolute;
+    top: 0;
+}
+
+.index-copy {
+    text-align: right;
+}
+
+/* vim: set sw=4 sts=4 et tw=80 fileencoding=utf-8: */
+
