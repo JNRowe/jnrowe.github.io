@@ -82,7 +82,7 @@ It has never been that much of a problem to me, but I've heard other people comp
 
 h4. Development progress
 
-Both @winwrangler@ and @gtkhotkey@ appear to be dead, with no code improvements since the middle of 2009.  Inconveniently the projects are hosted on launchpad, so I'd be surprised if it can attract enough attention to fix bugs or move forward.  I know the people who were talking about it in the post-FOSDEM meeting were discussing it with the intent of either forking it or rewriting it from scratch, and that was considered necessary in part because of its use of launchpad.  Such a fork may even have happened, as I've not kept up with the mailing list or been to the meetings.
+Both @winwrangler@ and @gtkhotkey@ appear to be dead, with no code improvements since the middle of 2009.  Inconveniently the projects are hosted on launchpad, so I'd be surprised if they can attract enough attention to fix bugs or move forward.  I know the people who were talking about it in the post-FOSDEM meeting were discussing it with the intent of either forking it or rewriting it from scratch, and that was considered necessary in part because of its use of launchpad.  Such a fork may even have happened, as I've not kept up with the mailing list or been to the meetings.
 
 h4. Problems in dependencies
 
