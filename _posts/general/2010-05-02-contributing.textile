@@ -1,0 +1,77 @@
+---
+layout: post
+title: Contributing
+description: Advice for contributing to packages I maintain
+categories: [contributing, git, github, style]
+---
+
+h3. Hacking
+
+Patches to projects I maintain are most welcome, but I'd appreciate it if you could follow the guidelines below to make it easier to integrate your changes.  These are only guidelines however, and as such can be broken if the need arises or you just want to convince me that your style is better.
+
+* Documentation patches are as appreciated as code changes.
+* All documentation should be in "reStructuredText":http://docutils.sourceforge.net/rst.html format, regardless of the code's language
+* Broken patches are preferable to hand-wavy descriptions for feature requests
+* Comment the non-obvious things, let the rest document themselves
+* Use libraries where possible, don't reinvent the wheel unless said wheel belongs to a fifty tonne truck
+* Patches with tests are easier to judge, and therefore easier to accept
+* Tests *must not* span network boundaries
+
+h4. C specifics
+
+* "indent":http://indent.isidore-it.eu/beautify.html supports the @-kr@ and @-i8@ options for a reason
+* "GCC":http://gcc.gnu.org/ v4 is the targeted compiler, patches for other compilers will likely be accepted
+* "splint":http://lclint.cs.virginia.edu/ with @-posix-lib@ can be useful for finding obvious problems
+
+h4. Genie specifics
+
+* Indentation is four spaces, add @[indent=4]@ to the start of new files
+
+h4. Haskell specifics
+
+* Unless specifically stated "ghc":http://www.haskell.org/ghc/ 6.8 and newer are the targeted compiler versions, although patches for supporting earlier versions will likely be accepted
+* Patches that add better support for "cabal":http://www.haskell.org/cabal/ users are always appreciated
+* Provide type signatures
+* Add "quickcheck":http://www.cs.chalmers.se/~koen properties to new functions
+* Indentation is four spaces
+* Use "haddock":http://www.haskell.org/haddock/ syntax for comments
+* "hlint": is your friend
+
+h4. HTML specifics
+
+* Valid XML syntax, unless it breaks a valued browser
+* Indentation is four spaces
+* "xmllint":http://www.xmlsoft.org/ is your friend
+
+h4. Javascript specifics
+
+* Indentation is four spaces
+* "jslint":http://en.wikipedia.org/wiki/Automated_code_review is your friend
+
+h4. Python specifics
+
+* "PEP 8":http://www.python.org/dev/peps/pep-0008/, the style guide, should be followed where possible
+* Unless specifically stated Python v2.5 and newer is the targeted interpreter version, although patches for supporting earlier versions will likely be accepted
+* All new classes and methods should be accompanied by new @doctest@ examples, and "Sphinx":http://sphinx.pocoo.org/ @autodoc@ formatted descriptions if at all possible
+* @doctest@ tests in modules are only for unit testing in general, and should not rely on any modules that aren't in Python's standard library
+* Functional tests should be in the @doc@ directory in "reStructuredText":http://docutils.sourceforge.net/rst.html formatted files, with actual tests in @doctest@ blocks.  Functional tests can depend on external modules, but they must be Open Source
+* Patches that add better support for setuptools/"distribute":http://pypi.python.org/pypi/distribute users are appreciated, but forcing their use isn't
+* "pylint":http://www.logilab.org/projects/pylint/ is your friend
+
+h4. Ruby specifics
+
+* Unless specifically stated "ruby":http://www.ruby-lang.org/ 1.9.1 and newer are the targeted compiler versions, although patches for supporting earlier versions will likely be accepted
+* Indentation is four spaces
+* Patches that improve support for "rubygems":http://rubyforge.org/projects/rubygems/ are appreciated
+
+h3. Working with git
+
+* All commits need a message, and one that says what the commit actually does
+* The first line of the commit message should be a self-contained explanation, with deeper explanation beginning on line three if necessary
+* Far too many commits is better than bundling unrelated changes in to one commit
+* Bugfixes branched off the earliest revision that contains the bug are preferred, to make cherry picking changes easier
+
+h3. Forking on GitHub
+
+GitHub forks and pull requests are the preferred way of collaborating, but patches by mail are fine if you don't like "GitHub":http://github.com
+
