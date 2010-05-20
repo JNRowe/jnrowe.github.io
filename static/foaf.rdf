@@ -288,6 +288,18 @@ hasMet:
       </rdf:Description>
     </foaf:made>
 
+    <foaf:holdsAccount>
+      <foaf:onlineAccount>
+        <foaf:accountServiceHomepage rdf:resource="http://twitter.com/" />
+        <foaf:accountName>ewornj</foaf:accountName>
+      </foaf:onlineAccount>
+    </foaf:holdsAccount>
+    <foaf:made>
+      <rdf:Description rdf:about="http://twitter.com/ewornj">
+        <dc:title>My Twitter profile</dc:title>
+      </rdf:Description>
+    </foaf:made>
+
     <!--
     I realise some FOAF processing tools seem to have problems with
     solving node equality, but I'd prefer to only list SHA1 values of
