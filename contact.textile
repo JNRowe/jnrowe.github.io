@@ -21,10 +21,10 @@ p(note). The information in this section was last updated in <abbr class="rev" t
 * <a href="/static/foaf.rdf" title="Author metadata">My FOAF(Friend of a Friend) profile</a> <small>(<a href="http://xml.mfd-consult.dk/foaf/explorer/?foaf=http%3A%2F%2Fjnrowe.github.com%2Fstatic%2Ffoaf.rdf" title="FOAF Explorer">Explore</a>)</small>
 * <a href="http://jnrowe.github.com" title="Journal">My journal</a>
 * <a href="http://www.jnrowe.ukfsn.org/calendar.html" title="Public schedule">My public schedule</a>
-* "My del.icio.us links":http://del.icio.us/JNRowe
 * "My claimID profile":http://claimid.com/jnrowe
-* "My last.fm profile":http://www.last.fm/user/JNRowe/
+* "My del.icio.us links":http://del.icio.us/JNRowe
 * "My GitGub profile":http://github.com/JNRowe/
+* "My last.fm profile":http://www.last.fm/user/JNRowe/
 
 <small> [This page is <a href="http://microformats.org/wiki/hcard" title="hCard is a simple, open, distributed contact information format for people, companies, and organizations, which is suitable for embedding in (X)HTML, Atom, RSS, and arbitrary XML.">hCard</a> encoded, you can also grab it in "vcard format":http://suda.co.uk/projects/X2V/get-vcard.php?uri=http://jnrowe.github.com/contact.html ]</small>
 
