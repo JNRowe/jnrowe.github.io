@@ -10,12 +10,14 @@
  * Pygments is released under a 3-clause BSD license.
  */
 
+@import url(http://fonts.googleapis.com/css?family=Inconsolata);
+
 .highlight {
     background-color: rgb(238, 238, 238);
     border: dashed 0.1em rgb(139, 139, 139);
     clear: both;
     color: rgb(127, 111, 95);
-    font-family: "Courier New", "Lucida Sans", monospace;
+    font-family: "Inconsolata", "Monaco", monospace;
     margin-left: 1em;
     margin-right: 1em;
     padding: 0 0.5em;

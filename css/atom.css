@@ -1,8 +1,8 @@
-@charset"UTF-8";author{background-color:rgb(109,136,164);color:rgb(255,255,255);display:block;padding:0.5em;}
+@charset"UTF-8";@import url(http:author{background-color:rgb(109,136,164);color:rgb(255,255,255);display:block;padding:0.5em;}
 author name{display:block;}
-author uri,author email{display:block;font-family:"Courier New","Lucida Sans",monospace;}
+author uri,author email{display:block;font-family:"Inconsolata","Monaco",monospace;}
 content{background-color:inherit;color:inherit;display:block;font-size:0.9em;line-height:1.5em;margin:0 1em;padding:1em;}
-div.info,info{background-color:rgb(255,255,102);border:solid rgb(204,204,102)0.2em;color:rgb(204,51,51);display:block;font-family:"Courier New","Lucida Sans",monospace;font-size:0.8em;margin:3em 4em 3em 4em;padding:1.5em;text-align:center;}
+div.info,info{background-color:rgb(255,255,102);border:solid rgb(204,204,102)0.2em;color:rgb(204,51,51);display:block;font-family:"Inconsolata","Monaco",monospace;font-size:0.8em;margin:3em 4em 3em 4em;padding:1.5em;text-align:center;}
 entry{background-color:rgb(255,255,255);border:dashed 0.1em rgb(109,136,164);color:inherit;display:block;margin:1em 1em 4em 1em;padding:0;}
 entry id,entry draft,entry summary,feed icon,generator,id{display:none;}
 entry published{background-color:rgb(141,168,196);color:rgb(255,255,255);display:block;padding:0.5em;text-align:right;}

@@ -8,6 +8,8 @@
  * Commons website(http://creativecommons.org/licenses/by-sa/3.0/).
  */
 
+@import url(http://fonts.googleapis.com/css?family=Inconsolata);
+
 author {
     background-color: rgb(109, 136, 164);
     color: rgb(255, 255, 255);
@@ -19,7 +21,7 @@ author name {
 }
 author uri, author email {
     display: block;
-    font-family: "Courier New", "Lucida Sans", monospace;
+    font-family: "Inconsolata", "Monaco", monospace;
 }
 
 content {
@@ -37,7 +39,7 @@ div.info, info {
     border: solid rgb(204, 204, 102) 0.2em;
     color: rgb(204, 51, 51);
     display: block;
-    font-family: "Courier New", "Lucida Sans", monospace;
+    font-family: "Inconsolata", "Monaco", monospace;
     font-size: 0.8em;
     margin: 3em 4em 3em 4em;
     padding: 1.5em;
