@@ -1,0 +1,48 @@
+---
+layout: post
+title: A few months with the n900
+description: Looking back at the Nokia n900
+categories: [n900, nokia, phone]
+---
+
+Having just sent my "n900":http://maemo.nokia.com/n900/ back I figured I should write a few words about it.
+
+I should state upfront that I did not pay for the device, and that may have coloured my opinions about it.  Perhaps I would have scored the good and bad points differently if it had been paid for out of my own pocket.
+
+h3. The Good
+
+There are many, many things to like about the n900.  Here are just a few off the top of my head:
+
+* The hardware feels sturdy, and looks clean.
+* The software is well implemented, which in my opinion has been the case since the "n770":http://europe.nokia.com/find-products/devices/nokia-770.
+* Being able to code with "Python":http://www.python.org, "mono":http://www.mono-project.com/ or even "vala":http://live.gnome.org/Vala is really nice.  That in itself is probably reason enough to choose it, if you're a coder.
+* Using it as a rather expensive remote control for your desktop is quite cool.
+* The GPSr is good, and locks reasonably quickly.  The inbuilt mapping software leaves a lot to be desired, but there are plenty of replacements available.
+* The back button in the browser opens a pretty history list by default, which is a nice UI touch.
+* Making the device spit out a Star Trek communicator sound when you flip it via the accelerometer is quite fun, but shouldn't be done in "normal" non-geeky company.
+* "mmpc":http://mmpc.garage.maemo.org/ is a good client for "mpd":http://www.musicpd.org, which is even useful when you're sitting at the machine running @mpd@ as you don't need to switch windows.
+* It plays every file format I've thrown on it, and there is no conversion nonsense to do.
+* The front 640x480 camera is refreshingly nice, producing nice clear images.
+* The FM receiver is good, and manages to hold a signal well.  It is a nice fallback from playing heavily compressed audio when the device is running low on battery.
+* The FM transmitter works well although only over very, very short distances.
+
+h3. The Bad
+
+There are very few bad points about the device in my opinion, but here are a few:
+
+* It would be nice if the microSD slot was always accessible, for quickly transfering data.
+* The high spec rear camera doesn't always produce the quality of images you've come to expect from Nokia devices.
+* At close to 200 grams I find it a little too heavy for day to day use.
+* The "browser":http://browser.garage.maemo.org/ uses the gecko rendering engine, with some features I need like SVG disabled.  A "webkit":http://webkit.org/ browser would make a nice replacement, and there are various third-party browsers using @webkit@ available.
+
+h3. The Ugly
+
+There is only one point here, but it is a very serious one...
+
+* Battery life isn't very good, lasting less than a day when you're making calls, browsing and using the media player is very common.  Double capacity batteries are available from other suppliers though, and if the device was mine I would have probably bought one.
+
+h3. Conculsions
+
+All in all it is a great device, and I'd probably recommend it to hackers and users alike.  Had Google not given me a "Nexus One":http://www.google.com/phone I would probably be looking to buy a n900 for myself.
+
+The sad fact is I think Google have won me over simply because I'm allowed to keep the Nexus One.  It feels much easier to invest time in to a device you get to keep, then one you're asked to send back after a few months.  I can't seem to escape the feeling that because Google are giving a Nexus One to practically anybody who can pronounce the word Google they'll win over all the developer mindshare that Nokia have gained with their previous tablets, and I really hope it isn't the beginning of the end for the fantastic hackable n-series devices.
