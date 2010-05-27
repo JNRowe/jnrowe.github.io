@@ -12,7 +12,7 @@ bq. How do I get *just the list* of packages that are installed but not in @worl
 The constraint here is packages that were installed with @--oneshot@, or manually removed from @/var/lib/portage/world@, which means that they will no longer be updated automatically.  I often use this for packages I'm just playing with, and it appears lots of others do the same.  While the output of @emerge --pretend --depclean@ is all that is really needed, the question is how to get a list of just the packages.
 
 {% highlight text %}
-0 jay@kate ~/Desktop (master) $ emerge --pretend --depclean
+~/Desktop $ emerge --pretend --depclean
 <snipped heaps of output>
  gnome-base/orbit
     selected: 2.14.17 
@@ -97,9 +97,9 @@ bq. Is there an easy way to clean all the old modules from @/lib/modules@?
 Assuming you are trying to remove all modules that don't belong to the current kernel this is very easy using bash's @extglob@ support.  It may need to be enabled in your session, you can test whether it is enabled with @shopt extglob@.
 
 {% highlight text %}
-0 jay@kate ~/Desktop (master) $ echo /lib/modules/*
+~/Desktop $ echo /lib/modules/*
 /lib/modules/2.6.31.1 /lib/modules/2.6.31.2-jr2 /lib/modules/2.6.31.3-mk1
-0 jay@kate ~/Desktop (master) $ echo /lib/modules/!($(uname -r))
+~/Desktop $ echo /lib/modules/!($(uname -r))
 /lib/modules/2.6.31.1 /lib/modules/2.6.31.2-jr2
 {% endhighlight %}
 
