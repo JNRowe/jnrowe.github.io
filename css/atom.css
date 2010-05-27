@@ -1,18 +1,1 @@
-@charset"UTF-8";@import url(http:author{background-color:rgb(109,136,164);color:rgb(255,255,255);display:block;padding:0.5em;}
-author name{display:block;}
-author uri,author email{display:block;font-family:"Inconsolata","Monaco",monospace;}
-content{background-color:inherit;color:inherit;display:block;font-size:0.9em;line-height:1.5em;margin:0 1em;padding:1em;}
-div.info,info{background-color:rgb(255,255,102);border:solid rgb(204,204,102)0.2em;color:rgb(204,51,51);display:block;font-family:"Inconsolata","Monaco",monospace;font-size:0.8em;margin:3em 4em 3em 4em;padding:1.5em;text-align:center;}
-entry{background-color:rgb(255,255,255);border:dashed 0.1em rgb(109,136,164);color:inherit;display:block;margin:1em 1em 4em 1em;padding:0;}
-entry id,entry draft,entry summary,feed icon,generator,id{display:none;}
-entry published{background-color:rgb(141,168,196);color:rgb(255,255,255);display:block;padding:0.5em;text-align:right;}
-entry>updated:before{content:"Last updated: "}
-entry>updated{background-color:rgb(173,200,228);color:rgb(255,255,255);display:block;padding:0.5em;text-align:right;}
-entry title{background-color:rgb(109,136,164);color:rgb(255,255,255);display:block;font-size:1.1em;font-weight:bold;margin:0;padding:0.5em;text-align:center;}
-feed{background-color:rgb(224,224,224);color:rgb(0,0,0);display:block;font-family:"Verdana","Arial",sans-serif;font-size:0.9em;margin:0.2em;}
-feed>rights{background-color:rgb(141,168,196);color:rgb(255,255,255);display:block;padding:0.5em;}
-feed>updated:before{content:"Last updated: "}
-feed>updated{background-color:rgb(173,200,228);color:rgb(255,255,255);display:block;padding:0.5em;}
-feed>subtitle,feed>title{background-color:rgb(77,104,132);color:rgb(255,255,255);display:block;font-weight:bold;padding:0.5em;text-align:right;}
-subtitle{font-size:1.1em;}
-feed>title{font-size:1.3em;}
+@charset "UTF-8";@import url(http://fonts.googleapis.com/css?family=Inconsolata);author{background-color:rgb(109, 136, 164);color:rgb(255, 255, 255);display:block;padding:0.5em}author name{display:block}author uri,author email{display:block;font-family:"Inconsolata", "Monaco", monospace}content{background-color:inherit;color:inherit;display:block;font-size:0.9em;line-height:1.5em;margin:0 1em;padding:1em}div.info,info{background-color:rgb(255, 255, 102);border:solid rgb(204, 204, 102) 0.2em;color:rgb(204, 51, 51);display:block;font-family:"Inconsolata", "Monaco", monospace;font-size:0.8em;margin:3em 4em 3em 4em;padding:1.5em;text-align:center}entry{background-color:rgb(255, 255, 255);border:dashed 0.1em rgb(109, 136, 164);color:inherit;display:block;margin:1em 1em 4em 1em;padding:0}entry id,entry draft,entry summary{display:none}feed icon,generator,id{display:none}entry published{background-color:rgb(141, 168, 196);color:rgb(255, 255, 255);display:block;padding:0.5em;text-align:right}entry > updated{background-color:rgb(173, 200, 228);color:rgb(255, 255, 255);display:block;padding:0.5em;text-align:right}entry > updated:before{content:"Last updated: "}entry title{background-color:rgb(109, 136, 164);color:rgb(255, 255, 255);display:block;font-size:1.1em;font-weight:bold;margin:0;padding:0.5em;text-align:center}feed{background-color:rgb(224, 224, 224);color:rgb(0, 0, 0);display:block;font-family:"Verdana", "Arial", sans-serif;font-size:0.9em;margin:0.2em}feed > rights{background-color:rgb(141, 168, 196);color:rgb(255, 255, 255);display:block;padding:0.5em}feed > updated{background-color:rgb(173, 200, 228);color:rgb(255, 255, 255);display:block;padding:0.5em}feed > updated:before{content:"Last updated: "}feed > subtitle,feed > title{background-color:rgb(77, 104, 132);color:rgb(255, 255, 255);display:block;font-weight:bold;padding:0.5em;text-align:right}subtitle{font-size:1.1em}feed > title{font-size:1.3em}
