@@ -32,17 +32,11 @@ A little @python@ script is all that is needed to generate a reminder input file
 #! /usr/bin/python -tt
 
 import ConfigParser
-
-from datetime import date
-from functools import partial
-from os.path import expanduser
-from re import match
-from sys import stderr
-
-date_match = partial(match, "\d{4}-\d{2}-\d{2}$")
+import datetime
+import os
 
 data = ConfigParser.ConfigParser()
-data.read(expanduser("~/.abook/addressbook"))
+data.read(os.path.expanduser("~/.abook/addressbook"))
 
 birthdays = filter(lambda x: "custom2" in data.options(x),
                    data.sections())
@@ -54,16 +48,10 @@ for record in birthdays:
         name = data.get(record, "nick")
     except ConfigParser.NoOptionError:
         name = data.get(record, "name")
-    birthdate = data.get(record, "custom2")
-    if date_match(birthdate):
-        try:
-            birthdate_p = date(*map(int, birthdate.split("-")))
-        except ValueError, s:
-            print >>stderr, "Error in birthday format for %s(%s)" % (name, s)
-        print "REM %s +4 MSG %s's [grn][_yr_num(%d)][nrm] Birthday %%a" \
-            % (birthdate_p.strftime("%d %B"), name, birthdate_p.year)
-    else:
-        print >>stderr, "Error in birthday format for %s, must be YYYY-MM-DD" % name
+    birthdate = datetime.datetime.strptime(data.get(record, "custom2"),
+                                           "%Y-%m-%d")
+    print "REM %s +4 MSG %s's [grn][_yr_num(%d)][nrm] Birthday %%a" \
+        % (birthdate.strftime("%d %B"), name, birthdate.year)
 {% endhighlight %}
 p>. "Fork this code":http://gist.github.com/198018
 
