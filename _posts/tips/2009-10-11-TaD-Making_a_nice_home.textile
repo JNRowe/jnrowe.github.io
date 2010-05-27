@@ -31,7 +31,7 @@ fix-perms: $(PRIVATE_FILES) $(PRIVATE_DIRS)
 {% endhighlight %}
 p>. "Fork this code":http://gist.github.com/208207
 
-If this rule is called after a @git pull@ is issued the files always have the correct permissions.
+If this rule is called after a @git pull@ is issued then the files always have the correct permissions.
 
 h3. vim hacks
 
@@ -39,7 +39,6 @@ I also call @make@ in some subdirectories, the most interesting one is probably 
 
 {% highlight make %}
 CTAGS := exuberant-ctags
-
 
 TARGETS := $(patsubst /usr/lib/%, tags/%.ctags, $(wildcard /usr/lib/python*)) \
            doc/tags
@@ -59,7 +58,7 @@ clean:
 {% endhighlight %}
 p>. "Fork this code":http://gist.github.com/208209
 
-The values in @$(TARGETS)@ generated inside the @patsubst@ creates a list of filenames to use with "ctags":http://ctags.sourceforge.net.  The rule creates a different @ctags@ file for each installed "python":http://www.python.org version.  In the rule to make the @ctags@ files we specifically exclude test files as they aren't often useful in "omni-completion":http://vimdoc.sourceforge.net/htmldoc/version7.html#new-omni-completion, and they significantly pollute the tags database for normal use.
+The values in the @patsubst@ block of the @$(TARGETS)@ definition are a list of filenames to use for tag storage with "ctags":http://ctags.sourceforge.net.  The rule creates a different @ctags@ file for each installed "python":http://www.python.org version.  In the rule to make the @ctags@ files we specifically exclude test files as they aren't often useful in "omni-completion":http://vimdoc.sourceforge.net/htmldoc/version7.html#new-omni-completion, and they significantly pollute the tags database for normal use.
 
 The final entry in @$(TARGETS)@ simply updates the tag lists for "help files":http://vimdoc.sourceforge.net/htmldoc/various.html#:helptags installed in @~/.vim/doc@.
 
