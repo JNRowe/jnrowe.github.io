@@ -11,7 +11,7 @@ bq. What is the best small web server for testing site design and the like?
 
 There were a couple of predictable rants about the benefits and drawbacks of threading models.  Along with a couple of other topics entirely unhelpful for the question at hand, but surprisingly little dissent over the choices.
 
-Matt Turner's reply sums up the general feeling quite nicely:
+Matt Traner's reply sums up the general feeling quite nicely:
 
 bq. Just use whatever server you have installed already.  If you don't have _any_ installed grab "nginx":http://nginx.net/ as it works well and is quite small.
 
