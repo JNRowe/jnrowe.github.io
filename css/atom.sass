@@ -1,0 +1,135 @@
+@charset "UTF-8"
+/*
+ * atom.css
+ * (C) 2004-2010 James Rowe.
+ * 
+ * This style sheet is licensed under the Creative Commons
+ * Attribution-ShareAlike 3.0, for more information check the Creative
+ * Commons website(http://creativecommons.org/licenses/by-sa/3.0/).
+ */
+
+@import url(http://fonts.googleapis.com/css?family=Inconsolata)
+
+
+author
+  background-color: rgb(109, 136, 164)
+  color: rgb(255, 255, 255)
+  display: block
+  padding: 0.5em
+
+  name
+    display: block
+
+  uri, email
+    display: block
+    font-family: "Inconsolata", "Monaco", monospace
+
+
+content
+  background-color: inherit
+  color: inherit
+  display: block
+  font-size: 0.9em
+  line-height: 1.5em
+  margin: 0 1em
+  padding: 1em
+
+
+div.info, info
+  background-color: rgb(255, 255, 102)
+  border: solid rgb(204, 204, 102) 0.2em
+  color: rgb(204, 51, 51)
+  display: block
+  font-family: "Inconsolata", "Monaco", monospace
+  font-size: 0.8em
+  margin: 3em 4em 3em 4em
+  padding: 1.5em
+  text-align: center
+
+
+entry
+  background-color: rgb(255, 255, 255)
+  border: dashed 0.1em rgb(109, 136, 164)
+  color: inherit
+  display: block
+  margin: 1em 1em 4em 1em
+  padding: 0
+
+  id, draft, summary
+    display: none
+
+
+feed icon, generator, id
+  display: none
+
+
+entry
+  published
+    background-color: rgb(141, 168, 196)
+    color: rgb(255, 255, 255)
+    display: block
+    padding: 0.5em
+    text-align: right
+
+  > updated
+    background-color: rgb(173, 200, 228)
+    color: rgb(255, 255, 255)
+    display: block
+    padding: 0.5em
+    text-align: right
+
+    &:before
+      content: "Last updated: "
+
+
+  title
+    background-color: rgb(109, 136, 164)
+    color: rgb(255, 255, 255)
+    display: block
+    font-size: 1.1em
+    font-weight: bold
+    margin: 0
+    padding: 0.5em
+    text-align: center
+
+
+feed
+  background-color: rgb(224, 224, 224)
+  color: rgb(0, 0, 0)
+  display: block
+  font-family: "Verdana", "Arial", sans-serif
+  font-size: 0.9em
+  margin: 0.2em
+
+  >
+    rights
+      background-color: rgb(141, 168, 196)
+      color: rgb(255, 255, 255)
+      display: block
+      padding: 0.5em
+
+    updated
+      background-color: rgb(173, 200, 228)
+      color: rgb(255, 255, 255)
+      display: block
+      padding: 0.5em
+
+      &:before
+        content: "Last updated: "
+
+
+    subtitle, title
+      background-color: rgb(77, 104, 132)
+      color: rgb(255, 255, 255)
+      display: block
+      font-weight: bold
+      padding: 0.5em
+      text-align: right
+
+
+subtitle
+  font-size: 1.1em
+
+
+feed > title
+  font-size: 1.3em

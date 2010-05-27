@@ -1,0 +1,44 @@
+@charset "UTF-8"
+/*
+ * print.css
+ * (C) 2004-2010 James Rowe.
+ * 
+ * This style sheet is licensed under the Creative Commons
+ * Attribution-ShareAlike 3.0, for more information check the Creative
+ * Commons website(http://creativecommons.org/licenses/by-sa/3.0/).
+ */
+
+html, body
+  background-color: inherit
+
+
+#content
+  border: 0 !important
+
+
+acronym:after, abbr:after, cite:after
+  content: ' (' attr(title) ') '
+
+
+.entry-content a
+  &[href]:after
+    content: ' [' attr(href) '] '
+
+  &[href^="/"]:after
+    content: ' [http://www.jnrowe.ukfsn.org' attr(href) '] '
+
+
+code, samp, table, pre, div.content div
+  page-break-inside: avoid
+
+
+h1, h2, h3, h4, h5, h6
+  page-break-after: avoid
+
+
+.printonly
+  display: block
+
+
+.breadcrumbs, .quicksearch
+  display: none

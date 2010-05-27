@@ -1,11 +1,1 @@
-@charset"UTF-8";div.figure{background-color:rgb(241,241,241);color:inherit;float:right;padding:1em;}
-div.thumb{float:right;}
-p.attention,p.caution,p.danger,p.error,p.hint,p.important,p.note,p.warning,div.sidebar{border:0.2em solid;margin:1em;padding:0.3em;}
-p.hint,p.note,p.important,div.sidebar,p.attention,p.caution,p.danger,p.error,p.warning{color:rgb(0,0,0);}
-p.hint,p.note{background-color:rgb(187,255,187);}
-p.important,div.sidebar{background-color:rgb(255,255,187);}
-p.attention,p.caution,p.danger,p.error,p.warning{background-color:rgb(255,187,187);}
-blockquote p:before{content:"\201C";}
-blockquote p{font-family:cursive;}
-blockquote p:after{content:"\201D";}
-li.feed{list-style-image:url("/static/atom_icon.png");}
+@charset "UTF-8";div.figure{background-color:rgb(241, 241, 241);color:inherit;float:right;padding:1em}div.thumb{float:right}p.attention,p.caution,p.danger,p.error,p.hint,p.important,p.note,p.warning{border:0.2em solid;margin:1em;padding:0.3em}div.sidebar{border:0.2em solid;margin:1em;padding:0.3em}p.hint,p.note,p.important{color:rgb(0, 0, 0)}div.sidebar{color:rgb(0, 0, 0)}p.attention,p.caution,p.danger,p.error,p.warning{color:rgb(0, 0, 0)}p.hint,p.note{background-color:rgb(187, 255, 187)}p.important{background-color:rgb(255, 255, 187)}div.sidebar{background-color:rgb(255, 255, 187)}p.attention,p.caution,p.danger,p.error,p.warning{background-color:rgb(255, 187, 187)}blockquote p{font-family:cursive}blockquote p:before{content:"\201C"}blockquote p:after{content:"\201D"}li.feed{list-style-image:url("/static/atom_icon.png")}

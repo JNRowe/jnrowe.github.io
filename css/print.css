@@ -1,4 +1,1 @@
-@charset"UTF-8";html,body{background-color:inherit;}#content{border:0!important;}
-acronym:after,abbr:after,cite:after{content:' ('attr(title)') ';}.entry-content a[href]:after{content:' ['attr(href)'] ';}.entry-content a[href^="/"]:after{content:' [http://www.jnrowe.ukfsn.org'attr(href)'] ';}
-pre,code,samp,table,pre,div.content div{page-break-inside:avoid;}
-h1,h2,h3,h4,h5,h6{page-break-after:avoid;}.printonly{display:block;}.breadcrumbs,.quicksearch{display:none;}
+@charset "UTF-8";html,body{background-color:inherit}#content{border:0 !important}acronym:after,abbr:after,cite:after{content:' (' attr(title) ') '}.entry-content a[href]:after{content:' [' attr(href) '] '}.entry-content a[href^="/"]:after{content:' [http://www.jnrowe.ukfsn.org' attr(href) '] '}code,samp,table,pre,div.content div{page-break-inside:avoid}h1,h2,h3,h4,h5,h6{page-break-after:avoid}.printonly{display:block}.breadcrumbs,.quicksearch{display:none}
