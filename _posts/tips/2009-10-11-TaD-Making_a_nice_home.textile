@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Tip-a-day - Making a nice home
-description:
+description: Using make for ${HOME}keeping
 categories: [abook, home, make, shell, tad, tips, vim]
 ---
 
