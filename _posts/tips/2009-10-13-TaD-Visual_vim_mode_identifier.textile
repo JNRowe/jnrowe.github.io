@@ -9,7 +9,7 @@ Paul Kerry rants about his problems with "vim":http://www.vim.org/ over the cool
 
 bq. All this mode switching makes it hard to know whether typing "Paul" is going to insert a huge block of code from the ether or insert, you know, "Paul" on the screen.
 
-The point Paul is making is that when he is "normal mode":http://vimdoc.sourceforge.net/htmldoc/intro.html#vim-modes, typing the "P" of "Paul" can cause @vim@ to insert a huge amount of text at the cursor.  The text comes from the "unnamed register":http://vimdoc.sourceforge.net/htmldoc/change.html#quote_quote, so it will be whatever potentially very large chunk of text he deleted or "yanked":http://vimdoc.sourceforge.net/htmldoc/change.html#yank last.
+The point Paul is making is that when he is in "normal mode":http://vimdoc.sourceforge.net/htmldoc/intro.html#vim-modes, typing the "P" of "Paul" can cause @vim@ to insert a huge amount of text at the cursor.  The text comes from the "unnamed register":http://vimdoc.sourceforge.net/htmldoc/change.html#quote_quote, so it will be whatever potentially very large chunk of text he deleted or "yanked":http://vimdoc.sourceforge.net/htmldoc/change.html#yank last.
 
 <div class="thumb">
 !/images/2009-10-13-vim_screenshot.png(mode identifier in vim)!

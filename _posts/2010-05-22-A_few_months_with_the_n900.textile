@@ -28,7 +28,7 @@ There are many, many things to like about the n900.  Here are just a few off the
 
 h3. The Bad
 
-There are very few bad points about the device in my opinion, but here are a few:
+There are very few bad points about the device in my opinion, but here are a couple of things that annoyed me:
 
 * It would be nice if the microSD slot was always accessible, for quickly transfering data.
 * The high spec rear camera doesn't always produce the quality of images you've come to expect from Nokia devices.

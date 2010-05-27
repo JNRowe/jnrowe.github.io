@@ -67,11 +67,11 @@ CONNECT ""
 {% endhighlight %}
 p>. "Fork this code":http://gist.github.com/212739
 
-Exchange your APN(Access Point Name) for @3internet@ in the example above, if it differs.
+Exchange @3internet@ for your APN(Access Point Name) in the example above, if it differs.
 
 It is also possible, yet unlikely, that you'll have to call a different number to @*99#@.  If this was the case you would have found that out from extracting the data from the drivers or looking your network up in the NetworkManager database.
 
-Notice the very short value for timeout, I've come to that value empirically.  If it is any higher the connection is not coming up, and you're just wasting time before you retry.
+Notice the very short value for timeout, I've come to that value empirically.  If the connection isn't up after 3 seconds it is not coming up, and you're just wasting time before you retry.
 
 h4. /etc/ppp/peers/three
 
@@ -107,7 +107,7 @@ To test the connection all we need to do is issue @pon three@, or use the graphi
 
 On my system the log can be comfortably viewed with @tail -f /var/log/ppp/current@, but it is system dependent and if you don't use "metalog":http://metalog.sourceforge.net/ it will definitely be somewhere else in @/var/log@.
 
-If the connection worked fine that is all there is to it, now just enable the startup or configure "udev":http://www.kernel.org/pub/linux/utils/kernel/hotplug/udev.html to connect when the device is inserted if it will not always be connected.
+If the connection worked fine that is all there is to it, now just enable the connection at system startup or configure "udev":http://www.kernel.org/pub/linux/utils/kernel/hotplug/udev.html to connect when the device is inserted if it will not always be connected.
 
 p(note). These devices can take anywhere between 10 and 30 seconds to "settle" once plugged in. So, don't block on this service if you add it to the system startup scripts as it can significantly slow down the system boot time.  On my dongle you can visually see how long it takes to settle by watching the LED(Light Emitting Diode) on the case, when it changes from green it has found a network signal and is ready to use.
 

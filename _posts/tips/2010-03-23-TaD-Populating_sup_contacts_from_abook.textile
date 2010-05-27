@@ -41,7 +41,7 @@ p>. "Fork this code":http://gist.github.com/340873
 
 The script requires the excellent "configobj":http://www.voidspace.org.uk/python/configobj.html module.  You could also use the "ConfigParser":http://docs.python.org/library/configparser.html module from the Python standard library, but @configobj@ allows my laziness to shine through with its simple dictionary-based access to the parsed data.
 
-The script opens either the name or default @abook@ addressbook and fetch any entries that contain both a @nick@ and @email@ section.  Those entries are then output in format that @sup@ accepts.  It includes only the primary email address for the contact, as I tend to order contacts with multiple email addresses in address preference order.
+The script opens either the name or default @abook@ addressbook and fetches any entries that contain both a @nick@ and @email@ section.  Those entries are then output in format that @sup@ accepts.  It includes only the primary email address for the contact, as I tend to order contacts with multiple email addresses in address preference order.
 
 As I've "mentioned before":/2009/10/11/TaD-Making_a_nice_home.html all these tasks should be automated, and this one is no different.  To regenerate the contacts list when the addressbook has been updated we can use "make":http://www.gnu.org/software/make/make.html:
 
