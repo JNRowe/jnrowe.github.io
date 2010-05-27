@@ -17,9 +17,7 @@ p(note).  If you're a "Gentoo":http://www.gentoo.org/ user you can install @ditz
 
 I'm currently in the process of switching away from @be@(Bugs Everywhere), but it can serve as an example quite well.  Unfortunately, there are no releases currently being made so you will need to install a recent version of "bzr":http://bazaar-vcs.org/ to download it.  Don't worry though you aren't restricted to @bzr@ to use it.
 
-{% comment %}
 p(note). Colleagues from work can grab Dan's @be@ branch directly from our package repository, it doesn't require @bzr@ and it fixes quite a few usage problems(it is also much faster).  Just remember that it has diverged massively from the upstream code, so you won't be able to use it to work with bug databases created by the upstream project.
-{% endcomment %}
 
 The following examples use an older version of @be@ that you can download as a "tarball":http://www.jnrowe.ukfsn.org/_static/be-0.0.193.tar.bz2 and doesn't require @bzr@.
 
