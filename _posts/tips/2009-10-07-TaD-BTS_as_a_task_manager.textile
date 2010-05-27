@@ -28,10 +28,10 @@ h3. Setting @be@ up
 Before we use @be@ we must prepare it.  In the example that follows we're going to create a new directory under the control of "git":http://www.git-scm.com/, and tell @be@ we wish to use it in there:
 
 {% highlight text %}
-0 jay@kate ~/Desktop (master) $ mkdir be_test; cd be_test
-1 jay@kate ~/Desktop/be_test (master) $ git init
+~/Desktop $ mkdir be_test; cd be_test
+~/Desktop/be_test $ git init
 Initialized empty Git repository in /home/jay/Desktop/be_test/.git/
-1 jay@kate ~/Desktop/be_test (master) $ be set-root
+~/Desktop/be_test $ be set-root
 Using git for revision control.
 Directory initialized.
 {% endhighlight %}
@@ -41,15 +41,15 @@ h3. Filing bugs
 We can easily file new bugs, in the next snippet we can see two bugs being filed.  Bugs are identified by a UUID(Universally Unique IDentifier), and to operate on bugs we only need to use a unique prefix of the identifier as can be seen below.
 
 {% highlight text %}
-0 jay@kate ~/Desktop/be_test (master) $ be new "This is a test bug"
+~/Desktop/be_test $ be new "This is a test bug"
 Created bug with ID a09
-0 jay@kate ~/Desktop/be_test (master) $ be assign a09
-0 jay@kate ~/Desktop/be_test (master) $ git commit -m"Commit bug a09."
-0 jay@kate ~/Desktop/be_test (master) $ be new "This is a second bug"
+~/Desktop/be_test $ be assign a09
+~/Desktop/be_test $ git commit -m"Commit bug a09."
+~/Desktop/be_test $ be new "This is a second bug"
 Created bug with ID ec4
-0 jay@kate ~/Desktop/be_test (master) $ be severity ec4 serious
-1 jay@kate ~/Desktop/be_test (master) $ be comment ec4 "Comments are easy"
-1 jay@kate ~/Desktop/be_test (master) $ git commit -m"Commit bug ec4."
+~/Desktop/be_test $ be severity ec4 serious
+~/Desktop/be_test $ be comment ec4 "Comments are easy"
+~/Desktop/be_test $ git commit -m"Commit bug ec4."
 {% endhighlight %}
 
 We now have two bugs filed.  Bug @a09@ is self-assigned, while @ec4@ has yet to be assigned.  As we didn't set a severity level for @a09@ it is set to the default of @minor@.  A comment was also made on bug @ec4@, and if we hadn't specified the comment on the command line it would open our default editor to add the comment.
@@ -57,11 +57,10 @@ We now have two bugs filed.  Bug @a09@ is self-assigned, while @ec4@ has yet to 
 h3. Querying bugs
 
 {% highlight text %}
-0 jay@kate ~/Desktop/be_test (master) $ be list
+~/Desktop/be_test $ be list
 ec4:os: This is a second bug
 a09:om: This is a test bug
 {% endhighlight %}
-
 
 The @be list@ output consists of three fields separated by colons and they are: bug identifer, status and title.  The first character of the  status field is an @o@ tellings us the bugs are marked as open, and the second character is the severity indicator(where the @s@ for bug @ec4@ tells us it is marked as serious).
 
@@ -70,7 +69,7 @@ You can also limit the bugs shown with @be list@ by specifying severities with @
 When we wish to inspect individual bugs, to see there full status or comments, we use the @be show@ command:
 
 {% highlight text %}
-b0 jay@kate ~/Desktop/be_test (master) $ be show a09
+~/Desktop/be_test $ be show a09
           ID : a0912cd6-1eae-490c-8e56-5f532242394b
   Short name : a09
     Severity : minor
@@ -81,7 +80,7 @@ b0 jay@kate ~/Desktop/be_test (master) $ be show a09
      Created : Wed, 07 Oct 2009 14:11 (Wed, 07 Oct 2009 13:11:06 +0000)
 This is a test bug
 
-0 jay@kate ~/Desktop/be_test (master) $ be show ec4
+~/Desktop/be_test $ be show ec4
           ID : ec4438ca-a330-4345-b073-43c768f7e9b7
   Short name : ec4
     Severity : serious
@@ -106,10 +105,10 @@ We can change the bug status with @be status@, see the output from @be help stat
 Once bugs are marked as fixed they no longer show up in the default @be list@ output, but we can still view them with @be show@ or by calling @be list@ with filtering options.
 
 {% highlight text %}
-0 jay@kate ~/Desktop/be_test (master) $ be status ec4 fixed
-0 jay@kate ~/Desktop/be_test (master) $ be list
+~/Desktop/be_test $ be status ec4 fixed
+~/Desktop/be_test $ be list
 a09:om: This is a test bug
-0 jay@kate ~/Desktop/be_test (master) $ be show ec4
+~/Desktop/be_test $ be show ec4
           ID : ec4438ca-a330-4345-b073-43c768f7e9b7
   Short name : ec4
     Severity : serious
