@@ -11,7 +11,7 @@ The package for today is the wonderful "hpodder":http://software.complete.org/hp
 
 h3. Installation and setup
 
-If you haven't already installed @ghc@ you may wish to consider installing the binary version with @USE=binary@, as @ghc@ can take a long time to build.
+If you haven't already installed @ghc@ you may wish to consider installing the binary version with @USE=binary@, as @ghc@ can take an awful long time to build.
 
 {% highlight text %}
 # su -
@@ -21,7 +21,7 @@ If you haven't already installed @ghc@ you may wish to consider installing the b
 $ hpodder
 {% endhighlight %}
 
-On initial run @hpodder@ will ask where it should store downloaded podcasts, and offer to subscribe to some sample feeds.  Unless you really have no idea what podcasts you'd like to download I'd suggest skipping the samples and adding your own feeds straight away:
+On initial run @hpodder@ will ask where it should store downloaded podcasts, and offer to subscribe to some sample feeds.  I'd suggest skipping the samples and adding your own feeds straight away:
 
 h3. Usage
 

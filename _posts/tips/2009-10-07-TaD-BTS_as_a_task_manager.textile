@@ -11,9 +11,9 @@ bq. What apps do you guys use to manage your todo list(s)?
 
 I think this may be an incredibly personal thing but I prefer to use a BTS(Bug Tracking System) for local task management, the idea of just adding random lines of text to a file frankly baffles me.  I love the filtering, ordering and editing capabilities I get from using a BTS(Bug Tracking System) for this.
 
-Now, I'm not suggesting installing something complex and convoluted like "Bugzilla":http://www.bugzilla.org just for keeping track of your shopping lists and changing the battery in your phone.  There are quite a few lightweight systems available, "ditz":http://ditz.rubyforge.org and "Bugs Everywhere":http://bugseverywhere.org/be/show/HomePage being two examples.  There is also a @ditz@ inspired project, written in "Python":http://www.python.org, called "pitz":github.com/mw44118/pitz that is in active development.  And "fossil":http://www.fossil-scm.org/index.html/doc/tip/www/index.wiki is pretty cool if you're looking for a standalone wiki, BTS(Bug Tracking System) and VCS(Version Control System) in one.
+Now, I'm not suggesting installing something complex and convoluted like "Bugzilla":http://www.bugzilla.org just for keeping track of your shopping lists or remembering to charge the spare battery for your phone.  There are quite a few lightweight systems available, "ditz":http://ditz.rubyforge.org and "Bugs Everywhere":http://bugseverywhere.org/be/show/HomePage being two examples.  There is also a @ditz@ inspired project, written in "Python":http://www.python.org, called "pitz":github.com/mw44118/pitz that is in active development.  And "fossil":http://www.fossil-scm.org/index.html/doc/tip/www/index.wiki is pretty cool if you're looking for a standalone wiki, BTS(Bug Tracking System) and VCS(Version Control System) in one.
 
-p(note).  If you're a "Gentoo":http://www.gentoo.org/ user you can install @be@, @ditz@ and @fossil@ from my "overlay":http://github.com/jnrowe/misc-overlay.
+p(note).  If you're a "Gentoo":http://www.gentoo.org/ user you can install @ditz@ using the ebuild from my "overlay":http://github.com/jnrowe/misc-overlay.
 
 I'm currently in the process of switching away from @be@(Bugs Everywhere), but it can serve as an example quite well.  Unfortunately, there are no releases currently being made so you will need to install a recent version of "bzr":http://bazaar-vcs.org/ to download it.  Don't worry though you aren't restricted to @bzr@ to use it.
 
@@ -21,7 +21,7 @@ I'm currently in the process of switching away from @be@(Bugs Everywhere), but i
 p(note). Colleagues from work can grab Dan's @be@ branch directly from our package repository, it doesn't require @bzr@ and it fixes quite a few usage problems(it is also much faster).  Just remember that it has diverged massively from the upstream code, so you won't be able to use it to work with bug databases created by the upstream project.
 {% endcomment %}
 
-The following examples use an older version of @be@ that you can download as a "tarball":http://www.jnrowe.ukfsn.org/_static/be-0.0.193.tar.bz2 and doesn't require @bzr@.  As stated above, if you're using "Gentoo":http://www.gentoo.org/ you can use the @dev-util/be@ ebuild in my "overlay":http://github.com/jnrowe/misc-overlay.
+The following examples use an older version of @be@ that you can download as a "tarball":http://www.jnrowe.ukfsn.org/_static/be-0.0.193.tar.bz2 and doesn't require @bzr@.
 
 h3. Setting @be@ up
 

@@ -19,7 +19,7 @@ I agree with Matt's answer but I want to point a couple of possibly non-obvious 
 
 h3. Busybox
 
-All our Linux systems at the office include "busybox":http://www.busybox.net/, and in the configuration we use the "httpd":http://www.busybox.net/downloads/BusyBox.html#httpd applet is built.  It is very lightweight, and incredibly stable.  I often use it when testing or as a weak way to transfer files between hosts when "avahi":http://avahi.org/ isn't available or too much hassle.  In my "bash":http://cnswww.cns.cwru.edu/~chet/bash/bashtop.html configuration I have a little functions to start up a @busybox httpd@ server:
+All our Linux systems at the office include "busybox":http://www.busybox.net/, and in the configuration we use the "httpd":http://www.busybox.net/downloads/BusyBox.html#httpd applet is built.  It is very lightweight, and incredibly stable.  I often use it when testing or as a weak way to transfer files between hosts when "avahi":http://avahi.org/ isn't available or is too much hassle.  In my "bash":http://cnswww.cns.cwru.edu/~chet/bash/bashtop.html configuration I have a little functions to start up a @busybox httpd@ server:
 
 {% highlight bash %}
 http_serve()

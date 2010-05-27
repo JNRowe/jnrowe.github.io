@@ -47,7 +47,7 @@ On one system I use "Inconsolata":http://www.levien.com/type/myfonts/inconsolata
 {% endhighlight %}
 p>. "Fork this code":http://gist.github.com/202713
 
-p(note). As we're using "X11":http://xorg.freedesktop.org @xrdb@ it is network aware, it defines @SVR_$name@ for the @X@ server name and @CLNT_$name@ for the client name.  Using these it is easy to configure systems where the server and clients are on different machines.
+p(note). As we're using "X11":http://xorg.freedesktop.org's @xrdb@ it is network aware, it defines @SVR_$name@ for the @X@ server name and @CLNT_$name@ for the client name.  Using these it is easy to configure systems where the server and clients are on different machines.
 
 h3. Conditionals for server options
 
