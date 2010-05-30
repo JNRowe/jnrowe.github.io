@@ -7,8 +7,5 @@ no-disqus: true
 date: 2009-09-25
 ---
 
-
-h2. Copyright notes
-
 All _content_ within "this site":http://jnrowe.github.com/ is copyright James Rowe and licensed under the "Creative Commons Attribution-ShareAlike 3.0 license":http://creativecommons.org/licenses/by-sa/3.0/ unless stated otherwise.  See the "README.rst":http://github.com/JNRowe/jnrowe.github.com/blob/master/README.rst in the "Github":http://github.com "repository":http://github.com/JNRowe/jnrowe.github.com/ for more information.
 
