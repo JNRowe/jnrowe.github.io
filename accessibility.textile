@@ -6,8 +6,6 @@ categories: [accessibility, jnrowe, site]
 date: 2009-10-04
 ---
 
-h3. Introduction
-
 This site is designed with accessibility in mind, from keyboard only access to screen readers.  Of course, I'm fallible and if you notice anything which doesn't work right or feel there is some improvement I could make "drop me a mail":jnrowe@gmail.com and I'll try to correct the problem or at the very least improve the situation.
 
 h3. Access keys

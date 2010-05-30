@@ -6,10 +6,6 @@ categories: [about, home, jnrowe,main, site]
 date: 2009-09-25
 ---
 
-h2. {{ page.title }}
-
-h3. Purpose of these pages
-
 The main purpose of this site is a dumping ground for things that either not important enough or too incomplete to warrant their own location.
 
 h3. Site links

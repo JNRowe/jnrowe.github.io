@@ -6,8 +6,6 @@ categories: [bio, vcard, hcard, jnrowe, site]
 date: 2010-05-27
 ---
 
-h2. {{ page.title }}
-
 <div class="vcard" id="vcard">
 
 !>(photo)/static/pavatar.png!

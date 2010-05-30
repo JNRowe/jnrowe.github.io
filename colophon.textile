@@ -6,10 +6,6 @@ categories: [home, jnrowe, main, site]
 date: 2009-09-29
 ---
 
-h2. {{ page.title }}
-
-h3. Introduction
-
 This site is built with "jekyll":http://github.com/mojombo/jekyll, Tom Preston-Werner's absolutely fantastic static site builder.  You can fork the "content":http://github.com/JNRowe/jnrowe.github.com of this site to see how it works in practise.
 
 h3. Content creation
