@@ -2,7 +2,7 @@
 layout: post
 title: About this site
 description: Short introduction to the things you can find on this site
-categories: [about, home, jnrowe,main, site]
+categories: [about, home, jnrowe, main, site]
 date: 2009-09-25
 ---
 
