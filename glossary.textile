@@ -30,6 +30,7 @@ The following list is automatically generated from the pages on this site that c
 <dt>*LED*</dt> <dd>Light Emitting Diode</dd>
 <dt>*MDA*</dt> <dd>Mail Delivery Agent</dd>
 <dt>*PNG*</dt> <dd>Portable Network Graphics</dd>
+<dt>*RE*</dt> <dd>Regular Expression</dd>
 <dt>*RPC*</dt> <dd>Remote Procedure Call</dd>
 <dt>*SCSI*</dt> <dd>Small Computer Systems Interface</dd>
 <dt>*SMS*</dt> <dd>Short Message Service</dd>
