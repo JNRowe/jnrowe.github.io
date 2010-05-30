@@ -41,7 +41,7 @@ There is only one point here, but it is a very serious one...
 
 * Battery life isn't very good, lasting less than a day when you're making calls, browsing and using the media player is very common.  Double capacity batteries are available from other suppliers though, and if the device was mine I would have probably bought one.
 
-h3. Conculsions
+h3. Conclusions
 
 All in all it is a great device, and I'd probably recommend it to hackers and users alike.  Had Google not given me a "Nexus One":http://www.google.com/phone I would probably be looking to buy a n900 for myself.
 
