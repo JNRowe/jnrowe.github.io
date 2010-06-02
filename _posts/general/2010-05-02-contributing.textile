@@ -35,7 +35,7 @@ h4. Haskell specifics
 * Add "quickcheck":http://www.cs.chalmers.se/~koen properties to new functions
 * Indentation is four spaces
 * Use "haddock":http://www.haskell.org/haddock/ syntax for comments
-* "hlint": is your friend
+* "hlint":http://community.haskell.org/~ndm/hlint/ is your friend
 
 h4. HTML specifics
 
