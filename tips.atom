@@ -6,7 +6,7 @@ id: http://jnrowe.github.com/tips.atom
 url: /tips.atom
 ---
 
-{% for post in site.categories.tad %}
+{% for post in site.categories.tad limit:15 %}
 {% include atom_entry %}
 {% endfor %}
 

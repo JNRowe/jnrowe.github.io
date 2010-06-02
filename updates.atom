@@ -5,7 +5,7 @@ id: http://jnrowe.github.com/updates.atom
 url: /updates.atom
 ---
 
-{% for post in site.posts %}
+{% for post in site.posts limit:15 %}
 {% include atom_entry %}
 {% endfor %}
 
