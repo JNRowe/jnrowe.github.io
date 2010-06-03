@@ -2,7 +2,7 @@
 layout: post
 title: winwrangler - Tiling for the masses
 description: A simple tool to give basic tiling support to window managers
-categories: [tiling, winwrangler, wnck]
+categories: [fto, tiling, winwrangler, wnck]
 ---
 
 Today's random package from the "overlay":http://github.com/JNRowe/misc-overlay is "winwrangler":https://launchpad.net/winwrangler, a simple tool to give some tiling support to window managers without that functionality.  It won't give you the window mangling features of something like "awesome":http://awesome.naquadah.org/, but it is a useful tool for easily modifying the layout on supported window managers.

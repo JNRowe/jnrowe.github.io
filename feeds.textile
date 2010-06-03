@@ -13,5 +13,6 @@ This really sucks, but it appears not to be possible to use categories
 on files that aren't in _posts.
 {% endcomment %}
 *(feed) "Main feed":/updates.atom - Full feed for all categories
+*(feed) "Overlay feed":/tips.atom - Feed solely for the "from the overlay" category
 *(feed) "Tips feed":/tips.atom - Feed solely for the tips category
 
