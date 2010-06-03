@@ -2,7 +2,7 @@
 layout: post
 title: gitserve - Mercurial raised my expectations
 description: Extremely lightweight web based repository browser
-categories: [browser, git, gitweb, web]
+categories: [browser, fto, git, gitweb, web]
 ---
 
 Today's package from my "overlay":http://github.com/JNRowe/misc-overlay is "gitserve":http://github.com/jezdez/git-serve/, a web server for viewing "git":http://www.git-scm.com/ repositories that is written in "Python":http://www.python.org/.  It is simply a wrapper around @gitweb@ that doesn't require the user to install a full web server to use.
