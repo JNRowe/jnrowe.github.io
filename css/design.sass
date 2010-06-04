@@ -8,13 +8,15 @@
  * Commons website(http://creativecommons.org/licenses/by-sa/3.0/).
  */
 
+@import "fonts"
+
 html, body
   background:
     color: rgb(77, 104, 132)
     image: url("/static/body_background.png")
     repeat: repeat-x
   color: rgb(0, 0, 0)
-  font-family: "Verdana", "Arial", sans-serif
+  font-family: $sansserif
 
 
 // Work around HTML5 display problems
@@ -114,7 +116,7 @@ a
     border: 0.1em solid
     color: rgb(255, 255, 255)
     font
-      family: "Verdana", "Arial", sans-serif
+      family: $sansserif
       size: small
       weight: bold
     padding: 0 0.3em
@@ -145,7 +147,7 @@ h1, h2, h3, h4, h5, h6
 
 // hatom
 .entry-summary
-  font-family: cursive
+  font-family: $cursive
   text-align: right
 
   &:before
