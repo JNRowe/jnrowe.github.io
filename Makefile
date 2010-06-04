@@ -2,5 +2,5 @@ CSS_FILES := $(patsubst %.sass, %.css, $(filter-out css/fonts.sass, $(wildcard c
 
 all: $(CSS_FILES)
 
-%.css: %.sass
+%.css: %.sass css/fonts.sass
 	sass --style=compressed $< $@
