@@ -1,4 +1,4 @@
-CSS_FILES := $(patsubst %.sass, %.css, $(wildcard css/*.sass))
+CSS_FILES := $(patsubst %.sass, %.css, $(filter-out css/fonts.sass, $(wildcard css/*.sass)))
 
 all: $(CSS_FILES)
 
