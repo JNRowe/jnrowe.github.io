@@ -20,6 +20,11 @@ div
   &.thumb
     float: right
 
+  // If the nth-of-type psuedo-classes work, alternate thumb locations
+  &.thumb:nth-of-type(odd)
+    float: right
+  &.thumbnail:nth-of-type(even)
+    float: left
 
 p
   &.attention, &.caution, &.danger, &.error, &.hint, &.important, &.note, &.warning
