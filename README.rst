@@ -22,3 +22,6 @@ an email_.
 .. _GPL version 3: http://www.fsf.org/licensing/licenses/gpl.html
 .. _Creative Commons Attribution-ShareAlike 3.0 license: http://creativecommons.org/licenses/by-sa/3.0/
 
+..
+    :vim: set ft=rst ts=4 sw=4 et:
+
