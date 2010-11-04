@@ -20,7 +20,7 @@ h2. Journal
 
 h2. Projects
 
-*(projects) "BFM":http://github.com/JNRowe/bfm/: This program is a dockapp-style CPU, memory, swap and load average monitor.
+*(projects) "bfm":http://github.com/JNRowe/bfm/: This program is a dockapp-style CPU, memory, swap and load average monitor.
 *(projects) "blanco":http://github.com/JNRowe/blanco/: _"Hey, remember me?"_ [ "_documentation_":/blanco/ ]
 *(projects) "bleeter":http://github.com/JNRowe/bleeter/: "twitter":http://twitter.com viewer [ "_documentation_":/bleeter/ ]
 *(projects) "bwatch":http://github.com/JNRowe/bwatch/: Simple bandwidth watching tool [ "_documentation_":/bwatch/ ]
