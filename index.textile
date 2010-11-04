@@ -20,38 +20,38 @@ h2. Journal
 
 h2. Projects
 
-*(projects) "bfm":http://github.com/JNRowe/bfm/: This program is a dockapp-style CPU, memory, swap and load average monitor.
-*(projects) "blanco":http://github.com/JNRowe/blanco/: _"Hey, remember me?"_ [ "_documentation_":/blanco/ ]
-*(projects) "bleeter":http://github.com/JNRowe/bleeter/: "twitter":http://twitter.com viewer [ "_documentation_":/bleeter/ ]
-*(projects) "bwatch":http://github.com/JNRowe/bwatch/: Simple bandwidth watching tool [ "_documentation_":/bwatch/ ]
-*(projects) "cupage":http://github.com/JNRowe/cupage/: A tool to check for updates on web pages [ "_documentation_":/cupage/ ]
-*(projects) "dotbash":http://github.com/JNRowe/dotbash/: Shared "bash":http://cnswww.cns.cwru.edu/~chet/bash/bashtop.html configuration files
-*(projects) "emacs-configs":http://github.com/JNRowe/emacs-configs/: Personal emacs configs
-*(projects) "fixes-overlay":http://github.com/JNRowe/fixes-overlay/: Small package fixes languishing in the "Gentoo BTS":http://bugs.gentoo.org [ "_documentation_":/fixes-overlay/ ]
-*(projects) "jnrowe.github.com":http://github.com/JNRowe/jnrowe.github.com/: My user pages repository(_this site_)
-*(projects) "local-bin":http://github.com/JNRowe/local-bin/: Tat from my @~/bin@
-*(projects) "misc-overlay":http://github.com/JNRowe/misc-overlay/: "Gentoo":http://www.gentoo.org/ overlay -- miscellaneous packages [ "_documentation_":/misc-overlay/ ]
-*(projects) "pages_layouts":http://github.com/JNRowe/pages_layouts/: Shared layouts submodule for jekyll
-*(projects) "pyisbn":http://github.com/JNRowe/pyisbn/: A "Python":http://python.org module for working with 10- and 13-digit ISBN(International Standard Book Number)s
-*(projects) "pytemplate":http://github.com/JNRowe/pytemplate/: Personal package template for "Python":http://python.org/, with @distutils@ setup
-*(projects) "upoints":http://github.com/JNRowe/upoints/: @upoints@ is a collection of "GPL v3":http://www.fsf.org/licensing/licenses/gpl.html licensed modules for working with points on Earth, or other near spherical objects.
-*(projects) "vim-configs":http://github.com/JNRowe/vim-configs/: Personal vim configs [ "_documentation_":/vim-configs/ ]
-*(projects) "vim-jnrowe":http://github.com/JNRowe/vim-jnrowe/: My colorscheme, decoupled from my vim-configs repo for others ;)
+*(projects) "bfm":https://github.com/JNRowe/bfm/: This program is a dockapp-style CPU, memory, swap and load average monitor.
+*(projects) "blanco":https://github.com/JNRowe/blanco/: _"Hey, remember me?"_ [ "_documentation_":/blanco/ ]
+*(projects) "bleeter":https://github.com/JNRowe/bleeter/: "twitter":https://twitter.com viewer [ "_documentation_":/bleeter/ ]
+*(projects) "bwatch":https://github.com/JNRowe/bwatch/: Simple bandwidth watching tool [ "_documentation_":/bwatch/ ]
+*(projects) "cupage":https://github.com/JNRowe/cupage/: A tool to check for updates on web pages [ "_documentation_":/cupage/ ]
+*(projects) "dotbash":https://github.com/JNRowe/dotbash/: Shared "bash":http://cnswww.cns.cwru.edu/~chet/bash/bashtop.html configuration files
+*(projects) "emacs-configs":https://github.com/JNRowe/emacs-configs/: Personal emacs configs
+*(projects) "fixes-overlay":https://github.com/JNRowe/fixes-overlay/: Small package fixes languishing in the "Gentoo BTS":http://bugs.gentoo.org [ "_documentation_":/fixes-overlay/ ]
+*(projects) "jnrowe.github.com":https://github.com/JNRowe/jnrowe.github.com/: My user pages repository(_this site_)
+*(projects) "local-bin":https://github.com/JNRowe/local-bin/: Tat from my @~/bin@
+*(projects) "misc-overlay":https://github.com/JNRowe/misc-overlay/: "Gentoo":http://www.gentoo.org/ overlay -- miscellaneous packages [ "_documentation_":/misc-overlay/ ]
+*(projects) "pages_layouts":https://github.com/JNRowe/pages_layouts/: Shared layouts submodule for jekyll
+*(projects) "pyisbn":https://github.com/JNRowe/pyisbn/: A "Python":http://python.org module for working with 10- and 13-digit ISBN(International Standard Book Number)s
+*(projects) "pytemplate":https://github.com/JNRowe/pytemplate/: Personal package template for "Python":http://python.org/, with @distutils@ setup
+*(projects) "upoints":https://github.com/JNRowe/upoints/: @upoints@ is a collection of "GPL v3":http://www.fsf.org/licensing/licenses/gpl.html licensed modules for working with points on Earth, or other near spherical objects.
+*(projects) "vim-configs":https://github.com/JNRowe/vim-configs/: Personal vim configs [ "_documentation_":/vim-configs/ ]
+*(projects) "vim-jnrowe":https://github.com/JNRowe/vim-jnrowe/: My colorscheme, decoupled from my vim-configs repo for others ;)
 
 h3. Forks I'm hacking on
 
-*(forks) "github-cli":http://github.com/JNRowe/github-cli/: A command-line interface to the GitHub Issues API v2. [ "_origin_":http://github.com/jsmits/github-cli ]
-*(forks) "oh-my-zsh":http://github.com/JNRowe/oh-my-zsh/: A community-driven framework for managing your zsh configuration [ "_origin_":http://github.com/robbyrussell/oh-my-zsh ]
-*(forks) "python-github2":http://github.com/JNRowe/python-github2/: github client in python, with issues support [ "_origin_":http://github.com/ask/python-github2 ]
-*(forks) "reverend":http://github.com/JNRowe/reverend/: Reverend - Simple Bayesian classifier [ "_upstream homepage_":http://divmod.org/trac/wiki/DivmodReverend !/static/remote.png! ]
-*(forks) "snipmate.vim":http://github.com/JNRowe/snipmate.vim/: snipMate.vim aims to be a concise vim script that implements some of TextMate's snippets features in Vim [ "_origin_":http://github.com/msanders/snipmate.vim ]
-*(forks) "termstyle":http://github.com/JNRowe/termstyle/: A dirt-simple terminal-colour library for python [ "_origin_":http://github.com/gfxmonk/termstyle ]
-*(forks) "tweepy":http://github.com/JNRowe/tweepy/: A python library for the Twitter API. OAuth, python 3, complete coverage, streaming API [ "_origin_":https://github.com/joshthecoder/tweepy ]
+*(forks) "github-cli":https://github.com/JNRowe/github-cli/: A command-line interface to the GitHub Issues API v2. [ "_origin_":https://github.com/jsmits/github-cli ]
+*(forks) "oh-my-zsh":https://github.com/JNRowe/oh-my-zsh/: A community-driven framework for managing your zsh configuration [ "_origin_":https://github.com/robbyrussell/oh-my-zsh ]
+*(forks) "python-github2":https://github.com/JNRowe/python-github2/: github client in python, with issues support [ "_origin_":https://github.com/ask/python-github2 ]
+*(forks) "reverend":https://github.com/JNRowe/reverend/: Reverend - Simple Bayesian classifier [ "_upstream homepage_":http://divmod.org/trac/wiki/DivmodReverend !/static/remote.png! ]
+*(forks) "snipmate.vim":https://github.com/JNRowe/snipmate.vim/: snipMate.vim aims to be a concise vim script that implements some of TextMate's snippets features in Vim [ "_origin_":https://github.com/msanders/snipmate.vim ]
+*(forks) "termstyle":https://github.com/JNRowe/termstyle/: A dirt-simple terminal-colour library for python [ "_origin_":https://github.com/gfxmonk/termstyle ]
+*(forks) "tweepy":https://github.com/JNRowe/tweepy/: A python library for the Twitter API. OAuth, python 3, complete coverage, streaming API [ "_origin_":https://github.com/joshthecoder/tweepy ]
 
 h3. Git mirrors of projects I'm hacking on
 
-*(mirrors) "readyset":http://github.com/JNRowe/readyset/: Mirror of the "upstream":http://readyset.tigris.org/ !/static/remote.png! @svn@ tree
-*(mirrors) "surfraw":http://github.com/JNRowe/surfraw/: Mirror of the "upstream":http://surfraw.alioth.debian.org/ !/static/remote.png! git repository
-<!-- *(mirrors) "winwrangler":http://github.com/JNRowe/winwrangler/: Mirror of the upstream failpad source, converted for Matt -->
+*(mirrors) "readyset":https://github.com/JNRowe/readyset/: Mirror of the "upstream":http://readyset.tigris.org/ !/static/remote.png! @svn@ tree
+*(mirrors) "surfraw":https://github.com/JNRowe/surfraw/: Mirror of the "upstream":http://surfraw.alioth.debian.org/ !/static/remote.png! git repository
+<!-- *(mirrors) "winwrangler":https://github.com/JNRowe/winwrangler/: Mirror of the upstream failpad source, converted for Matt -->
 
 p(index-copy). <small>© <a class="rights" href="/copyright.html" title="Copyright info" accesskey="8">Copyright</a> 2009, James Rowe</small>
