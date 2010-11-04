@@ -36,6 +36,7 @@ h2. Projects
 *(projects) "pytemplate":http://github.com/JNRowe/pytemplate/: Personal package template for "Python":http://python.org/, with @distutils@ setup
 *(projects) "upoints":http://github.com/JNRowe/upoints/: upoints is a collection of "GPL v3":http://www.fsf.org/licensing/licenses/gpl.html licensed modules for working with points on Earth, or other near spherical objects.
 *(projects) "vim-configs":http://github.com/JNRowe/vim-configs/: Personal vim configs [ "_documentation_":/vim-configs/ ]
+*(projects) "vim-jnrowe":http://github.com/JNRowe/vim-jnrowe/: My colorscheme, decoupled from my vim-configs repo for others ;)
 
 h3. Forks I'm hacking on
 
