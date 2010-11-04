@@ -52,5 +52,6 @@ h3. Git mirrors of projects I'm hacking on
 
 *(mirrors) "readyset":http://github.com/JNRowe/readyset/: Mirror of the "upstream":http://readyset.tigris.org/ !/static/remote.png! @svn@ tree
 *(mirrors) "surfraw":http://github.com/JNRowe/surfraw/: Mirror of the "upstream":http://surfraw.alioth.debian.org/ !/static/remote.png! git repository
+<!-- *(mirrors) "winwrangler":http://github.com/JNRowe/winwrangler/: Mirror of the upstream failpad source, converted for Matt -->
 
 p(index-copy). <small>© <a class="rights" href="/copyright.html" title="Copyright info" accesskey="8">Copyright</a> 2009, James Rowe</small>
