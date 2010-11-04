@@ -40,6 +40,7 @@ h2. Projects
 
 h3. Forks I'm hacking on
 
+*(forks) "github-cli":http://github.com/JNRowe/github-cli/: A command-line interface to the GitHub Issues API v2. [ "_origin_":http://github.com/jsmits/github-cli ]
 *(forks) "oh-my-zsh":http://github.com/JNRowe/oh-my-zsh/: A community-driven framework for managing your zsh configuration [ "_origin_":http://github.com/robbyrussell/oh-my-zsh ]
 *(forks) "snipmate.vim":http://github.com/JNRowe/snipmate,vim/: snipMate.vim aims to be a concise vim script that implements some of TextMate's snippets features in Vim [ "_origin_":http://github.com/msanders/snipmate.vim ]
 *(forks) "termstyle":http://github.com/JNRowe/termstyle/: A dirt-simple terminal-colour library for python [ "_origin_":http://github.com/gfxmonk/termstyle ]
