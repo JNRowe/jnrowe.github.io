@@ -46,6 +46,7 @@ h3. Forks I'm hacking on
 *(forks) "reverend":http://github.com/JNRowe/reverend/: Reverend - Simple Bayesian classifier [ "_upstream homepage_":http://divmod.org/trac/wiki/DivmodReverend !/static/remote.png! ]
 *(forks) "snipmate.vim":http://github.com/JNRowe/snipmate,vim/: snipMate.vim aims to be a concise vim script that implements some of TextMate's snippets features in Vim [ "_origin_":http://github.com/msanders/snipmate.vim ]
 *(forks) "termstyle":http://github.com/JNRowe/termstyle/: A dirt-simple terminal-colour library for python [ "_origin_":http://github.com/gfxmonk/termstyle ]
+*(forks) "tweepy":http://github.com/JNRowe/tweepy/: A python library for the Twitter API. OAuth, python 3, complete coverage, streaming API [ "_origin_":https://github.com/joshthecoder/tweepy ]
 
 h3. Git mirrors of projects I'm hacking on
 
