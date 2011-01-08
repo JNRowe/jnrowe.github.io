@@ -9,7 +9,7 @@ Over lunch today a few people were talking about "planet":http://www.planetplane
 
 Reading the output of some planets can soak up an awful lot of time, and the posts aren't always about topics that interest you.  I don't treat this is a bug, skimming the musings of talented people often leads you to think about problems you're facing differently and that is a good thing.
 
-I'm wondering if some of the problems people face are because their workflows for processing all the content are good enough, so I'm going to mention one of the techniques I use.  Maybe it will help you, or maybe you'll suggest a better idea to me.
+I'm wondering if some of the problems people face are because their workflows for processing all the content aren't good enough, so I'm going to mention one of the techniques I use.  Maybe it will help you, or maybe you'll suggest a better idea to me.
 
 h3. The feeds
 
@@ -31,7 +31,7 @@ h3. The task
 
 Not all the entries are new, some are duplicates especially between Debian and gnome planets it would seem.  Some are uninteresting to me, talk of technologies I won't(not don't) use.  Some are the minutiae of their author's day, which I'm sure are interesting if you know those people but if I did they'd be in the friends feed category already.
 
-The question quickly becomes how to filter them, and the answer was in the title; use "Yahoo! Pipes":http://pipes.yahoo.com/.
+The question quickly becomes how to filter them, and the answer is: use "Yahoo! Pipes":http://pipes.yahoo.com/.
 
 Yahoo! Pipes is a clever little web-based tool for mangling data hosted on the internet, be it single pages or feeds or even CSV data files.  The interface is a friendly Javascript drag-and-drop affair, just select the tools you wish to use and literally connect the dots.
 
