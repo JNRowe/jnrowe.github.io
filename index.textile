@@ -28,6 +28,7 @@ h2. Projects
 *(projects) "dotbash":https://github.com/JNRowe/dotbash/: Shared "bash":http://cnswww.cns.cwru.edu/~chet/bash/bashtop.html configuration files
 *(projects) "emacs-configs":https://github.com/JNRowe/emacs-configs/: Personal emacs configs
 *(projects) "fixes-overlay":https://github.com/JNRowe/fixes-overlay/: Small package fixes languishing in the "Gentoo BTS":http://bugs.gentoo.org [ "_documentation_":/fixes-overlay/ ]
+*(projects) "gh-bugs":https://github.com/JNRowe/gh-bugs/: Simple client for GitHub issues
 *(projects) "jnrowe.github.com":https://github.com/JNRowe/jnrowe.github.com/: My user pages repository(_the source of this site_)
 *(projects) "local-bin":https://github.com/JNRowe/local-bin/: Tat from my @~/bin@
 *(projects) "misc-overlay":https://github.com/JNRowe/misc-overlay/: "Gentoo":http://www.gentoo.org/ overlay -- miscellaneous packages [ "_documentation_":/misc-overlay/ ]
