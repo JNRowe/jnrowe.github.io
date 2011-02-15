@@ -36,6 +36,7 @@ h2. Projects
 *(projects) "pyisbn":https://github.com/JNRowe/pyisbn/: A "Python":http://python.org module for working with 10- and 13-digit ISBN(International Standard Book Number)s
 *(projects) "pytemplate":https://github.com/JNRowe/pytemplate/: Personal package template for "Python":http://python.org/, with @distutils@ setup
 *(projects) "upoints":https://github.com/JNRowe/upoints/: @upoints@ is a collection of "GPL v3":http://www.fsf.org/licensing/licenses/gpl.html licensed modules for working with points on Earth, or other near spherical objects.
+*(projects) "versionah":https://github.com/JNRowe/versionah/: Simple version number mangler [ "_documentation_":/versionah/ ]
 *(projects) "vim-configs":https://github.com/JNRowe/vim-configs/: Personal vim configs [ "_documentation_":/vim-configs/ ]
 *(projects) "vim-jnrowe":https://github.com/JNRowe/vim-jnrowe/: My colorscheme, decoupled from my vim-configs repo for others ;)
 
