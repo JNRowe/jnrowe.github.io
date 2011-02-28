@@ -35,7 +35,7 @@ p(note). I'll happily update this table with information about Microsoft's Inter
 Internet Explorer possibly uses Alt, need to check
 {% endcomment %}
 
-Every page on this site also includes the ID @jnrowe-ukfsn-org@ on the @body@ element to allow for simple site-specific user restyling.
+Every page on this site also includes the ID @jnrowe-github-com@ on the @body@ element to allow for simple site-specific user restyling.
 
 h3. Standards compliance
 
