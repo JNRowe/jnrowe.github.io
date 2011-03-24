@@ -1,7 +1,0 @@
-User-Agent: *
-Disallow: /food/by/mouth
-
-Allow: /
-
-Sitemap: http://jnrowe.github.com/sitemap.xml
-
