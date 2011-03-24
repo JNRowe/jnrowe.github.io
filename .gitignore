@@ -1,8 +1,4 @@
+.build/
 .sass-cache/
-_site/
-
-*.(orig|rej)
-*.swp
-*.tmp
 
 README.html
