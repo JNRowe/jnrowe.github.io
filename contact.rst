@@ -17,7 +17,7 @@ Contact details
 
    <p class="note">The information in this section was last updated in <abbr class="rev" title="{{ page.date | date_to_xmlschema }}">{{ page.date | date_to_string }}</abbr>.</p>
 
-* `My :abbr:`FOAF (Friend of a Friend)` profile (Explore_)
+* `My FOAF profile`_ (Explore_)
 * `My journal`_
 * `My public schedule`_
 * `My Calendar About Nothing profile`_
@@ -33,8 +33,8 @@ Contact details
 
    </div>
 
-.. _My :abbr:`FOAF (Friend of a Friend)` profile: /static/foaf.rdf
-.. _Explore: http://xml.mfd-consult.dk/foaf/explorer/?foaf=http%3A%2F%2Fjnrowe.github.com%2Fstatic%2Ffoaf.rdf
+.. _My FOAF profile: _static/foaf.rdf
+.. _Explore: http://xml.mfd-consult.dk/foaf/explorer/?foaf=http%3A%2F%2Fjnrowe.github.com%2F_static%2Ffoaf.rdf
 .. _My journal: http://jnrowe.github.com
 .. _My public schedule: http://www.jnrowe.ukfsn.org/calendar.html
 .. _My Calendar About Nothing profile: http://calendaraboutnothing.com/~jnrowe
