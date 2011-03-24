@@ -11,6 +11,14 @@ Contents:
 .. toctree::
    :maxdepth: 2
 
+   projects
+
+   about
+   accessibility
+   colophon
+   contact
+   copyright
+
 Indices and tables
 ==================
 
