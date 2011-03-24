@@ -1,9 +1,0 @@
----
-layout: post
-title: Tip-a-day - Tip hiatus
-description: A short, non-permanent, break
-categories: [tad, tips]
----
-
-I'm taking a short 10 day break from these tips, but normal service will resume afterwards.  If I had the foresight back in the "original post":/2009/09/23/Tip_a_day.html I could have mentioned this then, however I had completely forgotten another commitment.
-
