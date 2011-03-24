@@ -1,5 +1,5 @@
 Projects
---------
+========
 
 * `bfm <https://github.com/JNRowe/bfm/>`_: This program is a dockapp-style CPU, memory, swap and load average monitor.
 * `blanco <https://github.com/JNRowe/blanco/>`_: *"Hey, remember me?"* [ `documentation </blanco/>`_ ]
