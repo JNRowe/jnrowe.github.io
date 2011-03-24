@@ -16,11 +16,11 @@ because jekyll doesn't support reST_.
 And finally...
 --------------
 
-I'd like to believe that all my pages are valid :abbr:`XHTML (eXtensible
-HyperText Markup Language)` and :abbr:`CSS (Cascading Style Sheets)`, and that
-all my feeds are valid Atom_.  Web standards are important, and I try to stick
-to them.  Check the content against validators if you wish, and shame me if I've
-failed :)
+I'd like to believe that all my pages are valid
+:abbr:`XHTML (eXtensible HyperText Markup Language)` and
+:abbr:`CSS (Cascading Style Sheets)`, and that all my feeds are valid Atom_.
+Web standards are important, and I try to stick to them.  Check the content
+against validators if you wish, and shame me if I've failed :)
 
 .. _jekyll: http://github.com/mojombo/jekyll
 .. _content: http://github.com/JNRowe/jnrowe.github.com
