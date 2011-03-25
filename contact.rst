@@ -21,6 +21,7 @@ Contact details
 * `My public schedule`_
 * `My Calendar About Nothing profile`_
 * `My claimID profile`_
+* `My GnuPG key`_
 * `My del.icio.us links`_
 * `My GitGub profile`_
 * `My last.fm profile`_
@@ -36,6 +37,7 @@ Contact details
 .. _My public schedule: http://www.jnrowe.ukfsn.org/calendar.html
 .. _My Calendar About Nothing profile: http://calendaraboutnothing.com/~jnrowe
 .. _My claimID profile: http://claimid.com/jnrowe
+.. _My GnuPG key: _static/gpg.asc
 .. _My del.icio.us links: http://del.icio.us/JNRowe
 .. _My GitGub profile: https://github.com/JNRowe/
 .. _My last.fm profile: http://www.last.fm/user/JNRowe/
