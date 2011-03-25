@@ -15,7 +15,7 @@ Contact details
 
    <p>The easiest way to contact <abbr class="nickname" title="JNRowe">James</abbr> is by <a href="mailto:jnrowe@gmail.com" class="email" accesskey="9">email</a>.</p>
 
-   <p class="note">The information in this section was last updated in <abbr class="rev" title="{{ page.date | date_to_xmlschema }}">{{ page.date | date_to_string }}</abbr>.</p>
+   <p class="note">The information in this section was last updated on <abbr class="rev" title="2011-03-25T09:06:00+00:00">2011-03-25</abbr>.</p>
 
 * `My journal`_
 * `My public schedule`_
