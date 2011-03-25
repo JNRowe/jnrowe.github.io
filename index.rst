@@ -20,7 +20,6 @@ Contents:
 
    projects
 
-   accessibility
    colophon
    contact
    copyright
