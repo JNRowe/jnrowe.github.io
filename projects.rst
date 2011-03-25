@@ -2,24 +2,24 @@ Projects
 ========
 
 * `bfm <https://github.com/JNRowe/bfm/>`_: This program is a dockapp-style CPU, memory, swap and load average monitor.
-* `blanco <https://github.com/JNRowe/blanco/>`_: *"Hey, remember me?"* [ `documentation </blanco/>`_ ]
-* `bleeter <https://github.com/JNRowe/bleeter/>`_: `twitter <https://twitter.com>`_ viewer [ `documentation </bleeter/>`_ ]
-* `bwatch <https://github.com/JNRowe/bwatch/>`_: Simple bandwidth watching tool [ `documentation </bwatch/>`_ ]
-* `cupage <https://github.com/JNRowe/cupage/>`_: A tool to check for updates on web pages [ `documentation </cupage/>`_ ]
+* `blanco <https://github.com/JNRowe/blanco/>`_: *"Hey, remember me?"* [ :ref:`documentation <blanco:blanco-label>` ]
+* `bleeter <https://github.com/JNRowe/bleeter/>`_: `twitter <https://twitter.com>`_ viewer [ :ref:`documentation <bleeter:bleeter-label>` ]
+* `bwatch <https://github.com/JNRowe/bwatch/>`_: Simple bandwidth watching tool [ :ref:`documentation <bwatch:bwatch-label>` ]
+* `cupage <https://github.com/JNRowe/cupage/>`_: A tool to check for updates on web pages [ :ref:`documentation <cupage:cupage-label>` ]
 * `dotbash <https://github.com/JNRowe/dotbash/>`_: Shared `bash <http://cnswww.cns.cwru.edu/~chet/bash/bashtop.html>`_ configuration files
 * `emacs-configs <https://github.com/JNRowe/emacs-configs/>`_: Personal emacs configs
-* `fixes-overlay <https://github.com/JNRowe/fixes-overlay/>`_: Small package fixes languishing in the `Gentoo BTS <http://bugs.gentoo.org>`_ [ `documentation </fixes-overlay/>`_ ]
+* `fixes-overlay <https://github.com/JNRowe/fixes-overlay/>`_: Small package fixes languishing in the `Gentoo BTS <http://bugs.gentoo.org>`_ [ :ref:`documentation <fixesoverlay:fixes-overlay-label>` ]
 * `gh_bugs <https://github.com/JNRowe/gh_bugs/>`_: Simple client for GitHub issues
 * `jnrowe.github.com <https://github.com/JNRowe/jnrowe.github.com/>`_: My user pages repository(*the source of this site*)
 * `local-bin <https://github.com/JNRowe/local-bin/>`_: Tat from my ``~/bin``
-* `misc-overlay <https://github.com/JNRowe/misc-overlay/>`_: `Gentoo <http://www.gentoo.org/>`_ overlay -- miscellaneous packages [ `documentation </misc-overlay/>`_ ]
+* `misc-overlay <https://github.com/JNRowe/misc-overlay/>`_: `Gentoo <http://www.gentoo.org/>`_ overlay -- miscellaneous packages [ :ref:`documentation <miscoverlay:misc-overlay-label>` ]
 * `pages_layouts <https://github.com/JNRowe/pages_layouts/>`_: Shared layouts submodule for jekyll
 * `pyisbn <https://github.com/JNRowe/pyisbn/>`_: A `Python <http://python.org>`_
   module for working with 10- and 13-digit :abbr:`ISBNs (International Standard Book Number)`
 * `pytemplate <https://github.com/JNRowe/pytemplate/>`_: Personal package template for `Python <http://python.org/>`_, with ``distutils`` setup
 * `upoints <https://github.com/JNRowe/upoints/>`_: ``upoints`` is a collection of `GPL v3 <http://www.fsf.org/licensing/licenses/gpl.html>`_ licensed modules for working with points on Earth, or other near spherical objects.
-* `versionah <https://github.com/JNRowe/versionah/>`_: Simple version number mangler [ `documentation </versionah/>`_ ]
-* `vim-configs <https://github.com/JNRowe/vim-configs/>`_: Personal vim configs [ `documentation </vim-configs/>`_ ]
+* `versionah <https://github.com/JNRowe/versionah/>`_: Simple version number mangler [ :ref:`documentation <versionah:versionah-label>` ]
+* `vim-configs <https://github.com/JNRowe/vim-configs/>`_: Personal vim configs [ :ref:`documentation <vim-configs:vim-configs-label>` ]
 * `vim-jnrowe <https://github.com/JNRowe/vim-jnrowe/>`_: My colorscheme, decoupled from my vim-configs repo for others ;)
 
 Forks I'm hacking on
