@@ -24,11 +24,3 @@ Contents:
    colophon
    contact
    copyright
-
-Indices and tables
-==================
-
-* :ref:`genindex`
-* :ref:`modindex`
-* :ref:`search`
-
