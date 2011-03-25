@@ -21,7 +21,7 @@ Contact details
 * `My public schedule`_
 * `My Calendar About Nothing profile`_
 * `My claimID profile`_
-* `My GnuPG key`_
+* `My GnuPG key`_ ``0xC0174749``
 * `My del.icio.us links`_
 * `My GitGub profile`_
 * `My last.fm profile`_
