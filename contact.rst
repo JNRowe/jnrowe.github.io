@@ -23,6 +23,7 @@ Contact details
 * `My claimID profile`_
 * `My GnuPG key`_ ``0xC0174749``
 * `My del.icio.us links`_
+* `My neighbours in meatspace`_
 * `My GitGub profile`_
 * `My last.fm profile`_
 * `My Twitter profile`_
@@ -42,3 +43,4 @@ Contact details
 .. _My GitGub profile: https://github.com/JNRowe/
 .. _My last.fm profile: http://www.last.fm/user/JNRowe/
 .. _My Twitter profile: http://twitter.com/ewornj
+.. _My neighbours in meatspace: http://geourl.org/near?p=jnrowe.github.com
