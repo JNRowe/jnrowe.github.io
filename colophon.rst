@@ -10,8 +10,8 @@ in practise.
 Content creation
 ----------------
 
-Content is invariably written with vim_ in the textile format, although only
-because jekyll doesn't support reST_.
+Content is invariably written with emacs_, or on occasion via a script, in the
+beautiful reST_ format.
 
 And finally...
 --------------
@@ -24,6 +24,6 @@ against validators if you wish, and shame me if I've failed :)
 
 .. _sphinx: http://sphinx.pocoo.org/
 .. _content: http://github.com/JNRowe/jnrowe.github.com
-.. _vim: http://www.vim.org/
+.. _emacs: http://www.gnu.org/software/emacs/
 .. _reST: http://docutils.sourceforge.net/docs/user/rst/
 .. _Atom: http://www.atomenabled.org/
