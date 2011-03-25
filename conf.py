@@ -244,5 +244,10 @@ man_pages = [
 ]
 
 
-# Example configuration for intersphinx: refer to the Python standard library.
-intersphinx_mapping = {'http://docs.python.org/': None}
+intersphinx_mapping = {}
+for proj in ['blanco', 'bleeter', 'bwatch', 'cupage', 'fixes-overlay',
+               'misc-overlay', 'versionah', 'vim-configs']:
+    # IDs must be alphanumeric
+    proj_id = filter(lambda s: s.isalnum(), proj)
+    intersphinx_mapping[proj_id] = ("http://jnrowe.github.com/%s/" % proj,
+                                    "../%s/doc/.build/html/objects.inv" % proj)
