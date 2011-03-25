@@ -12,7 +12,7 @@ If you find any problems with this repository either file an issue_ or drop me
 an email_.
 
 .. _my personal pages: http://jnrowe.github.com/
-.. _GitHub: http://www.github.com/
+.. _GitHub: https://www.github.com/
 .. _Creative Commons Attribution-ShareAlike 3.0 license: http://creativecommons.org/licenses/by-sa/3.0/
 .. _issue: https://github.com/JNRowe/jnrowe.github.com/issues
 .. _email: jnrowe@gmail.com

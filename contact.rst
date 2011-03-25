@@ -37,6 +37,6 @@ Contact details
 .. _My Calendar About Nothing profile: http://calendaraboutnothing.com/~jnrowe
 .. _My claimID profile: http://claimid.com/jnrowe
 .. _My del.icio.us links: http://del.icio.us/JNRowe
-.. _My GitGub profile: http://github.com/JNRowe/
+.. _My GitGub profile: https://github.com/JNRowe/
 .. _My last.fm profile: http://www.last.fm/user/JNRowe/
 .. _My Twitter profile: http://twitter.com/ewornj

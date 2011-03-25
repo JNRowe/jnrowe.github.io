@@ -14,6 +14,6 @@ Content is invariably written with emacs_, or on occasion via a script, in the
 beautiful reST_ format.
 
 .. _sphinx: http://sphinx.pocoo.org/
-.. _content: http://github.com/JNRowe/jnrowe.github.com
+.. _content: https://github.com/JNRowe/jnrowe.github.com
 .. _emacs: http://www.gnu.org/software/emacs/
 .. _reST: http://docutils.sourceforge.net/docs/user/rst/
