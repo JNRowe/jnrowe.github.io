@@ -27,6 +27,7 @@ Forks I'm hacking on
 
 * `github-cli <https://github.com/JNRowe/github-cli/>`_: A command-line interface to the GitHub Issues API v2. [ `origin <https://github.com/jsmits/github-cli>`_ ]
 * `oh-my-zsh <https://github.com/JNRowe/oh-my-zsh/>`_: A community-driven framework for managing your zsh configuration [ `origin <https://github.com/robbyrussell/oh-my-zsh>`_ ]
+* `pelican <https://github.com/JNRowe/pelican/>`_: Static blog generator in python, using ReST syntax [ `origin <https://github.com/ametaireau/pelican>`_ ]
 * `python-github2 <https://github.com/JNRowe/python-github2/>`_: github client in python, with issues support [ `origin <https://github.com/ask/python-github2>`_ ]
 * `reverend <https://github.com/JNRowe/reverend/>`_: Reverend - Simple Bayesian classifier [ `upstream homepage <http://divmod.org/trac/wiki/DivmodReverend>`_ ]
 * `snipmate.vim <https://github.com/JNRowe/snipmate.vim/>`_: snipMate.vim aims to be a concise vim script that implements some of TextMate's snippets features in Vim [ `origin <https://github.com/msanders/snipmate.vim>`_ ]
