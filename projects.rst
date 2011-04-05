@@ -32,6 +32,7 @@ Forks I'm hacking on
 * `python-github2 <https://github.com/JNRowe/python-github2/>`_: github client in python, with issues support [ `origin <https://github.com/ask/python-github2>`_ ]
 * `reverend <https://github.com/JNRowe/reverend/>`_: Reverend - Simple Bayesian classifier [ `upstream homepage <http://divmod.org/trac/wiki/DivmodReverend>`_ ]
 * `snipmate.vim <https://github.com/JNRowe/snipmate.vim/>`_: snipMate.vim aims to be a concise vim script that implements some of TextMate's snippets features in Vim [ `origin <https://github.com/msanders/snipmate.vim>`_ ]
+* `snipmate-snippets <https://github.com/JNRowe/snipmate-snippets/>`_: A collection of snippets for snipmate (vim plugin) with a focus on bash, php, html and javascript [ `origin <https://github.com/spf13/snipmate-snippets>`_ ]
 * `termstyle <https://github.com/JNRowe/termstyle/>`_: A dirt-simple terminal-colour library for python [ `origin <https://github.com/gfxmonk/termstyle>`_ ]
 * `tweepy <https://github.com/JNRowe/tweepy/>`_: A python library for the Twitter API. OAuth, python 3, complete coverage, streaming API [ `origin <https://github.com/joshthecoder/tweepy>`_ ]
 
