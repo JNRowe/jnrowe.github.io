@@ -41,6 +41,7 @@ Git mirrors of projects I'm hacking on
 --------------------------------------
 
 * `readyset <https://github.com/JNRowe/readyset/>`_: Mirror of the `upstream <http://readyset.tigris.org/>`_ ``svn`` tree
+* `shell-doctest <https://github.com/JNRowe/shell-doctest/>`_: Mirror of the `upstream <http://code.google.com/p/shell-doctest/>`_ ``mercurial`` tree
 * `surfraw <https://github.com/JNRowe/surfraw/>`_: Mirror of the `upstream <http://surfraw.alioth.debian.org/>`_ git repository
 
 ..
