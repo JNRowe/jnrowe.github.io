@@ -45,6 +45,7 @@ h3. Forks I'm hacking on
 *(forks) "github-cli":https://github.com/JNRowe/github-cli/: A command-line interface to the GitHub Issues API v2. [ "_origin_":https://github.com/jsmits/github-cli ]
 *(forks) "oh-my-zsh":https://github.com/JNRowe/oh-my-zsh/: A community-driven framework for managing your zsh configuration [ "_origin_":https://github.com/robbyrussell/oh-my-zsh ]
 *(forks) "python-github2":https://github.com/JNRowe/python-github2/: github client in python, with issues support [ "_origin_":https://github.com/ask/python-github2 ]
+*(forks) "pw":https://github.com/JNRowe/pw: Grep GPG-encrypted YAML password safes [ "_origin_":https://github.com/catch22/pw ]
 *(forks) "reverend":https://github.com/JNRowe/reverend/: Reverend - Simple Bayesian classifier [ "_upstream homepage_":http://divmod.org/trac/wiki/DivmodReverend !/static/remote.png! ]
 *(forks) "snipmate.vim":https://github.com/JNRowe/snipmate.vim/: snipMate.vim aims to be a concise vim script that implements some of TextMate's snippets features in Vim [ "_origin_":https://github.com/msanders/snipmate.vim ]
 *(forks) "termstyle":https://github.com/JNRowe/termstyle/: A dirt-simple terminal-colour library for python [ "_origin_":https://github.com/gfxmonk/termstyle ]
