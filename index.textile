@@ -43,6 +43,7 @@ h2. Projects
 h3. Forks I'm hacking on
 
 *(forks) "github-cli":https://github.com/JNRowe/github-cli/: A command-line interface to the GitHub Issues API v2. [ "_origin_":https://github.com/jsmits/github-cli ]
+*(forks) "hammertime":https://github.com/JNRowe/hammertime/: Time tracking with git [ "_origin_":https://github.com/caffeinehit/hammertime ]
 *(forks) "oh-my-zsh":https://github.com/JNRowe/oh-my-zsh/: A community-driven framework for managing your zsh configuration [ "_origin_":https://github.com/robbyrussell/oh-my-zsh ]
 *(forks) "python-github2":https://github.com/JNRowe/python-github2/: github client in python, with issues support [ "_origin_":https://github.com/ask/python-github2 ]
 *(forks) "pw":https://github.com/JNRowe/pw: Grep GPG-encrypted YAML password safes [ "_origin_":https://github.com/catch22/pw ]
