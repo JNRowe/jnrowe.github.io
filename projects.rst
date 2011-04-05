@@ -29,6 +29,7 @@ Forks I'm hacking on
 * `hammertime <https://github.com/JNRowe/hammertime/>`_: Time tracking with git [ `origin <https://github.com/caffeinehit/hammertime>`_ ]
 * `oh-my-zsh <https://github.com/JNRowe/oh-my-zsh/>`_: A community-driven framework for managing your zsh configuration [ `origin <https://github.com/robbyrussell/oh-my-zsh>`_ ]
 * `pelican <https://github.com/JNRowe/pelican/>`_: Static blog generator in python, using ReST syntax [ `origin <https://github.com/ametaireau/pelican>`_ ]
+* `pw <https://github.com/JNRowe/pw/>`_: Grep GPG-encrypted YAML password safes [ `origin <https://github.com/catch22/pw/>`_ ]
 * `python-github2 <https://github.com/JNRowe/python-github2/>`_: github client in python, with issues support [ `origin <https://github.com/ask/python-github2>`_ ]
 * `reverend <https://github.com/JNRowe/reverend/>`_: Reverend - Simple Bayesian classifier [ `upstream homepage <http://divmod.org/trac/wiki/DivmodReverend>`_ ]
 * `snipmate.vim <https://github.com/JNRowe/snipmate.vim/>`_: snipMate.vim aims to be a concise vim script that implements some of TextMate's snippets features in Vim [ `origin <https://github.com/msanders/snipmate.vim>`_ ]
