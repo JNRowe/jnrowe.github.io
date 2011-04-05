@@ -56,6 +56,7 @@ h3. Forks I'm hacking on
 h3. Git mirrors of projects I'm hacking on
 
 *(mirrors) "readyset":https://github.com/JNRowe/readyset/: Mirror of the "upstream":http://readyset.tigris.org/ !/static/remote.png! @svn@ tree
+*(mirrors) "shell-doctest":https://github.com/JNRowe/shell-doctest: Mirror of the "upstream":http://code.google.com/p/shell-doctest/ !/static/remote.png! @hg@ tree
 *(mirrors) "surfraw":https://github.com/JNRowe/surfraw/: Mirror of the "upstream":http://surfraw.alioth.debian.org/ !/static/remote.png! git repository
 <!-- *(mirrors) "winwrangler":https://github.com/JNRowe/winwrangler/: Mirror of the upstream failpad source, converted for Matt -->
 
