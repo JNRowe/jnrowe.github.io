@@ -1,0 +1,27 @@
+@charset "UTF-8";
+
+/*
+ * sphinx.css
+ *
+ * This stylesheet is derived from the default sphinx
+ * <http://sphinx.pocoo.org/> stylesheet, it amounts to the sphinx
+ * specific display rules and should not include any design elements.
+ */
+
+a.headerlink {
+    color: rgb(198, 15, 15);
+    font-size: 0.8em;
+    padding: 0 0.4em;
+    text-decoration: none;
+    visibility: hidden;
+}
+
+h1:hover > a.headerlink,
+h2:hover > a.headerlink,
+h3:hover > a.headerlink,
+h4:hover > a.headerlink,
+h5:hover > a.headerlink,
+h6:hover > a.headerlink,
+dt:hover > a.headerlink {
+    visibility: visible;
+}

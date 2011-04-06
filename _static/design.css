@@ -1,0 +1,90 @@
+@charset "UTF-8";
+
+
+
+
+
+html, body {
+    background-color: rgb(77, 104, 132);
+    background-image: url("body_background.png");
+    background-repeat: repeat-x;
+    color: rgb(0, 0, 0);
+    font-family: "Verdana", "Arial", sans-serif;
+}
+
+div.breadcrumbs {
+    background-color: rgb(241, 241, 241);
+    background-image: url("meta_background.png");
+    background-position: right;
+    background-repeat: repeat-y;
+    color: rgb(93, 93, 93);
+    font-size: smaller;
+}
+
+div.breadcrumbs h3 {
+    display: none;
+}
+div.breadcrumbs ul {
+    display: inline;
+    padding: 0;
+}
+div.breadcrumbs li {
+    display: inline;
+    list-style: none;
+}
+div.breadcrumbs .bounce {
+    float: right;
+}
+div.breadcrumbs .first {
+    margin-right: 1em
+}
+
+div.quicksearch {
+    background-color: rgb(255, 255, 187);
+    border: 0.1em dashed;
+    clear: right;
+    color: rgb(0, 0, 0);
+    float: right;
+    margin: 1em;
+    padding: 0.1em 0.3em;
+    width: 13em;
+}
+
+div#corewrapper {
+    margin: auto;
+}
+
+div#content {
+    background-color: rgb(250, 250, 250);
+    border: solid 0 0.2em 0.2em 0 rgb(0, 0, 0);
+    color: rgb(0, 0, 0);
+    margin: 1em 2em;
+    padding: 1em 2em;
+}
+
+a.rights {
+    font-size: small;
+    text-align: right;
+    text-transform: uppercase;
+}
+
+div.page_meta, ul.meta {
+    background-color: rgb(241, 241, 241);
+    background-image: url("/_static/meta_background.png");
+    background-position: right;
+    background-repeat: repeat-y;
+    color: rgb(93, 93, 93);
+    font-size: small;
+}
+
+div.page_meta ul, ul.meta {
+    list-style-type: none;
+}
+
+.skipvisual {
+    display: none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    text-shadow: rgb(220, 220, 220) 0.15em 0.15em;
+}
