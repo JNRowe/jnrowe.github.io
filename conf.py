@@ -247,7 +247,7 @@ man_pages = [
 
 intersphinx_mapping = {}
 for proj in ['blanco', 'bleeter', 'bwatch', 'cupage', 'fixes-overlay',
-               'misc-overlay', 'versionah']:
+               'misc-overlay', 'upoints', 'versionah']:
     # IDs must be alphanumeric
     proj_id = filter(lambda s: s.isalnum(), proj)
     intersphinx_mapping[proj_id] = ("http://jnrowe.github.com/%s/" % proj,
