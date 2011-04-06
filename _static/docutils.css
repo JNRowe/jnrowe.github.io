@@ -20,7 +20,7 @@ div.admonition, div.attention, div.caution, div.danger, div.error,
 div.hint, div.important, div.note, div.tip, div.warning, div.sidebar {
     border: 0.2em solid;
     margin: 1em;
-    padding: 0.3em;
+    padding: 0.1em 0.3em;
 }
 
 p.admonition-title {
@@ -111,7 +111,7 @@ p.sidebar-subtitle {
     font-weight: bold;
 }
 
-pre.literal-block {
+pre.literal-block, div.highlight {
     background-color: rgb(238, 238, 238);
     border: dashed 0.1em rgb(139, 139, 139);
     color: rgb(0, 0, 0);
