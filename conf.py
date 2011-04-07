@@ -25,8 +25,10 @@ import sys, os
 
 # Add any Sphinx extension module names here, as strings. They can be extensions
 # coming with Sphinx (named 'sphinx.ext.*') or your custom ones.
+sys.path.insert(0, os.pardir)
 extensions = ["sphinx.ext.%s" % ext for ext in ["intersphinx", ]] + \
-    ["sphinxcontrib.%s" % ext for ext in []]
+    ["sphinxcontrib.%s" % ext for ext in []] + \
+    ["%s" % ext for ext in ["feed", ]]
 
 # Add any paths that contain templates here, relative to this directory.
 templates_path = ['.templates']
