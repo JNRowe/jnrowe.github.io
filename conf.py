@@ -92,6 +92,8 @@ pygments_style = 'emacs'
 
 # -- Options for HTML output ---------------------------------------------------
 
+html_context = {"feed_link": True}
+
 # The theme to use for HTML and HTML Help pages.  See the documentation for
 # a list of builtin themes.
 html_theme = 'jnrowe'
