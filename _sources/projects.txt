@@ -20,7 +20,7 @@ Projects
 * `upoints <https://github.com/JNRowe/upoints/>`_: ``upoints`` is a collection of `GPL v3 <http://www.fsf.org/licensing/licenses/gpl.html>`_ licensed modules for working with points on Earth, or other near spherical objects. [ :ref:`documentation <upoints:upoints-label>` ]
 * `versionah <https://github.com/JNRowe/versionah/>`_: Simple version number mangler [ :ref:`documentation <versionah:versionah-label>` ]
 * `vim-configs <https://github.com/JNRowe/vim-configs/>`_: Personal vim configs
-* `vim-jnrowe <https://github.com/JNRowe/vim-jnrowe/>`_: My colorscheme, decoupled from my vim-configs repo for others ;)
+* `vim-jnrowe <https://github.com/JNRowe/vim-jnrowe/>`_: My colorscheme, decoupled from my vim-configs repo for others ;) [ :ref:`documentation <vimjnrowe:vim-jnrowe-label>` ]
 
 Forks I'm hacking on
 --------------------
