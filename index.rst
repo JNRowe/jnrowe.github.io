@@ -20,6 +20,8 @@ Contents:
 
    projects
 
+   articles/index
+
    colophon
    contact
    copyright
