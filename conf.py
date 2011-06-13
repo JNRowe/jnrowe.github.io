@@ -222,10 +222,12 @@ man_pages = [
 ]
 
 
-intersphinx_mapping = {}
+intersphinx_mapping = {
+    'python': ('http://docs.python.org/', 'objects/python.inv'),
+}
 for proj in ['blanco', 'bleeter', 'bwatch', 'cupage', 'fixes-overlay',
                'misc-overlay', 'pyisbn', 'upoints', 'versionah', 'vim-jnrowe']:
     # IDs must be alphanumeric
     proj_id = filter(lambda s: s.isalnum(), proj)
     intersphinx_mapping[proj_id] = ("http://jnrowe.github.com/%s/" % proj,
-                                    "../%s/doc/.build/html/objects.inv" % proj)
+                                    "objects/%s.inv" % proj)
