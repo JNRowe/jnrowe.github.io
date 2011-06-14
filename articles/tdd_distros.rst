@@ -1,3 +1,5 @@
+:date: 2011-06-13
+
 TDD distro development
 ======================
 
