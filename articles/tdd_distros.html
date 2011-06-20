@@ -1,0 +1,284 @@
+
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="ICBM" content="52.213,0.105" />
+    <title>TDD distro development − JNRowe</title>
+    <link rel="stylesheet" href="../_static/design.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/docutils.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/sphinx.css" type="text/css" />
+    
+    <link rel="alternate" type="application/atom+xml" title="Updated items" href="/updates.atom" />
+    
+    <link rel="openid.server" href="http://openid.claimid.com/server" />
+    <link rel="openid.delegate" href="http://openid.claimid.com/jnrowe" />
+    <meta http-equiv="x-xrds-location" content="http://claimid.com/jnrowe/xrds" />
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     '0.1.0',
+        COLLAPSE_MODINDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <link rel="shortcut icon" href="../_static/icon.png" type="image/png" />
+    <link rel="index" title="Index" href="../index.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="copyright" title="Copyright" href="../copyright.html" />
+    <link rel="top" title="JNRowe" href="../index.html" />
+    <link rel="up" title="Articles" href="index.html" />
+    <link rel="next" title="Colophon" href="../colophon.html" />
+    <link rel="prev" title="Articles" href="index.html" />
+    <link rel="contents" href="../index.html" title="Site contents" />
+    <link rel="home" href="../index.html" title="Home page" />
+    <link rel="made" href="mailto:jnrowe@gmail.com" title="Author's email address" />
+    <link rel="me" href="../index.html" />
+  </head>
+  <body id="jnrowe-github-com">
+    <div id="corewrapper">
+      <h1 class="skipvisual"><a href="../index.html" rel="home author me" accesskey="1">JNRowe</a></h1>
+      <ul class="skipvisual">
+        <li>
+          <a href="#content" accesskey="2">
+            Skip navigation section
+          </a>
+        </li>
+        <li>
+          <a href="../accessibility.html" title="Accessibility statement"
+            accesskey="0">Accessibility statement</a>
+        </li>
+        <li>
+          <a href="../search.html">Search</a>
+        </li>
+      </ul>
+
+      <div id="content">
+        <div class="breadcrumbs">
+          <h3>Navigation</h3>
+          <ul>
+            <li class="bounce first">
+              <a href="../genindex.html" title="General Index"
+                accesskey="I">index</a></li>
+            <li class="bounce">
+              <a href="../colophon.html" title="Colophon"
+                accesskey="N">next</a> |</li>
+            <li class="bounce">
+              <a href="index.html" title="Articles"
+                accesskey="P">previous</a> |</li>
+            <li><a href="../index.html">JNRowe</a> &#8594;</li>
+            <li><a href="index.html" accesskey="U">Articles</a> &#8594;</li>
+            <li><a href="">TDD distro development</a></li> 
+          </ul>
+        </div>
+        <div class="quicksearch">
+          <p class="sidebar-title">Quick search</p>
+          <form class="search" action="../search.html" method="get">
+            <div>
+              <input type="text" name="q" size="18" /> <input type="submit" value="Go" />
+              <input type="hidden" name="check_keywords" value="yes" />
+              <input type="hidden" name="area" value="default" />
+            </div>
+          </form>
+        </div>
+        <div class="entry">
+          <div class="entry-content">
+            
+  <div class="section" id="tdd-distro-development">
+<h1>TDD distro development<a class="headerlink" href="#tdd-distro-development" title="Permalink to this headline">¶</a></h1>
+<p>Using <abbr title="Test Driven Development">TDD</abbr> for distribution development is a
+hot topic in some of the more geeky circles I move in, and I&#8217;m very happy about
+this.  Anything that increases the robustness of my desktop computer, my phone
+or any other device I use is a great goal!</p>
+<div class="section" id="why">
+<h2>Why?<a class="headerlink" href="#why" title="Permalink to this headline">¶</a></h2>
+<p>This answer should be obvious; more testing is good.  However, what about the
+current system needs improving?</p>
+<p>The first point is that commonly deployed distributions base their stabilisation
+processes on the lack of <em>reported</em> bugs.  This implies that packages with a
+minimal set of tests(or human testers in the common case) go through much less
+testing than popular packages on their way to be marked as stable.  Of course,
+this also implies that bugs in popular packages that will affect many users are
+often discovered before a package is stabilised.</p>
+<p>The second point is that a small set of bugs are actually regressions of
+previously fixed bugs.  This, by itself, is a reason to look at alternatives.
+Fixing the same bug more than once is an horrendous waste of developer
+resources.</p>
+</div>
+<div class="section" id="how">
+<h2>How?<a class="headerlink" href="#how" title="Permalink to this headline">¶</a></h2>
+<p>We, the fine folks of AST&#8217;s London office, already use a test-based
+stabilisation policy in the preparation of our distribution images.  Adding
+tests for new and bumped packages is something Leal Hétu and I have been
+enforcing for the past few years.</p>
+<p>Our packages and distribution images are used for the embedded devices we sell,
+the desktops we develop on and the laptops we play on.  The methods we use vary
+greatly, so I&#8217;m going to present the simple case of testing console applications
+only.  It is the practise that is important, not the process.</p>
+<p>The easiest method we use is via <a class="reference external" href="http://pypi.python.org/pypi/shelldoctest/">shelldoctest</a>, a module that implements a
+<a class="reference external" href="http://docs.python.org/library/doctest.html#module-doctest" title="(in Python v2.7)"><tt class="xref py py-mod docutils literal"><span class="pre">doctest</span></tt></a> interface for testing shell commands.  The package provides a
+user-level script for running shell sessions in Python docstrings.  A simple
+example could be:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">$ echo test</span>
+<span class="sd">test</span>
+<span class="sd">$ echo fail</span>
+<span class="sd">liaf</span>
+<span class="sd">&quot;&quot;&quot;</span>
+</pre></div>
+</div>
+<p>Running the previous file with <tt class="docutils literal"><span class="pre">shell-doctest</span> <span class="pre">test</span> <span class="pre">testdoc.py</span></tt> produces the
+following output:</p>
+<div class="highlight-text"><div class="highlight"><pre>**********************************************************************
+File &quot;testdoc.py&quot;, line 4, in testdoc
+Failed example:
+    echo fail
+Expected:
+    liaf
+Got:
+    fail
+**********************************************************************
+1 items had failures:
+   1 of   2 in testdoc
+***Test Failed*** 1 failures.
+</pre></div>
+</div>
+<p>Each time we bump a package, or add a completely new package, we also commit a
+file containing a minimal series of tests that we consider important for the
+package.  This allows us to almost instantly ascertain whether a future package
+bump breaks functionality we require.</p>
+<p>We also add a test <em>every single time</em> we fix a packaging bug, to make sure it
+doesn&#8217;t come up again.  A good example can be gleaned from a bug that was fixed
+in our <a class="reference external" href="http://www.vim.org/scripts/script.php?script_id=1567">rails</a> vim package.  Given the way the <a class="reference external" href="http://www.vim.org/scripts/script.php?script_id=1567">vim scripts site</a> is organised
+the files you want to download have awful download locations, so our ebuild for
+the <tt class="docutils literal"><span class="pre">rails</span></tt> plugin contains the following snippet:</p>
+<div class="highlight-bash"><div class="highlight"><pre><span class="nv">DESCRIPTION</span><span class="o">=</span><span class="s2">&quot;vim plugin: RoR - easy file navigation, enhanced syntax highlighting&quot;</span>
+<span class="nv">HOMEPAGE</span><span class="o">=</span><span class="s2">&quot;http://www.vim.org/scripts/script.php?script_id=1567&quot;</span>
+<span class="nv">SRC_URI</span><span class="o">=</span><span class="s2">&quot;http://www.vim.org/scripts/download_script.php?src_id=13800 -&gt; ${P}.zip&quot;</span>
+</pre></div>
+</div>
+<p>The <tt class="docutils literal"><span class="pre">SRC_URI</span></tt> declaration says we need to fetch the file from
+<tt class="docutils literal"><span class="pre">http://www.vim.org/scripts/download_script.php?src_id=13800</span></tt> and name it
+locally as <tt class="docutils literal"><span class="pre">rails-4.3.zip</span></tt>.  I&#8217;m sure you can guess what happened here,
+someone saved a copy of the file locally for testing and forgot to update the
+<tt class="docutils literal"><span class="pre">src_id</span></tt> parameter correctly <a class="footnote-reference" href="#id2" id="id1">[1]</a>.  The result was an apparently new build
+that installed an older package release.</p>
+<p>When a fix for this bug was committed a test similar to the following snippet
+was added to the <tt class="docutils literal"><span class="pre">rails</span></tt> test suite:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">$ grep &quot;autoloaded_rails = &#39;${PV}&#39;&quot; /usr/share/vim/vimfiles/autoload/rails.vim</span>
+<span class="sd">&quot;&quot;&quot;</span>
+</pre></div>
+</div>
+<p>All this does is check the reported version is correct, and it clearly only took
+a few seconds to write.  This is important, it shouldn&#8217;t cost a lot to write a
+test and this is especially true for the simplest task.</p>
+<p>I use a similar technique for managing my public Gentoo overlay, <a class="reference external" href="https://github.com/JNRowe/misc-overlay.">misc-overlay</a>.
+For example, the <a class="reference external" href="http://pypi.python.org/pypi/blockdiag/">blockdiag</a> ebuild is accompanied by a series of tests that are
+run when bumping or stabilising the package, all of which are cribbed from my
+actual <tt class="docutils literal"><span class="pre">blockdiag</span></tt> usage.  This massively reduces the time required to
+evaluate a package at bump time.</p>
+</div>
+<div class="section" id="result">
+<h2>Result?<a class="headerlink" href="#result" title="Permalink to this headline">¶</a></h2>
+<p>The time it takes to stabilise, or bump, a package may be massively reduced
+while simultaneously increasing the robustness of the packages at the same time.
+This is a huge win, much bigger than we initially envisaged.</p>
+<p>We still use time-based stabilisation, but in union with test-based
+stabilisation.  It means that on the time-based stabilisation date we can
+conveniently script the progression to stable including a final run of the test
+suite.</p>
+<p>I would, of course, prefer to see <em>any</em> tests upstreamed and where possible this
+is already happening.  However, we&#8217;re pragmatists and this means we often use
+existing content as input for tests.  The use of existing input makes writing
+the test faster and means each test exercises functionality we actually require,
+but it also means we occasionally can&#8217;t submit the data upstream owing to
+licensing concerns.</p>
+</div>
+<div class="section" id="bonus">
+<h2>Bonus<a class="headerlink" href="#bonus" title="Permalink to this headline">¶</a></h2>
+<p>I&#8217;ve used the upstream supported <tt class="docutils literal"><span class="pre">shelldoctest</span></tt> method for writing tests on
+this page, but you can also easily specify them in <a class="reference external" href="http://docutils.sourceforge.net/docs/user/rst/">reST syntax</a> files too.
+Doing this encourages you to write nicely formatted documentation to accompany
+your tests.  You can also leverage your tests that are written in this way as
+documentation using the excellent <a class="reference external" href="http://sphinx.pocoo.org/">Sphinx</a> tool.</p>
+<p>The following script shows an extremely basic, yet fully functional, example of
+how to combine the <tt class="docutils literal"><span class="pre">doctest</span></tt> module&#8217;s <a class="reference external" href="http://docs.python.org/library/doctest.html#doctest.testfile" title="(in Python v2.7)"><tt class="xref py py-func docutils literal"><span class="pre">testfile()</span></tt></a> function with
+<tt class="docutils literal"><span class="pre">shelldoctest</span></tt>:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="c">#! /usr/bin/python -tt</span>
+<span class="kn">import</span> <span class="nn">doctest</span>
+<span class="kn">import</span> <span class="nn">os</span>
+<span class="kn">import</span> <span class="nn">sys</span>
+
+<span class="kn">import</span> <span class="nn">shelldoctest</span> <span class="kn">as</span> <span class="nn">sd</span>
+
+<span class="n">sys</span><span class="o">.</span><span class="n">exit</span><span class="p">(</span><span class="n">doctest</span><span class="o">.</span><span class="n">testfile</span><span class="p">(</span><span class="n">sys</span><span class="o">.</span><span class="n">argv</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">module_relative</span><span class="o">=</span><span class="bp">False</span><span class="p">,</span>
+                          <span class="n">extraglobs</span><span class="o">=</span><span class="p">{</span><span class="s">&quot;system_command&quot;</span><span class="p">:</span> <span class="n">sd</span><span class="o">.</span><span class="n">system_command</span><span class="p">},</span>
+                          <span class="n">parser</span><span class="o">=</span><span class="n">sd</span><span class="o">.</span><span class="n">ShellDocTestParser</span><span class="p">())[</span><span class="mi">0</span><span class="p">])</span>
+</pre></div>
+</div>
+<p>This script parses the first argument on the command line when it is run and
+executes any <tt class="docutils literal"><span class="pre">shelldoctest</span></tt> blocks it finds.  It returns the count of failed
+tests as its exit code, helpfully allowing you to execute a command with <tt class="docutils literal"><span class="pre">&amp;&amp;</span></tt>
+if all the tests pass.</p>
+<p>We actually operate this way at AST, the above <tt class="docutils literal"><span class="pre">rails</span></tt> test would actually be
+part of a <tt class="docutils literal"><span class="pre">reST</span></tt> formatted file as follows:</p>
+<div class="highlight-text"><div class="highlight"><pre>Fix bug #xx, incorrect archive file::
+
+    $ grep &quot;autoloaded_rails = &#39;${PV}&#39;&quot;
+    /usr/share/vim/vimfiles/autoload/rails.vim
+</pre></div>
+</div>
+<table class="docutils footnote" frame="void" id="id2" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="#id1">[1]</a></td><td>Okay, it was me.  I&#8217;ll confess.</td></tr>
+</tbody>
+</table>
+</div>
+</div>
+
+
+          </div>
+          <div class="page_meta">
+            <ul>
+              <li>
+                <a href="http://jnrowe.github.com/articles/tdd_distros.html" rel="bookmark" title="Permalink">Permalink</a>
+              </li>
+              <li>
+                Rights: © <a class="rights" href="../copyright.html" title="Copyright info" accesskey="8">Copyright</a> 2011, James Rowe.
+              </li>
+              <li>
+                Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.0.7.
+              </li>
+            </ul>
+            <p>
+              <a href="#content">Return to Top</a>
+            </p>
+          </div>
+          <div class="clearer"></div>
+        </div>
+        <div class="breadcrumbs">
+          <h3>Navigation</h3>
+          <ul>
+            <li class="bounce first">
+              <a href="../genindex.html" title="General Index">index</a></li>
+            <li class="bounce">
+              <a href="../colophon.html" title="Colophon">next</a> |</li>
+            <li class="bounce">
+              <a href="index.html" title="Articles">previous</a> |</li>
+            <li><a href="../index.html">JNRowe</a> &#8594;</li>
+            <li><a href="index.html">Articles</a> &#8594;</li>
+            <li><a href="">TDD distro development</a></li> 
+          </ul>
+        </div>
+        </div>
+    </div>
+  </body>
+</html>

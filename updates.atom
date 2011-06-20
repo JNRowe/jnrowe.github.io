@@ -1,2 +1,155 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>JNRowe</title><link href="http://jnrowe.github.com/" rel="alternate"></link><link href="http://jnrowe.github.com/updates.atom" rel="self"></link><id>http://jnrowe.github.com/</id><updated>2011-06-06T15:09:28Z</updated><rights>2011, James Rowe</rights></feed>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>JNRowe</title><link href="http://jnrowe.github.com/" rel="alternate"></link><link href="http://jnrowe.github.com/updates.atom" rel="self"></link><id>http://jnrowe.github.com/</id><updated>2011-06-13T00:00:00Z</updated><author><name>James Rowe</name><email>jnrowe@gmail.com</email><uri>http://jnrowe.github.com/</uri></author><rights>2011, James Rowe</rights><entry><title>TDD distro development</title><link href="http://jnrowe.github.com/articles/tdd_distros.html" rel="alternate"></link><updated>2011-06-13T00:00:00Z</updated><id>http://jnrowe.github.com/articles/tdd_distros.html</id><summary type="html">&lt;div class=section id=tdd-distro-development&gt;
+&lt;h1&gt;TDD distro development&lt;a class=headerlink href=http://jnrowe.github.com/articles/tdd_distros.html#tdd-distro-development title="Permalink to this headline"&gt;¶&lt;/a&gt;&lt;/h1&gt;
+&lt;p&gt;Using &lt;abbr title="Test Driven Development"&gt;TDD&lt;/abbr&gt; for distribution development is a
+hot topic in some of the more geeky circles I move in, and I’m very happy about
+this.  Anything that increases the robustness of my desktop computer, my phone
+or any other device I use is a great goal!&lt;/p&gt;
+&lt;div class=section id=why&gt;
+&lt;h2&gt;Why?&lt;a class=headerlink href=http://jnrowe.github.com/articles/tdd_distros.html#why title="Permalink to this headline"&gt;¶&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;This answer should be obvious; more testing is good.  However, what about the
+current system needs improving?&lt;/p&gt;
+&lt;p&gt;The first point is that commonly deployed distributions base their stabilisation
+processes on the lack of &lt;em&gt;reported&lt;/em&gt; bugs.  This implies that packages with a
+minimal set of tests(or human testers in the common case) go through much less
+testing than popular packages on their way to be marked as stable.  Of course,
+this also implies that bugs in popular packages that will affect many users are
+often discovered before a package is stabilised.&lt;/p&gt;
+&lt;p&gt;The second point is that a small set of bugs are actually regressions of
+previously fixed bugs.  This, by itself, is a reason to look at alternatives.
+Fixing the same bug more than once is an horrendous waste of developer
+resources.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=section id=how&gt;
+&lt;h2&gt;How?&lt;a class=headerlink href=http://jnrowe.github.com/articles/tdd_distros.html#how title="Permalink to this headline"&gt;¶&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;We, the fine folks of AST’s London office, already use a test-based
+stabilisation policy in the preparation of our distribution images.  Adding
+tests for new and bumped packages is something Leal Hétu and I have been
+enforcing for the past few years.&lt;/p&gt;
+&lt;p&gt;Our packages and distribution images are used for the embedded devices we sell,
+the desktops we develop on and the laptops we play on.  The methods we use vary
+greatly, so I’m going to present the simple case of testing console applications
+only.  It is the practise that is important, not the process.&lt;/p&gt;
+&lt;p&gt;The easiest method we use is via &lt;a class="reference external" href=http://pypi.python.org/pypi/shelldoctest/&gt;shelldoctest&lt;/a&gt;, a module that implements a
+&lt;a class="reference external" href=http://docs.python.org/library/doctest.html#module-doctest title="(in Python v2.7)"&gt;&lt;tt class="xref py py-mod docutils literal"&gt;&lt;span class=pre&gt;doctest&lt;/span&gt;&lt;/tt&gt;&lt;/a&gt; interface for testing shell commands.  The package provides a
+user-level script for running shell sessions in Python docstrings.  A simple
+example could be:&lt;/p&gt;
+&lt;div class=highlight-python&gt;&lt;div class=highlight&gt;&lt;pre&gt;&lt;span class=sd&gt;"""&lt;/span&gt;
+&lt;span class=sd&gt;$ echo test&lt;/span&gt;
+&lt;span class=sd&gt;test&lt;/span&gt;
+&lt;span class=sd&gt;$ echo fail&lt;/span&gt;
+&lt;span class=sd&gt;liaf&lt;/span&gt;
+&lt;span class=sd&gt;"""&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;Running the previous file with &lt;tt class="docutils literal"&gt;&lt;span class=pre&gt;shell-doctest&lt;/span&gt; &lt;span class=pre&gt;test&lt;/span&gt; &lt;span class=pre&gt;testdoc.py&lt;/span&gt;&lt;/tt&gt; produces the
+following output:&lt;/p&gt;
+&lt;div class=highlight-text&gt;&lt;div class=highlight&gt;&lt;pre&gt;**********************************************************************
+File "testdoc.py", line 4, in testdoc
+Failed example:
+    echo fail
+Expected:
+    liaf
+Got:
+    fail
+**********************************************************************
+1 items had failures:
+   1 of   2 in testdoc
+***Test Failed*** 1 failures.
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;Each time we bump a package, or add a completely new package, we also commit a
+file containing a minimal series of tests that we consider important for the
+package.  This allows us to almost instantly ascertain whether a future package
+bump breaks functionality we require.&lt;/p&gt;
+&lt;p&gt;We also add a test &lt;em&gt;every single time&lt;/em&gt; we fix a packaging bug, to make sure it
+doesn’t come up again.  A good example can be gleaned from a bug that was fixed
+in our &lt;a class="reference external" href="http://www.vim.org/scripts/script.php?script_id=1567"&gt;rails&lt;/a&gt; vim package.  Given the way the &lt;a class="reference external" href="http://www.vim.org/scripts/script.php?script_id=1567"&gt;vim scripts site&lt;/a&gt; is organised
+the files you want to download have awful download locations, so our ebuild for
+the &lt;tt class="docutils literal"&gt;&lt;span class=pre&gt;rails&lt;/span&gt;&lt;/tt&gt; plugin contains the following snippet:&lt;/p&gt;
+&lt;div class=highlight-bash&gt;&lt;div class=highlight&gt;&lt;pre&gt;&lt;span class=nv&gt;DESCRIPTION&lt;/span&gt;&lt;span class=o&gt;=&lt;/span&gt;&lt;span class=s2&gt;"vim plugin: RoR - easy file navigation, enhanced syntax highlighting"&lt;/span&gt;
+&lt;span class=nv&gt;HOMEPAGE&lt;/span&gt;&lt;span class=o&gt;=&lt;/span&gt;&lt;span class=s2&gt;"http://www.vim.org/scripts/script.php?script_id=1567"&lt;/span&gt;
+&lt;span class=nv&gt;SRC_URI&lt;/span&gt;&lt;span class=o&gt;=&lt;/span&gt;&lt;span class=s2&gt;"http://www.vim.org/scripts/download_script.php?src_id=13800 -&amp;gt; ${P}.zip"&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;The &lt;tt class="docutils literal"&gt;&lt;span class=pre&gt;SRC_URI&lt;/span&gt;&lt;/tt&gt; declaration says we need to fetch the file from
+&lt;tt class="docutils literal"&gt;&lt;span class=pre&gt;http://www.vim.org/scripts/download_script.php?src_id=13800&lt;/span&gt;&lt;/tt&gt; and name it
+locally as &lt;tt class="docutils literal"&gt;&lt;span class=pre&gt;rails-4.3.zip&lt;/span&gt;&lt;/tt&gt;.  I’m sure you can guess what happened here,
+someone saved a copy of the file locally for testing and forgot to update the
+&lt;tt class="docutils literal"&gt;&lt;span class=pre&gt;src_id&lt;/span&gt;&lt;/tt&gt; parameter correctly &lt;a class=footnote-reference href=http://jnrowe.github.com/articles/tdd_distros.html#id2 id=id1&gt;[1]&lt;/a&gt;.  The result was an apparently new build
+that installed an older package release.&lt;/p&gt;
+&lt;p&gt;When a fix for this bug was committed a test similar to the following snippet
+was added to the &lt;tt class="docutils literal"&gt;&lt;span class=pre&gt;rails&lt;/span&gt;&lt;/tt&gt; test suite:&lt;/p&gt;
+&lt;div class=highlight-python&gt;&lt;div class=highlight&gt;&lt;pre&gt;&lt;span class=sd&gt;"""&lt;/span&gt;
+&lt;span class=sd&gt;$ grep "autoloaded_rails = '${PV}'" /usr/share/vim/vimfiles/autoload/rails.vim&lt;/span&gt;
+&lt;span class=sd&gt;"""&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;All this does is check the reported version is correct, and it clearly only took
+a few seconds to write.  This is important, it shouldn’t cost a lot to write a
+test and this is especially true for the simplest task.&lt;/p&gt;
+&lt;p&gt;I use a similar technique for managing my public Gentoo overlay, &lt;a class="reference external" href=https://github.com/JNRowe/misc-overlay.&gt;misc-overlay&lt;/a&gt;.
+For example, the &lt;a class="reference external" href=http://pypi.python.org/pypi/blockdiag/&gt;blockdiag&lt;/a&gt; ebuild is accompanied by a series of tests that are
+run when bumping or stabilising the package, all of which are cribbed from my
+actual &lt;tt class="docutils literal"&gt;&lt;span class=pre&gt;blockdiag&lt;/span&gt;&lt;/tt&gt; usage.  This massively reduces the time required to
+evaluate a package at bump time.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=section id=result&gt;
+&lt;h2&gt;Result?&lt;a class=headerlink href=http://jnrowe.github.com/articles/tdd_distros.html#result title="Permalink to this headline"&gt;¶&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;The time it takes to stabilise, or bump, a package may be massively reduced
+while simultaneously increasing the robustness of the packages at the same time.
+This is a huge win, much bigger than we initially envisaged.&lt;/p&gt;
+&lt;p&gt;We still use time-based stabilisation, but in union with test-based
+stabilisation.  It means that on the time-based stabilisation date we can
+conveniently script the progression to stable including a final run of the test
+suite.&lt;/p&gt;
+&lt;p&gt;I would, of course, prefer to see &lt;em&gt;any&lt;/em&gt; tests upstreamed and where possible this
+is already happening.  However, we’re pragmatists and this means we often use
+existing content as input for tests.  The use of existing input makes writing
+the test faster and means each test exercises functionality we actually require,
+but it also means we occasionally can’t submit the data upstream owing to
+licensing concerns.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=section id=bonus&gt;
+&lt;h2&gt;Bonus&lt;a class=headerlink href=http://jnrowe.github.com/articles/tdd_distros.html#bonus title="Permalink to this headline"&gt;¶&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;I’ve used the upstream supported &lt;tt class="docutils literal"&gt;&lt;span class=pre&gt;shelldoctest&lt;/span&gt;&lt;/tt&gt; method for writing tests on
+this page, but you can also easily specify them in &lt;a class="reference external" href=http://docutils.sourceforge.net/docs/user/rst/&gt;reST syntax&lt;/a&gt; files too.
+Doing this encourages you to write nicely formatted documentation to accompany
+your tests.  You can also leverage your tests that are written in this way as
+documentation using the excellent &lt;a class="reference external" href=http://sphinx.pocoo.org/&gt;Sphinx&lt;/a&gt; tool.&lt;/p&gt;
+&lt;p&gt;The following script shows an extremely basic, yet fully functional, example of
+how to combine the &lt;tt class="docutils literal"&gt;&lt;span class=pre&gt;doctest&lt;/span&gt;&lt;/tt&gt; module’s &lt;a class="reference external" href=http://docs.python.org/library/doctest.html#doctest.testfile title="(in Python v2.7)"&gt;&lt;tt class="xref py py-func docutils literal"&gt;&lt;span class=pre&gt;testfile()&lt;/span&gt;&lt;/tt&gt;&lt;/a&gt; function with
+&lt;tt class="docutils literal"&gt;&lt;span class=pre&gt;shelldoctest&lt;/span&gt;&lt;/tt&gt;:&lt;/p&gt;
+&lt;div class=highlight-python&gt;&lt;div class=highlight&gt;&lt;pre&gt;&lt;span class=c&gt;#! /usr/bin/python -tt&lt;/span&gt;
+&lt;span class=kn&gt;import&lt;/span&gt; &lt;span class=nn&gt;doctest&lt;/span&gt;
+&lt;span class=kn&gt;import&lt;/span&gt; &lt;span class=nn&gt;os&lt;/span&gt;
+&lt;span class=kn&gt;import&lt;/span&gt; &lt;span class=nn&gt;sys&lt;/span&gt;
+
+&lt;span class=kn&gt;import&lt;/span&gt; &lt;span class=nn&gt;shelldoctest&lt;/span&gt; &lt;span class=kn&gt;as&lt;/span&gt; &lt;span class=nn&gt;sd&lt;/span&gt;
+
+&lt;span class=n&gt;sys&lt;/span&gt;&lt;span class=o&gt;.&lt;/span&gt;&lt;span class=n&gt;exit&lt;/span&gt;&lt;span class=p&gt;(&lt;/span&gt;&lt;span class=n&gt;doctest&lt;/span&gt;&lt;span class=o&gt;.&lt;/span&gt;&lt;span class=n&gt;testfile&lt;/span&gt;&lt;span class=p&gt;(&lt;/span&gt;&lt;span class=n&gt;sys&lt;/span&gt;&lt;span class=o&gt;.&lt;/span&gt;&lt;span class=n&gt;argv&lt;/span&gt;&lt;span class=p&gt;[&lt;/span&gt;&lt;span class=mi&gt;1&lt;/span&gt;&lt;span class=p&gt;],&lt;/span&gt; &lt;span class=n&gt;module_relative&lt;/span&gt;&lt;span class=o&gt;=&lt;/span&gt;&lt;span class=bp&gt;False&lt;/span&gt;&lt;span class=p&gt;,&lt;/span&gt;
+                          &lt;span class=n&gt;extraglobs&lt;/span&gt;&lt;span class=o&gt;=&lt;/span&gt;&lt;span class=p&gt;{&lt;/span&gt;&lt;span class=s&gt;"system_command"&lt;/span&gt;&lt;span class=p&gt;:&lt;/span&gt; &lt;span class=n&gt;sd&lt;/span&gt;&lt;span class=o&gt;.&lt;/span&gt;&lt;span class=n&gt;system_command&lt;/span&gt;&lt;span class=p&gt;},&lt;/span&gt;
+                          &lt;span class=n&gt;parser&lt;/span&gt;&lt;span class=o&gt;=&lt;/span&gt;&lt;span class=n&gt;sd&lt;/span&gt;&lt;span class=o&gt;.&lt;/span&gt;&lt;span class=n&gt;ShellDocTestParser&lt;/span&gt;&lt;span class=p&gt;())[&lt;/span&gt;&lt;span class=mi&gt;0&lt;/span&gt;&lt;span class=p&gt;])&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;This script parses the first argument on the command line when it is run and
+executes any &lt;tt class="docutils literal"&gt;&lt;span class=pre&gt;shelldoctest&lt;/span&gt;&lt;/tt&gt; blocks it finds.  It returns the count of failed
+tests as its exit code, helpfully allowing you to execute a command with &lt;tt class="docutils literal"&gt;&lt;span class=pre&gt;&amp;amp;&amp;amp;&lt;/span&gt;&lt;/tt&gt;
+if all the tests pass.&lt;/p&gt;
+&lt;p&gt;We actually operate this way at AST, the above &lt;tt class="docutils literal"&gt;&lt;span class=pre&gt;rails&lt;/span&gt;&lt;/tt&gt; test would actually be
+part of a &lt;tt class="docutils literal"&gt;&lt;span class=pre&gt;reST&lt;/span&gt;&lt;/tt&gt; formatted file as follows:&lt;/p&gt;
+&lt;div class=highlight-text&gt;&lt;div class=highlight&gt;&lt;pre&gt;Fix bug #xx, incorrect archive file::
+
+    $ grep "autoloaded_rails = '${PV}'"
+    /usr/share/vim/vimfiles/autoload/rails.vim
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;table class="docutils footnote" frame=void id=id2 rules=none&gt;
+&lt;col class=label&gt;&lt;col&gt;&lt;/colgroup&gt;
+&lt;tbody valign=top&gt;
+&lt;tr&gt;&lt;td class=label&gt;&lt;a class=fn-backref href=http://jnrowe.github.com/articles/tdd_distros.html#id1&gt;[1]&lt;/a&gt;&lt;td&gt;Okay, it was me.  I’ll confess.&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</summary></entry></feed>
