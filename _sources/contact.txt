@@ -17,14 +17,15 @@ Contact details
 
    <p class="note">The information in this section was last updated on <abbr class="rev" title="2011-03-25T09:06:00+00:00">2011-03-25</abbr>.</p>
 
-* `My journal`_
-* `My Calendar About Nothing profile`_
-* `My GnuPG key`_ ``0xC0174749``
-* `My del.icio.us links`_
-* `My neighbours in meatspace`_
 * `My GitGub profile`_
+* `My Calendar About Nothing profile`_
+* `My dailymile profile`_
+* `My GnuPG key`_ ``0xC0174749``
+* `My neighbours in meatspace`_
 * `My last.fm profile`_
 * `My Twitter profile`_
+* `My del.icio.us links`_
+
 
 .. raw:: html
 
@@ -32,11 +33,11 @@ Contact details
 
    </div>
 
-.. _My journal: http://jnrowe.github.com
-.. _My Calendar About Nothing profile: http://calendaraboutnothing.com/~jnrowe
-.. _My GnuPG key: _static/gpg.asc
-.. _My del.icio.us links: http://del.icio.us/JNRowe
 .. _My GitGub profile: https://github.com/JNRowe/
+.. _My Calendar About Nothing profile: http://calendaraboutnothing.com/~jnrowe
+.. _My dailymile profile: http://dailymile.com/people/JNRowe
+.. _My GnuPG key: _static/gpg.asc
+.. _My neighbours in meatspace: http://geourl.org/near?p=jnrowe.github.com
 .. _My last.fm profile: http://www.last.fm/user/JNRowe/
 .. _My Twitter profile: http://twitter.com/ewornj
-.. _My neighbours in meatspace: http://geourl.org/near?p=jnrowe.github.com
+.. _My del.icio.us links: http://del.icio.us/JNRowe
