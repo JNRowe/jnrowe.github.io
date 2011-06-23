@@ -18,9 +18,7 @@ Contact details
    <p class="note">The information in this section was last updated on <abbr class="rev" title="2011-03-25T09:06:00+00:00">2011-03-25</abbr>.</p>
 
 * `My journal`_
-* `My public schedule`_
 * `My Calendar About Nothing profile`_
-* `My claimID profile`_
 * `My GnuPG key`_ ``0xC0174749``
 * `My del.icio.us links`_
 * `My neighbours in meatspace`_
@@ -35,9 +33,7 @@ Contact details
    </div>
 
 .. _My journal: http://jnrowe.github.com
-.. _My public schedule: http://www.jnrowe.ukfsn.org/calendar.html
 .. _My Calendar About Nothing profile: http://calendaraboutnothing.com/~jnrowe
-.. _My claimID profile: http://claimid.com/jnrowe
 .. _My GnuPG key: _static/gpg.asc
 .. _My del.icio.us links: http://del.icio.us/JNRowe
 .. _My GitGub profile: https://github.com/JNRowe/
