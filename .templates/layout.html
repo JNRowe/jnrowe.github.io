@@ -1,0 +1,7 @@
+{% extends "cloud/layout.html" %}
+
+{% block extrahead %}
+    {% if feed_link %}
+    <link rel="alternate" type="application/atom+xml" title="Updated items" href="/updates.atom" />
+    {% endif %}
+{% endblock %}
