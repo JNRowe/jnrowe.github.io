@@ -1,7 +1,7 @@
 Copyright information
 =====================
 
-:description: Copyright conditions for this site, and git repository it is hosted in
+:description: Copyright conditions for this site, and the ``git`` repository it is hosted in
 
 All *content* within `this site`_ is copyright James Rowe and licensed under the
 `Creative Commons Attribution-ShareAlike 3.0 license`_ unless stated otherwise.
