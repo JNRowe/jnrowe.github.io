@@ -30,6 +30,7 @@ Forks I'm hacking on
 * `github-cli <https://github.com/JNRowe/github-cli>`__: A command-line interface to the GitHub Issues API v2. [ `origin <jsmits/github-cli>`__ ]
 * `gpxviewer <https://github.com/JNRowe/gpxviewer>`__: GPXViewer GPS trace viewer [ `origin <andrewgee/gpxviewer>`__ ]
 * `hammertime <https://github.com/JNRowe/hammertime>`__: Time tracking with git [ `origin <caffeinehit/hammertime>`__ ]
+* `HTTPretty <https://github.com/JNRowe/HTTPretty>`__: HTTP client mocking tool for Python [ `origin <gabrielfalcao/HTTPretty>`__ ]
 * `micromodels <https://github.com/JNRowe/micromodels>`__: Declarative dictionary-based model classes for Python [ `origin <j4mie/micromodels>`__ ]
 * `oh-my-zsh <https://github.com/JNRowe/oh-my-zsh>`__: A community-driven framework for managing your zsh configuration. [ `origin <robbyrussell/oh-my-zsh>`__ ]
 * `pelican <https://github.com/JNRowe/pelican>`__: Static blog generator in python, using ReST syntax [ `origin <ametaireau/pelican>`__ ]
