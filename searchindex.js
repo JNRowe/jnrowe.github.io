@@ -593,6 +593,7 @@ Search.setIndex({
         rememb: 6,
         test: 4,
         you: [5, 0, 3, 4, 1],
+        mock: 6,
         nice: 4,
         brandl: 1,
         "class": [3, 6],
@@ -605,6 +606,7 @@ Search.setIndex({
         descript: [0, 3, 2, 1, 4],
         distro: [0, 4, 5],
         time: [4, 6],
+        httpretti: 6,
         invari: 1,
         cpu: 6
     },
