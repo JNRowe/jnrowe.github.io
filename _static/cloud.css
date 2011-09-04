@@ -17,7 +17,7 @@
 
 body
 {
-    font-family: sans-serif;
+    font-family: Georgia, "Bitstream Vera Serif", "New York", Palatino, serif;
     font-size: 100%;
     background-color: #1A4162;
     color: #000;
@@ -109,7 +109,7 @@ div.sphinxsidebar h4
 
     border-bottom: 1px dashed #C0C0C0;
 
-    font-family: 'Crimson Text', serif;
+    font-family: Georgia, "Bitstream Vera Serif", "New York", Palatino, serif;
     font-weight: normal;
     color: #777777;
 }
@@ -225,6 +225,13 @@ div.footer a
 
 }
 
+/*****************************************************
+ * adapt for print media
+ *****************************************************/
+@media print
+{
+   div.body { border: 0; }
+}
 
 /*****************************************************
  * document - link styles
@@ -255,6 +262,18 @@ a.external:before
 }
 
 
+dt:target,
+.footnote:target,
+.highlighted
+{
+    padding: 4px;
+    margin: -4px;
+
+    border-radius: 4px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;    
+}
+
 /*****************************************************
  * document - header styles
  *****************************************************/
@@ -264,19 +283,50 @@ div.body h2,
 div.body h3,
 div.body h4,
 div.body h5,
-div.body h6
+div.body h6,
+div.body p.rubric
 {
     margin: 1em 0 -.25em;
     padding: 0;
 
     color: #000000;
 
-    font-family: 'Crimson Text', serif;
+    font-family: Georgia, "Bitstream Vera Serif", "New York", Palatino, serif;
     font-weight: normal;
+    text-shadow: 1px 1px 0 rgba(0,0,0,.1);
 }
 
-div.body h1 { font-size: 200%; margin: 0; padding-top: .25em; text-align: center; }
-div.body h2 { font-size: 160%; }
+div.body h1 {
+    margin: 0;
+    padding-top: .25em;
+    text-align: center;
+    font-size: 200%;
+}
+
+div.body h2,
+div.body p.rubric
+{
+     margin: 1em -10px 0 -10px;
+     padding: 10px;
+     
+     background: #AAC3D5;
+     border: 1px solid rgba(0,0,0,.125);
+     border-width: 0 1px 1px 0;
+     
+     border-radius: 10px;
+     -moz-border-radius: 10px;
+     -webkit-border-radius: 10px;
+     
+     font-size: 160%;
+     color: #ffffff;
+     text-shadow: 1px 1px 0 rgba(0,0,0,.1);
+}
+
+div.body p.rubric
+{
+     background: #CDDDE9; 
+}
+
 div.body h3 { font-size: 140%; }
 div.body h4 { font-size: 120%; }
 div.body h5 { font-size: 110%; }
@@ -327,17 +377,28 @@ a.headerlink:hover
 div.admonition
 {
     background: #f2f2f2;
-    border: 1px solid rgba(0,0,0,.1);
-    border-width: 1px 0;
-    margin: 1em;
+    border: 1px solid rgba(0,0,0,.05);
+    border-width: 0 1px 1px 0;
+    margin: 1em 0;
     padding: .5em;
+    border-radius: 10px 0 10px 0;
+    -webkit-border-radius: 10px 0 10px 0;
+    -moz-border-radius: 10px 0 10px 0;
 }
 
-div.note { background-color: #E7F0FE; }
-div.seealso { background-color: #FFF7E0; }
+div.note, div.seealso, div.warning, div.admonition-todo
+{
+    background-position: 8px center;
+    background-repeat: no-repeat;
+    padding-left: 38px;
+}
+
+div.note { background-color: #E7F0FE; background-image: url(icon-note.png); }
+
+div.seealso { background-color: #FFF7E0; background-image: url(icon-seealso.png); }
 div.topic { background-color: #eee; }
-div.warning { background-color: #ffe4e4; }
-div.admonition-todo { background-color: #f2f2f2; }
+div.warning { background-color: #ffe4e4; background-image: url(icon-warning.png); }
+div.admonition-todo { background-color: #FFF7E0; background-image: url(icon-todo.png); }
 
 div.admonition.caution { background-color: green; }
 /*div.admonition.caution { background-color: #FFF0E4; }*/
@@ -367,6 +428,11 @@ p.admonition-title:after
     content: ":";
 }
 
+p.admonition-title + ul
+{
+  margin-top: 0;
+}
+
 /* don't indent admonitions inside definitions */
 dl div.admonition
 {
@@ -382,7 +448,7 @@ div.body dd,
 div.body li
 {
     text-align: justify;
-    line-height: 130%;
+    line-height: 140%;
 }
 
 /*dl.function,
@@ -437,13 +503,6 @@ h2 + table.docutils
  * document - quoted text
  *****************************************************/
 
-div.highlight > pre,
-div.highlight-ini > pre,
-div.highlight-python > pre
-{
-    margin: 1em;
-}
-
 div.highlight .c
 {
     font-size: 90%;
@@ -455,7 +514,7 @@ pre
 
     background-color: #eeffcc;
     border: 1px solid #ac9;
-    border-width: 1px 0;
+    border-width: 1px 1px 1px 4px;
 
     color: #333333;
     line-height: 120%;
@@ -480,8 +539,8 @@ tt.literal
 
 tt.samp.literal > em
 {
-    font-family: 'Crimson Text', serif;
-    font-size: 1.05em;
+    font-family: Georgia, "Bitstream Vera Serif", "New York", Palatino, serif;
+    font-size: .8em;
     padding: 0 1px;
 }
 
@@ -515,7 +574,7 @@ th
 
 .viewcode-back
 {
-    font-family: sans-serif;
+    font-family: Georgia, "Bitstream Vera Serif", "New York", Palatino, serif;
 }
 
 div.viewcode-block:target
@@ -534,7 +593,7 @@ dl.nested-section > dt
 {
     color: #000000;
 
-    font-family: 'Crimson Text', serif;
+    font-family: Georgia, "Bitstream Vera Serif", "New York", Palatino, serif;
     font-weight: normal;
     font-size: 100%;
 }
