@@ -229,7 +229,7 @@ man_pages = [
 intersphinx_mapping = {
     'python': ('http://docs.python.org/', 'objects/python.inv'),
 }
-for proj in ['blanco', 'bleeter', 'bwatch', 'cupage', 'fixes-overlay',
+for proj in ['blanco', 'bleeter', 'bwatch', 'cupage', 'jnrowe-fixes',
                'jnrowe-misc', 'pyisbn', 'upoints', 'versionah', 'vim-jnrowe']:
     # IDs must be alphanumeric
     proj_id = filter(lambda s: s.isalnum(), proj)
