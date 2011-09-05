@@ -8,11 +8,11 @@ Projects
 * `cupage <https://github.com/JNRowe/cupage>`__: A tool to check for updates on web pages [ :ref:`documentation <cupage:cupage-label>` ]
 * `dotbash <https://github.com/JNRowe/dotbash>`__: Shared `bash <http://cnswww.cns.cwru.edu/~chet/bash/bashtop.html>`__ configuration files
 * `emacs-configs <https://github.com/JNRowe/emacs-configs>`__: Personal `emacs <http://www.gnu.org/software/emacs/>`__ configs
-* `jnrowe-fixes <https://github.com/JNRowe/jnrowe-fixes>`__: Small package fixes languishing in the `Gentoo BTS <http://bugs.gentoo.org>`__ [ :ref:`documentation <jnrowefixes:jnrowe-fixes-label>` ]
 * `hubugs <https://github.com/JNRowe/hubugs>`__: Simple client for `GitHub issues <https://github.com/blog/411-github-issue-tracker>`__ [ `documentation <http://packages.python.org/hubugs/>`__ ]
 * `jnrowe.github.com <https://github.com/JNRowe/jnrowe.github.com>`__: My user pages repository(*the source of this site*)
-* `local-bin <https://github.com/JNRowe/local-bin>`__: Tat from my ``~/bin``
+* `jnrowe-fixes <https://github.com/JNRowe/jnrowe-fixes>`__: Small package fixes languishing in the `Gentoo BTS <http://bugs.gentoo.org>`__ [ :ref:`documentation <jnrowefixes:jnrowe-fixes-label>` ]
 * `jnrowe-misc <https://github.com/JNRowe/jnrowe-misc>`__: Gentoo overlay -- miscellaneous packages [ :ref:`documentation <jnrowemisc:jnrowe-misc-label>` ]
+* `local-bin <https://github.com/JNRowe/local-bin>`__: Tat from my ``~/bin``
 * `pages_layouts <https://github.com/JNRowe/pages_layouts>`__: Shared layouts submodule for jekyll
 * `pyisbn <https://github.com/JNRowe/pyisbn>`__: A Python module for working with 10- and 13-digit ISBNs [ `documentation <http://packages.python.org/pyisbn>`__ ]
 * `pytemplate <https://github.com/JNRowe/pytemplate>`__: Package template for Python, with ``distutils`` setup
