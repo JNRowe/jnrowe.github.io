@@ -8,7 +8,7 @@ Projects
 * `cupage <https://github.com/JNRowe/cupage>`__: A tool to check for updates on web pages [ :ref:`documentation <cupage:cupage-label>` ]
 * `dotbash <https://github.com/JNRowe/dotbash>`__: Shared `bash <http://cnswww.cns.cwru.edu/~chet/bash/bashtop.html>`__ configuration files
 * `emacs-configs <https://github.com/JNRowe/emacs-configs>`__: Personal `emacs <http://www.gnu.org/software/emacs/>`__ configs
-* `hubugs <https://github.com/JNRowe/hubugs>`__: Simple client for `GitHub issues <https://github.com/blog/411-github-issue-tracker>`__ [ `documentation <http://packages.python.org/hubugs/>`__ ]
+* `hubugs <https://github.com/JNRowe/hubugs>`__: Simple client for `GitHub issues <https://github.com/blog/411-github-issue-tracker>`__ [ `documentation <http://hubugs.rtfd.org/>`__ ]
 * `jnrowe.github.com <https://github.com/JNRowe/jnrowe.github.com>`__: My user pages repository(*the source of this site*)
 * `jnrowe-fixes <https://github.com/JNRowe/jnrowe-fixes>`__: Small package fixes languishing in the `Gentoo BTS <http://bugs.gentoo.org>`__ [ :ref:`documentation <jnrowefixes:jnrowe-fixes-label>` ]
 * `jnrowe-misc <https://github.com/JNRowe/jnrowe-misc>`__: Gentoo overlay -- miscellaneous packages [ :ref:`documentation <jnrowemiscdocs:jnrowe-misc-label>` ]
