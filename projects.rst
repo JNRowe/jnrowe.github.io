@@ -11,7 +11,7 @@ Projects
 * `hubugs <https://github.com/JNRowe/hubugs>`__: Simple client for `GitHub issues <https://github.com/blog/411-github-issue-tracker>`__ [ `documentation <http://hubugs.rtfd.org/>`__ ]
 * `jnrowe.github.com <https://github.com/JNRowe/jnrowe.github.com>`__: My user pages repository(*the source of this site*)
 * `jnrowe-fixes <https://github.com/JNRowe/jnrowe-fixes>`__: Small package fixes languishing in the `Gentoo BTS <http://bugs.gentoo.org>`__ [ :ref:`documentation <jnrowefixes:jnrowe-fixes-label>` ]
-* `jnrowe-misc <https://github.com/JNRowe/jnrowe-misc>`__: Gentoo overlay -- miscellaneous packages [ :ref:`documentation <jnrowemiscdocs:jnrowe-misc-label>` ]
+* `jnrowe-misc <https://github.com/JNRowe/jnrowe-misc>`__: Gentoo overlay -- miscellaneous packages [ `documentation <http://jnrowe-misc.rtfd.org/>`__ ]
 * `local-bin <https://github.com/JNRowe/local-bin>`__: Tat from my ``~/bin``
 * `pages_layouts <https://github.com/JNRowe/pages_layouts>`__: Shared layouts submodule for jekyll
 * `pyisbn <https://github.com/JNRowe/pyisbn>`__: A Python module for working with 10- and 13-digit ISBNs [ `documentation <http://packages.python.org/pyisbn>`__ ]
