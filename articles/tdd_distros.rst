@@ -151,7 +151,6 @@ how to combine the ``doctest`` module's :func:`~doctest.testfile` function with
 
     #! /usr/bin/python -tt
     import doctest
-    import os
     import sys
 
     import shelldoctest as sd
