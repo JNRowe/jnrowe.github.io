@@ -109,7 +109,7 @@ All this does is check the reported version is correct, and it clearly only took
 a few seconds to write.  This is important, it shouldn't cost a lot to write a
 test and this is especially true for the simplest task.
 
-I use a similar technique for managing my public Gentoo overlay, misc-overlay_.
+I use a similar technique for managing my public Gentoo overlay, jnrowe-misc_.
 For example, the blockdiag_ ebuild is accompanied by a series of tests that are
 run when bumping or stabilising the package, all of which are cribbed from my
 actual ``blockdiag`` usage.  This massively reduces the time required to
@@ -180,7 +180,7 @@ part of a ``reST`` formatted file as follows:
 .. _shelldoctest: http://pypi.python.org/pypi/shelldoctest/
 .. _rails: http://www.vim.org/scripts/script.php?script_id=1567
 .. _vim scripts site: http://www.vim.org/scripts/script.php?script_id=1567
-.. _misc-overlay: https://github.com/JNRowe/misc-overlay.
+.. _jnrowe-misc: https://github.com/JNRowe/jnrowe-misc
 .. _blockdiag: http://pypi.python.org/pypi/blockdiag/
 .. _reST syntax: http://docutils.sourceforge.net/docs/user/rst/
 .. _Sphinx: http://sphinx.pocoo.org/
