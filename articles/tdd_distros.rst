@@ -119,8 +119,8 @@ Result?
 -------
 
 The time it takes to stabilise, or bump, a package may be massively reduced
-while simultaneously increasing the robustness of the packages at the same time.
-This is a huge win, much bigger than we initially envisaged.
+while simultaneously increasing the robustness of the packages.  This is a huge
+win, much bigger than we initially envisaged.
 
 We still use time-based stabilisation, but in union with test-based
 stabilisation.  It means that on the time-based stabilisation date we can
@@ -165,8 +165,8 @@ executes any ``shelldoctest`` blocks it finds.  It returns the count of failed
 tests as its exit code, helpfully allowing you to execute a command with ``&&``
 if all the tests pass.
 
-We actually operate this way at AST, the above ``rails`` test would actually be
-part of a ``reST`` formatted file as follows:
+We operate this way at AST, the above ``rails`` test would actually be part of
+a ``reST`` formatted file as follows:
 
 .. code-block:: text
 
