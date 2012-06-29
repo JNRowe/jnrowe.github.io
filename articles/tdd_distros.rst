@@ -101,7 +101,8 @@ was added to the ``rails`` test suite:
 .. code-block:: python
 
     """
-    $ grep "autoloaded_rails = '${PV}'" /usr/share/vim/vimfiles/autoload/rails.vim
+    $ grep -l "autoloaded_rails = '${PV}'" /usr/share/vim/vimfiles/autoload/rails.vim
+    /usr/share/vim/vimfiles/autoload/rails.vim
     """
 
 All this does is check the reported version is correct, and it clearly only took
@@ -171,7 +172,7 @@ part of a ``reST`` formatted file as follows:
 
     Fix bug #xx, incorrect archive file::
 
-        $ grep "autoloaded_rails = '${PV}'"
+        $ grep -l "autoloaded_rails = '${PV}'" /usr/share/vim/vimfiles/autoload/rails.vim
         /usr/share/vim/vimfiles/autoload/rails.vim
 
 .. [#] Okay, it was me.  I'll confess.
