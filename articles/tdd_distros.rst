@@ -56,7 +56,7 @@ example could be:
 Running the previous file with ``shell-doctest test testdoc.py`` produces the
 following output:
 
-.. code-block:: text
+.. code-block:: pycon
 
     **********************************************************************
     File "testdoc.py", line 4, in testdoc
@@ -167,7 +167,7 @@ if all the tests pass.
 We operate this way at AST, the above ``rails`` test would actually be part of
 a ``reST`` formatted file as follows:
 
-.. code-block:: text
+.. code-block:: rst
 
     Fix bug #xx, incorrect archive file::
 
