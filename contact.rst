@@ -7,7 +7,7 @@ Contact details
 
    <div class="vcard" id="vcard">
 
-   <img style="float:right" class="photo" src="_static/pavatar.png" />
+   <img style="float: right; margin: 1em" class="photo" src="_static/pavatar.png" />
 
    <p><a href="http://jnrowe.github.com/" class="url">This</a> is the personal website of <a href="http://claimid.com/jnrowe" class="url fn" rel="me">James Rowe</a>, a <span class="title">Senior</span> <span class="role">Developer</span> with <span class="org"><span xml:lang="fr" class="organization-name">AST</span>&#39;s <span class="organization-unit"><abbr class="geo" title="51.508, -0.126">Embedded Markets</abbr></span> division</span>.</p>
 
