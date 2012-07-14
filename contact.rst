@@ -1,7 +1,7 @@
 Contact details
 ===============
 
-:description: How to contact me, or find information about me
+:description: How to contact me, and where to find information about me
 
 .. raw:: html
 
@@ -20,29 +20,24 @@ Contact details
 
    <p>The easiest way to contact <abbr class="nickname" title="JNRowe">James</abbr> is by <a href="mailto:jnrowe@gmail.com" class="email" accesskey="9">email</a>.</p>
 
-   <p class="note">The information in this section was last updated on <abbr class="rev" title="2011-03-25T09:06:00+00:00">2011-03-25</abbr>.</p>
+   <p class="note">The information in this section was last updated on <abbr class="rev" title="2012-07-14T15:21:00+00:00">2012-07-14</abbr>.</p>
 
-* `My GitGub profile`_
-* `My Calendar About Nothing profile`_
+* `My GitHub profile`_
 * `My dailymile profile`_
+* `My runkeeper profile`_
 * `My GnuPG key`_ ``0xC0174749``
 * `My neighbours in meatspace`_
-* `My last.fm profile`_
 * `My Twitter profile`_
-* `My del.icio.us links`_
-
 
 .. raw:: html
 
-   <small> [This page is <a href="http://microformats.org/wiki/hcard" title="hCard is a simple, open, distributed contact information format for people, companies, and organizations, which is suitable for embedding in (X)HTML, Atom, RSS, and arbitrary XML.">hCard</a> encoded, you can also grab it in <a href="http://suda.co.uk/projects/X2V/get-vcard.php?uri=http://jnrowe.github.com/contact.html">vcard format</a></small>
+   <small> [This page is <a href="http://microformats.org/wiki/hcard" title="hCard is a simple, open, distributed contact information format for people, companies, and organizations, which is suitable for embedding in (X)HTML, Atom, RSS, and arbitrary XML.">hCard</a> encoded, you can also grab it in <a href="http://suda.co.uk/projects/X2V/get-vcard.php?uri=http://jnrowe.github.com/contact.html">vcard format</a>]</small>
 
    </div>
 
-.. _My GitGub profile: https://github.com/JNRowe/
-.. _My Calendar About Nothing profile: http://calendaraboutnothing.com/~jnrowe
+.. _My GitHub profile: https://github.com/JNRowe/
 .. _My dailymile profile: http://dailymile.com/people/JNRowe
+.. _My runkeeper profile: http://runkeeper.com/user/JNRowe/
 .. _My GnuPG key: _static/gpg.asc
 .. _My neighbours in meatspace: http://geourl.org/near?p=jnrowe.github.com
-.. _My last.fm profile: http://www.last.fm/user/JNRowe/
 .. _My Twitter profile: http://twitter.com/ewornj
-.. _My del.icio.us links: http://del.icio.us/JNRowe
