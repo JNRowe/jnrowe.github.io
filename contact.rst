@@ -3,6 +3,9 @@ Contact details
 
 :description: How to contact me, and where to find information about me
 
+.. This huge spaghetti of raw HTML exists for hCard markup, if there is a
+   better way to handle this I'd love to know about it.
+
 .. raw:: html
 
    <div class="vcard" id="vcard">
