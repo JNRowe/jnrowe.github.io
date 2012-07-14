@@ -96,8 +96,6 @@ pygments_style = 'emacs'
 
 # -- Options for HTML output --------------------------------------------------
 
-html_context = {"feed_link": True}
-
 # The theme to use for HTML and HTML Help pages.  See the documentation for
 # a list of builtin themes.
 html_theme = 'agogo'
@@ -178,15 +176,20 @@ htmlhelp_basename = 'JNRowedoc'
 
 # -- Options for LaTeX output -------------------------------------------------
 
-# The paper size ('letter' or 'a4').
-#latex_paper_size = 'letter'
+latex_elements = {
+# The paper size ('letterpaper' or 'a4paper').
+#'papersize': 'letterpaper',
 
 # The font size ('10pt', '11pt' or '12pt').
-#latex_font_size = '10pt'
+#'pointsize': '10pt',
+
+# Additional stuff for the LaTeX preamble.
+#'preamble': '',
+}
 
 # Grouping the document tree into LaTeX files. List of tuples
 # (source start file, target name, title, author, documentclass
-#  [howto/manual]).
+# [howto/manual]).
 latex_documents = [
   ('index', 'JNRowe.tex', u'JNRowe Documentation',
    u'James Rowe', 'manual'),
@@ -206,9 +209,6 @@ latex_documents = [
 # If true, show URL addresses after external links.
 #latex_show_urls = False
 
-# Additional stuff for the LaTeX preamble.
-#latex_preamble = ''
-
 # Documents to append as an appendix to all manuals.
 #latex_appendices = []
 
@@ -225,7 +225,32 @@ man_pages = [
      [u'James Rowe'], 1)
 ]
 
+# If true, show URL addresses after external links.
+#man_show_urls = False
 
+
+# -- Options for Texinfo output -----------------------------------------------
+
+# Grouping the document tree into Texinfo files. List of tuples
+# (source start file, target name, title, author,
+#  dir menu entry, description, category)
+texinfo_documents = [
+  ('index', 'jnrowe', u'JNRowe Documentation',
+   u'James Rowe', 'JNRowe', 'One line description of project.',
+   'Miscellaneous'),
+]
+
+# Documents to append as an appendix to all manuals.
+#texinfo_appendices = []
+
+# If false, no module index is generated.
+#texinfo_domain_indices = True
+
+# How to display URL addresses: 'footnote', 'no', or 'inline'.
+#texinfo_show_urls = 'footnote'
+
+
+# Example configuration for intersphinx: refer to the Python standard library.
 intersphinx_mapping = {
     'python': ('http://docs.python.org/', 'objects/python.inv'),
 }
