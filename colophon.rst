@@ -10,10 +10,10 @@ in practise.
 Content creation
 ----------------
 
-Content is invariably written with emacs_, or on occasion via a script, in the
+Content is invariably written with vim_, or on occasion via a script, in the
 beautiful reST_ format.
 
 .. _sphinx: http://sphinx.pocoo.org/
 .. _content: https://github.com/JNRowe/jnrowe.github.com
-.. _emacs: http://www.gnu.org/software/emacs/
+.. _vim: http://www.vim.org/
 .. _reST: http://docutils.sourceforge.net/docs/user/rst/
