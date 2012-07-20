@@ -24,4 +24,5 @@ Contents:
 
    colophon
    contact
+   consult
    copyright

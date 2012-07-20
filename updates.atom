@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>JNRowe</title><link href="http://jnrowe.github.com/" rel="alternate"></link><link href="http://jnrowe.github.com/updates.atom" rel="self"></link><id>http://jnrowe.github.com/</id><updated>2011-06-13T00:00:00Z</updated><author><name>James Rowe</name><email>jnrowe@gmail.com</email><uri>http://jnrowe.github.com/</uri></author><rights>2011, James Rowe</rights><entry><title>TDD distro development</title><link href="http://jnrowe.github.com/articles/tdd_distros.html" rel="alternate"></link><updated>2011-06-13T00:00:00Z</updated><id>http://jnrowe.github.com/articles/tdd_distros.html</id><summary type="html">&lt;div class=section id=tdd-distro-development&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>JNRowe</title><link href="http://jnrowe.github.com/" rel="alternate"></link><link href="http://jnrowe.github.com/updates.atom" rel="self"></link><id>http://jnrowe.github.com/</id><updated>2011-06-13T00:00:00Z</updated><author><name>James Rowe</name><email>jnrowe@gmail.com</email><uri>http://jnrowe.github.com/</uri></author><rights>2009-2012, James Rowe</rights><entry><title>TDD distro development</title><link href="http://jnrowe.github.com/articles/tdd_distros.html" rel="alternate"></link><updated>2011-06-13T00:00:00Z</updated><id>http://jnrowe.github.com/articles/tdd_distros.html</id><summary type="html">&lt;div class=section id=tdd-distro-development&gt;
 &lt;h1&gt;TDD distro development&lt;a class=headerlink href=http://jnrowe.github.com/articles/tdd_distros.html#tdd-distro-development title="Permalink to this headline"&gt;¶&lt;/a&gt;&lt;/h1&gt;
 &lt;p&gt;Using &lt;abbr title="Test Driven Development"&gt;TDD&lt;/abbr&gt; for distribution development is a
 hot topic in some of the more geeky circles I move in, and I’m very happy about
@@ -44,18 +44,18 @@ example could be:&lt;/p&gt;
 &lt;/div&gt;
 &lt;p&gt;Running the previous file with &lt;tt class="docutils literal"&gt;&lt;span class=pre&gt;shell-doctest&lt;/span&gt; &lt;span class=pre&gt;test&lt;/span&gt; &lt;span class=pre&gt;testdoc.py&lt;/span&gt;&lt;/tt&gt; produces the
 following output:&lt;/p&gt;
-&lt;div class=highlight-text&gt;&lt;div class=highlight&gt;&lt;pre&gt;**********************************************************************
-File "testdoc.py", line 4, in testdoc
-Failed example:
-    echo fail
-Expected:
-    liaf
-Got:
-    fail
-**********************************************************************
-1 items had failures:
-   1 of   2 in testdoc
-***Test Failed*** 1 failures.
+&lt;div class=highlight-pycon&gt;&lt;div class=highlight&gt;&lt;pre&gt;&lt;span class=go&gt;**********************************************************************&lt;/span&gt;
+&lt;span class=go&gt;File "testdoc.py", line 4, in testdoc&lt;/span&gt;
+&lt;span class=go&gt;Failed example:&lt;/span&gt;
+&lt;span class=go&gt;    echo fail&lt;/span&gt;
+&lt;span class=go&gt;Expected:&lt;/span&gt;
+&lt;span class=go&gt;    liaf&lt;/span&gt;
+&lt;span class=go&gt;Got:&lt;/span&gt;
+&lt;span class=go&gt;    fail&lt;/span&gt;
+&lt;span class=go&gt;**********************************************************************&lt;/span&gt;
+&lt;span class=go&gt;1 items had failures:&lt;/span&gt;
+&lt;span class=go&gt;   1 of   2 in testdoc&lt;/span&gt;
+&lt;span class=go&gt;***Test Failed*** 1 failures.&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
 &lt;p&gt;Each time we bump a package, or add a completely new package, we also commit a
@@ -81,14 +81,15 @@ that installed an older package release.&lt;/p&gt;
 &lt;p&gt;When a fix for this bug was committed a test similar to the following snippet
 was added to the &lt;tt class="docutils literal"&gt;&lt;span class=pre&gt;rails&lt;/span&gt;&lt;/tt&gt; test suite:&lt;/p&gt;
 &lt;div class=highlight-python&gt;&lt;div class=highlight&gt;&lt;pre&gt;&lt;span class=sd&gt;"""&lt;/span&gt;
-&lt;span class=sd&gt;$ grep "autoloaded_rails = '${PV}'" /usr/share/vim/vimfiles/autoload/rails.vim&lt;/span&gt;
+&lt;span class=sd&gt;$ grep -l "autoloaded_rails = '${PV}'" /usr/share/vim/vimfiles/autoload/rails.vim&lt;/span&gt;
+&lt;span class=sd&gt;/usr/share/vim/vimfiles/autoload/rails.vim&lt;/span&gt;
 &lt;span class=sd&gt;"""&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
 &lt;p&gt;All this does is check the reported version is correct, and it clearly only took
 a few seconds to write.  This is important, it shouldn’t cost a lot to write a
 test and this is especially true for the simplest task.&lt;/p&gt;
-&lt;p&gt;I use a similar technique for managing my public Gentoo overlay, &lt;a class="reference external" href=https://github.com/JNRowe/misc-overlay.&gt;misc-overlay&lt;/a&gt;.
+&lt;p&gt;I use a similar technique for managing my public Gentoo overlay, &lt;a class="reference external" href=https://github.com/JNRowe/jnrowe-misc&gt;jnrowe-misc&lt;/a&gt;.
 For example, the &lt;a class="reference external" href=http://pypi.python.org/pypi/blockdiag/&gt;blockdiag&lt;/a&gt; ebuild is accompanied by a series of tests that are
 run when bumping or stabilising the package, all of which are cribbed from my
 actual &lt;tt class="docutils literal"&gt;&lt;span class=pre&gt;blockdiag&lt;/span&gt;&lt;/tt&gt; usage.  This massively reduces the time required to
@@ -97,8 +98,8 @@ evaluate a package at bump time.&lt;/p&gt;
 &lt;div class=section id=result&gt;
 &lt;h2&gt;Result?&lt;a class=headerlink href=http://jnrowe.github.com/articles/tdd_distros.html#result title="Permalink to this headline"&gt;¶&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;The time it takes to stabilise, or bump, a package may be massively reduced
-while simultaneously increasing the robustness of the packages at the same time.
-This is a huge win, much bigger than we initially envisaged.&lt;/p&gt;
+while simultaneously increasing the robustness of the packages.  This is a huge
+win, much bigger than we initially envisaged.&lt;/p&gt;
 &lt;p&gt;We still use time-based stabilisation, but in union with test-based
 stabilisation.  It means that on the time-based stabilisation date we can
 conveniently script the progression to stable including a final run of the test
@@ -122,7 +123,6 @@ how to combine the &lt;tt class="docutils literal"&gt;&lt;span class=pre&gt;doct
 &lt;tt class="docutils literal"&gt;&lt;span class=pre&gt;shelldoctest&lt;/span&gt;&lt;/tt&gt;:&lt;/p&gt;
 &lt;div class=highlight-python&gt;&lt;div class=highlight&gt;&lt;pre&gt;&lt;span class=c&gt;#! /usr/bin/python -tt&lt;/span&gt;
 &lt;span class=kn&gt;import&lt;/span&gt; &lt;span class=nn&gt;doctest&lt;/span&gt;
-&lt;span class=kn&gt;import&lt;/span&gt; &lt;span class=nn&gt;os&lt;/span&gt;
 &lt;span class=kn&gt;import&lt;/span&gt; &lt;span class=nn&gt;sys&lt;/span&gt;
 
 &lt;span class=kn&gt;import&lt;/span&gt; &lt;span class=nn&gt;shelldoctest&lt;/span&gt; &lt;span class=kn&gt;as&lt;/span&gt; &lt;span class=nn&gt;sd&lt;/span&gt;
@@ -136,12 +136,12 @@ how to combine the &lt;tt class="docutils literal"&gt;&lt;span class=pre&gt;doct
 executes any &lt;tt class="docutils literal"&gt;&lt;span class=pre&gt;shelldoctest&lt;/span&gt;&lt;/tt&gt; blocks it finds.  It returns the count of failed
 tests as its exit code, helpfully allowing you to execute a command with &lt;tt class="docutils literal"&gt;&lt;span class=pre&gt;&amp;amp;&amp;amp;&lt;/span&gt;&lt;/tt&gt;
 if all the tests pass.&lt;/p&gt;
-&lt;p&gt;We actually operate this way at AST, the above &lt;tt class="docutils literal"&gt;&lt;span class=pre&gt;rails&lt;/span&gt;&lt;/tt&gt; test would actually be
-part of a &lt;tt class="docutils literal"&gt;&lt;span class=pre&gt;reST&lt;/span&gt;&lt;/tt&gt; formatted file as follows:&lt;/p&gt;
-&lt;div class=highlight-text&gt;&lt;div class=highlight&gt;&lt;pre&gt;Fix bug #xx, incorrect archive file::
+&lt;p&gt;We operate this way at AST, the above &lt;tt class="docutils literal"&gt;&lt;span class=pre&gt;rails&lt;/span&gt;&lt;/tt&gt; test would actually be part of
+a &lt;tt class="docutils literal"&gt;&lt;span class=pre&gt;reST&lt;/span&gt;&lt;/tt&gt; formatted file as follows:&lt;/p&gt;
+&lt;div class=highlight-rst&gt;&lt;div class=highlight&gt;&lt;pre&gt;Fix bug #xx, incorrect archive file&lt;span class=se&gt;::&lt;/span&gt;
 
-    $ grep "autoloaded_rails = '${PV}'"
-    /usr/share/vim/vimfiles/autoload/rails.vim
+&lt;span class=s&gt;    $ grep -l "autoloaded_rails = '${PV}'" /usr/share/vim/vimfiles/autoload/rails.vim&lt;/span&gt;
+&lt;span class=s&gt;    /usr/share/vim/vimfiles/autoload/rails.vim&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
 &lt;table class="docutils footnote" frame=void id=id2 rules=none&gt;

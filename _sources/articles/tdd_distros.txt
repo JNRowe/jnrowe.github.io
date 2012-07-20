@@ -56,7 +56,7 @@ example could be:
 Running the previous file with ``shell-doctest test testdoc.py`` produces the
 following output:
 
-.. code-block:: text
+.. code-block:: pycon
 
     **********************************************************************
     File "testdoc.py", line 4, in testdoc
@@ -101,14 +101,15 @@ was added to the ``rails`` test suite:
 .. code-block:: python
 
     """
-    $ grep "autoloaded_rails = '${PV}'" /usr/share/vim/vimfiles/autoload/rails.vim
+    $ grep -l "autoloaded_rails = '${PV}'" /usr/share/vim/vimfiles/autoload/rails.vim
+    /usr/share/vim/vimfiles/autoload/rails.vim
     """
 
 All this does is check the reported version is correct, and it clearly only took
 a few seconds to write.  This is important, it shouldn't cost a lot to write a
 test and this is especially true for the simplest task.
 
-I use a similar technique for managing my public Gentoo overlay, misc-overlay_.
+I use a similar technique for managing my public Gentoo overlay, jnrowe-misc_.
 For example, the blockdiag_ ebuild is accompanied by a series of tests that are
 run when bumping or stabilising the package, all of which are cribbed from my
 actual ``blockdiag`` usage.  This massively reduces the time required to
@@ -118,8 +119,8 @@ Result?
 -------
 
 The time it takes to stabilise, or bump, a package may be massively reduced
-while simultaneously increasing the robustness of the packages at the same time.
-This is a huge win, much bigger than we initially envisaged.
+while simultaneously increasing the robustness of the packages.  This is a huge
+win, much bigger than we initially envisaged.
 
 We still use time-based stabilisation, but in union with test-based
 stabilisation.  It means that on the time-based stabilisation date we can
@@ -150,7 +151,6 @@ how to combine the ``doctest`` module's :func:`~doctest.testfile` function with
 
     #! /usr/bin/python -tt
     import doctest
-    import os
     import sys
 
     import shelldoctest as sd
@@ -164,14 +164,14 @@ executes any ``shelldoctest`` blocks it finds.  It returns the count of failed
 tests as its exit code, helpfully allowing you to execute a command with ``&&``
 if all the tests pass.
 
-We actually operate this way at AST, the above ``rails`` test would actually be
-part of a ``reST`` formatted file as follows:
+We operate this way at AST, the above ``rails`` test would actually be part of
+a ``reST`` formatted file as follows:
 
-.. code-block:: text
+.. code-block:: rst
 
     Fix bug #xx, incorrect archive file::
 
-        $ grep "autoloaded_rails = '${PV}'"
+        $ grep -l "autoloaded_rails = '${PV}'" /usr/share/vim/vimfiles/autoload/rails.vim
         /usr/share/vim/vimfiles/autoload/rails.vim
 
 .. [#] Okay, it was me.  I'll confess.
@@ -179,7 +179,7 @@ part of a ``reST`` formatted file as follows:
 .. _shelldoctest: http://pypi.python.org/pypi/shelldoctest/
 .. _rails: http://www.vim.org/scripts/script.php?script_id=1567
 .. _vim scripts site: http://www.vim.org/scripts/script.php?script_id=1567
-.. _misc-overlay: https://github.com/JNRowe/misc-overlay.
+.. _jnrowe-misc: https://github.com/JNRowe/jnrowe-misc
 .. _blockdiag: http://pypi.python.org/pypi/blockdiag/
 .. _reST syntax: http://docutils.sourceforge.net/docs/user/rst/
 .. _Sphinx: http://sphinx.pocoo.org/
