@@ -2,26 +2,29 @@ Projects
 ========
 
 * `bfm <https://github.com/JNRowe/bfm>`__: This program is a dockapp-style CPU, memory, swap and load average monitor.
-* `blanco <https://github.com/JNRowe/blanco>`__: *"Hey, remember me?"* [ :ref:`documentation <blanco:blanco-label>` ]
-* `bleeter <https://github.com/JNRowe/bleeter>`__: Nasty little twitter client [ :ref:`documentation <bleeter:bleeter-label>` ]
-* `bwatch <https://github.com/JNRowe/bwatch>`__: Simple bandwidth watching tool [ :ref:`documentation <bwatch:bwatch-label>` ]
-* `cupage <https://github.com/JNRowe/cupage>`__: A tool to check for updates on web pages [ :ref:`documentation <cupage:cupage-label>` ]
-* `dotbash <https://github.com/JNRowe/dotbash>`__: Shared `bash <http://cnswww.cns.cwru.edu/~chet/bash/bashtop.html>`__ configuration files
-* `emacs-configs <https://github.com/JNRowe/emacs-configs>`__: Personal `emacs <http://www.gnu.org/software/emacs/>`__ configs
-* `hubugs <https://github.com/JNRowe/hubugs>`__: Simple client for `GitHub issues <https://github.com/blog/411-github-issue-tracker>`__ [ `documentation <http://hubugs.rtfd.org/>`__ ]
-* `jnrowe.github.com <https://github.com/JNRowe/jnrowe.github.com>`__: My user pages repository(*the source of this site*)
-* `jnrowe-fixes <https://github.com/JNRowe/jnrowe-fixes>`__: Small package fixes languishing in the `Gentoo BTS <http://bugs.gentoo.org>`__ [ :ref:`documentation <jnrowefixes:jnrowe-fixes-label>` ]
+* `blanco <https://github.com/JNRowe/blanco>`__: Hey, remember me? [ `documentation <http://jnrowe.github.com/blanco>`__ ]
+* `bleeter <https://github.com/JNRowe/bleeter>`__: Nasty little twitter client [ `documentation <http://jnrowe.github.com/bleeter/>`__ ]
+* `blog <https://github.com/JNRowe/blog>`__: Old jnrowe.github.com content that *may* be resurrected.
+* `bwatch <https://github.com/JNRowe/bwatch>`__: Simple bandwidth watching tool [ `documentation <http://jnrowe.github.com/bwatch/>`__ ]
+* `cupage <https://github.com/JNRowe/cupage>`__: A tool to check for updates on web pages [ `documentation <http://jnrowe.github.com/cupage>`__ ]
+* `dotbash <https://github.com/JNRowe/dotbash>`__: Shared bash configuration files
+* `dwm <https://github.com/JNRowe/dwm>`__: The dwm codebase I run [ `documentation <http://dwm.suckless.org/>`__ ]
+* `emacs-configs <https://github.com/JNRowe/emacs-configs>`__: Personal emacs configs
+* `hubugs <https://github.com/JNRowe/hubugs>`__: Simple client for GitHub issues [ `documentation <http://hubugs.rtfd.org/>`__ ]
+* `jnrowe-fixes <https://github.com/JNRowe/jnrowe-fixes>`__: Small package fixes languishing in the Gentoo BTS [ `documentation <http://jnrowe.github.com/jnrowe-fixes>`__ ]
 * `jnrowe-misc <https://github.com/JNRowe/jnrowe-misc>`__: Gentoo overlay -- miscellaneous packages [ `documentation <http://jnrowe-misc.rtfd.org/>`__ ]
-* `local-bin <https://github.com/JNRowe/local-bin>`__: Tat from my ``~/bin``
+* `jnrowe.github.com <https://github.com/JNRowe/jnrowe.github.com>`__: My user pages repository [ `documentation <http://jnrowe.github.com/>`__ ]
+* `local-bin <https://github.com/JNRowe/local-bin>`__: Tat from my ~/bin
 * `pages_layouts <https://github.com/JNRowe/pages_layouts>`__: Shared layouts submodule for jekyll
-* `pyisbn <https://github.com/JNRowe/pyisbn>`__: A Python module for working with 10- and 13-digit ISBNs [ `documentation <http://packages.python.org/pyisbn>`__ ]
-* `pytemplate <https://github.com/JNRowe/pytemplate>`__: Package template for Python, with ``distutils`` setup
-* `rdial <https://github.com/JNRowe/rdial>`__: Simple time tracking for simple people
-* `sphinx-jnrowe <https://github.com/JNRowe/sphinx-jnrowe>`__: My `sphinx <http://sphinx.pocoo.org/>`__ theme
-* `upoints <https://github.com/JNRowe/upoints>`__: upoints is a collection of GPL v3 licensed modules for working with points on Earth, or other near spherical objects. [ :ref:`documentation <upoints:upoints-label>` ]
-* `versionah <https://github.com/JNRowe/versionah>`__: Simple version number mangler [ :ref:`documentation <versionah:versionah-label>` ]
-* `vim-configs <https://github.com/JNRowe/vim-configs>`__: Personal `vim <http://www.vim.org/>`__ configs
-* `vim-jnrowe <https://github.com/JNRowe/vim-jnrowe>`__: My colorscheme, decoupled from ``vim-configs`` repo for others ;) [ :ref:`documentation <vimjnrowe:vim-jnrowe-label>` ]
+* `pyisbn <https://github.com/JNRowe/pyisbn>`__: A Python module for working with 10- and 13-digit ISBNs [ `documentation <http://packages.python.org/pyisbn/>`__ ]
+* `pytemplate <https://github.com/JNRowe/pytemplate>`__: Package template for Python, with distutils setup
+* `rdial <https://github.com/JNRowe/rdial>`__: Simple time tracking for simple people [ `documentation <http://rdial.rtfd.org/>`__ ]
+* `reverend <https://github.com/JNRowe/reverend>`__: Reverend - Simple Bayesian classifier [ `documentation <http://divmod.org/trac/wiki/DivmodReverend>`__ ]
+* `sphinx-jnrowe <https://github.com/JNRowe/sphinx-jnrowe>`__: My sphinx theme
+* `upoints <https://github.com/JNRowe/upoints>`__: upoints is a collection of GPL v3 licensed modules for working with points on Earth, or other near spherical objects. [ `documentation <http://jnrowe.github.com/upoints/>`__ ]
+* `versionah <https://github.com/JNRowe/versionah>`__: Simple version number mangler [ `documentation <http://versionah.rtfd.org/>`__ ]
+* `vim-configs <https://github.com/JNRowe/vim-configs>`__: Personal vim configs [ `documentation <http://jnrowe.github.com/vim-configs>`__ ]
+* `vim-jnrowe <https://github.com/JNRowe/vim-jnrowe>`__: My colorscheme, decoupled from my vim-configs repo for others ;) [ `documentation <http://jnrowe.github.com/vim-jnrowe/>`__ ]
 
 Forks I'm hacking on
 --------------------
@@ -66,12 +69,9 @@ Forks I'm hacking on
 Git mirrors of projects I'm hacking on
 --------------------------------------
 
-* `dwm <https://github.com/JNRowe/dwm>`__: Mirror of the `upstream <http://dwm.suckless.org/>`__ ``mercurial`` repository
 * `readyset <https://github.com/JNRowe/readyset>`__: Mirror of the `upstream <http://readyset.tigris.org/>`__ ``svn`` repository
 * `shell-doctest <https://github.com/JNRowe/shell-doctest>`__: Mirror of the `upstream <http://code.google.com/p/shell-doctest/>`__ ``mercurial`` repository
 * `surfraw <https://github.com/JNRowe/surfraw>`__: Mirror of the `upstream <http://surfraw.alioth.debian.org/>`__ git repository
 
 ..
   * `winwrangler <https://github.com/JNRowe/winwrangler>`__: Mirror of the upstream failpad source, converted for Matt
-
-
