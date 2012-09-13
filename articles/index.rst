@@ -8,4 +8,5 @@ mind.
    :maxdepth: 1
    :glob:
 
+   tips/index
    *
