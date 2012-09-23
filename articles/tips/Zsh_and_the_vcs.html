@@ -1,0 +1,245 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Zsh and the VCS &mdash; JNRowe</title>
+    
+    <link rel="stylesheet" href="../../_static/agogo.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../',
+        VERSION:     '0.1.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../_static/doctools.js"></script>
+    <link rel="shortcut icon" href="../../_static/icon.ico"/>
+    <link rel="copyright" title="Copyright" href="../../copyright.html" />
+    <link rel="top" title="JNRowe" href="../../index.html" />
+    <link rel="up" title="Tips" href="index.html" />
+    <link rel="next" title="TDD distro development" href="../tdd_distros.html" />
+    <link rel="prev" title="Visual vim mode identifier" href="Visual_vim_mode_identifier.html" />
+  </head>
+  <body>
+    <div class="header-wrapper">
+      <div class="header">
+          <p class="logo"><a href="../../index.html">
+            <img class="logo" src="../../_static/logo.png" alt="Logo"/>
+          </a></p>
+        <div class="headertitle"><a
+          href="../../index.html">JNRowe</a></div>
+        <div class="rel">
+          <a href="Visual_vim_mode_identifier.html" title="Visual vim mode identifier"
+             accesskey="P">previous</a> |
+          <a href="../tdd_distros.html" title="TDD distro development"
+             accesskey="N">next</a> |
+          <a href="../../genindex.html" title="General Index"
+             accesskey="I">index</a>
+        </div>
+       </div>
+    </div>
+
+    <div class="content-wrapper">
+      <div class="content">
+        <div class="document">
+            
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="zsh-and-the-vcs">
+<h1>Zsh and the VCS<a class="headerlink" href="#zsh-and-the-vcs" title="Permalink to this headline">¶</a></h1>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">date:</th><td class="field-body">2009-10-28</td>
+</tr>
+</tbody>
+</table>
+<img alt="Git prompt screenshot" class="align-right" src="../../_images/2009-10-28-git_prompt.png" />
+<p>I&#8217;ve recently switched to <a class="reference external" href="http://www.zsh.org/">Zsh</a> as my login shell after
+9 years of using <a class="reference external" href="http://cnswww.cns.cwru.edu/~chet/bash/bashtop.html">bash</a>, and for no particularly good reason either as they&#8217;re
+both great interactive shells.  I guess all the <em>Kool Kids</em> are doing it, and
+I&#8217;m just playing catchup.  The one side effect of that is I&#8217;m now scribbling
+tips about <tt class="docutils literal"><span class="pre">Zsh</span></tt> too...</p>
+<p>In a screenshot I posted in our bugtracker &#8211; that was considerably less staged
+than the example above &#8211; one of my more visual hunks of <tt class="docutils literal"><span class="pre">Zsh</span></tt> configuration
+was visible, leading to the following question from Dan Wilson:</p>
+<blockquote>
+<div>Okay, &#8216;fess time.  How do you get <tt class="docutils literal"><span class="pre">git</span></tt> branch names in the prompt?  How
+do you make the funky arrows show repo status?</div></blockquote>
+<p>Firstly, I use <a class="reference external" href="http://github.com/robbyrussell/oh-my-zsh">oh-my-zsh</a> which is an excellent basis for <tt class="docutils literal"><span class="pre">Zsh</span></tt> configuration
+files.  My prompt settings work within that framework, although they could be
+converted to work with <em>plain</em> <tt class="docutils literal"><span class="pre">Zsh</span></tt> if you have the inclination.</p>
+<p>If you want to see my entire &#8220;theme&#8221; file you can <a class="reference external" href="http://github.com/JNRowe/oh-my-zsh">clone my fork</a> and look at
+<a class="reference external" href="http://github.com/JNRowe/oh-my-zsh/blob/master/themes/jnrowe.zsh-theme">oh-my-zsh/themes/jnrowe.zsh-theme</a>.</p>
+<div class="section" id="branch-names">
+<h2>Branch names<a class="headerlink" href="#branch-names" title="Permalink to this headline">¶</a></h2>
+<p><tt class="docutils literal"><span class="pre">Zsh</span></tt> comes with some neat <abbr title="Version Control System">VCS</abbr> integration,
+that is exceptionally <a class="reference external" href="http://zsh.sourceforge.net/Doc/Release/User-Contributions.html#SEC273">documented</a> in the manual.  I use that code to enable
+branch names in my prompt, I use it directly instead of the code in
+<tt class="docutils literal"><span class="pre">oh-my-zsh</span></tt> that handles <tt class="docutils literal"><span class="pre">git</span></tt> status because it doesn&#8217;t do what I want
+[yet].  I use a format that matches the default(<tt class="docutils literal"><span class="pre">robbyrussell</span></tt>) theme in
+<tt class="docutils literal"><span class="pre">oh-my-zsh</span></tt>.</p>
+<div class="highlight-bash"><div class="highlight"><pre>autoload -Uz vcs_info
+
+<span class="c"># See the documentation for the format string definition</span>
+<span class="c"># This generates a fancy coloured string with $vcs:($branch)</span>
+zstyle <span class="s1">&#39;:vcs_info:*&#39;</span> formats <span class="s1">&#39;%F{2}%s%F{7}:%F{2}(%F{1}%b%F{2})%f &#39;</span>
+zstyle <span class="s1">&#39;:vcs_info:*&#39;</span> <span class="nb">enable </span>git
+</pre></div>
+</div>
+<p><a class="reference external" href="http://gist.github.com/220796">Fork this code</a></p>
+<p>Once we&#8217;ve configured <tt class="docutils literal"><span class="pre">vcs_info</span></tt> we just need to include
+<tt class="docutils literal"><span class="pre">${vcs_info_msg_0_}</span></tt> somewhere in our prompt to display the <abbr title="Version Control System">VCS</abbr> and current branch name.</p>
+<p><tt class="docutils literal"><span class="pre">vcs_info</span></tt> works quite well, and supports many different systems(both common
+and uncommon).  As the code snippet shows I enable support for <a class="reference external" href="http://www.git-scm.com/">git</a> exclusively.
+I&#8217;ve used it with <a class="reference external" href="http://www.selenic.com/mercurial/">mercurial</a> too, and it works well.  <a class="reference external" href="http://darcs.net">darcs</a> also appears to
+work well, but it isn&#8217;t a system I use often enough to have tested it
+thoroughly.</p>
+<p>I tested <tt class="docutils literal"><span class="pre">bzr</span></tt> support while writing this but it is totally unusable because of
+just how painfully slow <tt class="docutils literal"><span class="pre">bzr</span></tt> is.  On my system it adds close to one and half
+seconds to every prompt display, although that could be improved if I wasn&#8217;t
+using conservative CPU scaling to save power.  As a comparison the <tt class="docutils literal"><span class="pre">git</span></tt> info
+takes less than a tenth of a second to calculate on the same system, and
+<tt class="docutils literal"><span class="pre">mercurial</span></tt> around three times that which is most definitely still usable.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">There is a <tt class="docutils literal"><span class="pre">use-simple</span></tt> setting for the <tt class="docutils literal"><span class="pre">bzr</span></tt> support that may make the
+<tt class="docutils literal"><span class="pre">vcs_info</span></tt> functionality faster for you, albeit not noticeably on my system.
+It is also the only <abbr title="Version Control System">VCS</abbr> that has such a hack, which
+is quite telling in itself.</p>
+</div>
+</div>
+<div class="section" id="repository-state">
+<h2>Repository state<a class="headerlink" href="#repository-state" title="Permalink to this headline">¶</a></h2>
+<p>The &#8220;funky arrows&#8221; Dan asks about are dependent on the state of the current
+working directory as can be seen in the screenshot at the top of this page.</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="23%" />
+<col width="77%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Identifier</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>white →</td>
+<td>Not a <tt class="docutils literal"><span class="pre">git</span></tt> repository</td>
+</tr>
+<tr class="row-odd"><td>green ▶</td>
+<td>Clean <tt class="docutils literal"><span class="pre">git</span></tt> repository</td>
+</tr>
+<tr class="row-even"><td>red ▶</td>
+<td>Staged changes in <tt class="docutils literal"><span class="pre">git</span></tt> repository</td>
+</tr>
+<tr class="row-odd"><td>yellow ▶</td>
+<td>Unstaged changes in <tt class="docutils literal"><span class="pre">git</span></tt> repository</td>
+</tr>
+</tbody>
+</table>
+<p>Using these visual markers it is always obvious what state a directory is in,
+I&#8217;ve toyed with adding more but suspect the lack of complexity is what makes
+them so useful.</p>
+<p>To enable them we need to add a <a class="reference external" href="http://zsh.sourceforge.net/Doc/Release/Functions.html#SEC45">precmd hook</a> to calculate the repository
+status:</p>
+<div class="highlight-bash"><div class="highlight"><pre>autoload -U add-zsh-hook
+add-zsh-hook precmd prompt_jnrowe_precmd
+
+prompt_jnrowe_precmd <span class="o">()</span> <span class="o">{</span>
+    vcs_info
+
+    <span class="k">if</span> <span class="o">[</span> <span class="s2">&quot;${vcs_info_msg_0_}&quot;</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span> <span class="o">]</span>; <span class="k">then</span>
+<span class="k">        </span><span class="nv">dir_status</span><span class="o">=</span><span class="s2">&quot;%F{2}→%f&quot;</span>
+    <span class="k">elif</span> <span class="o">[[</span> <span class="k">$(</span>git diff --cached --name-status 2&gt;/dev/null <span class="k">)</span> !<span class="o">=</span> <span class="s2">&quot;&quot;</span> <span class="o">]]</span>; <span class="k">then</span>
+<span class="k">        </span><span class="nv">dir_status</span><span class="o">=</span><span class="s2">&quot;%F{1}▶%f&quot;</span>
+    <span class="k">elif</span> <span class="o">[[</span> <span class="k">$(</span>git diff --name-status 2&gt;/dev/null <span class="k">)</span> !<span class="o">=</span> <span class="s2">&quot;&quot;</span> <span class="o">]]</span>; <span class="k">then</span>
+<span class="k">        </span><span class="nv">dir_status</span><span class="o">=</span><span class="s2">&quot;%F{3}▶%f&quot;</span>
+    <span class="k">else</span>
+<span class="k">        </span><span class="nv">dir_status</span><span class="o">=</span><span class="s2">&quot;%F{2}▶%f&quot;</span>
+    <span class="k">fi</span>
+<span class="o">}</span>
+</pre></div>
+</div>
+<p><a class="reference external" href="http://gist.github.com/220829">Fork this code</a></p>
+<p>With this added the we just need to include <tt class="docutils literal"><span class="pre">$dir_status</span></tt> in our prompt and the
+status identifiers will be used.</p>
+<p>If you are using a font which doesn&#8217;t display the characters correctly, either
+change the characters in the <tt class="docutils literal"><span class="pre">dir_status</span></tt> values or switch to a <a class="reference external" href="http://www.is-vn.bg/hamster/">better font</a>
+that can display them.</p>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+        </div>
+        <div class="sidebar">
+          <h3>Table Of Contents</h3>
+          <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../projects.html">Projects</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../index.html">Articles</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../colophon.html">Colophon</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../contact.html">Contact details</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../consult.html">Consulting services</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../copyright.html">Copyright information</a></li>
+</ul>
+
+          <h3 style="margin-top: 1.5em;">Search</h3>
+          <form class="search" action="../../search.html" method="get">
+            <input type="text" name="q" />
+            <input type="submit" value="Go" />
+            <input type="hidden" name="check_keywords" value="yes" />
+            <input type="hidden" name="area" value="default" />
+          </form>
+          <p class="searchtip" style="font-size: 90%">
+            Enter search terms or a module, class or function name.
+          </p>
+        </div>
+        <div class="clearer"></div>
+      </div>
+    </div>
+
+    <div class="footer-wrapper">
+      <div class="footer">
+        <div class="left">
+          <a href="Visual_vim_mode_identifier.html" title="Visual vim mode identifier"
+             >previous</a> |
+          <a href="../tdd_distros.html" title="TDD distro development"
+             >next</a> |
+          <a href="../../genindex.html" title="General Index"
+             >index</a>
+            <br/>
+            <a href="../../_sources/articles/tips/Zsh_and_the_vcs.txt"
+               rel="nofollow">Show Source</a>
+        </div>
+
+        <div class="right">
+          
+    <div class="footer">
+        &copy; <a href="../../copyright.html">Copyright</a> 2009-2012, James Rowe.
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.1.3.
+    </div>
+        </div>
+        <div class="clearer"></div>
+      </div>
+    </div>
+
+  </body>
+</html>

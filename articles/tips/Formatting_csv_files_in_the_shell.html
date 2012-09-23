@@ -1,0 +1,204 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Formatting CSV files in the shell &mdash; JNRowe</title>
+    
+    <link rel="stylesheet" href="../../_static/agogo.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../',
+        VERSION:     '0.1.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../_static/doctools.js"></script>
+    <link rel="shortcut icon" href="../../_static/icon.ico"/>
+    <link rel="copyright" title="Copyright" href="../../copyright.html" />
+    <link rel="top" title="JNRowe" href="../../index.html" />
+    <link rel="up" title="Tips" href="index.html" />
+    <link rel="next" title="Gentoo one liners" href="Gentoo_one_liners.html" />
+    <link rel="prev" title="Finding a window’s owner" href="Finding_a_windows_owner.html" />
+  </head>
+  <body>
+    <div class="header-wrapper">
+      <div class="header">
+          <p class="logo"><a href="../../index.html">
+            <img class="logo" src="../../_static/logo.png" alt="Logo"/>
+          </a></p>
+        <div class="headertitle"><a
+          href="../../index.html">JNRowe</a></div>
+        <div class="rel">
+          <a href="Finding_a_windows_owner.html" title="Finding a window’s owner"
+             accesskey="P">previous</a> |
+          <a href="Gentoo_one_liners.html" title="Gentoo one liners"
+             accesskey="N">next</a> |
+          <a href="../../genindex.html" title="General Index"
+             accesskey="I">index</a>
+        </div>
+       </div>
+    </div>
+
+    <div class="content-wrapper">
+      <div class="content">
+        <div class="document">
+            
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="formatting-csv-files-in-the-shell">
+<h1>Formatting <abbr title="Comma Separated Values">CSV</abbr> files in the shell<a class="headerlink" href="#formatting-csv-files-in-the-shell" title="Permalink to this headline">¶</a></h1>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">date:</th><td class="field-body">2009-10-10</td>
+</tr>
+</tbody>
+</table>
+<p>kemi asks in <tt class="docutils literal"><span class="pre">#bash</span></tt>:</p>
+<blockquote>
+<div>Are there any tools to format <abbr title="Comma Separated Values">CSV</abbr> files in
+the console?  Not interactive, no spreadsheets</div></blockquote>
+<p><a class="reference external" href="http://www.linuxmanpages.com/man1/column.1.php">column</a>, which on Linux is likely to be provided by <a class="reference external" href="http://www.kernel.org/pub/linux/utils/util-linux-ng/">util-linux</a>, does exactly
+this.  The man page even offers an example of how it works(I&#8217;ve changed it
+slightly to make it work correctly on my system):</p>
+<div class="highlight-text"><div class="highlight"><pre>~/Desktop/jnrowe.github.com $ (echo &quot;PERM LINKS OWNER GROUP SIZE DATE HH:MM NAME&quot;;
+&gt; ls -l static/ | sed 1d) | column -t
+PERM        LINKS  OWNER  GROUP  SIZE   DATE        HH:MM  NAME
+-rw-r--r--  1      jay    jay    328    2009-09-25  02:59  body_background.png
+-rw-r--r--  1      jay    jay    7234   2009-09-25  02:59  draft.png
+-rw-r--r--  1      jay    jay    6253   2009-09-25  02:59  extract-metadata.xsl
+-rw-r--r--  1      jay    jay    13143  2009-10-07  09:05  foaf.rdf
+-rw-r--r--  1      jay    jay    3580   2009-09-25  02:59  gpg.asc
+-rw-r--r--  1      jay    jay    7739   2009-09-25  02:59  icon.png
+-rw-r--r--  1      jay    jay    96     2009-09-25  02:59  meta_background.png
+-rw-r--r--  1      jay    jay    411    2009-09-29  11:39  remote.png
+</pre></div>
+</div>
+<p>Given some other standard commands we can mangle that data in various ways at
+the shell prompt too, for example we may wish to display the total size of all
+the files.  Or, as in the output below, the total size of all the <abbr title="Portable Network Graphics">PNG</abbr> files in the directory.</p>
+<div class="highlight-text"><div class="highlight"><pre>~/Desktop/jnrowe.github.com $ (echo &quot;PERM LINKS OWNER GROUP SIZE DATE HH:MM NAME&quot;
+&gt; ls -l --time-style=long-iso static/ | sed 1d) | column -t | awk &#39;{print}
+&gt; /\.png/ {sum+=$5}
+&gt; END {print &quot;Total size of PNG files:&quot;, sum}&#39;
+PERM        LINKS  OWNER  GROUP  SIZE   DATE        HH:MM  NAME
+-rw-r--r--  1      jay    jay    328    2009-09-25  02:59  body_background.png
+-rw-r--r--  1      jay    jay    7234   2009-09-25  02:59  draft.png
+-rw-r--r--  1      jay    jay    6253   2009-09-25  02:59  extract-metadata.xsl
+-rw-r--r--  1      jay    jay    13143  2009-10-07  09:05  foaf.rdf
+-rw-r--r--  1      jay    jay    3580   2009-09-25  02:59  gpg.asc
+-rw-r--r--  1      jay    jay    7739   2009-09-25  02:59  icon.png
+-rw-r--r--  1      jay    jay    96     2009-09-25  02:59  meta_background.png
+-rw-r--r--  1      jay    jay    411    2009-09-29  11:39  remote.png
+Total size of PNG files: 15808
+</pre></div>
+</div>
+<p>In the original question on how to process <abbr title="Comma Separated Values">CSV</abbr> files all
+we really need to do is get the data in to a state for <tt class="docutils literal"><span class="pre">column</span></tt> to process,
+and we can use <a class="reference external" href="http://www.linuxmanpages.com/man1/tr.1.php">tr</a> to do that.  An example using a small chunk of the network
+log on this computer that we wish to format and calculate totals for could be:</p>
+<div class="highlight-text"><div class="highlight"><pre>~/Desktop/jnrowe.github.com $ cat stats
+2009-07-15T05:09:42+0100,16803,4304661,129262665
+2009-07-16T04:10:29+0100,17551,4012917,67572304
+2009-07-16T19:03:00+0100,17621,1712073,34162500
+2009-07-17T14:18:19+0100,7961,1071313,26286593
+2009-07-17T18:23:40+0100,1867,308589,6057915
+2009-07-17T18:53:21+0100,1740,180197,2907388
+2009-07-17T19:00:03+0100,356,152917,928948
+2009-07-17T22:01:57+0100,6611,1159789,25562873
+2009-07-18T13:09:31+0100,1681,164663,2049315
+2009-07-18T13:24:04+0100,834,54025,662134
+~/Desktop/jnrowe.github.com $ (echo &quot;Date,Duration,Sent,Received&quot;;  cat stats ) \
+&gt; | tr &#39;,&#39; &#39; &#39; | column -t | awk &#39;{print}
+&gt; !/Date/ {sent+=$3; recv+=$4}
+&gt; END {print &quot;\nTotal sent: &quot;sent&quot;, Total received: &quot;recv}&#39;
+Date                      Duration  Sent     Received
+2009-07-15T05:09:42+0100  16803     4304661  129262665
+2009-07-16T04:10:29+0100  17551     4012917  67572304
+2009-07-16T19:03:00+0100  17621     1712073  34162500
+2009-07-17T14:18:19+0100  7961      1071313  26286593
+2009-07-17T18:23:40+0100  1867      308589   6057915
+2009-07-17T18:53:21+0100  1740      180197   2907388
+2009-07-17T19:00:03+0100  356       152917   928948
+2009-07-17T22:01:57+0100  6611      1159789  25562873
+2009-07-18T13:09:31+0100  1681      164663   2049315
+2009-07-18T13:24:04+0100  834       54025    662134
+
+Total sent: 13121144, Total received: 295452635
+</pre></div>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+        </div>
+        <div class="sidebar">
+          <h3>Table Of Contents</h3>
+          <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../projects.html">Projects</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../index.html">Articles</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../colophon.html">Colophon</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../contact.html">Contact details</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../consult.html">Consulting services</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../copyright.html">Copyright information</a></li>
+</ul>
+
+          <h3 style="margin-top: 1.5em;">Search</h3>
+          <form class="search" action="../../search.html" method="get">
+            <input type="text" name="q" />
+            <input type="submit" value="Go" />
+            <input type="hidden" name="check_keywords" value="yes" />
+            <input type="hidden" name="area" value="default" />
+          </form>
+          <p class="searchtip" style="font-size: 90%">
+            Enter search terms or a module, class or function name.
+          </p>
+        </div>
+        <div class="clearer"></div>
+      </div>
+    </div>
+
+    <div class="footer-wrapper">
+      <div class="footer">
+        <div class="left">
+          <a href="Finding_a_windows_owner.html" title="Finding a window’s owner"
+             >previous</a> |
+          <a href="Gentoo_one_liners.html" title="Gentoo one liners"
+             >next</a> |
+          <a href="../../genindex.html" title="General Index"
+             >index</a>
+            <br/>
+            <a href="../../_sources/articles/tips/Formatting_csv_files_in_the_shell.txt"
+               rel="nofollow">Show Source</a>
+        </div>
+
+        <div class="right">
+          
+    <div class="footer">
+        &copy; <a href="../../copyright.html">Copyright</a> 2009-2012, James Rowe.
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.1.3.
+    </div>
+        </div>
+        <div class="clearer"></div>
+      </div>
+    </div>
+
+  </body>
+</html>

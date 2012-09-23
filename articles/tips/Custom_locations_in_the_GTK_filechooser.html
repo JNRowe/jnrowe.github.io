@@ -1,0 +1,227 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Custom keybindings in the GTK+ file dialogs &mdash; JNRowe</title>
+    
+    <link rel="stylesheet" href="../../_static/agogo.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../',
+        VERSION:     '0.1.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../_static/doctools.js"></script>
+    <link rel="shortcut icon" href="../../_static/icon.ico"/>
+    <link rel="copyright" title="Copyright" href="../../copyright.html" />
+    <link rel="top" title="JNRowe" href="../../index.html" />
+    <link rel="up" title="Tips" href="index.html" />
+    <link rel="next" title="Debugging Python regular expressions" href="Debugging_python_regexps.html" />
+    <link rel="prev" title="Context aware diffs with git" href="Context_aware_diffs_with_git.html" />
+  </head>
+  <body>
+    <div class="header-wrapper">
+      <div class="header">
+          <p class="logo"><a href="../../index.html">
+            <img class="logo" src="../../_static/logo.png" alt="Logo"/>
+          </a></p>
+        <div class="headertitle"><a
+          href="../../index.html">JNRowe</a></div>
+        <div class="rel">
+          <a href="Context_aware_diffs_with_git.html" title="Context aware diffs with git"
+             accesskey="P">previous</a> |
+          <a href="Debugging_python_regexps.html" title="Debugging Python regular expressions"
+             accesskey="N">next</a> |
+          <a href="../../genindex.html" title="General Index"
+             accesskey="I">index</a>
+        </div>
+       </div>
+    </div>
+
+    <div class="content-wrapper">
+      <div class="content">
+        <div class="document">
+            
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="custom-keybindings-in-the-gtk-file-dialogs">
+<h1>Custom keybindings in the GTK+ file dialogs<a class="headerlink" href="#custom-keybindings-in-the-gtk-file-dialogs" title="Permalink to this headline">¶</a></h1>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">date:</th><td class="field-body">2009-10-01</td>
+</tr>
+</tbody>
+</table>
+<p>In <a class="reference internal" href="Fancy_awesome_theming.html"><em>Fancy awesome theming</em></a> I included a screenshot that, by accident more
+than design, spawned today&#8217;s tip.</p>
+<a class="reference external image-reference" href="../../_static/2009-09-28-awesome_theming.png"><img alt="gtkrc in vim screenshot" class="align-right" src="../../_images/2009-10-01-gtkrc-mini.png" /></a>
+<p>Laura Biddulph sent me a <abbr title="Short Message Service">SMS</abbr> message that read:</p>
+<blockquote>
+<div>Thanks! I saw your <tt class="docutils literal"><span class="pre">gtkrc</span></tt>, and now I have keybound faves in the file
+dialog.</div></blockquote>
+<p>The <tt class="docutils literal"><span class="pre">gtkrc</span></tt> being referenced is my <a class="reference external" href="http://www.gtk.org/">GTK+</a> configuration file that could be seen
+in the right hand <a class="reference external" href="http://www.vim.org/">vim</a> window of the screenshot from that earlier post.  It was
+actually open in that screenshot because I was changing my GTK+ theme, and not
+being a <a class="reference external" href="http://www.gnome.org/">gnome</a> user the simplest way to change it is via my <tt class="docutils literal"><span class="pre">~/.gtkrc-2.0</span></tt>.
+And, if you&#8217;re using <a class="reference external" href="http://www.kde.org/">KDE</a> and wish to the settings for GTK+ applications you
+sould edit <tt class="docutils literal"><span class="pre">~/.gtkrc-2.0-kde</span></tt>.</p>
+<p>So the question becomes, what were the options in that screenshot, and are there
+any other cool and useful things you can do there?</p>
+<div class="highlight-cpp"><pre>gtk-theme-name = "expose"
+gtk-icon-theme-name = "hicolor"
+gtk-key-theme-name = "Emacs"
+
+binding "some-shortcuts" {
+    bind "&lt;Alt&gt;T" {
+        "location-popup" ("/home/jay/urls")
+    }
+    bind "&lt;Alt&gt;M" {
+        "location-popup" ("/var/lib/repo/jnrowe-misc")
+    }
+}
+class "GtkFileChooserDefault" binding "some-shortcuts"</pre>
+</div>
+<p><a class="reference external" href="http://gist.github.com/199268">Fork this code</a></p>
+<p>Ignoring the <tt class="docutils literal"><span class="pre">vim</span></tt> <a class="reference external" href="http://vimdoc.sourceforge.net/htmldoc/options.html#modeline">modeline</a> from the screenshot the first few settings are
+basic theme related options.  <tt class="docutils literal"><span class="pre">gtk-theme-name</span></tt> and <tt class="docutils literal"><span class="pre">gtk-icon-theme-name</span></tt> set
+the style and icon groups for GTK+ apps respectively.  <tt class="docutils literal"><span class="pre">gtk-key-theme-name</span></tt>
+sets the default keybindings for GTK+ apps.  By setting it to <tt class="docutils literal"><span class="pre">Emacs</span></tt> we have
+access to the &#8220;normal&#8221; keybindings we expect if we use <a class="reference external" href="http://cnswww.cns.cwru.edu/~chet/bash/bashtop.html">bash</a> or other common
+Linux tools, such as <tt class="docutils literal"><span class="pre">C-w</span></tt> to delete the word under the cursor.  You can read
+more about <tt class="docutils literal"><span class="pre">gtk-key-theme-name</span></tt> in <a class="reference external" href="http://www.jnrowe.ukfsn.org/articles/configs/gtk.html">an old posting of mine</a>.</p>
+<p>All of the settings above are configurable with a <abbr title="Graphical User Interface">GUI</abbr> if you use gnome or <a class="reference external" href="http://www.xfce.org/">xfce</a>, but for those of who don&#8217;t use those
+desktop environments editing the <tt class="docutils literal"><span class="pre">~/.gtkrc-2.0</span></tt> is a reasonable solution.</p>
+<a class="reference external image-reference" href="../../_static/2009-10-01-GTK_filechooser.png"><img alt="GTK file chooser screenshot" class="align-left" src="../../_images/2009-10-01-GTK_filechooser-mini.png" /></a>
+<p>The &#8220;some-shortcuts&#8221; section is the interesting one for today, it is telling
+GTK+ applications that we want to have our own extra keybindings available when
+opening or saving files.  <tt class="docutils literal"><span class="pre">GTKFileChooser</span></tt> is the modern GTK+ file dialog, and
+it already has a set of useful keybindings including:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="27%" />
+<col width="73%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Key</th>
+<th class="head">Purpose</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><tt class="docutils literal"><span class="pre">M-&lt;Home&gt;</span></tt></td>
+<td>Jump to your home directory</td>
+</tr>
+<tr class="row-odd"><td><tt class="docutils literal"><span class="pre">M-D</span></tt></td>
+<td>Jump to your <tt class="docutils literal"><span class="pre">~/Desktop</span></tt> directory</td>
+</tr>
+<tr class="row-even"><td><tt class="docutils literal"><span class="pre">M-&lt;Up&gt;</span></tt></td>
+<td>Go to current directory&#8217;s parent</td>
+</tr>
+<tr class="row-odd"><td><tt class="docutils literal"><span class="pre">C-L</span></tt></td>
+<td>Display the text location entry box</td>
+</tr>
+</tbody>
+</table>
+<p>We could actually use the file chooser&#8217;s bookmark feature, and access the
+bookmarks with <tt class="docutils literal"><span class="pre">M-1</span></tt> through <tt class="docutils literal"><span class="pre">M-9</span></tt> and <tt class="docutils literal"><span class="pre">M-0</span></tt> for bookmark number ten from
+the dialog.  However, I find it more practical to be able to use mnemonic names
+for favourite locations.  You could even use both if you have an excellent
+memory and a lot of favourite locations!</p>
+<p>If you wish to add your own bindings the format is hopefully quite
+self-explanatory, just don&#8217;t forget to link your bindings to the correct class
+or they will not work.</p>
+<p>You can also change the default bindings by specifying them in the configuration
+file, for example to use <tt class="docutils literal"><span class="pre">M-&lt;left&gt;</span></tt> and <tt class="docutils literal"><span class="pre">M-&lt;right&gt;</span></tt> to skip backward and forward
+along the directory path:</p>
+<div class="highlight-cpp"><div class="highlight"><pre><span class="n">bind</span> <span class="s">&quot;&lt;Alt&gt;Left&quot;</span> <span class="p">{</span>
+    <span class="s">&quot;up-folder&quot;</span> <span class="p">()</span>
+<span class="p">}</span>
+<span class="n">bind</span> <span class="s">&quot;&lt;Alt&gt;Right&quot;</span> <span class="p">{</span>
+    <span class="s">&quot;down-folder&quot;</span> <span class="p">()</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p><a class="reference external" href="http://gist.github.com/199269">Fork this code</a></p>
+<p>Whether you find <tt class="docutils literal"><span class="pre">up</span></tt> and <tt class="docutils literal"><span class="pre">down</span></tt> or <tt class="docutils literal"><span class="pre">left</span></tt> and <tt class="docutils literal"><span class="pre">right</span></tt> easier to remember
+depends on how you visualise the path, I personally prefer the defaults in this
+instance but the choice is entirely yours.</p>
+<p>If you decide to significantly modify the bindings you may even find it easier
+to split the <tt class="docutils literal"><span class="pre">~/.gtkrc-2.0</span></tt> in to chunks to make it easier to manage or share,
+for this you can use the <tt class="docutils literal"><span class="pre">include</span></tt> directive.  An example would be: <tt class="docutils literal"><span class="pre">include</span>
+<span class="pre">&quot;~/.gtk_bindings&quot;</span></tt>.</p>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+        </div>
+        <div class="sidebar">
+          <h3>Table Of Contents</h3>
+          <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../projects.html">Projects</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../index.html">Articles</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../colophon.html">Colophon</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../contact.html">Contact details</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../consult.html">Consulting services</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../copyright.html">Copyright information</a></li>
+</ul>
+
+          <h3 style="margin-top: 1.5em;">Search</h3>
+          <form class="search" action="../../search.html" method="get">
+            <input type="text" name="q" />
+            <input type="submit" value="Go" />
+            <input type="hidden" name="check_keywords" value="yes" />
+            <input type="hidden" name="area" value="default" />
+          </form>
+          <p class="searchtip" style="font-size: 90%">
+            Enter search terms or a module, class or function name.
+          </p>
+        </div>
+        <div class="clearer"></div>
+      </div>
+    </div>
+
+    <div class="footer-wrapper">
+      <div class="footer">
+        <div class="left">
+          <a href="Context_aware_diffs_with_git.html" title="Context aware diffs with git"
+             >previous</a> |
+          <a href="Debugging_python_regexps.html" title="Debugging Python regular expressions"
+             >next</a> |
+          <a href="../../genindex.html" title="General Index"
+             >index</a>
+            <br/>
+            <a href="../../_sources/articles/tips/Custom_locations_in_the_GTK_filechooser.txt"
+               rel="nofollow">Show Source</a>
+        </div>
+
+        <div class="right">
+          
+    <div class="footer">
+        &copy; <a href="../../copyright.html">Copyright</a> 2009-2012, James Rowe.
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.1.3.
+    </div>
+        </div>
+        <div class="clearer"></div>
+      </div>
+    </div>
+
+  </body>
+</html>

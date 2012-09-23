@@ -1,0 +1,283 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Three mobile broadband in Linux &mdash; JNRowe</title>
+    
+    <link rel="stylesheet" href="../../_static/agogo.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../',
+        VERSION:     '0.1.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../_static/doctools.js"></script>
+    <link rel="shortcut icon" href="../../_static/icon.ico"/>
+    <link rel="copyright" title="Copyright" href="../../copyright.html" />
+    <link rel="top" title="JNRowe" href="../../index.html" />
+    <link rel="up" title="Tips" href="index.html" />
+    <link rel="next" title="Toggling settings in vim" href="Toggling_settings_in_vim.html" />
+    <link rel="prev" title="Theming mutt" href="Theming_mutt.html" />
+  </head>
+  <body>
+    <div class="header-wrapper">
+      <div class="header">
+          <p class="logo"><a href="../../index.html">
+            <img class="logo" src="../../_static/logo.png" alt="Logo"/>
+          </a></p>
+        <div class="headertitle"><a
+          href="../../index.html">JNRowe</a></div>
+        <div class="rel">
+          <a href="Theming_mutt.html" title="Theming mutt"
+             accesskey="P">previous</a> |
+          <a href="Toggling_settings_in_vim.html" title="Toggling settings in vim"
+             accesskey="N">next</a> |
+          <a href="../../genindex.html" title="General Index"
+             accesskey="I">index</a>
+        </div>
+       </div>
+    </div>
+
+    <div class="content-wrapper">
+      <div class="content">
+        <div class="document">
+            
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="three-mobile-broadband-in-linux">
+<h1>Three mobile broadband in Linux<a class="headerlink" href="#three-mobile-broadband-in-linux" title="Permalink to this headline">¶</a></h1>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">date:</th><td class="field-body">2009-10-14</td>
+</tr>
+</tbody>
+</table>
+<p>Steve Lowry is picking up his <a class="reference external" href="http://three.co.uk">Three</a> modem this afternoon and asks on our
+internal Linux list if it supports Linux.</p>
+<blockquote>
+<div>I&#8217;ve ordered the Huawei E220 as it was free.  Is it likely to work with
+Linux?  And, if so what should I be looking for to set it up?</div></blockquote>
+<p>I&#8217;ve had a Huawei USB modem for about six months now and it works fine in Linux,
+although it is probably a slightly different model.  The box and case for mine
+claims it is a E160G, whereas <tt class="docutils literal"><span class="pre">lsusb</span></tt> from <a class="reference external" href="http://linux-usb.sourceforge.net/">usbutils</a> claims it is a E220.  The
+manufacturers of these types of products routinely change the components and
+models without updating the product codes, so you&#8217;ll have to wait until you plug
+it in to see what model it actually is.</p>
+<p>As for how to to make it work?  Simply use a distribution that comes with
+<a class="reference external" href="http://www.gnome.org/projects/NetworkManager/">NetworkManager</a> and NetworkManager&#8217;s <a class="reference external" href="http://live.gnome.org/NetworkManager/MobileBroadband/ServiceProviders">mobile broadband provider database</a>.
+When I tested it on a friend&#8217;s install with that setup last month it worked out
+of the box, all you had to do was plug it in and select the network.</p>
+<div class="section" id="the-route-to-fail">
+<h2>The route to fail<a class="headerlink" href="#the-route-to-fail" title="Permalink to this headline">¶</a></h2>
+<p>If, like me, you&#8217;d prefer not to install NetworkManager you can manually
+configure the device using <a class="reference external" href="http://www.samba.org/ppp">pppd</a>, and life is even easier now than it was when
+I did it as there is plenty more information available(including this I guess).</p>
+<div class="section" id="finding-the-apn">
+<h3>Finding the <abbr title="Access Point Name">APN</abbr><a class="headerlink" href="#finding-the-apn" title="Permalink to this headline">¶</a></h3>
+<p>The first thing you need is your provider&#8217;s <abbr title="Access Point Name">APN</abbr>, and
+the easiest place to find it is from the <a class="reference external" href="http://live.gnome.org/NetworkManager/MobileBroadband/ServiceProviders">NetworkManager database</a>.  If yours
+is not there you&#8217;ll have to dig further.  When I originally got my device that
+database was practically empty, so I had to resort to other means to find the
+<abbr title="Access Point Name">APN</abbr>.</p>
+<p>We can extract the <abbr title="Access Point Name">APN</abbr> from the Windows driver that
+came with the device.  The driver can be found on the device itself because it
+also acts a small <abbr title="Small Computer Systems Interface">SCSI</abbr> device with
+a filesystem.  It is actually pretty clever, assuming it works as advertised, as
+it can self-install its own driver when plugged in.</p>
+<p>If we find the device name with <tt class="docutils literal"><span class="pre">dmesg</span></tt> we can mount it, and pull the
+<abbr title="Access Point Name">APN</abbr> from the Windows driver:</p>
+<div class="highlight-bash"><div class="highlight"><pre>mkdir e220_drivers; <span class="nb">cd </span>e220_drivers
+mount -t vfat /dev/sr2 /mnt/huawei
+<span class="k">for </span>file in <span class="k">$(</span>find *.cab<span class="k">)</span>; <span class="k">do </span>unpack <span class="nv">$file</span>; <span class="k">done</span>
+</pre></div>
+</div>
+<p><a class="reference external" href="http://gist.github.com/212738">Fork this code</a></p>
+<p>The <tt class="docutils literal"><span class="pre">unpack</span></tt> tool from above is just a wrapper around common archivers, and
+the tool you actually need to extract the <tt class="docutils literal"><span class="pre">cab</span></tt> files is <a class="reference external" href="http://synce.sourceforge.net/synce/unshield.php">unshield</a>.  Contrary
+to my first idea <a class="reference external" href="http://www.cabextract.org.uk/">cabextract</a> doesn&#8217;t work, as these files are actually made by
+<tt class="docutils literal"><span class="pre">installshield</span></tt>.</p>
+<p>With the <abbr title="Access Point Name">APN</abbr> in hand all we need to do now is
+configure our system.</p>
+</div>
+<div class="section" id="kernel">
+<h3>Kernel<a class="headerlink" href="#kernel" title="Permalink to this headline">¶</a></h3>
+<p>If you&#8217;re using a vendor supplied kernel the options we need are hopefully
+already enabled.  If they&#8217;re not, or you build your own kernels, there are few
+changes we need to make to the kernel configuration.</p>
+<p>The dongle itself needs <tt class="docutils literal"><span class="pre">CONFIG_USB_SERIAL_OPTION</span></tt> enabled, which is labelled
+as <tt class="docutils literal"><span class="pre">USB</span> <span class="pre">driver</span> <span class="pre">for</span> <span class="pre">GSM</span> <span class="pre">and</span> <span class="pre">CDMA</span> <span class="pre">modems</span></tt> in the kernel&#8217;s <tt class="docutils literal"><span class="pre">menuconfig</span></tt>.  It
+can be found hidden away under the &#8220;USB Serial Converters&#8221; section in 2.6.31.</p>
+<p>We also need <tt class="docutils literal"><span class="pre">CONFIG_PPP</span></tt> and <tt class="docutils literal"><span class="pre">CONFIG_PPP_ASYNC</span></tt> support, which can be found
+in the &#8220;Network devices&#8221; section of the config.  Unlike the old-style dialup you
+probably used to use there is no point enabling the PPP compression options as
+they are not supported by mobile providers in general, partly because the data
+is already compressed.</p>
+<p>Then just rebuild the kernel, and check that the dongle shows up in <tt class="docutils literal"><span class="pre">dmesg</span></tt>
+output when it is plugged in.  If it does we&#8217;re ready for the next step.</p>
+</div>
+<div class="section" id="etc-chatscripts-three">
+<h3>/etc/chatscripts/three<a class="headerlink" href="#etc-chatscripts-three" title="Permalink to this headline">¶</a></h3>
+<p>We need a <tt class="docutils literal"><span class="pre">pppd</span></tt> chatscript for the connection, the format and settings of
+this file can be found in the <tt class="docutils literal"><span class="pre">chat(8)</span></tt> manpage.  My chatscript is below:</p>
+<div class="highlight-text"><div class="highlight"><pre>TIMEOUT 3
+ECHO ON
+ABORT &#39;BUSY&#39;
+ABORT &#39;DELAYED&#39;
+ABORT &#39;ERROR&#39;
+ABORT &#39;NO ANSWER&#39;
+ABORT &#39;NO CARRIER&#39;
+ABORT &#39;NO DIALTONE&#39;
+ABORT &#39;VOICE&#39;
+&#39;&#39; \rAT
+OK &#39;AT+CGDCONT=1,&quot;IP&quot;,&quot;3internet&quot;&#39;
+OK ATD*99#
+CONNECT &quot;&quot;
+</pre></div>
+</div>
+<p><a class="reference external" href="http://gist.github.com/212739">Fork this code</a></p>
+<p>Exchange <tt class="docutils literal"><span class="pre">3internet</span></tt> for your <abbr title="Access Point Name">APN</abbr> in the example
+above, if it differs.</p>
+<p>It is also possible, yet unlikely, that you&#8217;ll have to call a different number
+to <tt class="docutils literal"><span class="pre">*99#</span></tt>.  If this was the case you would have found that out from extracting
+the data from the drivers or looking your network up in the NetworkManager
+database.</p>
+<p>Notice the very short value for timeout, I&#8217;ve come to that value empirically.
+If the connection isn&#8217;t up after 3 seconds it is not coming up, and you&#8217;re just
+wasting time before you retry.</p>
+</div>
+<div class="section" id="etc-ppp-peers-three">
+<h3>/etc/ppp/peers/three<a class="headerlink" href="#etc-ppp-peers-three" title="Permalink to this headline">¶</a></h3>
+<p>We also need a peer script, and the format of that file is described in the
+<tt class="docutils literal"><span class="pre">pppd(8)</span></tt> manpage.  Mine can be used as an example:</p>
+<div class="highlight-text"><div class="highlight"><pre>debug
+noauth
+connect &quot;/usr/sbin/chat -v -f /etc/chatscripts/three&quot;
+noipdefault
+usepeerdns
+/dev/ttyUSB0
+defaultroute
+persist
+crtscts
+lcp-echo-failure 0
+</pre></div>
+</div>
+<p><a class="reference external" href="http://gist.github.com/212740">Fork this code</a></p>
+<p>You may have to change your device settings if the dongle doesn&#8217;t show up as
+<tt class="docutils literal"><span class="pre">/dev/ttyUSB0</span></tt>, but other than that the file should be correct.</p>
+<p>Note that we don&#8217;t set a speed in our peer file, and this may appear unusual to
+you if you&#8217;ve configured <tt class="docutils literal"><span class="pre">pppd</span></tt> manually in the past.  The reason is that
+interface speed for USB modems is set by the kernel, and adding a value here is
+pointless.</p>
+</div>
+<div class="section" id="passwords">
+<h3>passwords<a class="headerlink" href="#passwords" title="Permalink to this headline">¶</a></h3>
+<p>We don&#8217;t need to add an entry to <tt class="docutils literal"><span class="pre">chap-secrets</span></tt> or <tt class="docutils literal"><span class="pre">pap-secrets</span></tt> as
+authentication isn&#8217;t required, but if you&#8217;re following along having chosen to
+use a configuration tool such as <a class="reference external" href="http://http.us.debian.org/debian/pool/main/p/pppconfig/">pppconfig</a> just enter any values you wish as
+they&#8217;re silently ignored.</p>
+<p>I&#8217;m told the same applies to <a class="reference external" href="http://alumnit.ca/wiki/?WvDial">wvdial</a>, so if it complains about requiring
+a password just add an empty or random string to stop the errors.</p>
+</div>
+<div class="section" id="testing-the-connection">
+<h3>Testing the connection<a class="headerlink" href="#testing-the-connection" title="Permalink to this headline">¶</a></h3>
+<p>To test the connection all we need to do is issue <tt class="docutils literal"><span class="pre">pon</span> <span class="pre">three</span></tt>, or use the
+graphical tool in your distro if you wish.  The first time you do this you
+should watch the output of your syslog to look for errors, the errors can be
+found in syslog because we supplied <tt class="docutils literal"><span class="pre">debug</span></tt> in our peer script.</p>
+<p>On my system the log can be comfortably viewed with <tt class="docutils literal"><span class="pre">tail</span> <span class="pre">-f</span>
+<span class="pre">/var/log/ppp/current</span></tt>, but it is system dependent and if you don&#8217;t use <a class="reference external" href="http://metalog.sourceforge.net/">metalog</a>
+it will definitely be somewhere else in <tt class="docutils literal"><span class="pre">/var/log</span></tt>.</p>
+<p>If the connection worked fine that is all there is to it, now just enable the
+connection at system startup or configure <a class="reference external" href="http://www.kernel.org/pub/linux/utils/kernel/hotplug/udev.html">udev</a> to connect when the device is
+inserted if it will not always be connected.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">These devices can take anywhere between ten and thirty seconds to &#8220;settle&#8221;
+once plugged in. So, don&#8217;t block on this service if you add it to the system
+startup scripts as it can significantly slow down the system boot time.  On
+my dongle you can visually check how long the device takes to settle by
+watching the <abbr title="Light Emitting Diode">LED</abbr> on the case, when it changes
+from green it has found a network signal and is ready to use.</p>
+</div>
+<p>If the connection didn&#8217;t work correctly look at the debugging output in syslog
+and check the <tt class="docutils literal"><span class="pre">pppd</span></tt> manual page to look up the error codes.</p>
+<p>Happy, erm... mobility.</p>
+</div>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+        </div>
+        <div class="sidebar">
+          <h3>Table Of Contents</h3>
+          <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../projects.html">Projects</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../index.html">Articles</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../colophon.html">Colophon</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../contact.html">Contact details</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../consult.html">Consulting services</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../copyright.html">Copyright information</a></li>
+</ul>
+
+          <h3 style="margin-top: 1.5em;">Search</h3>
+          <form class="search" action="../../search.html" method="get">
+            <input type="text" name="q" />
+            <input type="submit" value="Go" />
+            <input type="hidden" name="check_keywords" value="yes" />
+            <input type="hidden" name="area" value="default" />
+          </form>
+          <p class="searchtip" style="font-size: 90%">
+            Enter search terms or a module, class or function name.
+          </p>
+        </div>
+        <div class="clearer"></div>
+      </div>
+    </div>
+
+    <div class="footer-wrapper">
+      <div class="footer">
+        <div class="left">
+          <a href="Theming_mutt.html" title="Theming mutt"
+             >previous</a> |
+          <a href="Toggling_settings_in_vim.html" title="Toggling settings in vim"
+             >next</a> |
+          <a href="../../genindex.html" title="General Index"
+             >index</a>
+            <br/>
+            <a href="../../_sources/articles/tips/Three_mobile_broadband_in_linux.txt"
+               rel="nofollow">Show Source</a>
+        </div>
+
+        <div class="right">
+          
+    <div class="footer">
+        &copy; <a href="../../copyright.html">Copyright</a> 2009-2012, James Rowe.
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.1.3.
+    </div>
+        </div>
+        <div class="clearer"></div>
+      </div>
+    </div>
+
+  </body>
+</html>

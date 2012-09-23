@@ -1,0 +1,171 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Fancy awesome theming &mdash; JNRowe</title>
+    
+    <link rel="stylesheet" href="../../_static/agogo.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../',
+        VERSION:     '0.1.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../_static/doctools.js"></script>
+    <link rel="shortcut icon" href="../../_static/icon.ico"/>
+    <link rel="copyright" title="Copyright" href="../../copyright.html" />
+    <link rel="top" title="JNRowe" href="../../index.html" />
+    <link rel="up" title="Tips" href="index.html" />
+    <link rel="next" title="Finding a window’s owner" href="Finding_a_windows_owner.html" />
+    <link rel="prev" title="Disabling cursor blinking in GTK+" href="Disabling_cursor_blinking_in_GTK.html" />
+  </head>
+  <body>
+    <div class="header-wrapper">
+      <div class="header">
+          <p class="logo"><a href="../../index.html">
+            <img class="logo" src="../../_static/logo.png" alt="Logo"/>
+          </a></p>
+        <div class="headertitle"><a
+          href="../../index.html">JNRowe</a></div>
+        <div class="rel">
+          <a href="Disabling_cursor_blinking_in_GTK.html" title="Disabling cursor blinking in GTK+"
+             accesskey="P">previous</a> |
+          <a href="Finding_a_windows_owner.html" title="Finding a window’s owner"
+             accesskey="N">next</a> |
+          <a href="../../genindex.html" title="General Index"
+             accesskey="I">index</a>
+        </div>
+       </div>
+    </div>
+
+    <div class="content-wrapper">
+      <div class="content">
+        <div class="document">
+            
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="fancy-awesome-theming">
+<h1>Fancy awesome theming<a class="headerlink" href="#fancy-awesome-theming" title="Permalink to this headline">¶</a></h1>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">date:</th><td class="field-body">2009-09-28</td>
+</tr>
+</tbody>
+</table>
+<a class="reference external image-reference" href="../../_static/2009-09-28-awesome_theming.png"><img alt="Awesome screenshot" class="align-right" src="../../_images/2009-09-28-awesome_theming-mini.png" /></a>
+<p>People, mostly named Neil Blake, who shouldn&#8217;t look over my shoulder ask:</p>
+<blockquote>
+<div>How do you make <a class="reference external" href="http://awesome.naquadah.org/">awesome</a> use <em>purdy</em> pixmap backgrounds for the <a class="reference external" href="http://awesome.naquadah.org/doc/api/modules/wibox.html">wibox</a>?</div></blockquote>
+<p>Simple answer today: cheat.</p>
+<p>As you can see in the screenshot on the right my wibox appears to be using the
+same fancy pixmap background as the <a class="reference external" href="http://www.gtk.org/">GTK+</a> theme I&#8217;m using.  What is actually
+happening is that I&#8217;ve pasted a copy of the background pixmap from the expose
+theme on top of my wallpaper using <a class="reference external" href="http://www.imagemagick.org/index.php">ImageMagick</a>, which is easily achievable on
+a netbook without having to fire up the <a class="reference external" href="http://www.gimp.org/">gimp</a>.</p>
+<div class="highlight-sh"><div class="highlight"><pre>convert /home/jay/.themes/expose/gtk-2.0/bc.xpm -scale 1024x20! bc.png
+composite  -gravity north bc.png backdrop.png backdrop_new.png
+</pre></div>
+</div>
+<p><a class="reference external" href="http://gist.github.com/198013">Fork this code</a></p>
+<p>The initial <tt class="docutils literal"><span class="pre">convert</span></tt> command resizes <tt class="docutils literal"><span class="pre">bc.xpm</span></tt> from the expose theme to 1024x20
+pixels, 1024 being the screen width and 20 being the height of my main wibox in
+awesome.  We must suffix the <tt class="docutils literal"><span class="pre">-scale</span></tt> option&#8217;s argument with <tt class="docutils literal"><span class="pre">!</span></tt> to tell
+<tt class="docutils literal"><span class="pre">convert</span></tt> to ignore the image&#8217;s aspect ratio when resizing, without this the
+command will not produce an image at the size we expect.</p>
+<p>The second command tells ImageMagick&#8217;s <tt class="docutils literal"><span class="pre">composite</span></tt> that we wish to paste our
+newly generated image on top <tt class="docutils literal"><span class="pre">backdrop.png</span></tt>, we could specify any location we
+want with the <tt class="docutils literal"><span class="pre">-gravity</span></tt> option but I have my wibox on the top of the screen so
+<tt class="docutils literal"><span class="pre">north</span></tt> is correct for me.</p>
+<p>With that done we have an image with our normal wallpaper and wibox sized chunk
+with our theme&#8217;s background.  All we need to do now is tell awesome to make our
+wibox transparent and the final result is a wibox that appears to be using the
+theme&#8217;s background.</p>
+<div class="highlight-lua"><div class="highlight"><pre><span class="n">mywibox</span><span class="p">[</span><span class="n">s</span><span class="p">]</span> <span class="o">=</span> <span class="n">wibox</span><span class="p">({</span> <span class="n">position</span> <span class="o">=</span> <span class="s2">&quot;</span><span class="s">top&quot;</span><span class="p">,</span> <span class="n">fg</span> <span class="o">=</span> <span class="n">beautiful</span><span class="p">.</span><span class="n">fg_normal</span><span class="p">,</span> <span class="n">bg</span> <span class="o">=</span> <span class="s2">&quot;</span><span class="s">#00000000&quot;</span> <span class="p">})</span>
+</pre></div>
+</div>
+<p><a class="reference external" href="http://gist.github.com/198014">Fork this code</a></p>
+<p>Colours are specified in the de facto standard format of
+<tt class="docutils literal"><span class="pre">#(red)(green)(blue)(alpha)</span></tt>, the &#8216;00&#8217; value for alpha in the above example
+means we want a fully transparent theme background.  You could include some
+colour values and varying levels of alpha transparency to tint the background
+image, however that could also be achieved with ImageMagick when building the
+background image if it is desired.</p>
+<p>Click on the thumbnail image above to see the full desktop image and the effect
+in full.</p>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+        </div>
+        <div class="sidebar">
+          <h3>Table Of Contents</h3>
+          <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../projects.html">Projects</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../index.html">Articles</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../colophon.html">Colophon</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../contact.html">Contact details</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../consult.html">Consulting services</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../copyright.html">Copyright information</a></li>
+</ul>
+
+          <h3 style="margin-top: 1.5em;">Search</h3>
+          <form class="search" action="../../search.html" method="get">
+            <input type="text" name="q" />
+            <input type="submit" value="Go" />
+            <input type="hidden" name="check_keywords" value="yes" />
+            <input type="hidden" name="area" value="default" />
+          </form>
+          <p class="searchtip" style="font-size: 90%">
+            Enter search terms or a module, class or function name.
+          </p>
+        </div>
+        <div class="clearer"></div>
+      </div>
+    </div>
+
+    <div class="footer-wrapper">
+      <div class="footer">
+        <div class="left">
+          <a href="Disabling_cursor_blinking_in_GTK.html" title="Disabling cursor blinking in GTK+"
+             >previous</a> |
+          <a href="Finding_a_windows_owner.html" title="Finding a window’s owner"
+             >next</a> |
+          <a href="../../genindex.html" title="General Index"
+             >index</a>
+            <br/>
+            <a href="../../_sources/articles/tips/Fancy_awesome_theming.txt"
+               rel="nofollow">Show Source</a>
+        </div>
+
+        <div class="right">
+          
+    <div class="footer">
+        &copy; <a href="../../copyright.html">Copyright</a> 2009-2012, James Rowe.
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.1.3.
+    </div>
+        </div>
+        <div class="clearer"></div>
+      </div>
+    </div>
+
+  </body>
+</html>

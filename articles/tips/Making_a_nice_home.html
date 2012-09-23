@@ -1,0 +1,215 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Making a nice home &mdash; JNRowe</title>
+    
+    <link rel="stylesheet" href="../../_static/agogo.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../',
+        VERSION:     '0.1.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../_static/doctools.js"></script>
+    <link rel="shortcut icon" href="../../_static/icon.ico"/>
+    <link rel="copyright" title="Copyright" href="../../copyright.html" />
+    <link rel="top" title="JNRowe" href="../../index.html" />
+    <link rel="up" title="Tips" href="index.html" />
+    <link rel="next" title="Populating sup contacts from abook" href="Populating_sup_contacts_from_abook.html" />
+    <link rel="prev" title="‘Kick me’ birthday reminders" href="Kick_me_birthday_reminders.html" />
+  </head>
+  <body>
+    <div class="header-wrapper">
+      <div class="header">
+          <p class="logo"><a href="../../index.html">
+            <img class="logo" src="../../_static/logo.png" alt="Logo"/>
+          </a></p>
+        <div class="headertitle"><a
+          href="../../index.html">JNRowe</a></div>
+        <div class="rel">
+          <a href="Kick_me_birthday_reminders.html" title="‘Kick me’ birthday reminders"
+             accesskey="P">previous</a> |
+          <a href="Populating_sup_contacts_from_abook.html" title="Populating sup contacts from abook"
+             accesskey="N">next</a> |
+          <a href="../../genindex.html" title="General Index"
+             accesskey="I">index</a>
+        </div>
+       </div>
+    </div>
+
+    <div class="content-wrapper">
+      <div class="content">
+        <div class="document">
+            
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="making-a-nice-home">
+<h1>Making a nice home<a class="headerlink" href="#making-a-nice-home" title="Permalink to this headline">¶</a></h1>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">date:</th><td class="field-body">2009-10-11</td>
+</tr>
+</tbody>
+</table>
+<p>Back in <a class="reference internal" href="Kick_me_birthday_reminders.html"><em>&#8216;Kick me&#8217; birthday reminders</em></a> I said:</p>
+<blockquote>
+<div>You could trigger a rebuild in your <tt class="docutils literal"><span class="pre">~/.bashrc</span></tt> before you call <tt class="docutils literal"><span class="pre">rem</span></tt> to
+see the reminders, so they are always up to date at login. Or, you could be
+like me and have a post commit hook for <a class="reference external" href="http://www.git-scm.com/">git</a> to manage this… because you are
+keeping your home directory version controlled as a sanity measure I hope!</div></blockquote>
+<p>Today, Stuart Grady asked me in a private mail:</p>
+<blockquote>
+<div>Okay, at which point is the &#8220;Tip of the Day&#8221; thingy going to be about using
+hooks and <a class="reference external" href="http://www.gnu.org/software/make/make.html">make</a> in <tt class="docutils literal"><span class="pre">$HOME</span></tt>?</div></blockquote>
+<p>I&#8217;ll take the hint and look at <tt class="docutils literal"><span class="pre">make</span></tt>.  For the purposes of this post we&#8217;re
+going to pretend we haven&#8217;t read <a class="reference external" href="http://miller.emu.id.au/pmiller/books/rmch/">recursive make considered harmful</a> as I don&#8217;t
+heed its advice for the <tt class="docutils literal"><span class="pre">Makefile</span></tt> I have in my home directory.  That said,
+let&#8217;s have a look at what can be found in my current top-level <tt class="docutils literal"><span class="pre">Makefile</span></tt>.</p>
+</div>
+<div class="section" id="permissions">
+<h1>Permissions<a class="headerlink" href="#permissions" title="Permalink to this headline">¶</a></h1>
+<p>I keep my home directory version controlled with <tt class="docutils literal"><span class="pre">git</span></tt>, but git out of the box
+doesn&#8217;t maintain permissions on files beyond the executable bit.  There are
+plenty of ways around this including using external tools such as <a class="reference external" href="http://joey.kitenet.net/code/etckeeper/">etckeeper</a>,
+but I prefer the simple approach of setting the permissions when they&#8217;re needed:</p>
+<div class="highlight-make"><div class="highlight"><pre><span class="nv">PRIVATE_FILES</span> <span class="o">:=</span> .abook/addressbook .gnupg/secring.gpg .mailfilter .msmtprc <span class="se">\</span>
+        .ssh/id_rsa
+PRIVATE_DIRS :<span class="o">=</span> .gnupg
+
+fix-perms: <span class="k">$(</span>PRIVATE_FILES<span class="k">)</span> <span class="k">$(</span>PRIVATE_DIRS<span class="k">)</span>
+        <span class="k">$(</span>info - Removing extra <span class="nb">read </span>permissions from private files and directories<span class="k">)</span>
+        chmod 600 <span class="k">$(</span>PRIVATE_FILES<span class="k">)</span>
+        chmod 700 <span class="k">$(</span>PRIVATE_DIRS<span class="k">)</span>
+</pre></div>
+</div>
+<p><a class="reference external" href="http://gist.github.com/208207">Fork this code</a></p>
+<p>If this rule is called after a <tt class="docutils literal"><span class="pre">git</span> <span class="pre">pull</span></tt> is issued then the files always have
+the correct permissions.</p>
+</div>
+<div class="section" id="vim-hacks">
+<h1>vim hacks<a class="headerlink" href="#vim-hacks" title="Permalink to this headline">¶</a></h1>
+<p>I also call <tt class="docutils literal"><span class="pre">make</span></tt> in some subdirectories, the most interesting one is probably
+for <tt class="docutils literal"><span class="pre">.vim</span></tt>:</p>
+<div class="highlight-make"><div class="highlight"><pre><span class="nv">CTAGS</span> <span class="o">:=</span> exuberant-ctags
+
+TARGETS :<span class="o">=</span> <span class="k">$(</span>patsubst /usr/lib/%, tags/%.ctags, <span class="k">$(</span>wildcard /usr/lib/python*<span class="k">))</span> <span class="se">\</span>
+        doc/tags
+
+all: <span class="k">$(</span>TARGETS<span class="k">)</span>
+
+tags/%.ctags: /usr/lib/%
+        <span class="k">$(</span>CTAGS<span class="k">)</span> --exclude<span class="o">=</span>test_* --exclude<span class="o">=</span>tests.py --exclude<span class="o">=</span>test.py <span class="se">\</span>
+                --exclude<span class="o">=</span>*/test/* --exclude<span class="o">=</span>*/tests/* --languages<span class="o">=</span>python <span class="se">\</span>
+                -R -f <span class="nv">$@</span> <span class="nv">$&lt;</span>
+
+doc/tags: <span class="k">$(</span>filter-out doc/tags, <span class="k">$(</span>wildcard doc/*<span class="k">))</span>
+        vim -X -u NONE -c <span class="s1">&#39;helptags $(dir $@)&#39;</span> -c <span class="s1">&#39;:q&#39;</span> &lt;/dev/null &amp;&gt;/dev/null
+
+clean:
+        rm -f <span class="k">$(</span>TARGETS<span class="k">)</span>
+</pre></div>
+</div>
+<p><a class="reference external" href="http://gist.github.com/208209">Fork this code</a></p>
+<p>The values in the <tt class="docutils literal"><span class="pre">patsubst</span></tt> block of the <tt class="docutils literal"><span class="pre">$(TARGETS)</span></tt> definition are a list
+of filenames to use for tag storage with <a class="reference external" href="http://ctags.sourceforge.net">ctags</a>.  The rule creates a different
+<tt class="docutils literal"><span class="pre">ctags</span></tt> file for each installed <a class="reference external" href="http://www.python.org">python</a> version.  In the rule to make the
+<tt class="docutils literal"><span class="pre">ctags</span></tt> files we specifically exclude test files as they aren&#8217;t often useful
+in <a class="reference external" href="http://vimdoc.sourceforge.net/htmldoc/version7.html#new-omni-completion">omni-completion</a>, and they significantly pollute the tags database for normal
+use.</p>
+<p>The final entry in <tt class="docutils literal"><span class="pre">$(TARGETS)</span></tt> simply updates the tag lists for <a class="reference external" href="http://vimdoc.sourceforge.net/htmldoc/various.html#:helptags">help files</a>
+installed in <tt class="docutils literal"><span class="pre">~/.vim/doc</span></tt>.</p>
+</div>
+<div class="section" id="documentation">
+<h1>Documentation<a class="headerlink" href="#documentation" title="Permalink to this headline">¶</a></h1>
+<p>The final subdirectory <tt class="docutils literal"><span class="pre">Makefile</span></tt> we&#8217;re going to look at is actually called in
+a number of different directories to create HTML versions of
+<a class="reference external" href="http://docutils.sourceforge.net/rst.html">reStructuredText</a> files.</p>
+<div class="highlight-make"><div class="highlight"><pre><span class="nv">GENERATED</span> <span class="o">=</span> <span class="k">$(</span>patsubst %.rst, %.html, <span class="k">$(</span>wildcard *.rst<span class="k">))</span>
+
+all: <span class="k">$(</span>GENERATED<span class="k">)</span>
+
+<span class="k">$(</span>GENERATED<span class="k">)</span>: %.html: %.rst
+        rst2html.py <span class="nv">$&lt;</span> <span class="nv">$@</span>
+</pre></div>
+</div>
+<p><a class="reference external" href="http://gist.github.com/208210">Fork this code</a></p>
+<p>If we call the above <tt class="docutils literal"><span class="pre">Makefile</span></tt> from our <tt class="docutils literal"><span class="pre">git</span></tt> hooks after any pull or merge we
+always have up to date processed versions of documents.</p>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+        </div>
+        <div class="sidebar">
+          <h3>Table Of Contents</h3>
+          <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../projects.html">Projects</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../index.html">Articles</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../colophon.html">Colophon</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../contact.html">Contact details</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../consult.html">Consulting services</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../copyright.html">Copyright information</a></li>
+</ul>
+
+          <h3 style="margin-top: 1.5em;">Search</h3>
+          <form class="search" action="../../search.html" method="get">
+            <input type="text" name="q" />
+            <input type="submit" value="Go" />
+            <input type="hidden" name="check_keywords" value="yes" />
+            <input type="hidden" name="area" value="default" />
+          </form>
+          <p class="searchtip" style="font-size: 90%">
+            Enter search terms or a module, class or function name.
+          </p>
+        </div>
+        <div class="clearer"></div>
+      </div>
+    </div>
+
+    <div class="footer-wrapper">
+      <div class="footer">
+        <div class="left">
+          <a href="Kick_me_birthday_reminders.html" title="‘Kick me’ birthday reminders"
+             >previous</a> |
+          <a href="Populating_sup_contacts_from_abook.html" title="Populating sup contacts from abook"
+             >next</a> |
+          <a href="../../genindex.html" title="General Index"
+             >index</a>
+            <br/>
+            <a href="../../_sources/articles/tips/Making_a_nice_home.txt"
+               rel="nofollow">Show Source</a>
+        </div>
+
+        <div class="right">
+          
+    <div class="footer">
+        &copy; <a href="../../copyright.html">Copyright</a> 2009-2012, James Rowe.
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.1.3.
+    </div>
+        </div>
+        <div class="clearer"></div>
+      </div>
+    </div>
+
+  </body>
+</html>

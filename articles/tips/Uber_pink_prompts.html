@@ -1,0 +1,177 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Uber pink prompts &mdash; JNRowe</title>
+    
+    <link rel="stylesheet" href="../../_static/agogo.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../',
+        VERSION:     '0.1.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../_static/doctools.js"></script>
+    <link rel="shortcut icon" href="../../_static/icon.ico"/>
+    <link rel="copyright" title="Copyright" href="../../copyright.html" />
+    <link rel="top" title="JNRowe" href="../../index.html" />
+    <link rel="up" title="Tips" href="index.html" />
+    <link rel="next" title="Visual vim mode identifier" href="Visual_vim_mode_identifier.html" />
+    <link rel="prev" title="Toggling settings in vim" href="Toggling_settings_in_vim.html" />
+  </head>
+  <body>
+    <div class="header-wrapper">
+      <div class="header">
+          <p class="logo"><a href="../../index.html">
+            <img class="logo" src="../../_static/logo.png" alt="Logo"/>
+          </a></p>
+        <div class="headertitle"><a
+          href="../../index.html">JNRowe</a></div>
+        <div class="rel">
+          <a href="Toggling_settings_in_vim.html" title="Toggling settings in vim"
+             accesskey="P">previous</a> |
+          <a href="Visual_vim_mode_identifier.html" title="Visual vim mode identifier"
+             accesskey="N">next</a> |
+          <a href="../../genindex.html" title="General Index"
+             accesskey="I">index</a>
+        </div>
+       </div>
+    </div>
+
+    <div class="content-wrapper">
+      <div class="content">
+        <div class="document">
+            
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="uber-pink-prompts">
+<h1>Uber pink prompts<a class="headerlink" href="#uber-pink-prompts" title="Permalink to this headline">¶</a></h1>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">date:</th><td class="field-body">2009-09-25</td>
+</tr>
+</tbody>
+</table>
+<p>cookiemon5ter asks in <tt class="docutils literal"><span class="pre">#gentoo</span></tt> on Freenode:</p>
+<blockquote>
+<div>anyone know where to get a list of color codes for bash or know the code for
+pink :p</div></blockquote>
+<p>My first suggestion was to look at <a class="reference external" href="http://kerneltrap.org/man/linux/man4/console_codes.4">console_codes(4)</a> for the escapes, and note
+that pink isn&#8217;t defined.  As a workaround I suggested changing the console
+palette using <tt class="docutils literal"><span class="pre">echo</span> <span class="pre">&quot;\e]PDff1493&quot;</span></tt> which will make the normal magenta escape
+in to a much deeper pink.  The syntax to change the console colour palette is
+<tt class="docutils literal"><span class="pre">\eP${colour_number}${red}${green}${blue}</span></tt>, so deconstructing the above
+example we are setting colour code <tt class="docutils literal"><span class="pre">D</span></tt> (or 13) to <tt class="docutils literal"><span class="pre">#ff1493</span></tt>.</p>
+<p>However, the idea cookiemon5ter had wasn&#8217;t to change the palette but just to use
+a nice pink in the <a class="reference external" href="http://cnswww.cns.cwru.edu/~chet/bash/bashtop.html">bash</a> prompt under <a class="reference external" href="http://materm.sourceforge.net/">mrxvt</a>.</p>
+<blockquote>
+<div>i was just talking [about] editing the line in bashrc</div></blockquote>
+<p>Using mrxvt, or any other terminal that supports the xterm&#8217;s 256 colour mode, we
+can actually pick a variety of pinks to use directly without having to redefine
+the palette.  The prompt with a more gaudy pink can be achieved with the
+following:</p>
+<div class="highlight-bash"><div class="highlight"><pre><span class="nb">export </span><span class="nv">PS1</span><span class="o">=</span><span class="s1">&#39;\[\e[01;33m\]\u@\h\[\e[38;5;199m\] \w\$\[\e[00m\] &#39;</span>
+</pre></div>
+</div>
+<p><a class="reference external" href="http://gist.github.com/198009">Fork this code</a></p>
+<p>The important change here is the use of <tt class="docutils literal"><span class="pre">\e[38;5;199m</span></tt>, which tells mrxvt to
+select colour 199 from its extended 256 colour range.  Colours 196 through 201
+are varying levels of pink.  To see a quick table of the full colour range you
+can use the following little loop:</p>
+<div class="highlight-bash"><div class="highlight"><pre><span class="k">for </span>i in <span class="o">{</span>0..15<span class="o">}</span>
+<span class="k">do</span>
+<span class="k">    for </span>j in <span class="o">{</span>0..15<span class="o">}</span>
+    <span class="k">do</span>
+<span class="k">        </span><span class="nv">col</span><span class="o">=</span><span class="k">$((</span>i*16+j<span class="k">))</span>
+        <span class="nb">printf</span> <span class="s2">&quot;\e[38;5;%im %03i&quot;</span> <span class="nv">$col</span> <span class="nv">$col</span>
+    <span class="k">done</span>
+<span class="k">    </span><span class="nb">printf</span> <span class="s2">&quot;\n&quot;</span>
+<span class="k">done</span>
+</pre></div>
+</div>
+<p><a class="reference external" href="http://gist.github.com/198010">Fork this code</a></p>
+<img alt="xterm's 256 colour palette" src="../../_images/2009-09-25-256_colours.png" />
+<p>There is one other important point to make here, you must set the prompt based
+on terminal type now as some terminals and the console won&#8217;t recognise the
+sequences correctly.  Test the terminal type by checking <tt class="docutils literal"><span class="pre">$TERM</span></tt> in your
+startup scripts, or if you&#8217;re convinced all your terminals are 256 colour
+capable you can simply check for <tt class="docutils literal"><span class="pre">$DISPLAY</span></tt> instead.</p>
+<p>Changing the console palette and using 256 colour mode makes for two tips
+today!!</p>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+        </div>
+        <div class="sidebar">
+          <h3>Table Of Contents</h3>
+          <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../projects.html">Projects</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../index.html">Articles</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../colophon.html">Colophon</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../contact.html">Contact details</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../consult.html">Consulting services</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../copyright.html">Copyright information</a></li>
+</ul>
+
+          <h3 style="margin-top: 1.5em;">Search</h3>
+          <form class="search" action="../../search.html" method="get">
+            <input type="text" name="q" />
+            <input type="submit" value="Go" />
+            <input type="hidden" name="check_keywords" value="yes" />
+            <input type="hidden" name="area" value="default" />
+          </form>
+          <p class="searchtip" style="font-size: 90%">
+            Enter search terms or a module, class or function name.
+          </p>
+        </div>
+        <div class="clearer"></div>
+      </div>
+    </div>
+
+    <div class="footer-wrapper">
+      <div class="footer">
+        <div class="left">
+          <a href="Toggling_settings_in_vim.html" title="Toggling settings in vim"
+             >previous</a> |
+          <a href="Visual_vim_mode_identifier.html" title="Visual vim mode identifier"
+             >next</a> |
+          <a href="../../genindex.html" title="General Index"
+             >index</a>
+            <br/>
+            <a href="../../_sources/articles/tips/Uber_pink_prompts.txt"
+               rel="nofollow">Show Source</a>
+        </div>
+
+        <div class="right">
+          
+    <div class="footer">
+        &copy; <a href="../../copyright.html">Copyright</a> 2009-2012, James Rowe.
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.1.3.
+    </div>
+        </div>
+        <div class="clearer"></div>
+      </div>
+    </div>
+
+  </body>
+</html>

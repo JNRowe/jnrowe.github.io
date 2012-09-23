@@ -1,0 +1,303 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>BTS as a task manager &mdash; JNRowe</title>
+    
+    <link rel="stylesheet" href="../../_static/agogo.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../',
+        VERSION:     '0.1.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../_static/doctools.js"></script>
+    <link rel="shortcut icon" href="../../_static/icon.ico"/>
+    <link rel="copyright" title="Copyright" href="../../copyright.html" />
+    <link rel="top" title="JNRowe" href="../../index.html" />
+    <link rel="up" title="Tips" href="index.html" />
+    <link rel="next" title="Beyond simple tab completion" href="Beyond_tab_completion.html" />
+    <link rel="prev" title="Tips" href="index.html" />
+  </head>
+  <body>
+    <div class="header-wrapper">
+      <div class="header">
+          <p class="logo"><a href="../../index.html">
+            <img class="logo" src="../../_static/logo.png" alt="Logo"/>
+          </a></p>
+        <div class="headertitle"><a
+          href="../../index.html">JNRowe</a></div>
+        <div class="rel">
+          <a href="index.html" title="Tips"
+             accesskey="P">previous</a> |
+          <a href="Beyond_tab_completion.html" title="Beyond simple tab completion"
+             accesskey="N">next</a> |
+          <a href="../../genindex.html" title="General Index"
+             accesskey="I">index</a>
+        </div>
+       </div>
+    </div>
+
+    <div class="content-wrapper">
+      <div class="content">
+        <div class="document">
+            
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="bts-as-a-task-manager">
+<h1><abbr title="Bug Tracking System">BTS</abbr> as a task manager<a class="headerlink" href="#bts-as-a-task-manager" title="Permalink to this headline">¶</a></h1>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">date:</th><td class="field-body">2009-10-07</td>
+</tr>
+</tbody>
+</table>
+<p>Tom Marshall asks over the cooler:</p>
+<blockquote>
+<div>What apps do you guys use to manage your todo list(s)?</div></blockquote>
+<p>I think this may be an incredibly personal thing but I prefer to use
+a <abbr title="Bug Tracking System">BTS</abbr> for local task management, the idea of just
+adding random lines of text to a file frankly baffles me.  I love the filtering,
+ordering and editing capabilities I get from using a <abbr title="Bug Tracking System">BTS</abbr> for this.</p>
+<p>Now, I&#8217;m not suggesting installing something complex and convoluted like
+<a class="reference external" href="http://www.bugzilla.org">Bugzilla</a> just for keeping track of your shopping lists or remembering to charge
+the spare battery for your phone.  There are quite a few lightweight systems
+available, <a class="reference external" href="http://ditz.rubyforge.org">ditz</a> and <a class="reference external" href="http://bugseverywhere.org/be/show/HomePage">Bugs Everywhere</a> being two examples.  There is also
+a <tt class="docutils literal"><span class="pre">ditz</span></tt> inspired project, written in <a class="reference external" href="http://www.python.org">Python</a>, called <a class="reference external" href="https://github.com/mw44118/pitz">pitz</a> that is in active
+development.  And <a class="reference external" href="http://www.fossil-scm.org/index.html/doc/tip/www/index.wiki">fossil</a> is pretty cool if you&#8217;re looking for a standalone
+wiki, <abbr title="Bug Tracking System">BTS</abbr> and <abbr title="Version Control System">VCS</abbr> in one.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">If you&#8217;re a <a class="reference external" href="http://www.gentoo.org/">Gentoo</a> user you can install <tt class="docutils literal"><span class="pre">ditz</span></tt> using
+the ebuild from my <a class="reference external" href="https://github.com/JNRowe/jnrowe-misc/">overlay</a>.</p>
+</div>
+<p>I&#8217;m currently in the process of switching away from <abbr title="Bugs Everywhere">be</abbr>, but it can serve as an example quite well.  Unfortunately, there
+are no releases currently being made so you will need to install a recent
+version of <tt class="docutils literal"><span class="pre">bzr</span></tt> to download it.  Don&#8217;t worry though you aren&#8217;t restricted to
+<tt class="docutils literal"><span class="pre">bzr</span></tt> to use it.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Colleagues from work can grab Dan&#8217;s <tt class="docutils literal"><span class="pre">be</span></tt> branch directly from our package
+repository, it doesn&#8217;t require <tt class="docutils literal"><span class="pre">bzr</span></tt> and it fixes quite a few usage
+problems(it is also much faster).  Just remember that it has diverged
+massively from the upstream code, so you won&#8217;t be able to use it to work with
+bug databases created by the upstream project.</p>
+</div>
+<p>The following examples use an older version of <tt class="docutils literal"><span class="pre">be</span></tt> that you can download as
+a <a class="reference external" href="http://www.jnrowe.ukfsn.org/_static/be-0.0.193.tar.bz2">tarball</a> and doesn&#8217;t require <tt class="docutils literal"><span class="pre">bzr</span></tt>.</p>
+<div class="section" id="setting-be-up">
+<h2>Setting <tt class="docutils literal"><span class="pre">be</span></tt> up<a class="headerlink" href="#setting-be-up" title="Permalink to this headline">¶</a></h2>
+<p>Before we use <tt class="docutils literal"><span class="pre">be</span></tt> we must prepare it.  In the example that follows we&#8217;re
+going to create a new directory under the control of <a class="reference external" href="http://www.git-scm.com/">git</a>, and tell <tt class="docutils literal"><span class="pre">be</span></tt> we
+wish to use it in there:</p>
+<div class="highlight-text"><div class="highlight"><pre>~/Desktop $ mkdir be_test; cd be_test
+~/Desktop/be_test $ git init
+Initialized empty Git repository in /home/jay/Desktop/be_test/.git/
+~/Desktop/be_test $ be set-root
+Using git for revision control.
+Directory initialized.
+</pre></div>
+</div>
+</div>
+<div class="section" id="filing-bugs">
+<h2>Filing bugs<a class="headerlink" href="#filing-bugs" title="Permalink to this headline">¶</a></h2>
+<p>We can easily file new bugs, in the next snippet we can see two bugs being
+filed.  Bugs are identified by a <abbr title="Universally Unique IDentifier">UUID</abbr>,
+and to operate on bugs we only need to use a unique prefix of the identifier as
+can be seen below.</p>
+<div class="highlight-text"><div class="highlight"><pre>~/Desktop/be_test $ be new &quot;This is a test bug&quot;
+Created bug with ID a09
+~/Desktop/be_test $ be assign a09
+~/Desktop/be_test $ git commit -m&quot;Commit bug a09.&quot;
+~/Desktop/be_test $ be new &quot;This is a second bug&quot;
+Created bug with ID ec4
+~/Desktop/be_test $ be severity ec4 serious
+~/Desktop/be_test $ be comment ec4 &quot;Comments are easy&quot;
+~/Desktop/be_test $ git commit -m&quot;Commit bug ec4.&quot;
+</pre></div>
+</div>
+<p>We now have two bugs filed.  Bug <tt class="docutils literal"><span class="pre">a09</span></tt> is self-assigned, while <tt class="docutils literal"><span class="pre">ec4</span></tt> has yet
+to be assigned.  As we didn&#8217;t set a severity level for <tt class="docutils literal"><span class="pre">a09</span></tt> it is set to the
+default of <tt class="docutils literal"><span class="pre">minor</span></tt>.  A comment was also made on bug <tt class="docutils literal"><span class="pre">ec4</span></tt>, and if we hadn&#8217;t
+specified the comment on the command line it would open our default editor to
+add the comment.</p>
+</div>
+<div class="section" id="querying-bugs">
+<h2>Querying bugs<a class="headerlink" href="#querying-bugs" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-text"><div class="highlight"><pre>~/Desktop/be_test $ be list
+ec4:os: This is a second bug
+a09:om: This is a test bug
+</pre></div>
+</div>
+<p>The <tt class="docutils literal"><span class="pre">be</span> <span class="pre">list</span></tt> output consists of three fields separated by colons and they
+are: bug identifer, status and title.  The first character of the  status field
+is an <tt class="docutils literal"><span class="pre">o</span></tt> telling us the bugs are marked as open, and the second character is
+the severity indicator(where the <tt class="docutils literal"><span class="pre">s</span></tt> for bug <tt class="docutils literal"><span class="pre">ec4</span></tt> tells us it is marked as
+serious).</p>
+<p>You can also limit the bugs shown with <tt class="docutils literal"><span class="pre">be</span> <span class="pre">list</span></tt> by specifying severities with
+<tt class="docutils literal"><span class="pre">-v</span></tt>.  Or bugs that are assigned to a certain user with <tt class="docutils literal"><span class="pre">-a</span></tt>, and you can
+use <tt class="docutils literal"><span class="pre">-m</span></tt> to list bugs assigned to yourself.</p>
+<p>When we wish to inspect individual bugs, to see there full status or comments,
+we use the <tt class="docutils literal"><span class="pre">be</span> <span class="pre">show</span></tt> command:</p>
+<div class="highlight-text"><div class="highlight"><pre>~/Desktop/be_test $ be show a09
+        ID : a0912cd6-1eae-490c-8e56-5f532242394b
+Short name : a09
+    Severity : minor
+    Status : open
+    Assigned : James Rowe &lt;jnrowe@gmail.com&gt;
+    Target :
+    Creator : James Rowe &lt;jnrowe@gmail.com&gt;
+    Created : Wed, 07 Oct 2009 14:11 (Wed, 07 Oct 2009 13:11:06 +0000)
+This is a test bug
+
+~/Desktop/be_test $ be show ec4
+        ID : ec4438ca-a330-4345-b073-43c768f7e9b7
+Short name : ec4
+    Severity : serious
+    Status : open
+    Assigned :
+    Target :
+    Creator : James Rowe &lt;jnrowe@gmail.com&gt;
+    Created : Wed, 07 Oct 2009 14:11 (Wed, 07 Oct 2009 13:11:17 +0000)
+This is a second bug
+--------- Comment ---------
+Name: ec4:1
+From: James Rowe &lt;jnrowe@gmail.com&gt;
+Date: Wed, 07 Oct 2009 13:11:53 +0000
+
+Comments are easy
+</pre></div>
+</div>
+</div>
+<div class="section" id="editing-bugs">
+<h2>Editing bugs<a class="headerlink" href="#editing-bugs" title="Permalink to this headline">¶</a></h2>
+<p>We can change the bug status with <tt class="docutils literal"><span class="pre">be</span> <span class="pre">status</span></tt>, see the output from <tt class="docutils literal"><span class="pre">be</span> <span class="pre">help</span>
+<span class="pre">status</span></tt> for available values.</p>
+<p>Once bugs are marked as fixed they no longer show up in the default <tt class="docutils literal"><span class="pre">be</span> <span class="pre">list</span></tt>
+output, but we can still view them with <tt class="docutils literal"><span class="pre">be</span> <span class="pre">show</span></tt> or by calling <tt class="docutils literal"><span class="pre">be</span> <span class="pre">list</span></tt>
+with filtering options.</p>
+<div class="highlight-text"><div class="highlight"><pre>~/Desktop/be_test $ be status ec4 fixed
+~/Desktop/be_test $ be list
+a09:om: This is a test bug
+~/Desktop/be_test $ be show ec4
+        ID : ec4438ca-a330-4345-b073-43c768f7e9b7
+Short name : ec4
+    Severity : serious
+    Status : fixed
+    Assigned :
+    Target :
+    Creator : James Rowe &lt;jnrowe@gmail.com&gt;
+    Created : Wed, 07 Oct 2009 14:11 (Wed, 07 Oct 2009 13:11:17 +0000)
+This is a second bug
+--------- Comment ---------
+Name: ec4:1
+From: James Rowe &lt;jnrowe@gmail.com&gt;
+Date: Wed, 07 Oct 2009 13:11:53 +0000
+
+Comments are easy
+</pre></div>
+</div>
+</div>
+<div class="section" id="conclusions">
+<h2>Conclusions<a class="headerlink" href="#conclusions" title="Permalink to this headline">¶</a></h2>
+<p>That really is all it takes to use <tt class="docutils literal"><span class="pre">be</span></tt>, and that is why I find a <abbr title="Bug Tracking System">BTS</abbr> to be a nice solution for managing all kinds of random
+tasks.  I have a Bugs Everywhere database in my home directory that over the
+past year has stored just over 600 bugs from shopping lists to actual bugs with
+my configurations files, and I&#8217;ve apparently managed to complete 95% of them!</p>
+</div>
+<div class="section" id="bonus-material">
+<h2>Bonus material<a class="headerlink" href="#bonus-material" title="Permalink to this headline">¶</a></h2>
+<p>One of the little tricks I like to do is override the <tt class="docutils literal"><span class="pre">cd</span></tt> command to
+automatically display the bug list when I enter a directory that contains a Bugs
+Everywhere database, and it is very simple to do:</p>
+<div class="highlight-bash"><div class="highlight"><pre><span class="nb">cd</span><span class="o">()</span> <span class="o">{</span>
+    <span class="nb">local </span>retval
+    <span class="nb">builtin cd</span> <span class="s2">&quot;$@&quot;</span>
+    <span class="nv">retval</span><span class="o">=</span><span class="nv">$?</span>
+    <span class="o">[</span> <span class="k">${</span><span class="nv">retval</span><span class="k">}</span> <span class="o">=</span> 0 -a -d .be <span class="o">]</span> <span class="o">&amp;&amp;</span> be list
+    <span class="k">return</span> <span class="k">${</span><span class="nv">retval</span><span class="k">}</span>
+<span class="o">}</span>
+</pre></div>
+</div>
+<p><a class="reference external" href="http://gist.github.com/204172">Fork this code</a></p>
+<p>It could be improved to take settings to filter the bug list or all manner of
+other cool things, but that is why it has a &#8220;Fork this code&#8221; label next to it.
+Feel free to post updates to the gist!</p>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+        </div>
+        <div class="sidebar">
+          <h3>Table Of Contents</h3>
+          <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../projects.html">Projects</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../index.html">Articles</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../colophon.html">Colophon</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../contact.html">Contact details</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../consult.html">Consulting services</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../copyright.html">Copyright information</a></li>
+</ul>
+
+          <h3 style="margin-top: 1.5em;">Search</h3>
+          <form class="search" action="../../search.html" method="get">
+            <input type="text" name="q" />
+            <input type="submit" value="Go" />
+            <input type="hidden" name="check_keywords" value="yes" />
+            <input type="hidden" name="area" value="default" />
+          </form>
+          <p class="searchtip" style="font-size: 90%">
+            Enter search terms or a module, class or function name.
+          </p>
+        </div>
+        <div class="clearer"></div>
+      </div>
+    </div>
+
+    <div class="footer-wrapper">
+      <div class="footer">
+        <div class="left">
+          <a href="index.html" title="Tips"
+             >previous</a> |
+          <a href="Beyond_tab_completion.html" title="Beyond simple tab completion"
+             >next</a> |
+          <a href="../../genindex.html" title="General Index"
+             >index</a>
+            <br/>
+            <a href="../../_sources/articles/tips/BTS_as_a_task_manager.txt"
+               rel="nofollow">Show Source</a>
+        </div>
+
+        <div class="right">
+          
+    <div class="footer">
+        &copy; <a href="../../copyright.html">Copyright</a> 2009-2012, James Rowe.
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.1.3.
+    </div>
+        </div>
+        <div class="clearer"></div>
+      </div>
+    </div>
+
+  </body>
+</html>

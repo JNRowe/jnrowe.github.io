@@ -1,0 +1,146 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Theming mutt &mdash; JNRowe</title>
+    
+    <link rel="stylesheet" href="../../_static/agogo.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../',
+        VERSION:     '0.1.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../_static/doctools.js"></script>
+    <link rel="shortcut icon" href="../../_static/icon.ico"/>
+    <link rel="copyright" title="Copyright" href="../../copyright.html" />
+    <link rel="top" title="JNRowe" href="../../index.html" />
+    <link rel="up" title="Tips" href="index.html" />
+    <link rel="next" title="Three mobile broadband in Linux" href="Three_mobile_broadband_in_linux.html" />
+    <link rel="prev" title="Simple notifications in awesome" href="Simple_notifications_in_awesome.html" />
+  </head>
+  <body>
+    <div class="header-wrapper">
+      <div class="header">
+          <p class="logo"><a href="../../index.html">
+            <img class="logo" src="../../_static/logo.png" alt="Logo"/>
+          </a></p>
+        <div class="headertitle"><a
+          href="../../index.html">JNRowe</a></div>
+        <div class="rel">
+          <a href="Simple_notifications_in_awesome.html" title="Simple notifications in awesome"
+             accesskey="P">previous</a> |
+          <a href="Three_mobile_broadband_in_linux.html" title="Three mobile broadband in Linux"
+             accesskey="N">next</a> |
+          <a href="../../genindex.html" title="General Index"
+             accesskey="I">index</a>
+        </div>
+       </div>
+    </div>
+
+    <div class="content-wrapper">
+      <div class="content">
+        <div class="document">
+            
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="theming-mutt">
+<h1>Theming mutt<a class="headerlink" href="#theming-mutt" title="Permalink to this headline">¶</a></h1>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">date:</th><td class="field-body">2009-09-23</td>
+</tr>
+</tbody>
+</table>
+<p>Jeff, a work colleague, asks via IRC:</p>
+<blockquote>
+<div>Can I make <a class="reference external" href="http://www.mutt.org/">mutt</a> use a blue statusbar in X and red in console? A different
+colour would make it easier to read with a transparent urxvt.</div></blockquote>
+<p><a class="reference external" href="http://www.mutt.org/">mutt</a> has access to environment variables when reading its configurations files,
+so setting the theme based on term type is extremely easy.</p>
+<p>First separate all your common settings in to one file, say
+<tt class="docutils literal"><span class="pre">~/.mutt/colour_defaults.rc</span></tt>.  Then add your per-term settings to a file named
+<tt class="docutils literal"><span class="pre">~/.mutt/colour_$TERM.rc</span></tt>.  Telling mutt to use the correct theme is now as
+simple as adding the following to your <tt class="docutils literal"><span class="pre">~/.muttrc</span></tt>:</p>
+<div class="highlight-sh"><div class="highlight"><pre><span class="nb">source</span> ~/.mutt/colour_defaults.rc
+<span class="nb">source</span> ~/.mutt/colour_<span class="nv">$TERM</span>.rc
+</pre></div>
+</div>
+<p><a class="reference external" href="http://gist.github.com/198012">Fork this code</a></p>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+        </div>
+        <div class="sidebar">
+          <h3>Table Of Contents</h3>
+          <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../projects.html">Projects</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../index.html">Articles</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../colophon.html">Colophon</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../contact.html">Contact details</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../consult.html">Consulting services</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../copyright.html">Copyright information</a></li>
+</ul>
+
+          <h3 style="margin-top: 1.5em;">Search</h3>
+          <form class="search" action="../../search.html" method="get">
+            <input type="text" name="q" />
+            <input type="submit" value="Go" />
+            <input type="hidden" name="check_keywords" value="yes" />
+            <input type="hidden" name="area" value="default" />
+          </form>
+          <p class="searchtip" style="font-size: 90%">
+            Enter search terms or a module, class or function name.
+          </p>
+        </div>
+        <div class="clearer"></div>
+      </div>
+    </div>
+
+    <div class="footer-wrapper">
+      <div class="footer">
+        <div class="left">
+          <a href="Simple_notifications_in_awesome.html" title="Simple notifications in awesome"
+             >previous</a> |
+          <a href="Three_mobile_broadband_in_linux.html" title="Three mobile broadband in Linux"
+             >next</a> |
+          <a href="../../genindex.html" title="General Index"
+             >index</a>
+            <br/>
+            <a href="../../_sources/articles/tips/Theming_mutt.txt"
+               rel="nofollow">Show Source</a>
+        </div>
+
+        <div class="right">
+          
+    <div class="footer">
+        &copy; <a href="../../copyright.html">Copyright</a> 2009-2012, James Rowe.
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.1.3.
+    </div>
+        </div>
+        <div class="clearer"></div>
+      </div>
+    </div>
+
+  </body>
+</html>
