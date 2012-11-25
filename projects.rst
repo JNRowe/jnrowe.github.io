@@ -8,7 +8,6 @@ Projects
 * `bwatch <https://github.com/JNRowe/bwatch>`__: Simple bandwidth watching tool [ `documentation <http://jnrowe.github.com/bwatch/>`__ ]
 * `cupage <https://github.com/JNRowe/cupage>`__: A tool to check for updates on web pages [ `documentation <http://jnrowe.github.com/cupage>`__ ]
 * `dotbash <https://github.com/JNRowe/dotbash>`__: Shared bash configuration files
-* `dwm <https://github.com/JNRowe/dwm>`__: The dwm codebase I run [ `documentation <http://dwm.suckless.org/>`__ ]
 * `emacs-configs <https://github.com/JNRowe/emacs-configs>`__: Personal emacs configs
 * `hubugs <https://github.com/JNRowe/hubugs>`__: Simple client for GitHub issues [ `documentation <http://hubugs.rtfd.org/>`__ ]
 * `jnrowe-fixes <https://github.com/JNRowe/jnrowe-fixes>`__: Small package fixes languishing in the Gentoo BTS [ `documentation <http://jnrowe.github.com/jnrowe-fixes>`__ ]
@@ -36,6 +35,7 @@ Forks I'm hacking on
 * `develop.github.com <https://github.com/JNRowe/develop.github.com>`__: API Documentation for GitHub [ `origin <https://github.com/github/develop.github.com>`__ ]
 * `dingus <https://github.com/JNRowe/dingus>`__: A record-then-assert test double library. [ `origin <https://github.com/garybernhardt/dingus>`__ ]
 * `Dolt <https://github.com/JNRowe/Dolt>`__: A dumb little wrapper around RESTful interfaces [ `origin <https://github.com/tswicegood/Dolt>`__ ]
+* `dwm <https://github.com/JNRowe/dwm>`__: My desktop DWM base [ `origin <https://github.com/suckless/dwm>`__ ]
 * `esearch <https://github.com/JNRowe/esearch>`__: Replacement for emerge --search [ `origin <https://github.com/fuzzyray/esearch>`__ ]
 * `expecter <https://github.com/JNRowe/expecter>`__: Expecter Gadget: better expectations (assertions) for Python. [ `origin <https://github.com/garybernhardt/expecter>`__ ]
 * `github-cli <https://github.com/JNRowe/github-cli>`__: A command-line interface to the GitHub Issues API v2. [ `origin <https://github.com/jsmits/github-cli>`__ ]
