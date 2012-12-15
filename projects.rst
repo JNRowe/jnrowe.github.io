@@ -8,6 +8,7 @@ Projects
 * `bwatch <https://github.com/JNRowe/bwatch>`__: Simple bandwidth watching tool [ `documentation <http://jnrowe.github.com/bwatch/>`__ ]
 * `cupage <https://github.com/JNRowe/cupage>`__: A tool to check for updates on web pages [ `documentation <http://jnrowe.github.com/cupage>`__ ]
 * `dotbash <https://github.com/JNRowe/dotbash>`__: Shared bash configuration files
+* `dwm <https://github.com/JNRowe/dwm>`__: My desktop DWM base
 * `emacs-configs <https://github.com/JNRowe/emacs-configs>`__: Personal emacs configs
 * `hubugs <https://github.com/JNRowe/hubugs>`__: Simple client for GitHub issues [ `documentation <http://hubugs.rtfd.org/>`__ ]
 * `jnrowe-fixes <https://github.com/JNRowe/jnrowe-fixes>`__: Small package fixes languishing in the Gentoo BTS [ `documentation <http://jnrowe.github.com/jnrowe-fixes>`__ ]
@@ -35,7 +36,6 @@ Forks I'm hacking on
 * `develop.github.com <https://github.com/JNRowe/develop.github.com>`__: API Documentation for GitHub [ `origin <https://github.com/github/develop.github.com>`__ ]
 * `dingus <https://github.com/JNRowe/dingus>`__: A record-then-assert test double library. [ `origin <https://github.com/garybernhardt/dingus>`__ ]
 * `Dolt <https://github.com/JNRowe/Dolt>`__: A dumb little wrapper around RESTful interfaces [ `origin <https://github.com/tswicegood/Dolt>`__ ]
-* `dwm <https://github.com/JNRowe/dwm>`__: My desktop DWM base [ `origin <https://github.com/suckless/dwm>`__ ]
 * `esearch <https://github.com/JNRowe/esearch>`__: Replacement for emerge --search [ `origin <https://github.com/fuzzyray/esearch>`__ ]
 * `expecter <https://github.com/JNRowe/expecter>`__: Expecter Gadget: better expectations (assertions) for Python. [ `origin <https://github.com/garybernhardt/expecter>`__ ]
 * `github-cli <https://github.com/JNRowe/github-cli>`__: A command-line interface to the GitHub Issues API v2. [ `origin <https://github.com/jsmits/github-cli>`__ ]
@@ -55,6 +55,7 @@ Forks I'm hacking on
 * `pyusb <https://github.com/JNRowe/pyusb>`__: USB access on python [ `origin <https://github.com/walac/pyusb>`__ ]
 * `requests <https://github.com/JNRowe/requests>`__: Python HTTP Requests for Humans. [ `origin <https://github.com/kennethreitz/requests>`__ ]
 * `restfulie-py <https://github.com/JNRowe/restfulie-py>`__: Python port of Restfulie [ `origin <https://github.com/caelum/restfulie-py>`__ ]
+* `schematics <https://github.com/JNRowe/schematics>`__: Python Data Structures for Humans™. [ `origin <https://github.com/ExtensionFM/dictshield>`__ ]
 * `snipmate-snippets <https://github.com/JNRowe/snipmate-snippets>`__: A collection of snippets for snipmate (vim plugin) with a focus on bash, php, html and javascript [ `origin <https://github.com/scrooloose/snipmate-snippets>`__ ]
 * `snipmate.vim <https://github.com/JNRowe/snipmate.vim>`__: snipMate.vim aims to be a concise vim script that implements some of TextMate's snippets features in Vim.  [ `origin <https://github.com/msanders/snipmate.vim>`__ ]
 * `sxiv <https://github.com/JNRowe/sxiv>`__: Simple (or small or suckless) X Image Viewer [ `origin <https://github.com/muennich/sxiv>`__ ]
@@ -69,6 +70,7 @@ Forks I'm hacking on
 Git mirrors of projects I'm hacking on
 --------------------------------------
 
+* `pyhumod <https://github.com/JNRowe/pyhumod>`__: Mirror of pyhumod Mercurial repository from Google Code
 * `readyset <https://github.com/JNRowe/readyset>`__: Mirror of the `upstream <http://readyset.tigris.org/>`__ ``svn`` repository
 * `shell-doctest <https://github.com/JNRowe/shell-doctest>`__: Mirror of the `upstream <http://code.google.com/p/shell-doctest/>`__ ``mercurial`` repository
 * `surfraw <https://github.com/JNRowe/surfraw>`__: Mirror of the `upstream <http://surfraw.alioth.debian.org/>`__ git repository
