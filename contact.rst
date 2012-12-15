@@ -27,7 +27,6 @@ Contact details
 
 * `My GitHub profile`_
 * `My dailymile profile`_
-* `My runkeeper profile`_
 * `My GnuPG key`_ ``0xC0174749``
 * `My neighbours in meatspace`_
 * `My Twitter profile`_
@@ -40,7 +39,6 @@ Contact details
 
 .. _My GitHub profile: https://github.com/JNRowe/
 .. _My dailymile profile: http://dailymile.com/people/JNRowe
-.. _My runkeeper profile: http://runkeeper.com/user/JNRowe/
 .. _My GnuPG key: _static/gpg.asc
 .. _My neighbours in meatspace: http://geourl.org/near?p=jnrowe.github.com
 .. _My Twitter profile: http://twitter.com/ewornj
