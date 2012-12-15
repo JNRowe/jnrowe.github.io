@@ -27,7 +27,6 @@ Contact details
 
 * `My GitHub profile`_
 * `My GnuPG key`_ ``0xC0174749``
-* `My neighbours in meatspace`_
 * `My Twitter profile`_
 
 .. raw:: html
@@ -38,5 +37,4 @@ Contact details
 
 .. _My GitHub profile: https://github.com/JNRowe/
 .. _My GnuPG key: _static/gpg.asc
-.. _My neighbours in meatspace: http://geourl.org/near?p=jnrowe.github.com
 .. _My Twitter profile: http://twitter.com/ewornj
