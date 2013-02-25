@@ -152,4 +152,279 @@ a &lt;tt class="docutils literal"&gt;&lt;span class=pre&gt;reST&lt;/span&gt;&lt;
 &lt;/table&gt;
 &lt;/div&gt;
 &lt;/div&gt;
+</summary></entry><entry><title>Introduction to RCS</title><link href="http://jnrowe.github.com/articles/rcs.html" rel="alternate"></link><updated>2003-09-05T00:00:00Z</updated><id>http://jnrowe.github.com/articles/rcs.html</id><summary type="html">&lt;div class="admonition warning"&gt;
+&lt;p class="first admonition-title"&gt;Warning&lt;/p&gt;
+&lt;p class=last&gt;I’ve resurrected this text from my old UKFSN site because a couple of people
+asked me to, but I wouldn’t recommend using RCS to anyone at this point.  It
+is mainly to help people who need to understand RCS because they have no
+choice, for example Gentoo users who are stuck with &lt;tt class="docutils literal"&gt;&lt;span class=pre&gt;dispatch-conf&lt;/span&gt;&lt;/tt&gt; (or so
+my mails tell me).&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=section id=introduction-to-rcs&gt;
+&lt;h1&gt;Introduction to RCS&lt;a class=headerlink href=http://jnrowe.github.com/articles/rcs.html#introduction-to-rcs title="Permalink to this headline"&gt;¶&lt;/a&gt;&lt;/h1&gt;
+&lt;div class=section id=abstract&gt;
+&lt;h2&gt;Abstract&lt;a class=headerlink href=http://jnrowe.github.com/articles/rcs.html#abstract title="Permalink to this headline"&gt;¶&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;This introduction is aimed at people with no experience of a &lt;abbr title="Version Control System"&gt;VCS&lt;/abbr&gt; at all, but who do have a need for an easy to use and
+non-intrusive way to backup, store and annotate configuration files or 5000 file
+C source trees. This text is by no means an in-depth &lt;abbr title="GNU Revision Control System"&gt;RCS&lt;/abbr&gt; usage manual, it is a short and fast way to get working with
+&lt;abbr title="GNU Revision Control System"&gt;RCS&lt;/abbr&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;abbr title="GNU Revision Control System"&gt;RCS&lt;/abbr&gt; is great for small projects or
+managing the wealth of configuration files in &lt;tt class="docutils literal"&gt;&lt;span class=pre&gt;/etc&lt;/span&gt;&lt;/tt&gt;. It provides a way to
+reduce the need for file backups(without losing any backup quality or quantity),
+to annotate changes made to a file, to allow other people to work on a file and
+an easy method to package patch/diff files for distribution.&lt;/p&gt;
+&lt;p&gt;If you want more in-depth information about using &lt;abbr title="GNU Revision Control System"&gt;RCS&lt;/abbr&gt;, or when you find you need more functionality from &lt;abbr title="GNU Revision Control System"&gt;RCS&lt;/abbr&gt;, there is a HOW-TO at &lt;a class="reference external" href=http://www.tldp.org&gt;The Linux Documentation
+Project&lt;/a&gt; (&lt;a class="reference external" href=http://tldp.org/HOWTO/RCS.html&gt;direct link&lt;/a&gt;) and fantastic documentation is provided with the
+&lt;abbr title="GNU Revision Control System"&gt;RCS&lt;/abbr&gt; package.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=section id=diving-in&gt;
+&lt;h2&gt;Diving in&lt;a class=headerlink href=http://jnrowe.github.com/articles/rcs.html#diving-in title="Permalink to this headline"&gt;¶&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;&lt;abbr title="GNU Revision Control System"&gt;RCS&lt;/abbr&gt; is that simple to use that I will jump
+straight in to an example.&lt;/p&gt;
+&lt;div class=highlight-text&gt;&lt;div class=highlight&gt;&lt;pre&gt;$ mkdir RCS
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;The &lt;abbr title="GNU Revision Control System"&gt;RCS&lt;/abbr&gt; directory holds the &lt;abbr title="GNU Revision Control System"&gt;RCS&lt;/abbr&gt; control files, they contain all the data
+&lt;abbr title="GNU Revision Control System"&gt;RCS&lt;/abbr&gt; needs to work.&lt;/p&gt;
+&lt;div class=highlight-text&gt;&lt;div class=highlight&gt;&lt;pre&gt;$ cat &amp;gt;myscript.sh &amp;lt;&amp;lt;EOF
+#! /bin/sh
+# $Id$
+echo "Hello World!"
+exit 0
+EOF
+
+$ ci myscript.sh
+RCS/myscript.sh,v  &amp;lt;--  myscript.sh
+enter description, terminated with single '.' or end of file:
+NOTE: This is NOT the log message!
+&amp;gt;&amp;gt; /bin/sh "Hello World!" example
+&amp;gt;&amp;gt; .
+initial revision: 1.1
+done
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;The command &lt;tt class="docutils literal"&gt;&lt;span class=pre&gt;ci&lt;/span&gt;&lt;/tt&gt; (check in) is where the magic of &lt;abbr title="GNU Revision Control System"&gt;RCS&lt;/abbr&gt; takes place. We have decided we want to make a snapshot of our
+file, &lt;tt class="docutils literal"&gt;&lt;span class=pre&gt;myscript.sh&lt;/span&gt;&lt;/tt&gt;, and use &lt;tt class="docutils literal"&gt;&lt;span class=pre&gt;ci&lt;/span&gt;&lt;/tt&gt; to add the file to revision control.&lt;/p&gt;
+&lt;div class=highlight-text&gt;&lt;div class=highlight&gt;&lt;pre&gt;$ ls
+RCS
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;The file we checked in appears to have disappeared, obviously it hasn’t but the
+default behaviour of &lt;abbr title="GNU Revision Control System"&gt;RCS&lt;/abbr&gt; is to remove the
+file we check in. You can choose to keep a working copy with &lt;tt class="docutils literal"&gt;&lt;span class=pre&gt;ci&lt;/span&gt; &lt;span class=pre&gt;-u&lt;/span&gt;&lt;/tt&gt; or &lt;tt class="docutils literal"&gt;&lt;span class=pre&gt;ci&lt;/span&gt;
+&lt;span class=pre&gt;-l&lt;/span&gt;&lt;/tt&gt; (covered below).&lt;/p&gt;
+&lt;div class=highlight-text&gt;&lt;div class=highlight&gt;&lt;pre&gt;$ ls ./RCS/
+myscript.sh,v
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;In the &lt;abbr title="GNU Revision Control System"&gt;RCS&lt;/abbr&gt; directory a file now exists
+with the same name as our script plus a ”,v”. This is the file &lt;abbr title="GNU Revision Control System"&gt;RCS&lt;/abbr&gt; uses to store all of its data in.&lt;/p&gt;
+&lt;div class=highlight-text&gt;&lt;div class=highlight&gt;&lt;pre&gt;$ co myscript.sh
+RCS/myscript.sh,v  --&amp;gt;  myscript.sh
+revision 1.1
+done
+$ ls -l ./
+drwxr-xr-x    2 james    james        1024 Nov  4 11:29 RCS
+-r--r--r--    1 james    james          95 Nov  4 11:29 myscript.sh
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;The command &lt;tt class="docutils literal"&gt;&lt;span class=pre&gt;co&lt;/span&gt;&lt;/tt&gt; (check out) pulls a current version(by default) from the
+&lt;abbr title="GNU Revision Control System"&gt;RCS&lt;/abbr&gt; repository and places it in the
+current directory. Default behaviour is to check out a read-only version of the
+file.&lt;/p&gt;
+&lt;div class=highlight-text&gt;&lt;div class=highlight&gt;&lt;pre&gt;$ co -l myscript.sh
+./RCS/myscript.sh,v  --&amp;gt;  ./myscript.sh
+revision 1.1 (locked)
+done
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;The &lt;tt class="docutils literal"&gt;&lt;span class=pre&gt;-l&lt;/span&gt;&lt;/tt&gt; option to &lt;tt class="docutils literal"&gt;&lt;span class=pre&gt;co&lt;/span&gt;&lt;/tt&gt; (and also &lt;tt class="docutils literal"&gt;&lt;span class=pre&gt;ci&lt;/span&gt;&lt;/tt&gt; ) is used to lock the file. This
+file now becomes a working file, which is writable, and it also means other
+people can’t edit it until you have released it or checked it in again.&lt;/p&gt;
+&lt;p&gt;Blindly using the &lt;tt class="docutils literal"&gt;&lt;span class=pre&gt;-l&lt;/span&gt;&lt;/tt&gt; option to &lt;tt class="docutils literal"&gt;&lt;span class=pre&gt;ci&lt;/span&gt;&lt;/tt&gt;/&lt;tt class="docutils literal"&gt;&lt;span class=pre&gt;co&lt;/span&gt;&lt;/tt&gt; is not advisable, you should
+get in to the habit now of only locking files you are working on. &lt;abbr title="GNU Revision Control System"&gt;RCS&lt;/abbr&gt; uses locking to block other users from checking
+in changes and will cause much grief if you use &lt;abbr title="GNU Revision Control System"&gt;RCS&lt;/abbr&gt; on multi-user projects. It is much better to use &lt;tt class="docutils literal"&gt;&lt;span class=pre&gt;-u&lt;/span&gt;&lt;/tt&gt; (or unlocked)
+when you &lt;tt class="docutils literal"&gt;&lt;span class=pre&gt;ci&lt;/span&gt;&lt;/tt&gt; in new files/changes this way you will have access to
+a read-only version of the file and it will allow other users to edit it.&lt;/p&gt;
+&lt;div class=highlight-text&gt;&lt;div class=highlight&gt;&lt;pre&gt;$ cat myscript.sh
+#! /bin/sh
+# $Id: myscript.sh,v 1.1 2002/11/04 11:29:48 james Exp james $
+echo "Hello World!"
+exit 0
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;If you remember from the original file it contained &lt;tt class="docutils literal"&gt;&lt;span class=pre&gt;$Id$&lt;/span&gt;&lt;/tt&gt; on a commented
+line, this &lt;tt class="docutils literal"&gt;&lt;span class=pre&gt;$Id$&lt;/span&gt;&lt;/tt&gt; is a keyword used by &lt;abbr title="GNU Revision Control System"&gt;RCS&lt;/abbr&gt; that is substituted with information about the current file. In this
+example the tag &lt;tt class="docutils literal"&gt;&lt;span class=pre&gt;$Id$&lt;/span&gt;&lt;/tt&gt; is expanded to read the filename, the revision number,
+the date and time of the check in, the person who checked in the file, the state
+of the file and the owner of the lock(if any).&lt;/p&gt;
+&lt;p&gt;There are many keywords available, including:&lt;/p&gt;
+&lt;ul class=simple&gt;
+&lt;li&gt;&lt;tt class="docutils literal"&gt;&lt;span class=pre&gt;$Author$&lt;/span&gt;&lt;/tt&gt; - the name of the person who did the check in&lt;/li&gt;
+&lt;li&gt;&lt;tt class="docutils literal"&gt;&lt;span class=pre&gt;$Header$&lt;/span&gt;&lt;/tt&gt; - the same as &lt;tt class="docutils literal"&gt;&lt;span class=pre&gt;$Id$&lt;/span&gt;&lt;/tt&gt; but including the path for the file&lt;/li&gt;
+&lt;li&gt;&lt;tt class="docutils literal"&gt;&lt;span class=pre&gt;$Log$&lt;/span&gt;&lt;/tt&gt; - a full changelog for file from the &lt;tt class="docutils literal"&gt;&lt;span class=pre&gt;ci&lt;/span&gt;&lt;/tt&gt; annotations&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Although using &lt;tt class="docutils literal"&gt;&lt;span class=pre&gt;$Log$&lt;/span&gt;&lt;/tt&gt; seems like a good idea it does mean the size of the
+file is increased a huge amount. All the changelog data is available with the
+&lt;tt class="docutils literal"&gt;&lt;span class=pre&gt;rlog&lt;/span&gt;&lt;/tt&gt; command at any time and without filling the source file.&lt;/p&gt;
+&lt;div class=highlight-text&gt;&lt;div class=highlight&gt;&lt;pre&gt;$ sed -ie 's/World/${USER}/' myscript.sh
+$ cat myscript.sh
+#! /bin/sh
+# $Id: myscript.sh,v 1.1 2002/11/04 11:29:48 james Exp james $
+echo "Hello ${USER}!"
+exit 0
+$ sh ./myscript.sh
+Hello james!
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;So we have decided to make some changes to the file, and then tested it
+works.&lt;/p&gt;
+&lt;div class=highlight-text&gt;&lt;div class=highlight&gt;&lt;pre&gt;$ rcsdiff myscript.sh
+===================================================================
+RCS file: RCS/myscript.sh,v
+retrieving revision 1.1
+diff -r1.1 myscript.sh
+3c3
+&amp;lt; echo "Hello World!"
+---
+&amp;gt; echo "Hello ${USER}!"
+TEST$  rcsdiff -u myscript.sh
+===================================================================
+RCS file: RCS/myscript.sh,v
+retrieving revision 1.1
+diff -u -r1.1 myscript.sh
+--- myscript.sh 2002/11/04 11:57:51     1.1
++++ myscript.sh 2002/11/05 03:52:14
+@@ -1,4 +1,4 @@
+ #! /bin/sh
+ # $Id: myscript,v 1.1 2002/11/04 11:29:48 james Exp james $
+-echo "Hello World!"
++echo "Hello ${USER}!"
+ exit 0
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;The command &lt;tt class="docutils literal"&gt;&lt;span class=pre&gt;rcsdiff&lt;/span&gt;&lt;/tt&gt; supplies an easy way to check changes in a file. Using
+&lt;tt class="docutils literal"&gt;&lt;span class=pre&gt;rcsdiff&lt;/span&gt; &lt;span class=pre&gt;filename&lt;/span&gt;&lt;/tt&gt; will output a generic context-free diff(and a small
+&lt;abbr title="GNU Revision Control System"&gt;RCS&lt;/abbr&gt; header to &lt;tt class="docutils literal"&gt;&lt;span class=pre&gt;STDERR&lt;/span&gt;&lt;/tt&gt; ), or you can
+pass normal &lt;tt class="docutils literal"&gt;&lt;span class=pre&gt;diff&lt;/span&gt;&lt;/tt&gt; (1) options to &lt;tt class="docutils literal"&gt;&lt;span class=pre&gt;rcsdiff&lt;/span&gt;&lt;/tt&gt;.  In the second &lt;tt class="docutils literal"&gt;&lt;span class=pre&gt;rcsdiff&lt;/span&gt;&lt;/tt&gt;
+command the &lt;tt class="docutils literal"&gt;&lt;span class=pre&gt;diff&lt;/span&gt;&lt;/tt&gt; option &lt;tt class="docutils literal"&gt;&lt;span class=pre&gt;-u&lt;/span&gt;&lt;/tt&gt; is given to tell &lt;tt class="docutils literal"&gt;&lt;span class=pre&gt;rcsdiff&lt;/span&gt;&lt;/tt&gt; it should output
+a unified context diff.&lt;/p&gt;
+&lt;div class=highlight-text&gt;&lt;div class=highlight&gt;&lt;pre&gt;$ ci -u ./myscript.sh
+./RCS/myscript.sh,v  &amp;lt;--  ./myscript.sh
+new revision: 1.2; previous revision: 1.1
+enter log message, terminated with single '.' or end of file:
+&amp;gt;&amp;gt; Changed World to ${USER} to give a more personal feeling
+&amp;gt;&amp;gt; .
+done
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;So now we have seen the changes made to the file, and are happy with them, we
+check in our new revision. &lt;abbr title="GNU Revision Control System"&gt;RCS&lt;/abbr&gt; asks for
+a log entry, this will make our changelog output later. You can cancel the check
+in using the normal &lt;tt class="docutils literal"&gt;&lt;span class=pre&gt;C-c&lt;/span&gt;&lt;/tt&gt; (control C) method.&lt;/p&gt;
+&lt;div class=highlight-text&gt;&lt;div class=highlight&gt;&lt;pre&gt;$ cat myscript.sh
+#! /bin/sh
+# $Id: myscript,v 1.2 2002/11/04 11:34:21 james Exp james $
+echo "Hello ${USER}!"
+exit 0
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;You can see above that when &lt;abbr title="GNU Revision Control System"&gt;RCS&lt;/abbr&gt; checked in
+the new revision it also updated the &lt;tt class="docutils literal"&gt;&lt;span class=pre&gt;$Id$&lt;/span&gt;&lt;/tt&gt; tag.&lt;/p&gt;
+&lt;div class=highlight-text&gt;&lt;div class=highlight&gt;&lt;pre&gt;$ rlog ./myscript.sh
+
+RCS file: ./RCS/myscript.sh,v
+Working file: ./myscript.sh
+head: 1.2
+branch:
+locks: strict
+access list:
+symbolic names:
+keyword substitution: kv
+total revisions: 2;     selected revisions: 2
+description:
+----------------------------
+revision 1.2
+date: 2002/11/05 04:01:13;  author: james;  state: Exp;  lines: +2 -2
+Changed World to ${USER} to give a more personal feeling
+----------------------------
+revision 1.1
+date: 2002/11/04 11:57:51;  author: james;  state: Exp;
+Initial revision
+=============================================================================
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;The command &lt;tt class="docutils literal"&gt;&lt;span class=pre&gt;rlog&lt;/span&gt;&lt;/tt&gt; provides quick access to revision history for files, it
+accepts multiple files per command line(using normal shell wild-carding) and
+provides all the information &lt;abbr title="GNU Revision Control System"&gt;RCS&lt;/abbr&gt; has on
+a file. Should you ever need to only know the changes that were made to the
+current revision you can use the &lt;tt class="docutils literal"&gt;&lt;span class=pre&gt;-r&lt;/span&gt;&lt;/tt&gt; option as in &lt;tt class="docutils literal"&gt;&lt;span class=pre&gt;rlog&lt;/span&gt; &lt;span class=pre&gt;-r&lt;/span&gt; &lt;span class=pre&gt;filename&lt;/span&gt;&lt;/tt&gt;. You
+can also check changes between revisions of files using the command like &lt;tt class="docutils literal"&gt;&lt;span class=pre&gt;rlog&lt;/span&gt;
+&lt;span class=pre&gt;-r1.1,1.2&lt;/span&gt; &lt;span class=pre&gt;filename&lt;/span&gt;&lt;/tt&gt;.&lt;/p&gt;
+&lt;p&gt;The &lt;tt class="docutils literal"&gt;&lt;span class=pre&gt;-r&lt;/span&gt;&lt;/tt&gt; option of &lt;abbr title="GNU Revision Control System"&gt;RCS&lt;/abbr&gt; is one of its
+most powerful, it is available in all the commands and shares the same semantics
+throughout. If &lt;tt class="docutils literal"&gt;&lt;span class=pre&gt;-r&lt;/span&gt;&lt;/tt&gt; is used with &lt;tt class="docutils literal"&gt;&lt;span class=pre&gt;ci&lt;/span&gt;&lt;/tt&gt; it forces a bump, for example &lt;tt class="docutils literal"&gt;&lt;span class=pre&gt;ci&lt;/span&gt;
+&lt;span class=pre&gt;-r1.7&lt;/span&gt; &lt;span class=pre&gt;filename&lt;/span&gt;&lt;/tt&gt; will force &lt;abbr title="GNU Revision Control System"&gt;RCS&lt;/abbr&gt; to check
+in filename as revision 1.7. Used with &lt;tt class="docutils literal"&gt;&lt;span class=pre&gt;co&lt;/span&gt;&lt;/tt&gt; you can pull any revision of the
+file from &lt;abbr title="GNU Revision Control System"&gt;RCS&lt;/abbr&gt; history. Used with
+&lt;tt class="docutils literal"&gt;&lt;span class=pre&gt;rcsdiff&lt;/span&gt;&lt;/tt&gt; you can create a diff between any revision under &lt;abbr title="GNU Revision Control System"&gt;RCS&lt;/abbr&gt;, for example &lt;tt class="docutils literal"&gt;&lt;span class=pre&gt;rcsdiff&lt;/span&gt; &lt;span class=pre&gt;-r1.1,1.8&lt;/span&gt; &lt;span class=pre&gt;-u&lt;/span&gt; &lt;span class=pre&gt;filename&lt;/span&gt;&lt;/tt&gt; will
+output a unified context diff of the changes from revision
+1.1 to 1.8.&lt;/p&gt;
+&lt;p&gt;&lt;abbr title="GNU Revision Control System"&gt;RCS&lt;/abbr&gt; really is that simple to use, it does
+have many more options that are not covered here(see the man pages) but the
+power of &lt;abbr title="GNU Revision Control System"&gt;RCS&lt;/abbr&gt; is how simple it is to use.
+It takes almost no time to setup, and probably less time then you currently
+spend on arranging backups. The command syntax is simple, and stable across the
+separate commands. It provides an immensely powerful way to control
+configuration files, source code, even revisions of binary files and of course
+silly little shell Hello World examples.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=section id=recap&gt;
+&lt;h2&gt;Recap&lt;a class=headerlink href=http://jnrowe.github.com/articles/rcs.html#recap title="Permalink to this headline"&gt;¶&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;To recap on &lt;abbr title="GNU Revision Control System"&gt;RCS&lt;/abbr&gt; usage&lt;/p&gt;
+&lt;ul class=simple&gt;
+&lt;li&gt;Make the RCS directory.&lt;/li&gt;
+&lt;li&gt;Insert &lt;abbr title="GNU Revision Control System"&gt;RCS&lt;/abbr&gt; tags, such as &lt;tt class="docutils literal"&gt;&lt;span class=pre&gt;$Id$&lt;/span&gt;&lt;/tt&gt;, in to
+your original files to help you keep track.&lt;/li&gt;
+&lt;li&gt;Edit your files.&lt;/li&gt;
+&lt;li&gt;Use &lt;tt class="docutils literal"&gt;&lt;span class=pre&gt;ci&lt;/span&gt;&lt;/tt&gt; to commit your revisions to the &lt;abbr title="GNU Revision Control System"&gt;RCS&lt;/abbr&gt; history and annotate changes made. You can also use &lt;tt class="docutils literal"&gt;&lt;span class=pre&gt;rcsdiff&lt;/span&gt;&lt;/tt&gt; to
+see what changes you have made, maybe to help you build your changelog
+information.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class=section id=advanced&gt;
+&lt;h2&gt;Advanced&lt;a class=headerlink href=http://jnrowe.github.com/articles/rcs.html#advanced title="Permalink to this headline"&gt;¶&lt;/a&gt;&lt;/h2&gt;
+&lt;div class=figure&gt;
+&lt;img alt="rcsi screenshot" src=http://jnrowe.github.com/_images/rcsi.png style="width: 500px; height: 114px;"&gt;
+&lt;/div&gt;
+&lt;p&gt;There are many tools available that can help you to manage your &lt;abbr title="GNU Revision Control System"&gt;RCS&lt;/abbr&gt; files, including the &lt;abbr title="GNU Revision Control System"&gt;RCS&lt;/abbr&gt; status monitor &lt;a class="reference external" href=http://www.colinbrough.pwp.blueyonder.co.uk/rcsi.README.html&gt;rcsi&lt;/a&gt; and &lt;a class="reference external" href=http://blame.sourceforge.net/&gt;blame&lt;/a&gt; &lt;abbr title="GNU Revision Control System"&gt;RCS&lt;/abbr&gt; file annotator.&lt;/p&gt;
+&lt;p&gt;&lt;tt class="docutils literal"&gt;&lt;span class=pre&gt;rcsi&lt;/span&gt;&lt;/tt&gt; will display information about the files within a directory.&lt;/p&gt;
+&lt;p&gt;The screenshot to the right shows &lt;tt class="docutils literal"&gt;&lt;span class=pre&gt;rcsi&lt;/span&gt;&lt;/tt&gt; in use on a sample partially
+&lt;abbr title="GNU Revision Control System"&gt;RCS&lt;/abbr&gt; controlled directory.  All the
+information it contains should be fairly self explanatory, and even if it isn’t
+the package comes with a comprehensive man page and README.&lt;/p&gt;
+&lt;div class=highlight-text&gt;&lt;div class=highlight&gt;&lt;pre&gt;1.2          (root     21-Aug-05):             eval find . -xdev -depth ${exceptions}   -type d -empty -exec rmdir '{}' \\';'
+1.2          (root     21-Aug-05):             eend 0
+1.2          (root     21-Aug-05):         else
+1.1          (root     16-Jul-05):             ebegin "Cleaning /tmp directory"
+1.4          (root     21-Jan-06):             {
+1.2          (root     21-Aug-05):                 rm -f /tmp/.X*-lock /tmp/esrv* /tmp/kio* /tmp/jpsock.* /tmp/.fam*
+1.2          (root     21-Aug-05):                 rm -rf /tmp/.esd* /tmp/orbit-* /tmp/ssh-* /tmp/ksocket-* /tmp/.*-unix
+1.4          (root     21-Jan-06):                 # Make sure our X11 stuff have the correct permissions
+1.4          (root     21-Jan-06):                 mkdir -p /tmp/.{ICE,X11}-unix
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;The above excerpt is a sample of the output from &lt;a class="reference external" href=http://blame.sourceforge.net/&gt;blame&lt;/a&gt; being run against
+a config file which is maintained using &lt;abbr title="GNU Revision Control System"&gt;RCS&lt;/abbr&gt; by Gentoo’s &lt;tt class="docutils literal"&gt;&lt;span class=pre&gt;dispatch-conf&lt;/span&gt;&lt;/tt&gt; tool.  It allows you to simply see which
+revision introduced a change to a specific line.  You can also choose to
+annotate specific &lt;abbr title="GNU Revision Control System"&gt;RCS&lt;/abbr&gt; revisions using the
+&lt;tt class="docutils literal"&gt;&lt;span class=pre&gt;--revision&lt;/span&gt;&lt;/tt&gt; option, or specific dates with &lt;tt class="docutils literal"&gt;&lt;span class=pre&gt;--date&lt;/span&gt;&lt;/tt&gt; option.  &lt;a class="reference external" href=http://blame.sourceforge.net/&gt;blame&lt;/a&gt; has
+also has a very comprehensive manual page included with it which you should read
+if you want to enjoy its full power.&lt;/p&gt;
+&lt;p&gt;There are many other tools available which use &lt;abbr title="GNU Revision Control System"&gt;RCS&lt;/abbr&gt; as a backend, and as long as you can access the &lt;abbr title="GNU Revision Control System"&gt;RCS&lt;/abbr&gt; data files blame can help to understand what is
+happening with them too.&lt;/p&gt;
+&lt;p&gt;If you know of any interesting &lt;abbr title="GNU Revision Control System"&gt;RCS&lt;/abbr&gt; uses
+please drop me a mail, and I hope this short text has been helpful to you.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
 </summary></entry></feed>

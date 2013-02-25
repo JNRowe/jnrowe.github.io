@@ -1,0 +1,400 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Introduction to RCS &mdash; JNRowe</title>
+    
+    <link rel="stylesheet" href="../_static/agogo.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     '0.1.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <link rel="shortcut icon" href="../_static/icon.ico"/>
+    <link rel="copyright" title="Copyright" href="../copyright.html" />
+    <link rel="top" title="JNRowe" href="../index.html" />
+    <link rel="up" title="Articles" href="index.html" />
+    <link rel="next" title="TDD distro development" href="tdd_distros.html" />
+    <link rel="prev" title="Zsh and the VCS" href="tips/Zsh_and_the_vcs.html" />
+  </head>
+  <body>
+    <div class="header-wrapper">
+      <div class="header">
+          <p class="logo"><a href="../index.html">
+            <img class="logo" src="../_static/logo.png" alt="Logo"/>
+          </a></p>
+        <div class="headertitle"><a
+          href="../index.html">JNRowe</a></div>
+        <div class="rel">
+          <a href="tips/Zsh_and_the_vcs.html" title="Zsh and the VCS"
+             accesskey="P">previous</a> |
+          <a href="tdd_distros.html" title="TDD distro development"
+             accesskey="N">next</a> |
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a>
+        </div>
+       </div>
+    </div>
+
+    <div class="content-wrapper">
+      <div class="content">
+        <div class="document">
+            
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="admonition warning">
+<p class="first admonition-title">Warning</p>
+<p class="last">I&#8217;ve resurrected this text from my old UKFSN site because a couple of people
+asked me to, but I wouldn&#8217;t recommend using RCS to anyone at this point.  It
+is mainly to help people who need to understand RCS because they have no
+choice, for example Gentoo users who are stuck with <tt class="docutils literal"><span class="pre">dispatch-conf</span></tt> (or so
+my mails tell me).</p>
+</div>
+<div class="section" id="introduction-to-rcs">
+<h1>Introduction to RCS<a class="headerlink" href="#introduction-to-rcs" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="abstract">
+<h2>Abstract<a class="headerlink" href="#abstract" title="Permalink to this headline">¶</a></h2>
+<p>This introduction is aimed at people with no experience of a <abbr title="Version Control System">VCS</abbr> at all, but who do have a need for an easy to use and
+non-intrusive way to backup, store and annotate configuration files or 5000 file
+C source trees. This text is by no means an in-depth <abbr title="GNU Revision Control System">RCS</abbr> usage manual, it is a short and fast way to get working with
+<abbr title="GNU Revision Control System">RCS</abbr>.</p>
+<p><abbr title="GNU Revision Control System">RCS</abbr> is great for small projects or
+managing the wealth of configuration files in <tt class="docutils literal"><span class="pre">/etc</span></tt>. It provides a way to
+reduce the need for file backups(without losing any backup quality or quantity),
+to annotate changes made to a file, to allow other people to work on a file and
+an easy method to package patch/diff files for distribution.</p>
+<p>If you want more in-depth information about using <abbr title="GNU Revision Control System">RCS</abbr>, or when you find you need more functionality from <abbr title="GNU Revision Control System">RCS</abbr>, there is a HOW-TO at <a class="reference external" href="http://www.tldp.org">The Linux Documentation
+Project</a> (<a class="reference external" href="http://tldp.org/HOWTO/RCS.html">direct link</a>) and fantastic documentation is provided with the
+<abbr title="GNU Revision Control System">RCS</abbr> package.</p>
+</div>
+<div class="section" id="diving-in">
+<h2>Diving in<a class="headerlink" href="#diving-in" title="Permalink to this headline">¶</a></h2>
+<p><abbr title="GNU Revision Control System">RCS</abbr> is that simple to use that I will jump
+straight in to an example.</p>
+<div class="highlight-text"><div class="highlight"><pre>$ mkdir RCS
+</pre></div>
+</div>
+<p>The <abbr title="GNU Revision Control System">RCS</abbr> directory holds the <abbr title="GNU Revision Control System">RCS</abbr> control files, they contain all the data
+<abbr title="GNU Revision Control System">RCS</abbr> needs to work.</p>
+<div class="highlight-text"><div class="highlight"><pre>$ cat &gt;myscript.sh &lt;&lt;EOF
+#! /bin/sh
+# $Id$
+echo &quot;Hello World!&quot;
+exit 0
+EOF
+
+$ ci myscript.sh
+RCS/myscript.sh,v  &lt;--  myscript.sh
+enter description, terminated with single &#39;.&#39; or end of file:
+NOTE: This is NOT the log message!
+&gt;&gt; /bin/sh &quot;Hello World!&quot; example
+&gt;&gt; .
+initial revision: 1.1
+done
+</pre></div>
+</div>
+<p>The command <tt class="docutils literal"><span class="pre">ci</span></tt> (check in) is where the magic of <abbr title="GNU Revision Control System">RCS</abbr> takes place. We have decided we want to make a snapshot of our
+file, <tt class="docutils literal"><span class="pre">myscript.sh</span></tt>, and use <tt class="docutils literal"><span class="pre">ci</span></tt> to add the file to revision control.</p>
+<div class="highlight-text"><div class="highlight"><pre>$ ls
+RCS
+</pre></div>
+</div>
+<p>The file we checked in appears to have disappeared, obviously it hasn&#8217;t but the
+default behaviour of <abbr title="GNU Revision Control System">RCS</abbr> is to remove the
+file we check in. You can choose to keep a working copy with <tt class="docutils literal"><span class="pre">ci</span> <span class="pre">-u</span></tt> or <tt class="docutils literal"><span class="pre">ci</span>
+<span class="pre">-l</span></tt> (covered below).</p>
+<div class="highlight-text"><div class="highlight"><pre>$ ls ./RCS/
+myscript.sh,v
+</pre></div>
+</div>
+<p>In the <abbr title="GNU Revision Control System">RCS</abbr> directory a file now exists
+with the same name as our script plus a &#8221;,v&#8221;. This is the file <abbr title="GNU Revision Control System">RCS</abbr> uses to store all of its data in.</p>
+<div class="highlight-text"><div class="highlight"><pre>$ co myscript.sh
+RCS/myscript.sh,v  --&gt;  myscript.sh
+revision 1.1
+done
+$ ls -l ./
+drwxr-xr-x    2 james    james        1024 Nov  4 11:29 RCS
+-r--r--r--    1 james    james          95 Nov  4 11:29 myscript.sh
+</pre></div>
+</div>
+<p>The command <tt class="docutils literal"><span class="pre">co</span></tt> (check out) pulls a current version(by default) from the
+<abbr title="GNU Revision Control System">RCS</abbr> repository and places it in the
+current directory. Default behaviour is to check out a read-only version of the
+file.</p>
+<div class="highlight-text"><div class="highlight"><pre>$ co -l myscript.sh
+./RCS/myscript.sh,v  --&gt;  ./myscript.sh
+revision 1.1 (locked)
+done
+</pre></div>
+</div>
+<p>The <tt class="docutils literal"><span class="pre">-l</span></tt> option to <tt class="docutils literal"><span class="pre">co</span></tt> (and also <tt class="docutils literal"><span class="pre">ci</span></tt> ) is used to lock the file. This
+file now becomes a working file, which is writable, and it also means other
+people can&#8217;t edit it until you have released it or checked it in again.</p>
+<p>Blindly using the <tt class="docutils literal"><span class="pre">-l</span></tt> option to <tt class="docutils literal"><span class="pre">ci</span></tt>/<tt class="docutils literal"><span class="pre">co</span></tt> is not advisable, you should
+get in to the habit now of only locking files you are working on. <abbr title="GNU Revision Control System">RCS</abbr> uses locking to block other users from checking
+in changes and will cause much grief if you use <abbr title="GNU Revision Control System">RCS</abbr> on multi-user projects. It is much better to use <tt class="docutils literal"><span class="pre">-u</span></tt> (or unlocked)
+when you <tt class="docutils literal"><span class="pre">ci</span></tt> in new files/changes this way you will have access to
+a read-only version of the file and it will allow other users to edit it.</p>
+<div class="highlight-text"><div class="highlight"><pre>$ cat myscript.sh
+#! /bin/sh
+# $Id: myscript.sh,v 1.1 2002/11/04 11:29:48 james Exp james $
+echo &quot;Hello World!&quot;
+exit 0
+</pre></div>
+</div>
+<p>If you remember from the original file it contained <tt class="docutils literal"><span class="pre">$Id$</span></tt> on a commented
+line, this <tt class="docutils literal"><span class="pre">$Id$</span></tt> is a keyword used by <abbr title="GNU Revision Control System">RCS</abbr> that is substituted with information about the current file. In this
+example the tag <tt class="docutils literal"><span class="pre">$Id$</span></tt> is expanded to read the filename, the revision number,
+the date and time of the check in, the person who checked in the file, the state
+of the file and the owner of the lock(if any).</p>
+<p>There are many keywords available, including:</p>
+<ul class="simple">
+<li><tt class="docutils literal"><span class="pre">$Author$</span></tt> - the name of the person who did the check in</li>
+<li><tt class="docutils literal"><span class="pre">$Header$</span></tt> - the same as <tt class="docutils literal"><span class="pre">$Id$</span></tt> but including the path for the file</li>
+<li><tt class="docutils literal"><span class="pre">$Log$</span></tt> - a full changelog for file from the <tt class="docutils literal"><span class="pre">ci</span></tt> annotations</li>
+</ul>
+<p>Although using <tt class="docutils literal"><span class="pre">$Log$</span></tt> seems like a good idea it does mean the size of the
+file is increased a huge amount. All the changelog data is available with the
+<tt class="docutils literal"><span class="pre">rlog</span></tt> command at any time and without filling the source file.</p>
+<div class="highlight-text"><div class="highlight"><pre>$ sed -ie &#39;s/World/${USER}/&#39; myscript.sh
+$ cat myscript.sh
+#! /bin/sh
+# $Id: myscript.sh,v 1.1 2002/11/04 11:29:48 james Exp james $
+echo &quot;Hello ${USER}!&quot;
+exit 0
+$ sh ./myscript.sh
+Hello james!
+</pre></div>
+</div>
+<p>So we have decided to make some changes to the file, and then tested it
+works.</p>
+<div class="highlight-text"><div class="highlight"><pre>$ rcsdiff myscript.sh
+===================================================================
+RCS file: RCS/myscript.sh,v
+retrieving revision 1.1
+diff -r1.1 myscript.sh
+3c3
+&lt; echo &quot;Hello World!&quot;
+---
+&gt; echo &quot;Hello ${USER}!&quot;
+TEST$  rcsdiff -u myscript.sh
+===================================================================
+RCS file: RCS/myscript.sh,v
+retrieving revision 1.1
+diff -u -r1.1 myscript.sh
+--- myscript.sh 2002/11/04 11:57:51     1.1
++++ myscript.sh 2002/11/05 03:52:14
+@@ -1,4 +1,4 @@
+ #! /bin/sh
+ # $Id: myscript,v 1.1 2002/11/04 11:29:48 james Exp james $
+-echo &quot;Hello World!&quot;
++echo &quot;Hello ${USER}!&quot;
+ exit 0
+</pre></div>
+</div>
+<p>The command <tt class="docutils literal"><span class="pre">rcsdiff</span></tt> supplies an easy way to check changes in a file. Using
+<tt class="docutils literal"><span class="pre">rcsdiff</span> <span class="pre">filename</span></tt> will output a generic context-free diff(and a small
+<abbr title="GNU Revision Control System">RCS</abbr> header to <tt class="docutils literal"><span class="pre">STDERR</span></tt> ), or you can
+pass normal <tt class="docutils literal"><span class="pre">diff</span></tt> (1) options to <tt class="docutils literal"><span class="pre">rcsdiff</span></tt>.  In the second <tt class="docutils literal"><span class="pre">rcsdiff</span></tt>
+command the <tt class="docutils literal"><span class="pre">diff</span></tt> option <tt class="docutils literal"><span class="pre">-u</span></tt> is given to tell <tt class="docutils literal"><span class="pre">rcsdiff</span></tt> it should output
+a unified context diff.</p>
+<div class="highlight-text"><div class="highlight"><pre>$ ci -u ./myscript.sh
+./RCS/myscript.sh,v  &lt;--  ./myscript.sh
+new revision: 1.2; previous revision: 1.1
+enter log message, terminated with single &#39;.&#39; or end of file:
+&gt;&gt; Changed World to ${USER} to give a more personal feeling
+&gt;&gt; .
+done
+</pre></div>
+</div>
+<p>So now we have seen the changes made to the file, and are happy with them, we
+check in our new revision. <abbr title="GNU Revision Control System">RCS</abbr> asks for
+a log entry, this will make our changelog output later. You can cancel the check
+in using the normal <tt class="docutils literal"><span class="pre">C-c</span></tt> (control C) method.</p>
+<div class="highlight-text"><div class="highlight"><pre>$ cat myscript.sh
+#! /bin/sh
+# $Id: myscript,v 1.2 2002/11/04 11:34:21 james Exp james $
+echo &quot;Hello ${USER}!&quot;
+exit 0
+</pre></div>
+</div>
+<p>You can see above that when <abbr title="GNU Revision Control System">RCS</abbr> checked in
+the new revision it also updated the <tt class="docutils literal"><span class="pre">$Id$</span></tt> tag.</p>
+<div class="highlight-text"><div class="highlight"><pre>$ rlog ./myscript.sh
+
+RCS file: ./RCS/myscript.sh,v
+Working file: ./myscript.sh
+head: 1.2
+branch:
+locks: strict
+access list:
+symbolic names:
+keyword substitution: kv
+total revisions: 2;     selected revisions: 2
+description:
+----------------------------
+revision 1.2
+date: 2002/11/05 04:01:13;  author: james;  state: Exp;  lines: +2 -2
+Changed World to ${USER} to give a more personal feeling
+----------------------------
+revision 1.1
+date: 2002/11/04 11:57:51;  author: james;  state: Exp;
+Initial revision
+=============================================================================
+</pre></div>
+</div>
+<p>The command <tt class="docutils literal"><span class="pre">rlog</span></tt> provides quick access to revision history for files, it
+accepts multiple files per command line(using normal shell wild-carding) and
+provides all the information <abbr title="GNU Revision Control System">RCS</abbr> has on
+a file. Should you ever need to only know the changes that were made to the
+current revision you can use the <tt class="docutils literal"><span class="pre">-r</span></tt> option as in <tt class="docutils literal"><span class="pre">rlog</span> <span class="pre">-r</span> <span class="pre">filename</span></tt>. You
+can also check changes between revisions of files using the command like <tt class="docutils literal"><span class="pre">rlog</span>
+<span class="pre">-r1.1,1.2</span> <span class="pre">filename</span></tt>.</p>
+<p>The <tt class="docutils literal"><span class="pre">-r</span></tt> option of <abbr title="GNU Revision Control System">RCS</abbr> is one of its
+most powerful, it is available in all the commands and shares the same semantics
+throughout. If <tt class="docutils literal"><span class="pre">-r</span></tt> is used with <tt class="docutils literal"><span class="pre">ci</span></tt> it forces a bump, for example <tt class="docutils literal"><span class="pre">ci</span>
+<span class="pre">-r1.7</span> <span class="pre">filename</span></tt> will force <abbr title="GNU Revision Control System">RCS</abbr> to check
+in filename as revision 1.7. Used with <tt class="docutils literal"><span class="pre">co</span></tt> you can pull any revision of the
+file from <abbr title="GNU Revision Control System">RCS</abbr> history. Used with
+<tt class="docutils literal"><span class="pre">rcsdiff</span></tt> you can create a diff between any revision under <abbr title="GNU Revision Control System">RCS</abbr>, for example <tt class="docutils literal"><span class="pre">rcsdiff</span> <span class="pre">-r1.1,1.8</span> <span class="pre">-u</span> <span class="pre">filename</span></tt> will
+output a unified context diff of the changes from revision
+1.1 to 1.8.</p>
+<p><abbr title="GNU Revision Control System">RCS</abbr> really is that simple to use, it does
+have many more options that are not covered here(see the man pages) but the
+power of <abbr title="GNU Revision Control System">RCS</abbr> is how simple it is to use.
+It takes almost no time to setup, and probably less time then you currently
+spend on arranging backups. The command syntax is simple, and stable across the
+separate commands. It provides an immensely powerful way to control
+configuration files, source code, even revisions of binary files and of course
+silly little shell Hello World examples.</p>
+</div>
+<div class="section" id="recap">
+<h2>Recap<a class="headerlink" href="#recap" title="Permalink to this headline">¶</a></h2>
+<p>To recap on <abbr title="GNU Revision Control System">RCS</abbr> usage</p>
+<ul class="simple">
+<li>Make the RCS directory.</li>
+<li>Insert <abbr title="GNU Revision Control System">RCS</abbr> tags, such as <tt class="docutils literal"><span class="pre">$Id$</span></tt>, in to
+your original files to help you keep track.</li>
+<li>Edit your files.</li>
+<li>Use <tt class="docutils literal"><span class="pre">ci</span></tt> to commit your revisions to the <abbr title="GNU Revision Control System">RCS</abbr> history and annotate changes made. You can also use <tt class="docutils literal"><span class="pre">rcsdiff</span></tt> to
+see what changes you have made, maybe to help you build your changelog
+information.</li>
+</ul>
+</div>
+<div class="section" id="advanced">
+<h2>Advanced<a class="headerlink" href="#advanced" title="Permalink to this headline">¶</a></h2>
+<div class="figure">
+<img alt="rcsi screenshot" src="../_images/rcsi.png" style="width: 500px; height: 114px;" />
+</div>
+<p>There are many tools available that can help you to manage your <abbr title="GNU Revision Control System">RCS</abbr> files, including the <abbr title="GNU Revision Control System">RCS</abbr> status monitor <a class="reference external" href="http://www.colinbrough.pwp.blueyonder.co.uk/rcsi.README.html">rcsi</a> and <a class="reference external" href="http://blame.sourceforge.net/">blame</a> <abbr title="GNU Revision Control System">RCS</abbr> file annotator.</p>
+<p><tt class="docutils literal"><span class="pre">rcsi</span></tt> will display information about the files within a directory.</p>
+<p>The screenshot to the right shows <tt class="docutils literal"><span class="pre">rcsi</span></tt> in use on a sample partially
+<abbr title="GNU Revision Control System">RCS</abbr> controlled directory.  All the
+information it contains should be fairly self explanatory, and even if it isn&#8217;t
+the package comes with a comprehensive man page and README.</p>
+<div class="highlight-text"><div class="highlight"><pre>1.2          (root     21-Aug-05):             eval find . -xdev -depth ${exceptions}   -type d -empty -exec rmdir &#39;{}&#39; \\&#39;;&#39;
+1.2          (root     21-Aug-05):             eend 0
+1.2          (root     21-Aug-05):         else
+1.1          (root     16-Jul-05):             ebegin &quot;Cleaning /tmp directory&quot;
+1.4          (root     21-Jan-06):             {
+1.2          (root     21-Aug-05):                 rm -f /tmp/.X*-lock /tmp/esrv* /tmp/kio* /tmp/jpsock.* /tmp/.fam*
+1.2          (root     21-Aug-05):                 rm -rf /tmp/.esd* /tmp/orbit-* /tmp/ssh-* /tmp/ksocket-* /tmp/.*-unix
+1.4          (root     21-Jan-06):                 # Make sure our X11 stuff have the correct permissions
+1.4          (root     21-Jan-06):                 mkdir -p /tmp/.{ICE,X11}-unix
+</pre></div>
+</div>
+<p>The above excerpt is a sample of the output from <a class="reference external" href="http://blame.sourceforge.net/">blame</a> being run against
+a config file which is maintained using <abbr title="GNU Revision Control System">RCS</abbr> by Gentoo&#8217;s <tt class="docutils literal"><span class="pre">dispatch-conf</span></tt> tool.  It allows you to simply see which
+revision introduced a change to a specific line.  You can also choose to
+annotate specific <abbr title="GNU Revision Control System">RCS</abbr> revisions using the
+<tt class="docutils literal"><span class="pre">--revision</span></tt> option, or specific dates with <tt class="docutils literal"><span class="pre">--date</span></tt> option.  <a class="reference external" href="http://blame.sourceforge.net/">blame</a> has
+also has a very comprehensive manual page included with it which you should read
+if you want to enjoy its full power.</p>
+<p>There are many other tools available which use <abbr title="GNU Revision Control System">RCS</abbr> as a backend, and as long as you can access the <abbr title="GNU Revision Control System">RCS</abbr> data files blame can help to understand what is
+happening with them too.</p>
+<p>If you know of any interesting <abbr title="GNU Revision Control System">RCS</abbr> uses
+please drop me a mail, and I hope this short text has been helpful to you.</p>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+        </div>
+        <div class="sidebar">
+          <h3>Table Of Contents</h3>
+          <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../projects.html">Projects</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Articles</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="tips/index.html">Tips</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="">Introduction to RCS</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tdd_distros.html">TDD distro development</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../colophon.html">Colophon</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../contact.html">Contact details</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../consult.html">Consulting services</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../copyright.html">Copyright information</a></li>
+</ul>
+
+          <h3 style="margin-top: 1.5em;">Search</h3>
+          <form class="search" action="../search.html" method="get">
+            <input type="text" name="q" />
+            <input type="submit" value="Go" />
+            <input type="hidden" name="check_keywords" value="yes" />
+            <input type="hidden" name="area" value="default" />
+          </form>
+          <p class="searchtip" style="font-size: 90%">
+            Enter search terms or a module, class or function name.
+          </p>
+        </div>
+        <div class="clearer"></div>
+      </div>
+    </div>
+
+    <div class="footer-wrapper">
+      <div class="footer">
+        <div class="left">
+          <a href="tips/Zsh_and_the_vcs.html" title="Zsh and the VCS"
+             >previous</a> |
+          <a href="tdd_distros.html" title="TDD distro development"
+             >next</a> |
+          <a href="../genindex.html" title="General Index"
+             >index</a>
+            <br/>
+            <a href="../_sources/articles/rcs.txt"
+               rel="nofollow">Show Source</a>
+        </div>
+
+        <div class="right">
+          
+    <div class="footer">
+        &copy; <a href="../copyright.html">Copyright</a> 2009-2012, James Rowe.
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.1.3.
+    </div>
+        </div>
+        <div class="clearer"></div>
+      </div>
+    </div>
+
+  </body>
+</html>
