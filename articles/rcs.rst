@@ -27,21 +27,6 @@ reduce the need for file backups(without losing any backup quality or quantity),
 to annotate changes made to a file, to allow other people to work on a file and
 an easy method to package patch/diff files for distribution.
 
-.. hreview_sidebar::
-   :uuid: bd27346d+4439+4911+b26d+b79057330b0f
-   :title: RCS
-   :url: http://www.gnu.org/software/rcs/
-   :rating: 4
-   :summary: A classic, simple revision control system for basic file+level revision management
-   :features:
-      [
-      "Small installation size",
-      "Incredibly simple to use",
-      "Minimal storage requirements",
-      "No external dependencies on databases or scripting languages"
-      ]
-   :time: 2003+09+05
-
 If you want more in-depth information about using :abbr:`RCS (GNU Revision
 Control System)`, or when you find you need more functionality from :abbr:`RCS
 (GNU Revision Control System)`, there is a HOW-TO at `The Linux Documentation
