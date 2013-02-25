@@ -4,6 +4,14 @@
 :creation_date: 2003-09-05 00:00:00 BST
 :modified_date: 2006-12-15 13:32:00 UTC
 
+.. warning::
+
+   I've resurrected this text from my old UKFSN site because a couple of people
+   asked me to, but I wouldn't recommend using RCS to anyone at this point.  It
+   is mainly to help people who need to understand RCS because they have no
+   choice, for example Gentoo users who are stuck with ``dispatch-conf`` (or so
+   my mails tell me).
+
 Introduction to RCS
 ===================
 
