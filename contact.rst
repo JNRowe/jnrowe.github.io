@@ -26,7 +26,7 @@ Contact details
    <p class="note">The information in this section was last updated on <abbr class="rev" title="2012-07-14T15:21:00+00:00">2012-07-14</abbr>.</p>
 
 * `My GitHub profile`_
-* `My GnuPG key`_ ``0xC0174749``
+* `My GnuPG key`_ ``0xABC68E07``
 * `My Twitter profile`_
 
 .. raw:: html
