@@ -6,7 +6,7 @@ Projects
 * `bleeter <https://github.com/JNRowe/bleeter>`__: Nasty little twitter client [ `documentation <http://jnrowe.github.com/bleeter/>`__ ]
 * `blog <https://github.com/JNRowe/blog>`__: Old jnrowe.github.com content that *may* be resurrected.
 * `bwatch <https://github.com/JNRowe/bwatch>`__: Simple bandwidth watching tool [ `documentation <http://jnrowe.github.com/bwatch/>`__ ]
-* `cupage <https://github.com/JNRowe/cupage>`__: A tool to check for updates on web pages [ `documentation <http://jnrowe.github.com/cupage>`__ ]
+* `cupage <https://github.com/JNRowe/cupage>`__: A tool to check for updates on web pages [ `documentation <http://cupage.rtfd.org/>`__ ]
 * `dotbash <https://github.com/JNRowe/dotbash>`__: Shared bash configuration files
 * `dwm <https://github.com/JNRowe/dwm>`__: My desktop DWM base
 * `emacs-configs <https://github.com/JNRowe/emacs-configs>`__: Personal emacs configs
@@ -16,7 +16,7 @@ Projects
 * `jnrowe.github.com <https://github.com/JNRowe/jnrowe.github.com>`__: My user pages repository [ `documentation <http://jnrowe.github.com/>`__ ]
 * `local-bin <https://github.com/JNRowe/local-bin>`__: Tat from my ~/bin
 * `pages_layouts <https://github.com/JNRowe/pages_layouts>`__: Shared layouts submodule for jekyll
-* `pyisbn <https://github.com/JNRowe/pyisbn>`__: A Python module for working with 10- and 13-digit ISBNs [ `documentation <http://packages.python.org/pyisbn/>`__ ]
+* `pyisbn <https://github.com/JNRowe/pyisbn>`__: A Python module for working with 10- and 13-digit ISBNs [ `documentation <http://pyisbn.rtfd.org/>`__ ]
 * `pytemplate <https://github.com/JNRowe/pytemplate>`__: Package template for Python, with distutils setup
 * `rdial <https://github.com/JNRowe/rdial>`__: Simple time tracking for simple people [ `documentation <http://rdial.rtfd.org/>`__ ]
 * `reverend <https://github.com/JNRowe/reverend>`__: Reverend - Simple Bayesian classifier [ `documentation <http://divmod.org/trac/wiki/DivmodReverend>`__ ]
@@ -32,7 +32,9 @@ Forks I'm hacking on
 * `applause <https://github.com/JNRowe/applause>`__: Applaud closing bugs. [ `origin <https://github.com/storborg/applause>`__ ]
 * `attest <https://github.com/JNRowe/attest>`__: Modern, Pythonic test automation [ `origin <https://github.com/dag/attest>`__ ]
 * `bugwarrior <https://github.com/JNRowe/bugwarrior>`__: Synch github, bitbucket, and trac issues with taskwarrior [ `origin <https://github.com/ralphbean/bugwarrior>`__ ]
+* `cleancat <https://github.com/JNRowe/cleancat>`__: Validation library for Python designed to be used with JSON REST frameworks [ `origin <https://github.com/elasticsales/cleancat>`__ ]
 * `commit-sounds <https://github.com/JNRowe/commit-sounds>`__: Make committing more fun! [ `origin <https://github.com/mika/commit-sounds>`__ ]
+* `csv-my-git <https://github.com/JNRowe/csv-my-git>`__: Add csv diff capabilities to your local git configuration [ `origin <https://github.com/theodi/csv-my-git>`__ ]
 * `develop.github.com <https://github.com/JNRowe/develop.github.com>`__: API Documentation for GitHub [ `origin <https://github.com/github/develop.github.com>`__ ]
 * `dingus <https://github.com/JNRowe/dingus>`__: A record-then-assert test double library. [ `origin <https://github.com/garybernhardt/dingus>`__ ]
 * `Dolt <https://github.com/JNRowe/Dolt>`__: A dumb little wrapper around RESTful interfaces [ `origin <https://github.com/tswicegood/Dolt>`__ ]
