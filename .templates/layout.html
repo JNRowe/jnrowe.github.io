@@ -5,3 +5,18 @@
     <link rel="alternate" type="application/atom+xml" title="Updated items" href="/updates.atom" />
     {%- endif %}
 {%- endblock %}
+
+{%- block document %}
+    {%- if pagename is not index %}
+    <div class="admonition note">
+        <p class="first admonition-title">
+            {#-
+                Super rough reading time estimation, but I appreciate it when
+                others do the something similar.
+            #}
+            Estimated reading time: {{ super() | wordcount // 500 + 1 }} minutes
+        </p>
+    </div>
+    {% endif %}
+    {{ super() }}
+{%- endblock %}
