@@ -31,7 +31,7 @@ copyright = u'2009-2013, James Rowe'
 version = '0.1'
 release = '0.1.0'
 
-exclude_patterns = ['.build', 'README.rst']
+exclude_patterns = ['venv', '.build', 'README.rst']
 
 pygments_style = 'murphy'
 html_theme = 'agogo'
