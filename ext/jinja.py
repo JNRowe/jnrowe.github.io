@@ -2,8 +2,12 @@ import os
 
 
 def add_tests(app):
-    app.builder.templates.environment.tests['index'] = \
-        lambda s: os.path.basename(s) == 'index'
+    try:
+        app.builder.templates.environment.tests['index'] = \
+            lambda s: os.path.basename(s) == 'index'
+    except AttributeError:
+        # Ignore builders
+        pass
 
 
 def setup(app):

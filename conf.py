@@ -11,6 +11,15 @@ extensions = \
     ["ext.%s" % ext for ext in ["jinja", ]] + \
     ["%s" % ext for ext in ["feed", ]]
 
+# Only activate spelling, if it is installed.  It is not required in the
+# general case and we don't have the granularity to describe this in a clean
+# way
+try:
+    from sphinxcontrib import spelling  # NOQA
+except ImportError:
+    pass
+else:
+    extensions.append('sphinxcontrib.spelling')
 
 master_doc = 'index'
 source_suffix = '.rst'
@@ -48,3 +57,6 @@ for proj in ['jnrowe-misc', ]:
     proj_id = filter(lambda s: s.isalnum(), proj) + 'docs'
     intersphinx_mapping[proj_id] = ("http://jnrowe.github.com/%s-docs/" % proj,
                                     "objects/%s.inv" % proj)
+
+spelling_lang = 'en_GB'
+spelling_word_list_filename = 'wordlist.txt'
