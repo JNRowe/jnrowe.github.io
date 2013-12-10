@@ -93,7 +93,7 @@ Querying bugs
     a09:om: This is a test bug
 
 The ``be list`` output consists of three fields separated by colons and they
-are: bug identifer, status and title.  The first character of the  status field
+are: bug identifier, status and title.  The first character of the  status field
 is an ``o`` telling us the bugs are marked as open, and the second character is
 the severity indicator(where the ``s`` for bug ``ec4`` tells us it is marked as
 serious).

@@ -21,7 +21,7 @@ in the right hand vim_ window of the screenshot from that earlier post.  It was
 actually open in that screenshot because I was changing my GTK+ theme, and not
 being a gnome_ user the simplest way to change it is via my ``~/.gtkrc-2.0``.
 And, if you're using KDE_ and wish to the settings for GTK+ applications you
-sould edit ``~/.gtkrc-2.0-kde``.
+should edit ``~/.gtkrc-2.0-kde``.
 
 So the question becomes, what were the options in that screenshot, and are there
 any other cool and useful things you can do there?

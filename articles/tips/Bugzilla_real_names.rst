@@ -27,7 +27,7 @@ generate an address search database for the ``lbdb`` ``m_inmail`` method.
 last seen date of every address we pass through it.  This allows our Bugzilla
 filter to work without us having to generate our own email-to-name list assuming
 we receive mail from the bug commenter either personally or on a list, at the
-cost of increased(albeit still neglible) processing time.  I use maildrop_ to
+cost of increased(albeit still negligible) processing time.  I use maildrop_ to
 filter my mail and to tell the ``maildrop`` :abbr:`MDA (Mail Delivery Agent)` to
 update the ``lbdb`` database we add a simple rule to our ``~/.mailfilter``:
 
