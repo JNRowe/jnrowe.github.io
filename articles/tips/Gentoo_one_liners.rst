@@ -54,7 +54,7 @@ a list of just the packages.
 The output we want can be easily matched with regular expressions, and the bash_
 ``alias`` below will list just the packages by piping the output through sed_.
 We can even use the one liner as input to a larger function if we only want to
-see top-level packages, that is packages that aren't listed as dependencies of
+see top-level packages; that is packages that aren't listed as dependencies of
 other packages:
 
 .. code-block:: bash
