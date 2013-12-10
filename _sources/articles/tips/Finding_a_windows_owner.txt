@@ -32,7 +32,7 @@ The other way
 
 EWMH_, the Extended Window Manager Hints standard, defines a property called
 ``_NET_WM_PID`` that, if defined, is the process id of the application that
-pened the window.  We have a couple of options to access that property, my
+opened the window.  We have a couple of options to access that property, my
 favourite would be wmctrl_ and another would be xprop_ which is often installed
 by default.
 

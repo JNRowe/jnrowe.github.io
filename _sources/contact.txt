@@ -23,10 +23,10 @@ Contact details
 
    <p>The easiest way to contact <abbr class="nickname" title="JNRowe">James</abbr> is by <a href="mailto:jnrowe@gmail.com" class="email" accesskey="9">email</a>.</p>
 
-   <p class="note">The information in this section was last updated on <abbr class="rev" title="2012-07-14T15:21:00+00:00">2012-07-14</abbr>.</p>
+   <p class="note">The information in this section was last updated on <abbr class="rev" title="2013-10-15T16:05:00+01:00">2013-10-15</abbr>.</p>
 
 * `My GitHub profile`_
-* `My GnuPG key`_ ``0xC0174749``
+* `My GnuPG key`_ ``0xABC68E07``
 * `My Twitter profile`_
 
 .. raw:: html

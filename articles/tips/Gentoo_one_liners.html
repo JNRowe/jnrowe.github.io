@@ -30,7 +30,7 @@
     <link rel="top" title="JNRowe" href="../../index.html" />
     <link rel="up" title="Tips" href="index.html" />
     <link rel="next" title="Importing gmail filters in mutt" href="Importing_gmail_filters_in_mutt.html" />
-    <link rel="prev" title="Formatting CSV files in the shell" href="Formatting_csv_files_in_the_shell.html" />
+    <link rel="prev" title="Formatting CSV files in the shell" href="Formatting_csv_files_in_the_shell.html" /> 
   </head>
   <body>
     <div class="header-wrapper">
@@ -117,7 +117,7 @@ Number to remove:     129
 <p>The output we want can be easily matched with regular expressions, and the <a class="reference external" href="http://cnswww.cns.cwru.edu/~chet/bash/bashtop.html">bash</a>
 <tt class="docutils literal"><span class="pre">alias</span></tt> below will list just the packages by piping the output through <a class="reference external" href="http://sed.sourceforge.net/">sed</a>.
 We can even use the one liner as input to a larger function if we only want to
-see top-level packages, that is packages that aren&#8217;t listed as dependencies of
+see top-level packages; that is packages that aren&#8217;t listed as dependencies of
 other packages:</p>
 <div class="highlight-bash"><div class="highlight"><pre><span class="nb">alias </span><span class="nv">pkgclean</span><span class="o">=</span><span class="s2">&quot;emerge ----pretend --depclean | sed -n &#39;/^ [a-z]/s,^ ,,p&#39; | sort&quot;</span>
 
@@ -237,7 +237,7 @@ output of <tt class="docutils literal"><span class="pre">uname</span> <span clas
         <div class="right">
           
     <div class="footer">
-        &copy; <a href="../../copyright.html">Copyright</a> 2009-2012, James Rowe.
+        &copy; <a href="../../copyright.html">Copyright</a> 2009-2013, James Rowe.
       Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.1.3.
     </div>
         </div>
