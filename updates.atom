@@ -1,5 +1,102 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>JNRowe</title><link rel="alternate" href="http://jnrowe.github.com/"></link><link rel="self" href="http://jnrowe.github.com/updates.atom"></link><id>http://jnrowe.github.com/</id><updated>2011-06-13T00:00:00Z</updated><author><name>James Rowe</name><email>jnrowe@gmail.com</email><uri>http://jnrowe.github.com/</uri></author><rights>2009-2013, James Rowe</rights><entry><title>TDD distro development</title><link rel="alternate" href="http://jnrowe.github.com/articles/tdd_distros.html"></link><updated>2011-06-13T00:00:00Z</updated><id>http://jnrowe.github.com/articles/tdd_distros.html</id><summary type="html">&lt;div class=section id=tdd-distro-development&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>JNRowe</title><link href="http://jnrowe.github.com/" rel="alternate"></link><link href="http://jnrowe.github.com/updates.atom" rel="self"></link><id>http://jnrowe.github.com/</id><updated>2013-12-16T00:00:00Z</updated><author><name>James Rowe</name><email>jnrowe@gmail.com</email><uri>http://jnrowe.github.com/</uri></author><rights>2009-2013, James Rowe</rights><entry><title>Side-projects</title><link href="http://jnrowe.github.com/articles/side_projects.html" rel="alternate"></link><updated>2013-12-16T00:00:00Z</updated><id>http://jnrowe.github.com/articles/side_projects.html</id><summary type="html">&lt;div class=section id=side-projects&gt;
+&lt;h1&gt;Side-projects&lt;a class=headerlink href=http://jnrowe.github.com/articles/side_projects.html#side-projects title="Permalink to this headline"&gt;¶&lt;/a&gt;&lt;/h1&gt;
+&lt;p&gt;Chatting with my brother yesterday he expressed some disbelief when I mentioned
+&lt;em&gt;yet another&lt;/em&gt; friend who has a website related to some topic we were discussing:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;div&gt;Does everyone you know run a website?&lt;/div&gt;&lt;/blockquote&gt;
+&lt;p&gt;Yes, yes, they do.&lt;/p&gt;
+&lt;p&gt;It hadn’t really occurred to me until I was reading a write up of a co-workers
+weekend hack.  The majority of nerdy people I know run websites, create
+iPhone/android apps or other personal side projects in various states of
+completion.  It’s just How Things Work®&lt;/p&gt;
+&lt;p&gt;I guess it is mostly a cultural issue, one which is quite strong behind the
+engineering side of the curtain in my workplace.  Sure, there are some “5:01”
+types who are out of the door as soon as the bell goes, but there are an awful
+lot who extend their tech creations in to a hobby or side business too.&lt;/p&gt;
+&lt;p&gt;To relate this to my brother I think of a family party we attended this past
+weekend.  When people asked me what my brother does I proudly say he works in
+logistics, and I like to tell people how well he’s done for himself.  When
+talking to the extended family that often seemed to end up being about material
+possessions or such, but I’ve noticed in the past when I’m talking to people I’d
+call friends it often quickly digresses in to strange discussions about box
+packing, routing, &lt;a class="reference external" href=http://en.wikipedia.org/wiki/Travelling_salesman_problem&gt;The Curse of Travelling Salesmen&lt;/a&gt; or &lt;a class="reference external" href=http://en.wikipedia.org/wiki/Bridges_of_Konigsberg&gt;bridges in a foreign
+land&lt;/a&gt;.  Because of the math and technology implications many of my friends have
+written tools to explore some of the practical and theoretical issues faced in
+logistics… for fun.&lt;/p&gt;
+&lt;div class=section id=it-is-all-about-me&gt;
+&lt;h2&gt;It is all about me&lt;a class=headerlink href=http://jnrowe.github.com/articles/side_projects.html#it-is-all-about-me title="Permalink to this headline"&gt;¶&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;I’m not working on any public facing websites right now, but I do play with
+a few public facing projects from time to time that should head towards proving
+my point.&lt;/p&gt;
+&lt;div class="admonition note"&gt;
+&lt;p class="first admonition-title"&gt;Note&lt;/p&gt;
+&lt;p class=last&gt;To save myself some researching effort I’ll only link to things from &lt;a class="reference external" href=https://github.com/JNRowe/&gt;my
+GitHub profile&lt;/a&gt; or links from my browser’s bookmarks, but that should be
+descriptive enough to get the point across.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=section id=gentoo&gt;
+&lt;h3&gt;Gentoo&lt;a class=headerlink href=http://jnrowe.github.com/articles/side_projects.html#gentoo title="Permalink to this headline"&gt;¶&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;Over the past decade I’ve spent a lot of time hacking on things related to
+&lt;a class="reference external" href=http://gentoo.org/&gt;Gentoo&lt;/a&gt;.  Some of that for work projects and some of it for &lt;a class="reference external" href=https://jnrowe-misc.rtfd.org/&gt;personal
+projects&lt;/a&gt;.  I’ve also experienced my fair share of troubles, and have &lt;a class="reference external" href="https://bugs.gentoo.org/buglist.cgi?email1=jnrowe%40gmail.com&amp;amp;emailassigned_to1=1&amp;amp;emailcc1=1&amp;amp;emaillongdesc1=1&amp;amp;emailreporter1=1&amp;amp;emailtype1=substring&amp;amp;query_format=advanced"&gt;reported
+a few bugs&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;At one time I even hoped to &lt;a class="reference external" href="https://bugs.gentoo.org/show_bug.cgi?id=142090"&gt;become a developer&lt;/a&gt;, but that didn’t work out for
+a bunch of reasons.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=section id=github2&gt;
+&lt;h3&gt;&lt;tt class="docutils literal"&gt;&lt;span class=pre&gt;github2&lt;/span&gt;&lt;/tt&gt;&lt;a class=headerlink href=http://jnrowe.github.com/articles/side_projects.html#github2 title="Permalink to this headline"&gt;¶&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;For a year I &lt;a class="reference external" href=https://github.com/ask/python-github2/graphs/contributors&gt;maintained&lt;/a&gt; a relatively popular &lt;a class="reference external" href=https://github.com/ask/python-github2&gt;API wrapper&lt;/a&gt; to GitHub.  I did
+this because I found it fun.  It provided no economic benefit to me, and I never
+expected it to.  I know a lot of people used it when building their own toy
+projects and websites, because many were kind enough to link to it.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=section id=pyisbn&gt;
+&lt;h3&gt;&lt;tt class="docutils literal"&gt;&lt;span class=pre&gt;pyisbn&lt;/span&gt;&lt;/tt&gt;&lt;a class=headerlink href=http://jnrowe.github.com/articles/side_projects.html#pyisbn title="Permalink to this headline"&gt;¶&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;For seven years I’ve maintained a small library for &lt;a class="reference external" href=https://github.com/JNRowe/pyisbn/&gt;validating ISBNs&lt;/a&gt;.
+&lt;em&gt;Yes, that is absolutely as boring as it sounds&lt;/em&gt;.&lt;/p&gt;
+&lt;p&gt;It was never meant to be used by others, I just needed something to validate
+entries in my e-book database.  Other people started using it, many for their
+own weird side projects including a number of book retail websites.  It has
+amassed literally tens of thousands of downloads from PyPI, but you really
+shouldn’t trust the dubious statistics from PyPI ;)&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=section id=rdial&gt;
+&lt;h3&gt;&lt;tt class="docutils literal"&gt;&lt;span class=pre&gt;rdial&lt;/span&gt;&lt;/tt&gt;&lt;a class=headerlink href=http://jnrowe.github.com/articles/side_projects.html#rdial title="Permalink to this headline"&gt;¶&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;&lt;a class="reference external" href=http://rdial.rtfd.org/&gt;rdial&lt;/a&gt; is a perfect example for me.  I played with it for over a year before
+anyone else saw it, just because it scratched an itch I had.  I never imagined
+it would be useful to others.  Turns out it was, and we have a small yet
+faithful band of users now.&lt;/p&gt;
+&lt;p&gt;I even received the great honour of a few summer evening beers for releasing it.
+A beer being second only to a patch in the table of projects endorsements
+that I subscribe to.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=section id=upoints&gt;
+&lt;h3&gt;&lt;tt class="docutils literal"&gt;&lt;span class=pre&gt;upoints&lt;/span&gt;&lt;/tt&gt;&lt;a class=headerlink href=http://jnrowe.github.com/articles/side_projects.html#upoints title="Permalink to this headline"&gt;¶&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;&lt;a class="reference external" href=https://jnrowe.github.com/upoints/&gt;upoints&lt;/a&gt; is a strange one.  It started as a &lt;a class="reference external" href=http://jnrowe.github.io/upoints/geolocation_and_pathcross.html&gt;stupid hack&lt;/a&gt; to figure out some
+silly travel planning drama, it proceeded to take on a life of its own.  Over
+the years it attracted a fair amount of users, and I still receive email about
+it now.&lt;/p&gt;
+&lt;p&gt;It did have some tangible benefit though, the sadly now defunct website it
+eventually spawned opened some nice doors for me.  I didn’t know it would or
+could at the time, so it didn’t affect how I spent my time when working on it.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=section id=cut-from-the-pattern&gt;
+&lt;h2&gt;Cut from the pattern&lt;a class=headerlink href=http://jnrowe.github.com/articles/side_projects.html#cut-from-the-pattern title="Permalink to this headline"&gt;¶&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;This isn’t specific to me, or even to the particularly nerdy among my
+co-workers.  If you &lt;a class="reference external" href=https://github.com/explore&gt;dig around on GitHub&lt;/a&gt;, or even &lt;a class="reference external" href=http://makezine.com/&gt;makezine&lt;/a&gt;, you’ll see
+people creating purely because they can.  This isn’t a new phenomenon either.
+If you were around pre-GitHub you’d see people making things on Sourceforge.  If
+you were around before Sourceforge, you’ll remember the good old days when life
+was simpler and people held doors open for you.&lt;/p&gt;
+&lt;p&gt;The point is simple.  Yes, I &lt;em&gt;may&lt;/em&gt; know someone who is working on project
+related to some topic, but that is only because many of the people I know are
+spitting out projects that may be websites on what often appears to be a weekly
+basis.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</summary></entry><entry><title>TDD distro development</title><link href="http://jnrowe.github.com/articles/tdd_distros.html" rel="alternate"></link><updated>2011-06-13T00:00:00Z</updated><id>http://jnrowe.github.com/articles/tdd_distros.html</id><summary type="html">&lt;div class=section id=tdd-distro-development&gt;
 &lt;h1&gt;TDD distro development&lt;a class=headerlink href=http://jnrowe.github.com/articles/tdd_distros.html#tdd-distro-development title="Permalink to this headline"&gt;¶&lt;/a&gt;&lt;/h1&gt;
 &lt;p&gt;Using &lt;abbr title="Test Driven Development"&gt;TDD&lt;/abbr&gt; for distribution development is a
 hot topic in some of the more geeky circles I move in, and I’m very happy about
@@ -152,7 +249,7 @@ a &lt;tt class="docutils literal"&gt;&lt;span class=pre&gt;reST&lt;/span&gt;&lt;
 &lt;/table&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-</summary></entry><entry><title>Introduction to RCS</title><link rel="alternate" href="http://jnrowe.github.com/articles/rcs.html"></link><updated>2003-09-05T00:00:00Z</updated><id>http://jnrowe.github.com/articles/rcs.html</id><summary type="html">&lt;div class="admonition warning"&gt;
+</summary></entry><entry><title>Introduction to RCS</title><link href="http://jnrowe.github.com/articles/rcs.html" rel="alternate"></link><updated>2003-09-05T00:00:00Z</updated><id>http://jnrowe.github.com/articles/rcs.html</id><summary type="html">&lt;div class="admonition warning"&gt;
 &lt;p class="first admonition-title"&gt;Warning&lt;/p&gt;
 &lt;p class=last&gt;I’ve resurrected this text from my old UKFSN site because a couple of people
 asked me to, but I wouldn’t recommend using RCS to anyone at this point.  It
