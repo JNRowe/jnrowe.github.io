@@ -89,7 +89,7 @@ projects and websites, because many were kind enough to link to it.
 ``pyisbn``
 ''''''''''
 
-For close to a decade I've maintained a small library for `validating ISBNs`_.
+For seven years I've maintained a small library for `validating ISBNs`_.
 *Yes, that is absolutely as boring as it sounds*.
 
 It was never meant to be used by others, I just needed something to validate
