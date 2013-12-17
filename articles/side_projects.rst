@@ -104,9 +104,9 @@ shouldn't trust the dubious statistics from PyPI ;)
 '''''''''
 
 rdial_ is a perfect example for me.  I played with it for over a year before
-anyone else saw it.  Not because I wanted to keep it a secret, but just because
-it scratched an itch I had.  I never imagined it wouldn't be useful to others.
-Turns out it was, and we have a small yet faithful band of users now.
+anyone else saw it, just because it scratched an itch I had.  I never imagined
+it would be useful to others.  Turns out it was, and we have a small yet
+faithful band of users now.
 
 I even received the great honour of a few summer evening beers for releasing it.
 A beer being second only to a patch in the table of projects endorsements
