@@ -12,13 +12,13 @@ Yes, yes, they do.
 
 It hadn't really occurred to me until I was reading a write up of a co-workers
 weekend hack.  The majority of nerdy people I know run websites, create
-iPhone/android apps or other personal side projects in various states of
-completion.  It's just How Things Work®
+iPhone/android apps or have other side projects in various states of completion.
+It's just How Things Work®
 
 I guess it is mostly a cultural issue, one which is quite strong behind the
 engineering side of the curtain in my workplace.  Sure, there are some "5:01"
 types who are out of the door as soon as the bell goes, but there are an awful
-lot who extend their tech creations in to a hobby or side business too.
+lot who extend their tech creations in to a downtime hobby or side business.
 
 ..
    For better or worse very few of the 5:01'ers tend to become my friends.  It
@@ -47,9 +47,9 @@ logistics… for fun.
 It is all about me
 ------------------
 
-I'm not working on any public facing websites right now, but I do play with
-a few public facing projects from time to time that should head towards proving
-my point.
+I'm not working on any public facing websites right now [#s1]_, but I do play
+with a few public facing projects from time to time that should head towards
+proving my point.
 
 .. note::
 
@@ -103,10 +103,10 @@ shouldn't trust the dubious statistics from PyPI ;)
 ``rdial``
 '''''''''
 
-rdial_ is a perfect example for me.  I played with it for over a year before
-anyone else saw it, just because it scratched an itch I had.  I never imagined
-it would be useful to others.  Turns out it was, and we have a small yet
-faithful band of users now.
+rdial_ is a time tracking tool, and a perfect example for me.  I played with it
+for over a year before anyone else saw it, just because it scratched an itch
+I had.  I never imagined it would be useful to others.  Turns out it was, and
+there is now a small yet faithful band of users.
 
 I even received the great honour of a few summer evening beers for releasing it.
 A beer being second only to a patch in the table of projects endorsements
@@ -124,7 +124,7 @@ it now.
 
 It did have some tangible benefit though, the sadly now defunct website it
 eventually spawned opened some nice doors for me.  I didn't know it would or
-could at the time, so it didn't affect how I spent my time when working on it.
+could at the time, so it didn't affect how I spent my time when playing with it.
 
 .. _upoints: https://jnrowe.github.com/upoints/
 .. _stupid hack: http://jnrowe.github.io/upoints/geolocation_and_pathcross.html
@@ -142,7 +142,12 @@ was simpler and people held doors open for you.
 .. _dig around on GitHub: https://github.com/explore
 .. _makezine: http://makezine.com/
 
-The point is simple.  Yes, I *may* know someone who is working on project
-related to some topic, but that is only because many of the people I know are
-spitting out projects that may be websites on what often appears to be a weekly
+The point is simple.  Yes, I *may* know someone who is working on
+project/website related to some topic, but that is only because many of the
+people I know are spitting out new projects on what often appears to be a weekly
 basis.
+
+.. rubric:: Footnotes
+
+.. [#s1] I really don't count `this site <http://jnrowe.github.io/>`__, as it
+         is just a jumbled content dump with no real purpose.
