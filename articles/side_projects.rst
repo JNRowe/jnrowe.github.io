@@ -17,7 +17,7 @@ It's just How Things Work®
 
 I guess it is mostly a cultural issue, one which is quite strong behind the
 engineering side of the curtain in my workplace.  Sure, there are some "5:01"
-types who are out of the door as soon as the bell goes, but there are an awful
+types who are out of the door as soon as the bell rings, but there are an awful
 lot who extend their tech creations in to a downtime hobby or side business.
 
 ..
@@ -36,12 +36,12 @@ logistics, and I like to tell people how well he's done for himself.  When
 talking to the extended family that often seemed to end up being about material
 possessions or such, but I've noticed in the past when I'm talking to people I'd
 call friends it often quickly digresses in to strange discussions about box
-packing, routing, `The Curse of Travelling Salesmen`_ or `bridges in a foreign
+packing, routing, `the curse of travelling salesmen`_ or `bridges in a foreign
 land`_.  Because of the math and technology implications many of my friends have
 written tools to explore some of the practical and theoretical issues faced in
 logistics… for fun.
 
-.. _The Curse of Travelling Salesmen: http://en.wikipedia.org/wiki/Travelling_salesman_problem
+.. _the curse of travelling salesmen: http://en.wikipedia.org/wiki/Travelling_salesman_problem
 .. _bridges in a foreign land: http://en.wikipedia.org/wiki/Bridges_of_Konigsberg
 
 It is all about me
@@ -49,7 +49,8 @@ It is all about me
 
 I'm not working on any public facing websites right now [#s1]_, but I do play
 with a few public facing projects from time to time that should head towards
-proving my point.
+proving my point.  I'm picking a few semi-randomly to illustrate a little
+diversity.
 
 .. note::
 
@@ -109,7 +110,7 @@ I had.  I never imagined it would be useful to others.  Turns out it was, and
 there is now a small yet faithful band of users.
 
 I even received the great honour of a few summer evening beers for releasing it.
-A beer being second only to a patch in the table of projects endorsements
+A beer being second only to a patch in the table of project endorsements
 that I subscribe to.
 
 .. _rdial: http://rdial.rtfd.org/
