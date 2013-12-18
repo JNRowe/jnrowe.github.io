@@ -43,6 +43,8 @@ html_favicon = '.static/icon.ico'
 
 html_static_path = ['.static', ]
 
+templates_path = ['.templates', ]
+
 intersphinx_mapping = {
     'python': ('http://docs.python.org/', os.getenv('SPHINX_PYTHON_OBJECTS')),
 }
