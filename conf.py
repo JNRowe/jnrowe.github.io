@@ -36,6 +36,7 @@ exclude_patterns = ['venv', '.build', 'README.rst']
 pygments_style = 'murphy'
 html_theme = 'agogo'
 
+html_context = {"feed_link": True}
 html_title = 'JNRowe'
 html_logo = '.static/logo.png'
 html_favicon = '.static/icon.ico'
