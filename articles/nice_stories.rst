@@ -75,27 +75,6 @@ beaten down for their apparent success.
 
 *Why can't people just find some happiness in the happiness of others?*
 
-Exhibit C
-'''''''''
-
-[I used to be enormously guilty of this class of offence, hopefully I'm less so
-now]
-
-When you want to review an item whether it is a coffee house, a film, piece of
-software or a pseudo-science health treatment then just review *it*.
-
-You shouldn't need to smack down on every alternative to get your point across.
-The common well known alternatives are clearly broken to some extent in your
-eyes, that is why you're extolling(or at least should be) the virtues of
-whatever it is you're trying to review.
-
-Perhaps I'll want a comparison to the old favourite coffee house, but if I do
-I'll ask for it.  If not I've probably already come to the tacit realisation
-that it has gone downhill or the new one just blows its collective socks off.
-After all, that is the reason you're attempting to tell me about the new one.
-
-*Why must reviews need to stand on the ashes and crushed bones of a competitor?*
-
 What to do
 ----------
 
