@@ -1,5 +1,47 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>JNRowe</title><link rel="alternate" href="http://jnrowe.github.com/"></link><link rel="self" href="http://jnrowe.github.com/updates.atom"></link><id>http://jnrowe.github.com/</id><updated>2013-12-23T00:00:00Z</updated><author><name>James Rowe</name><email>jnrowe@gmail.com</email><uri>http://jnrowe.github.com/</uri></author><rights>2009-2013, James Rowe</rights><entry><title>Tell me a nice story, please</title><link rel="alternate" href="http://jnrowe.github.com/articles/nice_stories.html"></link><updated>2013-12-23T00:00:00Z</updated><id>http://jnrowe.github.com/articles/nice_stories.html</id><summary type="html">&lt;div class=section id=tell-me-a-nice-story-please&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>JNRowe</title><link href="http://jnrowe.github.com/" rel="alternate"></link><link href="http://jnrowe.github.com/updates.atom" rel="self"></link><id>http://jnrowe.github.com/</id><updated>2014-01-06T00:00:00Z</updated><author><name>James Rowe</name><email>jnrowe@gmail.com</email><uri>http://jnrowe.github.com/</uri></author><rights>2009-2014, James Rowe</rights><entry><title>Dopplr defects</title><link href="http://jnrowe.github.com/articles/dopplr_effects.html" rel="alternate"></link><updated>2014-01-06T00:00:00Z</updated><id>http://jnrowe.github.com/articles/dopplr_effects.html</id><summary type="html">&lt;div class=section id=dopplr-defects&gt;
+&lt;h1&gt;Dopplr defects&lt;a class=headerlink href=http://jnrowe.github.com/articles/dopplr_effects.html#dopplr-defects title="Permalink to this headline"&gt;¶&lt;/a&gt;&lt;/h1&gt;
+&lt;blockquote&gt;
+&lt;div&gt;&lt;p&gt;Dopplr was a free social networking service, launched in 2007, that allowed
+users to create itineraries of their travel plans and spot correlations with
+their contacts’ travel plans in order to arrange meetings at any point on
+their journey.&lt;/p&gt;
+&lt;p class=attribution&gt;—&lt;a class="reference external" href=http://en.m.wikipedia.org/wiki/Dopplr&gt;dopplr&lt;/a&gt; wikipedia entry&lt;/p&gt;
+&lt;/div&gt;&lt;/blockquote&gt;
+&lt;p&gt;A couple of months ago &lt;a class="reference external" href=http://en.m.wikipedia.org/wiki/Dopplr&gt;dopplr&lt;/a&gt; was shut down.  It was perhaps my most
+favouritistist of websites, but I didn’t use it.  In fact, I hadn’t visited in
+nearly three years and it contained no data I was interested in saving…  but
+I still counted it among my favourite sites.&lt;/p&gt;
+&lt;p&gt;dopplr had an elegant, yet jaw droppingly beautiful design; a marvel of
+simplicity and discoverability.  The functionality was great, who doesn’t like
+the idea of discovering happy collisions with old friends?  The implementation
+was cool, introducing me to OpenID.  I loved the site enough to read the
+&lt;a class="reference internal" href=http://jnrowe.github.com/articles/dopplr_effects.html#backstory&gt;backstory&lt;/a&gt; when the shutdown news was being passed around, but I still didn’t
+want to use it again.  The cost for this functionality was just far too great
+for me.&lt;/p&gt;
+&lt;p&gt;I simply couldn’t stomach giving up the information that dopplr required to
+function.  It required an enormous amount of vigilance to police your own data
+on the way in, to make sure you weren’t sharing things you couldn’t or
+shouldn’t.  You could often glean things that people didn’t perhaps realise they
+were sharing.  A friend’s weekend to somewhere odd like Bedford wasn’t just
+a sign that you could meet up for lunch, it was probably also a sign that they
+were visiting Lockheed Martin &lt;a class=footnote-reference href=http://jnrowe.github.com/articles/dopplr_effects.html#s1 id=id1&gt;[1]&lt;/a&gt;.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;div&gt;“Oh, Kevin is going to be near me next week!  Hmm, either he is on an
+exceptionally long pub crawl or he is about to sign a contract”&lt;/div&gt;&lt;/blockquote&gt;
+&lt;p&gt;I know that dopplr was cool though, it was powerful and it did squeeze a lot
+more serendipity out of the world(I forget their actual tagline).  I couldn’t
+imagine a better present for 2014 than to find a replacement that I could
+actually use, but sadly I can’t even picture how it should work.&lt;/p&gt;
+&lt;p class=rubric&gt;Footnotes&lt;/p&gt;
+&lt;table class="docutils footnote" frame=void id=s1 rules=none&gt;
+&lt;col class=label&gt;&lt;col&gt;&lt;/colgroup&gt;
+&lt;tbody valign=top&gt;
+&lt;tr&gt;&lt;td class=label&gt;&lt;a class=fn-backref href=http://jnrowe.github.com/articles/dopplr_effects.html#id1&gt;[1]&lt;/a&gt;&lt;td&gt;Your personal examples may vary&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;span class=target id=backstory&gt;&lt;/span&gt;&lt;/div&gt;
+</summary></entry><entry><title>Tell me a nice story, please</title><link href="http://jnrowe.github.com/articles/nice_stories.html" rel="alternate"></link><updated>2013-12-23T00:00:00Z</updated><id>http://jnrowe.github.com/articles/nice_stories.html</id><summary type="html">&lt;div class=section id=tell-me-a-nice-story-please&gt;
 &lt;h1&gt;Tell me a nice story, please&lt;a class=headerlink href=http://jnrowe.github.com/articles/nice_stories.html#tell-me-a-nice-story-please title="Permalink to this headline"&gt;¶&lt;/a&gt;&lt;/h1&gt;
 &lt;p&gt;I’m fed up of hearing bad stories, I really am.  Often it feels like every
 person I know simply revels in the misfortune or missteps of others, and it is
@@ -96,7 +138,7 @@ know about it.&lt;/p&gt;
 &lt;/table&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-</summary></entry><entry><title>Side-projects</title><link rel="alternate" href="http://jnrowe.github.com/articles/side_projects.html"></link><updated>2013-12-16T00:00:00Z</updated><id>http://jnrowe.github.com/articles/side_projects.html</id><summary type="html">&lt;div class=section id=side-projects&gt;
+</summary></entry><entry><title>Side-projects</title><link href="http://jnrowe.github.com/articles/side_projects.html" rel="alternate"></link><updated>2013-12-16T00:00:00Z</updated><id>http://jnrowe.github.com/articles/side_projects.html</id><summary type="html">&lt;div class=section id=side-projects&gt;
 &lt;h1&gt;Side-projects&lt;a class=headerlink href=http://jnrowe.github.com/articles/side_projects.html#side-projects title="Permalink to this headline"&gt;¶&lt;/a&gt;&lt;/h1&gt;
 &lt;p&gt;Chatting with my brother yesterday he expressed some disbelief when I mentioned
 &lt;em&gt;yet another&lt;/em&gt; friend who has a website related to some topic we were discussing:&lt;/p&gt;
@@ -202,7 +244,7 @@ is just a jumbled content dump with no real purpose.&lt;/tr&gt;
 &lt;/table&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-</summary></entry><entry><title>TDD distro development</title><link rel="alternate" href="http://jnrowe.github.com/articles/tdd_distros.html"></link><updated>2011-06-13T00:00:00Z</updated><id>http://jnrowe.github.com/articles/tdd_distros.html</id><summary type="html">&lt;div class=section id=tdd-distro-development&gt;
+</summary></entry><entry><title>TDD distro development</title><link href="http://jnrowe.github.com/articles/tdd_distros.html" rel="alternate"></link><updated>2011-06-13T00:00:00Z</updated><id>http://jnrowe.github.com/articles/tdd_distros.html</id><summary type="html">&lt;div class=section id=tdd-distro-development&gt;
 &lt;h1&gt;TDD distro development&lt;a class=headerlink href=http://jnrowe.github.com/articles/tdd_distros.html#tdd-distro-development title="Permalink to this headline"&gt;¶&lt;/a&gt;&lt;/h1&gt;
 &lt;p&gt;Using &lt;abbr title="Test Driven Development"&gt;TDD&lt;/abbr&gt; for distribution development is a
 hot topic in some of the more geeky circles I move in, and I’m very happy about
@@ -355,7 +397,7 @@ a &lt;tt class="docutils literal"&gt;&lt;span class=pre&gt;reST&lt;/span&gt;&lt;
 &lt;/table&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-</summary></entry><entry><title>Introduction to RCS</title><link rel="alternate" href="http://jnrowe.github.com/articles/rcs.html"></link><updated>2003-09-05T00:00:00Z</updated><id>http://jnrowe.github.com/articles/rcs.html</id><summary type="html">&lt;div class="admonition warning"&gt;
+</summary></entry><entry><title>Introduction to RCS</title><link href="http://jnrowe.github.com/articles/rcs.html" rel="alternate"></link><updated>2003-09-05T00:00:00Z</updated><id>http://jnrowe.github.com/articles/rcs.html</id><summary type="html">&lt;div class="admonition warning"&gt;
 &lt;p class="first admonition-title"&gt;Warning&lt;/p&gt;
 &lt;p class=last&gt;I’ve resurrected this text from my old UKFSN site because a couple of people
 asked me to, but I wouldn’t recommend using RCS to anyone at this point.  It
