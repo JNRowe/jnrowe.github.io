@@ -32,6 +32,7 @@ version = '0.1'
 release = '0.1.0'
 
 exclude_patterns = ['venv', '.build', 'README.rst']
+exclude_trees = ['draft', ]
 
 pygments_style = 'murphy'
 html_theme = 'agogo'
