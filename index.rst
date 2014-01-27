@@ -26,3 +26,8 @@ Contents:
    contact
    consult
    copyright
+
+.. toctree::
+   :hidden:
+
+   404
