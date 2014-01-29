@@ -2,7 +2,7 @@ Projects
 ========
 
 * `bfm <https://github.com/JNRowe/bfm>`__: This program is a dockapp-style CPU, memory, swap and load average monitor.
-* `blanco <https://github.com/JNRowe/blanco>`__: Hey, remember me? [ `documentation <http://jnrowe.github.com/blanco>`__ ]
+* `blanco <https://github.com/JNRowe/blanco>`__: Hey, remember me? [ `documentation <http://blanco.rtfd.org/>`__ ]
 * `bleeter <https://github.com/JNRowe/bleeter>`__: Nasty little twitter client [ `documentation <http://jnrowe.github.com/bleeter/>`__ ]
 * `blog <https://github.com/JNRowe/blog>`__: Old jnrowe.github.com content that *may* be resurrected.
 * `bwatch <https://github.com/JNRowe/bwatch>`__: Simple bandwidth watching tool [ `documentation <http://jnrowe.github.com/bwatch/>`__ ]
@@ -47,7 +47,7 @@ Forks I'm hacking on
 * `gpxviewer <https://github.com/JNRowe/gpxviewer>`__: GPXViewer GPS trace viewer [ `origin <https://github.com/andrewgee/gpxviewer>`__ ]
 * `hammertime <https://github.com/JNRowe/hammertime>`__: Time tracking with git [ `origin <https://github.com/caffeinehit/hammertime>`__ ]
 * `html2data <https://github.com/JNRowe/html2data>`__: A simple way to transform a HTML file or URL to structured data [ `origin <https://github.com/dperezrada/html2data>`__ ]
-* `http <https://github.com/JNRowe/http>`__: simple HTTP library for Python [ `origin <https://github.com/franckcuny/http>`__ ]
+* `http <https://github.com/JNRowe/http>`__: simple HTTP library for Python [ `origin <https://github.com/samv/fluffyhttp>`__ ]
 * `HTTPretty <https://github.com/JNRowe/HTTPretty>`__: HTTP client mocking tool for Python [ `origin <https://github.com/gabrielfalcao/HTTPretty>`__ ]
 * `incoming <https://github.com/JNRowe/incoming>`__: JSON validation framework for Python. [ `origin <https://github.com/vaidik/incoming>`__ ]
 * `lice <https://github.com/JNRowe/lice>`__: Generate license files for your projects [ `origin <https://github.com/licenses/lice>`__ ]
@@ -57,6 +57,7 @@ Forks I'm hacking on
 * `oh-my-zsh <https://github.com/JNRowe/oh-my-zsh>`__: A community-driven framework for managing your zsh configuration. [ `origin <https://github.com/robbyrussell/oh-my-zsh>`__ ]
 * `org-diet <https://github.com/JNRowe/org-diet>`__: Forked from cwebber's org-diet on gitorious - https://gitorious.org/org-diet/org-diet [ `origin <https://github.com/mrc/org-diet>`__ ]
 * `parse <https://github.com/JNRowe/parse>`__: Parse strings using a specification based on the Python format() syntax. [ `origin <https://github.com/r1chardj0n3s/parse>`__ ]
+* `pecan <https://github.com/JNRowe/pecan>`__: A WSGI object-dispatching web framework, designed to be lean and fast with few dependencies. [ `origin <https://github.com/stackforge/pecan>`__ ]
 * `pelican <https://github.com/JNRowe/pelican>`__: Static blog generator in python, using ReST syntax [ `origin <https://github.com/getpelican/pelican>`__ ]
 * `pint <https://github.com/JNRowe/pint>`__: Operate and manipulate physical quantities in Python [ `origin <https://github.com/hgrecco/pint>`__ ]
 * `pret-a-manger <https://github.com/JNRowe/pret-a-manger>`__: command line tool for getting menu and organize order to pret.com [ `origin <https://github.com/rach/pret-a-manger>`__ ]
