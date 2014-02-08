@@ -182,4 +182,4 @@ a ``reST`` formatted file as follows:
 .. _jnrowe-misc: https://github.com/JNRowe/jnrowe-misc
 .. _blockdiag: http://pypi.python.org/pypi/blockdiag/
 .. _reST syntax: http://docutils.sourceforge.net/docs/user/rst/
-.. _Sphinx: http://sphinx.pocoo.org/
+.. _Sphinx: http://sphinx-doc.org/
