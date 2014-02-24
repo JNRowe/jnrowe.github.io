@@ -1,5 +1,46 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>JNRowe</title><link href="http://jnrowe.github.com/" rel="alternate"></link><link href="http://jnrowe.github.com/updates.atom" rel="self"></link><id>http://jnrowe.github.com/</id><updated>2014-01-27T00:00:00Z</updated><author><name>James Rowe</name><email>jnrowe@gmail.com</email><uri>http://jnrowe.github.com/</uri></author><rights>2009-2014, James Rowe</rights><entry><title>Return to rambling</title><link href="http://jnrowe.github.com/articles/the_returned.html" rel="alternate"></link><updated>2014-01-27T00:00:00Z</updated><id>http://jnrowe.github.com/articles/the_returned.html</id><summary type="html">&lt;div class=section id=return-to-rambling&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>JNRowe</title><link rel="alternate" href="http://jnrowe.github.com/"></link><link rel="self" href="http://jnrowe.github.com/updates.atom"></link><id>http://jnrowe.github.com/</id><updated>2014-02-24T00:00:00Z</updated><author><name>James Rowe</name><email>jnrowe@gmail.com</email><uri>http://jnrowe.github.com/</uri></author><rights>2009-2014, James Rowe</rights><entry><title>Hitting life&amp;#8217;s reset button</title><link rel="alternate" href="http://jnrowe.github.com/articles/reset_in_ten.html"></link><updated>2014-02-24T00:00:00Z</updated><id>http://jnrowe.github.com/articles/reset_in_ten.html</id><summary type="html">&lt;div class=section id=hitting-life-s-reset-button&gt;
+&lt;h1&gt;Hitting life’s reset button&lt;a class=headerlink href=http://jnrowe.github.com/articles/reset_in_ten.html#hitting-life-s-reset-button title="Permalink to this headline"&gt;¶&lt;/a&gt;&lt;/h1&gt;
+&lt;p&gt;Seven months ago while enjoying a little Saturday afternoon cricket picnic,
+a friend posed the question:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;div&gt;“If life had a reset button when would you have used it?”&lt;/div&gt;&lt;/blockquote&gt;
+&lt;p&gt;I understand the point and the purpose of this.  Catherine was hoping to elicit
+some deep truths, with the eventual goal that people would bond further.  That
+doesn’t mean I played the game though.&lt;/p&gt;
+&lt;p&gt;I recall my answer was somewhat flippant:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;div&gt;“I’d have used it repeatedly half an ago, until I figured out the magic
+incantation that convinces that cashier in the ‘Express to join me for
+a picnic...  and then I would have ditched you suckers.”&lt;/div&gt;&lt;/blockquote&gt;
+&lt;p&gt;It was an honest-ish answer;  I mean yeah, she may have been worth messing with
+the universe for.  It wasn’t, however, the correct kind of reply.  I should
+have been describing some dreadful mistake I made, both to make my friends
+laugh and also to let them in a little closer.&lt;/p&gt;
+&lt;p&gt;I didn’t choose to answer that way to be deliberately obtuse, I answered
+that way simply because it was how I felt at the time.&lt;/p&gt;
+&lt;p&gt;Since then, and I direct you to the first three words of this post, I’ve been
+mildly obsessed with the question.  I have a twenty heading document where I’ve
+described branch points in my life, specifically the ones with the deepest joy
+and most painful regrets.  I hoped I’d see a pattern of some kind, and that
+would allow me to direct myself toward the happier paths in future.&lt;/p&gt;
+&lt;p&gt;I didn’t, and it hasn’t.  Not even a little bit.&lt;/p&gt;
+&lt;p&gt;I don’t seem to find myself in the situations where I could repeat the most
+foolish decisions that I really regret.  And I wonder whether that is because
+I’ve eventually been smart enough to learn my lessons, or stupid enough that
+I’m unable to spot the new mistakes yet.&lt;/p&gt;
+&lt;p&gt;The whole process has been very cathartic though. Despite having
+a &lt;em&gt;significantly&lt;/em&gt; higher proportion of regrets than successes in my list,
+I kind of enjoying reviewing it in a cringe ridden way.&lt;/p&gt;
+&lt;p&gt;I’d really like to thank Catherine for offering the mirror, it has been
+intriguing in a terrifying and horrific kind of way.  Unfortunately, I can’t.
+It is too late, and there is another lesson for me to learn.&lt;/p&gt;
+&lt;hr class=docutils&gt;
+&lt;p&gt;For what it’s worth, that girl still works at the ‘Express and I’ve done
+nothing useful about it.  Internet, this is the foolish truth I proffer you
+today.  The others well, they’ll hopefully remain hidden away from view.&lt;/p&gt;
+&lt;/div&gt;
+</summary></entry><entry><title>Return to rambling</title><link rel="alternate" href="http://jnrowe.github.com/articles/the_returned.html"></link><updated>2014-01-27T00:00:00Z</updated><id>http://jnrowe.github.com/articles/the_returned.html</id><summary type="html">&lt;div class=section id=return-to-rambling&gt;
 &lt;h1&gt;Return to rambling&lt;a class=headerlink href=http://jnrowe.github.com/articles/the_returned.html#return-to-rambling title="Permalink to this headline"&gt;¶&lt;/a&gt;&lt;/h1&gt;
 &lt;p&gt;I kept a public journal from about 2003 until 2009, with a new entry about every
 three days.  I enjoyed the act of writing it greatly, and often looked forward
@@ -30,7 +71,7 @@ me for the opinions I express or information I spread.  And that invitation is
 absolutely extended to this site and the new content I post.&lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-</summary></entry><entry><title>Murdering morality with ferocious fire</title><link href="http://jnrowe.github.com/articles/important_balance.html" rel="alternate"></link><updated>2014-01-25T00:00:00Z</updated><id>http://jnrowe.github.com/articles/important_balance.html</id><summary type="html">&lt;div class=section id=murdering-morality-with-ferocious-fire&gt;
+</summary></entry><entry><title>Murdering morality with ferocious fire</title><link rel="alternate" href="http://jnrowe.github.com/articles/important_balance.html"></link><updated>2014-01-25T00:00:00Z</updated><id>http://jnrowe.github.com/articles/important_balance.html</id><summary type="html">&lt;div class=section id=murdering-morality-with-ferocious-fire&gt;
 &lt;h1&gt;Murdering morality with ferocious fire&lt;a class=headerlink href=http://jnrowe.github.com/articles/important_balance.html#murdering-morality-with-ferocious-fire title="Permalink to this headline"&gt;¶&lt;/a&gt;&lt;/h1&gt;
 &lt;blockquote&gt;
 &lt;div&gt;&lt;p&gt;“Morality is herd instinct in the individual.”&lt;/p&gt;
@@ -79,7 +120,7 @@ line up with your definition of “strong moral values” ;)&lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
 &lt;/div&gt;
-</summary></entry><entry><title>Dopplr defects</title><link href="http://jnrowe.github.com/articles/dopplr_effects.html" rel="alternate"></link><updated>2014-01-06T00:00:00Z</updated><id>http://jnrowe.github.com/articles/dopplr_effects.html</id><summary type="html">&lt;div class=section id=dopplr-defects&gt;
+</summary></entry><entry><title>Dopplr defects</title><link rel="alternate" href="http://jnrowe.github.com/articles/dopplr_effects.html"></link><updated>2014-01-06T00:00:00Z</updated><id>http://jnrowe.github.com/articles/dopplr_effects.html</id><summary type="html">&lt;div class=section id=dopplr-defects&gt;
 &lt;h1&gt;Dopplr defects&lt;a class=headerlink href=http://jnrowe.github.com/articles/dopplr_effects.html#dopplr-defects title="Permalink to this headline"&gt;¶&lt;/a&gt;&lt;/h1&gt;
 &lt;blockquote&gt;
 &lt;div&gt;&lt;p&gt;Dopplr was a free social networking service, launched in 2007, that allowed
@@ -121,7 +162,7 @@ actually use, but sadly I can’t even picture how it should work.&lt;/p&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
 &lt;span class=target id=backstory&gt;&lt;/span&gt;&lt;/div&gt;
-</summary></entry><entry><title>Tell me a nice story, please</title><link href="http://jnrowe.github.com/articles/nice_stories.html" rel="alternate"></link><updated>2013-12-23T00:00:00Z</updated><id>http://jnrowe.github.com/articles/nice_stories.html</id><summary type="html">&lt;div class=section id=tell-me-a-nice-story-please&gt;
+</summary></entry><entry><title>Tell me a nice story, please</title><link rel="alternate" href="http://jnrowe.github.com/articles/nice_stories.html"></link><updated>2013-12-23T00:00:00Z</updated><id>http://jnrowe.github.com/articles/nice_stories.html</id><summary type="html">&lt;div class=section id=tell-me-a-nice-story-please&gt;
 &lt;h1&gt;Tell me a nice story, please&lt;a class=headerlink href=http://jnrowe.github.com/articles/nice_stories.html#tell-me-a-nice-story-please title="Permalink to this headline"&gt;¶&lt;/a&gt;&lt;/h1&gt;
 &lt;p&gt;I’m fed up of hearing bad stories, I really am.  Often it feels like every
 person I know simply revels in the misfortune or missteps of others, and it is
@@ -218,7 +259,7 @@ know about it.&lt;/p&gt;
 &lt;/table&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-</summary></entry><entry><title>Side-projects</title><link href="http://jnrowe.github.com/articles/side_projects.html" rel="alternate"></link><updated>2013-12-16T00:00:00Z</updated><id>http://jnrowe.github.com/articles/side_projects.html</id><summary type="html">&lt;div class=section id=side-projects&gt;
+</summary></entry><entry><title>Side-projects</title><link rel="alternate" href="http://jnrowe.github.com/articles/side_projects.html"></link><updated>2013-12-16T00:00:00Z</updated><id>http://jnrowe.github.com/articles/side_projects.html</id><summary type="html">&lt;div class=section id=side-projects&gt;
 &lt;h1&gt;Side-projects&lt;a class=headerlink href=http://jnrowe.github.com/articles/side_projects.html#side-projects title="Permalink to this headline"&gt;¶&lt;/a&gt;&lt;/h1&gt;
 &lt;p&gt;Chatting with my brother yesterday he expressed some disbelief when I mentioned
 &lt;em&gt;yet another&lt;/em&gt; friend who has a website related to some topic we were discussing:&lt;/p&gt;
@@ -324,7 +365,7 @@ is just a jumbled content dump with no real purpose.&lt;/tr&gt;
 &lt;/table&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-</summary></entry><entry><title>TDD distro development</title><link href="http://jnrowe.github.com/articles/tdd_distros.html" rel="alternate"></link><updated>2011-06-13T00:00:00Z</updated><id>http://jnrowe.github.com/articles/tdd_distros.html</id><summary type="html">&lt;div class=section id=tdd-distro-development&gt;
+</summary></entry><entry><title>TDD distro development</title><link rel="alternate" href="http://jnrowe.github.com/articles/tdd_distros.html"></link><updated>2011-06-13T00:00:00Z</updated><id>http://jnrowe.github.com/articles/tdd_distros.html</id><summary type="html">&lt;div class=section id=tdd-distro-development&gt;
 &lt;h1&gt;TDD distro development&lt;a class=headerlink href=http://jnrowe.github.com/articles/tdd_distros.html#tdd-distro-development title="Permalink to this headline"&gt;¶&lt;/a&gt;&lt;/h1&gt;
 &lt;p&gt;Using &lt;abbr title="Test Driven Development"&gt;TDD&lt;/abbr&gt; for distribution development is a
 hot topic in some of the more geeky circles I move in, and I’m very happy about
@@ -477,7 +518,7 @@ a &lt;tt class="docutils literal"&gt;&lt;span class=pre&gt;reST&lt;/span&gt;&lt;
 &lt;/table&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-</summary></entry><entry><title>Introduction to RCS</title><link href="http://jnrowe.github.com/articles/rcs.html" rel="alternate"></link><updated>2003-09-05T00:00:00Z</updated><id>http://jnrowe.github.com/articles/rcs.html</id><summary type="html">&lt;div class="admonition warning"&gt;
+</summary></entry><entry><title>Introduction to RCS</title><link rel="alternate" href="http://jnrowe.github.com/articles/rcs.html"></link><updated>2003-09-05T00:00:00Z</updated><id>http://jnrowe.github.com/articles/rcs.html</id><summary type="html">&lt;div class="admonition warning"&gt;
 &lt;p class="first admonition-title"&gt;Warning&lt;/p&gt;
 &lt;p class=last&gt;I’ve resurrected this text from my old UKFSN site because a couple of people
 asked me to, but I wouldn’t recommend using RCS to anyone at this point.  It
