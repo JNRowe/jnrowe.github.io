@@ -21,6 +21,7 @@ Contents:
    projects
 
    articles/index
+   thoughts/index
 
    colophon
    contact
