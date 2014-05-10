@@ -1,6 +1,5 @@
+objects/
 .build/
-.ropeproject/
-.sass-cache/
 
 *.py[co]
 
