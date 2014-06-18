@@ -32,6 +32,10 @@ tend to overuse, "luck favours the prepared mind."
 If I have one tip for the Dear Reader this week it is this: Keep your
 sponsorship options in check, she'll destroy the target time.  Go Rach!
 
+.. note::
+
+   **Update**: Sub-four finish, 'nuff said.
+
 .. rubric:: Footnotes
 
 .. [#s1] a term which always make me think I should call child services [#s2]_
