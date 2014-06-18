@@ -31,9 +31,9 @@ Exhibit A
 '''''''''
 
 About five years ago I found out that an old school friend had made a serious,
-yet possibly singular, morally irresponsible mistake.  This is a man was close
-to the top of his chosen career tree, with a string of impressive achievements
-to his name.
+yet possibly singular, morally irresponsible mistake.  This is a man who was
+close to the top of his chosen career tree, with a string of impressive
+achievements to his name.
 
 The thing that bugged me about it, and to this day it is still does, is that I'd
 never heard anyone remark on his successes prior to this.  I was *entirely*
@@ -105,12 +105,12 @@ is that one girl who I'd sell my soul for a second chance with]
 Tell me about that friend whose child aced the `Eleven Plus`_, and has been
 accepted in to the school we all wish we had attended.
 
-Tell me how that old school friend who is building their own `Grand
+Tell me about that old school friend who is building their own `Grand
 Designs`_-esque house.
 
 I guess there is one reason I want to hear the bad stories, and it is very
 simple.  *If* there is some actionable thing I can do to help, then I *want* to
-know about it.
+know about it.  If that isn't the case, just keep it to yourself.
 
 .. _Eleven Plus: http://en.wikipedia.org/wiki/Eleven_plus_exam
 .. _Grand Designs: http://www.channel4.com/programmes/grand-designs

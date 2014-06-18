@@ -133,9 +133,10 @@ file from our address book now.</p>
 <p><a class="reference external" href="http://gist.github.com/198018">Fork this code</a></p>
 <p>I use the following <a class="reference external" href="http://www.gnu.org/software/make/make.html">make</a> snippet in my <tt class="docutils literal"><span class="pre">~/Makefile</span></tt> to generate the
 <tt class="docutils literal"><span class="pre">~/.reminders.d/birthdays</span></tt> file:</p>
-<div class="highlight-make"><pre>.reminders.d/birthdays: .abook/addressbook .reminders.d/birthdays.py
-        $(info - Generating remind's birthdays file)
-        $(word 2, $^) &gt;$@</pre>
+<div class="highlight-make"><div class="highlight"><pre>.reminders.d/birthdays: .abook/addressbook .reminders.d/birthdays.py
+        $(info - Generating remind&#39;s birthdays file)
+        $(word 2, $^) &gt;$@
+</pre></div>
 </div>
 <p><a class="reference external" href="http://gist.github.com/198019">Fork this code</a></p>
 <p>And finally, we need to tell <tt class="docutils literal"><span class="pre">remind</span></tt> to include our newly created file by
@@ -162,16 +163,11 @@ your home directory version controlled as a sanity measure I hope!</p>
 <li class="toctree-l1"><a class="reference internal" href="../../projects.html">Projects</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="../index.html">Articles</a><ul class="current">
 <li class="toctree-l2 current"><a class="reference internal" href="index.html">Tips</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../dopplr_effects.html">Dopplr defects</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../important_balance.html">Murdering morality with ferocious fire</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../nice_stories.html">Tell me a nice story, please</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../rcs.html">Introduction to RCS</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../reset_in_ten.html">Hitting life&#8217;s reset button</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../side_projects.html">Side-projects</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../tdd_distros.html">TDD distro development</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../the_returned.html">Return to rambling</a></li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="../../thoughts/index.html">Thoughts</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../colophon.html">Colophon</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../contact.html">Contact details</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../consult.html">Consulting services</a></li>
@@ -211,7 +207,7 @@ your home directory version controlled as a sanity measure I hope!</p>
           
     <div class="footer">
         &copy; <a href="../../copyright.html">Copyright</a> 2009-2014, James Rowe.
-      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.2.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.2.1.
     </div>
         </div>
         <div class="clearer"></div>

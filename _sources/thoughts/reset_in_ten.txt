@@ -10,9 +10,9 @@ a friend posed the question:
 
     "If life had a reset button when would you have used it?"
 
-I understand the point and the purpose of this.  Catherine was hoping to elicit
-some deep truths, with the eventual goal that people would bond further.  That
-doesn't mean I played the game though.
+Now, I understand the point and the purpose of this.  Catherine was hoping to
+elicit some deep truths, with the eventual goal that people would bond further.
+That doesn't mean I played the game though.
 
 I recall my answer was somewhat flippant:
 

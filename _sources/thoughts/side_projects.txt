@@ -37,12 +37,12 @@ talking to the extended family that often seemed to end up being about material
 possessions or such.  However, I've noticed in the past when I'm talking to
 people I'd call friends it often quickly digresses in to strange discussions
 about box packing, routing, `the curse of travelling salesmen`_ or `bridges in
-a foreign land`_.  Because of the math and technology implications many of my
-friends have written tools to explore some of the practical and theoretical
+some foreign land`_.  Because of the math and technology implications many of
+my friends have written tools to explore some of the practical and theoretical
 issues faced in logistics… for fun.
 
 .. _the curse of travelling salesmen: http://en.wikipedia.org/wiki/Travelling_salesman_problem
-.. _bridges in a foreign land: http://en.wikipedia.org/wiki/Bridges_of_Konigsberg
+.. _bridges in some foreign land: http://en.wikipedia.org/wiki/Bridges_of_Konigsberg
 
 It is all about me
 ------------------

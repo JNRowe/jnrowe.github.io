@@ -90,19 +90,20 @@ And, if you&#8217;re using <a class="reference external" href="http://www.kde.or
 should edit <tt class="docutils literal"><span class="pre">~/.gtkrc-2.0-kde</span></tt>.</p>
 <p>So the question becomes, what were the options in that screenshot, and are there
 any other cool and useful things you can do there?</p>
-<div class="highlight-cpp"><pre>gtk-theme-name = "expose"
-gtk-icon-theme-name = "hicolor"
-gtk-key-theme-name = "Emacs"
+<div class="highlight-cpp"><div class="highlight"><pre>gtk-theme-name = &quot;expose&quot;
+gtk-icon-theme-name = &quot;hicolor&quot;
+gtk-key-theme-name = &quot;Emacs&quot;
 
-binding "some-shortcuts" {
-    bind "&lt;Alt&gt;T" {
-        "location-popup" ("/home/jay/urls")
+binding &quot;some-shortcuts&quot; {
+    bind &quot;&lt;Alt&gt;T&quot; {
+        &quot;location-popup&quot; (&quot;/home/jay/urls&quot;)
     }
-    bind "&lt;Alt&gt;M" {
-        "location-popup" ("/var/lib/repo/jnrowe-misc")
+    bind &quot;&lt;Alt&gt;M&quot; {
+        &quot;location-popup&quot; (&quot;/var/lib/repo/jnrowe-misc&quot;)
     }
 }
-class "GtkFileChooserDefault" binding "some-shortcuts"</pre>
+class &quot;GtkFileChooserDefault&quot; binding &quot;some-shortcuts&quot;
+</pre></div>
 </div>
 <p><a class="reference external" href="http://gist.github.com/199268">Fork this code</a></p>
 <p>Ignoring the <tt class="docutils literal"><span class="pre">vim</span></tt> <a class="reference external" href="http://vimdoc.sourceforge.net/htmldoc/options.html#modeline">modeline</a> from the screenshot the first few settings are
@@ -184,16 +185,11 @@ for this you can use the <tt class="docutils literal"><span class="pre">include<
 <li class="toctree-l1"><a class="reference internal" href="../../projects.html">Projects</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="../index.html">Articles</a><ul class="current">
 <li class="toctree-l2 current"><a class="reference internal" href="index.html">Tips</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../dopplr_effects.html">Dopplr defects</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../important_balance.html">Murdering morality with ferocious fire</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../nice_stories.html">Tell me a nice story, please</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../rcs.html">Introduction to RCS</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../reset_in_ten.html">Hitting life&#8217;s reset button</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../side_projects.html">Side-projects</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../tdd_distros.html">TDD distro development</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../the_returned.html">Return to rambling</a></li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="../../thoughts/index.html">Thoughts</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../colophon.html">Colophon</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../contact.html">Contact details</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../consult.html">Consulting services</a></li>
@@ -233,7 +229,7 @@ for this you can use the <tt class="docutils literal"><span class="pre">include<
           
     <div class="footer">
         &copy; <a href="../../copyright.html">Copyright</a> 2009-2014, James Rowe.
-      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.2.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.2.1.
     </div>
         </div>
         <div class="clearer"></div>
