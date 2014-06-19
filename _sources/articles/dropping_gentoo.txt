@@ -1,8 +1,8 @@
-Dropping Gentoo
-===============
-
 :tags: gentoo, work, linux
 :date: 2014-06-18
+
+Dropping Gentoo
+===============
 
 We've been using Gentoo_ for shipped products since June 2005, and as
 a development platform since September 2004.  A long time, an incredibly long
