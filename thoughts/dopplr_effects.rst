@@ -5,6 +5,8 @@
 Dopplr defects
 ==============
 
+.. epigraph::
+
     Dopplr was a free social networking service, launched in 2007, that allowed
     users to create itineraries of their travel plans and spot correlations with
     their contacts' travel plans in order to arrange meetings at any point on
