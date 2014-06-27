@@ -3,6 +3,8 @@
 Murdering morality with ferocious fire
 ======================================
 
+.. epigraph::
+
     "Morality is herd instinct in the individual."
 
     -- Friedrich Nietzsche
