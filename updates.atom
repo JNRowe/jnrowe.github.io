@@ -1,5 +1,210 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>JNRowe</title><link href="http://jnrowe.github.com/" rel="alternate"></link><link href="http://jnrowe.github.com/updates.atom" rel="self"></link><id>http://jnrowe.github.com/</id><updated>2014-06-18T00:00:00Z</updated><author><name>James Rowe</name><email>jnrowe@gmail.com</email><uri>http://jnrowe.github.com/</uri></author><rights>2009-2014, James Rowe</rights><entry><title>Dropping Gentoo</title><link href="http://jnrowe.github.com/articles/dropping_gentoo.html" rel="alternate"></link><updated>2014-06-18T00:00:00Z</updated><id>http://jnrowe.github.com/articles/dropping_gentoo.html</id><summary type="html">&lt;div class=section id=dropping-gentoo&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>JNRowe</title><link rel="alternate" href="http://jnrowe.github.com/"></link><link rel="self" href="http://jnrowe.github.com/updates.atom"></link><id>http://jnrowe.github.com/</id><updated>2014-06-27T00:00:00Z</updated><author><name>James Rowe</name><email>jnrowe@gmail.com</email><uri>http://jnrowe.github.com/</uri></author><rights>2009-2014, James Rowe</rights><entry><title>Dropping Gentoo reflex</title><link rel="alternate" href="http://jnrowe.github.com/articles/dropping_gentoo_reflex.html"></link><updated>2014-06-27T00:00:00Z</updated><id>http://jnrowe.github.com/articles/dropping_gentoo_reflex.html</id><summary type="html">&lt;div class=section id=dropping-gentoo-reflex&gt;
+&lt;h1&gt;Dropping Gentoo reflex&lt;a class=headerlink href=http://jnrowe.github.com/articles/dropping_gentoo_reflex.html#dropping-gentoo-reflex title="Permalink to this headline"&gt;¶&lt;/a&gt;&lt;/h1&gt;
+&lt;p&gt;After hitting the publish button on &lt;a class="reference internal" href=http://jnrowe.github.com/articles/dropping_gentoo.html&gt;&lt;em&gt;Dropping Gentoo&lt;/em&gt;&lt;/a&gt; a few friends
+commented that I was either unnecessarily harsh about Gentoo or we wasted an
+enormous amount of time on it.  It definitely was the former, and I feel
+a touch ashamed for implying the latter.&lt;/p&gt;
+&lt;p&gt;I was writing my thoughts in the “project obituary” form that I’m used to, and
+that is entirely about spotting the downsides to make sure they don’t reoccur.
+And with that in mind I &lt;em&gt;was&lt;/em&gt; being incredibly unfair to Gentoo, both the
+project and by extension the people working on it.&lt;/p&gt;
+&lt;p&gt;There were many, many good points about Gentoo and I’ll nod towards a few now.&lt;/p&gt;
+&lt;div class=section id=speed&gt;
+&lt;h2&gt;Speed&lt;a class=headerlink href=http://jnrowe.github.com/articles/dropping_gentoo_reflex.html#speed title="Permalink to this headline"&gt;¶&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;No, no.  Not the “Oh my god, my KDEs are soooo fast” that many people fairly
+associate with Gentoo users.  I’m talking about the basic package handling
+tasks.&lt;/p&gt;
+&lt;p&gt;There are very few other distributions that can match Gentoo when it comes to
+the speed of editing a package.  Or, for that matter, the speed of installation
+if you share binary packages.&lt;/p&gt;
+&lt;p&gt;Almost the first thing you notice when switching to Debian or Fedora as a heavy
+binary package user on Gentoo is just how slow package installation and removal
+is.  Binary package installation on Gentoo feels on par with a distribution
+like Slackware, and what passes for package management there is just choosing
+the right argument to &lt;strong class=command&gt;tar&lt;/strong&gt;‘s &lt;em class="xref std std-option"&gt;-C&lt;/em&gt; option.&lt;/p&gt;
+&lt;p&gt;Where Gentoo really excels though is in the speed of creating new packages or
+editing existing packages.&lt;/p&gt;
+&lt;p&gt;Lets take a look at an example.  Say, for example, that you just found out that
+&lt;tt class="docutils literal"&gt;&lt;span class=pre&gt;flask-dashed&lt;/span&gt;&lt;/tt&gt;‘s  &lt;tt class="docutils literal"&gt;&lt;span class=pre&gt;ebuild&lt;/span&gt;&lt;/tt&gt; mistakenly installs a &lt;tt class="file docutils literal"&gt;&lt;span class=pre&gt;/usr/README&lt;/span&gt;&lt;/tt&gt; file.
+With Gentoo we can fix the problem with the following patch and a call to
+&lt;tt class="docutils literal"&gt;&lt;span class=pre&gt;repoman&lt;/span&gt; &lt;span class=pre&gt;manifest&lt;/span&gt;&lt;/tt&gt;, the rest takes care of itself.&lt;/p&gt;
+&lt;div class=highlight-diff&gt;&lt;div class=highlight&gt;&lt;pre&gt;&lt;span class=gh&gt;diff --git i/flask-dashed-0.1b_p2.ebuild w/flask-dashed-0.1b_p2.ebuild&lt;/span&gt;
+&lt;span class=gh&gt;index dd64877a387e..cf3e3cbf272b 100644&lt;/span&gt;
+&lt;span class=gd&gt;--- i/flask-dashed-0.1b_p2.ebuild&lt;/span&gt;
+&lt;span class=gi&gt;+++ w/flask-dashed-0.1b_p2.ebuild&lt;/span&gt;
+&lt;span class=gu&gt;@@ -29,5 +29,6 @@ S="${WORKDIR}/${MY_P}"&lt;/span&gt;
+
+ src_prepare() {
+        distutils-r1_src_prepare
+&lt;span class=gi&gt;+       sed -i /data_files/d setup.py || die "sed failed"&lt;/span&gt;
+        rm -rf "${S}/tests"
+}
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="admonition note"&gt;
+&lt;p class="first admonition-title"&gt;Note&lt;/p&gt;
+&lt;p class=last&gt;Of course, if you cared you’d fix the package properly and send the fix
+upstream(along with a fix for the duplicate files and other brokeness you
+found).&lt;/p&gt;
+&lt;/div&gt;
+&lt;p&gt;I have to mention a downside here however, it appears that very few people test
+&lt;tt class="docutils literal"&gt;&lt;span class=pre&gt;portage&lt;/span&gt;&lt;/tt&gt;‘s binary package support.  You will eventually burn some time
+working around problems.  And because the path isn’t all that well trodden
+you’ll have to devise your own dubious methods for resolving the problems, such
+as when an &lt;tt class="docutils literal"&gt;&lt;span class=pre&gt;eclass&lt;/span&gt;&lt;/tt&gt; change needs to ripple or a library breaks compatibility
+with the correct bump.&lt;/p&gt;
+&lt;p&gt;Luckily, such a problem can be quickly worked around with a loop in your shell
+of choice.  The following are a couple of annotated examples I’ve just plucked
+from deep inside my &lt;tt class="docutils literal"&gt;&lt;span class=pre&gt;zsh&lt;/span&gt;&lt;/tt&gt; history:&lt;/p&gt;
+&lt;div class="code sh highlight-python"&gt;&lt;div class=highlight&gt;&lt;pre&gt;# When you were stuck with packages that used python-distutils-ng, and you
+# needed to scrub packages because you changed Python version
+for i in /var/cache/packages/*-*/*.tbz2; do
+    qtbz2 -xO $i | qxpak -xO /dev/stdin ${${i##*/}/.tbz2}.ebuild | grep -q 'SUPPORT_PYTHON_ABIS' &amp;amp;&amp;amp; echo $i
+done
+
+# When you were stuck with packages that used python's "-r1" eclasses and
+# all you can see is a flood of blockages in your update output
+for i in /var/cache/packages/*-*/*.tbz2; do
+    qtbz2 -xO $i | qxpak -xO /dev/stdin RDEPEND 2&amp;gt;/dev/null | grep -q "dev-python/python-exec" &amp;amp;&amp;amp; echo $i
+done
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=section id=documentation&gt;
+&lt;h2&gt;Documentation&lt;a class=headerlink href=http://jnrowe.github.com/articles/dropping_gentoo_reflex.html#documentation title="Permalink to this headline"&gt;¶&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;The excellent &lt;a class="reference external" href=http://devmanual.gentoo.org/&gt;devmanual&lt;/a&gt; and the incredible &lt;a class="reference external" href=http://wiki.gentoo.org/wiki/Project:PMS&gt;Package Manager Specification&lt;/a&gt;
+made life so much easier.  The devmanual was both short enough to be used as
+quick reference and complete enough that you could learn most of what you’d need
+to know from it.  The unfortunately named PMS acted as the reference that
+finally allowed us to switch from away from &lt;tt class="docutils literal"&gt;&lt;span class=pre&gt;portage&lt;/span&gt;&lt;/tt&gt; completely at the
+office.&lt;/p&gt;
+&lt;p&gt;The PMS documented much of the nastiness that &lt;tt class="docutils literal"&gt;&lt;span class=pre&gt;portage&lt;/span&gt;&lt;/tt&gt; suffers from, and made
+life in general a whole lot nicer as a Gentoo user.  And, let us be honest it
+also stopped a little of the fluidity that plagued &lt;tt class="docutils literal"&gt;&lt;span class=pre&gt;portage&lt;/span&gt;&lt;/tt&gt; too.&lt;/p&gt;
+&lt;p&gt;Some people argue that it acts as unnecessary stop motion but those people must
+be forgetting what happened when behaviour changed randomly between &lt;tt class="docutils literal"&gt;&lt;span class=pre&gt;portage&lt;/span&gt;&lt;/tt&gt;
+versions.  PMS, and the EAPI process, also brought some much needed design and
+stability to newer &lt;tt class="docutils literal"&gt;&lt;span class=pre&gt;ebuild&lt;/span&gt;&lt;/tt&gt; features.&lt;/p&gt;
+&lt;p&gt;All Gentoo users owe Ciaran McCreesh a few beers for all the hard work he put in
+to those documents, especially in the early days.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=section id=wrapping-up&gt;
+&lt;h2&gt;Wrapping up&lt;a class=headerlink href=http://jnrowe.github.com/articles/dropping_gentoo_reflex.html#wrapping-up title="Permalink to this headline"&gt;¶&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;The simple truth is that you really can not always see the forest for trees.&lt;/p&gt;
+&lt;p&gt;Had recent events not clouded my vision I would have commented on the train
+wreck that is/was &lt;tt class="docutils literal"&gt;&lt;span class=pre&gt;webapp.eclass&lt;/span&gt;&lt;/tt&gt; and &lt;tt class="docutils literal"&gt;&lt;span class=pre&gt;app-admin/webapp-config&lt;/span&gt;&lt;/tt&gt; in
+&lt;a class="reference internal" href=http://jnrowe.github.com/articles/dropping_gentoo.html&gt;&lt;em&gt;Dropping Gentoo&lt;/em&gt;&lt;/a&gt;. It sucked tonnes and tonnes of time away until we
+eventually just trashed any package that interacted with it and moved on.&lt;/p&gt;
+&lt;p&gt;That was so long ago that I had forgotten about it until a friend asked me why
+I hadn’t mentioned it.  I suspect most of the other negative comments I made
+will feel equally inconsequential when compared to the benefits Gentoo gave us
+when a few more of the scars have finally healed.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</summary></entry><entry><title>Dropping Gentoo redux</title><link rel="alternate" href="http://jnrowe.github.com/articles/dropping_gentoo_redux.html"></link><updated>2014-06-27T00:00:00Z</updated><id>http://jnrowe.github.com/articles/dropping_gentoo_redux.html</id><summary type="html">&lt;div class=section id=dropping-gentoo-redux&gt;
+&lt;h1&gt;Dropping Gentoo redux&lt;a class=headerlink href=http://jnrowe.github.com/articles/dropping_gentoo_redux.html#dropping-gentoo-redux title="Permalink to this headline"&gt;¶&lt;/a&gt;&lt;/h1&gt;
+&lt;p&gt;After hitting the “publish” button on &lt;a class="reference internal" href=http://jnrowe.github.com/articles/dropping_gentoo.html&gt;&lt;em&gt;Dropping Gentoo&lt;/em&gt;&lt;/a&gt; a few friends
+commented that I was either unnecessarily harsh about Gentoo, or wasted an
+enormous amount of time on it.  It definitely was the former, and I feel a
+touch ashamed for implying the latter.&lt;/p&gt;
+&lt;p&gt;I was writing my thoughts in the project obituary form that I’m used to, and
+that is entirely about spotting the downsides to make sure they don’t happen
+again.  And with that in mind I &lt;em&gt;was&lt;/em&gt; being incredibly unfair to Gentoo, both
+the project and by extension the people working on it.&lt;/p&gt;
+&lt;p&gt;There were many, many good points about Gentoo and I’d like to look at a few
+now.&lt;/p&gt;
+&lt;div class=section id=speed&gt;
+&lt;h2&gt;Speed&lt;a class=headerlink href=http://jnrowe.github.com/articles/dropping_gentoo_redux.html#speed title="Permalink to this headline"&gt;¶&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;No, no.  Not the “Oh my god, my KDEs are soooo fast” that many people &lt;em&gt;rightly&lt;/em&gt;
+associate with Gentoo users.  I’m talking about basic package handling tasks.&lt;/p&gt;
+&lt;p&gt;There are very few other distributions that can match Gentoo when it comes to
+the speed of editing a package.  Or the speed of installation if you cache built
+packages for that matter.&lt;/p&gt;
+&lt;p&gt;Almost the first thing you notice when switching to Debian or Fedora from Gentoo
+as a heavy binary package user is just how slow package installation and removal
+is.  Installation feels on par with a distribution like Slackware, and there
+what passes for package management is just choosing the right argument to
+&lt;tt class="docutils literal"&gt;&lt;span class=pre&gt;tar&lt;/span&gt;&lt;/tt&gt;‘s &lt;cite&gt;-C&lt;/cite&gt; option.&lt;/p&gt;
+&lt;p&gt;Where Gentoo really excels though is in the speed of creating or editing
+existing packages.&lt;/p&gt;
+&lt;p&gt;Lets take a look at an example.  Say, for example, that you just found out that
+&lt;tt class="docutils literal"&gt;&lt;span class=pre&gt;flask-dashed&lt;/span&gt;&lt;/tt&gt;‘s  &lt;tt class="docutils literal"&gt;&lt;span class=pre&gt;ebuild&lt;/span&gt;&lt;/tt&gt; installs a &lt;tt class="file docutils literal"&gt;&lt;span class=pre&gt;/usr/README&lt;/span&gt;&lt;/tt&gt; file.  With Gentoo
+we can fix the problem with the following patch and a call to &lt;tt class="docutils literal"&gt;&lt;span class=pre&gt;repoman&lt;/span&gt;
+&lt;span class=pre&gt;manifest&lt;/span&gt;&lt;/tt&gt;, the rest takes care of itself.&lt;/p&gt;
+&lt;div class=highlight-diff&gt;&lt;div class=highlight&gt;&lt;pre&gt;&lt;span class=gh&gt;diff --git i/flask-dashed-0.1b_p2.ebuild w/flask-dashed-0.1b_p2.ebuild&lt;/span&gt;
+&lt;span class=gh&gt;index dd64877a387e..cf3e3cbf272b 100644&lt;/span&gt;
+&lt;span class=gd&gt;--- i/flask-dashed-0.1b_p2.ebuild&lt;/span&gt;
+&lt;span class=gi&gt;+++ w/flask-dashed-0.1b_p2.ebuild&lt;/span&gt;
+&lt;span class=gu&gt;@@ -29,5 +29,6 @@ S="${WORKDIR}/${MY_P}"&lt;/span&gt;
+
+ src_prepare() {
+        distutils-r1_src_prepare
+&lt;span class=gi&gt;+       sed -i /data_files/d setup.py || die "sed failed"&lt;/span&gt;
+        rm -rf "${S}/tests"
+}
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="admonition note"&gt;
+&lt;p class="first admonition-title"&gt;Note&lt;/p&gt;
+&lt;p class=last&gt;Of course, if you cared you’d fix the package properly and send the fix
+upstream(along with a fix for the duplicate files and other brokeness you
+found).&lt;/p&gt;
+&lt;/div&gt;
+&lt;p&gt;I will mention a downside here however, it appears that very few people test
+&lt;tt class="docutils literal"&gt;&lt;span class=pre&gt;portage&lt;/span&gt;&lt;/tt&gt;‘s binary package support.  You will eventually waste some time
+working around problems.  And because the path isn’t all that well trodden
+you’ll have to devise your own dubious methods for removing stale packages when
+an &lt;tt class="docutils literal"&gt;&lt;span class=pre&gt;eclass&lt;/span&gt;&lt;/tt&gt; change causes problems or a library breaks compatibility.&lt;/p&gt;
+&lt;p&gt;Oftentimes such a thing can be quickly achieved with a loop in your shell of
+choice.  The following are a couple of annotated examples I’ve just plucked from
+deep inside my &lt;tt class="docutils literal"&gt;&lt;span class=pre&gt;zsh&lt;/span&gt;&lt;/tt&gt; history:&lt;/p&gt;
+&lt;div class="code sh highlight-python"&gt;&lt;div class=highlight&gt;&lt;pre&gt;# When you were stuck with packages that used python-distutils-ng, and you
+# needed to scrub packages because you changed Python version
+for i in /var/cache/packages/*-*/*.tbz2; do
+    qtbz2 -xO $i | qxpak -xO /dev/stdin ${${i##*/}/.tbz2}.ebuild | grep -q 'SUPPORT_PYTHON_ABIS' &amp;amp;&amp;amp; echo $i
+done
+
+# When you were stuck with packages that used python's "-r1" eclasses and
+# all you can see is a flood of blockages in your update output
+for i in /var/cache/packages/*-*/*.tbz2; do
+    qtbz2 -xO $i | qxpak -xO /dev/stdin RDEPEND 2&amp;gt;/dev/null | grep -q "dev-python/python-exec" &amp;amp;&amp;amp; echo $i
+done
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=section id=documentation&gt;
+&lt;h2&gt;Documentation&lt;a class=headerlink href=http://jnrowe.github.com/articles/dropping_gentoo_redux.html#documentation title="Permalink to this headline"&gt;¶&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;The excellent &lt;a class="reference external" href=http://devmanual.gentoo.org/&gt;devmanual&lt;/a&gt; and the incredible &lt;a class="reference external" href=http://wiki.gentoo.org/wiki/Project:PMS&gt;Package Manager Specification&lt;/a&gt;
+made life so much easier.  The devmanual was both short enough to be used as
+quick reference and complete enough that you could learn most of what you’d need
+to know from it.  The unfortunately named PMS acted as the reference that
+finally allowed us to switch from away from &lt;tt class="docutils literal"&gt;&lt;span class=pre&gt;portage&lt;/span&gt;&lt;/tt&gt; completely at the
+office.&lt;/p&gt;
+&lt;p&gt;The PMS documented much of the nastiness that &lt;tt class="docutils literal"&gt;&lt;span class=pre&gt;portage&lt;/span&gt;&lt;/tt&gt; suffers from, and made
+life in general a whole lot nicer as a Gentoo user.  And, let us be honest it
+also stopped a little of the fluidity that plagued &lt;tt class="docutils literal"&gt;&lt;span class=pre&gt;portage&lt;/span&gt;&lt;/tt&gt; too.&lt;/p&gt;
+&lt;p&gt;Some people argue that it acts as unnecessary stop motion but those people must
+be forgetting what happened when behaviour changed randomly between &lt;tt class="docutils literal"&gt;&lt;span class=pre&gt;portage&lt;/span&gt;&lt;/tt&gt;
+versions.  PMS, and the EAPI process, also brought some much needed design and
+stability to newer &lt;tt class="docutils literal"&gt;&lt;span class=pre&gt;ebuild&lt;/span&gt;&lt;/tt&gt; features.&lt;/p&gt;
+&lt;p&gt;All Gentoo users owe Ciaran McCreesh a few beers for all the hard work he put in
+to those documents, especially in the early days.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=section id=wrapping-up&gt;
+&lt;h2&gt;Wrapping up&lt;a class=headerlink href=http://jnrowe.github.com/articles/dropping_gentoo_redux.html#wrapping-up title="Permalink to this headline"&gt;¶&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;The simple truth is that you really can not always see the forest for trees.&lt;/p&gt;
+&lt;p&gt;Had recent events not clouded my vision I would have commented on the train
+wreck that is/was &lt;tt class="docutils literal"&gt;&lt;span class=pre&gt;webapp.eclass&lt;/span&gt;&lt;/tt&gt; and &lt;tt class="docutils literal"&gt;&lt;span class=pre&gt;app-admin/webapp-config&lt;/span&gt;&lt;/tt&gt; in
+&lt;a class="reference internal" href=http://jnrowe.github.com/articles/dropping_gentoo.html&gt;&lt;em&gt;Dropping Gentoo&lt;/em&gt;&lt;/a&gt;. It sucked tonnes and tonnes of time away until we
+eventually just trashed any package that interacted with it and moved on.&lt;/p&gt;
+&lt;p&gt;That was so long ago that I had forgotten about it until a friend asked me why
+I hadn’t mentioned it.  I suspect most of the other negative comments I made
+will feel equally inconsequential when compared to the benefits Gentoo gave us
+when a few more of the scars have finally healed.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</summary></entry><entry><title>Dropping Gentoo</title><link rel="alternate" href="http://jnrowe.github.com/articles/dropping_gentoo.html"></link><updated>2014-06-18T00:00:00Z</updated><id>http://jnrowe.github.com/articles/dropping_gentoo.html</id><summary type="html">&lt;div class=section id=dropping-gentoo&gt;
 &lt;h1&gt;Dropping Gentoo&lt;a class=headerlink href=http://jnrowe.github.com/articles/dropping_gentoo.html#dropping-gentoo title="Permalink to this headline"&gt;¶&lt;/a&gt;&lt;/h1&gt;
 &lt;p&gt;We’ve been using &lt;a class="reference external" href=http://gentoo.org&gt;Gentoo&lt;/a&gt; for shipped products since June 2005, and as
 a development platform since September 2004.  A long time, an incredibly long
@@ -7,6 +212,11 @@ time in fact.&lt;/p&gt;
 &lt;p&gt;Today our final Gentoo using product shipped, with a single scheduled update
 promised in Q3-2015.  It is kind of sad day, but we all knew that day was coming
 and it takes only a little inside knowledge to know why.&lt;/p&gt;
+&lt;div class="admonition note"&gt;
+&lt;p class="first admonition-title"&gt;Note&lt;/p&gt;
+&lt;p class=last&gt;A couple of people have rightly pointed out that I was a little harsh in
+this document, so I’ve pushed a &lt;a class="reference internal" href=http://jnrowe.github.com/articles/dropping_gentoo_reflex.html&gt;&lt;em&gt;followup&lt;/em&gt;&lt;/a&gt;.&lt;/p&gt;
+&lt;/div&gt;
 &lt;div class=section id=landscapes-have-changed&gt;
 &lt;h2&gt;Landscapes have changed&lt;a class=headerlink href=http://jnrowe.github.com/articles/dropping_gentoo.html#landscapes-have-changed title="Permalink to this headline"&gt;¶&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;Back when we started using Gentoo it was clearly the best choice for what we
@@ -182,11 +392,11 @@ track for the next ten years.&lt;/p&gt;
 &lt;p&gt;So long Gentoo, and thanks for all fish!&lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-</summary></entry><entry><title>Delayed flashover</title><link href="http://jnrowe.github.com/thoughts/delayed_flashover.html" rel="alternate"></link><updated>2014-04-09T00:00:00Z</updated><id>http://jnrowe.github.com/thoughts/delayed_flashover.html</id><summary type="html">&lt;div class=section id=delayed-flashover&gt;
+</summary></entry><entry><title>Delayed flashover</title><link rel="alternate" href="http://jnrowe.github.com/thoughts/delayed_flashover.html"></link><updated>2014-04-09T00:00:00Z</updated><id>http://jnrowe.github.com/thoughts/delayed_flashover.html</id><summary type="html">&lt;div class=section id=delayed-flashover&gt;
 &lt;h1&gt;Delayed flashover&lt;a class=headerlink href=http://jnrowe.github.com/thoughts/delayed_flashover.html#delayed-flashover title="Permalink to this headline"&gt;¶&lt;/a&gt;&lt;/h1&gt;
 &lt;p&gt;This weekend a very good friend of mine is taking part in the London Marathon,
 and we’re all looking forward to the no-doubt incredible time she’ll finish in.&lt;/p&gt;
-&lt;blockquote&gt;
+&lt;blockquote class=epigraph&gt;
 &lt;div&gt;“Fun run” is the excuse losers give &lt;em&gt;before&lt;/em&gt; a race&lt;/div&gt;&lt;/blockquote&gt;
 &lt;p&gt;Normally, I wouldn’t bother writing anything about such an event but this is
 different.  It is different because she is practically a hero to me.&lt;/p&gt;
@@ -223,7 +433,7 @@ sponsorship options in check, she’ll destroy the target time.  Go Rach!&lt;/p&
 &lt;/tbody&gt;
 &lt;/table&gt;
 &lt;/div&gt;
-</summary></entry><entry><title>Hitting life&amp;#8217;s reset button</title><link href="http://jnrowe.github.com/thoughts/reset_in_ten.html" rel="alternate"></link><updated>2014-02-24T00:00:00Z</updated><id>http://jnrowe.github.com/thoughts/reset_in_ten.html</id><summary type="html">&lt;div class=section id=hitting-life-s-reset-button&gt;
+</summary></entry><entry><title>Hitting life&amp;#8217;s reset button</title><link rel="alternate" href="http://jnrowe.github.com/thoughts/reset_in_ten.html"></link><updated>2014-02-24T00:00:00Z</updated><id>http://jnrowe.github.com/thoughts/reset_in_ten.html</id><summary type="html">&lt;div class=section id=hitting-life-s-reset-button&gt;
 &lt;h1&gt;Hitting life’s reset button&lt;a class=headerlink href=http://jnrowe.github.com/thoughts/reset_in_ten.html#hitting-life-s-reset-button title="Permalink to this headline"&gt;¶&lt;/a&gt;&lt;/h1&gt;
 &lt;p&gt;Seven months ago while enjoying a little Saturday afternoon cricket picnic,
 a friend posed the question:&lt;/p&gt;
@@ -264,7 +474,7 @@ It is too late, and there is another lesson for me to learn.&lt;/p&gt;
 nothing useful about it.  Internet, this is the foolish truth I proffer you
 today.  The others well, they’ll hopefully remain hidden away from view.&lt;/p&gt;
 &lt;/div&gt;
-</summary></entry><entry><title>Hitting life&amp;#8217;s reset button</title><link href="http://jnrowe.github.com/articles/reset_in_ten.html" rel="alternate"></link><updated>2014-02-24T00:00:00Z</updated><id>http://jnrowe.github.com/articles/reset_in_ten.html</id><summary type="html">&lt;div class=section id=hitting-life-s-reset-button&gt;
+</summary></entry><entry><title>Hitting life&amp;#8217;s reset button</title><link rel="alternate" href="http://jnrowe.github.com/articles/reset_in_ten.html"></link><updated>2014-02-24T00:00:00Z</updated><id>http://jnrowe.github.com/articles/reset_in_ten.html</id><summary type="html">&lt;div class=section id=hitting-life-s-reset-button&gt;
 &lt;h1&gt;Hitting life’s reset button&lt;a class=headerlink href=http://jnrowe.github.com/articles/reset_in_ten.html#hitting-life-s-reset-button title="Permalink to this headline"&gt;¶&lt;/a&gt;&lt;/h1&gt;
 &lt;p&gt;Seven months ago while enjoying a little Saturday afternoon cricket picnic,
 a friend posed the question:&lt;/p&gt;
@@ -305,7 +515,7 @@ It is too late, and there is another lesson for me to learn.&lt;/p&gt;
 nothing useful about it.  Internet, this is the foolish truth I proffer you
 today.  The others well, they’ll hopefully remain hidden away from view.&lt;/p&gt;
 &lt;/div&gt;
-</summary></entry><entry><title>Return to rambling</title><link href="http://jnrowe.github.com/thoughts/the_returned.html" rel="alternate"></link><updated>2014-01-27T00:00:00Z</updated><id>http://jnrowe.github.com/thoughts/the_returned.html</id><summary type="html">&lt;div class=section id=return-to-rambling&gt;
+</summary></entry><entry><title>Return to rambling</title><link rel="alternate" href="http://jnrowe.github.com/thoughts/the_returned.html"></link><updated>2014-01-27T00:00:00Z</updated><id>http://jnrowe.github.com/thoughts/the_returned.html</id><summary type="html">&lt;div class=section id=return-to-rambling&gt;
 &lt;h1&gt;Return to rambling&lt;a class=headerlink href=http://jnrowe.github.com/thoughts/the_returned.html#return-to-rambling title="Permalink to this headline"&gt;¶&lt;/a&gt;&lt;/h1&gt;
 &lt;p&gt;I kept a public journal from about 2003 until 2009, with a new entry about every
 three days.  I enjoyed the act of writing it greatly, and often looked forward
@@ -336,7 +546,7 @@ me for the opinions I express or information I spread.  And that invitation is
 absolutely extended to this site and the new content I post.&lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-</summary></entry><entry><title>Return to rambling</title><link href="http://jnrowe.github.com/articles/the_returned.html" rel="alternate"></link><updated>2014-01-27T00:00:00Z</updated><id>http://jnrowe.github.com/articles/the_returned.html</id><summary type="html">&lt;div class=section id=return-to-rambling&gt;
+</summary></entry><entry><title>Return to rambling</title><link rel="alternate" href="http://jnrowe.github.com/articles/the_returned.html"></link><updated>2014-01-27T00:00:00Z</updated><id>http://jnrowe.github.com/articles/the_returned.html</id><summary type="html">&lt;div class=section id=return-to-rambling&gt;
 &lt;h1&gt;Return to rambling&lt;a class=headerlink href=http://jnrowe.github.com/articles/the_returned.html#return-to-rambling title="Permalink to this headline"&gt;¶&lt;/a&gt;&lt;/h1&gt;
 &lt;p&gt;I kept a public journal from about 2003 until 2009, with a new entry about every
 three days.  I enjoyed the act of writing it greatly, and often looked forward
@@ -367,9 +577,9 @@ me for the opinions I express or information I spread.  And that invitation is
 absolutely extended to this site and the new content I post.&lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-</summary></entry><entry><title>Murdering morality with ferocious fire</title><link href="http://jnrowe.github.com/thoughts/important_balance.html" rel="alternate"></link><updated>2014-01-25T00:00:00Z</updated><id>http://jnrowe.github.com/thoughts/important_balance.html</id><summary type="html">&lt;div class=section id=murdering-morality-with-ferocious-fire&gt;
+</summary></entry><entry><title>Murdering morality with ferocious fire</title><link rel="alternate" href="http://jnrowe.github.com/thoughts/important_balance.html"></link><updated>2014-01-25T00:00:00Z</updated><id>http://jnrowe.github.com/thoughts/important_balance.html</id><summary type="html">&lt;div class=section id=murdering-morality-with-ferocious-fire&gt;
 &lt;h1&gt;Murdering morality with ferocious fire&lt;a class=headerlink href=http://jnrowe.github.com/thoughts/important_balance.html#murdering-morality-with-ferocious-fire title="Permalink to this headline"&gt;¶&lt;/a&gt;&lt;/h1&gt;
-&lt;blockquote&gt;
+&lt;blockquote class=epigraph&gt;
 &lt;div&gt;&lt;p&gt;“Morality is herd instinct in the individual.”&lt;/p&gt;
 &lt;p class=attribution&gt;—Friedrich Nietzsche&lt;/p&gt;
 &lt;/div&gt;&lt;/blockquote&gt;
@@ -416,7 +626,7 @@ line up with your definition of “strong moral values” ;)&lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
 &lt;/div&gt;
-</summary></entry><entry><title>Murdering morality with ferocious fire</title><link href="http://jnrowe.github.com/articles/important_balance.html" rel="alternate"></link><updated>2014-01-25T00:00:00Z</updated><id>http://jnrowe.github.com/articles/important_balance.html</id><summary type="html">&lt;div class=section id=murdering-morality-with-ferocious-fire&gt;
+</summary></entry><entry><title>Murdering morality with ferocious fire</title><link rel="alternate" href="http://jnrowe.github.com/articles/important_balance.html"></link><updated>2014-01-25T00:00:00Z</updated><id>http://jnrowe.github.com/articles/important_balance.html</id><summary type="html">&lt;div class=section id=murdering-morality-with-ferocious-fire&gt;
 &lt;h1&gt;Murdering morality with ferocious fire&lt;a class=headerlink href=http://jnrowe.github.com/articles/important_balance.html#murdering-morality-with-ferocious-fire title="Permalink to this headline"&gt;¶&lt;/a&gt;&lt;/h1&gt;
 &lt;blockquote&gt;
 &lt;div&gt;&lt;p&gt;“Morality is herd instinct in the individual.”&lt;/p&gt;
@@ -465,9 +675,9 @@ line up with your definition of “strong moral values” ;)&lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
 &lt;/div&gt;
-</summary></entry><entry><title>Dopplr defects</title><link href="http://jnrowe.github.com/thoughts/dopplr_effects.html" rel="alternate"></link><updated>2014-01-06T00:00:00Z</updated><id>http://jnrowe.github.com/thoughts/dopplr_effects.html</id><summary type="html">&lt;div class=section id=dopplr-defects&gt;
+</summary></entry><entry><title>Dopplr defects</title><link rel="alternate" href="http://jnrowe.github.com/thoughts/dopplr_effects.html"></link><updated>2014-01-06T00:00:00Z</updated><id>http://jnrowe.github.com/thoughts/dopplr_effects.html</id><summary type="html">&lt;div class=section id=dopplr-defects&gt;
 &lt;h1&gt;Dopplr defects&lt;a class=headerlink href=http://jnrowe.github.com/thoughts/dopplr_effects.html#dopplr-defects title="Permalink to this headline"&gt;¶&lt;/a&gt;&lt;/h1&gt;
-&lt;blockquote&gt;
+&lt;blockquote class=epigraph&gt;
 &lt;div&gt;&lt;p&gt;Dopplr was a free social networking service, launched in 2007, that allowed
 users to create itineraries of their travel plans and spot correlations with
 their contacts’ travel plans in order to arrange meetings at any point on
@@ -507,7 +717,7 @@ actually use, but sadly I can’t even picture how it should work.&lt;/p&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
 &lt;span class=target id=backstory&gt;&lt;/span&gt;&lt;/div&gt;
-</summary></entry><entry><title>Dopplr defects</title><link href="http://jnrowe.github.com/articles/dopplr_effects.html" rel="alternate"></link><updated>2014-01-06T00:00:00Z</updated><id>http://jnrowe.github.com/articles/dopplr_effects.html</id><summary type="html">&lt;div class=section id=dopplr-defects&gt;
+</summary></entry><entry><title>Dopplr defects</title><link rel="alternate" href="http://jnrowe.github.com/articles/dopplr_effects.html"></link><updated>2014-01-06T00:00:00Z</updated><id>http://jnrowe.github.com/articles/dopplr_effects.html</id><summary type="html">&lt;div class=section id=dopplr-defects&gt;
 &lt;h1&gt;Dopplr defects&lt;a class=headerlink href=http://jnrowe.github.com/articles/dopplr_effects.html#dopplr-defects title="Permalink to this headline"&gt;¶&lt;/a&gt;&lt;/h1&gt;
 &lt;blockquote&gt;
 &lt;div&gt;&lt;p&gt;Dopplr was a free social networking service, launched in 2007, that allowed
@@ -549,7 +759,7 @@ actually use, but sadly I can’t even picture how it should work.&lt;/p&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
 &lt;span class=target id=backstory&gt;&lt;/span&gt;&lt;/div&gt;
-</summary></entry><entry><title>Tell me a nice story, please</title><link href="http://jnrowe.github.com/thoughts/nice_stories.html" rel="alternate"></link><updated>2013-12-23T00:00:00Z</updated><id>http://jnrowe.github.com/thoughts/nice_stories.html</id><summary type="html">&lt;div class=section id=tell-me-a-nice-story-please&gt;
+</summary></entry><entry><title>Tell me a nice story, please</title><link rel="alternate" href="http://jnrowe.github.com/thoughts/nice_stories.html"></link><updated>2013-12-23T00:00:00Z</updated><id>http://jnrowe.github.com/thoughts/nice_stories.html</id><summary type="html">&lt;div class=section id=tell-me-a-nice-story-please&gt;
 &lt;h1&gt;Tell me a nice story, please&lt;a class=headerlink href=http://jnrowe.github.com/thoughts/nice_stories.html#tell-me-a-nice-story-please title="Permalink to this headline"&gt;¶&lt;/a&gt;&lt;/h1&gt;
 &lt;p&gt;I’m fed up of hearing bad stories, I really am.  Often it feels like every
 person I know simply revels in the misfortune or missteps of others, and it is
@@ -646,7 +856,7 @@ know about it.  If that isn’t the case, just keep it to yourself.&lt;/p&gt;
 &lt;/table&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-</summary></entry><entry><title>Tell me a nice story, please</title><link href="http://jnrowe.github.com/articles/nice_stories.html" rel="alternate"></link><updated>2013-12-23T00:00:00Z</updated><id>http://jnrowe.github.com/articles/nice_stories.html</id><summary type="html">&lt;div class=section id=tell-me-a-nice-story-please&gt;
+</summary></entry><entry><title>Tell me a nice story, please</title><link rel="alternate" href="http://jnrowe.github.com/articles/nice_stories.html"></link><updated>2013-12-23T00:00:00Z</updated><id>http://jnrowe.github.com/articles/nice_stories.html</id><summary type="html">&lt;div class=section id=tell-me-a-nice-story-please&gt;
 &lt;h1&gt;Tell me a nice story, please&lt;a class=headerlink href=http://jnrowe.github.com/articles/nice_stories.html#tell-me-a-nice-story-please title="Permalink to this headline"&gt;¶&lt;/a&gt;&lt;/h1&gt;
 &lt;p&gt;I’m fed up of hearing bad stories, I really am.  Often it feels like every
 person I know simply revels in the misfortune or missteps of others, and it is
@@ -743,7 +953,7 @@ know about it.&lt;/p&gt;
 &lt;/table&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-</summary></entry><entry><title>Side-projects</title><link href="http://jnrowe.github.com/thoughts/side_projects.html" rel="alternate"></link><updated>2013-12-16T00:00:00Z</updated><id>http://jnrowe.github.com/thoughts/side_projects.html</id><summary type="html">&lt;div class=section id=side-projects&gt;
+</summary></entry><entry><title>Side-projects</title><link rel="alternate" href="http://jnrowe.github.com/thoughts/side_projects.html"></link><updated>2013-12-16T00:00:00Z</updated><id>http://jnrowe.github.com/thoughts/side_projects.html</id><summary type="html">&lt;div class=section id=side-projects&gt;
 &lt;h1&gt;Side-projects&lt;a class=headerlink href=http://jnrowe.github.com/thoughts/side_projects.html#side-projects title="Permalink to this headline"&gt;¶&lt;/a&gt;&lt;/h1&gt;
 &lt;p&gt;Chatting with my brother yesterday he expressed some disbelief when I mentioned
 &lt;em&gt;yet another&lt;/em&gt; friend who has a website related to some topic we were discussing:&lt;/p&gt;
@@ -849,7 +1059,7 @@ is just a jumbled content dump with no real purpose.&lt;/tr&gt;
 &lt;/table&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-</summary></entry><entry><title>Side-projects</title><link href="http://jnrowe.github.com/articles/side_projects.html" rel="alternate"></link><updated>2013-12-16T00:00:00Z</updated><id>http://jnrowe.github.com/articles/side_projects.html</id><summary type="html">&lt;div class=section id=side-projects&gt;
+</summary></entry><entry><title>Side-projects</title><link rel="alternate" href="http://jnrowe.github.com/articles/side_projects.html"></link><updated>2013-12-16T00:00:00Z</updated><id>http://jnrowe.github.com/articles/side_projects.html</id><summary type="html">&lt;div class=section id=side-projects&gt;
 &lt;h1&gt;Side-projects&lt;a class=headerlink href=http://jnrowe.github.com/articles/side_projects.html#side-projects title="Permalink to this headline"&gt;¶&lt;/a&gt;&lt;/h1&gt;
 &lt;p&gt;Chatting with my brother yesterday he expressed some disbelief when I mentioned
 &lt;em&gt;yet another&lt;/em&gt; friend who has a website related to some topic we were discussing:&lt;/p&gt;
@@ -955,7 +1165,7 @@ is just a jumbled content dump with no real purpose.&lt;/tr&gt;
 &lt;/table&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-</summary></entry><entry><title>TDD distro development</title><link href="http://jnrowe.github.com/articles/tdd_distros.html" rel="alternate"></link><updated>2011-06-13T00:00:00Z</updated><id>http://jnrowe.github.com/articles/tdd_distros.html</id><summary type="html">&lt;div class=section id=tdd-distro-development&gt;
+</summary></entry><entry><title>TDD distro development</title><link rel="alternate" href="http://jnrowe.github.com/articles/tdd_distros.html"></link><updated>2011-06-13T00:00:00Z</updated><id>http://jnrowe.github.com/articles/tdd_distros.html</id><summary type="html">&lt;div class=section id=tdd-distro-development&gt;
 &lt;h1&gt;TDD distro development&lt;a class=headerlink href=http://jnrowe.github.com/articles/tdd_distros.html#tdd-distro-development title="Permalink to this headline"&gt;¶&lt;/a&gt;&lt;/h1&gt;
 &lt;p&gt;Using &lt;abbr title="Test Driven Development"&gt;TDD&lt;/abbr&gt; for distribution development is a
 hot topic in some of the more geeky circles I move in, and I’m very happy about
@@ -1108,7 +1318,7 @@ a &lt;tt class="docutils literal"&gt;&lt;span class=pre&gt;reST&lt;/span&gt;&lt;
 &lt;/table&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-</summary></entry><entry><title>Introduction to RCS</title><link href="http://jnrowe.github.com/articles/rcs.html" rel="alternate"></link><updated>2003-09-05T00:00:00Z</updated><id>http://jnrowe.github.com/articles/rcs.html</id><summary type="html">&lt;div class="admonition warning"&gt;
+</summary></entry><entry><title>Introduction to RCS</title><link rel="alternate" href="http://jnrowe.github.com/articles/rcs.html"></link><updated>2003-09-05T00:00:00Z</updated><id>http://jnrowe.github.com/articles/rcs.html</id><summary type="html">&lt;div class="admonition warning"&gt;
 &lt;p class="first admonition-title"&gt;Warning&lt;/p&gt;
 &lt;p class=last&gt;I’ve resurrected this text from my old UKFSN site because a couple of people
 asked me to, but I wouldn’t recommend using RCS to anyone at this point.  It

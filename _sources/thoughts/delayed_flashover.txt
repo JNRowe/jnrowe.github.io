@@ -6,6 +6,8 @@ Delayed flashover
 This weekend a very good friend of mine is taking part in the London Marathon,
 and we're all looking forward to the no-doubt incredible time she'll finish in.
 
+.. epigraph::
+
     "Fun run" is the excuse losers give *before* a race
 
 Normally, I wouldn't bother writing anything about such an event but this is

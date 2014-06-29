@@ -1,0 +1,249 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Dropping Gentoo reflex &mdash; JNRowe</title>
+    
+    <link rel="stylesheet" href="../_static/agogo.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     '0.1.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <link rel="shortcut icon" href="../_static/icon.ico"/>
+    <link rel="copyright" title="Copyright" href="../copyright.html" />
+    <link rel="top" title="JNRowe" href="../index.html" />
+    <link rel="up" title="Articles" href="index.html" />
+    <link rel="next" title="Introduction to RCS" href="rcs.html" />
+    <link rel="prev" title="Dropping Gentoo" href="dropping_gentoo.html" />
+    <link rel="alternate" type="application/atom+xml" title="Updated items" href="/updates.atom" />
+  </head>
+  <body>
+    <div class="header-wrapper">
+      <div class="header">
+          <p class="logo"><a href="../index.html">
+            <img class="logo" src="../_static/logo.png" alt="Logo"/>
+          </a></p>
+        <div class="headertitle"><a
+          href="../index.html">JNRowe</a></div>
+        <div class="rel">
+          <a href="dropping_gentoo.html" title="Dropping Gentoo"
+             accesskey="P">previous</a> |
+          <a href="rcs.html" title="Introduction to RCS"
+             accesskey="N">next</a> |
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a>
+        </div>
+       </div>
+    </div>
+
+    <div class="content-wrapper">
+      <div class="content">
+        <div class="document">
+    <div class="admonition note">
+        <p class="first admonition-title">
+            Estimated reading time: 4 minutes
+        </p>
+    </div>
+    
+    
+            
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="dropping-gentoo-reflex">
+<h1>Dropping Gentoo reflex<a class="headerlink" href="#dropping-gentoo-reflex" title="Permalink to this headline">¶</a></h1>
+<p>After hitting the publish button on <a class="reference internal" href="dropping_gentoo.html"><em>Dropping Gentoo</em></a> a few friends
+commented that I was either unnecessarily harsh about Gentoo or we wasted an
+enormous amount of time on it.  It definitely was the former, and I feel
+a touch ashamed for implying the latter.</p>
+<p>I was writing my thoughts in the &#8220;project obituary&#8221; form that I&#8217;m used to, and
+that is entirely about spotting the downsides to make sure they don&#8217;t reoccur.
+And with that in mind I <em>was</em> being incredibly unfair to Gentoo, both the
+project and by extension the people working on it.</p>
+<p>There were many, many good points about Gentoo and I&#8217;ll nod towards a few now.</p>
+<div class="section" id="speed">
+<h2>Speed<a class="headerlink" href="#speed" title="Permalink to this headline">¶</a></h2>
+<p>No, no.  Not the &#8220;Oh my god, my KDEs are soooo fast&#8221; that many people fairly
+associate with Gentoo users.  I&#8217;m talking about the basic package handling
+tasks.</p>
+<p>There are very few other distributions that can match Gentoo when it comes to
+the speed of editing a package.  Or, for that matter, the speed of installation
+if you share binary packages.</p>
+<p>Almost the first thing you notice when switching to Debian or Fedora as a heavy
+binary package user on Gentoo is just how slow package installation and removal
+is.  Binary package installation on Gentoo feels on par with a distribution
+like Slackware, and what passes for package management there is just choosing
+the right argument to <strong class="command">tar</strong>&#8216;s <em class="xref std std-option">-C</em> option.</p>
+<p>Where Gentoo really excels though is in the speed of creating new packages or
+editing existing packages.</p>
+<p>Lets take a look at an example.  Say, for example, that you just found out that
+<tt class="docutils literal"><span class="pre">flask-dashed</span></tt>&#8216;s  <tt class="docutils literal"><span class="pre">ebuild</span></tt> mistakenly installs a <tt class="file docutils literal"><span class="pre">/usr/README</span></tt> file.
+We we can fix the problem with the following simple change and a call to
+<tt class="docutils literal"><span class="pre">repoman</span> <span class="pre">manifest</span></tt>, the rest takes care of itself.</p>
+<div class="highlight-diff"><div class="highlight"><pre><span class="gh">diff --git i/flask-dashed-0.1b_p2.ebuild w/flask-dashed-0.1b_p2.ebuild</span>
+<span class="gh">index dd64877a387e..cf3e3cbf272b 100644</span>
+<span class="gd">--- i/flask-dashed-0.1b_p2.ebuild</span>
+<span class="gi">+++ w/flask-dashed-0.1b_p2.ebuild</span>
+<span class="gu">@@ -29,5 +29,6 @@ S=&quot;${WORKDIR}/${MY_P}&quot;</span>
+
+ src_prepare() {
+        distutils-r1_src_prepare
+<span class="gi">+       sed -i /data_files/d setup.py || die &quot;sed failed&quot;</span>
+        rm -rf &quot;${S}/tests&quot;
+}
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Of course, you should fix the package properly and send the fix upstream but
+this is just to prove a point.</p>
+</div>
+<p>I have to mention a small downside here however, because very few people seem to
+test <tt class="docutils literal"><span class="pre">portage</span></tt>&#8216;s binary package support you&#8217;ll occasionally have to do some
+leg work to fix problems.  This normally arises when an <tt class="docutils literal"><span class="pre">eclass</span></tt> changes needs
+to ripple through, or when a library breaks compatibility and it&#8217;s ebuild hasn&#8217;t
+been bumped properly.</p>
+<p>Almost every time that happens you can fix it with a quick loop in your shell
+though.  A couple of such problems and solutions that I found in my shell
+history can be seen below.</p>
+<div class="highlight-sh"><div class="highlight"><pre><span class="c"># When you were stuck with packages that used python-distutils-ng, and you</span>
+<span class="c"># needed to scrub packages because you changed Python version</span>
+<span class="k">for </span>s in <span class="k">$(</span>portageq pkgdir<span class="k">)</span>/*-*/*.tbz2; <span class="k">do</span>
+<span class="k">    </span>qtbz2 -xO <span class="nv">$s</span> | qxpak -xO /dev/stdin <span class="k">${${</span><span class="nv">s</span><span class="p">##*/</span><span class="k">}</span><span class="p">/.tbz2</span><span class="k">}</span>.ebuild | grep -q <span class="s1">&#39;SUPPORT_PYTHON_ABIS&#39;</span> <span class="o">&amp;&amp;</span> <span class="nb">echo</span> <span class="nv">$s</span>
+<span class="k">done</span>
+
+<span class="c"># When you were using packages that used python&#39;s &quot;-r1&quot; eclasses and all</span>
+<span class="c"># you could see is a flood of blockages in your update output</span>
+<span class="k">for </span>s in <span class="k">$(</span>portageq pkgdir<span class="k">)</span>/*-*/*.tbz2; <span class="k">do</span>
+<span class="k">    </span>qtbz2 -xO <span class="nv">$s</span> | qxpak -xO /dev/stdin RDEPEND 2&gt;/dev/null | grep -q <span class="s2">&quot;dev-python/python-exec&quot;</span> <span class="o">&amp;&amp;</span> <span class="nb">echo</span> <span class="nv">$s</span>
+<span class="k">done</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="documentation">
+<h2>Documentation<a class="headerlink" href="#documentation" title="Permalink to this headline">¶</a></h2>
+<p>The excellent <a class="reference external" href="http://devmanual.gentoo.org/">devmanual</a> and the incredible <a class="reference external" href="http://wiki.gentoo.org/wiki/Project:PMS">Package Manager Specification</a>
+made life so much easier.  The devmanual was both short enough to be used as
+quick reference and complete enough that you could learn most of what you&#8217;d need
+to know from it.  The unfortunately named PMS acted as the reference that
+finally allowed us to switch from away from <tt class="docutils literal"><span class="pre">portage</span></tt> completely at the
+office.</p>
+<p>The PMS documented much of the nastiness that <tt class="docutils literal"><span class="pre">portage</span></tt> suffers from, and made
+life in general a whole lot nicer when you were chasing bugs deep down the
+rabbit hole.  And, let us be honest here it also stopped a little of the
+fluidity that plagued <tt class="docutils literal"><span class="pre">portage</span></tt> too.</p>
+<p>Some people argue that it acts as unnecessary stop motion but those people must
+be forgetting what happened when behaviour changed randomly between <tt class="docutils literal"><span class="pre">portage</span></tt>
+versions.  PMS, and the EAPI process, also brought some much needed design and
+stability to newer features.</p>
+<p>All Gentoo users owe Ciaran McCreesh a few beers for all the hard work he put in
+to those documents, especially in the early days.</p>
+</div>
+<div class="section" id="the-personal-touch">
+<h2>The personal touch<a class="headerlink" href="#the-personal-touch" title="Permalink to this headline">¶</a></h2>
+<p>On a personal note I&#8217;ve met some awesome people over the years as a result of
+using Gentoo.  Many of them at the old Gentoo UK conferences, which were always
+fun.  More recently at LoFu&#8217;s annual summit which seems to have taken Gentoo
+UK&#8217;s place with practically everyone you saw at Gentoo UK(minus the students),
+and oddly about the same Gentoo to non-Gentoo ratio of talks too.</p>
+<p>Two people on my current team were recruited following the Gentoo UK conference
+at UCL, and we met a spectacular contract hire at the one prior to that.</p>
+<p>I&#8217;ve been lucky enough to have a few doors held open for me as a result of
+similar meet ups, and I&#8217;d probably be writing this from a less happy place
+without them.</p>
+</div>
+<div class="section" id="wrapping-up">
+<h2>Wrapping up<a class="headerlink" href="#wrapping-up" title="Permalink to this headline">¶</a></h2>
+<p>It is true that you really can not always see the forest for trees.</p>
+<p>Had recent events not clouded my vision I would have commented on the train
+wreck that is <tt class="docutils literal"><span class="pre">webapp.eclass</span></tt> and <tt class="docutils literal"><span class="pre">app-admin/webapp-config</span></tt> in
+<a class="reference internal" href="dropping_gentoo.html"><em>Dropping Gentoo</em></a>.  It sucked tonnes and tonnes of time away until we
+eventually just trashed any package that interacted with it and moved on.</p>
+<p>That was so long ago that I had forgotten about it until a co-worker asked me
+why I hadn&#8217;t mentioned it.  I suspect most of the other negative comments I made
+will feel equally inconsequential when compared to the benefits Gentoo gave us
+as time moves on.</p>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+        </div>
+        <div class="sidebar">
+          <h3>Table Of Contents</h3>
+          <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../projects.html">Projects</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Articles</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="tips/index.html">Tips</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dropping_gentoo.html">Dropping Gentoo</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="">Dropping Gentoo reflex</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rcs.html">Introduction to RCS</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tdd_distros.html">TDD distro development</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../thoughts/index.html">Thoughts</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../colophon.html">Colophon</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../contact.html">Contact details</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../consult.html">Consulting services</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../copyright.html">Copyright information</a></li>
+</ul>
+
+          <h3 style="margin-top: 1.5em;">Search</h3>
+          <form class="search" action="../search.html" method="get">
+            <input type="text" name="q" />
+            <input type="submit" value="Go" />
+            <input type="hidden" name="check_keywords" value="yes" />
+            <input type="hidden" name="area" value="default" />
+          </form>
+          <p class="searchtip" style="font-size: 90%">
+            Enter search terms or a module, class or function name.
+          </p>
+        </div>
+        <div class="clearer"></div>
+      </div>
+    </div>
+
+    <div class="footer-wrapper">
+      <div class="footer">
+        <div class="left">
+          <a href="dropping_gentoo.html" title="Dropping Gentoo"
+             >previous</a> |
+          <a href="rcs.html" title="Introduction to RCS"
+             >next</a> |
+          <a href="../genindex.html" title="General Index"
+             >index</a>
+            <br/>
+            <a href="../_sources/articles/dropping_gentoo_reflex.txt"
+               rel="nofollow">Show Source</a>
+        </div>
+
+        <div class="right">
+          
+    <div class="footer">
+        &copy; <a href="../copyright.html">Copyright</a> 2009-2014, James Rowe.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.2.2.
+    </div>
+        </div>
+        <div class="clearer"></div>
+      </div>
+    </div>
+
+  </body>
+</html>
