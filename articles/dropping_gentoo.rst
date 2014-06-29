@@ -14,6 +14,11 @@ and it takes only a little inside knowledge to know why.
 
 .. _Gentoo: http://gentoo.org
 
+.. note::
+
+   A couple of people have rightly pointed out that I was a little harsh in
+   this document, so I've pushed a :doc:`followup <dropping_gentoo_reflex>`.
+
 Landscapes have changed
 -----------------------
 
