@@ -8,5 +8,14 @@ mind.
    :maxdepth: 1
    :glob:
 
-   tips/index
    *
+
+Further categories
+------------------
+
+.. toctree::
+   :maxdepth: 1
+   :glob:
+
+   tips/index
+   probits/index
