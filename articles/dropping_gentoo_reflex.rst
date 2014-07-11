@@ -73,13 +73,13 @@ history can be seen below.
     # When you were stuck with packages that used python-distutils-ng, and you
     # needed to scrub packages because you changed Python version
     for s in $(portageq pkgdir)/*-*/*.tbz2; do
-        qtbz2 -xO $s | qxpak -xO /dev/stdin ${${s##*/}/.tbz2}.ebuild | grep -q 'SUPPORT_PYTHON_ABIS' && echo $s
+        qtbz2 -xO $s | qxpak -xO - ${${s##*/}/.tbz2}.ebuild | grep -q 'SUPPORT_PYTHON_ABIS' && echo $s
     done
 
     # When you were using packages that used python's "-r1" eclasses and all
     # you could see is a flood of blockages in your update output
     for s in $(portageq pkgdir)/*-*/*.tbz2; do
-        qtbz2 -xO $s | qxpak -xO /dev/stdin RDEPEND 2>/dev/null | grep -q "dev-python/python-exec" && echo $s
+        qtbz2 -xO $s | qxpak -xO - RDEPEND 2>/dev/null | grep -q "dev-python/python-exec" && echo $s
     done
 
 Documentation
