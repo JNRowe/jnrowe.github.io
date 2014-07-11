@@ -73,13 +73,13 @@ history can be seen below.
     # When you were stuck with packages that used python-distutils-ng, and you
     # needed to scrub packages because you changed Python version
     for s in $(portageq pkgdir)/*-*/*.tbz2; do
-        qtbz2 -xO $s | qxpak -xO /dev/stdin ${${s##*/}/.tbz2}.ebuild | grep -q 'SUPPORT_PYTHON_ABIS' && echo $s
+        qtbz2 -xO $s | qxpak -xO - ${${s##*/}/.tbz2}.ebuild | grep -q 'SUPPORT_PYTHON_ABIS' && echo $s
     done
 
     # When you were using packages that used python's "-r1" eclasses and all
     # you could see is a flood of blockages in your update output
     for s in $(portageq pkgdir)/*-*/*.tbz2; do
-        qtbz2 -xO $s | qxpak -xO /dev/stdin RDEPEND 2>/dev/null | grep -q "dev-python/python-exec" && echo $s
+        qtbz2 -xO $s | qxpak -xO - RDEPEND 2>/dev/null | grep -q "dev-python/python-exec" && echo $s
     done
 
 Documentation
@@ -117,12 +117,13 @@ fun.  More recently at LoFu's annual summit which seems to have taken Gentoo
 UK's place with practically everyone you saw at Gentoo UK(minus the students),
 and oddly about the same Gentoo to non-Gentoo ratio of talks too.
 
-Two people on my current team were recruited following the Gentoo UK conference
-at UCL, and we met a spectacular contract hire at the one prior to that.
+Two excellent people on our current team were recruited following the Gentoo UK
+conference at UCL, and we met a spectacular contract hire at the one prior to
+that as well.
 
-I've been lucky enough to have a few doors held open for me as a result of
-similar meet ups, and I'd probably be writing this from a less happy place
-without them.
+I've even been lucky enough to have a few doors held open for me via people I've
+met at Gentoo-themed or Gentoo-heavy events, and I suspect I'd be writing this
+from a less happy place without them.
 
 Wrapping up
 -----------
@@ -138,4 +139,7 @@ That was so long ago that I had forgotten about it until a co-worker asked me
 why I hadn't mentioned it.  I suspect most of the other negative comments I made
 will feel equally inconsequential when compared to the benefits Gentoo gave us
 as time moves on.
+
+Instead of making this rant even longer, I'll take the time to reflect on the
+fun memories.
 

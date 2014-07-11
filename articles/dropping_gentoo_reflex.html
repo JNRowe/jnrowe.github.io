@@ -124,13 +124,13 @@ history can be seen below.</p>
 <div class="highlight-sh"><div class="highlight"><pre><span class="c"># When you were stuck with packages that used python-distutils-ng, and you</span>
 <span class="c"># needed to scrub packages because you changed Python version</span>
 <span class="k">for </span>s in <span class="k">$(</span>portageq pkgdir<span class="k">)</span>/*-*/*.tbz2; <span class="k">do</span>
-<span class="k">    </span>qtbz2 -xO <span class="nv">$s</span> | qxpak -xO /dev/stdin <span class="k">${${</span><span class="nv">s</span><span class="p">##*/</span><span class="k">}</span><span class="p">/.tbz2</span><span class="k">}</span>.ebuild | grep -q <span class="s1">&#39;SUPPORT_PYTHON_ABIS&#39;</span> <span class="o">&amp;&amp;</span> <span class="nb">echo</span> <span class="nv">$s</span>
+<span class="k">    </span>qtbz2 -xO <span class="nv">$s</span> | qxpak -xO - <span class="k">${${</span><span class="nv">s</span><span class="p">##*/</span><span class="k">}</span><span class="p">/.tbz2</span><span class="k">}</span>.ebuild | grep -q <span class="s1">&#39;SUPPORT_PYTHON_ABIS&#39;</span> <span class="o">&amp;&amp;</span> <span class="nb">echo</span> <span class="nv">$s</span>
 <span class="k">done</span>
 
 <span class="c"># When you were using packages that used python&#39;s &quot;-r1&quot; eclasses and all</span>
 <span class="c"># you could see is a flood of blockages in your update output</span>
 <span class="k">for </span>s in <span class="k">$(</span>portageq pkgdir<span class="k">)</span>/*-*/*.tbz2; <span class="k">do</span>
-<span class="k">    </span>qtbz2 -xO <span class="nv">$s</span> | qxpak -xO /dev/stdin RDEPEND 2&gt;/dev/null | grep -q <span class="s2">&quot;dev-python/python-exec&quot;</span> <span class="o">&amp;&amp;</span> <span class="nb">echo</span> <span class="nv">$s</span>
+<span class="k">    </span>qtbz2 -xO <span class="nv">$s</span> | qxpak -xO - RDEPEND 2&gt;/dev/null | grep -q <span class="s2">&quot;dev-python/python-exec&quot;</span> <span class="o">&amp;&amp;</span> <span class="nb">echo</span> <span class="nv">$s</span>
 <span class="k">done</span>
 </pre></div>
 </div>
@@ -161,11 +161,12 @@ using Gentoo.  Many of them at the old Gentoo UK conferences, which were always
 fun.  More recently at LoFu&#8217;s annual summit which seems to have taken Gentoo
 UK&#8217;s place with practically everyone you saw at Gentoo UK(minus the students),
 and oddly about the same Gentoo to non-Gentoo ratio of talks too.</p>
-<p>Two people on my current team were recruited following the Gentoo UK conference
-at UCL, and we met a spectacular contract hire at the one prior to that.</p>
-<p>I&#8217;ve been lucky enough to have a few doors held open for me as a result of
-similar meet ups, and I&#8217;d probably be writing this from a less happy place
-without them.</p>
+<p>Two excellent people on our current team were recruited following the Gentoo UK
+conference at UCL, and we met a spectacular contract hire at the one prior to
+that as well.</p>
+<p>I&#8217;ve even been lucky enough to have a few doors held open for me via people I&#8217;ve
+met at Gentoo-themed or Gentoo-heavy events, and I suspect I&#8217;d be writing this
+from a less happy place without them.</p>
 </div>
 <div class="section" id="wrapping-up">
 <h2>Wrapping up<a class="headerlink" href="#wrapping-up" title="Permalink to this headline">¶</a></h2>
@@ -178,6 +179,8 @@ eventually just trashed any package that interacted with it and moved on.</p>
 why I hadn&#8217;t mentioned it.  I suspect most of the other negative comments I made
 will feel equally inconsequential when compared to the benefits Gentoo gave us
 as time moves on.</p>
+<p>Instead of making this rant even longer, I&#8217;ll take the time to reflect on the
+fun memories.</p>
 </div>
 </div>
 
@@ -191,11 +194,11 @@ as time moves on.</p>
           <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../projects.html">Projects</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="index.html">Articles</a><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="tips/index.html">Tips</a></li>
 <li class="toctree-l2"><a class="reference internal" href="dropping_gentoo.html">Dropping Gentoo</a></li>
 <li class="toctree-l2 current"><a class="current reference internal" href="">Dropping Gentoo reflex</a></li>
 <li class="toctree-l2"><a class="reference internal" href="rcs.html">Introduction to RCS</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tdd_distros.html">TDD distro development</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#further-categories">Further categories</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../thoughts/index.html">Thoughts</a></li>

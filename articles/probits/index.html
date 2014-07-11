@@ -6,7 +6,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>Theming mutt &mdash; JNRowe</title>
+    <title>Project postmortems &mdash; JNRowe</title>
     
     <link rel="stylesheet" href="../../_static/agogo.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
@@ -26,9 +26,9 @@
     <link rel="shortcut icon" href="../../_static/icon.ico"/>
     <link rel="copyright" title="Copyright" href="../../copyright.html" />
     <link rel="top" title="JNRowe" href="../../index.html" />
-    <link rel="up" title="Tips" href="index.html" />
-    <link rel="next" title="Three mobile broadband in Linux" href="Three_mobile_broadband_in_linux.html" />
-    <link rel="prev" title="Simple notifications in awesome" href="Simple_notifications_in_awesome.html" />
+    <link rel="up" title="Articles" href="../index.html" />
+    <link rel="next" title="jnrowe-misc - The unsorted package overlay" href="jnrowe-misc.html" />
+    <link rel="prev" title="Zsh and the VCS" href="../tips/Zsh_and_the_vcs.html" />
     <link rel="alternate" type="application/atom+xml" title="Updated items" href="/updates.atom" />
   </head>
   <body>
@@ -40,9 +40,9 @@
         <div class="headertitle"><a
           href="../../index.html">JNRowe</a></div>
         <div class="rel">
-          <a href="Simple_notifications_in_awesome.html" title="Simple notifications in awesome"
+          <a href="../tips/Zsh_and_the_vcs.html" title="Zsh and the VCS"
              accesskey="P">previous</a> |
-          <a href="Three_mobile_broadband_in_linux.html" title="Three mobile broadband in Linux"
+          <a href="jnrowe-misc.html" title="jnrowe-misc - The unsorted package overlay"
              accesskey="N">next</a> |
           <a href="../../genindex.html" title="General Index"
              accesskey="I">index</a>
@@ -53,43 +53,41 @@
     <div class="content-wrapper">
       <div class="content">
         <div class="document">
-    <div class="admonition note">
-        <p class="first admonition-title">
-            Estimated reading time: 1 minutes
-        </p>
-    </div>
-    
     
             
       <div class="documentwrapper">
         <div class="bodywrapper">
           <div class="body">
             
-  <div class="section" id="theming-mutt">
-<h1>Theming mutt<a class="headerlink" href="#theming-mutt" title="Permalink to this headline">¶</a></h1>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">date:</th><td class="field-body">2009-09-23</td>
-</tr>
-</tbody>
-</table>
-<p>Jeff, a work colleague, asks via IRC:</p>
-<blockquote>
-<div>Can I make <a class="reference external" href="http://www.mutt.org/">mutt</a> use a blue statusbar in X and red in console? A different
-colour would make it easier to read with a transparent urxvt.</div></blockquote>
-<p><a class="reference external" href="http://www.mutt.org/">mutt</a> has access to environment variables when reading its configurations files,
-so setting the theme based on term type is extremely easy.</p>
-<p>First separate all your common settings in to one file, say
-<tt class="docutils literal"><span class="pre">~/.mutt/colour_defaults.rc</span></tt>.  Then add your per-term settings to a file named
-<tt class="docutils literal"><span class="pre">~/.mutt/colour_$TERM.rc</span></tt>.  Telling mutt to use the correct theme is now as
-simple as adding the following to your <tt class="docutils literal"><span class="pre">~/.muttrc</span></tt>:</p>
-<div class="highlight-sh"><div class="highlight"><pre><span class="nb">source</span> ~/.mutt/colour_defaults.rc
-<span class="nb">source</span> ~/.mutt/colour_<span class="nv">$TERM</span>.rc
-</pre></div>
+  <div class="section" id="project-postmortems">
+<h1>Project postmortems<a class="headerlink" href="#project-postmortems" title="Permalink to this headline">¶</a></h1>
+<p>One of my favourite things about the day job is the post-project analysis and
+postmortems, which we lovingly refer to as <abbr title="Project Obituaries">probits</abbr>
+internally.</p>
+<div class="section" id="background">
+<h2>Background<a class="headerlink" href="#background" title="Permalink to this headline">¶</a></h2>
+<p>I work in heavily structured and standalone project-oriented environment.  In
+a decade I can count the number of fluid projects on three fingers.  As I write
+this in June 2014 my tier-one project started 21 months ago, and has a delivery
+date locked down to a week in 2015.  We&#8217;ll deliver on time or a touch early, our
+team is known for that.</p>
+<p>One of the benefits of working on such strict projects with definite ship dates
+and locked schedules is that you always know when a project is complete.  This
+also allows us to take advantage of that by inspecting the project as a whole,
+spotting the successes and failures within.  Probits are the more informal
+dialogue that we pin to the front of each folder.</p>
 </div>
-<p><a class="reference external" href="http://gist.github.com/198012">Fork this code</a></p>
+<div class="section" id="what-you-ll-find">
+<h2>What you&#8217;ll find<a class="headerlink" href="#what-you-ll-find" title="Permalink to this headline">¶</a></h2>
+<p>I&#8217;ve recently decided I&#8217;d like to take a similar approach to some side projects
+that I work on, and also try to apply the methods to some more real-life
+situations.  This category, and the accompanying index, below are that attempt.</p>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="jnrowe-misc.html">jnrowe-misc - The unsorted package overlay</a></li>
+</ul>
+</div>
+</div>
 </div>
 
 
@@ -134,14 +132,14 @@ simple as adding the following to your <tt class="docutils literal"><span class=
     <div class="footer-wrapper">
       <div class="footer">
         <div class="left">
-          <a href="Simple_notifications_in_awesome.html" title="Simple notifications in awesome"
+          <a href="../tips/Zsh_and_the_vcs.html" title="Zsh and the VCS"
              >previous</a> |
-          <a href="Three_mobile_broadband_in_linux.html" title="Three mobile broadband in Linux"
+          <a href="jnrowe-misc.html" title="jnrowe-misc - The unsorted package overlay"
              >next</a> |
           <a href="../../genindex.html" title="General Index"
              >index</a>
             <br/>
-            <a href="../../_sources/articles/tips/Theming_mutt.txt"
+            <a href="../../_sources/articles/probits/index.txt"
                rel="nofollow">Show Source</a>
         </div>
 

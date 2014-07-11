@@ -1,5 +1,112 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>JNRowe</title><link rel="alternate" href="http://jnrowe.github.com/"></link><link rel="self" href="http://jnrowe.github.com/updates.atom"></link><id>http://jnrowe.github.com/</id><updated>2014-06-27T00:00:00Z</updated><author><name>James Rowe</name><email>jnrowe@gmail.com</email><uri>http://jnrowe.github.com/</uri></author><rights>2009-2014, James Rowe</rights><entry><title>Dropping Gentoo reflex</title><link rel="alternate" href="http://jnrowe.github.com/articles/dropping_gentoo_reflex.html"></link><updated>2014-06-27T00:00:00Z</updated><id>http://jnrowe.github.com/articles/dropping_gentoo_reflex.html</id><summary type="html">&lt;div class=section id=dropping-gentoo-reflex&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>JNRowe</title><link href="http://jnrowe.github.com/" rel="alternate"></link><link href="http://jnrowe.github.com/updates.atom" rel="self"></link><id>http://jnrowe.github.com/</id><updated>2014-06-30T00:00:00Z</updated><author><name>James Rowe</name><email>jnrowe@gmail.com</email><uri>http://jnrowe.github.com/</uri></author><rights>2009-2014, James Rowe</rights><entry><title>jnrowe-misc - The unsorted package overlay</title><link href="http://jnrowe.github.com/articles/probits/jnrowe-misc.html" rel="alternate"></link><updated>2014-06-30T00:00:00Z</updated><id>http://jnrowe.github.com/articles/probits/jnrowe-misc.html</id><summary type="html">&lt;div class=section id=jnrowe-misc-the-unsorted-package-overlay&gt;
+&lt;h1&gt;jnrowe-misc - The unsorted package overlay&lt;a class=headerlink href=http://jnrowe.github.com/articles/probits/jnrowe-misc.html#jnrowe-misc-the-unsorted-package-overlay title="Permalink to this headline"&gt;¶&lt;/a&gt;&lt;/h1&gt;
+&lt;blockquote&gt;
+&lt;div&gt;A collection of &lt;tt class="docutils literal"&gt;&lt;span class=pre&gt;ebuild&lt;/span&gt;&lt;/tt&gt; files with no overall theme.&lt;/div&gt;&lt;/blockquote&gt;
+&lt;p&gt;TLDR; For what it was &lt;a class="reference external" href=https://github.com/JNRowe/jnrowe-misc&gt;jnrowe-misc&lt;/a&gt; served its purpose well.&lt;/p&gt;
+&lt;div class=section id=an-island-unto-itself&gt;
+&lt;h2&gt;An island unto itself&lt;a class=headerlink href=http://jnrowe.github.com/articles/probits/jnrowe-misc.html#an-island-unto-itself title="Permalink to this headline"&gt;¶&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;While it may come as a surprise to a few of the users(which would be most of
+them) the overlay available on GitHub wasn’t the deliverable at any point in
+time.  In fact, the often convoluted merge history in the repository probably
+hinted at that quite a bit.&lt;/p&gt;
+&lt;a class="reference internal image-reference" href=http://jnrowe.github.com/_images/jnrowe-misc.png&gt;&lt;img alt="Tree view of ``jnrowe-misc`` history" class=align-right src=http://jnrowe.github.com/_images/jnrowe-misc.png style="width: 50%;"&gt;&lt;/a&gt;
+&lt;p&gt;&lt;tt class="docutils literal"&gt;&lt;span class=pre&gt;jnrowe-misc&lt;/span&gt;&lt;/tt&gt; was always the combination of a few independently managed
+repositories that I bundled up to make available for public consumption.
+Eventually it ended up being mostly Python stuff, but that was because the
+support burden of other packages was becoming more time consuming than I could
+justify.&lt;/p&gt;
+&lt;p&gt;The &lt;em&gt;real&lt;/em&gt; audience for the overlay, my co-workers, saw a different beast
+entirely.  It used our keyword types and rules, it came bundled &lt;a class="reference internal" href=http://jnrowe.github.com/articles/tdd_distros.html&gt;&lt;em&gt;with the
+tests&lt;/em&gt;&lt;/a&gt; I was unable to share and had a tighter schedule for
+maintenance.&lt;/p&gt;
+&lt;p&gt;Still, I received a fair number of emails and live comments from users so I’ll
+call that a success!&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=section id=upstreamed&gt;
+&lt;h2&gt;Upstreamed&lt;a class=headerlink href=http://jnrowe.github.com/articles/probits/jnrowe-misc.html#upstreamed title="Permalink to this headline"&gt;¶&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;Sadly, very little was ever taken upstream(even less if you count the parts that
+were credited).  This was entirely my fault.  I originally started exporting the
+overlay because I was fed up the new package process upstream, and it seemed
+like the best way to deal with that for me.&lt;/p&gt;
+&lt;p&gt;I had hoped that some packages would be picked up, but didn’t actively push them
+after the first few.&lt;/p&gt;
+&lt;p&gt;The overlay should have never touched packages that were available upstream, but
+occasionally they overlapped when upstream added them.  The use of &lt;tt class="docutils literal"&gt;&lt;span class=pre&gt;::shadow&lt;/span&gt;&lt;/tt&gt;
+to workaround problems when new packages were added upstream worked &lt;em&gt;really&lt;/em&gt;
+well, and saved the few remaining hairs on my balding head.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=section id=legacy&gt;
+&lt;h2&gt;Legacy&lt;a class=headerlink href=http://jnrowe.github.com/articles/probits/jnrowe-misc.html#legacy title="Permalink to this headline"&gt;¶&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;It looks like the majority of packages will continue to be maintained for the
+foreseeable future, but regrettably it looks like the result will not be
+available beyond a “open to all people who know where to look” organisation on
+GitHub.&lt;/p&gt;
+&lt;p&gt;I’d like to change the new maintainer’s mind, but in all honesty I understand
+their reasons.  I’ve stopped maintaining a lot of once public projects over the
+past couple of years, and it is as refreshing as it is saddening.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</summary></entry><entry><title>Project postmortems</title><link href="http://jnrowe.github.com/articles/probits/index.html" rel="alternate"></link><updated>2014-06-30T00:00:00Z</updated><id>http://jnrowe.github.com/articles/probits/index.html</id><summary type="html">&lt;div class=section id=project-postmortems&gt;
+&lt;h1&gt;Project postmortems&lt;a class=headerlink href=http://jnrowe.github.com/articles/probits/index.html#project-postmortems title="Permalink to this headline"&gt;¶&lt;/a&gt;&lt;/h1&gt;
+&lt;p&gt;One of my favourite things about the day job is the post-project analysis and
+postmortems, which we lovingly refer to as &lt;abbr title="Project Obituaries"&gt;probits&lt;/abbr&gt;
+internally.&lt;/p&gt;
+&lt;div class=section id=background&gt;
+&lt;h2&gt;Background&lt;a class=headerlink href=http://jnrowe.github.com/articles/probits/index.html#background title="Permalink to this headline"&gt;¶&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;I work in heavily structured and standalone project-oriented environment.  In
+a decade I can count the number of fluid projects on three fingers.  As I write
+this in June 2014 my tier-one project started 21 months ago, and has a delivery
+date locked down to a week in 2015.  We’ll deliver on time or a touch early, our
+team is known for that.&lt;/p&gt;
+&lt;p&gt;One of the benefits of working on such strict projects with definite ship dates
+and locked schedules is that you always know when a project is complete.  This
+also allows us to take advantage of that by inspecting the project as a whole,
+spotting the successes and failures within.  Probits are the more informal
+dialogue that we pin to the front of each folder.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=section id=what-you-ll-find&gt;
+&lt;h2&gt;What you’ll find&lt;a class=headerlink href=http://jnrowe.github.com/articles/probits/index.html#what-you-ll-find title="Permalink to this headline"&gt;¶&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;I’ve recently decided I’d like to take a similar approach to some side projects
+that I work on, and also try to apply the methods to some more real-life
+situations.  This category, and the accompanying index, below are that attempt.&lt;/p&gt;
+&lt;div class="toctree-wrapper compound"&gt;
+&lt;ul&gt;
+&lt;li class=toctree-l1&gt;&lt;a class="reference internal" href=http://jnrowe.github.com/articles/probits/jnrowe-misc.html&gt;jnrowe-misc - The unsorted package overlay&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</summary></entry><entry><title>Project postmortems</title><link href="http://jnrowe.github.com/articles/obits/index.html" rel="alternate"></link><updated>2014-06-30T00:00:00Z</updated><id>http://jnrowe.github.com/articles/obits/index.html</id><summary type="html">&lt;div class=section id=project-postmortems&gt;
+&lt;h1&gt;Project postmortems&lt;a class=headerlink href=http://jnrowe.github.com/articles/obits/index.html#project-postmortems title="Permalink to this headline"&gt;¶&lt;/a&gt;&lt;/h1&gt;
+&lt;p&gt;One of my favourite things about the day job is the post-project analysis and
+postmortems, which we lovingly refer to as &lt;abbr title="Project Obituaries"&gt;probits&lt;/abbr&gt;
+internally.&lt;/p&gt;
+&lt;div class=section id=background&gt;
+&lt;h2&gt;Background&lt;a class=headerlink href=http://jnrowe.github.com/articles/obits/index.html#background title="Permalink to this headline"&gt;¶&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;I work in heavily structured and standalone project-oriented environment.  In
+a decade I can count the number of fluid projects on three fingers.  As I write
+this in June 2014 my tier-one project started 21 months ago, and has a delivery
+date locked down to a week in 2015.  We’ll deliver on time or a touch early, our
+team is known for that.&lt;/p&gt;
+&lt;p&gt;One of the benefits of working on such strict projects with definite ship dates
+and locked schedules is that you always know when a project is complete.  This
+also allows us to take advantage of that by inspecting the project as a whole,
+spotting the successes and failures within.  Probits are the more informal
+dialogue that we pin to the front of each folder.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=section id=what-you-ll-find&gt;
+&lt;h2&gt;What you’ll find&lt;a class=headerlink href=http://jnrowe.github.com/articles/obits/index.html#what-you-ll-find title="Permalink to this headline"&gt;¶&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;I’ve recently decided I’d like to take a similar approach to some side projects
+that I work on, and also try to apply the methods to some more real-life
+situations.  This category, and the accompanying index, below are that attempt.&lt;/p&gt;
+&lt;div class="toctree-wrapper compound"&gt;
+&lt;ul class=simple&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</summary></entry><entry><title>Dropping Gentoo reflex</title><link href="http://jnrowe.github.com/articles/dropping_gentoo_reflex.html" rel="alternate"></link><updated>2014-06-27T00:00:00Z</updated><id>http://jnrowe.github.com/articles/dropping_gentoo_reflex.html</id><summary type="html">&lt;div class=section id=dropping-gentoo-reflex&gt;
 &lt;h1&gt;Dropping Gentoo reflex&lt;a class=headerlink href=http://jnrowe.github.com/articles/dropping_gentoo_reflex.html#dropping-gentoo-reflex title="Permalink to this headline"&gt;¶&lt;/a&gt;&lt;/h1&gt;
 &lt;p&gt;After hitting the publish button on &lt;a class="reference internal" href=http://jnrowe.github.com/articles/dropping_gentoo.html&gt;&lt;em&gt;Dropping Gentoo&lt;/em&gt;&lt;/a&gt; a few friends
 commented that I was either unnecessarily harsh about Gentoo or we wasted an
@@ -102,7 +209,7 @@ will feel equally inconsequential when compared to the benefits Gentoo gave us
 when a few more of the scars have finally healed.&lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-</summary></entry><entry><title>Dropping Gentoo redux</title><link rel="alternate" href="http://jnrowe.github.com/articles/dropping_gentoo_redux.html"></link><updated>2014-06-27T00:00:00Z</updated><id>http://jnrowe.github.com/articles/dropping_gentoo_redux.html</id><summary type="html">&lt;div class=section id=dropping-gentoo-redux&gt;
+</summary></entry><entry><title>Dropping Gentoo redux</title><link href="http://jnrowe.github.com/articles/dropping_gentoo_redux.html" rel="alternate"></link><updated>2014-06-27T00:00:00Z</updated><id>http://jnrowe.github.com/articles/dropping_gentoo_redux.html</id><summary type="html">&lt;div class=section id=dropping-gentoo-redux&gt;
 &lt;h1&gt;Dropping Gentoo redux&lt;a class=headerlink href=http://jnrowe.github.com/articles/dropping_gentoo_redux.html#dropping-gentoo-redux title="Permalink to this headline"&gt;¶&lt;/a&gt;&lt;/h1&gt;
 &lt;p&gt;After hitting the “publish” button on &lt;a class="reference internal" href=http://jnrowe.github.com/articles/dropping_gentoo.html&gt;&lt;em&gt;Dropping Gentoo&lt;/em&gt;&lt;/a&gt; a few friends
 commented that I was either unnecessarily harsh about Gentoo, or wasted an
@@ -204,7 +311,7 @@ will feel equally inconsequential when compared to the benefits Gentoo gave us
 when a few more of the scars have finally healed.&lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-</summary></entry><entry><title>Dropping Gentoo</title><link rel="alternate" href="http://jnrowe.github.com/articles/dropping_gentoo.html"></link><updated>2014-06-18T00:00:00Z</updated><id>http://jnrowe.github.com/articles/dropping_gentoo.html</id><summary type="html">&lt;div class=section id=dropping-gentoo&gt;
+</summary></entry><entry><title>Dropping Gentoo</title><link href="http://jnrowe.github.com/articles/dropping_gentoo.html" rel="alternate"></link><updated>2014-06-18T00:00:00Z</updated><id>http://jnrowe.github.com/articles/dropping_gentoo.html</id><summary type="html">&lt;div class=section id=dropping-gentoo&gt;
 &lt;h1&gt;Dropping Gentoo&lt;a class=headerlink href=http://jnrowe.github.com/articles/dropping_gentoo.html#dropping-gentoo title="Permalink to this headline"&gt;¶&lt;/a&gt;&lt;/h1&gt;
 &lt;p&gt;We’ve been using &lt;a class="reference external" href=http://gentoo.org&gt;Gentoo&lt;/a&gt; for shipped products since June 2005, and as
 a development platform since September 2004.  A long time, an incredibly long
@@ -392,7 +499,7 @@ track for the next ten years.&lt;/p&gt;
 &lt;p&gt;So long Gentoo, and thanks for all fish!&lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-</summary></entry><entry><title>Delayed flashover</title><link rel="alternate" href="http://jnrowe.github.com/thoughts/delayed_flashover.html"></link><updated>2014-04-09T00:00:00Z</updated><id>http://jnrowe.github.com/thoughts/delayed_flashover.html</id><summary type="html">&lt;div class=section id=delayed-flashover&gt;
+</summary></entry><entry><title>Delayed flashover</title><link href="http://jnrowe.github.com/thoughts/delayed_flashover.html" rel="alternate"></link><updated>2014-04-09T00:00:00Z</updated><id>http://jnrowe.github.com/thoughts/delayed_flashover.html</id><summary type="html">&lt;div class=section id=delayed-flashover&gt;
 &lt;h1&gt;Delayed flashover&lt;a class=headerlink href=http://jnrowe.github.com/thoughts/delayed_flashover.html#delayed-flashover title="Permalink to this headline"&gt;¶&lt;/a&gt;&lt;/h1&gt;
 &lt;p&gt;This weekend a very good friend of mine is taking part in the London Marathon,
 and we’re all looking forward to the no-doubt incredible time she’ll finish in.&lt;/p&gt;
@@ -433,7 +540,7 @@ sponsorship options in check, she’ll destroy the target time.  Go Rach!&lt;/p&
 &lt;/tbody&gt;
 &lt;/table&gt;
 &lt;/div&gt;
-</summary></entry><entry><title>Hitting life&amp;#8217;s reset button</title><link rel="alternate" href="http://jnrowe.github.com/thoughts/reset_in_ten.html"></link><updated>2014-02-24T00:00:00Z</updated><id>http://jnrowe.github.com/thoughts/reset_in_ten.html</id><summary type="html">&lt;div class=section id=hitting-life-s-reset-button&gt;
+</summary></entry><entry><title>Hitting life&amp;#8217;s reset button</title><link href="http://jnrowe.github.com/thoughts/reset_in_ten.html" rel="alternate"></link><updated>2014-02-24T00:00:00Z</updated><id>http://jnrowe.github.com/thoughts/reset_in_ten.html</id><summary type="html">&lt;div class=section id=hitting-life-s-reset-button&gt;
 &lt;h1&gt;Hitting life’s reset button&lt;a class=headerlink href=http://jnrowe.github.com/thoughts/reset_in_ten.html#hitting-life-s-reset-button title="Permalink to this headline"&gt;¶&lt;/a&gt;&lt;/h1&gt;
 &lt;p&gt;Seven months ago while enjoying a little Saturday afternoon cricket picnic,
 a friend posed the question:&lt;/p&gt;
@@ -474,7 +581,7 @@ It is too late, and there is another lesson for me to learn.&lt;/p&gt;
 nothing useful about it.  Internet, this is the foolish truth I proffer you
 today.  The others well, they’ll hopefully remain hidden away from view.&lt;/p&gt;
 &lt;/div&gt;
-</summary></entry><entry><title>Hitting life&amp;#8217;s reset button</title><link rel="alternate" href="http://jnrowe.github.com/articles/reset_in_ten.html"></link><updated>2014-02-24T00:00:00Z</updated><id>http://jnrowe.github.com/articles/reset_in_ten.html</id><summary type="html">&lt;div class=section id=hitting-life-s-reset-button&gt;
+</summary></entry><entry><title>Hitting life&amp;#8217;s reset button</title><link href="http://jnrowe.github.com/articles/reset_in_ten.html" rel="alternate"></link><updated>2014-02-24T00:00:00Z</updated><id>http://jnrowe.github.com/articles/reset_in_ten.html</id><summary type="html">&lt;div class=section id=hitting-life-s-reset-button&gt;
 &lt;h1&gt;Hitting life’s reset button&lt;a class=headerlink href=http://jnrowe.github.com/articles/reset_in_ten.html#hitting-life-s-reset-button title="Permalink to this headline"&gt;¶&lt;/a&gt;&lt;/h1&gt;
 &lt;p&gt;Seven months ago while enjoying a little Saturday afternoon cricket picnic,
 a friend posed the question:&lt;/p&gt;
@@ -515,7 +622,7 @@ It is too late, and there is another lesson for me to learn.&lt;/p&gt;
 nothing useful about it.  Internet, this is the foolish truth I proffer you
 today.  The others well, they’ll hopefully remain hidden away from view.&lt;/p&gt;
 &lt;/div&gt;
-</summary></entry><entry><title>Return to rambling</title><link rel="alternate" href="http://jnrowe.github.com/thoughts/the_returned.html"></link><updated>2014-01-27T00:00:00Z</updated><id>http://jnrowe.github.com/thoughts/the_returned.html</id><summary type="html">&lt;div class=section id=return-to-rambling&gt;
+</summary></entry><entry><title>Return to rambling</title><link href="http://jnrowe.github.com/thoughts/the_returned.html" rel="alternate"></link><updated>2014-01-27T00:00:00Z</updated><id>http://jnrowe.github.com/thoughts/the_returned.html</id><summary type="html">&lt;div class=section id=return-to-rambling&gt;
 &lt;h1&gt;Return to rambling&lt;a class=headerlink href=http://jnrowe.github.com/thoughts/the_returned.html#return-to-rambling title="Permalink to this headline"&gt;¶&lt;/a&gt;&lt;/h1&gt;
 &lt;p&gt;I kept a public journal from about 2003 until 2009, with a new entry about every
 three days.  I enjoyed the act of writing it greatly, and often looked forward
@@ -546,7 +653,7 @@ me for the opinions I express or information I spread.  And that invitation is
 absolutely extended to this site and the new content I post.&lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-</summary></entry><entry><title>Return to rambling</title><link rel="alternate" href="http://jnrowe.github.com/articles/the_returned.html"></link><updated>2014-01-27T00:00:00Z</updated><id>http://jnrowe.github.com/articles/the_returned.html</id><summary type="html">&lt;div class=section id=return-to-rambling&gt;
+</summary></entry><entry><title>Return to rambling</title><link href="http://jnrowe.github.com/articles/the_returned.html" rel="alternate"></link><updated>2014-01-27T00:00:00Z</updated><id>http://jnrowe.github.com/articles/the_returned.html</id><summary type="html">&lt;div class=section id=return-to-rambling&gt;
 &lt;h1&gt;Return to rambling&lt;a class=headerlink href=http://jnrowe.github.com/articles/the_returned.html#return-to-rambling title="Permalink to this headline"&gt;¶&lt;/a&gt;&lt;/h1&gt;
 &lt;p&gt;I kept a public journal from about 2003 until 2009, with a new entry about every
 three days.  I enjoyed the act of writing it greatly, and often looked forward
@@ -577,7 +684,7 @@ me for the opinions I express or information I spread.  And that invitation is
 absolutely extended to this site and the new content I post.&lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-</summary></entry><entry><title>Murdering morality with ferocious fire</title><link rel="alternate" href="http://jnrowe.github.com/thoughts/important_balance.html"></link><updated>2014-01-25T00:00:00Z</updated><id>http://jnrowe.github.com/thoughts/important_balance.html</id><summary type="html">&lt;div class=section id=murdering-morality-with-ferocious-fire&gt;
+</summary></entry><entry><title>Murdering morality with ferocious fire</title><link href="http://jnrowe.github.com/thoughts/important_balance.html" rel="alternate"></link><updated>2014-01-25T00:00:00Z</updated><id>http://jnrowe.github.com/thoughts/important_balance.html</id><summary type="html">&lt;div class=section id=murdering-morality-with-ferocious-fire&gt;
 &lt;h1&gt;Murdering morality with ferocious fire&lt;a class=headerlink href=http://jnrowe.github.com/thoughts/important_balance.html#murdering-morality-with-ferocious-fire title="Permalink to this headline"&gt;¶&lt;/a&gt;&lt;/h1&gt;
 &lt;blockquote class=epigraph&gt;
 &lt;div&gt;&lt;p&gt;“Morality is herd instinct in the individual.”&lt;/p&gt;
@@ -626,7 +733,7 @@ line up with your definition of “strong moral values” ;)&lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
 &lt;/div&gt;
-</summary></entry><entry><title>Murdering morality with ferocious fire</title><link rel="alternate" href="http://jnrowe.github.com/articles/important_balance.html"></link><updated>2014-01-25T00:00:00Z</updated><id>http://jnrowe.github.com/articles/important_balance.html</id><summary type="html">&lt;div class=section id=murdering-morality-with-ferocious-fire&gt;
+</summary></entry><entry><title>Murdering morality with ferocious fire</title><link href="http://jnrowe.github.com/articles/important_balance.html" rel="alternate"></link><updated>2014-01-25T00:00:00Z</updated><id>http://jnrowe.github.com/articles/important_balance.html</id><summary type="html">&lt;div class=section id=murdering-morality-with-ferocious-fire&gt;
 &lt;h1&gt;Murdering morality with ferocious fire&lt;a class=headerlink href=http://jnrowe.github.com/articles/important_balance.html#murdering-morality-with-ferocious-fire title="Permalink to this headline"&gt;¶&lt;/a&gt;&lt;/h1&gt;
 &lt;blockquote&gt;
 &lt;div&gt;&lt;p&gt;“Morality is herd instinct in the individual.”&lt;/p&gt;
@@ -675,7 +782,7 @@ line up with your definition of “strong moral values” ;)&lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
 &lt;/div&gt;
-</summary></entry><entry><title>Dopplr defects</title><link rel="alternate" href="http://jnrowe.github.com/thoughts/dopplr_effects.html"></link><updated>2014-01-06T00:00:00Z</updated><id>http://jnrowe.github.com/thoughts/dopplr_effects.html</id><summary type="html">&lt;div class=section id=dopplr-defects&gt;
+</summary></entry><entry><title>Dopplr defects</title><link href="http://jnrowe.github.com/thoughts/dopplr_effects.html" rel="alternate"></link><updated>2014-01-06T00:00:00Z</updated><id>http://jnrowe.github.com/thoughts/dopplr_effects.html</id><summary type="html">&lt;div class=section id=dopplr-defects&gt;
 &lt;h1&gt;Dopplr defects&lt;a class=headerlink href=http://jnrowe.github.com/thoughts/dopplr_effects.html#dopplr-defects title="Permalink to this headline"&gt;¶&lt;/a&gt;&lt;/h1&gt;
 &lt;blockquote class=epigraph&gt;
 &lt;div&gt;&lt;p&gt;Dopplr was a free social networking service, launched in 2007, that allowed
@@ -717,7 +824,7 @@ actually use, but sadly I can’t even picture how it should work.&lt;/p&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
 &lt;span class=target id=backstory&gt;&lt;/span&gt;&lt;/div&gt;
-</summary></entry><entry><title>Dopplr defects</title><link rel="alternate" href="http://jnrowe.github.com/articles/dopplr_effects.html"></link><updated>2014-01-06T00:00:00Z</updated><id>http://jnrowe.github.com/articles/dopplr_effects.html</id><summary type="html">&lt;div class=section id=dopplr-defects&gt;
+</summary></entry><entry><title>Dopplr defects</title><link href="http://jnrowe.github.com/articles/dopplr_effects.html" rel="alternate"></link><updated>2014-01-06T00:00:00Z</updated><id>http://jnrowe.github.com/articles/dopplr_effects.html</id><summary type="html">&lt;div class=section id=dopplr-defects&gt;
 &lt;h1&gt;Dopplr defects&lt;a class=headerlink href=http://jnrowe.github.com/articles/dopplr_effects.html#dopplr-defects title="Permalink to this headline"&gt;¶&lt;/a&gt;&lt;/h1&gt;
 &lt;blockquote&gt;
 &lt;div&gt;&lt;p&gt;Dopplr was a free social networking service, launched in 2007, that allowed
@@ -759,7 +866,7 @@ actually use, but sadly I can’t even picture how it should work.&lt;/p&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
 &lt;span class=target id=backstory&gt;&lt;/span&gt;&lt;/div&gt;
-</summary></entry><entry><title>Tell me a nice story, please</title><link rel="alternate" href="http://jnrowe.github.com/thoughts/nice_stories.html"></link><updated>2013-12-23T00:00:00Z</updated><id>http://jnrowe.github.com/thoughts/nice_stories.html</id><summary type="html">&lt;div class=section id=tell-me-a-nice-story-please&gt;
+</summary></entry><entry><title>Tell me a nice story, please</title><link href="http://jnrowe.github.com/thoughts/nice_stories.html" rel="alternate"></link><updated>2013-12-23T00:00:00Z</updated><id>http://jnrowe.github.com/thoughts/nice_stories.html</id><summary type="html">&lt;div class=section id=tell-me-a-nice-story-please&gt;
 &lt;h1&gt;Tell me a nice story, please&lt;a class=headerlink href=http://jnrowe.github.com/thoughts/nice_stories.html#tell-me-a-nice-story-please title="Permalink to this headline"&gt;¶&lt;/a&gt;&lt;/h1&gt;
 &lt;p&gt;I’m fed up of hearing bad stories, I really am.  Often it feels like every
 person I know simply revels in the misfortune or missteps of others, and it is
@@ -856,7 +963,7 @@ know about it.  If that isn’t the case, just keep it to yourself.&lt;/p&gt;
 &lt;/table&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-</summary></entry><entry><title>Tell me a nice story, please</title><link rel="alternate" href="http://jnrowe.github.com/articles/nice_stories.html"></link><updated>2013-12-23T00:00:00Z</updated><id>http://jnrowe.github.com/articles/nice_stories.html</id><summary type="html">&lt;div class=section id=tell-me-a-nice-story-please&gt;
+</summary></entry><entry><title>Tell me a nice story, please</title><link href="http://jnrowe.github.com/articles/nice_stories.html" rel="alternate"></link><updated>2013-12-23T00:00:00Z</updated><id>http://jnrowe.github.com/articles/nice_stories.html</id><summary type="html">&lt;div class=section id=tell-me-a-nice-story-please&gt;
 &lt;h1&gt;Tell me a nice story, please&lt;a class=headerlink href=http://jnrowe.github.com/articles/nice_stories.html#tell-me-a-nice-story-please title="Permalink to this headline"&gt;¶&lt;/a&gt;&lt;/h1&gt;
 &lt;p&gt;I’m fed up of hearing bad stories, I really am.  Often it feels like every
 person I know simply revels in the misfortune or missteps of others, and it is
@@ -953,7 +1060,7 @@ know about it.&lt;/p&gt;
 &lt;/table&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-</summary></entry><entry><title>Side-projects</title><link rel="alternate" href="http://jnrowe.github.com/thoughts/side_projects.html"></link><updated>2013-12-16T00:00:00Z</updated><id>http://jnrowe.github.com/thoughts/side_projects.html</id><summary type="html">&lt;div class=section id=side-projects&gt;
+</summary></entry><entry><title>Side-projects</title><link href="http://jnrowe.github.com/thoughts/side_projects.html" rel="alternate"></link><updated>2013-12-16T00:00:00Z</updated><id>http://jnrowe.github.com/thoughts/side_projects.html</id><summary type="html">&lt;div class=section id=side-projects&gt;
 &lt;h1&gt;Side-projects&lt;a class=headerlink href=http://jnrowe.github.com/thoughts/side_projects.html#side-projects title="Permalink to this headline"&gt;¶&lt;/a&gt;&lt;/h1&gt;
 &lt;p&gt;Chatting with my brother yesterday he expressed some disbelief when I mentioned
 &lt;em&gt;yet another&lt;/em&gt; friend who has a website related to some topic we were discussing:&lt;/p&gt;
@@ -1059,7 +1166,7 @@ is just a jumbled content dump with no real purpose.&lt;/tr&gt;
 &lt;/table&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-</summary></entry><entry><title>Side-projects</title><link rel="alternate" href="http://jnrowe.github.com/articles/side_projects.html"></link><updated>2013-12-16T00:00:00Z</updated><id>http://jnrowe.github.com/articles/side_projects.html</id><summary type="html">&lt;div class=section id=side-projects&gt;
+</summary></entry><entry><title>Side-projects</title><link href="http://jnrowe.github.com/articles/side_projects.html" rel="alternate"></link><updated>2013-12-16T00:00:00Z</updated><id>http://jnrowe.github.com/articles/side_projects.html</id><summary type="html">&lt;div class=section id=side-projects&gt;
 &lt;h1&gt;Side-projects&lt;a class=headerlink href=http://jnrowe.github.com/articles/side_projects.html#side-projects title="Permalink to this headline"&gt;¶&lt;/a&gt;&lt;/h1&gt;
 &lt;p&gt;Chatting with my brother yesterday he expressed some disbelief when I mentioned
 &lt;em&gt;yet another&lt;/em&gt; friend who has a website related to some topic we were discussing:&lt;/p&gt;
@@ -1165,7 +1272,7 @@ is just a jumbled content dump with no real purpose.&lt;/tr&gt;
 &lt;/table&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-</summary></entry><entry><title>TDD distro development</title><link rel="alternate" href="http://jnrowe.github.com/articles/tdd_distros.html"></link><updated>2011-06-13T00:00:00Z</updated><id>http://jnrowe.github.com/articles/tdd_distros.html</id><summary type="html">&lt;div class=section id=tdd-distro-development&gt;
+</summary></entry><entry><title>TDD distro development</title><link href="http://jnrowe.github.com/articles/tdd_distros.html" rel="alternate"></link><updated>2011-06-13T00:00:00Z</updated><id>http://jnrowe.github.com/articles/tdd_distros.html</id><summary type="html">&lt;div class=section id=tdd-distro-development&gt;
 &lt;h1&gt;TDD distro development&lt;a class=headerlink href=http://jnrowe.github.com/articles/tdd_distros.html#tdd-distro-development title="Permalink to this headline"&gt;¶&lt;/a&gt;&lt;/h1&gt;
 &lt;p&gt;Using &lt;abbr title="Test Driven Development"&gt;TDD&lt;/abbr&gt; for distribution development is a
 hot topic in some of the more geeky circles I move in, and I’m very happy about
@@ -1318,7 +1425,7 @@ a &lt;tt class="docutils literal"&gt;&lt;span class=pre&gt;reST&lt;/span&gt;&lt;
 &lt;/table&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-</summary></entry><entry><title>Introduction to RCS</title><link rel="alternate" href="http://jnrowe.github.com/articles/rcs.html"></link><updated>2003-09-05T00:00:00Z</updated><id>http://jnrowe.github.com/articles/rcs.html</id><summary type="html">&lt;div class="admonition warning"&gt;
+</summary></entry><entry><title>Introduction to RCS</title><link href="http://jnrowe.github.com/articles/rcs.html" rel="alternate"></link><updated>2003-09-05T00:00:00Z</updated><id>http://jnrowe.github.com/articles/rcs.html</id><summary type="html">&lt;div class="admonition warning"&gt;
 &lt;p class="first admonition-title"&gt;Warning&lt;/p&gt;
 &lt;p class=last&gt;I’ve resurrected this text from my old UKFSN site because a couple of people
 asked me to, but I wouldn’t recommend using RCS to anyone at this point.  It
