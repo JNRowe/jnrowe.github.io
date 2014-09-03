@@ -1,3 +1,5 @@
+:tags: gentoo, work, linux
+:date: 2014-06-29
 
 Dropping Gentoo reflex
 ======================
