@@ -1,5 +1,119 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>JNRowe</title><link href="http://jnrowe.github.com/" rel="alternate"></link><link href="http://jnrowe.github.com/updates.atom" rel="self"></link><id>http://jnrowe.github.com/</id><updated>2014-06-30T00:00:00Z</updated><author><name>James Rowe</name><email>jnrowe@gmail.com</email><uri>http://jnrowe.github.com/</uri></author><rights>2009-2014, James Rowe</rights><entry><title>jnrowe-misc - The unsorted package overlay</title><link href="http://jnrowe.github.com/articles/probits/jnrowe-misc.html" rel="alternate"></link><updated>2014-06-30T00:00:00Z</updated><id>http://jnrowe.github.com/articles/probits/jnrowe-misc.html</id><summary type="html">&lt;div class=section id=jnrowe-misc-the-unsorted-package-overlay&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>JNRowe</title><link href="http://jnrowe.github.com/" rel="alternate"></link><link href="http://jnrowe.github.com/updates.atom" rel="self"></link><id>http://jnrowe.github.com/</id><updated>2014-09-03T00:00:00Z</updated><author><name>James Rowe</name><email>jnrowe@gmail.com</email><uri>http://jnrowe.github.com/</uri></author><rights>2009-2014, James Rowe</rights><entry><title>Open Source and enjoyment</title><link href="http://jnrowe.github.com/thoughts/burn_out.html" rel="alternate"></link><updated>2014-09-03T00:00:00Z</updated><id>http://jnrowe.github.com/thoughts/burn_out.html</id><summary type="html">&lt;div class=section id=open-source-and-enjoyment&gt;
+&lt;h1&gt;Open Source and enjoyment&lt;a class=headerlink href=http://jnrowe.github.com/thoughts/burn_out.html#open-source-and-enjoyment title="Permalink to this headline"&gt;¶&lt;/a&gt;&lt;/h1&gt;
+&lt;p&gt;A few years ago I burned out on Open Source projects, to the point that it was
+close to impacting other parts of my life.  I have only myself to blame as
+I didn’t manage to distance myself at all well.  Distancing yourself is not easy
+to do when your fun hobby for relaxation is the thing that is thing that is
+working against you.&lt;/p&gt;
+&lt;p&gt;There were a variety of incredibly minor issues that piled up Jenga-style.  Then
+to carry the weak analogy forward, it toppled over in a split second like Jenga
+in a rubber dingy on the rolling seas with a fumbling drunken friend wearing
+a blindfold.&lt;/p&gt;
+&lt;p&gt;I’ve decided to write down a few of the things that were happening, both as an
+act of catharsis and to help me spot the problems in future.  Perhaps it will
+help others who are experiencing the same thing but haven’t quite spotted the
+catalysts yet.&lt;/p&gt;
+&lt;div class=section id=dealing-with-needy-users&gt;
+&lt;h2&gt;Dealing with needy users&lt;a class=headerlink href=http://jnrowe.github.com/thoughts/burn_out.html#dealing-with-needy-users title="Permalink to this headline"&gt;¶&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;Some users seem to feel a disproportionate amount of “you work for me”,
+seemingly more so than happens with actual paying customers on other projects
+which strikes me as strange.  They’ll bug you endlessly in emails, in the issue
+tracker, on IRC and in real life if you end up at the same conference.  You
+&lt;em&gt;need&lt;/em&gt; to stop this before it takes hold.  It helps if you can be polite, but if
+not just stop it anyway.  It is for &lt;em&gt;your&lt;/em&gt; welfare, so just do it.&lt;/p&gt;
+&lt;p&gt;I actually found myself burning the wrong people towards the peak of that
+imaginary Jenga tower.  You need to make a concerted effort to figure out which
+people are delivering the seemingly endless grief or perhaps just relentless
+&lt;a class="reference external" href=http://en.m.wikipedia.org/wiki/bikeshedding&gt;bikeshedding&lt;/a&gt;, and stop them.  It is all too easy to accidentally become
+annoyed at well meaning useful contributors when you’ve been trawling through
+a heap of useless meta-discussion about a change nobody is making.&lt;/p&gt;
+&lt;p&gt;On one &lt;em&gt;library&lt;/em&gt; project I worked on there was a user who didn’t read the
+documentation, couldn’t use the language enough to write tests, yet still
+endlessly sucked up support time by opening awful issues and sending pointless
+emails wishing to discuss changes they might make.  I kind of hesitate to say
+awful issues, but - for example - if you can’t write a two line assertion in
+a language you’re not in the target audience for a library in the first place.&lt;/p&gt;
+&lt;p&gt;Those people aren’t even adding value in pointing out deficiencies in
+documentation, because they’re not a target user.  It would be like me writing
+to &lt;a class="reference external" href=http://www.jcb.com/&gt;JCB&lt;/a&gt; telling them they must document why they use round knobs on the digger
+I saw someone else using.  So try spot it early, and put a stop to it.&lt;/p&gt;
+&lt;p&gt;I suspect a big part of the issue here is cost.  I’m sure if there was even
+a single penny cost to opening issues or sending a mail it would do wonders for
+communication in general.  I suspect that would remain true even if you
+reimbursed that penny immediately.&lt;/p&gt;
+&lt;div class=section id=the-answer&gt;
+&lt;h3&gt;The answer&lt;a class=headerlink href=http://jnrowe.github.com/thoughts/burn_out.html#the-answer title="Permalink to this headline"&gt;¶&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;I figured out how to work with this entirely by accident.  Politely offer
+answers that move them away from you.  It is by far the easiest solution.&lt;/p&gt;
+&lt;p&gt;In one instance I suggested alternatives packages to an expensive user, with the
+hope they’d quietly move on.  Which is evil really, as what you’re really doing
+is dreaming that they’ll move on to bother a developer who isn’t you.&lt;/p&gt;
+&lt;p&gt;On another occasion I stole an idea from a friend and said “Sorry, I can’t
+figure out how to implement this.  Open a pull request, and I’ll merge it!” to
+another.  It worked well, because it stopped the direction-less discussion and
+was never going to be followed up with a patch later.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=section id=dealing-with-unreasonable-requests&gt;
+&lt;h2&gt;Dealing with unreasonable requests&lt;a class=headerlink href=http://jnrowe.github.com/thoughts/burn_out.html#dealing-with-unreasonable-requests title="Permalink to this headline"&gt;¶&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;I used to get quite annoyed when I received an impolite or unreasonable request
+on an Open Source project, nowadays I tend to just respond with pre-canned
+answers for most of them.  If you can cut the time it takes to respond to them,
+you’ll obviously spend far less time thinking about them.&lt;/p&gt;
+&lt;p&gt;The typical one that springs to mind is a user complaining that you’ve not
+licensed your GPL code in a way which allows them to use it without contributing
+anything in return.  I choose reciprocating licences where I can, because
+frankly that may be the only value you provide &lt;em&gt;me&lt;/em&gt; as a user.  I get that some
+people need to use their Open Source projects as a way to improve their CV or
+build a presence, but for many of us it is just for fun and reciprocation.&lt;/p&gt;
+&lt;p&gt;Another example that I recall, but wish I didn’t, was a user &lt;em&gt;telling&lt;/em&gt; me to
+recompress a tarball on PyPI because their infrastructure couldn’t support
+&lt;tt class="docutils literal"&gt;&lt;span class=pre&gt;bzip2&lt;/span&gt;&lt;/tt&gt;.  Seems reasonable enough, but it came wrapped in a tirade of abuse.
+I ignored the abuse, uploaded another tarball and then received another abusive
+email in return the next day.  That was a long time ago, far before the burnout
+started to creep in so I just addressed the actual issue and moved on.&lt;/p&gt;
+&lt;div class=section id=id1&gt;
+&lt;h3&gt;The answer&lt;a class=headerlink href=http://jnrowe.github.com/thoughts/burn_out.html#id1 title="Permalink to this headline"&gt;¶&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;I had forgotten about that whole previous story until at &lt;a class="reference external" href=https://europython.eu/&gt;Europython&lt;/a&gt; a friend
+was telling me about someone who was banned from a number of events, hell-banned
+on various mailing lists and on forced lockout on Stack Overflow for poisonous
+behaviour.  I started to tell my story as an example of strange abusive
+behaviour, and it turned out to be the same guy.&lt;/p&gt;
+&lt;p&gt;The point is these people can be everywhere so just don’t let them get to you.
+I realise that is both obvious and feels hard to do, but it is quite easy in the
+virtual world.  If you have the hell-ban option available just use
+it; perhaps there is an ignore option in your issue tracker, add a “send to
+trash” rule in your email filter.  Even in person it can be quite easy to do,
+just politely acknowledge their issue and move away instead of engaging them.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=section id=the-solutions&gt;
+&lt;h1&gt;The solutions&lt;a class=headerlink href=http://jnrowe.github.com/thoughts/burn_out.html#the-solutions title="Permalink to this headline"&gt;¶&lt;/a&gt;&lt;/h1&gt;
+&lt;p&gt;I chose a solution I hate, for all intents and purposes I don’t release new Open
+Source projects any longer.  I still work on a lot of projects, and the code is
+normally available somewhere for strangers.  However, for the most part I’ve
+made a point of not hosting or releasing it in the common places.  This works
+for me, but it saddens me deeply.&lt;/p&gt;
+&lt;p&gt;I have a friend who does something interesting to combat the same problems I’ve
+mentioned here.  He hooks the issue tracker to only show issues reported by
+people in his second-degree &lt;a class="reference external" href=http://www.foaf-project.org/&gt;FOAF&lt;/a&gt; circle or people whose user profile is an
+active Open Source contributor.  It works, and it cuts out most of the problem
+users, but it is nasty.  I feel it is worse than my “solution” because it still
+gives the impression of support to the users you won’t support, but also gives
+the impression of bad support through heaps of unanswered issues to the users
+who would receive good support.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;div&gt;The greatest trick the devil ever played was convincing users they had skin
+in the game.&lt;/div&gt;&lt;/blockquote&gt;
+&lt;p&gt;I may be misappropriating a quote from a great film there, but it is important.
+A lot of the actively poisonous people who contact you aren’t providing any real
+value to you, and they’re probably never going to.  If you can remove them
+somehow you’re probably not losing anything, but you’ll be gaining a whole lot
+personally.&lt;/p&gt;
+&lt;/div&gt;
+</summary></entry><entry><title>jnrowe-misc - The unsorted package overlay</title><link href="http://jnrowe.github.com/articles/probits/jnrowe-misc.html" rel="alternate"></link><updated>2014-06-30T00:00:00Z</updated><id>http://jnrowe.github.com/articles/probits/jnrowe-misc.html</id><summary type="html">&lt;div class=section id=jnrowe-misc-the-unsorted-package-overlay&gt;
 &lt;h1&gt;jnrowe-misc - The unsorted package overlay&lt;a class=headerlink href=http://jnrowe.github.com/articles/probits/jnrowe-misc.html#jnrowe-misc-the-unsorted-package-overlay title="Permalink to this headline"&gt;¶&lt;/a&gt;&lt;/h1&gt;
 &lt;blockquote&gt;
 &lt;div&gt;A collection of &lt;tt class="docutils literal"&gt;&lt;span class=pre&gt;ebuild&lt;/span&gt;&lt;/tt&gt; files with no overall theme.&lt;/div&gt;&lt;/blockquote&gt;
@@ -77,36 +191,7 @@ situations.  This category, and the accompanying index, below are that attempt.&
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-</summary></entry><entry><title>Project postmortems</title><link href="http://jnrowe.github.com/articles/obits/index.html" rel="alternate"></link><updated>2014-06-30T00:00:00Z</updated><id>http://jnrowe.github.com/articles/obits/index.html</id><summary type="html">&lt;div class=section id=project-postmortems&gt;
-&lt;h1&gt;Project postmortems&lt;a class=headerlink href=http://jnrowe.github.com/articles/obits/index.html#project-postmortems title="Permalink to this headline"&gt;¶&lt;/a&gt;&lt;/h1&gt;
-&lt;p&gt;One of my favourite things about the day job is the post-project analysis and
-postmortems, which we lovingly refer to as &lt;abbr title="Project Obituaries"&gt;probits&lt;/abbr&gt;
-internally.&lt;/p&gt;
-&lt;div class=section id=background&gt;
-&lt;h2&gt;Background&lt;a class=headerlink href=http://jnrowe.github.com/articles/obits/index.html#background title="Permalink to this headline"&gt;¶&lt;/a&gt;&lt;/h2&gt;
-&lt;p&gt;I work in heavily structured and standalone project-oriented environment.  In
-a decade I can count the number of fluid projects on three fingers.  As I write
-this in June 2014 my tier-one project started 21 months ago, and has a delivery
-date locked down to a week in 2015.  We’ll deliver on time or a touch early, our
-team is known for that.&lt;/p&gt;
-&lt;p&gt;One of the benefits of working on such strict projects with definite ship dates
-and locked schedules is that you always know when a project is complete.  This
-also allows us to take advantage of that by inspecting the project as a whole,
-spotting the successes and failures within.  Probits are the more informal
-dialogue that we pin to the front of each folder.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class=section id=what-you-ll-find&gt;
-&lt;h2&gt;What you’ll find&lt;a class=headerlink href=http://jnrowe.github.com/articles/obits/index.html#what-you-ll-find title="Permalink to this headline"&gt;¶&lt;/a&gt;&lt;/h2&gt;
-&lt;p&gt;I’ve recently decided I’d like to take a similar approach to some side projects
-that I work on, and also try to apply the methods to some more real-life
-situations.  This category, and the accompanying index, below are that attempt.&lt;/p&gt;
-&lt;div class="toctree-wrapper compound"&gt;
-&lt;ul class=simple&gt;
-&lt;/ul&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-</summary></entry><entry><title>Dropping Gentoo reflex</title><link href="http://jnrowe.github.com/articles/dropping_gentoo_reflex.html" rel="alternate"></link><updated>2014-06-27T00:00:00Z</updated><id>http://jnrowe.github.com/articles/dropping_gentoo_reflex.html</id><summary type="html">&lt;div class=section id=dropping-gentoo-reflex&gt;
+</summary></entry><entry><title>Dropping Gentoo reflex</title><link href="http://jnrowe.github.com/articles/dropping_gentoo_reflex.html" rel="alternate"></link><updated>2014-06-29T00:00:00Z</updated><id>http://jnrowe.github.com/articles/dropping_gentoo_reflex.html</id><summary type="html">&lt;div class=section id=dropping-gentoo-reflex&gt;
 &lt;h1&gt;Dropping Gentoo reflex&lt;a class=headerlink href=http://jnrowe.github.com/articles/dropping_gentoo_reflex.html#dropping-gentoo-reflex title="Permalink to this headline"&gt;¶&lt;/a&gt;&lt;/h1&gt;
 &lt;p&gt;After hitting the publish button on &lt;a class="reference internal" href=http://jnrowe.github.com/articles/dropping_gentoo.html&gt;&lt;em&gt;Dropping Gentoo&lt;/em&gt;&lt;/a&gt; a few friends
 commented that I was either unnecessarily harsh about Gentoo or we wasted an
@@ -134,7 +219,7 @@ the right argument to &lt;strong class=command&gt;tar&lt;/strong&gt;‘s &lt;em 
 editing existing packages.&lt;/p&gt;
 &lt;p&gt;Lets take a look at an example.  Say, for example, that you just found out that
 &lt;tt class="docutils literal"&gt;&lt;span class=pre&gt;flask-dashed&lt;/span&gt;&lt;/tt&gt;‘s  &lt;tt class="docutils literal"&gt;&lt;span class=pre&gt;ebuild&lt;/span&gt;&lt;/tt&gt; mistakenly installs a &lt;tt class="file docutils literal"&gt;&lt;span class=pre&gt;/usr/README&lt;/span&gt;&lt;/tt&gt; file.
-With Gentoo we can fix the problem with the following patch and a call to
+We we can fix the problem with the following simple change and a call to
 &lt;tt class="docutils literal"&gt;&lt;span class=pre&gt;repoman&lt;/span&gt; &lt;span class=pre&gt;manifest&lt;/span&gt;&lt;/tt&gt;, the rest takes care of itself.&lt;/p&gt;
 &lt;div class=highlight-diff&gt;&lt;div class=highlight&gt;&lt;pre&gt;&lt;span class=gh&gt;diff --git i/flask-dashed-0.1b_p2.ebuild w/flask-dashed-0.1b_p2.ebuild&lt;/span&gt;
 &lt;span class=gh&gt;index dd64877a387e..cf3e3cbf272b 100644&lt;/span&gt;
@@ -151,30 +236,28 @@ With Gentoo we can fix the problem with the following patch and a call to
 &lt;/div&gt;
 &lt;div class="admonition note"&gt;
 &lt;p class="first admonition-title"&gt;Note&lt;/p&gt;
-&lt;p class=last&gt;Of course, if you cared you’d fix the package properly and send the fix
-upstream(along with a fix for the duplicate files and other brokeness you
-found).&lt;/p&gt;
+&lt;p class=last&gt;Of course, you should fix the package properly and send the fix upstream but
+this is just to prove a point.&lt;/p&gt;
 &lt;/div&gt;
-&lt;p&gt;I have to mention a downside here however, it appears that very few people test
-&lt;tt class="docutils literal"&gt;&lt;span class=pre&gt;portage&lt;/span&gt;&lt;/tt&gt;‘s binary package support.  You will eventually burn some time
-working around problems.  And because the path isn’t all that well trodden
-you’ll have to devise your own dubious methods for resolving the problems, such
-as when an &lt;tt class="docutils literal"&gt;&lt;span class=pre&gt;eclass&lt;/span&gt;&lt;/tt&gt; change needs to ripple or a library breaks compatibility
-with the correct bump.&lt;/p&gt;
-&lt;p&gt;Luckily, such a problem can be quickly worked around with a loop in your shell
-of choice.  The following are a couple of annotated examples I’ve just plucked
-from deep inside my &lt;tt class="docutils literal"&gt;&lt;span class=pre&gt;zsh&lt;/span&gt;&lt;/tt&gt; history:&lt;/p&gt;
-&lt;div class="code sh highlight-python"&gt;&lt;div class=highlight&gt;&lt;pre&gt;# When you were stuck with packages that used python-distutils-ng, and you
-# needed to scrub packages because you changed Python version
-for i in /var/cache/packages/*-*/*.tbz2; do
-    qtbz2 -xO $i | qxpak -xO /dev/stdin ${${i##*/}/.tbz2}.ebuild | grep -q 'SUPPORT_PYTHON_ABIS' &amp;amp;&amp;amp; echo $i
-done
+&lt;p&gt;I have to mention a small downside here however, because very few people seem to
+test &lt;tt class="docutils literal"&gt;&lt;span class=pre&gt;portage&lt;/span&gt;&lt;/tt&gt;‘s binary package support you’ll occasionally have to do some
+leg work to fix problems.  This normally arises when an &lt;tt class="docutils literal"&gt;&lt;span class=pre&gt;eclass&lt;/span&gt;&lt;/tt&gt; changes needs
+to ripple through, or when a library breaks compatibility and it’s ebuild hasn’t
+been bumped properly.&lt;/p&gt;
+&lt;p&gt;Almost every time that happens you can fix it with a quick loop in your shell
+though.  A couple of such problems and solutions that I found in my shell
+history can be seen below.&lt;/p&gt;
+&lt;div class=highlight-sh&gt;&lt;div class=highlight&gt;&lt;pre&gt;&lt;span class=c&gt;# When you were stuck with packages that used python-distutils-ng, and you&lt;/span&gt;
+&lt;span class=c&gt;# needed to scrub packages because you changed Python version&lt;/span&gt;
+&lt;span class=k&gt;for &lt;/span&gt;s in &lt;span class=k&gt;$(&lt;/span&gt;portageq pkgdir&lt;span class=k&gt;)&lt;/span&gt;/*-*/*.tbz2; &lt;span class=k&gt;do&lt;/span&gt;
+&lt;span class=k&gt;    &lt;/span&gt;qtbz2 -xO &lt;span class=nv&gt;$s&lt;/span&gt; | qxpak -xO - &lt;span class=k&gt;${${&lt;/span&gt;&lt;span class=nv&gt;s&lt;/span&gt;&lt;span class=p&gt;##*/&lt;/span&gt;&lt;span class=k&gt;}&lt;/span&gt;&lt;span class=p&gt;/.tbz2&lt;/span&gt;&lt;span class=k&gt;}&lt;/span&gt;.ebuild | grep -q &lt;span class=s1&gt;'SUPPORT_PYTHON_ABIS'&lt;/span&gt; &lt;span class=o&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span class=nb&gt;echo&lt;/span&gt; &lt;span class=nv&gt;$s&lt;/span&gt;
+&lt;span class=k&gt;done&lt;/span&gt;
 
-# When you were stuck with packages that used python's "-r1" eclasses and
-# all you can see is a flood of blockages in your update output
-for i in /var/cache/packages/*-*/*.tbz2; do
-    qtbz2 -xO $i | qxpak -xO /dev/stdin RDEPEND 2&amp;gt;/dev/null | grep -q "dev-python/python-exec" &amp;amp;&amp;amp; echo $i
-done
+&lt;span class=c&gt;# When you were using packages that used python's "-r1" eclasses and all&lt;/span&gt;
+&lt;span class=c&gt;# you could see is a flood of blockages in your update output&lt;/span&gt;
+&lt;span class=k&gt;for &lt;/span&gt;s in &lt;span class=k&gt;$(&lt;/span&gt;portageq pkgdir&lt;span class=k&gt;)&lt;/span&gt;/*-*/*.tbz2; &lt;span class=k&gt;do&lt;/span&gt;
+&lt;span class=k&gt;    &lt;/span&gt;qtbz2 -xO &lt;span class=nv&gt;$s&lt;/span&gt; | qxpak -xO - RDEPEND 2&amp;gt;/dev/null | grep -q &lt;span class=s2&gt;"dev-python/python-exec"&lt;/span&gt; &lt;span class=o&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span class=nb&gt;echo&lt;/span&gt; &lt;span class=nv&gt;$s&lt;/span&gt;
+&lt;span class=k&gt;done&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
@@ -187,128 +270,43 @@ to know from it.  The unfortunately named PMS acted as the reference that
 finally allowed us to switch from away from &lt;tt class="docutils literal"&gt;&lt;span class=pre&gt;portage&lt;/span&gt;&lt;/tt&gt; completely at the
 office.&lt;/p&gt;
 &lt;p&gt;The PMS documented much of the nastiness that &lt;tt class="docutils literal"&gt;&lt;span class=pre&gt;portage&lt;/span&gt;&lt;/tt&gt; suffers from, and made
-life in general a whole lot nicer as a Gentoo user.  And, let us be honest it
-also stopped a little of the fluidity that plagued &lt;tt class="docutils literal"&gt;&lt;span class=pre&gt;portage&lt;/span&gt;&lt;/tt&gt; too.&lt;/p&gt;
+life in general a whole lot nicer when you were chasing bugs deep down the
+rabbit hole.  And, let us be honest here it also stopped a little of the
+fluidity that plagued &lt;tt class="docutils literal"&gt;&lt;span class=pre&gt;portage&lt;/span&gt;&lt;/tt&gt; too.&lt;/p&gt;
 &lt;p&gt;Some people argue that it acts as unnecessary stop motion but those people must
 be forgetting what happened when behaviour changed randomly between &lt;tt class="docutils literal"&gt;&lt;span class=pre&gt;portage&lt;/span&gt;&lt;/tt&gt;
 versions.  PMS, and the EAPI process, also brought some much needed design and
-stability to newer &lt;tt class="docutils literal"&gt;&lt;span class=pre&gt;ebuild&lt;/span&gt;&lt;/tt&gt; features.&lt;/p&gt;
+stability to newer features.&lt;/p&gt;
 &lt;p&gt;All Gentoo users owe Ciaran McCreesh a few beers for all the hard work he put in
 to those documents, especially in the early days.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=section id=the-personal-touch&gt;
+&lt;h2&gt;The personal touch&lt;a class=headerlink href=http://jnrowe.github.com/articles/dropping_gentoo_reflex.html#the-personal-touch title="Permalink to this headline"&gt;¶&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;On a personal note I’ve met some awesome people over the years as a result of
+using Gentoo.  Many of them at the old Gentoo UK conferences, which were always
+fun.  More recently at LoFu’s annual summit which seems to have taken Gentoo
+UK’s place with practically everyone you saw at Gentoo UK(minus the students),
+and oddly about the same Gentoo to non-Gentoo ratio of talks too.&lt;/p&gt;
+&lt;p&gt;Two excellent people on our current team were recruited following the Gentoo UK
+conference at UCL, and we met a spectacular contract hire at the one prior to
+that as well.&lt;/p&gt;
+&lt;p&gt;I’ve even been lucky enough to have a few doors held open for me via people I’ve
+met at Gentoo-themed or Gentoo-heavy events, and I suspect I’d be writing this
+from a less happy place without them.&lt;/p&gt;
 &lt;/div&gt;
 &lt;div class=section id=wrapping-up&gt;
 &lt;h2&gt;Wrapping up&lt;a class=headerlink href=http://jnrowe.github.com/articles/dropping_gentoo_reflex.html#wrapping-up title="Permalink to this headline"&gt;¶&lt;/a&gt;&lt;/h2&gt;
-&lt;p&gt;The simple truth is that you really can not always see the forest for trees.&lt;/p&gt;
+&lt;p&gt;It is true that you really can not always see the forest for trees.&lt;/p&gt;
 &lt;p&gt;Had recent events not clouded my vision I would have commented on the train
-wreck that is/was &lt;tt class="docutils literal"&gt;&lt;span class=pre&gt;webapp.eclass&lt;/span&gt;&lt;/tt&gt; and &lt;tt class="docutils literal"&gt;&lt;span class=pre&gt;app-admin/webapp-config&lt;/span&gt;&lt;/tt&gt; in
-&lt;a class="reference internal" href=http://jnrowe.github.com/articles/dropping_gentoo.html&gt;&lt;em&gt;Dropping Gentoo&lt;/em&gt;&lt;/a&gt;. It sucked tonnes and tonnes of time away until we
+wreck that is &lt;tt class="docutils literal"&gt;&lt;span class=pre&gt;webapp.eclass&lt;/span&gt;&lt;/tt&gt; and &lt;tt class="docutils literal"&gt;&lt;span class=pre&gt;app-admin/webapp-config&lt;/span&gt;&lt;/tt&gt; in
+&lt;a class="reference internal" href=http://jnrowe.github.com/articles/dropping_gentoo.html&gt;&lt;em&gt;Dropping Gentoo&lt;/em&gt;&lt;/a&gt;.  It sucked tonnes and tonnes of time away until we
 eventually just trashed any package that interacted with it and moved on.&lt;/p&gt;
-&lt;p&gt;That was so long ago that I had forgotten about it until a friend asked me why
-I hadn’t mentioned it.  I suspect most of the other negative comments I made
+&lt;p&gt;That was so long ago that I had forgotten about it until a co-worker asked me
+why I hadn’t mentioned it.  I suspect most of the other negative comments I made
 will feel equally inconsequential when compared to the benefits Gentoo gave us
-when a few more of the scars have finally healed.&lt;/p&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-</summary></entry><entry><title>Dropping Gentoo redux</title><link href="http://jnrowe.github.com/articles/dropping_gentoo_redux.html" rel="alternate"></link><updated>2014-06-27T00:00:00Z</updated><id>http://jnrowe.github.com/articles/dropping_gentoo_redux.html</id><summary type="html">&lt;div class=section id=dropping-gentoo-redux&gt;
-&lt;h1&gt;Dropping Gentoo redux&lt;a class=headerlink href=http://jnrowe.github.com/articles/dropping_gentoo_redux.html#dropping-gentoo-redux title="Permalink to this headline"&gt;¶&lt;/a&gt;&lt;/h1&gt;
-&lt;p&gt;After hitting the “publish” button on &lt;a class="reference internal" href=http://jnrowe.github.com/articles/dropping_gentoo.html&gt;&lt;em&gt;Dropping Gentoo&lt;/em&gt;&lt;/a&gt; a few friends
-commented that I was either unnecessarily harsh about Gentoo, or wasted an
-enormous amount of time on it.  It definitely was the former, and I feel a
-touch ashamed for implying the latter.&lt;/p&gt;
-&lt;p&gt;I was writing my thoughts in the project obituary form that I’m used to, and
-that is entirely about spotting the downsides to make sure they don’t happen
-again.  And with that in mind I &lt;em&gt;was&lt;/em&gt; being incredibly unfair to Gentoo, both
-the project and by extension the people working on it.&lt;/p&gt;
-&lt;p&gt;There were many, many good points about Gentoo and I’d like to look at a few
-now.&lt;/p&gt;
-&lt;div class=section id=speed&gt;
-&lt;h2&gt;Speed&lt;a class=headerlink href=http://jnrowe.github.com/articles/dropping_gentoo_redux.html#speed title="Permalink to this headline"&gt;¶&lt;/a&gt;&lt;/h2&gt;
-&lt;p&gt;No, no.  Not the “Oh my god, my KDEs are soooo fast” that many people &lt;em&gt;rightly&lt;/em&gt;
-associate with Gentoo users.  I’m talking about basic package handling tasks.&lt;/p&gt;
-&lt;p&gt;There are very few other distributions that can match Gentoo when it comes to
-the speed of editing a package.  Or the speed of installation if you cache built
-packages for that matter.&lt;/p&gt;
-&lt;p&gt;Almost the first thing you notice when switching to Debian or Fedora from Gentoo
-as a heavy binary package user is just how slow package installation and removal
-is.  Installation feels on par with a distribution like Slackware, and there
-what passes for package management is just choosing the right argument to
-&lt;tt class="docutils literal"&gt;&lt;span class=pre&gt;tar&lt;/span&gt;&lt;/tt&gt;‘s &lt;cite&gt;-C&lt;/cite&gt; option.&lt;/p&gt;
-&lt;p&gt;Where Gentoo really excels though is in the speed of creating or editing
-existing packages.&lt;/p&gt;
-&lt;p&gt;Lets take a look at an example.  Say, for example, that you just found out that
-&lt;tt class="docutils literal"&gt;&lt;span class=pre&gt;flask-dashed&lt;/span&gt;&lt;/tt&gt;‘s  &lt;tt class="docutils literal"&gt;&lt;span class=pre&gt;ebuild&lt;/span&gt;&lt;/tt&gt; installs a &lt;tt class="file docutils literal"&gt;&lt;span class=pre&gt;/usr/README&lt;/span&gt;&lt;/tt&gt; file.  With Gentoo
-we can fix the problem with the following patch and a call to &lt;tt class="docutils literal"&gt;&lt;span class=pre&gt;repoman&lt;/span&gt;
-&lt;span class=pre&gt;manifest&lt;/span&gt;&lt;/tt&gt;, the rest takes care of itself.&lt;/p&gt;
-&lt;div class=highlight-diff&gt;&lt;div class=highlight&gt;&lt;pre&gt;&lt;span class=gh&gt;diff --git i/flask-dashed-0.1b_p2.ebuild w/flask-dashed-0.1b_p2.ebuild&lt;/span&gt;
-&lt;span class=gh&gt;index dd64877a387e..cf3e3cbf272b 100644&lt;/span&gt;
-&lt;span class=gd&gt;--- i/flask-dashed-0.1b_p2.ebuild&lt;/span&gt;
-&lt;span class=gi&gt;+++ w/flask-dashed-0.1b_p2.ebuild&lt;/span&gt;
-&lt;span class=gu&gt;@@ -29,5 +29,6 @@ S="${WORKDIR}/${MY_P}"&lt;/span&gt;
-
- src_prepare() {
-        distutils-r1_src_prepare
-&lt;span class=gi&gt;+       sed -i /data_files/d setup.py || die "sed failed"&lt;/span&gt;
-        rm -rf "${S}/tests"
-}
-&lt;/pre&gt;&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="admonition note"&gt;
-&lt;p class="first admonition-title"&gt;Note&lt;/p&gt;
-&lt;p class=last&gt;Of course, if you cared you’d fix the package properly and send the fix
-upstream(along with a fix for the duplicate files and other brokeness you
-found).&lt;/p&gt;
-&lt;/div&gt;
-&lt;p&gt;I will mention a downside here however, it appears that very few people test
-&lt;tt class="docutils literal"&gt;&lt;span class=pre&gt;portage&lt;/span&gt;&lt;/tt&gt;‘s binary package support.  You will eventually waste some time
-working around problems.  And because the path isn’t all that well trodden
-you’ll have to devise your own dubious methods for removing stale packages when
-an &lt;tt class="docutils literal"&gt;&lt;span class=pre&gt;eclass&lt;/span&gt;&lt;/tt&gt; change causes problems or a library breaks compatibility.&lt;/p&gt;
-&lt;p&gt;Oftentimes such a thing can be quickly achieved with a loop in your shell of
-choice.  The following are a couple of annotated examples I’ve just plucked from
-deep inside my &lt;tt class="docutils literal"&gt;&lt;span class=pre&gt;zsh&lt;/span&gt;&lt;/tt&gt; history:&lt;/p&gt;
-&lt;div class="code sh highlight-python"&gt;&lt;div class=highlight&gt;&lt;pre&gt;# When you were stuck with packages that used python-distutils-ng, and you
-# needed to scrub packages because you changed Python version
-for i in /var/cache/packages/*-*/*.tbz2; do
-    qtbz2 -xO $i | qxpak -xO /dev/stdin ${${i##*/}/.tbz2}.ebuild | grep -q 'SUPPORT_PYTHON_ABIS' &amp;amp;&amp;amp; echo $i
-done
-
-# When you were stuck with packages that used python's "-r1" eclasses and
-# all you can see is a flood of blockages in your update output
-for i in /var/cache/packages/*-*/*.tbz2; do
-    qtbz2 -xO $i | qxpak -xO /dev/stdin RDEPEND 2&amp;gt;/dev/null | grep -q "dev-python/python-exec" &amp;amp;&amp;amp; echo $i
-done
-&lt;/pre&gt;&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class=section id=documentation&gt;
-&lt;h2&gt;Documentation&lt;a class=headerlink href=http://jnrowe.github.com/articles/dropping_gentoo_redux.html#documentation title="Permalink to this headline"&gt;¶&lt;/a&gt;&lt;/h2&gt;
-&lt;p&gt;The excellent &lt;a class="reference external" href=http://devmanual.gentoo.org/&gt;devmanual&lt;/a&gt; and the incredible &lt;a class="reference external" href=http://wiki.gentoo.org/wiki/Project:PMS&gt;Package Manager Specification&lt;/a&gt;
-made life so much easier.  The devmanual was both short enough to be used as
-quick reference and complete enough that you could learn most of what you’d need
-to know from it.  The unfortunately named PMS acted as the reference that
-finally allowed us to switch from away from &lt;tt class="docutils literal"&gt;&lt;span class=pre&gt;portage&lt;/span&gt;&lt;/tt&gt; completely at the
-office.&lt;/p&gt;
-&lt;p&gt;The PMS documented much of the nastiness that &lt;tt class="docutils literal"&gt;&lt;span class=pre&gt;portage&lt;/span&gt;&lt;/tt&gt; suffers from, and made
-life in general a whole lot nicer as a Gentoo user.  And, let us be honest it
-also stopped a little of the fluidity that plagued &lt;tt class="docutils literal"&gt;&lt;span class=pre&gt;portage&lt;/span&gt;&lt;/tt&gt; too.&lt;/p&gt;
-&lt;p&gt;Some people argue that it acts as unnecessary stop motion but those people must
-be forgetting what happened when behaviour changed randomly between &lt;tt class="docutils literal"&gt;&lt;span class=pre&gt;portage&lt;/span&gt;&lt;/tt&gt;
-versions.  PMS, and the EAPI process, also brought some much needed design and
-stability to newer &lt;tt class="docutils literal"&gt;&lt;span class=pre&gt;ebuild&lt;/span&gt;&lt;/tt&gt; features.&lt;/p&gt;
-&lt;p&gt;All Gentoo users owe Ciaran McCreesh a few beers for all the hard work he put in
-to those documents, especially in the early days.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class=section id=wrapping-up&gt;
-&lt;h2&gt;Wrapping up&lt;a class=headerlink href=http://jnrowe.github.com/articles/dropping_gentoo_redux.html#wrapping-up title="Permalink to this headline"&gt;¶&lt;/a&gt;&lt;/h2&gt;
-&lt;p&gt;The simple truth is that you really can not always see the forest for trees.&lt;/p&gt;
-&lt;p&gt;Had recent events not clouded my vision I would have commented on the train
-wreck that is/was &lt;tt class="docutils literal"&gt;&lt;span class=pre&gt;webapp.eclass&lt;/span&gt;&lt;/tt&gt; and &lt;tt class="docutils literal"&gt;&lt;span class=pre&gt;app-admin/webapp-config&lt;/span&gt;&lt;/tt&gt; in
-&lt;a class="reference internal" href=http://jnrowe.github.com/articles/dropping_gentoo.html&gt;&lt;em&gt;Dropping Gentoo&lt;/em&gt;&lt;/a&gt;. It sucked tonnes and tonnes of time away until we
-eventually just trashed any package that interacted with it and moved on.&lt;/p&gt;
-&lt;p&gt;That was so long ago that I had forgotten about it until a friend asked me why
-I hadn’t mentioned it.  I suspect most of the other negative comments I made
-will feel equally inconsequential when compared to the benefits Gentoo gave us
-when a few more of the scars have finally healed.&lt;/p&gt;
+as time moves on.&lt;/p&gt;
+&lt;p&gt;Instead of making this rant even longer, I’ll take the time to reflect on the
+fun memories.&lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 </summary></entry><entry><title>Dropping Gentoo</title><link href="http://jnrowe.github.com/articles/dropping_gentoo.html" rel="alternate"></link><updated>2014-06-18T00:00:00Z</updated><id>http://jnrowe.github.com/articles/dropping_gentoo.html</id><summary type="html">&lt;div class=section id=dropping-gentoo&gt;
@@ -581,47 +579,6 @@ It is too late, and there is another lesson for me to learn.&lt;/p&gt;
 nothing useful about it.  Internet, this is the foolish truth I proffer you
 today.  The others well, they’ll hopefully remain hidden away from view.&lt;/p&gt;
 &lt;/div&gt;
-</summary></entry><entry><title>Hitting life&amp;#8217;s reset button</title><link href="http://jnrowe.github.com/articles/reset_in_ten.html" rel="alternate"></link><updated>2014-02-24T00:00:00Z</updated><id>http://jnrowe.github.com/articles/reset_in_ten.html</id><summary type="html">&lt;div class=section id=hitting-life-s-reset-button&gt;
-&lt;h1&gt;Hitting life’s reset button&lt;a class=headerlink href=http://jnrowe.github.com/articles/reset_in_ten.html#hitting-life-s-reset-button title="Permalink to this headline"&gt;¶&lt;/a&gt;&lt;/h1&gt;
-&lt;p&gt;Seven months ago while enjoying a little Saturday afternoon cricket picnic,
-a friend posed the question:&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;div&gt;“If life had a reset button when would you have used it?”&lt;/div&gt;&lt;/blockquote&gt;
-&lt;p&gt;I understand the point and the purpose of this.  Catherine was hoping to elicit
-some deep truths, with the eventual goal that people would bond further.  That
-doesn’t mean I played the game though.&lt;/p&gt;
-&lt;p&gt;I recall my answer was somewhat flippant:&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;div&gt;“I’d have used it repeatedly half an ago, until I figured out the magic
-incantation that convinces that cashier in the ‘Express to join me for
-a picnic...  and then I would have ditched you suckers.”&lt;/div&gt;&lt;/blockquote&gt;
-&lt;p&gt;It was an honest-ish answer;  I mean yeah, she may have been worth messing with
-the universe for.  It wasn’t, however, the correct kind of reply.  I should
-have been describing some dreadful mistake I made, both to make my friends
-laugh and also to let them in a little closer.&lt;/p&gt;
-&lt;p&gt;I didn’t choose to answer that way to be deliberately obtuse, I answered
-that way simply because it was how I felt at the time.&lt;/p&gt;
-&lt;p&gt;Since then, and I direct you to the first three words of this post, I’ve been
-mildly obsessed with the question.  I have a twenty heading document where I’ve
-described branch points in my life, specifically the ones with the deepest joy
-and most painful regrets.  I hoped I’d see a pattern of some kind, and that
-would allow me to direct myself toward the happier paths in future.&lt;/p&gt;
-&lt;p&gt;I didn’t, and it hasn’t.  Not even a little bit.&lt;/p&gt;
-&lt;p&gt;I don’t seem to find myself in the situations where I could repeat the most
-foolish decisions that I really regret.  And I wonder whether that is because
-I’ve eventually been smart enough to learn my lessons, or stupid enough that
-I’m unable to spot the new mistakes yet.&lt;/p&gt;
-&lt;p&gt;The whole process has been very cathartic though. Despite having
-a &lt;em&gt;significantly&lt;/em&gt; higher proportion of regrets than successes in my list,
-I kind of enjoying reviewing it in a cringe ridden way.&lt;/p&gt;
-&lt;p&gt;I’d really like to thank Catherine for offering the mirror, it has been
-intriguing in a terrifying and horrific kind of way.  Unfortunately, I can’t.
-It is too late, and there is another lesson for me to learn.&lt;/p&gt;
-&lt;hr class=docutils&gt;
-&lt;p&gt;For what it’s worth, that girl still works at the ‘Express and I’ve done
-nothing useful about it.  Internet, this is the foolish truth I proffer you
-today.  The others well, they’ll hopefully remain hidden away from view.&lt;/p&gt;
-&lt;/div&gt;
 </summary></entry><entry><title>Return to rambling</title><link href="http://jnrowe.github.com/thoughts/the_returned.html" rel="alternate"></link><updated>2014-01-27T00:00:00Z</updated><id>http://jnrowe.github.com/thoughts/the_returned.html</id><summary type="html">&lt;div class=section id=return-to-rambling&gt;
 &lt;h1&gt;Return to rambling&lt;a class=headerlink href=http://jnrowe.github.com/thoughts/the_returned.html#return-to-rambling title="Permalink to this headline"&gt;¶&lt;/a&gt;&lt;/h1&gt;
 &lt;p&gt;I kept a public journal from about 2003 until 2009, with a new entry about every
@@ -636,37 +593,6 @@ hour on a short post and finally delete it entirely.  &lt;em&gt;All&lt;/em&gt; t
 &lt;em&gt;all&lt;/em&gt; of it.&lt;/p&gt;
 &lt;div class=section id=unleash-the-shout-hole&gt;
 &lt;h2&gt;Unleash the shout-hole&lt;a class=headerlink href=http://jnrowe.github.com/thoughts/the_returned.html#unleash-the-shout-hole title="Permalink to this headline"&gt;¶&lt;/a&gt;&lt;/h2&gt;
-&lt;p&gt;So why return?  Simple, I’ve reached a stage in my life where I don’t have to be
-quite so concerned with outbound appearances for the sake of professional life,
-and I should feel free to express myself how I wish in my personal life.&lt;/p&gt;
-&lt;p&gt;Don’t get me wrong, I’m not about to start writing about whatever noisy issue
-I can find just because I can.  I’m not, nor have I ever wished to be, a tabloid
-journalist.&lt;/p&gt;
-&lt;p&gt;The purpose of this resurrection and the previous incarnations has always been
-as an outlet for some of my views.  It is a side-effect should it be read by
-others.  However, some of my fondest memories of writing have been the
-conversations that have arisen from folks who’ve contacted me about an entry.
-I’ve engaged with some extremely interesting people this way, some of whom
-I remain in touch with to this day.&lt;/p&gt;
-&lt;p&gt;I &lt;em&gt;always&lt;/em&gt; have an open invitation to thank me, correct me, shame me or berate
-me for the opinions I express or information I spread.  And that invitation is
-absolutely extended to this site and the new content I post.&lt;/p&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-</summary></entry><entry><title>Return to rambling</title><link href="http://jnrowe.github.com/articles/the_returned.html" rel="alternate"></link><updated>2014-01-27T00:00:00Z</updated><id>http://jnrowe.github.com/articles/the_returned.html</id><summary type="html">&lt;div class=section id=return-to-rambling&gt;
-&lt;h1&gt;Return to rambling&lt;a class=headerlink href=http://jnrowe.github.com/articles/the_returned.html#return-to-rambling title="Permalink to this headline"&gt;¶&lt;/a&gt;&lt;/h1&gt;
-&lt;p&gt;I kept a public journal from about 2003 until 2009, with a new entry about every
-three days.  I enjoyed the act of writing it greatly, and often looked forward
-to the period of contemplation it would create.  However, eventually I found
-I had to kill it, but not because of waning enthusiasm as is so often the case.&lt;/p&gt;
-&lt;p&gt;I had simply become incredibly frustrated and entirely fed up with having to
-censor myself; “unprofessional” thoughts, fear of discussing hot political
-issues, &amp;amp;c.  I realised, towards the end, that I would spend about the same
-amount of time editing a post as I would writing it.  Sometimes I would spend an
-hour on a short post and finally delete it entirely.  &lt;em&gt;All&lt;/em&gt; the love was gone,
-&lt;em&gt;all&lt;/em&gt; of it.&lt;/p&gt;
-&lt;div class=section id=unleash-the-shout-hole&gt;
-&lt;h2&gt;Unleash the shout-hole&lt;a class=headerlink href=http://jnrowe.github.com/articles/the_returned.html#unleash-the-shout-hole title="Permalink to this headline"&gt;¶&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;So why return?  Simple, I’ve reached a stage in my life where I don’t have to be
 quite so concerned with outbound appearances for the sake of professional life,
 and I should feel free to express myself how I wish in my personal life.&lt;/p&gt;
@@ -733,55 +659,6 @@ line up with your definition of “strong moral values” ;)&lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
 &lt;/div&gt;
-</summary></entry><entry><title>Murdering morality with ferocious fire</title><link href="http://jnrowe.github.com/articles/important_balance.html" rel="alternate"></link><updated>2014-01-25T00:00:00Z</updated><id>http://jnrowe.github.com/articles/important_balance.html</id><summary type="html">&lt;div class=section id=murdering-morality-with-ferocious-fire&gt;
-&lt;h1&gt;Murdering morality with ferocious fire&lt;a class=headerlink href=http://jnrowe.github.com/articles/important_balance.html#murdering-morality-with-ferocious-fire title="Permalink to this headline"&gt;¶&lt;/a&gt;&lt;/h1&gt;
-&lt;blockquote&gt;
-&lt;div&gt;&lt;p&gt;“Morality is herd instinct in the individual.”&lt;/p&gt;
-&lt;p class=attribution&gt;—Friedrich Nietzsche&lt;/p&gt;
-&lt;/div&gt;&lt;/blockquote&gt;
-&lt;p&gt;When I look back at my life’s work thus far I often find myself asking the
-question “was it worth it?”&lt;/p&gt;
-&lt;p&gt;That question isn’t meant in some kind of crazed suicidal manner, I just mean
-specifically the projects I’ve worked on and the things I do.  Are they just?
-Should I be doing this?&lt;/p&gt;
-&lt;p&gt;I truly hope it doesn’t come as a surprise to people who know me, but I consider
-myself to be a person of strong moral values &lt;a class=footnote-reference href=http://jnrowe.github.com/articles/important_balance.html#s1 id=id1&gt;[1]&lt;/a&gt;.  I probably shouldn’t admit
-this publicly, but over the years I have turned down several projects I didn’t
-feel ethically comfortable working on.  And it has &lt;em&gt;demonstrably&lt;/em&gt; held my career
-progression back.  I mostly fine with that.  No, I really am.&lt;/p&gt;
-&lt;p&gt;The simple fact is that I’m due for a HR review, overdue actually, and these
-questions have started to come to the fore again.  I’ll lay in bed thinking
-about them, I’ll sit here typing about them, I’ll judge other people to gauge
-the validity of my position and I’ll bore people who’ll listen with my
-dilemmas.&lt;/p&gt;
-&lt;p&gt;One shouldn’t really use the word “dilemma” here, these issues are practically
-the definition of “First World Problems”.  Part of me is disgusted to waste so
-much time on frankly trivial introspection, but for better or worse it is
-a &lt;em&gt;huge&lt;/em&gt; part of my self-identity.&lt;/p&gt;
-&lt;p&gt;I feel that – to some extent – I’m living a weak, self-imposed and
-inconsequential version of &lt;a class="reference external" href="http://en.m.wikipedia.org/wiki/Pascal's_wager"&gt;Pascal’s Gambit&lt;/a&gt;.  I know full well that the works
-I’ve rejected have been seen to completion by others.  I’ve not scuppered them,
-nor have I even attempted to.  Not having me work on them has perhaps even made
-them far more effective at whatever aspect I took exception to.  I’m making
-moral decisions with no weight beyond my own mind, no ripple beyond my own
-insignificant life puddle and no wake beyond this now excessively long essay.&lt;/p&gt;
-&lt;p&gt;However, in the face of these realisations I still find myself unable to
-consider the decisions wrong.  I’d still choose to reject them now, and
-I suspect that will remain true in the future.  I like that these decisions are
-defensible to &lt;em&gt;me&lt;/em&gt;, that they &lt;em&gt;must&lt;/em&gt; be defensible to me.  I love that the thing
-that keeps me awake at night is not the thought of the possibly nefarious
-effects of my works, but rather the exceedingly minor issue of not having
-a glistening and well-specced M6 in the garage.&lt;/p&gt;
-&lt;p&gt;Now, let me sleep.&lt;/p&gt;
-&lt;p class=rubric&gt;Footnotes&lt;/p&gt;
-&lt;table class="docutils footnote" frame=void id=s1 rules=none&gt;
-&lt;col class=label&gt;&lt;col&gt;&lt;/colgroup&gt;
-&lt;tbody valign=top&gt;
-&lt;tr&gt;&lt;td class=label&gt;&lt;a class=fn-backref href=http://jnrowe.github.com/articles/important_balance.html#id1&gt;[1]&lt;/a&gt;&lt;td&gt;For those values to be strong doesn’t necessarily mean they have to
-line up with your definition of “strong moral values” ;)&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-&lt;/div&gt;
 </summary></entry><entry><title>Dopplr defects</title><link href="http://jnrowe.github.com/thoughts/dopplr_effects.html" rel="alternate"></link><updated>2014-01-06T00:00:00Z</updated><id>http://jnrowe.github.com/thoughts/dopplr_effects.html</id><summary type="html">&lt;div class=section id=dopplr-defects&gt;
 &lt;h1&gt;Dopplr defects&lt;a class=headerlink href=http://jnrowe.github.com/thoughts/dopplr_effects.html#dopplr-defects title="Permalink to this headline"&gt;¶&lt;/a&gt;&lt;/h1&gt;
 &lt;blockquote class=epigraph&gt;
@@ -821,48 +698,6 @@ actually use, but sadly I can’t even picture how it should work.&lt;/p&gt;
 &lt;col class=label&gt;&lt;col&gt;&lt;/colgroup&gt;
 &lt;tbody valign=top&gt;
 &lt;tr&gt;&lt;td class=label&gt;&lt;a class=fn-backref href=http://jnrowe.github.com/thoughts/dopplr_effects.html#id1&gt;[1]&lt;/a&gt;&lt;td&gt;Your personal examples may vary&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-&lt;span class=target id=backstory&gt;&lt;/span&gt;&lt;/div&gt;
-</summary></entry><entry><title>Dopplr defects</title><link href="http://jnrowe.github.com/articles/dopplr_effects.html" rel="alternate"></link><updated>2014-01-06T00:00:00Z</updated><id>http://jnrowe.github.com/articles/dopplr_effects.html</id><summary type="html">&lt;div class=section id=dopplr-defects&gt;
-&lt;h1&gt;Dopplr defects&lt;a class=headerlink href=http://jnrowe.github.com/articles/dopplr_effects.html#dopplr-defects title="Permalink to this headline"&gt;¶&lt;/a&gt;&lt;/h1&gt;
-&lt;blockquote&gt;
-&lt;div&gt;&lt;p&gt;Dopplr was a free social networking service, launched in 2007, that allowed
-users to create itineraries of their travel plans and spot correlations with
-their contacts’ travel plans in order to arrange meetings at any point on
-their journey.&lt;/p&gt;
-&lt;p class=attribution&gt;—&lt;a class="reference external" href=http://en.m.wikipedia.org/wiki/Dopplr&gt;dopplr&lt;/a&gt; wikipedia entry&lt;/p&gt;
-&lt;/div&gt;&lt;/blockquote&gt;
-&lt;p&gt;A couple of months ago &lt;a class="reference external" href=http://en.m.wikipedia.org/wiki/Dopplr&gt;dopplr&lt;/a&gt; was shut down.  It was perhaps my most
-favouritistist of websites, but I didn’t use it.  In fact, I hadn’t visited in
-nearly three years and it contained no data I was interested in saving…  but
-I still counted it among my favourite sites.&lt;/p&gt;
-&lt;p&gt;dopplr had an elegant, yet jaw droppingly beautiful design; a marvel of
-simplicity and discoverability.  The functionality was great, who doesn’t like
-the idea of discovering happy collisions with old friends?  The implementation
-was cool, introducing me to OpenID.  I loved the site enough to read the
-&lt;a class="reference internal" href=http://jnrowe.github.com/articles/dopplr_effects.html#backstory&gt;backstory&lt;/a&gt; when the shutdown news was being passed around, but I still didn’t
-want to use it again.  The cost for this functionality was just far too great
-for me.&lt;/p&gt;
-&lt;p&gt;I simply couldn’t stomach giving up the information that dopplr required to
-function.  It required an enormous amount of vigilance to police your own data
-on the way in, to make sure you weren’t sharing things you couldn’t or
-shouldn’t.  You could often glean things that people didn’t perhaps realise they
-were sharing.  A friend’s weekend to somewhere odd like Bedford wasn’t just
-a sign that you could meet up for lunch, it was probably also a sign that they
-were visiting Lockheed Martin &lt;a class=footnote-reference href=http://jnrowe.github.com/articles/dopplr_effects.html#s1 id=id1&gt;[1]&lt;/a&gt;.&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;div&gt;“Oh, Kevin is going to be near me next week!  Hmm, either he is on an
-exceptionally long pub crawl or he is about to sign a contract”&lt;/div&gt;&lt;/blockquote&gt;
-&lt;p&gt;I know that dopplr was cool though, it was powerful and it did squeeze a lot
-more serendipity out of the world(I forget their actual tagline).  I couldn’t
-imagine a better present for 2014 than to find a replacement that I could
-actually use, but sadly I can’t even picture how it should work.&lt;/p&gt;
-&lt;p class=rubric&gt;Footnotes&lt;/p&gt;
-&lt;table class="docutils footnote" frame=void id=s1 rules=none&gt;
-&lt;col class=label&gt;&lt;col&gt;&lt;/colgroup&gt;
-&lt;tbody valign=top&gt;
-&lt;tr&gt;&lt;td class=label&gt;&lt;a class=fn-backref href=http://jnrowe.github.com/articles/dopplr_effects.html#id1&gt;[1]&lt;/a&gt;&lt;td&gt;Your personal examples may vary&lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
 &lt;span class=target id=backstory&gt;&lt;/span&gt;&lt;/div&gt;
@@ -959,103 +794,6 @@ know about it.  If that isn’t the case, just keep it to yourself.&lt;/p&gt;
 &lt;col class=label&gt;&lt;col&gt;&lt;/colgroup&gt;
 &lt;tbody valign=top&gt;
 &lt;tr&gt;&lt;td class=label&gt;&lt;a class=fn-backref href=http://jnrowe.github.com/thoughts/nice_stories.html#id1&gt;[1]&lt;/a&gt;&lt;td&gt;Okay, probably just a coffee or a beer&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-</summary></entry><entry><title>Tell me a nice story, please</title><link href="http://jnrowe.github.com/articles/nice_stories.html" rel="alternate"></link><updated>2013-12-23T00:00:00Z</updated><id>http://jnrowe.github.com/articles/nice_stories.html</id><summary type="html">&lt;div class=section id=tell-me-a-nice-story-please&gt;
-&lt;h1&gt;Tell me a nice story, please&lt;a class=headerlink href=http://jnrowe.github.com/articles/nice_stories.html#tell-me-a-nice-story-please title="Permalink to this headline"&gt;¶&lt;/a&gt;&lt;/h1&gt;
-&lt;p&gt;I’m fed up of hearing bad stories, I really am.  Often it feels like every
-person I know simply revels in the misfortune or missteps of others, and it is
-beginning to truly annoy me.&lt;/p&gt;
-&lt;p&gt;I can’t work out if it is the result of malicious envy, angry spitefulness or
-just a sad realisation that those stories seem to engage others more easily.
-That said I don’t believe the reason matters, it is wrong and it needs to stop.&lt;/p&gt;
-&lt;blockquote class=epigraph&gt;
-&lt;div&gt;&lt;p&gt;“You cannot strengthen one by weakening another; and you cannot add to the
-stature of a dwarf by cutting off the leg of a giant”&lt;/p&gt;
-&lt;p class=attribution&gt;—Benjamin Franklin Fairless&lt;/p&gt;
-&lt;/div&gt;&lt;/blockquote&gt;
-&lt;div class=section id=in-examples&gt;
-&lt;h2&gt;In examples&lt;a class=headerlink href=http://jnrowe.github.com/articles/nice_stories.html#in-examples title="Permalink to this headline"&gt;¶&lt;/a&gt;&lt;/h2&gt;
-&lt;p&gt;Hmm, this is hard.  How does one express examples without explicitly re-telling
-the nasty stories?&lt;/p&gt;
-&lt;p&gt;The stories you are about to hear are true.  The scenes have been munged to
-protect the innocent.&lt;/p&gt;
-&lt;div class=section id=exhibit-a&gt;
-&lt;h3&gt;Exhibit A&lt;a class=headerlink href=http://jnrowe.github.com/articles/nice_stories.html#exhibit-a title="Permalink to this headline"&gt;¶&lt;/a&gt;&lt;/h3&gt;
-&lt;p&gt;About five years ago I found out that an old school friend had made a serious,
-yet possibly singular, morally irresponsible mistake.  This is a man was close
-to the top of his chosen career tree, with a string of impressive achievements
-to his name.&lt;/p&gt;
-&lt;p&gt;The thing that bugged me about it, and to this day it is still does, is that I’d
-never heard anyone remark on his successes prior to this.  I was &lt;em&gt;entirely&lt;/em&gt;
-unaware of how his life had turned out prior to this story, and I was completely
-unaware of any of the success he had made for himself.&lt;/p&gt;
-&lt;p&gt;However, the moment there is a tale with the sprinkled essence of schadenfreude
-it felt like you couldn’t go a week without being told about it.  People would
-post about it on social-network-du-jour, drop it in to unrelated conversations
-and literally stop you in the street to tell you.&lt;/p&gt;
-&lt;p&gt;&lt;em&gt;Why couldn’t I have heard a fantastic story about an old friend’s success when
-trying to feed my shocking biscuit habit at Sainsbury’s?&lt;/em&gt;&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class=section id=exhibit-b&gt;
-&lt;h3&gt;Exhibit B&lt;a class=headerlink href=http://jnrowe.github.com/articles/nice_stories.html#exhibit-b title="Permalink to this headline"&gt;¶&lt;/a&gt;&lt;/h3&gt;
-&lt;p&gt;In the mid-naughties a conference friend sold his web service for an apparently
-healthy chunk of change.  I remember bumping in to the founding team at a boring
-conference and listening to their happiness at the outcome.  They were looking
-forward to working on the service itself more, and removing some of the
-day-to-day woes of running the business on fumes.  All seemed good.&lt;/p&gt;
-&lt;p&gt;That same day we, along with a bunch of ten or so others, headed off for lunch.
-We got to hear some interesting war stories, and some fun tales of moments when
-they were writing their “service suicide” notes.  The end of the lunch arrives,
-and they decided to pick up the whole tab.  An absolutely unnecessary gesture
-given that most, if not all, of us were expensed for the day anyway.  They did
-it simply because they’re nice guys.&lt;/p&gt;
-&lt;p&gt;As we started to break up and head back I noticed a few people were now telling
-other stories.  Some had heard that the specific amount of money wasn’t worth
-the grief, others expressed doubts the site would live on post acquisition, etc.&lt;/p&gt;
-&lt;p&gt;I hadn’t realised initially, but this change in tone appeared to happen almost
-the moment the founders left.  Friends who had found success, regaled us with
-their stories and kindly paid for our semi-liquid lunch were suddenly being
-beaten down for their apparent success.&lt;/p&gt;
-&lt;p&gt;&lt;em&gt;Why can’t people just find some happiness in the happiness of others?&lt;/em&gt;&lt;/p&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class=section id=what-to-do&gt;
-&lt;h2&gt;What to do&lt;a class=headerlink href=http://jnrowe.github.com/articles/nice_stories.html#what-to-do title="Permalink to this headline"&gt;¶&lt;/a&gt;&lt;/h2&gt;
-&lt;p&gt;I’m not perfect, well not quite anyway ;)&lt;/p&gt;
-&lt;p&gt;If I wasn’t so terribly, terribly ill today I’d be preparing to head to our
-Winterval shutdown party.  You’d no doubt find I like to have a little gossip
-and moan about things I shouldn’t, and I might even commit a couple of the faux
-pas I’ve mentioned above.  Yes, that upsets me. It really does, but I’m trying
-to change.&lt;/p&gt;
-&lt;div class=section id=a-pledge&gt;
-&lt;h3&gt;A pledge&lt;a class=headerlink href=http://jnrowe.github.com/articles/nice_stories.html#a-pledge title="Permalink to this headline"&gt;¶&lt;/a&gt;&lt;/h3&gt;
-&lt;p&gt;If you catch me using the failure of others for entertainment or to make
-a point, feel free to berate me for it.  It might even be time to start offering
-fantastic prizes &lt;a class=footnote-reference href=http://jnrowe.github.com/articles/nice_stories.html#s1 id=id1&gt;[1]&lt;/a&gt; to people who catch me doing so, as it is probably the only
-way I’ll really learn.&lt;/p&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class=section id=what-i-want-to-hear&gt;
-&lt;h2&gt;What I want to hear&lt;a class=headerlink href=http://jnrowe.github.com/articles/nice_stories.html#what-i-want-to-hear title="Permalink to this headline"&gt;¶&lt;/a&gt;&lt;/h2&gt;
-&lt;p&gt;Simply tell me about that friend who is getting married, don’t tell the story by
-mentioning that it is their third marriage.  I also don’t need to hear about
-that messy relationship breakdown.  [The exception – of course – being if it
-is that one girl who I’d sell my soul for a second chance with]&lt;/p&gt;
-&lt;p&gt;Tell me about that friend whose child aced the &lt;a class="reference external" href=http://en.wikipedia.org/wiki/Eleven_plus_exam&gt;Eleven Plus&lt;/a&gt;, and has been
-accepted in to the school we all wish we had attended.&lt;/p&gt;
-&lt;p&gt;Tell me how that old school friend who is building their own &lt;a class="reference external" href=http://www.channel4.com/programmes/grand-designs&gt;Grand
-Designs&lt;/a&gt;-esque house.&lt;/p&gt;
-&lt;p&gt;I guess there is one reason I want to hear the bad stories, and it is very
-simple.  &lt;em&gt;If&lt;/em&gt; there is some actionable thing I can do to help, then I &lt;em&gt;want&lt;/em&gt; to
-know about it.&lt;/p&gt;
-&lt;p class=rubric&gt;Footnotes&lt;/p&gt;
-&lt;table class="docutils footnote" frame=void id=s1 rules=none&gt;
-&lt;col class=label&gt;&lt;col&gt;&lt;/colgroup&gt;
-&lt;tbody valign=top&gt;
-&lt;tr&gt;&lt;td class=label&gt;&lt;a class=fn-backref href=http://jnrowe.github.com/articles/nice_stories.html#id1&gt;[1]&lt;/a&gt;&lt;td&gt;Okay, probably just a coffee or a beer&lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
 &lt;/div&gt;
@@ -1161,112 +899,6 @@ basis.&lt;/p&gt;
 &lt;col class=label&gt;&lt;col&gt;&lt;/colgroup&gt;
 &lt;tbody valign=top&gt;
 &lt;tr&gt;&lt;td class=label&gt;&lt;a class=fn-backref href=http://jnrowe.github.com/thoughts/side_projects.html#id1&gt;[1]&lt;/a&gt;&lt;td&gt;I really don’t count &lt;a class="reference external" href=http://jnrowe.github.io/&gt;this site&lt;/a&gt;, as it
-is just a jumbled content dump with no real purpose.&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-</summary></entry><entry><title>Side-projects</title><link href="http://jnrowe.github.com/articles/side_projects.html" rel="alternate"></link><updated>2013-12-16T00:00:00Z</updated><id>http://jnrowe.github.com/articles/side_projects.html</id><summary type="html">&lt;div class=section id=side-projects&gt;
-&lt;h1&gt;Side-projects&lt;a class=headerlink href=http://jnrowe.github.com/articles/side_projects.html#side-projects title="Permalink to this headline"&gt;¶&lt;/a&gt;&lt;/h1&gt;
-&lt;p&gt;Chatting with my brother yesterday he expressed some disbelief when I mentioned
-&lt;em&gt;yet another&lt;/em&gt; friend who has a website related to some topic we were discussing:&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;div&gt;Does everyone you know run a website?&lt;/div&gt;&lt;/blockquote&gt;
-&lt;p&gt;Yes, yes, they do.&lt;/p&gt;
-&lt;p&gt;It hadn’t really occurred to me until I was reading a write up of a co-workers
-weekend hack.  The majority of nerdy people I know run websites, create
-iPhone/android apps or have other side projects in various states of completion.
-It’s just How Things Work®&lt;/p&gt;
-&lt;p&gt;I guess it is mostly a cultural issue, one which is quite strong behind the
-engineering side of the curtain in my workplace.  Sure, there are some “5:01”
-types who are out of the door as soon as the bell rings, but there are an awful
-lot who extend their tech creations in to a downtime hobby or side business.&lt;/p&gt;
-&lt;p&gt;To relate this to my brother I think of a family party we attended this past
-weekend.  When people asked me what my brother does I proudly say he works in
-logistics, and I like to tell people how well he’s done for himself.  When
-talking to the extended family that often seemed to end up being about material
-possessions or such.  However, I’ve noticed in the past when I’m talking to
-people I’d call friends it often quickly digresses in to strange discussions
-about box packing, routing, &lt;a class="reference external" href=http://en.wikipedia.org/wiki/Travelling_salesman_problem&gt;the curse of travelling salesmen&lt;/a&gt; or &lt;a class="reference external" href=http://en.wikipedia.org/wiki/Bridges_of_Konigsberg&gt;bridges in
-a foreign land&lt;/a&gt;.  Because of the math and technology implications many of my
-friends have written tools to explore some of the practical and theoretical
-issues faced in logistics… for fun.&lt;/p&gt;
-&lt;div class=section id=it-is-all-about-me&gt;
-&lt;h2&gt;It is all about me&lt;a class=headerlink href=http://jnrowe.github.com/articles/side_projects.html#it-is-all-about-me title="Permalink to this headline"&gt;¶&lt;/a&gt;&lt;/h2&gt;
-&lt;p&gt;I’m not working on any public facing websites right now &lt;a class=footnote-reference href=http://jnrowe.github.com/articles/side_projects.html#s1 id=id1&gt;[1]&lt;/a&gt;, but I do play
-with a few public facing projects from time to time that should head towards
-proving my point.  I’m picking a few semi-randomly to illustrate a little
-diversity.&lt;/p&gt;
-&lt;div class="admonition note"&gt;
-&lt;p class="first admonition-title"&gt;Note&lt;/p&gt;
-&lt;p class=last&gt;To save myself some researching effort I’ll only link to things from &lt;a class="reference external" href=https://github.com/JNRowe/&gt;my
-GitHub profile&lt;/a&gt; or links from my browser’s bookmarks, but that should be
-descriptive enough to get the point across.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class=section id=gentoo&gt;
-&lt;h3&gt;Gentoo&lt;a class=headerlink href=http://jnrowe.github.com/articles/side_projects.html#gentoo title="Permalink to this headline"&gt;¶&lt;/a&gt;&lt;/h3&gt;
-&lt;p&gt;Over the past decade I’ve spent a lot of time hacking on things related to
-&lt;a class="reference external" href=http://gentoo.org/&gt;Gentoo&lt;/a&gt;.  Some of that for work projects and some of it for &lt;a class="reference external" href=https://jnrowe-misc.rtfd.org/&gt;personal
-projects&lt;/a&gt;.  I’ve also experienced my fair share of troubles, and have &lt;a class="reference external" href="https://bugs.gentoo.org/buglist.cgi?email1=jnrowe%40gmail.com&amp;amp;emailassigned_to1=1&amp;amp;emailcc1=1&amp;amp;emaillongdesc1=1&amp;amp;emailreporter1=1&amp;amp;emailtype1=substring&amp;amp;query_format=advanced"&gt;reported
-a few bugs&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;At one time I even hoped to &lt;a class="reference external" href="https://bugs.gentoo.org/show_bug.cgi?id=142090"&gt;become a developer&lt;/a&gt;, but that didn’t work out for
-a bunch of reasons.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class=section id=github2&gt;
-&lt;h3&gt;&lt;tt class="docutils literal"&gt;&lt;span class=pre&gt;github2&lt;/span&gt;&lt;/tt&gt;&lt;a class=headerlink href=http://jnrowe.github.com/articles/side_projects.html#github2 title="Permalink to this headline"&gt;¶&lt;/a&gt;&lt;/h3&gt;
-&lt;p&gt;For a year I &lt;a class="reference external" href=https://github.com/ask/python-github2/graphs/contributors&gt;maintained&lt;/a&gt; a relatively popular &lt;a class="reference external" href=https://github.com/ask/python-github2&gt;API wrapper&lt;/a&gt; to GitHub.  I did
-this because I found it fun.  It provided no economic benefit to me, and I never
-expected it to.  I know a lot of people used it when building their own toy
-projects and websites, because many were kind enough to link to it.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class=section id=pyisbn&gt;
-&lt;h3&gt;&lt;tt class="docutils literal"&gt;&lt;span class=pre&gt;pyisbn&lt;/span&gt;&lt;/tt&gt;&lt;a class=headerlink href=http://jnrowe.github.com/articles/side_projects.html#pyisbn title="Permalink to this headline"&gt;¶&lt;/a&gt;&lt;/h3&gt;
-&lt;p&gt;For seven years I’ve maintained a small library for &lt;a class="reference external" href=https://github.com/JNRowe/pyisbn/&gt;validating ISBNs&lt;/a&gt;.
-&lt;em&gt;Yes, that is absolutely as boring as it sounds&lt;/em&gt;.&lt;/p&gt;
-&lt;p&gt;It was never meant to be used by others, I just needed something to validate
-entries in my e-book database.  Other people started using it, many for their
-own weird side projects including a number of book retail websites.  It has
-amassed literally tens of thousands of downloads from PyPI, but you really
-shouldn’t trust the dubious statistics from PyPI ;)&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class=section id=rdial&gt;
-&lt;h3&gt;&lt;tt class="docutils literal"&gt;&lt;span class=pre&gt;rdial&lt;/span&gt;&lt;/tt&gt;&lt;a class=headerlink href=http://jnrowe.github.com/articles/side_projects.html#rdial title="Permalink to this headline"&gt;¶&lt;/a&gt;&lt;/h3&gt;
-&lt;p&gt;&lt;a class="reference external" href=http://rdial.rtfd.org/&gt;rdial&lt;/a&gt; is a time tracking tool, and a perfect example for me.  I played with it
-for over a year before anyone else saw it, just because it scratched an itch
-I had.  I never imagined it would be useful to others.  Turns out it was, and
-there is now a small yet faithful band of users.&lt;/p&gt;
-&lt;p&gt;I even received the great honour of a few summer evening beers for releasing it.
-A beer being second only to a patch in the table of project endorsements
-that I subscribe to.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class=section id=upoints&gt;
-&lt;h3&gt;&lt;tt class="docutils literal"&gt;&lt;span class=pre&gt;upoints&lt;/span&gt;&lt;/tt&gt;&lt;a class=headerlink href=http://jnrowe.github.com/articles/side_projects.html#upoints title="Permalink to this headline"&gt;¶&lt;/a&gt;&lt;/h3&gt;
-&lt;p&gt;&lt;a class="reference external" href=https://jnrowe.github.com/upoints/&gt;upoints&lt;/a&gt; is a strange one.  It started as a &lt;a class="reference external" href=http://jnrowe.github.io/upoints/geolocation_and_pathcross.html&gt;stupid hack&lt;/a&gt; to figure out some
-silly travel planning drama, it proceeded to take on a life of its own.  Over
-the years it attracted a fair amount of users, and I still receive email about
-it now.&lt;/p&gt;
-&lt;p&gt;It did have some tangible benefit though, the sadly now defunct website it
-eventually spawned opened some nice doors for me.  I didn’t know it would or
-could at the time, so it didn’t affect how I spent my time when playing with it.&lt;/p&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class=section id=cut-from-the-pattern&gt;
-&lt;h2&gt;Cut from the pattern&lt;a class=headerlink href=http://jnrowe.github.com/articles/side_projects.html#cut-from-the-pattern title="Permalink to this headline"&gt;¶&lt;/a&gt;&lt;/h2&gt;
-&lt;p&gt;This isn’t specific to me, or even to the particularly nerdy among my
-co-workers.  If you &lt;a class="reference external" href=https://github.com/explore&gt;dig around on GitHub&lt;/a&gt;, or even &lt;a class="reference external" href=http://makezine.com/&gt;makezine&lt;/a&gt;, you’ll see
-people creating purely because they can.  This isn’t a new phenomenon either.
-If you were around pre-GitHub you’d see people making things on Sourceforge.  If
-you were around before Sourceforge, you’ll remember the good old days when life
-was simpler and people held doors open for you.&lt;/p&gt;
-&lt;p&gt;The point is simple.  Yes, I &lt;em&gt;may&lt;/em&gt; know someone who is working on
-project/website related to some topic, but that is only because many of the
-people I know are spitting out new projects on what often appears to be a weekly
-basis.&lt;/p&gt;
-&lt;p class=rubric&gt;Footnotes&lt;/p&gt;
-&lt;table class="docutils footnote" frame=void id=s1 rules=none&gt;
-&lt;col class=label&gt;&lt;col&gt;&lt;/colgroup&gt;
-&lt;tbody valign=top&gt;
-&lt;tr&gt;&lt;td class=label&gt;&lt;a class=fn-backref href=http://jnrowe.github.com/articles/side_projects.html#id1&gt;[1]&lt;/a&gt;&lt;td&gt;I really don’t count &lt;a class="reference external" href=http://jnrowe.github.io/&gt;this site&lt;/a&gt;, as it
 is just a jumbled content dump with no real purpose.&lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;

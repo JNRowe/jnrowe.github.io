@@ -1,0 +1,252 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Open Source and enjoyment &mdash; JNRowe</title>
+    
+    <link rel="stylesheet" href="../_static/agogo.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     '0.1.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <link rel="shortcut icon" href="../_static/icon.ico"/>
+    <link rel="copyright" title="Copyright" href="../copyright.html" />
+    <link rel="top" title="JNRowe" href="../index.html" />
+    <link rel="up" title="Thoughts" href="index.html" />
+    <link rel="next" title="Delayed flashover" href="delayed_flashover.html" />
+    <link rel="prev" title="Thoughts" href="index.html" />
+    <link rel="alternate" type="application/atom+xml" title="Updated items" href="/updates.atom" />
+  </head>
+  <body>
+    <div class="header-wrapper">
+      <div class="header">
+          <p class="logo"><a href="../index.html">
+            <img class="logo" src="../_static/logo.png" alt="Logo"/>
+          </a></p>
+        <div class="headertitle"><a
+          href="../index.html">JNRowe</a></div>
+        <div class="rel">
+          <a href="index.html" title="Thoughts"
+             accesskey="P">previous</a> |
+          <a href="delayed_flashover.html" title="Delayed flashover"
+             accesskey="N">next</a> |
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a>
+        </div>
+       </div>
+    </div>
+
+    <div class="content-wrapper">
+      <div class="content">
+        <div class="document">
+    <div class="admonition note">
+        <p class="first admonition-title">
+            Estimated reading time: 4 minutes
+        </p>
+    </div>
+    
+    
+            
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="open-source-and-enjoyment">
+<h1>Open Source and enjoyment<a class="headerlink" href="#open-source-and-enjoyment" title="Permalink to this headline">¶</a></h1>
+<p>A few years ago I burned out on Open Source projects, to the point that it was
+close to impacting other parts of my life.  I have only myself to blame as
+I didn&#8217;t manage to distance myself at all well.  Distancing yourself is not easy
+to do when your fun hobby for relaxation is the thing that is thing that is
+working against you.</p>
+<p>There were a variety of incredibly minor issues that piled up Jenga-style.  Then
+to carry the weak analogy forward, it toppled over in a split second like Jenga
+in a rubber dingy on the rolling seas with a fumbling drunken friend wearing
+a blindfold.</p>
+<p>I&#8217;ve decided to write down a few of the things that were happening, both as an
+act of catharsis and to help me spot the problems in future.  Perhaps it will
+help others who are experiencing the same thing but haven&#8217;t quite spotted the
+catalysts yet.</p>
+<div class="section" id="dealing-with-needy-users">
+<h2>Dealing with needy users<a class="headerlink" href="#dealing-with-needy-users" title="Permalink to this headline">¶</a></h2>
+<p>Some users seem to feel a disproportionate amount of &#8220;you work for me&#8221;,
+seemingly more so than happens with actual paying customers on other projects
+which strikes me as strange.  They&#8217;ll bug you endlessly in emails, in the issue
+tracker, on IRC and in real life if you end up at the same conference.  You
+<em>need</em> to stop this before it takes hold.  It helps if you can be polite, but if
+not just stop it anyway.  It is for <em>your</em> welfare, so just do it.</p>
+<p>I actually found myself burning the wrong people towards the peak of that
+imaginary Jenga tower.  You need to make a concerted effort to figure out which
+people are delivering the seemingly endless grief or perhaps just relentless
+<a class="reference external" href="http://en.m.wikipedia.org/wiki/bikeshedding">bikeshedding</a>, and stop them.  It is all too easy to accidentally become
+annoyed at well meaning useful contributors when you&#8217;ve been trawling through
+a heap of useless meta-discussion about a change nobody is making.</p>
+<p>On one <em>library</em> project I worked on there was a user who didn&#8217;t read the
+documentation, couldn&#8217;t use the language enough to write tests, yet still
+endlessly sucked up support time by opening awful issues and sending pointless
+emails wishing to discuss changes they might make.  I kind of hesitate to say
+awful issues, but - for example - if you can&#8217;t write a two line assertion in
+a language you&#8217;re not in the target audience for a library in the first place.</p>
+<p>Those people aren&#8217;t even adding value in pointing out deficiencies in
+documentation, because they&#8217;re not a target user.  It would be like me writing
+to <a class="reference external" href="http://www.jcb.com/">JCB</a> telling them they must document why they use round knobs on the digger
+I saw someone else using.  So try spot it early, and put a stop to it.</p>
+<p>I suspect a big part of the issue here is cost.  I&#8217;m sure if there was even
+a single penny cost to opening issues or sending a mail it would do wonders for
+communication in general.  I suspect that would remain true even if you
+reimbursed that penny immediately.</p>
+<div class="section" id="the-answer">
+<h3>The answer<a class="headerlink" href="#the-answer" title="Permalink to this headline">¶</a></h3>
+<p>I figured out how to work with this entirely by accident.  Politely offer
+answers that move them away from you.  It is by far the easiest solution.</p>
+<p>In one instance I suggested alternatives packages to an expensive user, with the
+hope they&#8217;d quietly move on.  Which is evil really, as what you&#8217;re really doing
+is dreaming that they&#8217;ll move on to bother a developer who isn&#8217;t you.</p>
+<p>On another occasion I stole an idea from a friend and said &#8220;Sorry, I can&#8217;t
+figure out how to implement this.  Open a pull request, and I&#8217;ll merge it!&#8221; to
+another.  It worked well, because it stopped the direction-less discussion and
+was never going to be followed up with a patch later.</p>
+</div>
+</div>
+<div class="section" id="dealing-with-unreasonable-requests">
+<h2>Dealing with unreasonable requests<a class="headerlink" href="#dealing-with-unreasonable-requests" title="Permalink to this headline">¶</a></h2>
+<p>I used to get quite annoyed when I received an impolite or unreasonable request
+on an Open Source project, nowadays I tend to just respond with pre-canned
+answers for most of them.  If you can cut the time it takes to respond to them,
+you&#8217;ll obviously spend far less time thinking about them.</p>
+<p>The typical one that springs to mind is a user complaining that you&#8217;ve not
+licensed your GPL code in a way which allows them to use it without contributing
+anything in return.  I choose reciprocating licences where I can, because
+frankly that may be the only value you provide <em>me</em> as a user.  I get that some
+people need to use their Open Source projects as a way to improve their CV or
+build a presence, but for many of us it is just for fun and reciprocation.</p>
+<p>Another example that I recall, but wish I didn&#8217;t, was a user <em>telling</em> me to
+recompress a tarball on PyPI because their infrastructure couldn&#8217;t support
+<tt class="docutils literal"><span class="pre">bzip2</span></tt>.  Seems reasonable enough, but it came wrapped in a tirade of abuse.
+I ignored the abuse, uploaded another tarball and then received another abusive
+email in return the next day.  That was a long time ago, far before the burnout
+started to creep in so I just addressed the actual issue and moved on.</p>
+<div class="section" id="id1">
+<h3>The answer<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
+<p>I had forgotten about that whole previous story until at <a class="reference external" href="https://europython.eu/">Europython</a> a friend
+was telling me about someone who was banned from a number of events, hell-banned
+on various mailing lists and on forced lockout on Stack Overflow for poisonous
+behaviour.  I started to tell my story as an example of strange abusive
+behaviour, and it turned out to be the same guy.</p>
+<p>The point is these people can be everywhere so just don&#8217;t let them get to you.
+I realise that is both obvious and feels hard to do, but it is quite easy in the
+virtual world.  If you have the hell-ban option available just use
+it; perhaps there is an ignore option in your issue tracker, add a &#8220;send to
+trash&#8221; rule in your email filter.  Even in person it can be quite easy to do,
+just politely acknowledge their issue and move away instead of engaging them.</p>
+</div>
+</div>
+</div>
+<div class="section" id="the-solutions">
+<h1>The solutions<a class="headerlink" href="#the-solutions" title="Permalink to this headline">¶</a></h1>
+<p>I chose a solution I hate, for all intents and purposes I don&#8217;t release new Open
+Source projects any longer.  I still work on a lot of projects, and the code is
+normally available somewhere for strangers.  However, for the most part I&#8217;ve
+made a point of not hosting or releasing it in the common places.  This works
+for me, but it saddens me deeply.</p>
+<p>I have a friend who does something interesting to combat the same problems I&#8217;ve
+mentioned here.  He hooks the issue tracker to only show issues reported by
+people in his second-degree <a class="reference external" href="http://www.foaf-project.org/">FOAF</a> circle or people whose user profile is an
+active Open Source contributor.  It works, and it cuts out most of the problem
+users, but it is nasty.  I feel it is worse than my &#8220;solution&#8221; because it still
+gives the impression of support to the users you won&#8217;t support, but also gives
+the impression of bad support through heaps of unanswered issues to the users
+who would receive good support.</p>
+<blockquote>
+<div>The greatest trick the devil ever played was convincing users they had skin
+in the game.</div></blockquote>
+<p>I may be misappropriating a quote from a great film there, but it is important.
+A lot of the actively poisonous people who contact you aren&#8217;t providing any real
+value to you, and they&#8217;re probably never going to.  If you can remove them
+somehow you&#8217;re probably not losing anything, but you&#8217;ll be gaining a whole lot
+personally.</p>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+        </div>
+        <div class="sidebar">
+          <h3>Table Of Contents</h3>
+          <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../projects.html">Projects</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../articles/index.html">Articles</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Thoughts</a><ul class="current">
+<li class="toctree-l2 current"><a class="current reference internal" href="">Open Source and enjoyment</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#the-solutions">The solutions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="delayed_flashover.html">Delayed flashover</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dopplr_effects.html">Dopplr defects</a></li>
+<li class="toctree-l2"><a class="reference internal" href="important_balance.html">Murdering morality with ferocious fire</a></li>
+<li class="toctree-l2"><a class="reference internal" href="nice_stories.html">Tell me a nice story, please</a></li>
+<li class="toctree-l2"><a class="reference internal" href="reset_in_ten.html">Hitting life&#8217;s reset button</a></li>
+<li class="toctree-l2"><a class="reference internal" href="side_projects.html">Side-projects</a></li>
+<li class="toctree-l2"><a class="reference internal" href="the_returned.html">Return to rambling</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../colophon.html">Colophon</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../contact.html">Contact details</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../consult.html">Consulting services</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../copyright.html">Copyright information</a></li>
+</ul>
+
+          <h3 style="margin-top: 1.5em;">Search</h3>
+          <form class="search" action="../search.html" method="get">
+            <input type="text" name="q" />
+            <input type="submit" value="Go" />
+            <input type="hidden" name="check_keywords" value="yes" />
+            <input type="hidden" name="area" value="default" />
+          </form>
+          <p class="searchtip" style="font-size: 90%">
+            Enter search terms or a module, class or function name.
+          </p>
+        </div>
+        <div class="clearer"></div>
+      </div>
+    </div>
+
+    <div class="footer-wrapper">
+      <div class="footer">
+        <div class="left">
+          <a href="index.html" title="Thoughts"
+             >previous</a> |
+          <a href="delayed_flashover.html" title="Delayed flashover"
+             >next</a> |
+          <a href="../genindex.html" title="General Index"
+             >index</a>
+            <br/>
+            <a href="../_sources/thoughts/burn_out.txt"
+               rel="nofollow">Show Source</a>
+        </div>
+
+        <div class="right">
+          
+    <div class="footer">
+        &copy; <a href="../copyright.html">Copyright</a> 2009-2014, James Rowe.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.2.2.
+    </div>
+        </div>
+        <div class="clearer"></div>
+      </div>
+    </div>
+
+  </body>
+</html>
