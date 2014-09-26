@@ -152,7 +152,7 @@ personally.
     Everyone I speak to cites the non-contributing "community member" types that
     defines the Canonical ecosystem as being a significant source of the
     poisonous user problem, but the rant is probably unneccessary outside this
-    comment.  
+    comment.
 
 .. _bikeshedding: http://en.m.wikipedia.org/wiki/bikeshedding
 .. _JCB: http://www.jcb.com/

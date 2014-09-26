@@ -1,5 +1,139 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>JNRowe</title><link href="http://jnrowe.github.com/" rel="alternate"></link><link href="http://jnrowe.github.com/updates.atom" rel="self"></link><id>http://jnrowe.github.com/</id><updated>2014-09-03T00:00:00Z</updated><author><name>James Rowe</name><email>jnrowe@gmail.com</email><uri>http://jnrowe.github.com/</uri></author><rights>2009-2014, James Rowe</rights><entry><title>Open Source and enjoyment</title><link href="http://jnrowe.github.com/thoughts/burn_out.html" rel="alternate"></link><updated>2014-09-03T00:00:00Z</updated><id>http://jnrowe.github.com/thoughts/burn_out.html</id><summary type="html">&lt;div class=section id=open-source-and-enjoyment&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>JNRowe</title><link href="http://jnrowe.github.com/" rel="alternate"></link><link href="http://jnrowe.github.com/updates.atom" rel="self"></link><id>http://jnrowe.github.com/</id><updated>2014-09-18T00:00:00Z</updated><author><name>James Rowe</name><email>jnrowe@gmail.com</email><uri>http://jnrowe.github.com/</uri></author><rights>2009-2014, James Rowe</rights><entry><title>Cleanse thy soul</title><link href="http://jnrowe.github.com/thoughts/disconnect.html" rel="alternate"></link><updated>2014-09-18T00:00:00Z</updated><id>http://jnrowe.github.com/thoughts/disconnect.html</id><summary type="html">&lt;div class=section id=cleanse-thy-soul&gt;
+&lt;h1&gt;Cleanse thy soul&lt;a class=headerlink href=http://jnrowe.github.com/thoughts/disconnect.html#cleanse-thy-soul title="Permalink to this headline"&gt;¶&lt;/a&gt;&lt;/h1&gt;
+&lt;p&gt;For the past few years I’ve taken to having routine breaks from certain
+timesinks to help me focus and also to denoise some of my thoughts.  The number
+one timesink in my world is without doubt the interwebs, and there are a few
+steps I’ve taken to weaken its stranglehold.&lt;/p&gt;
+&lt;p&gt;Perhaps the following will help you, or perhaps you’ll &lt;a class="reference external" href=mailto:jnrowe%40gmail.com&gt;email&lt;/a&gt; me to point out
+your ideas for me to try.&lt;/p&gt;
+&lt;div class=section id=cut-the-tether&gt;
+&lt;h2&gt;Cut the tether&lt;a class=headerlink href=http://jnrowe.github.com/thoughts/disconnect.html#cut-the-tether title="Permalink to this headline"&gt;¶&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;I track every thing that I &lt;em&gt;practically&lt;/em&gt; can, doing so can be very empowering.
+This is something which the buzzwordy types apparently refer to as The
+Quantified Self, and despite knowing that I continue to do so.&lt;/p&gt;
+&lt;p&gt;With a query of my network logs &lt;a class=footnote-reference href=http://jnrowe.github.com/thoughts/disconnect.html#s1 id=id1&gt;[1]&lt;/a&gt; I can tell you that for the first nine
+months of this year I’ve been entirely without internet access for thirty-one
+percent of the time.  Last year the final amount was thirty-eight percent, and
+once our Winterval shutdown is included I’d expect this year to be about the
+same.&lt;/p&gt;
+&lt;p&gt;It isn’t just a case of being without internet access for a few hours or on
+certain days either, my longest break &lt;em&gt;complete&lt;/em&gt; this year was a straight
+thirteen days back in May.&lt;/p&gt;
+&lt;p&gt;The number one thing I’ve learnt is that a lot of the things I burnt time on
+where genuinely just burnt.  For example, news sites feel mostly pointless to
+me at this point.&lt;/p&gt;
+&lt;ul class=simple&gt;
+&lt;li&gt;Mainstream news is invariably a PR copy’n’paste fest, which is &lt;em&gt;really&lt;/em&gt;
+noticeable when you come back from a break and catch up on various feeds in
+one huge chunk.&lt;/li&gt;
+&lt;li&gt;Sites with a slightly more tech bias like HackerNews and its ilk are just
+a complete time hole.  Often the really interesting tech stories will bubble
+up elsewhere in a curated fashion(such as &lt;a class="reference external" href=http://chneukirchen.org/trivium/&gt;Trivium&lt;/a&gt;), and for example on HN the
+majority of posts and comments are just US politics or occasionally
+interesting insights from the SV bubble anyway.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;I’ll still catch up from a couple of, in my opinion, trusted sources.  That is
+to say I’ll dip in to a few categories on BBC news and perhaps visit The
+Guardian’s site(although I do that considerably less over the past year
+according to my data).  I also like to avail myself of a little &lt;a class="reference external" href=http://rt.com/&gt;Russia Today&lt;/a&gt;
+and &lt;a class="reference external" href=http://www.aljazeera.net/&gt;Al Jazeera&lt;/a&gt; to keep the bias in check a little.&lt;/p&gt;
+&lt;p&gt;With a simple &lt;a class="reference external" href=https://pypi.python.org/pypi/rdial/&gt;rdial&lt;/a&gt; report I can also tell you that on an average internet
+connected day I can spend an hour reading news, friend’s blogs, sports stories,
+&amp;amp;c.  A big chunk of that time is also combined with breakfast, so I choose to
+let it slide for the most part.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=section id=tighten-the-noose&gt;
+&lt;h2&gt;Tighten the noose&lt;a class=headerlink href=http://jnrowe.github.com/thoughts/disconnect.html#tighten-the-noose title="Permalink to this headline"&gt;¶&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;For the two-thirds of the year that I have internet access, I’ve started to
+severely restrict access.&lt;/p&gt;
+&lt;p&gt;It all started with a friend who – while wearing his tinfoil hat – preached
+about how we all need to consider blocking sites that use &lt;abbr title="Content Delivery Network"&gt;CDNs&lt;/abbr&gt; in much the same way that many of us block web analytics
+companies.  We’re probably giving up tracking data to the large CDNs then we do
+the simple analytics companies.&lt;/p&gt;
+&lt;p&gt;The thought popped in to my mind that a whitelist, instead of a blacklist, might
+actually be workable and since last November I’ve taken to doing just that.&lt;/p&gt;
+&lt;p&gt;The strangest result in my mind is just how short the list is.  My old advert
+and analytics blacklist had close to 1500 entries, and would obviously miss many
+“nasties” that I either hadn’t seen or that were simply new.&lt;/p&gt;
+&lt;p&gt;The whitelist, on the other hand, has only ever had 900 entries. Right now it
+has less than 150 thanks to the automated decay-based-on-visits purging of the
+entries it contains.&lt;/p&gt;
+&lt;p&gt;The whitelist approach also feeds in to my data tracking habit, as I can now
+tell from the decay tracking data when bursts of certain sites appear.  For
+example, StackOverflow(and &lt;tt class="docutils literal"&gt;&lt;span class=pre&gt;cdn.sstatic.net/stackoverflow/&lt;/span&gt;&lt;/tt&gt; for styling) were
+on the whitelist for two weeks in June with six visits, which happens to
+coincide with a project that involved porting a tool to Windows.&lt;/p&gt;
+&lt;p&gt;The act of using a whitelist makes the point of procrastination noticeable and
+adds a cost to even starting it.  Every time I want to visit a new site &lt;a class=footnote-reference href=http://jnrowe.github.com/thoughts/disconnect.html#s2 id=id2&gt;[2]&lt;/a&gt;,
+I have to highlight the URL and rattle a key combo in &lt;a class="reference external" href=http://awesome.naquadah.org/&gt;awesome&lt;/a&gt; that updates the
+whitelist to enable access to it.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=section id=on-the-knoll&gt;
+&lt;h2&gt;On the knoll&lt;a class=headerlink href=http://jnrowe.github.com/thoughts/disconnect.html#on-the-knoll title="Permalink to this headline"&gt;¶&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;I know the whole “go without the internet” thing is going to strike people as
+unworkable.  Questions abound about contact via email, missing bug reports,
+skipping meeting logs, depriving myself of invites to weddings I don’t wish to
+attend and so on.  I do realise it isn’t achievable for everyone, but with
+a little effort it should at the very least be achievable for one day a week.&lt;/p&gt;
+&lt;p&gt;The other advantage of doing so is the forced removal from services that
+actively destroy your privacy and the privacy of your friends and family, which
+is something that feels increasingly important in recent years.  For example,
+I no longer actively store my addressbook online &lt;a class=footnote-reference href=http://jnrowe.github.com/thoughts/disconnect.html#s3 id=id3&gt;[3]&lt;/a&gt; nor do I use a service
+to help me process receipts any more.&lt;/p&gt;
+&lt;div class=sidebar&gt;
+&lt;p class="first sidebar-title"&gt;Admission of guilt&lt;/p&gt;
+&lt;p&gt;I have to admit that I haven’t quite dropped all the services I’d like to,
+here are a few:&lt;/p&gt;
+&lt;ul class="last simple"&gt;
+&lt;li&gt;Strava - I’m still kind of using for the time being, although Keith’s
+replacement looks like it will fulfill my needs &lt;abbr title="Real Soon Now™"&gt;RSN&lt;/abbr&gt;.&lt;/li&gt;
+&lt;li&gt;status.net - There are one or two people I don’t want to lose contact with
+who aren’t able to access our private server because of geo-filtering, and
+I don’t know how that can be fixed.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;p&gt;There are a myriad of benefits to dropping the reliance on &lt;abbr title="Software as a Service"&gt;SaaS&lt;/abbr&gt; affairs.  The chance of any of them existing tomorrow is frankly
+not all that great: shuttering, buy-out closures, “pivotting”, &amp;amp;c.  You can
+also retain some level of control over your own data, knowing that for example
+it isn’t being sold or stored in regions with little to no data protection
+regulation.&lt;/p&gt;
+&lt;p&gt;In all honesty, I – no, &lt;em&gt;we&lt;/em&gt; – should have resisted the urge to use so called
+cloud services from the outset.  One doesn’t need to be a fully paid up member
+of the tinfoil hat brigade to know that it is just not acceptable to entrust
+your important data to external companies for the sake of a little convenience
+or a shiny interface.&lt;/p&gt;
+&lt;p&gt;Killing my internet access for chunks of time really pointed out how much I had
+come to rely on services far beyond my control, and the freedom one feels when
+you regain some of that is very comforting.&lt;/p&gt;
+&lt;p class=rubric&gt;Footnotes&lt;/p&gt;
+&lt;table class="docutils footnote" frame=void id=s1 rules=none&gt;
+&lt;col class=label&gt;&lt;col&gt;&lt;/colgroup&gt;
+&lt;tbody valign=top&gt;
+&lt;tr&gt;&lt;td class=label&gt;&lt;a class=fn-backref href=http://jnrowe.github.com/thoughts/disconnect.html#id1&gt;[1]&lt;/a&gt;&lt;td&gt;The code I use is an unreleased project created by a friend, but
+&lt;a class="reference external" href=http://humdi.net/vnstat/&gt;vnstat&lt;/a&gt; may work equally well for the same purpose.&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;table class="docutils footnote" frame=void id=s2 rules=none&gt;
+&lt;col class=label&gt;&lt;col&gt;&lt;/colgroup&gt;
+&lt;tbody valign=top&gt;
+&lt;tr&gt;&lt;td class=label&gt;&lt;a class=fn-backref href=http://jnrowe.github.com/thoughts/disconnect.html#id2&gt;[2]&lt;/a&gt;&lt;td&gt;For the most part I whitelist based on hostname, but as in the
+StackOverflow styling example will whitelist specific paths on hosts on some
+occasions.&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;table class="docutils footnote" frame=void id=s3 rules=none&gt;
+&lt;col class=label&gt;&lt;col&gt;&lt;/colgroup&gt;
+&lt;tbody valign=top&gt;
+&lt;tr&gt;&lt;td class=label&gt;&lt;a class=fn-backref href=http://jnrowe.github.com/thoughts/disconnect.html#id3&gt;[3]&lt;/a&gt;&lt;td&gt;I’m aware that Google has access to a small corner of my contacts graph
+via gmail, but I haven’t yet decided how I plan to resolve.  I’ve never used
+gmail for work or mail that I’d be uncomfortable reading in public, but it
+does act as a nice sieve for everything else right now.&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</summary></entry><entry><title>Open Source and enjoyment</title><link href="http://jnrowe.github.com/thoughts/burn_out.html" rel="alternate"></link><updated>2014-09-03T00:00:00Z</updated><id>http://jnrowe.github.com/thoughts/burn_out.html</id><summary type="html">&lt;div class=section id=open-source-and-enjoyment&gt;
 &lt;h1&gt;Open Source and enjoyment&lt;a class=headerlink href=http://jnrowe.github.com/thoughts/burn_out.html#open-source-and-enjoyment title="Permalink to this headline"&gt;¶&lt;/a&gt;&lt;/h1&gt;
 &lt;p&gt;A few years ago I burned out on Open Source projects, to the point that it was
 close to impacting other parts of my life.  I have only myself to blame as
@@ -787,7 +921,7 @@ accepted in to the school we all wish we had attended.&lt;/p&gt;
 &lt;p&gt;Tell me about that old school friend who is building their own &lt;a class="reference external" href=http://www.channel4.com/programmes/grand-designs&gt;Grand
 Designs&lt;/a&gt;-esque house.&lt;/p&gt;
 &lt;p&gt;I guess there is one reason I want to hear the bad stories, and it is very
-simple.  &lt;em&gt;If&lt;/em&gt; there is some actionable thing I can do to help, then I &lt;em&gt;want&lt;/em&gt; to
+simple.  &lt;em&gt;Iff&lt;/em&gt; there is some actionable thing I can do to help, then I &lt;em&gt;want&lt;/em&gt; to
 know about it.  If that isn’t the case, just keep it to yourself.&lt;/p&gt;
 &lt;p class=rubric&gt;Footnotes&lt;/p&gt;
 &lt;table class="docutils footnote" frame=void id=s1 rules=none&gt;

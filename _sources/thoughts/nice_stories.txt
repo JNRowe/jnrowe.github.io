@@ -109,7 +109,7 @@ Tell me about that old school friend who is building their own `Grand
 Designs`_-esque house.
 
 I guess there is one reason I want to hear the bad stories, and it is very
-simple.  *If* there is some actionable thing I can do to help, then I *want* to
+simple.  *Iff* there is some actionable thing I can do to help, then I *want* to
 know about it.  If that isn't the case, just keep it to yourself.
 
 .. _Eleven Plus: http://en.wikipedia.org/wiki/Eleven_plus_exam
