@@ -23,7 +23,7 @@ to them.  Check the content against validators if you wish, and shame me if I've
 failed :)
 
 .. _sphinx: http://sphinx-doc.org/
-.. _git repository: https://github.com/JNRowe/jnrowe.github.com
+.. _git repository: https://github.com/JNRowe/jnrowe.github.io
 .. _vim: http://www.vim.org/
 .. _reST: http://docutils.sourceforge.net/docs/user/rst/
 .. _Atom: http://www.atomenabled.org/

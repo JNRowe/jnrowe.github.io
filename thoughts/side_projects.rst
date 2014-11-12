@@ -127,7 +127,7 @@ It did have some tangible benefit though, the sadly now defunct website it
 eventually spawned opened some nice doors for me.  I didn't know it would or
 could at the time, so it didn't affect how I spent my time when playing with it.
 
-.. _upoints: https://jnrowe.github.com/upoints/
+.. _upoints: https://jnrowe.github.io/upoints/
 .. _stupid hack: http://jnrowe.github.io/upoints/geolocation_and_pathcross.html
 
 Cut from the pattern

@@ -11,8 +11,8 @@ Attribution-ShareAlike 4.0 license`_.
 If you find any problems with this repository either file an issue_ or drop me
 an email_.
 
-.. _my personal pages: http://jnrowe.github.com/
+.. _my personal pages: http://jnrowe.github.io/
 .. _GitHub: https://www.github.com/
 .. _Creative Commons Attribution-ShareAlike 4.0 license: http://creativecommons.org/licenses/by-sa/4.0/
-.. _issue: https://github.com/JNRowe/jnrowe.github.com/issues
+.. _issue: https://github.com/JNRowe/jnrowe.github.io/issues
 .. _email: jnrowe@gmail.com

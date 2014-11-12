@@ -15,8 +15,8 @@ All *content* within `this site`_ is copyright James Rowe and licensed under the
 `Creative Commons Attribution-ShareAlike 4.0 license`_ unless stated otherwise.
 See the `README.rst`_ in the Github_ repository_ for more information.
 
-.. _this site: http://jnrowe.github.com/
+.. _this site: http://jnrowe.github.io/
 .. _Creative Commons Attribution-ShareAlike 4.0 license: http://creativecommons.org/licenses/by-sa/4.0/
-.. _README.rst: https://github.com/JNRowe/jnrowe.github.com/blob/master/README.rst
+.. _README.rst: https://github.com/JNRowe/jnrowe.github.io/blob/master/README.rst
 .. _Github: https://github.com
-.. _repository: https://github.com/JNRowe/jnrowe.github.com/
+.. _repository: https://github.com/JNRowe/jnrowe.github.io/

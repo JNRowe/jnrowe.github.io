@@ -54,7 +54,7 @@ Python_ comes with its own basic web server, and it is very easy to use:
 
 .. code-block:: text
 
-    ~/Desktop/jnrowe.github.com/_site $ python2.6 -m SimpleHTTPServer 8080
+    ~/Desktop/jnrowe.github.io/_site $ python2.6 -m SimpleHTTPServer 8080
     Serving HTTP on 0.0.0.0 port 8080 ...
     kate.localdomain - - [13/Oct/2009 01:16:51] "GET / HTTP/1.1" 200 -
     kate.localdomain - - [13/Oct/2009 01:16:51] "GET /css/content.css HTTP/1.1" 200 -
@@ -63,7 +63,7 @@ Python_ comes with its own basic web server, and it is very easy to use:
     kate.localdomain - - [13/Oct/2009 01:16:51] "GET /css/microformats.css HTTP/1.1" 200 -
     kate.localdomain - - [13/Oct/2009 01:16:51] "GET /css/print.css HTTP/1.1" 200 -
     kate.localdomain - - [13/Oct/2009 01:16:51] "GET /css/voice.css HTTP/1.1" 200 -
-    ~/Desktop/jnrowe.github.com/_site $ python3.1 -m http.server 8080
+    ~/Desktop/jnrowe.github.io/_site $ python3.1 -m http.server 8080
     Serving HTTP on 0.0.0.0 port 8080 ...
     kate.localdomain - - [13/Oct/2009 01:17:23] "GET /2009/10/12/TaD-Instant_web_server.html HTTP/1.1" 200 -
 

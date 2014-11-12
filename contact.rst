@@ -30,7 +30,7 @@ Contact details
 
 .. raw:: html
 
-   <small> [This page is <a href="http://microformats.org/wiki/hcard" title="hCard is a simple, open, distributed contact information format for people, companies, and organizations, which is suitable for embedding in (X)HTML, Atom, RSS, and arbitrary XML.">hCard</a> encoded, you can also grab it in <a href="http://suda.co.uk/projects/X2V/get-vcard.php?uri=http://jnrowe.github.com/contact.html">vcard format</a>]</small>
+   <small> [This page is <a href="http://microformats.org/wiki/hcard" title="hCard is a simple, open, distributed contact information format for people, companies, and organizations, which is suitable for embedding in (X)HTML, Atom, RSS, and arbitrary XML.">hCard</a> encoded, you can also grab it in <a href="http://suda.co.uk/projects/X2V/get-vcard.php?uri=http://jnrowe.github.io/contact.html">vcard format</a>]</small>
 
    </div>
 
