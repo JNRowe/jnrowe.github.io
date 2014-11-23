@@ -27,7 +27,7 @@
     <link rel="copyright" title="Copyright" href="../copyright.html" />
     <link rel="top" title="JNRowe" href="../index.html" />
     <link rel="up" title="Articles" href="index.html" />
-    <link rel="next" title="Introduction to RCS" href="rcs.html" />
+    <link rel="next" title="fossil experiments" href="fossil.html" />
     <link rel="prev" title="Dropping Gentoo" href="dropping_gentoo.html" />
     <link rel="alternate" type="application/atom+xml" title="Updated items" href="/updates.atom" />
   </head>
@@ -43,7 +43,7 @@
         &#160;&#160;::&#160;&#160;
         <a class="uplink" href="../index.html">Contents</a>
         &#160;&#160;::&#160;&#160;
-        <a href="rcs.html">Introduction to RCS</a>&#160;&#160;»
+        <a href="fossil.html"><tt class="docutils literal"><span class="pre">fossil</span></tt> experiments</a>&#160;&#160;»
         </p>
 
       </div>
@@ -96,13 +96,14 @@ We we can fix the problem with the following simple change and a call to
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
 <p class="last">Of course, you should fix the package properly and send the fix upstream but
-this is just to prove a point.</p>
+this is just to prove a point.  Calling <tt class="docutils literal"><span class="pre">die</span></tt> with <tt class="docutils literal"><span class="pre">sed</span></tt> there isn&#8217;t
+recommended and is practically pointless, but it is the style upstream.</p>
 </div>
 <p>I have to mention a small downside here however, because very few people seem to
 test <tt class="docutils literal"><span class="pre">portage</span></tt>&#8216;s binary package support you&#8217;ll occasionally have to do some
-leg work to fix problems.  This normally arises when an <tt class="docutils literal"><span class="pre">eclass</span></tt> changes needs
-to ripple through, or when a library breaks compatibility and it&#8217;s ebuild hasn&#8217;t
-been bumped properly.</p>
+leg work to fix problems.  This normally arises when you have an <tt class="docutils literal"><span class="pre">eclass</span></tt>
+change that needs to ripple through, or when a library breaks compatibility and
+it&#8217;s <tt class="docutils literal"><span class="pre">ebuild</span></tt> hasn&#8217;t been bumped properly.</p>
 <p>Almost every time that happens you can fix it with a quick loop in your shell
 though.  A couple of such problems and solutions that I found in my shell
 history can be seen below.</p>
@@ -178,7 +179,7 @@ fun memories.</p>
         &#160;&#160;::&#160;&#160;
         <a class="uplink" href="../index.html">Contents</a>
         &#160;&#160;::&#160;&#160;
-        <a href="rcs.html">Introduction to RCS</a>&#160;&#160;»
+        <a href="fossil.html"><tt class="docutils literal"><span class="pre">fossil</span></tt> experiments</a>&#160;&#160;»
         </p>
 
       </div>

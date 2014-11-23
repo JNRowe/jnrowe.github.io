@@ -67,7 +67,7 @@ the console?  Not interactive, no spreadsheets</div></blockquote>
 <p><a class="reference external" href="http://www.linuxmanpages.com/man1/column.1.php">column</a>, which on Linux is likely to be provided by <a class="reference external" href="http://www.kernel.org/pub/linux/utils/util-linux-ng/">util-linux</a>, does exactly
 this.  The man page even offers an example of how it works(I&#8217;ve changed it
 slightly to make it work correctly on my system):</p>
-<div class="highlight-text"><div class="highlight"><pre>~/Desktop/jnrowe.github.com $ (echo &quot;PERM LINKS OWNER GROUP SIZE DATE HH:MM NAME&quot;;
+<div class="highlight-text"><div class="highlight"><pre>~/Desktop/jnrowe.github.io $ (echo &quot;PERM LINKS OWNER GROUP SIZE DATE HH:MM NAME&quot;;
 &gt; ls -l static/ | sed 1d) | column -t
 PERM        LINKS  OWNER  GROUP  SIZE   DATE        HH:MM  NAME
 -rw-r--r--  1      jay    jay    328    2009-09-25  02:59  body_background.png
@@ -83,7 +83,7 @@ PERM        LINKS  OWNER  GROUP  SIZE   DATE        HH:MM  NAME
 <p>Given some other standard commands we can mangle that data in various ways at
 the shell prompt too, for example we may wish to display the total size of all
 the files.  Or, as in the output below, the total size of all the <abbr title="Portable Network Graphics">PNG</abbr> files in the directory.</p>
-<div class="highlight-text"><div class="highlight"><pre>~/Desktop/jnrowe.github.com $ (echo &quot;PERM LINKS OWNER GROUP SIZE DATE HH:MM NAME&quot;
+<div class="highlight-text"><div class="highlight"><pre>~/Desktop/jnrowe.github.io $ (echo &quot;PERM LINKS OWNER GROUP SIZE DATE HH:MM NAME&quot;
 &gt; ls -l --time-style=long-iso static/ | sed 1d) | column -t | awk &#39;{print}
 &gt; /\.png/ {sum+=$5}
 &gt; END {print &quot;Total size of PNG files:&quot;, sum}&#39;
@@ -103,7 +103,7 @@ Total size of PNG files: 15808
 we really need to do is get the data in to a state for <tt class="docutils literal"><span class="pre">column</span></tt> to process,
 and we can use <a class="reference external" href="http://www.linuxmanpages.com/man1/tr.1.php">tr</a> to do that.  An example using a small chunk of the network
 log on this computer that we wish to format and calculate totals for could be:</p>
-<div class="highlight-text"><div class="highlight"><pre>~/Desktop/jnrowe.github.com $ cat stats
+<div class="highlight-text"><div class="highlight"><pre>~/Desktop/jnrowe.github.io $ cat stats
 2009-07-15T05:09:42+0100,16803,4304661,129262665
 2009-07-16T04:10:29+0100,17551,4012917,67572304
 2009-07-16T19:03:00+0100,17621,1712073,34162500
@@ -114,7 +114,7 @@ log on this computer that we wish to format and calculate totals for could be:</
 2009-07-17T22:01:57+0100,6611,1159789,25562873
 2009-07-18T13:09:31+0100,1681,164663,2049315
 2009-07-18T13:24:04+0100,834,54025,662134
-~/Desktop/jnrowe.github.com $ (echo &quot;Date,Duration,Sent,Received&quot;;  cat stats ) \
+~/Desktop/jnrowe.github.io $ (echo &quot;Date,Duration,Sent,Received&quot;;  cat stats ) \
 &gt; | tr &#39;,&#39; &#39; &#39; | column -t | awk &#39;{print}
 &gt; !/Date/ {sent+=$3; recv+=$4}
 &gt; END {print &quot;\nTotal sent: &quot;sent&quot;, Total received: &quot;recv}&#39;

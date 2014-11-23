@@ -3,17 +3,17 @@ Projects
 
 * `bfm <https://github.com/JNRowe/bfm>`__: This program is a dockapp-style CPU, memory, swap and load average monitor.
 * `blanco <https://github.com/JNRowe/blanco>`__: Hey, remember me? [ `documentation <http://blanco.rtfd.org/>`__ ]
-* `bleeter <https://github.com/JNRowe/bleeter>`__: Nasty little twitter client [ `documentation <http://jnrowe.github.com/bleeter/>`__ ]
-* `blog <https://github.com/JNRowe/blog>`__: Old jnrowe.github.com content that *may* be resurrected.
-* `bwatch <https://github.com/JNRowe/bwatch>`__: Simple bandwidth watching tool [ `documentation <http://jnrowe.github.com/bwatch/>`__ ]
+* `bleeter <https://github.com/JNRowe/bleeter>`__: Nasty little twitter client [ `documentation <http://jnrowe.github.io/bleeter/>`__ ]
+* `blog <https://github.com/JNRowe/blog>`__: Old jnrowe.github.io content that *may* be resurrected.
+* `bwatch <https://github.com/JNRowe/bwatch>`__: Simple bandwidth watching tool [ `documentation <http://jnrowe.github.io/bwatch/>`__ ]
 * `cupage <https://github.com/JNRowe/cupage>`__: A tool to check for updates on web pages [ `documentation <http://cupage.rtfd.org/>`__ ]
 * `dotbash <https://github.com/JNRowe/dotbash>`__: Shared bash configuration files
 * `dwm <https://github.com/JNRowe/dwm>`__: My desktop DWM base
 * `emacs-configs <https://github.com/JNRowe/emacs-configs>`__: Personal emacs configs
 * `hubugs <https://github.com/JNRowe/hubugs>`__: Simple client for GitHub issues [ `documentation <http://hubugs.rtfd.org/>`__ ]
-* `jnrowe-fixes <https://github.com/JNRowe/jnrowe-fixes>`__: Small package fixes languishing in the Gentoo BTS [ `documentation <http://jnrowe.github.com/jnrowe-fixes>`__ ]
+* `jnrowe-fixes <https://github.com/JNRowe/jnrowe-fixes>`__: Small package fixes languishing in the Gentoo BTS [ `documentation <http://jnrowe.github.io/jnrowe-fixes>`__ ]
 * `jnrowe-misc <https://github.com/JNRowe/jnrowe-misc>`__: Gentoo overlay -- miscellaneous packages [ `documentation <http://jnrowe-misc.rtfd.org/>`__ ]
-* `jnrowe.github.com <https://github.com/JNRowe/jnrowe.github.com>`__: My user pages repository [ `documentation <http://jnrowe.github.com/>`__ ]
+* `jnrowe.github.io <https://github.com/JNRowe/jnrowe.github.io>`__: My user pages repository [ `documentation <http://jnrowe.github.io/>`__ ]
 * `local-bin <https://github.com/JNRowe/local-bin>`__: Tat from my ~/bin
 * `pages_layouts <https://github.com/JNRowe/pages_layouts>`__: Shared layouts submodule for jekyll
 * `pyisbn <https://github.com/JNRowe/pyisbn>`__: A Python module for working with 10- and 13-digit ISBNs [ `documentation <http://pyisbn.rtfd.org/>`__ ]
@@ -21,10 +21,10 @@ Projects
 * `rdial <https://github.com/JNRowe/rdial>`__: Simple time tracking for simple people [ `documentation <http://rdial.rtfd.org/>`__ ]
 * `reverend <https://github.com/JNRowe/reverend>`__: Reverend - Simple Bayesian classifier [ `documentation <http://divmod.org/trac/wiki/DivmodReverend>`__ ]
 * `sphinx-jnrowe <https://github.com/JNRowe/sphinx-jnrowe>`__: My sphinx theme
-* `upoints <https://github.com/JNRowe/upoints>`__: upoints is a collection of GPL v3 licensed modules for working with points on Earth, or other near spherical objects. [ `documentation <http://jnrowe.github.com/upoints/>`__ ]
+* `upoints <https://github.com/JNRowe/upoints>`__: upoints is a collection of GPL v3 licensed modules for working with points on Earth, or other near spherical objects. [ `documentation <http://jnrowe.github.io/upoints/>`__ ]
 * `versionah <https://github.com/JNRowe/versionah>`__: Simple version number mangler [ `documentation <http://versionah.rtfd.org/>`__ ]
-* `vim-configs <https://github.com/JNRowe/vim-configs>`__: Personal vim configs [ `documentation <http://jnrowe.github.com/vim-configs>`__ ]
-* `vim-jnrowe <https://github.com/JNRowe/vim-jnrowe>`__: My colorscheme, decoupled from my vim-configs repo for others ;) [ `documentation <http://jnrowe.github.com/vim-jnrowe/>`__ ]
+* `vim-configs <https://github.com/JNRowe/vim-configs>`__: Personal vim configs [ `documentation <http://jnrowe.github.io/vim-configs>`__ ]
+* `vim-jnrowe <https://github.com/JNRowe/vim-jnrowe>`__: My colorscheme, decoupled from my vim-configs repo for others ;) [ `documentation <http://jnrowe.github.io/vim-jnrowe/>`__ ]
 
 Forks I'm hacking on
 --------------------

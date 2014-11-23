@@ -16,7 +16,7 @@ manufacturers of these types of products routinely change the components and
 models without updating the product codes, so you'll have to wait until you plug
 it in to see what model it actually is.
 
-As for how to to make it work?  Simply use a distribution that comes with
+As for how to make it work?  Simply use a distribution that comes with
 NetworkManager_ and NetworkManager's `mobile broadband provider database`_.
 When I tested it on a friend's install with that setup last month it worked out
 of the box, all you had to do was plug it in and select the network.
@@ -50,7 +50,7 @@ If we find the device name with ``dmesg`` we can mount it, and pull the
 
     mkdir e220_drivers; cd e220_drivers
     mount -t vfat /dev/sr2 /mnt/huawei
-    for file in $(find *.cab); do unpack $file; done
+    for file in /mnt/huawei/**/*.cab; do unpack $file; done
 
 `Fork this code <http://gist.github.com/212738>`__
 
