@@ -68,7 +68,7 @@ The answer
 I figured out how to work with this entirely by accident.  Politely offer
 answers that move them away from you.  It is by far the easiest solution.
 
-In one instance I suggested alternatives packages to an expensive user, with the
+In one instance I suggested alternative packages to an expensive user, with the
 hope they'd quietly move on.  Which is evil really, as what you're really doing
 is dreaming that they'll move on to bother a developer who isn't you.
 

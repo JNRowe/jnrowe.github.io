@@ -58,11 +58,12 @@ nicer.
 
 There was a point where we seriously considered moving to a Conary_-based
 infrastructure.  It did loads of the cool things we wanted to do and it mostly
-fitted out workflow with its mostly "Gentoo done right" feel.  Sadly, it has
-a :abbr:`CLA <Contributor License Agreement` which none of us could sign that
+fitted our workflow with its mostly "Gentoo done right" feel.  Sadly, it has
+a :abbr:`CLA (Contributor License Agreement)` which none of us could sign that
 practically guaranteed we would eventually be in the same place we were with
 Gentoo.  May have been a fortuitous roadblock in the end, as Conary never gained
-the traction it once promised.
+the traction it once promised(perhaps in part because of that :abbr:`CLA
+(Contributor License Agreement)`?).
 
 Had we waited another five months, there would have been another open source
 package manager for Gentoo we could have easily switched to and hacked on.
@@ -91,9 +92,9 @@ a patch to make it acceptable.
 
 For a time, to ease the annoyance we used to play a game where we reported real
 bugs with patches, but using silly data for ``emerge --info``.  It was
-definitely fun it lasted, but it didn't solve the pain points.  Not wanting to
-be associated with the bugs made people use pseudonyms, which also removed the
-hope of attribution too.
+definitely fun while it lasted, but it didn't solve the pain points.  Not
+wanting to be associated with the bugs made people use pseudonyms, which also
+removed the expectation of attribution too.
 
 I kept trying to report trivial and cosmetic bugs - ones which didn't require
 a huge upfront investment - for some time, but they'd go unchanged for weeks or
@@ -184,7 +185,7 @@ differences.
 
 In a few places that means taking on packages with a reverse dependency too,
 where differences create issues.  And it clearly means taking on any package
-that depend on ``openrc`` or Gentoo's ``baselayout`` package.  Those packages
+that depends on ``openrc`` or Gentoo's ``baselayout`` package.  Those packages
 are becoming fewer and fewer by the day though, so that would have become
 a non-issue.
 

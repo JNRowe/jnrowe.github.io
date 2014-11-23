@@ -58,13 +58,14 @@ We we can fix the problem with the following simple change and a call to
 .. note::
 
    Of course, you should fix the package properly and send the fix upstream but
-   this is just to prove a point.
+   this is just to prove a point.  Calling ``die`` with ``sed`` there isn't
+   recommended and is practically pointless, but it is the style upstream.
 
 I have to mention a small downside here however, because very few people seem to
 test ``portage``'s binary package support you'll occasionally have to do some
-leg work to fix problems.  This normally arises when an ``eclass`` changes needs
-to ripple through, or when a library breaks compatibility and it's ebuild hasn't
-been bumped properly.
+leg work to fix problems.  This normally arises when you have an ``eclass``
+change that needs to ripple through, or when a library breaks compatibility and
+it's ``ebuild`` hasn't been bumped properly.
 
 Almost every time that happens you can fix it with a quick loop in your shell
 though.  A couple of such problems and solutions that I found in my shell

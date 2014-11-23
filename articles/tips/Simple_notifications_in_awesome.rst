@@ -82,8 +82,9 @@ The ``notify.{start,stop,warn}`` functions prepend the text you pass it with
 a coloured Unicode bullet.  awesome makes use of pango_
 meaning you can easily use pretty much any character you wish, or more
 specifically any character your font can display.  From time to time I've
-experimented with using ``Ҏ`` and ``✘``, but most of the fonts I prefer to use don't
-display them correctly(if you're seeing two boxes your fonts don't either).
+experimented with using ``✔`` and ``✘``, but most of the fonts I prefer to use
+don't display them correctly(if you're seeing two boxes your fonts don't
+either).
 
 Window creation notifications
 -----------------------------

@@ -26,7 +26,7 @@ once our Winterval shutdown is included I'd expect this year to be about the
 same.
 
 It isn't just a case of being without internet access for a few hours or on
-certain days either, my longest break *complete* this year was a straight
+certain days either, my longest *complete* break this year was a straight
 thirteen days back in May.
 
 The number one thing I've learnt is that a lot of the things I burnt time on
@@ -62,8 +62,8 @@ severely restrict access.
 It all started with a friend who -- while wearing his tinfoil hat -- preached
 about how we all need to consider blocking sites that use :abbr:`CDNs (Content
 Delivery Network)` in much the same way that many of us block web analytics
-companies.  We're probably giving up tracking data to the large CDNs then we do
-the simple analytics companies.
+companies.  We're probably giving up more tracking data to the large CDNs then
+we do to the simple analytics companies.
 
 The thought popped in to my mind that a whitelist, instead of a blacklist, might
 actually be workable and since last November I've taken to doing just that.
@@ -78,7 +78,7 @@ entries it contains.
 
 The whitelist approach also feeds in to my data tracking habit, as I can now
 tell from the decay tracking data when bursts of certain sites appear.  For
-example, StackOverflow(and ``cdn.sstatic.net/stackoverflow/`` for styling) were
+example, StackOverflow(and ``cdn.sstatic.net/stackoverflow/`` for styling) was
 on the whitelist for two weeks in June with six visits, which happens to
 coincide with a project that involved porting a tool to Windows.
 

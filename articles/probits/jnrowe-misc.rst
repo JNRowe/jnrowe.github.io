@@ -40,7 +40,7 @@ Upstreamed
 
 Sadly, very little was ever taken upstream(even less if you count the parts that
 were credited).  This was entirely my fault.  I originally started exporting the
-overlay because I was fed up the new package process upstream, and it seemed
+overlay because I was fed up with the new package process upstream, and it seemed
 like the best way to deal with that for me.
 
 I had hoped that some packages would be picked up, but didn't actively push them
