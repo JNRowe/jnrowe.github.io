@@ -140,6 +140,11 @@ get used to the naming and non-standard option style you will need the help
 less.  I've patched this for our packages, and if people like it I'll try to
 push it upstream.
 
+.. note::
+   It turns out I won't be pushing the changes upstream.  They require
+   a :abbr:`CLA (Contributor Licence Agreement)` that I can not sign in good
+   faith, which is a shame.
+
 The option handling *will* trip you up endlessly.  Just the little things like
 being unable to chain options, and needing an endless stream of ``C-p M-5 M-b
 <space>`` to add a space before a commit message for example.  Yes, I know some
@@ -175,6 +180,10 @@ a system that is more obscure than ``fossil``.  If you read the `Fossil
 Concepts`_ and `Frequently Asked Questions`_ documents you'll see that the most
 significant problems for us are actually features for upstream, and that is
 obviously fine but it does mean upstreaming changes would be impossible.
+
+.. note::
+   As noted above, it turns out they require a :abbr:`CLA (Contributor Licence
+   Agreement)` which means we couldn't send changes upstream anyway.
 
 That said I'm am planning on stealing some of the ideas that I really liked
 about ``fossil`` for my own use.  ``fossil all``'s ability to run a command
