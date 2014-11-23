@@ -50,7 +50,7 @@ If we find the device name with ``dmesg`` we can mount it, and pull the
 
     mkdir e220_drivers; cd e220_drivers
     mount -t vfat /dev/sr2 /mnt/huawei
-    for file in $(find *.cab); do unpack $file; done
+    for file in /mnt/huawei/**/*.cab; do unpack $file; done
 
 `Fork this code <http://gist.github.com/212738>`__
 
