@@ -75,10 +75,10 @@ decade.
 All-in-one solution
 -------------------
 
-One of the proclaimed benefits of using ``fossil`` is that it handles most
-aspects of a project's :abbr:`ALM ()`; version control, issue tracking,
-documentation(via a wiki), etc.  However, and this is only my opinion, it feels
-like it does of all of these in a suboptimal manner.
+One of the proclaimed benefits of using ``fossil`` is that it handles many
+aspects of a project's :abbr:`ALM (Application Lifecycle Management)`; version
+control, issue tracking, documentation(via a wiki), etc.  However, and this is
+only my opinion, it feels like it does of all of these in a suboptimal manner.
 
 Version control
 '''''''''''''''
@@ -120,9 +120,9 @@ the features we use for our documentation.  I don't want to hold that against it
 though, as it just a impedance mismatch.
 
 The end result of the integrated components feels to me like you've chosen
-a usable, but weak, component for every aspect of your project's :abbr:`ALM ()`.
-The bits work well together, but none of them seem like an option you'd choose
-on their own.
+a usable, but weak, component for some of the  most important parts of your
+project's :abbr:`ALM (Application Lifecycle Management)`.  The bits work well
+together, but none of them seem like an option you'd choose on their own.
 
 Interface
 ---------
