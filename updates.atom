@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>JNRowe</title><link rel="alternate" href="http://jnrowe.github.com/"></link><link rel="self" href="http://jnrowe.github.com/updates.atom"></link><id>http://jnrowe.github.com/</id><updated>2014-11-12T00:00:00Z</updated><author><name>James Rowe</name><email>jnrowe@gmail.com</email><uri>http://jnrowe.github.com/</uri></author><rights>2009-2014, James Rowe</rights><entry><title>&lt;tt class="docutils literal"&gt;&lt;span class="pre"&gt;fossil&lt;/span&gt;&lt;/tt&gt; experiments</title><link rel="alternate" href="http://jnrowe.github.com/articles/fossil.html"></link><updated>2014-11-12T00:00:00Z</updated><id>http://jnrowe.github.com/articles/fossil.html</id><summary type="html">&lt;div class=section id=fossil-experiments&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>JNRowe</title><link href="http://jnrowe.github.com/" rel="alternate"></link><link href="http://jnrowe.github.com/updates.atom" rel="self"></link><id>http://jnrowe.github.com/</id><updated>2014-11-12T00:00:00Z</updated><author><name>James Rowe</name><email>jnrowe@gmail.com</email><uri>http://jnrowe.github.com/</uri></author><rights>2009-2014, James Rowe</rights><entry><title>&lt;tt class="docutils literal"&gt;&lt;span class="pre"&gt;fossil&lt;/span&gt;&lt;/tt&gt; experiments</title><link href="http://jnrowe.github.com/articles/fossil.html" rel="alternate"></link><updated>2014-11-12T00:00:00Z</updated><id>http://jnrowe.github.com/articles/fossil.html</id><summary type="html">&lt;div class=section id=fossil-experiments&gt;
 &lt;h1&gt;&lt;tt class="docutils literal"&gt;&lt;span class=pre&gt;fossil&lt;/span&gt;&lt;/tt&gt; experiments&lt;a class=headerlink href=http://jnrowe.github.com/articles/fossil.html#fossil-experiments title="Permalink to this headline"&gt;¶&lt;/a&gt;&lt;/h1&gt;
 &lt;p&gt;For a variety of reasons we can no longer use GitHub at work for any project
 which isn’t Open Source.  And since that decision was thrust upon us we’ve been
@@ -21,7 +21,7 @@ feed it &lt;tt class="docutils literal"&gt;&lt;span class=pre&gt;fossil&lt;/span
 &lt;span class=pre&gt;export&lt;/span&gt;&lt;/tt&gt;.&lt;/p&gt;
 &lt;p&gt;Sadly supporting incremental two-way mirroring didn’t work out for us, but
 perhaps it will for simpler projects.  In the end I simply mirrored the
-&lt;tt class="docutils literal"&gt;&lt;span class=pre&gt;fossil&lt;/span&gt;&lt;/tt&gt; repository to &lt;tt class="docutils literal"&gt;&lt;span class=pre&gt;git&lt;/span&gt;&lt;/tt&gt;, marked the &lt;tt class="docutils literal"&gt;&lt;span class=pre&gt;git&lt;/span&gt;&lt;/tt&gt; repositories as read-only
+&lt;tt class="docutils literal"&gt;&lt;span class=pre&gt;git&lt;/span&gt;&lt;/tt&gt; repositories to &lt;tt class="docutils literal"&gt;&lt;span class=pre&gt;fossil&lt;/span&gt;&lt;/tt&gt;, marked the &lt;tt class="docutils literal"&gt;&lt;span class=pre&gt;git&lt;/span&gt;&lt;/tt&gt; repositories as read-only
 and forced contributors to work with &lt;tt class="docutils literal"&gt;&lt;span class=pre&gt;fossil&lt;/span&gt;&lt;/tt&gt; from the outset.&lt;/p&gt;
 &lt;/div&gt;
 &lt;div class=section id=packaging&gt;
@@ -59,10 +59,10 @@ decade.&lt;/p&gt;
 &lt;/div&gt;
 &lt;div class=section id=all-in-one-solution&gt;
 &lt;h2&gt;All-in-one solution&lt;a class=headerlink href=http://jnrowe.github.com/articles/fossil.html#all-in-one-solution title="Permalink to this headline"&gt;¶&lt;/a&gt;&lt;/h2&gt;
-&lt;p&gt;One of the proclaimed benefits of using &lt;tt class="docutils literal"&gt;&lt;span class=pre&gt;fossil&lt;/span&gt;&lt;/tt&gt; is that it handles most
-aspects of a project’s &lt;abbr title=""&gt;ALM&lt;/abbr&gt;; version control, issue tracking,
-documentation(via a wiki), etc.  However, and this is only my opinion, it feels
-like it does of all of these in a suboptimal manner.&lt;/p&gt;
+&lt;p&gt;One of the proclaimed benefits of using &lt;tt class="docutils literal"&gt;&lt;span class=pre&gt;fossil&lt;/span&gt;&lt;/tt&gt; is that it handles many
+aspects of a project’s &lt;abbr title="Application Lifecycle Management"&gt;ALM&lt;/abbr&gt;; version
+control, issue tracking, documentation(via a wiki), etc.  However, and this is
+only my opinion, it feels like it does of all of these in a suboptimal manner.&lt;/p&gt;
 &lt;div class=section id=version-control&gt;
 &lt;h3&gt;Version control&lt;a class=headerlink href=http://jnrowe.github.com/articles/fossil.html#version-control title="Permalink to this headline"&gt;¶&lt;/a&gt;&lt;/h3&gt;
 &lt;p&gt;The version control feels quite nice for the most part, definitely usable but
@@ -94,9 +94,9 @@ file that makes all your edits and pump it in with &lt;tt class="docutils litera
 the features we use for our documentation.  I don’t want to hold that against it
 though, as it just a impedance mismatch.&lt;/p&gt;
 &lt;p&gt;The end result of the integrated components feels to me like you’ve chosen
-a usable, but weak, component for every aspect of your project’s &lt;abbr title=""&gt;ALM&lt;/abbr&gt;.
-The bits work well together, but none of them seem like an option you’d choose
-on their own.&lt;/p&gt;
+a usable, but weak, component for some of the  most important parts of your
+project’s &lt;abbr title="Application Lifecycle Management"&gt;ALM&lt;/abbr&gt;.  The bits work well
+together, but none of them seem like an option you’d choose on their own.&lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;div class=section id=interface&gt;
@@ -157,7 +157,7 @@ about &lt;tt class="docutils literal"&gt;&lt;span class=pre&gt;fossil&lt;/span&g
 against all repositories configured in &lt;tt class="file docutils literal"&gt;&lt;span class=pre&gt;~/.fossil&lt;/span&gt;&lt;/tt&gt; for example.&lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-</summary></entry><entry><title>Cleanse thy soul</title><link rel="alternate" href="http://jnrowe.github.com/thoughts/disconnect.html"></link><updated>2014-09-18T00:00:00Z</updated><id>http://jnrowe.github.com/thoughts/disconnect.html</id><summary type="html">&lt;div class=section id=cleanse-thy-soul&gt;
+</summary></entry><entry><title>Cleanse thy soul</title><link href="http://jnrowe.github.com/thoughts/disconnect.html" rel="alternate"></link><updated>2014-09-18T00:00:00Z</updated><id>http://jnrowe.github.com/thoughts/disconnect.html</id><summary type="html">&lt;div class=section id=cleanse-thy-soul&gt;
 &lt;h1&gt;Cleanse thy soul&lt;a class=headerlink href=http://jnrowe.github.com/thoughts/disconnect.html#cleanse-thy-soul title="Permalink to this headline"&gt;¶&lt;/a&gt;&lt;/h1&gt;
 &lt;p&gt;For the past few years I’ve taken to having routine breaks from certain
 timesinks to help me focus and also to denoise some of my thoughts.  The number
@@ -291,7 +291,7 @@ does act as a nice sieve for everything else right now.&lt;/tr&gt;
 &lt;/table&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-</summary></entry><entry><title>Open Source and enjoyment</title><link rel="alternate" href="http://jnrowe.github.com/thoughts/burn_out.html"></link><updated>2014-09-03T00:00:00Z</updated><id>http://jnrowe.github.com/thoughts/burn_out.html</id><summary type="html">&lt;div class=section id=open-source-and-enjoyment&gt;
+</summary></entry><entry><title>Open Source and enjoyment</title><link href="http://jnrowe.github.com/thoughts/burn_out.html" rel="alternate"></link><updated>2014-09-03T00:00:00Z</updated><id>http://jnrowe.github.com/thoughts/burn_out.html</id><summary type="html">&lt;div class=section id=open-source-and-enjoyment&gt;
 &lt;h1&gt;Open Source and enjoyment&lt;a class=headerlink href=http://jnrowe.github.com/thoughts/burn_out.html#open-source-and-enjoyment title="Permalink to this headline"&gt;¶&lt;/a&gt;&lt;/h1&gt;
 &lt;p&gt;A few years ago I burned out on Open Source projects, to the point that it was
 close to impacting other parts of my life.  I have only myself to blame as
@@ -405,7 +405,7 @@ value to you, and they’re probably never going to.  If you can remove them
 somehow you’re probably not losing anything, but you’ll be gaining a whole lot
 personally.&lt;/p&gt;
 &lt;/div&gt;
-</summary></entry><entry><title>jnrowe-misc - The unsorted package overlay</title><link rel="alternate" href="http://jnrowe.github.com/articles/probits/jnrowe-misc.html"></link><updated>2014-06-30T00:00:00Z</updated><id>http://jnrowe.github.com/articles/probits/jnrowe-misc.html</id><summary type="html">&lt;div class=section id=jnrowe-misc-the-unsorted-package-overlay&gt;
+</summary></entry><entry><title>jnrowe-misc - The unsorted package overlay</title><link href="http://jnrowe.github.com/articles/probits/jnrowe-misc.html" rel="alternate"></link><updated>2014-06-30T00:00:00Z</updated><id>http://jnrowe.github.com/articles/probits/jnrowe-misc.html</id><summary type="html">&lt;div class=section id=jnrowe-misc-the-unsorted-package-overlay&gt;
 &lt;h1&gt;jnrowe-misc - The unsorted package overlay&lt;a class=headerlink href=http://jnrowe.github.com/articles/probits/jnrowe-misc.html#jnrowe-misc-the-unsorted-package-overlay title="Permalink to this headline"&gt;¶&lt;/a&gt;&lt;/h1&gt;
 &lt;blockquote&gt;
 &lt;div&gt;A collection of &lt;tt class="docutils literal"&gt;&lt;span class=pre&gt;ebuild&lt;/span&gt;&lt;/tt&gt; files with no overall theme.&lt;/div&gt;&lt;/blockquote&gt;
@@ -453,7 +453,7 @@ their reasons.  I’ve stopped maintaining a lot of once public projects over th
 past couple of years, and it is as refreshing as it is saddening.&lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-</summary></entry><entry><title>Project postmortems</title><link rel="alternate" href="http://jnrowe.github.com/articles/probits/index.html"></link><updated>2014-06-30T00:00:00Z</updated><id>http://jnrowe.github.com/articles/probits/index.html</id><summary type="html">&lt;div class=section id=project-postmortems&gt;
+</summary></entry><entry><title>Project postmortems</title><link href="http://jnrowe.github.com/articles/probits/index.html" rel="alternate"></link><updated>2014-06-30T00:00:00Z</updated><id>http://jnrowe.github.com/articles/probits/index.html</id><summary type="html">&lt;div class=section id=project-postmortems&gt;
 &lt;h1&gt;Project postmortems&lt;a class=headerlink href=http://jnrowe.github.com/articles/probits/index.html#project-postmortems title="Permalink to this headline"&gt;¶&lt;/a&gt;&lt;/h1&gt;
 &lt;p&gt;One of my favourite things about the day job is the post-project analysis and
 postmortems, which we lovingly refer to as &lt;abbr title="Project Obituaries"&gt;probits&lt;/abbr&gt;
@@ -483,7 +483,7 @@ situations.  This category, and the accompanying index, below are that attempt.&
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-</summary></entry><entry><title>Dropping Gentoo reflex</title><link rel="alternate" href="http://jnrowe.github.com/articles/dropping_gentoo_reflex.html"></link><updated>2014-06-29T00:00:00Z</updated><id>http://jnrowe.github.com/articles/dropping_gentoo_reflex.html</id><summary type="html">&lt;div class=section id=dropping-gentoo-reflex&gt;
+</summary></entry><entry><title>Dropping Gentoo reflex</title><link href="http://jnrowe.github.com/articles/dropping_gentoo_reflex.html" rel="alternate"></link><updated>2014-06-29T00:00:00Z</updated><id>http://jnrowe.github.com/articles/dropping_gentoo_reflex.html</id><summary type="html">&lt;div class=section id=dropping-gentoo-reflex&gt;
 &lt;h1&gt;Dropping Gentoo reflex&lt;a class=headerlink href=http://jnrowe.github.com/articles/dropping_gentoo_reflex.html#dropping-gentoo-reflex title="Permalink to this headline"&gt;¶&lt;/a&gt;&lt;/h1&gt;
 &lt;p&gt;After hitting the publish button on &lt;a class="reference internal" href=http://jnrowe.github.com/articles/dropping_gentoo.html&gt;&lt;em&gt;Dropping Gentoo&lt;/em&gt;&lt;/a&gt; a few friends
 commented that I was either unnecessarily harsh about Gentoo or we wasted an
@@ -602,7 +602,7 @@ as time moves on.&lt;/p&gt;
 fun memories.&lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-</summary></entry><entry><title>Dropping Gentoo</title><link rel="alternate" href="http://jnrowe.github.com/articles/dropping_gentoo.html"></link><updated>2014-06-18T00:00:00Z</updated><id>http://jnrowe.github.com/articles/dropping_gentoo.html</id><summary type="html">&lt;div class=section id=dropping-gentoo&gt;
+</summary></entry><entry><title>Dropping Gentoo</title><link href="http://jnrowe.github.com/articles/dropping_gentoo.html" rel="alternate"></link><updated>2014-06-18T00:00:00Z</updated><id>http://jnrowe.github.com/articles/dropping_gentoo.html</id><summary type="html">&lt;div class=section id=dropping-gentoo&gt;
 &lt;h1&gt;Dropping Gentoo&lt;a class=headerlink href=http://jnrowe.github.com/articles/dropping_gentoo.html#dropping-gentoo title="Permalink to this headline"&gt;¶&lt;/a&gt;&lt;/h1&gt;
 &lt;p&gt;We’ve been using &lt;a class="reference external" href=http://gentoo.org&gt;Gentoo&lt;/a&gt; for shipped products since June 2005, and as
 a development platform since September 2004.  A long time, an incredibly long
@@ -623,7 +623,7 @@ actually weren’t a lot of viable choices back then.&lt;/p&gt;
 &lt;p&gt;&lt;a class="reference external" href=http://debian.org&gt;Debian&lt;/a&gt;, which many of us loved, felt like the only mainstream distribution we
 could have used.  Unfortunately, it wasn’t available for the arches we needed.
 It also didn’t package many of things we used at that point, but to be fair
-there were &lt;abbr title="Intent to Package"&gt;ITPs&lt;/abbr&gt; (were they called that beck then?)
+there were &lt;abbr title="Intent to Package"&gt;ITPs&lt;/abbr&gt; (were they called that back then?)
 already floating about for most of them.&lt;/p&gt;
 &lt;p&gt;The “from source” options available then would, for all intents and purposes,
 have meant taking on the support costs of the entire stack which nobody wanted
@@ -632,8 +632,8 @@ ten years anyway.&lt;/p&gt;
 &lt;/div&gt;
 &lt;div class=section id=take-a-left-in-100-metres&gt;
 &lt;h2&gt;Take a left in 100 metres&lt;a class=headerlink href=http://jnrowe.github.com/articles/dropping_gentoo.html#take-a-left-in-100-metres title="Permalink to this headline"&gt;¶&lt;/a&gt;&lt;/h2&gt;
-&lt;p&gt;Regrettably over the years we diverged, almost to the point that saying we use
-Gentoo almost feels like a lie.&lt;/p&gt;
+&lt;p&gt;Over the years we regrettably diverged heavily from upstream, almost to the
+point that saying we use Gentoo almost feels like a lie.&lt;/p&gt;
 &lt;p&gt;Before our first product shipped we had already switched to maintaining the
 essential toolchain packages like GCC and glibc ourselves.  I can’t recall the
 specific reasons as I didn’t work on them, but I recall agreeing with them.&lt;/p&gt;
@@ -645,7 +645,7 @@ features that Gentoo’s &lt;a class="reference external" href=http://wiki.gento
 nicer.&lt;/p&gt;
 &lt;p&gt;There was a point where we seriously considered moving to a &lt;a class="reference external" href=http://en.wikipedia.org/wiki/Conary_(package_manager)&gt;Conary&lt;/a&gt;-based
 infrastructure.  It did loads of the cool things we wanted to do and it mostly
-fitted our workflow with its mostly “Gentoo done right” feel.  Sadly, it has
+fitted our workflow with its “Gentoo done right” feel.  Sadly, it has
 a &lt;abbr title="Contributor License Agreement"&gt;CLA&lt;/abbr&gt; which none of us could sign that
 practically guaranteed we would eventually be in the same place we were with
 Gentoo.  May have been a fortuitous roadblock in the end, as Conary never gained
@@ -790,7 +790,7 @@ track for the next ten years.&lt;/p&gt;
 &lt;p&gt;So long Gentoo, and thanks for all fish!&lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-</summary></entry><entry><title>Delayed flashover</title><link rel="alternate" href="http://jnrowe.github.com/thoughts/delayed_flashover.html"></link><updated>2014-04-09T00:00:00Z</updated><id>http://jnrowe.github.com/thoughts/delayed_flashover.html</id><summary type="html">&lt;div class=section id=delayed-flashover&gt;
+</summary></entry><entry><title>Delayed flashover</title><link href="http://jnrowe.github.com/thoughts/delayed_flashover.html" rel="alternate"></link><updated>2014-04-09T00:00:00Z</updated><id>http://jnrowe.github.com/thoughts/delayed_flashover.html</id><summary type="html">&lt;div class=section id=delayed-flashover&gt;
 &lt;h1&gt;Delayed flashover&lt;a class=headerlink href=http://jnrowe.github.com/thoughts/delayed_flashover.html#delayed-flashover title="Permalink to this headline"&gt;¶&lt;/a&gt;&lt;/h1&gt;
 &lt;p&gt;This weekend a very good friend of mine is taking part in the London Marathon,
 and we’re all looking forward to the no-doubt incredible time she’ll finish in.&lt;/p&gt;
@@ -831,7 +831,7 @@ sponsorship options in check, she’ll destroy the target time.  Go Rach!&lt;/p&
 &lt;/tbody&gt;
 &lt;/table&gt;
 &lt;/div&gt;
-</summary></entry><entry><title>Hitting life&amp;#8217;s reset button</title><link rel="alternate" href="http://jnrowe.github.com/thoughts/reset_in_ten.html"></link><updated>2014-02-24T00:00:00Z</updated><id>http://jnrowe.github.com/thoughts/reset_in_ten.html</id><summary type="html">&lt;div class=section id=hitting-life-s-reset-button&gt;
+</summary></entry><entry><title>Hitting life&amp;#8217;s reset button</title><link href="http://jnrowe.github.com/thoughts/reset_in_ten.html" rel="alternate"></link><updated>2014-02-24T00:00:00Z</updated><id>http://jnrowe.github.com/thoughts/reset_in_ten.html</id><summary type="html">&lt;div class=section id=hitting-life-s-reset-button&gt;
 &lt;h1&gt;Hitting life’s reset button&lt;a class=headerlink href=http://jnrowe.github.com/thoughts/reset_in_ten.html#hitting-life-s-reset-button title="Permalink to this headline"&gt;¶&lt;/a&gt;&lt;/h1&gt;
 &lt;p&gt;Seven months ago while enjoying a little Saturday afternoon cricket picnic,
 a friend posed the question:&lt;/p&gt;
@@ -872,7 +872,7 @@ It is too late, and there is another lesson for me to learn.&lt;/p&gt;
 nothing useful about it.  Internet, this is the foolish truth I proffer you
 today.  The others well, they’ll hopefully remain hidden away from view.&lt;/p&gt;
 &lt;/div&gt;
-</summary></entry><entry><title>Return to rambling</title><link rel="alternate" href="http://jnrowe.github.com/thoughts/the_returned.html"></link><updated>2014-01-27T00:00:00Z</updated><id>http://jnrowe.github.com/thoughts/the_returned.html</id><summary type="html">&lt;div class=section id=return-to-rambling&gt;
+</summary></entry><entry><title>Return to rambling</title><link href="http://jnrowe.github.com/thoughts/the_returned.html" rel="alternate"></link><updated>2014-01-27T00:00:00Z</updated><id>http://jnrowe.github.com/thoughts/the_returned.html</id><summary type="html">&lt;div class=section id=return-to-rambling&gt;
 &lt;h1&gt;Return to rambling&lt;a class=headerlink href=http://jnrowe.github.com/thoughts/the_returned.html#return-to-rambling title="Permalink to this headline"&gt;¶&lt;/a&gt;&lt;/h1&gt;
 &lt;p&gt;I kept a public journal from about 2003 until 2009, with a new entry about every
 three days.  I enjoyed the act of writing it greatly, and often looked forward
@@ -903,7 +903,7 @@ me for the opinions I express or information I spread.  And that invitation is
 absolutely extended to this site and the new content I post.&lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-</summary></entry><entry><title>Murdering morality with ferocious fire</title><link rel="alternate" href="http://jnrowe.github.com/thoughts/important_balance.html"></link><updated>2014-01-25T00:00:00Z</updated><id>http://jnrowe.github.com/thoughts/important_balance.html</id><summary type="html">&lt;div class=section id=murdering-morality-with-ferocious-fire&gt;
+</summary></entry><entry><title>Murdering morality with ferocious fire</title><link href="http://jnrowe.github.com/thoughts/important_balance.html" rel="alternate"></link><updated>2014-01-25T00:00:00Z</updated><id>http://jnrowe.github.com/thoughts/important_balance.html</id><summary type="html">&lt;div class=section id=murdering-morality-with-ferocious-fire&gt;
 &lt;h1&gt;Murdering morality with ferocious fire&lt;a class=headerlink href=http://jnrowe.github.com/thoughts/important_balance.html#murdering-morality-with-ferocious-fire title="Permalink to this headline"&gt;¶&lt;/a&gt;&lt;/h1&gt;
 &lt;blockquote class=epigraph&gt;
 &lt;div&gt;&lt;p&gt;“Morality is herd instinct in the individual.”&lt;/p&gt;
@@ -952,7 +952,7 @@ line up with your definition of “strong moral values” ;)&lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
 &lt;/div&gt;
-</summary></entry><entry><title>Dopplr defects</title><link rel="alternate" href="http://jnrowe.github.com/thoughts/dopplr_effects.html"></link><updated>2014-01-06T00:00:00Z</updated><id>http://jnrowe.github.com/thoughts/dopplr_effects.html</id><summary type="html">&lt;div class=section id=dopplr-defects&gt;
+</summary></entry><entry><title>Dopplr defects</title><link href="http://jnrowe.github.com/thoughts/dopplr_effects.html" rel="alternate"></link><updated>2014-01-06T00:00:00Z</updated><id>http://jnrowe.github.com/thoughts/dopplr_effects.html</id><summary type="html">&lt;div class=section id=dopplr-defects&gt;
 &lt;h1&gt;Dopplr defects&lt;a class=headerlink href=http://jnrowe.github.com/thoughts/dopplr_effects.html#dopplr-defects title="Permalink to this headline"&gt;¶&lt;/a&gt;&lt;/h1&gt;
 &lt;blockquote class=epigraph&gt;
 &lt;div&gt;&lt;p&gt;Dopplr was a free social networking service, launched in 2007, that allowed
@@ -994,7 +994,7 @@ actually use, but sadly I can’t even picture how it should work.&lt;/p&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
 &lt;span class=target id=backstory&gt;&lt;/span&gt;&lt;/div&gt;
-</summary></entry><entry><title>Tell me a nice story, please</title><link rel="alternate" href="http://jnrowe.github.com/thoughts/nice_stories.html"></link><updated>2013-12-23T00:00:00Z</updated><id>http://jnrowe.github.com/thoughts/nice_stories.html</id><summary type="html">&lt;div class=section id=tell-me-a-nice-story-please&gt;
+</summary></entry><entry><title>Tell me a nice story, please</title><link href="http://jnrowe.github.com/thoughts/nice_stories.html" rel="alternate"></link><updated>2013-12-23T00:00:00Z</updated><id>http://jnrowe.github.com/thoughts/nice_stories.html</id><summary type="html">&lt;div class=section id=tell-me-a-nice-story-please&gt;
 &lt;h1&gt;Tell me a nice story, please&lt;a class=headerlink href=http://jnrowe.github.com/thoughts/nice_stories.html#tell-me-a-nice-story-please title="Permalink to this headline"&gt;¶&lt;/a&gt;&lt;/h1&gt;
 &lt;p&gt;I’m fed up of hearing bad stories, I really am.  Often it feels like every
 person I know simply revels in the misfortune or missteps of others, and it is
@@ -1091,7 +1091,7 @@ know about it.  If that isn’t the case, just keep it to yourself.&lt;/p&gt;
 &lt;/table&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-</summary></entry><entry><title>Side-projects</title><link rel="alternate" href="http://jnrowe.github.com/thoughts/side_projects.html"></link><updated>2013-12-16T00:00:00Z</updated><id>http://jnrowe.github.com/thoughts/side_projects.html</id><summary type="html">&lt;div class=section id=side-projects&gt;
+</summary></entry><entry><title>Side-projects</title><link href="http://jnrowe.github.com/thoughts/side_projects.html" rel="alternate"></link><updated>2013-12-16T00:00:00Z</updated><id>http://jnrowe.github.com/thoughts/side_projects.html</id><summary type="html">&lt;div class=section id=side-projects&gt;
 &lt;h1&gt;Side-projects&lt;a class=headerlink href=http://jnrowe.github.com/thoughts/side_projects.html#side-projects title="Permalink to this headline"&gt;¶&lt;/a&gt;&lt;/h1&gt;
 &lt;p&gt;Chatting with my brother yesterday he expressed some disbelief when I mentioned
 &lt;em&gt;yet another&lt;/em&gt; friend who has a website related to some topic we were discussing:&lt;/p&gt;
@@ -1197,7 +1197,7 @@ is just a jumbled content dump with no real purpose.&lt;/tr&gt;
 &lt;/table&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-</summary></entry><entry><title>TDD distro development</title><link rel="alternate" href="http://jnrowe.github.com/articles/tdd_distros.html"></link><updated>2011-06-13T00:00:00Z</updated><id>http://jnrowe.github.com/articles/tdd_distros.html</id><summary type="html">&lt;div class=section id=tdd-distro-development&gt;
+</summary></entry><entry><title>TDD distro development</title><link href="http://jnrowe.github.com/articles/tdd_distros.html" rel="alternate"></link><updated>2011-06-13T00:00:00Z</updated><id>http://jnrowe.github.com/articles/tdd_distros.html</id><summary type="html">&lt;div class=section id=tdd-distro-development&gt;
 &lt;h1&gt;TDD distro development&lt;a class=headerlink href=http://jnrowe.github.com/articles/tdd_distros.html#tdd-distro-development title="Permalink to this headline"&gt;¶&lt;/a&gt;&lt;/h1&gt;
 &lt;p&gt;Using &lt;abbr title="Test Driven Development"&gt;TDD&lt;/abbr&gt; for distribution development is a
 hot topic in some of the more geeky circles I move in, and I’m very happy about
@@ -1350,7 +1350,7 @@ a &lt;tt class="docutils literal"&gt;&lt;span class=pre&gt;reST&lt;/span&gt;&lt;
 &lt;/table&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-</summary></entry><entry><title>Introduction to RCS</title><link rel="alternate" href="http://jnrowe.github.com/articles/rcs.html"></link><updated>2003-09-05T00:00:00Z</updated><id>http://jnrowe.github.com/articles/rcs.html</id><summary type="html">&lt;div class="admonition warning"&gt;
+</summary></entry><entry><title>Introduction to RCS</title><link href="http://jnrowe.github.com/articles/rcs.html" rel="alternate"></link><updated>2003-09-05T00:00:00Z</updated><id>http://jnrowe.github.com/articles/rcs.html</id><summary type="html">&lt;div class="admonition warning"&gt;
 &lt;p class="first admonition-title"&gt;Warning&lt;/p&gt;
 &lt;p class=last&gt;I’ve resurrected this text from my old UKFSN site because a couple of people
 asked me to, but I wouldn’t recommend using RCS to anyone at this point.  It

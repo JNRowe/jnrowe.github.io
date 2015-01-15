@@ -23,7 +23,7 @@ Projects
 * `sphinx-jnrowe <https://github.com/JNRowe/sphinx-jnrowe>`__: My sphinx theme
 * `upoints <https://github.com/JNRowe/upoints>`__: upoints is a collection of GPL v3 licensed modules for working with points on Earth, or other near spherical objects. [ `documentation <http://jnrowe.github.io/upoints/>`__ ]
 * `versionah <https://github.com/JNRowe/versionah>`__: Simple version number mangler [ `documentation <http://versionah.rtfd.org/>`__ ]
-* `vim-configs <https://github.com/JNRowe/vim-configs>`__: Personal vim configs [ `documentation <http://jnrowe.github.io/vim-configs>`__ ]
+* `vim-configs <https://github.com/JNRowe/vim-configs>`__: Personal vim configs
 * `vim-jnrowe <https://github.com/JNRowe/vim-jnrowe>`__: My colorscheme, decoupled from my vim-configs repo for others ;) [ `documentation <http://jnrowe.github.io/vim-jnrowe/>`__ ]
 
 Forks I'm hacking on
