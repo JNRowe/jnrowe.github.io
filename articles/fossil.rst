@@ -29,7 +29,7 @@ export``.
 
 Sadly supporting incremental two-way mirroring didn't work out for us, but
 perhaps it will for simpler projects.  In the end I simply mirrored the
-``fossil`` repository to ``git``, marked the ``git`` repositories as read-only
+``git`` repositories to ``fossil``, marked the ``git`` repositories as read-only
 and forced contributors to work with ``fossil`` from the outset.
 
 Packaging

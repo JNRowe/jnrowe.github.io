@@ -29,7 +29,7 @@ actually weren't a lot of viable choices back then.
 Debian_, which many of us loved, felt like the only mainstream distribution we
 could have used.  Unfortunately, it wasn't available for the arches we needed.
 It also didn't package many of things we used at that point, but to be fair
-there were :abbr:`ITPs (Intent to Package)` (were they called that beck then?)
+there were :abbr:`ITPs (Intent to Package)` (were they called that back then?)
 already floating about for most of them.
 
 The "from source" options available then would, for all intents and purposes,
@@ -42,8 +42,8 @@ ten years anyway.
 Take a left in 100 metres
 -------------------------
 
-Regrettably over the years we diverged, almost to the point that saying we use
-Gentoo almost feels like a lie.
+Over the years we regrettably diverged heavily from upstream, almost to the
+point that saying we use Gentoo almost feels like a lie.
 
 Before our first product shipped we had already switched to maintaining the
 essential toolchain packages like GCC and glibc ourselves.  I can't recall the
@@ -58,7 +58,7 @@ nicer.
 
 There was a point where we seriously considered moving to a Conary_-based
 infrastructure.  It did loads of the cool things we wanted to do and it mostly
-fitted our workflow with its mostly "Gentoo done right" feel.  Sadly, it has
+fitted our workflow with its "Gentoo done right" feel.  Sadly, it has
 a :abbr:`CLA (Contributor License Agreement)` which none of us could sign that
 practically guaranteed we would eventually be in the same place we were with
 Gentoo.  May have been a fortuitous roadblock in the end, as Conary never gained
