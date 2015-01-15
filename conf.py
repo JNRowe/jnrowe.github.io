@@ -3,6 +3,8 @@
 import os
 import sys
 
+import sphinx_rtd_theme
+
 sys.path.extend([os.path.pardir, os.path.curdir, '/home/jay/Projects/feed'])
 
 extensions = \
@@ -34,12 +36,11 @@ release = '0.1.0'
 exclude_patterns = ['venv', '.build', 'README.rst']
 exclude_trees = ['draft', ]
 
-pygments_style = 'tango'
-html_theme = 'haiku'
+html_theme = "sphinx_rtd_theme"
+html_theme_path = [sphinx_rtd_theme.get_html_theme_path(), ]
 
 html_context = {"feed_link": True}
 html_title = 'JNRowe'
-html_logo = '.static/logo.png'
 html_favicon = '.static/icon.ico'
 
 html_static_path = ['.static', ]

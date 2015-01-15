@@ -1,4 +1,4 @@
-{% extends "haiku/layout.html" %}
+{% extends "sphinx_rtd_theme/layout.html" %}
 
 {% block extrahead -%}
     {% if feed_link %}
@@ -6,7 +6,7 @@
     {%- endif %}
 {%- endblock %}
 
-{%- block document %}
+{%- block extrabody %}
     {%- if pagename is not index %}
     <div class="admonition note">
         <p class="first admonition-title">
