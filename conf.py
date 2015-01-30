@@ -28,7 +28,7 @@ source_suffix = '.rst'
 
 # General information about the project.
 project = u'JNRowe'
-copyright = u'2009-2014, James Rowe'
+copyright = u'2009-2015, James Rowe'
 
 version = '0.1'
 release = '0.1.0'
