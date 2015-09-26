@@ -145,6 +145,12 @@ problem for you already:
 
 `Fork this code <http://gist.github.com/223895>`__
 
+.. note::
+   If you use `python-dateutil`_ do be aware that by default it will prefer US
+   mid-endian date formats when guessing for some patterns.  Either create your
+   own ``parserinfo`` object and set ``dayfirst`` to ``True``, or use something
+   stricter.
+
 In closing before you start parsing any text -- regardless of how simple it is
 -- you should thumb through the `standard library`_ and perform a search on
 pypi_.  Often, the work has already been done for you and may well be much
