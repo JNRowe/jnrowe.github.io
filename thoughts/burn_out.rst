@@ -7,8 +7,8 @@ Open Source and enjoyment
 A few years ago I burned out on Open Source projects, to the point that it was
 close to impacting other parts of my life.  I have only myself to blame as
 I didn't manage to distance myself at all well.  Distancing yourself is not easy
-to do when your fun hobby for relaxation is the thing that is thing that is
-working against you.
+to do when your fun hobby for relaxation is the thing that is working against
+you.
 
 There were a variety of incredibly minor issues that piled up Jenga-style.  Then
 to carry the weak analogy forward, it toppled over in a split second like Jenga
