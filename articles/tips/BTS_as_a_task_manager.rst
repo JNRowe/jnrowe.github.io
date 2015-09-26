@@ -21,7 +21,7 @@ a ``ditz`` inspired project, written in Python_, called pitz_ that is in active
 development.  And fossil_ is pretty cool if you're looking for a standalone
 wiki, :abbr:`BTS (Bug Tracking System)` and :abbr:`VCS (Version Control System)` in one.
 
-.. note:: 
+.. note::
    If you're a Gentoo_ user you can install ``ditz`` using
    the ebuild from my overlay_.
 
