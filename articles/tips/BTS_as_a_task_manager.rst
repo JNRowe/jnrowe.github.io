@@ -50,10 +50,10 @@ wish to use it in there:
 
 .. code-block:: console
 
-    ~/Desktop $ mkdir be_test; cd be_test
-    ~/Desktop/be_test $ git init
+    $ mkdir be_test; cd be_test
+    $ git init
     Initialized empty Git repository in /home/jay/Desktop/be_test/.git/
-    ~/Desktop/be_test $ be set-root
+    $ be set-root
     Using git for revision control.
     Directory initialized.
 
@@ -67,15 +67,15 @@ can be seen below.
 
 .. code-block:: console
 
-    ~/Desktop/be_test $ be new "This is a test bug"
+    $ be new "This is a test bug"
     Created bug with ID a09
-    ~/Desktop/be_test $ be assign a09
-    ~/Desktop/be_test $ git commit -m"Commit bug a09."
-    ~/Desktop/be_test $ be new "This is a second bug"
+    $ be assign a09
+    $ git commit -m"Commit bug a09."
+    $ be new "This is a second bug"
     Created bug with ID ec4
-    ~/Desktop/be_test $ be severity ec4 serious
-    ~/Desktop/be_test $ be comment ec4 "Comments are easy"
-    ~/Desktop/be_test $ git commit -m"Commit bug ec4."
+    $ be severity ec4 serious
+    $ be comment ec4 "Comments are easy"
+    $ git commit -m"Commit bug ec4."
 
 We now have two bugs filed.  Bug ``a09`` is self-assigned, while ``ec4`` has yet
 to be assigned.  As we didn't set a severity level for ``a09`` it is set to the
@@ -88,7 +88,7 @@ Querying bugs
 
 .. code-block:: console
 
-    ~/Desktop/be_test $ be list
+    $ be list
     ec4:os: This is a second bug
     a09:om: This is a test bug
 
@@ -107,7 +107,7 @@ we use the ``be show`` command:
 
 .. code-block:: console
 
-    ~/Desktop/be_test $ be show a09
+    $ be show a09
             ID : a0912cd6-1eae-490c-8e56-5f532242394b
     Short name : a09
         Severity : minor
@@ -118,7 +118,7 @@ we use the ``be show`` command:
         Created : Wed, 07 Oct 2009 14:11 (Wed, 07 Oct 2009 13:11:06 +0000)
     This is a test bug
 
-    ~/Desktop/be_test $ be show ec4
+    $ be show ec4
             ID : ec4438ca-a330-4345-b073-43c768f7e9b7
     Short name : ec4
         Severity : serious
@@ -147,10 +147,10 @@ with filtering options.
 
 .. code-block:: console
 
-    ~/Desktop/be_test $ be status ec4 fixed
-    ~/Desktop/be_test $ be list
+    $ be status ec4 fixed
+    $ be list
     a09:om: This is a test bug
-    ~/Desktop/be_test $ be show ec4
+    $ be show ec4
             ID : ec4438ca-a330-4345-b073-43c768f7e9b7
     Short name : ec4
         Severity : serious

@@ -14,8 +14,8 @@ slightly to make it work correctly on my system):
 
 .. code-block:: console
 
-    ~/Desktop/jnrowe.github.io $ (echo "PERM LINKS OWNER GROUP SIZE DATE HH:MM NAME";
-    > ls -l static/ | sed 1d) | column -t
+    $ (echo "PERM LINKS OWNER GROUP SIZE DATE HH:MM NAME";
+    >     ls -l static/ | sed 1d) | column -t
     PERM        LINKS  OWNER  GROUP  SIZE   DATE        HH:MM  NAME
     -rw-r--r--  1      jay    jay    328    2009-09-25  02:59  body_background.png
     -rw-r--r--  1      jay    jay    7234   2009-09-25  02:59  draft.png
@@ -33,10 +33,10 @@ the files.  Or, as in the output below, the total size of all the :abbr:`PNG
 
 .. code-block:: console
 
-    ~/Desktop/jnrowe.github.io $ (echo "PERM LINKS OWNER GROUP SIZE DATE HH:MM NAME"
-    > ls -l --time-style=long-iso static/ | sed 1d) | column -t | awk '{print}
-    > /\.png/ {sum+=$5}
-    > END {print "Total size of PNG files:", sum}'
+    $ (echo "PERM LINKS OWNER GROUP SIZE DATE HH:MM NAME"
+    >     ls -l static/ | sed 1d) | column -t | awk '{print}
+    >         /\.png/ {sum+=$5}
+    >         END {print "Total size of PNG files:", sum}'
     PERM        LINKS  OWNER  GROUP  SIZE   DATE        HH:MM  NAME
     -rw-r--r--  1      jay    jay    328    2009-09-25  02:59  body_background.png
     -rw-r--r--  1      jay    jay    7234   2009-09-25  02:59  draft.png
@@ -55,7 +55,7 @@ log on this computer that we wish to format and calculate totals for could be:
 
 .. code-block:: console
 
-    ~/Desktop/jnrowe.github.io $ cat stats
+    $ cat stats
     2009-07-15T05:09:42+0100,16803,4304661,129262665
     2009-07-16T04:10:29+0100,17551,4012917,67572304
     2009-07-16T19:03:00+0100,17621,1712073,34162500
@@ -66,10 +66,10 @@ log on this computer that we wish to format and calculate totals for could be:
     2009-07-17T22:01:57+0100,6611,1159789,25562873
     2009-07-18T13:09:31+0100,1681,164663,2049315
     2009-07-18T13:24:04+0100,834,54025,662134
-    ~/Desktop/jnrowe.github.io $ (echo "Date,Duration,Sent,Received";  cat stats ) \
-    > | tr ',' ' ' | column -t | awk '{print}
-    > !/Date/ {sent+=$3; recv+=$4}
-    > END {print "\nTotal sent: "sent", Total received: "recv}'
+    $ (echo "Date,Duration,Sent,Received";  cat stats ) \
+    >     | tr ',' ' ' | column -t | awk '{print}
+    >         !/Date/ {sent+=$3; recv+=$4}
+    >         END {print "\nTotal sent: "sent", Total received: "recv}'
     Date                      Duration  Sent     Received
     2009-07-15T05:09:42+0100  16803     4304661  129262665
     2009-07-16T04:10:29+0100  17551     4012917  67572304
