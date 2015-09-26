@@ -18,7 +18,7 @@ with, and it appears lots of others do the same.  While the output of ``emerge
 --pretend --depclean`` is all that is really needed, the question is how to get
 a list of just the packages.
 
-.. code-block:: text
+.. code-block:: console
 
     ~/Desktop $ emerge --pretend --depclean
     <snipped heaps of output>
@@ -122,7 +122,7 @@ kernel this is very easy using bash's ``extglob`` support.  It may need to be
 enabled in your session, you can test whether it is enabled with ``shopt
 extglob``.
 
-.. code-block:: text
+.. code-block:: console
 
     ~/Desktop $ echo /lib/modules/*
     /lib/modules/2.6.31.1 /lib/modules/2.6.31.2-jr2 /lib/modules/2.6.31.3-mk1

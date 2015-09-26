@@ -50,7 +50,7 @@ data removed, follows:
 The exported filter is actually quite nice and we could just pull the email
 addresses out with sed_:
 
-.. code-block:: text
+.. code-block:: console
 
     $ sed -n "/name='from'/s,^.*value='\([^']\+\)'.*$,\1,p" filter.xml
     joe@example.com
