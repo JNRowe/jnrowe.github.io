@@ -20,7 +20,7 @@ a list of just the packages.
 
 .. code-block:: console
 
-    ~/Desktop $ emerge --pretend --depclean
+    $ emerge --pretend --depclean
     <snipped heaps of output>
     gnome-base/orbit
         selected: 2.14.17
@@ -124,9 +124,9 @@ extglob``.
 
 .. code-block:: console
 
-    ~/Desktop $ echo /lib/modules/*
+    $ echo /lib/modules/*
     /lib/modules/2.6.31.1 /lib/modules/2.6.31.2-jr2 /lib/modules/2.6.31.3-mk1
-    ~/Desktop $ echo /lib/modules/!($(uname -r))
+    $ echo /lib/modules/!($(uname -r))
     /lib/modules/2.6.31.1 /lib/modules/2.6.31.2-jr2
 
 The ``!($(uname -r))`` syntax tells bash to match all but ``2.6.31.3-mk1`` (the
