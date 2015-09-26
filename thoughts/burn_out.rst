@@ -121,7 +121,7 @@ trash" rule in your email filter.  Even in person it can be quite easy to do,
 just politely acknowledge their issue and move away instead of engaging them.
 
 The solutions
-=============
+-------------
 
 I chose a solution I hate, for all intents and purposes I don't release new Open
 Source projects any longer.  I still work on a lot of projects, and the code is
