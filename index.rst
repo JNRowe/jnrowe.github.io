@@ -13,10 +13,10 @@ important enough for, or too incomplete to warrant, their own location.  More
 specifically it is used for toy :doc:`projects <projects>`, and the occasional
 rant.
 
-Contents:
-
 .. toctree::
    :maxdepth: 2
+   :hidden:
+   :caption: Contents
 
    projects
 
