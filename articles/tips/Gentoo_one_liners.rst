@@ -63,7 +63,7 @@ other packages:
 
     toppkgclean() {
         local depfiles=$(find /var/db/pkg/ -name RDEPEND -o -name PDEPEND)
-        local cleanlist=$(depclean)
+        local cleanlist=$(pkgclean)
         for package in ${cleanlist}
         do
             LC_ALL=C grep -q ${package} ${depfiles} || echo ${package}
