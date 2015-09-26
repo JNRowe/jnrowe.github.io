@@ -48,7 +48,7 @@ Before we use ``be`` we must prepare it.  In the example that follows we're
 going to create a new directory under the control of git_, and tell ``be`` we
 wish to use it in there:
 
-.. code-block:: text
+.. code-block:: console
 
     ~/Desktop $ mkdir be_test; cd be_test
     ~/Desktop/be_test $ git init
@@ -65,7 +65,7 @@ filed.  Bugs are identified by a :abbr:`UUID (Universally Unique IDentifier)`,
 and to operate on bugs we only need to use a unique prefix of the identifier as
 can be seen below.
 
-.. code-block:: text
+.. code-block:: console
 
     ~/Desktop/be_test $ be new "This is a test bug"
     Created bug with ID a09
@@ -86,7 +86,7 @@ add the comment.
 Querying bugs
 -------------
 
-.. code-block:: text
+.. code-block:: console
 
     ~/Desktop/be_test $ be list
     ec4:os: This is a second bug
@@ -105,7 +105,7 @@ use ``-m`` to list bugs assigned to yourself.
 When we wish to inspect individual bugs, to see there full status or comments,
 we use the ``be show`` command:
 
-.. code-block:: text
+.. code-block:: console
 
     ~/Desktop/be_test $ be show a09
             ID : a0912cd6-1eae-490c-8e56-5f532242394b
@@ -145,7 +145,7 @@ Once bugs are marked as fixed they no longer show up in the default ``be list``
 output, but we can still view them with ``be show`` or by calling ``be list``
 with filtering options.
 
-.. code-block:: text
+.. code-block:: console
 
     ~/Desktop/be_test $ be status ec4 fixed
     ~/Desktop/be_test $ be list

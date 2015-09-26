@@ -42,7 +42,7 @@ Diving in
 :abbr:`RCS (GNU Revision Control System)` is that simple to use that I will jump
 straight in to an example.
 
-.. code-block:: text
+.. code-block:: console
 
     $ mkdir RCS
 
@@ -50,7 +50,7 @@ The :abbr:`RCS (GNU Revision Control System)` directory holds the :abbr:`RCS
 (GNU Revision Control System)` control files, they contain all the data
 :abbr:`RCS (GNU Revision Control System)` needs to work.
 
-.. code-block:: text
+.. code-block:: console
 
     $ cat >myscript.sh <<EOF
     #! /bin/sh
@@ -72,7 +72,7 @@ The command ``ci`` (check in) is where the magic of :abbr:`RCS (GNU Revision
 Control System)` takes place. We have decided we want to make a snapshot of our
 file, ``myscript.sh``, and use ``ci`` to add the file to revision control.
 
-.. code-block:: text
+.. code-block:: console
 
     $ ls
     RCS
@@ -82,7 +82,7 @@ default behaviour of :abbr:`RCS (GNU Revision Control System)` is to remove the
 file we check in. You can choose to keep a working copy with ``ci -u`` or ``ci
 -l`` (covered below).
 
-.. code-block:: text
+.. code-block:: console
 
     $ ls ./RCS/
     myscript.sh,v
@@ -91,7 +91,7 @@ In the :abbr:`RCS (GNU Revision Control System)` directory a file now exists
 with the same name as our script plus a ",v". This is the file :abbr:`RCS (GNU
 Revision Control System)` uses to store all of its data in.
 
-.. code-block:: text
+.. code-block:: console
 
     $ co myscript.sh
     RCS/myscript.sh,v  -->  myscript.sh
@@ -106,7 +106,7 @@ The command ``co`` (check out) pulls a current version(by default) from the
 current directory. Default behaviour is to check out a read-only version of the
 file.
 
-.. code-block:: text
+.. code-block:: console
 
     $ co -l myscript.sh
     ./RCS/myscript.sh,v  -->  ./myscript.sh
@@ -125,7 +125,7 @@ System)` on multi-user projects. It is much better to use ``-u`` (or unlocked)
 when you ``ci`` in new files/changes this way you will have access to
 a read-only version of the file and it will allow other users to edit it.
 
-.. code-block:: text
+.. code-block:: console
 
     $ cat myscript.sh
     #! /bin/sh
@@ -150,7 +150,7 @@ Although using ``$Log$`` seems like a good idea it does mean the size of the
 file is increased a huge amount. All the changelog data is available with the
 ``rlog`` command at any time and without filling the source file.
 
-.. code-block:: text
+.. code-block:: console
 
     $ sed -ie 's/World/${USER}/' myscript.sh
     $ cat myscript.sh
@@ -164,7 +164,7 @@ file is increased a huge amount. All the changelog data is available with the
 So we have decided to make some changes to the file, and then tested it
 works.
 
-.. code-block:: text
+.. code-block:: console
 
     $ rcsdiff myscript.sh
     ===================================================================
@@ -196,7 +196,7 @@ pass normal ``diff`` (1) options to ``rcsdiff``.  In the second ``rcsdiff``
 command the ``diff`` option ``-u`` is given to tell ``rcsdiff`` it should output
 a unified context diff.
 
-.. code-block:: text
+.. code-block:: console
 
     $ ci -u ./myscript.sh
     ./RCS/myscript.sh,v  <--  ./myscript.sh
@@ -211,7 +211,7 @@ check in our new revision. :abbr:`RCS (GNU Revision Control System)` asks for
 a log entry, this will make our changelog output later. You can cancel the check
 in using the normal ``C-c`` (control C) method.
 
-.. code-block:: text
+.. code-block:: console
 
     $ cat myscript.sh
     #! /bin/sh
@@ -222,7 +222,7 @@ in using the normal ``C-c`` (control C) method.
 You can see above that when :abbr:`RCS (GNU Revision Control System)` checked in
 the new revision it also updated the ``$Id$`` tag.
 
-.. code-block:: text
+.. code-block:: console
 
     $ rlog ./myscript.sh
 

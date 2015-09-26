@@ -12,7 +12,7 @@ column_, which on Linux is likely to be provided by util-linux_, does exactly
 this.  The man page even offers an example of how it works(I've changed it
 slightly to make it work correctly on my system):
 
-.. code-block:: text
+.. code-block:: console
 
     ~/Desktop/jnrowe.github.io $ (echo "PERM LINKS OWNER GROUP SIZE DATE HH:MM NAME";
     > ls -l static/ | sed 1d) | column -t
@@ -31,7 +31,7 @@ the shell prompt too, for example we may wish to display the total size of all
 the files.  Or, as in the output below, the total size of all the :abbr:`PNG
 (Portable Network Graphics)` files in the directory.
 
-.. code-block:: text
+.. code-block:: console
 
     ~/Desktop/jnrowe.github.io $ (echo "PERM LINKS OWNER GROUP SIZE DATE HH:MM NAME"
     > ls -l --time-style=long-iso static/ | sed 1d) | column -t | awk '{print}
@@ -53,7 +53,7 @@ we really need to do is get the data in to a state for ``column`` to process,
 and we can use tr_ to do that.  An example using a small chunk of the network
 log on this computer that we wish to format and calculate totals for could be:
 
-.. code-block:: text
+.. code-block:: console
 
     ~/Desktop/jnrowe.github.io $ cat stats
     2009-07-15T05:09:42+0100,16803,4304661,129262665

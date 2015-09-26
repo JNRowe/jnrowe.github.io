@@ -52,7 +52,7 @@ Python
 
 Python_ comes with its own basic web server, and it is very easy to use:
 
-.. code-block:: text
+.. code-block:: console
 
     ~/Desktop/jnrowe.github.io/_site $ python2.6 -m SimpleHTTPServer 8080
     Serving HTTP on 0.0.0.0 port 8080 ...
