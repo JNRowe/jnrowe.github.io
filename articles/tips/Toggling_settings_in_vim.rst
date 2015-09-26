@@ -63,7 +63,7 @@ example shows how to do that:
             set laststatus=2
         endif
     endfunction
-    let g:notepad = "true"
+    let g:notepad = "false"
     map <M-F12> :call EditorvsNotepad()<CR>
 
 `Fork this code <http://gist.github.com/200258>`__
