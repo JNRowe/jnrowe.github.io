@@ -1,0 +1,74 @@
+==================================================================
+https://keybase.io/jnrowe
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of https://jnrowe.github.io
+  * I am jnrowe (https://keybase.io/jnrowe) on keybase.
+  * I have a public key with fingerprint 3ACF 2658 BC4D 35F6 E470  0DAF FDA3 C542 ABC6 8E07
+
+To do so, I am signing this object:
+
+{
+    "body": {
+        "key": {
+            "eldest_kid": "010142d4d7788d1aa686a4da123d7fa2bb25c9b0bb805932e95da4048f712b8ad5fe0a",
+            "fingerprint": "3acf2658bc4d35f6e4700daffda3c542abc68e07",
+            "host": "keybase.io",
+            "key_id": "fda3c542abc68e07",
+            "kid": "010142d4d7788d1aa686a4da123d7fa2bb25c9b0bb805932e95da4048f712b8ad5fe0a",
+            "uid": "461066126f00d6d9635516ea30649d19",
+            "username": "jnrowe"
+        },
+        "service": {
+            "hostname": "jnrowe.github.io",
+            "protocol": "https:"
+        },
+        "type": "web_service_binding",
+        "version": 1
+    },
+    "ctime": 1479428528,
+    "expire_in": 157680000,
+    "prev": "e43558410e9fd91a21bdeab02cd3d08cece95c45dcdba3db604042283e7e0273",
+    "seqno": 3,
+    "tag": "signature"
+}
+
+which yields the signature:
+
+-----BEGIN PGP MESSAGE-----
+Version: GnuPG v2
+
+owGtUm1QFVUYvhcvKiBCTqQEEq1ZIXTb7917NRIBP1BhaBpQjGB3z9l7V2j3cu/y
+caWCpmEQh0BzIA2xSZARGVJvgto4mQT4gZglFDDkxEwNYRGYRkCA7VL9aKafnT9n
+zvs+73Oe55l3v/8Cg69xtq5jQ1NnxSJj1whv2GHeMleI8ApwI9ZCJAvOXzAbQJea
+kSUBxIqgGIqROCABw7AswDiOZmmOBByGE4AROZzncUqw8CjPsyhlIXBooQBHoiQr
+MhjOsxygRIhySBQiSrINOh1OSVY1WoITRJymWF4gAUGJNCQZFAWcKAKOECgS53iB
+ZiHKaIN2xaVPaOJ4zgXNkqLVtEfGvLz/wP/PunPn6UgaQ2kaw2lRk0kDC01QFEZD
+jkBp0gIwiw50QafMvQY19G7ZqeRD5I0oRKvlSQLUY9V9/KtvtkmqPZf/y5HDqaiK
+oGRrXbuqOlxWfVp1O3R4PuQz/ibK4CUZaElqE3nQ6ZIUGbFiGlJQJZ0ZIxkLibMU
+zkYhsMAhOWGGpCMohmZR7ej/wDyNEpKagTSWxFBoEYEF43CMB5DjUVwABEBZAQpa
+IgJJAQHwHAF4GtXCwXGWgAxEcYZAdG85soJYCU0nZ9M4XZJN5tRcp2bct8wr1GQw
++hoWenvpO2bw9Qn8Z/EigwPmIoKjA2DQ6AW/nQsXV6wOCaoMTa49M3x6m+HFXxq/
+mRhrZi6GJzQzjiNTF46JJfniC4s/i786vW171f2etnX4tXYs3d1+oFE9ah6MK72V
+vrQ7rK96gzvx3L3RdytTlbLBsJHw3/pnuCXK6V03e31PmGp+n7rUOVOlfPvTZfvL
+IY1j47Fx4PvyoC+sH7SMVfsXzyyL2HH0j2ZPd68yWT9+235x6dDb8dHY3hslRWDm
+kdquO6sU/M2ouo411WfYspiiJbGqUrjRfwU4uzzC2lQTfG1jUkL8xECfjX7Mkunu
+X+6+ftWaXmVI7d/a6lcB5KyVLWftDz9dMYG3BU72xn4Ih4K8y5S43hTTmvV77raZ
+KvMGTgW0nLjk3f107e0aPnTW5Jr+aLv7uRLKE+E/YI45v/MJLGnVsePt+aXHZaf7
+pctXQt9/K+0Qashn5h5N7ArqCD/Yavg51bO/4UHa3aHJH3YNbgIPc+5Y7zfEnP9y
+bdHrPp7sZ9ZyTx40fl3X+t2w51W4fkHhVFXxXIE/lb66vKL5k3ubjnzFp5hDsm91
+Okc+z1kU+fHKPrB1eKTAFFm+LnDE70Zaa+av9dTjKQ2ZYfScz26HnyfrqeTucz3j
+9bE3G6+k9ZwqJluTGwLgg2zbgT1Jh2XrqHfTSZfRa7O5dDb+0L5nf7z+XjT9inE6
+cR/2/DuDJ5dtiUn4Ew==
+=Gs6Y
+-----END PGP MESSAGE-----
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/jnrowe
+
+==================================================================
+
