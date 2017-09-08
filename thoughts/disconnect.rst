@@ -108,7 +108,7 @@ to help me process receipts any more.
     here are a few:
 
     * Strava - I'm still kind of using for the time being, although Keith's
-      replacement looks like it will fulfill my needs :abbr:`RSN (Real Soon
+      replacement looks like it will fulfil my needs :abbr:`RSN (Real Soon
       Now™)`.
     * status.net - There are one or two people I don't want to lose contact with
       who aren't able to access our private server because of geo-filtering, and

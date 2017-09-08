@@ -16,7 +16,7 @@ That doesn't mean I played the game though.
 
 I recall my answer was somewhat flippant:
 
-    "I'd have used it repeatedly half an ago, until I figured out the magic
+    "I'd have used it repeatedly half an hour ago, until I figured out the magic
     incantation that convinces that cashier in the 'Express to join me for
     a picnic...  and then I would have ditched you suckers."
 
