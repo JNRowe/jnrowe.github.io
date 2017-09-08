@@ -30,7 +30,7 @@ certain days either, my longest *complete* break this year was a straight
 thirteen days back in May.
 
 The number one thing I've learnt is that a lot of the things I burnt time on
-where genuinely just burnt.  For example, news sites feel mostly pointless to
+were genuinely just burnt.  For example, news sites feel mostly pointless to
 me at this point.
 
 * Mainstream news is invariably a PR copy'n'paste fest, which is *really*
@@ -46,7 +46,7 @@ I'll still catch up from a couple of, in my opinion, trusted sources.  That is
 to say I'll dip in to a few categories on BBC news and perhaps visit The
 Guardian's site(although I do that considerably less over the past year
 according to my data).  I also like to avail myself of a little `Russia Today`_
-and `Al Jazeera`_ to keep the bias in check a little.
+and `Al Jazeera`_ to keep the bias in check a touch.
 
 With a simple rdial_ report I can also tell you that on an average internet
 connected day I can spend an hour reading news, friend's blogs, sports stories,
@@ -108,7 +108,7 @@ to help me process receipts any more.
     here are a few:
 
     * Strava - I'm still kind of using for the time being, although Keith's
-      replacement looks like it will fulfill my needs :abbr:`RSN (Real Soon
+      replacement looks like it will fulfil my needs :abbr:`RSN (Real Soon
       Now™)`.
     * status.net - There are one or two people I don't want to lose contact with
       who aren't able to access our private server because of geo-filtering, and

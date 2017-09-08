@@ -1,6 +1,95 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>JNRowe</title><link href="http://jnrowe.github.com/" rel="alternate"></link><link href="http://jnrowe.github.com/updates.atom" rel="self"></link><id>http://jnrowe.github.com/</id><updated>2014-11-12T00:00:00Z</updated><author><name>James Rowe</name><email>jnrowe@gmail.com</email><uri>http://jnrowe.github.com/</uri></author><rights>2009-2014, James Rowe</rights><entry><title>&lt;tt class="docutils literal"&gt;&lt;span class="pre"&gt;fossil&lt;/span&gt;&lt;/tt&gt; experiments</title><link href="http://jnrowe.github.com/articles/fossil.html" rel="alternate"></link><updated>2014-11-12T00:00:00Z</updated><id>http://jnrowe.github.com/articles/fossil.html</id><summary type="html">&lt;div class=section id=fossil-experiments&gt;
-&lt;h1&gt;&lt;tt class="docutils literal"&gt;&lt;span class=pre&gt;fossil&lt;/span&gt;&lt;/tt&gt; experiments&lt;a class=headerlink href=http://jnrowe.github.com/articles/fossil.html#fossil-experiments title="Permalink to this headline"&gt;¶&lt;/a&gt;&lt;/h1&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>JNRowe</title><link href="http://jnrowe.github.com/" rel="alternate"></link><link href="http://jnrowe.github.com/updates.atom" rel="self"></link><id>http://jnrowe.github.com/</id><updated>2017-09-03T00:00:00Z</updated><author><name>James Rowe</name><email>jnrowe@gmail.com</email><uri>http://jnrowe.github.com/</uri></author><rights>2009-2015, James Rowe</rights><entry><title>Burning down the streets</title><link href="http://jnrowe.github.com/thoughts/metro_city.html" rel="alternate"></link><updated>2017-09-03T00:00:00Z</updated><id>http://jnrowe.github.com/thoughts/metro_city.html</id><summary type="html">&lt;div class=section id=burning-down-the-streets&gt;
+&lt;h1&gt;Burning down the streets&lt;a class=headerlink href=http://jnrowe.github.com/thoughts/metro_city.html#burning-down-the-streets title="Permalink to this headline"&gt;¶&lt;/a&gt;&lt;/h1&gt;
+&lt;blockquote class=epigraph&gt;
+&lt;div&gt;&lt;p&gt;The whole thing makes me wonder whether a modern reintroduction of the
+&lt;a class="reference external" href=https://en.m.wikipedia.org/wiki/Charivari&gt;skimmington ride&lt;/a&gt; for social media is long overdue.&lt;/p&gt;
+&lt;p class=attribution&gt;—Stephen Roberts, eloquent friend&lt;/p&gt;
+&lt;/div&gt;&lt;/blockquote&gt;
+&lt;p&gt;A few months ago a work colleague asked if I could help his wife with an art
+project she was working on.  The premise was simple and rather enticing, so
+I jumped at the chance.&lt;/p&gt;
+&lt;p&gt;The basic idea was to mine Twitter for its copious poison and visualise any
+patterns that emerge.  We quickly hit upon the idea that some poison was so
+obvious that &lt;em&gt;even&lt;/em&gt; the Twitter folks would acknowledge and reject it, and
+piggybacking off of that would trim down the work considerably.&lt;/p&gt;
+&lt;div class=section id=mining-the-abyss&gt;
+&lt;h2&gt;Mining the abyss&lt;a class=headerlink href=http://jnrowe.github.com/thoughts/metro_city.html#mining-the-abyss title="Permalink to this headline"&gt;¶&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;My task was simple: ingest a massive lump of &lt;abbr title="JavaScript Object Notation"&gt;JSON&lt;/abbr&gt;, process it &lt;em&gt;somehow&lt;/em&gt; and spit out results that could be used in an
+artsy manner that I would likely not understand.&lt;/p&gt;
+&lt;p&gt;The initial concept worked by scanning a firehouse of tweets for keywords which
+seemed likely to be hugely poisonous, and then create a &lt;abbr title="Directed Acyclic Graph"&gt;DAG&lt;/abbr&gt; as the basis to rate users who were retweeting them.  Later
+versions were self-training using a naïve Bayes classifier, which allowed us to
+find offensive tweets using words I was previously happily unaware of.&lt;/p&gt;
+&lt;p&gt;Early on it became obvious that another effect presented itself.  There were
+&lt;em&gt;masses&lt;/em&gt; of users who were retweeting users who would later be banned, and
+those retweeting users would move on to retweeting new users who themselves
+would often end up banned.&lt;/p&gt;
+&lt;img alt="Route of evil" class=align-right src=http://jnrowe.github.com/_images/final_plight.png&gt;
+&lt;p&gt;The interesting point to me was that there were large numbers of &lt;em&gt;actual&lt;/em&gt; users
+— not bots — who redirect the hate storm and almost nothing else.  Many of
+these users were in an anechoic chamber, sucking in tweets from many users and
+spitting them back out to virtually no one.  I thought it would be interesting
+to work only on the final nodes; weighted by those users who receive close to
+no retweets and low user interaction but with histories of retweeting large
+numbers of banned and suspended users.  I called it RageRank, because I’m aware
+of &lt;a class="reference external" href=https://en.m.wikipedia.org/wiki/Pagerank&gt;Page Rank&lt;/a&gt; and lack an imagination.&lt;/p&gt;
+&lt;p&gt;The arty part of the project became known informally as Final Spite, after an
+early visualisation effort with animated clone after clone walking along
+a &lt;a class="reference external" href=https://en.m.wikipedia.org/wiki/Final_Fight&gt;Final Fight&lt;/a&gt; background spewing a tweet bubble as their energy bar
+depleted.  Each new visualisation started from a map, much like the game’s
+levels, and showed a real city with its real occupants.  The intent was to
+allow people to experience a location they knew but with its foetid underbelly
+exposed.&lt;/p&gt;
+&lt;a class="reference external image-reference" href=https://en.m.wikipedia.org/wiki/Final_Fight&gt;&lt;img alt="Final Fight One on the GBA" src=http://jnrowe.github.com/_images/final_fight_one.png&gt;&lt;/a&gt;
+&lt;/div&gt;
+&lt;div class=section id=what-happened-next&gt;
+&lt;h2&gt;What happened next?&lt;a class=headerlink href=http://jnrowe.github.com/thoughts/metro_city.html#what-happened-next title="Permalink to this headline"&gt;¶&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;What happened next saddened and surprised me in equal quantities; visitors to
+the site doxxed a heap of the displayed retweeters almost immediately.  So much
+in fact that the site was taken down within a day, and the work became a mostly
+offline exhibit in a little gallery for other evening school art students.&lt;/p&gt;
+&lt;p&gt;I can understand the sentiment in many ways, and perhaps should have seen it
+coming.  When I saw people I knew in a visualisation I was ashamed, truly
+ashamed.  I mean not to the point of thinking it is appropriate to post all
+their personal details for the internet vigilantes, but enough that I knew
+I would not want to be linked to them through work or social circles.&lt;/p&gt;
+&lt;p&gt;However, the end result was really neat even on the smaller canvas it has to
+live on.  Seeing that level of vitriolic rage isn’t fun, but realising that
+much of it is vented in to nowhere does soften it a little.&lt;/p&gt;
+&lt;div class=sidebar&gt;
+&lt;p class="first sidebar-title"&gt;Alternative mappings&lt;/p&gt;
+&lt;p&gt;Having seen the tweets of someone I know pop up, and digging around a little
+to see how hateful those tweets were it became clear there was an equally
+toxic topic that could be mapped in a similar manner.&lt;/p&gt;
+&lt;p class=last&gt;Following the game theme, perhaps a &lt;a class="reference external" href=https://en.m.wikipedia.org/wiki/Prince_of_Persia:_The_Sands_of_Time&gt;Prince of Persia: The Sands of Time&lt;/a&gt;
+affair that shows the changing hopes, dreams and promises of the anechoic
+brexit promoters from early 2016 up to today.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=section id=fall-out&gt;
+&lt;h2&gt;Fall out&lt;a class=headerlink href=http://jnrowe.github.com/thoughts/metro_city.html#fall-out title="Permalink to this headline"&gt;¶&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;One of the things that surprised me most was that initially I had primed the
+data by looking at users who followed users that have been suspended or banned.
+After digging in to a few examples to verify the method’s efficacy I noticed
+that there are bidirectional follows to the final nodes where one user appears
+to be polar opposite of the other, almost in an &lt;a class="reference external" href=https://en.m.wikipedia.org/wiki/Alf_Garnett&gt;Alf Garnett&lt;/a&gt; versus &lt;a class="reference external" href=https://en.m.wikipedia.org/wiki/Peppa_Pig&gt;Peppa
+Pig&lt;/a&gt; scale.&lt;/p&gt;
+&lt;p&gt;It took me a while to think of a possible cause beyond a simple modelling error
+that could explain this.  Sadly after recognising a top five rage retweeter in
+a local town it became somewhat obvious, there are occasionally business and
+familial ties involved.  There are seemingly swathes of the populace who choose
+to accept public association with the caustic members of society, even when
+there is a simple unfollow button you can hit to distance yourself from them.&lt;/p&gt;
+&lt;p&gt;Let us be frank and honest for a moment.  You’re giving the appearance of tacit
+approval to people’s views when you continue to follow them, even if you’re not
+actively engaging with them.  The simple act of not confronting them is
+normalising the behaviour.  If you’re not calling them out on it, you’re doing
+yourself and society at large a serious injustice.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</summary></entry><entry><title>&lt;code class="docutils literal"&gt;&lt;span class="pre"&gt;fossil&lt;/span&gt;&lt;/code&gt; experiments</title><link href="http://jnrowe.github.com/articles/fossil.html" rel="alternate"></link><updated>2014-11-12T00:00:00Z</updated><id>http://jnrowe.github.com/articles/fossil.html</id><summary type="html">&lt;div class=section id=fossil-experiments&gt;
+&lt;h1&gt;&lt;code class="docutils literal"&gt;&lt;span class=pre&gt;fossil&lt;/span&gt;&lt;/code&gt; experiments&lt;a class=headerlink href=http://jnrowe.github.com/articles/fossil.html#fossil-experiments title="Permalink to this headline"&gt;¶&lt;/a&gt;&lt;/h1&gt;
 &lt;p&gt;For a variety of reasons we can no longer use GitHub at work for any project
 which isn’t Open Source.  And since that decision was thrust upon us we’ve been
 playing with some alternatives for our workflow.  We’ll probably end up choosing
@@ -9,44 +98,44 @@ should evaluate a variety of options.&lt;/p&gt;
 &lt;p&gt;I was tasked with testing out &lt;a class="reference external" href=http://www.fossil-scm.org/&gt;fossil&lt;/a&gt; on a couple of small side projects, and
 these are my &lt;em&gt;absolutely&lt;/em&gt; biased personal findings.&lt;/p&gt;
 &lt;p&gt;Before I start I should add that while what I’m about to write probably sounds
-harsh, I do like &lt;tt class="docutils literal"&gt;&lt;span class=pre&gt;fossil&lt;/span&gt;&lt;/tt&gt; the concept.  I like the single &lt;a class="reference external" href=http://sqlite.org/&gt;sqlite&lt;/a&gt; project
+harsh, I do like &lt;code class="docutils literal"&gt;&lt;span class=pre&gt;fossil&lt;/span&gt;&lt;/code&gt; the concept.  I like the single &lt;a class="reference external" href=http://sqlite.org/&gt;sqlite&lt;/a&gt; project
 repository, I like the small-enough-to-grok-in-an-afternoon code base and I like
 the idea of a totally reproducible project state including all metadata.&lt;/p&gt;
 &lt;div class=section id=testing-fossil&gt;
-&lt;h2&gt;Testing &lt;tt class="docutils literal"&gt;&lt;span class=pre&gt;fossil&lt;/span&gt;&lt;/tt&gt;&lt;a class=headerlink href=http://jnrowe.github.com/articles/fossil.html#testing-fossil title="Permalink to this headline"&gt;¶&lt;/a&gt;&lt;/h2&gt;
-&lt;p&gt;The good news is that testing &lt;tt class="docutils literal"&gt;&lt;span class=pre&gt;fossil&lt;/span&gt;&lt;/tt&gt; is a piece of cake.  It supports both
-reading and writing &lt;tt class="docutils literal"&gt;&lt;span class=pre&gt;git&lt;/span&gt;&lt;/tt&gt;‘s &lt;a class="reference external" href=http://git-scm.com/docs/git-fast-import&gt;fast-import&lt;/a&gt; format.  If you want to test it out
+&lt;h2&gt;Testing &lt;code class="docutils literal"&gt;&lt;span class=pre&gt;fossil&lt;/span&gt;&lt;/code&gt;&lt;a class=headerlink href=http://jnrowe.github.com/articles/fossil.html#testing-fossil title="Permalink to this headline"&gt;¶&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;The good news is that testing &lt;code class="docutils literal"&gt;&lt;span class=pre&gt;fossil&lt;/span&gt;&lt;/code&gt; is a piece of cake.  It supports both
+reading and writing &lt;code class="docutils literal"&gt;&lt;span class=pre&gt;git&lt;/span&gt;&lt;/code&gt;‘s &lt;a class="reference external" href=http://git-scm.com/docs/git-fast-import&gt;fast-import&lt;/a&gt; format.  If you want to test it out
 just dump an existing &lt;a class="reference external" href=http://www.git-scm.com/&gt;git&lt;/a&gt; repository(or &lt;a class="reference external" href=http://mercurial.selenic.com/wiki/FastImportExtension&gt;mercurial with an extension&lt;/a&gt;), and
-feed it &lt;tt class="docutils literal"&gt;&lt;span class=pre&gt;fossil&lt;/span&gt; &lt;span class=pre&gt;import&lt;/span&gt;&lt;/tt&gt;.  If you later change your mind you can run &lt;tt class="docutils literal"&gt;&lt;span class=pre&gt;fossil&lt;/span&gt;
-&lt;span class=pre&gt;export&lt;/span&gt;&lt;/tt&gt;.&lt;/p&gt;
+feed it &lt;code class="docutils literal"&gt;&lt;span class=pre&gt;fossil&lt;/span&gt; &lt;span class=pre&gt;import&lt;/span&gt;&lt;/code&gt;.  If you later change your mind you can run &lt;code class="docutils literal"&gt;&lt;span class=pre&gt;fossil&lt;/span&gt;
+&lt;span class=pre&gt;export&lt;/span&gt;&lt;/code&gt;.&lt;/p&gt;
 &lt;p&gt;Sadly supporting incremental two-way mirroring didn’t work out for us, but
 perhaps it will for simpler projects.  In the end I simply mirrored the
-&lt;tt class="docutils literal"&gt;&lt;span class=pre&gt;git&lt;/span&gt;&lt;/tt&gt; repositories to &lt;tt class="docutils literal"&gt;&lt;span class=pre&gt;fossil&lt;/span&gt;&lt;/tt&gt;, marked the &lt;tt class="docutils literal"&gt;&lt;span class=pre&gt;git&lt;/span&gt;&lt;/tt&gt; repositories as read-only
-and forced contributors to work with &lt;tt class="docutils literal"&gt;&lt;span class=pre&gt;fossil&lt;/span&gt;&lt;/tt&gt; from the outset.&lt;/p&gt;
+&lt;code class="docutils literal"&gt;&lt;span class=pre&gt;git&lt;/span&gt;&lt;/code&gt; repositories to &lt;code class="docutils literal"&gt;&lt;span class=pre&gt;fossil&lt;/span&gt;&lt;/code&gt;, marked the &lt;code class="docutils literal"&gt;&lt;span class=pre&gt;git&lt;/span&gt;&lt;/code&gt; repositories as read-only
+and forced contributors to work with &lt;code class="docutils literal"&gt;&lt;span class=pre&gt;fossil&lt;/span&gt;&lt;/code&gt; from the outset.&lt;/p&gt;
 &lt;/div&gt;
 &lt;div class=section id=packaging&gt;
 &lt;h2&gt;Packaging&lt;a class=headerlink href=http://jnrowe.github.com/articles/fossil.html#packaging title="Permalink to this headline"&gt;¶&lt;/a&gt;&lt;/h2&gt;
-&lt;p&gt;The &lt;tt class="docutils literal"&gt;&lt;span class=pre&gt;fossil&lt;/span&gt;&lt;/tt&gt; project sells itself on being a single file binary install, and
+&lt;p&gt;The &lt;code class="docutils literal"&gt;&lt;span class=pre&gt;fossil&lt;/span&gt;&lt;/code&gt; project sells itself on being a single file binary install, and
 that probably works well for a subset of users.  We’re not that in that subset
-though, and &lt;tt class="docutils literal"&gt;&lt;span class=pre&gt;fossil&lt;/span&gt;&lt;/tt&gt; is more than a little annoying to wrangle in to our
+though, and &lt;code class="docutils literal"&gt;&lt;span class=pre&gt;fossil&lt;/span&gt;&lt;/code&gt; is more than a little annoying to wrangle in to our
 environment.&lt;/p&gt;
 &lt;p&gt;The tarball ships without any &lt;em&gt;directly&lt;/em&gt; usable documentation, so you end up
 with either no system documentation or a collection of docs sprinkled with wiki
-markup in &lt;tt class="file docutils literal"&gt;&lt;span class=pre&gt;/usr/share/doc&lt;/span&gt;&lt;/tt&gt;.&lt;/p&gt;
-&lt;p&gt;By default &lt;tt class="docutils literal"&gt;&lt;span class=pre&gt;fossil&lt;/span&gt;&lt;/tt&gt; builds in a manner which breaks most packaging standard
+markup in &lt;code class="file docutils literal"&gt;&lt;span class=pre&gt;/usr/share/doc&lt;/span&gt;&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;By default &lt;code class="docutils literal"&gt;&lt;span class=pre&gt;fossil&lt;/span&gt;&lt;/code&gt; builds in a manner which breaks most packaging standard
 unfortunately.  If you’re building packages you’ll likely need to write an awful
 lot of custom workarounds to get a compliant and usable package, see
-&lt;tt class="docutils literal"&gt;&lt;span class=pre&gt;lst-pkgs/utils/dev/fossil&lt;/span&gt;&lt;/tt&gt; build for the gory details of our hacks.&lt;/p&gt;
+&lt;code class="docutils literal"&gt;&lt;span class=pre&gt;lst-pkgs/utils/dev/fossil&lt;/span&gt;&lt;/code&gt; build for the gory details of our hacks.&lt;/p&gt;
 &lt;/div&gt;
 &lt;div class=section id=uptake&gt;
 &lt;h2&gt;Uptake&lt;a class=headerlink href=http://jnrowe.github.com/articles/fossil.html#uptake title="Permalink to this headline"&gt;¶&lt;/a&gt;&lt;/h2&gt;
-&lt;p&gt;I don’t really want to hold this against &lt;tt class="docutils literal"&gt;&lt;span class=pre&gt;fossil&lt;/span&gt;&lt;/tt&gt;, but it &lt;em&gt;is&lt;/em&gt; important to
+&lt;p&gt;I don’t really want to hold this against &lt;code class="docutils literal"&gt;&lt;span class=pre&gt;fossil&lt;/span&gt;&lt;/code&gt;, but it &lt;em&gt;is&lt;/em&gt; important to
 note that for all intents and purposes no one is familiar with it.  No upstream
 projects we actively track use it, there isn’t a single person who chooses to
 use it on our site(which is why I had to handle the packaging) and expecting new
 hires to have even heard of it is probably a stretch.&lt;/p&gt;
-&lt;p&gt;It wouldn’t be such an issue if the choice was a &lt;tt class="docutils literal"&gt;&lt;span class=pre&gt;git&lt;/span&gt;&lt;/tt&gt; vs &lt;a class="reference external" href=http://mercurial.selenic.com/&gt;mercurial&lt;/a&gt; one,
-where the few differences are mostly cosmetic.  &lt;tt class="docutils literal"&gt;&lt;span class=pre&gt;fossil&lt;/span&gt;&lt;/tt&gt; is a completely
+&lt;p&gt;It wouldn’t be such an issue if the choice was a &lt;code class="docutils literal"&gt;&lt;span class=pre&gt;git&lt;/span&gt;&lt;/code&gt; vs &lt;a class="reference external" href=http://mercurial.selenic.com/&gt;mercurial&lt;/a&gt; one,
+where the few differences are mostly cosmetic.  &lt;code class="docutils literal"&gt;&lt;span class=pre&gt;fossil&lt;/span&gt;&lt;/code&gt; is a completely
 different beast, and requires an enormous rethink in the way you handle version
 control.&lt;/p&gt;
 &lt;p&gt;Ten years ago when people were on the whole still familiar with the CVS and
@@ -59,7 +148,7 @@ decade.&lt;/p&gt;
 &lt;/div&gt;
 &lt;div class=section id=all-in-one-solution&gt;
 &lt;h2&gt;All-in-one solution&lt;a class=headerlink href=http://jnrowe.github.com/articles/fossil.html#all-in-one-solution title="Permalink to this headline"&gt;¶&lt;/a&gt;&lt;/h2&gt;
-&lt;p&gt;One of the proclaimed benefits of using &lt;tt class="docutils literal"&gt;&lt;span class=pre&gt;fossil&lt;/span&gt;&lt;/tt&gt; is that it handles many
+&lt;p&gt;One of the proclaimed benefits of using &lt;code class="docutils literal"&gt;&lt;span class=pre&gt;fossil&lt;/span&gt;&lt;/code&gt; is that it handles many
 aspects of a project’s &lt;abbr title="Application Lifecycle Management"&gt;ALM&lt;/abbr&gt;; version
 control, issue tracking, documentation(via a wiki), etc.  However, and this is
 only my opinion, it feels like it does of all of these in a suboptimal manner.&lt;/p&gt;
@@ -69,24 +158,24 @@ only my opinion, it feels like it does of all of these in a suboptimal manner.&l
 a little annoying to work with if you’re used to a modern &lt;abbr title="Distributed Version Control System"&gt;DVCS&lt;/abbr&gt; like we are.&lt;/p&gt;
 &lt;p&gt;That said it does feel like a &lt;em&gt;huge&lt;/em&gt; step backwards when working with branches,
 and you should set aside quite a lot of time for integration issues when you
-have &lt;tt class="docutils literal"&gt;&lt;span class=pre&gt;autosync&lt;/span&gt;&lt;/tt&gt; disabled.  And I can’t imagine a scenario where &lt;tt class="docutils literal"&gt;&lt;span class=pre&gt;autosync&lt;/span&gt;&lt;/tt&gt;
+have &lt;code class="docutils literal"&gt;&lt;span class=pre&gt;autosync&lt;/span&gt;&lt;/code&gt; disabled.  And I can’t imagine a scenario where &lt;code class="docutils literal"&gt;&lt;span class=pre&gt;autosync&lt;/span&gt;&lt;/code&gt;
 could work for us, without rewriting our entire way of working or returning to
 CVS-style mega commits and a manual patch stack layered on top.&lt;/p&gt;
-&lt;p&gt;If you read &lt;tt class="docutils literal"&gt;&lt;span class=pre&gt;fossil&lt;/span&gt;&lt;/tt&gt;‘s &lt;a class="reference external" href=http://www.bugzilla.org&gt;Branching, Forking, Merging, and Tagging&lt;/a&gt;
+&lt;p&gt;If you read &lt;code class="docutils literal"&gt;&lt;span class=pre&gt;fossil&lt;/span&gt;&lt;/code&gt;‘s &lt;a class="reference external" href=http://www.bugzilla.org&gt;Branching, Forking, Merging, and Tagging&lt;/a&gt;
 documentation it appears that this is a design feature for the creators.&lt;/p&gt;
 &lt;/div&gt;
 &lt;div class=section id=issue-tracker&gt;
 &lt;h3&gt;Issue tracker&lt;a class=headerlink href=http://jnrowe.github.com/articles/fossil.html#issue-tracker title="Permalink to this headline"&gt;¶&lt;/a&gt;&lt;/h3&gt;
 &lt;p&gt;The issue tracker feels like someone has tried to improve on &lt;a class="reference external" href=http://www.bugzilla.org&gt;Bugzilla&lt;/a&gt;, without
 taking a look at modern trackers.  It is definitely the weakest part of
-&lt;tt class="docutils literal"&gt;&lt;span class=pre&gt;fossil&lt;/span&gt;&lt;/tt&gt; in my opinion, using it is both a mental and eye-stabbing pain at the
+&lt;code class="docutils literal"&gt;&lt;span class=pre&gt;fossil&lt;/span&gt;&lt;/code&gt; in my opinion, using it is both a mental and eye-stabbing pain at the
 same time.&lt;/p&gt;
 &lt;p&gt;Luckily you can rework a lot of it by fiddling around with the administration
-settings exposed by &lt;tt class="docutils literal"&gt;&lt;span class=pre&gt;fossil&lt;/span&gt; &lt;span class=pre&gt;ui&lt;/span&gt;&lt;/tt&gt;.&lt;/p&gt;
-&lt;p&gt;This also exposes one of the best features of &lt;tt class="docutils literal"&gt;&lt;span class=pre&gt;fossil&lt;/span&gt;&lt;/tt&gt;, you can create
+settings exposed by &lt;code class="docutils literal"&gt;&lt;span class=pre&gt;fossil&lt;/span&gt; &lt;span class=pre&gt;ui&lt;/span&gt;&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;This also exposes one of the best features of &lt;code class="docutils literal"&gt;&lt;span class=pre&gt;fossil&lt;/span&gt;&lt;/code&gt;, you can create
 a custom SQL script that configures the project(issue tracking, pretty theme,
 etc) and just blast it in to the project’s database.  Or you can create a custom
-file that makes all your edits and pump it in with &lt;tt class="docutils literal"&gt;&lt;span class=pre&gt;fossil&lt;/span&gt; &lt;span class=pre&gt;config&lt;/span&gt; &lt;span class=pre&gt;import&lt;/span&gt;&lt;/tt&gt;.&lt;/p&gt;
+file that makes all your edits and pump it in with &lt;code class="docutils literal"&gt;&lt;span class=pre&gt;fossil&lt;/span&gt; &lt;span class=pre&gt;config&lt;/span&gt; &lt;span class=pre&gt;import&lt;/span&gt;&lt;/code&gt;.&lt;/p&gt;
 &lt;/div&gt;
 &lt;div class=section id=wiki&gt;
 &lt;h3&gt;Wiki&lt;a class=headerlink href=http://jnrowe.github.com/articles/fossil.html#wiki title="Permalink to this headline"&gt;¶&lt;/a&gt;&lt;/h3&gt;
@@ -102,11 +191,11 @@ together, but none of them seem like an option you’d choose on their own.&lt;/
 &lt;div class=section id=interface&gt;
 &lt;h2&gt;Interface&lt;a class=headerlink href=http://jnrowe.github.com/articles/fossil.html#interface title="Permalink to this headline"&gt;¶&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;The help output for new users is, in my opinion, really irritating.  The default
-command message tells you to run &lt;tt class="docutils literal"&gt;&lt;span class=pre&gt;fossil&lt;/span&gt; &lt;span class=pre&gt;help&lt;/span&gt;&lt;/tt&gt; or &lt;tt class="docutils literal"&gt;&lt;span class=pre&gt;fossil&lt;/span&gt; &lt;span class=pre&gt;help&lt;/span&gt; &lt;span class=pre&gt;COMMAND&lt;/span&gt;&lt;/tt&gt;,
-without providing the names of any of the common commands.  The &lt;tt class="docutils literal"&gt;&lt;span class=pre&gt;fossil&lt;/span&gt; &lt;span class=pre&gt;help&lt;/span&gt;&lt;/tt&gt;
-output emulates a &lt;tt class="docutils literal"&gt;&lt;span class=pre&gt;tsort&lt;/span&gt;&lt;/tt&gt; filter of the command names, listing commands with
-unique to &lt;tt class="docutils literal"&gt;&lt;span class=pre&gt;fossil&lt;/span&gt;&lt;/tt&gt; terminology and no short descriptions.  &lt;tt class="docutils literal"&gt;&lt;span class=pre&gt;fossil&lt;/span&gt; &lt;span class=pre&gt;help&lt;/span&gt;
-&lt;span class=pre&gt;--all&lt;/span&gt;&lt;/tt&gt; feels like it should be more useful, but just creates a larger table of
+command message tells you to run &lt;code class="docutils literal"&gt;&lt;span class=pre&gt;fossil&lt;/span&gt; &lt;span class=pre&gt;help&lt;/span&gt;&lt;/code&gt; or &lt;code class="docutils literal"&gt;&lt;span class=pre&gt;fossil&lt;/span&gt; &lt;span class=pre&gt;help&lt;/span&gt; &lt;span class=pre&gt;COMMAND&lt;/span&gt;&lt;/code&gt;,
+without providing the names of any of the common commands.  The &lt;code class="docutils literal"&gt;&lt;span class=pre&gt;fossil&lt;/span&gt; &lt;span class=pre&gt;help&lt;/span&gt;&lt;/code&gt;
+output emulates a &lt;code class="docutils literal"&gt;&lt;span class=pre&gt;tsort&lt;/span&gt;&lt;/code&gt; filter of the command names, listing commands with
+unique to &lt;code class="docutils literal"&gt;&lt;span class=pre&gt;fossil&lt;/span&gt;&lt;/code&gt; terminology and no short descriptions.  &lt;code class="docutils literal"&gt;&lt;span class=pre&gt;fossil&lt;/span&gt; &lt;span class=pre&gt;help&lt;/span&gt;
+&lt;span class=pre&gt;--all&lt;/span&gt;&lt;/code&gt; feels like it should be more useful, but just creates a larger table of
 commands with uncommon names and still no descriptions.&lt;/p&gt;
 &lt;p&gt;It makes very little sense to organise the help in this manner because as you
 get used to the naming and non-standard option style you will need the help
@@ -119,32 +208,32 @@ a &lt;abbr title="Contributor Licence Agreement"&gt;CLA&lt;/abbr&gt; that I can 
 faith, which is a shame.&lt;/p&gt;
 &lt;/div&gt;
 &lt;p&gt;The option handling &lt;em&gt;will&lt;/em&gt; trip you up endlessly.  Just the little things like
-being unable to chain options, and needing an endless stream of &lt;tt class="docutils literal"&gt;&lt;span class=pre&gt;C-p&lt;/span&gt; &lt;span class=pre&gt;M-5&lt;/span&gt; &lt;span class=pre&gt;M-b&lt;/span&gt;
-&lt;span class=pre&gt;&amp;lt;space&amp;gt;&lt;/span&gt;&lt;/tt&gt; to add a space before a commit message for example.  Yes, I know some
-people don’t like standard &lt;tt class="docutils literal"&gt;&lt;span class=pre&gt;getopt&lt;/span&gt;&lt;/tt&gt; or GNU-style option parsing, but every
+being unable to chain options, and needing an endless stream of &lt;code class="docutils literal"&gt;&lt;span class=pre&gt;C-p&lt;/span&gt; &lt;span class=pre&gt;M-5&lt;/span&gt; &lt;span class=pre&gt;M-b&lt;/span&gt;
+&lt;span class=pre&gt;&amp;lt;space&amp;gt;&lt;/span&gt;&lt;/code&gt; to add a space before a commit message for example.  Yes, I know some
+people don’t like standard &lt;code class="docutils literal"&gt;&lt;span class=pre&gt;getopt&lt;/span&gt;&lt;/code&gt; or GNU-style option parsing, but every
 other tool you use has chosen it.&lt;/p&gt;
 &lt;p&gt;Some of the interface decisions are actively bad, for example there appears to
 be no way to delegate password configuration to a trusted system service or even
-&lt;tt class="docutils literal"&gt;&lt;span class=pre&gt;netrc&lt;/span&gt;&lt;/tt&gt;.  Specifying passwords in URLs on the command line is a &lt;strong&gt;huge&lt;/strong&gt;
+&lt;code class="docutils literal"&gt;&lt;span class=pre&gt;netrc&lt;/span&gt;&lt;/code&gt;.  Specifying passwords in URLs on the command line is a &lt;strong&gt;huge&lt;/strong&gt;
 anti-pattern, and I just hope you don’t have any multiseat systems if you’re
 using that method.&lt;/p&gt;
 &lt;/div&gt;
 &lt;div class=section id=speed&gt;
 &lt;h2&gt;Speed&lt;a class=headerlink href=http://jnrowe.github.com/articles/fossil.html#speed title="Permalink to this headline"&gt;¶&lt;/a&gt;&lt;/h2&gt;
-&lt;p&gt;On the whole &lt;tt class="docutils literal"&gt;&lt;span class=pre&gt;fossil&lt;/span&gt;&lt;/tt&gt; is fast, not &lt;tt class="docutils literal"&gt;&lt;span class=pre&gt;git&lt;/span&gt;&lt;/tt&gt; fast but fast nonetheless.  Commits
+&lt;p&gt;On the whole &lt;code class="docutils literal"&gt;&lt;span class=pre&gt;fossil&lt;/span&gt;&lt;/code&gt; is fast, not &lt;code class="docutils literal"&gt;&lt;span class=pre&gt;git&lt;/span&gt;&lt;/code&gt; fast but fast nonetheless.  Commits
 do take a disturbingly long time to complete for some reason, but most of the
 other commands are fast enough.&lt;/p&gt;
-&lt;p&gt;Mangling a repository is actually a lot faster with &lt;tt class="docutils literal"&gt;&lt;span class=pre&gt;fossil&lt;/span&gt;&lt;/tt&gt; than any other
+&lt;p&gt;Mangling a repository is actually a lot faster with &lt;code class="docutils literal"&gt;&lt;span class=pre&gt;fossil&lt;/span&gt;&lt;/code&gt; than any other
 system I can think of, as you can just throw the power of SQL at it.  You can
-find some &lt;a class="reference external" href=http://www.sqlalchemy.org/&gt;sqlalchemy&lt;/a&gt; ORM definitions in &lt;tt class="file docutils literal"&gt;&lt;span class=pre&gt;/usr/share/doc/fossil/orm&lt;/span&gt;&lt;/tt&gt; in my
+find some &lt;a class="reference external" href=http://www.sqlalchemy.org/&gt;sqlalchemy&lt;/a&gt; ORM definitions in &lt;code class="file docutils literal"&gt;&lt;span class=pre&gt;/usr/share/doc/fossil/orm&lt;/span&gt;&lt;/code&gt; in my
 packages.&lt;/p&gt;
 &lt;/div&gt;
 &lt;div class=section id=conclusion&gt;
 &lt;h2&gt;Conclusion&lt;a class=headerlink href=http://jnrowe.github.com/articles/fossil.html#conclusion title="Permalink to this headline"&gt;¶&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;I mentioned this in this first paragraph, but I don’t see us moving to
-&lt;tt class="docutils literal"&gt;&lt;span class=pre&gt;fossil&lt;/span&gt;&lt;/tt&gt;.  It is a nice system, but it just wouldn’t work for us as is.&lt;/p&gt;
+&lt;code class="docutils literal"&gt;&lt;span class=pre&gt;fossil&lt;/span&gt;&lt;/code&gt;.  It is a nice system, but it just wouldn’t work for us as is.&lt;/p&gt;
 &lt;p&gt;Part of me is tempted to attempt to fix the problems, but then we’d be left with
-a system that is more obscure than &lt;tt class="docutils literal"&gt;&lt;span class=pre&gt;fossil&lt;/span&gt;&lt;/tt&gt;.  If you read the &lt;a class="reference external" href=http://fossil-scm.org/xfer/doc/tip/www/concepts.wiki&gt;Fossil
+a system that is more obscure than &lt;code class="docutils literal"&gt;&lt;span class=pre&gt;fossil&lt;/span&gt;&lt;/code&gt;.  If you read the &lt;a class="reference external" href=http://fossil-scm.org/xfer/doc/tip/www/concepts.wiki&gt;Fossil
 Concepts&lt;/a&gt; and &lt;a class="reference external" href=http://www.fossil-scm.org/xfer/doc/tip/www/faq.wiki&gt;Frequently Asked Questions&lt;/a&gt; documents you’ll see that the most
 significant problems for us are actually features for upstream, and that is
 obviously fine but it does mean upstreaming changes would be impossible.&lt;/p&gt;
@@ -153,8 +242,8 @@ obviously fine but it does mean upstreaming changes would be impossible.&lt;/p&g
 &lt;p class=last&gt;As noted above, it turns out they require a &lt;abbr title="Contributor Licence Agreement"&gt;CLA&lt;/abbr&gt; which means we couldn’t send changes upstream anyway.&lt;/p&gt;
 &lt;/div&gt;
 &lt;p&gt;That said I’m am planning on stealing some of the ideas that I really liked
-about &lt;tt class="docutils literal"&gt;&lt;span class=pre&gt;fossil&lt;/span&gt;&lt;/tt&gt; for my own use.  &lt;tt class="docutils literal"&gt;&lt;span class=pre&gt;fossil&lt;/span&gt; &lt;span class=pre&gt;all&lt;/span&gt;&lt;/tt&gt;‘s ability to run a command
-against all repositories configured in &lt;tt class="file docutils literal"&gt;&lt;span class=pre&gt;~/.fossil&lt;/span&gt;&lt;/tt&gt; for example.&lt;/p&gt;
+about &lt;code class="docutils literal"&gt;&lt;span class=pre&gt;fossil&lt;/span&gt;&lt;/code&gt; for my own use.  &lt;code class="docutils literal"&gt;&lt;span class=pre&gt;fossil&lt;/span&gt; &lt;span class=pre&gt;all&lt;/span&gt;&lt;/code&gt;‘s ability to run a command
+against all repositories configured in &lt;code class="file docutils literal"&gt;&lt;span class=pre&gt;~/.fossil&lt;/span&gt;&lt;/code&gt; for example.&lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 </summary></entry><entry><title>Cleanse thy soul</title><link href="http://jnrowe.github.com/thoughts/disconnect.html" rel="alternate"></link><updated>2014-09-18T00:00:00Z</updated><id>http://jnrowe.github.com/thoughts/disconnect.html</id><summary type="html">&lt;div class=section id=cleanse-thy-soul&gt;
@@ -179,7 +268,7 @@ same.&lt;/p&gt;
 certain days either, my longest &lt;em&gt;complete&lt;/em&gt; break this year was a straight
 thirteen days back in May.&lt;/p&gt;
 &lt;p&gt;The number one thing I’ve learnt is that a lot of the things I burnt time on
-where genuinely just burnt.  For example, news sites feel mostly pointless to
+were genuinely just burnt.  For example, news sites feel mostly pointless to
 me at this point.&lt;/p&gt;
 &lt;ul class=simple&gt;
 &lt;li&gt;Mainstream news is invariably a PR copy’n’paste fest, which is &lt;em&gt;really&lt;/em&gt;
@@ -195,7 +284,7 @@ interesting insights from the SV bubble anyway.&lt;/li&gt;
 to say I’ll dip in to a few categories on BBC news and perhaps visit The
 Guardian’s site(although I do that considerably less over the past year
 according to my data).  I also like to avail myself of a little &lt;a class="reference external" href=http://rt.com/&gt;Russia Today&lt;/a&gt;
-and &lt;a class="reference external" href=http://www.aljazeera.net/&gt;Al Jazeera&lt;/a&gt; to keep the bias in check a little.&lt;/p&gt;
+and &lt;a class="reference external" href=http://www.aljazeera.net/&gt;Al Jazeera&lt;/a&gt; to keep the bias in check a touch.&lt;/p&gt;
 &lt;p&gt;With a simple &lt;a class="reference external" href=https://pypi.python.org/pypi/rdial/&gt;rdial&lt;/a&gt; report I can also tell you that on an average internet
 connected day I can spend an hour reading news, friend’s blogs, sports stories,
 &amp;amp;c.  A big chunk of that time is also combined with breakfast, so I choose to
@@ -219,7 +308,7 @@ has less than 150 thanks to the automated decay-based-on-visits purging of the
 entries it contains.&lt;/p&gt;
 &lt;p&gt;The whitelist approach also feeds in to my data tracking habit, as I can now
 tell from the decay tracking data when bursts of certain sites appear.  For
-example, StackOverflow(and &lt;tt class="docutils literal"&gt;&lt;span class=pre&gt;cdn.sstatic.net/stackoverflow/&lt;/span&gt;&lt;/tt&gt; for styling) was
+example, StackOverflow(and &lt;code class="docutils literal"&gt;&lt;span class=pre&gt;cdn.sstatic.net/stackoverflow/&lt;/span&gt;&lt;/code&gt; for styling) was
 on the whitelist for two weeks in June with six visits, which happens to
 coincide with a project that involved porting a tool to Windows.&lt;/p&gt;
 &lt;p&gt;The act of using a whitelist makes the point of procrastination noticeable and
@@ -245,7 +334,7 @@ to help me process receipts any more.&lt;/p&gt;
 here are a few:&lt;/p&gt;
 &lt;ul class="last simple"&gt;
 &lt;li&gt;Strava - I’m still kind of using for the time being, although Keith’s
-replacement looks like it will fulfill my needs &lt;abbr title="Real Soon Now™"&gt;RSN&lt;/abbr&gt;.&lt;/li&gt;
+replacement looks like it will fulfil my needs &lt;abbr title="Real Soon Now™"&gt;RSN&lt;/abbr&gt;.&lt;/li&gt;
 &lt;li&gt;status.net - There are one or two people I don’t want to lose contact with
 who aren’t able to access our private server because of geo-filtering, and
 I don’t know how that can be fixed.&lt;/li&gt;
@@ -296,8 +385,8 @@ does act as a nice sieve for everything else right now.&lt;/tr&gt;
 &lt;p&gt;A few years ago I burned out on Open Source projects, to the point that it was
 close to impacting other parts of my life.  I have only myself to blame as
 I didn’t manage to distance myself at all well.  Distancing yourself is not easy
-to do when your fun hobby for relaxation is the thing that is thing that is
-working against you.&lt;/p&gt;
+to do when your fun hobby for relaxation is the thing that is working against
+you.&lt;/p&gt;
 &lt;p&gt;There were a variety of incredibly minor issues that piled up Jenga-style.  Then
 to carry the weak analogy forward, it toppled over in a split second like Jenga
 in a rubber dingy on the rolling seas with a fumbling drunken friend wearing
@@ -361,7 +450,7 @@ people need to use their Open Source projects as a way to improve their CV or
 build a presence, but for many of us it is just for fun and reciprocation.&lt;/p&gt;
 &lt;p&gt;Another example that I recall, but wish I didn’t, was a user &lt;em&gt;telling&lt;/em&gt; me to
 recompress a tarball on PyPI because their infrastructure couldn’t support
-&lt;tt class="docutils literal"&gt;&lt;span class=pre&gt;bzip2&lt;/span&gt;&lt;/tt&gt;.  Seems reasonable enough, but it came wrapped in a tirade of abuse.
+&lt;code class="docutils literal"&gt;&lt;span class=pre&gt;bzip2&lt;/span&gt;&lt;/code&gt;.  Seems reasonable enough, but it came wrapped in a tirade of abuse.
 I ignored the abuse, uploaded another tarball and then received another abusive
 email in return the next day.  That was a long time ago, far before the burnout
 started to creep in so I just addressed the actual issue and moved on.&lt;/p&gt;
@@ -380,9 +469,8 @@ trash” rule in your email filter.  Even in person it can be quite easy to do,
 just politely acknowledge their issue and move away instead of engaging them.&lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;/div&gt;
 &lt;div class=section id=the-solutions&gt;
-&lt;h1&gt;The solutions&lt;a class=headerlink href=http://jnrowe.github.com/thoughts/burn_out.html#the-solutions title="Permalink to this headline"&gt;¶&lt;/a&gt;&lt;/h1&gt;
+&lt;h2&gt;The solutions&lt;a class=headerlink href=http://jnrowe.github.com/thoughts/burn_out.html#the-solutions title="Permalink to this headline"&gt;¶&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;I chose a solution I hate, for all intents and purposes I don’t release new Open
 Source projects any longer.  I still work on a lot of projects, and the code is
 normally available somewhere for strangers.  However, for the most part I’ve
@@ -405,10 +493,11 @@ value to you, and they’re probably never going to.  If you can remove them
 somehow you’re probably not losing anything, but you’ll be gaining a whole lot
 personally.&lt;/p&gt;
 &lt;/div&gt;
+&lt;/div&gt;
 </summary></entry><entry><title>jnrowe-misc - The unsorted package overlay</title><link href="http://jnrowe.github.com/articles/probits/jnrowe-misc.html" rel="alternate"></link><updated>2014-06-30T00:00:00Z</updated><id>http://jnrowe.github.com/articles/probits/jnrowe-misc.html</id><summary type="html">&lt;div class=section id=jnrowe-misc-the-unsorted-package-overlay&gt;
 &lt;h1&gt;jnrowe-misc - The unsorted package overlay&lt;a class=headerlink href=http://jnrowe.github.com/articles/probits/jnrowe-misc.html#jnrowe-misc-the-unsorted-package-overlay title="Permalink to this headline"&gt;¶&lt;/a&gt;&lt;/h1&gt;
 &lt;blockquote&gt;
-&lt;div&gt;A collection of &lt;tt class="docutils literal"&gt;&lt;span class=pre&gt;ebuild&lt;/span&gt;&lt;/tt&gt; files with no overall theme.&lt;/div&gt;&lt;/blockquote&gt;
+&lt;div&gt;A collection of &lt;code class="docutils literal"&gt;&lt;span class=pre&gt;ebuild&lt;/span&gt;&lt;/code&gt; files with no overall theme.&lt;/div&gt;&lt;/blockquote&gt;
 &lt;p&gt;TLDR; For what it was &lt;a class="reference external" href=https://github.com/JNRowe/jnrowe-misc&gt;jnrowe-misc&lt;/a&gt; served its purpose well.&lt;/p&gt;
 &lt;div class=section id=an-island-unto-itself&gt;
 &lt;h2&gt;An island unto itself&lt;a class=headerlink href=http://jnrowe.github.com/articles/probits/jnrowe-misc.html#an-island-unto-itself title="Permalink to this headline"&gt;¶&lt;/a&gt;&lt;/h2&gt;
@@ -417,7 +506,7 @@ them) the overlay available on GitHub wasn’t the deliverable at any point in
 time.  In fact, the often convoluted merge history in the repository probably
 hinted at that quite a bit.&lt;/p&gt;
 &lt;a class="reference internal image-reference" href=http://jnrowe.github.com/_images/jnrowe-misc.png&gt;&lt;img alt="Tree view of ``jnrowe-misc`` history" class=align-right src=http://jnrowe.github.com/_images/jnrowe-misc.png style="width: 50%;"&gt;&lt;/a&gt;
-&lt;p&gt;&lt;tt class="docutils literal"&gt;&lt;span class=pre&gt;jnrowe-misc&lt;/span&gt;&lt;/tt&gt; was always the combination of a few independently managed
+&lt;p&gt;&lt;code class="docutils literal"&gt;&lt;span class=pre&gt;jnrowe-misc&lt;/span&gt;&lt;/code&gt; was always the combination of a few independently managed
 repositories that I bundled up to make available for public consumption.
 Eventually it ended up being mostly Python stuff, but that was because the
 support burden of other packages was becoming more time consuming than I could
@@ -438,7 +527,7 @@ like the best way to deal with that for me.&lt;/p&gt;
 &lt;p&gt;I had hoped that some packages would be picked up, but didn’t actively push them
 after the first few.&lt;/p&gt;
 &lt;p&gt;The overlay should have never touched packages that were available upstream, but
-occasionally they overlapped when upstream added them.  The use of &lt;tt class="docutils literal"&gt;&lt;span class=pre&gt;::shadow&lt;/span&gt;&lt;/tt&gt;
+occasionally they overlapped when upstream added them.  The use of &lt;code class="docutils literal"&gt;&lt;span class=pre&gt;::shadow&lt;/span&gt;&lt;/code&gt;
 to workaround problems when new packages were added upstream worked &lt;em&gt;really&lt;/em&gt;
 well, and saved the few remaining hairs on my balding head.&lt;/p&gt;
 &lt;/div&gt;
@@ -506,14 +595,14 @@ if you share binary packages.&lt;/p&gt;
 binary package user on Gentoo is just how slow package installation and removal
 is.  Binary package installation on Gentoo feels on par with a distribution
 like Slackware, and what passes for package management there is just choosing
-the right argument to &lt;strong class=command&gt;tar&lt;/strong&gt;‘s &lt;em class="xref std std-option"&gt;-C&lt;/em&gt; option.&lt;/p&gt;
+the right argument to &lt;strong class=command&gt;tar&lt;/strong&gt;‘s &lt;code class="xref std std-option docutils literal"&gt;&lt;span class=pre&gt;-C&lt;/span&gt;&lt;/code&gt; option.&lt;/p&gt;
 &lt;p&gt;Where Gentoo really excels though is in the speed of creating new packages or
 editing existing packages.&lt;/p&gt;
 &lt;p&gt;Lets take a look at an example.  Say, for example, that you just found out that
-&lt;tt class="docutils literal"&gt;&lt;span class=pre&gt;flask-dashed&lt;/span&gt;&lt;/tt&gt;‘s  &lt;tt class="docutils literal"&gt;&lt;span class=pre&gt;ebuild&lt;/span&gt;&lt;/tt&gt; mistakenly installs a &lt;tt class="file docutils literal"&gt;&lt;span class=pre&gt;/usr/README&lt;/span&gt;&lt;/tt&gt; file.
+&lt;code class="docutils literal"&gt;&lt;span class=pre&gt;flask-dashed&lt;/span&gt;&lt;/code&gt;‘s  &lt;code class="docutils literal"&gt;&lt;span class=pre&gt;ebuild&lt;/span&gt;&lt;/code&gt; mistakenly installs a &lt;code class="file docutils literal"&gt;&lt;span class=pre&gt;/usr/README&lt;/span&gt;&lt;/code&gt; file.
 We we can fix the problem with the following simple change and a call to
-&lt;tt class="docutils literal"&gt;&lt;span class=pre&gt;repoman&lt;/span&gt; &lt;span class=pre&gt;manifest&lt;/span&gt;&lt;/tt&gt;, the rest takes care of itself.&lt;/p&gt;
-&lt;div class=highlight-diff&gt;&lt;div class=highlight&gt;&lt;pre&gt;&lt;span class=gh&gt;diff --git i/flask-dashed-0.1b_p2.ebuild w/flask-dashed-0.1b_p2.ebuild&lt;/span&gt;
+&lt;code class="docutils literal"&gt;&lt;span class=pre&gt;repoman&lt;/span&gt; &lt;span class=pre&gt;manifest&lt;/span&gt;&lt;/code&gt;, the rest takes care of itself.&lt;/p&gt;
+&lt;div class=highlight-diff&gt;&lt;div class=highlight&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=gh&gt;diff --git i/flask-dashed-0.1b_p2.ebuild w/flask-dashed-0.1b_p2.ebuild&lt;/span&gt;
 &lt;span class=gh&gt;index dd64877a387e..cf3e3cbf272b 100644&lt;/span&gt;
 &lt;span class=gd&gt;--- i/flask-dashed-0.1b_p2.ebuild&lt;/span&gt;
 &lt;span class=gi&gt;+++ w/flask-dashed-0.1b_p2.ebuild&lt;/span&gt;
@@ -529,27 +618,27 @@ We we can fix the problem with the following simple change and a call to
 &lt;div class="admonition note"&gt;
 &lt;p class="first admonition-title"&gt;Note&lt;/p&gt;
 &lt;p class=last&gt;Of course, you should fix the package properly and send the fix upstream but
-this is just to prove a point.  Calling &lt;tt class="docutils literal"&gt;&lt;span class=pre&gt;die&lt;/span&gt;&lt;/tt&gt; with &lt;tt class="docutils literal"&gt;&lt;span class=pre&gt;sed&lt;/span&gt;&lt;/tt&gt; there isn’t
+this is just to prove a point.  Calling &lt;code class="docutils literal"&gt;&lt;span class=pre&gt;die&lt;/span&gt;&lt;/code&gt; with &lt;code class="docutils literal"&gt;&lt;span class=pre&gt;sed&lt;/span&gt;&lt;/code&gt; there isn’t
 recommended and is practically pointless, but it is the style upstream.&lt;/p&gt;
 &lt;/div&gt;
 &lt;p&gt;I have to mention a small downside here however, because very few people seem to
-test &lt;tt class="docutils literal"&gt;&lt;span class=pre&gt;portage&lt;/span&gt;&lt;/tt&gt;‘s binary package support you’ll occasionally have to do some
-leg work to fix problems.  This normally arises when you have an &lt;tt class="docutils literal"&gt;&lt;span class=pre&gt;eclass&lt;/span&gt;&lt;/tt&gt;
+test &lt;code class="docutils literal"&gt;&lt;span class=pre&gt;portage&lt;/span&gt;&lt;/code&gt;‘s binary package support you’ll occasionally have to do some
+leg work to fix problems.  This normally arises when you have an &lt;code class="docutils literal"&gt;&lt;span class=pre&gt;eclass&lt;/span&gt;&lt;/code&gt;
 change that needs to ripple through, or when a library breaks compatibility and
-it’s &lt;tt class="docutils literal"&gt;&lt;span class=pre&gt;ebuild&lt;/span&gt;&lt;/tt&gt; hasn’t been bumped properly.&lt;/p&gt;
+it’s &lt;code class="docutils literal"&gt;&lt;span class=pre&gt;ebuild&lt;/span&gt;&lt;/code&gt; hasn’t been bumped properly.&lt;/p&gt;
 &lt;p&gt;Almost every time that happens you can fix it with a quick loop in your shell
 though.  A couple of such problems and solutions that I found in my shell
 history can be seen below.&lt;/p&gt;
-&lt;div class=highlight-sh&gt;&lt;div class=highlight&gt;&lt;pre&gt;&lt;span class=c&gt;# When you were stuck with packages that used python-distutils-ng, and you&lt;/span&gt;
-&lt;span class=c&gt;# needed to scrub packages because you changed Python version&lt;/span&gt;
-&lt;span class=k&gt;for &lt;/span&gt;s in &lt;span class=k&gt;$(&lt;/span&gt;portageq pkgdir&lt;span class=k&gt;)&lt;/span&gt;/*-*/*.tbz2; &lt;span class=k&gt;do&lt;/span&gt;
-&lt;span class=k&gt;    &lt;/span&gt;qtbz2 -xO &lt;span class=nv&gt;$s&lt;/span&gt; | qxpak -xO - &lt;span class=k&gt;${${&lt;/span&gt;&lt;span class=nv&gt;s&lt;/span&gt;&lt;span class=p&gt;##*/&lt;/span&gt;&lt;span class=k&gt;}&lt;/span&gt;&lt;span class=p&gt;/.tbz2&lt;/span&gt;&lt;span class=k&gt;}&lt;/span&gt;.ebuild | grep -q &lt;span class=s1&gt;'SUPPORT_PYTHON_ABIS'&lt;/span&gt; &lt;span class=o&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span class=nb&gt;echo&lt;/span&gt; &lt;span class=nv&gt;$s&lt;/span&gt;
+&lt;div class=highlight-sh&gt;&lt;div class=highlight&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=c1&gt;# When you were stuck with packages that used python-distutils-ng, and you&lt;/span&gt;
+&lt;span class=c1&gt;# needed to scrub packages because you changed Python version&lt;/span&gt;
+&lt;span class=k&gt;for&lt;/span&gt; s in &lt;span class=k&gt;$(&lt;/span&gt;portageq pkgdir&lt;span class=k&gt;)&lt;/span&gt;/*-*/*.tbz2&lt;span class=p&gt;;&lt;/span&gt; &lt;span class=k&gt;do&lt;/span&gt;
+    qtbz2 -xO $s &lt;span class=p&gt;|&lt;/span&gt; qxpak -xO - &lt;span class=si&gt;${${&lt;/span&gt;&lt;span class=nv&gt;s&lt;/span&gt;&lt;span class=p&gt;##*/&lt;/span&gt;&lt;span class=si&gt;}&lt;/span&gt;&lt;span class=p&gt;/.tbz2&lt;/span&gt;&lt;span class=si&gt;}&lt;/span&gt;.ebuild &lt;span class=p&gt;|&lt;/span&gt; grep -q &lt;span class=s1&gt;'SUPPORT_PYTHON_ABIS'&lt;/span&gt; &lt;span class=o&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span class=nb&gt;echo&lt;/span&gt; $s
 &lt;span class=k&gt;done&lt;/span&gt;
 
-&lt;span class=c&gt;# When you were using packages that used python's "-r1" eclasses and all&lt;/span&gt;
-&lt;span class=c&gt;# you could see is a flood of blockages in your update output&lt;/span&gt;
-&lt;span class=k&gt;for &lt;/span&gt;s in &lt;span class=k&gt;$(&lt;/span&gt;portageq pkgdir&lt;span class=k&gt;)&lt;/span&gt;/*-*/*.tbz2; &lt;span class=k&gt;do&lt;/span&gt;
-&lt;span class=k&gt;    &lt;/span&gt;qtbz2 -xO &lt;span class=nv&gt;$s&lt;/span&gt; | qxpak -xO - RDEPEND 2&amp;gt;/dev/null | grep -q &lt;span class=s2&gt;"dev-python/python-exec"&lt;/span&gt; &lt;span class=o&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span class=nb&gt;echo&lt;/span&gt; &lt;span class=nv&gt;$s&lt;/span&gt;
+&lt;span class=c1&gt;# When you were using packages that used python's "-r1" eclasses and all&lt;/span&gt;
+&lt;span class=c1&gt;# you could see is a flood of blockages in your update output&lt;/span&gt;
+&lt;span class=k&gt;for&lt;/span&gt; s in &lt;span class=k&gt;$(&lt;/span&gt;portageq pkgdir&lt;span class=k&gt;)&lt;/span&gt;/*-*/*.tbz2&lt;span class=p&gt;;&lt;/span&gt; &lt;span class=k&gt;do&lt;/span&gt;
+    qtbz2 -xO $s &lt;span class=p&gt;|&lt;/span&gt; qxpak -xO - RDEPEND 2&amp;gt;/dev/null &lt;span class=p&gt;|&lt;/span&gt; grep -q &lt;span class=s2&gt;"dev-python/python-exec"&lt;/span&gt; &lt;span class=o&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span class=nb&gt;echo&lt;/span&gt; $s
 &lt;span class=k&gt;done&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
@@ -560,14 +649,14 @@ history can be seen below.&lt;/p&gt;
 made life so much easier.  The devmanual was both short enough to be used as
 quick reference and complete enough that you could learn most of what you’d need
 to know from it.  The unfortunately named PMS acted as the reference that
-finally allowed us to switch from away from &lt;tt class="docutils literal"&gt;&lt;span class=pre&gt;portage&lt;/span&gt;&lt;/tt&gt; completely at the
+finally allowed us to switch from away from &lt;code class="docutils literal"&gt;&lt;span class=pre&gt;portage&lt;/span&gt;&lt;/code&gt; completely at the
 office.&lt;/p&gt;
-&lt;p&gt;The PMS documented much of the nastiness that &lt;tt class="docutils literal"&gt;&lt;span class=pre&gt;portage&lt;/span&gt;&lt;/tt&gt; suffers from, and made
+&lt;p&gt;The PMS documented much of the nastiness that &lt;code class="docutils literal"&gt;&lt;span class=pre&gt;portage&lt;/span&gt;&lt;/code&gt; suffers from, and made
 life in general a whole lot nicer when you were chasing bugs deep down the
 rabbit hole.  And, let us be honest here it also stopped a little of the
-fluidity that plagued &lt;tt class="docutils literal"&gt;&lt;span class=pre&gt;portage&lt;/span&gt;&lt;/tt&gt; too.&lt;/p&gt;
+fluidity that plagued &lt;code class="docutils literal"&gt;&lt;span class=pre&gt;portage&lt;/span&gt;&lt;/code&gt; too.&lt;/p&gt;
 &lt;p&gt;Some people argue that it acts as unnecessary stop motion but those people must
-be forgetting what happened when behaviour changed randomly between &lt;tt class="docutils literal"&gt;&lt;span class=pre&gt;portage&lt;/span&gt;&lt;/tt&gt;
+be forgetting what happened when behaviour changed randomly between &lt;code class="docutils literal"&gt;&lt;span class=pre&gt;portage&lt;/span&gt;&lt;/code&gt;
 versions.  PMS, and the EAPI process, also brought some much needed design and
 stability to newer features.&lt;/p&gt;
 &lt;p&gt;All Gentoo users owe Ciaran McCreesh a few beers for all the hard work he put in
@@ -591,7 +680,7 @@ from a less happy place without them.&lt;/p&gt;
 &lt;h2&gt;Wrapping up&lt;a class=headerlink href=http://jnrowe.github.com/articles/dropping_gentoo_reflex.html#wrapping-up title="Permalink to this headline"&gt;¶&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;It is true that you really can not always see the forest for trees.&lt;/p&gt;
 &lt;p&gt;Had recent events not clouded my vision I would have commented on the train
-wreck that is &lt;tt class="docutils literal"&gt;&lt;span class=pre&gt;webapp.eclass&lt;/span&gt;&lt;/tt&gt; and &lt;tt class="docutils literal"&gt;&lt;span class=pre&gt;app-admin/webapp-config&lt;/span&gt;&lt;/tt&gt; in
+wreck that is &lt;code class="docutils literal"&gt;&lt;span class=pre&gt;webapp.eclass&lt;/span&gt;&lt;/code&gt; and &lt;code class="docutils literal"&gt;&lt;span class=pre&gt;app-admin/webapp-config&lt;/span&gt;&lt;/code&gt; in
 &lt;a class="reference internal" href=http://jnrowe.github.com/articles/dropping_gentoo.html&gt;&lt;em&gt;Dropping Gentoo&lt;/em&gt;&lt;/a&gt;.  It sucked tonnes and tonnes of time away until we
 eventually just trashed any package that interacted with it and moved on.&lt;/p&gt;
 &lt;p&gt;That was so long ago that I had forgotten about it until a co-worker asked me
@@ -639,7 +728,7 @@ essential toolchain packages like GCC and glibc ourselves.  I can’t recall the
 specific reasons as I didn’t work on them, but I recall agreeing with them.&lt;/p&gt;
 &lt;p&gt;At some point we started using a custom package manager, initially just a new
 drop-in resolver and eventually a completely independent package manager.
-&lt;tt class="docutils literal"&gt;&lt;span class=pre&gt;portage&lt;/span&gt;&lt;/tt&gt; was ferociously buggy in places and also appeared to be moribund, so
+&lt;code class="docutils literal"&gt;&lt;span class=pre&gt;portage&lt;/span&gt;&lt;/code&gt; was ferociously buggy in places and also appeared to be moribund, so
 it seemed like the correct choice.  We never supported the full range of
 features that Gentoo’s &lt;a class="reference external" href=http://wiki.gentoo.org/wiki/Project:PMS&gt;PMS&lt;/a&gt; now defines, but it made the support surface a lot
 nicer.&lt;/p&gt;
@@ -669,7 +758,7 @@ report in the ChangeLog was huge.  That taught me a valuable personal lesson,
 I always attribute a commit to the reporter even when I’ve significantly mangled
 a patch to make it acceptable.&lt;/p&gt;
 &lt;p&gt;For a time, to ease the annoyance we used to play a game where we reported real
-bugs with patches, but using silly data for &lt;tt class="docutils literal"&gt;&lt;span class=pre&gt;emerge&lt;/span&gt; &lt;span class=pre&gt;--info&lt;/span&gt;&lt;/tt&gt;.  It was
+bugs with patches, but using silly data for &lt;code class="docutils literal"&gt;&lt;span class=pre&gt;emerge&lt;/span&gt; &lt;span class=pre&gt;--info&lt;/span&gt;&lt;/code&gt;.  It was
 definitely fun while it lasted, but it didn’t solve the pain points.  Not
 wanting to be associated with the bugs made people use pseudonyms, which also
 removed the expectation of attribution too.&lt;/p&gt;
@@ -679,7 +768,7 @@ months so I stopped doing that too&lt;/p&gt;
 &lt;p&gt;Looking around now there is an automatically generated list of bugs with patches
 which we’ve fixed but haven’t upstreamed, and a few random entries from it look
 like this:&lt;/p&gt;
-&lt;div class=highlight-console&gt;&lt;div class=highlight&gt;&lt;pre&gt;&lt;span class=gp&gt;$&lt;/span&gt; wc -l ~/gentoo/to_push/jay.rst
+&lt;div class=highlight-console&gt;&lt;div class=highlight&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=gp&gt;$&lt;/span&gt; wc -l ~/gentoo/to_push/jay.rst
 &lt;span class=go&gt;1157 /home/jay/gentoo/to_push/jay.rst&lt;/span&gt;
 &lt;span class=gp&gt;$&lt;/span&gt; wc -l ~/gentoo/to_push/mattias.rst
 &lt;span class=go&gt;2104 /home/jay/gentoo/to_push/mattias.rst&lt;/span&gt;
@@ -717,7 +806,7 @@ alone.&lt;/p&gt;
 &lt;div class=section id=support-costs&gt;
 &lt;h2&gt;Support costs&lt;a class=headerlink href=http://jnrowe.github.com/articles/dropping_gentoo.html#support-costs title="Permalink to this headline"&gt;¶&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;Over time we’ve come to support most of the tree that people refer to as
-&lt;tt class="docutils literal"&gt;&lt;span class=pre&gt;gentoo-x86&lt;/span&gt;&lt;/tt&gt; ourselves.  The toolchain changes we needed at the time
+&lt;code class="docutils literal"&gt;&lt;span class=pre&gt;gentoo-x86&lt;/span&gt;&lt;/code&gt; ourselves.  The toolchain changes we needed at the time
 necessitated supporting a few packages further up the stack.  Our desire to trim
 the tree of a few categories that were problematic, meant replacing a variety of
 packages with then unavailable dependencies.&lt;/p&gt;
@@ -740,12 +829,12 @@ moot.&lt;/p&gt;
 &lt;/div&gt;
 &lt;div class=section id=systemd&gt;
 &lt;h3&gt;systemd&lt;a class=headerlink href=http://jnrowe.github.com/articles/dropping_gentoo.html#systemd title="Permalink to this headline"&gt;¶&lt;/a&gt;&lt;/h3&gt;
-&lt;p&gt;We switched to &lt;tt class="docutils literal"&gt;&lt;span class=pre&gt;systemd&lt;/span&gt;&lt;/tt&gt; before the package was in upstream’s tree, and we
+&lt;p&gt;We switched to &lt;code class="docutils literal"&gt;&lt;span class=pre&gt;systemd&lt;/span&gt;&lt;/code&gt; before the package was in upstream’s tree, and we
 have had to keep supporting it to this day because of insurmountable packaging
 differences.&lt;/p&gt;
 &lt;p&gt;In a few places that means taking on packages with a reverse dependency too,
 where differences create issues.  And it clearly means taking on any package
-that depends on &lt;tt class="docutils literal"&gt;&lt;span class=pre&gt;openrc&lt;/span&gt;&lt;/tt&gt; or Gentoo’s &lt;tt class="docutils literal"&gt;&lt;span class=pre&gt;baselayout&lt;/span&gt;&lt;/tt&gt; package.  Those packages
+that depends on &lt;code class="docutils literal"&gt;&lt;span class=pre&gt;openrc&lt;/span&gt;&lt;/code&gt; or Gentoo’s &lt;code class="docutils literal"&gt;&lt;span class=pre&gt;baselayout&lt;/span&gt;&lt;/code&gt; package.  Those packages
 are becoming fewer and fewer by the day though, so that would have become
 a non-issue.&lt;/p&gt;
 &lt;/div&gt;
@@ -772,7 +861,7 @@ summer of last year, and it has finally started to come in to effect.&lt;/p&gt;
 &lt;p&gt;There are plenty of good alternatives out there now for building systems that
 need to run on a variety of architectures.  Some binary, some source-based and
 a few hybrid approaches.&lt;/p&gt;
-&lt;p&gt;The project I’m working on right now is using Debian &lt;tt class="docutils literal"&gt;&lt;span class=pre&gt;testing&lt;/span&gt;&lt;/tt&gt;, and it appears
+&lt;p&gt;The project I’m working on right now is using Debian &lt;code class="docutils literal"&gt;&lt;span class=pre&gt;testing&lt;/span&gt;&lt;/code&gt;, and it appears
 to be working out fine.  Some things still annoy me, like the time it takes to
 patch and recreate a package.  It is a trivial thing with Gentoo, but requires
 far too much work with Debian.  Perhaps we’ll improve the workflow enough as we
@@ -842,7 +931,7 @@ elicit some deep truths, with the eventual goal that people would bond further.
 That doesn’t mean I played the game though.&lt;/p&gt;
 &lt;p&gt;I recall my answer was somewhat flippant:&lt;/p&gt;
 &lt;blockquote&gt;
-&lt;div&gt;“I’d have used it repeatedly half an ago, until I figured out the magic
+&lt;div&gt;“I’d have used it repeatedly half an hour ago, until I figured out the magic
 incantation that convinces that cashier in the ‘Express to join me for
 a picnic...  and then I would have ditched you suckers.”&lt;/div&gt;&lt;/blockquote&gt;
 &lt;p&gt;It was an honest-ish answer;  I mean yeah, she may have been worth messing with
@@ -1138,14 +1227,14 @@ a few bugs&lt;/a&gt;.&lt;/p&gt;
 a bunch of reasons.&lt;/p&gt;
 &lt;/div&gt;
 &lt;div class=section id=github2&gt;
-&lt;h3&gt;&lt;tt class="docutils literal"&gt;&lt;span class=pre&gt;github2&lt;/span&gt;&lt;/tt&gt;&lt;a class=headerlink href=http://jnrowe.github.com/thoughts/side_projects.html#github2 title="Permalink to this headline"&gt;¶&lt;/a&gt;&lt;/h3&gt;
+&lt;h3&gt;&lt;code class="docutils literal"&gt;&lt;span class=pre&gt;github2&lt;/span&gt;&lt;/code&gt;&lt;a class=headerlink href=http://jnrowe.github.com/thoughts/side_projects.html#github2 title="Permalink to this headline"&gt;¶&lt;/a&gt;&lt;/h3&gt;
 &lt;p&gt;For a year I &lt;a class="reference external" href=https://github.com/ask/python-github2/graphs/contributors&gt;maintained&lt;/a&gt; a relatively popular &lt;a class="reference external" href=https://github.com/ask/python-github2&gt;API wrapper&lt;/a&gt; to GitHub.  I did
 this because I found it fun.  It provided no economic benefit to me, and I never
 expected it to.  I know a lot of people used it when building their own toy
 projects and websites, because many were kind enough to link to it.&lt;/p&gt;
 &lt;/div&gt;
 &lt;div class=section id=pyisbn&gt;
-&lt;h3&gt;&lt;tt class="docutils literal"&gt;&lt;span class=pre&gt;pyisbn&lt;/span&gt;&lt;/tt&gt;&lt;a class=headerlink href=http://jnrowe.github.com/thoughts/side_projects.html#pyisbn title="Permalink to this headline"&gt;¶&lt;/a&gt;&lt;/h3&gt;
+&lt;h3&gt;&lt;code class="docutils literal"&gt;&lt;span class=pre&gt;pyisbn&lt;/span&gt;&lt;/code&gt;&lt;a class=headerlink href=http://jnrowe.github.com/thoughts/side_projects.html#pyisbn title="Permalink to this headline"&gt;¶&lt;/a&gt;&lt;/h3&gt;
 &lt;p&gt;For seven years I’ve maintained a small library for &lt;a class="reference external" href=https://github.com/JNRowe/pyisbn/&gt;validating ISBNs&lt;/a&gt;.
 &lt;em&gt;Yes, that is absolutely as boring as it sounds&lt;/em&gt;.&lt;/p&gt;
 &lt;p&gt;It was never meant to be used by others, I just needed something to validate
@@ -1155,7 +1244,7 @@ amassed literally tens of thousands of downloads from PyPI, but you really
 shouldn’t trust the dubious statistics from PyPI ;)&lt;/p&gt;
 &lt;/div&gt;
 &lt;div class=section id=rdial&gt;
-&lt;h3&gt;&lt;tt class="docutils literal"&gt;&lt;span class=pre&gt;rdial&lt;/span&gt;&lt;/tt&gt;&lt;a class=headerlink href=http://jnrowe.github.com/thoughts/side_projects.html#rdial title="Permalink to this headline"&gt;¶&lt;/a&gt;&lt;/h3&gt;
+&lt;h3&gt;&lt;code class="docutils literal"&gt;&lt;span class=pre&gt;rdial&lt;/span&gt;&lt;/code&gt;&lt;a class=headerlink href=http://jnrowe.github.com/thoughts/side_projects.html#rdial title="Permalink to this headline"&gt;¶&lt;/a&gt;&lt;/h3&gt;
 &lt;p&gt;&lt;a class="reference external" href=http://rdial.rtfd.org/&gt;rdial&lt;/a&gt; is a time tracking tool, and a perfect example for me.  I played with it
 for over a year before anyone else saw it, just because it scratched an itch
 I had.  I never imagined it would be useful to others.  Turns out it was, and
@@ -1165,7 +1254,7 @@ A beer being second only to a patch in the table of project endorsements
 that I subscribe to.&lt;/p&gt;
 &lt;/div&gt;
 &lt;div class=section id=upoints&gt;
-&lt;h3&gt;&lt;tt class="docutils literal"&gt;&lt;span class=pre&gt;upoints&lt;/span&gt;&lt;/tt&gt;&lt;a class=headerlink href=http://jnrowe.github.com/thoughts/side_projects.html#upoints title="Permalink to this headline"&gt;¶&lt;/a&gt;&lt;/h3&gt;
+&lt;h3&gt;&lt;code class="docutils literal"&gt;&lt;span class=pre&gt;upoints&lt;/span&gt;&lt;/code&gt;&lt;a class=headerlink href=http://jnrowe.github.com/thoughts/side_projects.html#upoints title="Permalink to this headline"&gt;¶&lt;/a&gt;&lt;/h3&gt;
 &lt;p&gt;&lt;a class="reference external" href=https://jnrowe.github.io/upoints/&gt;upoints&lt;/a&gt; is a strange one.  It started as a &lt;a class="reference external" href=http://jnrowe.github.io/upoints/geolocation_and_pathcross.html&gt;stupid hack&lt;/a&gt; to figure out some
 silly travel planning drama, it proceeded to take on a life of its own.  Over
 the years it attracted a fair amount of users, and I still receive email about
@@ -1229,10 +1318,10 @@ the desktops we develop on and the laptops we play on.  The methods we use vary
 greatly, so I’m going to present the simple case of testing console applications
 only.  It is the practise that is important, not the process.&lt;/p&gt;
 &lt;p&gt;The easiest method we use is via &lt;a class="reference external" href=http://pypi.python.org/pypi/shelldoctest/&gt;shelldoctest&lt;/a&gt;, a module that implements a
-&lt;a class="reference external" href=http://docs.python.org/library/doctest.html#module-doctest title="(in Python v2.7)"&gt;&lt;tt class="xref py py-mod docutils literal"&gt;&lt;span class=pre&gt;doctest&lt;/span&gt;&lt;/tt&gt;&lt;/a&gt; interface for testing shell commands.  The package provides a
+&lt;a class="reference external" href=http://docs.python.org/library/doctest.html#module-doctest title="(in Python v2.7)"&gt;&lt;code class="xref py py-mod docutils literal"&gt;&lt;span class=pre&gt;doctest&lt;/span&gt;&lt;/code&gt;&lt;/a&gt; interface for testing shell commands.  The package provides a
 user-level script for running shell sessions in Python docstrings.  A simple
 example could be:&lt;/p&gt;
-&lt;div class=highlight-python&gt;&lt;div class=highlight&gt;&lt;pre&gt;&lt;span class=sd&gt;"""&lt;/span&gt;
+&lt;div class=highlight-python&gt;&lt;div class=highlight&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=sd&gt;"""&lt;/span&gt;
 &lt;span class=sd&gt;$ echo test&lt;/span&gt;
 &lt;span class=sd&gt;test&lt;/span&gt;
 &lt;span class=sd&gt;$ echo fail&lt;/span&gt;
@@ -1240,9 +1329,9 @@ example could be:&lt;/p&gt;
 &lt;span class=sd&gt;"""&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
-&lt;p&gt;Running the previous file with &lt;tt class="docutils literal"&gt;&lt;span class=pre&gt;shell-doctest&lt;/span&gt; &lt;span class=pre&gt;test&lt;/span&gt; &lt;span class=pre&gt;testdoc.py&lt;/span&gt;&lt;/tt&gt; produces the
+&lt;p&gt;Running the previous file with &lt;code class="docutils literal"&gt;&lt;span class=pre&gt;shell-doctest&lt;/span&gt; &lt;span class=pre&gt;test&lt;/span&gt; &lt;span class=pre&gt;testdoc.py&lt;/span&gt;&lt;/code&gt; produces the
 following output:&lt;/p&gt;
-&lt;div class=highlight-pycon&gt;&lt;div class=highlight&gt;&lt;pre&gt;&lt;span class=go&gt;**********************************************************************&lt;/span&gt;
+&lt;div class=highlight-pycon&gt;&lt;div class=highlight&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=go&gt;**********************************************************************&lt;/span&gt;
 &lt;span class=go&gt;File "testdoc.py", line 4, in testdoc&lt;/span&gt;
 &lt;span class=go&gt;Failed example:&lt;/span&gt;
 &lt;span class=go&gt;    echo fail&lt;/span&gt;
@@ -1264,21 +1353,21 @@ bump breaks functionality we require.&lt;/p&gt;
 doesn’t come up again.  A good example can be gleaned from a bug that was fixed
 in our &lt;a class="reference external" href="http://www.vim.org/scripts/script.php?script_id=1567"&gt;rails&lt;/a&gt; vim package.  Given the way the &lt;a class="reference external" href="http://www.vim.org/scripts/script.php?script_id=1567"&gt;vim scripts site&lt;/a&gt; is organised
 the files you want to download have awful download locations, so our ebuild for
-the &lt;tt class="docutils literal"&gt;&lt;span class=pre&gt;rails&lt;/span&gt;&lt;/tt&gt; plugin contains the following snippet:&lt;/p&gt;
-&lt;div class=highlight-bash&gt;&lt;div class=highlight&gt;&lt;pre&gt;&lt;span class=nv&gt;DESCRIPTION&lt;/span&gt;&lt;span class=o&gt;=&lt;/span&gt;&lt;span class=s2&gt;"vim plugin: RoR - easy file navigation, enhanced syntax highlighting"&lt;/span&gt;
+the &lt;code class="docutils literal"&gt;&lt;span class=pre&gt;rails&lt;/span&gt;&lt;/code&gt; plugin contains the following snippet:&lt;/p&gt;
+&lt;div class=highlight-bash&gt;&lt;div class=highlight&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=nv&gt;DESCRIPTION&lt;/span&gt;&lt;span class=o&gt;=&lt;/span&gt;&lt;span class=s2&gt;"vim plugin: RoR - easy file navigation, enhanced syntax highlighting"&lt;/span&gt;
 &lt;span class=nv&gt;HOMEPAGE&lt;/span&gt;&lt;span class=o&gt;=&lt;/span&gt;&lt;span class=s2&gt;"http://www.vim.org/scripts/script.php?script_id=1567"&lt;/span&gt;
-&lt;span class=nv&gt;SRC_URI&lt;/span&gt;&lt;span class=o&gt;=&lt;/span&gt;&lt;span class=s2&gt;"http://www.vim.org/scripts/download_script.php?src_id=13800 -&amp;gt; ${P}.zip"&lt;/span&gt;
+&lt;span class=nv&gt;SRC_URI&lt;/span&gt;&lt;span class=o&gt;=&lt;/span&gt;&lt;span class=s2&gt;"http://www.vim.org/scripts/download_script.php?src_id=13800 -&amp;gt; &lt;/span&gt;&lt;span class=si&gt;${&lt;/span&gt;&lt;span class=nv&gt;P&lt;/span&gt;&lt;span class=si&gt;}&lt;/span&gt;&lt;span class=s2&gt;.zip"&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
-&lt;p&gt;The &lt;tt class="docutils literal"&gt;&lt;span class=pre&gt;SRC_URI&lt;/span&gt;&lt;/tt&gt; declaration says we need to fetch the file from
-&lt;tt class="docutils literal"&gt;&lt;span class=pre&gt;http://www.vim.org/scripts/download_script.php?src_id=13800&lt;/span&gt;&lt;/tt&gt; and name it
-locally as &lt;tt class="docutils literal"&gt;&lt;span class=pre&gt;rails-4.3.zip&lt;/span&gt;&lt;/tt&gt;.  I’m sure you can guess what happened here,
+&lt;p&gt;The &lt;code class="docutils literal"&gt;&lt;span class=pre&gt;SRC_URI&lt;/span&gt;&lt;/code&gt; declaration says we need to fetch the file from
+&lt;code class="docutils literal"&gt;&lt;span class=pre&gt;http://www.vim.org/scripts/download_script.php?src_id=13800&lt;/span&gt;&lt;/code&gt; and name it
+locally as &lt;code class="docutils literal"&gt;&lt;span class=pre&gt;rails-4.3.zip&lt;/span&gt;&lt;/code&gt;.  I’m sure you can guess what happened here,
 someone saved a copy of the file locally for testing and forgot to update the
-&lt;tt class="docutils literal"&gt;&lt;span class=pre&gt;src_id&lt;/span&gt;&lt;/tt&gt; parameter correctly &lt;a class=footnote-reference href=http://jnrowe.github.com/articles/tdd_distros.html#id2 id=id1&gt;[1]&lt;/a&gt;.  The result was an apparently new build
+&lt;code class="docutils literal"&gt;&lt;span class=pre&gt;src_id&lt;/span&gt;&lt;/code&gt; parameter correctly &lt;a class=footnote-reference href=http://jnrowe.github.com/articles/tdd_distros.html#id2 id=id1&gt;[1]&lt;/a&gt;.  The result was an apparently new build
 that installed an older package release.&lt;/p&gt;
 &lt;p&gt;When a fix for this bug was committed a test similar to the following snippet
-was added to the &lt;tt class="docutils literal"&gt;&lt;span class=pre&gt;rails&lt;/span&gt;&lt;/tt&gt; test suite:&lt;/p&gt;
-&lt;div class=highlight-python&gt;&lt;div class=highlight&gt;&lt;pre&gt;&lt;span class=sd&gt;"""&lt;/span&gt;
+was added to the &lt;code class="docutils literal"&gt;&lt;span class=pre&gt;rails&lt;/span&gt;&lt;/code&gt; test suite:&lt;/p&gt;
+&lt;div class=highlight-python&gt;&lt;div class=highlight&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=sd&gt;"""&lt;/span&gt;
 &lt;span class=sd&gt;$ grep -l "autoloaded_rails = '${PV}'" /usr/share/vim/vimfiles/autoload/rails.vim&lt;/span&gt;
 &lt;span class=sd&gt;/usr/share/vim/vimfiles/autoload/rails.vim&lt;/span&gt;
 &lt;span class=sd&gt;"""&lt;/span&gt;
@@ -1290,7 +1379,7 @@ test and this is especially true for the simplest task.&lt;/p&gt;
 &lt;p&gt;I use a similar technique for managing my public Gentoo overlay, &lt;a class="reference external" href=https://github.com/JNRowe/jnrowe-misc&gt;jnrowe-misc&lt;/a&gt;.
 For example, the &lt;a class="reference external" href=http://pypi.python.org/pypi/blockdiag/&gt;blockdiag&lt;/a&gt; ebuild is accompanied by a series of tests that are
 run when bumping or stabilising the package, all of which are cribbed from my
-actual &lt;tt class="docutils literal"&gt;&lt;span class=pre&gt;blockdiag&lt;/span&gt;&lt;/tt&gt; usage.  This massively reduces the time required to
+actual &lt;code class="docutils literal"&gt;&lt;span class=pre&gt;blockdiag&lt;/span&gt;&lt;/code&gt; usage.  This massively reduces the time required to
 evaluate a package at bump time.&lt;/p&gt;
 &lt;/div&gt;
 &lt;div class=section id=result&gt;
@@ -1311,32 +1400,32 @@ licensing concerns.&lt;/p&gt;
 &lt;/div&gt;
 &lt;div class=section id=bonus&gt;
 &lt;h2&gt;Bonus&lt;a class=headerlink href=http://jnrowe.github.com/articles/tdd_distros.html#bonus title="Permalink to this headline"&gt;¶&lt;/a&gt;&lt;/h2&gt;
-&lt;p&gt;I’ve used the upstream supported &lt;tt class="docutils literal"&gt;&lt;span class=pre&gt;shelldoctest&lt;/span&gt;&lt;/tt&gt; method for writing tests on
+&lt;p&gt;I’ve used the upstream supported &lt;code class="docutils literal"&gt;&lt;span class=pre&gt;shelldoctest&lt;/span&gt;&lt;/code&gt; method for writing tests on
 this page, but you can also easily specify them in &lt;a class="reference external" href=http://docutils.sourceforge.net/docs/user/rst/&gt;reST syntax&lt;/a&gt; files too.
 Doing this encourages you to write nicely formatted documentation to accompany
 your tests.  You can also leverage your tests that are written in this way as
 documentation using the excellent &lt;a class="reference external" href=http://sphinx-doc.org/&gt;Sphinx&lt;/a&gt; tool.&lt;/p&gt;
 &lt;p&gt;The following script shows an extremely basic, yet fully functional, example of
-how to combine the &lt;tt class="docutils literal"&gt;&lt;span class=pre&gt;doctest&lt;/span&gt;&lt;/tt&gt; module’s &lt;a class="reference external" href=http://docs.python.org/library/doctest.html#doctest.testfile title="(in Python v2.7)"&gt;&lt;tt class="xref py py-func docutils literal"&gt;&lt;span class=pre&gt;testfile()&lt;/span&gt;&lt;/tt&gt;&lt;/a&gt; function with
-&lt;tt class="docutils literal"&gt;&lt;span class=pre&gt;shelldoctest&lt;/span&gt;&lt;/tt&gt;:&lt;/p&gt;
-&lt;div class=highlight-python&gt;&lt;div class=highlight&gt;&lt;pre&gt;&lt;span class=c&gt;#! /usr/bin/python -tt&lt;/span&gt;
+how to combine the &lt;code class="docutils literal"&gt;&lt;span class=pre&gt;doctest&lt;/span&gt;&lt;/code&gt; module’s &lt;a class="reference external" href=http://docs.python.org/library/doctest.html#doctest.testfile title="(in Python v2.7)"&gt;&lt;code class="xref py py-func docutils literal"&gt;&lt;span class=pre&gt;testfile()&lt;/span&gt;&lt;/code&gt;&lt;/a&gt; function with
+&lt;code class="docutils literal"&gt;&lt;span class=pre&gt;shelldoctest&lt;/span&gt;&lt;/code&gt;:&lt;/p&gt;
+&lt;div class=highlight-python&gt;&lt;div class=highlight&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=ch&gt;#! /usr/bin/python -tt&lt;/span&gt;
 &lt;span class=kn&gt;import&lt;/span&gt; &lt;span class=nn&gt;doctest&lt;/span&gt;
 &lt;span class=kn&gt;import&lt;/span&gt; &lt;span class=nn&gt;sys&lt;/span&gt;
 
 &lt;span class=kn&gt;import&lt;/span&gt; &lt;span class=nn&gt;shelldoctest&lt;/span&gt; &lt;span class=kn&gt;as&lt;/span&gt; &lt;span class=nn&gt;sd&lt;/span&gt;
 
 &lt;span class=n&gt;sys&lt;/span&gt;&lt;span class=o&gt;.&lt;/span&gt;&lt;span class=n&gt;exit&lt;/span&gt;&lt;span class=p&gt;(&lt;/span&gt;&lt;span class=n&gt;doctest&lt;/span&gt;&lt;span class=o&gt;.&lt;/span&gt;&lt;span class=n&gt;testfile&lt;/span&gt;&lt;span class=p&gt;(&lt;/span&gt;&lt;span class=n&gt;sys&lt;/span&gt;&lt;span class=o&gt;.&lt;/span&gt;&lt;span class=n&gt;argv&lt;/span&gt;&lt;span class=p&gt;[&lt;/span&gt;&lt;span class=mi&gt;1&lt;/span&gt;&lt;span class=p&gt;],&lt;/span&gt; &lt;span class=n&gt;module_relative&lt;/span&gt;&lt;span class=o&gt;=&lt;/span&gt;&lt;span class=bp&gt;False&lt;/span&gt;&lt;span class=p&gt;,&lt;/span&gt;
-                          &lt;span class=n&gt;extraglobs&lt;/span&gt;&lt;span class=o&gt;=&lt;/span&gt;&lt;span class=p&gt;{&lt;/span&gt;&lt;span class=s&gt;"system_command"&lt;/span&gt;&lt;span class=p&gt;:&lt;/span&gt; &lt;span class=n&gt;sd&lt;/span&gt;&lt;span class=o&gt;.&lt;/span&gt;&lt;span class=n&gt;system_command&lt;/span&gt;&lt;span class=p&gt;},&lt;/span&gt;
+                          &lt;span class=n&gt;extraglobs&lt;/span&gt;&lt;span class=o&gt;=&lt;/span&gt;&lt;span class=p&gt;{&lt;/span&gt;&lt;span class=s2&gt;"system_command"&lt;/span&gt;&lt;span class=p&gt;:&lt;/span&gt; &lt;span class=n&gt;sd&lt;/span&gt;&lt;span class=o&gt;.&lt;/span&gt;&lt;span class=n&gt;system_command&lt;/span&gt;&lt;span class=p&gt;},&lt;/span&gt;
                           &lt;span class=n&gt;parser&lt;/span&gt;&lt;span class=o&gt;=&lt;/span&gt;&lt;span class=n&gt;sd&lt;/span&gt;&lt;span class=o&gt;.&lt;/span&gt;&lt;span class=n&gt;ShellDocTestParser&lt;/span&gt;&lt;span class=p&gt;())[&lt;/span&gt;&lt;span class=mi&gt;0&lt;/span&gt;&lt;span class=p&gt;])&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
 &lt;p&gt;This script parses the first argument on the command line when it is run and
-executes any &lt;tt class="docutils literal"&gt;&lt;span class=pre&gt;shelldoctest&lt;/span&gt;&lt;/tt&gt; blocks it finds.  It returns the count of failed
-tests as its exit code, helpfully allowing you to execute a command with &lt;tt class="docutils literal"&gt;&lt;span class=pre&gt;&amp;amp;&amp;amp;&lt;/span&gt;&lt;/tt&gt;
+executes any &lt;code class="docutils literal"&gt;&lt;span class=pre&gt;shelldoctest&lt;/span&gt;&lt;/code&gt; blocks it finds.  It returns the count of failed
+tests as its exit code, helpfully allowing you to execute a command with &lt;code class="docutils literal"&gt;&lt;span class=pre&gt;&amp;amp;&amp;amp;&lt;/span&gt;&lt;/code&gt;
 if all the tests pass.&lt;/p&gt;
-&lt;p&gt;We operate this way at AST, the above &lt;tt class="docutils literal"&gt;&lt;span class=pre&gt;rails&lt;/span&gt;&lt;/tt&gt; test would actually be part of
-a &lt;tt class="docutils literal"&gt;&lt;span class=pre&gt;reST&lt;/span&gt;&lt;/tt&gt; formatted file as follows:&lt;/p&gt;
-&lt;div class=highlight-rst&gt;&lt;div class=highlight&gt;&lt;pre&gt;Fix bug #xx, incorrect archive file&lt;span class=se&gt;::&lt;/span&gt;
+&lt;p&gt;We operate this way at AST, the above &lt;code class="docutils literal"&gt;&lt;span class=pre&gt;rails&lt;/span&gt;&lt;/code&gt; test would actually be part of
+a &lt;code class="docutils literal"&gt;&lt;span class=pre&gt;reST&lt;/span&gt;&lt;/code&gt; formatted file as follows:&lt;/p&gt;
+&lt;div class=highlight-rst&gt;&lt;div class=highlight&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;Fix bug #xx, incorrect archive file&lt;span class=se&gt;::&lt;/span&gt;
 
 &lt;span class=s&gt;    $ grep -l "autoloaded_rails = '${PV}'" /usr/share/vim/vimfiles/autoload/rails.vim&lt;/span&gt;
 &lt;span class=s&gt;    /usr/share/vim/vimfiles/autoload/rails.vim&lt;/span&gt;
@@ -1355,7 +1444,7 @@ a &lt;tt class="docutils literal"&gt;&lt;span class=pre&gt;reST&lt;/span&gt;&lt;
 &lt;p class=last&gt;I’ve resurrected this text from my old UKFSN site because a couple of people
 asked me to, but I wouldn’t recommend using RCS to anyone at this point.  It
 is mainly to help people who need to understand RCS because they have no
-choice, for example Gentoo users who are stuck with &lt;tt class="docutils literal"&gt;&lt;span class=pre&gt;dispatch-conf&lt;/span&gt;&lt;/tt&gt; (or so
+choice, for example Gentoo users who are stuck with &lt;code class="docutils literal"&gt;&lt;span class=pre&gt;dispatch-conf&lt;/span&gt;&lt;/code&gt; (or so
 my mails tell me).&lt;/p&gt;
 &lt;/div&gt;
 &lt;div class=section id=introduction-to-rcs&gt;
@@ -1367,7 +1456,7 @@ non-intrusive way to backup, store and annotate configuration files or 5000 file
 C source trees. This text is by no means an in-depth &lt;abbr title="GNU Revision Control System"&gt;RCS&lt;/abbr&gt; usage manual, it is a short and fast way to get working with
 &lt;abbr title="GNU Revision Control System"&gt;RCS&lt;/abbr&gt;.&lt;/p&gt;
 &lt;p&gt;&lt;abbr title="GNU Revision Control System"&gt;RCS&lt;/abbr&gt; is great for small projects or
-managing the wealth of configuration files in &lt;tt class="docutils literal"&gt;&lt;span class=pre&gt;/etc&lt;/span&gt;&lt;/tt&gt;. It provides a way to
+managing the wealth of configuration files in &lt;code class="docutils literal"&gt;&lt;span class=pre&gt;/etc&lt;/span&gt;&lt;/code&gt;. It provides a way to
 reduce the need for file backups(without losing any backup quality or quantity),
 to annotate changes made to a file, to allow other people to work on a file and
 an easy method to package patch/diff files for distribution.&lt;/p&gt;
@@ -1379,193 +1468,193 @@ Project&lt;/a&gt; (&lt;a class="reference external" href=http://tldp.org/HOWTO/R
 &lt;h2&gt;Diving in&lt;a class=headerlink href=http://jnrowe.github.com/articles/rcs.html#diving-in title="Permalink to this headline"&gt;¶&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;&lt;abbr title="GNU Revision Control System"&gt;RCS&lt;/abbr&gt; is that simple to use that I will jump
 straight in to an example.&lt;/p&gt;
-&lt;div class=highlight-text&gt;&lt;div class=highlight&gt;&lt;pre&gt;$ mkdir RCS
+&lt;div class=highlight-console&gt;&lt;div class=highlight&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=gp&gt;$&lt;/span&gt; mkdir RCS
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
 &lt;p&gt;The &lt;abbr title="GNU Revision Control System"&gt;RCS&lt;/abbr&gt; directory holds the &lt;abbr title="GNU Revision Control System"&gt;RCS&lt;/abbr&gt; control files, they contain all the data
 &lt;abbr title="GNU Revision Control System"&gt;RCS&lt;/abbr&gt; needs to work.&lt;/p&gt;
-&lt;div class=highlight-text&gt;&lt;div class=highlight&gt;&lt;pre&gt;$ cat &amp;gt;myscript.sh &amp;lt;&amp;lt;EOF
-#! /bin/sh
-# $Id$
-echo "Hello World!"
-exit 0
-EOF
+&lt;div class=highlight-console&gt;&lt;div class=highlight&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=gp&gt;$&lt;/span&gt; cat &amp;gt;myscript.sh &amp;lt;&amp;lt;EOF
+&lt;span class=gp&gt;#&lt;/span&gt;! /bin/sh
+&lt;span class=gp&gt;#&lt;/span&gt; $Id$
+&lt;span class=go&gt;echo "Hello World!"&lt;/span&gt;
+&lt;span class=go&gt;exit 0&lt;/span&gt;
+&lt;span class=go&gt;EOF&lt;/span&gt;
 
-$ ci myscript.sh
-RCS/myscript.sh,v  &amp;lt;--  myscript.sh
-enter description, terminated with single '.' or end of file:
-NOTE: This is NOT the log message!
-&amp;gt;&amp;gt; /bin/sh "Hello World!" example
-&amp;gt;&amp;gt; .
-initial revision: 1.1
-done
+&lt;span class=gp&gt;$&lt;/span&gt; ci myscript.sh
+&lt;span class=go&gt;RCS/myscript.sh,v  &amp;lt;--  myscript.sh&lt;/span&gt;
+&lt;span class=go&gt;enter description, terminated with single '.' or end of file:&lt;/span&gt;
+&lt;span class=go&gt;NOTE: This is NOT the log message!&lt;/span&gt;
+&lt;span class=gp&gt;&amp;gt;&lt;/span&gt;&amp;gt; /bin/sh &lt;span class=s2&gt;"Hello World!"&lt;/span&gt; example
+&lt;span class=gp&gt;&amp;gt;&lt;/span&gt;&amp;gt; .
+&lt;span class=go&gt;initial revision: 1.1&lt;/span&gt;
+&lt;span class=go&gt;done&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
-&lt;p&gt;The command &lt;tt class="docutils literal"&gt;&lt;span class=pre&gt;ci&lt;/span&gt;&lt;/tt&gt; (check in) is where the magic of &lt;abbr title="GNU Revision Control System"&gt;RCS&lt;/abbr&gt; takes place. We have decided we want to make a snapshot of our
-file, &lt;tt class="docutils literal"&gt;&lt;span class=pre&gt;myscript.sh&lt;/span&gt;&lt;/tt&gt;, and use &lt;tt class="docutils literal"&gt;&lt;span class=pre&gt;ci&lt;/span&gt;&lt;/tt&gt; to add the file to revision control.&lt;/p&gt;
-&lt;div class=highlight-text&gt;&lt;div class=highlight&gt;&lt;pre&gt;$ ls
-RCS
+&lt;p&gt;The command &lt;code class="docutils literal"&gt;&lt;span class=pre&gt;ci&lt;/span&gt;&lt;/code&gt; (check in) is where the magic of &lt;abbr title="GNU Revision Control System"&gt;RCS&lt;/abbr&gt; takes place. We have decided we want to make a snapshot of our
+file, &lt;code class="docutils literal"&gt;&lt;span class=pre&gt;myscript.sh&lt;/span&gt;&lt;/code&gt;, and use &lt;code class="docutils literal"&gt;&lt;span class=pre&gt;ci&lt;/span&gt;&lt;/code&gt; to add the file to revision control.&lt;/p&gt;
+&lt;div class=highlight-console&gt;&lt;div class=highlight&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=gp&gt;$&lt;/span&gt; ls
+&lt;span class=go&gt;RCS&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
 &lt;p&gt;The file we checked in appears to have disappeared, obviously it hasn’t but the
 default behaviour of &lt;abbr title="GNU Revision Control System"&gt;RCS&lt;/abbr&gt; is to remove the
-file we check in. You can choose to keep a working copy with &lt;tt class="docutils literal"&gt;&lt;span class=pre&gt;ci&lt;/span&gt; &lt;span class=pre&gt;-u&lt;/span&gt;&lt;/tt&gt; or &lt;tt class="docutils literal"&gt;&lt;span class=pre&gt;ci&lt;/span&gt;
-&lt;span class=pre&gt;-l&lt;/span&gt;&lt;/tt&gt; (covered below).&lt;/p&gt;
-&lt;div class=highlight-text&gt;&lt;div class=highlight&gt;&lt;pre&gt;$ ls ./RCS/
-myscript.sh,v
+file we check in. You can choose to keep a working copy with &lt;code class="docutils literal"&gt;&lt;span class=pre&gt;ci&lt;/span&gt; &lt;span class=pre&gt;-u&lt;/span&gt;&lt;/code&gt; or &lt;code class="docutils literal"&gt;&lt;span class=pre&gt;ci&lt;/span&gt;
+&lt;span class=pre&gt;-l&lt;/span&gt;&lt;/code&gt; (covered below).&lt;/p&gt;
+&lt;div class=highlight-console&gt;&lt;div class=highlight&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=gp&gt;$&lt;/span&gt; ls ./RCS/
+&lt;span class=go&gt;myscript.sh,v&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
 &lt;p&gt;In the &lt;abbr title="GNU Revision Control System"&gt;RCS&lt;/abbr&gt; directory a file now exists
 with the same name as our script plus a ”,v”. This is the file &lt;abbr title="GNU Revision Control System"&gt;RCS&lt;/abbr&gt; uses to store all of its data in.&lt;/p&gt;
-&lt;div class=highlight-text&gt;&lt;div class=highlight&gt;&lt;pre&gt;$ co myscript.sh
-RCS/myscript.sh,v  --&amp;gt;  myscript.sh
-revision 1.1
-done
-$ ls -l ./
-drwxr-xr-x    2 james    james        1024 Nov  4 11:29 RCS
--r--r--r--    1 james    james          95 Nov  4 11:29 myscript.sh
+&lt;div class=highlight-console&gt;&lt;div class=highlight&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=gp&gt;$&lt;/span&gt; co myscript.sh
+&lt;span class=go&gt;RCS/myscript.sh,v  --&amp;gt;  myscript.sh&lt;/span&gt;
+&lt;span class=go&gt;revision 1.1&lt;/span&gt;
+&lt;span class=go&gt;done&lt;/span&gt;
+&lt;span class=gp&gt;$&lt;/span&gt; ls -l ./
+&lt;span class=go&gt;drwxr-xr-x    2 james    james        1024 Nov  4 11:29 RCS&lt;/span&gt;
+&lt;span class=go&gt;-r--r--r--    1 james    james          95 Nov  4 11:29 myscript.sh&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
-&lt;p&gt;The command &lt;tt class="docutils literal"&gt;&lt;span class=pre&gt;co&lt;/span&gt;&lt;/tt&gt; (check out) pulls a current version(by default) from the
+&lt;p&gt;The command &lt;code class="docutils literal"&gt;&lt;span class=pre&gt;co&lt;/span&gt;&lt;/code&gt; (check out) pulls a current version(by default) from the
 &lt;abbr title="GNU Revision Control System"&gt;RCS&lt;/abbr&gt; repository and places it in the
 current directory. Default behaviour is to check out a read-only version of the
 file.&lt;/p&gt;
-&lt;div class=highlight-text&gt;&lt;div class=highlight&gt;&lt;pre&gt;$ co -l myscript.sh
-./RCS/myscript.sh,v  --&amp;gt;  ./myscript.sh
-revision 1.1 (locked)
-done
+&lt;div class=highlight-console&gt;&lt;div class=highlight&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=gp&gt;$&lt;/span&gt; co -l myscript.sh
+&lt;span class=go&gt;./RCS/myscript.sh,v  --&amp;gt;  ./myscript.sh&lt;/span&gt;
+&lt;span class=go&gt;revision 1.1 (locked)&lt;/span&gt;
+&lt;span class=go&gt;done&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
-&lt;p&gt;The &lt;tt class="docutils literal"&gt;&lt;span class=pre&gt;-l&lt;/span&gt;&lt;/tt&gt; option to &lt;tt class="docutils literal"&gt;&lt;span class=pre&gt;co&lt;/span&gt;&lt;/tt&gt; (and also &lt;tt class="docutils literal"&gt;&lt;span class=pre&gt;ci&lt;/span&gt;&lt;/tt&gt; ) is used to lock the file. This
+&lt;p&gt;The &lt;code class="docutils literal"&gt;&lt;span class=pre&gt;-l&lt;/span&gt;&lt;/code&gt; option to &lt;code class="docutils literal"&gt;&lt;span class=pre&gt;co&lt;/span&gt;&lt;/code&gt; (and also &lt;code class="docutils literal"&gt;&lt;span class=pre&gt;ci&lt;/span&gt;&lt;/code&gt; ) is used to lock the file. This
 file now becomes a working file, which is writable, and it also means other
 people can’t edit it until you have released it or checked it in again.&lt;/p&gt;
-&lt;p&gt;Blindly using the &lt;tt class="docutils literal"&gt;&lt;span class=pre&gt;-l&lt;/span&gt;&lt;/tt&gt; option to &lt;tt class="docutils literal"&gt;&lt;span class=pre&gt;ci&lt;/span&gt;&lt;/tt&gt;/&lt;tt class="docutils literal"&gt;&lt;span class=pre&gt;co&lt;/span&gt;&lt;/tt&gt; is not advisable, you should
+&lt;p&gt;Blindly using the &lt;code class="docutils literal"&gt;&lt;span class=pre&gt;-l&lt;/span&gt;&lt;/code&gt; option to &lt;code class="docutils literal"&gt;&lt;span class=pre&gt;ci&lt;/span&gt;&lt;/code&gt;/&lt;code class="docutils literal"&gt;&lt;span class=pre&gt;co&lt;/span&gt;&lt;/code&gt; is not advisable, you should
 get in to the habit now of only locking files you are working on. &lt;abbr title="GNU Revision Control System"&gt;RCS&lt;/abbr&gt; uses locking to block other users from checking
-in changes and will cause much grief if you use &lt;abbr title="GNU Revision Control System"&gt;RCS&lt;/abbr&gt; on multi-user projects. It is much better to use &lt;tt class="docutils literal"&gt;&lt;span class=pre&gt;-u&lt;/span&gt;&lt;/tt&gt; (or unlocked)
-when you &lt;tt class="docutils literal"&gt;&lt;span class=pre&gt;ci&lt;/span&gt;&lt;/tt&gt; in new files/changes this way you will have access to
+in changes and will cause much grief if you use &lt;abbr title="GNU Revision Control System"&gt;RCS&lt;/abbr&gt; on multi-user projects. It is much better to use &lt;code class="docutils literal"&gt;&lt;span class=pre&gt;-u&lt;/span&gt;&lt;/code&gt; (or unlocked)
+when you &lt;code class="docutils literal"&gt;&lt;span class=pre&gt;ci&lt;/span&gt;&lt;/code&gt; in new files/changes this way you will have access to
 a read-only version of the file and it will allow other users to edit it.&lt;/p&gt;
-&lt;div class=highlight-text&gt;&lt;div class=highlight&gt;&lt;pre&gt;$ cat myscript.sh
-#! /bin/sh
-# $Id: myscript.sh,v 1.1 2002/11/04 11:29:48 james Exp james $
-echo "Hello World!"
-exit 0
+&lt;div class=highlight-console&gt;&lt;div class=highlight&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=gp&gt;$&lt;/span&gt; cat myscript.sh
+&lt;span class=gp&gt;#&lt;/span&gt;! /bin/sh
+&lt;span class=gp&gt;#&lt;/span&gt; $Id: myscript.sh,v 1.1 2002/11/04 11:29:48 james Exp james $
+&lt;span class=go&gt;echo "Hello World!"&lt;/span&gt;
+&lt;span class=go&gt;exit 0&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
-&lt;p&gt;If you remember from the original file it contained &lt;tt class="docutils literal"&gt;&lt;span class=pre&gt;$Id$&lt;/span&gt;&lt;/tt&gt; on a commented
-line, this &lt;tt class="docutils literal"&gt;&lt;span class=pre&gt;$Id$&lt;/span&gt;&lt;/tt&gt; is a keyword used by &lt;abbr title="GNU Revision Control System"&gt;RCS&lt;/abbr&gt; that is substituted with information about the current file. In this
-example the tag &lt;tt class="docutils literal"&gt;&lt;span class=pre&gt;$Id$&lt;/span&gt;&lt;/tt&gt; is expanded to read the filename, the revision number,
+&lt;p&gt;If you remember from the original file it contained &lt;code class="docutils literal"&gt;&lt;span class=pre&gt;$Id$&lt;/span&gt;&lt;/code&gt; on a commented
+line, this &lt;code class="docutils literal"&gt;&lt;span class=pre&gt;$Id$&lt;/span&gt;&lt;/code&gt; is a keyword used by &lt;abbr title="GNU Revision Control System"&gt;RCS&lt;/abbr&gt; that is substituted with information about the current file. In this
+example the tag &lt;code class="docutils literal"&gt;&lt;span class=pre&gt;$Id$&lt;/span&gt;&lt;/code&gt; is expanded to read the filename, the revision number,
 the date and time of the check in, the person who checked in the file, the state
 of the file and the owner of the lock(if any).&lt;/p&gt;
 &lt;p&gt;There are many keywords available, including:&lt;/p&gt;
 &lt;ul class=simple&gt;
-&lt;li&gt;&lt;tt class="docutils literal"&gt;&lt;span class=pre&gt;$Author$&lt;/span&gt;&lt;/tt&gt; - the name of the person who did the check in&lt;/li&gt;
-&lt;li&gt;&lt;tt class="docutils literal"&gt;&lt;span class=pre&gt;$Header$&lt;/span&gt;&lt;/tt&gt; - the same as &lt;tt class="docutils literal"&gt;&lt;span class=pre&gt;$Id$&lt;/span&gt;&lt;/tt&gt; but including the path for the file&lt;/li&gt;
-&lt;li&gt;&lt;tt class="docutils literal"&gt;&lt;span class=pre&gt;$Log$&lt;/span&gt;&lt;/tt&gt; - a full changelog for file from the &lt;tt class="docutils literal"&gt;&lt;span class=pre&gt;ci&lt;/span&gt;&lt;/tt&gt; annotations&lt;/li&gt;
+&lt;li&gt;&lt;code class="docutils literal"&gt;&lt;span class=pre&gt;$Author$&lt;/span&gt;&lt;/code&gt; - the name of the person who did the check in&lt;/li&gt;
+&lt;li&gt;&lt;code class="docutils literal"&gt;&lt;span class=pre&gt;$Header$&lt;/span&gt;&lt;/code&gt; - the same as &lt;code class="docutils literal"&gt;&lt;span class=pre&gt;$Id$&lt;/span&gt;&lt;/code&gt; but including the path for the file&lt;/li&gt;
+&lt;li&gt;&lt;code class="docutils literal"&gt;&lt;span class=pre&gt;$Log$&lt;/span&gt;&lt;/code&gt; - a full changelog for file from the &lt;code class="docutils literal"&gt;&lt;span class=pre&gt;ci&lt;/span&gt;&lt;/code&gt; annotations&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;Although using &lt;tt class="docutils literal"&gt;&lt;span class=pre&gt;$Log$&lt;/span&gt;&lt;/tt&gt; seems like a good idea it does mean the size of the
+&lt;p&gt;Although using &lt;code class="docutils literal"&gt;&lt;span class=pre&gt;$Log$&lt;/span&gt;&lt;/code&gt; seems like a good idea it does mean the size of the
 file is increased a huge amount. All the changelog data is available with the
-&lt;tt class="docutils literal"&gt;&lt;span class=pre&gt;rlog&lt;/span&gt;&lt;/tt&gt; command at any time and without filling the source file.&lt;/p&gt;
-&lt;div class=highlight-text&gt;&lt;div class=highlight&gt;&lt;pre&gt;$ sed -ie 's/World/${USER}/' myscript.sh
-$ cat myscript.sh
-#! /bin/sh
-# $Id: myscript.sh,v 1.1 2002/11/04 11:29:48 james Exp james $
-echo "Hello ${USER}!"
-exit 0
-$ sh ./myscript.sh
-Hello james!
+&lt;code class="docutils literal"&gt;&lt;span class=pre&gt;rlog&lt;/span&gt;&lt;/code&gt; command at any time and without filling the source file.&lt;/p&gt;
+&lt;div class=highlight-console&gt;&lt;div class=highlight&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=gp&gt;$&lt;/span&gt; sed -ie &lt;span class=s1&gt;'s/World/${USER}/'&lt;/span&gt; myscript.sh
+&lt;span class=gp&gt;$&lt;/span&gt; cat myscript.sh
+&lt;span class=gp&gt;#&lt;/span&gt;! /bin/sh
+&lt;span class=gp&gt;#&lt;/span&gt; $Id: myscript.sh,v 1.1 2002/11/04 11:29:48 james Exp james $
+&lt;span class=go&gt;echo "Hello ${USER}!"&lt;/span&gt;
+&lt;span class=go&gt;exit 0&lt;/span&gt;
+&lt;span class=gp&gt;$&lt;/span&gt; sh ./myscript.sh
+&lt;span class=go&gt;Hello james!&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
 &lt;p&gt;So we have decided to make some changes to the file, and then tested it
 works.&lt;/p&gt;
-&lt;div class=highlight-text&gt;&lt;div class=highlight&gt;&lt;pre&gt;$ rcsdiff myscript.sh
-===================================================================
-RCS file: RCS/myscript.sh,v
-retrieving revision 1.1
-diff -r1.1 myscript.sh
-3c3
-&amp;lt; echo "Hello World!"
----
-&amp;gt; echo "Hello ${USER}!"
-TEST$  rcsdiff -u myscript.sh
-===================================================================
-RCS file: RCS/myscript.sh,v
-retrieving revision 1.1
-diff -u -r1.1 myscript.sh
---- myscript.sh 2002/11/04 11:57:51     1.1
-+++ myscript.sh 2002/11/05 03:52:14
-@@ -1,4 +1,4 @@
- #! /bin/sh
- # $Id: myscript,v 1.1 2002/11/04 11:29:48 james Exp james $
--echo "Hello World!"
-+echo "Hello ${USER}!"
- exit 0
+&lt;div class=highlight-console&gt;&lt;div class=highlight&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=gp&gt;$&lt;/span&gt; rcsdiff myscript.sh
+&lt;span class=go&gt;===================================================================&lt;/span&gt;
+&lt;span class=go&gt;RCS file: RCS/myscript.sh,v&lt;/span&gt;
+&lt;span class=go&gt;retrieving revision 1.1&lt;/span&gt;
+&lt;span class=go&gt;diff -r1.1 myscript.sh&lt;/span&gt;
+&lt;span class=go&gt;3c3&lt;/span&gt;
+&lt;span class=go&gt;&amp;lt; echo "Hello World!"&lt;/span&gt;
+&lt;span class=go&gt;---&lt;/span&gt;
+&lt;span class=gp&gt;&amp;gt;&lt;/span&gt; &lt;span class=nb&gt;echo&lt;/span&gt; &lt;span class=s2&gt;"Hello &lt;/span&gt;&lt;span class=si&gt;${&lt;/span&gt;&lt;span class=nv&gt;USER&lt;/span&gt;&lt;span class=si&gt;}&lt;/span&gt;&lt;span class=s2&gt;!"&lt;/span&gt;
+&lt;span class=go&gt;TEST$  rcsdiff -u myscript.sh&lt;/span&gt;
+&lt;span class=go&gt;===================================================================&lt;/span&gt;
+&lt;span class=go&gt;RCS file: RCS/myscript.sh,v&lt;/span&gt;
+&lt;span class=go&gt;retrieving revision 1.1&lt;/span&gt;
+&lt;span class=go&gt;diff -u -r1.1 myscript.sh&lt;/span&gt;
+&lt;span class=go&gt;--- myscript.sh 2002/11/04 11:57:51     1.1&lt;/span&gt;
+&lt;span class=go&gt;+++ myscript.sh 2002/11/05 03:52:14&lt;/span&gt;
+&lt;span class=go&gt;@@ -1,4 +1,4 @@&lt;/span&gt;
+&lt;span class=gp&gt; #&lt;/span&gt;! /bin/sh
+&lt;span class=gp&gt; #&lt;/span&gt; $Id: myscript,v 1.1 2002/11/04 11:29:48 james Exp james $
+&lt;span class=go&gt;-echo "Hello World!"&lt;/span&gt;
+&lt;span class=go&gt;+echo "Hello ${USER}!"&lt;/span&gt;
+&lt;span class=go&gt; exit 0&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
-&lt;p&gt;The command &lt;tt class="docutils literal"&gt;&lt;span class=pre&gt;rcsdiff&lt;/span&gt;&lt;/tt&gt; supplies an easy way to check changes in a file. Using
-&lt;tt class="docutils literal"&gt;&lt;span class=pre&gt;rcsdiff&lt;/span&gt; &lt;span class=pre&gt;filename&lt;/span&gt;&lt;/tt&gt; will output a generic context-free diff(and a small
-&lt;abbr title="GNU Revision Control System"&gt;RCS&lt;/abbr&gt; header to &lt;tt class="docutils literal"&gt;&lt;span class=pre&gt;STDERR&lt;/span&gt;&lt;/tt&gt; ), or you can
-pass normal &lt;tt class="docutils literal"&gt;&lt;span class=pre&gt;diff&lt;/span&gt;&lt;/tt&gt; (1) options to &lt;tt class="docutils literal"&gt;&lt;span class=pre&gt;rcsdiff&lt;/span&gt;&lt;/tt&gt;.  In the second &lt;tt class="docutils literal"&gt;&lt;span class=pre&gt;rcsdiff&lt;/span&gt;&lt;/tt&gt;
-command the &lt;tt class="docutils literal"&gt;&lt;span class=pre&gt;diff&lt;/span&gt;&lt;/tt&gt; option &lt;tt class="docutils literal"&gt;&lt;span class=pre&gt;-u&lt;/span&gt;&lt;/tt&gt; is given to tell &lt;tt class="docutils literal"&gt;&lt;span class=pre&gt;rcsdiff&lt;/span&gt;&lt;/tt&gt; it should output
+&lt;p&gt;The command &lt;code class="docutils literal"&gt;&lt;span class=pre&gt;rcsdiff&lt;/span&gt;&lt;/code&gt; supplies an easy way to check changes in a file. Using
+&lt;code class="docutils literal"&gt;&lt;span class=pre&gt;rcsdiff&lt;/span&gt; &lt;span class=pre&gt;filename&lt;/span&gt;&lt;/code&gt; will output a generic context-free diff(and a small
+&lt;abbr title="GNU Revision Control System"&gt;RCS&lt;/abbr&gt; header to &lt;code class="docutils literal"&gt;&lt;span class=pre&gt;STDERR&lt;/span&gt;&lt;/code&gt; ), or you can
+pass normal &lt;code class="docutils literal"&gt;&lt;span class=pre&gt;diff&lt;/span&gt;&lt;/code&gt; (1) options to &lt;code class="docutils literal"&gt;&lt;span class=pre&gt;rcsdiff&lt;/span&gt;&lt;/code&gt;.  In the second &lt;code class="docutils literal"&gt;&lt;span class=pre&gt;rcsdiff&lt;/span&gt;&lt;/code&gt;
+command the &lt;code class="docutils literal"&gt;&lt;span class=pre&gt;diff&lt;/span&gt;&lt;/code&gt; option &lt;code class="docutils literal"&gt;&lt;span class=pre&gt;-u&lt;/span&gt;&lt;/code&gt; is given to tell &lt;code class="docutils literal"&gt;&lt;span class=pre&gt;rcsdiff&lt;/span&gt;&lt;/code&gt; it should output
 a unified context diff.&lt;/p&gt;
-&lt;div class=highlight-text&gt;&lt;div class=highlight&gt;&lt;pre&gt;$ ci -u ./myscript.sh
-./RCS/myscript.sh,v  &amp;lt;--  ./myscript.sh
-new revision: 1.2; previous revision: 1.1
-enter log message, terminated with single '.' or end of file:
-&amp;gt;&amp;gt; Changed World to ${USER} to give a more personal feeling
-&amp;gt;&amp;gt; .
-done
+&lt;div class=highlight-console&gt;&lt;div class=highlight&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=gp&gt;$&lt;/span&gt; ci -u ./myscript.sh
+&lt;span class=go&gt;./RCS/myscript.sh,v  &amp;lt;--  ./myscript.sh&lt;/span&gt;
+&lt;span class=go&gt;new revision: 1.2; previous revision: 1.1&lt;/span&gt;
+&lt;span class=go&gt;enter log message, terminated with single '.' or end of file:&lt;/span&gt;
+&lt;span class=gp&gt;&amp;gt;&lt;/span&gt;&amp;gt; Changed World to &lt;span class=si&gt;${&lt;/span&gt;&lt;span class=nv&gt;USER&lt;/span&gt;&lt;span class=si&gt;}&lt;/span&gt; to give a more personal feeling
+&lt;span class=gp&gt;&amp;gt;&lt;/span&gt;&amp;gt; .
+&lt;span class=go&gt;done&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
 &lt;p&gt;So now we have seen the changes made to the file, and are happy with them, we
 check in our new revision. &lt;abbr title="GNU Revision Control System"&gt;RCS&lt;/abbr&gt; asks for
 a log entry, this will make our changelog output later. You can cancel the check
-in using the normal &lt;tt class="docutils literal"&gt;&lt;span class=pre&gt;C-c&lt;/span&gt;&lt;/tt&gt; (control C) method.&lt;/p&gt;
-&lt;div class=highlight-text&gt;&lt;div class=highlight&gt;&lt;pre&gt;$ cat myscript.sh
-#! /bin/sh
-# $Id: myscript,v 1.2 2002/11/04 11:34:21 james Exp james $
-echo "Hello ${USER}!"
-exit 0
+in using the normal &lt;code class="docutils literal"&gt;&lt;span class=pre&gt;C-c&lt;/span&gt;&lt;/code&gt; (control C) method.&lt;/p&gt;
+&lt;div class=highlight-console&gt;&lt;div class=highlight&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=gp&gt;$&lt;/span&gt; cat myscript.sh
+&lt;span class=gp&gt;#&lt;/span&gt;! /bin/sh
+&lt;span class=gp&gt;#&lt;/span&gt; $Id: myscript,v 1.2 2002/11/04 11:34:21 james Exp james $
+&lt;span class=go&gt;echo "Hello ${USER}!"&lt;/span&gt;
+&lt;span class=go&gt;exit 0&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
 &lt;p&gt;You can see above that when &lt;abbr title="GNU Revision Control System"&gt;RCS&lt;/abbr&gt; checked in
-the new revision it also updated the &lt;tt class="docutils literal"&gt;&lt;span class=pre&gt;$Id$&lt;/span&gt;&lt;/tt&gt; tag.&lt;/p&gt;
-&lt;div class=highlight-text&gt;&lt;div class=highlight&gt;&lt;pre&gt;$ rlog ./myscript.sh
+the new revision it also updated the &lt;code class="docutils literal"&gt;&lt;span class=pre&gt;$Id$&lt;/span&gt;&lt;/code&gt; tag.&lt;/p&gt;
+&lt;div class=highlight-console&gt;&lt;div class=highlight&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=gp&gt;$&lt;/span&gt; rlog ./myscript.sh
 
-RCS file: ./RCS/myscript.sh,v
-Working file: ./myscript.sh
-head: 1.2
-branch:
-locks: strict
-access list:
-symbolic names:
-keyword substitution: kv
-total revisions: 2;     selected revisions: 2
-description:
-----------------------------
-revision 1.2
-date: 2002/11/05 04:01:13;  author: james;  state: Exp;  lines: +2 -2
-Changed World to ${USER} to give a more personal feeling
-----------------------------
-revision 1.1
-date: 2002/11/04 11:57:51;  author: james;  state: Exp;
-Initial revision
-=============================================================================
+&lt;span class=go&gt;RCS file: ./RCS/myscript.sh,v&lt;/span&gt;
+&lt;span class=go&gt;Working file: ./myscript.sh&lt;/span&gt;
+&lt;span class=go&gt;head: 1.2&lt;/span&gt;
+&lt;span class=go&gt;branch:&lt;/span&gt;
+&lt;span class=go&gt;locks: strict&lt;/span&gt;
+&lt;span class=go&gt;access list:&lt;/span&gt;
+&lt;span class=go&gt;symbolic names:&lt;/span&gt;
+&lt;span class=go&gt;keyword substitution: kv&lt;/span&gt;
+&lt;span class=go&gt;total revisions: 2;     selected revisions: 2&lt;/span&gt;
+&lt;span class=go&gt;description:&lt;/span&gt;
+&lt;span class=go&gt;----------------------------&lt;/span&gt;
+&lt;span class=go&gt;revision 1.2&lt;/span&gt;
+&lt;span class=go&gt;date: 2002/11/05 04:01:13;  author: james;  state: Exp;  lines: +2 -2&lt;/span&gt;
+&lt;span class=go&gt;Changed World to ${USER} to give a more personal feeling&lt;/span&gt;
+&lt;span class=go&gt;----------------------------&lt;/span&gt;
+&lt;span class=go&gt;revision 1.1&lt;/span&gt;
+&lt;span class=go&gt;date: 2002/11/04 11:57:51;  author: james;  state: Exp;&lt;/span&gt;
+&lt;span class=go&gt;Initial revision&lt;/span&gt;
+&lt;span class=go&gt;=============================================================================&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
-&lt;p&gt;The command &lt;tt class="docutils literal"&gt;&lt;span class=pre&gt;rlog&lt;/span&gt;&lt;/tt&gt; provides quick access to revision history for files, it
+&lt;p&gt;The command &lt;code class="docutils literal"&gt;&lt;span class=pre&gt;rlog&lt;/span&gt;&lt;/code&gt; provides quick access to revision history for files, it
 accepts multiple files per command line(using normal shell wild-carding) and
 provides all the information &lt;abbr title="GNU Revision Control System"&gt;RCS&lt;/abbr&gt; has on
 a file. Should you ever need to only know the changes that were made to the
-current revision you can use the &lt;tt class="docutils literal"&gt;&lt;span class=pre&gt;-r&lt;/span&gt;&lt;/tt&gt; option as in &lt;tt class="docutils literal"&gt;&lt;span class=pre&gt;rlog&lt;/span&gt; &lt;span class=pre&gt;-r&lt;/span&gt; &lt;span class=pre&gt;filename&lt;/span&gt;&lt;/tt&gt;. You
-can also check changes between revisions of files using the command like &lt;tt class="docutils literal"&gt;&lt;span class=pre&gt;rlog&lt;/span&gt;
-&lt;span class=pre&gt;-r1.1,1.2&lt;/span&gt; &lt;span class=pre&gt;filename&lt;/span&gt;&lt;/tt&gt;.&lt;/p&gt;
-&lt;p&gt;The &lt;tt class="docutils literal"&gt;&lt;span class=pre&gt;-r&lt;/span&gt;&lt;/tt&gt; option of &lt;abbr title="GNU Revision Control System"&gt;RCS&lt;/abbr&gt; is one of its
+current revision you can use the &lt;code class="docutils literal"&gt;&lt;span class=pre&gt;-r&lt;/span&gt;&lt;/code&gt; option as in &lt;code class="docutils literal"&gt;&lt;span class=pre&gt;rlog&lt;/span&gt; &lt;span class=pre&gt;-r&lt;/span&gt; &lt;span class=pre&gt;filename&lt;/span&gt;&lt;/code&gt;. You
+can also check changes between revisions of files using the command like &lt;code class="docutils literal"&gt;&lt;span class=pre&gt;rlog&lt;/span&gt;
+&lt;span class=pre&gt;-r1.1,1.2&lt;/span&gt; &lt;span class=pre&gt;filename&lt;/span&gt;&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;The &lt;code class="docutils literal"&gt;&lt;span class=pre&gt;-r&lt;/span&gt;&lt;/code&gt; option of &lt;abbr title="GNU Revision Control System"&gt;RCS&lt;/abbr&gt; is one of its
 most powerful, it is available in all the commands and shares the same semantics
-throughout. If &lt;tt class="docutils literal"&gt;&lt;span class=pre&gt;-r&lt;/span&gt;&lt;/tt&gt; is used with &lt;tt class="docutils literal"&gt;&lt;span class=pre&gt;ci&lt;/span&gt;&lt;/tt&gt; it forces a bump, for example &lt;tt class="docutils literal"&gt;&lt;span class=pre&gt;ci&lt;/span&gt;
-&lt;span class=pre&gt;-r1.7&lt;/span&gt; &lt;span class=pre&gt;filename&lt;/span&gt;&lt;/tt&gt; will force &lt;abbr title="GNU Revision Control System"&gt;RCS&lt;/abbr&gt; to check
-in filename as revision 1.7. Used with &lt;tt class="docutils literal"&gt;&lt;span class=pre&gt;co&lt;/span&gt;&lt;/tt&gt; you can pull any revision of the
+throughout. If &lt;code class="docutils literal"&gt;&lt;span class=pre&gt;-r&lt;/span&gt;&lt;/code&gt; is used with &lt;code class="docutils literal"&gt;&lt;span class=pre&gt;ci&lt;/span&gt;&lt;/code&gt; it forces a bump, for example &lt;code class="docutils literal"&gt;&lt;span class=pre&gt;ci&lt;/span&gt;
+&lt;span class=pre&gt;-r1.7&lt;/span&gt; &lt;span class=pre&gt;filename&lt;/span&gt;&lt;/code&gt; will force &lt;abbr title="GNU Revision Control System"&gt;RCS&lt;/abbr&gt; to check
+in filename as revision 1.7. Used with &lt;code class="docutils literal"&gt;&lt;span class=pre&gt;co&lt;/span&gt;&lt;/code&gt; you can pull any revision of the
 file from &lt;abbr title="GNU Revision Control System"&gt;RCS&lt;/abbr&gt; history. Used with
-&lt;tt class="docutils literal"&gt;&lt;span class=pre&gt;rcsdiff&lt;/span&gt;&lt;/tt&gt; you can create a diff between any revision under &lt;abbr title="GNU Revision Control System"&gt;RCS&lt;/abbr&gt;, for example &lt;tt class="docutils literal"&gt;&lt;span class=pre&gt;rcsdiff&lt;/span&gt; &lt;span class=pre&gt;-r1.1,1.8&lt;/span&gt; &lt;span class=pre&gt;-u&lt;/span&gt; &lt;span class=pre&gt;filename&lt;/span&gt;&lt;/tt&gt; will
+&lt;code class="docutils literal"&gt;&lt;span class=pre&gt;rcsdiff&lt;/span&gt;&lt;/code&gt; you can create a diff between any revision under &lt;abbr title="GNU Revision Control System"&gt;RCS&lt;/abbr&gt;, for example &lt;code class="docutils literal"&gt;&lt;span class=pre&gt;rcsdiff&lt;/span&gt; &lt;span class=pre&gt;-r1.1,1.8&lt;/span&gt; &lt;span class=pre&gt;-u&lt;/span&gt; &lt;span class=pre&gt;filename&lt;/span&gt;&lt;/code&gt; will
 output a unified context diff of the changes from revision
 1.1 to 1.8.&lt;/p&gt;
 &lt;p&gt;&lt;abbr title="GNU Revision Control System"&gt;RCS&lt;/abbr&gt; really is that simple to use, it does
@@ -1582,10 +1671,10 @@ silly little shell Hello World examples.&lt;/p&gt;
 &lt;p&gt;To recap on &lt;abbr title="GNU Revision Control System"&gt;RCS&lt;/abbr&gt; usage&lt;/p&gt;
 &lt;ul class=simple&gt;
 &lt;li&gt;Make the RCS directory.&lt;/li&gt;
-&lt;li&gt;Insert &lt;abbr title="GNU Revision Control System"&gt;RCS&lt;/abbr&gt; tags, such as &lt;tt class="docutils literal"&gt;&lt;span class=pre&gt;$Id$&lt;/span&gt;&lt;/tt&gt;, in to
+&lt;li&gt;Insert &lt;abbr title="GNU Revision Control System"&gt;RCS&lt;/abbr&gt; tags, such as &lt;code class="docutils literal"&gt;&lt;span class=pre&gt;$Id$&lt;/span&gt;&lt;/code&gt;, in to
 your original files to help you keep track.&lt;/li&gt;
 &lt;li&gt;Edit your files.&lt;/li&gt;
-&lt;li&gt;Use &lt;tt class="docutils literal"&gt;&lt;span class=pre&gt;ci&lt;/span&gt;&lt;/tt&gt; to commit your revisions to the &lt;abbr title="GNU Revision Control System"&gt;RCS&lt;/abbr&gt; history and annotate changes made. You can also use &lt;tt class="docutils literal"&gt;&lt;span class=pre&gt;rcsdiff&lt;/span&gt;&lt;/tt&gt; to
+&lt;li&gt;Use &lt;code class="docutils literal"&gt;&lt;span class=pre&gt;ci&lt;/span&gt;&lt;/code&gt; to commit your revisions to the &lt;abbr title="GNU Revision Control System"&gt;RCS&lt;/abbr&gt; history and annotate changes made. You can also use &lt;code class="docutils literal"&gt;&lt;span class=pre&gt;rcsdiff&lt;/span&gt;&lt;/code&gt; to
 see what changes you have made, maybe to help you build your changelog
 information.&lt;/li&gt;
 &lt;/ul&gt;
@@ -1596,12 +1685,12 @@ information.&lt;/li&gt;
 &lt;a class="reference internal image-reference" href=http://jnrowe.github.com/_images/rcsi.png&gt;&lt;img alt="rcsi screenshot" src=http://jnrowe.github.com/_images/rcsi.png style="width: 500px; height: 114px;"&gt;&lt;/a&gt;
 &lt;/div&gt;
 &lt;p&gt;There are many tools available that can help you to manage your &lt;abbr title="GNU Revision Control System"&gt;RCS&lt;/abbr&gt; files, including the &lt;abbr title="GNU Revision Control System"&gt;RCS&lt;/abbr&gt; status monitor &lt;a class="reference external" href=http://www.colinbrough.pwp.blueyonder.co.uk/rcsi.README.html&gt;rcsi&lt;/a&gt; and &lt;a class="reference external" href=http://blame.sourceforge.net/&gt;blame&lt;/a&gt; &lt;abbr title="GNU Revision Control System"&gt;RCS&lt;/abbr&gt; file annotator.&lt;/p&gt;
-&lt;p&gt;&lt;tt class="docutils literal"&gt;&lt;span class=pre&gt;rcsi&lt;/span&gt;&lt;/tt&gt; will display information about the files within a directory.&lt;/p&gt;
-&lt;p&gt;The screenshot to the right shows &lt;tt class="docutils literal"&gt;&lt;span class=pre&gt;rcsi&lt;/span&gt;&lt;/tt&gt; in use on a sample partially
+&lt;p&gt;&lt;code class="docutils literal"&gt;&lt;span class=pre&gt;rcsi&lt;/span&gt;&lt;/code&gt; will display information about the files within a directory.&lt;/p&gt;
+&lt;p&gt;The screenshot to the right shows &lt;code class="docutils literal"&gt;&lt;span class=pre&gt;rcsi&lt;/span&gt;&lt;/code&gt; in use on a sample partially
 &lt;abbr title="GNU Revision Control System"&gt;RCS&lt;/abbr&gt; controlled directory.  All the
 information it contains should be fairly self explanatory, and even if it isn’t
 the package comes with a comprehensive man page and README.&lt;/p&gt;
-&lt;div class=highlight-text&gt;&lt;div class=highlight&gt;&lt;pre&gt;1.2          (root     21-Aug-05):             eval find . -xdev -depth ${exceptions}   -type d -empty -exec rmdir '{}' \\';'
+&lt;div class=highlight-text&gt;&lt;div class=highlight&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;1.2          (root     21-Aug-05):             eval find . -xdev -depth ${exceptions}   -type d -empty -exec rmdir '{}' \\';'
 1.2          (root     21-Aug-05):             eend 0
 1.2          (root     21-Aug-05):         else
 1.1          (root     16-Jul-05):             ebegin "Cleaning /tmp directory"
@@ -1613,10 +1702,10 @@ the package comes with a comprehensive man page and README.&lt;/p&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
 &lt;p&gt;The above excerpt is a sample of the output from &lt;a class="reference external" href=http://blame.sourceforge.net/&gt;blame&lt;/a&gt; being run against
-a config file which is maintained using &lt;abbr title="GNU Revision Control System"&gt;RCS&lt;/abbr&gt; by Gentoo’s &lt;tt class="docutils literal"&gt;&lt;span class=pre&gt;dispatch-conf&lt;/span&gt;&lt;/tt&gt; tool.  It allows you to simply see which
+a config file which is maintained using &lt;abbr title="GNU Revision Control System"&gt;RCS&lt;/abbr&gt; by Gentoo’s &lt;code class="docutils literal"&gt;&lt;span class=pre&gt;dispatch-conf&lt;/span&gt;&lt;/code&gt; tool.  It allows you to simply see which
 revision introduced a change to a specific line.  You can also choose to
 annotate specific &lt;abbr title="GNU Revision Control System"&gt;RCS&lt;/abbr&gt; revisions using the
-&lt;tt class="docutils literal"&gt;&lt;span class=pre&gt;--revision&lt;/span&gt;&lt;/tt&gt; option, or specific dates with &lt;tt class="docutils literal"&gt;&lt;span class=pre&gt;--date&lt;/span&gt;&lt;/tt&gt; option.  &lt;a class="reference external" href=http://blame.sourceforge.net/&gt;blame&lt;/a&gt; has
+&lt;code class="docutils literal"&gt;&lt;span class=pre&gt;--revision&lt;/span&gt;&lt;/code&gt; option, or specific dates with &lt;code class="docutils literal"&gt;&lt;span class=pre&gt;--date&lt;/span&gt;&lt;/code&gt; option.  &lt;a class="reference external" href=http://blame.sourceforge.net/&gt;blame&lt;/a&gt; has
 also has a very comprehensive manual page included with it which you should read
 if you want to enjoy its full power.&lt;/p&gt;
 &lt;p&gt;There are many other tools available which use &lt;abbr title="GNU Revision Control System"&gt;RCS&lt;/abbr&gt; as a backend, and as long as you can access the &lt;abbr title="GNU Revision Control System"&gt;RCS&lt;/abbr&gt; data files blame can help to understand what is

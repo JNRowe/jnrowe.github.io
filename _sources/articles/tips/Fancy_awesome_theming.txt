@@ -43,9 +43,9 @@ with our theme's background.  All we need to do now is tell awesome to make our
 wibox transparent and the final result is a wibox that appears to be using the
 theme's background.
 
-.. code-block:: lua
+.. code-block:: moon
 
-    mywibox[s] = wibox({ position = "top", fg = beautiful.fg_normal, bg = "#00000000" })
+    mywibox[s] = wibox position: "top", fg: beautiful.fg_normal, bg: "#00000000"
 
 `Fork this code <http://gist.github.com/198014>`__
 

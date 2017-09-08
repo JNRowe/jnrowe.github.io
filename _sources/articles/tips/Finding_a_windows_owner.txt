@@ -16,7 +16,7 @@ The easy way
 Many windows define a ``WM_COMMAND`` property that is set to the command name of
 the application, if that exists all we have to do is read it:
 
-.. code-block:: text
+.. code-block:: console
 
     $ xprop  | grep WM_COMMAND
     WM_COMMAND(STRING) = { "urxvt", "-cd", "/home/jay/Desktop" }
@@ -36,7 +36,7 @@ opened the window.  We have a couple of options to access that property, my
 favourite would be wmctrl_ and another would be xprop_ which is often installed
 by default.
 
-.. code-block:: text
+.. code-block:: console
 
     $ wmctrl -lp
     0x01200003  2 13398  kate 2009-10-06-TaD-Finding_a_windows_owner.textile [+] - gvim

@@ -5,6 +5,7 @@
 <!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
 <head>
   <meta charset="utf-8">
+  
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
   <title>Debugging Python regular expressions &mdash; JNRowe</title>
@@ -16,7 +17,6 @@
   
 
   
-  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
 
   
   
@@ -30,6 +30,8 @@
   
 
   
+
+  
         <link rel="copyright" title="Copyright" href="../../copyright.html"/>
     <link rel="top" title="JNRowe" href="../../index.html"/>
         <link rel="up" title="Tips" href="index.html"/>
@@ -38,7 +40,7 @@
     <link rel="alternate" type="application/atom+xml" title="Updated items" href="/updates.atom" />
 
   
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script>
+  <script src="../../_static/js/modernizr.min.js"></script>
 
 </head>
 
@@ -48,61 +50,101 @@
 
     
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
-      <div class="wy-side-nav-search">
-        <a href="../../index.html" class="fa fa-home"> JNRowe</a>
-        <div role="search">
-  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> JNRowe
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.1
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
     <input type="text" name="q" placeholder="Search docs" />
     <input type="hidden" name="check_keywords" value="yes" />
     <input type="hidden" name="area" value="default" />
   </form>
 </div>
-      </div>
 
-      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
-        
-        
-            <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="../../projects.html">Projects</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../../projects.html#forks-i-m-hacking-on">Forks I&#8217;m hacking on</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../projects.html#git-mirrors-of-projects-i-m-hacking-on">Git mirrors of projects I&#8217;m hacking on</a></li>
-</ul>
-</li>
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <p class="caption"><span class="caption-text">Contents</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../projects.html">Projects</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="../index.html">Articles</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="../dropping_gentoo.html">Dropping Gentoo</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../dropping_gentoo_reflex.html">Dropping Gentoo reflex</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../fossil.html"><tt class="docutils literal"><span class="pre">fossil</span></tt> experiments</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../fossil.html"><code class="docutils literal"><span class="pre">fossil</span></code> experiments</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../rcs.html">Introduction to RCS</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../tdd_distros.html">TDD distro development</a></li>
-<li class="toctree-l2 current"><a class="reference internal" href="../index.html#further-categories">Further categories</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../index.html#further-categories">Further categories</a><ul class="current">
+<li class="toctree-l3 current"><a class="reference internal" href="index.html">Tips</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="BTS_as_a_task_manager.html"><abbr title="Bug Tracking System">BTS</abbr> as a task manager</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Beyond_tab_completion.html">Beyond simple tab completion</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Bugzilla_real_names.html">Bugzilla mail with real names</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Compiling_in_vim.html">Compiling C source in vim</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Context_aware_diffs_with_git.html">Context aware diffs with git</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Custom_locations_in_the_GTK_filechooser.html">Custom keybindings in the GTK+ file dialogs</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="">Debugging Python regular expressions</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Disabling_cursor_blinking_in_GTK.html">Disabling cursor blinking in GTK+</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Fancy_awesome_theming.html">Fancy awesome theming</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Finding_a_windows_owner.html">Finding a window&#8217;s owner</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Formatting_csv_files_in_the_shell.html">Formatting <abbr title="Comma Separated Values">CSV</abbr> files in the shell</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Gentoo_one_liners.html">Gentoo one liners</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Importing_gmail_filters_in_mutt.html">Importing gmail filters in mutt</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Instant_web_server.html">Instant web server</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Kick_me_birthday_reminders.html">&#8216;Kick me&#8217; birthday reminders</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Making_a_nice_home.html">Making a nice home</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Making_a_nice_home.html#permissions">Permissions</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Making_a_nice_home.html#vim-hacks">vim hacks</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Making_a_nice_home.html#documentation">Documentation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Populating_sup_contacts_from_abook.html">Populating sup contacts from abook</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Sharing_Xresources_between_systems.html">Sharing Xresources between systems</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Simple_notifications_in_awesome.html">Simple notifications in awesome</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Simple_notifications_in_awesome.html#window-creation-notifications">Window creation notifications</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Simple_notifications_in_awesome.html#network-notifications">Network notifications</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Theming_mutt.html">Theming mutt</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Three_mobile_broadband_in_linux.html">Three mobile broadband in Linux</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Toggling_settings_in_vim.html">Toggling settings in vim</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Uber_pink_prompts.html">Uber pink prompts</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Visual_vim_mode_identifier.html">Visual vim mode identifier</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Zsh_and_the_vcs.html">Zsh and the VCS</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../../thoughts/index.html">Thoughts</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../../thoughts/burn_out.html">Open Source and enjoyment</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../thoughts/burn_out.html#the-solutions">The solutions</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../thoughts/delayed_flashover.html">Delayed flashover</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../thoughts/disconnect.html">Cleanse thy soul</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../thoughts/dopplr_effects.html">Dopplr defects</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../thoughts/important_balance.html">Murdering morality with ferocious fire</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../thoughts/nice_stories.html">Tell me a nice story, please</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../thoughts/reset_in_ten.html">Hitting life&#8217;s reset button</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../thoughts/side_projects.html">Side-projects</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../thoughts/the_returned.html">Return to rambling</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../probits/index.html">Project postmortems</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../../colophon.html">Colophon</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../../colophon.html#content-creation">Content creation</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../colophon.html#and-finally">And finally...</a></li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="../../thoughts/index.html">Thoughts</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../colophon.html">Colophon</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../contact.html">Contact details</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../consult.html">Consulting services</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../copyright.html">Copyright information</a></li>
 </ul>
 
-        
+            
+          
+        </div>
       </div>
-      &nbsp;
     </nav>
 
     <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
@@ -117,7 +159,13 @@
       
       <div class="wy-nav-content">
         <div class="rst-content">
-          <div role="navigation" aria-label="breadcrumbs navigation">
+          
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
   <ul class="wy-breadcrumbs">
     <li><a href="../../index.html">Docs</a> &raquo;</li>
       
@@ -128,21 +176,16 @@
     <li>Debugging Python regular expressions</li>
       <li class="wy-breadcrumbs-aside">
         
-          <a href="../../_sources/articles/tips/Debugging_python_regexps.txt" rel="nofollow"> View page source</a>
+          
+            <a href="../../_sources/articles/tips/Debugging_python_regexps.txt" rel="nofollow"> View page source</a>
+          
         
       </li>
   </ul>
   <hr/>
 </div>
-          <div role="main">
-            
-    <div class="admonition note">
-        <p class="first admonition-title">
-            Estimated reading time: 1 minutes
-        </p>
-    </div>
-    
-    
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
             
   <div class="section" id="debugging-python-regular-expressions">
 <h1>Debugging Python regular expressions<a class="headerlink" href="#debugging-python-regular-expressions" title="Permalink to this headline">¶</a></h1>
@@ -171,18 +214,18 @@ job exists</li>
 <h2>Raw strings<a class="headerlink" href="#raw-strings" title="Permalink to this headline">¶</a></h2>
 <p>In Rob&#8217;s code he had failed to take in to account the backslash escaping
 problem.  A simplified example of what he was trying to do would be:</p>
-<div class="highlight-pycon"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">re</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">re</span><span class="o">.</span><span class="n">findall</span><span class="p">(</span><span class="s">&#39; ([0-9]+</span><span class="se">\\</span><span class="s">[a-z]+) &#39;</span><span class="p">,</span> <span class="s">&#39;make 123\match &#39;</span><span class="p">)</span>
+<div class="highlight-pycon"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">re</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">re</span><span class="o">.</span><span class="n">findall</span><span class="p">(</span><span class="s1">&#39; ([0-9]+</span><span class="se">\\</span><span class="s1">[a-z]+) &#39;</span><span class="p">,</span> <span class="s1">&#39;make 123\match &#39;</span><span class="p">)</span>
 <span class="go">[]</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="c"># Whereas with raw strings this match will work</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">re</span><span class="o">.</span><span class="n">findall</span><span class="p">(</span><span class="s">r&#39; ([0-9]+</span><span class="se">\\</span><span class="s">[a-z]+) &#39;</span><span class="p">,</span> <span class="s">&#39;make 123\match &#39;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="c1"># Whereas with raw strings this match will work</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">re</span><span class="o">.</span><span class="n">findall</span><span class="p">(</span><span class="s1">r&#39; ([0-9]+</span><span class="se">\\</span><span class="s1">[a-z]+) &#39;</span><span class="p">,</span> <span class="s1">&#39;make 123\match &#39;</span><span class="p">)</span>
 <span class="go">[&#39;123\\match&#39;]</span>
 </pre></div>
 </div>
 <p><a class="reference external" href="http://gist.github.com/198015">Fork this code</a></p>
-<p>Without the raw string, specified by the preceding <tt class="docutils literal"><span class="pre">r</span></tt> in our pattern, the
-<abbr title="Regular Expression">RE</abbr> parser is actually looking for a literal <tt class="docutils literal"><span class="pre">[</span></tt>
-where we&#8217;ve intended to use the <tt class="docutils literal"><span class="pre">[</span></tt> as the start of a character set.</p>
+<p>Without the raw string, specified by the preceding <code class="docutils literal"><span class="pre">r</span></code> in our pattern, the
+<abbr title="Regular Expression">RE</abbr> parser is actually looking for a literal <code class="docutils literal"><span class="pre">[</span></code>
+where we&#8217;ve intended to use the <code class="docutils literal"><span class="pre">[</span></code> as the start of a character set.</p>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
 <p class="last">There is another important point here too as the example above uses character
@@ -193,10 +236,10 @@ Unicode aware by specifying the <a class="reference external" href="http://docs.
 </div>
 <p>These types of string escaping problems are common, and as your <abbr title="Regular Expression">RE</abbr> becomes more complex their likelihood increases greatly.
 Python, as is often the case, has the answer and it comes in the shape of the
-<tt class="docutils literal"><span class="pre">re.DEBUG</span></tt> flag which unfortunately appears to not be documented.  The
-<tt class="docutils literal"><span class="pre">re.DEBUG</span></tt> flag displays a parse tree allowing you to easily inspect the
+<code class="docutils literal"><span class="pre">re.DEBUG</span></code> flag which unfortunately appears to not be documented.  The
+<code class="docutils literal"><span class="pre">re.DEBUG</span></code> flag displays a parse tree allowing you to easily inspect the
 <abbr title="Regular Expression">RE</abbr> you have constructed:</p>
-<div class="highlight-pycon"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">re</span><span class="o">.</span><span class="n">findall</span><span class="p">(</span><span class="s">&#39; ([0-9]+</span><span class="se">\\</span><span class="s">[a-z]+) &#39;</span><span class="p">,</span> <span class="s">&#39;make 123\match &#39;</span><span class="p">,</span> <span class="n">re</span><span class="o">.</span><span class="n">DEBUG</span><span class="p">)</span>
+<div class="highlight-pycon"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">re</span><span class="o">.</span><span class="n">findall</span><span class="p">(</span><span class="s1">&#39; ([0-9]+</span><span class="se">\\</span><span class="s1">[a-z]+) &#39;</span><span class="p">,</span> <span class="s1">&#39;make 123\match &#39;</span><span class="p">,</span> <span class="n">re</span><span class="o">.</span><span class="n">DEBUG</span><span class="p">)</span>
 <span class="go">literal 32</span>
 <span class="go">subpattern 1</span>
 <span class="go">max_repeat 1 65535</span>
@@ -213,14 +256,14 @@ Python, as is often the case, has the answer and it comes in the shape of the
 </pre></div>
 </div>
 <p><a class="reference external" href="http://gist.github.com/223892">Fork this code</a></p>
-<p>Here we can see that our expression matches <tt class="docutils literal"><span class="pre">range</span> <span class="pre">(48,</span> <span class="pre">57)</span></tt>, 48 and 57 being
-the <a class="reference external" href="http://docs.python.org/library/functions.html">ordinal</a> for <tt class="docutils literal"><span class="pre">0</span></tt> and <tt class="docutils literal"><span class="pre">9</span></tt> respectively.  Following that we see a match
-for <tt class="docutils literal"><span class="pre">literal</span> <span class="pre">91</span></tt>, <tt class="docutils literal"><span class="pre">chr(91)</span></tt> shows us that the character we are matching is
-a <tt class="docutils literal"><span class="pre">[</span></tt>.  With this information it is easy to see where the problem is.</p>
+<p>Here we can see that our expression matches <code class="docutils literal"><span class="pre">range</span> <span class="pre">(48,</span> <span class="pre">57)</span></code>, 48 and 57 being
+the <a class="reference external" href="http://docs.python.org/library/functions.html">ordinal</a> for <code class="docutils literal"><span class="pre">0</span></code> and <code class="docutils literal"><span class="pre">9</span></code> respectively.  Following that we see a match
+for <code class="docutils literal"><span class="pre">literal</span> <span class="pre">91</span></code>, <code class="docutils literal"><span class="pre">chr(91)</span></code> shows us that the character we are matching is
+a <code class="docutils literal"><span class="pre">[</span></code>.  With this information it is easy to see where the problem is.</p>
 <p>If you need to use more than one flag, such as often useful <a class="reference external" href="http://docs.python.org/library/re.html#re.X">VERBOSE</a> flag, you
-can combine them with <tt class="docutils literal"><span class="pre">|</span></tt> (bitwise OR) as the flags are just named
-constants(<tt class="docutils literal"><span class="pre">DEBUG</span></tt> is 128 for example).</p>
-<div class="highlight-pycon"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">re</span><span class="o">.</span><span class="n">findall</span><span class="p">(</span><span class="s">r&#39; (\d+</span><span class="se">\\</span><span class="s">\w+) &#39;</span><span class="p">,</span> <span class="s">&#39;make 123\match &#39;</span><span class="p">,</span> <span class="n">re</span><span class="o">.</span><span class="n">DEBUG</span><span class="o">|</span><span class="n">re</span><span class="o">.</span><span class="n">LOCALE</span><span class="p">)</span>
+can combine them with <code class="docutils literal"><span class="pre">|</span></code> (bitwise OR) as the flags are just named
+constants(<code class="docutils literal"><span class="pre">DEBUG</span></code> is 128 for example).</p>
+<div class="highlight-pycon"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">re</span><span class="o">.</span><span class="n">findall</span><span class="p">(</span><span class="s1">r&#39; (\d+</span><span class="se">\\</span><span class="s1">\w+) &#39;</span><span class="p">,</span> <span class="s1">&#39;make 123\match &#39;</span><span class="p">,</span> <span class="n">re</span><span class="o">.</span><span class="n">DEBUG</span><span class="o">|</span><span class="n">re</span><span class="o">.</span><span class="n">LOCALE</span><span class="p">)</span>
 <span class="go">literal 32</span>
 <span class="go">subpattern 1</span>
 <span class="go">max_repeat 1 65535</span>
@@ -243,33 +286,40 @@ many tasks for far too many people(myself included).  There are often much
 better choices, some of which are very domain specific and some quite general.</p>
 <p>For any moderately complex parsing job <a class="reference external" href="http://pyparsing.wikispaces.com/">pyparsing</a> is a great choice.  The syntax
 is quite readable and the parser is very fast.  Just make sure you ignore any
-examples telling you to use <tt class="docutils literal"><span class="pre">from</span> <span class="pre">pyparsing</span> <span class="pre">import</span> <span class="pre">*</span></tt> as you&#8217;ll evoke great
+examples telling you to use <code class="docutils literal"><span class="pre">from</span> <span class="pre">pyparsing</span> <span class="pre">import</span> <span class="pre">*</span></code> as you&#8217;ll evoke great
 rage in every person who reads your code.</p>
-<p>While <tt class="docutils literal"><span class="pre">pyparsing</span></tt> is a good general parsing tool it would be overkill for the
+<p>While <code class="docutils literal"><span class="pre">pyparsing</span></code> is a good general parsing tool it would be overkill for the
 task at hand, but it doesn&#8217;t hurt to show a simple example of constructing
 a parser:</p>
-<div class="highlight-pycon"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">pyparsing</span> <span class="kn">import</span> <span class="p">(</span><span class="n">Literal</span><span class="p">,</span> <span class="n">White</span><span class="p">,</span> <span class="n">Word</span><span class="p">,</span> <span class="n">alphas</span><span class="p">,</span> <span class="n">nums</span><span class="p">)</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">matcher</span> <span class="o">=</span> <span class="n">Word</span><span class="p">(</span><span class="n">alphas</span><span class="p">)</span> <span class="o">+</span> <span class="n">Word</span><span class="p">(</span><span class="n">nums</span><span class="p">)</span> <span class="o">+</span> <span class="n">Literal</span><span class="p">(</span><span class="s">&#39;</span><span class="se">\\</span><span class="s">&#39;</span><span class="p">)</span> <span class="o">+</span> <span class="n">Word</span><span class="p">(</span><span class="n">alphas</span><span class="p">)</span> <span class="o">+</span> <span class="n">White</span><span class="p">()</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">matcher</span><span class="o">.</span><span class="n">parseString</span><span class="p">(</span><span class="s">&#39;make 123</span><span class="se">\\</span><span class="s">match &#39;</span><span class="p">)</span>
+<div class="highlight-pycon"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">pyparsing</span> <span class="kn">import</span> <span class="p">(</span><span class="n">Literal</span><span class="p">,</span> <span class="n">White</span><span class="p">,</span> <span class="n">Word</span><span class="p">,</span> <span class="n">alphas</span><span class="p">,</span> <span class="n">nums</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">matcher</span> <span class="o">=</span> <span class="n">Word</span><span class="p">(</span><span class="n">alphas</span><span class="p">)</span> <span class="o">+</span> <span class="n">Word</span><span class="p">(</span><span class="n">nums</span><span class="p">)</span> <span class="o">+</span> <span class="n">Literal</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\\</span><span class="s1">&#39;</span><span class="p">)</span> <span class="o">+</span> <span class="n">Word</span><span class="p">(</span><span class="n">alphas</span><span class="p">)</span> <span class="o">+</span> <span class="n">White</span><span class="p">()</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">matcher</span><span class="o">.</span><span class="n">parseString</span><span class="p">(</span><span class="s1">&#39;make 123</span><span class="se">\\</span><span class="s1">match &#39;</span><span class="p">)</span>
 <span class="go">([&#39;make&#39;, &#39;123&#39;, &#39;\\&#39;, &#39;match&#39;, &#39; &#39;], {})</span>
 </pre></div>
 </div>
 <p><a class="reference external" href="http://gist.github.com/223894">Fork this code</a></p>
 <p>Another exceptional tool for tasks that people often abuse <abbr title="Regular Expressions">RE</abbr> for is <a class="reference external" href="http://labix.org/python-dateutil">python-dateutil</a>.  One of the reasons I occasionally turn
 to this module is that Python&#8217;s <a class="reference external" href="http://docs.python.org/library/time.html#time.strptime">time.strptime</a> isn&#8217;t even capable of parsing
-timestamps created by <a class="reference external" href="http://docs.python.org/library/time.html#time.strftime">time.strftime</a>, for example if you use <tt class="docutils literal"><span class="pre">%z</span></tt> in the
-<tt class="docutils literal"><span class="pre">strftime</span></tt> call.</p>
+timestamps created by <a class="reference external" href="http://docs.python.org/library/time.html#time.strftime">time.strftime</a>, for example if you use <code class="docutils literal"><span class="pre">%z</span></code> in the
+<code class="docutils literal"><span class="pre">strftime</span></code> call.</p>
 <p>All too often you see people trying to solve date parsing problems with
 <abbr title="Regular Expressions">RE</abbr> and heaps of <a class="reference external" href="http://docs.python.org/library/functions.html#int">int</a> calls to mangle the matches.
 Not only is this a very brittle approach, but the <a class="reference external" href="http://labix.org/">labix</a> guys have solved this
 problem for you already:</p>
-<div class="highlight-pycon"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">dateutil</span> <span class="kn">import</span> <span class="n">parser</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">s</span> <span class="o">=</span> <span class="s">&#39;2009 10 30 23:35:16+0400&#39;</span>
+<div class="highlight-pycon"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">dateutil</span> <span class="kn">import</span> <span class="n">parser</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">s</span> <span class="o">=</span> <span class="s1">&#39;2009 10 30 23:35:16+0400&#39;</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">parser</span><span class="o">.</span><span class="n">parse</span><span class="p">(</span><span class="n">s</span><span class="p">)</span>
 <span class="go">datetime.datetime(2009, 10, 30, 23, 35, 16, tzinfo=tzoffset(None, 14400))</span>
 </pre></div>
 </div>
 <p><a class="reference external" href="http://gist.github.com/223895">Fork this code</a></p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">If you use <a class="reference external" href="http://labix.org/python-dateutil">python-dateutil</a> do be aware that by default it will prefer US
+mid-endian date formats when guessing for some patterns.  Either create your
+own <code class="docutils literal"><span class="pre">parserinfo</span></code> object and set <code class="docutils literal"><span class="pre">dayfirst</span></code> to <code class="docutils literal"><span class="pre">True</span></code>, or use something
+stricter.</p>
+</div>
 <p>In closing before you start parsing any text &#8211; regardless of how simple it is
 &#8211; you should thumb through the <a class="reference external" href="http://docs.python.org/library/">standard library</a> and perform a search on
 <a class="reference external" href="http://pypi.python.org/pypi">pypi</a>.  Often, the work has already been done for you and may well be much
@@ -279,15 +329,16 @@ a <abbr title="Regular Expression">RE</abbr>.</p>
 </div>
 
 
+           </div>
           </div>
           <footer>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="Disabling_cursor_blinking_in_GTK.html" class="btn btn-neutral float-right" title="Disabling cursor blinking in GTK+"/>Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="Disabling_cursor_blinking_in_GTK.html" class="btn btn-neutral float-right" title="Disabling cursor blinking in GTK+" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="Custom_locations_in_the_GTK_filechooser.html" class="btn btn-neutral" title="Custom keybindings in the GTK+ file dialogs"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="Custom_locations_in_the_GTK_filechooser.html" class="btn btn-neutral" title="Custom keybindings in the GTK+ file dialogs" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -296,12 +347,14 @@ a <abbr title="Regular Expression">RE</abbr>.</p>
 
   <div role="contentinfo">
     <p>
-        &copy; <a href="../../copyright.html">Copyright</a> 2009-2014, James Rowe.
+        &copy; <a href="../../copyright.html">Copyright</a> 2009-2015, James Rowe.
+
     </p>
   </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
 
-  <a href="https://github.com/snide/sphinx_rtd_theme">Sphinx theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>
 </footer>
+
         </div>
       </div>
 

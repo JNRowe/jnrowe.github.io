@@ -5,6 +5,7 @@
 <!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
 <head>
   <meta charset="utf-8">
+  
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
   <title>TDD distro development &mdash; JNRowe</title>
@@ -16,7 +17,6 @@
   
 
   
-  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
 
   
   
@@ -30,6 +30,8 @@
   
 
   
+
+  
         <link rel="copyright" title="Copyright" href="../copyright.html"/>
     <link rel="top" title="JNRowe" href="../index.html"/>
         <link rel="up" title="Articles" href="index.html"/>
@@ -38,7 +40,7 @@
     <link rel="alternate" type="application/atom+xml" title="Updated items" href="/updates.atom" />
 
   
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script>
+  <script src="../_static/js/modernizr.min.js"></script>
 
 </head>
 
@@ -48,61 +50,71 @@
 
     
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
-      <div class="wy-side-nav-search">
-        <a href="../index.html" class="fa fa-home"> JNRowe</a>
-        <div role="search">
-  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> JNRowe
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.1
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
     <input type="text" name="q" placeholder="Search docs" />
     <input type="hidden" name="check_keywords" value="yes" />
     <input type="hidden" name="area" value="default" />
   </form>
 </div>
-      </div>
 
-      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
-        
-        
-            <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="../projects.html">Projects</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../projects.html#forks-i-m-hacking-on">Forks I&#8217;m hacking on</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../projects.html#git-mirrors-of-projects-i-m-hacking-on">Git mirrors of projects I&#8217;m hacking on</a></li>
-</ul>
-</li>
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <p class="caption"><span class="caption-text">Contents</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../projects.html">Projects</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="index.html">Articles</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="dropping_gentoo.html">Dropping Gentoo</a></li>
 <li class="toctree-l2"><a class="reference internal" href="dropping_gentoo_reflex.html">Dropping Gentoo reflex</a></li>
-<li class="toctree-l2"><a class="reference internal" href="fossil.html"><tt class="docutils literal"><span class="pre">fossil</span></tt> experiments</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fossil.html"><code class="docutils literal"><span class="pre">fossil</span></code> experiments</a></li>
 <li class="toctree-l2"><a class="reference internal" href="rcs.html">Introduction to RCS</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="">TDD distro development</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="">TDD distro development</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#why">Why?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#how">How?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#result">Result?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#bonus">Bonus</a></li>
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="index.html#further-categories">Further categories</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../thoughts/index.html">Thoughts</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../thoughts/burn_out.html">Open Source and enjoyment</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../thoughts/burn_out.html#the-solutions">The solutions</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../thoughts/delayed_flashover.html">Delayed flashover</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../thoughts/disconnect.html">Cleanse thy soul</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../thoughts/dopplr_effects.html">Dopplr defects</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../thoughts/important_balance.html">Murdering morality with ferocious fire</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../thoughts/nice_stories.html">Tell me a nice story, please</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../thoughts/reset_in_ten.html">Hitting life&#8217;s reset button</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../thoughts/side_projects.html">Side-projects</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../thoughts/the_returned.html">Return to rambling</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="../colophon.html">Colophon</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../colophon.html#content-creation">Content creation</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../colophon.html#and-finally">And finally...</a></li>
-</ul>
-</li>
+<li class="toctree-l1"><a class="reference internal" href="../thoughts/index.html">Thoughts</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../colophon.html">Colophon</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../contact.html">Contact details</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../consult.html">Consulting services</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../copyright.html">Copyright information</a></li>
 </ul>
 
-        
+            
+          
+        </div>
       </div>
-      &nbsp;
     </nav>
 
     <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
@@ -117,7 +129,13 @@
       
       <div class="wy-nav-content">
         <div class="rst-content">
-          <div role="navigation" aria-label="breadcrumbs navigation">
+          
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
   <ul class="wy-breadcrumbs">
     <li><a href="../index.html">Docs</a> &raquo;</li>
       
@@ -126,21 +144,16 @@
     <li>TDD distro development</li>
       <li class="wy-breadcrumbs-aside">
         
-          <a href="../_sources/articles/tdd_distros.txt" rel="nofollow"> View page source</a>
+          
+            <a href="../_sources/articles/tdd_distros.txt" rel="nofollow"> View page source</a>
+          
         
       </li>
   </ul>
   <hr/>
 </div>
-          <div role="main">
-            
-    <div class="admonition note">
-        <p class="first admonition-title">
-            Estimated reading time: 1 minutes
-        </p>
-    </div>
-    
-    
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
             
   <div class="section" id="tdd-distro-development">
 <h1>TDD distro development<a class="headerlink" href="#tdd-distro-development" title="Permalink to this headline">¶</a></h1>
@@ -174,10 +187,10 @@ the desktops we develop on and the laptops we play on.  The methods we use vary
 greatly, so I&#8217;m going to present the simple case of testing console applications
 only.  It is the practise that is important, not the process.</p>
 <p>The easiest method we use is via <a class="reference external" href="http://pypi.python.org/pypi/shelldoctest/">shelldoctest</a>, a module that implements a
-<a class="reference external" href="http://docs.python.org/library/doctest.html#module-doctest" title="(in Python v2.7)"><tt class="xref py py-mod docutils literal"><span class="pre">doctest</span></tt></a> interface for testing shell commands.  The package provides a
+<a class="reference external" href="http://docs.python.org/library/doctest.html#module-doctest" title="(in Python v2.7)"><code class="xref py py-mod docutils literal"><span class="pre">doctest</span></code></a> interface for testing shell commands.  The package provides a
 user-level script for running shell sessions in Python docstrings.  A simple
 example could be:</p>
-<div class="highlight-python"><div class="highlight"><pre><span class="sd">&quot;&quot;&quot;</span>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">$ echo test</span>
 <span class="sd">test</span>
 <span class="sd">$ echo fail</span>
@@ -185,9 +198,9 @@ example could be:</p>
 <span class="sd">&quot;&quot;&quot;</span>
 </pre></div>
 </div>
-<p>Running the previous file with <tt class="docutils literal"><span class="pre">shell-doctest</span> <span class="pre">test</span> <span class="pre">testdoc.py</span></tt> produces the
+<p>Running the previous file with <code class="docutils literal"><span class="pre">shell-doctest</span> <span class="pre">test</span> <span class="pre">testdoc.py</span></code> produces the
 following output:</p>
-<div class="highlight-pycon"><div class="highlight"><pre><span class="go">**********************************************************************</span>
+<div class="highlight-pycon"><div class="highlight"><pre><span></span><span class="go">**********************************************************************</span>
 <span class="go">File &quot;testdoc.py&quot;, line 4, in testdoc</span>
 <span class="go">Failed example:</span>
 <span class="go">    echo fail</span>
@@ -209,21 +222,21 @@ bump breaks functionality we require.</p>
 doesn&#8217;t come up again.  A good example can be gleaned from a bug that was fixed
 in our <a class="reference external" href="http://www.vim.org/scripts/script.php?script_id=1567">rails</a> vim package.  Given the way the <a class="reference external" href="http://www.vim.org/scripts/script.php?script_id=1567">vim scripts site</a> is organised
 the files you want to download have awful download locations, so our ebuild for
-the <tt class="docutils literal"><span class="pre">rails</span></tt> plugin contains the following snippet:</p>
-<div class="highlight-bash"><div class="highlight"><pre><span class="nv">DESCRIPTION</span><span class="o">=</span><span class="s2">&quot;vim plugin: RoR - easy file navigation, enhanced syntax highlighting&quot;</span>
+the <code class="docutils literal"><span class="pre">rails</span></code> plugin contains the following snippet:</p>
+<div class="highlight-bash"><div class="highlight"><pre><span></span><span class="nv">DESCRIPTION</span><span class="o">=</span><span class="s2">&quot;vim plugin: RoR - easy file navigation, enhanced syntax highlighting&quot;</span>
 <span class="nv">HOMEPAGE</span><span class="o">=</span><span class="s2">&quot;http://www.vim.org/scripts/script.php?script_id=1567&quot;</span>
-<span class="nv">SRC_URI</span><span class="o">=</span><span class="s2">&quot;http://www.vim.org/scripts/download_script.php?src_id=13800 -&gt; ${P}.zip&quot;</span>
+<span class="nv">SRC_URI</span><span class="o">=</span><span class="s2">&quot;http://www.vim.org/scripts/download_script.php?src_id=13800 -&gt; </span><span class="si">${</span><span class="nv">P</span><span class="si">}</span><span class="s2">.zip&quot;</span>
 </pre></div>
 </div>
-<p>The <tt class="docutils literal"><span class="pre">SRC_URI</span></tt> declaration says we need to fetch the file from
-<tt class="docutils literal"><span class="pre">http://www.vim.org/scripts/download_script.php?src_id=13800</span></tt> and name it
-locally as <tt class="docutils literal"><span class="pre">rails-4.3.zip</span></tt>.  I&#8217;m sure you can guess what happened here,
+<p>The <code class="docutils literal"><span class="pre">SRC_URI</span></code> declaration says we need to fetch the file from
+<code class="docutils literal"><span class="pre">http://www.vim.org/scripts/download_script.php?src_id=13800</span></code> and name it
+locally as <code class="docutils literal"><span class="pre">rails-4.3.zip</span></code>.  I&#8217;m sure you can guess what happened here,
 someone saved a copy of the file locally for testing and forgot to update the
-<tt class="docutils literal"><span class="pre">src_id</span></tt> parameter correctly <a class="footnote-reference" href="#id2" id="id1">[1]</a>.  The result was an apparently new build
+<code class="docutils literal"><span class="pre">src_id</span></code> parameter correctly <a class="footnote-reference" href="#id2" id="id1">[1]</a>.  The result was an apparently new build
 that installed an older package release.</p>
 <p>When a fix for this bug was committed a test similar to the following snippet
-was added to the <tt class="docutils literal"><span class="pre">rails</span></tt> test suite:</p>
-<div class="highlight-python"><div class="highlight"><pre><span class="sd">&quot;&quot;&quot;</span>
+was added to the <code class="docutils literal"><span class="pre">rails</span></code> test suite:</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">$ grep -l &quot;autoloaded_rails = &#39;${PV}&#39;&quot; /usr/share/vim/vimfiles/autoload/rails.vim</span>
 <span class="sd">/usr/share/vim/vimfiles/autoload/rails.vim</span>
 <span class="sd">&quot;&quot;&quot;</span>
@@ -235,7 +248,7 @@ test and this is especially true for the simplest task.</p>
 <p>I use a similar technique for managing my public Gentoo overlay, <a class="reference external" href="https://github.com/JNRowe/jnrowe-misc">jnrowe-misc</a>.
 For example, the <a class="reference external" href="http://pypi.python.org/pypi/blockdiag/">blockdiag</a> ebuild is accompanied by a series of tests that are
 run when bumping or stabilising the package, all of which are cribbed from my
-actual <tt class="docutils literal"><span class="pre">blockdiag</span></tt> usage.  This massively reduces the time required to
+actual <code class="docutils literal"><span class="pre">blockdiag</span></code> usage.  This massively reduces the time required to
 evaluate a package at bump time.</p>
 </div>
 <div class="section" id="result">
@@ -256,32 +269,32 @@ licensing concerns.</p>
 </div>
 <div class="section" id="bonus">
 <h2>Bonus<a class="headerlink" href="#bonus" title="Permalink to this headline">¶</a></h2>
-<p>I&#8217;ve used the upstream supported <tt class="docutils literal"><span class="pre">shelldoctest</span></tt> method for writing tests on
+<p>I&#8217;ve used the upstream supported <code class="docutils literal"><span class="pre">shelldoctest</span></code> method for writing tests on
 this page, but you can also easily specify them in <a class="reference external" href="http://docutils.sourceforge.net/docs/user/rst/">reST syntax</a> files too.
 Doing this encourages you to write nicely formatted documentation to accompany
 your tests.  You can also leverage your tests that are written in this way as
 documentation using the excellent <a class="reference external" href="http://sphinx-doc.org/">Sphinx</a> tool.</p>
 <p>The following script shows an extremely basic, yet fully functional, example of
-how to combine the <tt class="docutils literal"><span class="pre">doctest</span></tt> module&#8217;s <a class="reference external" href="http://docs.python.org/library/doctest.html#doctest.testfile" title="(in Python v2.7)"><tt class="xref py py-func docutils literal"><span class="pre">testfile()</span></tt></a> function with
-<tt class="docutils literal"><span class="pre">shelldoctest</span></tt>:</p>
-<div class="highlight-python"><div class="highlight"><pre><span class="c">#! /usr/bin/python -tt</span>
+how to combine the <code class="docutils literal"><span class="pre">doctest</span></code> module&#8217;s <a class="reference external" href="http://docs.python.org/library/doctest.html#doctest.testfile" title="(in Python v2.7)"><code class="xref py py-func docutils literal"><span class="pre">testfile()</span></code></a> function with
+<code class="docutils literal"><span class="pre">shelldoctest</span></code>:</p>
+<div class="highlight-python"><div class="highlight"><pre><span></span><span class="ch">#! /usr/bin/python -tt</span>
 <span class="kn">import</span> <span class="nn">doctest</span>
 <span class="kn">import</span> <span class="nn">sys</span>
 
 <span class="kn">import</span> <span class="nn">shelldoctest</span> <span class="kn">as</span> <span class="nn">sd</span>
 
 <span class="n">sys</span><span class="o">.</span><span class="n">exit</span><span class="p">(</span><span class="n">doctest</span><span class="o">.</span><span class="n">testfile</span><span class="p">(</span><span class="n">sys</span><span class="o">.</span><span class="n">argv</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">module_relative</span><span class="o">=</span><span class="bp">False</span><span class="p">,</span>
-                          <span class="n">extraglobs</span><span class="o">=</span><span class="p">{</span><span class="s">&quot;system_command&quot;</span><span class="p">:</span> <span class="n">sd</span><span class="o">.</span><span class="n">system_command</span><span class="p">},</span>
+                          <span class="n">extraglobs</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;system_command&quot;</span><span class="p">:</span> <span class="n">sd</span><span class="o">.</span><span class="n">system_command</span><span class="p">},</span>
                           <span class="n">parser</span><span class="o">=</span><span class="n">sd</span><span class="o">.</span><span class="n">ShellDocTestParser</span><span class="p">())[</span><span class="mi">0</span><span class="p">])</span>
 </pre></div>
 </div>
 <p>This script parses the first argument on the command line when it is run and
-executes any <tt class="docutils literal"><span class="pre">shelldoctest</span></tt> blocks it finds.  It returns the count of failed
-tests as its exit code, helpfully allowing you to execute a command with <tt class="docutils literal"><span class="pre">&amp;&amp;</span></tt>
+executes any <code class="docutils literal"><span class="pre">shelldoctest</span></code> blocks it finds.  It returns the count of failed
+tests as its exit code, helpfully allowing you to execute a command with <code class="docutils literal"><span class="pre">&amp;&amp;</span></code>
 if all the tests pass.</p>
-<p>We operate this way at AST, the above <tt class="docutils literal"><span class="pre">rails</span></tt> test would actually be part of
-a <tt class="docutils literal"><span class="pre">reST</span></tt> formatted file as follows:</p>
-<div class="highlight-rst"><div class="highlight"><pre>Fix bug #xx, incorrect archive file<span class="se">::</span>
+<p>We operate this way at AST, the above <code class="docutils literal"><span class="pre">rails</span></code> test would actually be part of
+a <code class="docutils literal"><span class="pre">reST</span></code> formatted file as follows:</p>
+<div class="highlight-rst"><div class="highlight"><pre><span></span>Fix bug #xx, incorrect archive file<span class="se">::</span>
 
 <span class="s">    $ grep -l &quot;autoloaded_rails = &#39;${PV}&#39;&quot; /usr/share/vim/vimfiles/autoload/rails.vim</span>
 <span class="s">    /usr/share/vim/vimfiles/autoload/rails.vim</span>
@@ -297,15 +310,16 @@ a <tt class="docutils literal"><span class="pre">reST</span></tt> formatted file
 </div>
 
 
+           </div>
           </div>
           <footer>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="tips/index.html" class="btn btn-neutral float-right" title="Tips"/>Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="tips/index.html" class="btn btn-neutral float-right" title="Tips" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="rcs.html" class="btn btn-neutral" title="Introduction to RCS"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="rcs.html" class="btn btn-neutral" title="Introduction to RCS" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -314,12 +328,14 @@ a <tt class="docutils literal"><span class="pre">reST</span></tt> formatted file
 
   <div role="contentinfo">
     <p>
-        &copy; <a href="../copyright.html">Copyright</a> 2009-2014, James Rowe.
+        &copy; <a href="../copyright.html">Copyright</a> 2009-2015, James Rowe.
+
     </p>
   </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
 
-  <a href="https://github.com/snide/sphinx_rtd_theme">Sphinx theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>
 </footer>
+
         </div>
       </div>
 

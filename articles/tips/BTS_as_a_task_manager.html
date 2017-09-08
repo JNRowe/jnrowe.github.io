@@ -5,6 +5,7 @@
 <!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
 <head>
   <meta charset="utf-8">
+  
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
   <title>BTS as a task manager &mdash; JNRowe</title>
@@ -16,7 +17,6 @@
   
 
   
-  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
 
   
   
@@ -30,6 +30,8 @@
   
 
   
+
+  
         <link rel="copyright" title="Copyright" href="../../copyright.html"/>
     <link rel="top" title="JNRowe" href="../../index.html"/>
         <link rel="up" title="Tips" href="index.html"/>
@@ -38,7 +40,7 @@
     <link rel="alternate" type="application/atom+xml" title="Updated items" href="/updates.atom" />
 
   
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script>
+  <script src="../../_static/js/modernizr.min.js"></script>
 
 </head>
 
@@ -48,61 +50,101 @@
 
     
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
-      <div class="wy-side-nav-search">
-        <a href="../../index.html" class="fa fa-home"> JNRowe</a>
-        <div role="search">
-  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> JNRowe
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.1
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
     <input type="text" name="q" placeholder="Search docs" />
     <input type="hidden" name="check_keywords" value="yes" />
     <input type="hidden" name="area" value="default" />
   </form>
 </div>
-      </div>
 
-      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
-        
-        
-            <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="../../projects.html">Projects</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../../projects.html#forks-i-m-hacking-on">Forks I&#8217;m hacking on</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../projects.html#git-mirrors-of-projects-i-m-hacking-on">Git mirrors of projects I&#8217;m hacking on</a></li>
-</ul>
-</li>
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <p class="caption"><span class="caption-text">Contents</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../projects.html">Projects</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="../index.html">Articles</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="../dropping_gentoo.html">Dropping Gentoo</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../dropping_gentoo_reflex.html">Dropping Gentoo reflex</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../fossil.html"><tt class="docutils literal"><span class="pre">fossil</span></tt> experiments</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../fossil.html"><code class="docutils literal"><span class="pre">fossil</span></code> experiments</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../rcs.html">Introduction to RCS</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../tdd_distros.html">TDD distro development</a></li>
-<li class="toctree-l2 current"><a class="reference internal" href="../index.html#further-categories">Further categories</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../index.html#further-categories">Further categories</a><ul class="current">
+<li class="toctree-l3 current"><a class="reference internal" href="index.html">Tips</a><ul class="current">
+<li class="toctree-l4 current"><a class="current reference internal" href=""><abbr title="Bug Tracking System">BTS</abbr> as a task manager</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Beyond_tab_completion.html">Beyond simple tab completion</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Bugzilla_real_names.html">Bugzilla mail with real names</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Compiling_in_vim.html">Compiling C source in vim</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Context_aware_diffs_with_git.html">Context aware diffs with git</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Custom_locations_in_the_GTK_filechooser.html">Custom keybindings in the GTK+ file dialogs</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Debugging_python_regexps.html">Debugging Python regular expressions</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Disabling_cursor_blinking_in_GTK.html">Disabling cursor blinking in GTK+</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Fancy_awesome_theming.html">Fancy awesome theming</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Finding_a_windows_owner.html">Finding a window&#8217;s owner</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Formatting_csv_files_in_the_shell.html">Formatting <abbr title="Comma Separated Values">CSV</abbr> files in the shell</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Gentoo_one_liners.html">Gentoo one liners</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Importing_gmail_filters_in_mutt.html">Importing gmail filters in mutt</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Instant_web_server.html">Instant web server</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Kick_me_birthday_reminders.html">&#8216;Kick me&#8217; birthday reminders</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Making_a_nice_home.html">Making a nice home</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Making_a_nice_home.html#permissions">Permissions</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Making_a_nice_home.html#vim-hacks">vim hacks</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Making_a_nice_home.html#documentation">Documentation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Populating_sup_contacts_from_abook.html">Populating sup contacts from abook</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Sharing_Xresources_between_systems.html">Sharing Xresources between systems</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Simple_notifications_in_awesome.html">Simple notifications in awesome</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Simple_notifications_in_awesome.html#window-creation-notifications">Window creation notifications</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Simple_notifications_in_awesome.html#network-notifications">Network notifications</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Theming_mutt.html">Theming mutt</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Three_mobile_broadband_in_linux.html">Three mobile broadband in Linux</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Toggling_settings_in_vim.html">Toggling settings in vim</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Uber_pink_prompts.html">Uber pink prompts</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Visual_vim_mode_identifier.html">Visual vim mode identifier</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Zsh_and_the_vcs.html">Zsh and the VCS</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../../thoughts/index.html">Thoughts</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../../thoughts/burn_out.html">Open Source and enjoyment</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../thoughts/burn_out.html#the-solutions">The solutions</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../thoughts/delayed_flashover.html">Delayed flashover</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../thoughts/disconnect.html">Cleanse thy soul</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../thoughts/dopplr_effects.html">Dopplr defects</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../thoughts/important_balance.html">Murdering morality with ferocious fire</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../thoughts/nice_stories.html">Tell me a nice story, please</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../thoughts/reset_in_ten.html">Hitting life&#8217;s reset button</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../thoughts/side_projects.html">Side-projects</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../thoughts/the_returned.html">Return to rambling</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../probits/index.html">Project postmortems</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../../colophon.html">Colophon</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../../colophon.html#content-creation">Content creation</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../colophon.html#and-finally">And finally...</a></li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="../../thoughts/index.html">Thoughts</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../colophon.html">Colophon</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../contact.html">Contact details</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../consult.html">Consulting services</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../copyright.html">Copyright information</a></li>
 </ul>
 
-        
+            
+          
+        </div>
       </div>
-      &nbsp;
     </nav>
 
     <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
@@ -117,7 +159,13 @@
       
       <div class="wy-nav-content">
         <div class="rst-content">
-          <div role="navigation" aria-label="breadcrumbs navigation">
+          
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
   <ul class="wy-breadcrumbs">
     <li><a href="../../index.html">Docs</a> &raquo;</li>
       
@@ -128,21 +176,16 @@
     <li><abbr title="Bug Tracking System">BTS</abbr> as a task manager</li>
       <li class="wy-breadcrumbs-aside">
         
-          <a href="../../_sources/articles/tips/BTS_as_a_task_manager.txt" rel="nofollow"> View page source</a>
+          
+            <a href="../../_sources/articles/tips/BTS_as_a_task_manager.txt" rel="nofollow"> View page source</a>
+          
         
       </li>
   </ul>
   <hr/>
 </div>
-          <div role="main">
-            
-    <div class="admonition note">
-        <p class="first admonition-title">
-            Estimated reading time: 1 minutes
-        </p>
-    </div>
-    
-    
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
             
   <div class="section" id="bts-as-a-task-manager">
 <h1><abbr title="Bug Tracking System">BTS</abbr> as a task manager<a class="headerlink" href="#bts-as-a-task-manager" title="Permalink to this headline">¶</a></h1>
@@ -165,39 +208,39 @@ ordering and editing capabilities I get from using a <abbr title="Bug Tracking S
 <a class="reference external" href="http://www.bugzilla.org">Bugzilla</a> just for keeping track of your shopping lists or remembering to charge
 the spare battery for your phone.  There are quite a few lightweight systems
 available, <a class="reference external" href="http://ditz.rubyforge.org">ditz</a> and <a class="reference external" href="http://bugseverywhere.org/be/show/HomePage">Bugs Everywhere</a> being two examples.  There is also
-a <tt class="docutils literal"><span class="pre">ditz</span></tt> inspired project, written in <a class="reference external" href="http://www.python.org">Python</a>, called <a class="reference external" href="https://github.com/mw44118/pitz">pitz</a> that is in active
+a <code class="docutils literal"><span class="pre">ditz</span></code> inspired project, written in <a class="reference external" href="http://www.python.org">Python</a>, called <a class="reference external" href="https://github.com/mw44118/pitz">pitz</a> that is in active
 development.  And <a class="reference external" href="http://www.fossil-scm.org/index.html/doc/tip/www/index.wiki">fossil</a> is pretty cool if you&#8217;re looking for a standalone
 wiki, <abbr title="Bug Tracking System">BTS</abbr> and <abbr title="Version Control System">VCS</abbr> in one.</p>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
-<p class="last">If you&#8217;re a <a class="reference external" href="http://www.gentoo.org/">Gentoo</a> user you can install <tt class="docutils literal"><span class="pre">ditz</span></tt> using
+<p class="last">If you&#8217;re a <a class="reference external" href="http://www.gentoo.org/">Gentoo</a> user you can install <code class="docutils literal"><span class="pre">ditz</span></code> using
 the ebuild from my <a class="reference external" href="https://github.com/JNRowe/jnrowe-misc/">overlay</a>.</p>
 </div>
 <p>I&#8217;m currently in the process of switching away from <abbr title="Bugs Everywhere">be</abbr>, but it can serve as an example quite well.  Unfortunately, there
 are no releases currently being made so you will need to install a recent
-version of <tt class="docutils literal"><span class="pre">bzr</span></tt> to download it.  Don&#8217;t worry though you aren&#8217;t restricted to
-<tt class="docutils literal"><span class="pre">bzr</span></tt> to use it.</p>
+version of <code class="docutils literal"><span class="pre">bzr</span></code> to download it.  Don&#8217;t worry though you aren&#8217;t restricted to
+<code class="docutils literal"><span class="pre">bzr</span></code> to use it.</p>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
-<p class="last">Colleagues from work can grab Dan&#8217;s <tt class="docutils literal"><span class="pre">be</span></tt> branch directly from our package
-repository, it doesn&#8217;t require <tt class="docutils literal"><span class="pre">bzr</span></tt> and it fixes quite a few usage
+<p class="last">Colleagues from work can grab Dan&#8217;s <code class="docutils literal"><span class="pre">be</span></code> branch directly from our package
+repository, it doesn&#8217;t require <code class="docutils literal"><span class="pre">bzr</span></code> and it fixes quite a few usage
 problems(it is also much faster).  Just remember that it has diverged
 massively from the upstream code, so you won&#8217;t be able to use it to work with
 bug databases created by the upstream project.</p>
 </div>
-<p>The following examples use an older version of <tt class="docutils literal"><span class="pre">be</span></tt> that you can download as
-a <a class="reference external" href="http://www.jnrowe.ukfsn.org/_static/be-0.0.193.tar.bz2">tarball</a> and doesn&#8217;t require <tt class="docutils literal"><span class="pre">bzr</span></tt>.</p>
+<p>The following examples use an older version of <code class="docutils literal"><span class="pre">be</span></code> that you can download as
+a <a class="reference external" href="http://www.jnrowe.ukfsn.org/_static/be-0.0.193.tar.bz2">tarball</a> and doesn&#8217;t require <code class="docutils literal"><span class="pre">bzr</span></code>.</p>
 <div class="section" id="setting-be-up">
-<h2>Setting <tt class="docutils literal"><span class="pre">be</span></tt> up<a class="headerlink" href="#setting-be-up" title="Permalink to this headline">¶</a></h2>
-<p>Before we use <tt class="docutils literal"><span class="pre">be</span></tt> we must prepare it.  In the example that follows we&#8217;re
-going to create a new directory under the control of <a class="reference external" href="http://www.git-scm.com/">git</a>, and tell <tt class="docutils literal"><span class="pre">be</span></tt> we
+<h2>Setting <code class="docutils literal"><span class="pre">be</span></code> up<a class="headerlink" href="#setting-be-up" title="Permalink to this headline">¶</a></h2>
+<p>Before we use <code class="docutils literal"><span class="pre">be</span></code> we must prepare it.  In the example that follows we&#8217;re
+going to create a new directory under the control of <a class="reference external" href="http://www.git-scm.com/">git</a>, and tell <code class="docutils literal"><span class="pre">be</span></code> we
 wish to use it in there:</p>
-<div class="highlight-text"><div class="highlight"><pre>~/Desktop $ mkdir be_test; cd be_test
-~/Desktop/be_test $ git init
-Initialized empty Git repository in /home/jay/Desktop/be_test/.git/
-~/Desktop/be_test $ be set-root
-Using git for revision control.
-Directory initialized.
+<div class="highlight-console"><div class="highlight"><pre><span></span><span class="gp">$</span> mkdir be_test<span class="p">;</span> <span class="nb">cd</span> be_test
+<span class="gp">$</span> git init
+<span class="go">Initialized empty Git repository in /home/jay/Desktop/be_test/.git/</span>
+<span class="gp">$</span> be set-root
+<span class="go">Using git for revision control.</span>
+<span class="go">Directory initialized.</span>
 </pre></div>
 </div>
 </div>
@@ -207,117 +250,117 @@ Directory initialized.
 filed.  Bugs are identified by a <abbr title="Universally Unique IDentifier">UUID</abbr>,
 and to operate on bugs we only need to use a unique prefix of the identifier as
 can be seen below.</p>
-<div class="highlight-text"><div class="highlight"><pre>~/Desktop/be_test $ be new &quot;This is a test bug&quot;
-Created bug with ID a09
-~/Desktop/be_test $ be assign a09
-~/Desktop/be_test $ git commit -m&quot;Commit bug a09.&quot;
-~/Desktop/be_test $ be new &quot;This is a second bug&quot;
-Created bug with ID ec4
-~/Desktop/be_test $ be severity ec4 serious
-~/Desktop/be_test $ be comment ec4 &quot;Comments are easy&quot;
-~/Desktop/be_test $ git commit -m&quot;Commit bug ec4.&quot;
+<div class="highlight-console"><div class="highlight"><pre><span></span><span class="gp">$</span> be new <span class="s2">&quot;This is a test bug&quot;</span>
+<span class="go">Created bug with ID a09</span>
+<span class="gp">$</span> be assign a09
+<span class="gp">$</span> git commit -m<span class="s2">&quot;Commit bug a09.&quot;</span>
+<span class="gp">$</span> be new <span class="s2">&quot;This is a second bug&quot;</span>
+<span class="go">Created bug with ID ec4</span>
+<span class="gp">$</span> be severity ec4 serious
+<span class="gp">$</span> be comment ec4 <span class="s2">&quot;Comments are easy&quot;</span>
+<span class="gp">$</span> git commit -m<span class="s2">&quot;Commit bug ec4.&quot;</span>
 </pre></div>
 </div>
-<p>We now have two bugs filed.  Bug <tt class="docutils literal"><span class="pre">a09</span></tt> is self-assigned, while <tt class="docutils literal"><span class="pre">ec4</span></tt> has yet
-to be assigned.  As we didn&#8217;t set a severity level for <tt class="docutils literal"><span class="pre">a09</span></tt> it is set to the
-default of <tt class="docutils literal"><span class="pre">minor</span></tt>.  A comment was also made on bug <tt class="docutils literal"><span class="pre">ec4</span></tt>, and if we hadn&#8217;t
+<p>We now have two bugs filed.  Bug <code class="docutils literal"><span class="pre">a09</span></code> is self-assigned, while <code class="docutils literal"><span class="pre">ec4</span></code> has yet
+to be assigned.  As we didn&#8217;t set a severity level for <code class="docutils literal"><span class="pre">a09</span></code> it is set to the
+default of <code class="docutils literal"><span class="pre">minor</span></code>.  A comment was also made on bug <code class="docutils literal"><span class="pre">ec4</span></code>, and if we hadn&#8217;t
 specified the comment on the command line it would open our default editor to
 add the comment.</p>
 </div>
 <div class="section" id="querying-bugs">
 <h2>Querying bugs<a class="headerlink" href="#querying-bugs" title="Permalink to this headline">¶</a></h2>
-<div class="highlight-text"><div class="highlight"><pre>~/Desktop/be_test $ be list
-ec4:os: This is a second bug
-a09:om: This is a test bug
+<div class="highlight-console"><div class="highlight"><pre><span></span><span class="gp">$</span> be list
+<span class="go">ec4:os: This is a second bug</span>
+<span class="go">a09:om: This is a test bug</span>
 </pre></div>
 </div>
-<p>The <tt class="docutils literal"><span class="pre">be</span> <span class="pre">list</span></tt> output consists of three fields separated by colons and they
+<p>The <code class="docutils literal"><span class="pre">be</span> <span class="pre">list</span></code> output consists of three fields separated by colons and they
 are: bug identifier, status and title.  The first character of the  status field
-is an <tt class="docutils literal"><span class="pre">o</span></tt> telling us the bugs are marked as open, and the second character is
-the severity indicator(where the <tt class="docutils literal"><span class="pre">s</span></tt> for bug <tt class="docutils literal"><span class="pre">ec4</span></tt> tells us it is marked as
+is an <code class="docutils literal"><span class="pre">o</span></code> telling us the bugs are marked as open, and the second character is
+the severity indicator(where the <code class="docutils literal"><span class="pre">s</span></code> for bug <code class="docutils literal"><span class="pre">ec4</span></code> tells us it is marked as
 serious).</p>
-<p>You can also limit the bugs shown with <tt class="docutils literal"><span class="pre">be</span> <span class="pre">list</span></tt> by specifying severities with
-<tt class="docutils literal"><span class="pre">-v</span></tt>.  Or bugs that are assigned to a certain user with <tt class="docutils literal"><span class="pre">-a</span></tt>, and you can
-use <tt class="docutils literal"><span class="pre">-m</span></tt> to list bugs assigned to yourself.</p>
+<p>You can also limit the bugs shown with <code class="docutils literal"><span class="pre">be</span> <span class="pre">list</span></code> by specifying severities with
+<code class="docutils literal"><span class="pre">-v</span></code>.  Or bugs that are assigned to a certain user with <code class="docutils literal"><span class="pre">-a</span></code>, and you can
+use <code class="docutils literal"><span class="pre">-m</span></code> to list bugs assigned to yourself.</p>
 <p>When we wish to inspect individual bugs, to see there full status or comments,
-we use the <tt class="docutils literal"><span class="pre">be</span> <span class="pre">show</span></tt> command:</p>
-<div class="highlight-text"><div class="highlight"><pre>~/Desktop/be_test $ be show a09
-        ID : a0912cd6-1eae-490c-8e56-5f532242394b
-Short name : a09
-    Severity : minor
-    Status : open
-    Assigned : James Rowe &lt;jnrowe@gmail.com&gt;
-    Target :
-    Creator : James Rowe &lt;jnrowe@gmail.com&gt;
-    Created : Wed, 07 Oct 2009 14:11 (Wed, 07 Oct 2009 13:11:06 +0000)
-This is a test bug
+we use the <code class="docutils literal"><span class="pre">be</span> <span class="pre">show</span></code> command:</p>
+<div class="highlight-console"><div class="highlight"><pre><span></span><span class="gp">$</span> be show a09
+<span class="go">        ID : a0912cd6-1eae-490c-8e56-5f532242394b</span>
+<span class="go">Short name : a09</span>
+<span class="go">    Severity : minor</span>
+<span class="go">    Status : open</span>
+<span class="go">    Assigned : James Rowe &lt;jnrowe@gmail.com&gt;</span>
+<span class="go">    Target :</span>
+<span class="go">    Creator : James Rowe &lt;jnrowe@gmail.com&gt;</span>
+<span class="go">    Created : Wed, 07 Oct 2009 14:11 (Wed, 07 Oct 2009 13:11:06 +0000)</span>
+<span class="go">This is a test bug</span>
 
-~/Desktop/be_test $ be show ec4
-        ID : ec4438ca-a330-4345-b073-43c768f7e9b7
-Short name : ec4
-    Severity : serious
-    Status : open
-    Assigned :
-    Target :
-    Creator : James Rowe &lt;jnrowe@gmail.com&gt;
-    Created : Wed, 07 Oct 2009 14:11 (Wed, 07 Oct 2009 13:11:17 +0000)
-This is a second bug
---------- Comment ---------
-Name: ec4:1
-From: James Rowe &lt;jnrowe@gmail.com&gt;
-Date: Wed, 07 Oct 2009 13:11:53 +0000
+<span class="gp">$</span> be show ec4
+<span class="go">        ID : ec4438ca-a330-4345-b073-43c768f7e9b7</span>
+<span class="go">Short name : ec4</span>
+<span class="go">    Severity : serious</span>
+<span class="go">    Status : open</span>
+<span class="go">    Assigned :</span>
+<span class="go">    Target :</span>
+<span class="go">    Creator : James Rowe &lt;jnrowe@gmail.com&gt;</span>
+<span class="go">    Created : Wed, 07 Oct 2009 14:11 (Wed, 07 Oct 2009 13:11:17 +0000)</span>
+<span class="go">This is a second bug</span>
+<span class="go">--------- Comment ---------</span>
+<span class="go">Name: ec4:1</span>
+<span class="go">From: James Rowe &lt;jnrowe@gmail.com&gt;</span>
+<span class="go">Date: Wed, 07 Oct 2009 13:11:53 +0000</span>
 
-Comments are easy
+<span class="go">Comments are easy</span>
 </pre></div>
 </div>
 </div>
 <div class="section" id="editing-bugs">
 <h2>Editing bugs<a class="headerlink" href="#editing-bugs" title="Permalink to this headline">¶</a></h2>
-<p>We can change the bug status with <tt class="docutils literal"><span class="pre">be</span> <span class="pre">status</span></tt>, see the output from <tt class="docutils literal"><span class="pre">be</span> <span class="pre">help</span>
-<span class="pre">status</span></tt> for available values.</p>
-<p>Once bugs are marked as fixed they no longer show up in the default <tt class="docutils literal"><span class="pre">be</span> <span class="pre">list</span></tt>
-output, but we can still view them with <tt class="docutils literal"><span class="pre">be</span> <span class="pre">show</span></tt> or by calling <tt class="docutils literal"><span class="pre">be</span> <span class="pre">list</span></tt>
+<p>We can change the bug status with <code class="docutils literal"><span class="pre">be</span> <span class="pre">status</span></code>, see the output from <code class="docutils literal"><span class="pre">be</span> <span class="pre">help</span>
+<span class="pre">status</span></code> for available values.</p>
+<p>Once bugs are marked as fixed they no longer show up in the default <code class="docutils literal"><span class="pre">be</span> <span class="pre">list</span></code>
+output, but we can still view them with <code class="docutils literal"><span class="pre">be</span> <span class="pre">show</span></code> or by calling <code class="docutils literal"><span class="pre">be</span> <span class="pre">list</span></code>
 with filtering options.</p>
-<div class="highlight-text"><div class="highlight"><pre>~/Desktop/be_test $ be status ec4 fixed
-~/Desktop/be_test $ be list
-a09:om: This is a test bug
-~/Desktop/be_test $ be show ec4
-        ID : ec4438ca-a330-4345-b073-43c768f7e9b7
-Short name : ec4
-    Severity : serious
-    Status : fixed
-    Assigned :
-    Target :
-    Creator : James Rowe &lt;jnrowe@gmail.com&gt;
-    Created : Wed, 07 Oct 2009 14:11 (Wed, 07 Oct 2009 13:11:17 +0000)
-This is a second bug
---------- Comment ---------
-Name: ec4:1
-From: James Rowe &lt;jnrowe@gmail.com&gt;
-Date: Wed, 07 Oct 2009 13:11:53 +0000
+<div class="highlight-console"><div class="highlight"><pre><span></span><span class="gp">$</span> be status ec4 fixed
+<span class="gp">$</span> be list
+<span class="go">a09:om: This is a test bug</span>
+<span class="gp">$</span> be show ec4
+<span class="go">        ID : ec4438ca-a330-4345-b073-43c768f7e9b7</span>
+<span class="go">Short name : ec4</span>
+<span class="go">    Severity : serious</span>
+<span class="go">    Status : fixed</span>
+<span class="go">    Assigned :</span>
+<span class="go">    Target :</span>
+<span class="go">    Creator : James Rowe &lt;jnrowe@gmail.com&gt;</span>
+<span class="go">    Created : Wed, 07 Oct 2009 14:11 (Wed, 07 Oct 2009 13:11:17 +0000)</span>
+<span class="go">This is a second bug</span>
+<span class="go">--------- Comment ---------</span>
+<span class="go">Name: ec4:1</span>
+<span class="go">From: James Rowe &lt;jnrowe@gmail.com&gt;</span>
+<span class="go">Date: Wed, 07 Oct 2009 13:11:53 +0000</span>
 
-Comments are easy
+<span class="go">Comments are easy</span>
 </pre></div>
 </div>
 </div>
 <div class="section" id="conclusions">
 <h2>Conclusions<a class="headerlink" href="#conclusions" title="Permalink to this headline">¶</a></h2>
-<p>That really is all it takes to use <tt class="docutils literal"><span class="pre">be</span></tt>, and that is why I find a <abbr title="Bug Tracking System">BTS</abbr> to be a nice solution for managing all kinds of random
+<p>That really is all it takes to use <code class="docutils literal"><span class="pre">be</span></code>, and that is why I find a <abbr title="Bug Tracking System">BTS</abbr> to be a nice solution for managing all kinds of random
 tasks.  I have a Bugs Everywhere database in my home directory that over the
 past year has stored just over 600 bugs from shopping lists to actual bugs with
 my configurations files, and I&#8217;ve apparently managed to complete 95% of them!</p>
 </div>
 <div class="section" id="bonus-material">
 <h2>Bonus material<a class="headerlink" href="#bonus-material" title="Permalink to this headline">¶</a></h2>
-<p>One of the little tricks I like to do is override the <tt class="docutils literal"><span class="pre">cd</span></tt> command to
+<p>One of the little tricks I like to do is override the <code class="docutils literal"><span class="pre">cd</span></code> command to
 automatically display the bug list when I enter a directory that contains a Bugs
 Everywhere database, and it is very simple to do:</p>
-<div class="highlight-bash"><div class="highlight"><pre><span class="nb">cd</span><span class="o">()</span> <span class="o">{</span>
-    <span class="nb">local </span>retval
-    <span class="nb">builtin cd</span> <span class="s2">&quot;$@&quot;</span>
+<div class="highlight-bash"><div class="highlight"><pre><span></span>cd<span class="o">()</span> <span class="o">{</span>
+    <span class="nb">local</span> retval
+    <span class="nb">builtin</span> <span class="nb">cd</span> <span class="s2">&quot;</span><span class="nv">$@</span><span class="s2">&quot;</span>
     <span class="nv">retval</span><span class="o">=</span><span class="nv">$?</span>
-    <span class="o">[</span> <span class="k">${</span><span class="nv">retval</span><span class="k">}</span> <span class="o">=</span> 0 -a -d .be <span class="o">]</span> <span class="o">&amp;&amp;</span> be list
-    <span class="k">return</span> <span class="k">${</span><span class="nv">retval</span><span class="k">}</span>
+    <span class="o">[</span> <span class="si">${</span><span class="nv">retval</span><span class="si">}</span> <span class="o">=</span> <span class="m">0</span> -a -d .be <span class="o">]</span> <span class="o">&amp;&amp;</span> be list
+    <span class="k">return</span> <span class="si">${</span><span class="nv">retval</span><span class="si">}</span>
 <span class="o">}</span>
 </pre></div>
 </div>
@@ -329,15 +372,16 @@ Feel free to post updates to the gist!</p>
 </div>
 
 
+           </div>
           </div>
           <footer>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="Beyond_tab_completion.html" class="btn btn-neutral float-right" title="Beyond simple tab completion"/>Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="Beyond_tab_completion.html" class="btn btn-neutral float-right" title="Beyond simple tab completion" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="index.html" class="btn btn-neutral" title="Tips"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="index.html" class="btn btn-neutral" title="Tips" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -346,12 +390,14 @@ Feel free to post updates to the gist!</p>
 
   <div role="contentinfo">
     <p>
-        &copy; <a href="../../copyright.html">Copyright</a> 2009-2014, James Rowe.
+        &copy; <a href="../../copyright.html">Copyright</a> 2009-2015, James Rowe.
+
     </p>
   </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
 
-  <a href="https://github.com/snide/sphinx_rtd_theme">Sphinx theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>
 </footer>
+
         </div>
       </div>
 

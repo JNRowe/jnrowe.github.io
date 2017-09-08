@@ -5,6 +5,7 @@
 <!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
 <head>
   <meta charset="utf-8">
+  
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
   <title>Dropping Gentoo &mdash; JNRowe</title>
@@ -16,7 +17,6 @@
   
 
   
-  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
 
   
   
@@ -30,6 +30,8 @@
   
 
   
+
+  
         <link rel="copyright" title="Copyright" href="../copyright.html"/>
     <link rel="top" title="JNRowe" href="../index.html"/>
         <link rel="up" title="Articles" href="index.html"/>
@@ -38,7 +40,7 @@
     <link rel="alternate" type="application/atom+xml" title="Updated items" href="/updates.atom" />
 
   
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script>
+  <script src="../_static/js/modernizr.min.js"></script>
 
 </head>
 
@@ -48,61 +50,80 @@
 
     
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
-      <div class="wy-side-nav-search">
-        <a href="../index.html" class="fa fa-home"> JNRowe</a>
-        <div role="search">
-  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> JNRowe
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.1
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
     <input type="text" name="q" placeholder="Search docs" />
     <input type="hidden" name="check_keywords" value="yes" />
     <input type="hidden" name="area" value="default" />
   </form>
 </div>
-      </div>
 
-      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
-        
-        
-            <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="../projects.html">Projects</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../projects.html#forks-i-m-hacking-on">Forks I&#8217;m hacking on</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../projects.html#git-mirrors-of-projects-i-m-hacking-on">Git mirrors of projects I&#8217;m hacking on</a></li>
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <p class="caption"><span class="caption-text">Contents</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../projects.html">Projects</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Articles</a><ul class="current">
+<li class="toctree-l2 current"><a class="current reference internal" href="">Dropping Gentoo</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#landscapes-have-changed">Landscapes have changed</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#take-a-left-in-100-metres">Take a left in 100 metres</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#upstreaming-changes">Upstreaming changes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#supporting-upstream">Supporting upstream</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#support-costs">Support costs</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#matchbox">matchbox</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#python">Python</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#systemd">systemd</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#x-org">X.org</a></li>
 </ul>
 </li>
-<li class="toctree-l1 current"><a class="reference internal" href="index.html">Articles</a><ul class="current">
-<li class="toctree-l2 current"><a class="current reference internal" href="">Dropping Gentoo</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#the-end-is-nigh">The end is nigh</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#the-times-they-are-a-changing">The Times They Are a-Changing</a></li>
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="dropping_gentoo_reflex.html">Dropping Gentoo reflex</a></li>
-<li class="toctree-l2"><a class="reference internal" href="fossil.html"><tt class="docutils literal"><span class="pre">fossil</span></tt> experiments</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fossil.html"><code class="docutils literal"><span class="pre">fossil</span></code> experiments</a></li>
 <li class="toctree-l2"><a class="reference internal" href="rcs.html">Introduction to RCS</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tdd_distros.html">TDD distro development</a></li>
 <li class="toctree-l2"><a class="reference internal" href="index.html#further-categories">Further categories</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../thoughts/index.html">Thoughts</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../thoughts/burn_out.html">Open Source and enjoyment</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../thoughts/burn_out.html#the-solutions">The solutions</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../thoughts/delayed_flashover.html">Delayed flashover</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../thoughts/disconnect.html">Cleanse thy soul</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../thoughts/dopplr_effects.html">Dopplr defects</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../thoughts/important_balance.html">Murdering morality with ferocious fire</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../thoughts/nice_stories.html">Tell me a nice story, please</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../thoughts/reset_in_ten.html">Hitting life&#8217;s reset button</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../thoughts/side_projects.html">Side-projects</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../thoughts/the_returned.html">Return to rambling</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="../colophon.html">Colophon</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../colophon.html#content-creation">Content creation</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../colophon.html#and-finally">And finally...</a></li>
-</ul>
-</li>
+<li class="toctree-l1"><a class="reference internal" href="../thoughts/index.html">Thoughts</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../colophon.html">Colophon</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../contact.html">Contact details</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../consult.html">Consulting services</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../copyright.html">Copyright information</a></li>
 </ul>
 
-        
+            
+          
+        </div>
       </div>
-      &nbsp;
     </nav>
 
     <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
@@ -117,7 +138,13 @@
       
       <div class="wy-nav-content">
         <div class="rst-content">
-          <div role="navigation" aria-label="breadcrumbs navigation">
+          
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
   <ul class="wy-breadcrumbs">
     <li><a href="../index.html">Docs</a> &raquo;</li>
       
@@ -126,21 +153,16 @@
     <li>Dropping Gentoo</li>
       <li class="wy-breadcrumbs-aside">
         
-          <a href="../_sources/articles/dropping_gentoo.txt" rel="nofollow"> View page source</a>
+          
+            <a href="../_sources/articles/dropping_gentoo.txt" rel="nofollow"> View page source</a>
+          
         
       </li>
   </ul>
   <hr/>
 </div>
-          <div role="main">
-            
-    <div class="admonition note">
-        <p class="first admonition-title">
-            Estimated reading time: 1 minutes
-        </p>
-    </div>
-    
-    
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
             
   <div class="section" id="dropping-gentoo">
 <h1>Dropping Gentoo<a class="headerlink" href="#dropping-gentoo" title="Permalink to this headline">¶</a></h1>
@@ -179,7 +201,7 @@ essential toolchain packages like GCC and glibc ourselves.  I can&#8217;t recall
 specific reasons as I didn&#8217;t work on them, but I recall agreeing with them.</p>
 <p>At some point we started using a custom package manager, initially just a new
 drop-in resolver and eventually a completely independent package manager.
-<tt class="docutils literal"><span class="pre">portage</span></tt> was ferociously buggy in places and also appeared to be moribund, so
+<code class="docutils literal"><span class="pre">portage</span></code> was ferociously buggy in places and also appeared to be moribund, so
 it seemed like the correct choice.  We never supported the full range of
 features that Gentoo&#8217;s <a class="reference external" href="http://wiki.gentoo.org/wiki/Project:PMS">PMS</a> now defines, but it made the support surface a lot
 nicer.</p>
@@ -209,7 +231,7 @@ report in the ChangeLog was huge.  That taught me a valuable personal lesson,
 I always attribute a commit to the reporter even when I&#8217;ve significantly mangled
 a patch to make it acceptable.</p>
 <p>For a time, to ease the annoyance we used to play a game where we reported real
-bugs with patches, but using silly data for <tt class="docutils literal"><span class="pre">emerge</span> <span class="pre">--info</span></tt>.  It was
+bugs with patches, but using silly data for <code class="docutils literal"><span class="pre">emerge</span> <span class="pre">--info</span></code>.  It was
 definitely fun while it lasted, but it didn&#8217;t solve the pain points.  Not
 wanting to be associated with the bugs made people use pseudonyms, which also
 removed the expectation of attribution too.</p>
@@ -219,7 +241,7 @@ months so I stopped doing that too</p>
 <p>Looking around now there is an automatically generated list of bugs with patches
 which we&#8217;ve fixed but haven&#8217;t upstreamed, and a few random entries from it look
 like this:</p>
-<div class="highlight-console"><div class="highlight"><pre><span class="gp">$</span> wc -l ~/gentoo/to_push/jay.rst
+<div class="highlight-console"><div class="highlight"><pre><span></span><span class="gp">$</span> wc -l ~/gentoo/to_push/jay.rst
 <span class="go">1157 /home/jay/gentoo/to_push/jay.rst</span>
 <span class="gp">$</span> wc -l ~/gentoo/to_push/mattias.rst
 <span class="go">2104 /home/jay/gentoo/to_push/mattias.rst</span>
@@ -257,7 +279,7 @@ alone.</p>
 <div class="section" id="support-costs">
 <h2>Support costs<a class="headerlink" href="#support-costs" title="Permalink to this headline">¶</a></h2>
 <p>Over time we&#8217;ve come to support most of the tree that people refer to as
-<tt class="docutils literal"><span class="pre">gentoo-x86</span></tt> ourselves.  The toolchain changes we needed at the time
+<code class="docutils literal"><span class="pre">gentoo-x86</span></code> ourselves.  The toolchain changes we needed at the time
 necessitated supporting a few packages further up the stack.  Our desire to trim
 the tree of a few categories that were problematic, meant replacing a variety of
 packages with then unavailable dependencies.</p>
@@ -280,12 +302,12 @@ moot.</p>
 </div>
 <div class="section" id="systemd">
 <h3>systemd<a class="headerlink" href="#systemd" title="Permalink to this headline">¶</a></h3>
-<p>We switched to <tt class="docutils literal"><span class="pre">systemd</span></tt> before the package was in upstream&#8217;s tree, and we
+<p>We switched to <code class="docutils literal"><span class="pre">systemd</span></code> before the package was in upstream&#8217;s tree, and we
 have had to keep supporting it to this day because of insurmountable packaging
 differences.</p>
 <p>In a few places that means taking on packages with a reverse dependency too,
 where differences create issues.  And it clearly means taking on any package
-that depends on <tt class="docutils literal"><span class="pre">openrc</span></tt> or Gentoo&#8217;s <tt class="docutils literal"><span class="pre">baselayout</span></tt> package.  Those packages
+that depends on <code class="docutils literal"><span class="pre">openrc</span></code> or Gentoo&#8217;s <code class="docutils literal"><span class="pre">baselayout</span></code> package.  Those packages
 are becoming fewer and fewer by the day though, so that would have become
 a non-issue.</p>
 </div>
@@ -312,7 +334,7 @@ summer of last year, and it has finally started to come in to effect.</p>
 <p>There are plenty of good alternatives out there now for building systems that
 need to run on a variety of architectures.  Some binary, some source-based and
 a few hybrid approaches.</p>
-<p>The project I&#8217;m working on right now is using Debian <tt class="docutils literal"><span class="pre">testing</span></tt>, and it appears
+<p>The project I&#8217;m working on right now is using Debian <code class="docutils literal"><span class="pre">testing</span></code>, and it appears
 to be working out fine.  Some things still annoy me, like the time it takes to
 patch and recreate a package.  It is a trivial thing with Gentoo, but requires
 far too much work with Debian.  Perhaps we&#8217;ll improve the workflow enough as we
@@ -332,15 +354,16 @@ track for the next ten years.</p>
 </div>
 
 
+           </div>
           </div>
           <footer>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="dropping_gentoo_reflex.html" class="btn btn-neutral float-right" title="Dropping Gentoo reflex"/>Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="dropping_gentoo_reflex.html" class="btn btn-neutral float-right" title="Dropping Gentoo reflex" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="index.html" class="btn btn-neutral" title="Articles"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="index.html" class="btn btn-neutral" title="Articles" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -349,12 +372,14 @@ track for the next ten years.</p>
 
   <div role="contentinfo">
     <p>
-        &copy; <a href="../copyright.html">Copyright</a> 2009-2014, James Rowe.
+        &copy; <a href="../copyright.html">Copyright</a> 2009-2015, James Rowe.
+
     </p>
   </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
 
-  <a href="https://github.com/snide/sphinx_rtd_theme">Sphinx theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>
 </footer>
+
         </div>
       </div>
 
