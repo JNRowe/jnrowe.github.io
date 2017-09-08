@@ -26,7 +26,7 @@ Contact details
    <p class="note">The information in this section was last updated on <abbr class="rev" title="2013-10-15T16:05:00+01:00">2013-10-15</abbr>.</p>
 
 * `My GitHub profile`_
-* `My GnuPG key`_ ``0xABC68E07``
+* `My GnuPG key`_ ``0xFDA3C542ABC68E07`` (fingerprint = ``3ACF 2658 BC4D 35F6 E470  0DAF FDA3 C542 ABC6 8E07``)
 
 .. raw:: html
 
