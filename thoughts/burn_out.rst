@@ -151,7 +151,7 @@ personally.
     There was a rant about Canonical/Ubuntu here, but I've decided to scrub it.
     Everyone I speak to cites the non-contributing "community member" types that
     defines the Canonical ecosystem as being a significant source of the
-    poisonous user problem, but the rant is probably unneccessary outside this
+    poisonous user problem, but the rant is probably unnecessary outside this
     comment.
 
 .. _bikeshedding: http://en.m.wikipedia.org/wiki/bikeshedding
