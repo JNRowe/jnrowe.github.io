@@ -8,10 +8,10 @@ import sphinx_rtd_theme
 sys.path.extend([os.path.pardir, os.path.curdir, '/home/jay/Projects/feed'])
 
 extensions = \
-    ["sphinx.ext.%s" % ext for ext in ["intersphinx", ]] + \
-    ["sphinxcontrib.%s" % ext for ext in []] + \
-    ["ext.%s" % ext for ext in ["jinja", ]] + \
-    ["%s" % ext for ext in ["feed", ]]
+    ['sphinx.ext.%s' % ext for ext in ['intersphinx', ]] + \
+    ['sphinxcontrib.%s' % ext for ext in []] + \
+    ['ext.%s' % ext for ext in ['jinja', ]] + \
+    ['%s' % ext for ext in ['feed', ]]
 
 # Only activate spelling, if it is installed.  It is not required in the
 # general case and we don't have the granularity to describe this in a clean
@@ -35,10 +35,10 @@ release = '0.1.0'
 
 exclude_patterns = ['README.rst', '.build', 'draft', 'venv']
 
-html_theme = "sphinx_rtd_theme"
+html_theme = 'sphinx_rtd_theme'
 html_theme_path = [sphinx_rtd_theme.get_html_theme_path(), ]
 
-html_context = {"feed_link": True}
+html_context = {'feed_link': True}
 html_title = 'JNRowe'
 html_favicon = '.static/icon.ico'
 
@@ -53,14 +53,14 @@ for proj in ['blanco', 'bleeter', 'bwatch', 'cupage', 'jnrowe-fixes',
              'pyisbn', 'upoints', 'versionah', 'vim-jnrowe']:
     # IDs must be alphanumeric
     proj_id = filter(lambda s: s.isalnum(), proj)
-    intersphinx_mapping[proj_id] = ("http://jnrowe.github.io/%s/" % proj,
-                                    "objects/%s.inv" % proj)
+    intersphinx_mapping[proj_id] = ('http://jnrowe.github.io/%s/' % proj,
+                                    'objects/%s.inv' % proj)
 
 for proj in ['jnrowe-misc', ]:
     # IDs must be alphanumeric
     proj_id = filter(lambda s: s.isalnum(), proj) + 'docs'
-    intersphinx_mapping[proj_id] = ("http://jnrowe.github.io/%s-docs/" % proj,
-                                    "objects/%s.inv" % proj)
+    intersphinx_mapping[proj_id] = ('http://jnrowe.github.io/%s-docs/' % proj,
+                                    'objects/%s.inv' % proj)
 
 spelling_lang = 'en_GB'
 spelling_word_list_filename = 'wordlist.txt'
