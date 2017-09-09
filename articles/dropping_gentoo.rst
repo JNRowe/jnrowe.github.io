@@ -194,8 +194,8 @@ X.org
 
 We had been packaging x.org's packages to work around some implementation
 differences with upstream since the dawn of modular X.  Mostly just to do with
-how dependencies were specified to start with, but they're not even similar
-anymore.
+how dependencies were specified to start with, but they're no longer even
+remotely similar.
 
 Luckily there isn't a great deal of churn in the packages we care about for the
 most part, so it never caused a huge time sink.

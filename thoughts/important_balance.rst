@@ -47,7 +47,7 @@ I suspect that will remain true in the future.  I like that these decisions are
 defensible to *me*, that they *must* be defensible to me.  I love that the thing
 that keeps me awake at night is not the thought of the possibly nefarious
 effects of my works, but rather the exceedingly minor issue of not having
-a glistening and well-specced M6 in the garage.
+a glistening and well-spec’d M6 in the garage.
 
 Now, let me sleep.
 

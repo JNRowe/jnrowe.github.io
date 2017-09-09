@@ -19,7 +19,7 @@ There were many, many good points about Gentoo and I'll nod towards a few now.
 Speed
 -----
 
-No, no.  Not the "Oh my god, my KDEs are soooo fast" that many people fairly
+No, no.  Not the "Oh my god, my KDEs are so fast" that many people fairly
 associate with Gentoo users.  I'm talking about the basic package handling
 tasks.
 

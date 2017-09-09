@@ -27,7 +27,7 @@ My task was simple: ingest a massive lump of :abbr:`JSON (JavaScript Object
 Notation)`, process it *somehow* and spit out results that could be used in an
 artsy manner that I would likely not understand.
 
-The initial concept worked by scanning a firehouse of tweets for keywords which
+The initial concept worked by scanning a firehose of tweets for keywords which
 seemed likely to be hugely poisonous, and then create a :abbr:`DAG (Directed
 Acyclic Graph)` as the basis to rate users who were retweeting them.  Later
 versions were self-training using a naïve Bayes classifier, which allowed us to
@@ -79,7 +79,7 @@ their personal details for the internet vigilantes, but enough that I knew
 I would not want to be linked to them through work or social circles.
 
 However, the end result was really neat even on the smaller canvas it has to
-live on.  Seeing that level of vitriolic rage isn’t fun, but realising that
+live on.  Seeing that level of vitriolic rage is not fun, but realising that
 much of it is vented in to nowhere does soften it a little.
 
 .. sidebar:: Alternative mappings
