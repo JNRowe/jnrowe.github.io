@@ -116,7 +116,7 @@ to help me process receipts any more.
 
 There are a myriad of benefits to dropping the reliance on :abbr:`SaaS (Software
 as a Service)` affairs.  The chance of any of them existing tomorrow is frankly
-not all that great: shuttering, buy-out closures, "pivotting", &c.  You can
+not all that great: shuttering, buy-out closures, "pivoting", &c.  You can
 also retain some level of control over your own data, knowing that for example
 it isn't being sold or stored in regions with little to no data protection
 regulation.
