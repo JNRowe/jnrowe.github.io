@@ -8,7 +8,7 @@ import sphinx_rtd_theme
 sys.path.extend([os.path.pardir, os.path.curdir, '/home/jay/Projects/feed'])
 
 extensions = \
-    ['sphinx.ext.%s' % ext for ext in ['intersphinx', ]] + \
+    ['sphinx.ext.%s' % ext for ext in ['githubpages', 'intersphinx', ]] + \
     ['sphinxcontrib.%s' % ext for ext in []] + \
     ['ext.%s' % ext for ext in ['jinja', ]] + \
     ['%s' % ext for ext in ['feed', ]]
