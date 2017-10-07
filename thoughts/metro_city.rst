@@ -61,7 +61,8 @@ exposed.
 
 .. image:: /.static/final_fight_one.png
    :alt: Final Fight One on the GBA
-   :scale: 25%
+   :align: right
+   :scale: 33%
    :target: https://en.m.wikipedia.org/wiki/Final_Fight
 
 What happened next?
