@@ -32,6 +32,9 @@
   
 
   
+        <link rel="index" title="Index"
+              href="../../genindex.html"/>
+        <link rel="search" title="Search" href="../../search.html"/>
         <link rel="copyright" title="Copyright" href="../../copyright.html"/>
     <link rel="top" title="JNRowe" href="../../index.html"/>
         <link rel="up" title="Tips" href="index.html"/>
@@ -105,13 +108,13 @@
 <li class="toctree-l4"><a class="reference internal" href="Custom_locations_in_the_GTK_filechooser.html">Custom keybindings in the GTK+ file dialogs</a></li>
 <li class="toctree-l4"><a class="reference internal" href="Debugging_python_regexps.html">Debugging Python regular expressions</a></li>
 <li class="toctree-l4"><a class="reference internal" href="Disabling_cursor_blinking_in_GTK.html">Disabling cursor blinking in GTK+</a></li>
-<li class="toctree-l4 current"><a class="current reference internal" href="">Fancy awesome theming</a></li>
-<li class="toctree-l4"><a class="reference internal" href="Finding_a_windows_owner.html">Finding a window&#8217;s owner</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">Fancy awesome theming</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Finding_a_windows_owner.html">Finding a window’s owner</a></li>
 <li class="toctree-l4"><a class="reference internal" href="Formatting_csv_files_in_the_shell.html">Formatting <abbr title="Comma Separated Values">CSV</abbr> files in the shell</a></li>
 <li class="toctree-l4"><a class="reference internal" href="Gentoo_one_liners.html">Gentoo one liners</a></li>
 <li class="toctree-l4"><a class="reference internal" href="Importing_gmail_filters_in_mutt.html">Importing gmail filters in mutt</a></li>
 <li class="toctree-l4"><a class="reference internal" href="Instant_web_server.html">Instant web server</a></li>
-<li class="toctree-l4"><a class="reference internal" href="Kick_me_birthday_reminders.html">&#8216;Kick me&#8217; birthday reminders</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Kick_me_birthday_reminders.html">‘Kick me’ birthday reminders</a></li>
 <li class="toctree-l4"><a class="reference internal" href="Making_a_nice_home.html">Making a nice home</a></li>
 <li class="toctree-l4"><a class="reference internal" href="Making_a_nice_home.html#permissions">Permissions</a></li>
 <li class="toctree-l4"><a class="reference internal" href="Making_a_nice_home.html#vim-hacks">vim hacks</a></li>
@@ -161,7 +164,7 @@
         <div class="rst-content">
           
 
-
+ 
 
 
 
@@ -176,8 +179,6 @@
     <li>Fancy awesome theming</li>
       <li class="wy-breadcrumbs-aside">
         
-          
-            <a href="../../_sources/articles/tips/Fancy_awesome_theming.txt" rel="nofollow"> View page source</a>
           
         
       </li>
@@ -198,13 +199,13 @@
 </tbody>
 </table>
 <a class="reference external image-reference" href="../../_static/2009-09-28-awesome_theming.png"><img alt="Awesome screenshot" class="align-right" src="../../_images/2009-09-28-awesome_theming-mini.png" /></a>
-<p>People, mostly named Neil Blake, who shouldn&#8217;t look over my shoulder ask:</p>
+<p>People, mostly named Neil Blake, who shouldn’t look over my shoulder ask:</p>
 <blockquote>
 <div>How do you make <a class="reference external" href="http://awesome.naquadah.org/">awesome</a> use <em>purdy</em> pixmap backgrounds for the <a class="reference external" href="http://awesome.naquadah.org/doc/api/modules/wibox.html">wibox</a>?</div></blockquote>
 <p>Simple answer today: cheat.</p>
 <p>As you can see in the screenshot on the right my wibox appears to be using the
-same fancy pixmap background as the <a class="reference external" href="http://www.gtk.org/">GTK+</a> theme I&#8217;m using.  What is actually
-happening is that I&#8217;ve pasted a copy of the background pixmap from the expose
+same fancy pixmap background as the <a class="reference external" href="http://www.gtk.org/">GTK+</a> theme I’m using.  What is actually
+happening is that I’ve pasted a copy of the background pixmap from the expose
 theme on top of my wallpaper using <a class="reference external" href="http://www.imagemagick.org/index.php">ImageMagick</a>, which is easily achievable on
 a netbook without having to fire up the <a class="reference external" href="http://www.gimp.org/">gimp</a>.</p>
 <div class="highlight-sh"><div class="highlight"><pre><span></span>convert /home/jay/.themes/expose/gtk-2.0/bc.xpm -scale 1024x20! bc.png
@@ -214,23 +215,23 @@ composite  -gravity north bc.png backdrop.png backdrop_new.png
 <p><a class="reference external" href="http://gist.github.com/198013">Fork this code</a></p>
 <p>The initial <code class="docutils literal"><span class="pre">convert</span></code> command resizes <code class="docutils literal"><span class="pre">bc.xpm</span></code> from the expose theme to 1024x20
 pixels, 1024 being the screen width and 20 being the height of my main wibox in
-awesome.  We must suffix the <code class="docutils literal"><span class="pre">-scale</span></code> option&#8217;s argument with <code class="docutils literal"><span class="pre">!</span></code> to tell
-<code class="docutils literal"><span class="pre">convert</span></code> to ignore the image&#8217;s aspect ratio when resizing, without this the
+awesome.  We must suffix the <code class="docutils literal"><span class="pre">-scale</span></code> option’s argument with <code class="docutils literal"><span class="pre">!</span></code> to tell
+<code class="docutils literal"><span class="pre">convert</span></code> to ignore the image’s aspect ratio when resizing, without this the
 command will not produce an image at the size we expect.</p>
-<p>The second command tells ImageMagick&#8217;s <code class="docutils literal"><span class="pre">composite</span></code> that we wish to paste our
+<p>The second command tells ImageMagick’s <code class="docutils literal"><span class="pre">composite</span></code> that we wish to paste our
 newly generated image on top <code class="docutils literal"><span class="pre">backdrop.png</span></code>, we could specify any location we
 want with the <code class="docutils literal"><span class="pre">-gravity</span></code> option but I have my wibox on the top of the screen so
 <code class="docutils literal"><span class="pre">north</span></code> is correct for me.</p>
 <p>With that done we have an image with our normal wallpaper and wibox sized chunk
-with our theme&#8217;s background.  All we need to do now is tell awesome to make our
+with our theme’s background.  All we need to do now is tell awesome to make our
 wibox transparent and the final result is a wibox that appears to be using the
-theme&#8217;s background.</p>
+theme’s background.</p>
 <div class="highlight-moon"><div class="highlight"><pre><span></span><span class="n">mywibox</span><span class="kt">[</span><span class="n">s</span><span class="kt">]</span> <span class="o">=</span> <span class="n">wibox</span> <span class="nv">position:</span> <span class="s2">&quot;</span><span class="s">top</span><span class="s2">&quot;</span><span class="p">,</span> <span class="nv">fg:</span> <span class="n">beautiful</span><span class="o">.</span><span class="n">fg_normal</span><span class="p">,</span> <span class="nv">bg:</span> <span class="s2">&quot;</span><span class="s">#00000000</span><span class="s2">&quot;</span>
 </pre></div>
 </div>
 <p><a class="reference external" href="http://gist.github.com/198014">Fork this code</a></p>
 <p>Colours are specified in the de facto standard format of
-<code class="docutils literal"><span class="pre">#(red)(green)(blue)(alpha)</span></code>, the &#8216;00&#8217; value for alpha in the above example
+<code class="docutils literal"><span class="pre">#(red)(green)(blue)(alpha)</span></code>, the ‘00’ value for alpha in the above example
 means we want a fully transparent theme background.  You could include some
 colour values and varying levels of alpha transparency to tint the background
 image, however that could also be achieved with ImageMagick when building the
@@ -258,7 +259,7 @@ in full.</p>
 
   <div role="contentinfo">
     <p>
-        &copy; <a href="../../copyright.html">Copyright</a> 2009-2015, James Rowe.
+        &copy; <a href="../../copyright.html">Copyright</a> 2009-2017, James Rowe.
 
     </p>
   </div>
@@ -283,7 +284,7 @@ in full.</p>
             VERSION:'0.1.0',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
-            HAS_SOURCE:  true
+            HAS_SOURCE:  false
         };
     </script>
       <script type="text/javascript" src="../../_static/jquery.js"></script>

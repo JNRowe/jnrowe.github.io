@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>JNRowe</title><link href="http://jnrowe.github.com/" rel="alternate"></link><link href="http://jnrowe.github.com/updates.atom" rel="self"></link><id>http://jnrowe.github.com/</id><updated>2017-09-03T00:00:00Z</updated><author><name>James Rowe</name><email>jnrowe@gmail.com</email><uri>http://jnrowe.github.com/</uri></author><rights>2009-2015, James Rowe</rights><entry><title>Burning down the streets</title><link href="http://jnrowe.github.com/thoughts/metro_city.html" rel="alternate"></link><updated>2017-09-03T00:00:00Z</updated><id>http://jnrowe.github.com/thoughts/metro_city.html</id><summary type="html">&lt;div class=section id=burning-down-the-streets&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>JNRowe</title><link rel="alternate" href="http://jnrowe.github.com/"></link><link rel="self" href="http://jnrowe.github.com/updates.atom"></link><id>http://jnrowe.github.com/</id><updated>2017-09-03T00:00:00Z</updated><author><name>James Rowe</name><email>jnrowe@gmail.com</email><uri>http://jnrowe.github.com/</uri></author><rights>2009-2017, James Rowe</rights><entry><title>Burning down the streets</title><link rel="alternate" href="http://jnrowe.github.com/thoughts/metro_city.html"></link><updated>2017-09-03T00:00:00Z</updated><id>http://jnrowe.github.com/thoughts/metro_city.html</id><summary type="html">&lt;div class=section id=burning-down-the-streets&gt;
 &lt;h1&gt;Burning down the streets&lt;a class=headerlink href=http://jnrowe.github.com/thoughts/metro_city.html#burning-down-the-streets title="Permalink to this headline"&gt;¶&lt;/a&gt;&lt;/h1&gt;
 &lt;blockquote class=epigraph&gt;
 &lt;div&gt;&lt;p&gt;The whole thing makes me wonder whether a modern reintroduction of the
@@ -17,7 +17,7 @@ piggybacking off of that would trim down the work considerably.&lt;/p&gt;
 &lt;h2&gt;Mining the abyss&lt;a class=headerlink href=http://jnrowe.github.com/thoughts/metro_city.html#mining-the-abyss title="Permalink to this headline"&gt;¶&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;My task was simple: ingest a massive lump of &lt;abbr title="JavaScript Object Notation"&gt;JSON&lt;/abbr&gt;, process it &lt;em&gt;somehow&lt;/em&gt; and spit out results that could be used in an
 artsy manner that I would likely not understand.&lt;/p&gt;
-&lt;p&gt;The initial concept worked by scanning a firehouse of tweets for keywords which
+&lt;p&gt;The initial concept worked by scanning a firehose of tweets for keywords which
 seemed likely to be hugely poisonous, and then create a &lt;abbr title="Directed Acyclic Graph"&gt;DAG&lt;/abbr&gt; as the basis to rate users who were retweeting them.  Later
 versions were self-training using a naïve Bayes classifier, which allowed us to
 find offensive tweets using words I was previously happily unaware of.&lt;/p&gt;
@@ -41,7 +41,7 @@ depleted.  Each new visualisation started from a map, much like the game’s
 levels, and showed a real city with its real occupants.  The intent was to
 allow people to experience a location they knew but with its foetid underbelly
 exposed.&lt;/p&gt;
-&lt;a class="reference external image-reference" href=https://en.m.wikipedia.org/wiki/Final_Fight&gt;&lt;img alt="Final Fight One on the GBA" src=http://jnrowe.github.com/_images/final_fight_one.png&gt;&lt;/a&gt;
+&lt;a class="reference external image-reference" href=https://en.m.wikipedia.org/wiki/Final_Fight&gt;&lt;img alt="Final Fight One on the GBA" class=align-right src=http://jnrowe.github.com/_images/final_fight_one.png style="width: 237.6px; height: 158.4px;"&gt;&lt;/a&gt;
 &lt;/div&gt;
 &lt;div class=section id=what-happened-next&gt;
 &lt;h2&gt;What happened next?&lt;a class=headerlink href=http://jnrowe.github.com/thoughts/metro_city.html#what-happened-next title="Permalink to this headline"&gt;¶&lt;/a&gt;&lt;/h2&gt;
@@ -55,7 +55,7 @@ ashamed.  I mean not to the point of thinking it is appropriate to post all
 their personal details for the internet vigilantes, but enough that I knew
 I would not want to be linked to them through work or social circles.&lt;/p&gt;
 &lt;p&gt;However, the end result was really neat even on the smaller canvas it has to
-live on.  Seeing that level of vitriolic rage isn’t fun, but realising that
+live on.  Seeing that level of vitriolic rage is not fun, but realising that
 much of it is vented in to nowhere does soften it a little.&lt;/p&gt;
 &lt;div class=sidebar&gt;
 &lt;p class="first sidebar-title"&gt;Alternative mappings&lt;/p&gt;
@@ -88,7 +88,7 @@ normalising the behaviour.  If you’re not calling them out on it, you’re doi
 yourself and society at large a serious injustice.&lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-</summary></entry><entry><title>&lt;code class="docutils literal"&gt;&lt;span class="pre"&gt;fossil&lt;/span&gt;&lt;/code&gt; experiments</title><link href="http://jnrowe.github.com/articles/fossil.html" rel="alternate"></link><updated>2014-11-12T00:00:00Z</updated><id>http://jnrowe.github.com/articles/fossil.html</id><summary type="html">&lt;div class=section id=fossil-experiments&gt;
+</summary></entry><entry><title>&lt;code class="docutils literal"&gt;&lt;span class="pre"&gt;fossil&lt;/span&gt;&lt;/code&gt; experiments</title><link rel="alternate" href="http://jnrowe.github.com/articles/fossil.html"></link><updated>2014-11-12T00:00:00Z</updated><id>http://jnrowe.github.com/articles/fossil.html</id><summary type="html">&lt;div class=section id=fossil-experiments&gt;
 &lt;h1&gt;&lt;code class="docutils literal"&gt;&lt;span class=pre&gt;fossil&lt;/span&gt;&lt;/code&gt; experiments&lt;a class=headerlink href=http://jnrowe.github.com/articles/fossil.html#fossil-experiments title="Permalink to this headline"&gt;¶&lt;/a&gt;&lt;/h1&gt;
 &lt;p&gt;For a variety of reasons we can no longer use GitHub at work for any project
 which isn’t Open Source.  And since that decision was thrust upon us we’ve been
@@ -104,7 +104,7 @@ the idea of a totally reproducible project state including all metadata.&lt;/p&g
 &lt;div class=section id=testing-fossil&gt;
 &lt;h2&gt;Testing &lt;code class="docutils literal"&gt;&lt;span class=pre&gt;fossil&lt;/span&gt;&lt;/code&gt;&lt;a class=headerlink href=http://jnrowe.github.com/articles/fossil.html#testing-fossil title="Permalink to this headline"&gt;¶&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;The good news is that testing &lt;code class="docutils literal"&gt;&lt;span class=pre&gt;fossil&lt;/span&gt;&lt;/code&gt; is a piece of cake.  It supports both
-reading and writing &lt;code class="docutils literal"&gt;&lt;span class=pre&gt;git&lt;/span&gt;&lt;/code&gt;‘s &lt;a class="reference external" href=http://git-scm.com/docs/git-fast-import&gt;fast-import&lt;/a&gt; format.  If you want to test it out
+reading and writing &lt;code class="docutils literal"&gt;&lt;span class=pre&gt;git&lt;/span&gt;&lt;/code&gt;’s &lt;a class="reference external" href=http://git-scm.com/docs/git-fast-import&gt;fast-import&lt;/a&gt; format.  If you want to test it out
 just dump an existing &lt;a class="reference external" href=http://www.git-scm.com/&gt;git&lt;/a&gt; repository(or &lt;a class="reference external" href=http://mercurial.selenic.com/wiki/FastImportExtension&gt;mercurial with an extension&lt;/a&gt;), and
 feed it &lt;code class="docutils literal"&gt;&lt;span class=pre&gt;fossil&lt;/span&gt; &lt;span class=pre&gt;import&lt;/span&gt;&lt;/code&gt;.  If you later change your mind you can run &lt;code class="docutils literal"&gt;&lt;span class=pre&gt;fossil&lt;/span&gt;
 &lt;span class=pre&gt;export&lt;/span&gt;&lt;/code&gt;.&lt;/p&gt;
@@ -161,7 +161,7 @@ and you should set aside quite a lot of time for integration issues when you
 have &lt;code class="docutils literal"&gt;&lt;span class=pre&gt;autosync&lt;/span&gt;&lt;/code&gt; disabled.  And I can’t imagine a scenario where &lt;code class="docutils literal"&gt;&lt;span class=pre&gt;autosync&lt;/span&gt;&lt;/code&gt;
 could work for us, without rewriting our entire way of working or returning to
 CVS-style mega commits and a manual patch stack layered on top.&lt;/p&gt;
-&lt;p&gt;If you read &lt;code class="docutils literal"&gt;&lt;span class=pre&gt;fossil&lt;/span&gt;&lt;/code&gt;‘s &lt;a class="reference external" href=http://www.bugzilla.org&gt;Branching, Forking, Merging, and Tagging&lt;/a&gt;
+&lt;p&gt;If you read &lt;code class="docutils literal"&gt;&lt;span class=pre&gt;fossil&lt;/span&gt;&lt;/code&gt;’s &lt;a class="reference external" href=http://www.bugzilla.org&gt;Branching, Forking, Merging, and Tagging&lt;/a&gt;
 documentation it appears that this is a design feature for the creators.&lt;/p&gt;
 &lt;/div&gt;
 &lt;div class=section id=issue-tracker&gt;
@@ -242,11 +242,11 @@ obviously fine but it does mean upstreaming changes would be impossible.&lt;/p&g
 &lt;p class=last&gt;As noted above, it turns out they require a &lt;abbr title="Contributor Licence Agreement"&gt;CLA&lt;/abbr&gt; which means we couldn’t send changes upstream anyway.&lt;/p&gt;
 &lt;/div&gt;
 &lt;p&gt;That said I’m am planning on stealing some of the ideas that I really liked
-about &lt;code class="docutils literal"&gt;&lt;span class=pre&gt;fossil&lt;/span&gt;&lt;/code&gt; for my own use.  &lt;code class="docutils literal"&gt;&lt;span class=pre&gt;fossil&lt;/span&gt; &lt;span class=pre&gt;all&lt;/span&gt;&lt;/code&gt;‘s ability to run a command
+about &lt;code class="docutils literal"&gt;&lt;span class=pre&gt;fossil&lt;/span&gt;&lt;/code&gt; for my own use.  &lt;code class="docutils literal"&gt;&lt;span class=pre&gt;fossil&lt;/span&gt; &lt;span class=pre&gt;all&lt;/span&gt;&lt;/code&gt;’s ability to run a command
 against all repositories configured in &lt;code class="file docutils literal"&gt;&lt;span class=pre&gt;~/.fossil&lt;/span&gt;&lt;/code&gt; for example.&lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-</summary></entry><entry><title>Cleanse thy soul</title><link href="http://jnrowe.github.com/thoughts/disconnect.html" rel="alternate"></link><updated>2014-09-18T00:00:00Z</updated><id>http://jnrowe.github.com/thoughts/disconnect.html</id><summary type="html">&lt;div class=section id=cleanse-thy-soul&gt;
+</summary></entry><entry><title>Cleanse thy soul</title><link rel="alternate" href="http://jnrowe.github.com/thoughts/disconnect.html"></link><updated>2014-09-18T00:00:00Z</updated><id>http://jnrowe.github.com/thoughts/disconnect.html</id><summary type="html">&lt;div class=section id=cleanse-thy-soul&gt;
 &lt;h1&gt;Cleanse thy soul&lt;a class=headerlink href=http://jnrowe.github.com/thoughts/disconnect.html#cleanse-thy-soul title="Permalink to this headline"&gt;¶&lt;/a&gt;&lt;/h1&gt;
 &lt;p&gt;For the past few years I’ve taken to having routine breaks from certain
 timesinks to help me focus and also to denoise some of my thoughts.  The number
@@ -341,7 +341,7 @@ I don’t know how that can be fixed.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
 &lt;p&gt;There are a myriad of benefits to dropping the reliance on &lt;abbr title="Software as a Service"&gt;SaaS&lt;/abbr&gt; affairs.  The chance of any of them existing tomorrow is frankly
-not all that great: shuttering, buy-out closures, “pivotting”, &amp;amp;c.  You can
+not all that great: shuttering, buy-out closures, “pivoting”, &amp;amp;c.  You can
 also retain some level of control over your own data, knowing that for example
 it isn’t being sold or stored in regions with little to no data protection
 regulation.&lt;/p&gt;
@@ -380,7 +380,7 @@ does act as a nice sieve for everything else right now.&lt;/tr&gt;
 &lt;/table&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-</summary></entry><entry><title>Open Source and enjoyment</title><link href="http://jnrowe.github.com/thoughts/burn_out.html" rel="alternate"></link><updated>2014-09-03T00:00:00Z</updated><id>http://jnrowe.github.com/thoughts/burn_out.html</id><summary type="html">&lt;div class=section id=open-source-and-enjoyment&gt;
+</summary></entry><entry><title>Open Source and enjoyment</title><link rel="alternate" href="http://jnrowe.github.com/thoughts/burn_out.html"></link><updated>2014-09-03T00:00:00Z</updated><id>http://jnrowe.github.com/thoughts/burn_out.html</id><summary type="html">&lt;div class=section id=open-source-and-enjoyment&gt;
 &lt;h1&gt;Open Source and enjoyment&lt;a class=headerlink href=http://jnrowe.github.com/thoughts/burn_out.html#open-source-and-enjoyment title="Permalink to this headline"&gt;¶&lt;/a&gt;&lt;/h1&gt;
 &lt;p&gt;A few years ago I burned out on Open Source projects, to the point that it was
 close to impacting other parts of my life.  I have only myself to blame as
@@ -494,7 +494,7 @@ somehow you’re probably not losing anything, but you’ll be gaining a whole l
 personally.&lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-</summary></entry><entry><title>jnrowe-misc - The unsorted package overlay</title><link href="http://jnrowe.github.com/articles/probits/jnrowe-misc.html" rel="alternate"></link><updated>2014-06-30T00:00:00Z</updated><id>http://jnrowe.github.com/articles/probits/jnrowe-misc.html</id><summary type="html">&lt;div class=section id=jnrowe-misc-the-unsorted-package-overlay&gt;
+</summary></entry><entry><title>jnrowe-misc - The unsorted package overlay</title><link rel="alternate" href="http://jnrowe.github.com/articles/probits/jnrowe-misc.html"></link><updated>2014-06-30T00:00:00Z</updated><id>http://jnrowe.github.com/articles/probits/jnrowe-misc.html</id><summary type="html">&lt;div class=section id=jnrowe-misc-the-unsorted-package-overlay&gt;
 &lt;h1&gt;jnrowe-misc - The unsorted package overlay&lt;a class=headerlink href=http://jnrowe.github.com/articles/probits/jnrowe-misc.html#jnrowe-misc-the-unsorted-package-overlay title="Permalink to this headline"&gt;¶&lt;/a&gt;&lt;/h1&gt;
 &lt;blockquote&gt;
 &lt;div&gt;A collection of &lt;code class="docutils literal"&gt;&lt;span class=pre&gt;ebuild&lt;/span&gt;&lt;/code&gt; files with no overall theme.&lt;/div&gt;&lt;/blockquote&gt;
@@ -512,8 +512,8 @@ Eventually it ended up being mostly Python stuff, but that was because the
 support burden of other packages was becoming more time consuming than I could
 justify.&lt;/p&gt;
 &lt;p&gt;The &lt;em&gt;real&lt;/em&gt; audience for the overlay, my co-workers, saw a different beast
-entirely.  It used our keyword types and rules, it came bundled &lt;a class="reference internal" href=http://jnrowe.github.com/articles/tdd_distros.html&gt;&lt;em&gt;with the
-tests&lt;/em&gt;&lt;/a&gt; I was unable to share and had a tighter schedule for
+entirely.  It used our keyword types and rules, it came bundled &lt;a class="reference internal" href=http://jnrowe.github.com/articles/tdd_distros.html&gt;&lt;span class=doc&gt;with the
+tests&lt;/span&gt;&lt;/a&gt; I was unable to share and had a tighter schedule for
 maintenance.&lt;/p&gt;
 &lt;p&gt;Still, I received a fair number of emails and live comments from users so I’ll
 call that a success!&lt;/p&gt;
@@ -542,7 +542,7 @@ their reasons.  I’ve stopped maintaining a lot of once public projects over th
 past couple of years, and it is as refreshing as it is saddening.&lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-</summary></entry><entry><title>Project postmortems</title><link href="http://jnrowe.github.com/articles/probits/index.html" rel="alternate"></link><updated>2014-06-30T00:00:00Z</updated><id>http://jnrowe.github.com/articles/probits/index.html</id><summary type="html">&lt;div class=section id=project-postmortems&gt;
+</summary></entry><entry><title>Project postmortems</title><link rel="alternate" href="http://jnrowe.github.com/articles/probits/index.html"></link><updated>2014-06-30T00:00:00Z</updated><id>http://jnrowe.github.com/articles/probits/index.html</id><summary type="html">&lt;div class=section id=project-postmortems&gt;
 &lt;h1&gt;Project postmortems&lt;a class=headerlink href=http://jnrowe.github.com/articles/probits/index.html#project-postmortems title="Permalink to this headline"&gt;¶&lt;/a&gt;&lt;/h1&gt;
 &lt;p&gt;One of my favourite things about the day job is the post-project analysis and
 postmortems, which we lovingly refer to as &lt;abbr title="Project Obituaries"&gt;probits&lt;/abbr&gt;
@@ -572,9 +572,9 @@ situations.  This category, and the accompanying index, below are that attempt.&
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-</summary></entry><entry><title>Dropping Gentoo reflex</title><link href="http://jnrowe.github.com/articles/dropping_gentoo_reflex.html" rel="alternate"></link><updated>2014-06-29T00:00:00Z</updated><id>http://jnrowe.github.com/articles/dropping_gentoo_reflex.html</id><summary type="html">&lt;div class=section id=dropping-gentoo-reflex&gt;
+</summary></entry><entry><title>Dropping Gentoo reflex</title><link rel="alternate" href="http://jnrowe.github.com/articles/dropping_gentoo_reflex.html"></link><updated>2014-06-29T00:00:00Z</updated><id>http://jnrowe.github.com/articles/dropping_gentoo_reflex.html</id><summary type="html">&lt;div class=section id=dropping-gentoo-reflex&gt;
 &lt;h1&gt;Dropping Gentoo reflex&lt;a class=headerlink href=http://jnrowe.github.com/articles/dropping_gentoo_reflex.html#dropping-gentoo-reflex title="Permalink to this headline"&gt;¶&lt;/a&gt;&lt;/h1&gt;
-&lt;p&gt;After hitting the publish button on &lt;a class="reference internal" href=http://jnrowe.github.com/articles/dropping_gentoo.html&gt;&lt;em&gt;Dropping Gentoo&lt;/em&gt;&lt;/a&gt; a few friends
+&lt;p&gt;After hitting the publish button on &lt;a class="reference internal" href=http://jnrowe.github.com/articles/dropping_gentoo.html&gt;&lt;span class=doc&gt;Dropping Gentoo&lt;/span&gt;&lt;/a&gt; a few friends
 commented that I was either unnecessarily harsh about Gentoo or we wasted an
 enormous amount of time on it.  It definitely was the former, and I feel
 a touch ashamed for implying the latter.&lt;/p&gt;
@@ -585,7 +585,7 @@ project and by extension the people working on it.&lt;/p&gt;
 &lt;p&gt;There were many, many good points about Gentoo and I’ll nod towards a few now.&lt;/p&gt;
 &lt;div class=section id=speed&gt;
 &lt;h2&gt;Speed&lt;a class=headerlink href=http://jnrowe.github.com/articles/dropping_gentoo_reflex.html#speed title="Permalink to this headline"&gt;¶&lt;/a&gt;&lt;/h2&gt;
-&lt;p&gt;No, no.  Not the “Oh my god, my KDEs are soooo fast” that many people fairly
+&lt;p&gt;No, no.  Not the “Oh my god, my KDEs are so fast” that many people fairly
 associate with Gentoo users.  I’m talking about the basic package handling
 tasks.&lt;/p&gt;
 &lt;p&gt;There are very few other distributions that can match Gentoo when it comes to
@@ -595,11 +595,11 @@ if you share binary packages.&lt;/p&gt;
 binary package user on Gentoo is just how slow package installation and removal
 is.  Binary package installation on Gentoo feels on par with a distribution
 like Slackware, and what passes for package management there is just choosing
-the right argument to &lt;strong class=command&gt;tar&lt;/strong&gt;‘s &lt;code class="xref std std-option docutils literal"&gt;&lt;span class=pre&gt;-C&lt;/span&gt;&lt;/code&gt; option.&lt;/p&gt;
+the right argument to &lt;strong class=command&gt;tar&lt;/strong&gt;’s &lt;a class="reference external" href=http://docs.python.org/library/trace.html#cmdoption-trace-C title="(in Python v3.6)"&gt;&lt;code class="xref std std-option docutils literal"&gt;&lt;span class=pre&gt;-C&lt;/span&gt;&lt;/code&gt;&lt;/a&gt; option.&lt;/p&gt;
 &lt;p&gt;Where Gentoo really excels though is in the speed of creating new packages or
 editing existing packages.&lt;/p&gt;
 &lt;p&gt;Lets take a look at an example.  Say, for example, that you just found out that
-&lt;code class="docutils literal"&gt;&lt;span class=pre&gt;flask-dashed&lt;/span&gt;&lt;/code&gt;‘s  &lt;code class="docutils literal"&gt;&lt;span class=pre&gt;ebuild&lt;/span&gt;&lt;/code&gt; mistakenly installs a &lt;code class="file docutils literal"&gt;&lt;span class=pre&gt;/usr/README&lt;/span&gt;&lt;/code&gt; file.
+&lt;code class="docutils literal"&gt;&lt;span class=pre&gt;flask-dashed&lt;/span&gt;&lt;/code&gt;’s  &lt;code class="docutils literal"&gt;&lt;span class=pre&gt;ebuild&lt;/span&gt;&lt;/code&gt; mistakenly installs a &lt;code class="file docutils literal"&gt;&lt;span class=pre&gt;/usr/README&lt;/span&gt;&lt;/code&gt; file.
 We we can fix the problem with the following simple change and a call to
 &lt;code class="docutils literal"&gt;&lt;span class=pre&gt;repoman&lt;/span&gt; &lt;span class=pre&gt;manifest&lt;/span&gt;&lt;/code&gt;, the rest takes care of itself.&lt;/p&gt;
 &lt;div class=highlight-diff&gt;&lt;div class=highlight&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=gh&gt;diff --git i/flask-dashed-0.1b_p2.ebuild w/flask-dashed-0.1b_p2.ebuild&lt;/span&gt;
@@ -622,7 +622,7 @@ this is just to prove a point.  Calling &lt;code class="docutils literal"&gt;&lt
 recommended and is practically pointless, but it is the style upstream.&lt;/p&gt;
 &lt;/div&gt;
 &lt;p&gt;I have to mention a small downside here however, because very few people seem to
-test &lt;code class="docutils literal"&gt;&lt;span class=pre&gt;portage&lt;/span&gt;&lt;/code&gt;‘s binary package support you’ll occasionally have to do some
+test &lt;code class="docutils literal"&gt;&lt;span class=pre&gt;portage&lt;/span&gt;&lt;/code&gt;’s binary package support you’ll occasionally have to do some
 leg work to fix problems.  This normally arises when you have an &lt;code class="docutils literal"&gt;&lt;span class=pre&gt;eclass&lt;/span&gt;&lt;/code&gt;
 change that needs to ripple through, or when a library breaks compatibility and
 it’s &lt;code class="docutils literal"&gt;&lt;span class=pre&gt;ebuild&lt;/span&gt;&lt;/code&gt; hasn’t been bumped properly.&lt;/p&gt;
@@ -632,13 +632,13 @@ history can be seen below.&lt;/p&gt;
 &lt;div class=highlight-sh&gt;&lt;div class=highlight&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=c1&gt;# When you were stuck with packages that used python-distutils-ng, and you&lt;/span&gt;
 &lt;span class=c1&gt;# needed to scrub packages because you changed Python version&lt;/span&gt;
 &lt;span class=k&gt;for&lt;/span&gt; s in &lt;span class=k&gt;$(&lt;/span&gt;portageq pkgdir&lt;span class=k&gt;)&lt;/span&gt;/*-*/*.tbz2&lt;span class=p&gt;;&lt;/span&gt; &lt;span class=k&gt;do&lt;/span&gt;
-    qtbz2 -xO $s &lt;span class=p&gt;|&lt;/span&gt; qxpak -xO - &lt;span class=si&gt;${${&lt;/span&gt;&lt;span class=nv&gt;s&lt;/span&gt;&lt;span class=p&gt;##*/&lt;/span&gt;&lt;span class=si&gt;}&lt;/span&gt;&lt;span class=p&gt;/.tbz2&lt;/span&gt;&lt;span class=si&gt;}&lt;/span&gt;.ebuild &lt;span class=p&gt;|&lt;/span&gt; grep -q &lt;span class=s1&gt;'SUPPORT_PYTHON_ABIS'&lt;/span&gt; &lt;span class=o&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span class=nb&gt;echo&lt;/span&gt; $s
+    qtbz2 -xO &lt;span class=nv&gt;$s&lt;/span&gt; &lt;span class=p&gt;|&lt;/span&gt; qxpak -xO - &lt;span class=si&gt;${${&lt;/span&gt;&lt;span class=nv&gt;s&lt;/span&gt;&lt;span class=p&gt;##*/&lt;/span&gt;&lt;span class=si&gt;}&lt;/span&gt;&lt;span class=p&gt;/.tbz2&lt;/span&gt;&lt;span class=si&gt;}&lt;/span&gt;.ebuild &lt;span class=p&gt;|&lt;/span&gt; grep -q &lt;span class=s1&gt;'SUPPORT_PYTHON_ABIS'&lt;/span&gt; &lt;span class=o&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span class=nb&gt;echo&lt;/span&gt; &lt;span class=nv&gt;$s&lt;/span&gt;
 &lt;span class=k&gt;done&lt;/span&gt;
 
 &lt;span class=c1&gt;# When you were using packages that used python's "-r1" eclasses and all&lt;/span&gt;
 &lt;span class=c1&gt;# you could see is a flood of blockages in your update output&lt;/span&gt;
 &lt;span class=k&gt;for&lt;/span&gt; s in &lt;span class=k&gt;$(&lt;/span&gt;portageq pkgdir&lt;span class=k&gt;)&lt;/span&gt;/*-*/*.tbz2&lt;span class=p&gt;;&lt;/span&gt; &lt;span class=k&gt;do&lt;/span&gt;
-    qtbz2 -xO $s &lt;span class=p&gt;|&lt;/span&gt; qxpak -xO - RDEPEND 2&amp;gt;/dev/null &lt;span class=p&gt;|&lt;/span&gt; grep -q &lt;span class=s2&gt;"dev-python/python-exec"&lt;/span&gt; &lt;span class=o&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span class=nb&gt;echo&lt;/span&gt; $s
+    qtbz2 -xO &lt;span class=nv&gt;$s&lt;/span&gt; &lt;span class=p&gt;|&lt;/span&gt; qxpak -xO - RDEPEND &lt;span class=m&gt;2&lt;/span&gt;&amp;gt;/dev/null &lt;span class=p&gt;|&lt;/span&gt; grep -q &lt;span class=s2&gt;"dev-python/python-exec"&lt;/span&gt; &lt;span class=o&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span class=nb&gt;echo&lt;/span&gt; &lt;span class=nv&gt;$s&lt;/span&gt;
 &lt;span class=k&gt;done&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
@@ -681,7 +681,7 @@ from a less happy place without them.&lt;/p&gt;
 &lt;p&gt;It is true that you really can not always see the forest for trees.&lt;/p&gt;
 &lt;p&gt;Had recent events not clouded my vision I would have commented on the train
 wreck that is &lt;code class="docutils literal"&gt;&lt;span class=pre&gt;webapp.eclass&lt;/span&gt;&lt;/code&gt; and &lt;code class="docutils literal"&gt;&lt;span class=pre&gt;app-admin/webapp-config&lt;/span&gt;&lt;/code&gt; in
-&lt;a class="reference internal" href=http://jnrowe.github.com/articles/dropping_gentoo.html&gt;&lt;em&gt;Dropping Gentoo&lt;/em&gt;&lt;/a&gt;.  It sucked tonnes and tonnes of time away until we
+&lt;a class="reference internal" href=http://jnrowe.github.com/articles/dropping_gentoo.html&gt;&lt;span class=doc&gt;Dropping Gentoo&lt;/span&gt;&lt;/a&gt;.  It sucked tonnes and tonnes of time away until we
 eventually just trashed any package that interacted with it and moved on.&lt;/p&gt;
 &lt;p&gt;That was so long ago that I had forgotten about it until a co-worker asked me
 why I hadn’t mentioned it.  I suspect most of the other negative comments I made
@@ -691,7 +691,7 @@ as time moves on.&lt;/p&gt;
 fun memories.&lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-</summary></entry><entry><title>Dropping Gentoo</title><link href="http://jnrowe.github.com/articles/dropping_gentoo.html" rel="alternate"></link><updated>2014-06-18T00:00:00Z</updated><id>http://jnrowe.github.com/articles/dropping_gentoo.html</id><summary type="html">&lt;div class=section id=dropping-gentoo&gt;
+</summary></entry><entry><title>Dropping Gentoo</title><link rel="alternate" href="http://jnrowe.github.com/articles/dropping_gentoo.html"></link><updated>2014-06-18T00:00:00Z</updated><id>http://jnrowe.github.com/articles/dropping_gentoo.html</id><summary type="html">&lt;div class=section id=dropping-gentoo&gt;
 &lt;h1&gt;Dropping Gentoo&lt;a class=headerlink href=http://jnrowe.github.com/articles/dropping_gentoo.html#dropping-gentoo title="Permalink to this headline"&gt;¶&lt;/a&gt;&lt;/h1&gt;
 &lt;p&gt;We’ve been using &lt;a class="reference external" href=http://gentoo.org&gt;Gentoo&lt;/a&gt; for shipped products since June 2005, and as
 a development platform since September 2004.  A long time, an incredibly long
@@ -702,7 +702,7 @@ and it takes only a little inside knowledge to know why.&lt;/p&gt;
 &lt;div class="admonition note"&gt;
 &lt;p class="first admonition-title"&gt;Note&lt;/p&gt;
 &lt;p class=last&gt;A couple of people have rightly pointed out that I was a little harsh in
-this document, so I’ve pushed a &lt;a class="reference internal" href=http://jnrowe.github.com/articles/dropping_gentoo_reflex.html&gt;&lt;em&gt;followup&lt;/em&gt;&lt;/a&gt;.&lt;/p&gt;
+this document, so I’ve pushed a &lt;a class="reference internal" href=http://jnrowe.github.com/articles/dropping_gentoo_reflex.html&gt;&lt;span class=doc&gt;followup&lt;/span&gt;&lt;/a&gt;.&lt;/p&gt;
 &lt;/div&gt;
 &lt;div class=section id=landscapes-have-changed&gt;
 &lt;h2&gt;Landscapes have changed&lt;a class=headerlink href=http://jnrowe.github.com/articles/dropping_gentoo.html#landscapes-have-changed title="Permalink to this headline"&gt;¶&lt;/a&gt;&lt;/h2&gt;
@@ -741,7 +741,7 @@ Gentoo.  May have been a fortuitous roadblock in the end, as Conary never gained
 the traction it once promised(perhaps in part because of that &lt;abbr title="Contributor License Agreement"&gt;CLA&lt;/abbr&gt;?).&lt;/p&gt;
 &lt;p&gt;Had we waited another five months, there would have been another open source
 package manager for Gentoo we could have easily switched to and hacked on.
-There is perhaps a pattern here...&lt;/p&gt;
+There is perhaps a pattern here…&lt;/p&gt;
 &lt;/div&gt;
 &lt;div class=section id=upstreaming-changes&gt;
 &lt;h2&gt;Upstreaming changes&lt;a class=headerlink href=http://jnrowe.github.com/articles/dropping_gentoo.html#upstreaming-changes title="Permalink to this headline"&gt;¶&lt;/a&gt;&lt;/h2&gt;
@@ -810,7 +810,7 @@ alone.&lt;/p&gt;
 necessitated supporting a few packages further up the stack.  Our desire to trim
 the tree of a few categories that were problematic, meant replacing a variety of
 packages with then unavailable dependencies.&lt;/p&gt;
-&lt;p&gt;And there were many other examples too...&lt;/p&gt;
+&lt;p&gt;And there were many other examples too…&lt;/p&gt;
 &lt;div class=section id=matchbox&gt;
 &lt;h3&gt;matchbox&lt;a class=headerlink href=http://jnrowe.github.com/articles/dropping_gentoo.html#matchbox title="Permalink to this headline"&gt;¶&lt;/a&gt;&lt;/h3&gt;
 &lt;p&gt;We packaged &lt;a class="reference internal" href=http://jnrowe.github.com/articles/dropping_gentoo.html#matchbox&gt;matchbox&lt;/a&gt; and its associated packages a long, long time before they
@@ -842,8 +842,8 @@ a non-issue.&lt;/p&gt;
 &lt;h3&gt;X.org&lt;a class=headerlink href=http://jnrowe.github.com/articles/dropping_gentoo.html#x-org title="Permalink to this headline"&gt;¶&lt;/a&gt;&lt;/h3&gt;
 &lt;p&gt;We had been packaging x.org’s packages to work around some implementation
 differences with upstream since the dawn of modular X.  Mostly just to do with
-how dependencies were specified to start with, but they’re not even similar
-anymore.&lt;/p&gt;
+how dependencies were specified to start with, but they’re no longer even
+remotely similar.&lt;/p&gt;
 &lt;p&gt;Luckily there isn’t a great deal of churn in the packages we care about for the
 most part, so it never caused a huge time sink.&lt;/p&gt;
 &lt;/div&gt;
@@ -879,7 +879,7 @@ track for the next ten years.&lt;/p&gt;
 &lt;p&gt;So long Gentoo, and thanks for all fish!&lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-</summary></entry><entry><title>Delayed flashover</title><link href="http://jnrowe.github.com/thoughts/delayed_flashover.html" rel="alternate"></link><updated>2014-04-09T00:00:00Z</updated><id>http://jnrowe.github.com/thoughts/delayed_flashover.html</id><summary type="html">&lt;div class=section id=delayed-flashover&gt;
+</summary></entry><entry><title>Delayed flashover</title><link rel="alternate" href="http://jnrowe.github.com/thoughts/delayed_flashover.html"></link><updated>2014-04-09T00:00:00Z</updated><id>http://jnrowe.github.com/thoughts/delayed_flashover.html</id><summary type="html">&lt;div class=section id=delayed-flashover&gt;
 &lt;h1&gt;Delayed flashover&lt;a class=headerlink href=http://jnrowe.github.com/thoughts/delayed_flashover.html#delayed-flashover title="Permalink to this headline"&gt;¶&lt;/a&gt;&lt;/h1&gt;
 &lt;p&gt;This weekend a very good friend of mine is taking part in the London Marathon,
 and we’re all looking forward to the no-doubt incredible time she’ll finish in.&lt;/p&gt;
@@ -920,7 +920,7 @@ sponsorship options in check, she’ll destroy the target time.  Go Rach!&lt;/p&
 &lt;/tbody&gt;
 &lt;/table&gt;
 &lt;/div&gt;
-</summary></entry><entry><title>Hitting life&amp;#8217;s reset button</title><link href="http://jnrowe.github.com/thoughts/reset_in_ten.html" rel="alternate"></link><updated>2014-02-24T00:00:00Z</updated><id>http://jnrowe.github.com/thoughts/reset_in_ten.html</id><summary type="html">&lt;div class=section id=hitting-life-s-reset-button&gt;
+</summary></entry><entry><title>Hitting life’s reset button</title><link rel="alternate" href="http://jnrowe.github.com/thoughts/reset_in_ten.html"></link><updated>2014-02-24T00:00:00Z</updated><id>http://jnrowe.github.com/thoughts/reset_in_ten.html</id><summary type="html">&lt;div class=section id=hitting-life-s-reset-button&gt;
 &lt;h1&gt;Hitting life’s reset button&lt;a class=headerlink href=http://jnrowe.github.com/thoughts/reset_in_ten.html#hitting-life-s-reset-button title="Permalink to this headline"&gt;¶&lt;/a&gt;&lt;/h1&gt;
 &lt;p&gt;Seven months ago while enjoying a little Saturday afternoon cricket picnic,
 a friend posed the question:&lt;/p&gt;
@@ -933,7 +933,7 @@ That doesn’t mean I played the game though.&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;div&gt;“I’d have used it repeatedly half an hour ago, until I figured out the magic
 incantation that convinces that cashier in the ‘Express to join me for
-a picnic...  and then I would have ditched you suckers.”&lt;/div&gt;&lt;/blockquote&gt;
+a picnic…  and then I would have ditched you suckers.”&lt;/div&gt;&lt;/blockquote&gt;
 &lt;p&gt;It was an honest-ish answer;  I mean yeah, she may have been worth messing with
 the universe for.  It wasn’t, however, the correct kind of reply.  I should
 have been describing some dreadful mistake I made, both to make my friends
@@ -961,7 +961,7 @@ It is too late, and there is another lesson for me to learn.&lt;/p&gt;
 nothing useful about it.  Internet, this is the foolish truth I proffer you
 today.  The others well, they’ll hopefully remain hidden away from view.&lt;/p&gt;
 &lt;/div&gt;
-</summary></entry><entry><title>Return to rambling</title><link href="http://jnrowe.github.com/thoughts/the_returned.html" rel="alternate"></link><updated>2014-01-27T00:00:00Z</updated><id>http://jnrowe.github.com/thoughts/the_returned.html</id><summary type="html">&lt;div class=section id=return-to-rambling&gt;
+</summary></entry><entry><title>Return to rambling</title><link rel="alternate" href="http://jnrowe.github.com/thoughts/the_returned.html"></link><updated>2014-01-27T00:00:00Z</updated><id>http://jnrowe.github.com/thoughts/the_returned.html</id><summary type="html">&lt;div class=section id=return-to-rambling&gt;
 &lt;h1&gt;Return to rambling&lt;a class=headerlink href=http://jnrowe.github.com/thoughts/the_returned.html#return-to-rambling title="Permalink to this headline"&gt;¶&lt;/a&gt;&lt;/h1&gt;
 &lt;p&gt;I kept a public journal from about 2003 until 2009, with a new entry about every
 three days.  I enjoyed the act of writing it greatly, and often looked forward
@@ -992,7 +992,7 @@ me for the opinions I express or information I spread.  And that invitation is
 absolutely extended to this site and the new content I post.&lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-</summary></entry><entry><title>Murdering morality with ferocious fire</title><link href="http://jnrowe.github.com/thoughts/important_balance.html" rel="alternate"></link><updated>2014-01-25T00:00:00Z</updated><id>http://jnrowe.github.com/thoughts/important_balance.html</id><summary type="html">&lt;div class=section id=murdering-morality-with-ferocious-fire&gt;
+</summary></entry><entry><title>Murdering morality with ferocious fire</title><link rel="alternate" href="http://jnrowe.github.com/thoughts/important_balance.html"></link><updated>2014-01-25T00:00:00Z</updated><id>http://jnrowe.github.com/thoughts/important_balance.html</id><summary type="html">&lt;div class=section id=murdering-morality-with-ferocious-fire&gt;
 &lt;h1&gt;Murdering morality with ferocious fire&lt;a class=headerlink href=http://jnrowe.github.com/thoughts/important_balance.html#murdering-morality-with-ferocious-fire title="Permalink to this headline"&gt;¶&lt;/a&gt;&lt;/h1&gt;
 &lt;blockquote class=epigraph&gt;
 &lt;div&gt;&lt;p&gt;“Morality is herd instinct in the individual.”&lt;/p&gt;
@@ -1030,7 +1030,7 @@ I suspect that will remain true in the future.  I like that these decisions are
 defensible to &lt;em&gt;me&lt;/em&gt;, that they &lt;em&gt;must&lt;/em&gt; be defensible to me.  I love that the thing
 that keeps me awake at night is not the thought of the possibly nefarious
 effects of my works, but rather the exceedingly minor issue of not having
-a glistening and well-specced M6 in the garage.&lt;/p&gt;
+a glistening and well-spec’d M6 in the garage.&lt;/p&gt;
 &lt;p&gt;Now, let me sleep.&lt;/p&gt;
 &lt;p class=rubric&gt;Footnotes&lt;/p&gt;
 &lt;table class="docutils footnote" frame=void id=s1 rules=none&gt;
@@ -1041,7 +1041,7 @@ line up with your definition of “strong moral values” ;)&lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
 &lt;/div&gt;
-</summary></entry><entry><title>Dopplr defects</title><link href="http://jnrowe.github.com/thoughts/dopplr_effects.html" rel="alternate"></link><updated>2014-01-06T00:00:00Z</updated><id>http://jnrowe.github.com/thoughts/dopplr_effects.html</id><summary type="html">&lt;div class=section id=dopplr-defects&gt;
+</summary></entry><entry><title>Dopplr defects</title><link rel="alternate" href="http://jnrowe.github.com/thoughts/dopplr_effects.html"></link><updated>2014-01-06T00:00:00Z</updated><id>http://jnrowe.github.com/thoughts/dopplr_effects.html</id><summary type="html">&lt;div class=section id=dopplr-defects&gt;
 &lt;h1&gt;Dopplr defects&lt;a class=headerlink href=http://jnrowe.github.com/thoughts/dopplr_effects.html#dopplr-defects title="Permalink to this headline"&gt;¶&lt;/a&gt;&lt;/h1&gt;
 &lt;blockquote class=epigraph&gt;
 &lt;div&gt;&lt;p&gt;Dopplr was a free social networking service, launched in 2007, that allowed
@@ -1083,7 +1083,7 @@ actually use, but sadly I can’t even picture how it should work.&lt;/p&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
 &lt;span class=target id=backstory&gt;&lt;/span&gt;&lt;/div&gt;
-</summary></entry><entry><title>Tell me a nice story, please</title><link href="http://jnrowe.github.com/thoughts/nice_stories.html" rel="alternate"></link><updated>2013-12-23T00:00:00Z</updated><id>http://jnrowe.github.com/thoughts/nice_stories.html</id><summary type="html">&lt;div class=section id=tell-me-a-nice-story-please&gt;
+</summary></entry><entry><title>Tell me a nice story, please</title><link rel="alternate" href="http://jnrowe.github.com/thoughts/nice_stories.html"></link><updated>2013-12-23T00:00:00Z</updated><id>http://jnrowe.github.com/thoughts/nice_stories.html</id><summary type="html">&lt;div class=section id=tell-me-a-nice-story-please&gt;
 &lt;h1&gt;Tell me a nice story, please&lt;a class=headerlink href=http://jnrowe.github.com/thoughts/nice_stories.html#tell-me-a-nice-story-please title="Permalink to this headline"&gt;¶&lt;/a&gt;&lt;/h1&gt;
 &lt;p&gt;I’m fed up of hearing bad stories, I really am.  Often it feels like every
 person I know simply revels in the misfortune or missteps of others, and it is
@@ -1180,7 +1180,7 @@ know about it.  If that isn’t the case, just keep it to yourself.&lt;/p&gt;
 &lt;/table&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-</summary></entry><entry><title>Side-projects</title><link href="http://jnrowe.github.com/thoughts/side_projects.html" rel="alternate"></link><updated>2013-12-16T00:00:00Z</updated><id>http://jnrowe.github.com/thoughts/side_projects.html</id><summary type="html">&lt;div class=section id=side-projects&gt;
+</summary></entry><entry><title>Side-projects</title><link rel="alternate" href="http://jnrowe.github.com/thoughts/side_projects.html"></link><updated>2013-12-16T00:00:00Z</updated><id>http://jnrowe.github.com/thoughts/side_projects.html</id><summary type="html">&lt;div class=section id=side-projects&gt;
 &lt;h1&gt;Side-projects&lt;a class=headerlink href=http://jnrowe.github.com/thoughts/side_projects.html#side-projects title="Permalink to this headline"&gt;¶&lt;/a&gt;&lt;/h1&gt;
 &lt;p&gt;Chatting with my brother yesterday he expressed some disbelief when I mentioned
 &lt;em&gt;yet another&lt;/em&gt; friend who has a website related to some topic we were discussing:&lt;/p&gt;
@@ -1286,7 +1286,7 @@ is just a jumbled content dump with no real purpose.&lt;/tr&gt;
 &lt;/table&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-</summary></entry><entry><title>TDD distro development</title><link href="http://jnrowe.github.com/articles/tdd_distros.html" rel="alternate"></link><updated>2011-06-13T00:00:00Z</updated><id>http://jnrowe.github.com/articles/tdd_distros.html</id><summary type="html">&lt;div class=section id=tdd-distro-development&gt;
+</summary></entry><entry><title>TDD distro development</title><link rel="alternate" href="http://jnrowe.github.com/articles/tdd_distros.html"></link><updated>2011-06-13T00:00:00Z</updated><id>http://jnrowe.github.com/articles/tdd_distros.html</id><summary type="html">&lt;div class=section id=tdd-distro-development&gt;
 &lt;h1&gt;TDD distro development&lt;a class=headerlink href=http://jnrowe.github.com/articles/tdd_distros.html#tdd-distro-development title="Permalink to this headline"&gt;¶&lt;/a&gt;&lt;/h1&gt;
 &lt;p&gt;Using &lt;abbr title="Test Driven Development"&gt;TDD&lt;/abbr&gt; for distribution development is a
 hot topic in some of the more geeky circles I move in, and I’m very happy about
@@ -1318,7 +1318,7 @@ the desktops we develop on and the laptops we play on.  The methods we use vary
 greatly, so I’m going to present the simple case of testing console applications
 only.  It is the practise that is important, not the process.&lt;/p&gt;
 &lt;p&gt;The easiest method we use is via &lt;a class="reference external" href=http://pypi.python.org/pypi/shelldoctest/&gt;shelldoctest&lt;/a&gt;, a module that implements a
-&lt;a class="reference external" href=http://docs.python.org/library/doctest.html#module-doctest title="(in Python v2.7)"&gt;&lt;code class="xref py py-mod docutils literal"&gt;&lt;span class=pre&gt;doctest&lt;/span&gt;&lt;/code&gt;&lt;/a&gt; interface for testing shell commands.  The package provides a
+&lt;a class="reference external" href=http://docs.python.org/library/doctest.html#module-doctest title="(in Python v3.6)"&gt;&lt;code class="xref py py-mod docutils literal"&gt;&lt;span class=pre&gt;doctest&lt;/span&gt;&lt;/code&gt;&lt;/a&gt; interface for testing shell commands.  The package provides a
 user-level script for running shell sessions in Python docstrings.  A simple
 example could be:&lt;/p&gt;
 &lt;div class=highlight-python&gt;&lt;div class=highlight&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=sd&gt;"""&lt;/span&gt;
@@ -1406,7 +1406,7 @@ Doing this encourages you to write nicely formatted documentation to accompany
 your tests.  You can also leverage your tests that are written in this way as
 documentation using the excellent &lt;a class="reference external" href=http://sphinx-doc.org/&gt;Sphinx&lt;/a&gt; tool.&lt;/p&gt;
 &lt;p&gt;The following script shows an extremely basic, yet fully functional, example of
-how to combine the &lt;code class="docutils literal"&gt;&lt;span class=pre&gt;doctest&lt;/span&gt;&lt;/code&gt; module’s &lt;a class="reference external" href=http://docs.python.org/library/doctest.html#doctest.testfile title="(in Python v2.7)"&gt;&lt;code class="xref py py-func docutils literal"&gt;&lt;span class=pre&gt;testfile()&lt;/span&gt;&lt;/code&gt;&lt;/a&gt; function with
+how to combine the &lt;code class="docutils literal"&gt;&lt;span class=pre&gt;doctest&lt;/span&gt;&lt;/code&gt; module’s &lt;a class="reference external" href=http://docs.python.org/library/doctest.html#doctest.testfile title="(in Python v3.6)"&gt;&lt;code class="xref py py-func docutils literal"&gt;&lt;span class=pre&gt;testfile()&lt;/span&gt;&lt;/code&gt;&lt;/a&gt; function with
 &lt;code class="docutils literal"&gt;&lt;span class=pre&gt;shelldoctest&lt;/span&gt;&lt;/code&gt;:&lt;/p&gt;
 &lt;div class=highlight-python&gt;&lt;div class=highlight&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=ch&gt;#! /usr/bin/python -tt&lt;/span&gt;
 &lt;span class=kn&gt;import&lt;/span&gt; &lt;span class=nn&gt;doctest&lt;/span&gt;
@@ -1439,7 +1439,7 @@ a &lt;code class="docutils literal"&gt;&lt;span class=pre&gt;reST&lt;/span&gt;&l
 &lt;/table&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-</summary></entry><entry><title>Introduction to RCS</title><link href="http://jnrowe.github.com/articles/rcs.html" rel="alternate"></link><updated>2003-09-05T00:00:00Z</updated><id>http://jnrowe.github.com/articles/rcs.html</id><summary type="html">&lt;div class="admonition warning"&gt;
+</summary></entry><entry><title>Introduction to RCS</title><link rel="alternate" href="http://jnrowe.github.com/articles/rcs.html"></link><updated>2003-09-05T00:00:00Z</updated><id>http://jnrowe.github.com/articles/rcs.html</id><summary type="html">&lt;div class="admonition warning"&gt;
 &lt;p class="first admonition-title"&gt;Warning&lt;/p&gt;
 &lt;p class=last&gt;I’ve resurrected this text from my old UKFSN site because a couple of people
 asked me to, but I wouldn’t recommend using RCS to anyone at this point.  It
@@ -1475,7 +1475,7 @@ straight in to an example.&lt;/p&gt;
 &lt;abbr title="GNU Revision Control System"&gt;RCS&lt;/abbr&gt; needs to work.&lt;/p&gt;
 &lt;div class=highlight-console&gt;&lt;div class=highlight&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=gp&gt;$&lt;/span&gt; cat &amp;gt;myscript.sh &amp;lt;&amp;lt;EOF
 &lt;span class=gp&gt;#&lt;/span&gt;! /bin/sh
-&lt;span class=gp&gt;#&lt;/span&gt; $Id$
+&lt;span class=gp&gt;#&lt;/span&gt; &lt;span class=nv&gt;$Id&lt;/span&gt;$
 &lt;span class=go&gt;echo "Hello World!"&lt;/span&gt;
 &lt;span class=go&gt;exit 0&lt;/span&gt;
 &lt;span class=go&gt;EOF&lt;/span&gt;
@@ -1505,7 +1505,7 @@ file we check in. You can choose to keep a working copy with &lt;code class="doc
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
 &lt;p&gt;In the &lt;abbr title="GNU Revision Control System"&gt;RCS&lt;/abbr&gt; directory a file now exists
-with the same name as our script plus a ”,v”. This is the file &lt;abbr title="GNU Revision Control System"&gt;RCS&lt;/abbr&gt; uses to store all of its data in.&lt;/p&gt;
+with the same name as our script plus a “,v”. This is the file &lt;abbr title="GNU Revision Control System"&gt;RCS&lt;/abbr&gt; uses to store all of its data in.&lt;/p&gt;
 &lt;div class=highlight-console&gt;&lt;div class=highlight&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=gp&gt;$&lt;/span&gt; co myscript.sh
 &lt;span class=go&gt;RCS/myscript.sh,v  --&amp;gt;  myscript.sh&lt;/span&gt;
 &lt;span class=go&gt;revision 1.1&lt;/span&gt;
@@ -1535,7 +1535,7 @@ when you &lt;code class="docutils literal"&gt;&lt;span class=pre&gt;ci&lt;/span&
 a read-only version of the file and it will allow other users to edit it.&lt;/p&gt;
 &lt;div class=highlight-console&gt;&lt;div class=highlight&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=gp&gt;$&lt;/span&gt; cat myscript.sh
 &lt;span class=gp&gt;#&lt;/span&gt;! /bin/sh
-&lt;span class=gp&gt;#&lt;/span&gt; $Id: myscript.sh,v 1.1 2002/11/04 11:29:48 james Exp james $
+&lt;span class=gp&gt;#&lt;/span&gt; &lt;span class=nv&gt;$Id&lt;/span&gt;: myscript.sh,v &lt;span class=m&gt;1&lt;/span&gt;.1 &lt;span class=m&gt;2002&lt;/span&gt;/11/04 &lt;span class=m&gt;11&lt;/span&gt;:29:48 james Exp james $
 &lt;span class=go&gt;echo "Hello World!"&lt;/span&gt;
 &lt;span class=go&gt;exit 0&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
@@ -1557,7 +1557,7 @@ file is increased a huge amount. All the changelog data is available with the
 &lt;div class=highlight-console&gt;&lt;div class=highlight&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=gp&gt;$&lt;/span&gt; sed -ie &lt;span class=s1&gt;'s/World/${USER}/'&lt;/span&gt; myscript.sh
 &lt;span class=gp&gt;$&lt;/span&gt; cat myscript.sh
 &lt;span class=gp&gt;#&lt;/span&gt;! /bin/sh
-&lt;span class=gp&gt;#&lt;/span&gt; $Id: myscript.sh,v 1.1 2002/11/04 11:29:48 james Exp james $
+&lt;span class=gp&gt;#&lt;/span&gt; &lt;span class=nv&gt;$Id&lt;/span&gt;: myscript.sh,v &lt;span class=m&gt;1&lt;/span&gt;.1 &lt;span class=m&gt;2002&lt;/span&gt;/11/04 &lt;span class=m&gt;11&lt;/span&gt;:29:48 james Exp james $
 &lt;span class=go&gt;echo "Hello ${USER}!"&lt;/span&gt;
 &lt;span class=go&gt;exit 0&lt;/span&gt;
 &lt;span class=gp&gt;$&lt;/span&gt; sh ./myscript.sh
@@ -1584,7 +1584,7 @@ works.&lt;/p&gt;
 &lt;span class=go&gt;+++ myscript.sh 2002/11/05 03:52:14&lt;/span&gt;
 &lt;span class=go&gt;@@ -1,4 +1,4 @@&lt;/span&gt;
 &lt;span class=gp&gt; #&lt;/span&gt;! /bin/sh
-&lt;span class=gp&gt; #&lt;/span&gt; $Id: myscript,v 1.1 2002/11/04 11:29:48 james Exp james $
+&lt;span class=gp&gt; #&lt;/span&gt; &lt;span class=nv&gt;$Id&lt;/span&gt;: myscript,v &lt;span class=m&gt;1&lt;/span&gt;.1 &lt;span class=m&gt;2002&lt;/span&gt;/11/04 &lt;span class=m&gt;11&lt;/span&gt;:29:48 james Exp james $
 &lt;span class=go&gt;-echo "Hello World!"&lt;/span&gt;
 &lt;span class=go&gt;+echo "Hello ${USER}!"&lt;/span&gt;
 &lt;span class=go&gt; exit 0&lt;/span&gt;
@@ -1611,7 +1611,7 @@ a log entry, this will make our changelog output later. You can cancel the check
 in using the normal &lt;code class="docutils literal"&gt;&lt;span class=pre&gt;C-c&lt;/span&gt;&lt;/code&gt; (control C) method.&lt;/p&gt;
 &lt;div class=highlight-console&gt;&lt;div class=highlight&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=gp&gt;$&lt;/span&gt; cat myscript.sh
 &lt;span class=gp&gt;#&lt;/span&gt;! /bin/sh
-&lt;span class=gp&gt;#&lt;/span&gt; $Id: myscript,v 1.2 2002/11/04 11:34:21 james Exp james $
+&lt;span class=gp&gt;#&lt;/span&gt; &lt;span class=nv&gt;$Id&lt;/span&gt;: myscript,v &lt;span class=m&gt;1&lt;/span&gt;.2 &lt;span class=m&gt;2002&lt;/span&gt;/11/04 &lt;span class=m&gt;11&lt;/span&gt;:34:21 james Exp james $
 &lt;span class=go&gt;echo "Hello ${USER}!"&lt;/span&gt;
 &lt;span class=go&gt;exit 0&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;

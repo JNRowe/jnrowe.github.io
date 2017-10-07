@@ -32,6 +32,9 @@
   
 
   
+        <link rel="index" title="Index"
+              href="../../genindex.html"/>
+        <link rel="search" title="Search" href="../../search.html"/>
         <link rel="copyright" title="Copyright" href="../../copyright.html"/>
     <link rel="top" title="JNRowe" href="../../index.html"/>
         <link rel="up" title="Tips" href="index.html"/>
@@ -106,12 +109,12 @@
 <li class="toctree-l4"><a class="reference internal" href="Debugging_python_regexps.html">Debugging Python regular expressions</a></li>
 <li class="toctree-l4"><a class="reference internal" href="Disabling_cursor_blinking_in_GTK.html">Disabling cursor blinking in GTK+</a></li>
 <li class="toctree-l4"><a class="reference internal" href="Fancy_awesome_theming.html">Fancy awesome theming</a></li>
-<li class="toctree-l4"><a class="reference internal" href="Finding_a_windows_owner.html">Finding a window&#8217;s owner</a></li>
-<li class="toctree-l4 current"><a class="current reference internal" href="">Formatting <abbr title="Comma Separated Values">CSV</abbr> files in the shell</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Finding_a_windows_owner.html">Finding a window’s owner</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">Formatting <abbr title="Comma Separated Values">CSV</abbr> files in the shell</a></li>
 <li class="toctree-l4"><a class="reference internal" href="Gentoo_one_liners.html">Gentoo one liners</a></li>
 <li class="toctree-l4"><a class="reference internal" href="Importing_gmail_filters_in_mutt.html">Importing gmail filters in mutt</a></li>
 <li class="toctree-l4"><a class="reference internal" href="Instant_web_server.html">Instant web server</a></li>
-<li class="toctree-l4"><a class="reference internal" href="Kick_me_birthday_reminders.html">&#8216;Kick me&#8217; birthday reminders</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Kick_me_birthday_reminders.html">‘Kick me’ birthday reminders</a></li>
 <li class="toctree-l4"><a class="reference internal" href="Making_a_nice_home.html">Making a nice home</a></li>
 <li class="toctree-l4"><a class="reference internal" href="Making_a_nice_home.html#permissions">Permissions</a></li>
 <li class="toctree-l4"><a class="reference internal" href="Making_a_nice_home.html#vim-hacks">vim hacks</a></li>
@@ -161,7 +164,7 @@
         <div class="rst-content">
           
 
-
+ 
 
 
 
@@ -176,8 +179,6 @@
     <li>Formatting <abbr title="Comma Separated Values">CSV</abbr> files in the shell</li>
       <li class="wy-breadcrumbs-aside">
         
-          
-            <a href="../../_sources/articles/tips/Formatting_csv_files_in_the_shell.txt" rel="nofollow"> View page source</a>
           
         
       </li>
@@ -202,7 +203,7 @@
 <div>Are there any tools to format <abbr title="Comma Separated Values">CSV</abbr> files in
 the console?  Not interactive, no spreadsheets</div></blockquote>
 <p><a class="reference external" href="http://www.linuxmanpages.com/man1/column.1.php">column</a>, which on Linux is likely to be provided by <a class="reference external" href="http://www.kernel.org/pub/linux/utils/util-linux-ng/">util-linux</a>, does exactly
-this.  The man page even offers an example of how it works(I&#8217;ve changed it
+this.  The man page even offers an example of how it works(I’ve changed it
 slightly to make it work correctly on my system):</p>
 <div class="highlight-console"><div class="highlight"><pre><span></span><span class="gp">$</span> <span class="o">(</span><span class="nb">echo</span> <span class="s2">&quot;PERM LINKS OWNER GROUP SIZE DATE HH:MM NAME&quot;</span><span class="p">;</span>
 <span class="gp">&gt;</span>     ls -l static/ <span class="p">|</span> sed 1d<span class="o">)</span> <span class="p">|</span> column -t
@@ -252,7 +253,7 @@ log on this computer that we wish to format and calculate totals for could be:</
 <span class="go">2009-07-18T13:09:31+0100,1681,164663,2049315</span>
 <span class="go">2009-07-18T13:24:04+0100,834,54025,662134</span>
 <span class="gp">$</span> <span class="o">(</span><span class="nb">echo</span> <span class="s2">&quot;Date,Duration,Sent,Received&quot;</span><span class="p">;</span>  cat stats <span class="o">)</span> <span class="se">\</span>
-<span class="gp">&gt;</span>     <span class="p">|</span> tr <span class="s1">&#39;,&#39;</span> <span class="s1">&#39; &#39;</span> <span class="p">|</span> column -t <span class="p">|</span> awk <span class="s1">&#39;{print}</span>
+&gt;     <span class="p">|</span> tr <span class="s1">&#39;,&#39;</span> <span class="s1">&#39; &#39;</span> <span class="p">|</span> column -t <span class="p">|</span> awk <span class="s1">&#39;{print}</span>
 <span class="gp">&gt;</span><span class="s1">         !/Date/ {sent+=$3; recv+=$4}</span>
 <span class="gp">&gt;</span><span class="s1">         END {print &quot;\nTotal sent: &quot;sent&quot;, Total received: &quot;recv}&#39;</span>
 <span class="go">Date                      Duration  Sent     Received</span>
@@ -291,7 +292,7 @@ log on this computer that we wish to format and calculate totals for could be:</
 
   <div role="contentinfo">
     <p>
-        &copy; <a href="../../copyright.html">Copyright</a> 2009-2015, James Rowe.
+        &copy; <a href="../../copyright.html">Copyright</a> 2009-2017, James Rowe.
 
     </p>
   </div>
@@ -316,7 +317,7 @@ log on this computer that we wish to format and calculate totals for could be:</
             VERSION:'0.1.0',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
-            HAS_SOURCE:  true
+            HAS_SOURCE:  false
         };
     </script>
       <script type="text/javascript" src="../../_static/jquery.js"></script>

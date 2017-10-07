@@ -32,6 +32,9 @@
   
 
   
+        <link rel="index" title="Index"
+              href="../genindex.html"/>
+        <link rel="search" title="Search" href="../search.html"/>
         <link rel="copyright" title="Copyright" href="../copyright.html"/>
     <link rel="top" title="JNRowe" href="../index.html"/>
         <link rel="up" title="Articles" href="index.html"/>
@@ -94,7 +97,7 @@
 <li class="toctree-l2"><a class="reference internal" href="dropping_gentoo_reflex.html">Dropping Gentoo reflex</a></li>
 <li class="toctree-l2"><a class="reference internal" href="fossil.html"><code class="docutils literal"><span class="pre">fossil</span></code> experiments</a></li>
 <li class="toctree-l2"><a class="reference internal" href="rcs.html">Introduction to RCS</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="">TDD distro development</a><ul>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">TDD distro development</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#why">Why?</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#how">How?</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#result">Result?</a></li>
@@ -131,7 +134,7 @@
         <div class="rst-content">
           
 
-
+ 
 
 
 
@@ -145,8 +148,6 @@
       <li class="wy-breadcrumbs-aside">
         
           
-            <a href="../_sources/articles/tdd_distros.txt" rel="nofollow"> View page source</a>
-          
         
       </li>
   </ul>
@@ -158,7 +159,7 @@
   <div class="section" id="tdd-distro-development">
 <h1>TDD distro development<a class="headerlink" href="#tdd-distro-development" title="Permalink to this headline">¶</a></h1>
 <p>Using <abbr title="Test Driven Development">TDD</abbr> for distribution development is a
-hot topic in some of the more geeky circles I move in, and I&#8217;m very happy about
+hot topic in some of the more geeky circles I move in, and I’m very happy about
 this.  Anything that increases the robustness of my desktop computer, my phone
 or any other device I use is a great goal!</p>
 <div class="section" id="why">
@@ -178,16 +179,16 @@ resources.</p>
 </div>
 <div class="section" id="how">
 <h2>How?<a class="headerlink" href="#how" title="Permalink to this headline">¶</a></h2>
-<p>We, the fine folks of AST&#8217;s London office, already use a test-based
+<p>We, the fine folks of AST’s London office, already use a test-based
 stabilisation policy in the preparation of our distribution images.  Adding
 tests for new and bumped packages is something Leal Hétu and I have been
 enforcing for the past few years.</p>
 <p>Our packages and distribution images are used for the embedded devices we sell,
 the desktops we develop on and the laptops we play on.  The methods we use vary
-greatly, so I&#8217;m going to present the simple case of testing console applications
+greatly, so I’m going to present the simple case of testing console applications
 only.  It is the practise that is important, not the process.</p>
 <p>The easiest method we use is via <a class="reference external" href="http://pypi.python.org/pypi/shelldoctest/">shelldoctest</a>, a module that implements a
-<a class="reference external" href="http://docs.python.org/library/doctest.html#module-doctest" title="(in Python v2.7)"><code class="xref py py-mod docutils literal"><span class="pre">doctest</span></code></a> interface for testing shell commands.  The package provides a
+<a class="reference external" href="http://docs.python.org/library/doctest.html#module-doctest" title="(in Python v3.6)"><code class="xref py py-mod docutils literal"><span class="pre">doctest</span></code></a> interface for testing shell commands.  The package provides a
 user-level script for running shell sessions in Python docstrings.  A simple
 example could be:</p>
 <div class="highlight-python"><div class="highlight"><pre><span></span><span class="sd">&quot;&quot;&quot;</span>
@@ -219,7 +220,7 @@ file containing a minimal series of tests that we consider important for the
 package.  This allows us to almost instantly ascertain whether a future package
 bump breaks functionality we require.</p>
 <p>We also add a test <em>every single time</em> we fix a packaging bug, to make sure it
-doesn&#8217;t come up again.  A good example can be gleaned from a bug that was fixed
+doesn’t come up again.  A good example can be gleaned from a bug that was fixed
 in our <a class="reference external" href="http://www.vim.org/scripts/script.php?script_id=1567">rails</a> vim package.  Given the way the <a class="reference external" href="http://www.vim.org/scripts/script.php?script_id=1567">vim scripts site</a> is organised
 the files you want to download have awful download locations, so our ebuild for
 the <code class="docutils literal"><span class="pre">rails</span></code> plugin contains the following snippet:</p>
@@ -230,7 +231,7 @@ the <code class="docutils literal"><span class="pre">rails</span></code> plugin 
 </div>
 <p>The <code class="docutils literal"><span class="pre">SRC_URI</span></code> declaration says we need to fetch the file from
 <code class="docutils literal"><span class="pre">http://www.vim.org/scripts/download_script.php?src_id=13800</span></code> and name it
-locally as <code class="docutils literal"><span class="pre">rails-4.3.zip</span></code>.  I&#8217;m sure you can guess what happened here,
+locally as <code class="docutils literal"><span class="pre">rails-4.3.zip</span></code>.  I’m sure you can guess what happened here,
 someone saved a copy of the file locally for testing and forgot to update the
 <code class="docutils literal"><span class="pre">src_id</span></code> parameter correctly <a class="footnote-reference" href="#id2" id="id1">[1]</a>.  The result was an apparently new build
 that installed an older package release.</p>
@@ -243,7 +244,7 @@ was added to the <code class="docutils literal"><span class="pre">rails</span></
 </pre></div>
 </div>
 <p>All this does is check the reported version is correct, and it clearly only took
-a few seconds to write.  This is important, it shouldn&#8217;t cost a lot to write a
+a few seconds to write.  This is important, it shouldn’t cost a lot to write a
 test and this is especially true for the simplest task.</p>
 <p>I use a similar technique for managing my public Gentoo overlay, <a class="reference external" href="https://github.com/JNRowe/jnrowe-misc">jnrowe-misc</a>.
 For example, the <a class="reference external" href="http://pypi.python.org/pypi/blockdiag/">blockdiag</a> ebuild is accompanied by a series of tests that are
@@ -261,21 +262,21 @@ stabilisation.  It means that on the time-based stabilisation date we can
 conveniently script the progression to stable including a final run of the test
 suite.</p>
 <p>I would, of course, prefer to see <em>any</em> tests upstreamed and where possible this
-is already happening.  However, we&#8217;re pragmatists and this means we often use
+is already happening.  However, we’re pragmatists and this means we often use
 existing content as input for tests.  The use of existing input makes writing
 the test faster and means each test exercises functionality we actually require,
-but it also means we occasionally can&#8217;t submit the data upstream owing to
+but it also means we occasionally can’t submit the data upstream owing to
 licensing concerns.</p>
 </div>
 <div class="section" id="bonus">
 <h2>Bonus<a class="headerlink" href="#bonus" title="Permalink to this headline">¶</a></h2>
-<p>I&#8217;ve used the upstream supported <code class="docutils literal"><span class="pre">shelldoctest</span></code> method for writing tests on
+<p>I’ve used the upstream supported <code class="docutils literal"><span class="pre">shelldoctest</span></code> method for writing tests on
 this page, but you can also easily specify them in <a class="reference external" href="http://docutils.sourceforge.net/docs/user/rst/">reST syntax</a> files too.
 Doing this encourages you to write nicely formatted documentation to accompany
 your tests.  You can also leverage your tests that are written in this way as
 documentation using the excellent <a class="reference external" href="http://sphinx-doc.org/">Sphinx</a> tool.</p>
 <p>The following script shows an extremely basic, yet fully functional, example of
-how to combine the <code class="docutils literal"><span class="pre">doctest</span></code> module&#8217;s <a class="reference external" href="http://docs.python.org/library/doctest.html#doctest.testfile" title="(in Python v2.7)"><code class="xref py py-func docutils literal"><span class="pre">testfile()</span></code></a> function with
+how to combine the <code class="docutils literal"><span class="pre">doctest</span></code> module’s <a class="reference external" href="http://docs.python.org/library/doctest.html#doctest.testfile" title="(in Python v3.6)"><code class="xref py py-func docutils literal"><span class="pre">testfile()</span></code></a> function with
 <code class="docutils literal"><span class="pre">shelldoctest</span></code>:</p>
 <div class="highlight-python"><div class="highlight"><pre><span></span><span class="ch">#! /usr/bin/python -tt</span>
 <span class="kn">import</span> <span class="nn">doctest</span>
@@ -303,7 +304,7 @@ a <code class="docutils literal"><span class="pre">reST</span></code> formatted 
 <table class="docutils footnote" frame="void" id="id2" rules="none">
 <colgroup><col class="label" /><col /></colgroup>
 <tbody valign="top">
-<tr><td class="label"><a class="fn-backref" href="#id1">[1]</a></td><td>Okay, it was me.  I&#8217;ll confess.</td></tr>
+<tr><td class="label"><a class="fn-backref" href="#id1">[1]</a></td><td>Okay, it was me.  I’ll confess.</td></tr>
 </tbody>
 </table>
 </div>
@@ -328,7 +329,7 @@ a <code class="docutils literal"><span class="pre">reST</span></code> formatted 
 
   <div role="contentinfo">
     <p>
-        &copy; <a href="../copyright.html">Copyright</a> 2009-2015, James Rowe.
+        &copy; <a href="../copyright.html">Copyright</a> 2009-2017, James Rowe.
 
     </p>
   </div>
@@ -353,7 +354,7 @@ a <code class="docutils literal"><span class="pre">reST</span></code> formatted 
             VERSION:'0.1.0',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
-            HAS_SOURCE:  true
+            HAS_SOURCE:  false
         };
     </script>
       <script type="text/javascript" src="../_static/jquery.js"></script>

@@ -32,6 +32,9 @@
   
 
   
+        <link rel="index" title="Index"
+              href="../../genindex.html"/>
+        <link rel="search" title="Search" href="../../search.html"/>
         <link rel="copyright" title="Copyright" href="../../copyright.html"/>
     <link rel="top" title="JNRowe" href="../../index.html"/>
         <link rel="up" title="Tips" href="index.html"/>
@@ -106,12 +109,12 @@
 <li class="toctree-l4"><a class="reference internal" href="Debugging_python_regexps.html">Debugging Python regular expressions</a></li>
 <li class="toctree-l4"><a class="reference internal" href="Disabling_cursor_blinking_in_GTK.html">Disabling cursor blinking in GTK+</a></li>
 <li class="toctree-l4"><a class="reference internal" href="Fancy_awesome_theming.html">Fancy awesome theming</a></li>
-<li class="toctree-l4"><a class="reference internal" href="Finding_a_windows_owner.html">Finding a window&#8217;s owner</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Finding_a_windows_owner.html">Finding a window’s owner</a></li>
 <li class="toctree-l4"><a class="reference internal" href="Formatting_csv_files_in_the_shell.html">Formatting <abbr title="Comma Separated Values">CSV</abbr> files in the shell</a></li>
 <li class="toctree-l4"><a class="reference internal" href="Gentoo_one_liners.html">Gentoo one liners</a></li>
 <li class="toctree-l4"><a class="reference internal" href="Importing_gmail_filters_in_mutt.html">Importing gmail filters in mutt</a></li>
 <li class="toctree-l4"><a class="reference internal" href="Instant_web_server.html">Instant web server</a></li>
-<li class="toctree-l4"><a class="reference internal" href="Kick_me_birthday_reminders.html">&#8216;Kick me&#8217; birthday reminders</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Kick_me_birthday_reminders.html">‘Kick me’ birthday reminders</a></li>
 <li class="toctree-l4"><a class="reference internal" href="Making_a_nice_home.html">Making a nice home</a></li>
 <li class="toctree-l4"><a class="reference internal" href="Making_a_nice_home.html#permissions">Permissions</a></li>
 <li class="toctree-l4"><a class="reference internal" href="Making_a_nice_home.html#vim-hacks">vim hacks</a></li>
@@ -125,7 +128,7 @@
 <li class="toctree-l4"><a class="reference internal" href="Three_mobile_broadband_in_linux.html">Three mobile broadband in Linux</a></li>
 <li class="toctree-l4"><a class="reference internal" href="Toggling_settings_in_vim.html">Toggling settings in vim</a></li>
 <li class="toctree-l4"><a class="reference internal" href="Uber_pink_prompts.html">Uber pink prompts</a></li>
-<li class="toctree-l4 current"><a class="current reference internal" href="">Visual vim mode identifier</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">Visual vim mode identifier</a></li>
 <li class="toctree-l4"><a class="reference internal" href="Zsh_and_the_vcs.html">Zsh and the VCS</a></li>
 </ul>
 </li>
@@ -161,7 +164,7 @@
         <div class="rst-content">
           
 
-
+ 
 
 
 
@@ -176,8 +179,6 @@
     <li>Visual vim mode identifier</li>
       <li class="wy-breadcrumbs-aside">
         
-          
-            <a href="../../_sources/articles/tips/Visual_vim_mode_identifier.txt" rel="nofollow"> View page source</a>
           
         
       </li>
@@ -200,11 +201,11 @@
 <p>Paul Kerry rants about his problems with <a class="reference external" href="http://www.vim.org/">vim</a> over the cooler today, and as
 a long time <code class="docutils literal"><span class="pre">vim</span></code> user I found it hard not to respond to some of the points.</p>
 <blockquote>
-<div>All this mode switching makes it hard to know whether typing &#8220;Paul&#8221; is going
-to insert a huge block of code from the ether or insert, you know, &#8220;Paul&#8221; on
+<div>All this mode switching makes it hard to know whether typing “Paul” is going
+to insert a huge block of code from the ether or insert, you know, “Paul” on
 the screen.</div></blockquote>
-<p>The point Paul is making is that when he is in <a class="reference external" href="http://vimdoc.sourceforge.net/htmldoc/intro.html#vim-modes">normal mode</a>, typing the &#8220;P&#8221; of
-&#8220;Paul&#8221; can cause <code class="docutils literal"><span class="pre">vim</span></code> to insert a huge amount of text at the cursor.  The
+<p>The point Paul is making is that when he is in <a class="reference external" href="http://vimdoc.sourceforge.net/htmldoc/intro.html#vim-modes">normal mode</a>, typing the “P” of
+“Paul” can cause <code class="docutils literal"><span class="pre">vim</span></code> to insert a huge amount of text at the cursor.  The
 text comes from the <a class="reference external" href="http://vimdoc.sourceforge.net/htmldoc/change.html#quote">unnamed register</a>, so it will be whatever potentially very
 large chunk of text he deleted or <a class="reference external" href="http://vimdoc.sourceforge.net/htmldoc/change.html#yank">yanked</a> last.</p>
 <img alt="mode identifier in vim" class="align-right" src="../../_images/2009-10-13-vim_screenshot.png" />
@@ -212,7 +213,7 @@ large chunk of text he deleted or <a class="reference external" href="http://vim
 <span class="pre">INSERT</span> <span class="pre">--</span></code> reminder in the bottom of his terminal window when in insert mode, as
 can be seen in the screenshot on the right.</p>
 <p>Another option that I use, combined with <a class="reference external" href="http://vimdoc.sourceforge.net/htmldoc/options.html#'showmode'">showmode</a>, is to change the cursor
-colour when switching to and from <code class="docutils literal"><span class="pre">insert</span></code> mode.  This unfortunately doesn&#8217;t
+colour when switching to and from <code class="docutils literal"><span class="pre">insert</span></code> mode.  This unfortunately doesn’t
 work on all terminal types, which means you have to test them individually and
 then set appropriate values for <a class="reference external" href="http://vimdoc.sourceforge.net/htmldoc/term.html#'t_SI'">t_SI</a> and <a class="reference external" href="http://vimdoc.sourceforge.net/htmldoc/term.html#'t_EI'">t_EI</a> on each terminal type.  An
 example for <a class="reference external" href="http://rxvt.sourceforge.net/">rxvt</a>-based terminals, including my favourite <a class="reference external" href="http://software.schmorp.de/">rxvt-unicode</a>, is
@@ -228,18 +229,18 @@ below:</p>
 but found keeping the same cursor colour as my shell sessions was the most
 useful for me.  You can use any colour your terminal supports, including the
 extended 256 colour palette.  For more information on accessing the colours from
-the extended palette see the earlier <a class="reference internal" href="Uber_pink_prompts.html"><em>Uber pink prompts</em></a> tip.</p>
+the extended palette see the earlier <a class="reference internal" href="Uber_pink_prompts.html"><span class="doc">Uber pink prompts</span></a> tip.</p>
 <p>You can also use the <a class="reference external" href="http://vimdoc.sourceforge.net/htmldoc/autocmd.html#InsertEnter">InsertEnter</a> and <a class="reference external" href="http://vimdoc.sourceforge.net/htmldoc/autocmd.html#InsertLeave">InsertLeave</a> events to call a function
 when changing mode.  There really is no limit to what kind of notifications you
 can use with this method.  Taking the idea too far we could use the <a class="reference external" href="http://awesome.naquadah.org/">awesome</a>
-notifications from <a class="reference internal" href="Simple_notifications_in_awesome.html"><em>Simple notifications in awesome</em></a> to display popups
+notifications from <a class="reference internal" href="Simple_notifications_in_awesome.html"><span class="doc">Simple notifications in awesome</span></a> to display popups
 when we change mode:</p>
 <div class="highlight-vim"><div class="highlight"><pre><span></span><span class="k">au</span> <span class="nb">InsertEnter</span> * <span class="p">!</span>echo <span class="s2">&quot;notify.start(&#39;Insert mode started&#39;)&quot;</span> <span class="p">|</span> awesome<span class="p">-</span>client
 <span class="k">au</span> <span class="nb">InsertLeave</span> * <span class="p">!</span>echo <span class="s2">&quot;notify.stop(&#39;Insert mode finished&#39;)&quot;</span> <span class="p">|</span> awesome<span class="p">-</span>client
 </pre></div>
 </div>
 <p><a class="reference external" href="http://gist.github.com/209915">Fork this code</a></p>
-<p>Note that I didn&#8217;t say it was a good idea, just that it was possible!</p>
+<p>Note that I didn’t say it was a good idea, just that it was possible!</p>
 </div>
 
 
@@ -261,7 +262,7 @@ when we change mode:</p>
 
   <div role="contentinfo">
     <p>
-        &copy; <a href="../../copyright.html">Copyright</a> 2009-2015, James Rowe.
+        &copy; <a href="../../copyright.html">Copyright</a> 2009-2017, James Rowe.
 
     </p>
   </div>
@@ -286,7 +287,7 @@ when we change mode:</p>
             VERSION:'0.1.0',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
-            HAS_SOURCE:  true
+            HAS_SOURCE:  false
         };
     </script>
       <script type="text/javascript" src="../../_static/jquery.js"></script>

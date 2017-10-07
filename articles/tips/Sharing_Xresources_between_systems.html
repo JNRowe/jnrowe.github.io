@@ -32,6 +32,9 @@
   
 
   
+        <link rel="index" title="Index"
+              href="../../genindex.html"/>
+        <link rel="search" title="Search" href="../../search.html"/>
         <link rel="copyright" title="Copyright" href="../../copyright.html"/>
     <link rel="top" title="JNRowe" href="../../index.html"/>
         <link rel="up" title="Tips" href="index.html"/>
@@ -106,18 +109,18 @@
 <li class="toctree-l4"><a class="reference internal" href="Debugging_python_regexps.html">Debugging Python regular expressions</a></li>
 <li class="toctree-l4"><a class="reference internal" href="Disabling_cursor_blinking_in_GTK.html">Disabling cursor blinking in GTK+</a></li>
 <li class="toctree-l4"><a class="reference internal" href="Fancy_awesome_theming.html">Fancy awesome theming</a></li>
-<li class="toctree-l4"><a class="reference internal" href="Finding_a_windows_owner.html">Finding a window&#8217;s owner</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Finding_a_windows_owner.html">Finding a window’s owner</a></li>
 <li class="toctree-l4"><a class="reference internal" href="Formatting_csv_files_in_the_shell.html">Formatting <abbr title="Comma Separated Values">CSV</abbr> files in the shell</a></li>
 <li class="toctree-l4"><a class="reference internal" href="Gentoo_one_liners.html">Gentoo one liners</a></li>
 <li class="toctree-l4"><a class="reference internal" href="Importing_gmail_filters_in_mutt.html">Importing gmail filters in mutt</a></li>
 <li class="toctree-l4"><a class="reference internal" href="Instant_web_server.html">Instant web server</a></li>
-<li class="toctree-l4"><a class="reference internal" href="Kick_me_birthday_reminders.html">&#8216;Kick me&#8217; birthday reminders</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Kick_me_birthday_reminders.html">‘Kick me’ birthday reminders</a></li>
 <li class="toctree-l4"><a class="reference internal" href="Making_a_nice_home.html">Making a nice home</a></li>
 <li class="toctree-l4"><a class="reference internal" href="Making_a_nice_home.html#permissions">Permissions</a></li>
 <li class="toctree-l4"><a class="reference internal" href="Making_a_nice_home.html#vim-hacks">vim hacks</a></li>
 <li class="toctree-l4"><a class="reference internal" href="Making_a_nice_home.html#documentation">Documentation</a></li>
 <li class="toctree-l4"><a class="reference internal" href="Populating_sup_contacts_from_abook.html">Populating sup contacts from abook</a></li>
-<li class="toctree-l4 current"><a class="current reference internal" href="">Sharing Xresources between systems</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">Sharing Xresources between systems</a></li>
 <li class="toctree-l4"><a class="reference internal" href="Simple_notifications_in_awesome.html">Simple notifications in awesome</a></li>
 <li class="toctree-l4"><a class="reference internal" href="Simple_notifications_in_awesome.html#window-creation-notifications">Window creation notifications</a></li>
 <li class="toctree-l4"><a class="reference internal" href="Simple_notifications_in_awesome.html#network-notifications">Network notifications</a></li>
@@ -161,7 +164,7 @@
         <div class="rst-content">
           
 
-
+ 
 
 
 
@@ -176,8 +179,6 @@
     <li>Sharing Xresources between systems</li>
       <li class="wy-breadcrumbs-aside">
         
-          
-            <a href="../../_sources/articles/tips/Sharing_Xresources_between_systems.txt" rel="nofollow"> View page source</a>
           
         
       </li>
@@ -203,16 +204,16 @@
 home directory between machines?</div></blockquote>
 <p>The question arises from a much larger topic concerning keeping your home
 directory in a <a class="reference external" href="http://www.git-scm.com/">git</a> repository.  The issue Carl is having is that he needs to
-use different options on different machines and doesn&#8217;t relish the idea of
+use different options on different machines and doesn’t relish the idea of
 having to pull and rebase branches just to keep files in sync.  Of course, he
-doesn&#8217;t have to do that and that is the point of this tip.</p>
+doesn’t have to do that and that is the point of this tip.</p>
 <div class="section" id="basic-conditionals">
 <h2>Basic conditionals<a class="headerlink" href="#basic-conditionals" title="Permalink to this headline">¶</a></h2>
 <p>With great foresight the authors of <a class="reference external" href="http://www.xfree86.org/current/xrdb.1.html">xrdb</a> decided that our <code class="docutils literal"><span class="pre">Xresources</span></code> file
 should be preprocessed before it is used, the default preprocessor is <code class="docutils literal"><span class="pre">cpp</span></code>.
 On most of our systems at work, and likely most Linux systems in general,
-<code class="docutils literal"><span class="pre">cpp</span></code> is <a class="reference external" href="http://gcc.gnu.org/onlinedocs/gcc-4.4.1/cpp/">GNU cpp</a>.  Don&#8217;t worry about the size of the manual though, the
-interesting features are easy to understand and use.  Let&#8217;s look at trimmed
+<code class="docutils literal"><span class="pre">cpp</span></code> is <a class="reference external" href="http://gcc.gnu.org/onlinedocs/gcc-4.4.1/cpp/">GNU cpp</a>.  Don’t worry about the size of the manual though, the
+interesting features are easy to understand and use.  Let’s look at trimmed
 example from my configuration file:</p>
 <div class="highlight-c"><div class="highlight"><pre><span></span><span class="cp">#ifndef FIXED_FONT</span>
     <span class="cp">#define FIXED_FONT xft:Inconsolata:pixelsize=14:antialias=false</span>
@@ -232,15 +233,15 @@ example from my configuration file:</p>
 throughout our resource file as <code class="docutils literal"><span class="pre">FIXED_FONT</span></code> and <code class="docutils literal"><span class="pre">BOLD_FIXED_FONT</span></code>.  This
 way we can easily change the value in one place and it trickles down to all our
 programs.  Or we can define different options at runtime by specifying values to
-<code class="docutils literal"><span class="pre">xrdb</span></code>, such as <code class="docutils literal"><span class="pre">xrdb</span> <span class="pre">-DFIXED_FONT=xft:Monospace:pixelsize=10</span></code>.  And don&#8217;t
+<code class="docutils literal"><span class="pre">xrdb</span></code>, such as <code class="docutils literal"><span class="pre">xrdb</span> <span class="pre">-DFIXED_FONT=xft:Monospace:pixelsize=10</span></code>.  And don’t
 worry, <code class="docutils literal"><span class="pre">cpp</span></code> is smart enough to cope with the use <code class="docutils literal"><span class="pre">=</span></code> in our definition.</p>
 </div>
 <div class="section" id="per-system-conditionals">
 <h2>Per system conditionals<a class="headerlink" href="#per-system-conditionals" title="Permalink to this headline">¶</a></h2>
 <p>On one system I use <a class="reference external" href="http://www.levien.com/type/myfonts/inconsolata.html">Inconsolata</a> is not installed, so the configuration above
-wouldn&#8217;t work on it.  <code class="docutils literal"><span class="pre">xrdb</span></code> gives us a way around the problem though, it
-defines a set of symbols we can use including one to test the system&#8217;s
-<code class="docutils literal"><span class="pre">hostname</span></code>.  <code class="docutils literal"><span class="pre">nebula</span></code>, the system that doesn&#8217;t have Inconsolata, does have
+wouldn’t work on it.  <code class="docutils literal"><span class="pre">xrdb</span></code> gives us a way around the problem though, it
+defines a set of symbols we can use including one to test the system’s
+<code class="docutils literal"><span class="pre">hostname</span></code>.  <code class="docutils literal"><span class="pre">nebula</span></code>, the system that doesn’t have Inconsolata, does have
 <a class="reference external" href="http://www.is-vn.bg/hamster/">terminus</a> and I can use that on there with a couple of small changes.</p>
 <div class="highlight-c"><div class="highlight"><pre><span></span><span class="cp">#ifndef FIXED_FONT</span>
     <span class="cp">#ifdef SRVR_nebula</span>
@@ -254,7 +255,7 @@ defines a set of symbols we can use including one to test the system&#8217;s
 <p><a class="reference external" href="http://gist.github.com/202713">Fork this code</a></p>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
-<p class="last">As we&#8217;re using <a class="reference external" href="http://xorg.freedesktop.org/">X11</a>&#8216;s <code class="docutils literal"><span class="pre">xrdb</span></code> it is network aware, it defines <code class="docutils literal"><span class="pre">SVR_$name</span></code>
+<p class="last">As we’re using <a class="reference external" href="http://xorg.freedesktop.org/">X11</a>’s <code class="docutils literal"><span class="pre">xrdb</span></code> it is network aware, it defines <code class="docutils literal"><span class="pre">SVR_$name</span></code>
 for the <code class="docutils literal"><span class="pre">X</span></code> server name and <code class="docutils literal"><span class="pre">CLNT_$name</span></code> for the client name.  Using
 these it is easy to configure systems where the server and clients are on
 different machines.</p>
@@ -264,7 +265,7 @@ different machines.</p>
 <h2>Conditionals for server options<a class="headerlink" href="#conditionals-for-server-options" title="Permalink to this headline">¶</a></h2>
 <p>You can also change configured settings based on the extensions loaded in to the
 server, for example to disable the screensaver in <code class="docutils literal"><span class="pre">muxi</span></code> if the DPMS extension
-is supported we&#8217;d test for <code class="docutils literal"><span class="pre">EXT_DPMS</span></code>:</p>
+is supported we’d test for <code class="docutils literal"><span class="pre">EXT_DPMS</span></code>:</p>
 <div class="highlight-c"><div class="highlight"><pre><span></span><span class="cp">#ifdef EXT_DPMS</span>
     <span class="n">muxi</span><span class="p">.</span><span class="nl">screensaver</span><span class="p">:</span> <span class="nb">false</span>
 <span class="cp">#endif</span>
@@ -274,7 +275,7 @@ is supported we&#8217;d test for <code class="docutils literal"><span class="pre
 </div>
 <div class="section" id="testing-your-resource-files">
 <h2>Testing your resource files<a class="headerlink" href="#testing-your-resource-files" title="Permalink to this headline">¶</a></h2>
-<p>When you&#8217;re testing your own <code class="docutils literal"><span class="pre">~/.Xresources</span></code> file you can use the <code class="docutils literal"><span class="pre">-n</span></code>
+<p>When you’re testing your own <code class="docutils literal"><span class="pre">~/.Xresources</span></code> file you can use the <code class="docutils literal"><span class="pre">-n</span></code>
 option with <code class="docutils literal"><span class="pre">xrdb</span></code>, it tells <code class="docutils literal"><span class="pre">xrdb</span></code> to dump the settings as they would be
 used instead of updating the resource database.  This makes it easy to check if
 our conditional statements are working correctly without having to open and
@@ -285,7 +286,7 @@ test your modifications that rely on symbols that are normally exported by
 </div>
 <div class="section" id="using-a-more-featureful-preprocessor">
 <h2>Using a more featureful preprocessor<a class="headerlink" href="#using-a-more-featureful-preprocessor" title="Permalink to this headline">¶</a></h2>
-<p>You can also choose a different preprocessor if <code class="docutils literal"><span class="pre">cpp</span></code> isn&#8217;t up to your needs
+<p>You can also choose a different preprocessor if <code class="docutils literal"><span class="pre">cpp</span></code> isn’t up to your needs
 by specifying a <code class="docutils literal"><span class="pre">-cpp</span></code> option to <code class="docutils literal"><span class="pre">xrdb</span></code>.  The only caveat is that must
 accept <code class="docutils literal"><span class="pre">-D</span></code> for defines, <code class="docutils literal"><span class="pre">-U</span></code> for symbol cancelling and <code class="docutils literal"><span class="pre">-I</span></code> for include
 paths.  An example that does fit these restrictions is <a class="reference external" href="http://www.gnu.org/software/m4/m4.html">m4</a>, and it might be
@@ -313,7 +314,7 @@ such as fancy filtering or the use of loops for defining settings.</p>
 
   <div role="contentinfo">
     <p>
-        &copy; <a href="../../copyright.html">Copyright</a> 2009-2015, James Rowe.
+        &copy; <a href="../../copyright.html">Copyright</a> 2009-2017, James Rowe.
 
     </p>
   </div>
@@ -338,7 +339,7 @@ such as fancy filtering or the use of loops for defining settings.</p>
             VERSION:'0.1.0',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
-            HAS_SOURCE:  true
+            HAS_SOURCE:  false
         };
     </script>
       <script type="text/javascript" src="../../_static/jquery.js"></script>

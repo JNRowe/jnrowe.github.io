@@ -32,6 +32,9 @@
   
 
   
+        <link rel="index" title="Index"
+              href="../../genindex.html"/>
+        <link rel="search" title="Search" href="../../search.html"/>
         <link rel="copyright" title="Copyright" href="../../copyright.html"/>
     <link rel="top" title="JNRowe" href="../../index.html"/>
         <link rel="up" title="Tips" href="index.html"/>
@@ -106,13 +109,13 @@
 <li class="toctree-l4"><a class="reference internal" href="Debugging_python_regexps.html">Debugging Python regular expressions</a></li>
 <li class="toctree-l4"><a class="reference internal" href="Disabling_cursor_blinking_in_GTK.html">Disabling cursor blinking in GTK+</a></li>
 <li class="toctree-l4"><a class="reference internal" href="Fancy_awesome_theming.html">Fancy awesome theming</a></li>
-<li class="toctree-l4"><a class="reference internal" href="Finding_a_windows_owner.html">Finding a window&#8217;s owner</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Finding_a_windows_owner.html">Finding a window’s owner</a></li>
 <li class="toctree-l4"><a class="reference internal" href="Formatting_csv_files_in_the_shell.html">Formatting <abbr title="Comma Separated Values">CSV</abbr> files in the shell</a></li>
 <li class="toctree-l4"><a class="reference internal" href="Gentoo_one_liners.html">Gentoo one liners</a></li>
 <li class="toctree-l4"><a class="reference internal" href="Importing_gmail_filters_in_mutt.html">Importing gmail filters in mutt</a></li>
 <li class="toctree-l4"><a class="reference internal" href="Instant_web_server.html">Instant web server</a></li>
-<li class="toctree-l4"><a class="reference internal" href="Kick_me_birthday_reminders.html">&#8216;Kick me&#8217; birthday reminders</a></li>
-<li class="toctree-l4 current"><a class="current reference internal" href="">Making a nice home</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Kick_me_birthday_reminders.html">‘Kick me’ birthday reminders</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">Making a nice home</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#permissions">Permissions</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#vim-hacks">vim hacks</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#documentation">Documentation</a></li>
@@ -161,7 +164,7 @@
         <div class="rst-content">
           
 
-
+ 
 
 
 
@@ -176,8 +179,6 @@
     <li>Making a nice home</li>
       <li class="wy-breadcrumbs-aside">
         
-          
-            <a href="../../_sources/articles/tips/Making_a_nice_home.txt" rel="nofollow"> View page source</a>
           
         
       </li>
@@ -197,7 +198,7 @@
 </tr>
 </tbody>
 </table>
-<p>Back in <a class="reference internal" href="Kick_me_birthday_reminders.html"><em>&#8216;Kick me&#8217; birthday reminders</em></a> I said:</p>
+<p>Back in <a class="reference internal" href="Kick_me_birthday_reminders.html"><span class="doc">‘Kick me’ birthday reminders</span></a> I said:</p>
 <blockquote>
 <div>You could trigger a rebuild in your <code class="docutils literal"><span class="pre">~/.bashrc</span></code> before you call <code class="docutils literal"><span class="pre">rem</span></code> to
 see the reminders, so they are always up to date at login. Or, you could be
@@ -205,19 +206,19 @@ like me and have a post commit hook for <a class="reference external" href="http
 keeping your home directory version controlled as a sanity measure I hope!</div></blockquote>
 <p>Today, Stuart Grady asked me in a private mail:</p>
 <blockquote>
-<div>Okay, at which point is the &#8220;Tip of the Day&#8221; thingy going to be about using
+<div>Okay, at which point is the “Tip of the Day” thingy going to be about using
 hooks and <a class="reference external" href="http://www.gnu.org/software/make/make.html">make</a> in <code class="docutils literal"><span class="pre">$HOME</span></code>?</div></blockquote>
-<p>I&#8217;ll take the hint and look at <code class="docutils literal"><span class="pre">make</span></code>.  For the purposes of this post we&#8217;re
-going to pretend we haven&#8217;t read <a class="reference external" href="http://miller.emu.id.au/pmiller/books/rmch/">recursive make considered harmful</a> as I don&#8217;t
+<p>I’ll take the hint and look at <code class="docutils literal"><span class="pre">make</span></code>.  For the purposes of this post we’re
+going to pretend we haven’t read <a class="reference external" href="http://miller.emu.id.au/pmiller/books/rmch/">recursive make considered harmful</a> as I don’t
 heed its advice for the <code class="docutils literal"><span class="pre">Makefile</span></code> I have in my home directory.  That said,
-let&#8217;s have a look at what can be found in my current top-level <code class="docutils literal"><span class="pre">Makefile</span></code>.</p>
+let’s have a look at what can be found in my current top-level <code class="docutils literal"><span class="pre">Makefile</span></code>.</p>
 </div>
 <div class="section" id="permissions">
 <h1>Permissions<a class="headerlink" href="#permissions" title="Permalink to this headline">¶</a></h1>
 <p>I keep my home directory version controlled with <code class="docutils literal"><span class="pre">git</span></code>, but git out of the box
-doesn&#8217;t maintain permissions on files beyond the executable bit.  There are
+doesn’t maintain permissions on files beyond the executable bit.  There are
 plenty of ways around this including using external tools such as <a class="reference external" href="http://joey.kitenet.net/code/etckeeper/">etckeeper</a>,
-but I prefer the simple approach of setting the permissions when they&#8217;re needed:</p>
+but I prefer the simple approach of setting the permissions when they’re needed:</p>
 <div class="highlight-make"><div class="highlight"><pre><span></span><span class="nv">PRIVATE_FILES</span> <span class="o">:=</span> .abook/addressbook .gnupg/secring.gpg .mailfilter .msmtprc <span class="se">\</span>
         .ssh/id_rsa
 <span class="nv">PRIVATE_DIRS</span> <span class="o">:=</span> .gnupg
@@ -248,7 +249,7 @@ for <code class="docutils literal"><span class="pre">.vim</span></code>:</p>
                 --exclude<span class="o">=</span>*/test/* --exclude<span class="o">=</span>*/tests/* --languages<span class="o">=</span>python <span class="se">\</span>
                 -R -f <span class="nv">$@</span> $&lt;
 
-<span class="nf">doc/tags</span><span class="o">:</span> <span class="k">$(</span><span class="nv">filter</span>-<span class="nv">out</span> <span class="nv">doc</span>/<span class="nv">tags</span>, <span class="k">$</span>(<span class="nv">wildcard</span> <span class="nv">doc</span>/*<span class="k">)</span>)
+<span class="nf">doc/tags</span><span class="o">:</span> <span class="k">$(</span><span class="nv">filter</span>-<span class="nv">out</span> <span class="nv">doc</span>/<span class="nv">tags</span>, <span class="k">$(</span><span class="nv">wildcard</span> <span class="nv">doc</span>/*<span class="k">))</span>
         vim -X -u NONE -c <span class="s1">&#39;helptags $(dir $@)&#39;</span> -c <span class="s1">&#39;:q&#39;</span> &lt;/dev/null <span class="p">&amp;</span>&gt;/dev/null
 
 <span class="nf">clean</span><span class="o">:</span>
@@ -259,7 +260,7 @@ for <code class="docutils literal"><span class="pre">.vim</span></code>:</p>
 <p>The values in the <code class="docutils literal"><span class="pre">patsubst</span></code> block of the <code class="docutils literal"><span class="pre">$(TARGETS)</span></code> definition are a list
 of filenames to use for tag storage with <a class="reference external" href="http://ctags.sourceforge.net">ctags</a>.  The rule creates a different
 <code class="docutils literal"><span class="pre">ctags</span></code> file for each installed <a class="reference external" href="http://www.python.org">python</a> version.  In the rule to make the
-<code class="docutils literal"><span class="pre">ctags</span></code> files we specifically exclude test files as they aren&#8217;t often useful
+<code class="docutils literal"><span class="pre">ctags</span></code> files we specifically exclude test files as they aren’t often useful
 in <a class="reference external" href="http://vimdoc.sourceforge.net/htmldoc/version7.html#new-omni-completion">omni-completion</a>, and they significantly pollute the tags database for normal
 use.</p>
 <p>The final entry in <code class="docutils literal"><span class="pre">$(TARGETS)</span></code> simply updates the tag lists for <a class="reference external" href="http://vimdoc.sourceforge.net/htmldoc/various.html#:helptags">help files</a>
@@ -267,7 +268,7 @@ installed in <code class="docutils literal"><span class="pre">~/.vim/doc</span><
 </div>
 <div class="section" id="documentation">
 <h1>Documentation<a class="headerlink" href="#documentation" title="Permalink to this headline">¶</a></h1>
-<p>The final subdirectory <code class="docutils literal"><span class="pre">Makefile</span></code> we&#8217;re going to look at is actually called in
+<p>The final subdirectory <code class="docutils literal"><span class="pre">Makefile</span></code> we’re going to look at is actually called in
 a number of different directories to create HTML versions of
 <a class="reference external" href="http://docutils.sourceforge.net/rst.html">reStructuredText</a> files.</p>
 <div class="highlight-make"><div class="highlight"><pre><span></span><span class="nv">GENERATED</span> <span class="o">=</span> <span class="k">$(</span>patsubst %.rst, %.html, <span class="k">$(</span>wildcard *.rst<span class="k">))</span>
@@ -302,7 +303,7 @@ always have up to date processed versions of documents.</p>
 
   <div role="contentinfo">
     <p>
-        &copy; <a href="../../copyright.html">Copyright</a> 2009-2015, James Rowe.
+        &copy; <a href="../../copyright.html">Copyright</a> 2009-2017, James Rowe.
 
     </p>
   </div>
@@ -327,7 +328,7 @@ always have up to date processed versions of documents.</p>
             VERSION:'0.1.0',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
-            HAS_SOURCE:  true
+            HAS_SOURCE:  false
         };
     </script>
       <script type="text/javascript" src="../../_static/jquery.js"></script>

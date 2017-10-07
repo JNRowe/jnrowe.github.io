@@ -32,6 +32,9 @@
   
 
   
+        <link rel="index" title="Index"
+              href="../../genindex.html"/>
+        <link rel="search" title="Search" href="../../search.html"/>
         <link rel="copyright" title="Copyright" href="../../copyright.html"/>
     <link rel="top" title="JNRowe" href="../../index.html"/>
         <link rel="up" title="Tips" href="index.html"/>
@@ -102,16 +105,16 @@
 <li class="toctree-l4"><a class="reference internal" href="Bugzilla_real_names.html">Bugzilla mail with real names</a></li>
 <li class="toctree-l4"><a class="reference internal" href="Compiling_in_vim.html">Compiling C source in vim</a></li>
 <li class="toctree-l4"><a class="reference internal" href="Context_aware_diffs_with_git.html">Context aware diffs with git</a></li>
-<li class="toctree-l4 current"><a class="current reference internal" href="">Custom keybindings in the GTK+ file dialogs</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">Custom keybindings in the GTK+ file dialogs</a></li>
 <li class="toctree-l4"><a class="reference internal" href="Debugging_python_regexps.html">Debugging Python regular expressions</a></li>
 <li class="toctree-l4"><a class="reference internal" href="Disabling_cursor_blinking_in_GTK.html">Disabling cursor blinking in GTK+</a></li>
 <li class="toctree-l4"><a class="reference internal" href="Fancy_awesome_theming.html">Fancy awesome theming</a></li>
-<li class="toctree-l4"><a class="reference internal" href="Finding_a_windows_owner.html">Finding a window&#8217;s owner</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Finding_a_windows_owner.html">Finding a window’s owner</a></li>
 <li class="toctree-l4"><a class="reference internal" href="Formatting_csv_files_in_the_shell.html">Formatting <abbr title="Comma Separated Values">CSV</abbr> files in the shell</a></li>
 <li class="toctree-l4"><a class="reference internal" href="Gentoo_one_liners.html">Gentoo one liners</a></li>
 <li class="toctree-l4"><a class="reference internal" href="Importing_gmail_filters_in_mutt.html">Importing gmail filters in mutt</a></li>
 <li class="toctree-l4"><a class="reference internal" href="Instant_web_server.html">Instant web server</a></li>
-<li class="toctree-l4"><a class="reference internal" href="Kick_me_birthday_reminders.html">&#8216;Kick me&#8217; birthday reminders</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Kick_me_birthday_reminders.html">‘Kick me’ birthday reminders</a></li>
 <li class="toctree-l4"><a class="reference internal" href="Making_a_nice_home.html">Making a nice home</a></li>
 <li class="toctree-l4"><a class="reference internal" href="Making_a_nice_home.html#permissions">Permissions</a></li>
 <li class="toctree-l4"><a class="reference internal" href="Making_a_nice_home.html#vim-hacks">vim hacks</a></li>
@@ -161,7 +164,7 @@
         <div class="rst-content">
           
 
-
+ 
 
 
 
@@ -176,8 +179,6 @@
     <li>Custom keybindings in the GTK+ file dialogs</li>
       <li class="wy-breadcrumbs-aside">
         
-          
-            <a href="../../_sources/articles/tips/Custom_locations_in_the_GTK_filechooser.txt" rel="nofollow"> View page source</a>
           
         
       </li>
@@ -197,8 +198,8 @@
 </tr>
 </tbody>
 </table>
-<p>In <a class="reference internal" href="Fancy_awesome_theming.html"><em>Fancy awesome theming</em></a> I included a screenshot that, by accident more
-than design, spawned today&#8217;s tip.</p>
+<p>In <a class="reference internal" href="Fancy_awesome_theming.html"><span class="doc">Fancy awesome theming</span></a> I included a screenshot that, by accident more
+than design, spawned today’s tip.</p>
 <a class="reference external image-reference" href="../../_static/2009-09-28-awesome_theming.png"><img alt="gtkrc in vim screenshot" class="align-right" src="../../_images/2009-10-01-gtkrc-mini.png" /></a>
 <p>Laura Biddulph sent me a <abbr title="Short Message Service">SMS</abbr> message that read:</p>
 <blockquote>
@@ -208,7 +209,7 @@ dialog.</div></blockquote>
 in the right hand <a class="reference external" href="http://www.vim.org/">vim</a> window of the screenshot from that earlier post.  It was
 actually open in that screenshot because I was changing my GTK+ theme, and not
 being a <a class="reference external" href="http://www.gnome.org/">gnome</a> user the simplest way to change it is via my <code class="docutils literal"><span class="pre">~/.gtkrc-2.0</span></code>.
-And, if you&#8217;re using <a class="reference external" href="http://www.kde.org/">KDE</a> and wish to the settings for GTK+ applications you
+And, if you’re using <a class="reference external" href="http://www.kde.org/">KDE</a> and wish to the settings for GTK+ applications you
 should edit <code class="docutils literal"><span class="pre">~/.gtkrc-2.0-kde</span></code>.</p>
 <p>So the question becomes, what were the options in that screenshot, and are there
 any other cool and useful things you can do there?</p>
@@ -232,13 +233,13 @@ class &quot;GtkFileChooserDefault&quot; binding &quot;some-shortcuts&quot;
 basic theme related options.  <code class="docutils literal"><span class="pre">gtk-theme-name</span></code> and <code class="docutils literal"><span class="pre">gtk-icon-theme-name</span></code> set
 the style and icon groups for GTK+ apps respectively.  <code class="docutils literal"><span class="pre">gtk-key-theme-name</span></code>
 sets the default keybindings for GTK+ apps.  By setting it to <code class="docutils literal"><span class="pre">Emacs</span></code> we have
-access to the &#8220;normal&#8221; keybindings we expect if we use <a class="reference external" href="http://cnswww.cns.cwru.edu/~chet/bash/bashtop.html">bash</a> or other common
+access to the “normal” keybindings we expect if we use <a class="reference external" href="http://cnswww.cns.cwru.edu/~chet/bash/bashtop.html">bash</a> or other common
 Linux tools, such as <code class="docutils literal"><span class="pre">C-w</span></code> to delete the word under the cursor.  You can read
 more about <code class="docutils literal"><span class="pre">gtk-key-theme-name</span></code> in <a class="reference external" href="http://www.jnrowe.ukfsn.org/articles/configs/gtk.html">an old posting of mine</a>.</p>
-<p>All of the settings above are configurable with a <abbr title="Graphical User Interface">GUI</abbr> if you use gnome or <a class="reference external" href="http://www.xfce.org/">xfce</a>, but for those of who don&#8217;t use those
+<p>All of the settings above are configurable with a <abbr title="Graphical User Interface">GUI</abbr> if you use gnome or <a class="reference external" href="http://www.xfce.org/">xfce</a>, but for those of who don’t use those
 desktop environments editing the <code class="docutils literal"><span class="pre">~/.gtkrc-2.0</span></code> is a reasonable solution.</p>
 <a class="reference external image-reference" href="../../_static/2009-10-01-GTK_filechooser.png"><img alt="GTK file chooser screenshot" class="align-left" src="../../_images/2009-10-01-GTK_filechooser-mini.png" /></a>
-<p>The &#8220;some-shortcuts&#8221; section is the interesting one for today, it is telling
+<p>The “some-shortcuts” section is the interesting one for today, it is telling
 GTK+ applications that we want to have our own extra keybindings available when
 opening or saving files.  <code class="docutils literal"><span class="pre">GTKFileChooser</span></code> is the modern GTK+ file dialog, and
 it already has a set of useful keybindings including:</p>
@@ -260,20 +261,20 @@ it already has a set of useful keybindings including:</p>
 <td>Jump to your <code class="docutils literal"><span class="pre">~/Desktop</span></code> directory</td>
 </tr>
 <tr class="row-even"><td><code class="docutils literal"><span class="pre">M-&lt;Up&gt;</span></code></td>
-<td>Go to current directory&#8217;s parent</td>
+<td>Go to current directory’s parent</td>
 </tr>
 <tr class="row-odd"><td><code class="docutils literal"><span class="pre">C-L</span></code></td>
 <td>Display the text location entry box</td>
 </tr>
 </tbody>
 </table>
-<p>We could actually use the file chooser&#8217;s bookmark feature, and access the
+<p>We could actually use the file chooser’s bookmark feature, and access the
 bookmarks with <code class="docutils literal"><span class="pre">M-1</span></code> through <code class="docutils literal"><span class="pre">M-9</span></code> and <code class="docutils literal"><span class="pre">M-0</span></code> for bookmark number ten from
 the dialog.  However, I find it more practical to be able to use mnemonic names
 for favourite locations.  You could even use both if you have an excellent
 memory and a lot of favourite locations!</p>
 <p>If you wish to add your own bindings the format is hopefully quite
-self-explanatory, just don&#8217;t forget to link your bindings to the correct class
+self-explanatory, just don’t forget to link your bindings to the correct class
 or they will not work.</p>
 <p>You can also change the default bindings by specifying them in the configuration
 file, for example to use <code class="docutils literal"><span class="pre">M-&lt;left&gt;</span></code> and <code class="docutils literal"><span class="pre">M-&lt;right&gt;</span></code> to skip backward and forward
@@ -315,7 +316,7 @@ for this you can use the <code class="docutils literal"><span class="pre">includ
 
   <div role="contentinfo">
     <p>
-        &copy; <a href="../../copyright.html">Copyright</a> 2009-2015, James Rowe.
+        &copy; <a href="../../copyright.html">Copyright</a> 2009-2017, James Rowe.
 
     </p>
   </div>
@@ -340,7 +341,7 @@ for this you can use the <code class="docutils literal"><span class="pre">includ
             VERSION:'0.1.0',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
-            HAS_SOURCE:  true
+            HAS_SOURCE:  false
         };
     </script>
       <script type="text/javascript" src="../../_static/jquery.js"></script>

@@ -32,6 +32,9 @@
   
 
   
+        <link rel="index" title="Index"
+              href="../../genindex.html"/>
+        <link rel="search" title="Search" href="../../search.html"/>
         <link rel="copyright" title="Copyright" href="../../copyright.html"/>
     <link rel="top" title="JNRowe" href="../../index.html"/>
         <link rel="up" title="Tips" href="index.html"/>
@@ -106,12 +109,12 @@
 <li class="toctree-l4"><a class="reference internal" href="Debugging_python_regexps.html">Debugging Python regular expressions</a></li>
 <li class="toctree-l4"><a class="reference internal" href="Disabling_cursor_blinking_in_GTK.html">Disabling cursor blinking in GTK+</a></li>
 <li class="toctree-l4"><a class="reference internal" href="Fancy_awesome_theming.html">Fancy awesome theming</a></li>
-<li class="toctree-l4"><a class="reference internal" href="Finding_a_windows_owner.html">Finding a window&#8217;s owner</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Finding_a_windows_owner.html">Finding a window’s owner</a></li>
 <li class="toctree-l4"><a class="reference internal" href="Formatting_csv_files_in_the_shell.html">Formatting <abbr title="Comma Separated Values">CSV</abbr> files in the shell</a></li>
 <li class="toctree-l4"><a class="reference internal" href="Gentoo_one_liners.html">Gentoo one liners</a></li>
 <li class="toctree-l4"><a class="reference internal" href="Importing_gmail_filters_in_mutt.html">Importing gmail filters in mutt</a></li>
-<li class="toctree-l4 current"><a class="current reference internal" href="">Instant web server</a></li>
-<li class="toctree-l4"><a class="reference internal" href="Kick_me_birthday_reminders.html">&#8216;Kick me&#8217; birthday reminders</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">Instant web server</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Kick_me_birthday_reminders.html">‘Kick me’ birthday reminders</a></li>
 <li class="toctree-l4"><a class="reference internal" href="Making_a_nice_home.html">Making a nice home</a></li>
 <li class="toctree-l4"><a class="reference internal" href="Making_a_nice_home.html#permissions">Permissions</a></li>
 <li class="toctree-l4"><a class="reference internal" href="Making_a_nice_home.html#vim-hacks">vim hacks</a></li>
@@ -161,7 +164,7 @@
         <div class="rst-content">
           
 
-
+ 
 
 
 
@@ -176,8 +179,6 @@
     <li>Instant web server</li>
       <li class="wy-breadcrumbs-aside">
         
-          
-            <a href="../../_sources/articles/tips/Instant_web_server.txt" rel="nofollow"> View page source</a>
           
         
       </li>
@@ -204,18 +205,18 @@ Fletcher that I was expecting to unleash a flurry of emotional responses:</p>
 <p>There were a couple of predictable rants about the benefits and drawbacks of
 threading models.  Along with a couple of other topics entirely unhelpful for
 the question at hand, but surprisingly little dissent over the choices.</p>
-<p>Matt Traner&#8217;s reply sums up the general feeling quite nicely:</p>
+<p>Matt Traner’s reply sums up the general feeling quite nicely:</p>
 <blockquote>
-<div>Just use whatever server you have installed already.  If you don&#8217;t have
+<div>Just use whatever server you have installed already.  If you don’t have
 <em>any</em> installed grab <a class="reference external" href="http://nginx.net/">nginx</a> as it works well and is quite small.</div></blockquote>
-<p>I agree with Matt&#8217;s answer but I want to point a couple of possibly non-obvious
+<p>I agree with Matt’s answer but I want to point a couple of possibly non-obvious
 web servers that they, and you, are likely to have installed already.</p>
 <div class="section" id="busybox">
 <h2>Busybox<a class="headerlink" href="#busybox" title="Permalink to this headline">¶</a></h2>
 <p>All our Linux systems at the office include <a class="reference external" href="http://www.busybox.net/">busybox</a>, and in the configuration
 we use the <a class="reference external" href="http://www.busybox.net/downloads/BusyBox.html#httpd">httpd</a> applet is built.  It is very lightweight, and incredibly
 stable.  I often use it when testing or as a weak way to transfer files between
-hosts when <a class="reference external" href="http://avahi.org/">avahi</a> isn&#8217;t available or is too much hassle.  In my <a class="reference external" href="http://cnswww.cns.cwru.edu/~chet/bash/bashtop.html">bash</a>
+hosts when <a class="reference external" href="http://avahi.org/">avahi</a> isn’t available or is too much hassle.  In my <a class="reference external" href="http://cnswww.cns.cwru.edu/~chet/bash/bashtop.html">bash</a>
 configuration I have a little functions to start up a <code class="docutils literal"><span class="pre">busybox</span> <span class="pre">httpd</span></code> server:</p>
 <div class="highlight-bash"><div class="highlight"><pre><span></span>http_serve<span class="o">()</span>
 <span class="o">{</span>
@@ -223,7 +224,7 @@ configuration I have a little functions to start up a <code class="docutils lite
     <span class="k">then</span>
         <span class="nb">echo</span> <span class="s2">&quot;Usage:  </span><span class="si">${</span><span class="nv">FUNCNAME</span><span class="si">}</span><span class="s2"> [location]&quot;</span>
         <span class="nb">echo</span> <span class="s2">&quot;Start a httpd in \`location&#39;, defaulting to \`</span><span class="si">${</span><span class="nv">http_serve_location</span><span class="si">}</span><span class="s2">&#39;.&quot;</span>
-        <span class="k">return</span> 1
+        <span class="k">return</span> <span class="m">1</span>
     <span class="k">fi</span>
     busybox httpd -f -p <span class="m">8080</span> -h <span class="si">${</span><span class="nv">1</span><span class="k">:-</span><span class="si">${</span><span class="nv">http_serve_location</span><span class="si">}}</span>
 <span class="o">}</span>
@@ -236,7 +237,7 @@ keep per-machine settings separate.</p>
 <div class="section" id="python">
 <h2>Python<a class="headerlink" href="#python" title="Permalink to this headline">¶</a></h2>
 <p><a class="reference external" href="http://www.python.org/">Python</a> comes with its own basic web server, and it is very easy to use:</p>
-<div class="highlight-console"><div class="highlight"><pre><span></span><span class="gp">$</span> python2.6 -m SimpleHTTPServer 8080
+<div class="highlight-console"><div class="highlight"><pre><span></span><span class="gp">$</span> python2.6 -m SimpleHTTPServer <span class="m">8080</span>
 <span class="go">Serving HTTP on 0.0.0.0 port 8080 ...</span>
 <span class="go">kate.localdomain - - [13/Oct/2009 01:16:51] &quot;GET / HTTP/1.1&quot; 200 -</span>
 <span class="go">kate.localdomain - - [13/Oct/2009 01:16:51] &quot;GET /css/content.css HTTP/1.1&quot; 200 -</span>
@@ -252,14 +253,14 @@ keep per-machine settings separate.</p>
 </div>
 <p>Note that the name of the module has changed from <code class="docutils literal"><span class="pre">SimpleHTTPServer</span></code> to
 <code class="docutils literal"><span class="pre">http.server</span></code> for Python v3 and above.</p>
-<p>I&#8217;ve specified the port 8080 to both calls in the snippet above, by default the
+<p>I’ve specified the port 8080 to both calls in the snippet above, by default the
 server port would be 8000.  If port 8000 is acceptable for you then you can save
 yourself five keystrokes.</p>
 </div>
 <div class="section" id="ruby">
 <h2>Ruby<a class="headerlink" href="#ruby" title="Permalink to this headline">¶</a></h2>
-<p><a class="reference external" href="http://www.ruby-lang.org/">ruby</a> also comes with its own web server, one that you&#8217;re probably already
-familiar with if you&#8217;re a <a class="reference external" href="http://www.rubyonrails.org/">rails</a> user, called <a class="reference external" href="http://www.webrick.org/">webrick</a>.  We need a little script
+<p><a class="reference external" href="http://www.ruby-lang.org/">ruby</a> also comes with its own web server, one that you’re probably already
+familiar with if you’re a <a class="reference external" href="http://www.rubyonrails.org/">rails</a> user, called <a class="reference external" href="http://www.webrick.org/">webrick</a>.  We need a little script
 to use <code class="docutils literal"><span class="pre">webrick</span></code>:</p>
 <div class="highlight-ruby"><div class="highlight"><pre><span></span><span class="ch">#! /usr/bin/ruby</span>
 
@@ -284,8 +285,8 @@ argument.</p>
 <h2>Bonus<a class="headerlink" href="#bonus" title="Permalink to this headline">¶</a></h2>
 <p>Python also comes with a <abbr title="Common Gateway Interface">CGI</abbr>-capable version called
 <code class="docutils literal"><span class="pre">CGIHTTPServer</span></code> and a <abbr title="Extensible Markup Language">XML</abbr>-<abbr title="Remote Procedure Call">RPC</abbr>
-server called &#8211; this shouldn&#8217;t come as a surprise &#8211; <code class="docutils literal"><span class="pre">SimpleXMLRPCServer</span></code>.
-They&#8217;re very useful for testing out ideas and concepts without having to set
+server called – this shouldn’t come as a surprise – <code class="docutils literal"><span class="pre">SimpleXMLRPCServer</span></code>.
+They’re very useful for testing out ideas and concepts without having to set
 down lots of code.</p>
 </div>
 </div>
@@ -309,7 +310,7 @@ down lots of code.</p>
 
   <div role="contentinfo">
     <p>
-        &copy; <a href="../../copyright.html">Copyright</a> 2009-2015, James Rowe.
+        &copy; <a href="../../copyright.html">Copyright</a> 2009-2017, James Rowe.
 
     </p>
   </div>
@@ -334,7 +335,7 @@ down lots of code.</p>
             VERSION:'0.1.0',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
-            HAS_SOURCE:  true
+            HAS_SOURCE:  false
         };
     </script>
       <script type="text/javascript" src="../../_static/jquery.js"></script>

@@ -32,6 +32,9 @@
   
 
   
+        <link rel="index" title="Index"
+              href="../../genindex.html"/>
+        <link rel="search" title="Search" href="../../search.html"/>
         <link rel="copyright" title="Copyright" href="../../copyright.html"/>
     <link rel="top" title="JNRowe" href="../../index.html"/>
         <link rel="up" title="Tips" href="index.html"/>
@@ -97,7 +100,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../tdd_distros.html">TDD distro development</a></li>
 <li class="toctree-l2 current"><a class="reference internal" href="../index.html#further-categories">Further categories</a><ul class="current">
 <li class="toctree-l3 current"><a class="reference internal" href="index.html">Tips</a><ul class="current">
-<li class="toctree-l4 current"><a class="current reference internal" href=""><abbr title="Bug Tracking System">BTS</abbr> as a task manager</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#"><abbr title="Bug Tracking System">BTS</abbr> as a task manager</a></li>
 <li class="toctree-l4"><a class="reference internal" href="Beyond_tab_completion.html">Beyond simple tab completion</a></li>
 <li class="toctree-l4"><a class="reference internal" href="Bugzilla_real_names.html">Bugzilla mail with real names</a></li>
 <li class="toctree-l4"><a class="reference internal" href="Compiling_in_vim.html">Compiling C source in vim</a></li>
@@ -106,12 +109,12 @@
 <li class="toctree-l4"><a class="reference internal" href="Debugging_python_regexps.html">Debugging Python regular expressions</a></li>
 <li class="toctree-l4"><a class="reference internal" href="Disabling_cursor_blinking_in_GTK.html">Disabling cursor blinking in GTK+</a></li>
 <li class="toctree-l4"><a class="reference internal" href="Fancy_awesome_theming.html">Fancy awesome theming</a></li>
-<li class="toctree-l4"><a class="reference internal" href="Finding_a_windows_owner.html">Finding a window&#8217;s owner</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Finding_a_windows_owner.html">Finding a window’s owner</a></li>
 <li class="toctree-l4"><a class="reference internal" href="Formatting_csv_files_in_the_shell.html">Formatting <abbr title="Comma Separated Values">CSV</abbr> files in the shell</a></li>
 <li class="toctree-l4"><a class="reference internal" href="Gentoo_one_liners.html">Gentoo one liners</a></li>
 <li class="toctree-l4"><a class="reference internal" href="Importing_gmail_filters_in_mutt.html">Importing gmail filters in mutt</a></li>
 <li class="toctree-l4"><a class="reference internal" href="Instant_web_server.html">Instant web server</a></li>
-<li class="toctree-l4"><a class="reference internal" href="Kick_me_birthday_reminders.html">&#8216;Kick me&#8217; birthday reminders</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Kick_me_birthday_reminders.html">‘Kick me’ birthday reminders</a></li>
 <li class="toctree-l4"><a class="reference internal" href="Making_a_nice_home.html">Making a nice home</a></li>
 <li class="toctree-l4"><a class="reference internal" href="Making_a_nice_home.html#permissions">Permissions</a></li>
 <li class="toctree-l4"><a class="reference internal" href="Making_a_nice_home.html#vim-hacks">vim hacks</a></li>
@@ -161,7 +164,7 @@
         <div class="rst-content">
           
 
-
+ 
 
 
 
@@ -176,8 +179,6 @@
     <li><abbr title="Bug Tracking System">BTS</abbr> as a task manager</li>
       <li class="wy-breadcrumbs-aside">
         
-          
-            <a href="../../_sources/articles/tips/BTS_as_a_task_manager.txt" rel="nofollow"> View page source</a>
           
         
       </li>
@@ -204,35 +205,35 @@
 a <abbr title="Bug Tracking System">BTS</abbr> for local task management, the idea of just
 adding random lines of text to a file frankly baffles me.  I love the filtering,
 ordering and editing capabilities I get from using a <abbr title="Bug Tracking System">BTS</abbr> for this.</p>
-<p>Now, I&#8217;m not suggesting installing something complex and convoluted like
+<p>Now, I’m not suggesting installing something complex and convoluted like
 <a class="reference external" href="http://www.bugzilla.org">Bugzilla</a> just for keeping track of your shopping lists or remembering to charge
 the spare battery for your phone.  There are quite a few lightweight systems
 available, <a class="reference external" href="http://ditz.rubyforge.org">ditz</a> and <a class="reference external" href="http://bugseverywhere.org/be/show/HomePage">Bugs Everywhere</a> being two examples.  There is also
 a <code class="docutils literal"><span class="pre">ditz</span></code> inspired project, written in <a class="reference external" href="http://www.python.org">Python</a>, called <a class="reference external" href="https://github.com/mw44118/pitz">pitz</a> that is in active
-development.  And <a class="reference external" href="http://www.fossil-scm.org/index.html/doc/tip/www/index.wiki">fossil</a> is pretty cool if you&#8217;re looking for a standalone
+development.  And <a class="reference external" href="http://www.fossil-scm.org/index.html/doc/tip/www/index.wiki">fossil</a> is pretty cool if you’re looking for a standalone
 wiki, <abbr title="Bug Tracking System">BTS</abbr> and <abbr title="Version Control System">VCS</abbr> in one.</p>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
-<p class="last">If you&#8217;re a <a class="reference external" href="http://www.gentoo.org/">Gentoo</a> user you can install <code class="docutils literal"><span class="pre">ditz</span></code> using
+<p class="last">If you’re a <a class="reference external" href="http://www.gentoo.org/">Gentoo</a> user you can install <code class="docutils literal"><span class="pre">ditz</span></code> using
 the ebuild from my <a class="reference external" href="https://github.com/JNRowe/jnrowe-misc/">overlay</a>.</p>
 </div>
-<p>I&#8217;m currently in the process of switching away from <abbr title="Bugs Everywhere">be</abbr>, but it can serve as an example quite well.  Unfortunately, there
+<p>I’m currently in the process of switching away from <abbr title="Bugs Everywhere">be</abbr>, but it can serve as an example quite well.  Unfortunately, there
 are no releases currently being made so you will need to install a recent
-version of <code class="docutils literal"><span class="pre">bzr</span></code> to download it.  Don&#8217;t worry though you aren&#8217;t restricted to
+version of <code class="docutils literal"><span class="pre">bzr</span></code> to download it.  Don’t worry though you aren’t restricted to
 <code class="docutils literal"><span class="pre">bzr</span></code> to use it.</p>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
-<p class="last">Colleagues from work can grab Dan&#8217;s <code class="docutils literal"><span class="pre">be</span></code> branch directly from our package
-repository, it doesn&#8217;t require <code class="docutils literal"><span class="pre">bzr</span></code> and it fixes quite a few usage
+<p class="last">Colleagues from work can grab Dan’s <code class="docutils literal"><span class="pre">be</span></code> branch directly from our package
+repository, it doesn’t require <code class="docutils literal"><span class="pre">bzr</span></code> and it fixes quite a few usage
 problems(it is also much faster).  Just remember that it has diverged
-massively from the upstream code, so you won&#8217;t be able to use it to work with
+massively from the upstream code, so you won’t be able to use it to work with
 bug databases created by the upstream project.</p>
 </div>
 <p>The following examples use an older version of <code class="docutils literal"><span class="pre">be</span></code> that you can download as
-a <a class="reference external" href="http://www.jnrowe.ukfsn.org/_static/be-0.0.193.tar.bz2">tarball</a> and doesn&#8217;t require <code class="docutils literal"><span class="pre">bzr</span></code>.</p>
+a <a class="reference external" href="http://www.jnrowe.ukfsn.org/_static/be-0.0.193.tar.bz2">tarball</a> and doesn’t require <code class="docutils literal"><span class="pre">bzr</span></code>.</p>
 <div class="section" id="setting-be-up">
 <h2>Setting <code class="docutils literal"><span class="pre">be</span></code> up<a class="headerlink" href="#setting-be-up" title="Permalink to this headline">¶</a></h2>
-<p>Before we use <code class="docutils literal"><span class="pre">be</span></code> we must prepare it.  In the example that follows we&#8217;re
+<p>Before we use <code class="docutils literal"><span class="pre">be</span></code> we must prepare it.  In the example that follows we’re
 going to create a new directory under the control of <a class="reference external" href="http://www.git-scm.com/">git</a>, and tell <code class="docutils literal"><span class="pre">be</span></code> we
 wish to use it in there:</p>
 <div class="highlight-console"><div class="highlight"><pre><span></span><span class="gp">$</span> mkdir be_test<span class="p">;</span> <span class="nb">cd</span> be_test
@@ -262,8 +263,8 @@ can be seen below.</p>
 </pre></div>
 </div>
 <p>We now have two bugs filed.  Bug <code class="docutils literal"><span class="pre">a09</span></code> is self-assigned, while <code class="docutils literal"><span class="pre">ec4</span></code> has yet
-to be assigned.  As we didn&#8217;t set a severity level for <code class="docutils literal"><span class="pre">a09</span></code> it is set to the
-default of <code class="docutils literal"><span class="pre">minor</span></code>.  A comment was also made on bug <code class="docutils literal"><span class="pre">ec4</span></code>, and if we hadn&#8217;t
+to be assigned.  As we didn’t set a severity level for <code class="docutils literal"><span class="pre">a09</span></code> it is set to the
+default of <code class="docutils literal"><span class="pre">minor</span></code>.  A comment was also made on bug <code class="docutils literal"><span class="pre">ec4</span></code>, and if we hadn’t
 specified the comment on the command line it would open our default editor to
 add the comment.</p>
 </div>
@@ -348,7 +349,7 @@ with filtering options.</p>
 <p>That really is all it takes to use <code class="docutils literal"><span class="pre">be</span></code>, and that is why I find a <abbr title="Bug Tracking System">BTS</abbr> to be a nice solution for managing all kinds of random
 tasks.  I have a Bugs Everywhere database in my home directory that over the
 past year has stored just over 600 bugs from shopping lists to actual bugs with
-my configurations files, and I&#8217;ve apparently managed to complete 95% of them!</p>
+my configurations files, and I’ve apparently managed to complete 95% of them!</p>
 </div>
 <div class="section" id="bonus-material">
 <h2>Bonus material<a class="headerlink" href="#bonus-material" title="Permalink to this headline">¶</a></h2>
@@ -366,7 +367,7 @@ Everywhere database, and it is very simple to do:</p>
 </div>
 <p><a class="reference external" href="http://gist.github.com/204172">Fork this code</a></p>
 <p>It could be improved to take settings to filter the bug list or all manner of
-other cool things, but that is why it has a &#8220;Fork this code&#8221; label next to it.
+other cool things, but that is why it has a “Fork this code” label next to it.
 Feel free to post updates to the gist!</p>
 </div>
 </div>
@@ -390,7 +391,7 @@ Feel free to post updates to the gist!</p>
 
   <div role="contentinfo">
     <p>
-        &copy; <a href="../../copyright.html">Copyright</a> 2009-2015, James Rowe.
+        &copy; <a href="../../copyright.html">Copyright</a> 2009-2017, James Rowe.
 
     </p>
   </div>
@@ -415,7 +416,7 @@ Feel free to post updates to the gist!</p>
             VERSION:'0.1.0',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
-            HAS_SOURCE:  true
+            HAS_SOURCE:  false
         };
     </script>
       <script type="text/javascript" src="../../_static/jquery.js"></script>

@@ -32,6 +32,9 @@
   
 
   
+        <link rel="index" title="Index"
+              href="../genindex.html"/>
+        <link rel="search" title="Search" href="../search.html"/>
         <link rel="copyright" title="Copyright" href="../copyright.html"/>
     <link rel="top" title="JNRowe" href="../index.html"/>
         <link rel="up" title="Articles" href="index.html"/>
@@ -91,7 +94,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../projects.html">Projects</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="index.html">Articles</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="dropping_gentoo.html">Dropping Gentoo</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="">Dropping Gentoo reflex</a><ul>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Dropping Gentoo reflex</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#speed">Speed</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#documentation">Documentation</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#the-personal-touch">The personal touch</a></li>
@@ -131,7 +134,7 @@
         <div class="rst-content">
           
 
-
+ 
 
 
 
@@ -145,8 +148,6 @@
       <li class="wy-breadcrumbs-aside">
         
           
-            <a href="../_sources/articles/dropping_gentoo_reflex.txt" rel="nofollow"> View page source</a>
-          
         
       </li>
   </ul>
@@ -157,19 +158,19 @@
             
   <div class="section" id="dropping-gentoo-reflex">
 <h1>Dropping Gentoo reflex<a class="headerlink" href="#dropping-gentoo-reflex" title="Permalink to this headline">¶</a></h1>
-<p>After hitting the publish button on <a class="reference internal" href="dropping_gentoo.html"><em>Dropping Gentoo</em></a> a few friends
+<p>After hitting the publish button on <a class="reference internal" href="dropping_gentoo.html"><span class="doc">Dropping Gentoo</span></a> a few friends
 commented that I was either unnecessarily harsh about Gentoo or we wasted an
 enormous amount of time on it.  It definitely was the former, and I feel
 a touch ashamed for implying the latter.</p>
-<p>I was writing my thoughts in the &#8220;project obituary&#8221; form that I&#8217;m used to, and
-that is entirely about spotting the downsides to make sure they don&#8217;t reoccur.
+<p>I was writing my thoughts in the “project obituary” form that I’m used to, and
+that is entirely about spotting the downsides to make sure they don’t reoccur.
 And with that in mind I <em>was</em> being incredibly unfair to Gentoo, both the
 project and by extension the people working on it.</p>
-<p>There were many, many good points about Gentoo and I&#8217;ll nod towards a few now.</p>
+<p>There were many, many good points about Gentoo and I’ll nod towards a few now.</p>
 <div class="section" id="speed">
 <h2>Speed<a class="headerlink" href="#speed" title="Permalink to this headline">¶</a></h2>
-<p>No, no.  Not the &#8220;Oh my god, my KDEs are soooo fast&#8221; that many people fairly
-associate with Gentoo users.  I&#8217;m talking about the basic package handling
+<p>No, no.  Not the “Oh my god, my KDEs are so fast” that many people fairly
+associate with Gentoo users.  I’m talking about the basic package handling
 tasks.</p>
 <p>There are very few other distributions that can match Gentoo when it comes to
 the speed of editing a package.  Or, for that matter, the speed of installation
@@ -178,11 +179,11 @@ if you share binary packages.</p>
 binary package user on Gentoo is just how slow package installation and removal
 is.  Binary package installation on Gentoo feels on par with a distribution
 like Slackware, and what passes for package management there is just choosing
-the right argument to <strong class="command">tar</strong>&#8216;s <code class="xref std std-option docutils literal"><span class="pre">-C</span></code> option.</p>
+the right argument to <strong class="command">tar</strong>’s <a class="reference external" href="http://docs.python.org/library/trace.html#cmdoption-trace-C" title="(in Python v3.6)"><code class="xref std std-option docutils literal"><span class="pre">-C</span></code></a> option.</p>
 <p>Where Gentoo really excels though is in the speed of creating new packages or
 editing existing packages.</p>
 <p>Lets take a look at an example.  Say, for example, that you just found out that
-<code class="docutils literal"><span class="pre">flask-dashed</span></code>&#8216;s  <code class="docutils literal"><span class="pre">ebuild</span></code> mistakenly installs a <code class="file docutils literal"><span class="pre">/usr/README</span></code> file.
+<code class="docutils literal"><span class="pre">flask-dashed</span></code>’s  <code class="docutils literal"><span class="pre">ebuild</span></code> mistakenly installs a <code class="file docutils literal"><span class="pre">/usr/README</span></code> file.
 We we can fix the problem with the following simple change and a call to
 <code class="docutils literal"><span class="pre">repoman</span> <span class="pre">manifest</span></code>, the rest takes care of itself.</p>
 <div class="highlight-diff"><div class="highlight"><pre><span></span><span class="gh">diff --git i/flask-dashed-0.1b_p2.ebuild w/flask-dashed-0.1b_p2.ebuild</span>
@@ -201,27 +202,27 @@ We we can fix the problem with the following simple change and a call to
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
 <p class="last">Of course, you should fix the package properly and send the fix upstream but
-this is just to prove a point.  Calling <code class="docutils literal"><span class="pre">die</span></code> with <code class="docutils literal"><span class="pre">sed</span></code> there isn&#8217;t
+this is just to prove a point.  Calling <code class="docutils literal"><span class="pre">die</span></code> with <code class="docutils literal"><span class="pre">sed</span></code> there isn’t
 recommended and is practically pointless, but it is the style upstream.</p>
 </div>
 <p>I have to mention a small downside here however, because very few people seem to
-test <code class="docutils literal"><span class="pre">portage</span></code>&#8216;s binary package support you&#8217;ll occasionally have to do some
+test <code class="docutils literal"><span class="pre">portage</span></code>’s binary package support you’ll occasionally have to do some
 leg work to fix problems.  This normally arises when you have an <code class="docutils literal"><span class="pre">eclass</span></code>
 change that needs to ripple through, or when a library breaks compatibility and
-it&#8217;s <code class="docutils literal"><span class="pre">ebuild</span></code> hasn&#8217;t been bumped properly.</p>
+it’s <code class="docutils literal"><span class="pre">ebuild</span></code> hasn’t been bumped properly.</p>
 <p>Almost every time that happens you can fix it with a quick loop in your shell
 though.  A couple of such problems and solutions that I found in my shell
 history can be seen below.</p>
 <div class="highlight-sh"><div class="highlight"><pre><span></span><span class="c1"># When you were stuck with packages that used python-distutils-ng, and you</span>
 <span class="c1"># needed to scrub packages because you changed Python version</span>
 <span class="k">for</span> s in <span class="k">$(</span>portageq pkgdir<span class="k">)</span>/*-*/*.tbz2<span class="p">;</span> <span class="k">do</span>
-    qtbz2 -xO $s <span class="p">|</span> qxpak -xO - <span class="si">${${</span><span class="nv">s</span><span class="p">##*/</span><span class="si">}</span><span class="p">/.tbz2</span><span class="si">}</span>.ebuild <span class="p">|</span> grep -q <span class="s1">&#39;SUPPORT_PYTHON_ABIS&#39;</span> <span class="o">&amp;&amp;</span> <span class="nb">echo</span> $s
+    qtbz2 -xO <span class="nv">$s</span> <span class="p">|</span> qxpak -xO - <span class="si">${${</span><span class="nv">s</span><span class="p">##*/</span><span class="si">}</span><span class="p">/.tbz2</span><span class="si">}</span>.ebuild <span class="p">|</span> grep -q <span class="s1">&#39;SUPPORT_PYTHON_ABIS&#39;</span> <span class="o">&amp;&amp;</span> <span class="nb">echo</span> <span class="nv">$s</span>
 <span class="k">done</span>
 
 <span class="c1"># When you were using packages that used python&#39;s &quot;-r1&quot; eclasses and all</span>
 <span class="c1"># you could see is a flood of blockages in your update output</span>
 <span class="k">for</span> s in <span class="k">$(</span>portageq pkgdir<span class="k">)</span>/*-*/*.tbz2<span class="p">;</span> <span class="k">do</span>
-    qtbz2 -xO $s <span class="p">|</span> qxpak -xO - RDEPEND 2&gt;/dev/null <span class="p">|</span> grep -q <span class="s2">&quot;dev-python/python-exec&quot;</span> <span class="o">&amp;&amp;</span> <span class="nb">echo</span> $s
+    qtbz2 -xO <span class="nv">$s</span> <span class="p">|</span> qxpak -xO - RDEPEND <span class="m">2</span>&gt;/dev/null <span class="p">|</span> grep -q <span class="s2">&quot;dev-python/python-exec&quot;</span> <span class="o">&amp;&amp;</span> <span class="nb">echo</span> <span class="nv">$s</span>
 <span class="k">done</span>
 </pre></div>
 </div>
@@ -230,7 +231,7 @@ history can be seen below.</p>
 <h2>Documentation<a class="headerlink" href="#documentation" title="Permalink to this headline">¶</a></h2>
 <p>The excellent <a class="reference external" href="http://devmanual.gentoo.org/">devmanual</a> and the incredible <a class="reference external" href="http://wiki.gentoo.org/wiki/Project:PMS">Package Manager Specification</a>
 made life so much easier.  The devmanual was both short enough to be used as
-quick reference and complete enough that you could learn most of what you&#8217;d need
+quick reference and complete enough that you could learn most of what you’d need
 to know from it.  The unfortunately named PMS acted as the reference that
 finally allowed us to switch from away from <code class="docutils literal"><span class="pre">portage</span></code> completely at the
 office.</p>
@@ -247,16 +248,16 @@ to those documents, especially in the early days.</p>
 </div>
 <div class="section" id="the-personal-touch">
 <h2>The personal touch<a class="headerlink" href="#the-personal-touch" title="Permalink to this headline">¶</a></h2>
-<p>On a personal note I&#8217;ve met some awesome people over the years as a result of
+<p>On a personal note I’ve met some awesome people over the years as a result of
 using Gentoo.  Many of them at the old Gentoo UK conferences, which were always
-fun.  More recently at LoFu&#8217;s annual summit which seems to have taken Gentoo
-UK&#8217;s place with practically everyone you saw at Gentoo UK(minus the students),
+fun.  More recently at LoFu’s annual summit which seems to have taken Gentoo
+UK’s place with practically everyone you saw at Gentoo UK(minus the students),
 and oddly about the same Gentoo to non-Gentoo ratio of talks too.</p>
 <p>Two excellent people on our current team were recruited following the Gentoo UK
 conference at UCL, and we met a spectacular contract hire at the one prior to
 that as well.</p>
-<p>I&#8217;ve even been lucky enough to have a few doors held open for me via people I&#8217;ve
-met at Gentoo-themed or Gentoo-heavy events, and I suspect I&#8217;d be writing this
+<p>I’ve even been lucky enough to have a few doors held open for me via people I’ve
+met at Gentoo-themed or Gentoo-heavy events, and I suspect I’d be writing this
 from a less happy place without them.</p>
 </div>
 <div class="section" id="wrapping-up">
@@ -264,13 +265,13 @@ from a less happy place without them.</p>
 <p>It is true that you really can not always see the forest for trees.</p>
 <p>Had recent events not clouded my vision I would have commented on the train
 wreck that is <code class="docutils literal"><span class="pre">webapp.eclass</span></code> and <code class="docutils literal"><span class="pre">app-admin/webapp-config</span></code> in
-<a class="reference internal" href="dropping_gentoo.html"><em>Dropping Gentoo</em></a>.  It sucked tonnes and tonnes of time away until we
+<a class="reference internal" href="dropping_gentoo.html"><span class="doc">Dropping Gentoo</span></a>.  It sucked tonnes and tonnes of time away until we
 eventually just trashed any package that interacted with it and moved on.</p>
 <p>That was so long ago that I had forgotten about it until a co-worker asked me
-why I hadn&#8217;t mentioned it.  I suspect most of the other negative comments I made
+why I hadn’t mentioned it.  I suspect most of the other negative comments I made
 will feel equally inconsequential when compared to the benefits Gentoo gave us
 as time moves on.</p>
-<p>Instead of making this rant even longer, I&#8217;ll take the time to reflect on the
+<p>Instead of making this rant even longer, I’ll take the time to reflect on the
 fun memories.</p>
 </div>
 </div>
@@ -294,7 +295,7 @@ fun memories.</p>
 
   <div role="contentinfo">
     <p>
-        &copy; <a href="../copyright.html">Copyright</a> 2009-2015, James Rowe.
+        &copy; <a href="../copyright.html">Copyright</a> 2009-2017, James Rowe.
 
     </p>
   </div>
@@ -319,7 +320,7 @@ fun memories.</p>
             VERSION:'0.1.0',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
-            HAS_SOURCE:  true
+            HAS_SOURCE:  false
         };
     </script>
       <script type="text/javascript" src="../_static/jquery.js"></script>

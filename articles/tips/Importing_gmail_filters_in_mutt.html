@@ -32,6 +32,9 @@
   
 
   
+        <link rel="index" title="Index"
+              href="../../genindex.html"/>
+        <link rel="search" title="Search" href="../../search.html"/>
         <link rel="copyright" title="Copyright" href="../../copyright.html"/>
     <link rel="top" title="JNRowe" href="../../index.html"/>
         <link rel="up" title="Tips" href="index.html"/>
@@ -106,12 +109,12 @@
 <li class="toctree-l4"><a class="reference internal" href="Debugging_python_regexps.html">Debugging Python regular expressions</a></li>
 <li class="toctree-l4"><a class="reference internal" href="Disabling_cursor_blinking_in_GTK.html">Disabling cursor blinking in GTK+</a></li>
 <li class="toctree-l4"><a class="reference internal" href="Fancy_awesome_theming.html">Fancy awesome theming</a></li>
-<li class="toctree-l4"><a class="reference internal" href="Finding_a_windows_owner.html">Finding a window&#8217;s owner</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Finding_a_windows_owner.html">Finding a window’s owner</a></li>
 <li class="toctree-l4"><a class="reference internal" href="Formatting_csv_files_in_the_shell.html">Formatting <abbr title="Comma Separated Values">CSV</abbr> files in the shell</a></li>
 <li class="toctree-l4"><a class="reference internal" href="Gentoo_one_liners.html">Gentoo one liners</a></li>
-<li class="toctree-l4 current"><a class="current reference internal" href="">Importing gmail filters in mutt</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">Importing gmail filters in mutt</a></li>
 <li class="toctree-l4"><a class="reference internal" href="Instant_web_server.html">Instant web server</a></li>
-<li class="toctree-l4"><a class="reference internal" href="Kick_me_birthday_reminders.html">&#8216;Kick me&#8217; birthday reminders</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Kick_me_birthday_reminders.html">‘Kick me’ birthday reminders</a></li>
 <li class="toctree-l4"><a class="reference internal" href="Making_a_nice_home.html">Making a nice home</a></li>
 <li class="toctree-l4"><a class="reference internal" href="Making_a_nice_home.html#permissions">Permissions</a></li>
 <li class="toctree-l4"><a class="reference internal" href="Making_a_nice_home.html#vim-hacks">vim hacks</a></li>
@@ -161,7 +164,7 @@
         <div class="rst-content">
           
 
-
+ 
 
 
 
@@ -176,8 +179,6 @@
     <li>Importing gmail filters in mutt</li>
       <li class="wy-breadcrumbs-aside">
         
-          
-            <a href="../../_sources/articles/tips/Importing_gmail_filters_in_mutt.txt" rel="nofollow"> View page source</a>
           
         
       </li>
@@ -197,12 +198,12 @@
 </tr>
 </tbody>
 </table>
-<p>On our company&#8217;s Linux list Ryan Abbott is preparing to move to
+<p>On our company’s Linux list Ryan Abbott is preparing to move to
 <a class="reference external" href="http://www.mutt.org/">mutt</a>:</p>
 <blockquote>
-<div>I have some user filters setup in <a class="reference external" href="https://mail.google.com">gmail</a>, and I&#8217;m wondering if there some
+<div>I have some user filters setup in <a class="reference external" href="https://mail.google.com">gmail</a>, and I’m wondering if there some
 way to make mutt use them?</div></blockquote>
-<p>Ryan has some filters set up for &#8220;premium&#8221; users who should be tagged in
+<p>Ryan has some filters set up for “premium” users who should be tagged in
 a special way in the mail display so that they are much more noticeable.  Google
 do support <a class="reference external" href="http://gmailblog.blogspot.com/2009/03/new-in-labs-filter-importexport.html">exporting filters</a> now, and conveniently it is in well documented
 format based on <a class="reference external" href="http://www.atomenabled.org/">Atom</a>.  An example export, gleaned from Ryan but with personal
@@ -260,9 +261,9 @@ instead of settings it directly so that we can make use cumulative scoring.  We
 must make sure we include <code class="docutils literal"><span class="pre">%N</span></code> in our <a class="reference external" href="http://www.mutt.org/doc/manual/manual-6.html#index_format">index_format</a> setting to see the scores
 in the mail index, the above <code class="docutils literal"><span class="pre">index_format</span></code> setting is the one I currently use
 and it can be seen in the screenshot on the right.</p>
-<p>I&#8217;m sure we&#8217;d prefer to automate the generation of the rules, and we can quickly
-generate a list for <code class="docutils literal"><span class="pre">mutt</span></code> using our favourite XML processing tool.  Today I&#8217;m
-using <a class="reference external" href="http://www.ruby-lang.org/">ruby</a>, because I know it is installed on Ryan&#8217;s system.  We&#8217;re going to
+<p>I’m sure we’d prefer to automate the generation of the rules, and we can quickly
+generate a list for <code class="docutils literal"><span class="pre">mutt</span></code> using our favourite XML processing tool.  Today I’m
+using <a class="reference external" href="http://www.ruby-lang.org/">ruby</a>, because I know it is installed on Ryan’s system.  We’re going to
 keep the identifier data from the Google export just in case we decide to
 re-import our rules from <code class="docutils literal"><span class="pre">mutt</span></code> at some point in the future:</p>
 <div class="highlight-ruby"><div class="highlight"><pre><span></span><span class="nb">require</span> <span class="s1">&#39;rexml/document&#39;</span>
@@ -311,7 +312,7 @@ may be worth taking a quick look at if you use folders to organise your mails.</
 
   <div role="contentinfo">
     <p>
-        &copy; <a href="../../copyright.html">Copyright</a> 2009-2015, James Rowe.
+        &copy; <a href="../../copyright.html">Copyright</a> 2009-2017, James Rowe.
 
     </p>
   </div>
@@ -336,7 +337,7 @@ may be worth taking a quick look at if you use folders to organise your mails.</
             VERSION:'0.1.0',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
-            HAS_SOURCE:  true
+            HAS_SOURCE:  false
         };
     </script>
       <script type="text/javascript" src="../../_static/jquery.js"></script>

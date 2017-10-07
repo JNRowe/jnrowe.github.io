@@ -32,6 +32,9 @@
   
 
   
+        <link rel="index" title="Index"
+              href="../../genindex.html"/>
+        <link rel="search" title="Search" href="../../search.html"/>
         <link rel="copyright" title="Copyright" href="../../copyright.html"/>
     <link rel="top" title="JNRowe" href="../../index.html"/>
         <link rel="up" title="Tips" href="index.html"/>
@@ -101,17 +104,17 @@
 <li class="toctree-l4"><a class="reference internal" href="Beyond_tab_completion.html">Beyond simple tab completion</a></li>
 <li class="toctree-l4"><a class="reference internal" href="Bugzilla_real_names.html">Bugzilla mail with real names</a></li>
 <li class="toctree-l4"><a class="reference internal" href="Compiling_in_vim.html">Compiling C source in vim</a></li>
-<li class="toctree-l4 current"><a class="current reference internal" href="">Context aware diffs with git</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">Context aware diffs with git</a></li>
 <li class="toctree-l4"><a class="reference internal" href="Custom_locations_in_the_GTK_filechooser.html">Custom keybindings in the GTK+ file dialogs</a></li>
 <li class="toctree-l4"><a class="reference internal" href="Debugging_python_regexps.html">Debugging Python regular expressions</a></li>
 <li class="toctree-l4"><a class="reference internal" href="Disabling_cursor_blinking_in_GTK.html">Disabling cursor blinking in GTK+</a></li>
 <li class="toctree-l4"><a class="reference internal" href="Fancy_awesome_theming.html">Fancy awesome theming</a></li>
-<li class="toctree-l4"><a class="reference internal" href="Finding_a_windows_owner.html">Finding a window&#8217;s owner</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Finding_a_windows_owner.html">Finding a window’s owner</a></li>
 <li class="toctree-l4"><a class="reference internal" href="Formatting_csv_files_in_the_shell.html">Formatting <abbr title="Comma Separated Values">CSV</abbr> files in the shell</a></li>
 <li class="toctree-l4"><a class="reference internal" href="Gentoo_one_liners.html">Gentoo one liners</a></li>
 <li class="toctree-l4"><a class="reference internal" href="Importing_gmail_filters_in_mutt.html">Importing gmail filters in mutt</a></li>
 <li class="toctree-l4"><a class="reference internal" href="Instant_web_server.html">Instant web server</a></li>
-<li class="toctree-l4"><a class="reference internal" href="Kick_me_birthday_reminders.html">&#8216;Kick me&#8217; birthday reminders</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Kick_me_birthday_reminders.html">‘Kick me’ birthday reminders</a></li>
 <li class="toctree-l4"><a class="reference internal" href="Making_a_nice_home.html">Making a nice home</a></li>
 <li class="toctree-l4"><a class="reference internal" href="Making_a_nice_home.html#permissions">Permissions</a></li>
 <li class="toctree-l4"><a class="reference internal" href="Making_a_nice_home.html#vim-hacks">vim hacks</a></li>
@@ -161,7 +164,7 @@
         <div class="rst-content">
           
 
-
+ 
 
 
 
@@ -176,8 +179,6 @@
     <li>Context aware diffs with git</li>
       <li class="wy-breadcrumbs-aside">
         
-          
-            <a href="../../_sources/articles/tips/Context_aware_diffs_with_git.txt" rel="nofollow"> View page source</a>
           
         
       </li>
@@ -199,16 +200,16 @@
 </table>
 <p>Earlier this week Luke Cox asked in response to a patch I sent:</p>
 <blockquote>
-<div>What version of <a class="reference external" href="http://www.git-scm.com/">git</a> are you using?  Mine doesn&#8217;t seem to produce the right
+<div>What version of <a class="reference external" href="http://www.git-scm.com/">git</a> are you using?  Mine doesn’t seem to produce the right
 location output for <code class="docutils literal"><span class="pre">format-patch</span></code>.</div></blockquote>
 <p><code class="docutils literal"><span class="pre">git</span></code>, by default, displays a <a class="reference external" href="http://www.gnu.org/software/diffutils/manual/html_node/C-Function-Headings.html">function name in the hunk header</a> of its
 <code class="docutils literal"><span class="pre">diff</span></code> output.  It produces some really nice output for certain languages, but
-out of the box it doesn&#8217;t display nice information for all the file formats you
+out of the box it doesn’t display nice information for all the file formats you
 may use.</p>
 <p>The patch I sent Luke included a significant change to an
 <a class="reference external" href="http://www.cloanto.com/specs/ini.html">.ini</a> format file, including some mostly
-accurate location information in the hunk header.  It wasn&#8217;t because I use
-a newer version of <code class="docutils literal"><span class="pre">git</span></code>, just that I&#8217;ve set it up to use different matchers for
+accurate location information in the hunk header.  It wasn’t because I use
+a newer version of <code class="docutils literal"><span class="pre">git</span></code>, just that I’ve set it up to use different matchers for
 different files.  In my <code class="docutils literal"><span class="pre">~/.gitconfig</span></code> I have the following snippet to use
 better function names in <code class="docutils literal"><span class="pre">ini</span></code> and <code class="docutils literal"><span class="pre">adr</span></code> files:</p>
 <div class="highlight-ini"><div class="highlight"><pre><span></span><span class="k">[diff &quot;ini&quot;]</span>
@@ -229,7 +230,7 @@ by editing the <code class="docutils literal"><span class="pre">.gitattributes</
 <code class="docutils literal"><span class="pre">ini</span></code> example it is searching for a line that begins with a <code class="docutils literal"><span class="pre">[</span></code> and ends with
 a <code class="docutils literal"><span class="pre">]</span></code> as these are the common section headers.  And the <code class="docutils literal"><span class="pre">adr</span></code> matcher just
 specifies a line that begins with a <code class="docutils literal"><span class="pre">#</span></code>.  It is important to match the entire
-string, as it is the matched content that is used in the diff hunk&#8217;s output.</p>
+string, as it is the matched content that is used in the diff hunk’s output.</p>
 </div>
 
 
@@ -251,7 +252,7 @@ string, as it is the matched content that is used in the diff hunk&#8217;s outpu
 
   <div role="contentinfo">
     <p>
-        &copy; <a href="../../copyright.html">Copyright</a> 2009-2015, James Rowe.
+        &copy; <a href="../../copyright.html">Copyright</a> 2009-2017, James Rowe.
 
     </p>
   </div>
@@ -276,7 +277,7 @@ string, as it is the matched content that is used in the diff hunk&#8217;s outpu
             VERSION:'0.1.0',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
-            HAS_SOURCE:  true
+            HAS_SOURCE:  false
         };
     </script>
       <script type="text/javascript" src="../../_static/jquery.js"></script>

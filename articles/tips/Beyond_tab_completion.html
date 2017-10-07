@@ -32,6 +32,9 @@
   
 
   
+        <link rel="index" title="Index"
+              href="../../genindex.html"/>
+        <link rel="search" title="Search" href="../../search.html"/>
         <link rel="copyright" title="Copyright" href="../../copyright.html"/>
     <link rel="top" title="JNRowe" href="../../index.html"/>
         <link rel="up" title="Tips" href="index.html"/>
@@ -98,7 +101,7 @@
 <li class="toctree-l2 current"><a class="reference internal" href="../index.html#further-categories">Further categories</a><ul class="current">
 <li class="toctree-l3 current"><a class="reference internal" href="index.html">Tips</a><ul class="current">
 <li class="toctree-l4"><a class="reference internal" href="BTS_as_a_task_manager.html"><abbr title="Bug Tracking System">BTS</abbr> as a task manager</a></li>
-<li class="toctree-l4 current"><a class="current reference internal" href="">Beyond simple tab completion</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">Beyond simple tab completion</a></li>
 <li class="toctree-l4"><a class="reference internal" href="Bugzilla_real_names.html">Bugzilla mail with real names</a></li>
 <li class="toctree-l4"><a class="reference internal" href="Compiling_in_vim.html">Compiling C source in vim</a></li>
 <li class="toctree-l4"><a class="reference internal" href="Context_aware_diffs_with_git.html">Context aware diffs with git</a></li>
@@ -106,12 +109,12 @@
 <li class="toctree-l4"><a class="reference internal" href="Debugging_python_regexps.html">Debugging Python regular expressions</a></li>
 <li class="toctree-l4"><a class="reference internal" href="Disabling_cursor_blinking_in_GTK.html">Disabling cursor blinking in GTK+</a></li>
 <li class="toctree-l4"><a class="reference internal" href="Fancy_awesome_theming.html">Fancy awesome theming</a></li>
-<li class="toctree-l4"><a class="reference internal" href="Finding_a_windows_owner.html">Finding a window&#8217;s owner</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Finding_a_windows_owner.html">Finding a window’s owner</a></li>
 <li class="toctree-l4"><a class="reference internal" href="Formatting_csv_files_in_the_shell.html">Formatting <abbr title="Comma Separated Values">CSV</abbr> files in the shell</a></li>
 <li class="toctree-l4"><a class="reference internal" href="Gentoo_one_liners.html">Gentoo one liners</a></li>
 <li class="toctree-l4"><a class="reference internal" href="Importing_gmail_filters_in_mutt.html">Importing gmail filters in mutt</a></li>
 <li class="toctree-l4"><a class="reference internal" href="Instant_web_server.html">Instant web server</a></li>
-<li class="toctree-l4"><a class="reference internal" href="Kick_me_birthday_reminders.html">&#8216;Kick me&#8217; birthday reminders</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Kick_me_birthday_reminders.html">‘Kick me’ birthday reminders</a></li>
 <li class="toctree-l4"><a class="reference internal" href="Making_a_nice_home.html">Making a nice home</a></li>
 <li class="toctree-l4"><a class="reference internal" href="Making_a_nice_home.html#permissions">Permissions</a></li>
 <li class="toctree-l4"><a class="reference internal" href="Making_a_nice_home.html#vim-hacks">vim hacks</a></li>
@@ -161,7 +164,7 @@
         <div class="rst-content">
           
 
-
+ 
 
 
 
@@ -176,8 +179,6 @@
     <li>Beyond simple tab completion</li>
       <li class="wy-breadcrumbs-aside">
         
-          
-            <a href="../../_sources/articles/tips/Beyond_tab_completion.txt" rel="nofollow"> View page source</a>
           
         
       </li>
@@ -237,16 +238,16 @@ a regular basis.  You must either re-read the configuration file or restart the
 <p><a class="reference external" href="http://gist.github.com/198437">Fork this code</a></p>
 <p>You must source the startup file or restart <code class="docutils literal"><span class="pre">bash</span></code> to enable this binding,
 alternatively you can just test the command in your current <code class="docutils literal"><span class="pre">bash</span></code> setting
-until you&#8217;re happy with the key combination.</p>
+until you’re happy with the key combination.</p>
 <p>In a follow up email on the list Matt asks if it is possible to make the
 completion context aware, in much the same the <a class="reference external" href="http://bash-completion.alioth.debian.org/">bash-completion</a> package does but
 without having to write new completion scripts.  There are some other quite
-useful completion modes available in <code class="docutils literal"><span class="pre">bash</span></code>, I&#8217;ll describe a few below.</p>
+useful completion modes available in <code class="docutils literal"><span class="pre">bash</span></code>, I’ll describe a few below.</p>
 <p><code class="docutils literal"><span class="pre">M-!</span></code> tells <code class="docutils literal"><span class="pre">bash</span></code> to complete command names be they actual on-disk
 commands, functions or aliases. <code class="docutils literal"><span class="pre">M-/</span></code> completes only filenames, this can be
 very useful when <code class="docutils literal"><span class="pre">bash-completion</span></code> is refusing to tab complete a filename for
 you.  <code class="docutils literal"><span class="pre">C-$</span></code> implements variable name completion, this is most useful when
-you&#8217;re looking to unset or re-set a variable.  Variable name completion isn&#8217;t
+you’re looking to unset or re-set a variable.  Variable name completion isn’t
 actually necessary if you have <code class="docutils literal"><span class="pre">bash-completion</span></code> installed as it is smart
 enough to handle this for you in most cases.</p>
 <p>And finally, there is a one more incredibly useful completion mode in <code class="docutils literal"><span class="pre">bash</span></code>
@@ -256,7 +257,7 @@ completes to
 <code class="docutils literal"><span class="pre">/home/jay/Git/Local/{Makefile,countless,dot-configs,haskvim,jrutils}</span></code>.  Using
 <code class="docutils literal"><span class="pre">readline</span></code> motion commands, especially word motions such as <code class="docutils literal"><span class="pre">M-f</span></code> and
 <code class="docutils literal"><span class="pre">M-b</span></code> to jump forward and backward one word, I can easily apply a command to
-a certain set of files in a directory.  Just don&#8217;t try it on <code class="docutils literal"><span class="pre">/usr/bin</span></code> unless
+a certain set of files in a directory.  Just don’t try it on <code class="docutils literal"><span class="pre">/usr/bin</span></code> unless
 you want to see how <code class="docutils literal"><span class="pre">bash</span></code> handles massive command lines!!</p>
 </div>
 
@@ -279,7 +280,7 @@ you want to see how <code class="docutils literal"><span class="pre">bash</span>
 
   <div role="contentinfo">
     <p>
-        &copy; <a href="../../copyright.html">Copyright</a> 2009-2015, James Rowe.
+        &copy; <a href="../../copyright.html">Copyright</a> 2009-2017, James Rowe.
 
     </p>
   </div>
@@ -304,7 +305,7 @@ you want to see how <code class="docutils literal"><span class="pre">bash</span>
             VERSION:'0.1.0',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
-            HAS_SOURCE:  true
+            HAS_SOURCE:  false
         };
     </script>
       <script type="text/javascript" src="../../_static/jquery.js"></script>

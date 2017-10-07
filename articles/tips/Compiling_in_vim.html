@@ -32,6 +32,9 @@
   
 
   
+        <link rel="index" title="Index"
+              href="../../genindex.html"/>
+        <link rel="search" title="Search" href="../../search.html"/>
         <link rel="copyright" title="Copyright" href="../../copyright.html"/>
     <link rel="top" title="JNRowe" href="../../index.html"/>
         <link rel="up" title="Tips" href="index.html"/>
@@ -100,18 +103,18 @@
 <li class="toctree-l4"><a class="reference internal" href="BTS_as_a_task_manager.html"><abbr title="Bug Tracking System">BTS</abbr> as a task manager</a></li>
 <li class="toctree-l4"><a class="reference internal" href="Beyond_tab_completion.html">Beyond simple tab completion</a></li>
 <li class="toctree-l4"><a class="reference internal" href="Bugzilla_real_names.html">Bugzilla mail with real names</a></li>
-<li class="toctree-l4 current"><a class="current reference internal" href="">Compiling C source in vim</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">Compiling C source in vim</a></li>
 <li class="toctree-l4"><a class="reference internal" href="Context_aware_diffs_with_git.html">Context aware diffs with git</a></li>
 <li class="toctree-l4"><a class="reference internal" href="Custom_locations_in_the_GTK_filechooser.html">Custom keybindings in the GTK+ file dialogs</a></li>
 <li class="toctree-l4"><a class="reference internal" href="Debugging_python_regexps.html">Debugging Python regular expressions</a></li>
 <li class="toctree-l4"><a class="reference internal" href="Disabling_cursor_blinking_in_GTK.html">Disabling cursor blinking in GTK+</a></li>
 <li class="toctree-l4"><a class="reference internal" href="Fancy_awesome_theming.html">Fancy awesome theming</a></li>
-<li class="toctree-l4"><a class="reference internal" href="Finding_a_windows_owner.html">Finding a window&#8217;s owner</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Finding_a_windows_owner.html">Finding a window’s owner</a></li>
 <li class="toctree-l4"><a class="reference internal" href="Formatting_csv_files_in_the_shell.html">Formatting <abbr title="Comma Separated Values">CSV</abbr> files in the shell</a></li>
 <li class="toctree-l4"><a class="reference internal" href="Gentoo_one_liners.html">Gentoo one liners</a></li>
 <li class="toctree-l4"><a class="reference internal" href="Importing_gmail_filters_in_mutt.html">Importing gmail filters in mutt</a></li>
 <li class="toctree-l4"><a class="reference internal" href="Instant_web_server.html">Instant web server</a></li>
-<li class="toctree-l4"><a class="reference internal" href="Kick_me_birthday_reminders.html">&#8216;Kick me&#8217; birthday reminders</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Kick_me_birthday_reminders.html">‘Kick me’ birthday reminders</a></li>
 <li class="toctree-l4"><a class="reference internal" href="Making_a_nice_home.html">Making a nice home</a></li>
 <li class="toctree-l4"><a class="reference internal" href="Making_a_nice_home.html#permissions">Permissions</a></li>
 <li class="toctree-l4"><a class="reference internal" href="Making_a_nice_home.html#vim-hacks">vim hacks</a></li>
@@ -161,7 +164,7 @@
         <div class="rst-content">
           
 
-
+ 
 
 
 
@@ -176,8 +179,6 @@
     <li>Compiling C source in vim</li>
       <li class="wy-breadcrumbs-aside">
         
-          
-            <a href="../../_sources/articles/tips/Compiling_in_vim.txt" rel="nofollow"> View page source</a>
           
         
       </li>
@@ -200,9 +201,9 @@
 <p>The fabulous Miss Biddulph asks via the EADS Linux list:</p>
 <blockquote>
 <div>Is there a way to make vim compile C files without a makefile?</div></blockquote>
-<p>A quick phone call later and we know that Laura wishes to emulate the <a class="reference external" href="http://www.gnu.org/software/make/make.html">make</a>&#8216;s
+<p>A quick phone call later and we know that Laura wishes to emulate the <a class="reference external" href="http://www.gnu.org/software/make/make.html">make</a>’s
 behaviour where calling <code class="docutils literal"><span class="pre">make</span> <span class="pre">my_code</span></code> without a <code class="docutils literal"><span class="pre">Makefile</span></code> will attempt to
-build <code class="docutils literal"><span class="pre">my_code</span></code> from <code class="docutils literal"><span class="pre">my_code.c</span></code>. <a class="reference external" href="http://www.vim.org">vim</a>&#8216;s default <code class="docutils literal"><span class="pre">:make</span></code> command doesn&#8217;t
+build <code class="docutils literal"><span class="pre">my_code</span></code> from <code class="docutils literal"><span class="pre">my_code.c</span></code>. <a class="reference external" href="http://www.vim.org">vim</a>’s default <code class="docutils literal"><span class="pre">:make</span></code> command doesn’t
 quite do the trick as it just calls <code class="docutils literal"><span class="pre">make</span></code> without any arguments.</p>
 <p>vim allows us to set options for specific file types only using the <code class="docutils literal"><span class="pre">:autocmd</span></code>
 command, and this is the perfect time to use it.  We will set the value of
@@ -217,7 +218,7 @@ C++ files.</p>
 <p><a class="reference external" href="http://gist.github.com/198024">Fork this code</a></p>
 <p>The <code class="docutils literal"><span class="pre">%&lt;</span></code> in our <code class="docutils literal"><span class="pre">makeprg</span></code> definition refers to the current file with its
 extension stripped.  We specifically only change the behaviour if no
-<code class="docutils literal"><span class="pre">Makefile</span></code> exists so that we don&#8217;t interfere with the normal usage of the
+<code class="docutils literal"><span class="pre">Makefile</span></code> exists so that we don’t interfere with the normal usage of the
 <code class="docutils literal"><span class="pre">:make</span></code> command.</p>
 </div>
 
@@ -240,7 +241,7 @@ extension stripped.  We specifically only change the behaviour if no
 
   <div role="contentinfo">
     <p>
-        &copy; <a href="../../copyright.html">Copyright</a> 2009-2015, James Rowe.
+        &copy; <a href="../../copyright.html">Copyright</a> 2009-2017, James Rowe.
 
     </p>
   </div>
@@ -265,7 +266,7 @@ extension stripped.  We specifically only change the behaviour if no
             VERSION:'0.1.0',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
-            HAS_SOURCE:  true
+            HAS_SOURCE:  false
         };
     </script>
       <script type="text/javascript" src="../../_static/jquery.js"></script>

@@ -32,6 +32,9 @@
   
 
   
+        <link rel="index" title="Index"
+              href="../genindex.html"/>
+        <link rel="search" title="Search" href="../search.html"/>
         <link rel="copyright" title="Copyright" href="../copyright.html"/>
     <link rel="top" title="JNRowe" href="../index.html"/>
         <link rel="up" title="Articles" href="index.html"/>
@@ -90,7 +93,7 @@
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../projects.html">Projects</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="index.html">Articles</a><ul class="current">
-<li class="toctree-l2 current"><a class="current reference internal" href="">Dropping Gentoo</a><ul>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Dropping Gentoo</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#landscapes-have-changed">Landscapes have changed</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#take-a-left-in-100-metres">Take a left in 100 metres</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#upstreaming-changes">Upstreaming changes</a></li>
@@ -140,7 +143,7 @@
         <div class="rst-content">
           
 
-
+ 
 
 
 
@@ -154,8 +157,6 @@
       <li class="wy-breadcrumbs-aside">
         
           
-            <a href="../_sources/articles/dropping_gentoo.txt" rel="nofollow"> View page source</a>
-          
         
       </li>
   </ul>
@@ -166,7 +167,7 @@
             
   <div class="section" id="dropping-gentoo">
 <h1>Dropping Gentoo<a class="headerlink" href="#dropping-gentoo" title="Permalink to this headline">¶</a></h1>
-<p>We&#8217;ve been using <a class="reference external" href="http://gentoo.org">Gentoo</a> for shipped products since June 2005, and as
+<p>We’ve been using <a class="reference external" href="http://gentoo.org">Gentoo</a> for shipped products since June 2005, and as
 a development platform since September 2004.  A long time, an incredibly long
 time in fact.</p>
 <p>Today our final Gentoo using product shipped, with a single scheduled update
@@ -175,19 +176,19 @@ and it takes only a little inside knowledge to know why.</p>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
 <p class="last">A couple of people have rightly pointed out that I was a little harsh in
-this document, so I&#8217;ve pushed a <a class="reference internal" href="dropping_gentoo_reflex.html"><em>followup</em></a>.</p>
+this document, so I’ve pushed a <a class="reference internal" href="dropping_gentoo_reflex.html"><span class="doc">followup</span></a>.</p>
 </div>
 <div class="section" id="landscapes-have-changed">
 <h2>Landscapes have changed<a class="headerlink" href="#landscapes-have-changed" title="Permalink to this headline">¶</a></h2>
 <p>Back when we started using Gentoo it was clearly the best choice for what we
 needed; a easily coercible base on which to construct our Linux devices.  There
-actually weren&#8217;t a lot of viable choices back then.</p>
+actually weren’t a lot of viable choices back then.</p>
 <p><a class="reference external" href="http://debian.org">Debian</a>, which many of us loved, felt like the only mainstream distribution we
-could have used.  Unfortunately, it wasn&#8217;t available for the arches we needed.
-It also didn&#8217;t package many of things we used at that point, but to be fair
+could have used.  Unfortunately, it wasn’t available for the arches we needed.
+It also didn’t package many of things we used at that point, but to be fair
 there were <abbr title="Intent to Package">ITPs</abbr> (were they called that back then?)
 already floating about for most of them.</p>
-<p>The &#8220;from source&#8221; options available then would, for all intents and purposes,
+<p>The “from source” options available then would, for all intents and purposes,
 have meant taking on the support costs of the entire stack which nobody wanted
 to commit to.  As it turns out that burden slowly crept up on us over the next
 ten years anyway.</p>
@@ -197,49 +198,49 @@ ten years anyway.</p>
 <p>Over the years we regrettably diverged heavily from upstream, almost to the
 point that saying we use Gentoo almost feels like a lie.</p>
 <p>Before our first product shipped we had already switched to maintaining the
-essential toolchain packages like GCC and glibc ourselves.  I can&#8217;t recall the
-specific reasons as I didn&#8217;t work on them, but I recall agreeing with them.</p>
+essential toolchain packages like GCC and glibc ourselves.  I can’t recall the
+specific reasons as I didn’t work on them, but I recall agreeing with them.</p>
 <p>At some point we started using a custom package manager, initially just a new
 drop-in resolver and eventually a completely independent package manager.
 <code class="docutils literal"><span class="pre">portage</span></code> was ferociously buggy in places and also appeared to be moribund, so
 it seemed like the correct choice.  We never supported the full range of
-features that Gentoo&#8217;s <a class="reference external" href="http://wiki.gentoo.org/wiki/Project:PMS">PMS</a> now defines, but it made the support surface a lot
+features that Gentoo’s <a class="reference external" href="http://wiki.gentoo.org/wiki/Project:PMS">PMS</a> now defines, but it made the support surface a lot
 nicer.</p>
 <p>There was a point where we seriously considered moving to a <a class="reference external" href="http://en.wikipedia.org/wiki/Conary_(package_manager)">Conary</a>-based
 infrastructure.  It did loads of the cool things we wanted to do and it mostly
-fitted our workflow with its &#8220;Gentoo done right&#8221; feel.  Sadly, it has
+fitted our workflow with its “Gentoo done right” feel.  Sadly, it has
 a <abbr title="Contributor License Agreement">CLA</abbr> which none of us could sign that
 practically guaranteed we would eventually be in the same place we were with
 Gentoo.  May have been a fortuitous roadblock in the end, as Conary never gained
 the traction it once promised(perhaps in part because of that <abbr title="Contributor License Agreement">CLA</abbr>?).</p>
 <p>Had we waited another five months, there would have been another open source
 package manager for Gentoo we could have easily switched to and hacked on.
-There is perhaps a pattern here...</p>
+There is perhaps a pattern here…</p>
 </div>
 <div class="section" id="upstreaming-changes">
 <h2>Upstreaming changes<a class="headerlink" href="#upstreaming-changes" title="Permalink to this headline">¶</a></h2>
 <p>Of course, running a non-standard package manager and a thick layer of custom
 packages at the bottom of the stack made contributing changes back upstream very
 time consuming.  Many of us tried, but eventually most stopped.</p>
-<p>Anyone who was running Gentoo in the mid-00&#8217;s will recall the giant wedge that
+<p>Anyone who was running Gentoo in the mid-00’s will recall the giant wedge that
 got in the way of reporting bugs, and sadly by the time it disappeared many of
 us had lost interest.</p>
 <p>If you had ran the gauntlet and lucked out with a bug in front of a developer,
 there was a new barrier that many were irked by: lack of attribution.  It never
-bothered me, but the number of developers who wouldn&#8217;t even reference a bug
+bothered me, but the number of developers who wouldn’t even reference a bug
 report in the ChangeLog was huge.  That taught me a valuable personal lesson,
-I always attribute a commit to the reporter even when I&#8217;ve significantly mangled
+I always attribute a commit to the reporter even when I’ve significantly mangled
 a patch to make it acceptable.</p>
 <p>For a time, to ease the annoyance we used to play a game where we reported real
 bugs with patches, but using silly data for <code class="docutils literal"><span class="pre">emerge</span> <span class="pre">--info</span></code>.  It was
-definitely fun while it lasted, but it didn&#8217;t solve the pain points.  Not
+definitely fun while it lasted, but it didn’t solve the pain points.  Not
 wanting to be associated with the bugs made people use pseudonyms, which also
 removed the expectation of attribution too.</p>
-<p>I kept trying to report trivial and cosmetic bugs - ones which didn&#8217;t require
-a huge upfront investment - for some time, but they&#8217;d go unchanged for weeks or
+<p>I kept trying to report trivial and cosmetic bugs - ones which didn’t require
+a huge upfront investment - for some time, but they’d go unchanged for weeks or
 months so I stopped doing that too</p>
 <p>Looking around now there is an automatically generated list of bugs with patches
-which we&#8217;ve fixed but haven&#8217;t upstreamed, and a few random entries from it look
+which we’ve fixed but haven’t upstreamed, and a few random entries from it look
 like this:</p>
 <div class="highlight-console"><div class="highlight"><pre><span></span><span class="gp">$</span> wc -l ~/gentoo/to_push/jay.rst
 <span class="go">1157 /home/jay/gentoo/to_push/jay.rst</span>
@@ -250,19 +251,19 @@ like this:</p>
 </pre></div>
 </div>
 <p>That genuinely upsets me greatly.  The amount of potential duplicated effort
-they represent is enormous, and I don&#8217;t even want to attempt to put a figure on
+they represent is enormous, and I don’t even want to attempt to put a figure on
 it.</p>
 </div>
 <div class="section" id="supporting-upstream">
 <h2>Supporting upstream<a class="headerlink" href="#supporting-upstream" title="Permalink to this headline">¶</a></h2>
-<p>We&#8217;re entirely to blame.  We always planned on supporting upstream in whichever
+<p>We’re entirely to blame.  We always planned on supporting upstream in whichever
 way we could.  That fell down for instances beyond sending patches too.</p>
 <p>The story that comes to mind is from a chance encounter at LinuxWorld back in
 2005.  We had managed to gather a whole heap of really cool hardware to donate
 to projects who were exhibiting on the day we attended, and it felt nice handing
-out toys as a little &#8220;thank you&#8221; to the projects we depended on.</p>
-<p>It wasn&#8217;t all roses though.  My manager went off to offer some ARM-based devices
-to the Gentoo guys who were there, but was met with &#8220;tremendous rudeness&#8221; from
+out toys as a little “thank you” to the projects we depended on.</p>
+<p>It wasn’t all roses though.  My manager went off to offer some ARM-based devices
+to the Gentoo guys who were there, but was met with “tremendous rudeness” from
 the person manning their desk at the time.  In hindsight people could have
 predicted a similar outcome, and it was just an unlucky moment for him to walk
 up.  That soured his enthusiasm no end, and it was the last time we managed to
@@ -278,12 +279,12 @@ alone.</p>
 </div>
 <div class="section" id="support-costs">
 <h2>Support costs<a class="headerlink" href="#support-costs" title="Permalink to this headline">¶</a></h2>
-<p>Over time we&#8217;ve come to support most of the tree that people refer to as
+<p>Over time we’ve come to support most of the tree that people refer to as
 <code class="docutils literal"><span class="pre">gentoo-x86</span></code> ourselves.  The toolchain changes we needed at the time
 necessitated supporting a few packages further up the stack.  Our desire to trim
 the tree of a few categories that were problematic, meant replacing a variety of
 packages with then unavailable dependencies.</p>
-<p>And there were many other examples too...</p>
+<p>And there were many other examples too…</p>
 <div class="section" id="matchbox">
 <h3>matchbox<a class="headerlink" href="#matchbox" title="Permalink to this headline">¶</a></h3>
 <p>We packaged <a class="reference internal" href="#matchbox">matchbox</a> and its associated packages a long, long time before they
@@ -302,29 +303,29 @@ moot.</p>
 </div>
 <div class="section" id="systemd">
 <h3>systemd<a class="headerlink" href="#systemd" title="Permalink to this headline">¶</a></h3>
-<p>We switched to <code class="docutils literal"><span class="pre">systemd</span></code> before the package was in upstream&#8217;s tree, and we
+<p>We switched to <code class="docutils literal"><span class="pre">systemd</span></code> before the package was in upstream’s tree, and we
 have had to keep supporting it to this day because of insurmountable packaging
 differences.</p>
 <p>In a few places that means taking on packages with a reverse dependency too,
 where differences create issues.  And it clearly means taking on any package
-that depends on <code class="docutils literal"><span class="pre">openrc</span></code> or Gentoo&#8217;s <code class="docutils literal"><span class="pre">baselayout</span></code> package.  Those packages
+that depends on <code class="docutils literal"><span class="pre">openrc</span></code> or Gentoo’s <code class="docutils literal"><span class="pre">baselayout</span></code> package.  Those packages
 are becoming fewer and fewer by the day though, so that would have become
 a non-issue.</p>
 </div>
 <div class="section" id="x-org">
 <h3>X.org<a class="headerlink" href="#x-org" title="Permalink to this headline">¶</a></h3>
-<p>We had been packaging x.org&#8217;s packages to work around some implementation
+<p>We had been packaging x.org’s packages to work around some implementation
 differences with upstream since the dawn of modular X.  Mostly just to do with
-how dependencies were specified to start with, but they&#8217;re not even similar
-anymore.</p>
-<p>Luckily there isn&#8217;t a great deal of churn in the packages we care about for the
+how dependencies were specified to start with, but they’re no longer even
+remotely similar.</p>
+<p>Luckily there isn’t a great deal of churn in the packages we care about for the
 most part, so it never caused a huge time sink.</p>
 </div>
 </div>
 <div class="section" id="the-end-is-nigh">
 <h2>The end is nigh<a class="headerlink" href="#the-end-is-nigh" title="Permalink to this headline">¶</a></h2>
 <p>At some point it began to feel like we were maintaining our own distribution
-from end-to-end, and that wasn&#8217;t fun.  It also wasn&#8217;t what any of us needed to
+from end-to-end, and that wasn’t fun.  It also wasn’t what any of us needed to
 do, and the time it was taking measurably ate in to <em>real</em> project time.</p>
 <p>The decision to start weaning ourselves off of Gentoo was made back in the
 summer of last year, and it has finally started to come in to effect.</p>
@@ -334,20 +335,20 @@ summer of last year, and it has finally started to come in to effect.</p>
 <p>There are plenty of good alternatives out there now for building systems that
 need to run on a variety of architectures.  Some binary, some source-based and
 a few hybrid approaches.</p>
-<p>The project I&#8217;m working on right now is using Debian <code class="docutils literal"><span class="pre">testing</span></code>, and it appears
+<p>The project I’m working on right now is using Debian <code class="docutils literal"><span class="pre">testing</span></code>, and it appears
 to be working out fine.  Some things still annoy me, like the time it takes to
 patch and recreate a package.  It is a trivial thing with Gentoo, but requires
-far too much work with Debian.  Perhaps we&#8217;ll improve the workflow enough as we
+far too much work with Debian.  Perhaps we’ll improve the workflow enough as we
 develop more experience.</p>
-<p>We&#8217;ve also hit a good moment to use Debian because a whole heap of work has gone
+<p>We’ve also hit a good moment to use Debian because a whole heap of work has gone
 in to making Debian easier to bootstrap, and it definitely shows.  When I find
-out who has done all the magic to make that happen I&#8217;ll scribble down a note to
+out who has done all the magic to make that happen I’ll scribble down a note to
 owe them some beers.</p>
-<p>We&#8217;re also lucky in that we employ two Debian developers, one is practically
-a funded full-time Debian developer.  They&#8217;re incredibly knowledgeable and it
+<p>We’re also lucky in that we employ two Debian developers, one is practically
+a funded full-time Debian developer.  They’re incredibly knowledgeable and it
 makes working with Debian a lot easier, so thanks guys!</p>
-<p>All told, things look good.  We&#8217;re still playing with some alternatives and as
-yet no concrete decisions have been made, but I feel like we&#8217;re on the right
+<p>All told, things look good.  We’re still playing with some alternatives and as
+yet no concrete decisions have been made, but I feel like we’re on the right
 track for the next ten years.</p>
 <p>So long Gentoo, and thanks for all fish!</p>
 </div>
@@ -372,7 +373,7 @@ track for the next ten years.</p>
 
   <div role="contentinfo">
     <p>
-        &copy; <a href="../copyright.html">Copyright</a> 2009-2015, James Rowe.
+        &copy; <a href="../copyright.html">Copyright</a> 2009-2017, James Rowe.
 
     </p>
   </div>
@@ -397,7 +398,7 @@ track for the next ten years.</p>
             VERSION:'0.1.0',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
-            HAS_SOURCE:  true
+            HAS_SOURCE:  false
         };
     </script>
       <script type="text/javascript" src="../_static/jquery.js"></script>

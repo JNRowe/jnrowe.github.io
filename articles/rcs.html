@@ -32,6 +32,9 @@
   
 
   
+        <link rel="index" title="Index"
+              href="../genindex.html"/>
+        <link rel="search" title="Search" href="../search.html"/>
         <link rel="copyright" title="Copyright" href="../copyright.html"/>
     <link rel="top" title="JNRowe" href="../index.html"/>
         <link rel="up" title="Articles" href="index.html"/>
@@ -93,7 +96,7 @@
 <li class="toctree-l2"><a class="reference internal" href="dropping_gentoo.html">Dropping Gentoo</a></li>
 <li class="toctree-l2"><a class="reference internal" href="dropping_gentoo_reflex.html">Dropping Gentoo reflex</a></li>
 <li class="toctree-l2"><a class="reference internal" href="fossil.html"><code class="docutils literal"><span class="pre">fossil</span></code> experiments</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="">Introduction to RCS</a><ul>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Introduction to RCS</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#abstract">Abstract</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#diving-in">Diving in</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#recap">Recap</a></li>
@@ -131,7 +134,7 @@
         <div class="rst-content">
           
 
-
+ 
 
 
 
@@ -145,8 +148,6 @@
       <li class="wy-breadcrumbs-aside">
         
           
-            <a href="../_sources/articles/rcs.txt" rel="nofollow"> View page source</a>
-          
         
       </li>
   </ul>
@@ -157,8 +158,8 @@
             
   <div class="admonition warning">
 <p class="first admonition-title">Warning</p>
-<p class="last">I&#8217;ve resurrected this text from my old UKFSN site because a couple of people
-asked me to, but I wouldn&#8217;t recommend using RCS to anyone at this point.  It
+<p class="last">I’ve resurrected this text from my old UKFSN site because a couple of people
+asked me to, but I wouldn’t recommend using RCS to anyone at this point.  It
 is mainly to help people who need to understand RCS because they have no
 choice, for example Gentoo users who are stuck with <code class="docutils literal"><span class="pre">dispatch-conf</span></code> (or so
 my mails tell me).</p>
@@ -191,7 +192,7 @@ straight in to an example.</p>
 <abbr title="GNU Revision Control System">RCS</abbr> needs to work.</p>
 <div class="highlight-console"><div class="highlight"><pre><span></span><span class="gp">$</span> cat &gt;myscript.sh &lt;&lt;EOF
 <span class="gp">#</span>! /bin/sh
-<span class="gp">#</span> $Id$
+<span class="gp">#</span> <span class="nv">$Id</span>$
 <span class="go">echo &quot;Hello World!&quot;</span>
 <span class="go">exit 0</span>
 <span class="go">EOF</span>
@@ -212,7 +213,7 @@ file, <code class="docutils literal"><span class="pre">myscript.sh</span></code>
 <span class="go">RCS</span>
 </pre></div>
 </div>
-<p>The file we checked in appears to have disappeared, obviously it hasn&#8217;t but the
+<p>The file we checked in appears to have disappeared, obviously it hasn’t but the
 default behaviour of <abbr title="GNU Revision Control System">RCS</abbr> is to remove the
 file we check in. You can choose to keep a working copy with <code class="docutils literal"><span class="pre">ci</span> <span class="pre">-u</span></code> or <code class="docutils literal"><span class="pre">ci</span>
 <span class="pre">-l</span></code> (covered below).</p>
@@ -221,7 +222,7 @@ file we check in. You can choose to keep a working copy with <code class="docuti
 </pre></div>
 </div>
 <p>In the <abbr title="GNU Revision Control System">RCS</abbr> directory a file now exists
-with the same name as our script plus a &#8221;,v&#8221;. This is the file <abbr title="GNU Revision Control System">RCS</abbr> uses to store all of its data in.</p>
+with the same name as our script plus a “,v”. This is the file <abbr title="GNU Revision Control System">RCS</abbr> uses to store all of its data in.</p>
 <div class="highlight-console"><div class="highlight"><pre><span></span><span class="gp">$</span> co myscript.sh
 <span class="go">RCS/myscript.sh,v  --&gt;  myscript.sh</span>
 <span class="go">revision 1.1</span>
@@ -243,7 +244,7 @@ file.</p>
 </div>
 <p>The <code class="docutils literal"><span class="pre">-l</span></code> option to <code class="docutils literal"><span class="pre">co</span></code> (and also <code class="docutils literal"><span class="pre">ci</span></code> ) is used to lock the file. This
 file now becomes a working file, which is writable, and it also means other
-people can&#8217;t edit it until you have released it or checked it in again.</p>
+people can’t edit it until you have released it or checked it in again.</p>
 <p>Blindly using the <code class="docutils literal"><span class="pre">-l</span></code> option to <code class="docutils literal"><span class="pre">ci</span></code>/<code class="docutils literal"><span class="pre">co</span></code> is not advisable, you should
 get in to the habit now of only locking files you are working on. <abbr title="GNU Revision Control System">RCS</abbr> uses locking to block other users from checking
 in changes and will cause much grief if you use <abbr title="GNU Revision Control System">RCS</abbr> on multi-user projects. It is much better to use <code class="docutils literal"><span class="pre">-u</span></code> (or unlocked)
@@ -251,7 +252,7 @@ when you <code class="docutils literal"><span class="pre">ci</span></code> in ne
 a read-only version of the file and it will allow other users to edit it.</p>
 <div class="highlight-console"><div class="highlight"><pre><span></span><span class="gp">$</span> cat myscript.sh
 <span class="gp">#</span>! /bin/sh
-<span class="gp">#</span> $Id: myscript.sh,v 1.1 2002/11/04 11:29:48 james Exp james $
+<span class="gp">#</span> <span class="nv">$Id</span>: myscript.sh,v <span class="m">1</span>.1 <span class="m">2002</span>/11/04 <span class="m">11</span>:29:48 james Exp james $
 <span class="go">echo &quot;Hello World!&quot;</span>
 <span class="go">exit 0</span>
 </pre></div>
@@ -273,7 +274,7 @@ file is increased a huge amount. All the changelog data is available with the
 <div class="highlight-console"><div class="highlight"><pre><span></span><span class="gp">$</span> sed -ie <span class="s1">&#39;s/World/${USER}/&#39;</span> myscript.sh
 <span class="gp">$</span> cat myscript.sh
 <span class="gp">#</span>! /bin/sh
-<span class="gp">#</span> $Id: myscript.sh,v 1.1 2002/11/04 11:29:48 james Exp james $
+<span class="gp">#</span> <span class="nv">$Id</span>: myscript.sh,v <span class="m">1</span>.1 <span class="m">2002</span>/11/04 <span class="m">11</span>:29:48 james Exp james $
 <span class="go">echo &quot;Hello ${USER}!&quot;</span>
 <span class="go">exit 0</span>
 <span class="gp">$</span> sh ./myscript.sh
@@ -300,7 +301,7 @@ works.</p>
 <span class="go">+++ myscript.sh 2002/11/05 03:52:14</span>
 <span class="go">@@ -1,4 +1,4 @@</span>
 <span class="gp"> #</span>! /bin/sh
-<span class="gp"> #</span> $Id: myscript,v 1.1 2002/11/04 11:29:48 james Exp james $
+<span class="gp"> #</span> <span class="nv">$Id</span>: myscript,v <span class="m">1</span>.1 <span class="m">2002</span>/11/04 <span class="m">11</span>:29:48 james Exp james $
 <span class="go">-echo &quot;Hello World!&quot;</span>
 <span class="go">+echo &quot;Hello ${USER}!&quot;</span>
 <span class="go"> exit 0</span>
@@ -327,7 +328,7 @@ a log entry, this will make our changelog output later. You can cancel the check
 in using the normal <code class="docutils literal"><span class="pre">C-c</span></code> (control C) method.</p>
 <div class="highlight-console"><div class="highlight"><pre><span></span><span class="gp">$</span> cat myscript.sh
 <span class="gp">#</span>! /bin/sh
-<span class="gp">#</span> $Id: myscript,v 1.2 2002/11/04 11:34:21 james Exp james $
+<span class="gp">#</span> <span class="nv">$Id</span>: myscript,v <span class="m">1</span>.2 <span class="m">2002</span>/11/04 <span class="m">11</span>:34:21 james Exp james $
 <span class="go">echo &quot;Hello ${USER}!&quot;</span>
 <span class="go">exit 0</span>
 </pre></div>
@@ -404,7 +405,7 @@ information.</li>
 <p><code class="docutils literal"><span class="pre">rcsi</span></code> will display information about the files within a directory.</p>
 <p>The screenshot to the right shows <code class="docutils literal"><span class="pre">rcsi</span></code> in use on a sample partially
 <abbr title="GNU Revision Control System">RCS</abbr> controlled directory.  All the
-information it contains should be fairly self explanatory, and even if it isn&#8217;t
+information it contains should be fairly self explanatory, and even if it isn’t
 the package comes with a comprehensive man page and README.</p>
 <div class="highlight-text"><div class="highlight"><pre><span></span>1.2          (root     21-Aug-05):             eval find . -xdev -depth ${exceptions}   -type d -empty -exec rmdir &#39;{}&#39; \\&#39;;&#39;
 1.2          (root     21-Aug-05):             eend 0
@@ -418,7 +419,7 @@ the package comes with a comprehensive man page and README.</p>
 </pre></div>
 </div>
 <p>The above excerpt is a sample of the output from <a class="reference external" href="http://blame.sourceforge.net/">blame</a> being run against
-a config file which is maintained using <abbr title="GNU Revision Control System">RCS</abbr> by Gentoo&#8217;s <code class="docutils literal"><span class="pre">dispatch-conf</span></code> tool.  It allows you to simply see which
+a config file which is maintained using <abbr title="GNU Revision Control System">RCS</abbr> by Gentoo’s <code class="docutils literal"><span class="pre">dispatch-conf</span></code> tool.  It allows you to simply see which
 revision introduced a change to a specific line.  You can also choose to
 annotate specific <abbr title="GNU Revision Control System">RCS</abbr> revisions using the
 <code class="docutils literal"><span class="pre">--revision</span></code> option, or specific dates with <code class="docutils literal"><span class="pre">--date</span></code> option.  <a class="reference external" href="http://blame.sourceforge.net/">blame</a> has
@@ -450,7 +451,7 @@ please drop me a mail, and I hope this short text has been helpful to you.</p>
 
   <div role="contentinfo">
     <p>
-        &copy; <a href="../copyright.html">Copyright</a> 2009-2015, James Rowe.
+        &copy; <a href="../copyright.html">Copyright</a> 2009-2017, James Rowe.
 
     </p>
   </div>
@@ -475,7 +476,7 @@ please drop me a mail, and I hope this short text has been helpful to you.</p>
             VERSION:'0.1.0',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
-            HAS_SOURCE:  true
+            HAS_SOURCE:  false
         };
     </script>
       <script type="text/javascript" src="../_static/jquery.js"></script>

@@ -32,6 +32,9 @@
   
 
   
+        <link rel="index" title="Index"
+              href="../../genindex.html"/>
+        <link rel="search" title="Search" href="../../search.html"/>
         <link rel="copyright" title="Copyright" href="../../copyright.html"/>
     <link rel="top" title="JNRowe" href="../../index.html"/>
         <link rel="up" title="Tips" href="index.html"/>
@@ -106,12 +109,12 @@
 <li class="toctree-l4"><a class="reference internal" href="Debugging_python_regexps.html">Debugging Python regular expressions</a></li>
 <li class="toctree-l4"><a class="reference internal" href="Disabling_cursor_blinking_in_GTK.html">Disabling cursor blinking in GTK+</a></li>
 <li class="toctree-l4"><a class="reference internal" href="Fancy_awesome_theming.html">Fancy awesome theming</a></li>
-<li class="toctree-l4 current"><a class="current reference internal" href="">Finding a window&#8217;s owner</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">Finding a window’s owner</a></li>
 <li class="toctree-l4"><a class="reference internal" href="Formatting_csv_files_in_the_shell.html">Formatting <abbr title="Comma Separated Values">CSV</abbr> files in the shell</a></li>
 <li class="toctree-l4"><a class="reference internal" href="Gentoo_one_liners.html">Gentoo one liners</a></li>
 <li class="toctree-l4"><a class="reference internal" href="Importing_gmail_filters_in_mutt.html">Importing gmail filters in mutt</a></li>
 <li class="toctree-l4"><a class="reference internal" href="Instant_web_server.html">Instant web server</a></li>
-<li class="toctree-l4"><a class="reference internal" href="Kick_me_birthday_reminders.html">&#8216;Kick me&#8217; birthday reminders</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Kick_me_birthday_reminders.html">‘Kick me’ birthday reminders</a></li>
 <li class="toctree-l4"><a class="reference internal" href="Making_a_nice_home.html">Making a nice home</a></li>
 <li class="toctree-l4"><a class="reference internal" href="Making_a_nice_home.html#permissions">Permissions</a></li>
 <li class="toctree-l4"><a class="reference internal" href="Making_a_nice_home.html#vim-hacks">vim hacks</a></li>
@@ -161,7 +164,7 @@
         <div class="rst-content">
           
 
-
+ 
 
 
 
@@ -173,11 +176,9 @@
       
           <li><a href="index.html">Tips</a> &raquo;</li>
       
-    <li>Finding a window&#8217;s owner</li>
+    <li>Finding a window’s owner</li>
       <li class="wy-breadcrumbs-aside">
         
-          
-            <a href="../../_sources/articles/tips/Finding_a_windows_owner.txt" rel="nofollow"> View page source</a>
           
         
       </li>
@@ -188,7 +189,7 @@
            <div itemprop="articleBody">
             
   <div class="section" id="finding-a-window-s-owner">
-<h1>Finding a window&#8217;s owner<a class="headerlink" href="#finding-a-window-s-owner" title="Permalink to this headline">¶</a></h1>
+<h1>Finding a window’s owner<a class="headerlink" href="#finding-a-window-s-owner" title="Permalink to this headline">¶</a></h1>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -211,8 +212,8 @@ the application, if that exists all we have to do is read it:</p>
 </pre></div>
 </div>
 <p>However, not all applications set this property.  Examples of applications that
-don&#8217;t set this property include <a class="reference external" href="http://www.mozilla.com/firefox">firefox</a> and <a class="reference external" href="http://www.gimp.org/">gimp</a>.  In fact, many of the modern
-applications you find on desktop systems don&#8217;t set this property at all.</p>
+don’t set this property include <a class="reference external" href="http://www.mozilla.com/firefox">firefox</a> and <a class="reference external" href="http://www.gimp.org/">gimp</a>.  In fact, many of the modern
+applications you find on desktop systems don’t set this property at all.</p>
 </div>
 <div class="section" id="the-other-way">
 <h2>The other way<a class="headerlink" href="#the-other-way" title="Permalink to this headline">¶</a></h2>
@@ -234,7 +235,7 @@ by default.</p>
 </div>
 <p>The <code class="docutils literal"><span class="pre">wmctrl</span></code> output has five aligned columns.  The first is the window id, the
 second the desktop is visible on, the third is the process id, the fourth is the
-client machine and the fifth is the window&#8217;s title string.  And with the <code class="docutils literal"><span class="pre">xprop</span></code>
+client machine and the fifth is the window’s title string.  And with the <code class="docutils literal"><span class="pre">xprop</span></code>
 example we must select a window with the mouse when calling <code class="docutils literal"><span class="pre">xprop</span></code>, and then we
 pluck the process id from the output.</p>
 <p>The <code class="docutils literal"><span class="pre">cmdline</span></code> value for the process from <a class="reference external" href="http://blogs.sun.com/eschrock/entry/the_power_of_proc">procfs</a> is finally read.  The <code class="docutils literal"><span class="pre">tr</span></code>
@@ -245,12 +246,12 @@ command is needed because options are separated by null terminators.</p>
 <p>Back to the original question and Rach was looking for a way to stop the window
 from showing up, the immediate response to the annoying window problem is to
 find its process id and send it a <code class="docutils literal"><span class="pre">SIGTERM</span></code>.  It seems like a reasonable idea,
-but I&#8217;ve been choosing the <code class="docutils literal"><span class="pre">urxvtd</span></code> examples on purpose to prove a point.</p>
+but I’ve been choosing the <code class="docutils literal"><span class="pre">urxvtd</span></code> examples on purpose to prove a point.</p>
 <p><code class="docutils literal"><span class="pre">urxvtd</span></code> is the terminal daemon provided by <a class="reference external" href="http://software.schmorp.de/">rxvt-unicode</a>, all terminals that
 are spawned by it will have the same <code class="docutils literal"><span class="pre">_NET_WM_PID</span></code> value and <code class="docutils literal"><span class="pre">WM_COMMAND</span></code>
-string.  This isn&#8217;t just an issue with <code class="docutils literal"><span class="pre">urxvtd</span></code> either, it happens with all
+string.  This isn’t just an issue with <code class="docutils literal"><span class="pre">urxvtd</span></code> either, it happens with all
 applications that operate in this way.  Sending a <code class="docutils literal"><span class="pre">SIGTERM</span></code> to every terminal
-opened by <code class="docutils literal"><span class="pre">urxvtd</span></code> probably isn&#8217;t what we would want to do, so you should
+opened by <code class="docutils literal"><span class="pre">urxvtd</span></code> probably isn’t what we would want to do, so you should
 always think very carefully before sending terminate signals.</p>
 </div>
 </div>
@@ -274,7 +275,7 @@ always think very carefully before sending terminate signals.</p>
 
   <div role="contentinfo">
     <p>
-        &copy; <a href="../../copyright.html">Copyright</a> 2009-2015, James Rowe.
+        &copy; <a href="../../copyright.html">Copyright</a> 2009-2017, James Rowe.
 
     </p>
   </div>
@@ -299,7 +300,7 @@ always think very carefully before sending terminate signals.</p>
             VERSION:'0.1.0',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
-            HAS_SOURCE:  true
+            HAS_SOURCE:  false
         };
     </script>
       <script type="text/javascript" src="../../_static/jquery.js"></script>

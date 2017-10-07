@@ -32,6 +32,9 @@
   
 
   
+        <link rel="index" title="Index"
+              href="../../genindex.html"/>
+        <link rel="search" title="Search" href="../../search.html"/>
         <link rel="copyright" title="Copyright" href="../../copyright.html"/>
     <link rel="top" title="JNRowe" href="../../index.html"/>
         <link rel="up" title="Tips" href="index.html"/>
@@ -106,12 +109,12 @@
 <li class="toctree-l4"><a class="reference internal" href="Debugging_python_regexps.html">Debugging Python regular expressions</a></li>
 <li class="toctree-l4"><a class="reference internal" href="Disabling_cursor_blinking_in_GTK.html">Disabling cursor blinking in GTK+</a></li>
 <li class="toctree-l4"><a class="reference internal" href="Fancy_awesome_theming.html">Fancy awesome theming</a></li>
-<li class="toctree-l4"><a class="reference internal" href="Finding_a_windows_owner.html">Finding a window&#8217;s owner</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Finding_a_windows_owner.html">Finding a window’s owner</a></li>
 <li class="toctree-l4"><a class="reference internal" href="Formatting_csv_files_in_the_shell.html">Formatting <abbr title="Comma Separated Values">CSV</abbr> files in the shell</a></li>
-<li class="toctree-l4 current"><a class="current reference internal" href="">Gentoo one liners</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">Gentoo one liners</a></li>
 <li class="toctree-l4"><a class="reference internal" href="Importing_gmail_filters_in_mutt.html">Importing gmail filters in mutt</a></li>
 <li class="toctree-l4"><a class="reference internal" href="Instant_web_server.html">Instant web server</a></li>
-<li class="toctree-l4"><a class="reference internal" href="Kick_me_birthday_reminders.html">&#8216;Kick me&#8217; birthday reminders</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Kick_me_birthday_reminders.html">‘Kick me’ birthday reminders</a></li>
 <li class="toctree-l4"><a class="reference internal" href="Making_a_nice_home.html">Making a nice home</a></li>
 <li class="toctree-l4"><a class="reference internal" href="Making_a_nice_home.html#permissions">Permissions</a></li>
 <li class="toctree-l4"><a class="reference internal" href="Making_a_nice_home.html#vim-hacks">vim hacks</a></li>
@@ -161,7 +164,7 @@
         <div class="rst-content">
           
 
-
+ 
 
 
 
@@ -176,8 +179,6 @@
     <li>Gentoo one liners</li>
       <li class="wy-breadcrumbs-aside">
         
-          
-            <a href="../../_sources/articles/tips/Gentoo_one_liners.txt" rel="nofollow"> View page source</a>
           
         
       </li>
@@ -200,13 +201,13 @@
 <p>On our Linux list at work the topic of <a class="reference external" href="http://www.gentoo.org/">Gentoo</a> usage arose again today.
 Originally, the topic was about interesting one liners used to maintain a Gentoo
 system.  I found myself posting extended replies to some of the questions and
-I&#8217;m reposting a few of those here.</p>
+I’m reposting a few of those here.</p>
 <blockquote>
 <div>How do I get <em>just the list</em> of packages that are installed but not in
 <code class="docutils literal"><span class="pre">world</span></code>?</div></blockquote>
 <p>The constraint here is packages that were installed with <code class="docutils literal"><span class="pre">--oneshot</span></code>, or
 manually removed from <code class="docutils literal"><span class="pre">/var/lib/portage/world</span></code>, which means that they will no
-longer be updated automatically.  I often use this for packages I&#8217;m just playing
+longer be updated automatically.  I often use this for packages I’m just playing
 with, and it appears lots of others do the same.  While the output of <code class="docutils literal"><span class="pre">emerge</span>
 <span class="pre">--pretend</span> <span class="pre">--depclean</span></code> is all that is really needed, the question is how to get
 a list of just the packages.</p>
@@ -245,7 +246,7 @@ a list of just the packages.</p>
 <p>The output we want can be easily matched with regular expressions, and the <a class="reference external" href="http://cnswww.cns.cwru.edu/~chet/bash/bashtop.html">bash</a>
 <code class="docutils literal"><span class="pre">alias</span></code> below will list just the packages by piping the output through <a class="reference external" href="http://sed.sourceforge.net/">sed</a>.
 We can even use the one liner as input to a larger function if we only want to
-see top-level packages; that is packages that aren&#8217;t listed as dependencies of
+see top-level packages; that is packages that aren’t listed as dependencies of
 other packages:</p>
 <div class="highlight-bash"><div class="highlight"><pre><span></span><span class="nb">alias</span> <span class="nv">pkgclean</span><span class="o">=</span><span class="s2">&quot;emerge ----pretend --depclean | sed -n &#39;/^ [a-z]/s,^ ,,p&#39; | sort&quot;</span>
 
@@ -270,21 +271,21 @@ a similar question in <code class="docutils literal"><span class="pre">#gentoo</
     <span class="k">if</span> <span class="o">[</span> -z <span class="nv">$1</span> <span class="o">]</span>
     <span class="k">then</span>
         <span class="nb">echo</span> <span class="s2">&quot;</span><span class="si">${</span><span class="nv">FUNCNAME</span><span class="si">}</span><span class="s2"> &lt;category/package&gt; [arch]&quot;</span>
-        <span class="k">return</span> 1
+        <span class="k">return</span> <span class="m">1</span>
     <span class="k">fi</span>
     <span class="k">for</span> i in <span class="k">$(</span>portageq envvar PORTDIR PORTDIR_OVERLAY<span class="k">)</span>
     <span class="k">do</span>
-        <span class="k">if</span> <span class="o">[</span> -d $i/<span class="nv">$1</span> <span class="o">]</span>
+        <span class="k">if</span> <span class="o">[</span> -d <span class="nv">$i</span>/<span class="nv">$1</span> <span class="o">]</span>
         <span class="k">then</span>
             <span class="nb">echo</span> <span class="nv">$1</span> <span class="nv">$2</span> &gt;&gt;/etc/portage/package.keywords/testing
-            <span class="k">done</span><span class="o">=</span>1
+            <span class="k">done</span><span class="o">=</span><span class="m">1</span>
             <span class="nb">break</span>
         <span class="k">fi</span>
     <span class="k">done</span>
     <span class="k">if</span> <span class="o">[</span> -z <span class="s2">&quot;</span><span class="si">${</span><span class="nv">done</span><span class="si">}</span><span class="s2">&quot;</span> <span class="o">]</span>
     <span class="k">then</span>
         <span class="nb">echo</span> <span class="s2">&quot;Doesn&#39;t exist \`</span><span class="nv">$1</span><span class="s2">&#39;&quot;</span>
-        <span class="k">return</span> 1
+        <span class="k">return</span> <span class="m">1</span>
     <span class="k">fi</span>
 <span class="o">}</span>
 <span class="nb">complete</span> -F _emerge arch_unmask
@@ -293,7 +294,7 @@ a similar question in <code class="docutils literal"><span class="pre">#gentoo</
 <p><a class="reference external" href="http://gist.github.com/207306">Fork this code</a></p>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
-<p class="last">If you&#8217;re using our Gentoo boxes at the office the function will be much
+<p class="last">If you’re using our Gentoo boxes at the office the function will be much
 faster if you replace the call to <code class="docutils literal"><span class="pre">portageq</span></code> by <code class="docutils literal"><span class="pre">/var/lib/repos/*</span></code>, as
 our package trees are always installed there.  The <code class="docutils literal"><span class="pre">portageq</span></code> call is
 mainly there for users who use <code class="docutils literal"><span class="pre">/usr/portage</span></code> and <code class="docutils literal"><span class="pre">/usr/local/portage</span></code>,
@@ -302,8 +303,8 @@ or other such monstrosities.</p>
 <p>The final question I looked at was:</p>
 <blockquote>
 <div>Is there an easy way to clean all the old modules from <code class="docutils literal"><span class="pre">/lib/modules</span></code>?</div></blockquote>
-<p>Assuming you are trying to remove all modules that don&#8217;t belong to the current
-kernel this is very easy using bash&#8217;s <code class="docutils literal"><span class="pre">extglob</span></code> support.  It may need to be
+<p>Assuming you are trying to remove all modules that don’t belong to the current
+kernel this is very easy using bash’s <code class="docutils literal"><span class="pre">extglob</span></code> support.  It may need to be
 enabled in your session, you can test whether it is enabled with <code class="docutils literal"><span class="pre">shopt</span>
 <span class="pre">extglob</span></code>.</p>
 <div class="highlight-console"><div class="highlight"><pre><span></span><span class="gp">$</span> <span class="nb">echo</span> /lib/modules/*
@@ -336,7 +337,7 @@ output of <code class="docutils literal"><span class="pre">uname</span> <span cl
 
   <div role="contentinfo">
     <p>
-        &copy; <a href="../../copyright.html">Copyright</a> 2009-2015, James Rowe.
+        &copy; <a href="../../copyright.html">Copyright</a> 2009-2017, James Rowe.
 
     </p>
   </div>
@@ -361,7 +362,7 @@ output of <code class="docutils literal"><span class="pre">uname</span> <span cl
             VERSION:'0.1.0',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
-            HAS_SOURCE:  true
+            HAS_SOURCE:  false
         };
     </script>
       <script type="text/javascript" src="../../_static/jquery.js"></script>

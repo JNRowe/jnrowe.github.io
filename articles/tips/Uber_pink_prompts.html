@@ -32,6 +32,9 @@
   
 
   
+        <link rel="index" title="Index"
+              href="../../genindex.html"/>
+        <link rel="search" title="Search" href="../../search.html"/>
         <link rel="copyright" title="Copyright" href="../../copyright.html"/>
     <link rel="top" title="JNRowe" href="../../index.html"/>
         <link rel="up" title="Tips" href="index.html"/>
@@ -106,12 +109,12 @@
 <li class="toctree-l4"><a class="reference internal" href="Debugging_python_regexps.html">Debugging Python regular expressions</a></li>
 <li class="toctree-l4"><a class="reference internal" href="Disabling_cursor_blinking_in_GTK.html">Disabling cursor blinking in GTK+</a></li>
 <li class="toctree-l4"><a class="reference internal" href="Fancy_awesome_theming.html">Fancy awesome theming</a></li>
-<li class="toctree-l4"><a class="reference internal" href="Finding_a_windows_owner.html">Finding a window&#8217;s owner</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Finding_a_windows_owner.html">Finding a window’s owner</a></li>
 <li class="toctree-l4"><a class="reference internal" href="Formatting_csv_files_in_the_shell.html">Formatting <abbr title="Comma Separated Values">CSV</abbr> files in the shell</a></li>
 <li class="toctree-l4"><a class="reference internal" href="Gentoo_one_liners.html">Gentoo one liners</a></li>
 <li class="toctree-l4"><a class="reference internal" href="Importing_gmail_filters_in_mutt.html">Importing gmail filters in mutt</a></li>
 <li class="toctree-l4"><a class="reference internal" href="Instant_web_server.html">Instant web server</a></li>
-<li class="toctree-l4"><a class="reference internal" href="Kick_me_birthday_reminders.html">&#8216;Kick me&#8217; birthday reminders</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Kick_me_birthday_reminders.html">‘Kick me’ birthday reminders</a></li>
 <li class="toctree-l4"><a class="reference internal" href="Making_a_nice_home.html">Making a nice home</a></li>
 <li class="toctree-l4"><a class="reference internal" href="Making_a_nice_home.html#permissions">Permissions</a></li>
 <li class="toctree-l4"><a class="reference internal" href="Making_a_nice_home.html#vim-hacks">vim hacks</a></li>
@@ -124,7 +127,7 @@
 <li class="toctree-l4"><a class="reference internal" href="Theming_mutt.html">Theming mutt</a></li>
 <li class="toctree-l4"><a class="reference internal" href="Three_mobile_broadband_in_linux.html">Three mobile broadband in Linux</a></li>
 <li class="toctree-l4"><a class="reference internal" href="Toggling_settings_in_vim.html">Toggling settings in vim</a></li>
-<li class="toctree-l4 current"><a class="current reference internal" href="">Uber pink prompts</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">Uber pink prompts</a></li>
 <li class="toctree-l4"><a class="reference internal" href="Visual_vim_mode_identifier.html">Visual vim mode identifier</a></li>
 <li class="toctree-l4"><a class="reference internal" href="Zsh_and_the_vcs.html">Zsh and the VCS</a></li>
 </ul>
@@ -161,7 +164,7 @@
         <div class="rst-content">
           
 
-
+ 
 
 
 
@@ -176,8 +179,6 @@
     <li>Uber pink prompts</li>
       <li class="wy-breadcrumbs-aside">
         
-          
-            <a href="../../_sources/articles/tips/Uber_pink_prompts.txt" rel="nofollow"> View page source</a>
           
         
       </li>
@@ -202,16 +203,16 @@
 <div>anyone know where to get a list of color codes for bash or know the code for
 pink :p</div></blockquote>
 <p>My first suggestion was to look at <a class="reference external" href="http://kerneltrap.org/man/linux/man4/console_codes.4">console_codes(4)</a> for the escapes, and note
-that pink isn&#8217;t defined.  As a workaround I suggested changing the console
+that pink isn’t defined.  As a workaround I suggested changing the console
 palette using <code class="docutils literal"><span class="pre">echo</span> <span class="pre">&quot;\e]PDff1493&quot;</span></code> which will make the normal magenta escape
 in to a much deeper pink.  The syntax to change the console colour palette is
 <code class="docutils literal"><span class="pre">\eP${colour_number}${red}${green}${blue}</span></code>, so deconstructing the above
 example we are setting colour code <code class="docutils literal"><span class="pre">D</span></code> (or 13) to <code class="docutils literal"><span class="pre">#ff1493</span></code>.</p>
-<p>However, the idea cookiemon5ter had wasn&#8217;t to change the palette but just to use
+<p>However, the idea cookiemon5ter had wasn’t to change the palette but just to use
 a nice pink in the <a class="reference external" href="http://cnswww.cns.cwru.edu/~chet/bash/bashtop.html">bash</a> prompt under <a class="reference external" href="http://materm.sourceforge.net/">mrxvt</a>.</p>
 <blockquote>
 <div>i was just talking [about] editing the line in bashrc</div></blockquote>
-<p>Using mrxvt, or any other terminal that supports the xterm&#8217;s 256 colour mode, we
+<p>Using mrxvt, or any other terminal that supports the xterm’s 256 colour mode, we
 can actually pick a variety of pinks to use directly without having to redefine
 the palette.  The prompt with a more gaudy pink can be achieved with the
 following:</p>
@@ -223,12 +224,12 @@ following:</p>
 select colour 199 from its extended 256 colour range.  Colours 196 through 201
 are varying levels of pink.  To see a quick table of the full colour range you
 can use the following little loop:</p>
-<div class="highlight-bash"><div class="highlight"><pre><span></span><span class="k">for</span> i in <span class="o">{</span>0..15<span class="o">}</span>
+<div class="highlight-bash"><div class="highlight"><pre><span></span><span class="k">for</span> i in <span class="o">{</span><span class="m">0</span>..15<span class="o">}</span>
 <span class="k">do</span>
-    <span class="k">for</span> j in <span class="o">{</span>0..15<span class="o">}</span>
+    <span class="k">for</span> j in <span class="o">{</span><span class="m">0</span>..15<span class="o">}</span>
     <span class="k">do</span>
         <span class="nv">col</span><span class="o">=</span><span class="k">$((</span>i*16+j<span class="k">))</span>
-        <span class="nb">printf</span> <span class="s2">&quot;\e[38;5;%im %03i&quot;</span> <span class="nv">$c</span>ol <span class="nv">$c</span>ol
+        <span class="nb">printf</span> <span class="s2">&quot;\e[38;5;%im %03i&quot;</span> <span class="nv">$col</span> <span class="nv">$col</span>
     <span class="k">done</span>
     <span class="nb">printf</span> <span class="s2">&quot;\n&quot;</span>
 <span class="k">done</span>
@@ -237,9 +238,9 @@ can use the following little loop:</p>
 <p><a class="reference external" href="http://gist.github.com/198010">Fork this code</a></p>
 <img alt="xterm's 256 colour palette" src="../../_images/2009-09-25-256_colours.png" />
 <p>There is one other important point to make here, you must set the prompt based
-on terminal type now as some terminals and the console won&#8217;t recognise the
+on terminal type now as some terminals and the console won’t recognise the
 sequences correctly.  Test the terminal type by checking <code class="docutils literal"><span class="pre">$TERM</span></code> in your
-startup scripts, or if you&#8217;re convinced all your terminals are 256 colour
+startup scripts, or if you’re convinced all your terminals are 256 colour
 capable you can simply check for <code class="docutils literal"><span class="pre">$DISPLAY</span></code> instead.</p>
 <p>Changing the console palette and using 256 colour mode makes for two tips
 today!!</p>
@@ -264,7 +265,7 @@ today!!</p>
 
   <div role="contentinfo">
     <p>
-        &copy; <a href="../../copyright.html">Copyright</a> 2009-2015, James Rowe.
+        &copy; <a href="../../copyright.html">Copyright</a> 2009-2017, James Rowe.
 
     </p>
   </div>
@@ -289,7 +290,7 @@ today!!</p>
             VERSION:'0.1.0',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
-            HAS_SOURCE:  true
+            HAS_SOURCE:  false
         };
     </script>
       <script type="text/javascript" src="../../_static/jquery.js"></script>
