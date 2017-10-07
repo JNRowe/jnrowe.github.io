@@ -25,6 +25,7 @@ else:
 
 master_doc = 'index'
 source_suffix = '.rst'
+html_copy_source = False
 
 # General information about the project.
 project = u'JNRowe'
