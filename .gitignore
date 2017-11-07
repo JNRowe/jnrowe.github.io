@@ -1,6 +1,3 @@
 objects/
 .build/
-
-*.py[co]
-
-README.html
+__pycache__/
