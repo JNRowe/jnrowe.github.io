@@ -27,6 +27,8 @@ should edit ``~/.gtkrc-2.0-kde``.
 So the question becomes, what were the options in that screenshot, and are there
 any other cool and useful things you can do there?
 
+.. Yes, I know GTK+’s config isn’t a cpp, but the highlighting works…
+
 .. code-block:: cpp
 
     gtk-theme-name = "expose"
@@ -92,6 +94,8 @@ or they will not work.
 You can also change the default bindings by specifying them in the configuration
 file, for example to use ``M-<left>`` and ``M-<right>`` to skip backward and forward
 along the directory path:
+
+.. Yes, I know GTK+’s config isn’t a cpp, but the highlighting works…
 
 .. code-block:: cpp
 
