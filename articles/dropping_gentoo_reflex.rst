@@ -92,19 +92,19 @@ Documentation
 The excellent devmanual_ and the incredible `Package Manager Specification`_
 made life so much easier.  The devmanual was both short enough to be used as
 quick reference and complete enough that you could learn most of what you’d need
-to know from it.  The unfortunately named PMS acted as the reference that
+to know from it.  The unfortunately named |PMS| acted as the reference that
 finally allowed us to switch from away from ``portage`` completely at the
 office.
 
-The PMS documented much of the nastiness that ``portage`` suffers from, and made
-life in general a whole lot nicer when you were chasing bugs deep down the
+The |PMS| documented much of the nastiness that ``portage`` suffers from, and
+made life in general a whole lot nicer when you were chasing bugs deep down the
 rabbit hole.  And, let us be honest here it also stopped a little of the
 fluidity that plagued ``portage`` too.
 
 Some people argue that it acts as unnecessary stop motion but those people must
 be forgetting what happened when behaviour changed randomly between ``portage``
-versions.  PMS, and the EAPI process, also brought some much needed design and
-stability to newer features.
+versions.  |PMS|, and the EAPI process, also brought some much needed design
+and stability to newer features.
 
 All Gentoo users owe Ciaran McCreesh a few beers for all the hard work he put in
 to those documents, especially in the early days.
@@ -122,8 +122,8 @@ UK’s place with practically everyone you saw at Gentoo UK(minus the students),
 and oddly about the same Gentoo to non-Gentoo ratio of talks too.
 
 Two excellent people on our current team were recruited following the Gentoo UK
-conference at UCL, and we met a spectacular contract hire at the one prior to
-that as well.
+conference at :abbr:`UCL (University College London)`, and we met a spectacular
+contract hire at the one prior to that as well.
 
 I’ve even been lucky enough to have a few doors held open for me via people I’ve
 met at Gentoo-themed or Gentoo-heavy events, and I suspect I’d be writing this
@@ -147,3 +147,4 @@ as time moves on.
 Instead of making this rant even longer, I’ll take the time to reflect on the
 fun memories.
 
+.. |PMS| replace:: :abbr:`PMS (Package Manager Specification)`

@@ -64,10 +64,10 @@ thoroughly.
 I tested :command:`bzr` support while writing this but it is totally unusable
 because of just how painfully slow :command:`bzr` is.  On my system it adds
 close to one and half seconds to every prompt display, although that could be
-improved if I wasn’t using conservative CPU scaling to save power.  As
-a comparison the :command:`git` info takes less than a tenth of a second to
-calculate on the same system, and :command:`mercurial` around three times that
-which is most definitely still usable.
+improved if I wasn’t using conservative :abbr:`CPU (Central Processing Unit)`
+scaling to save power.  As a comparison the :command:`git` info takes less than
+a tenth of a second to calculate on the same system, and :command:`mercurial`
+around three times that which is most definitely still usable.
 
 .. note::
    There is a ``use-simple`` setting for the :command:`bzr` support that may

@@ -65,7 +65,7 @@ one, where the few differences are mostly cosmetic.  :command:`fossil` is
 a completely different beast, and requires an enormous rethink in the way you
 handle version control.
 
-Ten years ago when people were on the whole still familiar with the CVS and
+Ten years ago when people were on the whole still familiar with the |CVS| and
 Subversion way of working that wouldn’t have been such an issue, but times have
 most definitely changed.
 
@@ -92,7 +92,7 @@ That said it does feel like a *huge* step backwards when working with branches,
 and you should set aside quite a lot of time for integration issues when you
 have ``autosync`` disabled.  And I can’t imagine a scenario where ``autosync``
 could work for us, without rewriting our entire way of working or returning to
-CVS-style mega commits and a manual patch stack layered on top.
+|CVS|-style mega commits and a manual patch stack layered on top.
 
 If you read :command:`fossil`’s `Branching, Forking, Merging, and Tagging`_
 documentation it appears that this is a design feature for the creators.
@@ -109,10 +109,10 @@ Luckily you can rework a lot of it by fiddling around with the administration
 settings exposed by :command:`fossil ui`.
 
 This also exposes one of the best features of :command:`fossil`, you can create
-a custom SQL script that configures the project(issue tracking, pretty theme,
-etc) and just blast it in to the project’s database.  Or you can create a custom
-file that makes all your edits and pump it in with :command:`fossil config
-import`.
+a custom |SQL| script that configures the project(issue tracking, pretty theme,
+etc) and just blast it in to the project’s database.  Or you can create
+a custom file that makes all your edits and pump it in with :command:`fossil
+config import`.
 
 Wiki
 ''''
@@ -155,7 +155,7 @@ every other tool you use has chosen it.
 
 Some of the interface decisions are actively bad, for example there appears to
 be no way to delegate password configuration to a trusted system service or even
-``netrc``.  Specifying passwords in URLs on the command line is a **huge**
+``netrc``.  Specifying passwords in |URL|\ s on the command line is a **huge**
 anti-pattern, and I just hope you don’t have any multiseat systems if you’re
 using that method.
 
@@ -167,9 +167,9 @@ nonetheless.  Commits do take a disturbingly long time to complete for some
 reason, but most of the other commands are fast enough.
 
 Mangling a repository is actually a lot faster with :command:`fossil` than any
-other system I can think of, as you can just throw the power of SQL at it.  You
-can find some sqlalchemy_ ORM definitions in :file:`/usr/share/doc/fossil/orm`
-in my packages.
+other system I can think of, as you can just throw the power of |SQL| at it.
+You can find some sqlalchemy_ :abbr:`ORM (Object relational mapping)`
+definitions in :file:`/usr/share/doc/fossil/orm` in my packages.
 
 Conclusion
 ----------
@@ -193,6 +193,8 @@ about :command:`fossil` for my own use.  :command:`fossil all`’s ability to ru
 a command against all repositories configured in :file:`~/.fossil` for example.
 
 .. |ALM| replace:: :abbr:`ALM (Application Lifecycle Management)`
+.. |CVS| replace:: :abbr:`CVS (Concurrent Versions System)`
+.. |SQL| replace:: :abbr:`SQL (Structured Query Language)`
 
 .. _fossil: http://www.fossil-scm.org/
 .. _sqlite: http://sqlite.org/

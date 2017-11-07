@@ -31,7 +31,7 @@ writing importers and exporters simple enough.  As an example, I generate my
 
 Now the birthday trick is a cool one, :command:`abook` has a number of custom
 fields you can use for anything you like.  I use ``customfield 2`` to store
-birthdays in ISO-8601 format as in “1974-04-12”.  So that we see the correct
+birthdays in |ISO|-8601 format as in “1974-04-12”.  So that we see the correct
 field name in the user interface instead of just ``Custom2`` add the following
 to your :file:`~/.abook/abookrc`:
 

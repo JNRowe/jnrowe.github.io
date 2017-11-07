@@ -80,8 +80,9 @@ Conditionals for server options
 -------------------------------
 
 You can also change configured settings based on the extensions loaded in to the
-server, for example to disable the screensaver in ``muxi`` if the DPMS extension
-is supported we’d test for ``EXT_DPMS``::
+server, for example to disable the screensaver in ``muxi`` if the :abbr:`DPMS
+(Display Power Management Signalling)` extension is supported we’d test for
+``EXT_DPMS``::
 
     #ifdef EXT_DPMS
         muxi.screensaver: false

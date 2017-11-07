@@ -26,9 +26,9 @@ Dealing with needy users
 Some users seem to feel a disproportionate amount of “you work for me”,
 seemingly more so than happens with actual paying customers on other projects
 which strikes me as strange.  They’ll bug you endlessly in emails, in the issue
-tracker, on IRC and in real life if you end up at the same conference.  You
-*need* to stop this before it takes hold.  It helps if you can be polite, but if
-not just stop it anyway.  It is for *your* welfare, so just do it.
+tracker, on |IRC| and in real life if you end up at the same conference.  You
+*need* to stop this before it takes hold.  It helps if you can be polite, but
+if not just stop it anyway.  It is for *your* welfare, so just do it.
 
 I actually found myself burning the wrong people towards the peak of that
 imaginary Jenga tower.  You need to make a concerted effort to figure out which
@@ -50,9 +50,9 @@ to JCB_ telling them they must document why they use round knobs on the digger
 I saw someone else using.  So try spot it early, and put a stop to it.
 
 ..
-    If you want to know why :pypi:`github2` never spawned API v3 support, now
+    If you want to know why :pypi:`github2` never spawned |API| v3 support, now
     you do.  To some extent it was probably a good thing as the replacement was
-    a clean reimplementation, without the baggage that supporting both API
+    a clean reimplementation, without the baggage that supporting both |API|
     versions would have required.  In other ways it was bad as we could have
     used the momemtum to push a single library, instead of the tonnes of half
     finished skeletons we seem to have now.
@@ -86,11 +86,12 @@ answers for most of them.  If you can cut the time it takes to respond to them,
 you’ll obviously spend far less time thinking about them.
 
 The typical one that springs to mind is a user complaining that you’ve not
-licensed your GPL code in a way which allows them to use it without contributing
-anything in return.  I choose reciprocating licences where I can, because
-frankly that may be the only value you provide *me* as a user.  I get that some
-people need to use their Open Source projects as a way to improve their CV or
-build a presence, but for many of us it is just for fun and reciprocation.
+licensed your |GPL| code in a way which allows them to use it without
+contributing anything in return.  I choose reciprocating licences where I can,
+because frankly that may be the only value you provide *me* as a user.  I get
+that some people need to use their Open Source projects as a way to improve
+their CV or build a presence, but for many of us it is just for fun and
+reciprocation.
 
 ..
     My normal response now is a cuddlier version of this: “If you don’t want to
@@ -153,6 +154,9 @@ personally.
     defines the Canonical ecosystem as being a significant source of the
     poisonous user problem, but the rant is probably unnecessary outside this
     comment.
+
+.. |API| replace:: :abbr:`API (Application Programming Interface)`
+.. |GPL| replace:: :abbr:`GPL (GNU General Public License)`
 
 .. _bikeshedding: http://en.m.wikipedia.org/wiki/bikeshedding
 .. _JCB: http://www.jcb.com/

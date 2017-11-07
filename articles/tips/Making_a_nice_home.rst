@@ -90,7 +90,7 @@ Documentation
 -------------
 
 The final subdirectory :file:`Makefile` we’re going to look at is actually
-called in a number of different directories to create HTML versions of
+called in a number of different directories to create |HTML| versions of
 reStructuredText_ files.
 
 ::

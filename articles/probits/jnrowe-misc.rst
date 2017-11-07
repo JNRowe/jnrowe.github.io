@@ -6,7 +6,8 @@ jnrowe-misc - The unsorted package overlay
 
     A collection of ``ebuild`` files with no overall theme.
 
-TLDR; For what it was jnrowe-misc_ served its purpose well.
+:abbr:`TLDR (Too Long; Didn’t Read)`; For what it was jnrowe-misc_ served its
+purpose well.
 
 An island unto itself
 ---------------------
