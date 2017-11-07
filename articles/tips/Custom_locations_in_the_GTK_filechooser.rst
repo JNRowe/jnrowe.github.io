@@ -43,7 +43,7 @@ any other cool and useful things you can do there?
     }
     class "GtkFileChooserDefault" binding "some-shortcuts"
 
-`Fork this code <http://gist.github.com/199268>`__
+See :gist:`199268`
 
 Ignoring the ``vim`` modeline_ from the screenshot the first few settings are
 basic theme related options.  ``gtk-theme-name`` and ``gtk-icon-theme-name`` set
@@ -102,7 +102,7 @@ along the directory path:
         "down-folder" ()
     }
 
-`Fork this code <http://gist.github.com/199269>`__
+See :gist:`199269`
 
 Whether you find ``up`` and ``down`` or ``left`` and ``right`` easier to remember
 depends on how you visualise the path, I personally prefer the defaults in this

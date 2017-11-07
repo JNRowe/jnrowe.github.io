@@ -85,6 +85,7 @@ html_experimental_html5_writer = True
 
 # extlinks extension settings {{{
 extlinks = {
+    'gist': ('http://gist.github.com/%s', 'gist #'),
     'pypi': ('https://pypi.python.org/pypi/%s', ''),
 }
 # }}}

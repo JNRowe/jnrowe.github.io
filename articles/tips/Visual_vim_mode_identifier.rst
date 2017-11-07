@@ -38,7 +38,7 @@ below:
         let &t_SI="\033]12;green\007"
     endif
 
-`Fork this code <http://gist.github.com/209913>`__
+See :gist:`209913`
 
 I use a green cursor to indicate ``insert`` mode, I tried a number of alternatives
 but found keeping the same cursor colour as my shell sessions was the most
@@ -57,7 +57,7 @@ when we change mode:
     au InsertEnter * !echo "notify.start('Insert mode started')" | awesome-client
     au InsertLeave * !echo "notify.stop('Insert mode finished')" | awesome-client
 
-`Fork this code <http://gist.github.com/209915>`__
+See :gist:`209915`
 
 Note that I didn't say it was a good idea, just that it was possible!
 

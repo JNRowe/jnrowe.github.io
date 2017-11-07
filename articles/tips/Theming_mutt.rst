@@ -22,6 +22,6 @@ simple as adding the following to your ``~/.muttrc``:
     source ~/.mutt/colour_defaults.rc
     source ~/.mutt/colour_$TERM.rc
 
-`Fork this code <http://gist.github.com/198012>`__
+See :gist:`198012`
 
 .. _mutt: http://www.mutt.org/

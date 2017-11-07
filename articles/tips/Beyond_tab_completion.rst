@@ -36,7 +36,7 @@ this:
         "\C-a": menu-complete
     $endif
 
-`Fork this code <http://gist.github.com/198394>`__
+See :gist:`198394`
 
 The above tells ``readline`` we wish to bind ``menu-complete`` to ``Control-a``,
 I find that key combination quite comfortable as ``Control-a`` is easy to reach
@@ -51,7 +51,7 @@ To enable the key binding in ``bash`` only we could also just edit the appropria
 
     bind '"\C-a": menu-complete'
 
-`Fork this code <http://gist.github.com/198437>`__
+See :gist:`198437`
 
 You must source the startup file or restart ``bash`` to enable this binding,
 alternatively you can just test the command in your current ``bash`` setting

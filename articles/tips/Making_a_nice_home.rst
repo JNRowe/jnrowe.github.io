@@ -40,7 +40,7 @@ but I prefer the simple approach of setting the permissions when they're needed:
             chmod 600 $(PRIVATE_FILES)
             chmod 700 $(PRIVATE_DIRS)
 
-`Fork this code <http://gist.github.com/208207>`__
+See :gist:`208207`
 
 If this rule is called after a ``git pull`` is issued then the files always have
 the correct permissions.
@@ -71,7 +71,7 @@ for ``.vim``:
     clean:
             rm -f $(TARGETS)
 
-`Fork this code <http://gist.github.com/208209>`__
+See :gist:`208209`
 
 The values in the ``patsubst`` block of the ``$(TARGETS)`` definition are a list
 of filenames to use for tag storage with ctags_.  The rule creates a different
@@ -99,7 +99,7 @@ reStructuredText_ files.
     $(GENERATED): %.html: %.rst
             rst2html.py $< $@
 
-`Fork this code <http://gist.github.com/208210>`__
+See :gist:`208210`
 
 If we call the above ``Makefile`` from our ``git`` hooks after any pull or merge we
 always have up to date processed versions of documents.

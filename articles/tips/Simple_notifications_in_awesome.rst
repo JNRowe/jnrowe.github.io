@@ -24,7 +24,7 @@ for example:
 
     naughty.notify text: "my little popup", position: "bottom_left"
 
-`Fork this code <http://gist.github.com/201130>`__
+See :gist:`201130`
 
 I do however define a few functions in my configuration file to simplify the
 normal notifications I use:
@@ -59,7 +59,7 @@ normal notifications I use:
         warn: (text) ->
             notify._gnotify "warn", text,
 
-`Fork this code <http://gist.github.com/201131>`__
+See :gist:`201131`
 
 .. note::
    If you're willing to install lua-functional_, the above code snippet can be
@@ -93,7 +93,7 @@ way I don't miss windows opening on tags I'm not currently viewing.
         notify.start "#{@name or 'Application'} started"
     end)
 
-`Fork this code <http://gist.github.com/201132>`__
+See :gist:`201132`
 
 Network notifications
 ---------------------
@@ -129,7 +129,7 @@ switches the network graph widget to use the appropriate input too.
                 3, "download"
             notify.stop "PPP0 interface has gone down"
 
-`Fork this code <http://gist.github.com/201133>`__
+See :gist:`201133`
 
 .. _awesome: http://awesome.naquadah.org/
 .. _naughty: http://awesome.naquadah.org/doc/api/modules/naughty.html

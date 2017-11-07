@@ -39,7 +39,7 @@ example from my configuration file:
 
     irssi.font: FIXED_FONT
 
-`Fork this code <http://gist.github.com/202712>`__
+See :gist:`202712`
 
 This small snippet sets a couple of default fonts that we can reference
 throughout our resource file as ``FIXED_FONT`` and ``BOLD_FIXED_FONT``.  This
@@ -67,7 +67,7 @@ terminus_ and I can use that on there with a couple of small changes.
         #endif
     #endif
 
-`Fork this code <http://gist.github.com/202713>`__
+See :gist:`202713`
 
 .. note::
    As we're using X11_'s ``xrdb`` it is network aware, it defines ``SVR_$name``
@@ -88,7 +88,7 @@ is supported we'd test for ``EXT_DPMS``:
         muxi.screensaver: false
     #endif
 
-`Fork this code <http://gist.github.com/202714>`__
+See :gist:`202714`
 
 Testing your resource files
 ---------------------------

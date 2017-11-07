@@ -98,7 +98,7 @@ future:
         puts "score ~f#{addy} 20"
     end
 
-`Fork this code <http://gist.github.com/205052>`__
+See :gist:`205052`
 
 Calling that script on the example data from above yields a small ``mutt``
 configuration file that we can include in our mutt setup by adding ``source

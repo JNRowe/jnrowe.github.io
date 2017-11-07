@@ -193,10 +193,10 @@ Everywhere database, and it is very simple to do:
         return ${retval}
     }
 
-`Fork this code <http://gist.github.com/204172>`__
+See :gist:`204172`
 
 It could be improved to take settings to filter the bug list or all manner of
-other cool things, but that is why it has a "Fork this code" label next to it.
+other cool things, but that is why it has a "See gist #x" label next to it.
 Feel free to post updates to the gist!
 
 .. |BTS| replace:: :abbr:`BTS (Bug Tracking System)`
