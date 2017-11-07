@@ -4,6 +4,8 @@
 Introduction to |RCS|
 =====================
 
+.. highlight:: console
+
 .. warning::
 
    I’ve resurrected this text from my old UKFSN site because a couple of people
@@ -40,14 +42,14 @@ Diving in
 
 |RCS| is that simple to use that I will jump straight in to an example.
 
-.. code-block:: console
+::
 
     $ mkdir RCS
 
 The |RCS| directory holds the |RCS| control files, they contain all the data
 |RCS| needs to work.
 
-.. code-block:: console
+::
 
     $ cat >myscript.sh <<EOF
     #! /bin/sh
@@ -69,7 +71,7 @@ The command ``ci`` (check in) is where the magic of |RCS| takes place. We have
 decided we want to make a snapshot of our file, ``myscript.sh``, and use ``ci``
 to add the file to revision control.
 
-.. code-block:: console
+::
 
     $ ls
     RCS
@@ -78,7 +80,7 @@ The file we checked in appears to have disappeared, obviously it hasn’t but th
 default behaviour of |RCS| is to remove the file we check in. You can choose to
 keep a working copy with ``ci -u`` or ``ci -l`` (covered below).
 
-.. code-block:: console
+::
 
     $ ls ./RCS/
     myscript.sh,v
@@ -86,7 +88,7 @@ keep a working copy with ``ci -u`` or ``ci -l`` (covered below).
 In the |RCS| directory a file now exists with the same name as our script plus
 a ``,v``. This is the file |RCS| uses to store all of its data in.
 
-.. code-block:: console
+::
 
     $ co myscript.sh
     RCS/myscript.sh,v  -->  myscript.sh
@@ -100,7 +102,7 @@ The command ``co`` (check out) pulls a current version(by default) from the
 |RCS| repository and places it in the current directory. Default behaviour is
 to check out a read-only version of the file.
 
-.. code-block:: console
+::
 
     $ co -l myscript.sh
     ./RCS/myscript.sh,v  -->  ./myscript.sh
@@ -118,7 +120,7 @@ if you use |RCS| on multi-user projects. It is much better to use ``-u`` (or
 unlocked) when you ``ci`` in new files/changes this way you will have access to
 a read-only version of the file and it will allow other users to edit it.
 
-.. code-block:: console
+::
 
     $ cat myscript.sh
     #! /bin/sh
@@ -143,7 +145,7 @@ Although using ``$Log$`` seems like a good idea it does mean the size of the
 file is increased a huge amount. All the changelog data is available with the
 ``rlog`` command at any time and without filling the source file.
 
-.. code-block:: console
+::
 
     $ sed -ie 's/World/${USER}/' myscript.sh
     $ cat myscript.sh
@@ -157,7 +159,7 @@ file is increased a huge amount. All the changelog data is available with the
 So we have decided to make some changes to the file, and then tested it
 works.
 
-.. code-block:: console
+::
 
     $ rcsdiff myscript.sh
     ===================================================================
@@ -188,7 +190,7 @@ header to ``STDERR`` ), or you can pass normal ``diff`` (1) options to
 ``rcsdiff``.  In the second ``rcsdiff`` command the ``diff`` option ``-u`` is
 given to tell ``rcsdiff`` it should output a unified context diff.
 
-.. code-block:: console
+::
 
     $ ci -u ./myscript.sh
     ./RCS/myscript.sh,v  <--  ./myscript.sh
@@ -203,7 +205,7 @@ check in our new revision.  |RCS| asks for a log entry, this will make our
 changelog output later. You can cancel the check in using the normal ``C-c``
 (control C) method.
 
-.. code-block:: console
+::
 
     $ cat myscript.sh
     #! /bin/sh
@@ -214,7 +216,7 @@ changelog output later. You can cancel the check in using the normal ``C-c``
 You can see above that when |RCS| checked in the new revision it also updated
 the ``$Id$`` tag.
 
-.. code-block:: console
+::
 
     $ rlog ./myscript.sh
 

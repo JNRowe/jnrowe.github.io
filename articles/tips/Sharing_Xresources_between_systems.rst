@@ -4,6 +4,8 @@
 Sharing Xresources between systems
 ==================================
 
+.. highlight:: c
+
 In amongst the rants in our watercooler channel at work comes this question:
 
     So then, how do custom settings in ``Xresources`` work if you share your
@@ -23,9 +25,7 @@ should be preprocessed before it is used, the default preprocessor is ``cpp``.
 On most of our systems at work, and likely most Linux systems in general,
 ``cpp`` is `GNU cpp`_.  Don’t worry about the size of the manual though, the
 interesting features are easy to understand and use.  Let’s look at trimmed
-example from my configuration file:
-
-.. code-block:: c
+example from my configuration file::
 
     #ifndef FIXED_FONT
         #define FIXED_FONT xft:Inconsolata:pixelsize=14:antialias=false
@@ -57,7 +57,7 @@ defines a set of symbols we can use including one to test the system’s
 ``hostname``.  ``nebula``, the system that doesn’t have Inconsolata, does have
 terminus_ and I can use that on there with a couple of small changes.
 
-.. code-block:: c
+::
 
     #ifndef FIXED_FONT
         #ifdef SRVR_nebula
@@ -80,9 +80,7 @@ Conditionals for server options
 
 You can also change configured settings based on the extensions loaded in to the
 server, for example to disable the screensaver in ``muxi`` if the DPMS extension
-is supported we’d test for ``EXT_DPMS``:
-
-.. code-block:: c
+is supported we’d test for ``EXT_DPMS``::
 
     #ifdef EXT_DPMS
         muxi.screensaver: false
