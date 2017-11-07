@@ -1,7 +1,8 @@
+:date: 2009-10-13
+:tags: awesome, vim
+
 Visual vim mode identifier
 ==========================
-
-:date: 2009-10-13
 
 Paul Kerry rants about his problems with vim_ over the cooler today, and as
 a long time ``vim`` user I found it hard not to respond to some of the points.

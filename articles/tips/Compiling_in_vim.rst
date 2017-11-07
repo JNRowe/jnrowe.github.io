@@ -1,7 +1,8 @@
+:date: 2009-09-24
+:tags: vim
+
 Compiling C source in vim
 =========================
-
-:date: 2009-09-24
 
 The fabulous Miss Biddulph asks via the EADS Linux list:
 

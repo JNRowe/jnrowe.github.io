@@ -1,7 +1,8 @@
+:date: 2009-10-29
+:tags: python
+
 Debugging Python regular expressions
 ====================================
-
-:date: 2009-10-29
 
 Rob Sampson is learning Python_ and struggling to get to grips with its
 |RegEx| handling.  He asks on one of our internal lists at the office:

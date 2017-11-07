@@ -1,7 +1,8 @@
+:date: 2009-09-27
+:tags: bugzilla, mail
+
 Bugzilla mail with real names
 =============================
-
-:date: 2009-09-27
 
 John Bateman rants on the EADS Linux list:
 

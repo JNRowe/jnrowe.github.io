@@ -1,7 +1,8 @@
+:date: 2009-10-10
+:tags: csv, unix
+
 Formatting |CSV| files in the shell
 ===================================
-
-:date: 2009-10-10
 
 kemi asks in ``#bash``:
 

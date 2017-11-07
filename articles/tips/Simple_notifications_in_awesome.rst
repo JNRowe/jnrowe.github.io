@@ -1,7 +1,8 @@
+:date: 2009-10-04
+:tags: awesome
+
 Simple notifications in awesome
 -------------------------------
-
-:date: 2009-10-04
 
 On seeing my window notifications in awesome_ from a screencast for a new
 project at work Matt Cooper asks:

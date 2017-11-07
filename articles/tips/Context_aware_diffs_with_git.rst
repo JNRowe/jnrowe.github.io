@@ -1,7 +1,8 @@
+:date: 2009-09-29
+:tags: git
+
 Context aware diffs with git
 ============================
-
-:date: 2009-09-29
 
 Earlier this week Luke Cox asked in response to a patch I sent:
 

@@ -1,7 +1,8 @@
+:date: 2009-10-09
+:tags: gentoo
+
 Gentoo one liners
 =================
-
-:date: 2009-10-09
 
 On our Linux list at work the topic of Gentoo_ usage arose again today.
 Originally, the topic was about interesting one liners used to maintain a Gentoo

@@ -1,7 +1,8 @@
+:date: 2009-10-01
+:tags: GTK+
+
 Custom keybindings in the GTK+ file dialogs
 ===========================================
-
-:date: 2009-10-01
 
 In :doc:`Fancy_awesome_theming` I included a screenshot that, by accident more
 than design, spawned today's tip.

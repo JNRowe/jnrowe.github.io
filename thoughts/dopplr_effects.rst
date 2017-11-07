@@ -1,4 +1,5 @@
 :date: 2014-01-06
+:tags: history, privacy
 
 .. This is probably the start of something else, we'll see.
 

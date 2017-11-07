@@ -1,7 +1,8 @@
+:date: 2009-10-14
+:tags: linux, three
+
 Three mobile broadband in Linux
 ===============================
-
-:date: 2009-10-14
 
 Steve Lowry is picking up his Three_ modem this afternoon and asks on our
 internal Linux list if it supports Linux.

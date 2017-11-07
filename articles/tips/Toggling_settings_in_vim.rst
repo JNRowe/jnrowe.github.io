@@ -1,7 +1,8 @@
+:date: 2009-10-02
+:tags: vim
+
 Toggling settings in vim
 ========================
-
-:date: 2009-10-02
 
 As you can never have enough keybinding tips and vim_ helps to prove that, the
 tip for today answers Joshua's question from ``##purplism``

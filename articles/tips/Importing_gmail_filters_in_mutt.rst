@@ -1,7 +1,8 @@
+:date: 2009-10-08
+:tags: gmail, mutt
+
 Importing gmail filters in mutt
 ===============================
-
-:date: 2009-10-08
 
 On our company's Linux list Ryan Abbott is preparing to move to
 mutt_:

@@ -1,7 +1,8 @@
+:date: 2010-03-23
+:tags: abook, mail, sup
+
 Populating sup contacts from abook
 ==================================
-
-:date: 2010-03-23
 
 A colleague from work, Adam Robertson, is switching to Sup_ from mutt_ and
 wondering how to easily convert his contacts from abook_.  Given that it is my
