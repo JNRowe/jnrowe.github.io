@@ -1,20 +1,22 @@
 :date: 2010-03-23
 :tags: abook, mail, sup
 
-Populating sup contacts from abook
-==================================
+Populating :command:`sup` contacts from abook
+=============================================
 
 A colleague from work, Adam Robertson, is switching to Sup_ from mutt_ and
 wondering how to easily convert his contacts from abook_.  Given that it is my
-constant pimping of ``sup`` that has convinced him to switch I feel obliged to
-help with the conversion.
+constant pimping of :command:`sup` that has convinced him to switch I feel
+obliged to help with the conversion.
 
-The first choice I may recommend is just to follow the wiki_ and use ``abook``
-as a source for lbdb_.  I use a method similar to this quite successfully.
+The first choice I may recommend is just to follow the wiki_ and use
+:command:`abook` as a source for lbdb_.  I use a method similar to this quite
+successfully.
 
-The second choice is to prime the contact list from ``abook`` with a little
-Python_ script.  The ``sup`` contacts list uses a `very simple format`_ and
-mangling the ``abook`` addressbook is possible in only a few lines of code:
+The second choice is to prime the contact list from :command:`abook` with
+a little Python_ script.  The :command:`sup` contacts list uses a `very simple
+format`_ and mangling the :command:`abook` addressbook is possible in only
+a few lines of code:
 
 .. code-block:: python
 
@@ -51,11 +53,11 @@ ConfigParser_ module from the Python standard library, but ``configobj`` allows
 my laziness to shine through with its simple dictionary-based access to the
 parsed data.
 
-The script opens either the named or default ``abook`` addressbook and fetches
-any entries that contain both a ``nick`` and ``email`` section.  Those entries
-are then output in format that ``sup`` accepts.  It includes only the primary
-email address for the contact, as I tend to order contacts with multiple email
-addresses in address preference order.
+The script opens either the named or default :command:`abook` addressbook and
+fetches any entries that contain both a ``nick`` and ``email`` section.  Those
+entries are then output in format that :command:`sup` accepts.  It includes
+only the primary email address for the contact, as I tend to order contacts
+with multiple email addresses in address preference order.
 
 As I’ve mentioned before in :doc:`Making_a_nice_home` all these tasks should be
 automated, and this one is no different.  To regenerate the contacts list when
@@ -68,10 +70,10 @@ the addressbook has been updated we can use make_:
 
 See :gist:`340875`
 
-Using this method allows us to continue using ``abook`` while having simple
-access to our contacts from within ``sup``.  This is incredibly useful as it
-means we can continue to use ``abook`` for other things too, see
-:doc:`Kick_me_birthday_reminders`.
+Using this method allows us to continue using :command:`abook` while having
+simple access to our contacts from within :command:`sup`.  This is incredibly
+useful as it means we can continue to use :command:`abook` for other things
+too, see :doc:`Kick_me_birthday_reminders`.
 
 .. _Sup: http://sup.rubyforge.org/
 .. _mutt: http://www.mutt.org/

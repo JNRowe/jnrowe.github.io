@@ -13,27 +13,27 @@ Tony Collins asks on the EADS Linux list:
 My answer is to combine the excellent abook_ and remind_ tools in to a really
 cool solution that nags you about birthdays every time you login.
 
-For those that haven’t used it, ``abook`` is a simple ncurses_ based address
-book.  For some years now I’ve been using ``abook`` to manage my personal
-address book, as it is both small and quite featureful.  The address file is in
-a standard ``ini`` format that I can easily import from and export to
-practically anything with only a small Python_ script using ConfigParser_.
+For those that haven’t used it, :command:`abook` is a simple ncurses_ based
+address book.  For some years now I’ve been using :command:`abook` to manage my
+personal address book, as it is both small and quite featureful.  The address
+file is in a standard ``ini`` format that I can easily import from and export
+to practically anything with only a small Python_ script using ConfigParser_.
 
-``remind`` is a functional **to the point of insanity** text-based reminder
-tool.  I use it mainly to remind me of tasks that need completing when I login,
-although I do have a hook in awesome_ to display the ``remind`` output at other
-times.  Again the file format is quite sensible which makes writing importers
-and exporters simple enough.  As an example, I generate my
-``~/.reminders.d/meetings`` file from a hCalender_ page.
+:command:`remind` is a functional **to the point of insanity** text-based
+reminder tool.  I use it mainly to remind me of tasks that need completing when
+I login, although I do have a hook in awesome_ to display the :command:`remind`
+output at other times.  Again the file format is quite sensible which makes
+writing importers and exporters simple enough.  As an example, I generate my
+:file:`~/.reminders.d/meetings` file from a hCalender_ page.
 
 .. image:: /.static/2009-09-26-abook_screenshot-mini.png
    :alt: abook displaying custom tab
 
-Now the birthday trick is a cool one, ``abook`` has a number of custom fields
-you can use for anything you like.  I use ``customfield 2`` to store birthdays
-in ISO-8601 format as in “1974-04-12”.  So that we see the correct field name in
-the user interface instead of just ``Custom2`` add the following to your
-``~/.abook/abookrc``:
+Now the birthday trick is a cool one, :command:`abook` has a number of custom
+fields you can use for anything you like.  I use ``customfield 2`` to store
+birthdays in ISO-8601 format as in “1974-04-12”.  So that we see the correct
+field name in the user interface instead of just ``Custom2`` add the following
+to your :file:`~/.abook/abookrc`:
 
 .. code-block:: text
 
@@ -41,8 +41,8 @@ the user interface instead of just ``Custom2`` add the following to your
 
 See :gist:`198015`
 
-A little ``python`` script is all that is needed to generate a reminder input
-file from our address book now.
+A little :command:`python` script is all that is needed to generate
+a :command:`remind` input file from our address book now.
 
 .. code-block:: python
 
@@ -74,8 +74,8 @@ file from our address book now.
 
 See :gist:`198018`
 
-I use the following make_ snippet in my ``~/Makefile`` to generate the
-``~/.reminders.d/birthdays`` file:
+I use the following make_ snippet in my :file:`~/Makefile` to generate the
+:file:`~/.reminders.d/birthdays` file:
 
 .. code-block:: make
 
@@ -85,8 +85,8 @@ I use the following make_ snippet in my ``~/Makefile`` to generate the
 
 See :gist:`198019`
 
-And finally, we need to tell ``remind`` to include our newly created file by
-editing ``~/.reminders``:
+And finally, we need to tell :command:`remind` to include our newly created
+file by editing :file:`~/.reminders`:
 
 .. code-block:: text
 
@@ -97,10 +97,11 @@ See :gist:`198020`
 .. image:: /.static/2009-09-26-remind_screenshot.png
    :alt: shell login screenshot
 
-You could trigger a rebuild in your ``~/.bashrc`` before you call ``rem`` to see
-the reminders, so they are always up to date at login.  Or, you could be like me
-and have a post commit hook for git_ to manage this...  because you are keeping
-your home directory version controlled as a sanity measure I hope!
+You could trigger a rebuild in your :file:`~/.bashrc` before you call
+:command:`rem` to see the reminders, so they are always up to date at login.
+Or, you could be like me and have a post commit hook for git_ to manage this…
+because you are keeping your home directory version controlled as a sanity
+measure I hope!
 
 .. _abook: http://abook.sourceforge.net/
 .. _remind: http://www.roaringpenguin.com/products/remind

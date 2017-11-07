@@ -58,8 +58,9 @@ We we can fix the problem with the following simple change and a call to
 .. note::
 
    Of course, you should fix the package properly and send the fix upstream but
-   this is just to prove a point.  Calling ``die`` with ``sed`` there isn’t
-   recommended and is practically pointless, but it is the style upstream.
+   this is just to prove a point.  Calling :command:`die` with :command:`sed`
+   there isn’t recommended and is practically pointless, but it is the style
+   upstream.
 
 I have to mention a small downside here however, because very few people seem to
 test ``portage``’s binary package support you’ll occasionally have to do some
@@ -134,7 +135,7 @@ Wrapping up
 It is true that you really can not always see the forest for trees.
 
 Had recent events not clouded my vision I would have commented on the train
-wreck that is ``webapp.eclass`` and ``app-admin/webapp-config`` in
+wreck that is :file:`webapp.eclass` and :file:`app-admin/webapp-config` in
 :doc:`dropping_gentoo`.  It sucked tonnes and tonnes of time away until we
 eventually just trashed any package that interacted with it and moved on.
 

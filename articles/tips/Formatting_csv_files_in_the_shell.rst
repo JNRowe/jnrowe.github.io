@@ -50,8 +50,8 @@ the files.  Or, as in the output below, the total size of all the :abbr:`PNG
     Total size of PNG files: 15808
 
 In the original question on how to process |CSV| files all we really need to
-do is get the data in to a state for ``column`` to process, and we can use
-tr_ to do that.  An example using a small chunk of the network log on this
+do is get the data in to a state for :command:`column` to process, and we can
+use tr_ to do that.  An example using a small chunk of the network log on this
 computer that we wish to format and calculate totals for could be::
 
     $ cat stats

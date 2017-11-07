@@ -28,16 +28,17 @@ a netbook without having to fire up the gimp_.
 
 See :gist:`198013`
 
-The initial ``convert`` command resizes ``bc.xpm`` from the expose theme to 1024x20
-pixels, 1024 being the screen width and 20 being the height of my main wibox in
-awesome.  We must suffix the ``-scale`` option’s argument with ``!`` to tell
-``convert`` to ignore the image’s aspect ratio when resizing, without this the
-command will not produce an image at the size we expect.
+The initial :command:`convert` command resizes :file:`bc.xpm` from the expose
+theme to 1024x20 pixels, 1024 being the screen width and 20 being the height of
+my main wibox in awesome.  We must suffix the :option:`-scale` option’s
+argument with ``!`` to tell :command:`convert` to ignore the image’s aspect
+ratio when resizing, without this the command will not produce an image at the
+size we expect.
 
-The second command tells ImageMagick’s ``composite`` that we wish to paste our
-newly generated image on top ``backdrop.png``, we could specify any location we
-want with the ``-gravity`` option but I have my wibox on the top of the screen so
-``north`` is correct for me.
+The second command tells ImageMagick’s :command:`composite` that we wish to
+paste our newly generated image on top :file:`backdrop.png`, we could specify
+any location we want with the :option:`-gravity` option but I have my wibox on
+the top of the screen so ``north`` is correct for me.
 
 With that done we have an image with our normal wallpaper and wibox sized chunk
 with our theme’s background.  All we need to do now is tell awesome to make our
@@ -51,7 +52,7 @@ theme’s background.
 See :gist:`198014`
 
 Colours are specified in the de facto standard format of
-``#(red)(green)(blue)(alpha)``, the ``00`` value for alpha in the above example
+:samp:`#[{red}][{green}][{blue}][{alpha}]``, the ``00`` value for alpha in the above example
 means we want a fully transparent theme background.  You could include some
 colour values and varying levels of alpha transparency to tint the background
 image, however that could also be achieved with ImageMagick when building the

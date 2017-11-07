@@ -49,14 +49,15 @@ by default.
     $ tr '\000'  ' ' < /proc/9992/cmdline
     /usr/bin/urxvtd -q -f -o
 
-The ``wmctrl`` output has five aligned columns.  The first is the window id, the
-second the desktop is visible on, the third is the process id, the fourth is the
-client machine and the fifth is the window’s title string.  And with the ``xprop``
-example we must select a window with the mouse when calling ``xprop``, and then we
-pluck the process id from the output.
+The :command:`wmctrl` output has five aligned columns.  The first is the window
+id, the second the desktop is visible on, the third is the process id, the
+fourth is the client machine and the fifth is the window’s title string.  And
+with the :command:`xprop` example we must select a window with the mouse when
+calling :command:`xprop`, and then we pluck the process id from the output.
 
-The ``cmdline`` value for the process from procfs_ is finally read.  The ``tr``
-command is needed because options are separated by null terminators.
+The ``cmdline`` value for the process from procfs_ is finally read.  The
+:command:`tr` command is needed because options are separated by null
+terminators.
 
 The problems
 ------------
@@ -64,14 +65,16 @@ The problems
 Back to the original question and Rach was looking for a way to stop the window
 from showing up, the immediate response to the annoying window problem is to
 find its process id and send it a ``SIGTERM``.  It seems like a reasonable idea,
-but I’ve been choosing the ``urxvtd`` examples on purpose to prove a point.
+but I’ve been choosing the :command:`urxvtd` examples on purpose to prove
+a point.
 
-``urxvtd`` is the terminal daemon provided by rxvt-unicode_, all terminals that
-are spawned by it will have the same ``_NET_WM_PID`` value and ``WM_COMMAND``
-string.  This isn’t just an issue with ``urxvtd`` either, it happens with all
-applications that operate in this way.  Sending a ``SIGTERM`` to every terminal
-opened by ``urxvtd`` probably isn’t what we would want to do, so you should
-always think very carefully before sending terminate signals.
+:command:`urxvtd` is the terminal daemon provided by rxvt-unicode_, all
+terminals that are spawned by it will have the same ``_NET_WM_PID`` value and
+``WM_COMMAND`` string.  This isn’t just an issue with :command:`urxvtd` either,
+it happens with all applications that operate in this way.  Sending
+a ``SIGTERM`` to every terminal opened by :command:`urxvtd` probably isn’t what
+we would want to do, so you should always think very carefully before sending
+terminate signals.
 
 .. _firefox: http://www.mozilla.com/firefox
 .. _gimp: http://www.gimp.org/

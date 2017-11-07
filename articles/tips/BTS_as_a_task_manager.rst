@@ -19,36 +19,36 @@ Now, I’m not suggesting installing something complex and convoluted like
 Bugzilla_ just for keeping track of your shopping lists or remembering to
 charge the spare battery for your phone.  There are quite a few lightweight
 systems available, ditz_ and `Bugs Everywhere`_ being two examples.  There is
-also a ``ditz`` inspired project, written in Python_, called pitz_ that is in
-active development.  And fossil_ is pretty cool if you’re looking for
+also a :command:`ditz` inspired project, written in Python_, called pitz_ that
+is in active development.  And fossil_ is pretty cool if you’re looking for
 a standalone wiki, |BTS| and |VCS| in one.
 
 .. note::
-   If you’re a Gentoo_ user you can install ``ditz`` using
-   the ebuild from my overlay_.
+   If you’re a Gentoo_ user you can install :command:`ditz` using the ebuild
+   from my overlay_.
 
 I’m currently in the process of switching away from :abbr:`be (Bugs
 Everywhere)`, but it can serve as an example quite well.  Unfortunately, there
 are no releases currently being made so you will need to install a recent
-version of ``bzr`` to download it.  Don’t worry though you aren’t restricted to
-``bzr`` to use it.
+version of :command:`bzr` to download it.  Don’t worry though you aren’t
+restricted to :command:`bzr` to use it.
 
 .. note::
    Colleagues from work can grab Dan’s ``be`` branch directly from our package
-   repository, it doesn’t require ``bzr`` and it fixes quite a few usage
+   repository, it doesn’t require :command:`bzr` and it fixes quite a few usage
    problems(it is also much faster).  Just remember that it has diverged
    massively from the upstream code, so you won’t be able to use it to work with
    bug databases created by the upstream project.
 
-The following examples use an older version of ``be`` that you can download as
-a tarball_ and doesn’t require ``bzr``.
+The following examples use an older version of :command:`be` that you can
+download as a tarball_ and doesn’t require :command:`bzr`.
 
-Setting ``be`` up
------------------
+Setting :command:`be` up
+------------------------
 
-Before we use ``be`` we must prepare it.  In the example that follows we’re
-going to create a new directory under the control of git_, and tell ``be`` we
-wish to use it in there::
+Before we use :command:`be` we must prepare it.  In the example that follows
+we’re going to create a new directory under the control of git_, and tell
+:command:`be` we wish to use it in there::
 
     $ mkdir be_test; cd be_test
     $ git init
@@ -92,18 +92,18 @@ Querying bugs
     ec4:os: This is a second bug
     a09:om: This is a test bug
 
-The ``be list`` output consists of three fields separated by colons and they
-are: bug identifier, status and title.  The first character of the  status field
-is an ``o`` telling us the bugs are marked as open, and the second character is
-the severity indicator(where the ``s`` for bug ``ec4`` tells us it is marked as
-serious).
+The :command:`be list` output consists of three fields separated by colons and
+they are: bug identifier, status and title.  The first character of the  status
+field is an ``o`` telling us the bugs are marked as open, and the second
+character is the severity indicator(where the ``s`` for bug ``ec4`` tells us it
+is marked as serious).
 
-You can also limit the bugs shown with ``be list`` by specifying severities with
-``-v``.  Or bugs that are assigned to a certain user with ``-a``, and you can
-use ``-m`` to list bugs assigned to yourself.
+You can also limit the bugs shown with :command:`be list` by specifying
+severities with :option:`-v`.  Or bugs that are assigned to a certain user with
+:option:`-a`, and you can use :option:`-m` to list bugs assigned to yourself.
 
 When we wish to inspect individual bugs, to see there full status or comments,
-we use the ``be show`` command:
+we use the :command:`be show` command:
 
 ::
 
@@ -138,12 +138,12 @@ we use the ``be show`` command:
 Editing bugs
 ------------
 
-We can change the bug status with ``be status``, see the output from ``be help
-status`` for available values.
+We can change the bug status with :command:`be status`, see the output from
+:command:`be help status` for available values.
 
-Once bugs are marked as fixed they no longer show up in the default ``be list``
-output, but we can still view them with ``be show`` or by calling ``be list``
-with filtering options.
+Once bugs are marked as fixed they no longer show up in the default
+:command:`be list` output, but we can still view them with :command:`be show`
+or by calling :command:`be list` with filtering options.
 
 ::
 
@@ -170,16 +170,16 @@ with filtering options.
 Conclusions
 -----------
 
-That really is all it takes to use ``be``, and that is why I find a |BTS| to
-be a nice solution for managing all kinds of random tasks.  I have a Bugs
-Everywhere database in my home directory that over the past year has stored
-just over 600 bugs from shopping lists to actual bugs with my configurations
-files, and I’ve apparently managed to complete 95% of them!
+That really is all it takes to use :command:`be`, and that is why I find
+a |BTS| to be a nice solution for managing all kinds of random tasks.  I have
+a Bugs Everywhere database in my home directory that over the past year has
+stored just over 600 bugs from shopping lists to actual bugs with my
+configurations files, and I’ve apparently managed to complete 95% of them!
 
 Bonus material
 --------------
 
-One of the little tricks I like to do is override the ``cd`` command to
+One of the little tricks I like to do is override the :command:`cd` command to
 automatically display the bug list when I enter a directory that contains a Bugs
 Everywhere database, and it is very simple to do:
 

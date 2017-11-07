@@ -58,14 +58,16 @@ addresses out with sed_:
 
 .. warning::
 
-    You shouldn’t parse |XML| with tools like ``sed`` or ``awk``.  There are
-    plenty of |XML| processing tools available, and unlike ``sed`` they
-    shouldn’t fail with files that contain namespaces or other |XML| features.
-    Now I’ve said that, carry on using ``sed`` like I often do ;)
+    You shouldn’t parse |XML| with tools like :command:`sed` or :command:`awk`.
+    There are plenty of |XML| processing tools available, and unlike
+    :command:`sed` they shouldn’t fail with files that contain namespaces or
+    other |XML| features.  Now I’ve said that, carry on using :command:`sed`
+    like I often do ;)
 
 Once we have some way of getting at the email addresses we just need to add the
-filters to ``mutt``.  For those of us who use ``mutt`` the normal approach to
-prioritising in the gmail way is to use either colouring_ or scoring_:
+filters to :command:`mutt`.  For those of us who use :command:`mutt` the normal
+approach to prioritising in the gmail way is to use either colouring_ or
+scoring_:
 
 .. code-block:: text
 
@@ -85,11 +87,11 @@ in the mail index, the above ``index_format`` setting is the one I currently use
 and it can be seen in the screenshot on the right.
 
 I’m sure we’d prefer to automate the generation of the rules, and we can
-quickly generate a list for ``mutt`` using our favourite |XML| processing
-tool.  Today I’m using ruby_, because I know it is installed on Ryan’s
-system.  We’re going to keep the identifier data from the Google export just
-in case we decide to re-import our rules from ``mutt`` at some point in the
-future:
+quickly generate a list for :command:`mutt` using our favourite |XML|
+processing tool.  Today I’m using ruby_, because I know it is installed on
+Ryan’s system.  We’re going to keep the identifier data from the Google export
+just in case we decide to re-import our rules from :command:`mutt` at some
+point in the future:
 
 .. code-block:: ruby
 
@@ -106,9 +108,9 @@ future:
 
 See :gist:`205052`
 
-Calling that script on the example data from above yields a small ``mutt``
-configuration file that we can include in our mutt setup by adding ``source
-<file_location>`` to our ``~/.muttrc``.
+Calling that script on the example data from above yields a small
+:command:`mutt` configuration file that we can include in our mutt setup by
+adding ``source <file_location>`` to our :file:`~/.muttrc`.
 
 .. code-block:: text
 

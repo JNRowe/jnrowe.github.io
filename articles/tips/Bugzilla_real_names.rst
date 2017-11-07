@@ -6,8 +6,9 @@ Bugzilla mail with real names
 
 John Bateman rants on the EADS Linux list:
 
-    Bugzilla_ annoys the hell out of me, why I can’t just choose “spoof From
-    address” in bugspam is beyond me.  It makes filtering such a chore!!
+    Bugzilla_ annoys the hell out of me, why I can’t just choose “spoof
+    :mailheader:`From` address” in bugspam is beyond me.  It makes filtering
+    such a chore!!
 
 I agree, and I’ve long since decided to fix the problem locally.  There are
 unfortunately a couple of small prerequisites for using my method that you may
@@ -15,22 +16,23 @@ not have.  The first is that you need to be able to filter the content of the
 mail easily, and the second is that you install
 lbdb_.
 
-``lbdb`` is a small tool designed for handling mail addresses in mutt_, but it
-does not require you to use or even install mutt.  What we are going to do is
-use ``lbdb`` and our own incoming mail to seed an email-to-name database for our
-bugspam filtering.  We don’t even need to configure lbdb to use it for our
-purposes, although I do recommend giving the package a try even if you use
-another mail client.
+:command:`lbdb` is a small tool designed for handling mail addresses in mutt_,
+but it does not require you to use or even install :command:`mutt`.  What we
+are going to do is use :command:`lbdb` and our own incoming mail to seed an
+email-to-name database for our bugspam filtering.  We don’t even need to
+configure lbdb to use it for our purposes, although I do recommend giving the
+package a try even if you use another mail client.
 
-The ``lbdb`` tool we want to use is ``lbdb-fetchaddr`` which is designed to
-generate an address search database for the ``lbdb`` ``m_inmail`` method.
-``lbdb-fetchaddr`` keeps a text database of all the names, addresses and the
-last seen date of every address we pass through it.  This allows our Bugzilla
-filter to work without us having to generate our own email-to-name list assuming
-we receive mail from the bug commenter either personally or on a list, at the
-cost of increased(albeit still negligible) processing time.  I use maildrop_ to
-filter my mail and to tell the ``maildrop`` :abbr:`MDA (Mail Delivery Agent)` to
-update the ``lbdb`` database we add a simple rule to our ``~/.mailfilter``:
+The :command:`lbdb` tool we want to use is :command:`lbdb-fetchaddr` which is
+designed to generate an address search database for the :command:`lbdb`
+``m_inmail`` method.  :command:`lbdb-fetchaddr` keeps a text database of all
+the names, addresses and the last seen date of every address we pass through
+it.  This allows our Bugzilla filter to work without us having to generate our
+own email-to-name list assuming we receive mail from the bug commenter either
+personally or on a list, at the cost of increased(albeit still negligible)
+processing time.  I use maildrop_ to filter my mail and to tell the
+:command:`maildrop` :abbr:`MDA (Mail Delivery Agent)` to update the
+:command:`lbdb` database we add a simple rule to our :file:`~/.mailfilter`:
 
 .. code-block:: text
 
@@ -39,21 +41,21 @@ update the ``lbdb`` database we add a simple rule to our ``~/.mailfilter``:
 
 See :gist:`198021`
 
-This tells ``maildrop`` to pass all mails less than 32k in size through
-``lbdq-fetchaddr``, and we specify a nice ISO-8601 time format for easy sorting
-and parsing should the need arise.  Now every mail that is delivered with
-``maildrop`` and isn’t too large will have the sender name and address recorded
-in ``~/.lbdb/m_inmail.list``.
+This tells :command:`maildrop` to pass all mails less than 32k in size through
+:command:`lbdq-fetchaddr`, and we specify a nice ISO-8601 time format for easy
+sorting and parsing should the need arise.  Now every mail that is delivered
+with :command:`maildrop` and isn’t too large will have the sender name and
+address recorded in :file:`~/.lbdb/m_inmail.list`.
 
 Now on to the actual filtering script, which is is written in Python_.  It only
 uses modules from the Python standard library, so you don’t need to install
-anything else.  I have tested it with
-25000 unique entries in ``~/.lbdb/m_inmail.list`` and it still takes less than
-a thirtieth of a second to run the filter on my desktop, so processing the
-database each time we start up isn’t really an issue.  Also, the few small tests
-I’ve done suggest that using “real” database engines doesn’t help and the only
-way to speed it up significantly would be to write a small daemon to process the
-mail which seems more than a little overkill to me.
+anything else.  I have tested it with 25000 unique entries in
+:file:`~/.lbdb/m_inmail.list` and it still takes less than a thirtieth of
+a second to run the filter on my desktop, so processing the database each time
+we start up isn’t really an issue.  Also, the few small tests I’ve done suggest
+that using “real” database engines doesn’t help and the only way to speed it up
+significantly would be to write a small daemon to process the mail which seems
+more than a little overkill to me.
 
 .. code-block:: python
 
@@ -96,9 +98,9 @@ mail which seems more than a little overkill to me.
 
 See :gist:`198022`
 
-The final addition to our ``~/.mailfilter`` file enables our little Python
-filter to process mail from Bugzilla and change its ``from`` address if we have
-the information in the ``~/.lbdb/m_inmail.list`` database.
+The final addition to our :file:`~/.mailfilter` file enables our little Python
+filter to process mail from Bugzilla and change its :mailheader:`From` address
+if we have the information in the :file:`~/.lbdb/m_inmail.list` database.
 
 .. code-block:: text
 

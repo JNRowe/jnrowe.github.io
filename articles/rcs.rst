@@ -11,8 +11,8 @@ Introduction to |RCS|
    I’ve resurrected this text from my old UKFSN site because a couple of people
    asked me to, but I wouldn’t recommend using |RCS| to anyone at this point.
    It is mainly to help people who need to understand |RCS| because they have
-   no choice, for example Gentoo users who are stuck with ``dispatch-conf`` (or
-   so my mails tell me).
+   no choice, for example Gentoo users who are stuck with
+   :command:`dispatch-conf` (or so my mails tell me).
 
 Abstract
 --------
@@ -67,9 +67,9 @@ The |RCS| directory holds the |RCS| control files, they contain all the data
     initial revision: 1.1
     done
 
-The command ``ci`` (check in) is where the magic of |RCS| takes place. We have
-decided we want to make a snapshot of our file, ``myscript.sh``, and use ``ci``
-to add the file to revision control.
+The command :command:`ci` (check in) is where the magic of |RCS| takes place.
+We have decided we want to make a snapshot of our file, :file:`myscript.sh`,
+and use :command:`ci` to add the file to revision control.
 
 ::
 
@@ -98,9 +98,9 @@ a ``,v``. This is the file |RCS| uses to store all of its data in.
     drwxr-xr-x    2 james    james        1024 Nov  4 11:29 RCS
     -r--r--r--    1 james    james          95 Nov  4 11:29 myscript.sh
 
-The command ``co`` (check out) pulls a current version(by default) from the
-|RCS| repository and places it in the current directory. Default behaviour is
-to check out a read-only version of the file.
+The command :command:`co` (check out) pulls a current version(by default) from
+the |RCS| repository and places it in the current directory. Default behaviour
+is to check out a read-only version of the file.
 
 ::
 
@@ -109,16 +109,18 @@ to check out a read-only version of the file.
     revision 1.1 (locked)
     done
 
-The ``-l`` option to ``co`` (and also ``ci`` ) is used to lock the file. This
-file now becomes a working file, which is writable, and it also means other
-people can’t edit it until you have released it or checked it in again.
+The :option:`-l` option to :command:`co` (and also :command:`ci` ) is used to
+lock the file. This file now becomes a working file, which is writable, and it
+also means other people can’t edit it until you have released it or checked it
+in again.
 
-Blindly using the ``-l`` option to ``ci``/``co`` is not advisable, you should
-get in to the habit now of only locking files you are working on.  |RCS| uses
-locking to block other users from checking in changes and will cause much grief
-if you use |RCS| on multi-user projects. It is much better to use ``-u`` (or
-unlocked) when you ``ci`` in new files/changes this way you will have access to
-a read-only version of the file and it will allow other users to edit it.
+Blindly using the :option:`-l` option to :command:`ci`/:command:`co` is not
+advisable, you should get in to the habit now of only locking files you are
+working on.  |RCS| uses locking to block other users from checking in changes
+and will cause much grief if you use |RCS| on multi-user projects. It is much
+better to use :option:`-u` (or unlocked) when you :command:`ci` in new
+files/changes this way you will have access to a read-only version of the file
+and it will allow other users to edit it.
 
 ::
 
@@ -139,11 +141,11 @@ There are many keywords available, including:
 
 - ``$Author$`` - the name of the person who did the check in
 - ``$Header$`` - the same as ``$Id$`` but including the path for the file
-- ``$Log$`` - a full changelog for file from the ``ci`` annotations
+- ``$Log$`` - a full changelog for file from the :command:`ci` annotations
 
 Although using ``$Log$`` seems like a good idea it does mean the size of the
 file is increased a huge amount. All the changelog data is available with the
-``rlog`` command at any time and without filling the source file.
+:command:`rlog` command at any time and without filling the source file.
 
 ::
 
@@ -184,11 +186,12 @@ works.
     +echo "Hello ${USER}!"
      exit 0
 
-The command ``rcsdiff`` supplies an easy way to check changes in a file. Using
-``rcsdiff filename`` will output a generic context-free diff(and a small |RCS|
-header to ``STDERR`` ), or you can pass normal ``diff`` (1) options to
-``rcsdiff``.  In the second ``rcsdiff`` command the ``diff`` option ``-u`` is
-given to tell ``rcsdiff`` it should output a unified context diff.
+The command :command:`rcsdiff` supplies an easy way to check changes in a file.
+Using ``rcsdiff filename`` will output a generic context-free diff(and a small
+|RCS| header to ``stderr`` ), or you can pass normal :command:`diff` options to
+:command:`rcsdiff`.  In the second :command:`rcsdiff` command the
+:command:`diff` option :option:`-u` is given to tell :command:`rcsdiff` it
+should output a unified context diff.
 
 ::
 
@@ -202,7 +205,7 @@ given to tell ``rcsdiff`` it should output a unified context diff.
 
 So now we have seen the changes made to the file, and are happy with them, we
 check in our new revision.  |RCS| asks for a log entry, this will make our
-changelog output later. You can cancel the check in using the normal ``C-c``
+changelog output later. You can cancel the check in using the normal :kbd:`C-c`
 (control C) method.
 
 ::
@@ -240,20 +243,22 @@ the ``$Id$`` tag.
     Initial revision
     =============================================================================
 
-The command ``rlog`` provides quick access to revision history for files, it
-accepts multiple files per command line(using normal shell wild-carding) and
-provides all the information |RCS| has on a file. Should you ever need to only
-know the changes that were made to the current revision you can use the ``-r``
-option as in ``rlog -r filename``. You can also check changes between revisions
-of files using the command like ``rlog -r1.1,1.2 filename``.
+The command :command:`rlog` provides quick access to revision history for
+files, it accepts multiple files per command line(using normal shell
+wild-carding) and provides all the information |RCS| has on a file. Should you
+ever need to only know the changes that were made to the current revision you
+can use the :option:`-r` option as in ``rlog -r filename``. You can also check
+changes between revisions of files using the command like ``rlog -r1.1,1.2
+filename``.
 
-The ``-r`` option of |RCS| is one of its most powerful, it is available in all
-the commands and shares the same semantics throughout. If ``-r`` is used with
-``ci`` it forces a bump, for example ``ci -r1.7 filename`` will force |RCS| to
-check in filename as revision 1.7. Used with ``co`` you can pull any revision
-of the file from |RCS| history. Used with ``rcsdiff`` you can create a diff
-between any revision under |RCS|, for example ``rcsdiff -r1.1,1.8 -u filename``
-will output a unified context diff of the changes from revision
+The :option:`-r` option of |RCS| is one of its most powerful, it is available
+in all the commands and shares the same semantics throughout. If :option:`-r`
+is used with :command:`ci` it forces a bump, for example ``ci -r1.7 filename``
+will force |RCS| to check in filename as revision 1.7. Used with :command:`co`
+you can pull any revision of the file from |RCS| history. Used with
+:command:`rcsdiff` you can create a diff between any revision under |RCS|, for
+example ``rcsdiff -r1.1,1.8 -u filename`` will output a unified context diff of
+the changes from revision
 1.1 to 1.8.
 
 |RCS| really is that simple to use, it does have many more options that are not
@@ -272,9 +277,9 @@ To recap on |RCS| usage
 - Make the ``RCS`` directory.
 - Insert |RCS| tags, such as ``$Id$``, in to your original files to help you
   keep track.  - Edit your files.
-- Use ``ci`` to commit your revisions to the |RCS| history and annotate changes
-  made. You can also use ``rcsdiff`` to see what changes you have made, maybe
-  to help you build your changelog information.
+- Use :command:`ci` to commit your revisions to the |RCS| history and annotate
+  changes made. You can also use :command:`rcsdiff` to see what changes you
+  have made, maybe to help you build your changelog information.
 
 Advanced
 --------
@@ -287,12 +292,12 @@ Advanced
 There are many tools available that can help you to manage your |RCS| files,
 including the |RCS| status monitor rcsi_ and blame_ |RCS| file annotator.
 
-``rcsi`` will display information about the files within a directory.
+:command:`rcsi` will display information about the files within a directory.
 
-The screenshot to the right shows ``rcsi`` in use on a sample partially |RCS|
-controlled directory.  All the information it contains should be fairly self
-explanatory, and even if it isn’t the package comes with a comprehensive man
-page and README.
+The screenshot to the right shows :command:`rcsi` in use on a sample partially
+|RCS| controlled directory.  All the information it contains should be fairly
+self explanatory, and even if it isn’t the package comes with a comprehensive
+man page and :file:`README`.
 
 .. code-block:: text
 
@@ -307,12 +312,13 @@ page and README.
     1.4          (root     21-Jan-06):                 mkdir -p /tmp/.{ICE,X11}-unix
 
 The above excerpt is a sample of the output from blame_ being run against
-a config file which is maintained using |RCS| by Gentoo’s ``dispatch-conf``
-tool.  It allows you to simply see which revision introduced a change to
-a specific line.  You can also choose to annotate specific |RCS| revisions
-using the ``--revision`` option, or specific dates with ``--date`` option.
-blame_ has also has a very comprehensive manual page included with it which you
-should read if you want to enjoy its full power.
+a config file which is maintained using |RCS| by Gentoo’s
+:command:`dispatch-conf` tool.  It allows you to simply see which revision
+introduced a change to a specific line.  You can also choose to annotate
+specific |RCS| revisions using the :option:`--revision` option, or specific
+dates with :option:`--date` option.  blame_ has also has a very comprehensive
+manual page included with it which you should read if you want to enjoy its
+full power.
 
 There are many other tools available which use |RCS| as a backend, and as long
 as you can access the |RCS| data files blame can help to understand what is

@@ -12,10 +12,10 @@ internal Linux list if it supports Linux.
 
 I’ve had a Huawei USB modem for about six months now and it works fine in Linux,
 although it is probably a slightly different model.  The box and case for mine
-claims it is a E160G, whereas ``lsusb`` from usbutils_ claims it is a E220.  The
-manufacturers of these types of products routinely change the components and
-models without updating the product codes, so you’ll have to wait until you plug
-it in to see what model it actually is.
+claims it is a E160G, whereas :command:`lsusb` from usbutils_ claims it is
+a E220.  The manufacturers of these types of products routinely change the
+components and models without updating the product codes, so you’ll have to
+wait until you plug it in to see what model it actually is.
 
 As for how to make it work?  Simply use a distribution that comes with
 NetworkManager_ and NetworkManager’s `mobile broadband provider database`_.
@@ -43,8 +43,8 @@ The driver can be found on the device itself because it also acts a small
 is actually pretty clever, assuming it works as advertised, as it can
 self-install its own driver when plugged in.
 
-If we find the device name with ``dmesg`` we can mount it, and pull the |APN|
-from the Windows driver:
+If we find the device name with :command:`dmesg` we can mount it, and pull the
+|APN| from the Windows driver:
 
 .. code-block:: bash
 
@@ -54,10 +54,10 @@ from the Windows driver:
 
 See :gist:`212738`
 
-The ``unpack`` tool from above is just a wrapper around common archivers, and
-the tool you actually need to extract the ``cab`` files is unshield_.
-Contrary to my first idea cabextract_ doesn’t work, as these files are
-actually made by ``installshield``.
+The :command:`unpack` tool from above is just a wrapper around common
+archivers, and the tool you actually need to extract the ``cab`` files is
+unshield_.  Contrary to my first idea cabextract_ doesn’t work, as these files
+are actually made by ``installshield``.
 
 With the |APN| in hand all we need to do now is configure our system.
 
@@ -78,14 +78,16 @@ probably used to use there is no point enabling the PPP compression options as
 they are not supported by mobile providers in general, partly because the data
 is already compressed.
 
-Then just rebuild the kernel, and check that the dongle shows up in ``dmesg``
-output when it is plugged in.  If it does we’re ready for the next step.
+Then just rebuild the kernel, and check that the dongle shows up in
+:command:`dmesg` output when it is plugged in.  If it does we’re ready for the
+next step.
 
 /etc/chatscripts/three
 ''''''''''''''''''''''
 
-We need a ``pppd`` chatscript for the connection, the format and settings of
-this file can be found in the ``chat(8)`` manpage.  My chatscript is below:
+We need a :command:`pppd` chatscript for the connection, the format and
+settings of this file can be found in the :manpage:`chat(8)` manpage.  My
+chatscript is below:
 
 .. code-block:: text
 
@@ -120,7 +122,7 @@ wasting time before you retry.
 ''''''''''''''''''''
 
 We also need a peer script, and the format of that file is described in the
-``pppd(8)`` manpage.  Mine can be used as an example:
+:manpage:`pppd(8)` manpage.  Mine can be used as an example:
 
 .. code-block:: text
 
@@ -138,17 +140,17 @@ We also need a peer script, and the format of that file is described in the
 See :gist:`212740`
 
 You may have to change your device settings if the dongle doesn’t show up as
-``/dev/ttyUSB0``, but other than that the file should be correct.
+:file:`/dev/ttyUSB0`, but other than that the file should be correct.
 
 Note that we don’t set a speed in our peer file, and this may appear unusual to
-you if you’ve configured ``pppd`` manually in the past.  The reason is that
-interface speed for USB modems is set by the kernel, and adding a value here is
-pointless.
+you if you’ve configured :command:`pppd` manually in the past.  The reason is
+that interface speed for USB modems is set by the kernel, and adding a value
+here is pointless.
 
 passwords
 '''''''''
 
-We don’t need to add an entry to ``chap-secrets`` or ``pap-secrets`` as
+We don’t need to add an entry to :file:`chap-secrets` or :file:`pap-secrets` as
 authentication isn’t required, but if you’re following along having chosen to
 use a configuration tool such as pppconfig_ just enter any values you wish as
 they’re silently ignored.
@@ -181,9 +183,9 @@ inserted if it will not always be connected.
    from green it has found a network signal and is ready to use.
 
 If the connection didn’t work correctly look at the debugging output in syslog
-and check the ``pppd`` manual page to look up the error codes.
+and check the :command:`pppd` manual page to look up the error codes.
 
-Happy, erm... mobility.
+Happy, erm… mobility.
 
 .. |APN| replace:: :abbr:`APN (Access Point Name)`
 

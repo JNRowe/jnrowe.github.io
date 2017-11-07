@@ -14,18 +14,19 @@ I’ve recently switched to Zsh_ as my login shell after
 9 years of using bash_, and for no particularly good reason either as they’re
 both great interactive shells.  I guess all the *Kool Kids* are doing it, and
 I’m just playing catchup.  The one side effect of that is I’m now scribbling
-tips about ``Zsh`` too...
+tips about :command:`zsh` too…
 
 In a screenshot I posted in our bugtracker — that was considerably less staged
-than the example above — one of my more visual hunks of ``Zsh`` configuration
-was visible, leading to the following question from Dan Wilson:
+than the example above — one of my more visual hunks of :command:`zsh`
+configuration was visible, leading to the following question from Dan Wilson:
 
-    Okay, ‘fess time.  How do you get ``git`` branch names in the prompt?  How
-    do you make the funky arrows show repo status?
+    Okay, ‘fess time.  How do you get :command:`git` branch names in the
+    prompt?  How do you make the funky arrows show repo status?
 
-Firstly, I use oh-my-zsh_ which is an excellent basis for ``Zsh`` configuration
-files.  My prompt settings work within that framework, although they could be
-converted to work with *plain* ``Zsh`` if you have the inclination.
+Firstly, I use oh-my-zsh_ which is an excellent basis for :command:`zsh`
+configuration files.  My prompt settings work within that framework, although
+they could be converted to work with *plain* :command:`zsh` if you have the
+inclination.
 
 If you want to see my entire “theme” file you can `clone my fork`_ and look at
 `oh-my-zsh/themes/jnrowe.zsh-theme`_.
@@ -33,11 +34,11 @@ If you want to see my entire “theme” file you can `clone my fork`_ and look 
 Branch names
 ------------
 
-``Zsh`` comes with some neat |VCS| integration, that is exceptionally
+:command:`zsh` comes with some neat |VCS| integration, that is exceptionally
 documented_ in the manual.  I use that code to enable branch names in my
 prompt, I use it directly instead of the code in ``oh-my-zsh`` that handles
-``git`` status because it doesn’t do what I want [yet].  I use a format that
-matches the default(``robbyrussell``) theme in ``oh-my-zsh``.
+:command:`git` status because it doesn’t do what I want [yet].  I use a format
+that matches the default(``robbyrussell``) theme in ``oh-my-zsh``.
 
 ::
 
@@ -51,7 +52,7 @@ matches the default(``robbyrussell``) theme in ``oh-my-zsh``.
 See :gist:`220796`
 
 Once we’ve configured ``vcs_info`` we just need to include
-``${vcs_info_msg_0_}`` somewhere in our prompt to display the |VCS| and
+:envvar:`${vcs_info_msg_0_}` somewhere in our prompt to display the |VCS| and
 current branch name.
 
 ``vcs_info`` works quite well, and supports many different systems(both common
@@ -60,18 +61,19 @@ I’ve used it with mercurial_ too, and it works well.  darcs_ also appears to
 work well, but it isn’t a system I use often enough to have tested it
 thoroughly.
 
-I tested ``bzr`` support while writing this but it is totally unusable because of
-just how painfully slow ``bzr`` is.  On my system it adds close to one and half
-seconds to every prompt display, although that could be improved if I wasn’t
-using conservative CPU scaling to save power.  As a comparison the ``git`` info
-takes less than a tenth of a second to calculate on the same system, and
-``mercurial`` around three times that which is most definitely still usable.
+I tested :command:`bzr` support while writing this but it is totally unusable
+because of just how painfully slow :command:`bzr` is.  On my system it adds
+close to one and half seconds to every prompt display, although that could be
+improved if I wasn’t using conservative CPU scaling to save power.  As
+a comparison the :command:`git` info takes less than a tenth of a second to
+calculate on the same system, and :command:`mercurial` around three times that
+which is most definitely still usable.
 
 .. note::
-   There is a ``use-simple`` setting for the ``bzr`` support that may make the
-   ``vcs_info`` functionality faster for you, albeit not noticeably on my system.
-   It is also the only |VCS| that has such a hack, which is quite telling in
-   itself.
+   There is a ``use-simple`` setting for the :command:`bzr` support that may
+   make the ``vcs_info`` functionality faster for you, albeit not noticeably on
+   my system.  It is also the only |VCS| that has such a hack, which is quite
+   telling in itself.
 
 Repository state
 ----------------
@@ -79,17 +81,17 @@ Repository state
 The “funky arrows” Dan asks about are dependent on the state of the current
 working directory as can be seen in the screenshot at the top of this page.
 
-+------------+----------------------------------------+
-| Identifier | Description                            |
-+============+========================================+
-| white →    | Not a ``git`` repository               |
-+------------+----------------------------------------+
-| green ▶    | Clean ``git`` repository               |
-+------------+----------------------------------------+
-| red ▶      | Staged changes in ``git`` repository   |
-+------------+----------------------------------------+
-| yellow ▶   | Unstaged changes in ``git`` repository |
-+------------+----------------------------------------+
++------------+-----------------------------------------------+
+| Identifier | Description                                   |
++============+===============================================+
+| white →    | Not a :command:`git` repository               |
++------------+-----------------------------------------------+
+| green ▶    | Clean :command:`git` repository               |
++------------+-----------------------------------------------+
+| red ▶      | Staged changes in :command:`git` repository   |
++------------+-----------------------------------------------+
+| yellow ▶   | Unstaged changes in :command:`git` repository |
++------------+-----------------------------------------------+
 
 Using these visual markers it is always obvious what state a directory is in,
 I’ve toyed with adding more but suspect the lack of complexity is what makes
@@ -117,8 +119,8 @@ status::
 
 See :gist:`220829`
 
-With this added the we just need to include ``$dir_status`` in our prompt and the
-status identifiers will be used.
+With this added the we just need to include :envvar:`$dir_status` in our prompt
+and the status identifiers will be used.
 
 If you are using a font which doesn’t display the characters correctly, either
 change the characters in the ``dir_status`` values or switch to a `better font`_

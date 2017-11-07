@@ -1,7 +1,7 @@
 Copyright information
 =====================
 
-:description: Copyright conditions for this site, and the ``git`` repository it is hosted in
+:description: Copyright conditions for this site, and the :command:`git` repository it is hosted in
 
 .. Can’t use figure because of custom attributes
 

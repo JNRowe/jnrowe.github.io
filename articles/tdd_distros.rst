@@ -91,7 +91,7 @@ the ``rails`` plugin contains the following snippet:
 
 The ``SRC_URI`` declaration says we need to fetch the file from
 ``http://www.vim.org/scripts/download_script.php?src_id=13800`` and name it
-locally as ``rails-4.3.zip``.  I’m sure you can guess what happened here,
+locally as :file:`rails-4.3.zip`.  I’m sure you can guess what happened here,
 someone saved a copy of the file locally for testing and forgot to update the
 ``src_id`` parameter correctly [#]_.  The result was an apparently new build
 that installed an older package release.
@@ -143,8 +143,8 @@ your tests.  You can also leverage your tests that are written in this way as
 documentation using the excellent Sphinx_ tool.
 
 The following script shows an extremely basic, yet fully functional, example of
-how to combine the ``doctest`` module’s :func:`~doctest.testfile` function with
-``shelldoctest``::
+how to combine the :mod:`doctest` module’s :func:`~doctest.testfile` function
+with ``shelldoctest``::
 
     #! /usr/bin/python -tt
     import doctest
