@@ -37,7 +37,7 @@ prompt, I use it directly instead of the code in ``oh-my-zsh`` that handles
 ``git`` status because it doesn’t do what I want [yet].  I use a format that
 matches the default(``robbyrussell``) theme in ``oh-my-zsh``.
 
-.. code-block:: bash
+.. code-block:: zsh
 
     autoload -Uz vcs_info
 
@@ -96,7 +96,7 @@ them so useful.
 To enable them we need to add a `precmd hook`_ to calculate the repository
 status:
 
-.. code-block:: bash
+.. code-block:: zsh
 
     autoload -U add-zsh-hook
     add-zsh-hook precmd prompt_jnrowe_precmd
@@ -104,11 +104,11 @@ status:
     prompt_jnrowe_precmd () {
         vcs_info
 
-        if [ "${vcs_info_msg_0_}" = "" ]; then
+        if [ -z "${vcs_info_msg_0_}" ]; then
             dir_status="%F{2}→%f"
-        elif [[ $(git diff --cached --name-status 2>/dev/null ) != "" ]]; then
+        elif [[ -n "$(git diff --cached --name-status 2>/dev/null )" ]]; then
             dir_status="%F{1}▶%f"
-        elif [[ $(git diff --name-status 2>/dev/null ) != "" ]]; then
+        elif [[ -n "$(git diff --name-status 2>/dev/null )" ]]; then
             dir_status="%F{3}▶%f"
         else
             dir_status="%F{2}▶%f"

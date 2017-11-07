@@ -189,7 +189,7 @@ Everywhere database, and it is very simple to do:
         local retval
         builtin cd "$@"
         retval=$?
-        [ ${retval} = 0 -a -d .be ] && be list
+        [[ ${retval} = 0 && -d .be ]] && be list
         return ${retval}
     }
 

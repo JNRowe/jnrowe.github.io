@@ -82,24 +82,24 @@ a similar question in ``#gentoo`` on Freenode a couple of months ago:
 .. code-block:: bash
 
     arch_unmask() {
-        local i done
-        if [ -z $1 ]
+        local s done
+        if [[ -z $1 ]]
         then
             echo "${FUNCNAME} <category/package> [arch]"
             return 1
         fi
-        for i in $(portageq envvar PORTDIR PORTDIR_OVERLAY)
+        for s in $(portageq envvar PORTDIR PORTDIR_OVERLAY)
         do
-            if [ -d $i/$1 ]
+            if [[ -d $s/$1 ]]
             then
                 echo $1 $2 >>/etc/portage/package.keywords/testing
                 done=1
                 break
             fi
         done
-        if [ -z "${done}" ]
+        if [[ -z "${done}" ]]
         then
-            echo "Doesn't exist \`$1'"
+            echo "Doesn't exist ‘$1’"
             return 1
         fi
     }
