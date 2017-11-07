@@ -33,7 +33,7 @@ The number one thing I've learnt is that a lot of the things I burnt time on
 were genuinely just burnt.  For example, news sites feel mostly pointless to
 me at this point.
 
-* Mainstream news is invariably a PR copy'n'paste fest, which is *really*
+* Popular news sources are invariably a PR copy'n'paste fest, which is *really*
   noticeable when you come back from a break and catch up on various feeds in
   one huge chunk.
 * Sites with a slightly more tech bias like HackerNews and its ilk are just
