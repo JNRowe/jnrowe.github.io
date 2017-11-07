@@ -4,7 +4,7 @@
 Theming mutt
 ============
 
-Jeff, a work colleague, asks via IRC:
+Jeff, a work colleague, asks via |IRC|:
 
     Can I make mutt_ use a blue statusbar in X and red in console? A different
     colour would make it easier to read with a transparent urxvt.

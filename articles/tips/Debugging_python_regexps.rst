@@ -1,8 +1,8 @@
 :date: 2009-10-29
 :tags: python
 
-Debugging Python regular expressions
-====================================
+Debugging Python |RegEx|
+========================
 
 .. highlight:: pycon
 

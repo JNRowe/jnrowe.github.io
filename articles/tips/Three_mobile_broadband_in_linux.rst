@@ -10,11 +10,11 @@ internal Linux list if it supports Linux.
     I’ve ordered the Huawei E220 as it was free.  Is it likely to work with
     Linux?  And, if so what should I be looking for to set it up?
 
-I’ve had a Huawei USB modem for about six months now and it works fine in Linux,
-although it is probably a slightly different model.  The box and case for mine
-claims it is a E160G, whereas :command:`lsusb` from usbutils_ claims it is
-a E220.  The manufacturers of these types of products routinely change the
-components and models without updating the product codes, so you’ll have to
+I’ve had a Huawei |USB| modem for about six months now and it works fine in
+Linux, although it is probably a slightly different model.  The box and case
+for mine claims it is a E160G, whereas :command:`lsusb` from usbutils_ claims
+it is a E220.  The manufacturers of these types of products routinely change
+the components and models without updating the product codes, so you’ll have to
 wait until you plug it in to see what model it actually is.
 
 As for how to make it work?  Simply use a distribution that comes with
@@ -74,9 +74,9 @@ can be found hidden away under the “USB Serial Converters” section in 2.6.31
 
 We also need ``CONFIG_PPP`` and ``CONFIG_PPP_ASYNC`` support, which can be found
 in the “Network devices” section of the config.  Unlike the old-style dialup you
-probably used to use there is no point enabling the PPP compression options as
-they are not supported by mobile providers in general, partly because the data
-is already compressed.
+probably used to use there is no point enabling the :abbr:`PPP (Point-to-Point
+Protocol)` compression options as they are not supported by mobile providers in
+general, partly because the data is already compressed.
 
 Then just rebuild the kernel, and check that the dongle shows up in
 :command:`dmesg` output when it is plugged in.  If it does we’re ready for the
@@ -144,7 +144,7 @@ You may have to change your device settings if the dongle doesn’t show up as
 
 Note that we don’t set a speed in our peer file, and this may appear unusual to
 you if you’ve configured :command:`pppd` manually in the past.  The reason is
-that interface speed for USB modems is set by the kernel, and adding a value
+that interface speed for |USB| modems is set by the kernel, and adding a value
 here is pointless.
 
 passwords
@@ -188,6 +188,7 @@ and check the :command:`pppd` manual page to look up the error codes.
 Happy, erm… mobility.
 
 .. |APN| replace:: :abbr:`APN (Access Point Name)`
+.. |USB| replace:: :abbr:`USB (Universal Serial Bus)`
 
 .. _Three: http://three.co.uk
 .. _usbutils: http://linux-usb.sourceforge.net/

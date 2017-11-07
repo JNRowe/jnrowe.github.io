@@ -1,15 +1,15 @@
 :date: 2011-06-13
 :tags: devel, testing
 
-TDD distro development
-======================
+|TDD| distro development
+========================
 
 .. highlight:: python
 
-Using :abbr:`TDD (Test Driven Development)` for distribution development is a
-hot topic in some of the more geeky circles I move in, and I’m very happy about
-this.  Anything that increases the robustness of my desktop computer, my phone
-or any other device I use is a great goal!
+Using |TDD| for distribution development is a hot topic in some of the more
+geeky circles I move in, and I’m very happy about this.  Anything that
+increases the robustness of my desktop computer, my phone or any other device
+I use is a great goal!
 
 Why?
 ----
@@ -174,6 +174,8 @@ a ``reST`` formatted file as follows:
 .. rubric:: Footnotes
 
 .. [#] Okay, it was me.  I’ll confess.
+
+.. |TDD| replace:: :abbr:`TDD (Test Driven Development)`
 
 .. _rails: http://www.vim.org/scripts/script.php?script_id=1567
 .. _vim scripts site: http://www.vim.org/scripts/script.php?script_id=1567

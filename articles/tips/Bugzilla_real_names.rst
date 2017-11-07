@@ -42,10 +42,10 @@ processing time.  I use maildrop_ to filter my mail and to tell the
 See :gist:`198021`
 
 This tells :command:`maildrop` to pass all mails less than 32k in size through
-:command:`lbdq-fetchaddr`, and we specify a nice ISO-8601 time format for easy
-sorting and parsing should the need arise.  Now every mail that is delivered
-with :command:`maildrop` and isn’t too large will have the sender name and
-address recorded in :file:`~/.lbdb/m_inmail.list`.
+:command:`lbdq-fetchaddr`, and we specify a nice |ISO|-8601 time format for
+easy sorting and parsing should the need arise.  Now every mail that is
+delivered with :command:`maildrop` and isn’t too large will have the sender
+name and address recorded in :file:`~/.lbdb/m_inmail.list`.
 
 Now on to the actual filtering script, which is is written in Python_.  It only
 uses modules from the Python standard library, so you don’t need to install

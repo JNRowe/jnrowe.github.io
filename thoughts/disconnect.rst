@@ -43,10 +43,11 @@ me at this point.
   interesting insights from the SV bubble anyway.
 
 I’ll still catch up from a couple of, in my opinion, trusted sources.  That is
-to say I’ll dip in to a few categories on BBC news and perhaps visit The
-Guardian’s site(although I do that considerably less over the past year
-according to my data).  I also like to avail myself of a little `Russia Today`_
-and `Al Jazeera`_ to keep the bias in check a touch.
+to say I’ll dip in to a few categories on :abbr:`BBC (British Broadcasting
+Corporation)` news and perhaps visit The Guardian’s site(although I do that
+considerably less over the past year according to my data).  I also like to
+avail myself of a little `Russia Today`_ and `Al Jazeera`_ to keep the bias in
+check a touch.
 
 With a simple :pypi:`rdial` report I can also tell you that on an average
 internet connected day I can spend an hour reading news, friend’s blogs, sports
@@ -84,8 +85,8 @@ coincide with a project that involved porting a tool to Windows.
 
 The act of using a whitelist makes the point of procrastination noticeable and
 adds a cost to even starting it.  Every time I want to visit a new site [#s2]_,
-I have to highlight the URL and rattle a key combo in awesome_ that updates the
-whitelist to enable access to it.
+I have to highlight the |URL| and rattle a key combo in awesome_ that updates
+the whitelist to enable access to it.
 
 On the knoll
 ------------
