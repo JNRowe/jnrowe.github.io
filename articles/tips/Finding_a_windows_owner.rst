@@ -19,7 +19,7 @@ the application, if that exists all we have to do is read it:
 
 .. code-block:: console
 
-    $ xprop  | grep WM_COMMAND
+    $ xprop | grep WM_COMMAND
     WM_COMMAND(STRING) = { "urxvt", "-cd", "/home/jay/Desktop" }
 
 However, not all applications set this property.  Examples of applications that
