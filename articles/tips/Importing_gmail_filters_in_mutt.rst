@@ -77,11 +77,12 @@ must make sure we include ``%N`` in our index_format_ setting to see the scores
 in the mail index, the above ``index_format`` setting is the one I currently use
 and it can be seen in the screenshot on the right.
 
-I'm sure we'd prefer to automate the generation of the rules, and we can quickly
-generate a list for ``mutt`` using our favourite XML processing tool.  Today I'm
-using ruby_, because I know it is installed on Ryan's system.  We're going to
-keep the identifier data from the Google export just in case we decide to
-re-import our rules from ``mutt`` at some point in the future:
+I'm sure we'd prefer to automate the generation of the rules, and we can
+quickly generate a list for ``mutt`` using our favourite |XML| processing
+tool.  Today I'm using ruby_, because I know it is installed on Ryan's
+system.  We're going to keep the identifier data from the Google export just
+in case we decide to re-import our rules from ``mutt`` at some point in the
+future:
 
 .. code-block:: ruby
 

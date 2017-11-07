@@ -1,5 +1,5 @@
-Zsh and the VCS
-===============
+Zsh and the |VCS|
+================
 
 :date: 2009-10-28
 
@@ -30,12 +30,11 @@ If you want to see my entire "theme" file you can `clone my fork`_ and look at
 Branch names
 ------------
 
-``Zsh`` comes with some neat :abbr:`VCS (Version Control System)` integration,
-that is exceptionally documented_ in the manual.  I use that code to enable
-branch names in my prompt, I use it directly instead of the code in
-``oh-my-zsh`` that handles ``git`` status because it doesn't do what I want
-[yet].  I use a format that matches the default(``robbyrussell``) theme in
-``oh-my-zsh``.
+``Zsh`` comes with some neat |VCS| integration, that is exceptionally
+documented_ in the manual.  I use that code to enable branch names in my
+prompt, I use it directly instead of the code in ``oh-my-zsh`` that handles
+``git`` status because it doesn't do what I want [yet].  I use a format that
+matches the default(``robbyrussell``) theme in ``oh-my-zsh``.
 
 .. code-block:: bash
 
@@ -49,8 +48,8 @@ branch names in my prompt, I use it directly instead of the code in
 `Fork this code <http://gist.github.com/220796>`__
 
 Once we've configured ``vcs_info`` we just need to include
-``${vcs_info_msg_0_}`` somewhere in our prompt to display the :abbr:`VCS
-(Version Control System)` and current branch name.
+``${vcs_info_msg_0_}`` somewhere in our prompt to display the |VCS| and
+current branch name.
 
 ``vcs_info`` works quite well, and supports many different systems(both common
 and uncommon).  As the code snippet shows I enable support for git_ exclusively.
@@ -68,8 +67,8 @@ takes less than a tenth of a second to calculate on the same system, and
 .. note::
    There is a ``use-simple`` setting for the ``bzr`` support that may make the
    ``vcs_info`` functionality faster for you, albeit not noticeably on my system.
-   It is also the only :abbr:`VCS (Version Control System)` that has such a hack, which
-   is quite telling in itself.
+   It is also the only |VCS| that has such a hack, which is quite telling in
+   itself.
 
 Repository state
 ----------------

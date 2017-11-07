@@ -4,20 +4,17 @@ Debugging Python regular expressions
 :date: 2009-10-29
 
 Rob Sampson is learning Python_ and struggling to get to grips with its
-:abbr:`RE (Regular Expression)` handling.  He asks on one of our internal lists
-at the office:
+|RegEx| handling.  He asks on one of our internal lists at the office:
 
-    I've written what I believe to be a valid :abbr:`RE (Regular Expression)` to
-    perform matches on some data, and I can't figure out why it isn't matching
-    on my input.  Any clues about where to look?
+    I've written what I believe to be a valid |RegEx| to perform matches on
+    some data, and I can't figure out why it isn't matching on my input.
+    Any clues about where to look?
 
 The answer to these types of questions is more often than not one of two things:
 
-1. Failure to use `raw strings`_ when including backslashes in the :abbr:`RE
-   (Regular Expression)`
+1. Failure to use `raw strings`_ when including backslashes in the |RegEx|
 
-2. Choosing to use a :abbr:`RE (Regular Expression)` when a better tool for the
-   job exists
+2. Choosing to use a |RegEx| when a better tool for the job exists
 
 Raw strings
 -----------
@@ -37,23 +34,23 @@ problem.  A simplified example of what he was trying to do would be:
 `Fork this code <http://gist.github.com/198015>`__
 
 Without the raw string, specified by the preceding ``r`` in our pattern, the
-:abbr:`RE (Regular Expression)` parser is actually looking for a literal ``[``
-where we've intended to use the ``[`` as the start of a character set.
+|RegEx| parser is actually looking for a literal ``[`` where we've intended
+to use the ``[`` as the start of a character set.
 
 .. note::
-   There is another important point here too as the example above uses character
-   ranges, just as Rob's original did.  As in most :abbr:`RE (Regular
-   Expression)` engines Python has inbuilt support for certain character
-   classes, and they are often more functional than the simple character ranges.
-   The big win with Python's character classes is that they can be locale and/or
-   Unicode aware by specifying the LOCALE_ or UNICODE_ flags.
+   There is another important point here too as the example above uses
+   character ranges, just as Rob's original did.  As in most |RegEx| engines
+   Python has inbuilt support for certain character classes, and they are
+   often more functional than the simple character ranges.  The big win with
+   Python's character classes is that they can be locale and/or Unicode
+   aware by specifying the LOCALE_ or UNICODE_ flags.
 
-These types of string escaping problems are common, and as your :abbr:`RE
-(Regular Expression)` becomes more complex their likelihood increases greatly.
-Python, as is often the case, has the answer and it comes in the shape of the
-``re.DEBUG`` flag which unfortunately appears to not be documented.  The
-``re.DEBUG`` flag displays a parse tree allowing you to easily inspect the
-:abbr:`RE (Regular Expression)` you have constructed:
+These types of string escaping problems are common, and as your |RegEx|
+becomes more complex their likelihood increases greatly.  Python, as is often
+the case, has the answer and it comes in the shape of the ``re.DEBUG`` flag
+which unfortunately appears to not be documented.  The ``re.DEBUG`` flag
+displays a parse tree allowing you to easily inspect the |RegEx| you have
+constructed:
 
 .. code-block:: pycon
 
@@ -103,18 +100,18 @@ constants(``DEBUG`` is 128 for example).
 Better tools
 ------------
 
-Often, a :abbr:`RE(Regular Expressions)` is the hammer of choice for far too
-many tasks for far too many people(myself included).  There are often much
-better choices, some of which are very domain specific and some quite general.
+Often, a |RegEx| is the hammer of choice for far too many tasks for far too
+many people(myself included).  There are often much better choices, some of
+which are very domain specific and some quite general.
 
-For any moderately complex parsing job pyparsing_ is a great choice.  The syntax
-is quite readable and the parser is very fast.  Just make sure you ignore any
-examples telling you to use ``from pyparsing import *`` as you'll evoke great
-rage in every person who reads your code.
+For any moderately complex parsing job pyparsing_ is a great choice.  The
+syntax is quite readable and the parser is very fast.  Just make sure you
+ignore any examples telling you to use ``from pyparsing import *`` as you'll
+evoke great rage in every person who reads your code.
 
-While ``pyparsing`` is a good general parsing tool it would be overkill for the
-task at hand, but it doesn't hurt to show a simple example of constructing
-a parser:
+While ``pyparsing`` is a good general parsing tool it would be overkill for
+the task at hand, but it doesn't hurt to show a simple example of
+constructing a parser:
 
 .. code-block:: pycon
 
@@ -125,16 +122,15 @@ a parser:
 
 `Fork this code <http://gist.github.com/223894>`__
 
-Another exceptional tool for tasks that people often abuse :abbr:`RE (Regular
-Expressions)` for is python-dateutil_.  One of the reasons I occasionally turn
-to this module is that Python's time.strptime_ isn't even capable of parsing
-timestamps created by time.strftime_, for example if you use ``%z`` in the
-``strftime`` call.
+Another exceptional tool for tasks that people often abuse |RegEx| for is
+python-dateutil_.  One of the reasons I occasionally turn to this module is
+that Python's time.strptime_ isn't even capable of parsing timestamps created
+by time.strftime_, for example if you use ``%z`` in the ``strftime`` call.
 
 All too often you see people trying to solve date parsing problems with
-:abbr:`RE (Regular Expressions)` and heaps of int_ calls to mangle the matches.
-Not only is this a very brittle approach, but the labix_ guys have solved this
-problem for you already:
+|RegEx| and heaps of int_ calls to mangle the matches.  Not only is this
+a very brittle approach, but the labix_ guys have solved this problem for you
+already:
 
 .. code-block:: pycon
 
@@ -151,11 +147,11 @@ problem for you already:
    own ``parserinfo`` object and set ``dayfirst`` to ``True``, or use something
    stricter.
 
-In closing before you start parsing any text -- regardless of how simple it is
--- you should thumb through the `standard library`_ and perform a search on
-pypi_.  Often, the work has already been done for you and may well be much
+In closing before you start parsing any text -- regardless of how simple it
+is -- you should thumb through the `standard library`_ and perform a search
+on pypi_.  Often, the work has already been done for you and may well be much
 better than the hurried version you were about to cobble together with
-a :abbr:`RE (Regular Expression)`.
+a |RegEx|.
 
 .. _Python: http://www.python.org/
 .. _raw strings: http://docs.python.org/tutorial/introduction.html#strings

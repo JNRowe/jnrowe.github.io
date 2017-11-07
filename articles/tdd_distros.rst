@@ -39,9 +39,9 @@ the desktops we develop on and the laptops we play on.  The methods we use vary
 greatly, so I'm going to present the simple case of testing console applications
 only.  It is the practise that is important, not the process.
 
-The easiest method we use is via shelldoctest_, a module that implements a
-:mod:`doctest` interface for testing shell commands.  The package provides a
-user-level script for running shell sessions in Python docstrings.  A simple
+The easiest method we use is via :pypi:`shelldoctest`, a module that implements
+a :mod:`doctest` interface for testing shell commands.  The package provides
+a user-level script for running shell sessions in Python docstrings.  A simple
 example could be:
 
 .. code-block:: python
@@ -110,10 +110,10 @@ a few seconds to write.  This is important, it shouldn't cost a lot to write a
 test and this is especially true for the simplest task.
 
 I use a similar technique for managing my public Gentoo overlay, jnrowe-misc_.
-For example, the blockdiag_ ebuild is accompanied by a series of tests that are
-run when bumping or stabilising the package, all of which are cribbed from my
-actual ``blockdiag`` usage.  This massively reduces the time required to
-evaluate a package at bump time.
+For example, the :pypi:`blockdiag` ebuild is accompanied by a series of tests
+that are run when bumping or stabilising the package, all of which are cribbed
+from my actual ``blockdiag`` usage.  This massively reduces the time required
+to evaluate a package at bump time.
 
 Result?
 -------
@@ -176,10 +176,8 @@ a ``reST`` formatted file as follows:
 
 .. [#] Okay, it was me.  I'll confess.
 
-.. _shelldoctest: http://pypi.python.org/pypi/shelldoctest/
 .. _rails: http://www.vim.org/scripts/script.php?script_id=1567
 .. _vim scripts site: http://www.vim.org/scripts/script.php?script_id=1567
 .. _jnrowe-misc: https://github.com/JNRowe/jnrowe-misc
-.. _blockdiag: http://pypi.python.org/pypi/blockdiag/
 .. _reST syntax: http://docutils.sourceforge.net/docs/user/rst/
 .. _Sphinx: http://sphinx-doc.org/

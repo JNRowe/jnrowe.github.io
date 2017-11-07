@@ -59,11 +59,10 @@ nicer.
 There was a point where we seriously considered moving to a Conary_-based
 infrastructure.  It did loads of the cool things we wanted to do and it mostly
 fitted our workflow with its "Gentoo done right" feel.  Sadly, it has
-a :abbr:`CLA (Contributor License Agreement)` which none of us could sign that
-practically guaranteed we would eventually be in the same place we were with
-Gentoo.  May have been a fortuitous roadblock in the end, as Conary never gained
-the traction it once promised(perhaps in part because of that :abbr:`CLA
-(Contributor License Agreement)`?).
+a |CLA| which none of us could sign that practically guaranteed we would
+eventually be in the same place we were with Gentoo.  May have been
+a fortuitous roadblock in the end, as Conary never gained the traction it
+once promised(perhaps in part because of that |CLA|?).
 
 Had we waited another five months, there would have been another open source
 package manager for Gentoo we could have easily switched to and hacked on.

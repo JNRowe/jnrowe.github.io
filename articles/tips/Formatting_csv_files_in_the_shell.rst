@@ -1,12 +1,12 @@
-Formatting :abbr:`CSV (Comma Separated Values)` files in the shell
-==================================================================
+Formatting |CSV| files in the shell
+===================================
 
 :date: 2009-10-10
 
 kemi asks in ``#bash``:
 
-    Are there any tools to format :abbr:`CSV (Comma Separated Values)` files in
-    the console?  Not interactive, no spreadsheets
+    Are there any tools to format |CSV| files in the console?  Not
+    interactive, no spreadsheets
 
 column_, which on Linux is likely to be provided by util-linux_, does exactly
 this.  The man page even offers an example of how it works(I've changed it
@@ -48,10 +48,10 @@ the files.  Or, as in the output below, the total size of all the :abbr:`PNG
     -rw-r--r--  1      jay    jay    411    2009-09-29  11:39  remote.png
     Total size of PNG files: 15808
 
-In the original question on how to process :abbr:`CSV (Comma Separated Values)` files all
-we really need to do is get the data in to a state for ``column`` to process,
-and we can use tr_ to do that.  An example using a small chunk of the network
-log on this computer that we wish to format and calculate totals for could be:
+In the original question on how to process |CSV| files all we really need to
+do is get the data in to a state for ``column`` to process, and we can use
+tr_ to do that.  An example using a small chunk of the network log on this
+computer that we wish to format and calculate totals for could be:
 
 .. code-block:: console
 
@@ -83,6 +83,8 @@ log on this computer that we wish to format and calculate totals for could be:
     2009-07-18T13:24:04+0100  834       54025    662134
 
     Total sent: 13121144, Total received: 295452635
+
+.. |CSV| replace:: :abbr:`CSV (Comma Separated Values)`
 
 .. _column: http://www.linuxmanpages.com/man1/column.1.php
 .. _util-linux: http://www.kernel.org/pub/linux/utils/util-linux-ng/

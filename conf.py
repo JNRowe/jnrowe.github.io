@@ -8,7 +8,8 @@ import sphinx_rtd_theme
 sys.path.extend([os.path.pardir, os.path.curdir, '/home/jay/Projects/feed'])
 
 extensions = \
-    ['sphinx.ext.%s' % ext for ext in ['githubpages', 'intersphinx', ]] + \
+    ['sphinx.ext.%s' % ext for ext in ['extlinks', 'githubpages',
+                                       'intersphinx', ]] + \
     ['sphinxcontrib.%s' % ext for ext in []] + \
     ['ext.%s' % ext for ext in ['jinja', ]] + \
     ['%s' % ext for ext in ['feed', ]]
@@ -26,6 +27,15 @@ else:
 master_doc = 'index'
 source_suffix = '.rst'
 html_copy_source = False
+
+rst_epilog = """
+.. |CLA| replace:: :abbr:`CLA (Contributor License Agreement)`
+.. |DVCS| replace:: :abbr:`DVCS (Distributed Version Control System)`
+.. |PyPI| replace:: :abbr:`PyPI (Python Package Index)`
+.. |RegEx| replace:: :abbr:`RegEx (Regular Expression)`
+.. |VCS| replace:: :abbr:`VCS (Version Control System)`
+.. |XML| replace:: :abbr:`XML (Extensible Markup Language)`
+"""
 
 # General information about the project.
 project = u'JNRowe'
@@ -46,6 +56,10 @@ html_favicon = '.static/icon.ico'
 html_static_path = ['.static', ]
 
 templates_path = ['.templates', ]
+
+extlinks = {
+    'pypi': ('https://pypi.python.org/pypi/%s', ''),
+}
 
 intersphinx_mapping = {
     'python': ('http://docs.python.org/', os.getenv('SPHINX_PYTHON_OBJECTS')),
