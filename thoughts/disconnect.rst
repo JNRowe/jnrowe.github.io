@@ -59,7 +59,7 @@ Tighten the noose
 For the two-thirds of the year that I have internet access, I've started to
 severely restrict access.
 
-It all started with a friend who -- while wearing his tinfoil hat -- preached
+It all started with a friend who — while wearing his tinfoil hat — preached
 about how we all need to consider blocking sites that use |CDN| in much the
 same way that many of us block web analytics companies.  We're probably giving
 up more tracking data to the large |CDN|\ s then we do to the simple analytics
@@ -121,7 +121,7 @@ also retain some level of control over your own data, knowing that for example
 it isn't being sold or stored in regions with little to no data protection
 regulation.
 
-In all honesty, I -- no, *we* -- should have resisted the urge to use so called
+In all honesty, I — no, *we* — should have resisted the urge to use so called
 cloud services from the outset.  One doesn't need to be a fully paid up member
 of the tinfoil hat brigade to know that it is just not acceptable to entrust
 your important data to external companies for the sake of a little convenience

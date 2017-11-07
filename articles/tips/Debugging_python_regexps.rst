@@ -148,9 +148,9 @@ See :gist:`223895`
    own ``parserinfo`` object and set ``dayfirst`` to ``True``, or use something
    stricter.
 
-In closing before you start parsing any text -- regardless of how simple it
-is -- you should thumb through the `standard library`_ and perform a search
-on pypi_.  Often, the work has already been done for you and may well be much
+In closing before you start parsing any text — regardless of how simple it is
+— you should thumb through the `standard library`_ and perform a search on
+pypi_.  Often, the work has already been done for you and may well be much
 better than the hurried version you were about to cobble together with
 a |RegEx|.
 

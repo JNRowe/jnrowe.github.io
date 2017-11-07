@@ -14,8 +14,8 @@ both great interactive shells.  I guess all the *Kool Kids* are doing it, and
 I'm just playing catchup.  The one side effect of that is I'm now scribbling
 tips about ``Zsh`` too...
 
-In a screenshot I posted in our bugtracker -- that was considerably less staged
-than the example above -- one of my more visual hunks of ``Zsh`` configuration
+In a screenshot I posted in our bugtracker — that was considerably less staged
+than the example above — one of my more visual hunks of ``Zsh`` configuration
 was visible, leading to the following question from Dan Wilson:
 
     Okay, 'fess time.  How do you get ``git`` branch names in the prompt?  How
