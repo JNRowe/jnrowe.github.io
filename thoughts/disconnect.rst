@@ -48,10 +48,10 @@ Guardian's site(although I do that considerably less over the past year
 according to my data).  I also like to avail myself of a little `Russia Today`_
 and `Al Jazeera`_ to keep the bias in check a touch.
 
-With a simple rdial_ report I can also tell you that on an average internet
-connected day I can spend an hour reading news, friend's blogs, sports stories,
-&c.  A big chunk of that time is also combined with breakfast, so I choose to
-let it slide for the most part.
+With a simple :pypi:`rdial` report I can also tell you that on an average
+internet connected day I can spend an hour reading news, friend's blogs, sports
+stories, &c.  A big chunk of that time is also combined with breakfast, so
+I choose to let it slide for the most part.
 
 Tighten the noose
 -----------------
@@ -60,10 +60,10 @@ For the two-thirds of the year that I have internet access, I've started to
 severely restrict access.
 
 It all started with a friend who -- while wearing his tinfoil hat -- preached
-about how we all need to consider blocking sites that use :abbr:`CDNs (Content
-Delivery Network)` in much the same way that many of us block web analytics
-companies.  We're probably giving up more tracking data to the large CDNs then
-we do to the simple analytics companies.
+about how we all need to consider blocking sites that use |CDN| in much the
+same way that many of us block web analytics companies.  We're probably giving
+up more tracking data to the large |CDN|\ s then we do to the simple analytics
+companies.
 
 The thought popped in to my mind that a whitelist, instead of a blacklist, might
 actually be workable and since last November I've taken to doing just that.
@@ -143,8 +143,9 @@ you regain some of that is very comforting.
    gmail for work or mail that I'd be uncomfortable reading in public, but it
    does act as a nice sieve for everything else right now.
 
+.. |CDN| replace:: :abbr:`CDNs (Content Delivery Network)`
+
 .. _email: jnrowe@gmail.com
-.. _rdial: https://pypi.python.org/pypi/rdial/
 .. _trivium: http://chneukirchen.org/trivium/
 .. _Russia Today: http://rt.com/
 .. _Al Jazeera: http://www.aljazeera.net/

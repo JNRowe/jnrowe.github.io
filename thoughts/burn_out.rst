@@ -98,7 +98,7 @@ build a presence, but for many of us it is just for fun and reciprocation.
     not working for you.  I'm offering to work *with* you."
 
 Another example that I recall, but wish I didn't, was a user *telling* me to
-recompress a tarball on PyPI because their infrastructure couldn't support
+recompress a tarball on |PyPI| because their infrastructure couldn't support
 ``bzip2``.  Seems reasonable enough, but it came wrapped in a tirade of abuse.
 I ignored the abuse, uploaded another tarball and then received another abusive
 email in return the next day.  That was a long time ago, far before the burnout

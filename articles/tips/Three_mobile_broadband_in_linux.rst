@@ -28,23 +28,22 @@ If, like me, you'd prefer not to install NetworkManager you can manually
 configure the device using pppd_, and life is even easier now than it was when
 I did it as there is plenty more information available(including this I guess).
 
-Finding the :abbr:`APN (Access Point Name)`
-'''''''''''''''''''''''''''''''''''''''''''
+Finding the |APN|
+'''''''''''''''''
 
-The first thing you need is your provider's :abbr:`APN (Access Point Name)`, and
-the easiest place to find it is from the `NetworkManager database`_.  If yours
-is not there you'll have to dig further.  When I originally got my device that
-database was practically empty, so I had to resort to other means to find the
-:abbr:`APN (Access Point Name)`.
+The first thing you need is your provider's |APN|, and the easiest place to
+find it is from the `NetworkManager database`_.  If yours is not there you'll
+have to dig further.  When I originally got my device that database was
+practically empty, so I had to resort to other means to find the |APN|.
 
-We can extract the :abbr:`APN (Access Point Name)` from the Windows driver that
-came with the device.  The driver can be found on the device itself because it
-also acts a small :abbr:`SCSI (Small Computer Systems Interface)` device with
-a filesystem.  It is actually pretty clever, assuming it works as advertised, as
-it can self-install its own driver when plugged in.
+We can extract the |APN| from the Windows driver that came with the device.
+The driver can be found on the device itself because it also acts a small
+:abbr:`SCSI (Small Computer Systems Interface)` device with a filesystem.  It
+is actually pretty clever, assuming it works as advertised, as it can
+self-install its own driver when plugged in.
 
-If we find the device name with ``dmesg`` we can mount it, and pull the
-:abbr:`APN (Access Point Name)` from the Windows driver:
+If we find the device name with ``dmesg`` we can mount it, and pull the |APN|
+from the Windows driver:
 
 .. code-block:: bash
 
@@ -55,12 +54,11 @@ If we find the device name with ``dmesg`` we can mount it, and pull the
 `Fork this code <http://gist.github.com/212738>`__
 
 The ``unpack`` tool from above is just a wrapper around common archivers, and
-the tool you actually need to extract the ``cab`` files is unshield_.  Contrary
-to my first idea cabextract_ doesn't work, as these files are actually made by
-``installshield``.
+the tool you actually need to extract the ``cab`` files is unshield_.
+Contrary to my first idea cabextract_ doesn't work, as these files are
+actually made by ``installshield``.
 
-With the :abbr:`APN (Access Point Name)` in hand all we need to do now is
-configure our system.
+With the |APN| in hand all we need to do now is configure our system.
 
 Kernel
 ''''''
@@ -106,8 +104,7 @@ this file can be found in the ``chat(8)`` manpage.  My chatscript is below:
 
 `Fork this code <http://gist.github.com/212739>`__
 
-Exchange ``3internet`` for your :abbr:`APN (Access Point Name)` in the example
-above, if it differs.
+Exchange ``3internet`` for your |APN| in the example above, if it differs.
 
 It is also possible, yet unlikely, that you'll have to call a different number
 to ``*99#``.  If this was the case you would have found that out from extracting
@@ -186,6 +183,8 @@ If the connection didn't work correctly look at the debugging output in syslog
 and check the ``pppd`` manual page to look up the error codes.
 
 Happy, erm... mobility.
+
+.. |APN| replace:: :abbr:`APN (Access Point Name)`
 
 .. _Three: http://three.co.uk
 .. _usbutils: http://linux-usb.sourceforge.net/

@@ -105,11 +105,11 @@ argument.
 Bonus
 -----
 
-Python also comes with a :abbr:`CGI (Common Gateway Interface)`-capable version called
-``CGIHTTPServer`` and a :abbr:`XML (Extensible Markup Language)`-:abbr:`RPC (Remote Procedure Call)`
-server called -- this shouldn't come as a surprise -- ``SimpleXMLRPCServer``.
-They're very useful for testing out ideas and concepts without having to set
-down lots of code.
+Python also comes with a :abbr:`CGI (Common Gateway Interface)`-capable
+version called ``CGIHTTPServer`` and a |XML|-:abbr:`RPC (Remote Procedure
+Call)` server called -- this shouldn't come as a surprise --
+``SimpleXMLRPCServer``.  They're very useful for testing out ideas and
+concepts without having to set down lots of code.
 
 .. _nginx: http://nginx.net/
 .. _busybox: http://www.busybox.net/

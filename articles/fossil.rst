@@ -76,16 +76,15 @@ All-in-one solution
 -------------------
 
 One of the proclaimed benefits of using ``fossil`` is that it handles many
-aspects of a project's :abbr:`ALM (Application Lifecycle Management)`; version
-control, issue tracking, documentation(via a wiki), etc.  However, and this is
-only my opinion, it feels like it does of all of these in a suboptimal manner.
+aspects of a project's |ALM|; version control, issue tracking,
+documentation(via a wiki), etc.  However, and this is only my opinion, it
+feels like it does of all of these in a suboptimal manner.
 
 Version control
 '''''''''''''''
 
 The version control feels quite nice for the most part, definitely usable but
-a little annoying to work with if you're used to a modern :abbr:`DVCS
-(Distributed Version Control System)` like we are.
+a little annoying to work with if you're used to a modern |DVCS| like we are.
 
 That said it does feel like a *huge* step backwards when working with branches,
 and you should set aside quite a lot of time for integration issues when you
@@ -121,8 +120,8 @@ though, as it just a impedance mismatch.
 
 The end result of the integrated components feels to me like you've chosen
 a usable, but weak, component for some of the  most important parts of your
-project's :abbr:`ALM (Application Lifecycle Management)`.  The bits work well
-together, but none of them seem like an option you'd choose on their own.
+project's |ALM|.  The bits work well together, but none of them seem like an
+option you'd choose on their own.
 
 Interface
 ---------
@@ -142,8 +141,7 @@ push it upstream.
 
 .. note::
    It turns out I won't be pushing the changes upstream.  They require
-   a :abbr:`CLA (Contributor Licence Agreement)` that I can not sign in good
-   faith, which is a shame.
+   a |CLA| that I can not sign in good faith, which is a shame.
 
 The option handling *will* trip you up endlessly.  Just the little things like
 being unable to chain options, and needing an endless stream of ``C-p M-5 M-b
@@ -182,12 +180,14 @@ significant problems for us are actually features for upstream, and that is
 obviously fine but it does mean upstreaming changes would be impossible.
 
 .. note::
-   As noted above, it turns out they require a :abbr:`CLA (Contributor Licence
-   Agreement)` which means we couldn't send changes upstream anyway.
+   As noted above, it turns out they require a |CLA| which means we couldn't
+   send changes upstream anyway.
 
 That said I'm am planning on stealing some of the ideas that I really liked
 about ``fossil`` for my own use.  ``fossil all``'s ability to run a command
 against all repositories configured in :file:`~/.fossil` for example.
+
+.. |ALM| replace:: :abbr:`ALM (Application Lifecycle Management)`
 
 .. _fossil: http://www.fossil-scm.org/
 .. _sqlite: http://sqlite.org/

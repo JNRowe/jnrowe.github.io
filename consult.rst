@@ -31,8 +31,7 @@ That said, here are the guidelines:
    court.
 #. The first 15 minutes are free, all additional time will be chargeable and
    invoiced. [#]_
-#. I will *not* sign any :abbr:`NDA (Non-Disclosure Agreements)`, unless they
-   are time limited. [#]_
+#. I will *not* sign any |NDA|, unless they are time limited. [#]_
 
 Some of these rules can be side-stepped, if you can meet one of the following
 criteria:
@@ -42,5 +41,7 @@ criteria:
 
 .. [#] I may be willing to offer extra free services for non-profit
        organisations
-.. [#] Any :abbr:`NDA (Non-Disclosure Agreement)` with a limit in excess of
-       three years is likely to be a insurmountable barrier.
+.. [#] Any |NDA| with a limit in excess of three years is likely to be
+       a insurmountable barrier.
+
+.. |NDA| replace:: :abbr:`NDA (Non-Disclosure Agreements)`

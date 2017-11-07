@@ -1,5 +1,5 @@
-:abbr:`BTS (Bug Tracking System)` as a task manager
-===================================================
+|BTS| as a task manager
+=======================
 
 :date: 2009-10-07
 
@@ -7,19 +7,18 @@ Tom Marshall asks over the cooler:
 
     What apps do you guys use to manage your todo list(s)?
 
-I think this may be an incredibly personal thing but I prefer to use
-a :abbr:`BTS (Bug Tracking System)` for local task management, the idea of just
-adding random lines of text to a file frankly baffles me.  I love the filtering,
-ordering and editing capabilities I get from using a :abbr:`BTS (Bug Tracking
-System)` for this.
+I think this may be an incredibly personal thing but I prefer to use a |BTS|
+for local task management, the idea of just adding random lines of text to
+a file frankly baffles me.  I love the filtering, ordering and editing
+capabilities I get from using a |BTS| for this.
 
 Now, I'm not suggesting installing something complex and convoluted like
-Bugzilla_ just for keeping track of your shopping lists or remembering to charge
-the spare battery for your phone.  There are quite a few lightweight systems
-available, ditz_ and `Bugs Everywhere`_ being two examples.  There is also
-a ``ditz`` inspired project, written in Python_, called pitz_ that is in active
-development.  And fossil_ is pretty cool if you're looking for a standalone
-wiki, :abbr:`BTS (Bug Tracking System)` and :abbr:`VCS (Version Control System)` in one.
+Bugzilla_ just for keeping track of your shopping lists or remembering to
+charge the spare battery for your phone.  There are quite a few lightweight
+systems available, ditz_ and `Bugs Everywhere`_ being two examples.  There is
+also a ``ditz`` inspired project, written in Python_, called pitz_ that is in
+active development.  And fossil_ is pretty cool if you're looking for
+a standalone wiki, |BTS| and |VCS| in one.
 
 .. note::
    If you're a Gentoo_ user you can install ``ditz`` using
@@ -170,11 +169,11 @@ with filtering options.
 Conclusions
 -----------
 
-That really is all it takes to use ``be``, and that is why I find a :abbr:`BTS
-(Bug Tracking System)` to be a nice solution for managing all kinds of random
-tasks.  I have a Bugs Everywhere database in my home directory that over the
-past year has stored just over 600 bugs from shopping lists to actual bugs with
-my configurations files, and I've apparently managed to complete 95% of them!
+That really is all it takes to use ``be``, and that is why I find a |BTS| to
+be a nice solution for managing all kinds of random tasks.  I have a Bugs
+Everywhere database in my home directory that over the past year has stored
+just over 600 bugs from shopping lists to actual bugs with my configurations
+files, and I've apparently managed to complete 95% of them!
 
 Bonus material
 --------------
@@ -198,6 +197,8 @@ Everywhere database, and it is very simple to do:
 It could be improved to take settings to filter the bug list or all manner of
 other cool things, but that is why it has a "Fork this code" label next to it.
 Feel free to post updates to the gist!
+
+.. |BTS| replace:: :abbr:`BTS (Bug Tracking System)`
 
 .. _Bugzilla: http://www.bugzilla.org
 .. _ditz: http://ditz.rubyforge.org

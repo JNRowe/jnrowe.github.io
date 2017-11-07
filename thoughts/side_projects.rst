@@ -96,8 +96,8 @@ For seven years I've maintained a small library for `validating ISBNs`_.
 It was never meant to be used by others, I just needed something to validate
 entries in my e-book database.  Other people started using it, many for their
 own weird side projects including a number of book retail websites.  It has
-amassed literally tens of thousands of downloads from PyPI, but you really
-shouldn't trust the dubious statistics from PyPI ;)
+amassed literally tens of thousands of downloads from |PyPI|, but you really
+shouldn't trust the dubious statistics from |PyPI| ;)
 
 .. _validating ISBNs: https://github.com/JNRowe/pyisbn/
 
