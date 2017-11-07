@@ -100,15 +100,16 @@ One of the things that surprised me most was that initially I had primed the
 data by looking at users who followed users that have been suspended or banned.
 After digging in to a few examples to verify the method’s efficacy I noticed
 that there are bidirectional follows to the final nodes where one user appears
-to be polar opposite of the other, almost in an `Alf Garnett`_ versus `Peppa
-Pig`_ scale.
+to be the polar opposite of the other, almost in an `Alf Garnett`_ versus
+`Peppa Pig`_ scale.
 
-It took me a while to think of a possible cause beyond a simple modelling error
-that could explain this.  Sadly after recognising a top five rage retweeter in
-a local town it became somewhat obvious, there are occasionally business and
-familial ties involved.  There are seemingly swathes of the populace who choose
-to accept public association with the caustic members of society, even when
-there is a simple unfollow button you can hit to distance yourself from them.
+It took me a while to think of a possible cause — beyond a simple modelling
+error — that could explain this.  Sadly after recognising a top five rage
+retweeter in a local town it became somewhat obvious, there are occasionally
+business and familial ties involved.  There are seemingly swathes of the
+populace who choose to accept public association with the caustic members of
+society, even when there is a simple unfollow button you can hit to distance
+yourself from them.
 
 Let us be frank and honest for a moment.  You’re giving the appearance of tacit
 approval to people’s views when you continue to follow them, even if you’re not
