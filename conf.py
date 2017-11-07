@@ -96,7 +96,8 @@ extlinks = {
 
 # intersphinx extension settings {{{
 intersphinx_mapping = {
-    'python': ('http://docs.python.org/', os.getenv('SPHINX_PYTHON_OBJECTS')),
+    'python': ('https://docs.python.org/3/',
+               os.getenv('SPHINX_PYTHON_OBJECTS')),
 }
 for proj in ['blanco', 'bleeter', 'bwatch', 'cupage', 'jnrowe-fixes',
              'pyisbn', 'upoints', 'versionah', 'vim-jnrowe']:
