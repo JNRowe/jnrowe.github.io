@@ -65,7 +65,7 @@ I have to mention a small downside here however, because very few people seem to
 test ``portage``'s binary package support you'll occasionally have to do some
 leg work to fix problems.  This normally arises when you have an ``eclass``
 change that needs to ripple through, or when a library breaks compatibility and
-it's ``ebuild`` hasn't been bumped properly.
+its ``ebuild`` hasn't been bumped properly.
 
 Almost every time that happens you can fix it with a quick loop in your shell
 though.  A couple of such problems and solutions that I found in my shell
