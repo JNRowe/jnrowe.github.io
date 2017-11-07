@@ -5,7 +5,7 @@ Custom keybindings in the GTK+ file dialogs
 ===========================================
 
 In :doc:`Fancy_awesome_theming` I included a screenshot that, by accident more
-than design, spawned today's tip.
+than design, spawned today’s tip.
 
 .. image:: /.static/2009-10-01-gtkrc-mini.png
    :alt: gtkrc in vim screenshot
@@ -21,7 +21,7 @@ The ``gtkrc`` being referenced is my `GTK+`_ configuration file that could be se
 in the right hand vim_ window of the screenshot from that earlier post.  It was
 actually open in that screenshot because I was changing my GTK+ theme, and not
 being a gnome_ user the simplest way to change it is via my ``~/.gtkrc-2.0``.
-And, if you're using KDE_ and wish to the settings for GTK+ applications you
+And, if you’re using KDE_ and wish to the settings for GTK+ applications you
 should edit ``~/.gtkrc-2.0-kde``.
 
 So the question becomes, what were the options in that screenshot, and are there
@@ -49,12 +49,12 @@ Ignoring the ``vim`` modeline_ from the screenshot the first few settings are
 basic theme related options.  ``gtk-theme-name`` and ``gtk-icon-theme-name`` set
 the style and icon groups for GTK+ apps respectively.  ``gtk-key-theme-name``
 sets the default keybindings for GTK+ apps.  By setting it to ``Emacs`` we have
-access to the "normal" keybindings we expect if we use bash_ or other common
+access to the “normal” keybindings we expect if we use bash_ or other common
 Linux tools, such as ``C-w`` to delete the word under the cursor.  You can read
 more about ``gtk-key-theme-name`` in `an old posting of mine`_.
 
 All of the settings above are configurable with a :abbr:`GUI (Graphical User
-Interface)` if you use gnome or xfce_, but for those of who don't use those
+Interface)` if you use gnome or xfce_, but for those of who don’t use those
 desktop environments editing the ``~/.gtkrc-2.0`` is a reasonable solution.
 
 .. image:: /.static/2009-10-01-GTK_filechooser-mini.png
@@ -62,7 +62,7 @@ desktop environments editing the ``~/.gtkrc-2.0`` is a reasonable solution.
    :target: ../../_static/2009-10-01-GTK_filechooser.png
    :align: left
 
-The "some-shortcuts" section is the interesting one for today, it is telling
+The “some-shortcuts” section is the interesting one for today, it is telling
 GTK+ applications that we want to have our own extra keybindings available when
 opening or saving files.  ``GTKFileChooser`` is the modern GTK+ file dialog, and
 it already has a set of useful keybindings including:
@@ -74,19 +74,19 @@ it already has a set of useful keybindings including:
 +--------------+--------------------------------------+
 | ``M-D``      | Jump to your ``~/Desktop`` directory |
 +--------------+--------------------------------------+
-| ``M-<Up>``   | Go to current directory's parent     |
+| ``M-<Up>``   | Go to current directory’s parent     |
 +--------------+--------------------------------------+
 | ``C-L``      | Display the text location entry box  |
 +--------------+--------------------------------------+
 
-We could actually use the file chooser's bookmark feature, and access the
+We could actually use the file chooser’s bookmark feature, and access the
 bookmarks with ``M-1`` through ``M-9`` and ``M-0`` for bookmark number ten from
 the dialog.  However, I find it more practical to be able to use mnemonic names
 for favourite locations.  You could even use both if you have an excellent
 memory and a lot of favourite locations!
 
 If you wish to add your own bindings the format is hopefully quite
-self-explanatory, just don't forget to link your bindings to the correct class
+self-explanatory, just don’t forget to link your bindings to the correct class
 or they will not work.
 
 You can also change the default bindings by specifying them in the configuration

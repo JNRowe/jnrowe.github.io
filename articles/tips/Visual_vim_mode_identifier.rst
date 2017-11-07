@@ -7,12 +7,12 @@ Visual vim mode identifier
 Paul Kerry rants about his problems with vim_ over the cooler today, and as
 a long time ``vim`` user I found it hard not to respond to some of the points.
 
-    All this mode switching makes it hard to know whether typing "Paul" is going
-    to insert a huge block of code from the ether or insert, you know, "Paul" on
+    All this mode switching makes it hard to know whether typing “Paul” is going
+    to insert a huge block of code from the ether or insert, you know, “Paul” on
     the screen.
 
-The point Paul is making is that when he is in `normal mode`_, typing the "P" of
-"Paul" can cause ``vim`` to insert a huge amount of text at the cursor.  The
+The point Paul is making is that when he is in `normal mode`_, typing the “P” of
+”Paul” can cause ``vim`` to insert a huge amount of text at the cursor.  The
 text comes from the `unnamed register`_, so it will be whatever potentially very
 large chunk of text he deleted or yanked_ last.
 
@@ -25,7 +25,7 @@ INSERT --`` reminder in the bottom of his terminal window when in insert mode, a
 can be seen in the screenshot on the right.
 
 Another option that I use, combined with showmode_, is to change the cursor
-colour when switching to and from ``insert`` mode.  This unfortunately doesn't
+colour when switching to and from ``insert`` mode.  This unfortunately doesn’t
 work on all terminal types, which means you have to test them individually and
 then set appropriate values for t_SI_ and t_EI_ on each terminal type.  An
 example for rxvt_-based terminals, including my favourite rxvt-unicode_, is
@@ -59,7 +59,7 @@ when we change mode:
 
 See :gist:`209915`
 
-Note that I didn't say it was a good idea, just that it was possible!
+Note that I didn’t say it was a good idea, just that it was possible!
 
 .. _vim: http://www.vim.org/
 .. _normal mode: http://vimdoc.sourceforge.net/htmldoc/intro.html#vim-modes

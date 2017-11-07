@@ -10,7 +10,7 @@ kemi asks in ``#bash``:
     interactive, no spreadsheets
 
 column_, which on Linux is likely to be provided by util-linux_, does exactly
-this.  The man page even offers an example of how it works(I've changed it
+this.  The man page even offers an example of how it works(I’ve changed it
 slightly to make it work correctly on my system):
 
 .. code-block:: console

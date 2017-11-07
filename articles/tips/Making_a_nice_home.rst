@@ -13,21 +13,21 @@ Back in :doc:`Kick_me_birthday_reminders` I said:
 
 Today, Stuart Grady asked me in a private mail:
 
-    Okay, at which point is the "Tip of the Day" thingy going to be about using
+    Okay, at which point is the “Tip of the Day” thingy going to be about using
     hooks and make_ in ``$HOME``?
 
-I'll take the hint and look at ``make``.  For the purposes of this post we're
-going to pretend we haven't read `recursive make considered harmful`_ as I don't
+I’ll take the hint and look at ``make``.  For the purposes of this post we’re
+going to pretend we haven’t read `recursive make considered harmful`_ as I don’t
 heed its advice for the ``Makefile`` I have in my home directory.  That said,
-let's have a look at what can be found in my current top-level ``Makefile``.
+let’s have a look at what can be found in my current top-level ``Makefile``.
 
 Permissions
 -----------
 
 I keep my home directory version controlled with ``git``, but git out of the box
-doesn't maintain permissions on files beyond the executable bit.  There are
+doesn’t maintain permissions on files beyond the executable bit.  There are
 plenty of ways around this including using external tools such as etckeeper_,
-but I prefer the simple approach of setting the permissions when they're needed:
+but I prefer the simple approach of setting the permissions when they’re needed:
 
 .. code-block:: make
 
@@ -76,7 +76,7 @@ See :gist:`208209`
 The values in the ``patsubst`` block of the ``$(TARGETS)`` definition are a list
 of filenames to use for tag storage with ctags_.  The rule creates a different
 ``ctags`` file for each installed python_ version.  In the rule to make the
-``ctags`` files we specifically exclude test files as they aren't often useful
+``ctags`` files we specifically exclude test files as they aren’t often useful
 in omni-completion_, and they significantly pollute the tags database for normal
 use.
 
@@ -86,7 +86,7 @@ installed in ``~/.vim/doc``.
 Documentation
 -------------
 
-The final subdirectory ``Makefile`` we're going to look at is actually called in
+The final subdirectory ``Makefile`` we’re going to look at is actually called in
 a number of different directories to create HTML versions of
 reStructuredText_ files.
 

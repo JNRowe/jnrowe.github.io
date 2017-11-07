@@ -26,7 +26,7 @@ Projects
 * `vim-configs <https://github.com/JNRowe/vim-configs>`__: Personal vim configs
 * `vim-jnrowe <https://github.com/JNRowe/vim-jnrowe>`__: My colorscheme, decoupled from my vim-configs repo for others ;) [ `documentation <http://jnrowe.github.io/vim-jnrowe/>`__ ]
 
-Forks I'm hacking on
+Forks I’m hacking on
 --------------------
 
 * `aaargh <https://github.com/JNRowe/aaargh>`__: Aaargh, an astonishingly awesome application argument helper [ `origin <https://github.com/wbolster/aaargh>`__ ]
@@ -55,7 +55,7 @@ Forks I'm hacking on
 * `moonscript <https://github.com/JNRowe/moonscript>`__: MoonScript, a language that compiles to Lua [ `origin <https://github.com/leafo/moonscript>`__ ]
 * `nose2 <https://github.com/JNRowe/nose2>`__: The successor to nose, based on unittest2 [ `origin <https://github.com/nose-devs/nose2>`__ ]
 * `oh-my-zsh <https://github.com/JNRowe/oh-my-zsh>`__: A community-driven framework for managing your zsh configuration. [ `origin <https://github.com/robbyrussell/oh-my-zsh>`__ ]
-* `org-diet <https://github.com/JNRowe/org-diet>`__: Forked from cwebber's org-diet on gitorious - https://gitorious.org/org-diet/org-diet [ `origin <https://github.com/mrc/org-diet>`__ ]
+* `org-diet <https://github.com/JNRowe/org-diet>`__: Forked from cwebber’s org-diet on gitorious - https://gitorious.org/org-diet/org-diet [ `origin <https://github.com/mrc/org-diet>`__ ]
 * `parse <https://github.com/JNRowe/parse>`__: Parse strings using a specification based on the Python format() syntax. [ `origin <https://github.com/r1chardj0n3s/parse>`__ ]
 * `pecan <https://github.com/JNRowe/pecan>`__: A WSGI object-dispatching web framework, designed to be lean and fast with few dependencies. [ `origin <https://github.com/stackforge/pecan>`__ ]
 * `pelican <https://github.com/JNRowe/pelican>`__: Static blog generator in python, using ReST syntax [ `origin <https://github.com/getpelican/pelican>`__ ]
@@ -64,14 +64,14 @@ Forks I'm hacking on
 * `pw <https://github.com/JNRowe/pw>`__: Grep GPG-encrypted YAML password safes. [ `origin <https://github.com/catch22/pw>`__ ]
 * `python-github2 <https://github.com/JNRowe/python-github2>`__: github client in python, with issues support. [ `origin <https://github.com/ask/python-github2>`__ ]
 * `python-mode <https://github.com/JNRowe/python-mode>`__: Vim python-mode. PyLint, Rope, Pydoc, breakpoints from box. [ `origin <https://github.com/klen/python-mode>`__ ]
-* `python-tablefu <https://github.com/JNRowe/python-tablefu>`__: A Python version (almost a port) of ProPublica's TableFu [ `origin <https://github.com/eyeseast/python-tablefu>`__ ]
+* `python-tablefu <https://github.com/JNRowe/python-tablefu>`__: A Python version (almost a port) of ProPublica’s TableFu [ `origin <https://github.com/eyeseast/python-tablefu>`__ ]
 * `pyusb <https://github.com/JNRowe/pyusb>`__: USB access on python [ `origin <https://github.com/walac/pyusb>`__ ]
 * `requests <https://github.com/JNRowe/requests>`__: Python HTTP Requests for Humans. [ `origin <https://github.com/kennethreitz/requests>`__ ]
 * `restfulie-py <https://github.com/JNRowe/restfulie-py>`__: Python port of Restfulie [ `origin <https://github.com/caelum/restfulie-py>`__ ]
 * `restorm <https://github.com/JNRowe/restorm>`__: RestORM allows you to interact with resources as  if they were objects. [ `origin <https://github.com/joeribekker/restorm>`__ ]
 * `schematics <https://github.com/JNRowe/schematics>`__: Python Data Structures for Humans™. [ `origin <https://github.com/ExtensionFM/dictshield>`__ ]
 * `snipmate-snippets <https://github.com/JNRowe/snipmate-snippets>`__: A collection of snippets for snipmate (vim plugin) with a focus on bash, php, html and javascript [ `origin <https://github.com/scrooloose/snipmate-snippets>`__ ]
-* `snipmate.vim <https://github.com/JNRowe/snipmate.vim>`__: snipMate.vim aims to be a concise vim script that implements some of TextMate's snippets features in Vim.  [ `origin <https://github.com/msanders/snipmate.vim>`__ ]
+* `snipmate.vim <https://github.com/JNRowe/snipmate.vim>`__: snipMate.vim aims to be a concise vim script that implements some of TextMate’s snippets features in Vim.  [ `origin <https://github.com/msanders/snipmate.vim>`__ ]
 * `sxiv <https://github.com/JNRowe/sxiv>`__: Simple (or small or suckless) X Image Viewer [ `origin <https://github.com/muennich/sxiv>`__ ]
 * `syntastic <https://github.com/JNRowe/syntastic>`__: Syntax checking hacks for vim [ `origin <https://github.com/scrooloose/syntastic>`__ ]
 * `terminal <https://github.com/JNRowe/terminal>`__: A terminal environment tools for python. [ `origin <https://github.com/lepture/terminal>`__ ]
@@ -80,11 +80,11 @@ Forks I'm hacking on
 * `tweepy <https://github.com/JNRowe/tweepy>`__: A python library for the Twitter API. OAuth, python 3, complete coverage, streaming API [ `origin <https://github.com/tweepy/tweepy>`__ ]
 * `tyrs <https://github.com/JNRowe/tyrs>`__: twitter curses client [ `origin <https://github.com/Nic0/tyrs>`__ ]
 * `vanity <https://github.com/JNRowe/vanity>`__: Easy access to download stats for PyPI packages [ `origin <https://github.com/aclark4life/vanity>`__ ]
-* `vim-cute-python <https://github.com/JNRowe/vim-cute-python>`__: Unicode goodness for Python code by using vim's new “conceal” feature [ `origin <https://github.com/ehamberg/vim-cute-python>`__ ]
+* `vim-cute-python <https://github.com/JNRowe/vim-cute-python>`__: Unicode goodness for Python code by using vim’s new “conceal” feature [ `origin <https://github.com/ehamberg/vim-cute-python>`__ ]
 * `vim-sensible <https://github.com/JNRowe/vim-sensible>`__: sensible.vim: Defaults everyone can agree on [ `origin <https://github.com/tpope/vim-sensible>`__ ]
 * `xerox <https://github.com/JNRowe/xerox>`__: Copy + Paste in Python. [ `origin <https://github.com/kennethreitz/xerox>`__ ]
 
-Git mirrors of projects I'm hacking on
+Git mirrors of projects I’m hacking on
 --------------------------------------
 
 * `pyhumod <https://github.com/JNRowe/pyhumod>`__: Mirror of pyhumod Mercurial repository from Google Code

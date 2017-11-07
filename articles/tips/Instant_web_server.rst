@@ -13,12 +13,12 @@ There were a couple of predictable rants about the benefits and drawbacks of
 threading models.  Along with a couple of other topics entirely unhelpful for
 the question at hand, but surprisingly little dissent over the choices.
 
-Matt Traner's reply sums up the general feeling quite nicely:
+Matt Traner’s reply sums up the general feeling quite nicely:
 
-    Just use whatever server you have installed already.  If you don't have
+    Just use whatever server you have installed already.  If you don’t have
     *any* installed grab nginx_ as it works well and is quite small.
 
-I agree with Matt's answer but I want to point a couple of possibly non-obvious
+I agree with Matt’s answer but I want to point a couple of possibly non-obvious
 web servers that they, and you, are likely to have installed already.
 
 Busybox
@@ -27,7 +27,7 @@ Busybox
 All our Linux systems at the office include busybox_, and in the configuration
 we use the httpd_ applet is built.  It is very lightweight, and incredibly
 stable.  I often use it when testing or as a weak way to transfer files between
-hosts when avahi_ isn't available or is too much hassle.  In my bash_
+hosts when avahi_ isn’t available or is too much hassle.  In my bash_
 configuration I have a little functions to start up a ``busybox httpd`` server:
 
 .. code-block:: bash
@@ -37,7 +37,7 @@ configuration I have a little functions to start up a ``busybox httpd`` server:
         if [ "${1}" = "--help" ]
         then
             echo "Usage:  ${FUNCNAME} [location]"
-            echo "Start a httpd in \`location', defaulting to \`${http_serve_location}'."
+            echo "Start a httpd in ‘location’, defaulting to ‘${http_serve_location}’."
             return 1
         fi
         busybox httpd -f -p 8080 -h ${1:-${http_serve_location}}
@@ -71,15 +71,15 @@ Python_ comes with its own basic web server, and it is very easy to use:
 Note that the name of the module has changed from ``SimpleHTTPServer`` to
 ``http.server`` for Python v3 and above.
 
-I've specified the port 8080 to both calls in the snippet above, by default the
+I’ve specified the port 8080 to both calls in the snippet above, by default the
 server port would be 8000.  If port 8000 is acceptable for you then you can save
 yourself five keystrokes.
 
 Ruby
 ----
 
-ruby_ also comes with its own web server, one that you're probably already
-familiar with if you're a rails_ user, called webrick_.  We need a little script
+ruby_ also comes with its own web server, one that you’re probably already
+familiar with if you’re a rails_ user, called webrick_.  We need a little script
 to use ``webrick``:
 
 .. code-block:: ruby
@@ -108,7 +108,7 @@ Bonus
 
 Python also comes with a :abbr:`CGI (Common Gateway Interface)`-capable version
 called ``CGIHTTPServer`` and a |XML|-:abbr:`RPC (Remote Procedure Call)` server
-called — this shouldn't come as a surprise — ``SimpleXMLRPCServer``.  They're
+called — this shouldn’t come as a surprise — ``SimpleXMLRPCServer``.  They’re
 very useful for testing out ideas and concepts without having to set down lots
 of code.
 

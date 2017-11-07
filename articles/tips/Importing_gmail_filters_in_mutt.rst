@@ -4,13 +4,12 @@
 Importing gmail filters in mutt
 ===============================
 
-On our company's Linux list Ryan Abbott is preparing to move to
-mutt_:
+On our company’s Linux list Ryan Abbott is preparing to move to mutt_:
 
-    I have some user filters setup in gmail_, and I'm wondering if there some
+    I have some user filters setup in gmail_, and I’m wondering if there some
     way to make mutt use them?
 
-Ryan has some filters set up for "premium" users who should be tagged in
+Ryan has some filters set up for “premium” users who should be tagged in
 a special way in the mail display so that they are much more noticeable.  Google
 do support `exporting filters`_ now, and conveniently it is in well documented
 format based on Atom_.  An example export, gleaned from Ryan but with personal
@@ -78,10 +77,10 @@ must make sure we include ``%N`` in our index_format_ setting to see the scores
 in the mail index, the above ``index_format`` setting is the one I currently use
 and it can be seen in the screenshot on the right.
 
-I'm sure we'd prefer to automate the generation of the rules, and we can
+I’m sure we’d prefer to automate the generation of the rules, and we can
 quickly generate a list for ``mutt`` using our favourite |XML| processing
-tool.  Today I'm using ruby_, because I know it is installed on Ryan's
-system.  We're going to keep the identifier data from the Google export just
+tool.  Today I’m using ruby_, because I know it is installed on Ryan’s
+system.  We’re going to keep the identifier data from the Google export just
 in case we decide to re-import our rules from ``mutt`` at some point in the
 future:
 

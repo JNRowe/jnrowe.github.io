@@ -1,8 +1,8 @@
-JNRowe's user pages
+JNRowe’s user pages
 ===================
 
 This is the base for `my personal pages`_ on GitHub_.  The only content you’ll
-find in this repository are those things that aren't directly related to
+find in this repository are those things that aren’t directly related to
 another project.
 
 The content of this repository is licensed under the `Creative Commons

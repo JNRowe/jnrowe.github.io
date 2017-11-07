@@ -7,8 +7,8 @@ Debugging Python regular expressions
 Rob Sampson is learning Python_ and struggling to get to grips with its
 |RegEx| handling.  He asks on one of our internal lists at the office:
 
-    I've written what I believe to be a valid |RegEx| to perform matches on
-    some data, and I can't figure out why it isn't matching on my input.
+    I’ve written what I believe to be a valid |RegEx| to perform matches on
+    some data, and I can’t figure out why it isn’t matching on my input.
     Any clues about where to look?
 
 The answer to these types of questions is more often than not one of two things:
@@ -20,7 +20,7 @@ The answer to these types of questions is more often than not one of two things:
 Raw strings
 -----------
 
-In Rob's code he had failed to take in to account the backslash escaping
+In Rob’s code he had failed to take in to account the backslash escaping
 problem.  A simplified example of what he was trying to do would be:
 
 .. code-block:: pycon
@@ -35,15 +35,15 @@ problem.  A simplified example of what he was trying to do would be:
 See :gist:`198015`
 
 Without the raw string, specified by the preceding ``r`` in our pattern, the
-|RegEx| parser is actually looking for a literal ``[`` where we've intended
+|RegEx| parser is actually looking for a literal ``[`` where we’ve intended
 to use the ``[`` as the start of a character set.
 
 .. note::
    There is another important point here too as the example above uses
-   character ranges, just as Rob's original did.  As in most |RegEx| engines
+   character ranges, just as Rob’s original did.  As in most |RegEx| engines
    Python has inbuilt support for certain character classes, and they are
    often more functional than the simple character ranges.  The big win with
-   Python's character classes is that they can be locale and/or Unicode
+   Python’s character classes is that they can be locale and/or Unicode
    aware by specifying the LOCALE_ or UNICODE_ flags.
 
 These types of string escaping problems are common, and as your |RegEx|
@@ -107,11 +107,11 @@ which are very domain specific and some quite general.
 
 For any moderately complex parsing job pyparsing_ is a great choice.  The
 syntax is quite readable and the parser is very fast.  Just make sure you
-ignore any examples telling you to use ``from pyparsing import *`` as you'll
+ignore any examples telling you to use ``from pyparsing import *`` as you’ll
 evoke great rage in every person who reads your code.
 
 While ``pyparsing`` is a good general parsing tool it would be overkill for
-the task at hand, but it doesn't hurt to show a simple example of
+the task at hand, but it doesn’t hurt to show a simple example of
 constructing a parser:
 
 .. code-block:: pycon
@@ -125,7 +125,7 @@ See :gist:`223894`
 
 Another exceptional tool for tasks that people often abuse |RegEx| for is
 python-dateutil_.  One of the reasons I occasionally turn to this module is
-that Python's time.strptime_ isn't even capable of parsing timestamps created
+that Python’s time.strptime_ isn’t even capable of parsing timestamps created
 by time.strftime_, for example if you use ``%z`` in the ``strftime`` call.
 
 All too often you see people trying to solve date parsing problems with
