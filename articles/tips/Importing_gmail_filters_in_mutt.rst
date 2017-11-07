@@ -56,6 +56,13 @@ addresses out with sed_:
     joe@example.com
     johndoe@example.com
 
+.. warning::
+
+    You shouldn’t parse |XML| with tools like ``sed`` or ``awk``.  There are
+    plenty of |XML| processing tools available, and unlike ``sed`` they
+    shouldn’t fail with files that contain namespaces or other |XML| features.
+    Now I’ve said that, carry on using ``sed`` like I often do ;)
+
 Once we have some way of getting at the email addresses we just need to add the
 filters to ``mutt``.  For those of us who use ``mutt`` the normal approach to
 prioritising in the gmail way is to use either colouring_ or scoring_:
