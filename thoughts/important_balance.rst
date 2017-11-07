@@ -34,7 +34,7 @@ the definition of "First World Problems".  Part of me is disgusted to waste so
 much time on frankly trivial introspection, but for better or worse it is
 a *huge* part of my self-identity.
 
-I feel that -- to some extent -- I'm living a weak, self-imposed and
+I feel that — to some extent — I'm living a weak, self-imposed and
 inconsequential version of `Pascal's Gambit`_.  I know full well that the works
 I've rejected have been seen to completion by others.  I've not scuppered them,
 nor have I even attempted to.  Not having me work on them has perhaps even made

@@ -45,8 +45,8 @@ in a simple manner, the solution is to store state ourselves and test that.
 We may, for example, wish to toggle a group of settings on or off at one time.
 While we could test one of the settings in the toggle function it can become
 quite brittle if we change those settings ourselves.  By storing our toggle
-state in a variable we can test that instead.  The final -- totally contrived --
-example shows how to do that:
+state in a variable we can test that instead.  The final — totally contrived
+— example shows how to do that:
 
 .. code-block:: vim
 

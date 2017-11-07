@@ -98,10 +98,10 @@ way I'll really learn.
 What I want to hear
 -------------------
 
-Simply tell me about that friend who is getting married, don't tell the story by
-mentioning that it is their third marriage.  I also don't need to hear about
-that messy relationship breakdown.  [The exception -- of course -- being if it
-is that one girl who I'd sell my soul for a second chance with]
+Simply tell me about that friend who is getting married, don't tell the story
+by mentioning that it is their third marriage.  I also don't need to hear about
+that messy relationship breakdown.  [The exception — of course — being if it is
+that one girl who I'd sell my soul for a second chance with]
 
 Tell me about that friend whose child aced the `Eleven Plus`_, and has been
 accepted in to the school we all wish we had attended.
