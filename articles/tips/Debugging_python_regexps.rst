@@ -44,7 +44,7 @@ to use the ``[`` as the start of a character set.
    Python has inbuilt support for certain character classes, and they are
    often more functional than the simple character ranges.  The big win with
    Python’s character classes is that they can be locale and/or Unicode
-   aware by specifying the LOCALE_ or UNICODE_ flags.
+   aware by specifying the :data:`re.LOCALE` or :data:`re.UNICODE` flags.
 
 These types of string escaping problems are common, and as your |RegEx|
 becomes more complex their likelihood increases greatly.  Python, as is often
@@ -75,8 +75,8 @@ the ordinal_ for ``0`` and ``9`` respectively.  Following that we see a match
 for ``literal 91``, ``chr(91)`` shows us that the character we are matching is
 a ``[``.  With this information it is easy to see where the problem is.
 
-If you need to use more than one flag, such as often useful VERBOSE_ flag, you
-can combine them with ``|`` (bitwise OR) as the flags are just named
+If you need to use more than one flag, such as often useful :data:`re.VERBOSE`
+flag, you can combine them with ``|`` (bitwise OR) as the flags are just named
 constants(``DEBUG`` is 128 for example).
 
 ::
@@ -121,11 +121,12 @@ See :gist:`223894`
 
 Another exceptional tool for tasks that people often abuse |RegEx| for is
 python-dateutil_.  One of the reasons I occasionally turn to this module is
-that Python’s time.strptime_ isn’t even capable of parsing timestamps created
-by time.strftime_, for example if you use ``%z`` in the ``strftime`` call.
+that Python’s :func:`time.strptime` isn’t even capable of parsing timestamps
+created by :func:`time.strftime`, for example if you use ``%z`` in the
+``strftime`` call.
 
 All too often you see people trying to solve date parsing problems with
-|RegEx| and heaps of int_ calls to mangle the matches.  Not only is this
+|RegEx| and heaps of :func:`int` calls to mangle the matches.  Not only is this
 a very brittle approach, but the labix_ guys have solved this problem for you
 already::
 
@@ -150,15 +151,9 @@ a |RegEx|.
 
 .. _Python: http://www.python.org/
 .. _raw strings: http://docs.python.org/tutorial/introduction.html#strings
-.. _LOCALE: http://docs.python.org/library/re.html#re.LOCALE
-.. _UNICODE: http://docs.python.org/library/re.html#re.LOCALE
 .. _ordinal: http://docs.python.org/library/functions.html
-.. _VERBOSE: http://docs.python.org/library/re.html#re.X
 .. _pyparsing: http://pyparsing.wikispaces.com/
 .. _python-dateutil: http://labix.org/python-dateutil
-.. _time.strptime: http://docs.python.org/library/time.html#time.strptime
-.. _time.strftime: http://docs.python.org/library/time.html#time.strftime
-.. _int: http://docs.python.org/library/functions.html#int
 .. _labix: http://labix.org/
 .. _standard library: http://docs.python.org/library/
 .. _pypi: http://pypi.python.org/pypi

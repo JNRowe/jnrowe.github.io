@@ -17,7 +17,8 @@ For those that haven’t used it, :command:`abook` is a simple ncurses_ based
 address book.  For some years now I’ve been using :command:`abook` to manage my
 personal address book, as it is both small and quite featureful.  The address
 file is in a standard ``ini`` format that I can easily import from and export
-to practically anything with only a small Python_ script using ConfigParser_.
+to practically anything with only a small Python_ script using
+:class:`~configparser.ConfigParser`.
 
 :command:`remind` is a functional **to the point of insanity** text-based
 reminder tool.  I use it mainly to remind me of tasks that need completing when
@@ -107,7 +108,6 @@ measure I hope!
 .. _remind: http://www.roaringpenguin.com/products/remind
 .. _ncurses: http://dickey.his.com/ncurses/
 .. _Python: http://www.python.org/
-.. _ConfigParser: http://docs.python.org/library/configparser.html
 .. _awesome: http://awesome.naquadah.org/
 .. _hCalender: http://microformats.org/wiki/hcalendar
 .. _make: http://www.gnu.org/software/make/make.html
