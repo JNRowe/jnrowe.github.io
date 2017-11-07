@@ -16,9 +16,9 @@ project at work Matt Cooper asks:
    :alt: notifications in awesome
    :align: right
 
-There is a library to make notification popups in awesome, and it is called
-naughty_.  With it notifications are as simple as calling ``naughty.notify``,
-for example:
+There is a library to make notification popups in :command:`awesome`, and it is
+called naughty_.  With it notifications are as simple as calling
+``naughty.notify``, for example:
 
 .. note::
 

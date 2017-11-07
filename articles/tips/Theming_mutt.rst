@@ -13,9 +13,9 @@ mutt_ has access to environment variables when reading its configurations files,
 so setting the theme based on term type is extremely easy.
 
 First separate all your common settings in to one file, say
-``~/.mutt/colour_defaults.rc``.  Then add your per-term settings to a file named
-``~/.mutt/colour_$TERM.rc``.  Telling mutt to use the correct theme is now as
-simple as adding the following to your ``~/.muttrc``:
+:file:`~/.mutt/colour_defaults.rc`.  Then add your per-term settings to a file
+named ``~/.mutt/colour_$TERM.rc``.  Telling mutt to use the correct theme is
+now as simple as adding the following to your :file:`~/.muttrc`:
 
 .. Yes, I know mutt’s config isn’t a shell script, but the highlighting works…
 

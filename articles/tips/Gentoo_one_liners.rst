@@ -10,14 +10,14 @@ system.  I found myself posting extended replies to some of the questions and
 I’m reposting a few of those here.
 
     How do I get *just the list* of packages that are installed but not in
-    ``world``?
+    :file:`world`?
 
-The constraint here is packages that were installed with ``--oneshot``, or
-manually removed from ``/var/lib/portage/world``, which means that they will no
-longer be updated automatically.  I often use this for packages I’m just playing
-with, and it appears lots of others do the same.  While the output of ``emerge
---pretend --depclean`` is all that is really needed, the question is how to get
-a list of just the packages.
+The constraint here is packages that were installed with :option:`--oneshot`,
+or manually removed from :file:`/var/lib/portage/world`, which means that they
+will no longer be updated automatically.  I often use this for packages I’m
+just playing with, and it appears lots of others do the same.  While the output
+of ``emerge --pretend --depclean`` is all that is really needed, the question
+is how to get a list of just the packages.
 
 .. code-block:: console
 
@@ -52,11 +52,11 @@ a list of just the packages.
     Required packages:    348
     Number to remove:     129
 
-The output we want can be easily matched with regular expressions, and the bash_
-``alias`` below will list just the packages by piping the output through sed_.
-We can even use the one liner as input to a larger function if we only want to
-see top-level packages; that is packages that aren’t listed as dependencies of
-other packages:
+The output we want can be easily matched with |RegEx|, and the bash_
+:command:`alias` below will list just the packages by piping the output through
+sed_.  We can even use the one liner as input to a larger function if we only
+want to see top-level packages; that is packages that aren’t listed as
+dependencies of other packages::
 
 .. code-block:: bash
 
@@ -73,8 +73,8 @@ other packages:
 
 See :gist:`207305`
 
-    Is it possible to use bash completion to complete package names for use in
-    ``package.keywords``?
+    Is it possible to use :command:`bash` completion to complete package names
+    for use in :file:`package.keywords`?
 
 I actually wrote the following little function in reply to a user asking
 a similar question in ``#gentoo`` on Freenode a couple of months ago:
@@ -109,19 +109,19 @@ See :gist:`207306`
 
 .. note::
    If you’re using our Gentoo boxes at the office the function will be much
-   faster if you replace the call to ``portageq`` by ``/var/lib/repos/*``, as
-   our package trees are always installed there.  The ``portageq`` call is
-   mainly there for users who use ``/usr/portage`` and ``/usr/local/portage``,
-   or other such monstrosities.
+   faster if you replace the call to :command:`portageq` by
+   ``/var/lib/repos/*``, as our package trees are always installed there.  The
+   :command:`portageq` call is mainly there for users who use ``/usr/portage``
+   and ``/usr/local/portage``, or other such monstrosities.
 
 The final question I looked at was:
 
     Is there an easy way to clean all the old modules from ``/lib/modules``?
 
 Assuming you are trying to remove all modules that don’t belong to the current
-kernel this is very easy using bash’s ``extglob`` support.  It may need to be
-enabled in your session, you can test whether it is enabled with ``shopt
-extglob``.
+kernel this is very easy using :command:`bash`’s ``extglob`` support.  It may
+need to be enabled in your session, you can test whether it is enabled with
+``shopt extglob``.
 
 .. code-block:: console
 

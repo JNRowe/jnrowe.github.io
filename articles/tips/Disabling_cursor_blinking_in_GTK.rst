@@ -20,9 +20,9 @@ question at hand...
 Cursor blinking is a severe annoyance for some people, and disabling it for GTK+
 applications is really quite simple.   If you’re a gnome_ user then the setting
 to change blinking is in the keyboard properties dialog that can be found in the
-system menu.  If you’re using KDE_ you should edit ``~/.gtkrc-2.0-kde``.  If
-you’re using neither gnome or KDE you can add a directive to your
-``~/.gtkrc-2.0``:
+system menu.  If you’re using KDE_ you should edit :file:`~/.gtkrc-2.0-kde`.
+If you’re using neither gnome or KDE you can add a directive to your
+:file:`~/.gtkrc-2.0`:
 
 .. code-block:: cpp
 
@@ -34,7 +34,7 @@ If it is just rate of blinking that bugs you there is ``gtk-cursor-blink``, it
 should be set to a value in milliseconds to adjust the blink frequency.
 
 If you wish to only change the settings in pidgin you can edit
-``~/.purple/gtkrc-2.0`` instead of your main ``~/.gtkrc-2.0``
+:file:`~/.purple/gtkrc-2.0` instead of your main :file:`~/.gtkrc-2.0`.
 
 Bonus related tip
 -----------------

@@ -21,11 +21,11 @@ Basic conditionals
 ------------------
 
 With great foresight the authors of xrdb_ decided that our ``Xresources`` file
-should be preprocessed before it is used, the default preprocessor is ``cpp``.
-On most of our systems at work, and likely most Linux systems in general,
-``cpp`` is `GNU cpp`_.  Don’t worry about the size of the manual though, the
-interesting features are easy to understand and use.  Let’s look at trimmed
-example from my configuration file::
+should be preprocessed before it is used, the default preprocessor is
+:command:`cpp`.  On most of our systems at work, and likely most Linux systems
+in general, :command:`cpp` is `GNU cpp`_.  Don’t worry about the size of the
+manual though, the interesting features are easy to understand and use.  Let’s
+look at trimmed example from my configuration file::
 
     #ifndef FIXED_FONT
         #define FIXED_FONT xft:Inconsolata:pixelsize=14:antialias=false
@@ -44,16 +44,17 @@ See :gist:`202712`
 This small snippet sets a couple of default fonts that we can reference
 throughout our resource file as ``FIXED_FONT`` and ``BOLD_FIXED_FONT``.  This
 way we can easily change the value in one place and it trickles down to all our
-programs.  Or we can define different options at runtime by specifying values to
-``xrdb``, such as ``xrdb -DFIXED_FONT=xft:Monospace:pixelsize=10``.  And don’t
-worry, ``cpp`` is smart enough to cope with the use ``=`` in our definition.
+programs.  Or we can define different options at runtime by specifying values
+to :command:`xrdb`, such as ``xrdb -DFIXED_FONT=xft:Monospace:pixelsize=10``.
+And don’t worry, :command:`cpp` is smart enough to cope with the use ``=`` in
+our definition.
 
 Per system conditionals
 -----------------------
 
 On one system I use Inconsolata_ is not installed, so the configuration above
-wouldn’t work on it.  ``xrdb`` gives us a way around the problem though, it
-defines a set of symbols we can use including one to test the system’s
+wouldn’t work on it.  :command:`xrdb` gives us a way around the problem though,
+it defines a set of symbols we can use including one to test the system’s
 ``hostname``.  ``nebula``, the system that doesn’t have Inconsolata, does have
 terminus_ and I can use that on there with a couple of small changes.
 
@@ -70,10 +71,10 @@ terminus_ and I can use that on there with a couple of small changes.
 See :gist:`202713`
 
 .. note::
-   As we’re using X11_’s ``xrdb`` it is network aware, it defines ``SVR_$name``
-   for the ``X`` server name and ``CLNT_$name`` for the client name.  Using
-   these it is easy to configure systems where the server and clients are on
-   different machines.
+   As we’re using X11_’s :command:`xrdb` it is network aware, it defines
+   :samp:`SRVR_{name}` for the ``X`` server name and :samp:`CLNT_{name}` for the
+   client name.  Using these it is easy to configure systems where the server
+   and clients are on different machines.
 
 Conditionals for server options
 -------------------------------
@@ -91,24 +92,25 @@ See :gist:`202714`
 Testing your resource files
 ---------------------------
 
-When you’re testing your own ``~/.Xresources`` file you can use the ``-n``
-option with ``xrdb``, it tells ``xrdb`` to dump the settings as they would be
-used instead of updating the resource database.  This makes it easy to check if
-our conditional statements are working correctly without having to open and
-close applications constantly.  You can also define and cancel symbol
-definitions with the ``-D`` and ``-U`` options for ``xrdb``, this allows you to
-test your modifications that rely on symbols that are normally exported by
-``xrdb``.
+When you’re testing your own :file:`~/.Xresources` file you can use the
+:option:`-n` option with :command:`xrdb`, it tells :command:`xrdb` to dump the
+settings as they would be used instead of updating the resource database.  This
+makes it easy to check if our conditional statements are working correctly
+without having to open and close applications constantly.  You can also define
+and cancel symbol definitions with the :option:`-D` and :option:`-U` options
+for :command:`xrdb`, this allows you to test your modifications that rely on
+symbols that are normally exported by :command:`xrdb`.
 
 Using a more featureful preprocessor
 ------------------------------------
 
-You can also choose a different preprocessor if ``cpp`` isn’t up to your needs
-by specifying a ``-cpp`` option to ``xrdb``.  The only caveat is that must
-accept ``-D`` for defines, ``-U`` for symbol cancelling and ``-I`` for include
-paths.  An example that does fit these restrictions is m4_, and it might be
-a good choice if you wish to do mode advanced things in your configuration file
-such as fancy filtering or the use of loops for defining settings.
+You can also choose a different preprocessor if :command:`cpp` isn’t up to your
+needs by specifying a :command:`-cpp` option to :command:`xrdb`.  The only
+caveat is that must accept :option:`-D` for defines, :option:`-U` for symbol
+cancelling and :option:`-I` for include paths.  An example that does fit these
+restrictions is m4_, and it might be a good choice if you wish to do mode
+advanced things in your configuration file such as fancy filtering or the use
+of loops for defining settings.
 
 .. _git: http://www.git-scm.com/
 .. _xrdb: http://www.xfree86.org/current/xrdb.1.html

@@ -1,8 +1,8 @@
 :date: 2014-11-12
-:tags: ``fossil``, vcs, projects, development
+:tags: fossil, vcs, projects, development
 
-``fossil`` experiments
-======================
+:command:`fossil` experiments
+=============================
 
 For a variety of reasons we can no longer use GitHub at work for any project
 which isn’t Open Source.  And since that decision was thrust upon us we’ve been
@@ -14,54 +14,56 @@ I was tasked with testing out fossil_ on a couple of small side projects, and
 these are my *absolutely* biased personal findings.
 
 Before I start I should add that while what I’m about to write probably sounds
-harsh, I do like ``fossil`` the concept.  I like the single sqlite_ project
-repository, I like the small-enough-to-grok-in-an-afternoon code base and I like
-the idea of a totally reproducible project state including all metadata.
+harsh, I do like :command:`fossil` the concept.  I like the single sqlite_
+project repository, I like the small-enough-to-grok-in-an-afternoon code base
+and I like the idea of a totally reproducible project state including all
+metadata.
 
-Testing ``fossil``
-------------------
+Testing :command:`fossil`
+-------------------------
 
-The good news is that testing ``fossil`` is a piece of cake.  It supports both
-reading and writing ``git``’s fast-import_ format.  If you want to test it out
-just dump an existing git_ repository(or `mercurial with an extension`_), and
-feed it ``fossil import``.  If you later change your mind you can run ``fossil
-export``.
+The good news is that testing :command:`fossil` is a piece of cake.  It
+supports both reading and writing :command:`git`’s fast-import_ format.  If you
+want to test it out just dump an existing git_ repository(or `mercurial with an
+extension`_), and feed it :command:`fossil import`.  If you later change your
+mind you can run :command:`fossil export`.
 
 Sadly supporting incremental two-way mirroring didn’t work out for us, but
 perhaps it will for simpler projects.  In the end I simply mirrored the
-``git`` repositories to ``fossil``, marked the ``git`` repositories as read-only
-and forced contributors to work with ``fossil`` from the outset.
+:command:`git` repositories to :command:`fossil`, marked the :command:`git`
+repositories as read-only and forced contributors to work with
+:command:`fossil` from the outset.
 
 Packaging
 ---------
 
-The ``fossil`` project sells itself on being a single file binary install, and
-that probably works well for a subset of users.  We’re not that in that subset
-though, and ``fossil`` is more than a little annoying to wrangle in to our
-environment.
+The :command:`fossil` project sells itself on being a single file binary
+install, and that probably works well for a subset of users.  We’re not that in
+that subset though, and :command:`fossil` is more than a little annoying to
+wrangle in to our environment.
 
 The tarball ships without any *directly* usable documentation, so you end up
 with either no system documentation or a collection of docs sprinkled with wiki
 markup in :file:`/usr/share/doc`.
 
-By default ``fossil`` builds in a manner which breaks most packaging standard
-unfortunately.  If you’re building packages you’ll likely need to write an awful
-lot of custom workarounds to get a compliant and usable package, see
-``lst-pkgs/utils/dev/fossil`` build for the gory details of our hacks.
+By default :command:`fossil` builds in a manner which breaks most packaging
+standard unfortunately.  If you’re building packages you’ll likely need to
+write an awful lot of custom workarounds to get a compliant and usable package,
+see ``lst-pkgs/utils/dev/fossil`` build for the gory details of our hacks.
 
 Uptake
 ------
 
-I don’t really want to hold this against ``fossil``, but it *is* important to
-note that for all intents and purposes no one is familiar with it.  No upstream
-projects we actively track use it, there isn’t a single person who chooses to
-use it on our site(which is why I had to handle the packaging) and expecting new
-hires to have even heard of it is probably a stretch.
+I don’t really want to hold this against :command:`fossil`, but it *is*
+important to note that for all intents and purposes no one is familiar with it.
+No upstream projects we actively track use it, there isn’t a single person who
+chooses to use it on our site(which is why I had to handle the packaging) and
+expecting new hires to have even heard of it is probably a stretch.
 
-It wouldn’t be such an issue if the choice was a ``git`` vs mercurial_ one,
-where the few differences are mostly cosmetic.  ``fossil`` is a completely
-different beast, and requires an enormous rethink in the way you handle version
-control.
+It wouldn’t be such an issue if the choice was a :command:`git` vs mercurial_
+one, where the few differences are mostly cosmetic.  :command:`fossil` is
+a completely different beast, and requires an enormous rethink in the way you
+handle version control.
 
 Ten years ago when people were on the whole still familiar with the CVS and
 Subversion way of working that wouldn’t have been such an issue, but times have
@@ -75,10 +77,10 @@ decade.
 All-in-one solution
 -------------------
 
-One of the proclaimed benefits of using ``fossil`` is that it handles many
-aspects of a project’s |ALM|; version control, issue tracking,
-documentation(via a wiki), etc.  However, and this is only my opinion, it
-feels like it does of all of these in a suboptimal manner.
+One of the proclaimed benefits of using :command:`fossil` is that it handles
+many aspects of a project’s |ALM|; version control, issue tracking,
+documentation(via a wiki), etc.  However, and this is only my opinion, it feels
+like it does of all of these in a suboptimal manner.
 
 Version control
 '''''''''''''''
@@ -92,7 +94,7 @@ have ``autosync`` disabled.  And I can’t imagine a scenario where ``autosync``
 could work for us, without rewriting our entire way of working or returning to
 CVS-style mega commits and a manual patch stack layered on top.
 
-If you read ``fossil``’s `Branching, Forking, Merging, and Tagging`_
+If you read :command:`fossil`’s `Branching, Forking, Merging, and Tagging`_
 documentation it appears that this is a design feature for the creators.
 
 Issue tracker
@@ -100,16 +102,17 @@ Issue tracker
 
 The issue tracker feels like someone has tried to improve on Bugzilla_, without
 taking a look at modern trackers.  It is definitely the weakest part of
-``fossil`` in my opinion, using it is both a mental and eye-stabbing pain at the
-same time.
+:command:`fossil` in my opinion, using it is both a mental and eye-stabbing
+pain at the same time.
 
 Luckily you can rework a lot of it by fiddling around with the administration
-settings exposed by ``fossil ui``.
+settings exposed by :command:`fossil ui`.
 
-This also exposes one of the best features of ``fossil``, you can create
+This also exposes one of the best features of :command:`fossil`, you can create
 a custom SQL script that configures the project(issue tracking, pretty theme,
 etc) and just blast it in to the project’s database.  Or you can create a custom
-file that makes all your edits and pump it in with ``fossil config import``.
+file that makes all your edits and pump it in with :command:`fossil config
+import`.
 
 Wiki
 ''''
@@ -127,12 +130,13 @@ Interface
 ---------
 
 The help output for new users is, in my opinion, really irritating.  The default
-command message tells you to run ``fossil help`` or ``fossil help COMMAND``,
-without providing the names of any of the common commands.  The ``fossil help``
-output emulates a ``tsort`` filter of the command names, listing commands with
-unique to ``fossil`` terminology and no short descriptions.  ``fossil help
---all`` feels like it should be more useful, but just creates a larger table of
-commands with uncommon names and still no descriptions.
+command message tells you to run :command:`fossil help` or :command:`fossil
+help COMMAND`, without providing the names of any of the common commands.  The
+:command:`fossil help` output emulates a :command:`tsort` filter of the command
+names, listing commands with unique to :command:`fossil` terminology and no
+short descriptions.  :command:`fossil help --all` feels like it should be more
+useful, but just creates a larger table of commands with uncommon names and
+still no descriptions.
 
 It makes very little sense to organise the help in this manner because as you
 get used to the naming and non-standard option style you will need the help
@@ -146,8 +150,8 @@ push it upstream.
 The option handling *will* trip you up endlessly.  Just the little things like
 being unable to chain options, and needing an endless stream of ``C-p M-5 M-b
 <space>`` to add a space before a commit message for example.  Yes, I know some
-people don’t like standard ``getopt`` or GNU-style option parsing, but every
-other tool you use has chosen it.
+people don’t like standard :command:`getopt` or GNU-style option parsing, but
+every other tool you use has chosen it.
 
 Some of the interface decisions are actively bad, for example there appears to
 be no way to delegate password configuration to a trusted system service or even
@@ -158,23 +162,24 @@ using that method.
 Speed
 -----
 
-On the whole ``fossil`` is fast, not ``git`` fast but fast nonetheless.  Commits
-do take a disturbingly long time to complete for some reason, but most of the
-other commands are fast enough.
+On the whole :command:`fossil` is fast, not :command:`git` fast but fast
+nonetheless.  Commits do take a disturbingly long time to complete for some
+reason, but most of the other commands are fast enough.
 
-Mangling a repository is actually a lot faster with ``fossil`` than any other
-system I can think of, as you can just throw the power of SQL at it.  You can
-find some sqlalchemy_ ORM definitions in :file:`/usr/share/doc/fossil/orm` in my
-packages.
+Mangling a repository is actually a lot faster with :command:`fossil` than any
+other system I can think of, as you can just throw the power of SQL at it.  You
+can find some sqlalchemy_ ORM definitions in :file:`/usr/share/doc/fossil/orm`
+in my packages.
 
 Conclusion
 ----------
 
 I mentioned this in this first paragraph, but I don’t see us moving to
-``fossil``.  It is a nice system, but it just wouldn’t work for us as is.
+:command:`fossil`.  It is a nice system, but it just wouldn’t work for us as
+is.
 
 Part of me is tempted to attempt to fix the problems, but then we’d be left with
-a system that is more obscure than ``fossil``.  If you read the `Fossil
+a system that is more obscure than :command:`fossil`.  If you read the `Fossil
 Concepts`_ and `Frequently Asked Questions`_ documents you’ll see that the most
 significant problems for us are actually features for upstream, and that is
 obviously fine but it does mean upstreaming changes would be impossible.
@@ -184,8 +189,8 @@ obviously fine but it does mean upstreaming changes would be impossible.
    send changes upstream anyway.
 
 That said I’m am planning on stealing some of the ideas that I really liked
-about ``fossil`` for my own use.  ``fossil all``’s ability to run a command
-against all repositories configured in :file:`~/.fossil` for example.
+about :command:`fossil` for my own use.  :command:`fossil all`’s ability to run
+a command against all repositories configured in :file:`~/.fossil` for example.
 
 .. |ALM| replace:: :abbr:`ALM (Application Lifecycle Management)`
 

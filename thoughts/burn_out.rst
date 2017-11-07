@@ -50,8 +50,8 @@ to JCB_ telling them they must document why they use round knobs on the digger
 I saw someone else using.  So try spot it early, and put a stop to it.
 
 ..
-    If you want to know why ``github2`` never spawned API v3 support, now you
-    do.  To some extent it was probably a good thing as the replacement was
+    If you want to know why :pypi:`github2` never spawned API v3 support, now
+    you do.  To some extent it was probably a good thing as the replacement was
     a clean reimplementation, without the baggage that supporting both API
     versions would have required.  In other ways it was bad as we could have
     used the momemtum to push a single library, instead of the tonnes of half
@@ -99,10 +99,10 @@ build a presence, but for many of us it is just for fun and reciprocation.
 
 Another example that I recall, but wish I didn’t, was a user *telling* me to
 recompress a tarball on |PyPI| because their infrastructure couldn’t support
-``bzip2``.  Seems reasonable enough, but it came wrapped in a tirade of abuse.
-I ignored the abuse, uploaded another tarball and then received another abusive
-email in return the next day.  That was a long time ago, far before the burnout
-started to creep in so I just addressed the actual issue and moved on.
+:command:`bzip2`.  Seems reasonable enough, but it came wrapped in a tirade of
+abuse.  I ignored the abuse, uploaded another tarball and then received another
+abusive email in return the next day.  That was a long time ago, far before the
+burnout started to creep in so I just addressed the actual issue and moved on.
 
 The answer
 ''''''''''

@@ -7,24 +7,25 @@ Visual vim mode identifier
 .. highlight:: vim
 
 Paul Kerry rants about his problems with vim_ over the cooler today, and as
-a long time ``vim`` user I found it hard not to respond to some of the points.
+a long time :command:`vim` user I found it hard not to respond to some of the
+points.
 
     All this mode switching makes it hard to know whether typing “Paul” is going
     to insert a huge block of code from the ether or insert, you know, “Paul” on
     the screen.
 
 The point Paul is making is that when he is in `normal mode`_, typing the “P” of
-”Paul” can cause ``vim`` to insert a huge amount of text at the cursor.  The
-text comes from the `unnamed register`_, so it will be whatever potentially very
-large chunk of text he deleted or yanked_ last.
+”Paul” can cause :command:`vim` to insert a huge amount of text at the cursor.
+The text comes from the `unnamed register`_, so it will be whatever potentially
+very large chunk of text he deleted or yanked_ last.
 
 .. image:: /.static/2009-10-13-vim_screenshot.png
    :alt: mode identifier in vim
    :align: right
 
-If he had just added ``set showmode`` to his ``~/.vimrc`` he would have a nice ``--
-INSERT --`` reminder in the bottom of his terminal window when in insert mode, as
-can be seen in the screenshot on the right.
+If he had just added ``set showmode`` to his :file:`~/.vimrc` he would have
+a nice ``-- INSERT --`` reminder in the bottom of his terminal window when in
+insert mode, as can be seen in the screenshot on the right.
 
 Another option that I use, combined with showmode_, is to change the cursor
 colour when switching to and from ``insert`` mode.  This unfortunately doesn’t

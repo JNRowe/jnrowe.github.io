@@ -28,7 +28,8 @@ All our Linux systems at the office include busybox_, and in the configuration
 we use the httpd_ applet is built.  It is very lightweight, and incredibly
 stable.  I often use it when testing or as a weak way to transfer files between
 hosts when avahi_ isn’t available or is too much hassle.  In my bash_
-configuration I have a little functions to start up a ``busybox httpd`` server:
+configuration I have a little functions to start up a :command:`busybox httpd`
+server:
 
 .. code-block:: bash
 
