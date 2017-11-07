@@ -4,6 +4,8 @@
 Making a nice home
 ------------------
 
+.. highlight:: make
+
 Back in :doc:`Kick_me_birthday_reminders` I said:
 
     You could trigger a rebuild in your ``~/.bashrc`` before you call ``rem`` to
@@ -27,9 +29,8 @@ Permissions
 I keep my home directory version controlled with ``git``, but git out of the box
 doesn’t maintain permissions on files beyond the executable bit.  There are
 plenty of ways around this including using external tools such as etckeeper_,
-but I prefer the simple approach of setting the permissions when they’re needed:
-
-.. code-block:: make
+but I prefer the simple approach of setting the permissions when they’re
+needed::
 
     PRIVATE_FILES := .abook/addressbook .gnupg/secring.gpg .mailfilter .msmtprc \
             .ssh/id_rsa
@@ -48,10 +49,8 @@ the correct permissions.
 vim hacks
 ---------
 
-I also call ``make`` in some subdirectories, the most interesting one is probably
-for ``.vim``:
-
-.. code-block:: make
+I also call ``make`` in some subdirectories, the most interesting one is
+probably for ``.vim``::
 
     CTAGS := exuberant-ctags
 
@@ -92,7 +91,7 @@ The final subdirectory ``Makefile`` we’re going to look at is actually called 
 a number of different directories to create HTML versions of
 reStructuredText_ files.
 
-.. code-block:: make
+::
 
     GENERATED = $(patsubst %.rst, %.html, $(wildcard *.rst))
 

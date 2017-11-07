@@ -4,6 +4,8 @@
 Uber pink prompts
 =================
 
+.. highlight:: bash
+
 cookiemon5ter asks in ``#gentoo`` on Freenode:
 
     anyone know where to get a list of color codes for bash or know the code for
@@ -24,9 +26,7 @@ a nice pink in the bash_ prompt under mrxvt_.
 Using mrxvt, or any other terminal that supports the xterm’s 256 colour mode, we
 can actually pick a variety of pinks to use directly without having to redefine
 the palette.  The prompt with a more gaudy pink can be achieved with the
-following:
-
-.. code-block:: bash
+following::
 
     export PS1='\[\e[01;33m\]\u@\h\[\e[38;5;199m\] \w\$\[\e[00m\] '
 
@@ -35,9 +35,7 @@ See :gist:`198009`
 The important change here is the use of ``\e[38;5;199m``, which tells mrxvt to
 select colour 199 from its extended 256 colour range.  Colours 196 through 201
 are varying levels of pink.  To see a quick table of the full colour range you
-can use the following little loop:
-
-.. code-block:: bash
+can use the following little loop::
 
     for i in {0..15}
     do

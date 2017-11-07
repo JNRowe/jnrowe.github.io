@@ -4,6 +4,8 @@
 Visual vim mode identifier
 ==========================
 
+.. highlight:: vim
+
 Paul Kerry rants about his problems with vim_ over the cooler today, and as
 a long time ``vim`` user I found it hard not to respond to some of the points.
 
@@ -29,9 +31,7 @@ colour when switching to and from ``insert`` mode.  This unfortunately doesn’t
 work on all terminal types, which means you have to test them individually and
 then set appropriate values for t_SI_ and t_EI_ on each terminal type.  An
 example for rxvt_-based terminals, including my favourite rxvt-unicode_, is
-below:
-
-.. code-block:: vim
+below::
 
     if &term =~? '^rxvt' && exists('&t_EI')
         let &t_EI="\033]12;red\007"
@@ -50,9 +50,7 @@ You can also use the InsertEnter_ and InsertLeave_ events to call a function
 when changing mode.  There really is no limit to what kind of notifications you
 can use with this method.  Taking the idea too far we could use the awesome_
 notifications from :doc:`Simple_notifications_in_awesome` to display popups
-when we change mode:
-
-.. code-block:: vim
+when we change mode::
 
     au InsertEnter * !echo "notify.start('Insert mode started')" | awesome-client
     au InsertLeave * !echo "notify.stop('Insert mode finished')" | awesome-client

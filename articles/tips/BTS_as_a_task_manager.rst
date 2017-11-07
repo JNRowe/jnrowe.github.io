@@ -4,6 +4,8 @@
 |BTS| as a task manager
 =======================
 
+.. highlight:: console
+
 Tom Marshall asks over the cooler:
 
     What apps do you guys use to manage your todo list(s)?
@@ -46,9 +48,7 @@ Setting ``be`` up
 
 Before we use ``be`` we must prepare it.  In the example that follows we’re
 going to create a new directory under the control of git_, and tell ``be`` we
-wish to use it in there:
-
-.. code-block:: console
+wish to use it in there::
 
     $ mkdir be_test; cd be_test
     $ git init
@@ -65,7 +65,7 @@ filed.  Bugs are identified by a :abbr:`UUID (Universally Unique IDentifier)`,
 and to operate on bugs we only need to use a unique prefix of the identifier as
 can be seen below.
 
-.. code-block:: console
+::
 
     $ be new "This is a test bug"
     Created bug with ID a09
@@ -86,7 +86,7 @@ add the comment.
 Querying bugs
 -------------
 
-.. code-block:: console
+::
 
     $ be list
     ec4:os: This is a second bug
@@ -105,7 +105,7 @@ use ``-m`` to list bugs assigned to yourself.
 When we wish to inspect individual bugs, to see there full status or comments,
 we use the ``be show`` command:
 
-.. code-block:: console
+::
 
     $ be show a09
             ID : a0912cd6-1eae-490c-8e56-5f532242394b
@@ -145,7 +145,7 @@ Once bugs are marked as fixed they no longer show up in the default ``be list``
 output, but we can still view them with ``be show`` or by calling ``be list``
 with filtering options.
 
-.. code-block:: console
+::
 
     $ be status ec4 fixed
     $ be list

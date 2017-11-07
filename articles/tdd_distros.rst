@@ -4,6 +4,8 @@
 TDD distro development
 ======================
 
+.. highlight:: python
+
 Using :abbr:`TDD (Test Driven Development)` for distribution development is a
 hot topic in some of the more geeky circles I move in, and I’m very happy about
 this.  Anything that increases the robustness of my desktop computer, my phone
@@ -43,9 +45,7 @@ only.  It is the practise that is important, not the process.
 The easiest method we use is via :pypi:`shelldoctest`, a module that implements
 a :mod:`doctest` interface for testing shell commands.  The package provides
 a user-level script for running shell sessions in Python docstrings.  A simple
-example could be:
-
-.. code-block:: python
+example could be::
 
     """
     $ echo test
@@ -97,9 +97,7 @@ someone saved a copy of the file locally for testing and forgot to update the
 that installed an older package release.
 
 When a fix for this bug was committed a test similar to the following snippet
-was added to the ``rails`` test suite:
-
-.. code-block:: python
+was added to the ``rails`` test suite::
 
     """
     $ grep -l "autoloaded_rails = '${PV}'" /usr/share/vim/vimfiles/autoload/rails.vim
@@ -146,9 +144,7 @@ documentation using the excellent Sphinx_ tool.
 
 The following script shows an extremely basic, yet fully functional, example of
 how to combine the ``doctest`` module’s :func:`~doctest.testfile` function with
-``shelldoctest``:
-
-.. code-block:: python
+``shelldoctest``::
 
     #! /usr/bin/python -tt
     import doctest

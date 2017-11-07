@@ -4,6 +4,8 @@
 Zsh and the |VCS|
 =================
 
+.. highlight:: zsh
+
 .. image:: /.static/2009-10-28-git_prompt.png
    :alt: Git prompt screenshot
    :align: right
@@ -37,7 +39,7 @@ prompt, I use it directly instead of the code in ``oh-my-zsh`` that handles
 ``git`` status because it doesn’t do what I want [yet].  I use a format that
 matches the default(``robbyrussell``) theme in ``oh-my-zsh``.
 
-.. code-block:: zsh
+::
 
     autoload -Uz vcs_info
 
@@ -94,9 +96,7 @@ I’ve toyed with adding more but suspect the lack of complexity is what makes
 them so useful.
 
 To enable them we need to add a `precmd hook`_ to calculate the repository
-status:
-
-.. code-block:: zsh
+status::
 
     autoload -U add-zsh-hook
     add-zsh-hook precmd prompt_jnrowe_precmd

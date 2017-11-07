@@ -4,6 +4,8 @@
 Debugging Python regular expressions
 ====================================
 
+.. highlight:: pycon
+
 Rob Sampson is learning Python_ and struggling to get to grips with its
 |RegEx| handling.  He asks on one of our internal lists at the office:
 
@@ -21,9 +23,7 @@ Raw strings
 -----------
 
 In Rob’s code he had failed to take in to account the backslash escaping
-problem.  A simplified example of what he was trying to do would be:
-
-.. code-block:: pycon
+problem.  A simplified example of what he was trying to do would be::
 
     >>> import re
     >>> re.findall(' ([0-9]+\\[a-z]+) ', 'make 123\match ')
@@ -51,9 +51,7 @@ becomes more complex their likelihood increases greatly.  Python, as is often
 the case, has the answer and it comes in the shape of the ``re.DEBUG`` flag
 which unfortunately appears to not be documented.  The ``re.DEBUG`` flag
 displays a parse tree allowing you to easily inspect the |RegEx| you have
-constructed:
-
-.. code-block:: pycon
+constructed::
 
     >>> re.findall(' ([0-9]+\\[a-z]+) ', 'make 123\match ', re.DEBUG)
     literal 32
@@ -81,7 +79,7 @@ If you need to use more than one flag, such as often useful VERBOSE_ flag, you
 can combine them with ``|`` (bitwise OR) as the flags are just named
 constants(``DEBUG`` is 128 for example).
 
-.. code-block:: pycon
+::
 
     >>> re.findall(r' (\d+\\\w+) ', 'make 123\match ', re.DEBUG|re.LOCALE)
     literal 32
@@ -112,9 +110,7 @@ evoke great rage in every person who reads your code.
 
 While ``pyparsing`` is a good general parsing tool it would be overkill for
 the task at hand, but it doesn’t hurt to show a simple example of
-constructing a parser:
-
-.. code-block:: pycon
+constructing a parser::
 
     >>> from pyparsing import (Literal, White, Word, alphas, nums)
     >>> matcher = Word(alphas) + Word(nums) + Literal('\\') + Word(alphas) + White()
@@ -131,9 +127,7 @@ by time.strftime_, for example if you use ``%z`` in the ``strftime`` call.
 All too often you see people trying to solve date parsing problems with
 |RegEx| and heaps of int_ calls to mangle the matches.  Not only is this
 a very brittle approach, but the labix_ guys have solved this problem for you
-already:
-
-.. code-block:: pycon
+already::
 
     >>> from dateutil import parser
     >>> s = '2009 10 30 23:35:16+0400'

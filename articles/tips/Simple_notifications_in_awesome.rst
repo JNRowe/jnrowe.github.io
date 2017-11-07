@@ -4,6 +4,8 @@
 Simple notifications in awesome
 -------------------------------
 
+.. highlight:: moon
+
 On seeing my window notifications in awesome_ from a screencast for a new
 project at work Matt Cooper asks:
 
@@ -18,13 +20,13 @@ There is a library to make notification popups in awesome, and it is called
 naughty_.  With it notifications are as simple as calling ``naughty.notify``,
 for example:
 
-.. info::
+.. note::
 
     I use moonscript_ for all my lua_ needs, as it provides a nicer syntax and
     fixes some of the warts(such as global-by-default).  The examples below are
     all written in ``moonscript``.
 
-.. code-block:: moon
+::
 
     require "naughty"
 
@@ -33,9 +35,7 @@ for example:
 See :gist:`201130`
 
 I do however define a few functions in my configuration file to simplify the
-normal notifications I use:
-
-.. code-block:: moon
+normal notifications I use::
 
     -- Generic info/warn/error notifications
     debug_messages = false
@@ -92,7 +92,7 @@ Window creation notifications
 One of the notifications I like to have is for when new windows are opened, this
 way I don’t miss windows opening on tags I’m not currently viewing.
 
-.. code-block:: moon
+::
 
     awful.hooks.manage.register (startup) =>
         -- Display the window’s name, or just Application if it isn’t set
@@ -110,7 +110,7 @@ quite nice, and definitely more noticeable than just changing the text in the
 wibox_.  The code below changes the interface name in the ``wibox``, and
 switches the network graph widget to use the appropriate input too.
 
-.. code-block:: moon
+::
 
     netiface = "lo"
     awful.hooks.timer.register 3, ->
