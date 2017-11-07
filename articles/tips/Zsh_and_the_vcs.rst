@@ -1,7 +1,8 @@
-Zsh and the |VCS|
-================
-
 :date: 2009-10-28
+:tags: git, vcs, zsh
+
+Zsh and the |VCS|
+=================
 
 .. image:: /.static/2009-10-28-git_prompt.png
    :alt: Git prompt screenshot

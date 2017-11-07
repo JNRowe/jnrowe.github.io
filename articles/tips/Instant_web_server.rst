@@ -1,7 +1,8 @@
+:date: 2009-10-12
+:tags: devel, web
+
 Instant web server
 ==================
-
-:date: 2009-10-12
 
 Among the topics on our Linux list at work today was a question from Luke
 Fletcher that I was expecting to unleash a flurry of emotional responses:

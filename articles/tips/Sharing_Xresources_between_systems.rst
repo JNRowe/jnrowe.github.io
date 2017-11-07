@@ -1,7 +1,8 @@
+:date: 2009-10-05
+:tags: X11, styling
+
 Sharing Xresources between systems
 ==================================
-
-:date: 2009-10-05
 
 In amongst the rants in our watercooler channel at work comes this question:
 

@@ -1,7 +1,8 @@
+:date: 2009-09-25
+:tags: bash, styling
+
 Uber pink prompts
 =================
-
-:date: 2009-09-25
 
 cookiemon5ter asks in ``#gentoo`` on Freenode:
 

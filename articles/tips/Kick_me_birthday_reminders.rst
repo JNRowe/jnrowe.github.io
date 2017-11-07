@@ -1,7 +1,8 @@
+:date: 2009-09-26
+:tags: abook, remind
+
 'Kick me' birthday reminders
 ============================
-
-:date: 2009-09-26
 
 Tony Collins asks on the EADS Linux list:
 

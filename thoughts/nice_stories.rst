@@ -1,4 +1,5 @@
 :date: 2013-12-23
+:tags: life
 
 Tell me a nice story, please
 ============================

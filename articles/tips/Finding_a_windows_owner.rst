@@ -1,7 +1,8 @@
+:date: 2009-10-06
+:tags: X11
+
 Finding a window's owner
 ========================
-
-:date: 2009-10-06
 
 Rach Holmes asks on our Linux list:
 

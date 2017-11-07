@@ -1,7 +1,8 @@
+:date: 2009-09-30
+:tags: bash, readline
+
 Beyond simple tab completion
 ============================
-
-:date: 2009-09-30
 
 Matt Taylor wrote on the EADS Linux list:
 

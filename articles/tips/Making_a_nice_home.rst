@@ -1,7 +1,8 @@
+:date: 2009-10-11
+:tags: unix, vcs
+
 Making a nice home
 ------------------
-
-:date: 2009-10-11
 
 Back in :doc:`Kick_me_birthday_reminders` I said:
 

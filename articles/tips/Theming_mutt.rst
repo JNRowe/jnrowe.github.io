@@ -1,7 +1,8 @@
+:date: 2009-09-23
+:tags: mutt, styling
+
 Theming mutt
 ============
-
-:date: 2009-09-23
 
 Jeff, a work colleague, asks via IRC:
 

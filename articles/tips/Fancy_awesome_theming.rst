@@ -1,7 +1,8 @@
+:date: 2009-09-28
+:tags: awesome, styling
+
 Fancy awesome theming
 =====================
-
-:date: 2009-09-28
 
 .. image:: /.static/2009-09-28-awesome_theming-mini.png
    :alt: Awesome screenshot
