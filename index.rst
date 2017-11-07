@@ -22,3 +22,5 @@ rant.
    contact
    consult
    copyright
+
+   glossary
