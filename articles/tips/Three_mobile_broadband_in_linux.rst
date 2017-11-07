@@ -7,33 +7,33 @@ Three mobile broadband in Linux
 Steve Lowry is picking up his Three_ modem this afternoon and asks on our
 internal Linux list if it supports Linux.
 
-    I've ordered the Huawei E220 as it was free.  Is it likely to work with
+    I’ve ordered the Huawei E220 as it was free.  Is it likely to work with
     Linux?  And, if so what should I be looking for to set it up?
 
-I've had a Huawei USB modem for about six months now and it works fine in Linux,
+I’ve had a Huawei USB modem for about six months now and it works fine in Linux,
 although it is probably a slightly different model.  The box and case for mine
 claims it is a E160G, whereas ``lsusb`` from usbutils_ claims it is a E220.  The
 manufacturers of these types of products routinely change the components and
-models without updating the product codes, so you'll have to wait until you plug
+models without updating the product codes, so you’ll have to wait until you plug
 it in to see what model it actually is.
 
 As for how to make it work?  Simply use a distribution that comes with
-NetworkManager_ and NetworkManager's `mobile broadband provider database`_.
-When I tested it on a friend's install with that setup last month it worked out
+NetworkManager_ and NetworkManager’s `mobile broadband provider database`_.
+When I tested it on a friend’s install with that setup last month it worked out
 of the box, all you had to do was plug it in and select the network.
 
 The route to fail
 -----------------
 
-If, like me, you'd prefer not to install NetworkManager you can manually
+If, like me, you’d prefer not to install NetworkManager you can manually
 configure the device using pppd_, and life is even easier now than it was when
 I did it as there is plenty more information available(including this I guess).
 
 Finding the |APN|
 '''''''''''''''''
 
-The first thing you need is your provider's |APN|, and the easiest place to
-find it is from the `NetworkManager database`_.  If yours is not there you'll
+The first thing you need is your provider’s |APN|, and the easiest place to
+find it is from the `NetworkManager database`_.  If yours is not there you’ll
 have to dig further.  When I originally got my device that database was
 practically empty, so I had to resort to other means to find the |APN|.
 
@@ -56,7 +56,7 @@ See :gist:`212738`
 
 The ``unpack`` tool from above is just a wrapper around common archivers, and
 the tool you actually need to extract the ``cab`` files is unshield_.
-Contrary to my first idea cabextract_ doesn't work, as these files are
+Contrary to my first idea cabextract_ doesn’t work, as these files are
 actually made by ``installshield``.
 
 With the |APN| in hand all we need to do now is configure our system.
@@ -64,22 +64,22 @@ With the |APN| in hand all we need to do now is configure our system.
 Kernel
 ''''''
 
-If you're using a vendor supplied kernel the options we need are hopefully
-already enabled.  If they're not, or you build your own kernels, there are few
+If you’re using a vendor supplied kernel the options we need are hopefully
+already enabled.  If they’re not, or you build your own kernels, there are few
 changes we need to make to the kernel configuration.
 
 The dongle itself needs ``CONFIG_USB_SERIAL_OPTION`` enabled, which is labelled
-as ``USB driver for GSM and CDMA modems`` in the kernel's ``menuconfig``.  It
-can be found hidden away under the "USB Serial Converters" section in 2.6.31.
+as ``USB driver for GSM and CDMA modems`` in the kernel’s ``menuconfig``.  It
+can be found hidden away under the “USB Serial Converters” section in 2.6.31.
 
 We also need ``CONFIG_PPP`` and ``CONFIG_PPP_ASYNC`` support, which can be found
-in the "Network devices" section of the config.  Unlike the old-style dialup you
+in the “Network devices” section of the config.  Unlike the old-style dialup you
 probably used to use there is no point enabling the PPP compression options as
 they are not supported by mobile providers in general, partly because the data
 is already compressed.
 
 Then just rebuild the kernel, and check that the dongle shows up in ``dmesg``
-output when it is plugged in.  If it does we're ready for the next step.
+output when it is plugged in.  If it does we’re ready for the next step.
 
 /etc/chatscripts/three
 ''''''''''''''''''''''
@@ -107,13 +107,13 @@ See :gist:`212739`
 
 Exchange ``3internet`` for your |APN| in the example above, if it differs.
 
-It is also possible, yet unlikely, that you'll have to call a different number
+It is also possible, yet unlikely, that you’ll have to call a different number
 to ``*99#``.  If this was the case you would have found that out from extracting
 the data from the drivers or looking your network up in the NetworkManager
 database.
 
-Notice the very short value for timeout, I've come to that value empirically.
-If the connection isn't up after 3 seconds it is not coming up, and you're just
+Notice the very short value for timeout, I’ve come to that value empirically.
+If the connection isn’t up after 3 seconds it is not coming up, and you’re just
 wasting time before you retry.
 
 /etc/ppp/peers/three
@@ -137,23 +137,23 @@ We also need a peer script, and the format of that file is described in the
 
 See :gist:`212740`
 
-You may have to change your device settings if the dongle doesn't show up as
+You may have to change your device settings if the dongle doesn’t show up as
 ``/dev/ttyUSB0``, but other than that the file should be correct.
 
-Note that we don't set a speed in our peer file, and this may appear unusual to
-you if you've configured ``pppd`` manually in the past.  The reason is that
+Note that we don’t set a speed in our peer file, and this may appear unusual to
+you if you’ve configured ``pppd`` manually in the past.  The reason is that
 interface speed for USB modems is set by the kernel, and adding a value here is
 pointless.
 
 passwords
 '''''''''
 
-We don't need to add an entry to ``chap-secrets`` or ``pap-secrets`` as
-authentication isn't required, but if you're following along having chosen to
+We don’t need to add an entry to ``chap-secrets`` or ``pap-secrets`` as
+authentication isn’t required, but if you’re following along having chosen to
 use a configuration tool such as pppconfig_ just enter any values you wish as
-they're silently ignored.
+they’re silently ignored.
 
-I'm told the same applies to wvdial_, so if it complains about requiring
+I’m told the same applies to wvdial_, so if it complains about requiring
 a password just add an empty or random string to stop the errors.
 
 Testing the connection
@@ -165,7 +165,7 @@ should watch the output of your syslog to look for errors, the errors can be
 found in syslog because we supplied ``debug`` in our peer script.
 
 On my system the log can be comfortably viewed with ``tail -f
-/var/log/ppp/current``, but it is system dependent and if you don't use metalog_
+/var/log/ppp/current``, but it is system dependent and if you don’t use metalog_
 it will definitely be somewhere else in ``/var/log``.
 
 If the connection worked fine that is all there is to it, now just enable the
@@ -173,14 +173,14 @@ connection at system startup or configure udev_ to connect when the device is
 inserted if it will not always be connected.
 
 .. note::
-   These devices can take anywhere between ten and thirty seconds to "settle"
-   once plugged in. So, don't block on this service if you add it to the system
+   These devices can take anywhere between ten and thirty seconds to “settle”
+   once plugged in. So, don’t block on this service if you add it to the system
    startup scripts as it can significantly slow down the system boot time.  On
    my dongle you can visually check how long the device takes to settle by
    watching the :abbr:`LED (Light Emitting Diode)` on the case, when it changes
    from green it has found a network signal and is ready to use.
 
-If the connection didn't work correctly look at the debugging output in syslog
+If the connection didn’t work correctly look at the debugging output in syslog
 and check the ``pppd`` manual page to look up the error codes.
 
 Happy, erm... mobility.

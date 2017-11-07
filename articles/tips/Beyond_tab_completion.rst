@@ -55,18 +55,18 @@ See :gist:`198437`
 
 You must source the startup file or restart ``bash`` to enable this binding,
 alternatively you can just test the command in your current ``bash`` setting
-until you're happy with the key combination.
+until you’re happy with the key combination.
 
 In a follow up email on the list Matt asks if it is possible to make the
 completion context aware, in much the same the bash-completion_ package does but
 without having to write new completion scripts.  There are some other quite
-useful completion modes available in ``bash``, I'll describe a few below.
+useful completion modes available in ``bash``, I’ll describe a few below.
 
 ``M-!`` tells ``bash`` to complete command names be they actual on-disk
 commands, functions or aliases. ``M-/`` completes only filenames, this can be
 very useful when ``bash-completion`` is refusing to tab complete a filename for
 you.  ``C-$`` implements variable name completion, this is most useful when
-you're looking to unset or re-set a variable.  Variable name completion isn't
+you’re looking to unset or re-set a variable.  Variable name completion isn’t
 actually necessary if you have ``bash-completion`` installed as it is smart
 enough to handle this for you in most cases.
 
@@ -77,7 +77,7 @@ completes to
 ``/home/jay/Git/Local/{Makefile,countless,dot-configs,haskvim,jrutils}``.  Using
 ``readline`` motion commands, especially word motions such as ``M-f`` and
 ``M-b`` to jump forward and backward one word, I can easily apply a command to
-a certain set of files in a directory.  Just don't try it on ``/usr/bin`` unless
+a certain set of files in a directory.  Just don’t try it on ``/usr/bin`` unless
 you want to see how ``bash`` handles massive command lines!!
 
 .. _vim: http://www.vim.org/

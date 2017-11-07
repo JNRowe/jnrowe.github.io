@@ -1,7 +1,7 @@
 :date: 2009-09-26
 :tags: abook, remind
 
-'Kick me' birthday reminders
+“Kick me” birthday reminders
 ============================
 
 Tony Collins asks on the EADS Linux list:
@@ -13,7 +13,7 @@ Tony Collins asks on the EADS Linux list:
 My answer is to combine the excellent abook_ and remind_ tools in to a really
 cool solution that nags you about birthdays every time you login.
 
-For those that haven't used it, ``abook`` is a simple ncurses_ based address
+For those that haven’t used it, ``abook`` is a simple ncurses_ based address
 book.  For some years now I’ve been using ``abook`` to manage my personal
 address book, as it is both small and quite featureful.  The address file is in
 a standard ``ini`` format that I can easily import from and export to
@@ -67,7 +67,7 @@ file from our address book now.
             name = data.get(record, "name")
         birthdate = datetime.datetime.strptime(data.get(record, "custom2"),
                                             "%Y-%m-%d")
-        print "REM %s +4 MSG %s's [grn][_yr_num(%d)][nrm] Birthday %%a" \
+        print "REM %s +4 MSG %s’s [grn][_yr_num(%d)][nrm] Birthday %%a" \
             % (birthdate.strftime("%d %B"), name, birthdate.year)
 
 See :gist:`198018`
@@ -78,7 +78,7 @@ I use the following make_ snippet in my ``~/Makefile`` to generate the
 .. code-block:: make
 
     .reminders.d/birthdays: .abook/addressbook .reminders.d/birthdays.py
-            $(info - Generating remind's birthdays file)
+            $(info - Generating remind’s birthdays file)
             $(word 2, $^) >$@
 
 See :gist:`198019`

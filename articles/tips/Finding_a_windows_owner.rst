@@ -1,7 +1,7 @@
 :date: 2009-10-06
 :tags: X11
 
-Finding a window's owner
+Finding a window’s owner
 ========================
 
 Rach Holmes asks on our Linux list:
@@ -23,8 +23,8 @@ the application, if that exists all we have to do is read it:
     WM_COMMAND(STRING) = { "urxvt", "-cd", "/home/jay/Desktop" }
 
 However, not all applications set this property.  Examples of applications that
-don't set this property include firefox_ and gimp_.  In fact, many of the modern
-applications you find on desktop systems don't set this property at all.
+don’t set this property include firefox_ and gimp_.  In fact, many of the modern
+applications you find on desktop systems don’t set this property at all.
 
 The other way
 -------------
@@ -51,7 +51,7 @@ by default.
 
 The ``wmctrl`` output has five aligned columns.  The first is the window id, the
 second the desktop is visible on, the third is the process id, the fourth is the
-client machine and the fifth is the window's title string.  And with the ``xprop``
+client machine and the fifth is the window’s title string.  And with the ``xprop``
 example we must select a window with the mouse when calling ``xprop``, and then we
 pluck the process id from the output.
 
@@ -64,13 +64,13 @@ The problems
 Back to the original question and Rach was looking for a way to stop the window
 from showing up, the immediate response to the annoying window problem is to
 find its process id and send it a ``SIGTERM``.  It seems like a reasonable idea,
-but I've been choosing the ``urxvtd`` examples on purpose to prove a point.
+but I’ve been choosing the ``urxvtd`` examples on purpose to prove a point.
 
 ``urxvtd`` is the terminal daemon provided by rxvt-unicode_, all terminals that
 are spawned by it will have the same ``_NET_WM_PID`` value and ``WM_COMMAND``
-string.  This isn't just an issue with ``urxvtd`` either, it happens with all
+string.  This isn’t just an issue with ``urxvtd`` either, it happens with all
 applications that operate in this way.  Sending a ``SIGTERM`` to every terminal
-opened by ``urxvtd`` probably isn't what we would want to do, so you should
+opened by ``urxvtd`` probably isn’t what we would want to do, so you should
 always think very carefully before sending terminate signals.
 
 .. _firefox: http://www.mozilla.com/firefox

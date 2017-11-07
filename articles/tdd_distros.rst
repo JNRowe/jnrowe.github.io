@@ -5,7 +5,7 @@ TDD distro development
 ======================
 
 Using :abbr:`TDD (Test Driven Development)` for distribution development is a
-hot topic in some of the more geeky circles I move in, and I'm very happy about
+hot topic in some of the more geeky circles I move in, and I’m very happy about
 this.  Anything that increases the robustness of my desktop computer, my phone
 or any other device I use is a great goal!
 
@@ -30,14 +30,14 @@ resources.
 How?
 ----
 
-We, the fine folks of AST's London office, already use a test-based
+We, the fine folks of AST’s London office, already use a test-based
 stabilisation policy in the preparation of our distribution images.  Adding
 tests for new and bumped packages is something Leal Hétu and I have been
 enforcing for the past few years.
 
 Our packages and distribution images are used for the embedded devices we sell,
 the desktops we develop on and the laptops we play on.  The methods we use vary
-greatly, so I'm going to present the simple case of testing console applications
+greatly, so I’m going to present the simple case of testing console applications
 only.  It is the practise that is important, not the process.
 
 The easiest method we use is via :pypi:`shelldoctest`, a module that implements
@@ -78,7 +78,7 @@ package.  This allows us to almost instantly ascertain whether a future package
 bump breaks functionality we require.
 
 We also add a test *every single time* we fix a packaging bug, to make sure it
-doesn't come up again.  A good example can be gleaned from a bug that was fixed
+doesn’t come up again.  A good example can be gleaned from a bug that was fixed
 in our rails_ vim package.  Given the way the `vim scripts site`_ is organised
 the files you want to download have awful download locations, so our ebuild for
 the ``rails`` plugin contains the following snippet:
@@ -91,7 +91,7 @@ the ``rails`` plugin contains the following snippet:
 
 The ``SRC_URI`` declaration says we need to fetch the file from
 ``http://www.vim.org/scripts/download_script.php?src_id=13800`` and name it
-locally as ``rails-4.3.zip``.  I'm sure you can guess what happened here,
+locally as ``rails-4.3.zip``.  I’m sure you can guess what happened here,
 someone saved a copy of the file locally for testing and forgot to update the
 ``src_id`` parameter correctly [#]_.  The result was an apparently new build
 that installed an older package release.
@@ -107,7 +107,7 @@ was added to the ``rails`` test suite:
     """
 
 All this does is check the reported version is correct, and it clearly only took
-a few seconds to write.  This is important, it shouldn't cost a lot to write a
+a few seconds to write.  This is important, it shouldn’t cost a lot to write a
 test and this is especially true for the simplest task.
 
 I use a similar technique for managing my public Gentoo overlay, jnrowe-misc_.
@@ -129,23 +129,23 @@ conveniently script the progression to stable including a final run of the test
 suite.
 
 I would, of course, prefer to see *any* tests upstreamed and where possible this
-is already happening.  However, we're pragmatists and this means we often use
+is already happening.  However, we’re pragmatists and this means we often use
 existing content as input for tests.  The use of existing input makes writing
 the test faster and means each test exercises functionality we actually require,
-but it also means we occasionally can't submit the data upstream owing to
+but it also means we occasionally can’t submit the data upstream owing to
 licensing concerns.
 
 Bonus
 -----
 
-I've used the upstream supported ``shelldoctest`` method for writing tests on
+I’ve used the upstream supported ``shelldoctest`` method for writing tests on
 this page, but you can also easily specify them in `reST syntax`_ files too.
 Doing this encourages you to write nicely formatted documentation to accompany
 your tests.  You can also leverage your tests that are written in this way as
 documentation using the excellent Sphinx_ tool.
 
 The following script shows an extremely basic, yet fully functional, example of
-how to combine the ``doctest`` module's :func:`~doctest.testfile` function with
+how to combine the ``doctest`` module’s :func:`~doctest.testfile` function with
 ``shelldoctest``:
 
 .. code-block:: python
@@ -177,7 +177,7 @@ a ``reST`` formatted file as follows:
 
 .. rubric:: Footnotes
 
-.. [#] Okay, it was me.  I'll confess.
+.. [#] Okay, it was me.  I’ll confess.
 
 .. _rails: http://www.vim.org/scripts/script.php?script_id=1567
 .. _vim scripts site: http://www.vim.org/scripts/script.php?script_id=1567

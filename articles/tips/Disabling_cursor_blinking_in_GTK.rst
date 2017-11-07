@@ -8,7 +8,7 @@ Darren Roberts asks via the EADS Linux list:
 
     In pidgin_ how can I stop the cursor blinking?
 
-Since we've had our Jabber_ server set up at the office there have been
+Since we’ve had our Jabber_ server set up at the office there have been
 countless questions about using pidgin_ to the various lists, and I feel the
 answer that should often be given is:  Use something else.  There are plenty of
 other clients available; empathy_ is installed on all our Solaris and Linux
@@ -18,10 +18,10 @@ my favourite bitlbee_.  Now, with the rant out of the way we can go back to the
 question at hand...
 
 Cursor blinking is a severe annoyance for some people, and disabling it for GTK+
-applications is really quite simple.   If you're a gnome_ user then the setting
+applications is really quite simple.   If you’re a gnome_ user then the setting
 to change blinking is in the keyboard properties dialog that can be found in the
-system menu.  If you're using KDE_ you should edit ``~/.gtkrc-2.0-kde``.  If
-you're using neither gnome or KDE you can add a directive to your
+system menu.  If you’re using KDE_ you should edit ``~/.gtkrc-2.0-kde``.  If
+you’re using neither gnome or KDE you can add a directive to your
 ``~/.gtkrc-2.0``:
 
 .. code-block:: cpp
@@ -39,8 +39,8 @@ If you wish to only change the settings in pidgin you can edit
 Bonus related tip
 -----------------
 
-If you're really driven mad by the blinking cursor, and wish to disable it in
-the console too then add the next little snippet to your shell's startup file:
+If you’re really driven mad by the blinking cursor, and wish to disable it in
+the console too then add the next little snippet to your shell’s startup file:
 
 .. code-block:: bash
 

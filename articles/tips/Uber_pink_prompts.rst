@@ -10,18 +10,18 @@ cookiemon5ter asks in ``#gentoo`` on Freenode:
     pink :p
 
 My first suggestion was to look at `console_codes(4)`_ for the escapes, and note
-that pink isn't defined.  As a workaround I suggested changing the console
+that pink isn’t defined.  As a workaround I suggested changing the console
 palette using ``echo "\e]PDff1493"`` which will make the normal magenta escape
 in to a much deeper pink.  The syntax to change the console colour palette is
 ``\eP${colour_number}${red}${green}${blue}``, so deconstructing the above
 example we are setting colour code ``D`` (or 13) to ``#ff1493``.
 
-However, the idea cookiemon5ter had wasn't to change the palette but just to use
+However, the idea cookiemon5ter had wasn’t to change the palette but just to use
 a nice pink in the bash_ prompt under mrxvt_.
 
     i was just talking [about] editing the line in bashrc
 
-Using mrxvt, or any other terminal that supports the xterm's 256 colour mode, we
+Using mrxvt, or any other terminal that supports the xterm’s 256 colour mode, we
 can actually pick a variety of pinks to use directly without having to redefine
 the palette.  The prompt with a more gaudy pink can be achieved with the
 following:
@@ -55,9 +55,9 @@ See :gist:`198010`
    :alt: xterm's 256 colour palette
 
 There is one other important point to make here, you must set the prompt based
-on terminal type now as some terminals and the console won't recognise the
+on terminal type now as some terminals and the console won’t recognise the
 sequences correctly.  Test the terminal type by checking ``$TERM`` in your
-startup scripts, or if you're convinced all your terminals are 256 colour
+startup scripts, or if you’re convinced all your terminals are 256 colour
 capable you can simply check for ``$DISPLAY`` instead.
 
 Changing the console palette and using 256 colour mode makes for two tips

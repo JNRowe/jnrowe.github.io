@@ -5,16 +5,16 @@ Toggling settings in vim
 ========================
 
 As you can never have enough keybinding tips and vim_ helps to prove that, the
-tip for today answers Joshua's question from ``##purplism``
+tip for today answers Joshua’s question from ``##purplism``
 
     can you toggle settings in vim with a key?
 
-The simple answer is yes, but how easy it is depends on what you're trying to
+The simple answer is yes, but how easy it is depends on what you’re trying to
 toggle.  We need a state to test when toggling settings, so as long as we can
 query the setting toggling it is easy.  For example, I have a binding in my
 ``~/.vimrc`` to toggle the value of background_.  As I use transparent terminals
 the colours used for syntax highlighting can occasionally get a little difficult
-to read depending on the wallpaper I'm using, the following function allows me
+to read depending on the wallpaper I’m using, the following function allows me
 to quick toggle the ``background`` setting:
 
 .. code-block:: vim
@@ -39,7 +39,7 @@ For some other commands such as toggling line numbering it can be much simpler:
 
 See :gist:`200257`
 
-For those times when we can't easily flip the setting on and off or query state
+For those times when we can’t easily flip the setting on and off or query state
 in a simple manner, the solution is to store state ourselves and test that.
 
 We may, for example, wish to toggle a group of settings on or off at one time.

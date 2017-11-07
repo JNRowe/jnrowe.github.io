@@ -56,7 +56,7 @@ are then output in format that ``sup`` accepts.  It includes only the primary
 email address for the contact, as I tend to order contacts with multiple email
 addresses in address preference order.
 
-As I've mentioned before in :doc:`Making_a_nice_home` all these tasks should be
+As I’ve mentioned before in :doc:`Making_a_nice_home` all these tasks should be
 automated, and this one is no different.  To regenerate the contacts list when
 the addressbook has been updated we can use make_:
 

@@ -6,8 +6,8 @@ Introduction to |RCS|
 
 .. warning::
 
-   I've resurrected this text from my old UKFSN site because a couple of people
-   asked me to, but I wouldn't recommend using |RCS| to anyone at this point.
+   I’ve resurrected this text from my old UKFSN site because a couple of people
+   asked me to, but I wouldn’t recommend using |RCS| to anyone at this point.
    It is mainly to help people who need to understand |RCS| because they have
    no choice, for example Gentoo users who are stuck with ``dispatch-conf`` (or
    so my mails tell me).
@@ -74,7 +74,7 @@ to add the file to revision control.
     $ ls
     RCS
 
-The file we checked in appears to have disappeared, obviously it hasn't but the
+The file we checked in appears to have disappeared, obviously it hasn’t but the
 default behaviour of |RCS| is to remove the file we check in. You can choose to
 keep a working copy with ``ci -u`` or ``ci -l`` (covered below).
 
@@ -84,7 +84,7 @@ keep a working copy with ``ci -u`` or ``ci -l`` (covered below).
     myscript.sh,v
 
 In the |RCS| directory a file now exists with the same name as our script plus
-a ",v". This is the file |RCS| uses to store all of its data in.
+a ``,v``. This is the file |RCS| uses to store all of its data in.
 
 .. code-block:: console
 
@@ -109,7 +109,7 @@ to check out a read-only version of the file.
 
 The ``-l`` option to ``co`` (and also ``ci`` ) is used to lock the file. This
 file now becomes a working file, which is writable, and it also means other
-people can't edit it until you have released it or checked it in again.
+people can’t edit it until you have released it or checked it in again.
 
 Blindly using the ``-l`` option to ``ci``/``co`` is not advisable, you should
 get in to the habit now of only locking files you are working on.  |RCS| uses
@@ -289,7 +289,7 @@ including the |RCS| status monitor rcsi_ and blame_ |RCS| file annotator.
 
 The screenshot to the right shows ``rcsi`` in use on a sample partially |RCS|
 controlled directory.  All the information it contains should be fairly self
-explanatory, and even if it isn't the package comes with a comprehensive man
+explanatory, and even if it isn’t the package comes with a comprehensive man
 page and README.
 
 .. code-block:: text
@@ -305,7 +305,7 @@ page and README.
     1.4          (root     21-Jan-06):                 mkdir -p /tmp/.{ICE,X11}-unix
 
 The above excerpt is a sample of the output from blame_ being run against
-a config file which is maintained using |RCS| by Gentoo's ``dispatch-conf``
+a config file which is maintained using |RCS| by Gentoo’s ``dispatch-conf``
 tool.  It allows you to simply see which revision introduced a change to
 a specific line.  You can also choose to annotate specific |RCS| revisions
 using the ``--revision`` option, or specific dates with ``--date`` option.

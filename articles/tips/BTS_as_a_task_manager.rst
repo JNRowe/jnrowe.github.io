@@ -13,38 +13,38 @@ for local task management, the idea of just adding random lines of text to
 a file frankly baffles me.  I love the filtering, ordering and editing
 capabilities I get from using a |BTS| for this.
 
-Now, I'm not suggesting installing something complex and convoluted like
+Now, I’m not suggesting installing something complex and convoluted like
 Bugzilla_ just for keeping track of your shopping lists or remembering to
 charge the spare battery for your phone.  There are quite a few lightweight
 systems available, ditz_ and `Bugs Everywhere`_ being two examples.  There is
 also a ``ditz`` inspired project, written in Python_, called pitz_ that is in
-active development.  And fossil_ is pretty cool if you're looking for
+active development.  And fossil_ is pretty cool if you’re looking for
 a standalone wiki, |BTS| and |VCS| in one.
 
 .. note::
-   If you're a Gentoo_ user you can install ``ditz`` using
+   If you’re a Gentoo_ user you can install ``ditz`` using
    the ebuild from my overlay_.
 
-I'm currently in the process of switching away from :abbr:`be (Bugs
+I’m currently in the process of switching away from :abbr:`be (Bugs
 Everywhere)`, but it can serve as an example quite well.  Unfortunately, there
 are no releases currently being made so you will need to install a recent
-version of ``bzr`` to download it.  Don't worry though you aren't restricted to
+version of ``bzr`` to download it.  Don’t worry though you aren’t restricted to
 ``bzr`` to use it.
 
 .. note::
-   Colleagues from work can grab Dan's ``be`` branch directly from our package
-   repository, it doesn't require ``bzr`` and it fixes quite a few usage
+   Colleagues from work can grab Dan’s ``be`` branch directly from our package
+   repository, it doesn’t require ``bzr`` and it fixes quite a few usage
    problems(it is also much faster).  Just remember that it has diverged
-   massively from the upstream code, so you won't be able to use it to work with
+   massively from the upstream code, so you won’t be able to use it to work with
    bug databases created by the upstream project.
 
 The following examples use an older version of ``be`` that you can download as
-a tarball_ and doesn't require ``bzr``.
+a tarball_ and doesn’t require ``bzr``.
 
 Setting ``be`` up
 -----------------
 
-Before we use ``be`` we must prepare it.  In the example that follows we're
+Before we use ``be`` we must prepare it.  In the example that follows we’re
 going to create a new directory under the control of git_, and tell ``be`` we
 wish to use it in there:
 
@@ -78,8 +78,8 @@ can be seen below.
     $ git commit -m"Commit bug ec4."
 
 We now have two bugs filed.  Bug ``a09`` is self-assigned, while ``ec4`` has yet
-to be assigned.  As we didn't set a severity level for ``a09`` it is set to the
-default of ``minor``.  A comment was also made on bug ``ec4``, and if we hadn't
+to be assigned.  As we didn’t set a severity level for ``a09`` it is set to the
+default of ``minor``.  A comment was also made on bug ``ec4``, and if we hadn’t
 specified the comment on the command line it would open our default editor to
 add the comment.
 
@@ -174,7 +174,7 @@ That really is all it takes to use ``be``, and that is why I find a |BTS| to
 be a nice solution for managing all kinds of random tasks.  I have a Bugs
 Everywhere database in my home directory that over the past year has stored
 just over 600 bugs from shopping lists to actual bugs with my configurations
-files, and I've apparently managed to complete 95% of them!
+files, and I’ve apparently managed to complete 95% of them!
 
 Bonus material
 --------------
@@ -196,7 +196,7 @@ Everywhere database, and it is very simple to do:
 See :gist:`204172`
 
 It could be improved to take settings to filter the bug list or all manner of
-other cool things, but that is why it has a "See gist #x" label next to it.
+other cool things, but that is why it has a “See gist #x” label next to it.
 Feel free to post updates to the gist!
 
 .. |BTS| replace:: :abbr:`BTS (Bug Tracking System)`

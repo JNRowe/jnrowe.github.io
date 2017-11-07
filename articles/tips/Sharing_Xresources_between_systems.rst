@@ -11,9 +11,9 @@ In amongst the rants in our watercooler channel at work comes this question:
 
 The question arises from a much larger topic concerning keeping your home
 directory in a git_ repository.  The issue Carl is having is that he needs to
-use different options on different machines and doesn't relish the idea of
+use different options on different machines and doesn’t relish the idea of
 having to pull and rebase branches just to keep files in sync.  Of course, he
-doesn't have to do that and that is the point of this tip.
+doesn’t have to do that and that is the point of this tip.
 
 Basic conditionals
 ------------------
@@ -21,8 +21,8 @@ Basic conditionals
 With great foresight the authors of xrdb_ decided that our ``Xresources`` file
 should be preprocessed before it is used, the default preprocessor is ``cpp``.
 On most of our systems at work, and likely most Linux systems in general,
-``cpp`` is `GNU cpp`_.  Don't worry about the size of the manual though, the
-interesting features are easy to understand and use.  Let's look at trimmed
+``cpp`` is `GNU cpp`_.  Don’t worry about the size of the manual though, the
+interesting features are easy to understand and use.  Let’s look at trimmed
 example from my configuration file:
 
 .. code-block:: c
@@ -45,16 +45,16 @@ This small snippet sets a couple of default fonts that we can reference
 throughout our resource file as ``FIXED_FONT`` and ``BOLD_FIXED_FONT``.  This
 way we can easily change the value in one place and it trickles down to all our
 programs.  Or we can define different options at runtime by specifying values to
-``xrdb``, such as ``xrdb -DFIXED_FONT=xft:Monospace:pixelsize=10``.  And don't
+``xrdb``, such as ``xrdb -DFIXED_FONT=xft:Monospace:pixelsize=10``.  And don’t
 worry, ``cpp`` is smart enough to cope with the use ``=`` in our definition.
 
 Per system conditionals
 -----------------------
 
 On one system I use Inconsolata_ is not installed, so the configuration above
-wouldn't work on it.  ``xrdb`` gives us a way around the problem though, it
-defines a set of symbols we can use including one to test the system's
-``hostname``.  ``nebula``, the system that doesn't have Inconsolata, does have
+wouldn’t work on it.  ``xrdb`` gives us a way around the problem though, it
+defines a set of symbols we can use including one to test the system’s
+``hostname``.  ``nebula``, the system that doesn’t have Inconsolata, does have
 terminus_ and I can use that on there with a couple of small changes.
 
 .. code-block:: c
@@ -70,7 +70,7 @@ terminus_ and I can use that on there with a couple of small changes.
 See :gist:`202713`
 
 .. note::
-   As we're using X11_'s ``xrdb`` it is network aware, it defines ``SVR_$name``
+   As we’re using X11_’s ``xrdb`` it is network aware, it defines ``SVR_$name``
    for the ``X`` server name and ``CLNT_$name`` for the client name.  Using
    these it is easy to configure systems where the server and clients are on
    different machines.
@@ -80,7 +80,7 @@ Conditionals for server options
 
 You can also change configured settings based on the extensions loaded in to the
 server, for example to disable the screensaver in ``muxi`` if the DPMS extension
-is supported we'd test for ``EXT_DPMS``:
+is supported we’d test for ``EXT_DPMS``:
 
 .. code-block:: c
 
@@ -93,7 +93,7 @@ See :gist:`202714`
 Testing your resource files
 ---------------------------
 
-When you're testing your own ``~/.Xresources`` file you can use the ``-n``
+When you’re testing your own ``~/.Xresources`` file you can use the ``-n``
 option with ``xrdb``, it tells ``xrdb`` to dump the settings as they would be
 used instead of updating the resource database.  This makes it easy to check if
 our conditional statements are working correctly without having to open and
@@ -105,7 +105,7 @@ test your modifications that rely on symbols that are normally exported by
 Using a more featureful preprocessor
 ------------------------------------
 
-You can also choose a different preprocessor if ``cpp`` isn't up to your needs
+You can also choose a different preprocessor if ``cpp`` isn’t up to your needs
 by specifying a ``-cpp`` option to ``xrdb``.  The only caveat is that must
 accept ``-D`` for defines, ``-U`` for symbol cancelling and ``-I`` for include
 paths.  An example that does fit these restrictions is m4_, and it might be

@@ -62,7 +62,7 @@ normal notifications I use:
 See :gist:`201131`
 
 .. note::
-   If you're willing to install lua-functional_, the above code snippet can be
+   If you’re willing to install lua-functional_, the above code snippet can be
    made much nicer by using its ``partial`` application support to define
    ``start`` and ``stop``.
 
@@ -75,21 +75,21 @@ and switch it back to ``false`` to stop it being displayed.
 The ``notify.{start,stop,warn}`` functions prepend the text you pass it with
 a coloured Unicode bullet.  awesome makes use of pango_
 meaning you can easily use pretty much any character you wish, or more
-specifically any character your font can display.  From time to time I've
+specifically any character your font can display.  From time to time I’ve
 experimented with using ``✔`` and ``✘``, but most of the fonts I prefer to use
-don't display them correctly(if you're seeing two boxes your fonts don't
+don’t display them correctly(if you’re seeing two boxes your fonts don’t
 either).
 
 Window creation notifications
 -----------------------------
 
 One of the notifications I like to have is for when new windows are opened, this
-way I don't miss windows opening on tags I'm not currently viewing.
+way I don’t miss windows opening on tags I’m not currently viewing.
 
 .. code-block:: moon
 
     awful.hooks.manage.register (startup) =>
-        -- Display the window's name, or just Application if it isn't set
+        -- Display the window’s name, or just Application if it isn’t set
         notify.start "#{@name or 'Application'} started"
     end)
 
