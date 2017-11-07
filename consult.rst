@@ -39,6 +39,8 @@ criteria:
 * You're a non-profit organisation
 * Your for-profit company has an existing partnership with my current employer
 
+.. rubric:: Footnotes
+
 .. [#] I may be willing to offer extra free services for non-profit
        organisations
 .. [#] Any |NDA| with a limit in excess of three years is likely to be

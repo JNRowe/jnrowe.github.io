@@ -175,6 +175,8 @@ a ``reST`` formatted file as follows:
         $ grep -l "autoloaded_rails = '${PV}'" /usr/share/vim/vimfiles/autoload/rails.vim
         /usr/share/vim/vimfiles/autoload/rails.vim
 
+.. rubric:: Footnotes
+
 .. [#] Okay, it was me.  I'll confess.
 
 .. _rails: http://www.vim.org/scripts/script.php?script_id=1567
