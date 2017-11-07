@@ -57,42 +57,42 @@ mail which seems more than a little overkill to me.
 
 .. code-block:: python
 
-    #! /usr/bin/python -tt
+    #! /usr/bin/python3 -tt
 
     from csv import reader
     from email import message_from_file
     from os.path import expanduser
     from sys import stdin
 
-    lbdb = reader(open(expanduser("~/.lbdb/m_inmail.list")),
-                    delimiter='\t')
+    with open(expanduser('~/.lbdb/m_inmail.list')) as f:
+        lbdb = reader(f, delimiter='\t')
     addresses = dict(rec[:2] for rec in lbdb)
 
     message = message_from_file(stdin)
 
     commenter = None
     for line in message.get_payload().splitlines():
-        if line.endswith(" changed:"):
+        if line.endswith(' changed:'):
             commenter = line.split()[0]
             break
-        elif line.startswith("------- Comment #"):
+        elif line.startswith('------- Comment #'):
             commenter = line.split()[4]
             break
-        elif line.startswith("        ReportedBy: "):
+        elif line.startswith('        ReportedBy: '):
             commenter = line.split()[1]
             break
 
     # You could also filter the message content at this point if you wished.
     # The following, for example, would remove the “https” link and some of
     # the blank lines in Gentoo bugspam
-    message.set_payload("\n".join([message.get_payload().splitlines()[3], ]
+    message.set_payload('\n'.join([message.get_payload().splitlines()[3], ]
                                 + message.get_payload().splitlines()[6:]))
 
     if commenter in addresses:
-        message.replace_header("from",
-                            '"%s" <%s>' % (addresses[commenter], commenter))
+        message.replace_header('from',
+                               '"%s" <%s>' % (addresses[commenter], commenter))
 
-    print message.as_string()
+    print(message.as_string())
 
 See :gist:`198022`
 

@@ -18,27 +18,28 @@ mangling the ``abook`` addressbook is possible in only a few lines of code:
 
 .. code-block:: python
 
-    #! /usr/bin/python -tt
+    #! /usr/bin/python3 -tt
     """Generate a sup contacts list from abook"""
 
-    import configobj
-    import os
-    import sys
+    from os import path
+    from sys import argv, exit
 
-    def parse(file=None):
-        if not file:
-            file = os.path.expanduser("~/.abook/addressbook")
-        conf = configobj.ConfigObj(file, list_values=False)
-        for chunk in filter(lambda d: "nick" in d and "email" in d, conf.values()):
-            print "%(nick)s: %(name)s" % chunk, \
-                "<%s>" % chunk["email"].split(",")[0]
+    from configobj import ConfigObj
 
-    if __name__ == "__main__":
-        if len(sys.argv) > 1:
-            if sys.argv[1] in ("-h", "--help"):
-                print "%s [addressbook]" % sys.argv[0]
-                sys.exit(255)
-            addressbook = sys.argv[1]
+    def parse(fname=None):
+        if not fname:
+            fname = path.expanduser('~/.abook/addressbook')
+        conf = ConfigObj(fname, list_values=False)
+        for chunk in filter(lambda d: 'nick' in d and 'email' in d, conf.values()):
+            print('{0[nick]}: {0[name]}'.format(chunk),
+                  '<{}>'.format(chunk['email'].split(',')[0]))
+
+    if __name__ == '__main__':
+        if len(argv) > 1:
+            if argv[1] in ('-h', '--help'):
+                print('{} [addressbook]'.format(argv[0]))
+                exit(255)
+            addressbook = argv[1]
         else:
             addressbook = None
         parse(addressbook)
@@ -63,7 +64,7 @@ the addressbook has been updated we can use make_:
 .. code-block:: make
 
     .sup/contacts.txt: .abook/addressbook
-        python sup_contacts.py $< >$@
+        python3 sup_contacts.py $< >$@
 
 See :gist:`340875`
 
