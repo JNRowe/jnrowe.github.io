@@ -39,7 +39,7 @@ the user interface instead of just ``Custom2`` add the following to your
 
     customfield 2 Birthday
 
-`Fork this code <http://gist.github.com/198015>`__
+See :gist:`198015`
 
 A little ``python`` script is all that is needed to generate a reminder input
 file from our address book now.
@@ -70,7 +70,7 @@ file from our address book now.
         print "REM %s +4 MSG %s's [grn][_yr_num(%d)][nrm] Birthday %%a" \
             % (birthdate.strftime("%d %B"), name, birthdate.year)
 
-`Fork this code <http://gist.github.com/198018>`__
+See :gist:`198018`
 
 I use the following make_ snippet in my ``~/Makefile`` to generate the
 ``~/.reminders.d/birthdays`` file:
@@ -81,7 +81,7 @@ I use the following make_ snippet in my ``~/Makefile`` to generate the
             $(info - Generating remind's birthdays file)
             $(word 2, $^) >$@
 
-`Fork this code <http://gist.github.com/198019>`__
+See :gist:`198019`
 
 And finally, we need to tell ``remind`` to include our newly created file by
 editing ``~/.reminders``:
@@ -90,7 +90,7 @@ editing ``~/.reminders``:
 
     INCLUDE /home/jay/.reminders.d/birthdays
 
-`Fork this code <http://gist.github.com/198020>`__
+See :gist:`198020`
 
 .. image:: /.static/2009-09-26-remind_screenshot.png
    :alt: shell login screenshot

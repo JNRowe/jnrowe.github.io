@@ -43,7 +43,7 @@ configuration I have a little functions to start up a ``busybox httpd`` server:
         busybox httpd -f -p 8080 -h ${1:-${http_serve_location}}
     }
 
-`Fork this code <http://gist.github.com/208887>`__
+See :gist:`208887`
 
 ``http_serve_location`` is set elsewhere in my configuration file, so that I can
 keep per-machine settings separate.
@@ -98,7 +98,7 @@ to use ``webrick``:
 
     server.start
 
-`Fork this code <http://gist.github.com/208891>`__
+See :gist:`208891`
 
 This script will serve files from whatever directory is specified as its first
 argument.

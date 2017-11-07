@@ -28,7 +28,7 @@ better function names in ``ini`` and ``adr`` files:
     [diff "adr"]
             funcname = "^#.*$"
 
-`Fork this code <http://gist.github.com/198037>`__
+See :gist:`198037`
 
 And, to enable them you must tell ``git`` which files to use the new matchers with
 by editing the ``.gitattributes`` file:
@@ -38,7 +38,7 @@ by editing the ``.gitattributes`` file:
     *.ini diff=ini
     *.adr diff=adr
 
-`Fork this code <http://gist.github.com/198038>`__
+See :gist:`198038`
 
 The ``funcname`` values are simple regular expressions to search for, so in the
 ``ini`` example it is searching for a line that begins with a ``[`` and ends with

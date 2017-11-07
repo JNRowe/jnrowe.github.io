@@ -30,7 +30,7 @@ following:
 
     export PS1='\[\e[01;33m\]\u@\h\[\e[38;5;199m\] \w\$\[\e[00m\] '
 
-`Fork this code <http://gist.github.com/198009>`__
+See :gist:`198009`
 
 The important change here is the use of ``\e[38;5;199m``, which tells mrxvt to
 select colour 199 from its extended 256 colour range.  Colours 196 through 201
@@ -49,7 +49,7 @@ can use the following little loop:
         printf "\n"
     done
 
-`Fork this code <http://gist.github.com/198010>`__
+See :gist:`198010`
 
 .. image:: /.static/2009-09-25-256_colours.png
    :alt: xterm's 256 colour palette

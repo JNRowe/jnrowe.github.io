@@ -25,7 +25,7 @@ C++ files.
         \   let &makeprg="make %<" |
         \ endif
 
-`Fork this code <http://gist.github.com/198024>`__
+See :gist:`198024`
 
 The ``%<`` in our ``makeprg`` definition refers to the current file with its
 extension stripped.  We specifically only change the behaviour if no

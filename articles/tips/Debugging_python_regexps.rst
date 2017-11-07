@@ -32,7 +32,7 @@ problem.  A simplified example of what he was trying to do would be:
     >>> re.findall(r' ([0-9]+\\[a-z]+) ', 'make 123\match ')
     ['123\\match']
 
-`Fork this code <http://gist.github.com/198015>`__
+See :gist:`198015`
 
 Without the raw string, specified by the preceding ``r`` in our pattern, the
 |RegEx| parser is actually looking for a literal ``[`` where we've intended
@@ -70,7 +70,7 @@ constructed:
     literal 32
     []
 
-`Fork this code <http://gist.github.com/223892>`__
+See :gist:`223892`
 
 Here we can see that our expression matches ``range (48, 57)``, 48 and 57 being
 the ordinal_ for ``0`` and ``9`` respectively.  Following that we see a match
@@ -96,7 +96,7 @@ constants(``DEBUG`` is 128 for example).
     literal 32
     ['123\\match']
 
-`Fork this code <http://gist.github.com/223893>`__
+See :gist:`223893`
 
 Better tools
 ------------
@@ -121,7 +121,7 @@ constructing a parser:
     >>> matcher.parseString('make 123\\match ')
     (['make', '123', '\\', 'match', ' '], {})
 
-`Fork this code <http://gist.github.com/223894>`__
+See :gist:`223894`
 
 Another exceptional tool for tasks that people often abuse |RegEx| for is
 python-dateutil_.  One of the reasons I occasionally turn to this module is
@@ -140,7 +140,7 @@ already:
     >>> parser.parse(s)
     datetime.datetime(2009, 10, 30, 23, 35, 16, tzinfo=tzoffset(None, 14400))
 
-`Fork this code <http://gist.github.com/223895>`__
+See :gist:`223895`
 
 .. note::
    If you use `python-dateutil`_ do be aware that by default it will prefer US

@@ -28,7 +28,7 @@ you're using neither gnome or KDE you can add a directive to your
 
     gtk-cursor-blink = 0
 
-`Fork this code <http://gist.github.com/200429>`__
+See :gist:`200429`
 
 If it is just rate of blinking that bugs you there is ``gtk-cursor-blink``, it
 should be set to a value in milliseconds to adjust the blink frequency.
@@ -46,7 +46,7 @@ the console too then add the next little snippet to your shell's startup file:
 
     echo -e '\033[?48c'
 
-`Fork this code <http://gist.github.com/200430>`__
+See :gist:`200430`
 
 .. _pidgin: http://pidgin.im/
 .. _Jabber: http://xmpp.org/

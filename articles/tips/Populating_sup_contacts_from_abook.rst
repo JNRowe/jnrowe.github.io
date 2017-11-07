@@ -43,7 +43,7 @@ mangling the ``abook`` addressbook is possible in only a few lines of code:
             addressbook = None
         parse(addressbook)
 
-`Fork this code <http://gist.github.com/340873>`__
+See :gist:`340873`
 
 The script requires the excellent configobj_ module.  You could also use the
 ConfigParser_ module from the Python standard library, but ``configobj`` allows
@@ -65,7 +65,7 @@ the addressbook has been updated we can use make_:
     .sup/contacts.txt: .abook/addressbook
         python sup_contacts.py $< >$@
 
-`Fork this code <http://gist.github.com/340875>`__
+See :gist:`340875`
 
 Using this method allows us to continue using ``abook`` while having simple
 access to our contacts from within ``sup``.  This is incredibly useful as it

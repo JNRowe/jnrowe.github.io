@@ -71,7 +71,7 @@ other packages:
         done
     }
 
-`Fork this code <http://gist.github.com/207305>`__
+See :gist:`207305`
 
     Is it possible to use bash completion to complete package names for use in
     ``package.keywords``?
@@ -105,7 +105,7 @@ a similar question in ``#gentoo`` on Freenode a couple of months ago:
     }
     complete -F _emerge arch_unmask
 
-`Fork this code <http://gist.github.com/207306>`__
+See :gist:`207306`
 
 .. note::
    If you're using our Gentoo boxes at the office the function will be much
