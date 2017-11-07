@@ -49,9 +49,9 @@ a few lines of code:
 See :gist:`340873`
 
 The script requires the excellent configobj_ module.  You could also use the
-ConfigParser_ module from the Python standard library, but ``configobj`` allows
-my laziness to shine through with its simple dictionary-based access to the
-parsed data.
+:mod:`configparser` module from the Python standard library, but ``configobj``
+allows my laziness to shine through with its simple dictionary-based access to
+the parsed data.
 
 The script opens either the named or default :command:`abook` addressbook and
 fetches any entries that contain both a ``nick`` and ``email`` section.  Those
@@ -83,5 +83,4 @@ too, see :doc:`Kick_me_birthday_reminders`.
 .. _Python: http://www.python.org/
 .. _very simple format: http://sup.rubyforge.org/wiki/wiki.pl?ContactsList
 .. _configobj: http://www.voidspace.org.uk/python/configobj.html
-.. _ConfigParser: http://docs.python.org/library/configparser.html
 .. _make: http://www.gnu.org/software/make/make.html
