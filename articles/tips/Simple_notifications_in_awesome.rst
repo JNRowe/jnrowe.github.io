@@ -18,6 +18,12 @@ There is a library to make notification popups in awesome, and it is called
 naughty_.  With it notifications are as simple as calling ``naughty.notify``,
 for example:
 
+.. info::
+
+    I use moonscript_ for all my lua_ needs, as it provides a nicer syntax and
+    fixes some of the warts(such as global-by-default).  The examples below are
+    all written in ``moonscript``.
+
 .. code-block:: moon
 
     require "naughty"
@@ -91,7 +97,6 @@ way I don’t miss windows opening on tags I’m not currently viewing.
     awful.hooks.manage.register (startup) =>
         -- Display the window’s name, or just Application if it isn’t set
         notify.start "#{@name or 'Application'} started"
-    end)
 
 See :gist:`201132`
 
@@ -107,32 +112,25 @@ switches the network graph widget to use the appropriate input too.
 
 .. code-block:: moon
 
+    netiface = "lo"
     awful.hooks.timer.register 3, ->
-        if netiface == "lo" and io.open "/var/lock/LCK..ttyUSB0"
-            netiface = "ppp0"
-            nettext_widget.text = " ppp0:"
-            wicked.register netbar_widget, "net",
-                "${ppp0 up_b}",
-                3, "upload"
-            wicked.register netbar_widget, "net",
-                "${ppp0 down_b}",
-                3, "download"
-            notify.start "PPP0 interface has come up"
+        iface, state = if netiface == "lo" and io.open "/var/lock/LCK..ttyUSB0"
+            "ppp0", "up"
         elseif netiface == "ppp0" and not io.open "/var/lock/LCK..ttyUSB0"
-            netiface = "lo"
-            nettext_widget.text = " lo:"
-            wicked.register netbar_widget, "net",
-                "${lo up_b}",
-                3, "upload"
-            wicked.register netbar_widget, "net",
-                "${lo down_b}",
-                3, "download"
-            notify.stop "PPP0 interface has gone down"
+            "lo", "down"
+
+        nettext_widget.text = " #{iface}:"
+        wicked.register netbar_widget, "net", "${#{iface} up_b}", 3, "upload"
+        wicked.register netbar_widget, "net", "${#{iface} down_b}", 3,
+            "download"
+        notify.start "PPP0 interface has come #{state}"
 
 See :gist:`201133`
 
 .. _awesome: http://awesome.naquadah.org/
 .. _naughty: http://awesome.naquadah.org/doc/api/modules/naughty.html
+.. _moonscript: https://github.com/leafo/moonscript/
+.. _lua: http://www.lua.org/
 .. _lua-functional: http://github.com/samsarin/lua-functional
 .. _pango: http://www.pango.org/
 .. _awful: http://awesome.naquadah.org/doc/api/modules/awful.hooks.html
