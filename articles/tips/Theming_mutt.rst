@@ -17,6 +17,8 @@ First separate all your common settings in to one file, say
 ``~/.mutt/colour_$TERM.rc``.  Telling mutt to use the correct theme is now as
 simple as adding the following to your ``~/.muttrc``:
 
+.. Yes, I know mutt’s config isn’t a shell script, but the highlighting works…
+
 .. code-block:: sh
 
     source ~/.mutt/colour_defaults.rc
