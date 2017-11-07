@@ -24,9 +24,9 @@ better function names in ``ini`` and ``adr`` files:
 .. code-block:: ini
 
     [diff "ini"]
-            funcname = "^\\[.*\\]$"
+        funcname = "^\\[.*\\]$"
     [diff "adr"]
-            funcname = "^#.*$"
+        funcname = "^#.*$"
 
 See :gist:`198037`
 

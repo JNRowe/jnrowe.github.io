@@ -56,20 +56,22 @@ for ``.vim``:
     CTAGS := exuberant-ctags
 
     TARGETS := $(patsubst /usr/lib/%, tags/%.ctags, $(wildcard /usr/lib/python*)) \
-            doc/tags
+        doc/tags
+
+    .PHONY: clean
 
     all: $(TARGETS)
 
-    tags/%.ctags: /usr/lib/%
-            $(CTAGS) --exclude=test_* --exclude=tests.py --exclude=test.py \
-                    --exclude=*/test/* --exclude=*/tests/* --languages=python \
-                    -R -f $@ $<
+    $(TARGETS): tags/%.ctags: /usr/lib/%
+        $(CTAGS) --exclude=test_* --exclude=tests.py --exclude=test.py \
+            --exclude=*/test/* --exclude=*/tests/* --languages=python \
+            -R -f $@ $<
 
     doc/tags: $(filter-out doc/tags, $(wildcard doc/*))
-            vim -X -u NONE -c 'helptags $(dir $@)' -c ':q' </dev/null &>/dev/null
+        vim -X -u NONE -c 'helptags $(dir $@)' -c ':q' </dev/null &>/dev/null
 
     clean:
-            rm -f $(TARGETS)
+        rm -f $(TARGETS)
 
 See :gist:`208209`
 

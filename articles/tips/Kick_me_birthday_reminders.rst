@@ -80,8 +80,8 @@ I use the following make_ snippet in my ``~/Makefile`` to generate the
 .. code-block:: make
 
     .reminders.d/birthdays: .abook/addressbook .reminders.d/birthdays.py
-            $(info - Generating remind’s birthdays file)
-            $(word 2, $^) >$@
+        $(info - Generating remind’s birthdays file)
+        $(word 2, $^) >$@
 
 See :gist:`198019`
 
