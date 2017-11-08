@@ -74,7 +74,7 @@ html_title = 'JNRowe'
 html_context = {'feed_link': True}
 html_favicon = '.static/icon.ico'
 html_static_path = ['.static', ]
-html_extra_path = ['.well-known/', ]
+html_extra_path = ['.extras', ]
 
 with suppress(CalledProcessError):
     proc = run(['git', 'log', "--pretty=format:'%ad [%h]'", '--date=short',
