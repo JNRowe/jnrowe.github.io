@@ -15,7 +15,7 @@ other clients available; empathy_ is installed on all our Solaris and Linux
 boxes now, gossip_ may already be installed, emacs-jabber_ seems popular with
 many of our emacs_ using developers, gajim_ comes recommended by a few users or
 my favourite bitlbee_.  Now, with the rant out of the way we can go back to the
-question at hand...
+question at hand…
 
 Cursor blinking is a severe annoyance for some people, and disabling it for GTK+
 applications is really quite simple.   If you’re a gnome_ user then the setting

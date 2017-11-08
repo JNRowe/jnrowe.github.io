@@ -13,8 +13,8 @@ Content creation
 Content is invariably written with vim_, or on occasion via a script, in the
 beautiful reST_ format.
 
-And finally...
---------------
+And finally…
+------------
 
 I’d like to believe that all my pages are valid |HTML| and :abbr:`CSS
 (Cascading Style Sheets)`, and that all my feeds are valid Atom_.  Web
