@@ -106,15 +106,15 @@ status::
     prompt_jnrowe_precmd () {
         vcs_info
 
-        if [ -z "${vcs_info_msg_0_}" ]; then
+        if [ -z "${vcs_info_msg_0_}" ] {
             dir_status="%F{2}→%f"
-        elif [[ -n "$(git diff --cached --name-status 2>/dev/null )" ]]; then
+        } elif [[ -n "$(git diff --cached --name-status 2>/dev/null )" ]] {
             dir_status="%F{1}▶%f"
-        elif [[ -n "$(git diff --name-status 2>/dev/null )" ]]; then
+        } elif [[ -n "$(git diff --name-status 2>/dev/null )" ]] {
             dir_status="%F{3}▶%f"
-        else
+        } else {
             dir_status="%F{2}▶%f"
-        fi
+        }
     }
 
 See :gist:`220829`
