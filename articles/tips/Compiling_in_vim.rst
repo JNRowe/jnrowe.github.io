@@ -23,8 +23,8 @@ value of ``makeprg``, which :command:`vim` uses as the command to run with
 .. code-block:: vim
 
     autocmd FileType c,cpp
-        \ if glob("[Mm]akefile') == "" |
-        \   let &makeprg="make %<" |
+        \ if empty(glob("[Mm]akefile")) |
+        \   setlocal makeprg=make\ %< |
         \ endif
 
 See :gist:`198024`
