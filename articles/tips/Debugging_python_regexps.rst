@@ -48,10 +48,9 @@ to use the ``[`` as the start of a character set.
 
 These types of string escaping problems are common, and as your |RegEx|
 becomes more complex their likelihood increases greatly.  Python, as is often
-the case, has the answer and it comes in the shape of the :data:`re.DEBUG` flag
-which unfortunately appears to not be documented.  The :data:`re.DEBUG` flag
-displays a parse tree allowing you to easily inspect the |RegEx| you have
-constructed::
+the case, has the answer and it comes in the shape of the :data:`re.DEBUG`
+flag.  The :data:`re.DEBUG` flag displays a parse tree allowing you to easily
+inspect the |RegEx| you have constructed::
 
     >>> re.findall(' ([0-9]+\\[a-z]+) ', 'make 123\match ', re.DEBUG)
     literal 32
