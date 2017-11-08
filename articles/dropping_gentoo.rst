@@ -66,7 +66,7 @@ once promised(perhaps in part because of that |CLA|?).
 
 Had we waited another five months, there would have been another open source
 package manager for Gentoo we could have easily switched to and hacked on.
-There is perhaps a pattern here...
+There is perhaps a pattern here…
 
 .. _conary: http://en.wikipedia.org/wiki/Conary_(package_manager)
 .. _PMS: http://wiki.gentoo.org/wiki/Project:PMS
@@ -153,7 +153,7 @@ necessitated supporting a few packages further up the stack.  Our desire to trim
 the tree of a few categories that were problematic, meant replacing a variety of
 packages with then unavailable dependencies.
 
-And there were many other examples too...
+And there were many other examples too…
 
 matchbox
 ''''''''

@@ -18,7 +18,7 @@ I recall my answer was somewhat flippant:
 
     “I’d have used it repeatedly half an hour ago, until I figured out the magic
     incantation that convinces that cashier in the ‘Express to join me for
-    a picnic...  and then I would have ditched you suckers.”
+    a picnic… and then I would have ditched you suckers.”
 
 It was an honest-ish answer;  I mean yeah, she may have been worth messing with
 the universe for.  It wasn’t, however, the correct kind of reply.  I should
