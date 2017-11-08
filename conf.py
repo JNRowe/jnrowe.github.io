@@ -99,18 +99,6 @@ intersphinx_mapping = {
     'python': ('https://docs.python.org/3/',
                os.getenv('SPHINX_PYTHON_OBJECTS')),
 }
-for proj in ['blanco', 'bleeter', 'bwatch', 'cupage', 'jnrowe-fixes',
-             'pyisbn', 'upoints', 'versionah', 'vim-jnrowe']:
-    # IDs must be alphanumeric
-    proj_id = ''.join(filter(str.isalnum, proj))
-    intersphinx_mapping[proj_id] = ('https://jnrowe.github.io/%s/' % proj,
-                                    'objects/%s.inv' % proj)
-
-for proj in ['jnrowe-misc', ]:
-    # IDs must be alphanumeric
-    proj_id = ''.join(filter(str.isalnum, proj)) + 'docs'
-    intersphinx_mapping[proj_id] = ('https://jnrowe.github.io/%s-docs/' % proj,
-                                    'objects/%s.inv' % proj)
 # }}}
 
 # spelling extension settings {{{
