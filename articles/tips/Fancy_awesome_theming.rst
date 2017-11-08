@@ -13,7 +13,7 @@ People, mostly named Neil Blake, who shouldn’t look over my shoulder ask:
 
     How do you make awesome_ use *purdy* pixmap backgrounds for the wibox_?
 
-Simple answer today: cheat.
+Simple answer today; cheat.
 
 As you can see in the screenshot on the right my wibox appears to be using the
 same fancy pixmap background as the `GTK+`_ theme I’m using.  What is actually
