@@ -32,7 +32,7 @@ this:
 .. code-block:: text
 
     "\C-a": menu-complete
-    # Alternative version, enables menu-complete on for bash
+    # Alternative version, enables menu-complete only for bash
     $if Bash
         "\C-a": menu-complete
     $endif

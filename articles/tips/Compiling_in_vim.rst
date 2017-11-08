@@ -9,7 +9,7 @@ The fabulous Miss Biddulph asks via the EADS Linux list:
     Is there a way to make :command:`vim` compile C files without
     a :file:`Makefile`?
 
-A quick phone call later and we know that Laura wishes to emulate the make_’s
+A quick phone call later and we know that Laura wishes to emulate make_’s
 behaviour where calling ``make my_code`` without a :file:`Makefile` will
 attempt to build :file:`my_code` from :file:`my_code.c`. vim_’s default
 ``:make`` command doesn’t quite do the trick as it just calls :command:`make`
