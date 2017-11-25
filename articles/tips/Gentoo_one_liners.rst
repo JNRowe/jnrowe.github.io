@@ -53,7 +53,7 @@ is how to get a list of just the packages.
     Number to remove:     129
 
 The output we want can be easily matched with |RegEx|, and the bash_
-:alias:`alias` below will list just the packages by piping the output through
+:command:`alias` below will list just the packages by piping the output through
 sed_.  We can even use the one liner as input to a larger function if we only
 want to see top-level packages; that is packages that aren’t listed as
 dependencies of other packages::

@@ -17,12 +17,12 @@ many of our emacs_ using developers, gajim_ comes recommended by a few users or
 my favourite bitlbee_.  Now, with the rant out of the way we can go back to the
 question at hand…
 
-Cursor blinking is a severe annoyance for some people, and disabling it for GTK+
-applications is really quite simple.   If you’re a gnome_ user then the setting
-to change blinking is in the keyboard properties dialog that can be found in the
-system menu.  If you’re using KDE_ you should edit :file:`~/.gtkrc-2.0-kde`.
-If you’re using neither gnome or KDE you can add a directive to your
-:file:`~/.gtkrc-2.0`:
+Cursor blinking is a severe annoyance for some people(not me, I patch apps to
+add it), and disabling it for GTK+ applications is really quite simple.   If
+you’re a gnome_ user then the setting to change blinking is in the keyboard
+properties dialog that can be found in the system menu.  If you’re using KDE_
+you should edit :file:`~/.gtkrc-2.0-kde`.  If you’re using neither gnome or KDE
+you can add a directive to your :file:`~/.gtkrc-2.0`:
 
 .. code-block:: cpp
 
@@ -30,8 +30,9 @@ If you’re using neither gnome or KDE you can add a directive to your
 
 See :gist:`200429`
 
-If it is just rate of blinking that bugs you there is ``gtk-cursor-blink``, it
-should be set to a value in milliseconds to adjust the blink frequency.
+If it is just the blinking rate that bugs you, then you can give a different
+value for ``gtk-cursor-blink``.  The value is given in milliseconds for the
+blink frequency.
 
 If you wish to only change the settings in pidgin you can edit
 :file:`~/.purple/gtkrc-2.0` instead of your main :file:`~/.gtkrc-2.0`.

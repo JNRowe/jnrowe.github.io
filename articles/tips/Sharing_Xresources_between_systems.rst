@@ -111,7 +111,7 @@ caveat is that must accept :option:`-D` for defines, :option:`-U` for symbol
 cancelling and :option:`-I` for include paths.  An example that does fit these
 restrictions is m4_, and it might be a good choice if you wish to do mode
 advanced things in your configuration file such as fancy filtering or the use
-of loops for defining settings.
+of loops for defining colour tables.
 
 .. _git: http://www.git-scm.com/
 .. _xrdb: http://www.xfree86.org/current/xrdb.1.html

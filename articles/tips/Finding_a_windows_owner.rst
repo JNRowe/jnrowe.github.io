@@ -49,11 +49,12 @@ by default.
     $ tr '\000'  ' ' < /proc/9992/cmdline
     /usr/bin/urxvtd -q -f -o
 
-The :command:`wmctrl` output has five aligned columns.  The first is the window
-id, the second the desktop is visible on, the third is the process id, the
-fourth is the client machine and the fifth is the window’s title string.  And
-with the :command:`xprop` example we must select a window with the mouse when
-calling :command:`xprop`, and then we pluck the process id from the output.
+The :command:`wmctrl` output has five space aligned columns.  The first is the
+window id, the second the desktop is visible on, the third is the process id,
+the fourth is the client machine and the fifth is the window’s title string.
+And with the :command:`xprop` example we must select a window with the mouse
+when calling :command:`xprop`, and then we pluck the process id from the
+output.
 
 The ``cmdline`` value for the process from procfs_ is finally read.  The
 :command:`tr` command is needed because options are separated by null

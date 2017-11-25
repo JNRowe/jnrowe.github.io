@@ -4,6 +4,8 @@
 Three mobile broadband in Linux
 ===============================
 
+.. highlight:: text
+
 Steve Lowry is picking up his Three_ modem this afternoon and asks on our
 internal Linux list if it supports Linux.
 
@@ -72,11 +74,11 @@ The dongle itself needs ``CONFIG_USB_SERIAL_OPTION`` enabled, which is labelled
 as ``USB driver for GSM and CDMA modems`` in the kernel’s ``menuconfig``.  It
 can be found hidden away under the “USB Serial Converters” section in 2.6.31.
 
-We also need ``CONFIG_PPP`` and ``CONFIG_PPP_ASYNC`` support, which can be found
-in the “Network devices” section of the config.  Unlike the old-style dialup you
-probably used to use there is no point enabling the :abbr:`PPP (Point-to-Point
-Protocol)` compression options as they are not supported by mobile providers in
-general, partly because the data is already compressed.
+We also need ``CONFIG_PPP`` and ``CONFIG_PPP_ASYNC`` support, which can be
+found in the “Network devices” section of the config.  Unlike the old-style
+dialup you may be used to use there is no point enabling the :abbr:`PPP
+(Point-to-Point Protocol)` compression options as they are not supported by
+mobile providers in general, partly because the data is already compressed.
 
 Then just rebuild the kernel, and check that the dongle shows up in
 :command:`dmesg` output when it is plugged in.  If it does we’re ready for the
@@ -87,9 +89,7 @@ next step.
 
 We need a :command:`pppd` chatscript for the connection, the format and
 settings of this file can be found in the :manpage:`chat(8)` manpage.  My
-chatscript is below:
-
-.. code-block:: text
+chatscript is below::
 
     TIMEOUT 3
     ECHO ON
@@ -122,9 +122,7 @@ wasting time before you retry.
 ''''''''''''''''''''
 
 We also need a peer script, and the format of that file is described in the
-:manpage:`pppd(8)` manpage.  Mine can be used as an example:
-
-.. code-block:: text
+:manpage:`pppd(8)` manpage.  Mine can be used as an example::
 
     debug
     noauth
