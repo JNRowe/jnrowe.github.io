@@ -94,6 +94,15 @@ extlinks = {
 }
 # }}}
 
+# feed extension settings {{{
+feed_base_url = 'https://jnrowe.github.io'
+feed_description = 'Ramblings of a tired mind'
+feed_filename = 'updates.atom'
+feed_link_url = 'https://jnrowe.github.io/updates.atom'
+feed_type = 'atom+dc'
+feed_url = 'https://jnrowe.github.io/'
+# }}}
+
 # intersphinx extension settings {{{
 intersphinx_mapping = {
     'python': ('https://docs.python.org/3/',
