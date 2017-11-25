@@ -69,14 +69,14 @@ See :gist:`201131`
 
 .. note::
    If you’re willing to install lua-functional_, the above code snippet can be
-   made much nicer by using its ``partial`` application support to define
-   ``start`` and ``stop``.
+   made much nicer by using its ``partial`` application support to define the
+   final functions.
 
 This group of functions, all namespaced under ``notify``, provide simple wrappers
 for the everyday notifications I use.  ``notify.debug`` is a nice way to be able
 to litter your configuration file with visible pointers as to what is going on,
-set ``debug_messages = true`` in your ``rc.lua`` to enable all the debug information
-and switch it back to ``false`` to stop it being displayed.
+set ``debug_messages = true`` in your ``rc.moon`` to enable all the debug
+information and switch it back to ``false`` to stop it being displayed.
 
 The ``notify.{start,stop,warn}`` functions prepend the text you pass it with
 a coloured Unicode bullet.  awesome makes use of pango_

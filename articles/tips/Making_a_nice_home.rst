@@ -105,7 +105,9 @@ reStructuredText_ files.
 See :gist:`208210`
 
 If we call the above :file:`Makefile` from our :command:`git` hooks after any
-pull or merge we always have up to date processed versions of documents.
+pull or merge we always have up to date processed versions of documents.  It is
+like having a personal web viewable wiki, but without having to use an awful
+markup language.
 
 .. _git: http://www.git-scm.com/
 .. _make: http://www.gnu.org/software/make/make.html

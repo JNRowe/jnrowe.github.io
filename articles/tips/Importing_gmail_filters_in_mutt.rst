@@ -81,17 +81,17 @@ scoring_:
 The ``color`` example sets all mail from the fictitious Joe Bloggs in the mail
 index to use a bright green foreground and the default background colour.  The
 ``score`` example adds another 20 points to mail from John Doe, we add it
-instead of settings it directly so that we can make use cumulative scoring.  We
-must make sure we include ``%N`` in our index_format_ setting to see the scores
-in the mail index, the above ``index_format`` setting is the one I currently use
-and it can be seen in the screenshot on the right.
+instead of setting it directly is so that we can make use cumulative scoring.
+We must make sure we include ``%N`` in our index_format_ setting to see the
+scores in the mail index, the above ``index_format`` setting is the one
+I currently use and it can be seen in the screenshot above.
 
 I’m sure we’d prefer to automate the generation of the rules, and we can
 quickly generate a list for :command:`mutt` using our favourite |XML|
 processing tool.  Today I’m using ruby_, because I know it is installed on
 Ryan’s system.  We’re going to keep the identifier data from the Google export
-just in case we decide to re-import our rules from :command:`mutt` at some
-point in the future:
+just in case we decide to export our rules from :command:`mutt` at some point
+in the future:
 
 .. code-block:: ruby
 
