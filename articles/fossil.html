@@ -15,6 +15,8 @@
   
     <link rel="shortcut icon" href="../_static/icon.ico"/>
   
+  
+  
 
   
 
@@ -49,6 +51,7 @@
 
 <body class="wy-body-for-nav" role="document">
 
+   
   <div class="wy-grid-for-nav">
 
     
@@ -89,14 +92,17 @@
           
             
             
-                <p class="caption"><span class="caption-text">Contents</span></p>
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../projects.html">Projects</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="index.html">Articles</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="dropping_gentoo.html">Dropping Gentoo</a></li>
 <li class="toctree-l2"><a class="reference internal" href="dropping_gentoo_reflex.html">Dropping Gentoo reflex</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#"><code class="docutils literal"><span class="pre">fossil</span></code> experiments</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#testing-fossil">Testing <code class="docutils literal"><span class="pre">fossil</span></code></a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#"><strong class="command">fossil</strong> experiments</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#testing-fossil">Testing <strong class="command">fossil</strong></a></li>
 <li class="toctree-l3"><a class="reference internal" href="#packaging">Packaging</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#uptake">Uptake</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#all-in-one-solution">All-in-one solution</a><ul>
@@ -110,8 +116,8 @@
 <li class="toctree-l3"><a class="reference internal" href="#conclusion">Conclusion</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="rcs.html">Introduction to RCS</a></li>
-<li class="toctree-l2"><a class="reference internal" href="tdd_distros.html">TDD distro development</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rcs.html">Introduction to <abbr title="GNU Revision Control System">RCS</abbr></a></li>
+<li class="toctree-l2"><a class="reference internal" href="tdd_distros.html"><abbr title="Test Driven Development">TDD</abbr> distro development</a></li>
 <li class="toctree-l2"><a class="reference internal" href="index.html#further-categories">Further categories</a></li>
 </ul>
 </li>
@@ -120,6 +126,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../contact.html">Contact details</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../consult.html">Consulting services</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../copyright.html">Copyright information</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../glossary.html">Glossary</a></li>
 </ul>
 
             
@@ -132,8 +139,10 @@
 
       
       <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
-        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-        <a href="../index.html">JNRowe</a>
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">JNRowe</a>
+        
       </nav>
 
 
@@ -142,30 +151,47 @@
         <div class="rst-content">
           
 
- 
+
+
+
+
+
+
+
+
+
+
+
 
 
 
 <div role="navigation" aria-label="breadcrumbs navigation">
+
   <ul class="wy-breadcrumbs">
-    <li><a href="../index.html">Docs</a> &raquo;</li>
-      
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
           <li><a href="index.html">Articles</a> &raquo;</li>
-      
-    <li><code class="docutils literal"><span class="pre">fossil</span></code> experiments</li>
+        
+      <li><strong class="command">fossil</strong> experiments</li>
+    
+    
       <li class="wy-breadcrumbs-aside">
         
-          
+            
         
       </li>
+    
   </ul>
+
+  
   <hr/>
 </div>
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
   <div class="section" id="fossil-experiments">
-<h1><code class="docutils literal"><span class="pre">fossil</span></code> experiments<a class="headerlink" href="#fossil-experiments" title="Permalink to this headline">¶</a></h1>
+<h1><strong class="command">fossil</strong> experiments<a class="headerlink" href="#fossil-experiments" title="Permalink to this headline">¶</a></h1>
 <p>For a variety of reasons we can no longer use GitHub at work for any project
 which isn’t Open Source.  And since that decision was thrust upon us we’ve been
 playing with some alternatives for our workflow.  We’ll probably end up choosing
@@ -174,47 +200,49 @@ should evaluate a variety of options.</p>
 <p>I was tasked with testing out <a class="reference external" href="http://www.fossil-scm.org/">fossil</a> on a couple of small side projects, and
 these are my <em>absolutely</em> biased personal findings.</p>
 <p>Before I start I should add that while what I’m about to write probably sounds
-harsh, I do like <code class="docutils literal"><span class="pre">fossil</span></code> the concept.  I like the single <a class="reference external" href="http://sqlite.org/">sqlite</a> project
-repository, I like the small-enough-to-grok-in-an-afternoon code base and I like
-the idea of a totally reproducible project state including all metadata.</p>
+harsh, I do like <strong class="command">fossil</strong> the concept.  I like the single <a class="reference external" href="http://sqlite.org/">sqlite</a>
+project repository, I like the small-enough-to-grok-in-an-afternoon code base
+and I like the idea of a totally reproducible project state including all
+metadata.</p>
 <div class="section" id="testing-fossil">
-<h2>Testing <code class="docutils literal"><span class="pre">fossil</span></code><a class="headerlink" href="#testing-fossil" title="Permalink to this headline">¶</a></h2>
-<p>The good news is that testing <code class="docutils literal"><span class="pre">fossil</span></code> is a piece of cake.  It supports both
-reading and writing <code class="docutils literal"><span class="pre">git</span></code>’s <a class="reference external" href="http://git-scm.com/docs/git-fast-import">fast-import</a> format.  If you want to test it out
-just dump an existing <a class="reference external" href="http://www.git-scm.com/">git</a> repository(or <a class="reference external" href="http://mercurial.selenic.com/wiki/FastImportExtension">mercurial with an extension</a>), and
-feed it <code class="docutils literal"><span class="pre">fossil</span> <span class="pre">import</span></code>.  If you later change your mind you can run <code class="docutils literal"><span class="pre">fossil</span>
-<span class="pre">export</span></code>.</p>
+<h2>Testing <strong class="command">fossil</strong><a class="headerlink" href="#testing-fossil" title="Permalink to this headline">¶</a></h2>
+<p>The good news is that testing <strong class="command">fossil</strong> is a piece of cake.  It
+supports both reading and writing <strong class="command">git</strong>’s <a class="reference external" href="http://git-scm.com/docs/git-fast-import">fast-import</a> format.  If you
+want to test it out just dump an existing <a class="reference external" href="http://www.git-scm.com/">git</a> repository(or <a class="reference external" href="http://mercurial.selenic.com/wiki/FastImportExtension">mercurial with an
+extension</a>), and feed it <strong class="command">fossil import</strong>.  If you later change your
+mind you can run <strong class="command">fossil export</strong>.</p>
 <p>Sadly supporting incremental two-way mirroring didn’t work out for us, but
 perhaps it will for simpler projects.  In the end I simply mirrored the
-<code class="docutils literal"><span class="pre">git</span></code> repositories to <code class="docutils literal"><span class="pre">fossil</span></code>, marked the <code class="docutils literal"><span class="pre">git</span></code> repositories as read-only
-and forced contributors to work with <code class="docutils literal"><span class="pre">fossil</span></code> from the outset.</p>
+<strong class="command">git</strong> repositories to <strong class="command">fossil</strong>, marked the <strong class="command">git</strong>
+repositories as read-only and forced contributors to work with
+<strong class="command">fossil</strong> from the outset.</p>
 </div>
 <div class="section" id="packaging">
 <h2>Packaging<a class="headerlink" href="#packaging" title="Permalink to this headline">¶</a></h2>
-<p>The <code class="docutils literal"><span class="pre">fossil</span></code> project sells itself on being a single file binary install, and
-that probably works well for a subset of users.  We’re not that in that subset
-though, and <code class="docutils literal"><span class="pre">fossil</span></code> is more than a little annoying to wrangle in to our
-environment.</p>
+<p>The <strong class="command">fossil</strong> project sells itself on being a single file binary
+install, and that probably works well for a subset of users.  We’re not that in
+that subset though, and <strong class="command">fossil</strong> is more than a little annoying to
+wrangle in to our environment.</p>
 <p>The tarball ships without any <em>directly</em> usable documentation, so you end up
 with either no system documentation or a collection of docs sprinkled with wiki
 markup in <code class="file docutils literal"><span class="pre">/usr/share/doc</span></code>.</p>
-<p>By default <code class="docutils literal"><span class="pre">fossil</span></code> builds in a manner which breaks most packaging standard
-unfortunately.  If you’re building packages you’ll likely need to write an awful
-lot of custom workarounds to get a compliant and usable package, see
-<code class="docutils literal"><span class="pre">lst-pkgs/utils/dev/fossil</span></code> build for the gory details of our hacks.</p>
+<p>By default <strong class="command">fossil</strong> builds in a manner which breaks most packaging
+standard unfortunately.  If you’re building packages you’ll likely need to
+write an awful lot of custom workarounds to get a compliant and usable package,
+see <code class="docutils literal"><span class="pre">lst-pkgs/utils/dev/fossil</span></code> build for the gory details of our hacks.</p>
 </div>
 <div class="section" id="uptake">
 <h2>Uptake<a class="headerlink" href="#uptake" title="Permalink to this headline">¶</a></h2>
-<p>I don’t really want to hold this against <code class="docutils literal"><span class="pre">fossil</span></code>, but it <em>is</em> important to
-note that for all intents and purposes no one is familiar with it.  No upstream
-projects we actively track use it, there isn’t a single person who chooses to
-use it on our site(which is why I had to handle the packaging) and expecting new
-hires to have even heard of it is probably a stretch.</p>
-<p>It wouldn’t be such an issue if the choice was a <code class="docutils literal"><span class="pre">git</span></code> vs <a class="reference external" href="http://mercurial.selenic.com/">mercurial</a> one,
-where the few differences are mostly cosmetic.  <code class="docutils literal"><span class="pre">fossil</span></code> is a completely
-different beast, and requires an enormous rethink in the way you handle version
-control.</p>
-<p>Ten years ago when people were on the whole still familiar with the CVS and
+<p>I don’t really want to hold this against <strong class="command">fossil</strong>, but it <em>is</em>
+important to note that for all intents and purposes no one is familiar with it.
+No upstream projects we actively track use it, there isn’t a single person who
+chooses to use it on our site(which is why I had to handle the packaging) and
+expecting new hires to have even heard of it is probably a stretch.</p>
+<p>It wouldn’t be such an issue if the choice was a <strong class="command">git</strong> vs <a class="reference external" href="http://mercurial.selenic.com/">mercurial</a>
+one, where the few differences are mostly cosmetic.  <strong class="command">fossil</strong> is
+a completely different beast, and requires an enormous rethink in the way you
+handle version control.</p>
+<p>Ten years ago when people were on the whole still familiar with the <abbr title="Concurrent Versions System">CVS</abbr> and
 Subversion way of working that wouldn’t have been such an issue, but times have
 most definitely changed.</p>
 <p>The vocabulary in the documentation is likely to be foreign to users of any
@@ -224,10 +252,10 @@ decade.</p>
 </div>
 <div class="section" id="all-in-one-solution">
 <h2>All-in-one solution<a class="headerlink" href="#all-in-one-solution" title="Permalink to this headline">¶</a></h2>
-<p>One of the proclaimed benefits of using <code class="docutils literal"><span class="pre">fossil</span></code> is that it handles many
-aspects of a project’s <abbr title="Application Lifecycle Management">ALM</abbr>; version
-control, issue tracking, documentation(via a wiki), etc.  However, and this is
-only my opinion, it feels like it does of all of these in a suboptimal manner.</p>
+<p>One of the proclaimed benefits of using <strong class="command">fossil</strong> is that it handles
+many aspects of a project’s <abbr title="Application Lifecycle Management">ALM</abbr>; version control, issue tracking,
+documentation(via a wiki), etc.  However, and this is only my opinion, it feels
+like it does of all of these in a suboptimal manner.</p>
 <div class="section" id="version-control">
 <h3>Version control<a class="headerlink" href="#version-control" title="Permalink to this headline">¶</a></h3>
 <p>The version control feels quite nice for the most part, definitely usable but
@@ -236,22 +264,23 @@ a little annoying to work with if you’re used to a modern <abbr title="Distrib
 and you should set aside quite a lot of time for integration issues when you
 have <code class="docutils literal"><span class="pre">autosync</span></code> disabled.  And I can’t imagine a scenario where <code class="docutils literal"><span class="pre">autosync</span></code>
 could work for us, without rewriting our entire way of working or returning to
-CVS-style mega commits and a manual patch stack layered on top.</p>
-<p>If you read <code class="docutils literal"><span class="pre">fossil</span></code>’s <a class="reference external" href="http://www.bugzilla.org">Branching, Forking, Merging, and Tagging</a>
+<abbr title="Concurrent Versions System">CVS</abbr>-style mega commits and a manual patch stack layered on top.</p>
+<p>If you read <strong class="command">fossil</strong>’s <a class="reference external" href="http://www.bugzilla.org">Branching, Forking, Merging, and Tagging</a>
 documentation it appears that this is a design feature for the creators.</p>
 </div>
 <div class="section" id="issue-tracker">
 <h3>Issue tracker<a class="headerlink" href="#issue-tracker" title="Permalink to this headline">¶</a></h3>
 <p>The issue tracker feels like someone has tried to improve on <a class="reference external" href="http://www.bugzilla.org">Bugzilla</a>, without
 taking a look at modern trackers.  It is definitely the weakest part of
-<code class="docutils literal"><span class="pre">fossil</span></code> in my opinion, using it is both a mental and eye-stabbing pain at the
-same time.</p>
+<strong class="command">fossil</strong> in my opinion, using it is both a mental and eye-stabbing
+pain at the same time.</p>
 <p>Luckily you can rework a lot of it by fiddling around with the administration
-settings exposed by <code class="docutils literal"><span class="pre">fossil</span> <span class="pre">ui</span></code>.</p>
-<p>This also exposes one of the best features of <code class="docutils literal"><span class="pre">fossil</span></code>, you can create
-a custom SQL script that configures the project(issue tracking, pretty theme,
-etc) and just blast it in to the project’s database.  Or you can create a custom
-file that makes all your edits and pump it in with <code class="docutils literal"><span class="pre">fossil</span> <span class="pre">config</span> <span class="pre">import</span></code>.</p>
+settings exposed by <strong class="command">fossil ui</strong>.</p>
+<p>This also exposes one of the best features of <strong class="command">fossil</strong>, you can create
+a custom <abbr title="Structured Query Language">SQL</abbr> script that configures the project(issue tracking, pretty theme,
+etc) and just blast it in to the project’s database.  Or you can create
+a custom file that makes all your edits and pump it in with <strong class="command">fossil
+config import</strong>.</p>
 </div>
 <div class="section" id="wiki">
 <h3>Wiki<a class="headerlink" href="#wiki" title="Permalink to this headline">¶</a></h3>
@@ -260,80 +289,85 @@ the features we use for our documentation.  I don’t want to hold that against 
 though, as it just a impedance mismatch.</p>
 <p>The end result of the integrated components feels to me like you’ve chosen
 a usable, but weak, component for some of the  most important parts of your
-project’s <abbr title="Application Lifecycle Management">ALM</abbr>.  The bits work well
-together, but none of them seem like an option you’d choose on their own.</p>
+project’s <abbr title="Application Lifecycle Management">ALM</abbr>.  The bits work well together, but none of them seem like an
+option you’d choose on their own.</p>
 </div>
 </div>
 <div class="section" id="interface">
 <h2>Interface<a class="headerlink" href="#interface" title="Permalink to this headline">¶</a></h2>
 <p>The help output for new users is, in my opinion, really irritating.  The default
-command message tells you to run <code class="docutils literal"><span class="pre">fossil</span> <span class="pre">help</span></code> or <code class="docutils literal"><span class="pre">fossil</span> <span class="pre">help</span> <span class="pre">COMMAND</span></code>,
-without providing the names of any of the common commands.  The <code class="docutils literal"><span class="pre">fossil</span> <span class="pre">help</span></code>
-output emulates a <code class="docutils literal"><span class="pre">tsort</span></code> filter of the command names, listing commands with
-unique to <code class="docutils literal"><span class="pre">fossil</span></code> terminology and no short descriptions.  <code class="docutils literal"><span class="pre">fossil</span> <span class="pre">help</span>
-<span class="pre">--all</span></code> feels like it should be more useful, but just creates a larger table of
-commands with uncommon names and still no descriptions.</p>
+command message tells you to run <strong class="command">fossil help</strong> or <strong class="command">fossil
+help COMMAND</strong>, without providing the names of any of the common commands.  The
+<strong class="command">fossil help</strong> output emulates a <strong class="command">tsort</strong> filter of the command
+names, listing commands with unique to <strong class="command">fossil</strong> terminology and no
+short descriptions.  <strong class="command">fossil help --all</strong> feels like it should be more
+useful, but just creates a larger table of commands with uncommon names and
+still no descriptions.</p>
 <p>It makes very little sense to organise the help in this manner because as you
 get used to the naming and non-standard option style you will need the help
 less.  I’ve patched this for our packages, and if people like it I’ll try to
 push it upstream.</p>
 <div class="admonition note">
-<p class="first admonition-title">Note</p>
-<p class="last">It turns out I won’t be pushing the changes upstream.  They require
-a <abbr title="Contributor Licence Agreement">CLA</abbr> that I can not sign in good
-faith, which is a shame.</p>
+<p class="admonition-title">Note</p>
+<p>It turns out I won’t be pushing the changes upstream.  They require
+a <abbr title="Contributor License Agreement">CLA</abbr> that I can not sign in good faith, which is a shame.</p>
 </div>
 <p>The option handling <em>will</em> trip you up endlessly.  Just the little things like
 being unable to chain options, and needing an endless stream of <code class="docutils literal"><span class="pre">C-p</span> <span class="pre">M-5</span> <span class="pre">M-b</span>
 <span class="pre">&lt;space&gt;</span></code> to add a space before a commit message for example.  Yes, I know some
-people don’t like standard <code class="docutils literal"><span class="pre">getopt</span></code> or GNU-style option parsing, but every
-other tool you use has chosen it.</p>
+people don’t like standard <strong class="command">getopt</strong> or GNU-style option parsing, but
+every other tool you use has chosen it.</p>
 <p>Some of the interface decisions are actively bad, for example there appears to
 be no way to delegate password configuration to a trusted system service or even
-<code class="docutils literal"><span class="pre">netrc</span></code>.  Specifying passwords in URLs on the command line is a <strong>huge</strong>
+<code class="docutils literal"><span class="pre">netrc</span></code>.  Specifying passwords in <abbr title="Uniform Resource Locator">URL</abbr>s on the command line is a <strong>huge</strong>
 anti-pattern, and I just hope you don’t have any multiseat systems if you’re
 using that method.</p>
 </div>
 <div class="section" id="speed">
 <h2>Speed<a class="headerlink" href="#speed" title="Permalink to this headline">¶</a></h2>
-<p>On the whole <code class="docutils literal"><span class="pre">fossil</span></code> is fast, not <code class="docutils literal"><span class="pre">git</span></code> fast but fast nonetheless.  Commits
-do take a disturbingly long time to complete for some reason, but most of the
-other commands are fast enough.</p>
-<p>Mangling a repository is actually a lot faster with <code class="docutils literal"><span class="pre">fossil</span></code> than any other
-system I can think of, as you can just throw the power of SQL at it.  You can
-find some <a class="reference external" href="http://www.sqlalchemy.org/">sqlalchemy</a> ORM definitions in <code class="file docutils literal"><span class="pre">/usr/share/doc/fossil/orm</span></code> in my
-packages.</p>
+<p>On the whole <strong class="command">fossil</strong> is fast, not <strong class="command">git</strong> fast but fast
+nonetheless.  Commits do take a disturbingly long time to complete for some
+reason, but most of the other commands are fast enough.</p>
+<p>Mangling a repository is actually a lot faster with <strong class="command">fossil</strong> than any
+other system I can think of, as you can just throw the power of <abbr title="Structured Query Language">SQL</abbr> at it.
+You can find some <a class="reference external" href="http://www.sqlalchemy.org/">sqlalchemy</a> <abbr title="Object relational mapping">ORM</abbr>
+definitions in <code class="file docutils literal"><span class="pre">/usr/share/doc/fossil/orm</span></code> in my packages.</p>
 </div>
 <div class="section" id="conclusion">
 <h2>Conclusion<a class="headerlink" href="#conclusion" title="Permalink to this headline">¶</a></h2>
 <p>I mentioned this in this first paragraph, but I don’t see us moving to
-<code class="docutils literal"><span class="pre">fossil</span></code>.  It is a nice system, but it just wouldn’t work for us as is.</p>
+<strong class="command">fossil</strong>.  It is a nice system, but it just wouldn’t work for us as
+is.</p>
 <p>Part of me is tempted to attempt to fix the problems, but then we’d be left with
-a system that is more obscure than <code class="docutils literal"><span class="pre">fossil</span></code>.  If you read the <a class="reference external" href="http://fossil-scm.org/xfer/doc/tip/www/concepts.wiki">Fossil
+a system that is more obscure than <strong class="command">fossil</strong>.  If you read the <a class="reference external" href="http://fossil-scm.org/xfer/doc/tip/www/concepts.wiki">Fossil
 Concepts</a> and <a class="reference external" href="http://www.fossil-scm.org/xfer/doc/tip/www/faq.wiki">Frequently Asked Questions</a> documents you’ll see that the most
 significant problems for us are actually features for upstream, and that is
 obviously fine but it does mean upstreaming changes would be impossible.</p>
 <div class="admonition note">
-<p class="first admonition-title">Note</p>
-<p class="last">As noted above, it turns out they require a <abbr title="Contributor Licence Agreement">CLA</abbr> which means we couldn’t send changes upstream anyway.</p>
+<p class="admonition-title">Note</p>
+<p>As noted above, it turns out they require a <abbr title="Contributor License Agreement">CLA</abbr> which means we couldn’t
+send changes upstream anyway.</p>
 </div>
 <p>That said I’m am planning on stealing some of the ideas that I really liked
-about <code class="docutils literal"><span class="pre">fossil</span></code> for my own use.  <code class="docutils literal"><span class="pre">fossil</span> <span class="pre">all</span></code>’s ability to run a command
-against all repositories configured in <code class="file docutils literal"><span class="pre">~/.fossil</span></code> for example.</p>
+about <strong class="command">fossil</strong> for my own use.  <strong class="command">fossil all</strong>’s ability to run
+a command against all repositories configured in <code class="file docutils literal"><span class="pre">~/.fossil</span></code> for example.</p>
 </div>
 </div>
 
 
+           </div>
+           <div class="articleComments">
+            
            </div>
           </div>
           <footer>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="rcs.html" class="btn btn-neutral float-right" title="Introduction to RCS" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="rcs.html" class="btn btn-neutral float-right" title="Introduction to RCS" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="dropping_gentoo_reflex.html" class="btn btn-neutral" title="Dropping Gentoo reflex" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="dropping_gentoo_reflex.html" class="btn btn-neutral" title="Dropping Gentoo reflex" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -342,7 +376,8 @@ against all repositories configured in <code class="file docutils literal"><span
 
   <div role="contentinfo">
     <p>
-        &copy; <a href="../copyright.html">Copyright</a> 2009-2017, James Rowe.
+        &copy; <a href="../copyright.html">Copyright</a> 2009-2017  James Rowe.
+      Last updated on &#39;2017-11-25 [67138f3]&#39;.
 
     </p>
   </div>
@@ -367,7 +402,8 @@ against all repositories configured in <code class="file docutils literal"><span
             VERSION:'0.1.0',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
-            HAS_SOURCE:  false
+            HAS_SOURCE:  false,
+            SOURCELINK_SUFFIX: '.txt'
         };
     </script>
       <script type="text/javascript" src="../_static/jquery.js"></script>

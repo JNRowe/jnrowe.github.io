@@ -15,6 +15,8 @@
   
     <link rel="shortcut icon" href="../_static/icon.ico"/>
   
+  
+  
 
   
 
@@ -49,6 +51,7 @@
 
 <body class="wy-body-for-nav" role="document">
 
+   
   <div class="wy-grid-for-nav">
 
     
@@ -89,7 +92,10 @@
           
             
             
-                <p class="caption"><span class="caption-text">Contents</span></p>
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../projects.html">Projects</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="index.html">Articles</a><ul class="current">
@@ -101,9 +107,9 @@
 <li class="toctree-l3"><a class="reference internal" href="#wrapping-up">Wrapping up</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="fossil.html"><code class="docutils literal"><span class="pre">fossil</span></code> experiments</a></li>
-<li class="toctree-l2"><a class="reference internal" href="rcs.html">Introduction to RCS</a></li>
-<li class="toctree-l2"><a class="reference internal" href="tdd_distros.html">TDD distro development</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fossil.html"><strong class="command">fossil</strong> experiments</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rcs.html">Introduction to <abbr title="GNU Revision Control System">RCS</abbr></a></li>
+<li class="toctree-l2"><a class="reference internal" href="tdd_distros.html"><abbr title="Test Driven Development">TDD</abbr> distro development</a></li>
 <li class="toctree-l2"><a class="reference internal" href="index.html#further-categories">Further categories</a></li>
 </ul>
 </li>
@@ -112,6 +118,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../contact.html">Contact details</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../consult.html">Consulting services</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../copyright.html">Copyright information</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../glossary.html">Glossary</a></li>
 </ul>
 
             
@@ -124,8 +131,10 @@
 
       
       <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
-        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-        <a href="../index.html">JNRowe</a>
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">JNRowe</a>
+        
       </nav>
 
 
@@ -134,23 +143,40 @@
         <div class="rst-content">
           
 
- 
+
+
+
+
+
+
+
+
+
+
+
 
 
 
 <div role="navigation" aria-label="breadcrumbs navigation">
+
   <ul class="wy-breadcrumbs">
-    <li><a href="../index.html">Docs</a> &raquo;</li>
-      
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
           <li><a href="index.html">Articles</a> &raquo;</li>
-      
-    <li>Dropping Gentoo reflex</li>
+        
+      <li>Dropping Gentoo reflex</li>
+    
+    
       <li class="wy-breadcrumbs-aside">
         
-          
+            
         
       </li>
+    
   </ul>
+
+  
   <hr/>
 </div>
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
@@ -179,7 +205,7 @@ if you share binary packages.</p>
 binary package user on Gentoo is just how slow package installation and removal
 is.  Binary package installation on Gentoo feels on par with a distribution
 like Slackware, and what passes for package management there is just choosing
-the right argument to <strong class="command">tar</strong>’s <a class="reference external" href="http://docs.python.org/library/trace.html#cmdoption-trace-C" title="(in Python v3.6)"><code class="xref std std-option docutils literal"><span class="pre">-C</span></code></a> option.</p>
+the right argument to <strong class="command">tar</strong>’s <a class="reference external" href="https://docs.python.org/3/library/trace.html#cmdoption-trace-C" title="(in Python v3.6)"><code class="xref std std-option docutils literal"><span class="pre">-C</span></code></a> option.</p>
 <p>Where Gentoo really excels though is in the speed of creating new packages or
 editing existing packages.</p>
 <p>Lets take a look at an example.  Say, for example, that you just found out that
@@ -200,29 +226,30 @@ We we can fix the problem with the following simple change and a call to
 </pre></div>
 </div>
 <div class="admonition note">
-<p class="first admonition-title">Note</p>
-<p class="last">Of course, you should fix the package properly and send the fix upstream but
-this is just to prove a point.  Calling <code class="docutils literal"><span class="pre">die</span></code> with <code class="docutils literal"><span class="pre">sed</span></code> there isn’t
-recommended and is practically pointless, but it is the style upstream.</p>
+<p class="admonition-title">Note</p>
+<p>Of course, you should fix the package properly and send the fix upstream but
+this is just to prove a point.  Calling <strong class="command">die</strong> with <strong class="command">sed</strong>
+there isn’t recommended and is practically pointless, but it is the style
+upstream.</p>
 </div>
 <p>I have to mention a small downside here however, because very few people seem to
 test <code class="docutils literal"><span class="pre">portage</span></code>’s binary package support you’ll occasionally have to do some
 leg work to fix problems.  This normally arises when you have an <code class="docutils literal"><span class="pre">eclass</span></code>
 change that needs to ripple through, or when a library breaks compatibility and
-it’s <code class="docutils literal"><span class="pre">ebuild</span></code> hasn’t been bumped properly.</p>
+its <code class="docutils literal"><span class="pre">ebuild</span></code> hasn’t been bumped properly.</p>
 <p>Almost every time that happens you can fix it with a quick loop in your shell
 though.  A couple of such problems and solutions that I found in my shell
 history can be seen below.</p>
-<div class="highlight-sh"><div class="highlight"><pre><span></span><span class="c1"># When you were stuck with packages that used python-distutils-ng, and you</span>
+<div class="highlight-zsh"><div class="highlight"><pre><span></span><span class="c1"># When you were stuck with packages that used python-distutils-ng, and you</span>
 <span class="c1"># needed to scrub packages because you changed Python version</span>
-<span class="k">for</span> s in <span class="k">$(</span>portageq pkgdir<span class="k">)</span>/*-*/*.tbz2<span class="p">;</span> <span class="k">do</span>
-    qtbz2 -xO <span class="nv">$s</span> <span class="p">|</span> qxpak -xO - <span class="si">${${</span><span class="nv">s</span><span class="p">##*/</span><span class="si">}</span><span class="p">/.tbz2</span><span class="si">}</span>.ebuild <span class="p">|</span> grep -q <span class="s1">&#39;SUPPORT_PYTHON_ABIS&#39;</span> <span class="o">&amp;&amp;</span> <span class="nb">echo</span> <span class="nv">$s</span>
+<span class="k">for</span> p in <span class="k">$(</span>portageq pkgdir<span class="k">)</span>/*-*/*.tbz2<span class="p">;</span> <span class="k">do</span>
+    qtbz2 -xO <span class="nv">$p</span> <span class="p">|</span> qxpak -xO - <span class="si">${${</span><span class="nv">p</span><span class="p">##*/</span><span class="si">}</span><span class="p">/.tbz2</span><span class="si">}</span>.ebuild <span class="p">|</span> grep -q <span class="s1">&#39;SUPPORT_PYTHON_ABIS&#39;</span> <span class="o">&amp;&amp;</span> <span class="nb">echo</span> <span class="nv">$p</span>
 <span class="k">done</span>
 
-<span class="c1"># When you were using packages that used python&#39;s &quot;-r1&quot; eclasses and all</span>
+<span class="c1"># When you were using packages that used python’s “-r1” eclasses and all</span>
 <span class="c1"># you could see is a flood of blockages in your update output</span>
-<span class="k">for</span> s in <span class="k">$(</span>portageq pkgdir<span class="k">)</span>/*-*/*.tbz2<span class="p">;</span> <span class="k">do</span>
-    qtbz2 -xO <span class="nv">$s</span> <span class="p">|</span> qxpak -xO - RDEPEND <span class="m">2</span>&gt;/dev/null <span class="p">|</span> grep -q <span class="s2">&quot;dev-python/python-exec&quot;</span> <span class="o">&amp;&amp;</span> <span class="nb">echo</span> <span class="nv">$s</span>
+<span class="k">for</span> p in <span class="k">$(</span>portageq pkgdir<span class="k">)</span>/*-*/*.tbz2<span class="p">;</span> <span class="k">do</span>
+    qtbz2 -xO <span class="nv">$p</span> <span class="p">|</span> qxpak -xO - RDEPEND <span class="m">2</span>&gt;/dev/null <span class="p">|</span> grep -q <span class="s2">&quot;dev-python/python-exec&quot;</span> <span class="o">&amp;&amp;</span> <span class="nb">echo</span> <span class="nv">$p</span>
 <span class="k">done</span>
 </pre></div>
 </div>
@@ -232,17 +259,17 @@ history can be seen below.</p>
 <p>The excellent <a class="reference external" href="http://devmanual.gentoo.org/">devmanual</a> and the incredible <a class="reference external" href="http://wiki.gentoo.org/wiki/Project:PMS">Package Manager Specification</a>
 made life so much easier.  The devmanual was both short enough to be used as
 quick reference and complete enough that you could learn most of what you’d need
-to know from it.  The unfortunately named PMS acted as the reference that
+to know from it.  The unfortunately named <abbr title="Package Manager Specification">PMS</abbr> acted as the reference that
 finally allowed us to switch from away from <code class="docutils literal"><span class="pre">portage</span></code> completely at the
 office.</p>
-<p>The PMS documented much of the nastiness that <code class="docutils literal"><span class="pre">portage</span></code> suffers from, and made
-life in general a whole lot nicer when you were chasing bugs deep down the
+<p>The <abbr title="Package Manager Specification">PMS</abbr> documented much of the nastiness that <code class="docutils literal"><span class="pre">portage</span></code> suffers from, and
+made life in general a whole lot nicer when you were chasing bugs deep down the
 rabbit hole.  And, let us be honest here it also stopped a little of the
 fluidity that plagued <code class="docutils literal"><span class="pre">portage</span></code> too.</p>
 <p>Some people argue that it acts as unnecessary stop motion but those people must
 be forgetting what happened when behaviour changed randomly between <code class="docutils literal"><span class="pre">portage</span></code>
-versions.  PMS, and the EAPI process, also brought some much needed design and
-stability to newer features.</p>
+versions.  <abbr title="Package Manager Specification">PMS</abbr>, and the EAPI process, also brought some much needed design
+and stability to newer features.</p>
 <p>All Gentoo users owe Ciaran McCreesh a few beers for all the hard work he put in
 to those documents, especially in the early days.</p>
 </div>
@@ -254,8 +281,8 @@ fun.  More recently at LoFu’s annual summit which seems to have taken Gentoo
 UK’s place with practically everyone you saw at Gentoo UK(minus the students),
 and oddly about the same Gentoo to non-Gentoo ratio of talks too.</p>
 <p>Two excellent people on our current team were recruited following the Gentoo UK
-conference at UCL, and we met a spectacular contract hire at the one prior to
-that as well.</p>
+conference at <abbr title="University College London">UCL</abbr>, and we met a spectacular
+contract hire at the one prior to that as well.</p>
 <p>I’ve even been lucky enough to have a few doors held open for me via people I’ve
 met at Gentoo-themed or Gentoo-heavy events, and I suspect I’d be writing this
 from a less happy place without them.</p>
@@ -264,7 +291,7 @@ from a less happy place without them.</p>
 <h2>Wrapping up<a class="headerlink" href="#wrapping-up" title="Permalink to this headline">¶</a></h2>
 <p>It is true that you really can not always see the forest for trees.</p>
 <p>Had recent events not clouded my vision I would have commented on the train
-wreck that is <code class="docutils literal"><span class="pre">webapp.eclass</span></code> and <code class="docutils literal"><span class="pre">app-admin/webapp-config</span></code> in
+wreck that is <code class="file docutils literal"><span class="pre">webapp.eclass</span></code> and <code class="file docutils literal"><span class="pre">app-admin/webapp-config</span></code> in
 <a class="reference internal" href="dropping_gentoo.html"><span class="doc">Dropping Gentoo</span></a>.  It sucked tonnes and tonnes of time away until we
 eventually just trashed any package that interacted with it and moved on.</p>
 <p>That was so long ago that I had forgotten about it until a co-worker asked me
@@ -278,15 +305,18 @@ fun memories.</p>
 
 
            </div>
+           <div class="articleComments">
+            
+           </div>
           </div>
           <footer>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="fossil.html" class="btn btn-neutral float-right" title="fossil experiments" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="fossil.html" class="btn btn-neutral float-right" title="fossil experiments" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="dropping_gentoo.html" class="btn btn-neutral" title="Dropping Gentoo" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="dropping_gentoo.html" class="btn btn-neutral" title="Dropping Gentoo" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -295,7 +325,8 @@ fun memories.</p>
 
   <div role="contentinfo">
     <p>
-        &copy; <a href="../copyright.html">Copyright</a> 2009-2017, James Rowe.
+        &copy; <a href="../copyright.html">Copyright</a> 2009-2017  James Rowe.
+      Last updated on &#39;2017-11-25 [67138f3]&#39;.
 
     </p>
   </div>
@@ -320,7 +351,8 @@ fun memories.</p>
             VERSION:'0.1.0',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
-            HAS_SOURCE:  false
+            HAS_SOURCE:  false,
+            SOURCELINK_SUFFIX: '.txt'
         };
     </script>
       <script type="text/javascript" src="../_static/jquery.js"></script>

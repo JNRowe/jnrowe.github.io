@@ -15,6 +15,8 @@
   
     <link rel="shortcut icon" href="_static/icon.ico"/>
   
+  
+  
 
   
 
@@ -48,6 +50,7 @@
 
 <body class="wy-body-for-nav" role="document">
 
+   
   <div class="wy-grid-for-nav">
 
     
@@ -88,7 +91,10 @@
           
             
             
-                <p class="caption"><span class="caption-text">Contents</span></p>
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="projects.html">Projects</a></li>
 <li class="toctree-l1"><a class="reference internal" href="articles/index.html">Articles</a></li>
@@ -101,6 +107,7 @@
 <li class="toctree-l1"><a class="reference internal" href="contact.html">Contact details</a></li>
 <li class="toctree-l1"><a class="reference internal" href="consult.html">Consulting services</a></li>
 <li class="toctree-l1"><a class="reference internal" href="copyright.html">Copyright information</a></li>
+<li class="toctree-l1"><a class="reference internal" href="glossary.html">Glossary</a></li>
 </ul>
 
             
@@ -113,8 +120,10 @@
 
       
       <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
-        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-        <a href="index.html">JNRowe</a>
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">JNRowe</a>
+        
       </nav>
 
 
@@ -123,21 +132,38 @@
         <div class="rst-content">
           
 
- 
+
+
+
+
+
+
+
+
+
+
+
 
 
 
 <div role="navigation" aria-label="breadcrumbs navigation">
+
   <ul class="wy-breadcrumbs">
-    <li><a href="index.html">Docs</a> &raquo;</li>
-      
-    <li>Colophon</li>
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+      <li>Colophon</li>
+    
+    
       <li class="wy-breadcrumbs-aside">
         
-          
+            
         
       </li>
+    
   </ul>
+
+  
   <hr/>
 </div>
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
@@ -145,14 +171,11 @@
             
   <div class="section" id="colophon">
 <h1>Colophon<a class="headerlink" href="#colophon" title="Permalink to this headline">¶</a></h1>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">description:</th><td class="field-body">How this site is built</td>
-</tr>
-</tbody>
-</table>
+<dl class="field-list simple">
+<dt class="field-odd">description</dt>
+<dd class="field-odd"><p>How this site is built</p>
+</dd>
+</dl>
 <p>This site is built with <a class="reference external" href="http://sphinx-doc.org/">Sphinx</a>, Georg Brandl’s absolutely fantastic
 documentation tool.  You can view the <a class="reference external" href="https://github.com/JNRowe/jnrowe.github.io">git repository</a> of this site to see how
 it works in practice.</p>
@@ -163,24 +186,26 @@ beautiful <a class="reference external" href="http://docutils.sourceforge.net/do
 </div>
 <div class="section" id="and-finally">
 <h2>And finally…<a class="headerlink" href="#and-finally" title="Permalink to this headline">¶</a></h2>
-<p>I’d like to believe that all my pages are valid <abbr title="eXtensible HyperText Markup Language">XHTML</abbr> and <abbr title="Cascading Style Sheets">CSS</abbr>, and that
-all my feeds are valid <a class="reference external" href="http://www.atomenabled.org/">Atom</a>.  Web standards are important, and I try to stick
-to them.  Check the content against validators if you wish, and shame me if I’ve
-failed :)</p>
+<p>I’d like to believe that all my pages are valid <abbr title="HyperText Markup Language">HTML</abbr> and <abbr title="Cascading Style Sheets">CSS</abbr>, and that all my feeds are valid <a class="reference external" href="http://www.atomenabled.org/">Atom</a>.  Web
+standards are important, and I try to stick to them.  Check the content against
+validators if you wish, and shame me if I’ve failed :)</p>
 </div>
 </div>
 
 
+           </div>
+           <div class="articleComments">
+            
            </div>
           </div>
           <footer>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="contact.html" class="btn btn-neutral float-right" title="Contact details" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="contact.html" class="btn btn-neutral float-right" title="Contact details" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="thoughts/the_returned.html" class="btn btn-neutral" title="Return to rambling" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="thoughts/the_returned.html" class="btn btn-neutral" title="Return to rambling" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -189,7 +214,8 @@ failed :)</p>
 
   <div role="contentinfo">
     <p>
-        &copy; <a href="copyright.html">Copyright</a> 2009-2017, James Rowe.
+        &copy; <a href="copyright.html">Copyright</a> 2009-2017  James Rowe.
+      Last updated on &#39;2017-11-25 [67138f3]&#39;.
 
     </p>
   </div>
@@ -214,7 +240,8 @@ failed :)</p>
             VERSION:'0.1.0',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
-            HAS_SOURCE:  false
+            HAS_SOURCE:  false,
+            SOURCELINK_SUFFIX: '.txt'
         };
     </script>
       <script type="text/javascript" src="_static/jquery.js"></script>

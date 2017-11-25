@@ -15,6 +15,8 @@
   
     <link rel="shortcut icon" href="../_static/icon.ico"/>
   
+  
+  
 
   
 
@@ -49,6 +51,7 @@
 
 <body class="wy-body-for-nav" role="document">
 
+   
   <div class="wy-grid-for-nav">
 
     
@@ -89,15 +92,18 @@
           
             
             
-                <p class="caption"><span class="caption-text">Contents</span></p>
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../projects.html">Projects</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="index.html">Articles</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="dropping_gentoo.html">Dropping Gentoo</a></li>
 <li class="toctree-l2"><a class="reference internal" href="dropping_gentoo_reflex.html">Dropping Gentoo reflex</a></li>
-<li class="toctree-l2"><a class="reference internal" href="fossil.html"><code class="docutils literal"><span class="pre">fossil</span></code> experiments</a></li>
-<li class="toctree-l2"><a class="reference internal" href="rcs.html">Introduction to RCS</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">TDD distro development</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="fossil.html"><strong class="command">fossil</strong> experiments</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rcs.html">Introduction to <abbr title="GNU Revision Control System">RCS</abbr></a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#"><abbr title="Test Driven Development">TDD</abbr> distro development</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#why">Why?</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#how">How?</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#result">Result?</a></li>
@@ -112,6 +118,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../contact.html">Contact details</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../consult.html">Consulting services</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../copyright.html">Copyright information</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../glossary.html">Glossary</a></li>
 </ul>
 
             
@@ -124,8 +131,10 @@
 
       
       <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
-        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-        <a href="../index.html">JNRowe</a>
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">JNRowe</a>
+        
       </nav>
 
 
@@ -134,34 +143,51 @@
         <div class="rst-content">
           
 
- 
+
+
+
+
+
+
+
+
+
+
+
 
 
 
 <div role="navigation" aria-label="breadcrumbs navigation">
+
   <ul class="wy-breadcrumbs">
-    <li><a href="../index.html">Docs</a> &raquo;</li>
-      
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
           <li><a href="index.html">Articles</a> &raquo;</li>
-      
-    <li>TDD distro development</li>
+        
+      <li><abbr title="Test Driven Development">TDD</abbr> distro development</li>
+    
+    
       <li class="wy-breadcrumbs-aside">
         
-          
+            
         
       </li>
+    
   </ul>
+
+  
   <hr/>
 </div>
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
   <div class="section" id="tdd-distro-development">
-<h1>TDD distro development<a class="headerlink" href="#tdd-distro-development" title="Permalink to this headline">¶</a></h1>
-<p>Using <abbr title="Test Driven Development">TDD</abbr> for distribution development is a
-hot topic in some of the more geeky circles I move in, and I’m very happy about
-this.  Anything that increases the robustness of my desktop computer, my phone
-or any other device I use is a great goal!</p>
+<h1><abbr title="Test Driven Development">TDD</abbr> distro development<a class="headerlink" href="#tdd-distro-development" title="Permalink to this headline">¶</a></h1>
+<p>Using <abbr title="Test Driven Development">TDD</abbr> for distribution development is a hot topic in some of the more
+geeky circles I move in, and I’m very happy about this.  Anything that
+increases the robustness of my desktop computer, my phone or any other device
+I use is a great goal!</p>
 <div class="section" id="why">
 <h2>Why?<a class="headerlink" href="#why" title="Permalink to this headline">¶</a></h2>
 <p>This answer should be obvious; more testing is good.  However, what about the
@@ -187,9 +213,9 @@ enforcing for the past few years.</p>
 the desktops we develop on and the laptops we play on.  The methods we use vary
 greatly, so I’m going to present the simple case of testing console applications
 only.  It is the practise that is important, not the process.</p>
-<p>The easiest method we use is via <a class="reference external" href="http://pypi.python.org/pypi/shelldoctest/">shelldoctest</a>, a module that implements a
-<a class="reference external" href="http://docs.python.org/library/doctest.html#module-doctest" title="(in Python v3.6)"><code class="xref py py-mod docutils literal"><span class="pre">doctest</span></code></a> interface for testing shell commands.  The package provides a
-user-level script for running shell sessions in Python docstrings.  A simple
+<p>The easiest method we use is via <a class="reference external" href="https://pypi.python.org/pypi/shelldoctest">shelldoctest</a>, a module that implements
+a <a class="reference external" href="https://docs.python.org/3/library/doctest.html#module-doctest" title="(in Python v3.6)"><code class="xref py py-mod docutils literal"><span class="pre">doctest</span></code></a> interface for testing shell commands.  The package provides
+a user-level script for running shell sessions in Python docstrings.  A simple
 example could be:</p>
 <div class="highlight-python"><div class="highlight"><pre><span></span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">$ echo test</span>
@@ -231,9 +257,9 @@ the <code class="docutils literal"><span class="pre">rails</span></code> plugin 
 </div>
 <p>The <code class="docutils literal"><span class="pre">SRC_URI</span></code> declaration says we need to fetch the file from
 <code class="docutils literal"><span class="pre">http://www.vim.org/scripts/download_script.php?src_id=13800</span></code> and name it
-locally as <code class="docutils literal"><span class="pre">rails-4.3.zip</span></code>.  I’m sure you can guess what happened here,
+locally as <code class="file docutils literal"><span class="pre">rails-4.3.zip</span></code>.  I’m sure you can guess what happened here,
 someone saved a copy of the file locally for testing and forgot to update the
-<code class="docutils literal"><span class="pre">src_id</span></code> parameter correctly <a class="footnote-reference" href="#id2" id="id1">[1]</a>.  The result was an apparently new build
+<code class="docutils literal"><span class="pre">src_id</span></code> parameter correctly<a class="footnote-reference brackets" href="#id2" id="id1">1</a>.  The result was an apparently new build
 that installed an older package release.</p>
 <p>When a fix for this bug was committed a test similar to the following snippet
 was added to the <code class="docutils literal"><span class="pre">rails</span></code> test suite:</p>
@@ -247,10 +273,10 @@ was added to the <code class="docutils literal"><span class="pre">rails</span></
 a few seconds to write.  This is important, it shouldn’t cost a lot to write a
 test and this is especially true for the simplest task.</p>
 <p>I use a similar technique for managing my public Gentoo overlay, <a class="reference external" href="https://github.com/JNRowe/jnrowe-misc">jnrowe-misc</a>.
-For example, the <a class="reference external" href="http://pypi.python.org/pypi/blockdiag/">blockdiag</a> ebuild is accompanied by a series of tests that are
-run when bumping or stabilising the package, all of which are cribbed from my
-actual <code class="docutils literal"><span class="pre">blockdiag</span></code> usage.  This massively reduces the time required to
-evaluate a package at bump time.</p>
+For example, the <a class="reference external" href="https://pypi.python.org/pypi/blockdiag">blockdiag</a> ebuild is accompanied by a series of tests
+that are run when bumping or stabilising the package, all of which are cribbed
+from my actual <code class="docutils literal"><span class="pre">blockdiag</span></code> usage.  This massively reduces the time required
+to evaluate a package at bump time.</p>
 </div>
 <div class="section" id="result">
 <h2>Result?<a class="headerlink" href="#result" title="Permalink to this headline">¶</a></h2>
@@ -276,8 +302,8 @@ Doing this encourages you to write nicely formatted documentation to accompany
 your tests.  You can also leverage your tests that are written in this way as
 documentation using the excellent <a class="reference external" href="http://sphinx-doc.org/">Sphinx</a> tool.</p>
 <p>The following script shows an extremely basic, yet fully functional, example of
-how to combine the <code class="docutils literal"><span class="pre">doctest</span></code> module’s <a class="reference external" href="http://docs.python.org/library/doctest.html#doctest.testfile" title="(in Python v3.6)"><code class="xref py py-func docutils literal"><span class="pre">testfile()</span></code></a> function with
-<code class="docutils literal"><span class="pre">shelldoctest</span></code>:</p>
+how to combine the <a class="reference external" href="https://docs.python.org/3/library/doctest.html#module-doctest" title="(in Python v3.6)"><code class="xref py py-mod docutils literal"><span class="pre">doctest</span></code></a> module’s <a class="reference external" href="https://docs.python.org/3/library/doctest.html#doctest.testfile" title="(in Python v3.6)"><code class="xref py py-func docutils literal"><span class="pre">testfile()</span></code></a> function
+with <code class="docutils literal"><span class="pre">shelldoctest</span></code>:</p>
 <div class="highlight-python"><div class="highlight"><pre><span></span><span class="ch">#! /usr/bin/python -tt</span>
 <span class="kn">import</span> <span class="nn">doctest</span>
 <span class="kn">import</span> <span class="nn">sys</span>
@@ -301,26 +327,29 @@ a <code class="docutils literal"><span class="pre">reST</span></code> formatted 
 <span class="s">    /usr/share/vim/vimfiles/autoload/rails.vim</span>
 </pre></div>
 </div>
-<table class="docutils footnote" frame="void" id="id2" rules="none">
-<colgroup><col class="label" /><col /></colgroup>
-<tbody valign="top">
-<tr><td class="label"><a class="fn-backref" href="#id1">[1]</a></td><td>Okay, it was me.  I’ll confess.</td></tr>
-</tbody>
-</table>
+<p class="rubric">Footnotes</p>
+<dl class="footnote brackets">
+<dt class="label" id="id2"><span class="brackets"><a class="fn-backref" href="#id1">1</a></span></dt>
+<dd><p>Okay, it was me.  I’ll confess.</p>
+</dd>
+</dl>
 </div>
 </div>
 
 
+           </div>
+           <div class="articleComments">
+            
            </div>
           </div>
           <footer>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="tips/index.html" class="btn btn-neutral float-right" title="Tips" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="tips/index.html" class="btn btn-neutral float-right" title="Tips" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="rcs.html" class="btn btn-neutral" title="Introduction to RCS" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="rcs.html" class="btn btn-neutral" title="Introduction to RCS" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -329,7 +358,8 @@ a <code class="docutils literal"><span class="pre">reST</span></code> formatted 
 
   <div role="contentinfo">
     <p>
-        &copy; <a href="../copyright.html">Copyright</a> 2009-2017, James Rowe.
+        &copy; <a href="../copyright.html">Copyright</a> 2009-2017  James Rowe.
+      Last updated on &#39;2017-11-25 [67138f3]&#39;.
 
     </p>
   </div>
@@ -354,7 +384,8 @@ a <code class="docutils literal"><span class="pre">reST</span></code> formatted 
             VERSION:'0.1.0',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
-            HAS_SOURCE:  false
+            HAS_SOURCE:  false,
+            SOURCELINK_SUFFIX: '.txt'
         };
     </script>
       <script type="text/javascript" src="../_static/jquery.js"></script>

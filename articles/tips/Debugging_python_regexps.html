@@ -8,12 +8,14 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Debugging Python regular expressions &mdash; JNRowe</title>
+  <title>Debugging Python RegEx &mdash; JNRowe</title>
   
 
   
   
     <link rel="shortcut icon" href="../../_static/icon.ico"/>
+  
+  
   
 
   
@@ -49,6 +51,7 @@
 
 <body class="wy-body-for-nav" role="document">
 
+   
   <div class="wy-grid-for-nav">
 
     
@@ -89,15 +92,18 @@
           
             
             
-                <p class="caption"><span class="caption-text">Contents</span></p>
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../../projects.html">Projects</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="../index.html">Articles</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="../dropping_gentoo.html">Dropping Gentoo</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../dropping_gentoo_reflex.html">Dropping Gentoo reflex</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../fossil.html"><code class="docutils literal"><span class="pre">fossil</span></code> experiments</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../rcs.html">Introduction to RCS</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../tdd_distros.html">TDD distro development</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../fossil.html"><strong class="command">fossil</strong> experiments</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../rcs.html">Introduction to <abbr title="GNU Revision Control System">RCS</abbr></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../tdd_distros.html"><abbr title="Test Driven Development">TDD</abbr> distro development</a></li>
 <li class="toctree-l2 current"><a class="reference internal" href="../index.html#further-categories">Further categories</a><ul class="current">
 <li class="toctree-l3 current"><a class="reference internal" href="index.html">Tips</a><ul class="current">
 <li class="toctree-l4"><a class="reference internal" href="BTS_as_a_task_manager.html"><abbr title="Bug Tracking System">BTS</abbr> as a task manager</a></li>
@@ -106,7 +112,7 @@
 <li class="toctree-l4"><a class="reference internal" href="Compiling_in_vim.html">Compiling C source in vim</a></li>
 <li class="toctree-l4"><a class="reference internal" href="Context_aware_diffs_with_git.html">Context aware diffs with git</a></li>
 <li class="toctree-l4"><a class="reference internal" href="Custom_locations_in_the_GTK_filechooser.html">Custom keybindings in the GTK+ file dialogs</a></li>
-<li class="toctree-l4 current"><a class="current reference internal" href="#">Debugging Python regular expressions</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">Debugging Python <abbr title="Regular Expression">RegEx</abbr></a></li>
 <li class="toctree-l4"><a class="reference internal" href="Disabling_cursor_blinking_in_GTK.html">Disabling cursor blinking in GTK+</a></li>
 <li class="toctree-l4"><a class="reference internal" href="Fancy_awesome_theming.html">Fancy awesome theming</a></li>
 <li class="toctree-l4"><a class="reference internal" href="Finding_a_windows_owner.html">Finding a window’s owner</a></li>
@@ -114,12 +120,12 @@
 <li class="toctree-l4"><a class="reference internal" href="Gentoo_one_liners.html">Gentoo one liners</a></li>
 <li class="toctree-l4"><a class="reference internal" href="Importing_gmail_filters_in_mutt.html">Importing gmail filters in mutt</a></li>
 <li class="toctree-l4"><a class="reference internal" href="Instant_web_server.html">Instant web server</a></li>
-<li class="toctree-l4"><a class="reference internal" href="Kick_me_birthday_reminders.html">‘Kick me’ birthday reminders</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Kick_me_birthday_reminders.html">“Kick me” birthday reminders</a></li>
 <li class="toctree-l4"><a class="reference internal" href="Making_a_nice_home.html">Making a nice home</a></li>
 <li class="toctree-l4"><a class="reference internal" href="Making_a_nice_home.html#permissions">Permissions</a></li>
 <li class="toctree-l4"><a class="reference internal" href="Making_a_nice_home.html#vim-hacks">vim hacks</a></li>
 <li class="toctree-l4"><a class="reference internal" href="Making_a_nice_home.html#documentation">Documentation</a></li>
-<li class="toctree-l4"><a class="reference internal" href="Populating_sup_contacts_from_abook.html">Populating sup contacts from abook</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Populating_sup_contacts_from_abook.html">Populating <strong class="command">sup</strong> contacts from abook</a></li>
 <li class="toctree-l4"><a class="reference internal" href="Sharing_Xresources_between_systems.html">Sharing Xresources between systems</a></li>
 <li class="toctree-l4"><a class="reference internal" href="Simple_notifications_in_awesome.html">Simple notifications in awesome</a></li>
 <li class="toctree-l4"><a class="reference internal" href="Simple_notifications_in_awesome.html#window-creation-notifications">Window creation notifications</a></li>
@@ -129,7 +135,7 @@
 <li class="toctree-l4"><a class="reference internal" href="Toggling_settings_in_vim.html">Toggling settings in vim</a></li>
 <li class="toctree-l4"><a class="reference internal" href="Uber_pink_prompts.html">Uber pink prompts</a></li>
 <li class="toctree-l4"><a class="reference internal" href="Visual_vim_mode_identifier.html">Visual vim mode identifier</a></li>
-<li class="toctree-l4"><a class="reference internal" href="Zsh_and_the_vcs.html">Zsh and the VCS</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Zsh_and_the_vcs.html">Zsh and the <abbr title="Version Control System">VCS</abbr></a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../probits/index.html">Project postmortems</a></li>
@@ -142,6 +148,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../../contact.html">Contact details</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../consult.html">Consulting services</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../copyright.html">Copyright information</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../glossary.html">Glossary</a></li>
 </ul>
 
             
@@ -154,8 +161,10 @@
 
       
       <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
-        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-        <a href="../../index.html">JNRowe</a>
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">JNRowe</a>
+        
       </nav>
 
 
@@ -164,52 +173,60 @@
         <div class="rst-content">
           
 
- 
+
+
+
+
+
+
+
+
+
+
+
 
 
 
 <div role="navigation" aria-label="breadcrumbs navigation">
+
   <ul class="wy-breadcrumbs">
-    <li><a href="../../index.html">Docs</a> &raquo;</li>
-      
+    
+      <li><a href="../../index.html">Docs</a> &raquo;</li>
+        
           <li><a href="../index.html">Articles</a> &raquo;</li>
-      
+        
           <li><a href="index.html">Tips</a> &raquo;</li>
-      
-    <li>Debugging Python regular expressions</li>
+        
+      <li>Debugging Python <abbr title="Regular Expression">RegEx</abbr></li>
+    
+    
       <li class="wy-breadcrumbs-aside">
         
-          
+            
         
       </li>
+    
   </ul>
+
+  
   <hr/>
 </div>
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="debugging-python-regular-expressions">
-<h1>Debugging Python regular expressions<a class="headerlink" href="#debugging-python-regular-expressions" title="Permalink to this headline">¶</a></h1>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">date:</th><td class="field-body">2009-10-29</td>
-</tr>
-</tbody>
-</table>
+  <div class="section" id="debugging-python-regex">
+<h1>Debugging Python <abbr title="Regular Expression">RegEx</abbr><a class="headerlink" href="#debugging-python-regex" title="Permalink to this headline">¶</a></h1>
 <p>Rob Sampson is learning <a class="reference external" href="http://www.python.org/">Python</a> and struggling to get to grips with its
-<abbr title="Regular Expression">RE</abbr> handling.  He asks on one of our internal lists
-at the office:</p>
+<abbr title="Regular Expression">RegEx</abbr> handling.  He asks on one of our internal lists at the office:</p>
 <blockquote>
-<div>I’ve written what I believe to be a valid <abbr title="Regular Expression">RE</abbr> to
-perform matches on some data, and I can’t figure out why it isn’t matching
-on my input.  Any clues about where to look?</div></blockquote>
+<div><p>I’ve written what I believe to be a valid <abbr title="Regular Expression">RegEx</abbr> to perform matches on
+some data, and I can’t figure out why it isn’t matching on my input.
+Any clues about where to look?</p>
+</div></blockquote>
 <p>The answer to these types of questions is more often than not one of two things:</p>
 <ol class="arabic simple">
-<li>Failure to use <a class="reference external" href="http://docs.python.org/tutorial/introduction.html#strings">raw strings</a> when including backslashes in the <abbr title="Regular Expression">RE</abbr></li>
-<li>Choosing to use a <abbr title="Regular Expression">RE</abbr> when a better tool for the
-job exists</li>
+<li><p>Failure to use <a class="reference external" href="http://docs.python.org/tutorial/introduction.html#strings">raw strings</a> when including backslashes in the <abbr title="Regular Expression">RegEx</abbr></p></li>
+<li><p>Choosing to use a <abbr title="Regular Expression">RegEx</abbr> when a better tool for the job exists</p></li>
 </ol>
 <div class="section" id="raw-strings">
 <h2>Raw strings<a class="headerlink" href="#raw-strings" title="Permalink to this headline">¶</a></h2>
@@ -223,23 +240,24 @@ problem.  A simplified example of what he was trying to do would be:</p>
 <span class="go">[&#39;123\\match&#39;]</span>
 </pre></div>
 </div>
-<p><a class="reference external" href="http://gist.github.com/198015">Fork this code</a></p>
+<p>See <a class="reference external" href="http://gist.github.com/198015">gist #198015</a></p>
 <p>Without the raw string, specified by the preceding <code class="docutils literal"><span class="pre">r</span></code> in our pattern, the
-<abbr title="Regular Expression">RE</abbr> parser is actually looking for a literal <code class="docutils literal"><span class="pre">[</span></code>
-where we’ve intended to use the <code class="docutils literal"><span class="pre">[</span></code> as the start of a character set.</p>
+<abbr title="Regular Expression">RegEx</abbr> parser is actually looking for a literal <code class="docutils literal"><span class="pre">[</span></code> where we’ve intended
+to use the <code class="docutils literal"><span class="pre">[</span></code> as the start of a character set.</p>
 <div class="admonition note">
-<p class="first admonition-title">Note</p>
-<p class="last">There is another important point here too as the example above uses character
-ranges, just as Rob’s original did.  As in most <abbr title="Regular Expression">RE</abbr> engines Python has inbuilt support for certain character
-classes, and they are often more functional than the simple character ranges.
-The big win with Python’s character classes is that they can be locale and/or
-Unicode aware by specifying the <a class="reference external" href="http://docs.python.org/library/re.html#re.LOCALE">LOCALE</a> or <a class="reference external" href="http://docs.python.org/library/re.html#re.LOCALE">UNICODE</a> flags.</p>
+<p class="admonition-title">Note</p>
+<p>There is another important point here too as the example above uses
+character ranges, just as Rob’s original did.  As in most <abbr title="Regular Expression">RegEx</abbr> engines
+Python has inbuilt support for certain character classes, and they are
+often more functional than the simple character ranges.  The big win with
+Python’s character classes is that they can be locale and/or Unicode
+aware by specifying the <a class="reference external" href="https://docs.python.org/3/library/re.html#re.LOCALE" title="(in Python v3.6)"><code class="xref py py-data docutils literal"><span class="pre">re.LOCALE</span></code></a> or <code class="xref py py-data docutils literal"><span class="pre">re.UNICODE</span></code> flags.</p>
 </div>
-<p>These types of string escaping problems are common, and as your <abbr title="Regular Expression">RE</abbr> becomes more complex their likelihood increases greatly.
-Python, as is often the case, has the answer and it comes in the shape of the
-<code class="docutils literal"><span class="pre">re.DEBUG</span></code> flag which unfortunately appears to not be documented.  The
-<code class="docutils literal"><span class="pre">re.DEBUG</span></code> flag displays a parse tree allowing you to easily inspect the
-<abbr title="Regular Expression">RE</abbr> you have constructed:</p>
+<p>These types of string escaping problems are common, and as your <abbr title="Regular Expression">RegEx</abbr>
+becomes more complex their likelihood increases greatly.  Python, as is often
+the case, has the answer and it comes in the shape of the <a class="reference external" href="https://docs.python.org/3/library/re.html#re.DEBUG" title="(in Python v3.6)"><code class="xref py py-data docutils literal"><span class="pre">re.DEBUG</span></code></a>
+flag.  The <a class="reference external" href="https://docs.python.org/3/library/re.html#re.DEBUG" title="(in Python v3.6)"><code class="xref py py-data docutils literal"><span class="pre">re.DEBUG</span></code></a> flag displays a parse tree allowing you to easily
+inspect the <abbr title="Regular Expression">RegEx</abbr> you have constructed:</p>
 <div class="highlight-pycon"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">re</span><span class="o">.</span><span class="n">findall</span><span class="p">(</span><span class="s1">&#39; ([0-9]+</span><span class="se">\\</span><span class="s1">[a-z]+) &#39;</span><span class="p">,</span> <span class="s1">&#39;make 123\match &#39;</span><span class="p">,</span> <span class="n">re</span><span class="o">.</span><span class="n">DEBUG</span><span class="p">)</span>
 <span class="go">literal 32</span>
 <span class="go">subpattern 1</span>
@@ -256,13 +274,13 @@ Python, as is often the case, has the answer and it comes in the shape of the
 <span class="go">[]</span>
 </pre></div>
 </div>
-<p><a class="reference external" href="http://gist.github.com/223892">Fork this code</a></p>
+<p>See <a class="reference external" href="http://gist.github.com/223892">gist #223892</a></p>
 <p>Here we can see that our expression matches <code class="docutils literal"><span class="pre">range</span> <span class="pre">(48,</span> <span class="pre">57)</span></code>, 48 and 57 being
 the <a class="reference external" href="http://docs.python.org/library/functions.html">ordinal</a> for <code class="docutils literal"><span class="pre">0</span></code> and <code class="docutils literal"><span class="pre">9</span></code> respectively.  Following that we see a match
 for <code class="docutils literal"><span class="pre">literal</span> <span class="pre">91</span></code>, <code class="docutils literal"><span class="pre">chr(91)</span></code> shows us that the character we are matching is
 a <code class="docutils literal"><span class="pre">[</span></code>.  With this information it is easy to see where the problem is.</p>
-<p>If you need to use more than one flag, such as often useful <a class="reference external" href="http://docs.python.org/library/re.html#re.X">VERBOSE</a> flag, you
-can combine them with <code class="docutils literal"><span class="pre">|</span></code> (bitwise OR) as the flags are just named
+<p>If you need to use more than one flag, such as often useful <a class="reference external" href="https://docs.python.org/3/library/re.html#re.VERBOSE" title="(in Python v3.6)"><code class="xref py py-data docutils literal"><span class="pre">re.VERBOSE</span></code></a>
+flag, you can combine them with <code class="docutils literal"><span class="pre">|</span></code> (bitwise OR) as the flags are just named
 constants(<code class="docutils literal"><span class="pre">DEBUG</span></code> is 128 for example).</p>
 <div class="highlight-pycon"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">re</span><span class="o">.</span><span class="n">findall</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39; (\d+</span><span class="se">\\</span><span class="s1">\w+) &#39;</span><span class="p">,</span> <span class="s1">&#39;make 123\match &#39;</span><span class="p">,</span> <span class="n">re</span><span class="o">.</span><span class="n">DEBUG</span><span class="o">|</span><span class="n">re</span><span class="o">.</span><span class="n">LOCALE</span><span class="p">)</span>
 <span class="go">literal 32</span>
@@ -278,68 +296,72 @@ constants(<code class="docutils literal"><span class="pre">DEBUG</span></code> i
 <span class="go">[&#39;123\\match&#39;]</span>
 </pre></div>
 </div>
-<p><a class="reference external" href="http://gist.github.com/223893">Fork this code</a></p>
+<p>See <a class="reference external" href="http://gist.github.com/223893">gist #223893</a></p>
 </div>
 <div class="section" id="better-tools">
 <h2>Better tools<a class="headerlink" href="#better-tools" title="Permalink to this headline">¶</a></h2>
-<p>Often, a <abbr title="Regular Expressions">RE</abbr> is the hammer of choice for far too
-many tasks for far too many people(myself included).  There are often much
-better choices, some of which are very domain specific and some quite general.</p>
-<p>For any moderately complex parsing job <a class="reference external" href="http://pyparsing.wikispaces.com/">pyparsing</a> is a great choice.  The syntax
-is quite readable and the parser is very fast.  Just make sure you ignore any
-examples telling you to use <code class="docutils literal"><span class="pre">from</span> <span class="pre">pyparsing</span> <span class="pre">import</span> <span class="pre">*</span></code> as you’ll evoke great
-rage in every person who reads your code.</p>
-<p>While <code class="docutils literal"><span class="pre">pyparsing</span></code> is a good general parsing tool it would be overkill for the
-task at hand, but it doesn’t hurt to show a simple example of constructing
-a parser:</p>
+<p>Often, a <abbr title="Regular Expression">RegEx</abbr> is the hammer of choice for far too many tasks for far too
+many people(myself included).  There are often much better choices, some of
+which are very domain specific and some quite general.</p>
+<p>For any moderately complex parsing job <a class="reference external" href="http://pyparsing.wikispaces.com/">pyparsing</a> is a great choice.  The
+syntax is quite readable and the parser is very fast.  Just make sure you
+ignore any examples telling you to use <code class="docutils literal"><span class="pre">from</span> <span class="pre">pyparsing</span> <span class="pre">import</span> <span class="pre">*</span></code> as you’ll
+evoke great rage in every person who reads your code.</p>
+<p>While <code class="docutils literal"><span class="pre">pyparsing</span></code> is a good general parsing tool it would be overkill for
+the task at hand, but it doesn’t hurt to show a simple example of
+constructing a parser:</p>
 <div class="highlight-pycon"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">pyparsing</span> <span class="kn">import</span> <span class="p">(</span><span class="n">Literal</span><span class="p">,</span> <span class="n">White</span><span class="p">,</span> <span class="n">Word</span><span class="p">,</span> <span class="n">alphas</span><span class="p">,</span> <span class="n">nums</span><span class="p">)</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">matcher</span> <span class="o">=</span> <span class="n">Word</span><span class="p">(</span><span class="n">alphas</span><span class="p">)</span> <span class="o">+</span> <span class="n">Word</span><span class="p">(</span><span class="n">nums</span><span class="p">)</span> <span class="o">+</span> <span class="n">Literal</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\\</span><span class="s1">&#39;</span><span class="p">)</span> <span class="o">+</span> <span class="n">Word</span><span class="p">(</span><span class="n">alphas</span><span class="p">)</span> <span class="o">+</span> <span class="n">White</span><span class="p">()</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">matcher</span><span class="o">.</span><span class="n">parseString</span><span class="p">(</span><span class="s1">&#39;make 123</span><span class="se">\\</span><span class="s1">match &#39;</span><span class="p">)</span>
 <span class="go">([&#39;make&#39;, &#39;123&#39;, &#39;\\&#39;, &#39;match&#39;, &#39; &#39;], {})</span>
 </pre></div>
 </div>
-<p><a class="reference external" href="http://gist.github.com/223894">Fork this code</a></p>
-<p>Another exceptional tool for tasks that people often abuse <abbr title="Regular Expressions">RE</abbr> for is <a class="reference external" href="http://labix.org/python-dateutil">python-dateutil</a>.  One of the reasons I occasionally turn
-to this module is that Python’s <a class="reference external" href="http://docs.python.org/library/time.html#time.strptime">time.strptime</a> isn’t even capable of parsing
-timestamps created by <a class="reference external" href="http://docs.python.org/library/time.html#time.strftime">time.strftime</a>, for example if you use <code class="docutils literal"><span class="pre">%z</span></code> in the
+<p>See <a class="reference external" href="http://gist.github.com/223894">gist #223894</a></p>
+<p>Another exceptional tool for tasks that people often abuse <abbr title="Regular Expression">RegEx</abbr> for is
+<a class="reference external" href="http://labix.org/python-dateutil">python-dateutil</a>.  One of the reasons I occasionally turn to this module is
+that Python’s <a class="reference external" href="https://docs.python.org/3/library/time.html#time.strptime" title="(in Python v3.6)"><code class="xref py py-func docutils literal"><span class="pre">time.strptime()</span></code></a> isn’t even capable of parsing timestamps
+created by <a class="reference external" href="https://docs.python.org/3/library/time.html#time.strftime" title="(in Python v3.6)"><code class="xref py py-func docutils literal"><span class="pre">time.strftime()</span></code></a>, for example if you use <code class="docutils literal"><span class="pre">%z</span></code> in the
 <code class="docutils literal"><span class="pre">strftime</span></code> call.</p>
 <p>All too often you see people trying to solve date parsing problems with
-<abbr title="Regular Expressions">RE</abbr> and heaps of <a class="reference external" href="http://docs.python.org/library/functions.html#int">int</a> calls to mangle the matches.
-Not only is this a very brittle approach, but the <a class="reference external" href="http://labix.org/">labix</a> guys have solved this
-problem for you already:</p>
+<abbr title="Regular Expression">RegEx</abbr> and heaps of <code class="xref py py-func docutils literal"><span class="pre">int()</span></code> calls to mangle the matches.  Not only is this
+a very brittle approach, but the <a class="reference external" href="http://labix.org/">labix</a> guys have solved this problem for you
+already:</p>
 <div class="highlight-pycon"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">dateutil</span> <span class="kn">import</span> <span class="n">parser</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">s</span> <span class="o">=</span> <span class="s1">&#39;2009 10 30 23:35:16+0400&#39;</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">parser</span><span class="o">.</span><span class="n">parse</span><span class="p">(</span><span class="n">s</span><span class="p">)</span>
 <span class="go">datetime.datetime(2009, 10, 30, 23, 35, 16, tzinfo=tzoffset(None, 14400))</span>
 </pre></div>
 </div>
-<p><a class="reference external" href="http://gist.github.com/223895">Fork this code</a></p>
+<p>See <a class="reference external" href="http://gist.github.com/223895">gist #223895</a></p>
 <div class="admonition note">
-<p class="first admonition-title">Note</p>
-<p class="last">If you use <a class="reference external" href="http://labix.org/python-dateutil">python-dateutil</a> do be aware that by default it will prefer US
+<p class="admonition-title">Note</p>
+<p>If you use <a class="reference external" href="http://labix.org/python-dateutil">python-dateutil</a> do be aware that by default it will prefer US
 mid-endian date formats when guessing for some patterns.  Either create your
 own <code class="docutils literal"><span class="pre">parserinfo</span></code> object and set <code class="docutils literal"><span class="pre">dayfirst</span></code> to <code class="docutils literal"><span class="pre">True</span></code>, or use something
 stricter.</p>
 </div>
-<p>In closing before you start parsing any text – regardless of how simple it is
-– you should thumb through the <a class="reference external" href="http://docs.python.org/library/">standard library</a> and perform a search on
+<p>In closing before you start parsing any text — regardless of how simple it is
+— you should thumb through the <a class="reference external" href="http://docs.python.org/library/">standard library</a> and perform a search on
 <a class="reference external" href="http://pypi.python.org/pypi">pypi</a>.  Often, the work has already been done for you and may well be much
 better than the hurried version you were about to cobble together with
-a <abbr title="Regular Expression">RE</abbr>.</p>
+a <abbr title="Regular Expression">RegEx</abbr>.</p>
 </div>
 </div>
 
 
+           </div>
+           <div class="articleComments">
+            
            </div>
           </div>
           <footer>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="Disabling_cursor_blinking_in_GTK.html" class="btn btn-neutral float-right" title="Disabling cursor blinking in GTK+" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="Disabling_cursor_blinking_in_GTK.html" class="btn btn-neutral float-right" title="Disabling cursor blinking in GTK+" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="Custom_locations_in_the_GTK_filechooser.html" class="btn btn-neutral" title="Custom keybindings in the GTK+ file dialogs" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="Custom_locations_in_the_GTK_filechooser.html" class="btn btn-neutral" title="Custom keybindings in the GTK+ file dialogs" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -348,7 +370,8 @@ a <abbr title="Regular Expression">RE</abbr>.</p>
 
   <div role="contentinfo">
     <p>
-        &copy; <a href="../../copyright.html">Copyright</a> 2009-2017, James Rowe.
+        &copy; <a href="../../copyright.html">Copyright</a> 2009-2017  James Rowe.
+      Last updated on &#39;2017-11-25 [67138f3]&#39;.
 
     </p>
   </div>
@@ -373,7 +396,8 @@ a <abbr title="Regular Expression">RE</abbr>.</p>
             VERSION:'0.1.0',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
-            HAS_SOURCE:  false
+            HAS_SOURCE:  false,
+            SOURCELINK_SUFFIX: '.txt'
         };
     </script>
       <script type="text/javascript" src="../../_static/jquery.js"></script>

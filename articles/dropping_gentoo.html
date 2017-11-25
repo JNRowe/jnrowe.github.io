@@ -15,6 +15,8 @@
   
     <link rel="shortcut icon" href="../_static/icon.ico"/>
   
+  
+  
 
   
 
@@ -49,6 +51,7 @@
 
 <body class="wy-body-for-nav" role="document">
 
+   
   <div class="wy-grid-for-nav">
 
     
@@ -89,7 +92,10 @@
           
             
             
-                <p class="caption"><span class="caption-text">Contents</span></p>
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../projects.html">Projects</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="index.html">Articles</a><ul class="current">
@@ -110,9 +116,9 @@
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="dropping_gentoo_reflex.html">Dropping Gentoo reflex</a></li>
-<li class="toctree-l2"><a class="reference internal" href="fossil.html"><code class="docutils literal"><span class="pre">fossil</span></code> experiments</a></li>
-<li class="toctree-l2"><a class="reference internal" href="rcs.html">Introduction to RCS</a></li>
-<li class="toctree-l2"><a class="reference internal" href="tdd_distros.html">TDD distro development</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fossil.html"><strong class="command">fossil</strong> experiments</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rcs.html">Introduction to <abbr title="GNU Revision Control System">RCS</abbr></a></li>
+<li class="toctree-l2"><a class="reference internal" href="tdd_distros.html"><abbr title="Test Driven Development">TDD</abbr> distro development</a></li>
 <li class="toctree-l2"><a class="reference internal" href="index.html#further-categories">Further categories</a></li>
 </ul>
 </li>
@@ -121,6 +127,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../contact.html">Contact details</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../consult.html">Consulting services</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../copyright.html">Copyright information</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../glossary.html">Glossary</a></li>
 </ul>
 
             
@@ -133,8 +140,10 @@
 
       
       <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
-        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-        <a href="../index.html">JNRowe</a>
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">JNRowe</a>
+        
       </nav>
 
 
@@ -143,23 +152,40 @@
         <div class="rst-content">
           
 
- 
+
+
+
+
+
+
+
+
+
+
+
 
 
 
 <div role="navigation" aria-label="breadcrumbs navigation">
+
   <ul class="wy-breadcrumbs">
-    <li><a href="../index.html">Docs</a> &raquo;</li>
-      
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
           <li><a href="index.html">Articles</a> &raquo;</li>
-      
-    <li>Dropping Gentoo</li>
+        
+      <li>Dropping Gentoo</li>
+    
+    
       <li class="wy-breadcrumbs-aside">
         
-          
+            
         
       </li>
+    
   </ul>
+
+  
   <hr/>
 </div>
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
@@ -174,8 +200,8 @@ time in fact.</p>
 promised in Q3-2015.  It is kind of sad day, but we all knew that day was coming
 and it takes only a little inside knowledge to know why.</p>
 <div class="admonition note">
-<p class="first admonition-title">Note</p>
-<p class="last">A couple of people have rightly pointed out that I was a little harsh in
+<p class="admonition-title">Note</p>
+<p>A couple of people have rightly pointed out that I was a little harsh in
 this document, so I’ve pushed a <a class="reference internal" href="dropping_gentoo_reflex.html"><span class="doc">followup</span></a>.</p>
 </div>
 <div class="section" id="landscapes-have-changed">
@@ -209,10 +235,10 @@ nicer.</p>
 <p>There was a point where we seriously considered moving to a <a class="reference external" href="http://en.wikipedia.org/wiki/Conary_(package_manager)">Conary</a>-based
 infrastructure.  It did loads of the cool things we wanted to do and it mostly
 fitted our workflow with its “Gentoo done right” feel.  Sadly, it has
-a <abbr title="Contributor License Agreement">CLA</abbr> which none of us could sign that
-practically guaranteed we would eventually be in the same place we were with
-Gentoo.  May have been a fortuitous roadblock in the end, as Conary never gained
-the traction it once promised(perhaps in part because of that <abbr title="Contributor License Agreement">CLA</abbr>?).</p>
+a <abbr title="Contributor License Agreement">CLA</abbr> which none of us could sign that practically guaranteed we would
+eventually be in the same place we were with Gentoo.  May have been
+a fortuitous roadblock in the end, as Conary never gained the traction it
+once promised(perhaps in part because of that <abbr title="Contributor License Agreement">CLA</abbr>?).</p>
 <p>Had we waited another five months, there would have been another open source
 package manager for Gentoo we could have easily switched to and hacked on.
 There is perhaps a pattern here…</p>
@@ -356,15 +382,18 @@ track for the next ten years.</p>
 
 
            </div>
+           <div class="articleComments">
+            
+           </div>
           </div>
           <footer>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="dropping_gentoo_reflex.html" class="btn btn-neutral float-right" title="Dropping Gentoo reflex" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="dropping_gentoo_reflex.html" class="btn btn-neutral float-right" title="Dropping Gentoo reflex" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="index.html" class="btn btn-neutral" title="Articles" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="index.html" class="btn btn-neutral" title="Articles" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -373,7 +402,8 @@ track for the next ten years.</p>
 
   <div role="contentinfo">
     <p>
-        &copy; <a href="../copyright.html">Copyright</a> 2009-2017, James Rowe.
+        &copy; <a href="../copyright.html">Copyright</a> 2009-2017  James Rowe.
+      Last updated on &#39;2017-11-25 [67138f3]&#39;.
 
     </p>
   </div>
@@ -398,7 +428,8 @@ track for the next ten years.</p>
             VERSION:'0.1.0',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
-            HAS_SOURCE:  false
+            HAS_SOURCE:  false,
+            SOURCELINK_SUFFIX: '.txt'
         };
     </script>
       <script type="text/javascript" src="../_static/jquery.js"></script>
