@@ -8,31 +8,40 @@ Contact details
 
 .. raw:: html
 
-   <div class="vcard" id="vcard">
+   <div class="hcard" id="vcard">
 
 .. image:: .static/pavatar.png
    :align: right
-   :class: photo
+   :class: u-photo u-logo
    :alt: pavatar
 
 .. raw:: html
 
-   <p><a href="http://jnrowe.github.io/" class="url">This</a> is the personal website of <a href="http://claimid.com/jnrowe" class="url fn" rel="me">James Rowe</a>, a <span class="title">Senior</span> <span class="role">Developer</span> with <span class="org"><span xml:lang="fr" class="organization-name">AST</span>&#39;s <span class="organization-unit"><abbr class="geo" title="51.508, -0.126">Embedded Markets</abbr></span> division</span>.</p>
+   <p><a href="https://jnrowe.github.io/" class="u-url">This</a> is the
+   personal website of <span class="p-name" rel="me">James Rowe</a>, a <span
+   class="p-job-title">Senior <span class="p-role">Developer</span></span> with
+   <span class="p-org"><span xml:lang="fr"
+   class="organization-name">EADS</span>&#39;s <abbr
+   class="p-organization-unit" title="Advanced Embedded Markets">AEM</abbr>
+   division</span>.</p>
 
-   <p class="adr">He <abbr class="geo" title="52.213,0.105">lives</abbr> near <span class="locality">Cambridge</span>, <span class="region">East Anglia</span> in the <abbr title="United Kingdom" class="country-name">UK</abbr>.</p>
+   <p class="adr">He <abbr class="p-geo" title="52.213,0.105">lives</abbr> near
+   <span class="p-locality">Cambridge</span>, <span class="p-region">East
+   Anglia</span> in the <abbr title="United Kingdom"
+   class="p-country-name">UK</abbr>.</p>
 
-   <p>The easiest way to contact <abbr class="nickname" title="JNRowe">James</abbr> is by <a href="mailto:jnrowe@gmail.com" class="email" accesskey="9">email</a>.</p>
+   <p>The easiest way to contact <abbr class="p-nickname"
+   title="JNRowe">James</abbr> is by <a href="mailto:jnrowe@gmail.com"
+   class="u-email" accesskey="9">email</a>.</p>
 
-   <p class="note">The information in this section was last updated on <abbr class="rev" title="2013-10-15T16:05:00+01:00">2013-10-15</abbr>.</p>
+   <p>His <a href="_static/gpg.asc" rel="enclosure">GnuPG key</a> is <tt
+   class="u-key">0xFDA3C542ABC68E07</tt> (fingerprint = <tt>3ACF 2658 BC4D 35F6
+   E470  0DAF FDA3 C542 ABC6 8E07</tt>)</p>
 
-* `My GitHub profile`_
-* `My GnuPG key`_ ``0xFDA3C542ABC68E07`` (fingerprint = ``3ACF 2658 BC4D 35F6 E470  0DAF FDA3 C542 ABC6 8E07``)
-
-.. raw:: html
-
-   <small> [This page is <a href="http://microformats.org/wiki/hcard" title="hCard is a simple, open, distributed contact information format for people, companies, and organizations, which is suitable for embedding in (X)HTML, Atom, RSS, and arbitrary XML.">hCard</a> encoded, you can also grab it in <a href="http://suda.co.uk/projects/X2V/get-vcard.php?uri=http://jnrowe.github.io/contact.html">vcard format</a>]</small>
+   <p class="note">The information in this section was last updated on <time
+   class="dt-rev" datetime="2017-12-09T07:35:19+0000">2017-12-09</time>, and
+   is <a href="http://microformats.org/wiki/h-card" title="h-card is a simple,
+   open format for publishing people and organisations on the web.">h-card</a>
+   encoded.</p>
 
    </div>
-
-.. _My GitHub profile: https://github.com/JNRowe/
-.. _My GnuPG key: _static/gpg.asc
