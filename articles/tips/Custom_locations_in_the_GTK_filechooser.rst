@@ -56,7 +56,7 @@ respectively.  ``gtk-key-theme-name`` sets the default keybindings for GTK+
 apps.  By setting it to ``Emacs`` we have access to the “normal” keybindings we
 expect if we use bash_ or other common Linux tools, such as :kbd:`C-w` to
 delete the word under the cursor.  You can read more about
-``gtk-key-theme-name`` in `an old posting of mine`_.
+``gtk-key-theme-name`` in :doc:`emacs_gtk_shortcuts`.
 
 All of the settings above are configurable with a :abbr:`GUI (Graphical User
 Interface)` if you use gnome or xfce_, but for those of who don’t use those
@@ -122,5 +122,4 @@ share, for this you can use the ``include`` directive.  An example would be:
 .. _KDE: http://www.kde.org/
 .. _modeline: http://vimdoc.sourceforge.net/htmldoc/options.html#modeline
 .. _bash: http://cnswww.cns.cwru.edu/~chet/bash/bashtop.html
-.. _an old posting of mine: http://www.jnrowe.ukfsn.org/articles/configs/gtk.html
 .. _xfce: http://www.xfce.org/
