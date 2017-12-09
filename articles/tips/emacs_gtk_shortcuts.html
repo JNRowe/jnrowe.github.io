@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Beyond simple tab completion &mdash; JNRowe</title>
+  <title>Proper keyboard shortcuts in GTK+ &mdash; JNRowe</title>
   
 
   
@@ -40,8 +40,8 @@
         <link rel="copyright" title="Copyright" href="../../copyright.html"/>
     <link rel="top" title="JNRowe" href="../../index.html"/>
         <link rel="up" title="Tips" href="index.html"/>
-        <link rel="next" title="Bugzilla mail with real names" href="Bugzilla_real_names.html"/>
-        <link rel="prev" title="BTS as a task manager" href="BTS_as_a_task_manager.html"/>
+        <link rel="next" title="Project postmortems" href="../probits/index.html"/>
+        <link rel="prev" title="Zsh and the VCS" href="Zsh_and_the_vcs.html"/>
     <link rel="alternate" type="application/atom+xml" title="Updated items" href="/updates.atom" />
 
   
@@ -108,7 +108,7 @@
 <li class="toctree-l2 current"><a class="reference internal" href="../index.html#further-categories">Further categories</a><ul class="current">
 <li class="toctree-l3 current"><a class="reference internal" href="index.html">Tips</a><ul class="current">
 <li class="toctree-l4"><a class="reference internal" href="BTS_as_a_task_manager.html"><abbr title="Bug Tracking System">BTS</abbr> as a task manager</a></li>
-<li class="toctree-l4 current"><a class="current reference internal" href="#">Beyond simple tab completion</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Beyond_tab_completion.html">Beyond simple tab completion</a></li>
 <li class="toctree-l4"><a class="reference internal" href="Bugzilla_real_names.html">Bugzilla mail with real names</a></li>
 <li class="toctree-l4"><a class="reference internal" href="Compiling_in_vim.html">Compiling C source in vim</a></li>
 <li class="toctree-l4"><a class="reference internal" href="Context_aware_diffs_with_git.html">Context aware diffs with git</a></li>
@@ -137,7 +137,7 @@
 <li class="toctree-l4"><a class="reference internal" href="Uber_pink_prompts.html">Uber pink prompts</a></li>
 <li class="toctree-l4"><a class="reference internal" href="Visual_vim_mode_identifier.html">Visual vim mode identifier</a></li>
 <li class="toctree-l4"><a class="reference internal" href="Zsh_and_the_vcs.html">Zsh and the <abbr title="Version Control System">VCS</abbr></a></li>
-<li class="toctree-l4"><a class="reference internal" href="emacs_gtk_shortcuts.html">Proper keyboard shortcuts in GTK+</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">Proper keyboard shortcuts in GTK+</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../probits/index.html">Project postmortems</a></li>
@@ -199,7 +199,7 @@
         
           <li><a href="index.html">Tips</a> &raquo;</li>
         
-      <li>Beyond simple tab completion</li>
+      <li>Proper keyboard shortcuts in GTK+</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -216,75 +216,44 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="beyond-simple-tab-completion">
-<h1>Beyond simple tab completion<a class="headerlink" href="#beyond-simple-tab-completion" title="Permalink to this headline">¶</a></h1>
-<p>Matt Taylor wrote on the EADS Linux list:</p>
-<blockquote>
-<div><p><code class="docutils literal"><span class="pre">wildmenu</span></code> is to <a class="reference external" href="http://www.vim.org/">vim</a> as <code class="docutils literal"><span class="pre">$x</span></code> is to <a class="reference external" href="http://cnswww.cns.cwru.edu/~chet/bash/bashtop.html">bash</a>.  Define <code class="docutils literal"><span class="pre">$x</span></code> :)</p>
-</div></blockquote>
-<p>The <a class="reference external" href="http://vimdoc.sourceforge.net/htmldoc/options.html#'wildmenu'">wildmenu</a> option in <strong class="command">vim</strong> shows possible command line completions
-above the command line, highlighting the currently selected completion option.
-A follow up email later and Matt says:</p>
-<blockquote>
-<div><p>Basically, I want <strong class="command">bash</strong> to show me the completions and
-<code class="kbd docutils literal"><span class="pre">Tab`</span></code> to <code class="docutils literal"><span class="pre">$key</span></code> through them in the same way <strong class="command">vim</strong> does
-it.</p>
-</div></blockquote>
-<p>The feature is surprisingly easy to achieve with <strong class="command">bash</strong>, and is
-actually a feature of <a class="reference external" href="http://cnswww.cns.cwru.edu/php/chet/readline/rltop.html">readline</a> making it available to all software that uses
-completion functionality from <code class="docutils literal"><span class="pre">readline</span></code>.</p>
-<p>The option we want is called <a class="reference external" href="http://cnswww.cns.cwru.edu/php/chet/readline/readline.html#IDX137">menu-complete</a>, but it not bound to a key by
-default.  You can enable <code class="docutils literal"><span class="pre">menu-complete</span></code> in all <code class="docutils literal"><span class="pre">readline</span></code>-using
-applications by editing your <code class="file docutils literal"><span class="pre">~/.inputrc</span></code> (or whatever <span class="target" id="index-0"></span><code class="xref std std-envvar docutils literal"><span class="pre">$INPUTRC</span></code>
-points to if it is set) or just for <strong class="command">bash</strong> if you do not wish to
-change the behaviour of other applications.</p>
-<p>To change the behaviour by editing the <code class="docutils literal"><span class="pre">readline</span></code> configuration file we would do
-this:</p>
-<div class="highlight-text"><div class="highlight"><pre><span></span>&quot;\C-a&quot;: menu-complete
-# Alternative version, enables menu-complete only for bash
-$if Bash
-    &quot;\C-a&quot;: menu-complete
-$endif
+  <div class="section" id="proper-keyboard-shortcuts-in-gtk">
+<h1>Proper keyboard shortcuts in GTK+<a class="headerlink" href="#proper-keyboard-shortcuts-in-gtk" title="Permalink to this headline">¶</a></h1>
+<p>If you’re used to the old style <a class="reference external" href="http://www.gtk.org/">GTK+</a> keyboard shortcuts, and find yourself
+continually closing windows when you’re trying to delete a word (like me) then
+add the following to your <code class="file docutils literal"><span class="pre">~/.gtkrc-2.0</span></code>:</p>
+<div class="highlight-text"><div class="highlight"><pre><span></span>gtk-key-theme-name = &quot;Emacs&quot;
 </pre></div>
 </div>
-<p>See <a class="reference external" href="http://gist.github.com/198394">gist #198394</a></p>
-<p>The above tells <code class="docutils literal"><span class="pre">readline</span></code> we wish to bind <code class="docutils literal"><span class="pre">menu-complete</span></code> to
-<code class="kbd docutils literal"><span class="pre">Control-a</span></code>, I find that key combination quite comfortable as
-<code class="kbd docutils literal"><span class="pre">Control-a</span></code> is easy to reach the my keyboard layout and is of little use
-in any of the apps I use on a regular basis.  You must either re-read the
-configuration file or restart the <strong class="command">bash</strong> session to enable this
-binding.</p>
-<p>To enable the key binding in <strong class="command">bash</strong> only we could also just edit the
-appropriate <strong class="command">bash</strong> startup file:</p>
-<div class="highlight-bash"><div class="highlight"><pre><span></span><span class="nb">bind</span> <span class="s1">&#39;&quot;\C-a&quot;: menu-complete&#39;</span>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This is for people using GTK+ apps, not GNOME.  If you wish to change
+bindings in GNOME you should use the control centre.</p>
+</div>
+<p>Using the above you can return to the old default format, but if you only want
+to enable <code class="kbd docutils literal"><span class="pre">&lt;C-w&gt;</span></code> and keep the other Windows-style shortcuts you can just
+add:</p>
+<div class="highlight-text"><div class="highlight"><pre><span></span>binding &quot;gtk-emacs-text-entry&quot;
+{
+    bind &quot;&lt;ctrl&gt;w&quot; { &quot;delete-from-cursor&quot; (word-ends, -1) }
+}
+class &quot;GtkEntry&quot; binding &quot;gtk-emacs-text-entry&quot;
+class &quot;GtkTextView&quot; binding &quot;gtk-emacs-text-entry&quot;
 </pre></div>
 </div>
-<p>See <a class="reference external" href="http://gist.github.com/198437">gist #198437</a></p>
-<p>You must source the startup file or restart <strong class="command">bash</strong> to enable this
-binding, alternatively you can just test the command in your current
-<strong class="command">bash</strong> setting until you’re happy with the key combination.</p>
-<p>In a follow up email on the list Matt asks if it is possible to make the
-completion context aware, in much the same the <a class="reference external" href="http://bash-completion.alioth.debian.org/">bash-completion</a> package does but
-without having to write new completion scripts.  There are some other quite
-useful completion modes available in <strong class="command">bash</strong>, I’ll describe a few
-below.</p>
-<p><code class="kbd docutils literal"><span class="pre">M-!</span></code> tells <strong class="command">bash</strong> to complete command names be they actual
-on-disk commands, functions or aliases. <code class="kbd docutils literal"><span class="pre">M-/</span></code> completes only filenames,
-this can be very useful when <code class="docutils literal"><span class="pre">bash-completion</span></code> is refusing to tab complete
-a filename for you.  <code class="kbd docutils literal"><span class="pre">C-$</span></code> implements variable name completion, this is
-most useful when you’re looking to unset or re-set a variable.  Variable name
-completion isn’t actually necessary if you have <code class="docutils literal"><span class="pre">bash-completion</span></code> installed
-as it is smart enough to handle this for you in most cases.</p>
-<p>And finally, there is a one more incredibly useful completion mode in
-<strong class="command">bash</strong> and that is <code class="kbd docutils literal"><span class="pre">M-{</span></code>, it adds all possible completions to the
-command line using the brace expansion syntax.  For example, if I type <code class="docutils literal"><span class="pre">ls</span>
-<span class="pre">~/Git/Local/&lt;M-{&gt;</span></code> it completes to
-<code class="docutils literal"><span class="pre">/home/jay/Git/Local/{Makefile,countless,dot-configs,haskvim,jrutils}</span></code>.
-Using <code class="docutils literal"><span class="pre">readline</span></code> motion commands, especially word motions such as <code class="kbd docutils literal"><span class="pre">M-f</span></code>
-and <code class="kbd docutils literal"><span class="pre">M-b</span></code> to jump forward and backward one word, I can easily apply
-a command to a certain set of files in a directory.  Just don’t try it on
-<code class="docutils literal"><span class="pre">/usr/bin</span></code> unless you want to see how <strong class="command">bash</strong> handles massive command
-lines!!</p>
+<p>If you use <a class="reference external" href="http://plasmasturm.org/code/gtk-chtheme/">gtk-chtheme</a> or <a class="reference external" href="http://www.muhri.net/nav.php3?node=gts">gtk-theme-switch</a> you should add custom options to
+your <code class="file docutils literal"><span class="pre">~/.gtkrc.mine</span></code> so it isn’t overwritten when you change themes.  See
+the comments in your <code class="file docutils literal"><span class="pre">~/.gtkrc-2.0</span></code> if you use either of these theme
+switchers.</p>
+<div class="figure">
+<img alt="XFce4 keyboard settings window" src="../../_images/xfce4_keyboard.png" />
+</div>
+<p>If you’re an <a class="reference external" href="http://www.xfce.org/">XFce</a> user you can select the Emacs keyboard shortcuts using the
+keyboard settings dialog.</p>
+<p>If you can’t change the settings for some reason, then you can still use
+a shortcut to delete words.  The default setting, up to at least GTK+ v2.10.9,
+is the finger-stretching <code class="kbd docutils literal"><span class="pre">&lt;C-backspace&gt;</span></code>.</p>
+<p>And finally, if you manage to convince upstream that the default behaviour
+should be the settings in the Emacs theme I’ll owe you a few beers!</p>
 </div>
 
 
@@ -297,10 +266,10 @@ lines!!</p>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="Bugzilla_real_names.html" class="btn btn-neutral float-right" title="Bugzilla mail with real names" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="../probits/index.html" class="btn btn-neutral float-right" title="Project postmortems" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="BTS_as_a_task_manager.html" class="btn btn-neutral" title="BTS as a task manager" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="Zsh_and_the_vcs.html" class="btn btn-neutral" title="Zsh and the VCS" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   

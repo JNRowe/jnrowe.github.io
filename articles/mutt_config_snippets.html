@@ -1,0 +1,391 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>mutt configuration snippets &mdash; JNRowe</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../_static/icon.ico"/>
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+        <link rel="index" title="Index"
+              href="../genindex.html"/>
+        <link rel="search" title="Search" href="../search.html"/>
+        <link rel="copyright" title="Copyright" href="../copyright.html"/>
+    <link rel="top" title="JNRowe" href="../index.html"/>
+        <link rel="up" title="Articles" href="index.html"/>
+        <link rel="next" title="Introduction to RCS" href="rcs.html"/>
+        <link rel="prev" title="fossil experiments" href="fossil.html"/>
+    <link rel="alternate" type="application/atom+xml" title="Updated items" href="/updates.atom" />
+
+  
+  <script src="../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> JNRowe
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.1
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../projects.html">Projects</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Articles</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="dropping_gentoo.html">Dropping Gentoo</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dropping_gentoo_reflex.html">Dropping Gentoo reflex</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fossil.html"><strong class="command">fossil</strong> experiments</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#"><strong class="command">mutt</strong> configuration snippets</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rcs.html">Introduction to <abbr title="GNU Revision Control System">RCS</abbr></a></li>
+<li class="toctree-l2"><a class="reference internal" href="tdd_distros.html"><abbr title="Test Driven Development">TDD</abbr> distro development</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#further-categories">Further categories</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../thoughts/index.html">Thoughts</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../colophon.html">Colophon</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../contact.html">Contact details</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../consult.html">Consulting services</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../copyright.html">Copyright information</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../glossary.html">Glossary</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">JNRowe</a>
+        
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="index.html">Articles</a> &raquo;</li>
+        
+      <li><strong class="command">mutt</strong> configuration snippets</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="mutt-configuration-snippets">
+<h1><strong class="command">mutt</strong> configuration snippets<a class="headerlink" href="#mutt-configuration-snippets" title="Permalink to this headline">¶</a></h1>
+<p><a class="reference external" href="http://www.mutt.org/">mutt</a> is my favourite <abbr title="Mail User Agent">MUA</abbr>, one of the few tools
+I truly believe I couldn’t manage without.  It is also one of those tools,
+along with <a class="reference external" href="http://www.vim.org/">vim</a>, which can end up sucking away all your free time to configure
+it just how you want.</p>
+<p>To get a quick idea of how many options you can configure with <strong class="command">mutt</strong>
+run <code class="docutils literal"><span class="pre">mutt</span> <span class="pre">-D</span> <span class="pre">|</span> <span class="pre">wc</span> <span class="pre">-l</span></code>, on my system with a heavily patched <strong class="command">mutt</strong>
+1.5.13 it dumps just over 300 lines of output.  Of course, you shouldn’t need
+to edit all of those settings though.</p>
+<p>With the possibility of such large configuration files segregation is
+important, and to aid that <strong class="command">mutt</strong> supports config file inclusion.  My
+own <code class="file docutils literal"><span class="pre">~/.muttrc</span></code> takes advantage of this and consists of just the
+following:</p>
+<div class="highlight-text"><div class="highlight"><pre><span></span>source ~/.mutt/boolean.rc
+source ~/.mutt/colour.rc
+source ~/.mutt/format.rc
+source ~/.mutt/keys.rc
+source ~/.mutt/misc.rc
+source ~/.mutt/quad.rc
+source ~/.mutt/folders.rc
+source ~/.mutt/autoview.rc
+source ~/.mutt/gpg.rc
+source ~/.mutt/score.rc
+
+push &lt;show-version&gt;
+</pre></div>
+</div>
+<p>The main config file simply includes all my other config files, and finally
+displays the <strong class="command">mutt</strong> version number in the status line.  If you go down
+this route, and I recommend it, just keep in mind that <strong class="command">mutt</strong>
+processes the files in order so you can’t use variables that are defined in
+later files.  The other thing to bear in mind while debugging is that
+<strong class="command">mutt</strong> will be using the <em>last</em> set option, so if you try to set the
+same variable in <code class="file docutils literal"><span class="pre">boolean.rc</span></code> and <code class="file docutils literal"><span class="pre">gpg.rc</span></code> <strong class="command">mutt</strong> will
+override the value from <code class="file docutils literal"><span class="pre">boolean.rc</span></code> when it reads <code class="docutils literal"><span class="pre">gpg.rc</span></code>.</p>
+<p>The first config file to contain anything unusual is <code class="file docutils literal"><span class="pre">colour.rc</span></code>:</p>
+<div class="highlight-text"><div class="highlight"><pre><span></span># Match URLs in mail
+color body blue default &quot;(finger|ftp|hg|http(|s)|news|tel)://[^ ]*&quot;
+color body yellow black &quot;mailto:[-a-z_0-9.]+@[-a-z_0-9.]+&quot;
+# Match dates, both ISO-style and [YY]YY/MM/DD
+color body brightred black &quot;\(19|20\)?[0-9][0-9][/-][01]?[0-9][/-][0123]?[0-9]&quot;
+
+# Highlight qsf and SpamAssassin flagged mail
+color index brightred brightblack &quot;~h &#39;^X-Spam: YES&#39;&quot;
+color index brightmagenta brightblack &quot;~h &#39;^X-Spam-Status: Yes&#39;&quot;
+
+# ISBNs
+color body yellow default &quot;[-0-9]{9,12}[0-9X]&quot;
+</pre></div>
+</div>
+<p>In <code class="file docutils literal"><span class="pre">keys.rc</span></code>:</p>
+<div class="highlight-text"><div class="highlight"><pre><span></span># Read mail using text-to-speech engine
+macro pager + &quot;|festival --tts\r&quot;
+</pre></div>
+</div>
+<p>In <code class="file docutils literal"><span class="pre">misc.rc</span></code> you can find:</p>
+<div class="highlight-text"><div class="highlight"><pre><span></span># Fetch the spam rating as defined by qsf and SpamAssassin
+spam &quot;X-Spam-Status: Yes, hits=([0-9]+.[0-9]*)&quot; &quot;Spam [%1]&quot;
+spam &quot;X-Spam-Rating: ([7-9][0-9]+)&quot; &quot;Spam [%1]&quot;
+</pre></div>
+</div>
+<p>You can then display the ratings in the <strong class="command">mutt</strong> index by using <code class="docutils literal"><span class="pre">%H</span></code>
+in your <code class="docutils literal"><span class="pre">index_format</span></code> string.  I personally choose to display the spam
+rating instead of the date if it is found:</p>
+<div class="highlight-text"><div class="highlight"><pre><span></span>set index_format=&quot;%Z %2N %?H?%-12.12H&amp;%D? %-16.16F  %s&quot;
+</pre></div>
+</div>
+<p>The important bit there is <code class="docutils literal"><span class="pre">%?H?%-12.12H&amp;%D?</span></code> which displays twelve
+characters of the spam value if it is found, or failing that the date.  The
+reason we display exactly 12 characters of the spam value is so that the
+columns line up correctly regardless of whether we display a date or a spam
+value.  An example can be seen on the right featuring a few snippets from a ham
+mailbox and my spam mailbox:</p>
+<div class="figure">
+<img alt="Spam field alignment in :command:`mutt`" src="../_images/mutt_spam.png" />
+</div>
+<p>The final, and perhaps most interesting, file is <code class="file docutils literal"><span class="pre">score.rc</span></code> where
+I define all my manual scoring and some per-mail colouring policies.</p>
+<p>The first thing we need to understand is that <strong class="command">mutt</strong> accumulates
+scoring and colouring over its run time.  If you set a scoring policy of +20
+for all mail from a certain domain each time you enter a folder 20 will be
+added to the score of any mail from that domain.  If you leave <strong class="command">mutt</strong>
+running for a long time this can easily end up skewing the displayed score.
+The solution is simple, we tell <strong class="command">mutt</strong> to re-source the score file and
+clear the settings every time we change folders:</p>
+<div class="highlight-text"><div class="highlight"><pre><span></span># Reread this file on every folder change
+folder-hook . source ~/.mutt/score.rc
+unscore *
+uncolor index *
+# Read our global colours again
+source ~/.mutt/colour.rc
+</pre></div>
+</div>
+<p>Now we are free to setup our scoring policies without needing to worry about
+whether a score will be calculated twice.  We can also set up per-folder
+colouring much easier this way.</p>
+<div class="highlight-text"><div class="highlight"><pre><span></span># Score mail to me, basically any mail which matches a value in
+# $alternates
+score ~p 40
+
+# Color UKFSN status mail, this way we can highlight the status
+# messages in the users mailing list and we don’t need to subscribe
+# to the specific status list.
+folder-hook UKFSN-users color index brightred black ~hX-Status-Mail:
+
+# Gentoo stuff
+# Color resolved Bugzilla bug mail
+folder-hook Gentoo-bugs color index brightred black ~hX-Resolved:
+# Watch for comments from Seemant in the bugstream
+folder-hook Gentoo-bugs &#39;color index brightyellow default ~fseemant@gentoo\.org&#39;
+</pre></div>
+</div>
+<p><strong class="command">mutt</strong> allows you to search the entire message using the <code class="docutils literal"><span class="pre">~b</span></code>
+qualifier, but it can take an incredible amount of time to scan a large mailbox
+if you use full body searches.  If you need to search in the mail body on
+a routine basis it is better to add custom headers to your mail during
+processing with your <abbr title="Mail Delivery Agent">MDA</abbr>, and then trigger rules based on those headers.</p>
+<p>The Gentoo-bugs folder examples above use this method, because unfortunately
+<a class="reference external" href="http://www.bugzilla.org/">Bugzilla</a> doesn’t give us anything else to work with.  I add a <code class="docutils literal"><span class="pre">X-Resolved</span></code>
+header if the mail contains <code class="regexp docutils literal"><span class="pre">^</span> <span class="pre">+Status|[^|]+|RESOLVED$</span></code>.  And I set
+the <code class="docutils literal"><span class="pre">From</span></code> header with the address taken from the first line that matches
+<code class="regexp docutils literal"><span class="pre">^-{7}</span> <span class="pre">Comment</span> <span class="pre">#</span></code>, or <code class="regexp docutils literal"><span class="pre">^</span> <span class="pre">{8}ReportedBy:</span></code>.  Those two <abbr title="Regular Expression">RegEx</abbr>
+catch every Gentoo Bugzilla mail I’ve come across, except external bug state
+changes which are left unchanged on purpose for easy highlighting.  I use
+a non-public <abbr title="Mail Delivery Agent">MDA</abbr> system, so the actual rules aren’t very useful.</p>
+<p>You can use any of the search attributes <strong class="command">mutt</strong> defines to set up
+scores or colouring.  For example, you could set all mail older than 1 week to
+a dull grey by matching on <code class="docutils literal"><span class="pre">~d&gt;1w</span></code> as in:</p>
+<div class="highlight-text"><div class="highlight"><pre><span></span>folder-hook Gentoo-bugs &#39;color index brightblack default &#39;~d&gt;1w&#39;&#39;
+</pre></div>
+</div>
+<p>There are a lot of possibilities with <strong class="command">mutt</strong>, and there is a lot of
+in-depth documentation included in the package.  If your distribution doesn’t
+include it you can always head along to the <a class="reference external" href="http://www.mutt.org/">mutt</a> website and read it there.
+Happy <strong class="command">mutt</strong>’ing.</p>
+</div>
+
+
+           </div>
+           <div class="articleComments">
+            
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="rcs.html" class="btn btn-neutral float-right" title="Introduction to RCS" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="fossil.html" class="btn btn-neutral" title="fossil experiments" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; <a href="../copyright.html">Copyright</a> 2009-2017  James Rowe.
+      Last updated on &#39;2017-12-09 [e8fa873]&#39;.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'0.1.0',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  false,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>
