@@ -43,8 +43,6 @@ the permissions when they’re needed::
             chmod 600 $(PRIVATE_FILES)
             chmod 700 $(PRIVATE_DIRS)
 
-See :gist:`208207`
-
 If this rule is called after a :command:`git pull` is issued then the files
 always have the correct permissions.
 
@@ -74,8 +72,6 @@ probably for ``.vim``::
     clean:
         rm -f $(TARGETS)
 
-See :gist:`208209`
-
 The values in the ``patsubst`` block of the :makevar:`TARGETS` definition are
 a list of filenames to use for tag storage with ctags_.  The rule creates
 a different :command:`ctags` file for each installed python_ version.  In the
@@ -101,8 +97,6 @@ reStructuredText_ files.
 
     $(GENERATED): %.html: %.rst
             rst2html.py $< $@
-
-See :gist:`208210`
 
 If we call the above :file:`Makefile` from our :command:`git` hooks after any
 pull or merge we always have up to date processed versions of documents.  It is

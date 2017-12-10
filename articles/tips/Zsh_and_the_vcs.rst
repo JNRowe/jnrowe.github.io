@@ -49,8 +49,6 @@ that matches the default(``robbyrussell``) theme in ``oh-my-zsh``.
     zstyle ':vcs_info:*' formats '%F{2}%s%F{7}:%F{2}(%F{1}%b%F{2})%f '
     zstyle ':vcs_info:*' enable git
 
-See :gist:`220796`
-
 Once we’ve configured ``vcs_info`` we just need to include
 :envvar:`${vcs_info_msg_0_}` somewhere in our prompt to display the |VCS| and
 current branch name.
@@ -116,8 +114,6 @@ status::
             dir_status="%F{2}▶%f"
         }
     }
-
-See :gist:`220829`
 
 With this added the we just need to include :envvar:`$dir_status` in our prompt
 and the status identifiers will be used.

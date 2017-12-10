@@ -28,8 +28,6 @@ you can add a directive to your :file:`~/.gtkrc-2.0`:
 
     gtk-cursor-blink = 0
 
-See :gist:`200429`
-
 If it is just the blinking rate that bugs you, then you can give a different
 value for ``gtk-cursor-blink``.  The value is given in milliseconds for the
 blink frequency.
@@ -46,8 +44,6 @@ the console too then add the next little snippet to your shell’s startup file:
 .. code-block:: bash
 
     echo -e '\033[?48c'
-
-See :gist:`200430`
 
 .. _pidgin: http://pidgin.im/
 .. _Jabber: http://xmpp.org/

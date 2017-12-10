@@ -39,8 +39,6 @@ processing time.  I use maildrop_ to filter my mail and to tell the
     if ($SIZE < 32768)
         cc '| lbdb-fetchaddr -d "%FT%T%z"'
 
-See :gist:`198021`
-
 This tells :command:`maildrop` to pass all mails less than 32k in size through
 :command:`lbdq-fetchaddr`, and we specify a nice |ISO|-8601 time format for
 easy sorting and parsing should the need arise.  Now every mail that is
@@ -96,8 +94,6 @@ more than a little overkill to me.
 
     print(message.as_string())
 
-See :gist:`198022`
-
 The final addition to our :file:`~/.mailfilter` file enables our little Python
 filter to process mail from Bugzilla and change its :mailheader:`From` address
 if we have the information in the :file:`~/.lbdb/m_inmail.list` database.
@@ -109,8 +105,6 @@ if we have the information in the :file:`~/.lbdb/m_inmail.list` database.
         xfilter "~/.mailfilter.d/rewrite-name.py"
         to Mail/Gentoo-bugs
     }
-
-See :gist:`198023`
 
 And from now on, or at least once your ``m_inmail.list`` is sufficiently seeded,
 your bugspam will have the commenter’s name and email address, making it much

@@ -44,8 +44,6 @@ server:
         busybox httpd -f -p 8080 -h ${1:-${http_serve_location}}
     }
 
-See :gist:`208887`
-
 ``http_serve_location`` is set elsewhere in my configuration file, so that I can
 keep per-machine settings separate.
 
@@ -98,8 +96,6 @@ to use ``webrick``:
     trap("INT") { server.shutdown }
 
     server.start
-
-See :gist:`208891`
 
 This script will serve files from whatever directory is specified as its first
 argument.

@@ -32,8 +32,6 @@ called naughty_.  With it notifications are as simple as calling
 
     naughty.notify text: "my little popup", position: "bottom_left"
 
-See :gist:`201130`
-
 I do however define a few functions in my configuration file to simplify the
 normal notifications I use::
 
@@ -64,8 +62,6 @@ normal notifications I use::
             notify._gnotify "error", text,
         warn: (text) ->
             notify._gnotify "warn", text,
-
-See :gist:`201131`
 
 .. note::
    If you’re willing to install lua-functional_, the above code snippet can be
@@ -98,8 +94,6 @@ way I don’t miss windows opening on tags I’m not currently viewing.
         -- Display the window’s name, or just Application if it isn’t set
         notify.start "#{@name or 'Application'} started"
 
-See :gist:`201132`
-
 Network notifications
 ---------------------
 
@@ -124,8 +118,6 @@ switches the network graph widget to use the appropriate input too.
         wicked.register netbar_widget, "net", "${#{iface} down_b}", 3,
             "download"
         notify.start "PPP0 interface has come #{state}"
-
-See :gist:`201133`
 
 .. _awesome: http://awesome.naquadah.org/
 .. _naughty: http://awesome.naquadah.org/doc/api/modules/naughty.html
