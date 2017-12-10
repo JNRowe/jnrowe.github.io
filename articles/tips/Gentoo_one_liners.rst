@@ -69,8 +69,6 @@ dependencies of other packages::
         done
     }
 
-See :gist:`207305`
-
     Is it possible to use :command:`bash` completion to complete package names
     for use in :file:`package.keywords`?
 
@@ -102,8 +100,6 @@ a similar question in ``#gentoo`` on Freenode a couple of months ago:
         fi
     }
     complete -F _emerge arch_unmask
-
-See :gist:`207306`
 
 .. note::
    If you’re using our Gentoo boxes at the office the function will be much

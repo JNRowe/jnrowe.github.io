@@ -24,6 +24,4 @@ now as simple as adding the following to your :file:`~/.muttrc`:
     source ~/.mutt/colour_defaults.rc
     source ~/.mutt/colour_$TERM.rc
 
-See :gist:`198012`
-
 .. _mutt: http://www.mutt.org/

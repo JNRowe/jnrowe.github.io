@@ -27,8 +27,6 @@ value of ``makeprg``, which :command:`vim` uses as the command to run with
         \   setlocal makeprg=make\ %< |
         \ endif
 
-See :gist:`198024`
-
 The ``%<`` in our ``makeprg`` definition refers to the current file with its
 extension stripped.  We specifically only change the behaviour if no
 :file:`Makefile` exists so that we don’t interfere with the normal usage of the

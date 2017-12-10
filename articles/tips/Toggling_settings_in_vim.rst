@@ -29,14 +29,10 @@ function allows me to quick toggle the ``background`` setting::
     endfunction
     map <S-F12> :call Switch_background()<CR>
 
-See :gist:`200255`
-
 For some other commands such as toggling line numbering it can be much
 simpler::
 
     map <C-F12> :set number!<CR>
-
-See :gist:`200257`
 
 For those times when we can’t easily flip the setting on and off or query state
 in a simple manner, the solution is to store state ourselves and test that.
@@ -63,8 +59,6 @@ state in a variable we can test that instead.  The final — totally contrived
     endfunction
     let g:notepad = "false"
     map <M-F12> :call EditorvsNotepad()<CR>
-
-See :gist:`200258`
 
 .. _vim: http://www.vim.org
 .. _background: http://vimdoc.sourceforge.net/htmldoc/options.html#'background'

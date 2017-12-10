@@ -28,8 +28,6 @@ I have the following snippet to use better function names in ``ini`` and
     [diff "adr"]
         funcname = "^#.*$"
 
-See :gist:`198037`
-
 And, to enable them you must tell :command:`git` which files to use the new
 matchers with by editing the :file:`.gitattributes` file:
 
@@ -37,8 +35,6 @@ matchers with by editing the :file:`.gitattributes` file:
 
     *.ini diff=ini
     *.adr diff=adr
-
-See :gist:`198038`
 
 The ``funcname`` values are simple |RegEX| to search for, so in the ``ini``
 example it is searching for a line that begins with a :regexp:`[` and ends with

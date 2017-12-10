@@ -37,8 +37,6 @@ this:
         "\C-a": menu-complete
     $endif
 
-See :gist:`198394`
-
 The above tells ``readline`` we wish to bind ``menu-complete`` to
 :kbd:`Control-a`, I find that key combination quite comfortable as
 :kbd:`Control-a` is easy to reach the my keyboard layout and is of little use
@@ -52,8 +50,6 @@ appropriate :command:`bash` startup file:
 .. code-block:: bash
 
     bind '"\C-a": menu-complete'
-
-See :gist:`198437`
 
 You must source the startup file or restart :command:`bash` to enable this
 binding, alternatively you can just test the command in your current

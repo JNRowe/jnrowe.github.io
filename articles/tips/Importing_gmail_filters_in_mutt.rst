@@ -106,8 +106,6 @@ in the future:
         puts "score ~f#{addy} 20"
     end
 
-See :gist:`205052`
-
 Calling that script on the example data from above yields a small
 :command:`mutt` configuration file that we can include in our mutt setup by
 adding ``source <file_location>`` to our :file:`~/.muttrc`.

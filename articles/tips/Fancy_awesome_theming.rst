@@ -26,8 +26,6 @@ a netbook without having to fire up the gimp_.
     convert /home/jay/.themes/expose/gtk-2.0/bc.xpm -scale 1024x20! bc.png
     composite  -gravity north bc.png backdrop.png backdrop_new.png
 
-See :gist:`198013`
-
 The initial :command:`convert` command resizes :file:`bc.xpm` from the expose
 theme to 1024x20 pixels, 1024 being the screen width and 20 being the height of
 my main wibox in awesome.  We must suffix the :option:`-scale` option’s
@@ -48,8 +46,6 @@ theme’s background.
 .. code-block:: moon
 
     mywibox[s] = wibox position: "top", fg: beautiful.fg_normal, bg: "#00000000"
-
-See :gist:`198014`
 
 Colours are specified in the de facto standard format of
 :samp:`#[{red}][{green}][{blue}][{alpha}]``, the ``00`` value for alpha in the above example

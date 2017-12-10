@@ -54,8 +54,6 @@ If we find the device name with :command:`dmesg` we can mount it, and pull the
     mount -t vfat /dev/sr2 /mnt/huawei
     for file in /mnt/huawei/**/*.cab; do unpack $file; done
 
-See :gist:`212738`
-
 The :command:`unpack` tool from above is just a wrapper around common
 archivers, and the tool you actually need to extract the ``cab`` files is
 unshield_.  Contrary to my first idea cabextract_ doesn’t work, as these files
@@ -105,8 +103,6 @@ chatscript is below::
     OK ATD*99#
     CONNECT ""
 
-See :gist:`212739`
-
 Exchange ``3internet`` for your |APN| in the example above, if it differs.
 
 It is also possible, yet unlikely, that you’ll have to call a different number
@@ -134,8 +130,6 @@ We also need a peer script, and the format of that file is described in the
     persist
     crtscts
     lcp-echo-failure 0
-
-See :gist:`212740`
 
 You may have to change your device settings if the dongle doesn’t show up as
 :file:`/dev/ttyUSB0`, but other than that the file should be correct.

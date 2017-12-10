@@ -39,8 +39,6 @@ look at trimmed example from my configuration file::
 
     irssi.font: FIXED_FONT
 
-See :gist:`202712`
-
 This small snippet sets a couple of default fonts that we can reference
 throughout our resource file as ``FIXED_FONT`` and ``BOLD_FIXED_FONT``.  This
 way we can easily change the value in one place and it trickles down to all our
@@ -68,8 +66,6 @@ terminus_ and I can use that on there with a couple of small changes.
         #endif
     #endif
 
-See :gist:`202713`
-
 .. note::
    As we’re using X11_’s :command:`xrdb` it is network aware, it defines
    :samp:`SRVR_{name}` for the ``X`` server name and :samp:`CLNT_{name}` for the
@@ -87,8 +83,6 @@ server, for example to disable the screensaver in ``muxi`` if the :abbr:`DPMS
     #ifdef EXT_DPMS
         muxi.screensaver: false
     #endif
-
-See :gist:`202714`
 
 Testing your resource files
 ---------------------------

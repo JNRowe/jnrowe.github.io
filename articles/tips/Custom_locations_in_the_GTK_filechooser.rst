@@ -47,8 +47,6 @@ any other cool and useful things you can do there?
     }
     class "GtkFileChooserDefault" binding "some-shortcuts"
 
-See :gist:`199268`
-
 Ignoring the :command:`vim` modeline_ from the screenshot the first few
 settings are basic theme related options.  ``gtk-theme-name`` and
 ``gtk-icon-theme-name`` set the style and icon groups for GTK+ apps
@@ -104,8 +102,6 @@ skip backward and forward along the directory path::
     bind "<Alt>Right" {
         "down-folder" ()
     }
-
-See :gist:`199269`
 
 Whether you find :kbd:`Up` and :kbd:`Down` or :kbd:`Left` and :kbd:`Right`
 easier to remember depends on how you visualise the path, I personally prefer

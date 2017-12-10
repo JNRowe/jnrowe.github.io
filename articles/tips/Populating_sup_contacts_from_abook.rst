@@ -46,8 +46,6 @@ a few lines of code:
             addressbook = None
         parse(addressbook)
 
-See :gist:`340873`
-
 The script requires the excellent configobj_ module.  You could also use the
 :mod:`configparser` module from the Python standard library, but ``configobj``
 allows my laziness to shine through with its simple dictionary-based access to
@@ -67,8 +65,6 @@ the addressbook has been updated we can use make_:
 
     .sup/contacts.txt: .abook/addressbook
         python3 sup_contacts.py $< >$@
-
-See :gist:`340875`
 
 Using this method allows us to continue using :command:`abook` while having
 simple access to our contacts from within :command:`sup`.  This is incredibly

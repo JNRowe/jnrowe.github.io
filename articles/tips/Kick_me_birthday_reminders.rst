@@ -70,8 +70,6 @@ a :command:`remind` input file from our address book now.
         birthdate = data.getisodate(record, 'birthday')
         print(tmpl.format(birthdate.strftime('%d %B'), name, birthdate.year))
 
-See :gist:`198018`
-
 I use the following make_ snippet in my :file:`~/Makefile` to generate the
 :file:`~/.reminders.d/birthdays` file:
 
@@ -81,16 +79,12 @@ I use the following make_ snippet in my :file:`~/Makefile` to generate the
         $(info - Generating remind’s birthdays file)
         $(word 2, $^) >$@
 
-See :gist:`198019`
-
 And finally, we need to tell :command:`remind` to include our newly created
 file by editing :file:`~/.reminders`:
 
 .. code-block:: text
 
     INCLUDE /home/jay/.reminders.d/birthdays
-
-See :gist:`198020`
 
 .. image:: /.static/2009-09-26-remind_screenshot.png
    :alt: shell login screenshot
