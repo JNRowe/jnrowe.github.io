@@ -257,7 +257,6 @@ mount -t vfat /dev/sr2 /mnt/huawei
 <span class="k">for</span> file in /mnt/huawei/**/*.cab<span class="p">;</span> <span class="k">do</span> unpack <span class="nv">$file</span><span class="p">;</span> <span class="k">done</span>
 </pre></div>
 </div>
-<p>See <a class="reference external" href="http://gist.github.com/212738">gist #212738</a></p>
 <p>The <strong class="command">unpack</strong> tool from above is just a wrapper around common
 archivers, and the tool you actually need to extract the <code class="docutils literal"><span class="pre">cab</span></code> files is
 <a class="reference external" href="http://synce.sourceforge.net/synce/unshield.php">unshield</a>.  Contrary to my first idea <a class="reference external" href="http://www.cabextract.org.uk/">cabextract</a> doesn’t work, as these files
@@ -300,7 +299,6 @@ OK ATD*99#
 CONNECT &quot;&quot;
 </pre></div>
 </div>
-<p>See <a class="reference external" href="http://gist.github.com/212739">gist #212739</a></p>
 <p>Exchange <code class="docutils literal"><span class="pre">3internet</span></code> for your <abbr title="Access Point Name">APN</abbr> in the example above, if it differs.</p>
 <p>It is also possible, yet unlikely, that you’ll have to call a different number
 to <code class="docutils literal"><span class="pre">*99#</span></code>.  If this was the case you would have found that out from extracting
@@ -326,7 +324,6 @@ crtscts
 lcp-echo-failure 0
 </pre></div>
 </div>
-<p>See <a class="reference external" href="http://gist.github.com/212740">gist #212740</a></p>
 <p>You may have to change your device settings if the dongle doesn’t show up as
 <code class="file docutils literal"><span class="pre">/dev/ttyUSB0</span></code>, but other than that the file should be correct.</p>
 <p>Note that we don’t set a speed in our peer file, and this may appear unusual to
@@ -394,7 +391,7 @@ and check the <strong class="command">pppd</strong> manual page to look up the e
   <div role="contentinfo">
     <p>
         &copy; <a href="../../copyright.html">Copyright</a> 2009-2017  James Rowe.
-      Last updated on &#39;2017-12-09 [e8fa873]&#39;.
+      Last updated on &#39;2017-12-10 [98dd75d]&#39;.
 
     </p>
   </div>

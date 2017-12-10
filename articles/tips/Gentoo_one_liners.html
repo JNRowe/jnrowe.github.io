@@ -279,13 +279,11 @@ toppkgclean() {
         LC_ALL=C grep -q ${package} ${depfiles} || echo ${package}
     done
 }
+
+Is it possible to use :command:`bash` completion to complete package names
+for use in :file:`package.keywords`?
 </pre></div>
 </div>
-<p>See <a class="reference external" href="http://gist.github.com/207305">gist #207305</a></p>
-<blockquote>
-<div><p>Is it possible to use <strong class="command">bash</strong> completion to complete package names
-for use in <code class="file docutils literal"><span class="pre">package.keywords</span></code>?</p>
-</div></blockquote>
 <p>I actually wrote the following little function in reply to a user asking
 a similar question in <code class="docutils literal"><span class="pre">#gentoo</span></code> on Freenode a couple of months ago:</p>
 <div class="highlight-bash"><div class="highlight"><pre><span></span>arch_unmask<span class="o">()</span> <span class="o">{</span>
@@ -313,7 +311,6 @@ a similar question in <code class="docutils literal"><span class="pre">#gentoo</
 <span class="nb">complete</span> -F _emerge arch_unmask
 </pre></div>
 </div>
-<p>See <a class="reference external" href="http://gist.github.com/207306">gist #207306</a></p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>If you’re using our Gentoo boxes at the office the function will be much
@@ -364,7 +361,7 @@ output of <code class="docutils literal"><span class="pre">uname</span> <span cl
   <div role="contentinfo">
     <p>
         &copy; <a href="../../copyright.html">Copyright</a> 2009-2017  James Rowe.
-      Last updated on &#39;2017-12-09 [e8fa873]&#39;.
+      Last updated on &#39;2017-12-10 [98dd75d]&#39;.
 
     </p>
   </div>

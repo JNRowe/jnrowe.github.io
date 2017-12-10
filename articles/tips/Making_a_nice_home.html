@@ -254,7 +254,6 @@ the permissions when they’re needed:</p>
         chmod <span class="m">700</span> <span class="k">$(</span>PRIVATE_DIRS<span class="k">)</span>
 </pre></div>
 </div>
-<p>See <a class="reference external" href="http://gist.github.com/208207">gist #208207</a></p>
 <p>If this rule is called after a <strong class="command">git pull</strong> is issued then the files
 always have the correct permissions.</p>
 </div>
@@ -283,7 +282,6 @@ probably for <code class="docutils literal"><span class="pre">.vim</span></code>
     rm -f <span class="k">$(</span>TARGETS<span class="k">)</span>
 </pre></div>
 </div>
-<p>See <a class="reference external" href="http://gist.github.com/208209">gist #208209</a></p>
 <p>The values in the <code class="docutils literal"><span class="pre">patsubst</span></code> block of the <strong class="makevar">TARGETS</strong> definition are
 a list of filenames to use for tag storage with <a class="reference external" href="http://ctags.sourceforge.net">ctags</a>.  The rule creates
 a different <strong class="command">ctags</strong> file for each installed <a class="reference external" href="http://www.python.org">python</a> version.  In the
@@ -306,7 +304,6 @@ called in a number of different directories to create <abbr title="HyperText Mar
         rst2html.py $&lt; <span class="nv">$@</span>
 </pre></div>
 </div>
-<p>See <a class="reference external" href="http://gist.github.com/208210">gist #208210</a></p>
 <p>If we call the above <code class="file docutils literal"><span class="pre">Makefile</span></code> from our <strong class="command">git</strong> hooks after any
 pull or merge we always have up to date processed versions of documents.  It is
 like having a personal web viewable wiki, but without having to use an awful
@@ -336,7 +333,7 @@ markup language.</p>
   <div role="contentinfo">
     <p>
         &copy; <a href="../../copyright.html">Copyright</a> 2009-2017  James Rowe.
-      Last updated on &#39;2017-12-09 [e8fa873]&#39;.
+      Last updated on &#39;2017-12-10 [98dd75d]&#39;.
 
     </p>
   </div>

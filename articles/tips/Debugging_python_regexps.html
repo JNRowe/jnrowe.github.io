@@ -242,7 +242,6 @@ problem.  A simplified example of what he was trying to do would be:</p>
 <span class="go">[&#39;123\\match&#39;]</span>
 </pre></div>
 </div>
-<p>See <a class="reference external" href="http://gist.github.com/198015">gist #198015</a></p>
 <p>Without the raw string, specified by the preceding <code class="docutils literal"><span class="pre">r</span></code> in our pattern, the
 <abbr title="Regular Expression">RegEx</abbr> parser is actually looking for a literal <code class="docutils literal"><span class="pre">[</span></code> where we’ve intended
 to use the <code class="docutils literal"><span class="pre">[</span></code> as the start of a character set.</p>
@@ -276,7 +275,6 @@ inspect the <abbr title="Regular Expression">RegEx</abbr> you have constructed:<
 <span class="go">[]</span>
 </pre></div>
 </div>
-<p>See <a class="reference external" href="http://gist.github.com/223892">gist #223892</a></p>
 <p>Here we can see that our expression matches <code class="docutils literal"><span class="pre">range</span> <span class="pre">(48,</span> <span class="pre">57)</span></code>, 48 and 57 being
 the <a class="reference external" href="http://docs.python.org/library/functions.html">ordinal</a> for <code class="docutils literal"><span class="pre">0</span></code> and <code class="docutils literal"><span class="pre">9</span></code> respectively.  Following that we see a match
 for <code class="docutils literal"><span class="pre">literal</span> <span class="pre">91</span></code>, <code class="docutils literal"><span class="pre">chr(91)</span></code> shows us that the character we are matching is
@@ -298,7 +296,6 @@ constants(<code class="docutils literal"><span class="pre">DEBUG</span></code> i
 <span class="go">[&#39;123\\match&#39;]</span>
 </pre></div>
 </div>
-<p>See <a class="reference external" href="http://gist.github.com/223893">gist #223893</a></p>
 </div>
 <div class="section" id="better-tools">
 <h2>Better tools<a class="headerlink" href="#better-tools" title="Permalink to this headline">¶</a></h2>
@@ -318,7 +315,6 @@ constructing a parser:</p>
 <span class="go">([&#39;make&#39;, &#39;123&#39;, &#39;\\&#39;, &#39;match&#39;, &#39; &#39;], {})</span>
 </pre></div>
 </div>
-<p>See <a class="reference external" href="http://gist.github.com/223894">gist #223894</a></p>
 <p>Another exceptional tool for tasks that people often abuse <abbr title="Regular Expression">RegEx</abbr> for is
 <a class="reference external" href="http://labix.org/python-dateutil">python-dateutil</a>.  One of the reasons I occasionally turn to this module is
 that Python’s <a class="reference external" href="https://docs.python.org/3/library/time.html#time.strptime" title="(in Python v3.6)"><code class="xref py py-func docutils literal"><span class="pre">time.strptime()</span></code></a> isn’t even capable of parsing timestamps
@@ -334,7 +330,6 @@ already:</p>
 <span class="go">datetime.datetime(2009, 10, 30, 23, 35, 16, tzinfo=tzoffset(None, 14400))</span>
 </pre></div>
 </div>
-<p>See <a class="reference external" href="http://gist.github.com/223895">gist #223895</a></p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>If you use <a class="reference external" href="http://labix.org/python-dateutil">python-dateutil</a> do be aware that by default it will prefer US
@@ -373,7 +368,7 @@ a <abbr title="Regular Expression">RegEx</abbr>.</p>
   <div role="contentinfo">
     <p>
         &copy; <a href="../../copyright.html">Copyright</a> 2009-2017  James Rowe.
-      Last updated on &#39;2017-12-09 [e8fa873]&#39;.
+      Last updated on &#39;2017-12-10 [98dd75d]&#39;.
 
     </p>
   </div>

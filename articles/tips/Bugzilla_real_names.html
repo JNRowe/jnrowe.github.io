@@ -249,7 +249,6 @@ processing time.  I use <a class="reference external" href="http://www.courier-m
     cc &#39;| lbdb-fetchaddr -d &quot;%FT%T%z&quot;&#39;
 </pre></div>
 </div>
-<p>See <a class="reference external" href="http://gist.github.com/198021">gist #198021</a></p>
 <p>This tells <strong class="command">maildrop</strong> to pass all mails less than 32k in size through
 <strong class="command">lbdq-fetchaddr</strong>, and we specify a nice <abbr title="International Organization for Standardization">ISO</abbr>-8601 time format for
 easy sorting and parsing should the need arise.  Now every mail that is
@@ -302,7 +301,6 @@ more than a little overkill to me.</p>
 <span class="k">print</span><span class="p">(</span><span class="n">message</span><span class="o">.</span><span class="n">as_string</span><span class="p">())</span>
 </pre></div>
 </div>
-<p>See <a class="reference external" href="http://gist.github.com/198022">gist #198022</a></p>
 <p>The final addition to our <code class="file docutils literal"><span class="pre">~/.mailfilter</span></code> file enables our little Python
 filter to process mail from Bugzilla and change its <em class="mailheader">From</em> address
 if we have the information in the <code class="file docutils literal"><span class="pre">~/.lbdb/m_inmail.list</span></code> database.</p>
@@ -313,7 +311,6 @@ if we have the information in the <code class="file docutils literal"><span clas
 }
 </pre></div>
 </div>
-<p>See <a class="reference external" href="http://gist.github.com/198023">gist #198023</a></p>
 <p>And from now on, or at least once your <code class="docutils literal"><span class="pre">m_inmail.list</span></code> is sufficiently seeded,
 your bugspam will have the commenter’s name and email address, making it much
 easier to filter and process it in your favourite mail client.</p>
@@ -342,7 +339,7 @@ easier to filter and process it in your favourite mail client.</p>
   <div role="contentinfo">
     <p>
         &copy; <a href="../../copyright.html">Copyright</a> 2009-2017  James Rowe.
-      Last updated on &#39;2017-12-09 [e8fa873]&#39;.
+      Last updated on &#39;2017-12-10 [98dd75d]&#39;.
 
     </p>
   </div>

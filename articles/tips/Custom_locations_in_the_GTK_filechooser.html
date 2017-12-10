@@ -220,7 +220,7 @@
 <h1>Custom keybindings in the GTK+ file dialogs<a class="headerlink" href="#custom-keybindings-in-the-gtk-file-dialogs" title="Permalink to this headline">¶</a></h1>
 <p>In <a class="reference internal" href="Fancy_awesome_theming.html"><span class="doc">Fancy awesome theming</span></a> I included a screenshot that, by accident more
 than design, spawned today’s tip.</p>
-<a class="reference external image-reference" href="../../_static/2009-09-28-awesome_theming.png"><img alt="gtkrc in vim screenshot" class="align-right" src="../../_images/2009-10-01-gtkrc-mini.png" /></a>
+<a class="reference external image-reference" href="/.images/2009-09-28-awesome_theming.png"><img alt="gtkrc in vim screenshot" class="align-right" src="../../_images/2009-10-01-gtkrc-mini.png" /></a>
 <p>Laura Biddulph sent me a <abbr title="Short Message Service">SMS</abbr> message that read:</p>
 <blockquote>
 <div><p>Thanks! I saw your <code class="file docutils literal"><span class="pre">gtkrc</span></code>, and now I have keybound faves in the file
@@ -249,7 +249,6 @@ binding &quot;some-shortcuts&quot; {
 class &quot;GtkFileChooserDefault&quot; binding &quot;some-shortcuts&quot;
 </pre></div>
 </div>
-<p>See <a class="reference external" href="http://gist.github.com/199268">gist #199268</a></p>
 <p>Ignoring the <strong class="command">vim</strong> <a class="reference external" href="http://vimdoc.sourceforge.net/htmldoc/options.html#modeline">modeline</a> from the screenshot the first few
 settings are basic theme related options.  <code class="docutils literal"><span class="pre">gtk-theme-name</span></code> and
 <code class="docutils literal"><span class="pre">gtk-icon-theme-name</span></code> set the style and icon groups for GTK+ apps
@@ -260,7 +259,7 @@ delete the word under the cursor.  You can read more about
 <code class="docutils literal"><span class="pre">gtk-key-theme-name</span></code> in <a class="reference internal" href="emacs_gtk_shortcuts.html"><span class="doc">Proper keyboard shortcuts in GTK+</span></a>.</p>
 <p>All of the settings above are configurable with a <abbr title="Graphical User Interface">GUI</abbr> if you use gnome or <a class="reference external" href="http://www.xfce.org/">xfce</a>, but for those of who don’t use those
 desktop environments editing the <code class="file docutils literal"><span class="pre">~/.gtkrc-2.0</span></code> is a reasonable solution.</p>
-<a class="reference external image-reference" href="../../_static/2009-10-01-GTK_filechooser.png"><img alt="GTK file chooser screenshot" class="align-left" src="../../_images/2009-10-01-GTK_filechooser-mini.png" /></a>
+<a class="reference external image-reference" href="/_images/2009-10-01-GTK_filechooser.png"><img alt="GTK file chooser screenshot" class="align-left" src="../../_images/2009-10-01-GTK_filechooser-mini.png" /></a>
 <p>The “some-shortcuts” section is the interesting one for today, it is telling
 GTK+ applications that we want to have our own extra keybindings available when
 opening or saving files.  <code class="docutils literal"><span class="pre">GTKFileChooser</span></code> is the modern GTK+ file dialog, and
@@ -309,7 +308,6 @@ skip backward and forward along the directory path:</p>
 <span class="p">}</span>
 </pre></div>
 </div>
-<p>See <a class="reference external" href="http://gist.github.com/199269">gist #199269</a></p>
 <p>Whether you find <code class="kbd docutils literal"><span class="pre">Up</span></code> and <code class="kbd docutils literal"><span class="pre">Down</span></code> or <code class="kbd docutils literal"><span class="pre">Left</span></code> and <code class="kbd docutils literal"><span class="pre">Right</span></code>
 easier to remember depends on how you visualise the path, I personally prefer
 the defaults in this instance but the choice is entirely yours.</p>
@@ -342,7 +340,7 @@ share, for this you can use the <code class="docutils literal"><span class="pre"
   <div role="contentinfo">
     <p>
         &copy; <a href="../../copyright.html">Copyright</a> 2009-2017  James Rowe.
-      Last updated on &#39;2017-12-09 [e8fa873]&#39;.
+      Last updated on &#39;2017-12-10 [98dd75d]&#39;.
 
     </p>
   </div>
