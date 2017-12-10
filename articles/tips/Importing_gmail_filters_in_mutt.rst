@@ -75,7 +75,7 @@ scoring_:
     score ~fjohndoe@example.com +20
     set index_format="%Z %2N %?H?%-16.12H&%D? %-16.16F  %s"
 
-.. image:: /.static/2009-10-08-mutt_screenshot.png
+.. image:: /.images/2009-10-08-mutt_screenshot.png
    :alt: colouring and scoring in mutt
 
 The ``color`` example sets all mail from the fictitious Joe Bloggs in the mail

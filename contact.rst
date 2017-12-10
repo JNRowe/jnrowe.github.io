@@ -10,7 +10,7 @@ Contact details
 
    <div class="hcard" id="vcard">
 
-.. image:: .static/pavatar.png
+.. image:: /.images/pavatar.png
    :align: right
    :class: u-photo u-logo
    :alt: pavatar

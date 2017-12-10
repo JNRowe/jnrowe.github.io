@@ -33,7 +33,7 @@ your :file:`~/.gtkrc.mine` so it isn’t overwritten when you change themes.  Se
 the comments in your :file:`~/.gtkrc-2.0` if you use either of these theme
 switchers.
 
-.. figure:: /.static/xfce4_keyboard.png
+.. figure:: /.images/xfce4_keyboard.png
    :alt: XFce4 keyboard settings window
 
 If you’re an XFce_ user you can select the Emacs keyboard shortcuts using the
