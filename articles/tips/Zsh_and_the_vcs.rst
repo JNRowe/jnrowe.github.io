@@ -6,7 +6,7 @@ Zsh and the |VCS|
 
 .. highlight:: zsh
 
-.. image:: /.static/2009-10-28-git_prompt.png
+.. image:: /.images/2009-10-28-git_prompt.png
    :alt: Git prompt screenshot
    :align: right
 

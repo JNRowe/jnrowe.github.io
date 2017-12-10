@@ -4,9 +4,9 @@
 Fancy awesome theming
 =====================
 
-.. image:: /.static/2009-09-28-awesome_theming-mini.png
+.. image:: /.images/2009-09-28-awesome_theming-mini.png
    :alt: Awesome screenshot
-   :target: ../../_static/2009-09-28-awesome_theming.png
+   :target: /.images/2009-09-28-awesome_theming.png
    :align: right
 
 People, mostly named Neil Blake, who shouldn’t look over my shoulder ask:

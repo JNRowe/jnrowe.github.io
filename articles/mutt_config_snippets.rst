@@ -85,7 +85,7 @@ columns line up correctly regardless of whether we display a date or a spam
 value.  An example can be seen on the right featuring a few snippets from a ham
 mailbox and my spam mailbox:
 
-.. figure:: /.static/mutt_spam.png
+.. figure:: /.images/mutt_spam.png
    :alt: Spam field alignment in :command:`mutt`
 
 The final, and perhaps most interesting, file is :file:`score.rc` where

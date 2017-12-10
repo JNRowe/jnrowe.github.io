@@ -12,7 +12,7 @@ project at work Matt Cooper asks:
     Is there a library that does those fancy notifications or do you have to
     hack it up yourself?
 
-.. image:: /.static/2009-10-04-awesome_notifications.png
+.. image:: /.images/2009-10-04-awesome_notifications.png
    :alt: notifications in awesome
    :align: right
 

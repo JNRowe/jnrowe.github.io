@@ -19,7 +19,7 @@ The point Paul is making is that when he is in `normal mode`_, typing the â€œPâ€
 The text comes from the `unnamed register`_, so it will be whatever potentially
 very large chunk of text he deleted or yanked_ last.
 
-.. image:: /.static/2009-10-13-vim_screenshot.png
+.. image:: /.images/2009-10-13-vim_screenshot.png
    :alt: mode identifier in vim
    :align: right
 

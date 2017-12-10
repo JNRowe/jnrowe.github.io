@@ -45,7 +45,7 @@ can use the following little loop::
         printf "\n"
     done
 
-.. image:: /.static/2009-09-25-256_colours.png
+.. image:: /.images/2009-09-25-256_colours.png
    :alt: xterm's 256 colour palette
 
 There is one other important point to make here, you must set the prompt based

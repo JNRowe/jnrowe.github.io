@@ -11,9 +11,9 @@ Custom keybindings in the GTK+ file dialogs
 In :doc:`Fancy_awesome_theming` I included a screenshot that, by accident more
 than design, spawned today’s tip.
 
-.. image:: /.static/2009-10-01-gtkrc-mini.png
+.. image:: /.images/2009-10-01-gtkrc-mini.png
    :alt: gtkrc in vim screenshot
-   :target: ../../_static/2009-09-28-awesome_theming.png
+   :target: /.images/2009-09-28-awesome_theming.png
    :align: right
 
 Laura Biddulph sent me a :abbr:`SMS (Short Message Service)` message that read:
@@ -60,9 +60,9 @@ All of the settings above are configurable with a :abbr:`GUI (Graphical User
 Interface)` if you use gnome or xfce_, but for those of who don’t use those
 desktop environments editing the :file:`~/.gtkrc-2.0` is a reasonable solution.
 
-.. image:: /.static/2009-10-01-GTK_filechooser-mini.png
+.. image:: /.images/2009-10-01-GTK_filechooser-mini.png
    :alt: GTK file chooser screenshot
-   :target: ../../_static/2009-10-01-GTK_filechooser.png
+   :target: /_images/2009-10-01-GTK_filechooser.png
    :align: left
 
 The “some-shortcuts” section is the interesting one for today, it is telling

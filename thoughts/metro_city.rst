@@ -38,7 +38,7 @@ Early on it became obvious that another effect presented itself.  There were
 those retweeting users would move on to retweeting new users who themselves
 would often end up banned.
 
-.. image:: /.static/final_plight.png
+.. image:: /.images/final_plight.png
    :alt: Route of evil
    :align: right
 
@@ -59,7 +59,7 @@ levels, and showed a real city with its real occupants.  The intent was to
 allow people to experience a location they knew but with its foetid underbelly
 exposed.
 
-.. image:: /.static/final_fight_one.png
+.. image:: /.images/final_fight_one.png
    :alt: Final Fight One on the GBA
    :align: right
    :scale: 33%

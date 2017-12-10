@@ -17,7 +17,7 @@ them) the overlay available on GitHub wasn’t the deliverable at any point in
 time.  In fact, the often convoluted merge history in the repository probably
 hinted at that quite a bit.
 
-.. image:: /.static/jnrowe-misc.png
+.. image:: /.images/jnrowe-misc.png
    :alt: Tree view of ``jnrowe-misc`` history
    :width: 50%
    :align: right

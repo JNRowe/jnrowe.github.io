@@ -284,7 +284,7 @@ To recap on |RCS| usage
 Advanced
 --------
 
-.. figure:: /.static/rcsi.png
+.. figure:: /.images/rcsi.png
    :alt: rcsi screenshot
    :width: 500
    :height: 114

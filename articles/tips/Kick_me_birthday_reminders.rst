@@ -27,7 +27,7 @@ output at other times.  Again the file format is quite sensible which makes
 writing importers and exporters simple enough.  As an example, I generate my
 :file:`~/.reminders.d/meetings` file from a hCalender_ page.
 
-.. image:: /.static/2009-09-26-abook_screenshot-mini.png
+.. image:: /.images/2009-09-26-abook_screenshot-mini.png
    :alt: abook displaying custom tab
 
 Now the birthday trick is a cool one, :command:`abook` allows the use of custom
@@ -86,7 +86,7 @@ file by editing :file:`~/.reminders`:
 
     INCLUDE /home/jay/.reminders.d/birthdays
 
-.. image:: /.static/2009-09-26-remind_screenshot.png
+.. image:: /.images/2009-09-26-remind_screenshot.png
    :alt: shell login screenshot
 
 You could trigger a rebuild in your :file:`~/.bashrc` before you call
