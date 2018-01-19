@@ -13,7 +13,27 @@ AUTHOR = 'James Rowe'
 SITENAME = 'JNRowe'
 SITEURL = ''
 
-PATH = 'content'
+STATIC_PATHS = ['.extras/', 'files']
+EXTRA_PATH_METADATA = {
+    '.extras/' + f: {'path': f}
+    for f in ['.well-known/keybase.txt', 'google4ab4fc069ca34be6.html',
+              'robots.txt']
+}
+
+# Play with toggling this
+TYPOGRIFY = False
+
+# }}}
+
+# URL settings {{{
+
+RELATIVE_URLS = True
+
+AUTHOR_SAVE_AS = ''
+
+# }}}
+
+# Time and Date {{{
 
 TIMEZONE = 'Europe/London'
 

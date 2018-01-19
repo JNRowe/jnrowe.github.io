@@ -1,3 +1,2 @@
-objects/
-.build/
+/output/
 __pycache__/
