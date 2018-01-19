@@ -9,7 +9,6 @@ PATH = 'content'
 PLUGINS = []
 PLUGIN_PATHS = []
 
-AUTHOR = 'James Rowe'
 SITENAME = 'JNRowe'
 SITEURL = ''
 
@@ -36,27 +35,38 @@ AUTHOR_SAVE_AS = ''
 # Time and Date {{{
 
 TIMEZONE = 'Europe/London'
+DEFAULT_DATE_FORMAT = '%Y-%m-%d'
 
-DEFAULT_LANG = 'en'
+# }}}
 
-# Feed generation is usually not desired when developing
-FEED_ALL_ATOM = None
-CATEGORY_FEED_ATOM = None
-TRANSLATION_FEED_ATOM = None
-AUTHOR_FEED_ATOM = None
-AUTHOR_FEED_RSS = None
+# Metadata {{{
 
-# Blogroll
-LINKS = (('Pelican', 'http://getpelican.com/'),
-         ('Python.org', 'http://python.org/'),
-         ('Jinja2', 'http://jinja.pocoo.org/'),
-         ('You can modify those links in your config file', '#'),)
+AUTHOR = 'James Rowe'
 
-# Social widget
-SOCIAL = (('You can add links in your config file', '#'),
-          ('Another social link', '#'),)
+# }}}
+
+# Pagination {{{
 
 DEFAULT_PAGINATION = 10
 
-# Uncomment following line if you want document-relative URLs when developing
-#RELATIVE_URLS = True
+# }}}
+
+# Themes {{{
+
+SITESUBTITLE = 'Ramblings of a tired mind'
+GITHUB_URL = 'https://github.com/JNRowe/'
+
+LINKS_WIDGET_NAME = 'Info'
+LINKS = [
+    ('Contact details', 'pages/contact.html'),
+    ('Copyright information', 'pages/copyright.html'),
+    ('Consulting services', 'pages/consult.html'),
+    ('Projects', 'pages/projects.html'),
+    ('Colophon', 'pages/colophon.html'),
+]
+
+SOCIAL = [
+    ('GitHub', 'https://github.com/JNRowe/'),
+]
+
+# }}}
