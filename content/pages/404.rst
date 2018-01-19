@@ -1,0 +1,11 @@
+404 - Page not found
+====================
+
+:status: hidden
+:save_as: 404.html
+
+.. error:: ``404``
+   The page you’re looking for can not be found.
+
+Try the `home page </>`__ or `archives <archives.html>`__, perhaps you’ll find
+what you’re looking for there.
