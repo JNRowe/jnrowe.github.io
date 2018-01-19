@@ -1,6 +1,13 @@
-#!/usr/bin/env python
-# -*- coding: utf-8 -*- #
-from __future__ import unicode_literals
+# Basic settings {{{
+
+OUTPUT_RETENTION = ['.git', ]
+
+READERS = {'html': None}
+
+PATH = 'content'
+
+PLUGINS = []
+PLUGIN_PATHS = []
 
 AUTHOR = 'James Rowe'
 SITENAME = 'JNRowe'
