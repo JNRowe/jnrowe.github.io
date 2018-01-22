@@ -7,7 +7,8 @@ import sys
 from contextlib import suppress
 from subprocess import CalledProcessError, PIPE, run
 
-import sphinx_rtd_theme
+import ablog
+import alabaster
 
 sys.path.extend([os.path.curdir, os.path.pardir])
 
@@ -17,7 +18,7 @@ extensions = \
      for ext in ['extlinks', 'githubpages', 'intersphinx', ]] + \
     ['sphinxcontrib.%s' % ext for ext in []] + \
     ['ext.%s' % ext for ext in ['jinja', ]] + \
-    ['feed', ]
+    ['ablog', 'alabaster']
 
 # Only activate spelling if it is installed.  It is not required in the
 # general case and we don’t have the granularity to describe this in a clean
@@ -33,7 +34,7 @@ master_doc = 'index'
 
 exclude_patterns = ['README.rst', '.build', 'draft']
 
-templates_path = ['.templates', ]
+templates_path = ['.templates', ablog.get_html_templates_path()]
 
 rst_epilog = """
 .. |CLA| replace:: :abbr:`CLA (Contributor License Agreement)`
@@ -62,12 +63,21 @@ copyright = '2009-2017  James Rowe'
 version = '0.1'
 release = '0.1.0'
 
+pygments_style = 'monokai'
+
 trim_footnote_reference_space = True
 # }}}
 
 # Options for HTML output {{{
-html_theme = 'sphinx_rtd_theme'
-html_theme_path = [sphinx_rtd_theme.get_html_theme_path(), ]
+html_theme = 'alabaster'
+html_theme_options = {
+    'pre_bg': '#272822',
+    'font_family': '"Verdana", "Arial", sans-serif',
+    'head_font_family': '"Times", "Calibri", serif',
+    'logo': 'logo.png',
+    'show_related': True,
+}
+html_theme_path = [alabaster.get_path(), ]
 
 html_title = 'JNRowe'
 
@@ -94,13 +104,22 @@ extlinks = {
 }
 # }}}
 
-# feed extension settings {{{
-feed_base_url = 'https://jnrowe.github.io'
-feed_description = 'Ramblings of a tired mind'
-feed_filename = 'updates.atom'
-feed_link_url = 'https://jnrowe.github.io/updates.atom'
-feed_type = 'atom+dc'
-feed_url = 'https://jnrowe.github.io/'
+# ablog extension settings {{{
+blog_title = project
+blog_baseurl = 'https://jnrowe.github.io/'
+post_date_format = '%F'
+post_redirect_refresh = 1
+
+html_sidebars = {
+    '**': ['about.html', 'postcard.html', 'navigation.html',
+           'recentposts.html', 'tagcloud.html', 'categories.html',
+           'archives.html', 'searchbox.html'],
+}
+
+blog_feed_archives = True
+blog_feed_fulltext = True
+blog_feed_subtitle = 'Ramblings of a tired mind'
+blog_feed_length = 15
 # }}}
 
 # intersphinx extension settings {{{
