@@ -1,5 +1,5 @@
-:date: 2009-10-08
-:tags: gmail, mutt
+.. post:: 2009-10-08
+   :tags: gmail, mutt
 
 Importing gmail filters in mutt
 ===============================

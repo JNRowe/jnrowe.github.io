@@ -1,5 +1,5 @@
-:date: 2009-09-27
-:tags: bugzilla, mail
+.. post:: 2009-09-27
+   :tags: bugzilla, mail
 
 Bugzilla mail with real names
 =============================

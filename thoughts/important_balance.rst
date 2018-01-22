@@ -1,5 +1,5 @@
-:date: 2014-01-25
-:tags: life
+.. post:: 2014-01-25
+   :tags: life
 
 Murdering morality with ferocious fire
 ======================================

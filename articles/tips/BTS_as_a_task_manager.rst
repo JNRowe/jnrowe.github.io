@@ -1,5 +1,5 @@
-:date: 2009-10-07
-:tags: bts, devel
+.. post:: 2009-10-07
+   :tags: bts, devel
 
 |BTS| as a task manager
 =======================

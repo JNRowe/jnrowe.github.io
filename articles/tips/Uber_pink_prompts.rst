@@ -1,5 +1,5 @@
-:date: 2009-09-25
-:tags: bash, styling
+.. post:: 2009-09-25
+   :tags: bash, styling
 
 Uber pink prompts
 =================

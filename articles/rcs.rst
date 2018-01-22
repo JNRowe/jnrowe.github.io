@@ -1,5 +1,5 @@
-:date: 2003-09-05
-:tags: vcs
+.. post:: 2003-09-05
+   :tags: vcs
 
 Introduction to |RCS|
 =====================

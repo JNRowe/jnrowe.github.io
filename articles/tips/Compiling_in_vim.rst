@@ -1,5 +1,5 @@
-:date: 2009-09-24
-:tags: vim
+.. post:: 2009-09-24
+   :tags: vim
 
 Compiling C source in vim
 =========================

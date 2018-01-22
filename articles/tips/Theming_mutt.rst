@@ -1,5 +1,5 @@
-:date: 2009-09-23
-:tags: mutt, styling
+.. post:: 2009-09-23
+   :tags: mutt, styling
 
 Theming mutt
 ============

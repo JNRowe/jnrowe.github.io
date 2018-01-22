@@ -1,5 +1,5 @@
-:date: 2009-09-29
-:tags: git
+.. post:: 2009-09-29
+   :tags: git
 
 Context aware diffs with git
 ============================
