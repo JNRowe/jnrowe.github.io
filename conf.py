@@ -57,7 +57,7 @@ nitpicky = True
 
 # Project information {{{
 project = 'JNRowe'
-copyright = '2009-2017  James Rowe'
+copyright = '2009-2018  James Rowe'
 
 version = '0.1'
 release = '0.1.0'
