@@ -1,5 +1,5 @@
-:date: 2009-10-02
-:tags: vim
+.. post:: 2009-10-02
+   :tags: vim
 
 Toggling settings in vim
 ========================

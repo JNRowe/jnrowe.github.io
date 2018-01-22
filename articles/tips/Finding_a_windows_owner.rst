@@ -1,5 +1,5 @@
-:date: 2009-10-06
-:tags: X11
+.. post:: 2009-10-06
+   :tags: X11
 
 Finding a window’s owner
 ========================

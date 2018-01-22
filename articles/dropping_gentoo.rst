@@ -1,5 +1,5 @@
-:tags: gentoo, work, linux
-:date: 2014-06-18
+.. post:: 2014-06-18
+   :tags: gentoo, work, linux
 
 Dropping Gentoo
 ===============

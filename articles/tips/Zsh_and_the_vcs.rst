@@ -1,5 +1,5 @@
-:date: 2009-10-28
-:tags: git, vcs, zsh
+.. post:: 2009-10-28
+   :tags: git, vcs, zsh
 
 Zsh and the |VCS|
 =================

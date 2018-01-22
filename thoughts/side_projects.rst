@@ -1,5 +1,5 @@
-:date: 2013-12-16
-:tags: hobbies, projects
+.. post:: 2013-12-16
+   :tags: hobbies, projects
 
 Side-projects
 =============

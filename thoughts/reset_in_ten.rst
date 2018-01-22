@@ -1,5 +1,5 @@
-:date: 2014-02-24
-:tags: life
+.. post:: 2014-02-24
+   :tags: life
 
 Hitting life’s reset button
 ===========================

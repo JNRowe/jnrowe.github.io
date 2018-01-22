@@ -1,5 +1,5 @@
-:date: 2009-10-13
-:tags: awesome, vim
+.. post:: 2009-10-13
+   :tags: awesome, vim
 
 Visual vim mode identifier
 ==========================

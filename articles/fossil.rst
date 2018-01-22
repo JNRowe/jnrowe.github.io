@@ -1,5 +1,5 @@
-:date: 2014-11-12
-:tags: fossil, vcs, projects, development
+.. post:: 2014-11-12
+   :tags: fossil, vcs, projects, development
 
 :command:`fossil` experiments
 =============================

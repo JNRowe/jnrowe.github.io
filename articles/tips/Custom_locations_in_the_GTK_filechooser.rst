@@ -1,5 +1,5 @@
-:date: 2009-10-01
-:tags: GTK+
+.. post:: 2009-10-01
+   :tags: GTK+
 
 Custom keybindings in the GTK+ file dialogs
 ===========================================

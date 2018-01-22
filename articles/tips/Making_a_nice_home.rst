@@ -1,5 +1,5 @@
-:date: 2009-10-11
-:tags: unix, vcs
+.. post:: 2009-10-11
+   :tags: unix, vcs
 
 Making a nice home
 ------------------
