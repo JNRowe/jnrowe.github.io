@@ -227,17 +227,36 @@ location output for <strong class="command">format-patch</strong>.</p>
 its <strong class="command">diff</strong> output.  It produces some really nice output for certain
 languages, but out of the box it doesn’t display nice information for all the
 file formats you may use.</p>
+<div class="highlight-diff"><div class="highlight"><pre><span></span><span class="gh">diff --git 1/config/dconf/user.ini 2/config/dconf/user.ini</span>
+<span class="gh">index d4bf8a0..5559f9f 100644</span>
+<span class="gd">--- 1/config/dconf/user.ini</span>
+<span class="gi">+++ 2/config/dconf/user.ini</span>
+<span class="gu">@@ -5,5 +5,5 @@ org/gtk/settings/file-chooser</span>
+ sort-column=&#39;name&#39;
+ show-size-column=true
+ startup-mode=&#39;cwd&#39;
+<span class="gd">-show-hidden=false</span>
+<span class="gi">+show-hidden=true</span>
+ sort-directories-first=true
+</pre></div>
+</div>
 <p>The patch I sent Luke included a significant change to an <a class="reference external" href="http://www.cloanto.com/specs/ini.html">.ini</a> format file,
-including some mostly accurate location information in the hunk header.  It
-wasn’t because I use a newer version of <strong class="command">git</strong>, just that I’ve set it
-up to use different matchers for different files.  In my <code class="file docutils literal"><span class="pre">~/.gitconfig</span></code>
-I have the following snippet to use better function names in <code class="docutils literal"><span class="pre">ini</span></code> and
-<code class="docutils literal"><span class="pre">adr</span></code> files:</p>
+including some mostly accurate location information in the hunk header as in
+the example above.  It wasn’t because I use a newer version of <strong class="command">git</strong>,
+just that I’ve set it up to use different matchers for different files.  In my
+<code class="file docutils literal"><span class="pre">~/.config/git/config</span></code> I have the following snippet to use better
+function names in <code class="docutils literal"><span class="pre">ini</span></code> and <code class="docutils literal"><span class="pre">adr</span></code> files:</p>
 <div class="highlight-ini"><div class="highlight"><pre><span></span><span class="k">[diff &quot;ini&quot;]</span>
-    <span class="na">funcname</span> <span class="o">=</span> <span class="s">&quot;^\\[.*\\]$&quot;</span>
+    <span class="na">funcname</span> <span class="o">=</span> <span class="s">&quot;^\\[\\(.*\\)\\]$&quot;</span>
 <span class="k">[diff &quot;adr&quot;]</span>
     <span class="na">funcname</span> <span class="o">=</span> <span class="s">&quot;^#.*$&quot;</span>
 </pre></div>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Be sure to escape backslashes, as the config parser will eat a single
+backslash before it is even seen by the diff driver.  For the full details
+on the format, see <em class="manpage">gitattributes(7)</em>.</p>
 </div>
 <p>And, to enable them you must tell <strong class="command">git</strong> which files to use the new
 matchers with by editing the <code class="file docutils literal"><span class="pre">.gitattributes</span></code> file:</p>
@@ -248,9 +267,11 @@ matchers with by editing the <code class="file docutils literal"><span class="pr
 <p>The <code class="docutils literal"><span class="pre">funcname</span></code> values are simple <abbr title="Regular Expression">RegEx</abbr> to search for, so in the <code class="docutils literal"><span class="pre">ini</span></code>
 example it is searching for a line that begins with a <code class="regexp docutils literal"><span class="pre">[</span></code> and ends with
 a <code class="regexp docutils literal"><span class="pre">]</span></code> as these are the common section headers.  And the <code class="docutils literal"><span class="pre">adr</span></code> matcher
-just specifies a line that begins with a <code class="regexp docutils literal"><span class="pre">#</span></code>.  It is important to match
-the entire string, as it is the matched content that is used in the diff hunk’s
-output.</p>
+just specifies a line that begins with a <code class="regexp docutils literal"><span class="pre">#</span></code>.</p>
+<p>It is important to match the entire string or to use grouping, as it is the
+matched content that is used in the diff hunk’s output.  As can be seen in the
+<code class="docutils literal"><span class="pre">ini</span></code> example, I group only the text between <code class="docutils literal"><span class="pre">[</span></code> and <code class="docutils literal"><span class="pre">]</span></code> so that the
+brackets aren’t included in the header.</p>
 </div>
 
 
@@ -275,8 +296,8 @@ output.</p>
 
   <div role="contentinfo">
     <p>
-        &copy; <a href="../../copyright.html">Copyright</a> 2009-2017  James Rowe.
-      Last updated on &#39;2017-12-10 [98dd75d]&#39;.
+        &copy; <a href="../../copyright.html">Copyright</a> 2009-2018  James Rowe.
+      Last updated on &#39;2018-01-23 [6f0c07b]&#39;.
 
     </p>
   </div>

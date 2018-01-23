@@ -269,11 +269,11 @@ is to check out a read-only version of the file.</p>
 <span class="go">done</span>
 </pre></div>
 </div>
-<p>The <a class="reference external" href="https://docs.python.org/3/library/zipfile.html#cmdoption-zipfile-l" title="(in Python v3.6)"><code class="xref std std-option docutils literal"><span class="pre">-l</span></code></a> option to <strong class="command">co</strong> (and also <strong class="command">ci</strong> ) is used to
+<p>The <code class="xref std std-option docutils literal"><span class="pre">-l</span></code> option to <strong class="command">co</strong> (and also <strong class="command">ci</strong> ) is used to
 lock the file. This file now becomes a working file, which is writable, and it
 also means other people can’t edit it until you have released it or checked it
 in again.</p>
-<p>Blindly using the <a class="reference external" href="https://docs.python.org/3/library/zipfile.html#cmdoption-zipfile-l" title="(in Python v3.6)"><code class="xref std std-option docutils literal"><span class="pre">-l</span></code></a> option to <strong class="command">ci</strong>/<strong class="command">co</strong> is not
+<p>Blindly using the <code class="xref std std-option docutils literal"><span class="pre">-l</span></code> option to <strong class="command">ci</strong>/<strong class="command">co</strong> is not
 advisable, you should get in to the habit now of only locking files you are
 working on.  <abbr title="GNU Revision Control System">RCS</abbr> uses locking to block other users from checking in changes
 and will cause much grief if you use <abbr title="GNU Revision Control System">RCS</abbr> on multi-user projects. It is much
@@ -393,11 +393,11 @@ the <code class="docutils literal"><span class="pre">$Id$</span></code> tag.</p>
 files, it accepts multiple files per command line(using normal shell
 wild-carding) and provides all the information <abbr title="GNU Revision Control System">RCS</abbr> has on a file. Should you
 ever need to only know the changes that were made to the current revision you
-can use the <a class="reference external" href="https://docs.python.org/3/library/trace.html#cmdoption-trace-r" title="(in Python v3.6)"><code class="xref std std-option docutils literal"><span class="pre">-r</span></code></a> option as in <code class="docutils literal"><span class="pre">rlog</span> <span class="pre">-r</span> <span class="pre">filename</span></code>. You can also check
+can use the <code class="xref std std-option docutils literal"><span class="pre">-r</span></code> option as in <code class="docutils literal"><span class="pre">rlog</span> <span class="pre">-r</span> <span class="pre">filename</span></code>. You can also check
 changes between revisions of files using the command like <code class="docutils literal"><span class="pre">rlog</span> <span class="pre">-r1.1,1.2</span>
 <span class="pre">filename</span></code>.</p>
-<p>The <a class="reference external" href="https://docs.python.org/3/library/trace.html#cmdoption-trace-r" title="(in Python v3.6)"><code class="xref std std-option docutils literal"><span class="pre">-r</span></code></a> option of <abbr title="GNU Revision Control System">RCS</abbr> is one of its most powerful, it is available
-in all the commands and shares the same semantics throughout. If <a class="reference external" href="https://docs.python.org/3/library/trace.html#cmdoption-trace-r" title="(in Python v3.6)"><code class="xref std std-option docutils literal"><span class="pre">-r</span></code></a>
+<p>The <code class="xref std std-option docutils literal"><span class="pre">-r</span></code> option of <abbr title="GNU Revision Control System">RCS</abbr> is one of its most powerful, it is available
+in all the commands and shares the same semantics throughout. If <code class="xref std std-option docutils literal"><span class="pre">-r</span></code>
 is used with <strong class="command">ci</strong> it forces a bump, for example <code class="docutils literal"><span class="pre">ci</span> <span class="pre">-r1.7</span> <span class="pre">filename</span></code>
 will force <abbr title="GNU Revision Control System">RCS</abbr> to check in filename as revision 1.7. Used with <strong class="command">co</strong>
 you can pull any revision of the file from <abbr title="GNU Revision Control System">RCS</abbr> history. Used with
@@ -486,8 +486,8 @@ this short text has been helpful to you.</p>
 
   <div role="contentinfo">
     <p>
-        &copy; <a href="../copyright.html">Copyright</a> 2009-2017  James Rowe.
-      Last updated on &#39;2017-12-10 [98dd75d]&#39;.
+        &copy; <a href="../copyright.html">Copyright</a> 2009-2018  James Rowe.
+      Last updated on &#39;2018-01-23 [6f0c07b]&#39;.
 
     </p>
   </div>

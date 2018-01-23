@@ -295,7 +295,7 @@ server, for example to disable the screensaver in <code class="docutils literal"
 <div class="section" id="testing-your-resource-files">
 <h2>Testing your resource files<a class="headerlink" href="#testing-your-resource-files" title="Permalink to this headline">¶</a></h2>
 <p>When you’re testing your own <code class="file docutils literal"><span class="pre">~/.Xresources</span></code> file you can use the
-<a class="reference external" href="https://docs.python.org/3/library/timeit.html#cmdoption-timeit-n" title="(in Python v3.6)"><code class="xref std std-option docutils literal"><span class="pre">-n</span></code></a> option with <strong class="command">xrdb</strong>, it tells <strong class="command">xrdb</strong> to dump the
+<code class="xref std std-option docutils literal"><span class="pre">-n</span></code> option with <strong class="command">xrdb</strong>, it tells <strong class="command">xrdb</strong> to dump the
 settings as they would be used instead of updating the resource database.  This
 makes it easy to check if our conditional statements are working correctly
 without having to open and close applications constantly.  You can also define
@@ -308,7 +308,7 @@ symbols that are normally exported by <strong class="command">xrdb</strong>.</p>
 <p>You can also choose a different preprocessor if <strong class="command">cpp</strong> isn’t up to your
 needs by specifying a <strong class="command">-cpp</strong> option to <strong class="command">xrdb</strong>.  The only
 caveat is that must accept <code class="xref std std-option docutils literal"><span class="pre">-D</span></code> for defines, <code class="xref std std-option docutils literal"><span class="pre">-U</span></code> for symbol
-cancelling and <a class="reference external" href="https://docs.python.org/3/using/cmdline.html#cmdoption-I" title="(in Python v3.6)"><code class="xref std std-option docutils literal"><span class="pre">-I</span></code></a> for include paths.  An example that does fit these
+cancelling and <a class="reference external" href="https://docs.python.org/3/using/cmdline.html#id2" title="(in Python v3.6)"><code class="xref std std-option docutils literal"><span class="pre">-I</span></code></a> for include paths.  An example that does fit these
 restrictions is <a class="reference external" href="http://www.gnu.org/software/m4/m4.html">m4</a>, and it might be a good choice if you wish to do mode
 advanced things in your configuration file such as fancy filtering or the use
 of loops for defining colour tables.</p>
@@ -337,8 +337,8 @@ of loops for defining colour tables.</p>
 
   <div role="contentinfo">
     <p>
-        &copy; <a href="../../copyright.html">Copyright</a> 2009-2017  James Rowe.
-      Last updated on &#39;2017-12-10 [98dd75d]&#39;.
+        &copy; <a href="../../copyright.html">Copyright</a> 2009-2018  James Rowe.
+      Last updated on &#39;2018-01-23 [6f0c07b]&#39;.
 
     </p>
   </div>
