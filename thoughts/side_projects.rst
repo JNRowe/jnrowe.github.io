@@ -32,15 +32,15 @@ lot who extend their tech creations in to a downtime hobby or side business.
    lights have been switched off.
 
 To relate this to my brother I think of a family party we attended this past
-weekend.  When people asked me what my brother does I proudly say he works in
-logistics, and I like to tell people how well he’s done for himself.  When
-talking to the extended family that often seemed to end up being about material
-possessions or such.  However, I’ve noticed in the past when I’m talking to
-people I’d call friends it often quickly digresses in to strange discussions
-about box packing, routing, `the curse of travelling salesmen`_ or `bridges in
-some foreign land`_.  Because of the math and technology implications many of
-my friends have written tools to explore some of the practical and theoretical
-issues faced in logistics… for fun.
+weekend.  When people asked me what my brother does I’d say that he works in
+logistics, and the conversation drifts from there.  When talking to the
+extended family that often seemed to head toward being about material
+possessions that work may afford him.  However, I’ve noticed in the past when
+I’m talking to people I’d call friends it often quickly digresses in to strange
+discussions about box packing, routing, `the curse of travelling salesmen`_ or
+`bridges in some foreign land`_.  Because of the math and technology
+implications many of my friends have written tools to explore some of the
+practical and theoretical issues faced in logistics… often for fun.
 
 .. _the curse of travelling salesmen: http://en.wikipedia.org/wiki/Travelling_salesman_problem
 .. _bridges in some foreign land: http://en.wikipedia.org/wiki/Bridges_of_Konigsberg
