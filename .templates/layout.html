@@ -1,7 +1,7 @@
 {% extends "alabaster/layout.html" %}
 
 {%- block extrabody %}
-    {%- if pagename is not index %}
+    {%- if pagename is not index and pagename != 'projects' %}
         <p class="readtime">
             {#-
                 Super rough reading time estimation, but I appreciate it
