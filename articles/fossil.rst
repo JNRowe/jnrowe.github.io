@@ -46,10 +46,10 @@ The tarball ships without any *directly* usable documentation, so you end up
 with either no system documentation or a collection of docs sprinkled with wiki
 markup in :file:`/usr/share/doc`.
 
-By default :command:`fossil` builds in a manner which breaks most packaging
-standard unfortunately.  If you’re building packages you’ll likely need to
-write an awful lot of custom workarounds to get a compliant and usable package,
-see ``lst-pkgs/utils/dev/fossil`` build for the gory details of our hacks.
+By default :command:`fossil` builds in a manner which unfortunately breaks most
+packaging standards.  If you’re building packages you’ll likely need to write an
+awful lot of custom workarounds to get a compliant and usable package, see
+``lst-pkgs/utils/dev/fossil`` build for the gory details of my hacks.
 
 Uptake
 ------
@@ -80,7 +80,7 @@ All-in-one solution
 One of the proclaimed benefits of using :command:`fossil` is that it handles
 many aspects of a project’s |ALM|; version control, issue tracking,
 documentation(via a wiki), etc.  However, and this is only my opinion, it feels
-like it does of all of these in a suboptimal manner.
+like it does all of these in a suboptimal manner.
 
 Version control
 '''''''''''''''
