@@ -31,7 +31,7 @@ Almost the first thing you notice when switching to Debian or Fedora as a heavy
 binary package user on Gentoo is just how slow package installation and removal
 is.  Binary package installation on Gentoo feels on par with a distribution
 like Slackware, and what passes for package management there is just choosing
-the right argument to :command:`tar`’s :option:`-C` option.
+the right argument to :command:`tar`’s :option:`-C` option [*]_.
 
 Where Gentoo really excels though is in the speed of creating new packages or
 editing existing packages.
@@ -146,5 +146,11 @@ as time moves on.
 
 Instead of making this rant even longer, I’ll take the time to reflect on the
 fun memories.
+
+.. rubric:: Footnotes
+
+.. [*] To be fair ``.tbz2`` files on Gentoo are just tarballs with a binary
+       ``xpak`` appended.  Those extra bits beyond “just a tar -C” are what
+       makes dependency handling work among other things.
 
 .. |PMS| replace:: :abbr:`PMS (Package Manager Specification)`
