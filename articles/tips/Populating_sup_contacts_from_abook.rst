@@ -1,5 +1,5 @@
-:date: 2010-03-23
-:tags: abook, mail, sup
+.. post:: 2010-03-23
+   :tags: abook, mail, sup
 
 Populating :command:`sup` contacts from abook
 =============================================

@@ -1,5 +1,5 @@
-:date: 2009-10-10
-:tags: csv, unix
+.. post:: 2009-10-10
+   :tags: csv, unix
 
 Formatting |CSV| files in the shell
 ===================================

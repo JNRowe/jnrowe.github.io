@@ -1,6 +1,5 @@
-:tags: software, configs, mutt
-:description: Small snippets of my :command:`mutt` configuration
-:date: 2007-03-05
+.. post:: 2007-03-05
+   :tags: software, configs, mutt
 
 :command:`mutt` configuration snippets
 ======================================

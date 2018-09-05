@@ -1,22 +1,15 @@
-{% extends "sphinx_rtd_theme/layout.html" %}
-
-{% block extrahead -%}
-    {% if feed_link %}
-    <link rel="alternate" type="application/atom+xml" title="Updated items" href="/updates.atom" />
-    {%- endif %}
-{%- endblock %}
+{% extends "alabaster/layout.html" %}
 
 {%- block extrabody %}
     {%- if pagename is not index %}
-    <div class="admonition note">
-        <p class="first admonition-title">
+        <p class="readtime">
             {#-
-                Super rough reading time estimation, but I appreciate it when
-                others do the something similar.
+                Super rough reading time estimation, but I appreciate it
+                when others do the something similar.
             #}
-            Estimated reading time: {{ super() | wordcount // 500 + 1 }} minutes
+            <b>Estimated reading time</b>:
+            {{ super() | wordcount // 500 + 1 }} minutes
         </p>
-    </div>
     {% endif %}
     {{ super() }}
 {%- endblock %}

@@ -1,5 +1,5 @@
-:date: 2009-09-28
-:tags: awesome, styling
+.. post:: 2009-09-28
+   :tags: awesome, styling
 
 Fancy awesome theming
 =====================

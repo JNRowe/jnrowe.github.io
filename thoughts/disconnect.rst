@@ -1,5 +1,5 @@
-:tags: focus, denoise, net
-:date: 2014-09-18
+.. post:: 2014-09-18
+   :tags: focus, denoise, net
 
 Cleanse thy soul
 ================

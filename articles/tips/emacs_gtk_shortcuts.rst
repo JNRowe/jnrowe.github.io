@@ -1,6 +1,5 @@
-:description: How to change keyboard shortcuts with GTK+
-:tags: software, configs, GTK+, emacs
-:date: 2007-03-05
+.. post:: 2007-03-05
+   :tags: software, configs, GTK+, emacs
 
 Proper keyboard shortcuts in GTK+
 =================================

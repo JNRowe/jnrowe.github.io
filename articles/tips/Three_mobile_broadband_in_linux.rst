@@ -1,5 +1,5 @@
-:date: 2009-10-14
-:tags: linux, three
+.. post:: 2009-10-14
+   :tags: linux, three
 
 Three mobile broadband in Linux
 ===============================

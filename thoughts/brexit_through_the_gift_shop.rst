@@ -1,5 +1,5 @@
-:date: 2018-06-08
-:tags: work, politics
+.. post:: 2018-06-08
+   :tags: work, politics
 
 brexit through the gift shop
 ============================

@@ -1,5 +1,5 @@
-:date: 2009-10-04
-:tags: awesome
+.. post:: 2009-10-04
+   :tags: awesome
 
 Simple notifications in awesome
 -------------------------------

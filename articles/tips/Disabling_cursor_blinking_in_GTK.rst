@@ -1,5 +1,5 @@
-:date: 2009-10-03
-:tags: GTK+, styling
+.. post:: 2009-10-03
+   :tags: GTK+, styling
 
 Disabling cursor blinking in GTK+
 =================================

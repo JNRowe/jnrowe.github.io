@@ -1,5 +1,5 @@
-:tags: jnrowe-misc, gentoo
-:date: 2014-06-30
+.. post:: 2014-06-30
+   :tags: jnrowe-misc, gentoo
 
 jnrowe-misc - The unsorted package overlay
 ==========================================

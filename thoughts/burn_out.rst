@@ -1,5 +1,5 @@
-:date: 2014-09-03
-:tags: oss, burnout, life
+.. post:: 2014-09-03
+   :tags: oss, burnout, life
 
 Open Source and enjoyment
 =========================
