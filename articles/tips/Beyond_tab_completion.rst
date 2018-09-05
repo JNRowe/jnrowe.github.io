@@ -12,9 +12,8 @@ The wildmenu_ option in :command:`vim` shows possible command line completions
 above the command line, highlighting the currently selected completion option.
 A follow up email later and Matt says:
 
-    Basically, I want :command:`bash` to show me the completions and
-    :kbd:`Tab`` to ``$key`` through them in the same way :command:`vim` does
-    it.
+    Basically, I want :command:`bash` to show me the completions and :kbd:`Tab`
+    to slide through them in the same way :command:`vim` does it.
 
 The feature is surprisingly easy to achieve with :command:`bash`, and is
 actually a feature of readline_ making it available to all software that uses
@@ -40,9 +39,9 @@ this:
 The above tells ``readline`` we wish to bind ``menu-complete`` to
 :kbd:`Control-a`, I find that key combination quite comfortable as
 :kbd:`Control-a` is easy to reach the my keyboard layout and is of little use
-in any of the apps I use on a regular basis.  You must either re-read the
-configuration file or restart the :command:`bash` session to enable this
-binding.
+in any of the apps I use on a regular basis(I’d feel differently if :kbd:`Home`
+was inaccessible).  You must either re-read the configuration file or restart
+the :command:`bash` session to enable this binding.
 
 To enable the key binding in :command:`bash` only we could also just edit the
 appropriate :command:`bash` startup file:
@@ -61,7 +60,7 @@ without having to write new completion scripts.  There are some other quite
 useful completion modes available in :command:`bash`, I’ll describe a few
 below.
 
-:kbd:`M-!` tells :command:`bash` to complete command names be they actual
+:kbd:`M-!` tells :command:`bash` to complete command names; be they actual
 on-disk commands, functions or aliases. :kbd:`M-/` completes only filenames,
 this can be very useful when ``bash-completion`` is refusing to tab complete
 a filename for you.  :kbd:`C-$` implements variable name completion, this is
