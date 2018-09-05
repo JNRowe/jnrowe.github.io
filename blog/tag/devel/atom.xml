@@ -1,0 +1,467 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title type="text">JNRowe - Posts tagged devel</title>
+  <id>https://jnrowe.github.io/blog/tag/devel/atom.xml</id>
+  <updated>2011-06-13T00:00:00Z</updated>
+  <link href="https://jnrowe.github.io/" />
+  <link href="https://jnrowe.github.io/blog/tag/devel/atom.xml" rel="self" />
+  <subtitle type="text">Ramblings of a tired mind</subtitle>
+  <generator uri="http://ablog.readthedocs.org" version="0.9.2">ABlog</generator>
+  <entry xml:base="https://jnrowe.github.io/blog/tag/devel/atom.xml">
+    <title type="text">TDD distro development</title>
+    <id>https://jnrowe.github.io/articles/tdd_distros.html</id>
+    <updated>2011-06-13T00:00:00Z</updated>
+    <published>2011-06-13T00:00:00Z</published>
+    <link href="https://jnrowe.github.io/articles/tdd_distros.html" />
+    <author>
+      <name></name>
+    </author>
+    <content type="html">&lt;div class=&quot;section&quot; id=&quot;tdd-distro-development&quot;&gt;
+
+&lt;p&gt;Using &lt;abbr title=&quot;Test Driven Development&quot;&gt;TDD&lt;/abbr&gt; for distribution development is a hot topic in some of the more
+geeky circles I move in, and I’m very happy about this.  Anything that
+increases the robustness of my desktop computer, my phone or any other device
+I use is a great goal!&lt;/p&gt;
+&lt;div class=&quot;section&quot; id=&quot;why&quot;&gt;
+&lt;h2&gt;Why?&lt;/h2&gt;
+&lt;p&gt;This answer should be obvious; more testing is good.  However, what about the
+current system needs improving?&lt;/p&gt;
+&lt;p&gt;The first point is that commonly deployed distributions base their stabilisation
+processes on the lack of &lt;em&gt;reported&lt;/em&gt; bugs.  This implies that packages with a
+minimal set of tests(or human testers in the common case) go through much less
+testing than popular packages on their way to be marked as stable.  Of course,
+this also implies that bugs in popular packages that will affect many users are
+often discovered before a package is stabilised.&lt;/p&gt;
+&lt;p&gt;The second point is that a small set of bugs are actually regressions of
+previously fixed bugs.  This, by itself, is a reason to look at alternatives.
+Fixing the same bug more than once is an horrendous waste of developer
+resources.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;section&quot; id=&quot;how&quot;&gt;
+&lt;h2&gt;How?&lt;/h2&gt;
+&lt;p&gt;We, the fine folks of AST’s London office, already use a test-based
+stabilisation policy in the preparation of our distribution images.  Adding
+tests for new and bumped packages is something Leal Hétu and I have been
+enforcing for the past few years.&lt;/p&gt;
+&lt;p&gt;Our packages and distribution images are used for the embedded devices we sell,
+the desktops we develop on and the laptops we play on.  The methods we use vary
+greatly, so I’m going to present the simple case of testing console applications
+only.  It is the practise that is important, not the process.&lt;/p&gt;
+&lt;p&gt;The easiest method we use is via &lt;a class=&quot;reference external&quot; href=&quot;https://pypi.python.org/pypi/shelldoctest&quot;&gt;shelldoctest&lt;/a&gt;, a module that implements
+a &lt;a class=&quot;reference external&quot; href=&quot;https://docs.python.org/3/library/doctest.html#module-doctest&quot; title=&quot;(in Python v3.7)&quot;&gt;&lt;code class=&quot;xref py py-mod docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;doctest&lt;/span&gt;&lt;/code&gt;&lt;/a&gt; interface for testing shell commands.  The package provides
+a user-level script for running shell sessions in Python docstrings.  A simple
+example could be:&lt;/p&gt;
+&lt;div class=&quot;highlight-python notranslate&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&quot;sd&quot;&gt;&amp;quot;&amp;quot;&amp;quot;&lt;/span&gt;
+&lt;span class=&quot;sd&quot;&gt;$ echo test&lt;/span&gt;
+&lt;span class=&quot;sd&quot;&gt;test&lt;/span&gt;
+&lt;span class=&quot;sd&quot;&gt;$ echo fail&lt;/span&gt;
+&lt;span class=&quot;sd&quot;&gt;liaf&lt;/span&gt;
+&lt;span class=&quot;sd&quot;&gt;&amp;quot;&amp;quot;&amp;quot;&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;Running the previous file with &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;shell-doctest&lt;/span&gt; &lt;span class=&quot;pre&quot;&gt;test&lt;/span&gt; &lt;span class=&quot;pre&quot;&gt;testdoc.py&lt;/span&gt;&lt;/code&gt; produces the
+following output:&lt;/p&gt;
+&lt;div class=&quot;highlight-pycon notranslate&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&quot;go&quot;&gt;**********************************************************************&lt;/span&gt;
+&lt;span class=&quot;go&quot;&gt;File &amp;quot;testdoc.py&amp;quot;, line 4, in testdoc&lt;/span&gt;
+&lt;span class=&quot;go&quot;&gt;Failed example:&lt;/span&gt;
+&lt;span class=&quot;go&quot;&gt;    echo fail&lt;/span&gt;
+&lt;span class=&quot;go&quot;&gt;Expected:&lt;/span&gt;
+&lt;span class=&quot;go&quot;&gt;    liaf&lt;/span&gt;
+&lt;span class=&quot;go&quot;&gt;Got:&lt;/span&gt;
+&lt;span class=&quot;go&quot;&gt;    fail&lt;/span&gt;
+&lt;span class=&quot;go&quot;&gt;**********************************************************************&lt;/span&gt;
+&lt;span class=&quot;go&quot;&gt;1 items had failures:&lt;/span&gt;
+&lt;span class=&quot;go&quot;&gt;   1 of   2 in testdoc&lt;/span&gt;
+&lt;span class=&quot;go&quot;&gt;***Test Failed*** 1 failures.&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;Each time we bump a package, or add a completely new package, we also commit a
+file containing a minimal series of tests that we consider important for the
+package.  This allows us to almost instantly ascertain whether a future package
+bump breaks functionality we require.&lt;/p&gt;
+&lt;p&gt;We also add a test &lt;em&gt;every single time&lt;/em&gt; we fix a packaging bug, to make sure it
+doesn’t come up again.  A good example can be gleaned from a bug that was fixed
+in our &lt;a class=&quot;reference external&quot; href=&quot;http://www.vim.org/scripts/script.php?script_id=1567&quot;&gt;rails&lt;/a&gt; vim package.  Given the way the &lt;a class=&quot;reference external&quot; href=&quot;http://www.vim.org/scripts/script.php?script_id=1567&quot;&gt;vim scripts site&lt;/a&gt; is organised
+the files you want to download have awful download locations, so our ebuild for
+the &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;rails&lt;/span&gt;&lt;/code&gt; plugin contains the following snippet:&lt;/p&gt;
+&lt;div class=&quot;highlight-bash notranslate&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;DESCRIPTION&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;vim plugin: RoR - easy file navigation, enhanced syntax highlighting&amp;quot;&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;HOMEPAGE&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;http://www.vim.org/scripts/script.php?script_id=1567&amp;quot;&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;SRC_URI&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;http://www.vim.org/scripts/download_script.php?src_id=13800 -&amp;gt; &lt;/span&gt;&lt;span class=&quot;si&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;P&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;.zip&amp;quot;&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;The &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;SRC_URI&lt;/span&gt;&lt;/code&gt; declaration says we need to fetch the file from
+&lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;http://www.vim.org/scripts/download_script.php?src_id=13800&lt;/span&gt;&lt;/code&gt; and name it
+locally as &lt;code class=&quot;file docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;rails-4.3.zip&lt;/span&gt;&lt;/code&gt;.  I’m sure you can guess what happened here,
+someone saved a copy of the file locally for testing and forgot to update the
+&lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;src_id&lt;/span&gt;&lt;/code&gt; parameter correctly&lt;a class=&quot;footnote-reference brackets&quot; href=&quot;#id2&quot; id=&quot;id1&quot;&gt;1&lt;/a&gt;.  The result was an apparently new build
+that installed an older package release.&lt;/p&gt;
+&lt;p&gt;When a fix for this bug was committed a test similar to the following snippet
+was added to the &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;rails&lt;/span&gt;&lt;/code&gt; test suite:&lt;/p&gt;
+&lt;div class=&quot;highlight-python notranslate&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&quot;sd&quot;&gt;&amp;quot;&amp;quot;&amp;quot;&lt;/span&gt;
+&lt;span class=&quot;sd&quot;&gt;$ grep -l &amp;quot;autoloaded_rails = &amp;#39;${PV}&amp;#39;&amp;quot; /usr/share/vim/vimfiles/autoload/rails.vim&lt;/span&gt;
+&lt;span class=&quot;sd&quot;&gt;/usr/share/vim/vimfiles/autoload/rails.vim&lt;/span&gt;
+&lt;span class=&quot;sd&quot;&gt;&amp;quot;&amp;quot;&amp;quot;&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;All this does is check the reported version is correct, and it clearly only took
+a few seconds to write.  This is important, it shouldn’t cost a lot to write a
+test and this is especially true for the simplest task.&lt;/p&gt;
+&lt;p&gt;I use a similar technique for managing my public Gentoo overlay, &lt;a class=&quot;reference external&quot; href=&quot;https://github.com/JNRowe/jnrowe-misc&quot;&gt;jnrowe-misc&lt;/a&gt;.
+For example, the &lt;a class=&quot;reference external&quot; href=&quot;https://pypi.python.org/pypi/blockdiag&quot;&gt;blockdiag&lt;/a&gt; ebuild is accompanied by a series of tests
+that are run when bumping or stabilising the package, all of which are cribbed
+from my actual &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;blockdiag&lt;/span&gt;&lt;/code&gt; usage.  This massively reduces the time required
+to evaluate a package at bump time.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;section&quot; id=&quot;result&quot;&gt;
+&lt;h2&gt;Result?&lt;/h2&gt;
+&lt;p&gt;The time it takes to stabilise, or bump, a package may be massively reduced
+while simultaneously increasing the robustness of the packages.  This is a huge
+win, much bigger than we initially envisaged.&lt;/p&gt;
+&lt;p&gt;We still use time-based stabilisation, but in union with test-based
+stabilisation.  It means that on the time-based stabilisation date we can
+conveniently script the progression to stable including a final run of the test
+suite.&lt;/p&gt;
+&lt;p&gt;I would, of course, prefer to see &lt;em&gt;any&lt;/em&gt; tests upstreamed and where possible this
+is already happening.  However, we’re pragmatists and this means we often use
+existing content as input for tests.  The use of existing input makes writing
+the test faster and means each test exercises functionality we actually require,
+but it also means we occasionally can’t submit the data upstream owing to
+licensing concerns.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;section&quot; id=&quot;bonus&quot;&gt;
+&lt;h2&gt;Bonus&lt;/h2&gt;
+&lt;p&gt;I’ve used the upstream supported &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;shelldoctest&lt;/span&gt;&lt;/code&gt; method for writing tests on
+this page, but you can also easily specify them in &lt;a class=&quot;reference external&quot; href=&quot;http://docutils.sourceforge.net/docs/user/rst/&quot;&gt;reST syntax&lt;/a&gt; files too.
+Doing this encourages you to write nicely formatted documentation to accompany
+your tests.  You can also leverage your tests that are written in this way as
+documentation using the excellent &lt;a class=&quot;reference external&quot; href=&quot;http://sphinx-doc.org/&quot;&gt;Sphinx&lt;/a&gt; tool.&lt;/p&gt;
+&lt;p&gt;The following script shows an extremely basic, yet fully functional, example of
+how to combine the &lt;a class=&quot;reference external&quot; href=&quot;https://docs.python.org/3/library/doctest.html#module-doctest&quot; title=&quot;(in Python v3.7)&quot;&gt;&lt;code class=&quot;xref py py-mod docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;doctest&lt;/span&gt;&lt;/code&gt;&lt;/a&gt; module’s &lt;a class=&quot;reference external&quot; href=&quot;https://docs.python.org/3/library/doctest.html#doctest.testfile&quot; title=&quot;(in Python v3.7)&quot;&gt;&lt;code class=&quot;xref py py-func docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;testfile()&lt;/span&gt;&lt;/code&gt;&lt;/a&gt; function
+with &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;shelldoctest&lt;/span&gt;&lt;/code&gt;:&lt;/p&gt;
+&lt;div class=&quot;highlight-python notranslate&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&quot;ch&quot;&gt;#! /usr/bin/python -tt&lt;/span&gt;
+&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;doctest&lt;/span&gt;
+&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;sys&lt;/span&gt;
+
+&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;shelldoctest&lt;/span&gt; &lt;span class=&quot;kn&quot;&gt;as&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;sd&lt;/span&gt;
+
+&lt;span class=&quot;n&quot;&gt;sys&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;exit&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;doctest&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;testfile&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;sys&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;argv&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;module_relative&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;bp&quot;&gt;False&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+                          &lt;span class=&quot;n&quot;&gt;extraglobs&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;system_command&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;sd&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;system_command&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;},&lt;/span&gt;
+                          &lt;span class=&quot;n&quot;&gt;parser&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;sd&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ShellDocTestParser&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;())[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;])&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;This script parses the first argument on the command line when it is run and
+executes any &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;shelldoctest&lt;/span&gt;&lt;/code&gt; blocks it finds.  It returns the count of failed
+tests as its exit code, helpfully allowing you to execute a command with &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;&amp;amp;&amp;amp;&lt;/span&gt;&lt;/code&gt;
+if all the tests pass.&lt;/p&gt;
+&lt;p&gt;We operate this way at AST, the above &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;rails&lt;/span&gt;&lt;/code&gt; test would actually be part of
+a &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;reST&lt;/span&gt;&lt;/code&gt; formatted file as follows:&lt;/p&gt;
+&lt;div class=&quot;highlight-rst notranslate&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;Fix bug #xx, incorrect archive file&lt;span class=&quot;se&quot;&gt;::&lt;/span&gt;
+
+&lt;span class=&quot;s&quot;&gt;    $ grep -l &amp;quot;autoloaded_rails = &amp;#39;${PV}&amp;#39;&amp;quot; /usr/share/vim/vimfiles/autoload/rails.vim&lt;/span&gt;
+&lt;span class=&quot;s&quot;&gt;    /usr/share/vim/vimfiles/autoload/rails.vim&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;p class=&quot;rubric&quot;&gt;Footnotes&lt;/p&gt;
+&lt;dl class=&quot;footnote brackets&quot;&gt;
+&lt;dt class=&quot;label&quot; id=&quot;id2&quot;&gt;&lt;span class=&quot;brackets&quot;&gt;&lt;a class=&quot;fn-backref&quot; href=&quot;#id1&quot;&gt;1&lt;/a&gt;&lt;/span&gt;&lt;/dt&gt;
+&lt;dd&gt;&lt;p&gt;Okay, it was me.  I’ll confess.&lt;/p&gt;
+&lt;/dd&gt;
+&lt;/dl&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</content>
+  </entry>
+  <entry xml:base="https://jnrowe.github.io/blog/tag/devel/atom.xml">
+    <title type="text">Instant web server</title>
+    <id>https://jnrowe.github.io/articles/tips/Instant_web_server.html</id>
+    <updated>2009-10-12T00:00:00Z</updated>
+    <published>2009-10-12T00:00:00Z</published>
+    <link href="https://jnrowe.github.io/articles/tips/Instant_web_server.html" />
+    <author>
+      <name></name>
+    </author>
+    <content type="html">&lt;div class=&quot;section&quot; id=&quot;instant-web-server&quot;&gt;
+
+&lt;p&gt;Among the topics on our Linux list at work today was a question from Luke
+Fletcher that I was expecting to unleash a flurry of emotional responses:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;div&gt;&lt;p&gt;What is the best small web server for testing site design and the like?&lt;/p&gt;
+&lt;/div&gt;&lt;/blockquote&gt;
+&lt;p&gt;There were a couple of predictable rants about the benefits and drawbacks of
+threading models.  Along with a couple of other topics entirely unhelpful for
+the question at hand, but surprisingly little dissent over the choices.&lt;/p&gt;
+&lt;p&gt;Matt Traner’s reply sums up the general feeling quite nicely:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;div&gt;&lt;p&gt;Just use whatever server you have installed already.  If you don’t have
+&lt;em&gt;any&lt;/em&gt; installed grab &lt;a class=&quot;reference external&quot; href=&quot;http://nginx.net/&quot;&gt;nginx&lt;/a&gt; as it works well and is quite small.&lt;/p&gt;
+&lt;/div&gt;&lt;/blockquote&gt;
+&lt;p&gt;I agree with Matt’s answer but I want to point a couple of possibly non-obvious
+web servers that they, and you, are likely to have installed already.&lt;/p&gt;
+&lt;div class=&quot;section&quot; id=&quot;busybox&quot;&gt;
+&lt;h2&gt;Busybox&lt;/h2&gt;
+&lt;p&gt;All our Linux systems at the office include &lt;a class=&quot;reference external&quot; href=&quot;http://www.busybox.net/&quot;&gt;busybox&lt;/a&gt;, and in the configuration
+we use the &lt;a class=&quot;reference external&quot; href=&quot;http://www.busybox.net/downloads/BusyBox.html#httpd&quot;&gt;httpd&lt;/a&gt; applet is built.  It is very lightweight, and incredibly
+stable.  I often use it when testing or as a weak way to transfer files between
+hosts when &lt;a class=&quot;reference external&quot; href=&quot;http://avahi.org/&quot;&gt;avahi&lt;/a&gt; isn’t available or is too much hassle.  In my &lt;a class=&quot;reference external&quot; href=&quot;http://cnswww.cns.cwru.edu/~chet/bash/bashtop.html&quot;&gt;bash&lt;/a&gt;
+configuration I have a little functions to start up a &lt;strong class=&quot;command&quot;&gt;busybox httpd&lt;/strong&gt;
+server:&lt;/p&gt;
+&lt;div class=&quot;highlight-bash notranslate&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;http_serve&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;[[&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;--help&amp;quot;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;]]&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;then&lt;/span&gt;
+        &lt;span class=&quot;nb&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;Usage: &lt;/span&gt;&lt;span class=&quot;si&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;FUNCNAME&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt; [location]&amp;quot;&lt;/span&gt;
+        &lt;span class=&quot;nb&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;Start a httpd in ‘location’, defaulting to ‘&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;http_serve_location&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;’.&amp;quot;&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;1&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;fi&lt;/span&gt;
+    busybox httpd -f -p &lt;span class=&quot;m&quot;&gt;8080&lt;/span&gt; -h &lt;span class=&quot;si&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;:-&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;http_serve_location&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;}}&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;&lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;http_serve_location&lt;/span&gt;&lt;/code&gt; is set elsewhere in my configuration file, so that I can
+keep per-machine settings separate.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;section&quot; id=&quot;python&quot;&gt;
+&lt;h2&gt;Python&lt;/h2&gt;
+&lt;p&gt;&lt;a class=&quot;reference external&quot; href=&quot;http://www.python.org/&quot;&gt;Python&lt;/a&gt; comes with its own basic web server, and it is very easy to use:&lt;/p&gt;
+&lt;div class=&quot;highlight-console notranslate&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&quot;gp&quot;&gt;$&lt;/span&gt; python2.6 -m SimpleHTTPServer &lt;span class=&quot;m&quot;&gt;8080&lt;/span&gt;
+&lt;span class=&quot;go&quot;&gt;Serving HTTP on 0.0.0.0 port 8080 ...&lt;/span&gt;
+&lt;span class=&quot;go&quot;&gt;kate.localdomain - - [13/Oct/2009 01:16:51] &amp;quot;GET / HTTP/1.1&amp;quot; 200 -&lt;/span&gt;
+&lt;span class=&quot;go&quot;&gt;kate.localdomain - - [13/Oct/2009 01:16:51] &amp;quot;GET /css/content.css HTTP/1.1&amp;quot; 200 -&lt;/span&gt;
+&lt;span class=&quot;go&quot;&gt;kate.localdomain - - [13/Oct/2009 01:16:51] &amp;quot;GET /css/design.css HTTP/1.1&amp;quot; 200 -&lt;/span&gt;
+&lt;span class=&quot;go&quot;&gt;kate.localdomain - - [13/Oct/2009 01:16:51] &amp;quot;GET /css/pygments.css HTTP/1.1&amp;quot; 200 -&lt;/span&gt;
+&lt;span class=&quot;go&quot;&gt;kate.localdomain - - [13/Oct/2009 01:16:51] &amp;quot;GET /css/microformats.css HTTP/1.1&amp;quot; 200 -&lt;/span&gt;
+&lt;span class=&quot;go&quot;&gt;kate.localdomain - - [13/Oct/2009 01:16:51] &amp;quot;GET /css/print.css HTTP/1.1&amp;quot; 200 -&lt;/span&gt;
+&lt;span class=&quot;go&quot;&gt;kate.localdomain - - [13/Oct/2009 01:16:51] &amp;quot;GET /css/voice.css HTTP/1.1&amp;quot; 200 -&lt;/span&gt;
+&lt;span class=&quot;gp&quot;&gt;$&lt;/span&gt; python3.1 -m http.server &lt;span class=&quot;m&quot;&gt;8080&lt;/span&gt;
+&lt;span class=&quot;go&quot;&gt;Serving HTTP on 0.0.0.0 port 8080 ...&lt;/span&gt;
+&lt;span class=&quot;go&quot;&gt;kate.localdomain - - [13/Oct/2009 01:17:23] &amp;quot;GET /2009/10/12/TaD-Instant_web_server.html HTTP/1.1&amp;quot; 200 -&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;Note that the name of the module has changed from &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;SimpleHTTPServer&lt;/span&gt;&lt;/code&gt; to
+&lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;http.server&lt;/span&gt;&lt;/code&gt; for Python v3 and above.&lt;/p&gt;
+&lt;p&gt;I’ve specified the port 8080 to both calls in the snippet above, by default the
+server port would be 8000.  If port 8000 is acceptable for you then you can save
+yourself five keystrokes.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;section&quot; id=&quot;ruby&quot;&gt;
+&lt;h2&gt;Ruby&lt;/h2&gt;
+&lt;p&gt;&lt;a class=&quot;reference external&quot; href=&quot;http://www.ruby-lang.org/&quot;&gt;ruby&lt;/a&gt; also comes with its own web server, one that you’re probably already
+familiar with if you’re a &lt;a class=&quot;reference external&quot; href=&quot;http://www.rubyonrails.org/&quot;&gt;rails&lt;/a&gt; user, called &lt;a class=&quot;reference external&quot; href=&quot;http://www.webrick.org/&quot;&gt;webrick&lt;/a&gt;.  We need a little script
+to use &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;webrick&lt;/span&gt;&lt;/code&gt;:&lt;/p&gt;
+&lt;div class=&quot;highlight-ruby notranslate&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&quot;ch&quot;&gt;#! /usr/bin/ruby&lt;/span&gt;
+
+&lt;span class=&quot;nb&quot;&gt;require&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;webrick&amp;quot;&lt;/span&gt;
+
+&lt;span class=&quot;n&quot;&gt;server&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;WEBrick&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;HTTPServer&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;new&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;
+    &lt;span class=&quot;ss&quot;&gt;:BindAddress&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;localhost&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+    &lt;span class=&quot;ss&quot;&gt;:Port&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;8080&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+    &lt;span class=&quot;ss&quot;&gt;:DocumentRoot&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;ARGV&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+
+&lt;span class=&quot;nb&quot;&gt;trap&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;INT&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;server&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;shutdown&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+&lt;span class=&quot;n&quot;&gt;server&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;start&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;This script will serve files from whatever directory is specified as its first
+argument.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;section&quot; id=&quot;bonus&quot;&gt;
+&lt;h2&gt;Bonus&lt;/h2&gt;
+&lt;p&gt;Python also comes with a &lt;abbr title=&quot;Common Gateway Interface&quot;&gt;CGI&lt;/abbr&gt;-capable version
+called &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;CGIHTTPServer&lt;/span&gt;&lt;/code&gt; and a &lt;abbr title=&quot;Extensible Markup Language&quot;&gt;XML&lt;/abbr&gt;-&lt;abbr title=&quot;Remote Procedure Call&quot;&gt;RPC&lt;/abbr&gt; server
+called — this shouldn’t come as a surprise — &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;SimpleXMLRPCServer&lt;/span&gt;&lt;/code&gt;.  They’re
+very useful for testing out ideas and concepts without having to set down lots
+of code.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</content>
+  </entry>
+  <entry xml:base="https://jnrowe.github.io/blog/tag/devel/atom.xml">
+    <title type="text">BTS as a task manager</title>
+    <id>https://jnrowe.github.io/articles/tips/BTS_as_a_task_manager.html</id>
+    <updated>2009-10-07T00:00:00Z</updated>
+    <published>2009-10-07T00:00:00Z</published>
+    <link href="https://jnrowe.github.io/articles/tips/BTS_as_a_task_manager.html" />
+    <author>
+      <name></name>
+    </author>
+    <content type="html">&lt;div class=&quot;section&quot; id=&quot;bts-as-a-task-manager&quot;&gt;
+
+&lt;p&gt;Tom Marshall asks over the cooler:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;div&gt;&lt;p&gt;What apps do you guys use to manage your todo list(s)?&lt;/p&gt;
+&lt;/div&gt;&lt;/blockquote&gt;
+&lt;p&gt;I think this may be an incredibly personal thing but I prefer to use a &lt;abbr title=&quot;Bug Tracking System&quot;&gt;BTS&lt;/abbr&gt;
+for local task management, the idea of just adding random lines of text to
+a file frankly baffles me.  I love the filtering, ordering and editing
+capabilities I get from using a &lt;abbr title=&quot;Bug Tracking System&quot;&gt;BTS&lt;/abbr&gt; for this.&lt;/p&gt;
+&lt;p&gt;Now, I’m not suggesting installing something complex and convoluted like
+&lt;a class=&quot;reference external&quot; href=&quot;http://www.bugzilla.org&quot;&gt;Bugzilla&lt;/a&gt; just for keeping track of your shopping lists or remembering to
+charge the spare battery for your phone.  There are quite a few lightweight
+systems available, &lt;a class=&quot;reference external&quot; href=&quot;http://ditz.rubyforge.org&quot;&gt;ditz&lt;/a&gt; and &lt;a class=&quot;reference external&quot; href=&quot;http://bugseverywhere.org/be/show/HomePage&quot;&gt;Bugs Everywhere&lt;/a&gt; being two examples.  There is
+also a &lt;strong class=&quot;command&quot;&gt;ditz&lt;/strong&gt; inspired project, written in &lt;a class=&quot;reference external&quot; href=&quot;http://www.python.org&quot;&gt;Python&lt;/a&gt;, called &lt;a class=&quot;reference external&quot; href=&quot;https://github.com/mw44118/pitz&quot;&gt;pitz&lt;/a&gt; that
+is in active development.  And &lt;a class=&quot;reference external&quot; href=&quot;http://www.fossil-scm.org/index.html/doc/tip/www/index.wiki&quot;&gt;fossil&lt;/a&gt; is pretty cool if you’re looking for
+a standalone wiki, &lt;abbr title=&quot;Bug Tracking System&quot;&gt;BTS&lt;/abbr&gt; and &lt;abbr title=&quot;Version Control System&quot;&gt;VCS&lt;/abbr&gt; in one.&lt;/p&gt;
+&lt;div class=&quot;admonition note&quot;&gt;
+&lt;p class=&quot;admonition-title&quot;&gt;Note&lt;/p&gt;
+&lt;p&gt;If you’re a &lt;a class=&quot;reference external&quot; href=&quot;http://www.gentoo.org/&quot;&gt;Gentoo&lt;/a&gt; user you can install &lt;strong class=&quot;command&quot;&gt;ditz&lt;/strong&gt; using the ebuild
+from my &lt;a class=&quot;reference external&quot; href=&quot;https://github.com/JNRowe/jnrowe-misc/&quot;&gt;overlay&lt;/a&gt;.&lt;/p&gt;
+&lt;/div&gt;
+&lt;p&gt;I’m currently in the process of switching away from &lt;abbr title=&quot;Bugs Everywhere&quot;&gt;be&lt;/abbr&gt;, but it can serve as an example quite well.  Unfortunately, there
+are no releases currently being made so you will need to install a recent
+version of &lt;strong class=&quot;command&quot;&gt;bzr&lt;/strong&gt; to download it.  Don’t worry though you aren’t
+restricted to &lt;strong class=&quot;command&quot;&gt;bzr&lt;/strong&gt; to use it.&lt;/p&gt;
+&lt;div class=&quot;admonition note&quot;&gt;
+&lt;p class=&quot;admonition-title&quot;&gt;Note&lt;/p&gt;
+&lt;p&gt;Colleagues from work can grab Dan’s &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;be&lt;/span&gt;&lt;/code&gt; branch directly from our package
+repository, it doesn’t require &lt;strong class=&quot;command&quot;&gt;bzr&lt;/strong&gt; and it fixes quite a few usage
+problems(it is also much faster).  Just remember that it has diverged
+massively from the upstream code, so you won’t be able to use it to work with
+bug databases created by the upstream project.&lt;/p&gt;
+&lt;/div&gt;
+&lt;p&gt;The following examples use an older version of &lt;strong class=&quot;command&quot;&gt;be&lt;/strong&gt; that you can
+download as a &lt;a class=&quot;reference external&quot; href=&quot;http://www.jnrowe.ukfsn.org/_static/be-0.0.193.tar.bz2&quot;&gt;tarball&lt;/a&gt; and doesn’t require &lt;strong class=&quot;command&quot;&gt;bzr&lt;/strong&gt;.&lt;/p&gt;
+&lt;div class=&quot;section&quot; id=&quot;setting-be-up&quot;&gt;
+&lt;h2&gt;Setting &lt;strong class=&quot;command&quot;&gt;be&lt;/strong&gt; up&lt;/h2&gt;
+&lt;p&gt;Before we use &lt;strong class=&quot;command&quot;&gt;be&lt;/strong&gt; we must prepare it.  In the example that follows
+we’re going to create a new directory under the control of &lt;a class=&quot;reference external&quot; href=&quot;http://www.git-scm.com/&quot;&gt;git&lt;/a&gt;, and tell
+&lt;strong class=&quot;command&quot;&gt;be&lt;/strong&gt; we wish to use it in there:&lt;/p&gt;
+&lt;div class=&quot;highlight-console notranslate&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&quot;gp&quot;&gt;$&lt;/span&gt; mkdir be_test&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;cd&lt;/span&gt; be_test
+&lt;span class=&quot;gp&quot;&gt;$&lt;/span&gt; git init
+&lt;span class=&quot;go&quot;&gt;Initialized empty Git repository in /home/jay/Desktop/be_test/.git/&lt;/span&gt;
+&lt;span class=&quot;gp&quot;&gt;$&lt;/span&gt; be set-root
+&lt;span class=&quot;go&quot;&gt;Using git for revision control.&lt;/span&gt;
+&lt;span class=&quot;go&quot;&gt;Directory initialized.&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;section&quot; id=&quot;filing-bugs&quot;&gt;
+&lt;h2&gt;Filing bugs&lt;/h2&gt;
+&lt;p&gt;We can easily file new bugs, in the next snippet we can see two bugs being
+filed.  Bugs are identified by a &lt;abbr title=&quot;Universally Unique IDentifier&quot;&gt;UUID&lt;/abbr&gt;,
+and to operate on bugs we only need to use a unique prefix of the identifier as
+can be seen below.&lt;/p&gt;
+&lt;div class=&quot;highlight-console notranslate&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&quot;gp&quot;&gt;$&lt;/span&gt; be new &lt;span class=&quot;s2&quot;&gt;&amp;quot;This is a test bug&amp;quot;&lt;/span&gt;
+&lt;span class=&quot;go&quot;&gt;Created bug with ID a09&lt;/span&gt;
+&lt;span class=&quot;gp&quot;&gt;$&lt;/span&gt; be assign a09
+&lt;span class=&quot;gp&quot;&gt;$&lt;/span&gt; git commit -m&lt;span class=&quot;s2&quot;&gt;&amp;quot;Commit bug a09.&amp;quot;&lt;/span&gt;
+&lt;span class=&quot;gp&quot;&gt;$&lt;/span&gt; be new &lt;span class=&quot;s2&quot;&gt;&amp;quot;This is a second bug&amp;quot;&lt;/span&gt;
+&lt;span class=&quot;go&quot;&gt;Created bug with ID ec4&lt;/span&gt;
+&lt;span class=&quot;gp&quot;&gt;$&lt;/span&gt; be severity ec4 serious
+&lt;span class=&quot;gp&quot;&gt;$&lt;/span&gt; be comment ec4 &lt;span class=&quot;s2&quot;&gt;&amp;quot;Comments are easy&amp;quot;&lt;/span&gt;
+&lt;span class=&quot;gp&quot;&gt;$&lt;/span&gt; git commit -m&lt;span class=&quot;s2&quot;&gt;&amp;quot;Commit bug ec4.&amp;quot;&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;We now have two bugs filed.  Bug &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;a09&lt;/span&gt;&lt;/code&gt; is self-assigned, while &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;ec4&lt;/span&gt;&lt;/code&gt; has yet
+to be assigned.  As we didn’t set a severity level for &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;a09&lt;/span&gt;&lt;/code&gt; it is set to the
+default of &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;minor&lt;/span&gt;&lt;/code&gt;.  A comment was also made on bug &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;ec4&lt;/span&gt;&lt;/code&gt;, and if we hadn’t
+specified the comment on the command line it would open our default editor to
+add the comment.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;section&quot; id=&quot;querying-bugs&quot;&gt;
+&lt;h2&gt;Querying bugs&lt;/h2&gt;
+&lt;div class=&quot;highlight-console notranslate&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&quot;gp&quot;&gt;$&lt;/span&gt; be list
+&lt;span class=&quot;go&quot;&gt;ec4:os: This is a second bug&lt;/span&gt;
+&lt;span class=&quot;go&quot;&gt;a09:om: This is a test bug&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;The &lt;strong class=&quot;command&quot;&gt;be list&lt;/strong&gt; output consists of three fields separated by colons and
+they are: bug identifier, status and title.  The first character of the  status
+field is an &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;o&lt;/span&gt;&lt;/code&gt; telling us the bugs are marked as open, and the second
+character is the severity indicator(where the &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;s&lt;/span&gt;&lt;/code&gt; for bug &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;ec4&lt;/span&gt;&lt;/code&gt; tells us it
+is marked as serious).&lt;/p&gt;
+&lt;p&gt;You can also limit the bugs shown with &lt;strong class=&quot;command&quot;&gt;be list&lt;/strong&gt; by specifying
+severities with &lt;a class=&quot;reference external&quot; href=&quot;https://docs.python.org/3/using/cmdline.html#id4&quot; title=&quot;(in Python v3.7)&quot;&gt;&lt;code class=&quot;xref std std-option docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;-v&lt;/span&gt;&lt;/code&gt;&lt;/a&gt;.  Or bugs that are assigned to a certain user with
+&lt;code class=&quot;xref std std-option docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;-a&lt;/span&gt;&lt;/code&gt;, and you can use &lt;a class=&quot;reference external&quot; href=&quot;https://docs.python.org/3/using/cmdline.html#cmdoption-m&quot; title=&quot;(in Python v3.7)&quot;&gt;&lt;code class=&quot;xref std std-option docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;-m&lt;/span&gt;&lt;/code&gt;&lt;/a&gt; to list bugs assigned to yourself.&lt;/p&gt;
+&lt;p&gt;When we wish to inspect individual bugs, to see there full status or comments,
+we use the &lt;strong class=&quot;command&quot;&gt;be show&lt;/strong&gt; command:&lt;/p&gt;
+&lt;div class=&quot;highlight-console notranslate&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&quot;gp&quot;&gt;$&lt;/span&gt; be show a09
+&lt;span class=&quot;go&quot;&gt;        ID : a0912cd6-1eae-490c-8e56-5f532242394b&lt;/span&gt;
+&lt;span class=&quot;go&quot;&gt;Short name : a09&lt;/span&gt;
+&lt;span class=&quot;go&quot;&gt;    Severity : minor&lt;/span&gt;
+&lt;span class=&quot;go&quot;&gt;    Status : open&lt;/span&gt;
+&lt;span class=&quot;go&quot;&gt;    Assigned : James Rowe &amp;lt;jnrowe@gmail.com&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;go&quot;&gt;    Target :&lt;/span&gt;
+&lt;span class=&quot;go&quot;&gt;    Creator : James Rowe &amp;lt;jnrowe@gmail.com&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;go&quot;&gt;    Created : Wed, 07 Oct 2009 14:11 (Wed, 07 Oct 2009 13:11:06 +0000)&lt;/span&gt;
+&lt;span class=&quot;go&quot;&gt;This is a test bug&lt;/span&gt;
+
+&lt;span class=&quot;gp&quot;&gt;$&lt;/span&gt; be show ec4
+&lt;span class=&quot;go&quot;&gt;        ID : ec4438ca-a330-4345-b073-43c768f7e9b7&lt;/span&gt;
+&lt;span class=&quot;go&quot;&gt;Short name : ec4&lt;/span&gt;
+&lt;span class=&quot;go&quot;&gt;    Severity : serious&lt;/span&gt;
+&lt;span class=&quot;go&quot;&gt;    Status : open&lt;/span&gt;
+&lt;span class=&quot;go&quot;&gt;    Assigned :&lt;/span&gt;
+&lt;span class=&quot;go&quot;&gt;    Target :&lt;/span&gt;
+&lt;span class=&quot;go&quot;&gt;    Creator : James Rowe &amp;lt;jnrowe@gmail.com&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;go&quot;&gt;    Created : Wed, 07 Oct 2009 14:11 (Wed, 07 Oct 2009 13:11:17 +0000)&lt;/span&gt;
+&lt;span class=&quot;go&quot;&gt;This is a second bug&lt;/span&gt;
+&lt;span class=&quot;go&quot;&gt;--------- Comment ---------&lt;/span&gt;
+&lt;span class=&quot;go&quot;&gt;Name: ec4:1&lt;/span&gt;
+&lt;span class=&quot;go&quot;&gt;From: James Rowe &amp;lt;jnrowe@gmail.com&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;go&quot;&gt;Date: Wed, 07 Oct 2009 13:11:53 +0000&lt;/span&gt;
+
+&lt;span class=&quot;go&quot;&gt;Comments are easy&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;section&quot; id=&quot;editing-bugs&quot;&gt;
+&lt;h2&gt;Editing bugs&lt;/h2&gt;
+&lt;p&gt;We can change the bug status with &lt;strong class=&quot;command&quot;&gt;be status&lt;/strong&gt;, see the output from
+&lt;strong class=&quot;command&quot;&gt;be help status&lt;/strong&gt; for available values.&lt;/p&gt;
+&lt;p&gt;Once bugs are marked as fixed they no longer show up in the default
+&lt;strong class=&quot;command&quot;&gt;be list&lt;/strong&gt; output, but we can still view them with &lt;strong class=&quot;command&quot;&gt;be show&lt;/strong&gt;
+or by calling &lt;strong class=&quot;command&quot;&gt;be list&lt;/strong&gt; with filtering options.&lt;/p&gt;
+&lt;div class=&quot;highlight-console notranslate&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&quot;gp&quot;&gt;$&lt;/span&gt; be status ec4 fixed
+&lt;span class=&quot;gp&quot;&gt;$&lt;/span&gt; be list
+&lt;span class=&quot;go&quot;&gt;a09:om: This is a test bug&lt;/span&gt;
+&lt;span class=&quot;gp&quot;&gt;$&lt;/span&gt; be show ec4
+&lt;span class=&quot;go&quot;&gt;        ID : ec4438ca-a330-4345-b073-43c768f7e9b7&lt;/span&gt;
+&lt;span class=&quot;go&quot;&gt;Short name : ec4&lt;/span&gt;
+&lt;span class=&quot;go&quot;&gt;    Severity : serious&lt;/span&gt;
+&lt;span class=&quot;go&quot;&gt;    Status : fixed&lt;/span&gt;
+&lt;span class=&quot;go&quot;&gt;    Assigned :&lt;/span&gt;
+&lt;span class=&quot;go&quot;&gt;    Target :&lt;/span&gt;
+&lt;span class=&quot;go&quot;&gt;    Creator : James Rowe &amp;lt;jnrowe@gmail.com&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;go&quot;&gt;    Created : Wed, 07 Oct 2009 14:11 (Wed, 07 Oct 2009 13:11:17 +0000)&lt;/span&gt;
+&lt;span class=&quot;go&quot;&gt;This is a second bug&lt;/span&gt;
+&lt;span class=&quot;go&quot;&gt;--------- Comment ---------&lt;/span&gt;
+&lt;span class=&quot;go&quot;&gt;Name: ec4:1&lt;/span&gt;
+&lt;span class=&quot;go&quot;&gt;From: James Rowe &amp;lt;jnrowe@gmail.com&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;go&quot;&gt;Date: Wed, 07 Oct 2009 13:11:53 +0000&lt;/span&gt;
+
+&lt;span class=&quot;go&quot;&gt;Comments are easy&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;section&quot; id=&quot;conclusions&quot;&gt;
+&lt;h2&gt;Conclusions&lt;/h2&gt;
+&lt;p&gt;That really is all it takes to use &lt;strong class=&quot;command&quot;&gt;be&lt;/strong&gt;, and that is why I find
+a &lt;abbr title=&quot;Bug Tracking System&quot;&gt;BTS&lt;/abbr&gt; to be a nice solution for managing all kinds of random tasks.  I have
+a Bugs Everywhere database in my home directory that over the past year has
+stored just over 600 bugs from shopping lists to actual bugs with my
+configurations files, and I’ve apparently managed to complete 95% of them!&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;section&quot; id=&quot;bonus-material&quot;&gt;
+&lt;h2&gt;Bonus material&lt;/h2&gt;
+&lt;p&gt;One of the little tricks I like to do is override the &lt;strong class=&quot;command&quot;&gt;cd&lt;/strong&gt; command to
+automatically display the bug list when I enter a directory that contains a Bugs
+Everywhere database, and it is very simple to do:&lt;/p&gt;
+&lt;div class=&quot;highlight-bash notranslate&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;cd&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;nb&quot;&gt;local&lt;/span&gt; retval
+    &lt;span class=&quot;nb&quot;&gt;builtin&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;cd&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$@&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;&lt;/span&gt;
+    &lt;span class=&quot;nv&quot;&gt;retval&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$?&lt;/span&gt;
+    &lt;span class=&quot;o&quot;&gt;[[&lt;/span&gt; &lt;span class=&quot;si&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;retval&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;0&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;amp;&amp;amp;&lt;/span&gt; -d .be &lt;span class=&quot;o&quot;&gt;]]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;amp;&amp;amp;&lt;/span&gt; be list
+    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;si&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;retval&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;It could be improved to take settings to filter the bug list or all manner of
+other cool things, but that is why it has a “See gist #x” label next to it.
+Feel free to post updates to the gist!&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</content>
+  </entry>
+</feed>

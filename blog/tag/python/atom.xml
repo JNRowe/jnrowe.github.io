@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title type="text">JNRowe - Posts tagged python</title>
+  <id>https://jnrowe.github.io/blog/tag/python/atom.xml</id>
+  <updated>2009-10-29T00:00:00Z</updated>
+  <link href="https://jnrowe.github.io/" />
+  <link href="https://jnrowe.github.io/blog/tag/python/atom.xml" rel="self" />
+  <subtitle type="text">Ramblings of a tired mind</subtitle>
+  <generator uri="http://ablog.readthedocs.org" version="0.9.2">ABlog</generator>
+  <entry xml:base="https://jnrowe.github.io/blog/tag/python/atom.xml">
+    <title type="text">Debugging Python RegEx</title>
+    <id>https://jnrowe.github.io/articles/tips/Debugging_python_regexps.html</id>
+    <updated>2009-10-29T00:00:00Z</updated>
+    <published>2009-10-29T00:00:00Z</published>
+    <link href="https://jnrowe.github.io/articles/tips/Debugging_python_regexps.html" />
+    <author>
+      <name></name>
+    </author>
+    <content type="html">&lt;div class=&quot;section&quot; id=&quot;debugging-python-regex&quot;&gt;
+
+&lt;p&gt;Rob Sampson is learning &lt;a class=&quot;reference external&quot; href=&quot;http://www.python.org/&quot;&gt;Python&lt;/a&gt; and struggling to get to grips with its
+&lt;abbr title=&quot;Regular Expression&quot;&gt;RegEx&lt;/abbr&gt; handling.  He asks on one of our internal lists at the office:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;div&gt;&lt;p&gt;I’ve written what I believe to be a valid &lt;abbr title=&quot;Regular Expression&quot;&gt;RegEx&lt;/abbr&gt; to perform matches on
+some data, and I can’t figure out why it isn’t matching on my input.
+Any clues about where to look?&lt;/p&gt;
+&lt;/div&gt;&lt;/blockquote&gt;
+&lt;p&gt;The answer to these types of questions is more often than not one of two things:&lt;/p&gt;
+&lt;ol class=&quot;arabic simple&quot;&gt;
+&lt;li&gt;&lt;p&gt;Failure to use &lt;a class=&quot;reference external&quot; href=&quot;http://docs.python.org/tutorial/introduction.html#strings&quot;&gt;raw strings&lt;/a&gt; when including backslashes in the &lt;abbr title=&quot;Regular Expression&quot;&gt;RegEx&lt;/abbr&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Choosing to use a &lt;abbr title=&quot;Regular Expression&quot;&gt;RegEx&lt;/abbr&gt; when a better tool for the job exists&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div class=&quot;section&quot; id=&quot;raw-strings&quot;&gt;
+&lt;h2&gt;Raw strings&lt;/h2&gt;
+&lt;p&gt;In Rob’s code he had failed to take in to account the backslash escaping
+problem.  A simplified example of what he was trying to do would be:&lt;/p&gt;
+&lt;div class=&quot;highlight-pycon notranslate&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&quot;gp&quot;&gt;&amp;gt;&amp;gt;&amp;gt; &lt;/span&gt;&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;re&lt;/span&gt;
+&lt;span class=&quot;gp&quot;&gt;&amp;gt;&amp;gt;&amp;gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;re&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;findall&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39; ([0-9]+&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\\&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;[a-z]+) &amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;make 123\match &amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;go&quot;&gt;[]&lt;/span&gt;
+&lt;span class=&quot;gp&quot;&gt;&amp;gt;&amp;gt;&amp;gt; &lt;/span&gt;&lt;span class=&quot;c1&quot;&gt;# Whereas with raw strings this match will work&lt;/span&gt;
+&lt;span class=&quot;gp&quot;&gt;&amp;gt;&amp;gt;&amp;gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;re&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;findall&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;sa&quot;&gt;r&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39; ([0-9]+&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\\&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;[a-z]+) &amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;make 123\match &amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;go&quot;&gt;[&amp;#39;123\\match&amp;#39;]&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;Without the raw string, specified by the preceding &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;r&lt;/span&gt;&lt;/code&gt; in our pattern, the
+&lt;abbr title=&quot;Regular Expression&quot;&gt;RegEx&lt;/abbr&gt; parser is actually looking for a literal &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;[&lt;/span&gt;&lt;/code&gt; where we’ve intended
+to use the &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;[&lt;/span&gt;&lt;/code&gt; as the start of a character set.&lt;/p&gt;
+&lt;div class=&quot;admonition note&quot;&gt;
+&lt;p class=&quot;admonition-title&quot;&gt;Note&lt;/p&gt;
+&lt;p&gt;There is another important point here too as the example above uses
+character ranges, just as Rob’s original did.  As in most &lt;abbr title=&quot;Regular Expression&quot;&gt;RegEx&lt;/abbr&gt; engines
+Python has inbuilt support for certain character classes, and they are
+often more functional than the simple character ranges.  The big win with
+Python’s character classes is that they can be locale and/or Unicode
+aware by specifying the &lt;a class=&quot;reference external&quot; href=&quot;https://docs.python.org/3/library/re.html#re.LOCALE&quot; title=&quot;(in Python v3.7)&quot;&gt;&lt;code class=&quot;xref py py-data docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;re.LOCALE&lt;/span&gt;&lt;/code&gt;&lt;/a&gt; or &lt;code class=&quot;xref py py-data docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;re.UNICODE&lt;/span&gt;&lt;/code&gt; flags.&lt;/p&gt;
+&lt;/div&gt;
+&lt;p&gt;These types of string escaping problems are common, and as your &lt;abbr title=&quot;Regular Expression&quot;&gt;RegEx&lt;/abbr&gt;
+becomes more complex their likelihood increases greatly.  Python, as is often
+the case, has the answer and it comes in the shape of the &lt;a class=&quot;reference external&quot; href=&quot;https://docs.python.org/3/library/re.html#re.DEBUG&quot; title=&quot;(in Python v3.7)&quot;&gt;&lt;code class=&quot;xref py py-data docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;re.DEBUG&lt;/span&gt;&lt;/code&gt;&lt;/a&gt;
+flag.  The &lt;a class=&quot;reference external&quot; href=&quot;https://docs.python.org/3/library/re.html#re.DEBUG&quot; title=&quot;(in Python v3.7)&quot;&gt;&lt;code class=&quot;xref py py-data docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;re.DEBUG&lt;/span&gt;&lt;/code&gt;&lt;/a&gt; flag displays a parse tree allowing you to easily
+inspect the &lt;abbr title=&quot;Regular Expression&quot;&gt;RegEx&lt;/abbr&gt; you have constructed:&lt;/p&gt;
+&lt;div class=&quot;highlight-pycon notranslate&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&quot;gp&quot;&gt;&amp;gt;&amp;gt;&amp;gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;re&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;findall&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39; ([0-9]+&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\\&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;[a-z]+) &amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;make 123\match &amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;re&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;DEBUG&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;go&quot;&gt;literal 32&lt;/span&gt;
+&lt;span class=&quot;go&quot;&gt;subpattern 1&lt;/span&gt;
+&lt;span class=&quot;go&quot;&gt;max_repeat 1 65535&lt;/span&gt;
+&lt;span class=&quot;go&quot;&gt;    in&lt;/span&gt;
+&lt;span class=&quot;go&quot;&gt;    range (48, 57)&lt;/span&gt;
+&lt;span class=&quot;go&quot;&gt;literal 91&lt;/span&gt;
+&lt;span class=&quot;go&quot;&gt;literal 97&lt;/span&gt;
+&lt;span class=&quot;go&quot;&gt;literal 45&lt;/span&gt;
+&lt;span class=&quot;go&quot;&gt;literal 122&lt;/span&gt;
+&lt;span class=&quot;go&quot;&gt;max_repeat 1 65535&lt;/span&gt;
+&lt;span class=&quot;go&quot;&gt;    literal 93&lt;/span&gt;
+&lt;span class=&quot;go&quot;&gt;literal 32&lt;/span&gt;
+&lt;span class=&quot;go&quot;&gt;[]&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;Here we can see that our expression matches &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;range&lt;/span&gt; &lt;span class=&quot;pre&quot;&gt;(48,&lt;/span&gt; &lt;span class=&quot;pre&quot;&gt;57)&lt;/span&gt;&lt;/code&gt;, 48 and 57 being
+the &lt;a class=&quot;reference external&quot; href=&quot;http://docs.python.org/library/functions.html&quot;&gt;ordinal&lt;/a&gt; for &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;0&lt;/span&gt;&lt;/code&gt; and &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;9&lt;/span&gt;&lt;/code&gt; respectively.  Following that we see a match
+for &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;literal&lt;/span&gt; &lt;span class=&quot;pre&quot;&gt;91&lt;/span&gt;&lt;/code&gt;, &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;chr(91)&lt;/span&gt;&lt;/code&gt; shows us that the character we are matching is
+a &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;[&lt;/span&gt;&lt;/code&gt;.  With this information it is easy to see where the problem is.&lt;/p&gt;
+&lt;p&gt;If you need to use more than one flag, such as often useful &lt;a class=&quot;reference external&quot; href=&quot;https://docs.python.org/3/library/re.html#re.VERBOSE&quot; title=&quot;(in Python v3.7)&quot;&gt;&lt;code class=&quot;xref py py-data docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;re.VERBOSE&lt;/span&gt;&lt;/code&gt;&lt;/a&gt;
+flag, you can combine them with &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;|&lt;/span&gt;&lt;/code&gt; (bitwise OR) as the flags are just named
+constants(&lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;DEBUG&lt;/span&gt;&lt;/code&gt; is 128 for example).&lt;/p&gt;
+&lt;div class=&quot;highlight-pycon notranslate&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&quot;gp&quot;&gt;&amp;gt;&amp;gt;&amp;gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;re&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;findall&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;sa&quot;&gt;r&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39; (\d+&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\\&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;\w+) &amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;make 123\match &amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;re&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;DEBUG&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;|&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;re&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;LOCALE&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;go&quot;&gt;literal 32&lt;/span&gt;
+&lt;span class=&quot;go&quot;&gt;subpattern 1&lt;/span&gt;
+&lt;span class=&quot;go&quot;&gt;max_repeat 1 65535&lt;/span&gt;
+&lt;span class=&quot;go&quot;&gt;    in&lt;/span&gt;
+&lt;span class=&quot;go&quot;&gt;    category category_digit&lt;/span&gt;
+&lt;span class=&quot;go&quot;&gt;literal 92&lt;/span&gt;
+&lt;span class=&quot;go&quot;&gt;max_repeat 1 65535&lt;/span&gt;
+&lt;span class=&quot;go&quot;&gt;    in&lt;/span&gt;
+&lt;span class=&quot;go&quot;&gt;    category category_word&lt;/span&gt;
+&lt;span class=&quot;go&quot;&gt;literal 32&lt;/span&gt;
+&lt;span class=&quot;go&quot;&gt;[&amp;#39;123\\match&amp;#39;]&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;section&quot; id=&quot;better-tools&quot;&gt;
+&lt;h2&gt;Better tools&lt;/h2&gt;
+&lt;p&gt;Often, a &lt;abbr title=&quot;Regular Expression&quot;&gt;RegEx&lt;/abbr&gt; is the hammer of choice for far too many tasks for far too
+many people(myself included).  There are often much better choices, some of
+which are very domain specific and some quite general.&lt;/p&gt;
+&lt;p&gt;For any moderately complex parsing job &lt;a class=&quot;reference external&quot; href=&quot;http://pyparsing.wikispaces.com/&quot;&gt;pyparsing&lt;/a&gt; is a great choice.  The
+syntax is quite readable and the parser is very fast.  Just make sure you
+ignore any examples telling you to use &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;pre&quot;&gt;pyparsing&lt;/span&gt; &lt;span class=&quot;pre&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;pre&quot;&gt;*&lt;/span&gt;&lt;/code&gt; as you’ll
+evoke great rage in every person who reads your code.&lt;/p&gt;
+&lt;p&gt;While &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;pyparsing&lt;/span&gt;&lt;/code&gt; is a good general parsing tool it would be overkill for
+the task at hand, but it doesn’t hurt to show a simple example of
+constructing a parser:&lt;/p&gt;
+&lt;div class=&quot;highlight-pycon notranslate&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&quot;gp&quot;&gt;&amp;gt;&amp;gt;&amp;gt; &lt;/span&gt;&lt;span class=&quot;kn&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;pyparsing&lt;/span&gt; &lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Literal&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;White&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Word&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;alphas&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;nums&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;gp&quot;&gt;&amp;gt;&amp;gt;&amp;gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;matcher&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Word&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;alphas&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Word&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;nums&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Literal&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\\&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Word&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;alphas&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;White&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+&lt;span class=&quot;gp&quot;&gt;&amp;gt;&amp;gt;&amp;gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;matcher&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;parseString&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;make 123&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\\&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;match &amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;go&quot;&gt;([&amp;#39;make&amp;#39;, &amp;#39;123&amp;#39;, &amp;#39;\\&amp;#39;, &amp;#39;match&amp;#39;, &amp;#39; &amp;#39;], {})&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;Another exceptional tool for tasks that people often abuse &lt;abbr title=&quot;Regular Expression&quot;&gt;RegEx&lt;/abbr&gt; for is
+&lt;a class=&quot;reference external&quot; href=&quot;http://labix.org/python-dateutil&quot;&gt;python-dateutil&lt;/a&gt;.  One of the reasons I occasionally turn to this module is
+that Python’s &lt;a class=&quot;reference external&quot; href=&quot;https://docs.python.org/3/library/time.html#time.strptime&quot; title=&quot;(in Python v3.7)&quot;&gt;&lt;code class=&quot;xref py py-func docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;time.strptime()&lt;/span&gt;&lt;/code&gt;&lt;/a&gt; isn’t even capable of parsing timestamps
+created by &lt;a class=&quot;reference external&quot; href=&quot;https://docs.python.org/3/library/time.html#time.strftime&quot; title=&quot;(in Python v3.7)&quot;&gt;&lt;code class=&quot;xref py py-func docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;time.strftime()&lt;/span&gt;&lt;/code&gt;&lt;/a&gt;, for example if you use &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;%z&lt;/span&gt;&lt;/code&gt; in the
+&lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;strftime&lt;/span&gt;&lt;/code&gt; call.&lt;/p&gt;
+&lt;p&gt;All too often you see people trying to solve date parsing problems with
+&lt;abbr title=&quot;Regular Expression&quot;&gt;RegEx&lt;/abbr&gt; and heaps of &lt;code class=&quot;xref py py-func docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;int()&lt;/span&gt;&lt;/code&gt; calls to mangle the matches.  Not only is this
+a very brittle approach, but the &lt;a class=&quot;reference external&quot; href=&quot;http://labix.org/&quot;&gt;labix&lt;/a&gt; guys have solved this problem for you
+already:&lt;/p&gt;
+&lt;div class=&quot;highlight-pycon notranslate&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&quot;gp&quot;&gt;&amp;gt;&amp;gt;&amp;gt; &lt;/span&gt;&lt;span class=&quot;kn&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;dateutil&lt;/span&gt; &lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;parser&lt;/span&gt;
+&lt;span class=&quot;gp&quot;&gt;&amp;gt;&amp;gt;&amp;gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;s&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;2009 10 30 23:35:16+0400&amp;#39;&lt;/span&gt;
+&lt;span class=&quot;gp&quot;&gt;&amp;gt;&amp;gt;&amp;gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;parser&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;parse&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;s&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;go&quot;&gt;datetime.datetime(2009, 10, 30, 23, 35, 16, tzinfo=tzoffset(None, 14400))&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;admonition note&quot;&gt;
+&lt;p class=&quot;admonition-title&quot;&gt;Note&lt;/p&gt;
+&lt;p&gt;If you use &lt;a class=&quot;reference external&quot; href=&quot;http://labix.org/python-dateutil&quot;&gt;python-dateutil&lt;/a&gt; do be aware that by default it will prefer US
+mid-endian date formats when guessing for some patterns.  Either create your
+own &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;parserinfo&lt;/span&gt;&lt;/code&gt; object and set &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;dayfirst&lt;/span&gt;&lt;/code&gt; to &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;True&lt;/span&gt;&lt;/code&gt;, or use something
+stricter.&lt;/p&gt;
+&lt;/div&gt;
+&lt;p&gt;In closing before you start parsing any text — regardless of how simple it is
+— you should thumb through the &lt;a class=&quot;reference external&quot; href=&quot;http://docs.python.org/library/&quot;&gt;standard library&lt;/a&gt; and perform a search on
+&lt;a class=&quot;reference external&quot; href=&quot;http://pypi.python.org/pypi&quot;&gt;pypi&lt;/a&gt;.  Often, the work has already been done for you and may well be much
+better than the hurried version you were about to cobble together with
+a &lt;abbr title=&quot;Regular Expression&quot;&gt;RegEx&lt;/abbr&gt;.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</content>
+  </entry>
+</feed>

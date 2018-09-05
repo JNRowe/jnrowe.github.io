@@ -1,187 +1,51 @@
 
-
 <!DOCTYPE html>
-<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
-<head>
-  <meta charset="utf-8">
-  
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
-  <title>Introduction to RCS &mdash; JNRowe</title>
-  
 
-  
-  
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" />
+    <title>Introduction to RCS &#8212; JNRowe</title>
+    <link rel="stylesheet" href="../_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
     <link rel="shortcut icon" href="../_static/icon.ico"/>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="copyright" title="Copyright" href="../copyright.html" />
+    <link rel="next" title="TDD distro development" href="tdd_distros.html" />
+    <link rel="prev" title="mutt configuration snippets" href="mutt_config_snippets.html" />
   
-  
-  
-
-  
-
-  
-  
-    
-
-  
-
-  
-  
-    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
-  
-
-  
-
-  
-        <link rel="index" title="Index"
-              href="../genindex.html"/>
-        <link rel="search" title="Search" href="../search.html"/>
-        <link rel="copyright" title="Copyright" href="../copyright.html"/>
-    <link rel="top" title="JNRowe" href="../index.html"/>
-        <link rel="up" title="Articles" href="index.html"/>
-        <link rel="next" title="TDD distro development" href="tdd_distros.html"/>
-        <link rel="prev" title="mutt configuration snippets" href="mutt_config_snippets.html"/>
-    <link rel="alternate" type="application/atom+xml" title="Updated items" href="/updates.atom" />
-
-  
-  <script src="../_static/js/modernizr.min.js"></script>
-
-</head>
-
-<body class="wy-body-for-nav" role="document">
-
    
-  <div class="wy-grid-for-nav">
-
-    
-    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
-      <div class="wy-side-scroll">
-        <div class="wy-side-nav-search">
-          
-
-          
-            <a href="../index.html" class="icon icon-home"> JNRowe
-          
-
-          
-          </a>
-
-          
-            
-            
-              <div class="version">
-                0.1
-              </div>
-            
-          
-
-          
-<div role="search">
-  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" />
-    <input type="hidden" name="check_keywords" value="yes" />
-    <input type="hidden" name="area" value="default" />
-  </form>
-</div>
-
-          
-        </div>
-
-        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
-          
-            
-            
-              
-            
-            
-              <p class="caption"><span class="caption-text">Contents</span></p>
-<ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="../projects.html">Projects</a></li>
-<li class="toctree-l1 current"><a class="reference internal" href="index.html">Articles</a><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="dropping_gentoo.html">Dropping Gentoo</a></li>
-<li class="toctree-l2"><a class="reference internal" href="dropping_gentoo_reflex.html">Dropping Gentoo reflex</a></li>
-<li class="toctree-l2"><a class="reference internal" href="fossil.html"><strong class="command">fossil</strong> experiments</a></li>
-<li class="toctree-l2"><a class="reference internal" href="mutt_config_snippets.html"><strong class="command">mutt</strong> configuration snippets</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">Introduction to <abbr title="GNU Revision Control System">RCS</abbr></a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#abstract">Abstract</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#diving-in">Diving in</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#recap">Recap</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#advanced">Advanced</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="tdd_distros.html"><abbr title="Test Driven Development">TDD</abbr> distro development</a></li>
-<li class="toctree-l2"><a class="reference internal" href="index.html#further-categories">Further categories</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="../thoughts/index.html">Thoughts</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../colophon.html">Colophon</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../contact.html">Contact details</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../consult.html">Consulting services</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../copyright.html">Copyright information</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../glossary.html">Glossary</a></li>
-</ul>
-
-            
-          
-        </div>
-      </div>
-    </nav>
-
-    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
-
-      
-      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
-        
-          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="../index.html">JNRowe</a>
-        
-      </nav>
-
-
-      
-      <div class="wy-nav-content">
-        <div class="rst-content">
-          
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<div role="navigation" aria-label="breadcrumbs navigation">
-
-  <ul class="wy-breadcrumbs">
-    
-      <li><a href="../index.html">Docs</a> &raquo;</li>
-        
-          <li><a href="index.html">Articles</a> &raquo;</li>
-        
-      <li>Introduction to <abbr title="GNU Revision Control System">RCS</abbr></li>
-    
-    
-      <li class="wy-breadcrumbs-aside">
-        
-            
-        
-      </li>
-    
-  </ul>
+  <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
 
   
-  <hr/>
-</div>
-          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
-           <div itemprop="articleBody">
+  <link rel="alternate" type="application/atom+xml"  href="../blog/atom.xml" title="JNRowe">
+  
+  
+  <style type="text/css">
+    ul.ablog-archive {list-style: none; overflow: auto; margin-left: 0px}
+    ul.ablog-archive li {float: left; margin-right: 5px; font-size: 80%}
+    ul.postlist a {font-style: italic;}
+    ul.postlist-style-disc {list-style-type: disc;}
+    ul.postlist-style-none {list-style-type: none;}
+    ul.postlist-style-circle {list-style-type: circle;}
+  </style>
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
             
   <div class="section" id="introduction-to-rcs">
 <h1>Introduction to <abbr title="GNU Revision Control System">RCS</abbr><a class="headerlink" href="#introduction-to-rcs" title="Permalink to this headline">¶</a></h1>
@@ -201,7 +65,7 @@ and annotate configuration files or 5000 file C source trees. This text is by
 no means an in-depth <abbr title="GNU Revision Control System">RCS</abbr> usage manual, it is a short and fast way to get
 working with <abbr title="GNU Revision Control System">RCS</abbr>.</p>
 <p><abbr title="GNU Revision Control System">RCS</abbr> is great for small projects or managing the wealth of configuration files
-in <code class="docutils literal"><span class="pre">/etc</span></code>. It provides a way to reduce the need for file backups(without
+in <code class="docutils literal notranslate"><span class="pre">/etc</span></code>. It provides a way to reduce the need for file backups(without
 losing any backup quality or quantity), to annotate changes made to a file, to
 allow other people to work on a file and an easy method to package patch/diff
 files for distribution.</p>
@@ -213,12 +77,12 @@ provided with the <abbr title="GNU Revision Control System">RCS</abbr> package.<
 <div class="section" id="diving-in">
 <h2>Diving in<a class="headerlink" href="#diving-in" title="Permalink to this headline">¶</a></h2>
 <p><abbr title="GNU Revision Control System">RCS</abbr> is that simple to use that I will jump straight in to an example.</p>
-<div class="highlight-console"><div class="highlight"><pre><span></span><span class="gp">$</span> mkdir RCS
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> mkdir RCS
 </pre></div>
 </div>
 <p>The <abbr title="GNU Revision Control System">RCS</abbr> directory holds the <abbr title="GNU Revision Control System">RCS</abbr> control files, they contain all the data
 <abbr title="GNU Revision Control System">RCS</abbr> needs to work.</p>
-<div class="highlight-console"><div class="highlight"><pre><span></span><span class="gp">$</span> cat &gt;myscript.sh &lt;&lt;EOF
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> cat &gt;myscript.sh &lt;&lt;EOF
 <span class="gp">#</span>! /bin/sh
 <span class="gp">#</span> <span class="nv">$Id</span>$
 <span class="go">echo &quot;Hello World!&quot;</span>
@@ -236,22 +100,22 @@ provided with the <abbr title="GNU Revision Control System">RCS</abbr> package.<
 </pre></div>
 </div>
 <p>The command <strong class="command">ci</strong> (check in) is where the magic of <abbr title="GNU Revision Control System">RCS</abbr> takes place.
-We have decided we want to make a snapshot of our file, <code class="file docutils literal"><span class="pre">myscript.sh</span></code>,
+We have decided we want to make a snapshot of our file, <code class="file docutils literal notranslate"><span class="pre">myscript.sh</span></code>,
 and use <strong class="command">ci</strong> to add the file to revision control.</p>
-<div class="highlight-console"><div class="highlight"><pre><span></span><span class="gp">$</span> ls
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> ls
 <span class="go">RCS</span>
 </pre></div>
 </div>
 <p>The file we checked in appears to have disappeared, obviously it hasn’t but the
 default behaviour of <abbr title="GNU Revision Control System">RCS</abbr> is to remove the file we check in. You can choose to
-keep a working copy with <code class="docutils literal"><span class="pre">ci</span> <span class="pre">-u</span></code> or <code class="docutils literal"><span class="pre">ci</span> <span class="pre">-l</span></code> (covered below).</p>
-<div class="highlight-console"><div class="highlight"><pre><span></span><span class="gp">$</span> ls ./RCS/
+keep a working copy with <code class="docutils literal notranslate"><span class="pre">ci</span> <span class="pre">-u</span></code> or <code class="docutils literal notranslate"><span class="pre">ci</span> <span class="pre">-l</span></code> (covered below).</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> ls ./RCS/
 <span class="go">myscript.sh,v</span>
 </pre></div>
 </div>
 <p>In the <abbr title="GNU Revision Control System">RCS</abbr> directory a file now exists with the same name as our script plus
-a <code class="docutils literal"><span class="pre">,v</span></code>. This is the file <abbr title="GNU Revision Control System">RCS</abbr> uses to store all of its data in.</p>
-<div class="highlight-console"><div class="highlight"><pre><span></span><span class="gp">$</span> co myscript.sh
+a <code class="docutils literal notranslate"><span class="pre">,v</span></code>. This is the file <abbr title="GNU Revision Control System">RCS</abbr> uses to store all of its data in.</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> co myscript.sh
 <span class="go">RCS/myscript.sh,v  --&gt;  myscript.sh</span>
 <span class="go">revision 1.1</span>
 <span class="go">done</span>
@@ -263,46 +127,46 @@ a <code class="docutils literal"><span class="pre">,v</span></code>. This is the
 <p>The command <strong class="command">co</strong> (check out) pulls a current version(by default) from
 the <abbr title="GNU Revision Control System">RCS</abbr> repository and places it in the current directory. Default behaviour
 is to check out a read-only version of the file.</p>
-<div class="highlight-console"><div class="highlight"><pre><span></span><span class="gp">$</span> co -l myscript.sh
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> co -l myscript.sh
 <span class="go">./RCS/myscript.sh,v  --&gt;  ./myscript.sh</span>
 <span class="go">revision 1.1 (locked)</span>
 <span class="go">done</span>
 </pre></div>
 </div>
-<p>The <code class="xref std std-option docutils literal"><span class="pre">-l</span></code> option to <strong class="command">co</strong> (and also <strong class="command">ci</strong> ) is used to
+<p>The <code class="xref std std-option docutils literal notranslate"><span class="pre">-l</span></code> option to <strong class="command">co</strong> (and also <strong class="command">ci</strong> ) is used to
 lock the file. This file now becomes a working file, which is writable, and it
 also means other people can’t edit it until you have released it or checked it
 in again.</p>
-<p>Blindly using the <code class="xref std std-option docutils literal"><span class="pre">-l</span></code> option to <strong class="command">ci</strong>/<strong class="command">co</strong> is not
+<p>Blindly using the <code class="xref std std-option docutils literal notranslate"><span class="pre">-l</span></code> option to <strong class="command">ci</strong>/<strong class="command">co</strong> is not
 advisable, you should get in to the habit now of only locking files you are
 working on.  <abbr title="GNU Revision Control System">RCS</abbr> uses locking to block other users from checking in changes
 and will cause much grief if you use <abbr title="GNU Revision Control System">RCS</abbr> on multi-user projects. It is much
-better to use <a class="reference external" href="https://docs.python.org/3/using/cmdline.html#cmdoption-u" title="(in Python v3.6)"><code class="xref std std-option docutils literal"><span class="pre">-u</span></code></a> (or unlocked) when you <strong class="command">ci</strong> in new
+better to use <a class="reference external" href="https://docs.python.org/3/using/cmdline.html#cmdoption-u" title="(in Python v3.7)"><code class="xref std std-option docutils literal notranslate"><span class="pre">-u</span></code></a> (or unlocked) when you <strong class="command">ci</strong> in new
 files/changes this way you will have access to a read-only version of the file
 and it will allow other users to edit it.</p>
-<div class="highlight-console"><div class="highlight"><pre><span></span><span class="gp">$</span> cat myscript.sh
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> cat myscript.sh
 <span class="gp">#</span>! /bin/sh
 <span class="gp">#</span> <span class="nv">$Id</span>: myscript.sh,v <span class="m">1</span>.1 <span class="m">2002</span>/11/04 <span class="m">11</span>:29:48 james Exp james $
 <span class="go">echo &quot;Hello World!&quot;</span>
 <span class="go">exit 0</span>
 </pre></div>
 </div>
-<p>If you remember from the original file it contained <code class="docutils literal"><span class="pre">$Id$</span></code> on a commented
-line, this <code class="docutils literal"><span class="pre">$Id$</span></code> is a keyword used by <abbr title="GNU Revision Control System">RCS</abbr> that is substituted with
-information about the current file. In this example the tag <code class="docutils literal"><span class="pre">$Id$</span></code> is
+<p>If you remember from the original file it contained <code class="docutils literal notranslate"><span class="pre">$Id$</span></code> on a commented
+line, this <code class="docutils literal notranslate"><span class="pre">$Id$</span></code> is a keyword used by <abbr title="GNU Revision Control System">RCS</abbr> that is substituted with
+information about the current file. In this example the tag <code class="docutils literal notranslate"><span class="pre">$Id$</span></code> is
 expanded to read the filename, the revision number, the date and time of the
 check in, the person who checked in the file, the state of the file and the
 owner of the lock(if any).</p>
 <p>There are many keywords available, including:</p>
 <ul class="simple">
-<li><p><code class="docutils literal"><span class="pre">$Author$</span></code> - the name of the person who did the check in</p></li>
-<li><p><code class="docutils literal"><span class="pre">$Header$</span></code> - the same as <code class="docutils literal"><span class="pre">$Id$</span></code> but including the path for the file</p></li>
-<li><p><code class="docutils literal"><span class="pre">$Log$</span></code> - a full changelog for file from the <strong class="command">ci</strong> annotations</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">$Author$</span></code> - the name of the person who did the check in</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">$Header$</span></code> - the same as <code class="docutils literal notranslate"><span class="pre">$Id$</span></code> but including the path for the file</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">$Log$</span></code> - a full changelog for file from the <strong class="command">ci</strong> annotations</p></li>
 </ul>
-<p>Although using <code class="docutils literal"><span class="pre">$Log$</span></code> seems like a good idea it does mean the size of the
+<p>Although using <code class="docutils literal notranslate"><span class="pre">$Log$</span></code> seems like a good idea it does mean the size of the
 file is increased a huge amount. All the changelog data is available with the
 <strong class="command">rlog</strong> command at any time and without filling the source file.</p>
-<div class="highlight-console"><div class="highlight"><pre><span></span><span class="gp">$</span> sed -ie <span class="s1">&#39;s/World/${USER}/&#39;</span> myscript.sh
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> sed -ie <span class="s1">&#39;s/World/${USER}/&#39;</span> myscript.sh
 <span class="gp">$</span> cat myscript.sh
 <span class="gp">#</span>! /bin/sh
 <span class="gp">#</span> <span class="nv">$Id</span>: myscript.sh,v <span class="m">1</span>.1 <span class="m">2002</span>/11/04 <span class="m">11</span>:29:48 james Exp james $
@@ -314,7 +178,7 @@ file is increased a huge amount. All the changelog data is available with the
 </div>
 <p>So we have decided to make some changes to the file, and then tested it
 works.</p>
-<div class="highlight-console"><div class="highlight"><pre><span></span><span class="gp">$</span> rcsdiff myscript.sh
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> rcsdiff myscript.sh
 <span class="go">===================================================================</span>
 <span class="go">RCS file: RCS/myscript.sh,v</span>
 <span class="go">retrieving revision 1.1</span>
@@ -339,12 +203,12 @@ works.</p>
 </pre></div>
 </div>
 <p>The command <strong class="command">rcsdiff</strong> supplies an easy way to check changes in a file.
-Using <code class="docutils literal"><span class="pre">rcsdiff</span> <span class="pre">filename</span></code> will output a generic context-free diff(and a small
-<abbr title="GNU Revision Control System">RCS</abbr> header to <code class="docutils literal"><span class="pre">stderr</span></code> ), or you can pass normal <strong class="command">diff</strong> options to
+Using <code class="docutils literal notranslate"><span class="pre">rcsdiff</span> <span class="pre">filename</span></code> will output a generic context-free diff(and a small
+<abbr title="GNU Revision Control System">RCS</abbr> header to <code class="docutils literal notranslate"><span class="pre">stderr</span></code> ), or you can pass normal <strong class="command">diff</strong> options to
 <strong class="command">rcsdiff</strong>.  In the second <strong class="command">rcsdiff</strong> command the
-<strong class="command">diff</strong> option <a class="reference external" href="https://docs.python.org/3/using/cmdline.html#cmdoption-u" title="(in Python v3.6)"><code class="xref std std-option docutils literal"><span class="pre">-u</span></code></a> is given to tell <strong class="command">rcsdiff</strong> it
+<strong class="command">diff</strong> option <a class="reference external" href="https://docs.python.org/3/using/cmdline.html#cmdoption-u" title="(in Python v3.7)"><code class="xref std std-option docutils literal notranslate"><span class="pre">-u</span></code></a> is given to tell <strong class="command">rcsdiff</strong> it
 should output a unified context diff.</p>
-<div class="highlight-console"><div class="highlight"><pre><span></span><span class="gp">$</span> ci -u ./myscript.sh
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> ci -u ./myscript.sh
 <span class="go">./RCS/myscript.sh,v  &lt;--  ./myscript.sh</span>
 <span class="go">new revision: 1.2; previous revision: 1.1</span>
 <span class="go">enter log message, terminated with single &#39;.&#39; or end of file:</span>
@@ -355,9 +219,9 @@ should output a unified context diff.</p>
 </div>
 <p>So now we have seen the changes made to the file, and are happy with them, we
 check in our new revision.  <abbr title="GNU Revision Control System">RCS</abbr> asks for a log entry, this will make our
-changelog output later. You can cancel the check in using the normal <code class="kbd docutils literal"><span class="pre">C-c</span></code>
+changelog output later. You can cancel the check in using the normal <kbd class="kbd docutils literal notranslate">C-c</kbd>
 (control C) method.</p>
-<div class="highlight-console"><div class="highlight"><pre><span></span><span class="gp">$</span> cat myscript.sh
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> cat myscript.sh
 <span class="gp">#</span>! /bin/sh
 <span class="gp">#</span> <span class="nv">$Id</span>: myscript,v <span class="m">1</span>.2 <span class="m">2002</span>/11/04 <span class="m">11</span>:34:21 james Exp james $
 <span class="go">echo &quot;Hello ${USER}!&quot;</span>
@@ -365,8 +229,8 @@ changelog output later. You can cancel the check in using the normal <code class
 </pre></div>
 </div>
 <p>You can see above that when <abbr title="GNU Revision Control System">RCS</abbr> checked in the new revision it also updated
-the <code class="docutils literal"><span class="pre">$Id$</span></code> tag.</p>
-<div class="highlight-console"><div class="highlight"><pre><span></span><span class="gp">$</span> rlog ./myscript.sh
+the <code class="docutils literal notranslate"><span class="pre">$Id$</span></code> tag.</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> rlog ./myscript.sh
 
 <span class="go">RCS file: ./RCS/myscript.sh,v</span>
 <span class="go">Working file: ./myscript.sh</span>
@@ -393,16 +257,16 @@ the <code class="docutils literal"><span class="pre">$Id$</span></code> tag.</p>
 files, it accepts multiple files per command line(using normal shell
 wild-carding) and provides all the information <abbr title="GNU Revision Control System">RCS</abbr> has on a file. Should you
 ever need to only know the changes that were made to the current revision you
-can use the <code class="xref std std-option docutils literal"><span class="pre">-r</span></code> option as in <code class="docutils literal"><span class="pre">rlog</span> <span class="pre">-r</span> <span class="pre">filename</span></code>. You can also check
-changes between revisions of files using the command like <code class="docutils literal"><span class="pre">rlog</span> <span class="pre">-r1.1,1.2</span>
+can use the <code class="xref std std-option docutils literal notranslate"><span class="pre">-r</span></code> option as in <code class="docutils literal notranslate"><span class="pre">rlog</span> <span class="pre">-r</span> <span class="pre">filename</span></code>. You can also check
+changes between revisions of files using the command like <code class="docutils literal notranslate"><span class="pre">rlog</span> <span class="pre">-r1.1,1.2</span>
 <span class="pre">filename</span></code>.</p>
-<p>The <code class="xref std std-option docutils literal"><span class="pre">-r</span></code> option of <abbr title="GNU Revision Control System">RCS</abbr> is one of its most powerful, it is available
-in all the commands and shares the same semantics throughout. If <code class="xref std std-option docutils literal"><span class="pre">-r</span></code>
-is used with <strong class="command">ci</strong> it forces a bump, for example <code class="docutils literal"><span class="pre">ci</span> <span class="pre">-r1.7</span> <span class="pre">filename</span></code>
+<p>The <code class="xref std std-option docutils literal notranslate"><span class="pre">-r</span></code> option of <abbr title="GNU Revision Control System">RCS</abbr> is one of its most powerful, it is available
+in all the commands and shares the same semantics throughout. If <code class="xref std std-option docutils literal notranslate"><span class="pre">-r</span></code>
+is used with <strong class="command">ci</strong> it forces a bump, for example <code class="docutils literal notranslate"><span class="pre">ci</span> <span class="pre">-r1.7</span> <span class="pre">filename</span></code>
 will force <abbr title="GNU Revision Control System">RCS</abbr> to check in filename as revision 1.7. Used with <strong class="command">co</strong>
 you can pull any revision of the file from <abbr title="GNU Revision Control System">RCS</abbr> history. Used with
 <strong class="command">rcsdiff</strong> you can create a diff between any revision under <abbr title="GNU Revision Control System">RCS</abbr>, for
-example <code class="docutils literal"><span class="pre">rcsdiff</span> <span class="pre">-r1.1,1.8</span> <span class="pre">-u</span> <span class="pre">filename</span></code> will output a unified context diff of
+example <code class="docutils literal notranslate"><span class="pre">rcsdiff</span> <span class="pre">-r1.1,1.8</span> <span class="pre">-u</span> <span class="pre">filename</span></code> will output a unified context diff of
 the changes from revision
 1.1 to 1.8.</p>
 <p><abbr title="GNU Revision Control System">RCS</abbr> really is that simple to use, it does have many more options that are not
@@ -417,8 +281,8 @@ silly little shell Hello World examples.</p>
 <h2>Recap<a class="headerlink" href="#recap" title="Permalink to this headline">¶</a></h2>
 <p>To recap on <abbr title="GNU Revision Control System">RCS</abbr> usage</p>
 <ul class="simple">
-<li><p>Make the <code class="docutils literal"><span class="pre">RCS</span></code> directory.</p></li>
-<li><p>Insert <abbr title="GNU Revision Control System">RCS</abbr> tags, such as <code class="docutils literal"><span class="pre">$Id$</span></code>, in to your original files to help you
+<li><p>Make the <code class="docutils literal notranslate"><span class="pre">RCS</span></code> directory.</p></li>
+<li><p>Insert <abbr title="GNU Revision Control System">RCS</abbr> tags, such as <code class="docutils literal notranslate"><span class="pre">$Id$</span></code>, in to your original files to help you
 keep track.  - Edit your files.</p></li>
 <li><p>Use <strong class="command">ci</strong> to commit your revisions to the <abbr title="GNU Revision Control System">RCS</abbr> history and annotate
 changes made. You can also use <strong class="command">rcsdiff</strong> to see what changes you
@@ -436,8 +300,8 @@ including the <abbr title="GNU Revision Control System">RCS</abbr> status monito
 <p>The screenshot to the right shows <strong class="command">rcsi</strong> in use on a sample partially
 <abbr title="GNU Revision Control System">RCS</abbr> controlled directory.  All the information it contains should be fairly
 self explanatory, and even if it isn’t the package comes with a comprehensive
-man page and <code class="file docutils literal"><span class="pre">README</span></code>.</p>
-<div class="highlight-text"><div class="highlight"><pre><span></span>1.2          (root     21-Aug-05):             eval find . -xdev -depth ${exceptions}   -type d -empty -exec rmdir &#39;{}&#39; \\&#39;;&#39;
+man page and <code class="file docutils literal notranslate"><span class="pre">README</span></code>.</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>1.2          (root     21-Aug-05):             eval find . -xdev -depth ${exceptions}   -type d -empty -exec rmdir &#39;{}&#39; \\&#39;;&#39;
 1.2          (root     21-Aug-05):             eend 0
 1.2          (root     21-Aug-05):         else
 1.1          (root     16-Jul-05):             ebegin &quot;Cleaning /tmp directory&quot;
@@ -452,8 +316,8 @@ man page and <code class="file docutils literal"><span class="pre">README</span>
 a config file which is maintained using <abbr title="GNU Revision Control System">RCS</abbr> by Gentoo’s
 <strong class="command">dispatch-conf</strong> tool.  It allows you to simply see which revision
 introduced a change to a specific line.  You can also choose to annotate
-specific <abbr title="GNU Revision Control System">RCS</abbr> revisions using the <code class="xref std std-option docutils literal"><span class="pre">--revision</span></code> option, or specific
-dates with <code class="xref std std-option docutils literal"><span class="pre">--date</span></code> option.  <a class="reference external" href="http://blame.sourceforge.net/">blame</a> has also has a very comprehensive
+specific <abbr title="GNU Revision Control System">RCS</abbr> revisions using the <code class="xref std std-option docutils literal notranslate"><span class="pre">--revision</span></code> option, or specific
+dates with <code class="xref std std-option docutils literal notranslate"><span class="pre">--date</span></code> option.  <a class="reference external" href="http://blame.sourceforge.net/">blame</a> has also has a very comprehensive
 manual page included with it which you should read if you want to enjoy its
 full power.</p>
 <p>There are many other tools available which use <abbr title="GNU Revision Control System">RCS</abbr> as a backend, and as long
@@ -464,77 +328,451 @@ this short text has been helpful to you.</p>
 </div>
 </div>
 
-
-           </div>
-           <div class="articleComments">
-            
-           </div>
-          </div>
-          <footer>
+  <div class="section">
   
-    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-      
-        <a href="tdd_distros.html" class="btn btn-neutral float-right" title="TDD distro development" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
-      
-      
-        <a href="mutt_config_snippets.html" class="btn btn-neutral" title="mutt configuration snippets" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
-      
-    </div>
+    
+
+
+<div class="section">
+  <span style="float: left;">
   
+  </span>
+  <span>&nbsp;</span>
+  <span style="float: right;">
+  
+  Next: 
+  <a href="tips/emacs_gtk_shortcuts.html">
+    Proper keyboard shortcuts in GTK+
+    
+  </a>
+  </span>
+  
+</div>
 
-  <hr/>
-
-  <div role="contentinfo">
-    <p>
-        &copy; <a href="../copyright.html">Copyright</a> 2009-2018  James Rowe.
-      Last updated on &#39;2018-01-24 [cb31e9e]&#39;.
-
-    </p>
+  
+  
   </div>
-  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
 
-</footer>
-
+          </div>
+          
         </div>
       </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<p class="logo">
+  <a href="../index.html">
+    <img class="logo" src="../_static/logo.png" alt="Logo"/>
+    
+  </a>
+</p>
 
-    </section>
-
-  </div>
-  
 
 
-  
 
-    <script type="text/javascript">
-        var DOCUMENTATION_OPTIONS = {
-            URL_ROOT:'../',
-            VERSION:'0.1.0',
-            COLLAPSE_INDEX:false,
-            FILE_SUFFIX:'.html',
-            HAS_SOURCE:  false,
-            SOURCELINK_SUFFIX: '.txt'
-        };
-    </script>
-      <script type="text/javascript" src="../_static/jquery.js"></script>
-      <script type="text/javascript" src="../_static/underscore.js"></script>
-      <script type="text/javascript" src="../_static/doctools.js"></script>
 
-  
+
+
+
 
   
   
-    <script type="text/javascript" src="../_static/js/theme.js"></script>
+  <h2>
+  
+  
+    2003-09-05
+  
+  </h2>
+
+  <ul>
+    
+
   
 
   
-  
-  <script type="text/javascript">
-      jQuery(function () {
-          SphinxRtdTheme.StickyNav.enable();
-      });
-  </script>
-   
 
-</body>
+  
+
+  
+
+  
+  <li id="tags"><span>Tag:
+    
+      
+      <a href="../blog/tag/vcs.html">vcs</a>
+      
+    </li>
+  
+  
+  </ul>
+
+
+<h3>Navigation</h3>
+<p class="caption"><span class="caption-text">Contents</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../projects.html">Projects</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Articles</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="dropping_gentoo.html">Dropping Gentoo</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dropping_gentoo_reflex.html">Dropping Gentoo reflex</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fossil.html"><strong class="command">fossil</strong> experiments</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mutt_config_snippets.html"><strong class="command">mutt</strong> configuration snippets</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Introduction to <abbr title="GNU Revision Control System">RCS</abbr></a></li>
+<li class="toctree-l2"><a class="reference internal" href="tdd_distros.html"><abbr title="Test Driven Development">TDD</abbr> distro development</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#further-categories">Further categories</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../thoughts/index.html">Thoughts</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../colophon.html">Colophon</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../contact.html">Contact details</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../consult.html">Consulting services</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../copyright.html">Copyright information</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../glossary.html">Glossary</a></li>
+</ul>
+
+
+  <h3><a href="../blog.html">Recent Posts</a></h3>
+  <ul>
+    
+    
+      <li><a href="../thoughts/brexit_through_the_gift_shop.html">08 June - brexit through the gift shop</a></li>
+    
+      <li><a href="../thoughts/metro_city.html">03 September - Burning down the streets</a></li>
+    
+      <li><a href="fossil.html">12 November - fossil experiments</a></li>
+    
+      <li><a href="../thoughts/disconnect.html">18 September - Cleanse thy soul</a></li>
+    
+      <li><a href="../thoughts/burn_out.html">03 September - Open Source and enjoyment</a></li>
+    
+  </ul>
+
+  <h3><a href="../blog/tag.html">Tags</a></h3>
+  <style type="text/css">
+    ul.ablog-cloud {list-style: none; overflow: auto;}
+    ul.ablog-cloud li {float: left; height: 20pt; line-height: 18pt; margin-right: 5px;}
+    ul.ablog-cloud a {text-decoration: none; vertical-align: middle;}
+    li.ablog-cloud-1{font-size: 80%;}
+    li.ablog-cloud-2{font-size: 95%;}
+    li.ablog-cloud-3{font-size: 110%;}
+    li.ablog-cloud-4{font-size: 125%;}
+    li.ablog-cloud-5{font-size: 140%;}
+  </style>
+  <ul class="ablog-cloud">
+    
+      
+      <li class="ablog-cloud ablog-cloud-3">
+        <a href="../blog/tag/gtk.html">GTK+</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-2">
+        <a href="../blog/tag/x11.html">X11</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-2">
+        <a href="../blog/tag/abook.html">abook</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-3">
+        <a href="../blog/tag/awesome.html">awesome</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-2">
+        <a href="../blog/tag/bash.html">bash</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-1">
+        <a href="../blog/tag/blog.html">blog</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-1">
+        <a href="../blog/tag/bts.html">bts</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-1">
+        <a href="../blog/tag/bugzilla.html">bugzilla</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-1">
+        <a href="../blog/tag/burnout.html">burnout</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-2">
+        <a href="../blog/tag/configs.html">configs</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-1">
+        <a href="../blog/tag/csv.html">csv</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-1">
+        <a href="../blog/tag/denoise.html">denoise</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-3">
+        <a href="../blog/tag/devel.html">devel</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-1">
+        <a href="../blog/tag/development.html">development</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-1">
+        <a href="../blog/tag/emacs.html">emacs</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-1">
+        <a href="../blog/tag/focus.html">focus</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-1">
+        <a href="../blog/tag/fossil.html">fossil</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-4">
+        <a href="../blog/tag/gentoo.html">gentoo</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-2">
+        <a href="../blog/tag/git.html">git</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-1">
+        <a href="../blog/tag/gmail.html">gmail</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-1">
+        <a href="../blog/tag/history.html">history</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-1">
+        <a href="../blog/tag/hobbies.html">hobbies</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-1">
+        <a href="../blog/tag/jnrowe-misc.html">jnrowe-misc</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-5">
+        <a href="../blog/tag/life.html">life</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-3">
+        <a href="../blog/tag/linux.html">linux</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-2">
+        <a href="../blog/tag/mail.html">mail</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-3">
+        <a href="../blog/tag/mutt.html">mutt</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-1">
+        <a href="../blog/tag/net.html">net</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-1">
+        <a href="../blog/tag/noise.html">noise</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-1">
+        <a href="../blog/tag/oss.html">oss</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-2">
+        <a href="../blog/tag/politics.html">politics</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-1">
+        <a href="../blog/tag/privacy.html">privacy</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-1">
+        <a href="../blog/tag/probit.html">probit</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-2">
+        <a href="../blog/tag/projects.html">projects</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-1">
+        <a href="../blog/tag/python.html">python</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-1">
+        <a href="../blog/tag/readline.html">readline</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-1">
+        <a href="../blog/tag/remind.html">remind</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-1">
+        <a href="../blog/tag/site.html">site</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-2">
+        <a href="../blog/tag/software.html">software</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-5">
+        <a href="../blog/tag/styling.html">styling</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-1">
+        <a href="../blog/tag/sup.html">sup</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-1">
+        <a href="../blog/tag/testing.html">testing</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-1">
+        <a href="../blog/tag/three.html">three</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-2">
+        <a href="../blog/tag/unix.html">unix</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-4">
+        <a href="../blog/tag/vcs.html">vcs</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-3">
+        <a href="../blog/tag/vim.html">vim</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-1">
+        <a href="../blog/tag/web.html">web</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-3">
+        <a href="../blog/tag/work.html">work</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-1">
+        <a href="../blog/tag/zsh.html">zsh</a></li>
+      
+    
+  </ul>
+
+  <h3><a href="../blog/archive.html">Archives</a></h3>
+  <ul>
+  
+    
+    <li><a href="../blog/2018.html">2018 (1)</a></li>
+    
+  
+    
+    <li><a href="../blog/2017.html">2017 (1)</a></li>
+    
+  
+    
+    <li><a href="../blog/2014.html">2014 (12)</a></li>
+    
+  
+    
+    <li><a href="../blog/2013.html">2013 (2)</a></li>
+    
+  
+    
+    <li><a href="../blog/2011.html">2011 (1)</a></li>
+    
+  
+    
+    <li><a href="../blog/2010.html">2010 (1)</a></li>
+    
+  
+    
+    <li><a href="../blog/2009.html">2009 (24)</a></li>
+    
+  
+    
+    <li><a href="../blog/2007.html">2007 (2)</a></li>
+    
+  
+    
+    <li><a href="../blog/2003.html">2003 (1)</a></li>
+    
+  
+  </ul>
+
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    </div>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2009-2018  James Rowe.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.7.6</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.11</a>
+      
+    </div>
+
+    
+
+    
+  </body>
 </html>

@@ -1,220 +1,51 @@
 
-
 <!DOCTYPE html>
-<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
-<head>
-  <meta charset="utf-8">
-  
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
-  <title>Gentoo one liners &mdash; JNRowe</title>
-  
 
-  
-  
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" />
+    <title>Gentoo one liners &#8212; JNRowe</title>
+    <link rel="stylesheet" href="../../_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../_static/doctools.js"></script>
     <link rel="shortcut icon" href="../../_static/icon.ico"/>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="copyright" title="Copyright" href="../../copyright.html" />
+    <link rel="next" title="Importing gmail filters in mutt" href="Importing_gmail_filters_in_mutt.html" />
+    <link rel="prev" title="Formatting CSV files in the shell" href="Formatting_csv_files_in_the_shell.html" />
   
-  
-  
-
-  
-
-  
-  
-    
-
-  
-
-  
-  
-    <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
-  
-
-  
-
-  
-        <link rel="index" title="Index"
-              href="../../genindex.html"/>
-        <link rel="search" title="Search" href="../../search.html"/>
-        <link rel="copyright" title="Copyright" href="../../copyright.html"/>
-    <link rel="top" title="JNRowe" href="../../index.html"/>
-        <link rel="up" title="Tips" href="index.html"/>
-        <link rel="next" title="Importing gmail filters in mutt" href="Importing_gmail_filters_in_mutt.html"/>
-        <link rel="prev" title="Formatting CSV files in the shell" href="Formatting_csv_files_in_the_shell.html"/>
-    <link rel="alternate" type="application/atom+xml" title="Updated items" href="/updates.atom" />
-
-  
-  <script src="../../_static/js/modernizr.min.js"></script>
-
-</head>
-
-<body class="wy-body-for-nav" role="document">
-
    
-  <div class="wy-grid-for-nav">
-
-    
-    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
-      <div class="wy-side-scroll">
-        <div class="wy-side-nav-search">
-          
-
-          
-            <a href="../../index.html" class="icon icon-home"> JNRowe
-          
-
-          
-          </a>
-
-          
-            
-            
-              <div class="version">
-                0.1
-              </div>
-            
-          
-
-          
-<div role="search">
-  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" />
-    <input type="hidden" name="check_keywords" value="yes" />
-    <input type="hidden" name="area" value="default" />
-  </form>
-</div>
-
-          
-        </div>
-
-        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
-          
-            
-            
-              
-            
-            
-              <p class="caption"><span class="caption-text">Contents</span></p>
-<ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="../../projects.html">Projects</a></li>
-<li class="toctree-l1 current"><a class="reference internal" href="../index.html">Articles</a><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="../dropping_gentoo.html">Dropping Gentoo</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../dropping_gentoo_reflex.html">Dropping Gentoo reflex</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../fossil.html"><strong class="command">fossil</strong> experiments</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../mutt_config_snippets.html"><strong class="command">mutt</strong> configuration snippets</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../rcs.html">Introduction to <abbr title="GNU Revision Control System">RCS</abbr></a></li>
-<li class="toctree-l2"><a class="reference internal" href="../tdd_distros.html"><abbr title="Test Driven Development">TDD</abbr> distro development</a></li>
-<li class="toctree-l2 current"><a class="reference internal" href="../index.html#further-categories">Further categories</a><ul class="current">
-<li class="toctree-l3 current"><a class="reference internal" href="index.html">Tips</a><ul class="current">
-<li class="toctree-l4"><a class="reference internal" href="BTS_as_a_task_manager.html"><abbr title="Bug Tracking System">BTS</abbr> as a task manager</a></li>
-<li class="toctree-l4"><a class="reference internal" href="Beyond_tab_completion.html">Beyond simple tab completion</a></li>
-<li class="toctree-l4"><a class="reference internal" href="Bugzilla_real_names.html">Bugzilla mail with real names</a></li>
-<li class="toctree-l4"><a class="reference internal" href="Compiling_in_vim.html">Compiling C source in vim</a></li>
-<li class="toctree-l4"><a class="reference internal" href="Context_aware_diffs_with_git.html">Context aware diffs with git</a></li>
-<li class="toctree-l4"><a class="reference internal" href="Custom_locations_in_the_GTK_filechooser.html">Custom keybindings in the GTK+ file dialogs</a></li>
-<li class="toctree-l4"><a class="reference internal" href="Debugging_python_regexps.html">Debugging Python <abbr title="Regular Expression">RegEx</abbr></a></li>
-<li class="toctree-l4"><a class="reference internal" href="Disabling_cursor_blinking_in_GTK.html">Disabling cursor blinking in GTK+</a></li>
-<li class="toctree-l4"><a class="reference internal" href="Fancy_awesome_theming.html">Fancy awesome theming</a></li>
-<li class="toctree-l4"><a class="reference internal" href="Finding_a_windows_owner.html">Finding a window’s owner</a></li>
-<li class="toctree-l4"><a class="reference internal" href="Formatting_csv_files_in_the_shell.html">Formatting <abbr title="Comma Separated Values">CSV</abbr> files in the shell</a></li>
-<li class="toctree-l4 current"><a class="current reference internal" href="#">Gentoo one liners</a></li>
-<li class="toctree-l4"><a class="reference internal" href="Importing_gmail_filters_in_mutt.html">Importing gmail filters in mutt</a></li>
-<li class="toctree-l4"><a class="reference internal" href="Instant_web_server.html">Instant web server</a></li>
-<li class="toctree-l4"><a class="reference internal" href="Kick_me_birthday_reminders.html">“Kick me” birthday reminders</a></li>
-<li class="toctree-l4"><a class="reference internal" href="Making_a_nice_home.html">Making a nice home</a></li>
-<li class="toctree-l4"><a class="reference internal" href="Making_a_nice_home.html#permissions">Permissions</a></li>
-<li class="toctree-l4"><a class="reference internal" href="Making_a_nice_home.html#vim-hacks">vim hacks</a></li>
-<li class="toctree-l4"><a class="reference internal" href="Making_a_nice_home.html#documentation">Documentation</a></li>
-<li class="toctree-l4"><a class="reference internal" href="Populating_sup_contacts_from_abook.html">Populating <strong class="command">sup</strong> contacts from abook</a></li>
-<li class="toctree-l4"><a class="reference internal" href="Sharing_Xresources_between_systems.html">Sharing Xresources between systems</a></li>
-<li class="toctree-l4"><a class="reference internal" href="Simple_notifications_in_awesome.html">Simple notifications in awesome</a></li>
-<li class="toctree-l4"><a class="reference internal" href="Simple_notifications_in_awesome.html#window-creation-notifications">Window creation notifications</a></li>
-<li class="toctree-l4"><a class="reference internal" href="Simple_notifications_in_awesome.html#network-notifications">Network notifications</a></li>
-<li class="toctree-l4"><a class="reference internal" href="Theming_mutt.html">Theming mutt</a></li>
-<li class="toctree-l4"><a class="reference internal" href="Three_mobile_broadband_in_linux.html">Three mobile broadband in Linux</a></li>
-<li class="toctree-l4"><a class="reference internal" href="Toggling_settings_in_vim.html">Toggling settings in vim</a></li>
-<li class="toctree-l4"><a class="reference internal" href="Uber_pink_prompts.html">Uber pink prompts</a></li>
-<li class="toctree-l4"><a class="reference internal" href="Visual_vim_mode_identifier.html">Visual vim mode identifier</a></li>
-<li class="toctree-l4"><a class="reference internal" href="Zsh_and_the_vcs.html">Zsh and the <abbr title="Version Control System">VCS</abbr></a></li>
-<li class="toctree-l4"><a class="reference internal" href="emacs_gtk_shortcuts.html">Proper keyboard shortcuts in GTK+</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="../probits/index.html">Project postmortems</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="../../thoughts/index.html">Thoughts</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../colophon.html">Colophon</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../contact.html">Contact details</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../consult.html">Consulting services</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../copyright.html">Copyright information</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../glossary.html">Glossary</a></li>
-</ul>
-
-            
-          
-        </div>
-      </div>
-    </nav>
-
-    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
-
-      
-      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
-        
-          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="../../index.html">JNRowe</a>
-        
-      </nav>
-
-
-      
-      <div class="wy-nav-content">
-        <div class="rst-content">
-          
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<div role="navigation" aria-label="breadcrumbs navigation">
-
-  <ul class="wy-breadcrumbs">
-    
-      <li><a href="../../index.html">Docs</a> &raquo;</li>
-        
-          <li><a href="../index.html">Articles</a> &raquo;</li>
-        
-          <li><a href="index.html">Tips</a> &raquo;</li>
-        
-      <li>Gentoo one liners</li>
-    
-    
-      <li class="wy-breadcrumbs-aside">
-        
-            
-        
-      </li>
-    
-  </ul>
+  <link rel="stylesheet" href="../../_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
 
   
-  <hr/>
-</div>
-          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
-           <div itemprop="articleBody">
+  <link rel="alternate" type="application/atom+xml"  href="../../blog/atom.xml" title="JNRowe">
+  
+  
+  <style type="text/css">
+    ul.ablog-archive {list-style: none; overflow: auto; margin-left: 0px}
+    ul.ablog-archive li {float: left; margin-right: 5px; font-size: 80%}
+    ul.postlist a {font-style: italic;}
+    ul.postlist-style-disc {list-style-type: disc;}
+    ul.postlist-style-none {list-style-type: none;}
+    ul.postlist-style-circle {list-style-type: circle;}
+  </style>
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
             
   <div class="section" id="gentoo-one-liners">
 <h1>Gentoo one liners<a class="headerlink" href="#gentoo-one-liners" title="Permalink to this headline">¶</a></h1>
@@ -224,15 +55,15 @@ system.  I found myself posting extended replies to some of the questions and
 I’m reposting a few of those here.</p>
 <blockquote>
 <div><p>How do I get <em>just the list</em> of packages that are installed but not in
-<code class="file docutils literal"><span class="pre">world</span></code>?</p>
+<code class="file docutils literal notranslate"><span class="pre">world</span></code>?</p>
 </div></blockquote>
-<p>The constraint here is packages that were installed with <code class="xref std std-option docutils literal"><span class="pre">--oneshot</span></code>,
-or manually removed from <code class="file docutils literal"><span class="pre">/var/lib/portage/world</span></code>, which means that they
+<p>The constraint here is packages that were installed with <code class="xref std std-option docutils literal notranslate"><span class="pre">--oneshot</span></code>,
+or manually removed from <code class="file docutils literal notranslate"><span class="pre">/var/lib/portage/world</span></code>, which means that they
 will no longer be updated automatically.  I often use this for packages I’m
 just playing with, and it appears lots of others do the same.  While the output
-of <code class="docutils literal"><span class="pre">emerge</span> <span class="pre">--pretend</span> <span class="pre">--depclean</span></code> is all that is really needed, the question
+of <code class="docutils literal notranslate"><span class="pre">emerge</span> <span class="pre">--pretend</span> <span class="pre">--depclean</span></code> is all that is really needed, the question
 is how to get a list of just the packages.</p>
-<div class="highlight-console"><div class="highlight"><pre><span></span><span class="gp">$</span> emerge --pretend --depclean
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> emerge --pretend --depclean
 <span class="go">&lt;snipped heaps of output&gt;</span>
 <span class="go">gnome-base/orbit</span>
 <span class="go">    selected: 2.14.17</span>
@@ -269,7 +100,7 @@ is how to get a list of just the packages.</p>
 <a class="reference external" href="http://sed.sourceforge.net/">sed</a>.  We can even use the one liner as input to a larger function if we only
 want to see top-level packages; that is packages that aren’t listed as
 dependencies of other packages:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span>alias pkgclean=&quot;emerge ----pretend --depclean | sed -n &#39;/^ [a-z]/s,^ ,,p&#39; | sort&quot;
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>alias pkgclean=&quot;emerge ----pretend --depclean | sed -n &#39;/^ [a-z]/s,^ ,,p&#39; | sort&quot;
 
 toppkgclean() {
     local depfiles=$(find /var/db/pkg/ -name RDEPEND -o -name PDEPEND)
@@ -285,8 +116,8 @@ for use in :file:`package.keywords`?
 </pre></div>
 </div>
 <p>I actually wrote the following little function in reply to a user asking
-a similar question in <code class="docutils literal"><span class="pre">#gentoo</span></code> on Freenode a couple of months ago:</p>
-<div class="highlight-bash"><div class="highlight"><pre><span></span>arch_unmask<span class="o">()</span> <span class="o">{</span>
+a similar question in <code class="docutils literal notranslate"><span class="pre">#gentoo</span></code> on Freenode a couple of months ago:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>arch_unmask<span class="o">()</span> <span class="o">{</span>
     <span class="nb">local</span> s <span class="k">done</span>
     <span class="k">if</span> <span class="o">[[</span> -z <span class="nv">$1</span> <span class="o">]]</span>
     <span class="k">then</span>
@@ -315,100 +146,480 @@ a similar question in <code class="docutils literal"><span class="pre">#gentoo</
 <p class="admonition-title">Note</p>
 <p>If you’re using our Gentoo boxes at the office the function will be much
 faster if you replace the call to <strong class="command">portageq</strong> by
-<code class="docutils literal"><span class="pre">/var/lib/repos/*</span></code>, as our package trees are always installed there.  The
-<strong class="command">portageq</strong> call is mainly there for users who use <code class="docutils literal"><span class="pre">/usr/portage</span></code>
-and <code class="docutils literal"><span class="pre">/usr/local/portage</span></code>, or other such monstrosities.</p>
+<code class="docutils literal notranslate"><span class="pre">/var/lib/repos/*</span></code>, as our package trees are always installed there.  The
+<strong class="command">portageq</strong> call is mainly there for users who use <code class="docutils literal notranslate"><span class="pre">/usr/portage</span></code>
+and <code class="docutils literal notranslate"><span class="pre">/usr/local/portage</span></code>, or other such monstrosities.</p>
 </div>
 <p>The final question I looked at was:</p>
 <blockquote>
-<div><p>Is there an easy way to clean all the old modules from <code class="docutils literal"><span class="pre">/lib/modules</span></code>?</p>
+<div><p>Is there an easy way to clean all the old modules from <code class="docutils literal notranslate"><span class="pre">/lib/modules</span></code>?</p>
 </div></blockquote>
 <p>Assuming you are trying to remove all modules that don’t belong to the current
-kernel this is very easy using <strong class="command">bash</strong>’s <code class="docutils literal"><span class="pre">extglob</span></code> support.  It may
+kernel this is very easy using <strong class="command">bash</strong>’s <code class="docutils literal notranslate"><span class="pre">extglob</span></code> support.  It may
 need to be enabled in your session, you can test whether it is enabled with
-<code class="docutils literal"><span class="pre">shopt</span> <span class="pre">extglob</span></code>.</p>
-<div class="highlight-console"><div class="highlight"><pre><span></span><span class="gp">$</span> <span class="nb">echo</span> /lib/modules/*
+<code class="docutils literal notranslate"><span class="pre">shopt</span> <span class="pre">extglob</span></code>.</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> <span class="nb">echo</span> /lib/modules/*
 <span class="go">/lib/modules/2.6.31.1 /lib/modules/2.6.31.2-jr2 /lib/modules/2.6.31.3-mk1</span>
 <span class="gp">$</span> <span class="nb">echo</span> /lib/modules/!<span class="o">(</span><span class="k">$(</span>uname -r<span class="k">)</span><span class="o">)</span>
 <span class="go">/lib/modules/2.6.31.1 /lib/modules/2.6.31.2-jr2</span>
 </pre></div>
 </div>
-<p>The <code class="docutils literal"><span class="pre">!($(uname</span> <span class="pre">-r))</span></code> syntax tells bash to match all but <code class="docutils literal"><span class="pre">2.6.31.3-mk1</span></code> (the
-output of <code class="docutils literal"><span class="pre">uname</span> <span class="pre">-r</span></code> on my system), there are plenty of other uses for
-<code class="docutils literal"><span class="pre">extglob</span></code> and the <a class="reference external" href="http://www.gnu.org/software/bash/manual/html_node/Pattern-Matching.html#Pattern-Matching">documentation</a> has examples.</p>
+<p>The <code class="docutils literal notranslate"><span class="pre">!($(uname</span> <span class="pre">-r))</span></code> syntax tells bash to match all but <code class="docutils literal notranslate"><span class="pre">2.6.31.3-mk1</span></code> (the
+output of <code class="docutils literal notranslate"><span class="pre">uname</span> <span class="pre">-r</span></code> on my system), there are plenty of other uses for
+<code class="docutils literal notranslate"><span class="pre">extglob</span></code> and the <a class="reference external" href="http://www.gnu.org/software/bash/manual/html_node/Pattern-Matching.html#Pattern-Matching">documentation</a> has examples.</p>
 </div>
 
-
-           </div>
-           <div class="articleComments">
-            
-           </div>
-          </div>
-          <footer>
+  <div class="section">
   
-    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-      
-        <a href="Importing_gmail_filters_in_mutt.html" class="btn btn-neutral float-right" title="Importing gmail filters in mutt" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
-      
-      
-        <a href="Formatting_csv_files_in_the_shell.html" class="btn btn-neutral" title="Formatting CSV files in the shell" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
-      
-    </div>
+    
+
+
+<div class="section">
+  <span style="float: left;">
   
+  Previous: 
+  <a href="Importing_gmail_filters_in_mutt.html">
+    
+    Importing gmail filters in mutt
+  </a>
+  
+  </span>
+  <span>&nbsp;</span>
+  <span style="float: right;">
+  
+  Next: 
+  <a href="Formatting_csv_files_in_the_shell.html">
+    Formatting CSV files in the shell
+    
+  </a>
+  </span>
+  
+</div>
 
-  <hr/>
-
-  <div role="contentinfo">
-    <p>
-        &copy; <a href="../../copyright.html">Copyright</a> 2009-2018  James Rowe.
-      Last updated on &#39;2018-01-24 [cb31e9e]&#39;.
-
-    </p>
+  
+  
   </div>
-  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
 
-</footer>
-
+          </div>
+          
         </div>
       </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<p class="logo">
+  <a href="../../index.html">
+    <img class="logo" src="../../_static/logo.png" alt="Logo"/>
+    
+  </a>
+</p>
 
-    </section>
-
-  </div>
-  
 
 
-  
 
-    <script type="text/javascript">
-        var DOCUMENTATION_OPTIONS = {
-            URL_ROOT:'../../',
-            VERSION:'0.1.0',
-            COLLAPSE_INDEX:false,
-            FILE_SUFFIX:'.html',
-            HAS_SOURCE:  false,
-            SOURCELINK_SUFFIX: '.txt'
-        };
-    </script>
-      <script type="text/javascript" src="../../_static/jquery.js"></script>
-      <script type="text/javascript" src="../../_static/underscore.js"></script>
-      <script type="text/javascript" src="../../_static/doctools.js"></script>
 
-  
+
+
+
 
   
   
-    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+  <h2>
+  
+  
+    2009-10-09
+  
+  </h2>
+
+  <ul>
+    
+
   
 
   
-  
-  <script type="text/javascript">
-      jQuery(function () {
-          SphinxRtdTheme.StickyNav.enable();
-      });
-  </script>
-   
 
-</body>
+  
+
+  
+
+  
+  <li id="tags"><span>Tag:
+    
+      
+      <a href="../../blog/tag/gentoo.html">gentoo</a>
+      
+    </li>
+  
+  
+  </ul>
+
+
+<h3>Navigation</h3>
+<p class="caption"><span class="caption-text">Contents</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../projects.html">Projects</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">Articles</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../dropping_gentoo.html">Dropping Gentoo</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../dropping_gentoo_reflex.html">Dropping Gentoo reflex</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../fossil.html"><strong class="command">fossil</strong> experiments</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../mutt_config_snippets.html"><strong class="command">mutt</strong> configuration snippets</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../rcs.html">Introduction to <abbr title="GNU Revision Control System">RCS</abbr></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../tdd_distros.html"><abbr title="Test Driven Development">TDD</abbr> distro development</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../index.html#further-categories">Further categories</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../thoughts/index.html">Thoughts</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../colophon.html">Colophon</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../contact.html">Contact details</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../consult.html">Consulting services</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../copyright.html">Copyright information</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../glossary.html">Glossary</a></li>
+</ul>
+
+
+  <h3><a href="../../blog.html">Recent Posts</a></h3>
+  <ul>
+    
+    
+      <li><a href="../../thoughts/brexit_through_the_gift_shop.html">08 June - brexit through the gift shop</a></li>
+    
+      <li><a href="../../thoughts/metro_city.html">03 September - Burning down the streets</a></li>
+    
+      <li><a href="../fossil.html">12 November - fossil experiments</a></li>
+    
+      <li><a href="../../thoughts/disconnect.html">18 September - Cleanse thy soul</a></li>
+    
+      <li><a href="../../thoughts/burn_out.html">03 September - Open Source and enjoyment</a></li>
+    
+  </ul>
+
+  <h3><a href="../../blog/tag.html">Tags</a></h3>
+  <style type="text/css">
+    ul.ablog-cloud {list-style: none; overflow: auto;}
+    ul.ablog-cloud li {float: left; height: 20pt; line-height: 18pt; margin-right: 5px;}
+    ul.ablog-cloud a {text-decoration: none; vertical-align: middle;}
+    li.ablog-cloud-1{font-size: 80%;}
+    li.ablog-cloud-2{font-size: 95%;}
+    li.ablog-cloud-3{font-size: 110%;}
+    li.ablog-cloud-4{font-size: 125%;}
+    li.ablog-cloud-5{font-size: 140%;}
+  </style>
+  <ul class="ablog-cloud">
+    
+      
+      <li class="ablog-cloud ablog-cloud-3">
+        <a href="../../blog/tag/gtk.html">GTK+</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-2">
+        <a href="../../blog/tag/x11.html">X11</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-2">
+        <a href="../../blog/tag/abook.html">abook</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-3">
+        <a href="../../blog/tag/awesome.html">awesome</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-2">
+        <a href="../../blog/tag/bash.html">bash</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-1">
+        <a href="../../blog/tag/blog.html">blog</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-1">
+        <a href="../../blog/tag/bts.html">bts</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-1">
+        <a href="../../blog/tag/bugzilla.html">bugzilla</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-1">
+        <a href="../../blog/tag/burnout.html">burnout</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-2">
+        <a href="../../blog/tag/configs.html">configs</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-1">
+        <a href="../../blog/tag/csv.html">csv</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-1">
+        <a href="../../blog/tag/denoise.html">denoise</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-3">
+        <a href="../../blog/tag/devel.html">devel</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-1">
+        <a href="../../blog/tag/development.html">development</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-1">
+        <a href="../../blog/tag/emacs.html">emacs</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-1">
+        <a href="../../blog/tag/focus.html">focus</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-1">
+        <a href="../../blog/tag/fossil.html">fossil</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-4">
+        <a href="../../blog/tag/gentoo.html">gentoo</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-2">
+        <a href="../../blog/tag/git.html">git</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-1">
+        <a href="../../blog/tag/gmail.html">gmail</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-1">
+        <a href="../../blog/tag/history.html">history</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-1">
+        <a href="../../blog/tag/hobbies.html">hobbies</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-1">
+        <a href="../../blog/tag/jnrowe-misc.html">jnrowe-misc</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-5">
+        <a href="../../blog/tag/life.html">life</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-3">
+        <a href="../../blog/tag/linux.html">linux</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-2">
+        <a href="../../blog/tag/mail.html">mail</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-3">
+        <a href="../../blog/tag/mutt.html">mutt</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-1">
+        <a href="../../blog/tag/net.html">net</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-1">
+        <a href="../../blog/tag/noise.html">noise</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-1">
+        <a href="../../blog/tag/oss.html">oss</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-2">
+        <a href="../../blog/tag/politics.html">politics</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-1">
+        <a href="../../blog/tag/privacy.html">privacy</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-1">
+        <a href="../../blog/tag/probit.html">probit</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-2">
+        <a href="../../blog/tag/projects.html">projects</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-1">
+        <a href="../../blog/tag/python.html">python</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-1">
+        <a href="../../blog/tag/readline.html">readline</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-1">
+        <a href="../../blog/tag/remind.html">remind</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-1">
+        <a href="../../blog/tag/site.html">site</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-2">
+        <a href="../../blog/tag/software.html">software</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-5">
+        <a href="../../blog/tag/styling.html">styling</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-1">
+        <a href="../../blog/tag/sup.html">sup</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-1">
+        <a href="../../blog/tag/testing.html">testing</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-1">
+        <a href="../../blog/tag/three.html">three</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-2">
+        <a href="../../blog/tag/unix.html">unix</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-4">
+        <a href="../../blog/tag/vcs.html">vcs</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-3">
+        <a href="../../blog/tag/vim.html">vim</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-1">
+        <a href="../../blog/tag/web.html">web</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-3">
+        <a href="../../blog/tag/work.html">work</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-1">
+        <a href="../../blog/tag/zsh.html">zsh</a></li>
+      
+    
+  </ul>
+
+  <h3><a href="../../blog/archive.html">Archives</a></h3>
+  <ul>
+  
+    
+    <li><a href="../../blog/2018.html">2018 (1)</a></li>
+    
+  
+    
+    <li><a href="../../blog/2017.html">2017 (1)</a></li>
+    
+  
+    
+    <li><a href="../../blog/2014.html">2014 (12)</a></li>
+    
+  
+    
+    <li><a href="../../blog/2013.html">2013 (2)</a></li>
+    
+  
+    
+    <li><a href="../../blog/2011.html">2011 (1)</a></li>
+    
+  
+    
+    <li><a href="../../blog/2010.html">2010 (1)</a></li>
+    
+  
+    
+    <li><a href="../../blog/2009.html">2009 (24)</a></li>
+    
+  
+    
+    <li><a href="../../blog/2007.html">2007 (2)</a></li>
+    
+  
+    
+    <li><a href="../../blog/2003.html">2003 (1)</a></li>
+    
+  
+  </ul>
+
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    </div>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2009-2018  James Rowe.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.7.6</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.11</a>
+      
+    </div>
+
+    
+
+    
+  </body>
 </html>

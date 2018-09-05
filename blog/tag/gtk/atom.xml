@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title type="text">JNRowe - Posts tagged GTK+</title>
+  <id>https://jnrowe.github.io/blog/tag/gtk/atom.xml</id>
+  <updated>2009-10-03T00:00:00Z</updated>
+  <link href="https://jnrowe.github.io/" />
+  <link href="https://jnrowe.github.io/blog/tag/gtk/atom.xml" rel="self" />
+  <subtitle type="text">Ramblings of a tired mind</subtitle>
+  <generator uri="http://ablog.readthedocs.org" version="0.9.2">ABlog</generator>
+  <entry xml:base="https://jnrowe.github.io/blog/tag/gtk/atom.xml">
+    <title type="text">Disabling cursor blinking in GTK+</title>
+    <id>https://jnrowe.github.io/articles/tips/Disabling_cursor_blinking_in_GTK.html</id>
+    <updated>2009-10-03T00:00:00Z</updated>
+    <published>2009-10-03T00:00:00Z</published>
+    <link href="https://jnrowe.github.io/articles/tips/Disabling_cursor_blinking_in_GTK.html" />
+    <author>
+      <name></name>
+    </author>
+    <content type="html">&lt;div class=&quot;section&quot; id=&quot;disabling-cursor-blinking-in-gtk&quot;&gt;
+
+&lt;p&gt;Darren Roberts asks via the EADS Linux list:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;div&gt;&lt;p&gt;In &lt;a class=&quot;reference external&quot; href=&quot;http://pidgin.im/&quot;&gt;pidgin&lt;/a&gt; how can I stop the cursor blinking?&lt;/p&gt;
+&lt;/div&gt;&lt;/blockquote&gt;
+&lt;p&gt;Since we’ve had our &lt;a class=&quot;reference external&quot; href=&quot;http://xmpp.org/&quot;&gt;Jabber&lt;/a&gt; server set up at the office there have been
+countless questions about using &lt;a class=&quot;reference external&quot; href=&quot;http://pidgin.im/&quot;&gt;pidgin&lt;/a&gt; to the various lists, and I feel the
+answer that should often be given is:  Use something else.  There are plenty of
+other clients available; &lt;a class=&quot;reference external&quot; href=&quot;http://live.gnome.org/Empathy&quot;&gt;empathy&lt;/a&gt; is installed on all our Solaris and Linux
+boxes now, &lt;a class=&quot;reference external&quot; href=&quot;http://developer.imendio.com/projects/gossip&quot;&gt;gossip&lt;/a&gt; may already be installed, &lt;a class=&quot;reference external&quot; href=&quot;http://emacs-jabber.sourceforge.net/&quot;&gt;emacs-jabber&lt;/a&gt; seems popular with
+many of our &lt;a class=&quot;reference external&quot; href=&quot;http://www.xemacs.org/&quot;&gt;emacs&lt;/a&gt; using developers, &lt;a class=&quot;reference external&quot; href=&quot;http://www.gajim.org/&quot;&gt;gajim&lt;/a&gt; comes recommended by a few users or
+my favourite &lt;a class=&quot;reference external&quot; href=&quot;http://www.bitlbee.org/&quot;&gt;bitlbee&lt;/a&gt;.  Now, with the rant out of the way we can go back to the
+question at hand…&lt;/p&gt;
+&lt;p&gt;Cursor blinking is a severe annoyance for some people(not me, I patch apps to
+add it), and disabling it for GTK+ applications is really quite simple.   If
+you’re a &lt;a class=&quot;reference external&quot; href=&quot;http://www.gnome.org/&quot;&gt;gnome&lt;/a&gt; user then the setting to change blinking is in the keyboard
+properties dialog that can be found in the system menu.  If you’re using &lt;a class=&quot;reference external&quot; href=&quot;http://www.kde.org/&quot;&gt;KDE&lt;/a&gt;
+you should edit &lt;code class=&quot;file docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;~/.gtkrc-2.0-kde&lt;/span&gt;&lt;/code&gt;.  If you’re using neither gnome or KDE
+you can add a directive to your &lt;code class=&quot;file docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;~/.gtkrc-2.0&lt;/span&gt;&lt;/code&gt;:&lt;/p&gt;
+&lt;div class=&quot;highlight-cpp notranslate&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;gtk&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;cursor&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;blink&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;If it is just the blinking rate that bugs you, then you can give a different
+value for &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;gtk-cursor-blink&lt;/span&gt;&lt;/code&gt;.  The value is given in milliseconds for the
+blink frequency.&lt;/p&gt;
+&lt;p&gt;If you wish to only change the settings in pidgin you can edit
+&lt;code class=&quot;file docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;~/.purple/gtkrc-2.0&lt;/span&gt;&lt;/code&gt; instead of your main &lt;code class=&quot;file docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;~/.gtkrc-2.0&lt;/span&gt;&lt;/code&gt;.&lt;/p&gt;
+&lt;div class=&quot;section&quot; id=&quot;bonus-related-tip&quot;&gt;
+&lt;h2&gt;Bonus related tip&lt;/h2&gt;
+&lt;p&gt;If you’re really driven mad by the blinking cursor, and wish to disable it in
+the console too then add the next little snippet to your shell’s startup file:&lt;/p&gt;
+&lt;div class=&quot;highlight-bash notranslate&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;echo&lt;/span&gt; -e &lt;span class=&quot;s1&quot;&gt;&amp;#39;\033[?48c&amp;#39;&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</content>
+  </entry>
+  <entry xml:base="https://jnrowe.github.io/blog/tag/gtk/atom.xml">
+    <title type="text">Custom keybindings in the GTK+ file dialogs</title>
+    <id>https://jnrowe.github.io/articles/tips/Custom_locations_in_the_GTK_filechooser.html</id>
+    <updated>2009-10-01T00:00:00Z</updated>
+    <published>2009-10-01T00:00:00Z</published>
+    <link href="https://jnrowe.github.io/articles/tips/Custom_locations_in_the_GTK_filechooser.html" />
+    <author>
+      <name></name>
+    </author>
+    <content type="html">&lt;div class=&quot;section&quot; id=&quot;custom-keybindings-in-the-gtk-file-dialogs&quot;&gt;
+
+&lt;p&gt;In &lt;span class=&quot;xref std std-doc&quot;&gt;Fancy_awesome_theming&lt;/span&gt; I included a screenshot that, by accident more
+than design, spawned today’s tip.&lt;/p&gt;
+&lt;a class=&quot;reference external image-reference&quot; href=&quot;/.images/2009-09-28-awesome_theming.png&quot;&gt;&lt;img alt=&quot;gtkrc in vim screenshot&quot; class=&quot;align-right&quot; src=&quot;.images/2009-10-01-gtkrc-mini.png&quot; /&gt;&lt;/a&gt;
+&lt;p&gt;Laura Biddulph sent me a &lt;abbr title=&quot;Short Message Service&quot;&gt;SMS&lt;/abbr&gt; message that read:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;div&gt;&lt;p&gt;Thanks! I saw your &lt;code class=&quot;file docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;gtkrc&lt;/span&gt;&lt;/code&gt;, and now I have keybound faves in the file
+dialog.&lt;/p&gt;
+&lt;/div&gt;&lt;/blockquote&gt;
+&lt;p&gt;The &lt;code class=&quot;file docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;gtkrc&lt;/span&gt;&lt;/code&gt; being referenced is my &lt;a class=&quot;reference external&quot; href=&quot;http://www.gtk.org/&quot;&gt;GTK+&lt;/a&gt; configuration file that could
+be seen in the right hand &lt;a class=&quot;reference external&quot; href=&quot;http://www.vim.org/&quot;&gt;vim&lt;/a&gt; window of the screenshot from that earlier post.
+It was actually open in that screenshot because I was changing my GTK+ theme,
+and not being a &lt;a class=&quot;reference external&quot; href=&quot;http://www.gnome.org/&quot;&gt;gnome&lt;/a&gt; user the simplest way to change it is via my
+&lt;code class=&quot;file docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;~/.gtkrc-2.0&lt;/span&gt;&lt;/code&gt;.  And, if you’re using &lt;a class=&quot;reference external&quot; href=&quot;http://www.kde.org/&quot;&gt;KDE&lt;/a&gt; and wish to the settings for
+GTK+ applications you should edit &lt;code class=&quot;file docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;~/.gtkrc-2.0-kde&lt;/span&gt;&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;So the question becomes, what were the options in that screenshot, and are there
+any other cool and useful things you can do there?&lt;/p&gt;
+&lt;div class=&quot;highlight-cpp notranslate&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;gtk-theme-name = &amp;quot;expose&amp;quot;
+gtk-icon-theme-name = &amp;quot;hicolor&amp;quot;
+gtk-key-theme-name = &amp;quot;Emacs&amp;quot;
+
+binding &amp;quot;some-shortcuts&amp;quot; {
+    bind &amp;quot;&amp;lt;Alt&amp;gt;T&amp;quot; {
+        &amp;quot;location-popup&amp;quot; (&amp;quot;/home/jay/urls&amp;quot;)
+    }
+    bind &amp;quot;&amp;lt;Alt&amp;gt;M&amp;quot; {
+        &amp;quot;location-popup&amp;quot; (&amp;quot;/var/lib/repo/jnrowe-misc&amp;quot;)
+    }
+}
+class &amp;quot;GtkFileChooserDefault&amp;quot; binding &amp;quot;some-shortcuts&amp;quot;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;Ignoring the &lt;strong class=&quot;command&quot;&gt;vim&lt;/strong&gt; &lt;a class=&quot;reference external&quot; href=&quot;http://vimdoc.sourceforge.net/htmldoc/options.html#modeline&quot;&gt;modeline&lt;/a&gt; from the screenshot the first few
+settings are basic theme related options.  &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;gtk-theme-name&lt;/span&gt;&lt;/code&gt; and
+&lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;gtk-icon-theme-name&lt;/span&gt;&lt;/code&gt; set the style and icon groups for GTK+ apps
+respectively.  &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;gtk-key-theme-name&lt;/span&gt;&lt;/code&gt; sets the default keybindings for GTK+
+apps.  By setting it to &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;Emacs&lt;/span&gt;&lt;/code&gt; we have access to the “normal” keybindings we
+expect if we use &lt;a class=&quot;reference external&quot; href=&quot;http://cnswww.cns.cwru.edu/~chet/bash/bashtop.html&quot;&gt;bash&lt;/a&gt; or other common Linux tools, such as &lt;kbd class=&quot;kbd docutils literal notranslate&quot;&gt;C-w&lt;/kbd&gt; to
+delete the word under the cursor.  You can read more about
+&lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;gtk-key-theme-name&lt;/span&gt;&lt;/code&gt; in &lt;span class=&quot;xref std std-doc&quot;&gt;emacs_gtk_shortcuts&lt;/span&gt;.&lt;/p&gt;
+&lt;p&gt;All of the settings above are configurable with a &lt;abbr title=&quot;Graphical User Interface&quot;&gt;GUI&lt;/abbr&gt; if you use gnome or &lt;a class=&quot;reference external&quot; href=&quot;http://www.xfce.org/&quot;&gt;xfce&lt;/a&gt;, but for those of who don’t use those
+desktop environments editing the &lt;code class=&quot;file docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;~/.gtkrc-2.0&lt;/span&gt;&lt;/code&gt; is a reasonable solution.&lt;/p&gt;
+&lt;a class=&quot;reference external image-reference&quot; href=&quot;/_images/2009-10-01-GTK_filechooser.png&quot;&gt;&lt;img alt=&quot;GTK file chooser screenshot&quot; class=&quot;align-left&quot; src=&quot;.images/2009-10-01-GTK_filechooser-mini.png&quot; /&gt;&lt;/a&gt;
+&lt;p&gt;The “some-shortcuts” section is the interesting one for today, it is telling
+GTK+ applications that we want to have our own extra keybindings available when
+opening or saving files.  &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;GTKFileChooser&lt;/span&gt;&lt;/code&gt; is the modern GTK+ file dialog, and
+it already has a set of useful keybindings including:&lt;/p&gt;
+&lt;table class=&quot;docutils&quot;&gt;
+&lt;colgroup&gt;
+&lt;col style=&quot;width: 31%&quot; /&gt;
+&lt;col style=&quot;width: 69%&quot; /&gt;
+&lt;/colgroup&gt;
+&lt;thead&gt;
+&lt;tr class=&quot;row-odd&quot;&gt;&lt;th class=&quot;head&quot;&gt;&lt;p&gt;Key&lt;/p&gt;&lt;/th&gt;
+&lt;th class=&quot;head&quot;&gt;&lt;p&gt;Purpose&lt;/p&gt;&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr class=&quot;row-even&quot;&gt;&lt;td&gt;&lt;p&gt;&lt;kbd class=&quot;kbd docutils literal notranslate&quot;&gt;M-&amp;lt;Home&amp;gt;&lt;/kbd&gt;&lt;/p&gt;&lt;/td&gt;
+&lt;td&gt;&lt;p&gt;Jump to your home directory&lt;/p&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&quot;row-odd&quot;&gt;&lt;td&gt;&lt;p&gt;&lt;kbd class=&quot;kbd docutils literal notranslate&quot;&gt;M-D&lt;/kbd&gt;&lt;/p&gt;&lt;/td&gt;
+&lt;td&gt;&lt;p&gt;Jump to your &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;~/Desktop&lt;/span&gt;&lt;/code&gt; directory&lt;/p&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&quot;row-even&quot;&gt;&lt;td&gt;&lt;p&gt;&lt;kbd class=&quot;kbd docutils literal notranslate&quot;&gt;M-&amp;lt;Up&amp;gt;&lt;/kbd&gt;&lt;/p&gt;&lt;/td&gt;
+&lt;td&gt;&lt;p&gt;Go to current directory’s parent&lt;/p&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&quot;row-odd&quot;&gt;&lt;td&gt;&lt;p&gt;&lt;kbd class=&quot;kbd docutils literal notranslate&quot;&gt;C-L&lt;/kbd&gt;&lt;/p&gt;&lt;/td&gt;
+&lt;td&gt;&lt;p&gt;Display the text location entry box&lt;/p&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;We could actually use the file chooser’s bookmark feature, and access the
+bookmarks with &lt;kbd class=&quot;kbd docutils literal notranslate&quot;&gt;M-1&lt;/kbd&gt; through &lt;kbd class=&quot;kbd docutils literal notranslate&quot;&gt;M-9&lt;/kbd&gt; and &lt;kbd class=&quot;kbd docutils literal notranslate&quot;&gt;M-0&lt;/kbd&gt; for bookmark number
+ten from the dialog.  However, I find it more practical to be able to use
+mnemonic names for favourite locations.  You could even use both if you have an
+excellent memory and a lot of favourite locations!&lt;/p&gt;
+&lt;p&gt;If you wish to add your own bindings the format is hopefully quite
+self-explanatory, just don’t forget to link your bindings to the correct class
+or they will not work.&lt;/p&gt;
+&lt;p&gt;You can also change the default bindings by specifying them in the
+configuration file, for example to use &lt;kbd class=&quot;kbd docutils literal notranslate&quot;&gt;M-&amp;lt;left&amp;gt;&lt;/kbd&gt; and &lt;kbd class=&quot;kbd docutils literal notranslate&quot;&gt;M-&amp;lt;right&amp;gt;&lt;/kbd&gt; to
+skip backward and forward along the directory path:&lt;/p&gt;
+&lt;div class=&quot;highlight-cpp notranslate&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;bind&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;&amp;lt;Alt&amp;gt;Left&amp;quot;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;s&quot;&gt;&amp;quot;up-folder&amp;quot;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;bind&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;&amp;lt;Alt&amp;gt;Right&amp;quot;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;s&quot;&gt;&amp;quot;down-folder&amp;quot;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;Whether you find &lt;kbd class=&quot;kbd docutils literal notranslate&quot;&gt;Up&lt;/kbd&gt; and &lt;kbd class=&quot;kbd docutils literal notranslate&quot;&gt;Down&lt;/kbd&gt; or &lt;kbd class=&quot;kbd docutils literal notranslate&quot;&gt;Left&lt;/kbd&gt; and &lt;kbd class=&quot;kbd docutils literal notranslate&quot;&gt;Right&lt;/kbd&gt;
+easier to remember depends on how you visualise the path, I personally prefer
+the defaults in this instance but the choice is entirely yours.&lt;/p&gt;
+&lt;p&gt;If you decide to significantly modify the bindings you may even find it easier
+to split the &lt;code class=&quot;file docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;~/.gtkrc-2.0&lt;/span&gt;&lt;/code&gt; in to chunks to make it easier to manage or
+share, for this you can use the &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;include&lt;/span&gt;&lt;/code&gt; directive.  An example would be:
+&lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;include&lt;/span&gt; &lt;span class=&quot;pre&quot;&gt;&amp;quot;~/.gtk_bindings&amp;quot;&lt;/span&gt;&lt;/code&gt;.&lt;/p&gt;
+&lt;/div&gt;
+</content>
+  </entry>
+  <entry xml:base="https://jnrowe.github.io/blog/tag/gtk/atom.xml">
+    <title type="text">Proper keyboard shortcuts in GTK+</title>
+    <id>https://jnrowe.github.io/articles/tips/emacs_gtk_shortcuts.html</id>
+    <updated>2007-03-05T00:00:00Z</updated>
+    <published>2007-03-05T00:00:00Z</published>
+    <link href="https://jnrowe.github.io/articles/tips/emacs_gtk_shortcuts.html" />
+    <author>
+      <name></name>
+    </author>
+    <content type="html">&lt;div class=&quot;section&quot; id=&quot;proper-keyboard-shortcuts-in-gtk&quot;&gt;
+
+&lt;p&gt;If you’re used to the old style &lt;a class=&quot;reference external&quot; href=&quot;http://www.gtk.org/&quot;&gt;GTK+&lt;/a&gt; keyboard shortcuts, and find yourself
+continually closing windows when you’re trying to delete a word (like me) then
+add the following to your &lt;code class=&quot;file docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;~/.gtkrc-2.0&lt;/span&gt;&lt;/code&gt;:&lt;/p&gt;
+&lt;div class=&quot;highlight-text notranslate&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;gtk-key-theme-name = &amp;quot;Emacs&amp;quot;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;admonition note&quot;&gt;
+&lt;p class=&quot;admonition-title&quot;&gt;Note&lt;/p&gt;
+&lt;p&gt;This is for people using GTK+ apps, not GNOME.  If you wish to change
+bindings in GNOME you should use the control centre.&lt;/p&gt;
+&lt;/div&gt;
+&lt;p&gt;Using the above you can return to the old default format, but if you only want
+to enable &lt;kbd class=&quot;kbd docutils literal notranslate&quot;&gt;&amp;lt;C-w&amp;gt;&lt;/kbd&gt; and keep the other Windows-style shortcuts you can just
+add:&lt;/p&gt;
+&lt;div class=&quot;highlight-text notranslate&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;binding &amp;quot;gtk-emacs-text-entry&amp;quot;
+{
+    bind &amp;quot;&amp;lt;ctrl&amp;gt;w&amp;quot; { &amp;quot;delete-from-cursor&amp;quot; (word-ends, -1) }
+}
+class &amp;quot;GtkEntry&amp;quot; binding &amp;quot;gtk-emacs-text-entry&amp;quot;
+class &amp;quot;GtkTextView&amp;quot; binding &amp;quot;gtk-emacs-text-entry&amp;quot;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;If you use &lt;a class=&quot;reference external&quot; href=&quot;http://plasmasturm.org/code/gtk-chtheme/&quot;&gt;gtk-chtheme&lt;/a&gt; or &lt;a class=&quot;reference external&quot; href=&quot;http://www.muhri.net/nav.php3?node=gts&quot;&gt;gtk-theme-switch&lt;/a&gt; you should add custom options to
+your &lt;code class=&quot;file docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;~/.gtkrc.mine&lt;/span&gt;&lt;/code&gt; so it isn’t overwritten when you change themes.  See
+the comments in your &lt;code class=&quot;file docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;~/.gtkrc-2.0&lt;/span&gt;&lt;/code&gt; if you use either of these theme
+switchers.&lt;/p&gt;
+&lt;div class=&quot;figure&quot;&gt;
+&lt;img alt=&quot;XFce4 keyboard settings window&quot; src=&quot;.images/xfce4_keyboard.png&quot; /&gt;
+&lt;/div&gt;
+&lt;p&gt;If you’re an &lt;a class=&quot;reference external&quot; href=&quot;http://www.xfce.org/&quot;&gt;XFce&lt;/a&gt; user you can select the Emacs keyboard shortcuts using the
+keyboard settings dialog.&lt;/p&gt;
+&lt;p&gt;If you can’t change the settings for some reason, then you can still use
+a shortcut to delete words.  The default setting, up to at least GTK+ v2.10.9,
+is the finger-stretching &lt;kbd class=&quot;kbd docutils literal notranslate&quot;&gt;&amp;lt;C-backspace&amp;gt;&lt;/kbd&gt;.&lt;/p&gt;
+&lt;p&gt;And finally, if you manage to convince upstream that the default behaviour
+should be the settings in the Emacs theme I’ll owe you a few beers!&lt;/p&gt;
+&lt;/div&gt;
+</content>
+  </entry>
+</feed>

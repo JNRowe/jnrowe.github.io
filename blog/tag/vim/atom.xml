@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title type="text">JNRowe - Posts tagged vim</title>
+  <id>https://jnrowe.github.io/blog/tag/vim/atom.xml</id>
+  <updated>2009-10-13T00:00:00Z</updated>
+  <link href="https://jnrowe.github.io/" />
+  <link href="https://jnrowe.github.io/blog/tag/vim/atom.xml" rel="self" />
+  <subtitle type="text">Ramblings of a tired mind</subtitle>
+  <generator uri="http://ablog.readthedocs.org" version="0.9.2">ABlog</generator>
+  <entry xml:base="https://jnrowe.github.io/blog/tag/vim/atom.xml">
+    <title type="text">Visual vim mode identifier</title>
+    <id>https://jnrowe.github.io/articles/tips/Visual_vim_mode_identifier.html</id>
+    <updated>2009-10-13T00:00:00Z</updated>
+    <published>2009-10-13T00:00:00Z</published>
+    <link href="https://jnrowe.github.io/articles/tips/Visual_vim_mode_identifier.html" />
+    <author>
+      <name></name>
+    </author>
+    <content type="html">&lt;div class=&quot;section&quot; id=&quot;visual-vim-mode-identifier&quot;&gt;
+
+&lt;p&gt;Paul Kerry rants about his problems with &lt;a class=&quot;reference external&quot; href=&quot;http://www.vim.org/&quot;&gt;vim&lt;/a&gt; over the cooler today, and as
+a long time &lt;strong class=&quot;command&quot;&gt;vim&lt;/strong&gt; user I found it hard not to respond to some of the
+points.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;div&gt;&lt;p&gt;All this mode switching makes it hard to know whether typing “Paul” is going
+to insert a huge block of code from the ether or insert, you know, “Paul” on
+the screen.&lt;/p&gt;
+&lt;/div&gt;&lt;/blockquote&gt;
+&lt;p&gt;The point Paul is making is that when he is in &lt;a class=&quot;reference external&quot; href=&quot;http://vimdoc.sourceforge.net/htmldoc/intro.html#vim-modes&quot;&gt;normal mode&lt;/a&gt;, typing the “P” of
+”Paul” can cause &lt;strong class=&quot;command&quot;&gt;vim&lt;/strong&gt; to insert a huge amount of text at the cursor.
+The text comes from the &lt;a class=&quot;reference external&quot; href=&quot;http://vimdoc.sourceforge.net/htmldoc/change.html#quote&quot;&gt;unnamed register&lt;/a&gt;, so it will be whatever potentially
+very large chunk of text he deleted or &lt;a class=&quot;reference external&quot; href=&quot;http://vimdoc.sourceforge.net/htmldoc/change.html#yank&quot;&gt;yanked&lt;/a&gt; last.&lt;/p&gt;
+&lt;img alt=&quot;mode identifier in vim&quot; class=&quot;align-right&quot; src=&quot;.images/2009-10-13-vim_screenshot.png&quot; /&gt;
+&lt;p&gt;If he had just added &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;set&lt;/span&gt; &lt;span class=&quot;pre&quot;&gt;showmode&lt;/span&gt;&lt;/code&gt; to his &lt;code class=&quot;file docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;~/.vimrc&lt;/span&gt;&lt;/code&gt; he would have
+a nice &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;--&lt;/span&gt; &lt;span class=&quot;pre&quot;&gt;INSERT&lt;/span&gt; &lt;span class=&quot;pre&quot;&gt;--&lt;/span&gt;&lt;/code&gt; reminder in the bottom of his terminal window when in
+insert mode, as can be seen in the screenshot on the right.&lt;/p&gt;
+&lt;p&gt;Another option that I use, combined with &lt;a class=&quot;reference external&quot; href=&quot;http://vimdoc.sourceforge.net/htmldoc/options.html#'showmode'&quot;&gt;showmode&lt;/a&gt;, is to change the cursor
+colour when switching to and from &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;insert&lt;/span&gt;&lt;/code&gt; mode.  This unfortunately doesn’t
+work on all terminal types, which means you have to test them individually and
+then set appropriate values for &lt;a class=&quot;reference external&quot; href=&quot;http://vimdoc.sourceforge.net/htmldoc/term.html#'t_SI'&quot;&gt;t_SI&lt;/a&gt; and &lt;a class=&quot;reference external&quot; href=&quot;http://vimdoc.sourceforge.net/htmldoc/term.html#'t_EI'&quot;&gt;t_EI&lt;/a&gt; on each terminal type.  An
+example for &lt;a class=&quot;reference external&quot; href=&quot;http://rxvt.sourceforge.net/&quot;&gt;rxvt&lt;/a&gt;-based terminals, including my favourite &lt;a class=&quot;reference external&quot; href=&quot;http://software.schmorp.de/&quot;&gt;rxvt-unicode&lt;/a&gt;, is
+below:&lt;/p&gt;
+&lt;div class=&quot;highlight-vim notranslate&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &amp;amp;&lt;span class=&quot;nb&quot;&gt;term&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=~&lt;/span&gt;? &lt;span class=&quot;s1&quot;&gt;&amp;#39;^rxvt&amp;#39;&lt;/span&gt; &amp;amp;&amp;amp; exists&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;&amp;amp;t_EI&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;let&lt;/span&gt; &amp;amp;&lt;span class=&quot;nb&quot;&gt;t_EI&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;\033]12;red\007&amp;quot;&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;let&lt;/span&gt; &amp;amp;&lt;span class=&quot;nb&quot;&gt;t_SI&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;\033]12;green\007&amp;quot;&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;endif&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;I use a green cursor to indicate &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;insert&lt;/span&gt;&lt;/code&gt; mode, I tried a number of alternatives
+but found keeping the same cursor colour as my shell sessions was the most
+useful for me.  You can use any colour your terminal supports, including the
+extended 256 colour palette.  For more information on accessing the colours from
+the extended palette see the earlier &lt;span class=&quot;xref std std-doc&quot;&gt;Uber_pink_prompts&lt;/span&gt; tip.&lt;/p&gt;
+&lt;p&gt;You can also use the &lt;a class=&quot;reference external&quot; href=&quot;http://vimdoc.sourceforge.net/htmldoc/autocmd.html#InsertEnter&quot;&gt;InsertEnter&lt;/a&gt; and &lt;a class=&quot;reference external&quot; href=&quot;http://vimdoc.sourceforge.net/htmldoc/autocmd.html#InsertLeave&quot;&gt;InsertLeave&lt;/a&gt; events to call a function
+when changing mode.  There really is no limit to what kind of notifications you
+can use with this method.  Taking the idea too far we could use the &lt;a class=&quot;reference external&quot; href=&quot;http://awesome.naquadah.org/&quot;&gt;awesome&lt;/a&gt;
+notifications from &lt;span class=&quot;xref std std-doc&quot;&gt;Simple_notifications_in_awesome&lt;/span&gt; to display popups
+when we change mode:&lt;/p&gt;
+&lt;div class=&quot;highlight-vim notranslate&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;au&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;InsertEnter&lt;/span&gt; * &lt;span class=&quot;p&quot;&gt;!&lt;/span&gt;echo &lt;span class=&quot;s2&quot;&gt;&amp;quot;notify.start(&amp;#39;Insert mode started&amp;#39;)&amp;quot;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;|&lt;/span&gt; awesome&lt;span class=&quot;p&quot;&gt;-&lt;/span&gt;client
+&lt;span class=&quot;k&quot;&gt;au&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;InsertLeave&lt;/span&gt; * &lt;span class=&quot;p&quot;&gt;!&lt;/span&gt;echo &lt;span class=&quot;s2&quot;&gt;&amp;quot;notify.stop(&amp;#39;Insert mode finished&amp;#39;)&amp;quot;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;|&lt;/span&gt; awesome&lt;span class=&quot;p&quot;&gt;-&lt;/span&gt;client
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;Note that I didn’t say it was a good idea, just that it was possible!&lt;/p&gt;
+&lt;/div&gt;
+</content>
+  </entry>
+  <entry xml:base="https://jnrowe.github.io/blog/tag/vim/atom.xml">
+    <title type="text">Toggling settings in vim</title>
+    <id>https://jnrowe.github.io/articles/tips/Toggling_settings_in_vim.html</id>
+    <updated>2009-10-02T00:00:00Z</updated>
+    <published>2009-10-02T00:00:00Z</published>
+    <link href="https://jnrowe.github.io/articles/tips/Toggling_settings_in_vim.html" />
+    <author>
+      <name></name>
+    </author>
+    <content type="html">&lt;div class=&quot;section&quot; id=&quot;toggling-settings-in-vim&quot;&gt;
+
+&lt;p&gt;As you can never have enough keybinding tips and &lt;a class=&quot;reference external&quot; href=&quot;http://www.vim.org&quot;&gt;vim&lt;/a&gt; helps to prove that, the
+tip for today answers Joshua’s question from &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;##purplism&lt;/span&gt;&lt;/code&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;div&gt;&lt;p&gt;can you toggle settings in vim with a key?&lt;/p&gt;
+&lt;/div&gt;&lt;/blockquote&gt;
+&lt;p&gt;The simple answer is yes, but how easy it is depends on what you’re trying to
+toggle.  We need a state to test when toggling settings, so as long as we can
+query the setting toggling it is easy.  For example, I have a binding in my
+&lt;code class=&quot;file docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;~/.vimrc&lt;/span&gt;&lt;/code&gt; to toggle the value of &lt;a class=&quot;reference external&quot; href=&quot;http://vimdoc.sourceforge.net/htmldoc/options.html#'background'&quot;&gt;background&lt;/a&gt;.  As I use transparent
+terminals the colours used for syntax highlighting can occasionally get
+a little difficult to read depending on the wallpaper I’m using, the following
+function allows me to quick toggle the &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;background&lt;/span&gt;&lt;/code&gt; setting:&lt;/p&gt;
+&lt;div class=&quot;highlight-vim notranslate&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&quot;c&quot;&gt;&amp;quot; Map Shift-F12 to switch between light and dark&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;!&lt;/span&gt; Switch_background&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &amp;amp;&lt;span class=&quot;nb&quot;&gt;background&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;light&amp;quot;&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;set&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;background&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;dark&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;else&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;set&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;background&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;light&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;endif&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;endfunction&lt;/span&gt;
+map &lt;span class=&quot;p&quot;&gt;&amp;lt;&lt;/span&gt;S&lt;span class=&quot;p&quot;&gt;-&lt;/span&gt;F12&lt;span class=&quot;p&quot;&gt;&amp;gt;&lt;/span&gt; :&lt;span class=&quot;k&quot;&gt;call&lt;/span&gt; Switch_background&lt;span class=&quot;p&quot;&gt;()&amp;lt;&lt;/span&gt;CR&lt;span class=&quot;p&quot;&gt;&amp;gt;&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;For some other commands such as toggling line numbering it can be much
+simpler:&lt;/p&gt;
+&lt;div class=&quot;highlight-vim notranslate&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;map &lt;span class=&quot;p&quot;&gt;&amp;lt;&lt;/span&gt;C&lt;span class=&quot;p&quot;&gt;-&lt;/span&gt;F12&lt;span class=&quot;p&quot;&gt;&amp;gt;&lt;/span&gt; :&lt;span class=&quot;k&quot;&gt;set&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;number&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;!&amp;lt;&lt;/span&gt;CR&lt;span class=&quot;p&quot;&gt;&amp;gt;&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;For those times when we can’t easily flip the setting on and off or query state
+in a simple manner, the solution is to store state ourselves and test that.&lt;/p&gt;
+&lt;p&gt;We may, for example, wish to toggle a group of settings on or off at one time.
+While we could test one of the settings in the toggle function it can become
+quite brittle if we change those settings ourselves.  By storing our toggle
+state in a variable we can test that instead.  The final — totally contrived
+— example shows how to do that:&lt;/p&gt;
+&lt;div class=&quot;highlight-vim notranslate&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&quot;c&quot;&gt;&amp;quot; Map Mod1-F12 to toggle some vim goodness&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;!&lt;/span&gt; EditorvsNotepad&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;g&lt;/span&gt;:notepad &lt;span class=&quot;p&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;false&amp;quot;&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;g&lt;/span&gt;:notepad&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;true&amp;quot;&lt;/span&gt;
+        &lt;span class=&quot;nb&quot;&gt;syntax&lt;/span&gt; off
+        &lt;span class=&quot;k&quot;&gt;set&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;nohlsearch&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;set&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;laststatus&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;0&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;else&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;g&lt;/span&gt;:notepad&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;false&amp;quot;&lt;/span&gt;
+        &lt;span class=&quot;nb&quot;&gt;syntax&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;on&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;set&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;hlsearch&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;set&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;laststatus&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;2&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;endif&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;endfunction&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;g&lt;/span&gt;:notepad &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;false&amp;quot;&lt;/span&gt;
+map &lt;span class=&quot;p&quot;&gt;&amp;lt;&lt;/span&gt;M&lt;span class=&quot;p&quot;&gt;-&lt;/span&gt;F12&lt;span class=&quot;p&quot;&gt;&amp;gt;&lt;/span&gt; :&lt;span class=&quot;k&quot;&gt;call&lt;/span&gt; EditorvsNotepad&lt;span class=&quot;p&quot;&gt;()&amp;lt;&lt;/span&gt;CR&lt;span class=&quot;p&quot;&gt;&amp;gt;&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</content>
+  </entry>
+  <entry xml:base="https://jnrowe.github.io/blog/tag/vim/atom.xml">
+    <title type="text">Compiling C source in vim</title>
+    <id>https://jnrowe.github.io/articles/tips/Compiling_in_vim.html</id>
+    <updated>2009-09-24T00:00:00Z</updated>
+    <published>2009-09-24T00:00:00Z</published>
+    <link href="https://jnrowe.github.io/articles/tips/Compiling_in_vim.html" />
+    <author>
+      <name></name>
+    </author>
+    <content type="html">&lt;div class=&quot;section&quot; id=&quot;compiling-c-source-in-vim&quot;&gt;
+
+&lt;p&gt;The fabulous Miss Biddulph asks via the EADS Linux list:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;div&gt;&lt;p&gt;Is there a way to make &lt;strong class=&quot;command&quot;&gt;vim&lt;/strong&gt; compile C files without
+a &lt;code class=&quot;file docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;Makefile&lt;/span&gt;&lt;/code&gt;?&lt;/p&gt;
+&lt;/div&gt;&lt;/blockquote&gt;
+&lt;p&gt;A quick phone call later and we know that Laura wishes to emulate &lt;a class=&quot;reference external&quot; href=&quot;http://www.gnu.org/software/make/make.html&quot;&gt;make&lt;/a&gt;’s
+behaviour where calling &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;make&lt;/span&gt; &lt;span class=&quot;pre&quot;&gt;my_code&lt;/span&gt;&lt;/code&gt; without a &lt;code class=&quot;file docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;Makefile&lt;/span&gt;&lt;/code&gt; will
+attempt to build &lt;code class=&quot;file docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;my_code&lt;/span&gt;&lt;/code&gt; from &lt;code class=&quot;file docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;my_code.c&lt;/span&gt;&lt;/code&gt;. &lt;a class=&quot;reference external&quot; href=&quot;http://www.vim.org&quot;&gt;vim&lt;/a&gt;’s default
+&lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;:make&lt;/span&gt;&lt;/code&gt; command doesn’t quite do the trick as it just calls &lt;strong class=&quot;command&quot;&gt;make&lt;/strong&gt;
+without any arguments.&lt;/p&gt;
+&lt;p&gt;&lt;strong class=&quot;command&quot;&gt;vim&lt;/strong&gt; allows us to set options for specific file types only using the
+&lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;:autocmd&lt;/span&gt;&lt;/code&gt; command, and this is the perfect time to use it.  We will set the
+value of &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;makeprg&lt;/span&gt;&lt;/code&gt;, which &lt;strong class=&quot;command&quot;&gt;vim&lt;/strong&gt; uses as the command to run with
+&lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;:make&lt;/span&gt;&lt;/code&gt;, for all C and C++ files.&lt;/p&gt;
+&lt;div class=&quot;highlight-vim notranslate&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;autocmd &lt;span class=&quot;nb&quot;&gt;FileType&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;c&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;cpp
+    \ &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; empty&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;glob&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;[Mm]akefile&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;|&lt;/span&gt;
+    \   &lt;span class=&quot;k&quot;&gt;setlocal&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;makeprg&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;make&lt;/span&gt;\ %&lt;span class=&quot;p&quot;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;|&lt;/span&gt;
+    \ &lt;span class=&quot;k&quot;&gt;endif&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;The &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;%&amp;lt;&lt;/span&gt;&lt;/code&gt; in our &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;makeprg&lt;/span&gt;&lt;/code&gt; definition refers to the current file with its
+extension stripped.  We specifically only change the behaviour if no
+&lt;code class=&quot;file docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;Makefile&lt;/span&gt;&lt;/code&gt; exists so that we don’t interfere with the normal usage of the
+&lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;:make&lt;/span&gt;&lt;/code&gt; command.&lt;/p&gt;
+&lt;/div&gt;
+</content>
+  </entry>
+</feed>

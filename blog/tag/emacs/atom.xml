@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title type="text">JNRowe - Posts tagged emacs</title>
+  <id>https://jnrowe.github.io/blog/tag/emacs/atom.xml</id>
+  <updated>2007-03-05T00:00:00Z</updated>
+  <link href="https://jnrowe.github.io/" />
+  <link href="https://jnrowe.github.io/blog/tag/emacs/atom.xml" rel="self" />
+  <subtitle type="text">Ramblings of a tired mind</subtitle>
+  <generator uri="http://ablog.readthedocs.org" version="0.9.2">ABlog</generator>
+  <entry xml:base="https://jnrowe.github.io/blog/tag/emacs/atom.xml">
+    <title type="text">Proper keyboard shortcuts in GTK+</title>
+    <id>https://jnrowe.github.io/articles/tips/emacs_gtk_shortcuts.html</id>
+    <updated>2007-03-05T00:00:00Z</updated>
+    <published>2007-03-05T00:00:00Z</published>
+    <link href="https://jnrowe.github.io/articles/tips/emacs_gtk_shortcuts.html" />
+    <author>
+      <name></name>
+    </author>
+    <content type="html">&lt;div class=&quot;section&quot; id=&quot;proper-keyboard-shortcuts-in-gtk&quot;&gt;
+
+&lt;p&gt;If you’re used to the old style &lt;a class=&quot;reference external&quot; href=&quot;http://www.gtk.org/&quot;&gt;GTK+&lt;/a&gt; keyboard shortcuts, and find yourself
+continually closing windows when you’re trying to delete a word (like me) then
+add the following to your &lt;code class=&quot;file docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;~/.gtkrc-2.0&lt;/span&gt;&lt;/code&gt;:&lt;/p&gt;
+&lt;div class=&quot;highlight-text notranslate&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;gtk-key-theme-name = &amp;quot;Emacs&amp;quot;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;admonition note&quot;&gt;
+&lt;p class=&quot;admonition-title&quot;&gt;Note&lt;/p&gt;
+&lt;p&gt;This is for people using GTK+ apps, not GNOME.  If you wish to change
+bindings in GNOME you should use the control centre.&lt;/p&gt;
+&lt;/div&gt;
+&lt;p&gt;Using the above you can return to the old default format, but if you only want
+to enable &lt;kbd class=&quot;kbd docutils literal notranslate&quot;&gt;&amp;lt;C-w&amp;gt;&lt;/kbd&gt; and keep the other Windows-style shortcuts you can just
+add:&lt;/p&gt;
+&lt;div class=&quot;highlight-text notranslate&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;binding &amp;quot;gtk-emacs-text-entry&amp;quot;
+{
+    bind &amp;quot;&amp;lt;ctrl&amp;gt;w&amp;quot; { &amp;quot;delete-from-cursor&amp;quot; (word-ends, -1) }
+}
+class &amp;quot;GtkEntry&amp;quot; binding &amp;quot;gtk-emacs-text-entry&amp;quot;
+class &amp;quot;GtkTextView&amp;quot; binding &amp;quot;gtk-emacs-text-entry&amp;quot;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;If you use &lt;a class=&quot;reference external&quot; href=&quot;http://plasmasturm.org/code/gtk-chtheme/&quot;&gt;gtk-chtheme&lt;/a&gt; or &lt;a class=&quot;reference external&quot; href=&quot;http://www.muhri.net/nav.php3?node=gts&quot;&gt;gtk-theme-switch&lt;/a&gt; you should add custom options to
+your &lt;code class=&quot;file docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;~/.gtkrc.mine&lt;/span&gt;&lt;/code&gt; so it isn’t overwritten when you change themes.  See
+the comments in your &lt;code class=&quot;file docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;~/.gtkrc-2.0&lt;/span&gt;&lt;/code&gt; if you use either of these theme
+switchers.&lt;/p&gt;
+&lt;div class=&quot;figure&quot;&gt;
+&lt;img alt=&quot;XFce4 keyboard settings window&quot; src=&quot;.images/xfce4_keyboard.png&quot; /&gt;
+&lt;/div&gt;
+&lt;p&gt;If you’re an &lt;a class=&quot;reference external&quot; href=&quot;http://www.xfce.org/&quot;&gt;XFce&lt;/a&gt; user you can select the Emacs keyboard shortcuts using the
+keyboard settings dialog.&lt;/p&gt;
+&lt;p&gt;If you can’t change the settings for some reason, then you can still use
+a shortcut to delete words.  The default setting, up to at least GTK+ v2.10.9,
+is the finger-stretching &lt;kbd class=&quot;kbd docutils literal notranslate&quot;&gt;&amp;lt;C-backspace&amp;gt;&lt;/kbd&gt;.&lt;/p&gt;
+&lt;p&gt;And finally, if you manage to convince upstream that the default behaviour
+should be the settings in the Emacs theme I’ll owe you a few beers!&lt;/p&gt;
+&lt;/div&gt;
+</content>
+  </entry>
+</feed>

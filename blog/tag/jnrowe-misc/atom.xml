@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title type="text">JNRowe - Posts tagged jnrowe-misc</title>
+  <id>https://jnrowe.github.io/blog/tag/jnrowe-misc/atom.xml</id>
+  <updated>2014-06-30T00:00:00Z</updated>
+  <link href="https://jnrowe.github.io/" />
+  <link href="https://jnrowe.github.io/blog/tag/jnrowe-misc/atom.xml" rel="self" />
+  <subtitle type="text">Ramblings of a tired mind</subtitle>
+  <generator uri="http://ablog.readthedocs.org" version="0.9.2">ABlog</generator>
+  <entry xml:base="https://jnrowe.github.io/blog/tag/jnrowe-misc/atom.xml">
+    <title type="text">jnrowe-misc - The unsorted package overlay</title>
+    <id>https://jnrowe.github.io/articles/probits/jnrowe-misc.html</id>
+    <updated>2014-06-30T00:00:00Z</updated>
+    <published>2014-06-30T00:00:00Z</published>
+    <link href="https://jnrowe.github.io/articles/probits/jnrowe-misc.html" />
+    <author>
+      <name></name>
+    </author>
+    <content type="html">&lt;div class=&quot;section&quot; id=&quot;jnrowe-misc-the-unsorted-package-overlay&quot;&gt;
+
+&lt;blockquote&gt;
+&lt;div&gt;&lt;p&gt;A collection of &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;ebuild&lt;/span&gt;&lt;/code&gt; files with no overall theme.&lt;/p&gt;
+&lt;/div&gt;&lt;/blockquote&gt;
+&lt;p&gt;&lt;abbr title=&quot;Too Long; Didn’t Read&quot;&gt;TLDR&lt;/abbr&gt;; For what it was &lt;a class=&quot;reference external&quot; href=&quot;https://github.com/JNRowe/jnrowe-misc&quot;&gt;jnrowe-misc&lt;/a&gt; served its
+purpose well.&lt;/p&gt;
+&lt;div class=&quot;section&quot; id=&quot;an-island-unto-itself&quot;&gt;
+&lt;h2&gt;An island unto itself&lt;/h2&gt;
+&lt;p&gt;While it may come as a surprise to a few of the users(which would be most of
+them) the overlay available on GitHub wasn’t the deliverable at any point in
+time.  In fact, the often convoluted merge history in the repository probably
+hinted at that quite a bit.&lt;/p&gt;
+&lt;img alt=&quot;Tree view of ``jnrowe-misc`` history&quot; class=&quot;align-right&quot; src=&quot;.images/jnrowe-misc.png&quot; style=&quot;width: 50%;&quot; /&gt;
+&lt;p&gt;&lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;jnrowe-misc&lt;/span&gt;&lt;/code&gt; was always the combination of a few independently managed
+repositories that I bundled up to make available for public consumption.
+Eventually it ended up being mostly Python stuff, but that was because the
+support burden of other packages was becoming more time consuming than I could
+justify.&lt;/p&gt;
+&lt;p&gt;The &lt;em&gt;real&lt;/em&gt; audience for the overlay, my co-workers, saw a different beast
+entirely.  It used our keyword types and rules, it came bundled &lt;span class=&quot;xref std std-doc&quot;&gt;with the
+tests&lt;/span&gt; I was unable to share and had a tighter schedule for
+maintenance.&lt;/p&gt;
+&lt;p&gt;Still, I received a fair number of emails and live comments from users so I’ll
+call that a success!&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;section&quot; id=&quot;upstreamed&quot;&gt;
+&lt;h2&gt;Upstreamed&lt;/h2&gt;
+&lt;p&gt;Sadly, very little was ever taken upstream(even less if you count the parts that
+were credited).  This was entirely my fault.  I originally started exporting the
+overlay because I was fed up with the new package process upstream, and it seemed
+like the best way to deal with that for me.&lt;/p&gt;
+&lt;p&gt;I had hoped that some packages would be picked up, but didn’t actively push them
+after the first few.&lt;/p&gt;
+&lt;p&gt;The overlay should have never touched packages that were available upstream, but
+occasionally they overlapped when upstream added them.  The use of &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;::shadow&lt;/span&gt;&lt;/code&gt;
+to workaround problems when new packages were added upstream worked &lt;em&gt;really&lt;/em&gt;
+well, and saved the few remaining hairs on my balding head.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;section&quot; id=&quot;legacy&quot;&gt;
+&lt;h2&gt;Legacy&lt;/h2&gt;
+&lt;p&gt;It looks like the majority of packages will continue to be maintained for the
+foreseeable future, but regrettably it looks like the result will not be
+available beyond a “open to all people who know where to look” organisation on
+GitHub.&lt;/p&gt;
+&lt;p&gt;I’d like to change the new maintainer’s mind, but in all honesty I understand
+their reasons.  I’ve stopped maintaining a lot of once public projects over the
+past couple of years, and it is as refreshing as it is saddening.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</content>
+  </entry>
+</feed>

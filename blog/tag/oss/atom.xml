@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title type="text">JNRowe - Posts tagged oss</title>
+  <id>https://jnrowe.github.io/blog/tag/oss/atom.xml</id>
+  <updated>2014-09-03T00:00:00Z</updated>
+  <link href="https://jnrowe.github.io/" />
+  <link href="https://jnrowe.github.io/blog/tag/oss/atom.xml" rel="self" />
+  <subtitle type="text">Ramblings of a tired mind</subtitle>
+  <generator uri="http://ablog.readthedocs.org" version="0.9.2">ABlog</generator>
+  <entry xml:base="https://jnrowe.github.io/blog/tag/oss/atom.xml">
+    <title type="text">Open Source and enjoyment</title>
+    <id>https://jnrowe.github.io/thoughts/burn_out.html</id>
+    <updated>2014-09-03T00:00:00Z</updated>
+    <published>2014-09-03T00:00:00Z</published>
+    <link href="https://jnrowe.github.io/thoughts/burn_out.html" />
+    <author>
+      <name></name>
+    </author>
+    <content type="html">&lt;div class=&quot;section&quot; id=&quot;open-source-and-enjoyment&quot;&gt;
+
+&lt;p&gt;A few years ago I burned out on Open Source projects, to the point that it was
+close to impacting other parts of my life.  I have only myself to blame as
+I didn’t manage to distance myself at all well.  Distancing yourself is not easy
+to do when your fun hobby for relaxation is the thing that is working against
+you.&lt;/p&gt;
+&lt;p&gt;There were a variety of incredibly minor issues that piled up Jenga-style.  Then
+to carry the weak analogy forward, it toppled over in a split second like Jenga
+in a rubber dingy on the rolling seas with a fumbling drunken friend wearing
+a blindfold.&lt;/p&gt;
+&lt;p&gt;I’ve decided to write down a few of the things that were happening, both as an
+act of catharsis and to help me spot the problems in future.  Perhaps it will
+help others who are experiencing the same thing but haven’t quite spotted the
+catalysts yet.&lt;/p&gt;
+&lt;div class=&quot;section&quot; id=&quot;dealing-with-needy-users&quot;&gt;
+&lt;h2&gt;Dealing with needy users&lt;/h2&gt;
+&lt;p&gt;Some users seem to feel a disproportionate amount of “you work for me”,
+seemingly more so than happens with actual paying customers on other projects
+which strikes me as strange.  They’ll bug you endlessly in emails, in the issue
+tracker, on &lt;abbr title=&quot;Internet Relay Chat&quot;&gt;IRC&lt;/abbr&gt; and in real life if you end up at the same conference.  You
+&lt;em&gt;need&lt;/em&gt; to stop this before it takes hold.  It helps if you can be polite, but
+if not just stop it anyway.  It is for &lt;em&gt;your&lt;/em&gt; welfare, so just do it.&lt;/p&gt;
+&lt;p&gt;I actually found myself burning the wrong people towards the peak of that
+imaginary Jenga tower.  You need to make a concerted effort to figure out which
+people are delivering the seemingly endless grief or perhaps just relentless
+&lt;a class=&quot;reference external&quot; href=&quot;http://en.m.wikipedia.org/wiki/bikeshedding&quot;&gt;bikeshedding&lt;/a&gt;, and stop them.  It is all too easy to accidentally become
+annoyed at well meaning useful contributors when you’ve been trawling through
+a heap of useless meta-discussion about a change nobody is making.&lt;/p&gt;
+&lt;p&gt;On one &lt;em&gt;library&lt;/em&gt; project I worked on there was a user who didn’t read the
+documentation, couldn’t use the language enough to write tests, yet still
+endlessly sucked up support time by opening awful issues and sending pointless
+emails wishing to discuss changes they might make.  I kind of hesitate to say
+awful issues, but - for example - if you can’t write a two line assertion in
+a language you’re not in the target audience for a library in the first place.&lt;/p&gt;
+&lt;p&gt;Those people aren’t even adding value in pointing out deficiencies in
+documentation, because they’re not a target user.  It would be like me writing
+to &lt;a class=&quot;reference external&quot; href=&quot;http://www.jcb.com/&quot;&gt;JCB&lt;/a&gt; telling them they must document why they use round knobs on the digger
+I saw someone else using.  So try spot it early, and put a stop to it.&lt;/p&gt;
+&lt;p&gt;I suspect a big part of the issue here is cost.  I’m sure if there was even
+a single penny cost to opening issues or sending a mail it would do wonders for
+communication in general.  I suspect that would remain true even if you
+reimbursed that penny immediately.&lt;/p&gt;
+&lt;div class=&quot;section&quot; id=&quot;the-answer&quot;&gt;
+&lt;h3&gt;The answer&lt;/h3&gt;
+&lt;p&gt;I figured out how to work with this entirely by accident.  Politely offer
+answers that move them away from you.  It is by far the easiest solution.&lt;/p&gt;
+&lt;p&gt;In one instance I suggested alternative packages to an expensive user, with the
+hope they’d quietly move on.  Which is evil really, as what you’re really doing
+is dreaming that they’ll move on to bother a developer who isn’t you.&lt;/p&gt;
+&lt;p&gt;On another occasion I stole an idea from a friend and said “Sorry, I can’t
+figure out how to implement this.  Open a pull request, and I’ll merge it!” to
+another.  It worked well, because it stopped the direction-less discussion and
+was never going to be followed up with a patch later.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;section&quot; id=&quot;dealing-with-unreasonable-requests&quot;&gt;
+&lt;h2&gt;Dealing with unreasonable requests&lt;/h2&gt;
+&lt;p&gt;I used to get quite annoyed when I received an impolite or unreasonable request
+on an Open Source project, nowadays I tend to just respond with pre-canned
+answers for most of them.  If you can cut the time it takes to respond to them,
+you’ll obviously spend far less time thinking about them.&lt;/p&gt;
+&lt;p&gt;The typical one that springs to mind is a user complaining that you’ve not
+licensed your &lt;abbr title=&quot;GNU General Public License&quot;&gt;GPL&lt;/abbr&gt; code in a way which allows them to use it without
+contributing anything in return.  I choose reciprocating licences where I can,
+because frankly that may be the only value you provide &lt;em&gt;me&lt;/em&gt; as a user.  I get
+that some people need to use their Open Source projects as a way to improve
+their CV or build a presence, but for many of us it is just for fun and
+reciprocation.&lt;/p&gt;
+&lt;p&gt;Another example that I recall, but wish I didn’t, was a user &lt;em&gt;telling&lt;/em&gt; me to
+recompress a tarball on &lt;abbr title=&quot;Python Package Index&quot;&gt;PyPI&lt;/abbr&gt; because their infrastructure couldn’t support
+&lt;strong class=&quot;command&quot;&gt;bzip2&lt;/strong&gt;.  Seems reasonable enough, but it came wrapped in a tirade of
+abuse.  I ignored the abuse, uploaded another tarball and then received another
+abusive email in return the next day.  That was a long time ago, far before the
+burnout started to creep in so I just addressed the actual issue and moved on.&lt;/p&gt;
+&lt;div class=&quot;section&quot; id=&quot;id1&quot;&gt;
+&lt;h3&gt;The answer&lt;/h3&gt;
+&lt;p&gt;I had forgotten about that whole previous story until at &lt;a class=&quot;reference external&quot; href=&quot;https://europython.eu/&quot;&gt;Europython&lt;/a&gt; a friend
+was telling me about someone who was banned from a number of events, hell-banned
+on various mailing lists and on forced lockout on Stack Overflow for poisonous
+behaviour.  I started to tell my story as an example of strange abusive
+behaviour, and it turned out to be the same guy.&lt;/p&gt;
+&lt;p&gt;The point is these people can be everywhere so just don’t let them get to you.
+I realise that is both obvious and feels hard to do, but it is quite easy in the
+virtual world.  If you have the hell-ban option available just use
+it; perhaps there is an ignore option in your issue tracker, add a “send to
+trash” rule in your email filter.  Even in person it can be quite easy to do,
+just politely acknowledge their issue and move away instead of engaging them.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;section&quot; id=&quot;the-solutions&quot;&gt;
+&lt;h2&gt;The solutions&lt;/h2&gt;
+&lt;p&gt;I chose a solution I hate, for all intents and purposes I don’t release new Open
+Source projects any longer.  I still work on a lot of projects, and the code is
+normally available somewhere for strangers.  However, for the most part I’ve
+made a point of not hosting or releasing it in the common places.  This works
+for me, but it saddens me deeply.&lt;/p&gt;
+&lt;p&gt;I have a friend who does something interesting to combat the same problems I’ve
+mentioned here.  He hooks the issue tracker to only show issues reported by
+people in his second-degree &lt;a class=&quot;reference external&quot; href=&quot;http://www.foaf-project.org/&quot;&gt;FOAF&lt;/a&gt; circle or people whose user profile is an
+active Open Source contributor.  It works, and it cuts out most of the problem
+users, but it is nasty.  I feel it is worse than my “solution” because it still
+gives the impression of support to the users you won’t support, but also gives
+the impression of bad support through heaps of unanswered issues to the users
+who would receive good support.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;div&gt;&lt;p&gt;The greatest trick the devil ever played was convincing users they had skin
+in the game.&lt;/p&gt;
+&lt;/div&gt;&lt;/blockquote&gt;
+&lt;p&gt;I may be misappropriating a quote from a great film there, but it is important.
+A lot of the actively poisonous people who contact you aren’t providing any real
+value to you, and they’re probably never going to.  If you can remove them
+somehow you’re probably not losing anything, but you’ll be gaining a whole lot
+personally.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</content>
+  </entry>
+</feed>

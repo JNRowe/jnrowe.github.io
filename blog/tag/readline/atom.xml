@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title type="text">JNRowe - Posts tagged readline</title>
+  <id>https://jnrowe.github.io/blog/tag/readline/atom.xml</id>
+  <updated>2009-09-30T00:00:00Z</updated>
+  <link href="https://jnrowe.github.io/" />
+  <link href="https://jnrowe.github.io/blog/tag/readline/atom.xml" rel="self" />
+  <subtitle type="text">Ramblings of a tired mind</subtitle>
+  <generator uri="http://ablog.readthedocs.org" version="0.9.2">ABlog</generator>
+  <entry xml:base="https://jnrowe.github.io/blog/tag/readline/atom.xml">
+    <title type="text">Beyond simple tab completion</title>
+    <id>https://jnrowe.github.io/articles/tips/Beyond_tab_completion.html</id>
+    <updated>2009-09-30T00:00:00Z</updated>
+    <published>2009-09-30T00:00:00Z</published>
+    <link href="https://jnrowe.github.io/articles/tips/Beyond_tab_completion.html" />
+    <author>
+      <name></name>
+    </author>
+    <content type="html">&lt;div class=&quot;section&quot; id=&quot;beyond-simple-tab-completion&quot;&gt;
+
+&lt;p&gt;Matt Taylor wrote on the EADS Linux list:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;div&gt;&lt;p&gt;&lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;wildmenu&lt;/span&gt;&lt;/code&gt; is to &lt;a class=&quot;reference external&quot; href=&quot;http://www.vim.org/&quot;&gt;vim&lt;/a&gt; as &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;$x&lt;/span&gt;&lt;/code&gt; is to &lt;a class=&quot;reference external&quot; href=&quot;http://cnswww.cns.cwru.edu/~chet/bash/bashtop.html&quot;&gt;bash&lt;/a&gt;.  Define &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;$x&lt;/span&gt;&lt;/code&gt; :)&lt;/p&gt;
+&lt;/div&gt;&lt;/blockquote&gt;
+&lt;p&gt;The &lt;a class=&quot;reference external&quot; href=&quot;http://vimdoc.sourceforge.net/htmldoc/options.html#'wildmenu'&quot;&gt;wildmenu&lt;/a&gt; option in &lt;strong class=&quot;command&quot;&gt;vim&lt;/strong&gt; shows possible command line completions
+above the command line, highlighting the currently selected completion option.
+A follow up email later and Matt says:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;div&gt;&lt;p&gt;Basically, I want &lt;strong class=&quot;command&quot;&gt;bash&lt;/strong&gt; to show me the completions and
+&lt;kbd class=&quot;kbd docutils literal notranslate&quot;&gt;Tab`&lt;/kbd&gt; to &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;$key&lt;/span&gt;&lt;/code&gt; through them in the same way &lt;strong class=&quot;command&quot;&gt;vim&lt;/strong&gt; does
+it.&lt;/p&gt;
+&lt;/div&gt;&lt;/blockquote&gt;
+&lt;p&gt;The feature is surprisingly easy to achieve with &lt;strong class=&quot;command&quot;&gt;bash&lt;/strong&gt;, and is
+actually a feature of &lt;a class=&quot;reference external&quot; href=&quot;http://cnswww.cns.cwru.edu/php/chet/readline/rltop.html&quot;&gt;readline&lt;/a&gt; making it available to all software that uses
+completion functionality from &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;readline&lt;/span&gt;&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;The option we want is called &lt;a class=&quot;reference external&quot; href=&quot;http://cnswww.cns.cwru.edu/php/chet/readline/readline.html#IDX137&quot;&gt;menu-complete&lt;/a&gt;, but it not bound to a key by
+default.  You can enable &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;menu-complete&lt;/span&gt;&lt;/code&gt; in all &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;readline&lt;/span&gt;&lt;/code&gt;-using
+applications by editing your &lt;code class=&quot;file docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;~/.inputrc&lt;/span&gt;&lt;/code&gt; (or whatever &lt;span class=&quot;target&quot; id=&quot;index-0&quot;&gt;&lt;/span&gt;&lt;code class=&quot;xref std std-envvar docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;$INPUTRC&lt;/span&gt;&lt;/code&gt;
+points to if it is set) or just for &lt;strong class=&quot;command&quot;&gt;bash&lt;/strong&gt; if you do not wish to
+change the behaviour of other applications.&lt;/p&gt;
+&lt;p&gt;To change the behaviour by editing the &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;readline&lt;/span&gt;&lt;/code&gt; configuration file we would do
+this:&lt;/p&gt;
+&lt;div class=&quot;highlight-text notranslate&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&amp;quot;\C-a&amp;quot;: menu-complete
+# Alternative version, enables menu-complete only for bash
+$if Bash
+    &amp;quot;\C-a&amp;quot;: menu-complete
+$endif
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;The above tells &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;readline&lt;/span&gt;&lt;/code&gt; we wish to bind &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;menu-complete&lt;/span&gt;&lt;/code&gt; to
+&lt;kbd class=&quot;kbd docutils literal notranslate&quot;&gt;Control-a&lt;/kbd&gt;, I find that key combination quite comfortable as
+&lt;kbd class=&quot;kbd docutils literal notranslate&quot;&gt;Control-a&lt;/kbd&gt; is easy to reach the my keyboard layout and is of little use
+in any of the apps I use on a regular basis.  You must either re-read the
+configuration file or restart the &lt;strong class=&quot;command&quot;&gt;bash&lt;/strong&gt; session to enable this
+binding.&lt;/p&gt;
+&lt;p&gt;To enable the key binding in &lt;strong class=&quot;command&quot;&gt;bash&lt;/strong&gt; only we could also just edit the
+appropriate &lt;strong class=&quot;command&quot;&gt;bash&lt;/strong&gt; startup file:&lt;/p&gt;
+&lt;div class=&quot;highlight-bash notranslate&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;bind&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;&amp;quot;\C-a&amp;quot;: menu-complete&amp;#39;&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;You must source the startup file or restart &lt;strong class=&quot;command&quot;&gt;bash&lt;/strong&gt; to enable this
+binding, alternatively you can just test the command in your current
+&lt;strong class=&quot;command&quot;&gt;bash&lt;/strong&gt; setting until you’re happy with the key combination.&lt;/p&gt;
+&lt;p&gt;In a follow up email on the list Matt asks if it is possible to make the
+completion context aware, in much the same the &lt;a class=&quot;reference external&quot; href=&quot;http://bash-completion.alioth.debian.org/&quot;&gt;bash-completion&lt;/a&gt; package does but
+without having to write new completion scripts.  There are some other quite
+useful completion modes available in &lt;strong class=&quot;command&quot;&gt;bash&lt;/strong&gt;, I’ll describe a few
+below.&lt;/p&gt;
+&lt;p&gt;&lt;kbd class=&quot;kbd docutils literal notranslate&quot;&gt;M-!&lt;/kbd&gt; tells &lt;strong class=&quot;command&quot;&gt;bash&lt;/strong&gt; to complete command names be they actual
+on-disk commands, functions or aliases. &lt;kbd class=&quot;kbd docutils literal notranslate&quot;&gt;M-/&lt;/kbd&gt; completes only filenames,
+this can be very useful when &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;bash-completion&lt;/span&gt;&lt;/code&gt; is refusing to tab complete
+a filename for you.  &lt;kbd class=&quot;kbd docutils literal notranslate&quot;&gt;C-$&lt;/kbd&gt; implements variable name completion, this is
+most useful when you’re looking to unset or re-set a variable.  Variable name
+completion isn’t actually necessary if you have &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;bash-completion&lt;/span&gt;&lt;/code&gt; installed
+as it is smart enough to handle this for you in most cases.&lt;/p&gt;
+&lt;p&gt;And finally, there is a one more incredibly useful completion mode in
+&lt;strong class=&quot;command&quot;&gt;bash&lt;/strong&gt; and that is &lt;kbd class=&quot;kbd docutils literal notranslate&quot;&gt;M-{&lt;/kbd&gt;, it adds all possible completions to the
+command line using the brace expansion syntax.  For example, if I type &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;ls&lt;/span&gt;
+&lt;span class=&quot;pre&quot;&gt;~/Git/Local/&amp;lt;M-{&amp;gt;&lt;/span&gt;&lt;/code&gt; it completes to
+&lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;/home/jay/Git/Local/{Makefile,countless,dot-configs,haskvim,jrutils}&lt;/span&gt;&lt;/code&gt;.
+Using &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;readline&lt;/span&gt;&lt;/code&gt; motion commands, especially word motions such as &lt;kbd class=&quot;kbd docutils literal notranslate&quot;&gt;M-f&lt;/kbd&gt;
+and &lt;kbd class=&quot;kbd docutils literal notranslate&quot;&gt;M-b&lt;/kbd&gt; to jump forward and backward one word, I can easily apply
+a command to a certain set of files in a directory.  Just don’t try it on
+&lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;/usr/bin&lt;/span&gt;&lt;/code&gt; unless you want to see how &lt;strong class=&quot;command&quot;&gt;bash&lt;/strong&gt; handles massive command
+lines!!&lt;/p&gt;
+&lt;/div&gt;
+</content>
+  </entry>
+</feed>

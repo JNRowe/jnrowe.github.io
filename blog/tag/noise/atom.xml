@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title type="text">JNRowe - Posts tagged noise</title>
+  <id>https://jnrowe.github.io/blog/tag/noise/atom.xml</id>
+  <updated>2017-09-03T00:00:00Z</updated>
+  <link href="https://jnrowe.github.io/" />
+  <link href="https://jnrowe.github.io/blog/tag/noise/atom.xml" rel="self" />
+  <subtitle type="text">Ramblings of a tired mind</subtitle>
+  <generator uri="http://ablog.readthedocs.org" version="0.9.2">ABlog</generator>
+  <entry xml:base="https://jnrowe.github.io/blog/tag/noise/atom.xml">
+    <title type="text">Burning down the streets</title>
+    <id>https://jnrowe.github.io/thoughts/metro_city.html</id>
+    <updated>2017-09-03T00:00:00Z</updated>
+    <published>2017-09-03T00:00:00Z</published>
+    <link href="https://jnrowe.github.io/thoughts/metro_city.html" />
+    <author>
+      <name></name>
+    </author>
+    <content type="html">&lt;div class=&quot;section&quot; id=&quot;burning-down-the-streets&quot;&gt;
+
+&lt;blockquote class=&quot;epigraph&quot;&gt;
+&lt;div&gt;&lt;p&gt;The whole thing makes me wonder whether a modern reintroduction of the
+&lt;a class=&quot;reference external&quot; href=&quot;https://en.m.wikipedia.org/wiki/Charivari&quot;&gt;skimmington ride&lt;/a&gt; for social media is long overdue.&lt;/p&gt;
+&lt;p class=&quot;attribution&quot;&gt;—Stephen Roberts, eloquent friend&lt;/p&gt;
+&lt;/div&gt;&lt;/blockquote&gt;
+&lt;p&gt;A few months ago a work colleague asked if I could help his wife with an art
+project she was working on.  The premise was simple and rather enticing, so
+I jumped at the chance.&lt;/p&gt;
+&lt;p&gt;The basic idea was to mine Twitter for its copious poison and visualise any
+patterns that emerge.  We quickly hit upon the idea that some poison was so
+obvious that &lt;em&gt;even&lt;/em&gt; the Twitter folks would acknowledge and reject it, and
+piggybacking off of that would trim down the work considerably.&lt;/p&gt;
+&lt;div class=&quot;section&quot; id=&quot;mining-the-abyss&quot;&gt;
+&lt;h2&gt;Mining the abyss&lt;/h2&gt;
+&lt;p&gt;My task was simple: ingest a massive lump of &lt;abbr title=&quot;JavaScript Object Notation&quot;&gt;JSON&lt;/abbr&gt;, process it &lt;em&gt;somehow&lt;/em&gt; and spit out results that could be used in an
+artsy manner that I would likely not understand.&lt;/p&gt;
+&lt;p&gt;The initial concept worked by scanning a firehose of tweets for keywords which
+seemed likely to be hugely poisonous, and then create a &lt;abbr title=&quot;Directed Acyclic Graph&quot;&gt;DAG&lt;/abbr&gt; as the basis to rate users who were retweeting them.  Later
+versions were self-training using a naïve Bayes classifier, which allowed us to
+find offensive tweets using words I was previously happily unaware of.&lt;/p&gt;
+&lt;p&gt;Early on it became obvious that another effect presented itself.  There were
+&lt;em&gt;masses&lt;/em&gt; of users who were retweeting users who would later be banned, and
+those retweeting users would move on to retweeting new users who themselves
+would often end up banned.&lt;/p&gt;
+&lt;img alt=&quot;Route of evil&quot; class=&quot;align-right&quot; src=&quot;.images/final_plight.png&quot; /&gt;
+&lt;p&gt;The interesting point to me was that there were large numbers of &lt;em&gt;actual&lt;/em&gt; users
+— not bots — who redirect the hate storm and almost nothing else.  Many of
+these users were in an anechoic chamber, sucking in tweets from many users and
+spitting them back out to virtually no one.  I thought it would be interesting
+to work only on the final nodes; weighted by those users who receive close to
+no retweets and low user interaction but with histories of retweeting large
+numbers of banned and suspended users.  I called it RageRank, because I’m aware
+of &lt;a class=&quot;reference external&quot; href=&quot;https://en.m.wikipedia.org/wiki/Pagerank&quot;&gt;Page Rank&lt;/a&gt; and lack an imagination.&lt;/p&gt;
+&lt;p&gt;The arty part of the project became known informally as Final Spite, after an
+early visualisation effort with animated clone after clone walking along
+a &lt;a class=&quot;reference external&quot; href=&quot;https://en.m.wikipedia.org/wiki/Final_Fight&quot;&gt;Final Fight&lt;/a&gt; background spewing a tweet bubble as their energy bar
+depleted.  Each new visualisation started from a map, much like the game’s
+levels, and showed a real city with its real occupants.  The intent was to
+allow people to experience a location they knew but with its foetid underbelly
+exposed.&lt;/p&gt;
+&lt;a class=&quot;reference external image-reference&quot; href=&quot;https://en.m.wikipedia.org/wiki/Final_Fight&quot;&gt;&lt;img alt=&quot;Final Fight One on the GBA&quot; class=&quot;align-right&quot; src=&quot;.images/final_fight_one.png&quot; style=&quot;width: 237.60000000000002px; height: 158.4px;&quot; /&gt;&lt;/a&gt;
+&lt;/div&gt;
+&lt;div class=&quot;section&quot; id=&quot;what-happened-next&quot;&gt;
+&lt;h2&gt;What happened next?&lt;/h2&gt;
+&lt;p&gt;What happened next saddened and surprised me in equal quantities; visitors to
+the site doxxed a heap of the displayed retweeters almost immediately.  So much
+in fact that the site was taken down within a day, and the work became a mostly
+offline exhibit in a little gallery for other evening school art students.&lt;/p&gt;
+&lt;p&gt;I can understand the sentiment in many ways, and perhaps should have seen it
+coming.  When I saw people I knew in a visualisation I was ashamed, truly
+ashamed.  I mean not to the point of thinking it is appropriate to post all
+their personal details for the internet vigilantes, but enough that I knew
+I would not want to be linked to them through work or social circles.&lt;/p&gt;
+&lt;p&gt;However, the end result was really neat even on the smaller canvas it has to
+live on.  Seeing that level of vitriolic rage is not fun, but realising that
+much of it is vented in to nowhere does soften it a little.&lt;/p&gt;
+&lt;div class=&quot;sidebar&quot;&gt;
+&lt;p class=&quot;sidebar-title&quot;&gt;Alternative mappings&lt;/p&gt;
+&lt;p&gt;Having seen the tweets of someone I know pop up, and digging around a little
+to see how hateful those tweets were it became clear there was an equally
+toxic topic that could be mapped in a similar manner.&lt;/p&gt;
+&lt;p&gt;Following the game theme, perhaps a &lt;a class=&quot;reference external&quot; href=&quot;https://en.m.wikipedia.org/wiki/Prince_of_Persia:_The_Sands_of_Time&quot;&gt;Prince of Persia: The Sands of Time&lt;/a&gt;
+affair that shows the changing hopes, dreams and promises of the anechoic
+brexit promoters from early 2016 up to today.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;section&quot; id=&quot;fall-out&quot;&gt;
+&lt;h2&gt;Fall out&lt;/h2&gt;
+&lt;p&gt;One of the things that surprised me most was that initially I had primed the
+data by looking at users who followed users that have been suspended or banned.
+After digging in to a few examples to verify the method’s efficacy I noticed
+that there are bidirectional follows to the final nodes where one user appears
+to be the polar opposite of the other, almost in an &lt;a class=&quot;reference external&quot; href=&quot;https://en.m.wikipedia.org/wiki/Alf_Garnett&quot;&gt;Alf Garnett&lt;/a&gt; versus
+&lt;a class=&quot;reference external&quot; href=&quot;https://en.m.wikipedia.org/wiki/Peppa_Pig&quot;&gt;Peppa Pig&lt;/a&gt; scale.&lt;/p&gt;
+&lt;p&gt;It took me a while to think of a possible cause — beyond a simple modelling
+error — that could explain this.  Sadly after recognising a top five rage
+retweeter in a local town it became somewhat obvious, there are occasionally
+business and familial ties involved.  There are seemingly swathes of the
+populace who choose to accept public association with the caustic members of
+society, even when there is a simple unfollow button you can hit to distance
+yourself from them.&lt;/p&gt;
+&lt;p&gt;Let us be frank and honest for a moment.  You’re giving the appearance of tacit
+approval to people’s views when you continue to follow them, even if you’re not
+actively engaging with them.  The simple act of not confronting them is
+normalising the behaviour.  If you’re not calling them out on it, you’re doing
+yourself and society at large a serious injustice.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</content>
+  </entry>
+</feed>
