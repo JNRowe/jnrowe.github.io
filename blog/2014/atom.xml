@@ -469,7 +469,7 @@ purpose well.&lt;/p&gt;
 them) the overlay available on GitHub wasn’t the deliverable at any point in
 time.  In fact, the often convoluted merge history in the repository probably
 hinted at that quite a bit.&lt;/p&gt;
-&lt;img alt=&quot;Tree view of ``jnrowe-misc`` history&quot; class=&quot;align-right&quot; src=&quot;.images/jnrowe-misc.png&quot; style=&quot;width: 50%;&quot; /&gt;
+&lt;img alt=&quot;Tree view of ``jnrowe-misc`` history&quot; class=&quot;align-right&quot; src=&quot;../_images/jnrowe-misc.png&quot; style=&quot;width: 50%;&quot; /&gt;
 &lt;p&gt;&lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;jnrowe-misc&lt;/span&gt;&lt;/code&gt; was always the combination of a few independently managed
 repositories that I bundled up to make available for public consumption.
 Eventually it ended up being mostly Python stuff, but that was because the
@@ -578,7 +578,7 @@ if you share binary packages.&lt;/p&gt;
 binary package user on Gentoo is just how slow package installation and removal
 is.  Binary package installation on Gentoo feels on par with a distribution
 like Slackware, and what passes for package management there is just choosing
-the right argument to &lt;strong class=&quot;command&quot;&gt;tar&lt;/strong&gt;’s &lt;code class=&quot;xref std std-option docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;-C&lt;/span&gt;&lt;/code&gt; option.&lt;/p&gt;
+the right argument to &lt;strong class=&quot;command&quot;&gt;tar&lt;/strong&gt;’s &lt;code class=&quot;xref std std-option docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;-C&lt;/span&gt;&lt;/code&gt; option&lt;a class=&quot;footnote-reference brackets&quot; href=&quot;#id2&quot; id=&quot;id1&quot;&gt;*&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;Where Gentoo really excels though is in the speed of creating new packages or
 editing existing packages.&lt;/p&gt;
 &lt;p&gt;Lets take a look at an example.  Say, for example, that you just found out that
@@ -673,6 +673,14 @@ will feel equally inconsequential when compared to the benefits Gentoo gave us
 as time moves on.&lt;/p&gt;
 &lt;p&gt;Instead of making this rant even longer, I’ll take the time to reflect on the
 fun memories.&lt;/p&gt;
+&lt;p class=&quot;rubric&quot;&gt;Footnotes&lt;/p&gt;
+&lt;dl class=&quot;footnote brackets&quot;&gt;
+&lt;dt class=&quot;label&quot; id=&quot;id2&quot;&gt;&lt;span class=&quot;brackets&quot;&gt;&lt;a class=&quot;fn-backref&quot; href=&quot;#id1&quot;&gt;*&lt;/a&gt;&lt;/span&gt;&lt;/dt&gt;
+&lt;dd&gt;&lt;p&gt;To be fair &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;.tbz2&lt;/span&gt;&lt;/code&gt; files on Gentoo are just tarballs with a binary
+&lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;xpak&lt;/span&gt;&lt;/code&gt; appended.  Those extra bits beyond “just a tar -C” are what
+makes dependency handling work among other things.&lt;/p&gt;
+&lt;/dd&gt;
+&lt;/dl&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 </content>

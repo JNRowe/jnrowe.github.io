@@ -82,7 +82,7 @@ score ~fjohndoe@example.com +20
 set index_format=&amp;quot;%Z %2N %?H?%-16.12H&amp;amp;%D? %-16.16F  %s&amp;quot;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
-&lt;img alt=&quot;colouring and scoring in mutt&quot; src=&quot;.images/2009-10-08-mutt_screenshot.png&quot; /&gt;
+&lt;img alt=&quot;colouring and scoring in mutt&quot; src=&quot;../../_images/2009-10-08-mutt_screenshot.png&quot; /&gt;
 &lt;p&gt;The &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;color&lt;/span&gt;&lt;/code&gt; example sets all mail from the fictitious Joe Bloggs in the mail
 index to use a bright green foreground and the default background colour.  The
 &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;score&lt;/span&gt;&lt;/code&gt; example adds another 20 points to mail from John Doe, we add it
@@ -236,7 +236,7 @@ columns line up correctly regardless of whether we display a date or a spam
 value.  An example can be seen on the right featuring a few snippets from a ham
 mailbox and my spam mailbox:&lt;/p&gt;
 &lt;div class=&quot;figure&quot;&gt;
-&lt;img alt=&quot;Spam field alignment in :command:`mutt`&quot; src=&quot;.images/mutt_spam.png&quot; /&gt;
+&lt;img alt=&quot;Spam field alignment in :command:`mutt`&quot; src=&quot;../../_images/mutt_spam.png&quot; /&gt;
 &lt;/div&gt;
 &lt;p&gt;The final, and perhaps most interesting, file is &lt;code class=&quot;file docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;score.rc&lt;/span&gt;&lt;/code&gt; where
 I define all my manual scoring and some per-mail colouring policies.&lt;/p&gt;

@@ -135,7 +135,7 @@ can use the following little loop:&lt;/p&gt;
 &lt;span class=&quot;k&quot;&gt;done&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
-&lt;img alt=&quot;xterm's 256 colour palette&quot; src=&quot;.images/2009-09-25-256_colours.png&quot; /&gt;
+&lt;img alt=&quot;xterm's 256 colour palette&quot; src=&quot;../../_images/2009-09-25-256_colours.png&quot; /&gt;
 &lt;p&gt;There is one other important point to make here, you must set the prompt based
 on terminal type now as some terminals and the console won’t recognise the
 sequences correctly.  Test the terminal type by checking &lt;span class=&quot;target&quot; id=&quot;index-0&quot;&gt;&lt;/span&gt;&lt;code class=&quot;xref std std-envvar docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;$TERM&lt;/span&gt;&lt;/code&gt; in

@@ -261,7 +261,7 @@ have made, maybe to help you build your changelog information.&lt;/p&gt;&lt;/li&
 &lt;div class=&quot;section&quot; id=&quot;advanced&quot;&gt;
 &lt;h2&gt;Advanced&lt;/h2&gt;
 &lt;div class=&quot;figure&quot;&gt;
-&lt;img alt=&quot;rcsi screenshot&quot; src=&quot;.images/rcsi.png&quot; style=&quot;width: 500px; height: 114px;&quot; /&gt;
+&lt;img alt=&quot;rcsi screenshot&quot; src=&quot;../_images/rcsi.png&quot; style=&quot;width: 500px; height: 114px;&quot; /&gt;
 &lt;/div&gt;
 &lt;p&gt;There are many tools available that can help you to manage your &lt;abbr title=&quot;GNU Revision Control System&quot;&gt;RCS&lt;/abbr&gt; files,
 including the &lt;abbr title=&quot;GNU Revision Control System&quot;&gt;RCS&lt;/abbr&gt; status monitor &lt;a class=&quot;reference external&quot; href=&quot;http://www.colinbrough.pwp.blueyonder.co.uk/rcsi.README.html&quot;&gt;rcsi&lt;/a&gt; and &lt;a class=&quot;reference external&quot; href=&quot;http://blame.sourceforge.net/&quot;&gt;blame&lt;/a&gt; &lt;abbr title=&quot;GNU Revision Control System&quot;&gt;RCS&lt;/abbr&gt; file annotator.&lt;/p&gt;

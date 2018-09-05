@@ -29,7 +29,7 @@ purpose well.&lt;/p&gt;
 them) the overlay available on GitHub wasn’t the deliverable at any point in
 time.  In fact, the often convoluted merge history in the repository probably
 hinted at that quite a bit.&lt;/p&gt;
-&lt;img alt=&quot;Tree view of ``jnrowe-misc`` history&quot; class=&quot;align-right&quot; src=&quot;.images/jnrowe-misc.png&quot; style=&quot;width: 50%;&quot; /&gt;
+&lt;img alt=&quot;Tree view of ``jnrowe-misc`` history&quot; class=&quot;align-right&quot; src=&quot;../../_images/jnrowe-misc.png&quot; style=&quot;width: 50%;&quot; /&gt;
 &lt;p&gt;&lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;jnrowe-misc&lt;/span&gt;&lt;/code&gt; was always the combination of a few independently managed
 repositories that I bundled up to make available for public consumption.
 Eventually it ended up being mostly Python stuff, but that was because the

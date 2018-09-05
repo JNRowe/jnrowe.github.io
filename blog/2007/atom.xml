@@ -91,7 +91,7 @@ columns line up correctly regardless of whether we display a date or a spam
 value.  An example can be seen on the right featuring a few snippets from a ham
 mailbox and my spam mailbox:&lt;/p&gt;
 &lt;div class=&quot;figure&quot;&gt;
-&lt;img alt=&quot;Spam field alignment in :command:`mutt`&quot; src=&quot;.images/mutt_spam.png&quot; /&gt;
+&lt;img alt=&quot;Spam field alignment in :command:`mutt`&quot; src=&quot;../_images/mutt_spam.png&quot; /&gt;
 &lt;/div&gt;
 &lt;p&gt;The final, and perhaps most interesting, file is &lt;code class=&quot;file docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;score.rc&lt;/span&gt;&lt;/code&gt; where
 I define all my manual scoring and some per-mail colouring policies.&lt;/p&gt;
@@ -193,7 +193,7 @@ your &lt;code class=&quot;file docutils literal notranslate&quot;&gt;&lt;span cl
 the comments in your &lt;code class=&quot;file docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;~/.gtkrc-2.0&lt;/span&gt;&lt;/code&gt; if you use either of these theme
 switchers.&lt;/p&gt;
 &lt;div class=&quot;figure&quot;&gt;
-&lt;img alt=&quot;XFce4 keyboard settings window&quot; src=&quot;.images/xfce4_keyboard.png&quot; /&gt;
+&lt;img alt=&quot;XFce4 keyboard settings window&quot; src=&quot;../_images/xfce4_keyboard.png&quot; /&gt;
 &lt;/div&gt;
 &lt;p&gt;If you’re an &lt;a class=&quot;reference external&quot; href=&quot;http://www.xfce.org/&quot;&gt;XFce&lt;/a&gt; user you can select the Emacs keyboard shortcuts using the
 keyboard settings dialog.&lt;/p&gt;

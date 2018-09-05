@@ -110,7 +110,7 @@ I login, although I do have a hook in &lt;a class=&quot;reference external&quot;
 output at other times.  Again the file format is quite sensible which makes
 writing importers and exporters simple enough.  As an example, I generate my
 &lt;code class=&quot;file docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;~/.reminders.d/meetings&lt;/span&gt;&lt;/code&gt; file from a &lt;a class=&quot;reference external&quot; href=&quot;http://microformats.org/wiki/hcalendar&quot;&gt;hCalender&lt;/a&gt; page.&lt;/p&gt;
-&lt;img alt=&quot;abook displaying custom tab&quot; src=&quot;.images/2009-09-26-abook_screenshot-mini.png&quot; /&gt;
+&lt;img alt=&quot;abook displaying custom tab&quot; src=&quot;../../_images/2009-09-26-abook_screenshot-mini.png&quot; /&gt;
 &lt;p&gt;Now the birthday trick is a cool one, &lt;strong class=&quot;command&quot;&gt;abook&lt;/strong&gt; allows the use of custom
 fields that you can use for anything you like.  I use a custom field to store
 birthdays in &lt;abbr title=&quot;International Organization for Standardization&quot;&gt;ISO&lt;/abbr&gt;-8601 format as in “1974-04-12”, and enable it by adding the
@@ -159,7 +159,7 @@ file by editing &lt;code class=&quot;file docutils literal notranslate&quot;&gt;
 &lt;div class=&quot;highlight-text notranslate&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;INCLUDE /home/jay/.reminders.d/birthdays
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
-&lt;img alt=&quot;shell login screenshot&quot; src=&quot;.images/2009-09-26-remind_screenshot.png&quot; /&gt;
+&lt;img alt=&quot;shell login screenshot&quot; src=&quot;../../_images/2009-09-26-remind_screenshot.png&quot; /&gt;
 &lt;p&gt;You could trigger a rebuild in your &lt;code class=&quot;file docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;~/.bashrc&lt;/span&gt;&lt;/code&gt; before you call
 &lt;strong class=&quot;command&quot;&gt;rem&lt;/strong&gt; to see the reminders, so they are always up to date at login.
 Or, you could be like me and have a post commit hook for &lt;a class=&quot;reference external&quot; href=&quot;http://www.git-scm.com/&quot;&gt;git&lt;/a&gt; to manage this…
