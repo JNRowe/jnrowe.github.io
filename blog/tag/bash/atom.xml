@@ -26,9 +26,8 @@
 above the command line, highlighting the currently selected completion option.
 A follow up email later and Matt says:&lt;/p&gt;
 &lt;blockquote&gt;
-&lt;div&gt;&lt;p&gt;Basically, I want &lt;strong class=&quot;command&quot;&gt;bash&lt;/strong&gt; to show me the completions and
-&lt;kbd class=&quot;kbd docutils literal notranslate&quot;&gt;Tab`&lt;/kbd&gt; to &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;$key&lt;/span&gt;&lt;/code&gt; through them in the same way &lt;strong class=&quot;command&quot;&gt;vim&lt;/strong&gt; does
-it.&lt;/p&gt;
+&lt;div&gt;&lt;p&gt;Basically, I want &lt;strong class=&quot;command&quot;&gt;bash&lt;/strong&gt; to show me the completions and &lt;kbd class=&quot;kbd docutils literal notranslate&quot;&gt;Tab&lt;/kbd&gt;
+to slide through them in the same way &lt;strong class=&quot;command&quot;&gt;vim&lt;/strong&gt; does it.&lt;/p&gt;
 &lt;/div&gt;&lt;/blockquote&gt;
 &lt;p&gt;The feature is surprisingly easy to achieve with &lt;strong class=&quot;command&quot;&gt;bash&lt;/strong&gt;, and is
 actually a feature of &lt;a class=&quot;reference external&quot; href=&quot;http://cnswww.cns.cwru.edu/php/chet/readline/rltop.html&quot;&gt;readline&lt;/a&gt; making it available to all software that uses
@@ -50,9 +49,9 @@ $endif
 &lt;p&gt;The above tells &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;readline&lt;/span&gt;&lt;/code&gt; we wish to bind &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;menu-complete&lt;/span&gt;&lt;/code&gt; to
 &lt;kbd class=&quot;kbd docutils literal notranslate&quot;&gt;Control-a&lt;/kbd&gt;, I find that key combination quite comfortable as
 &lt;kbd class=&quot;kbd docutils literal notranslate&quot;&gt;Control-a&lt;/kbd&gt; is easy to reach the my keyboard layout and is of little use
-in any of the apps I use on a regular basis.  You must either re-read the
-configuration file or restart the &lt;strong class=&quot;command&quot;&gt;bash&lt;/strong&gt; session to enable this
-binding.&lt;/p&gt;
+in any of the apps I use on a regular basis(I’d feel differently if &lt;kbd class=&quot;kbd docutils literal notranslate&quot;&gt;Home&lt;/kbd&gt;
+was inaccessible).  You must either re-read the configuration file or restart
+the &lt;strong class=&quot;command&quot;&gt;bash&lt;/strong&gt; session to enable this binding.&lt;/p&gt;
 &lt;p&gt;To enable the key binding in &lt;strong class=&quot;command&quot;&gt;bash&lt;/strong&gt; only we could also just edit the
 appropriate &lt;strong class=&quot;command&quot;&gt;bash&lt;/strong&gt; startup file:&lt;/p&gt;
 &lt;div class=&quot;highlight-bash notranslate&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;bind&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;&amp;quot;\C-a&amp;quot;: menu-complete&amp;#39;&lt;/span&gt;
@@ -66,7 +65,7 @@ completion context aware, in much the same the &lt;a class=&quot;reference exter
 without having to write new completion scripts.  There are some other quite
 useful completion modes available in &lt;strong class=&quot;command&quot;&gt;bash&lt;/strong&gt;, I’ll describe a few
 below.&lt;/p&gt;
-&lt;p&gt;&lt;kbd class=&quot;kbd docutils literal notranslate&quot;&gt;M-!&lt;/kbd&gt; tells &lt;strong class=&quot;command&quot;&gt;bash&lt;/strong&gt; to complete command names be they actual
+&lt;p&gt;&lt;kbd class=&quot;kbd docutils literal notranslate&quot;&gt;M-!&lt;/kbd&gt; tells &lt;strong class=&quot;command&quot;&gt;bash&lt;/strong&gt; to complete command names; be they actual
 on-disk commands, functions or aliases. &lt;kbd class=&quot;kbd docutils literal notranslate&quot;&gt;M-/&lt;/kbd&gt; completes only filenames,
 this can be very useful when &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;bash-completion&lt;/span&gt;&lt;/code&gt; is refusing to tab complete
 a filename for you.  &lt;kbd class=&quot;kbd docutils literal notranslate&quot;&gt;C-$&lt;/kbd&gt; implements variable name completion, this is

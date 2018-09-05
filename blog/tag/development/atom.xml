@@ -52,10 +52,10 @@ wrangle in to our environment.&lt;/p&gt;
 &lt;p&gt;The tarball ships without any &lt;em&gt;directly&lt;/em&gt; usable documentation, so you end up
 with either no system documentation or a collection of docs sprinkled with wiki
 markup in &lt;code class=&quot;file docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;/usr/share/doc&lt;/span&gt;&lt;/code&gt;.&lt;/p&gt;
-&lt;p&gt;By default &lt;strong class=&quot;command&quot;&gt;fossil&lt;/strong&gt; builds in a manner which breaks most packaging
-standard unfortunately.  If you’re building packages you’ll likely need to
-write an awful lot of custom workarounds to get a compliant and usable package,
-see &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;lst-pkgs/utils/dev/fossil&lt;/span&gt;&lt;/code&gt; build for the gory details of our hacks.&lt;/p&gt;
+&lt;p&gt;By default &lt;strong class=&quot;command&quot;&gt;fossil&lt;/strong&gt; builds in a manner which unfortunately breaks most
+packaging standards.  If you’re building packages you’ll likely need to write an
+awful lot of custom workarounds to get a compliant and usable package, see
+&lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;lst-pkgs/utils/dev/fossil&lt;/span&gt;&lt;/code&gt; build for the gory details of my hacks.&lt;/p&gt;
 &lt;/div&gt;
 &lt;div class=&quot;section&quot; id=&quot;uptake&quot;&gt;
 &lt;h2&gt;Uptake&lt;/h2&gt;
@@ -81,7 +81,7 @@ decade.&lt;/p&gt;
 &lt;p&gt;One of the proclaimed benefits of using &lt;strong class=&quot;command&quot;&gt;fossil&lt;/strong&gt; is that it handles
 many aspects of a project’s &lt;abbr title=&quot;Application Lifecycle Management&quot;&gt;ALM&lt;/abbr&gt;; version control, issue tracking,
 documentation(via a wiki), etc.  However, and this is only my opinion, it feels
-like it does of all of these in a suboptimal manner.&lt;/p&gt;
+like it does all of these in a suboptimal manner.&lt;/p&gt;
 &lt;div class=&quot;section&quot; id=&quot;version-control&quot;&gt;
 &lt;h3&gt;Version control&lt;/h3&gt;
 &lt;p&gt;The version control feels quite nice for the most part, definitely usable but

@@ -63,9 +63,8 @@
 above the command line, highlighting the currently selected completion option.
 A follow up email later and Matt says:</p>
 <blockquote>
-<div><p>Basically, I want <strong class="command">bash</strong> to show me the completions and
-<kbd class="kbd docutils literal notranslate">Tab`</kbd> to <code class="docutils literal notranslate"><span class="pre">$key</span></code> through them in the same way <strong class="command">vim</strong> does
-it.</p>
+<div><p>Basically, I want <strong class="command">bash</strong> to show me the completions and <kbd class="kbd docutils literal notranslate">Tab</kbd>
+to slide through them in the same way <strong class="command">vim</strong> does it.</p>
 </div></blockquote>
 <p>The feature is surprisingly easy to achieve with <strong class="command">bash</strong>, and is
 actually a feature of <a class="reference external" href="http://cnswww.cns.cwru.edu/php/chet/readline/rltop.html">readline</a> making it available to all software that uses
@@ -87,9 +86,9 @@ $endif
 <p>The above tells <code class="docutils literal notranslate"><span class="pre">readline</span></code> we wish to bind <code class="docutils literal notranslate"><span class="pre">menu-complete</span></code> to
 <kbd class="kbd docutils literal notranslate">Control-a</kbd>, I find that key combination quite comfortable as
 <kbd class="kbd docutils literal notranslate">Control-a</kbd> is easy to reach the my keyboard layout and is of little use
-in any of the apps I use on a regular basis.  You must either re-read the
-configuration file or restart the <strong class="command">bash</strong> session to enable this
-binding.</p>
+in any of the apps I use on a regular basis(I’d feel differently if <kbd class="kbd docutils literal notranslate">Home</kbd>
+was inaccessible).  You must either re-read the configuration file or restart
+the <strong class="command">bash</strong> session to enable this binding.</p>
 <p>To enable the key binding in <strong class="command">bash</strong> only we could also just edit the
 appropriate <strong class="command">bash</strong> startup file:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">bind</span> <span class="s1">&#39;&quot;\C-a&quot;: menu-complete&#39;</span>
@@ -103,7 +102,7 @@ completion context aware, in much the same the <a class="reference external" hre
 without having to write new completion scripts.  There are some other quite
 useful completion modes available in <strong class="command">bash</strong>, I’ll describe a few
 below.</p>
-<p><kbd class="kbd docutils literal notranslate">M-!</kbd> tells <strong class="command">bash</strong> to complete command names be they actual
+<p><kbd class="kbd docutils literal notranslate">M-!</kbd> tells <strong class="command">bash</strong> to complete command names; be they actual
 on-disk commands, functions or aliases. <kbd class="kbd docutils literal notranslate">M-/</kbd> completes only filenames,
 this can be very useful when <code class="docutils literal notranslate"><span class="pre">bash-completion</span></code> is refusing to tab complete
 a filename for you.  <kbd class="kbd docutils literal notranslate">C-$</kbd> implements variable name completion, this is
@@ -122,13 +121,15 @@ a command to a certain set of files in a directory.  Just don’t try it on
 lines!!</p>
 </div>
 
+    <hr>
+
     <p class="keybase-verify">
       Authenticate this page by pasting <a
         href="https://raw.githubusercontent.com/JNRowe/jnrowe.github.io/source/articles/tips/Beyond_tab_completion.rst.asc">this signature</a> into
       <a href="https://keybase.io/verify">Keybase</a>.
     </p>
 
-    <p>
+    <p class="edit-page">
       Have a suggestion or see a typo?  <a href="https://github.com/JNRowe/jnrowe.github.io/edit/source/articles/tips/Beyond_tab_completion.rst">Edit this page</a>
      </p>
   
@@ -223,7 +224,6 @@ lines!!</p>
 
 
 <h3>Navigation</h3>
-<p class="caption"><span class="caption-text">Contents</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../../projects.html">Projects</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="../index.html">Articles</a><ul class="current">
