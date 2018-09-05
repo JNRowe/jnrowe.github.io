@@ -1,5 +1,5 @@
-:date: 2009-10-05
-:tags: X11, styling
+.. post:: 2009-10-05
+   :tags: X11, styling
 
 Sharing Xresources between systems
 ==================================

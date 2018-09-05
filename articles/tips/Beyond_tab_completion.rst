@@ -1,5 +1,5 @@
-:date: 2009-09-30
-:tags: bash, readline
+.. post:: 2009-09-30
+   :tags: bash, readline
 
 Beyond simple tab completion
 ============================

@@ -1,5 +1,5 @@
-:date: 2009-10-29
-:tags: python
+.. post:: 2009-10-29
+   :tags: python
 
 Debugging Python |RegEx|
 ========================

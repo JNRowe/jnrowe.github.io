@@ -1,5 +1,5 @@
-:date: 2011-06-13
-:tags: devel, testing
+.. post:: 2011-06-13
+   :tags: devel, testing
 
 |TDD| distro development
 ========================

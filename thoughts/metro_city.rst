@@ -1,5 +1,5 @@
-:date: 2017-09-03
-:tags: politics, noise
+.. post:: 2017-09-03
+   :tags: politics, noise
 
 Burning down the streets
 ========================

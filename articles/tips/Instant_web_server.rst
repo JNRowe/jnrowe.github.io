@@ -1,5 +1,5 @@
-:date: 2009-10-12
-:tags: devel, web
+.. post:: 2009-10-12
+   :tags: devel, web
 
 Instant web server
 ==================

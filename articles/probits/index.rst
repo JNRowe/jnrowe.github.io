@@ -1,5 +1,5 @@
-:date: 2014-06-30
-:tags: probit
+.. post:: 2014-06-30
+   :tags: probit
 
 Project postmortems
 ===================

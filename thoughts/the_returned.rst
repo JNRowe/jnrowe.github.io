@@ -1,5 +1,5 @@
-:date: 2014-01-27
-:tags: blog, site
+.. post:: 2014-01-27
+   :tags: blog, site
 
 Return to rambling
 ==================

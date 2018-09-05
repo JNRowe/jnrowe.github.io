@@ -1,5 +1,5 @@
-:date: 2009-09-26
-:tags: abook, remind
+.. post:: 2009-09-26
+   :tags: abook, remind
 
 “Kick me” birthday reminders
 ============================

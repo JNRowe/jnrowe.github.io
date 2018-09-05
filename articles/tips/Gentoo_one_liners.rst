@@ -1,5 +1,5 @@
-:date: 2009-10-09
-:tags: gentoo
+.. post:: 2009-10-09
+   :tags: gentoo
 
 Gentoo one liners
 =================
