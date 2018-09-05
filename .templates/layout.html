@@ -11,5 +11,16 @@
             {{ super() | wordcount // 500 + 1 }} minutes
         </p>
     {% endif %}
+
     {{ super() }}
+
+    {%- if pagename is not index and 'blog/' not in pagename %}
+        <p class="keybase-verify">
+            Authenticate this page by pasting <a
+                href="https://raw.githubusercontent.com/JNRowe/jnrowe.github.io/source/{{
+                pagename }}{{ page_source_suffix }}.asc">this signature</a> into
+            <a href="https://keybase.io/verify">Keybase</a>.
+        </p>
+    {% endif %}
+
 {%- endblock %}
