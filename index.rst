@@ -8,10 +8,18 @@ important enough for, or too incomplete to warrant, their own location.  More
 specifically it is used for toy :doc:`projects <projects>`, and the occasional
 rant.
 
+
+Recent posts
+------------
+
+.. postlist:: 5
+   :excerpts:
+   :date: %F
+   :list-style: disc
+
 .. toctree::
    :maxdepth: 2
    :hidden:
-   :caption: Contents
 
    projects
 
