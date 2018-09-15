@@ -8,7 +8,7 @@
                 when others do the something similar.
             #}
             <b>Estimated reading time</b>:
-            {{ super() | wordcount // 500 + 1 }} minutes
+            {{ body | wordcount // 500 + 1 }} minutes
         </p>
     {% endif %}
 
