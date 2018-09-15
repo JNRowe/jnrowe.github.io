@@ -14,7 +14,7 @@
     <published>2009-10-28T00:00:00Z</published>
     <link href="https://jnrowe.github.io/articles/tips/Zsh_and_the_vcs.html" />
     <author>
-      <name></name>
+      <name>James Rowe</name>
     </author>
     <content type="html">&lt;div class=&quot;section&quot; id=&quot;zsh-and-the-vcs&quot;&gt;
 
@@ -143,7 +143,7 @@ that can display them.&lt;/p&gt;
     <published>2009-09-29T00:00:00Z</published>
     <link href="https://jnrowe.github.io/articles/tips/Context_aware_diffs_with_git.html" />
     <author>
-      <name></name>
+      <name>James Rowe</name>
     </author>
     <content type="html">&lt;div class=&quot;section&quot; id=&quot;context-aware-diffs-with-git&quot;&gt;
 

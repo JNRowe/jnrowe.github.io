@@ -14,7 +14,7 @@
     <published>2009-10-29T00:00:00Z</published>
     <link href="https://jnrowe.github.io/articles/tips/Debugging_python_regexps.html" />
     <author>
-      <name></name>
+      <name>James Rowe</name>
     </author>
     <content type="html">&lt;div class=&quot;section&quot; id=&quot;debugging-python-regex&quot;&gt;
 
@@ -153,7 +153,7 @@ a &lt;abbr title=&quot;Regular Expression&quot;&gt;RegEx&lt;/abbr&gt;.&lt;/p&gt;
     <published>2009-10-28T00:00:00Z</published>
     <link href="https://jnrowe.github.io/articles/tips/Zsh_and_the_vcs.html" />
     <author>
-      <name></name>
+      <name>James Rowe</name>
     </author>
     <content type="html">&lt;div class=&quot;section&quot; id=&quot;zsh-and-the-vcs&quot;&gt;
 
@@ -282,7 +282,7 @@ that can display them.&lt;/p&gt;
     <published>2009-10-14T00:00:00Z</published>
     <link href="https://jnrowe.github.io/articles/tips/Three_mobile_broadband_in_linux.html" />
     <author>
-      <name></name>
+      <name>James Rowe</name>
     </author>
     <content type="html">&lt;div class=&quot;section&quot; id=&quot;three-mobile-broadband-in-linux&quot;&gt;
 
@@ -444,7 +444,7 @@ and check the &lt;strong class=&quot;command&quot;&gt;pppd&lt;/strong&gt; manual
     <published>2009-10-13T00:00:00Z</published>
     <link href="https://jnrowe.github.io/articles/tips/Visual_vim_mode_identifier.html" />
     <author>
-      <name></name>
+      <name>James Rowe</name>
     </author>
     <content type="html">&lt;div class=&quot;section&quot; id=&quot;visual-vim-mode-identifier&quot;&gt;
 
@@ -501,7 +501,7 @@ when we change mode:&lt;/p&gt;
     <published>2009-10-12T00:00:00Z</published>
     <link href="https://jnrowe.github.io/articles/tips/Instant_web_server.html" />
     <author>
-      <name></name>
+      <name>James Rowe</name>
     </author>
     <content type="html">&lt;div class=&quot;section&quot; id=&quot;instant-web-server&quot;&gt;
 
@@ -607,7 +607,7 @@ of code.&lt;/p&gt;
     <published>2009-10-11T00:00:00Z</published>
     <link href="https://jnrowe.github.io/articles/tips/Making_a_nice_home.html" />
     <author>
-      <name></name>
+      <name>James Rowe</name>
     </author>
     <content type="html">&lt;div class=&quot;section&quot; id=&quot;making-a-nice-home&quot;&gt;
 
@@ -711,7 +711,7 @@ markup language.&lt;/p&gt;
     <published>2009-10-10T00:00:00Z</published>
     <link href="https://jnrowe.github.io/articles/tips/Formatting_csv_files_in_the_shell.html" />
     <author>
-      <name></name>
+      <name>James Rowe</name>
     </author>
     <content type="html">&lt;div class=&quot;section&quot; id=&quot;formatting-csv-files-in-the-shell&quot;&gt;
 
@@ -799,7 +799,7 @@ computer that we wish to format and calculate totals for could be:&lt;/p&gt;
     <published>2009-10-09T00:00:00Z</published>
     <link href="https://jnrowe.github.io/articles/tips/Gentoo_one_liners.html" />
     <author>
-      <name></name>
+      <name>James Rowe</name>
     </author>
     <content type="html">&lt;div class=&quot;section&quot; id=&quot;gentoo-one-liners&quot;&gt;
 
@@ -931,7 +931,7 @@ output of &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span cl
     <published>2009-10-08T00:00:00Z</published>
     <link href="https://jnrowe.github.io/articles/tips/Importing_gmail_filters_in_mutt.html" />
     <author>
-      <name></name>
+      <name>James Rowe</name>
     </author>
     <content type="html">&lt;div class=&quot;section&quot; id=&quot;importing-gmail-filters-in-mutt&quot;&gt;
 
@@ -1047,7 +1047,7 @@ may be worth taking a quick look at if you use folders to organise your mails.&l
     <published>2009-10-07T00:00:00Z</published>
     <link href="https://jnrowe.github.io/articles/tips/BTS_as_a_task_manager.html" />
     <author>
-      <name></name>
+      <name>James Rowe</name>
     </author>
     <content type="html">&lt;div class=&quot;section&quot; id=&quot;bts-as-a-task-manager&quot;&gt;
 
@@ -1234,7 +1234,7 @@ Feel free to post updates to the gist!&lt;/p&gt;
     <published>2009-10-06T00:00:00Z</published>
     <link href="https://jnrowe.github.io/articles/tips/Finding_a_windows_owner.html" />
     <author>
-      <name></name>
+      <name>James Rowe</name>
     </author>
     <content type="html">&lt;div class=&quot;section&quot; id=&quot;finding-a-windows-owner&quot;&gt;
 
@@ -1309,7 +1309,7 @@ terminate signals.&lt;/p&gt;
     <published>2009-10-05T00:00:00Z</published>
     <link href="https://jnrowe.github.io/articles/tips/Sharing_Xresources_between_systems.html" />
     <author>
-      <name></name>
+      <name>James Rowe</name>
     </author>
     <content type="html">&lt;div class=&quot;section&quot; id=&quot;sharing-xresources-between-systems&quot;&gt;
 
@@ -1418,7 +1418,7 @@ of loops for defining colour tables.&lt;/p&gt;
     <published>2009-10-04T00:00:00Z</published>
     <link href="https://jnrowe.github.io/articles/tips/Simple_notifications_in_awesome.html" />
     <author>
-      <name></name>
+      <name>James Rowe</name>
     </author>
     <content type="html">&lt;div class=&quot;section&quot; id=&quot;simple-notifications-in-awesome&quot;&gt;
 
@@ -1535,7 +1535,7 @@ switches the network graph widget to use the appropriate input too.&lt;/p&gt;
     <published>2009-10-03T00:00:00Z</published>
     <link href="https://jnrowe.github.io/articles/tips/Disabling_cursor_blinking_in_GTK.html" />
     <author>
-      <name></name>
+      <name>James Rowe</name>
     </author>
     <content type="html">&lt;div class=&quot;section&quot; id=&quot;disabling-cursor-blinking-in-gtk&quot;&gt;
 
@@ -1583,7 +1583,7 @@ the console too then add the next little snippet to your shell’s startup file:
     <published>2009-10-02T00:00:00Z</published>
     <link href="https://jnrowe.github.io/articles/tips/Toggling_settings_in_vim.html" />
     <author>
-      <name></name>
+      <name>James Rowe</name>
     </author>
     <content type="html">&lt;div class=&quot;section&quot; id=&quot;toggling-settings-in-vim&quot;&gt;
 

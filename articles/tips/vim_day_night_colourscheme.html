@@ -1,0 +1,648 @@
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" />
+    <title>Vim with day/night colourschemes &#8212; JNRowe</title>
+    <link rel="stylesheet" href="../../_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../_static/doctools.js"></script>
+    <link rel="shortcut icon" href="../../_static/icon.ico"/>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="copyright" title="Copyright" href="../../copyright.html" />
+    <link rel="next" title="Project postmortems" href="../probits/index.html" />
+    <link rel="prev" title="Proper keyboard shortcuts in GTK+" href="emacs_gtk_shortcuts.html" />
+  
+   
+  <link rel="stylesheet" href="../../_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  
+  <link rel="alternate" type="application/atom+xml"  href="../../blog/atom.xml" title="JNRowe">
+  
+  
+  <style type="text/css">
+    ul.ablog-archive {list-style: none; overflow: auto; margin-left: 0px}
+    ul.ablog-archive li {float: left; margin-right: 5px; font-size: 80%}
+    ul.postlist a {font-style: italic;}
+    ul.postlist-style-disc {list-style-type: disc;}
+    ul.postlist-style-none {list-style-type: none;}
+    ul.postlist-style-circle {list-style-type: circle;}
+  </style>
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+    <p class="read-time">
+      <b>Estimated reading time</b>:
+      4 minutes
+    </p>
+  
+
+  <div class="section" id="vim-with-day-night-colourschemes">
+<h1>Vim with day/night colourschemes<a class="headerlink" href="#vim-with-day-night-colourschemes" title="Permalink to this headline">¶</a></h1>
+<p>The fabulous Miss Biddulph asks via our EADS Linux list:</p>
+<blockquote>
+<div><p>I lurve <a class="reference external" href="https://www.vim.org/scripts/script.php?script_id=594">taqua</a> in <a class="reference external" href="http://www.vim.org">vim</a> during the day, but now the days are getting shorter
+it is beginning to destroy me.  Is there a way to make <strong class="command">vim</strong> use
+different colourschemes depending on time?</p>
+</div></blockquote>
+<p>So, like most things this can either be <em>really</em> simple or horribly convoluted
+depending on where you wish to draw the usability line.  Because Laura is
+asking, we’ll scratch the surface of a few odd ways to do this.</p>
+<div class="section" id="the-simple-solution">
+<h2>The simple solution<a class="headerlink" href="#the-simple-solution" title="Permalink to this headline">¶</a></h2>
+<p>In many ways this is related to my <a class="reference external" href="https://github.com/JNRowe/awesome-timed-wallpaper/">awesome-timed-wallpaper</a> hack, and to start
+with I’m going to proceed in a similar way.</p>
+<p>The snippet below will configure the <a class="reference external" href="http://vimdoc.sourceforge.net/htmldoc/options.html#'background'">background</a> and <a class="reference external" href="http://vimdoc.sourceforge.net/htmldoc/syntax.html#:colorscheme">colourscheme</a> depending on
+the time of day.  You can change the bounds in any way you see fit<a class="footnote-reference brackets" href="#id3" id="id1">1</a>.</p>
+<div class="highlight-vim notranslate"><div class="highlight"><pre><span></span><span class="k">let</span> hour <span class="p">=</span> strftime<span class="p">(</span><span class="s1">&#39;%H&#39;</span><span class="p">)</span>
+<span class="k">if</span> hour <span class="p">&gt;=</span> <span class="m">18</span>
+    <span class="k">set</span> <span class="nb">background</span><span class="p">=</span><span class="nb">dark</span>
+    <span class="k">colorscheme</span> jnrowe  <span class="c">&quot; Best theme</span>
+<span class="k">elseif</span> hour <span class="p">&gt;=</span> <span class="m">9</span>
+    <span class="k">set</span> <span class="nb">background</span><span class="p">=</span><span class="nb">light</span>
+    <span class="k">colorscheme</span> taqua
+<span class="k">else</span>
+<span class="c">    &quot; Midnight to 08:59</span>
+    <span class="k">set</span> <span class="nb">background</span><span class="p">=</span><span class="nb">dark</span>
+    <span class="k">colorscheme</span> monokai
+<span class="k">endif</span>
+</pre></div>
+</div>
+<p>If you (re-)start <strong class="command">vim</strong> regularly this is all you’ll probably need.
+If — like me — you have <em>very</em> long running <strong class="command">vim</strong> sessions, you’ll have
+to put in some more effort to make it work:</p>
+<ul class="simple">
+<li><p>The easiest option would be <a class="reference external" href="http://vimdoc.sourceforge.net/htmldoc/map.html#:nmap">binding it to a key</a> and triggering it when you
+notice eye strain</p></li>
+<li><p>Use vim 8’s new asynchronous timer support, see <code class="docutils literal notranslate"><span class="pre">:h</span> <span class="pre">timer</span></code><a class="footnote-reference brackets" href="#id4" id="id2">2</a></p></li>
+<li><p>Support pre-v8 vim by adding an <a class="reference external" href="http://vimdoc.sourceforge.net/htmldoc/autocmd.html#:autocmd">autocmd</a> on <a class="reference external" href="http://vimdoc.sourceforge.net/htmldoc/autocmd.html#CursorHold">CursorHold</a></p></li>
+<li><p>Script vim externally using vim’s <a class="reference external" href="http://vimdoc.sourceforge.net/htmldoc/remote.html#--remote-send">client server support</a></p></li>
+<li><p>…</p></li>
+<li><p>Create a <a class="reference external" href="https://www.freedesktop.org/wiki/Software/systemd">systemd</a> user timer that triggers at a given time ;)</p></li>
+</ul>
+</div>
+<div class="section" id="the-ridiculous-solution">
+<h2>The ridiculous solution<a class="headerlink" href="#the-ridiculous-solution" title="Permalink to this headline">¶</a></h2>
+<p>We’ll need to figure out the actual daylight state.  There are an enormous
+number of options available.</p>
+<div class="section" id="upoints">
+<h3><code class="docutils literal notranslate"><span class="pre">upoints</span></code><a class="headerlink" href="#upoints" title="Permalink to this headline">¶</a></h3>
+<p>My <a class="reference external" href="https://pypi.org/project/upoints/">upoints</a> package can calculate sunrise and sunset:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">upoints.point</span> <span class="kn">import</span> <span class="n">Point</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">p</span> <span class="o">=</span> <span class="n">Point</span><span class="p">(</span><span class="mf">52.2</span><span class="p">,</span> <span class="mf">0.2</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">p</span><span class="o">.</span><span class="n">sun_events</span><span class="p">()</span>  <span class="c1"># UTC results</span>
+<span class="go">(datetime.time(5, 32), datetime.time(18, 15))</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">p</span><span class="o">.</span><span class="n">sun_events</span><span class="p">(</span><span class="n">zenith</span><span class="o">=</span><span class="s1">&#39;civil&#39;</span><span class="p">)</span>   <span class="c1"># twilight</span>
+<span class="go">(datetime.time(4, 58), datetime.time(18, 49))</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="redshift">
+<h3><code class="docutils literal notranslate"><span class="pre">redshift</span></code><a class="headerlink" href="#redshift" title="Permalink to this headline">¶</a></h3>
+<p>If you already use <a class="reference external" href="http://jonls.dk/redshift/">redshift</a> — and you should — getting the current state is
+quite easy.  Below is example output, and a quick <a class="reference external" href="http://sed.sourceforge.net/">sed</a>-based method to parse the
+output for script usage:</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>$ redshift -p
+Waiting <span class="k">for</span> current location to become available...
+Location: <span class="m">52</span>.2 N, <span class="m">0</span>.2 E
+Period: Night
+Colour temperature: 4500K
+Brightness: <span class="m">1</span>.00
+$ redshift -p <span class="m">2</span>&gt;/dev/null <span class="p">|</span> sed -n <span class="s1">&#39;/^Period/s,\(.*\): \(.*\),\U\1=\L\2,p&#39;</span>
+<span class="nv">PERIOD</span><span class="o">=</span>night
+</pre></div>
+</div>
+<p>Another option might be to use <strong class="command">redshift</strong>’s hook support, see the man
+page for how to configure hooks.</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span><span class="ch">#!/bin/zsh</span>
+
+<span class="k">case</span> <span class="nv">$1</span> <span class="o">{</span>
+<span class="o">(</span>period-changed<span class="o">)</span>
+    <span class="k">case</span> <span class="nv">$3</span> <span class="o">{</span>
+    <span class="o">(</span>day<span class="o">)</span> <span class="o">{</span> notify-send <span class="s2">&quot;Make bright&quot;</span> <span class="o">}</span> <span class="p">;;</span>
+    <span class="o">(</span>night<span class="o">)</span> <span class="o">{</span> notify-send <span class="s2">&quot;Make dark&quot;</span> <span class="o">}</span> <span class="p">;;</span>
+    <span class="o">}</span>
+<span class="o">}</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="camera-input">
+<h3>Camera input<a class="headerlink" href="#camera-input" title="Permalink to this headline">¶</a></h3>
+<p>Assuming you have access to either a very good or <em>very</em> bad webcam you could
+even script support that takes in to account cloud cover, or occultation caused
+by buildings and trees.</p>
+<p>For example, <a class="reference external" href="https://www.imagemagick.org/">ImageMagick</a> can be used to extract brightness from an image:</p>
+<div class="highlight-shell-session notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> curl <span class="nv">$cam_url</span> <span class="se">\</span>
+    <span class="p">|</span> convert - -colorspace Gray -format <span class="s2">&quot;%[fx:quantumrange*mean]&quot;</span> info:
+<span class="go">38244.2</span>
+</pre></div>
+</div>
+<p>The above will only really work with very poor webcams that don’t attempt to
+autobalance their images, with reasonable devices it will be close to useless.</p>
+<p>However, if you have a good quality camera image you may be able to extract the
+balancing data used from the image tags, and use that to infer the light level.
+<a class="reference external" href="http://www.exiv2.org/">exiv2</a> is great option to extract that data when available, and also supports
+<a class="reference external" href="https://wiki.gnome.org/Projects/GObjectIntrospection">gobject introspection</a> making it possible to use it with <a class="reference external" href="https://github.com/pavouk/lgi">lgi</a> in <a class="reference external" href="https://awesomewm.org/">awesome</a> for
+desktop colours too!</p>
+</div>
+</div>
+<div class="section" id="thoughts">
+<h2>Thoughts<a class="headerlink" href="#thoughts" title="Permalink to this headline">¶</a></h2>
+<p>That is definitely enough of that rabbit hole for me right now… I’m really
+looking forward to seeing people code golf some other solutions, be they useful
+or [hopefully] intriguing variations.</p>
+<p class="rubric">Footnotes</p>
+<dl class="footnote brackets">
+<dt class="label" id="id3"><span class="brackets"><a class="fn-backref" href="#id1">1</a></span></dt>
+<dd><p>If add more branches you can also wonder why <code class="docutils literal notranslate"><span class="pre">vimscript</span></code> doesn’t have
+a switch statement.</p>
+</dd>
+<dt class="label" id="id4"><span class="brackets"><a class="fn-backref" href="#id2">2</a></span></dt>
+<dd><p>No HTML link, as vimdoc is still on vim 7.3</p>
+</dd>
+</dl>
+</div>
+</div>
+
+    <hr>
+
+    <p class="keybase-verify">
+      Authenticate this page by pasting <a
+        href="https://raw.githubusercontent.com/JNRowe/jnrowe.github.io/source/articles/tips/vim_day_night_colourscheme.rst.asc">this signature</a> into
+      <a href="https://keybase.io/verify">Keybase</a>.
+    </p>
+
+    <p class="edit-page">
+      Have a suggestion or see a typo?  <a href="https://github.com/JNRowe/jnrowe.github.io/edit/source/articles/tips/vim_day_night_colourscheme.rst">Edit this page</a>
+    </p>
+  
+
+  <div class="section">
+  
+    
+
+
+<div class="section">
+  <span style="float: left;">
+  
+  Previous: 
+  <a href="../../thoughts/brexit_through_the_gift_shop.html">
+    
+    brexit through the gift shop
+  </a>
+  
+  </span>
+  <span>&nbsp;</span>
+  <span style="float: right;">
+  
+</div>
+
+  
+  
+  </div>
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<p class="logo">
+  <a href="../../index.html">
+    <img class="logo" src="../../_static/logo.png" alt="Logo"/>
+    
+  </a>
+</p>
+
+
+
+
+
+
+
+
+
+  
+  
+  <h2>
+  
+  
+    2018-09-15
+  
+  </h2>
+
+  <ul>
+    
+
+  
+  <li id="author"><span>Author:</span>
+    
+      
+      <a href="../../blog/author/james-rowe.html">James Rowe</a>
+      
+    </li>
+  
+
+  
+
+  
+
+  
+
+  
+  <li id="tags"><span>Tag:
+    
+      
+      <a href="../../blog/tag/vim.html">vim</a>
+      
+    </li>
+  
+  
+  </ul>
+
+
+<h3>Navigation</h3>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../projects.html">Projects</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">Articles</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../dropping_gentoo.html">Dropping Gentoo</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../dropping_gentoo_reflex.html">Dropping Gentoo reflex</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../fossil.html"><strong class="command">fossil</strong> experiments</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../mutt_config_snippets.html"><strong class="command">mutt</strong> configuration snippets</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../rcs.html">Introduction to <abbr title="GNU Revision Control System">RCS</abbr></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../tdd_distros.html"><abbr title="Test Driven Development">TDD</abbr> distro development</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../index.html#further-categories">Further categories</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../thoughts/index.html">Thoughts</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../colophon.html">Colophon</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../contact.html">Contact details</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../consult.html">Consulting services</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../copyright.html">Copyright information</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../glossary.html">Glossary</a></li>
+</ul>
+
+
+  <h3><a href="../../blog.html">Recent Posts</a></h3>
+  <ul>
+    
+    
+      <li><a href="../../thoughts/brexit_through_the_gift_shop.html">08 June - brexit through the gift shop</a></li>
+    
+      <li><a href="../../thoughts/metro_city.html">03 September - Burning down the streets</a></li>
+    
+      <li><a href="../fossil.html">12 November - fossil experiments</a></li>
+    
+      <li><a href="../../thoughts/disconnect.html">18 September - Cleanse thy soul</a></li>
+    
+      <li><a href="../../thoughts/burn_out.html">03 September - Open Source and enjoyment</a></li>
+    
+  </ul>
+
+  <h3><a href="../../blog/tag.html">Tags</a></h3>
+  <style type="text/css">
+    ul.ablog-cloud {list-style: none; overflow: auto;}
+    ul.ablog-cloud li {float: left; height: 20pt; line-height: 18pt; margin-right: 5px;}
+    ul.ablog-cloud a {text-decoration: none; vertical-align: middle;}
+    li.ablog-cloud-1{font-size: 80%;}
+    li.ablog-cloud-2{font-size: 95%;}
+    li.ablog-cloud-3{font-size: 110%;}
+    li.ablog-cloud-4{font-size: 125%;}
+    li.ablog-cloud-5{font-size: 140%;}
+  </style>
+  <ul class="ablog-cloud">
+    
+      
+      <li class="ablog-cloud ablog-cloud-3">
+        <a href="../../blog/tag/gtk.html">GTK+</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-2">
+        <a href="../../blog/tag/x11.html">X11</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-2">
+        <a href="../../blog/tag/abook.html">abook</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-3">
+        <a href="../../blog/tag/awesome.html">awesome</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-2">
+        <a href="../../blog/tag/bash.html">bash</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-1">
+        <a href="../../blog/tag/blog.html">blog</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-1">
+        <a href="../../blog/tag/bts.html">bts</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-1">
+        <a href="../../blog/tag/bugzilla.html">bugzilla</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-1">
+        <a href="../../blog/tag/burnout.html">burnout</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-2">
+        <a href="../../blog/tag/configs.html">configs</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-1">
+        <a href="../../blog/tag/csv.html">csv</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-1">
+        <a href="../../blog/tag/denoise.html">denoise</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-3">
+        <a href="../../blog/tag/devel.html">devel</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-1">
+        <a href="../../blog/tag/development.html">development</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-1">
+        <a href="../../blog/tag/emacs.html">emacs</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-1">
+        <a href="../../blog/tag/focus.html">focus</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-1">
+        <a href="../../blog/tag/fossil.html">fossil</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-4">
+        <a href="../../blog/tag/gentoo.html">gentoo</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-2">
+        <a href="../../blog/tag/git.html">git</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-1">
+        <a href="../../blog/tag/gmail.html">gmail</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-1">
+        <a href="../../blog/tag/history.html">history</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-1">
+        <a href="../../blog/tag/hobbies.html">hobbies</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-1">
+        <a href="../../blog/tag/jnrowe-misc.html">jnrowe-misc</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-5">
+        <a href="../../blog/tag/life.html">life</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-3">
+        <a href="../../blog/tag/linux.html">linux</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-2">
+        <a href="../../blog/tag/mail.html">mail</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-3">
+        <a href="../../blog/tag/mutt.html">mutt</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-1">
+        <a href="../../blog/tag/net.html">net</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-1">
+        <a href="../../blog/tag/noise.html">noise</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-1">
+        <a href="../../blog/tag/oss.html">oss</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-2">
+        <a href="../../blog/tag/politics.html">politics</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-1">
+        <a href="../../blog/tag/privacy.html">privacy</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-1">
+        <a href="../../blog/tag/probit.html">probit</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-2">
+        <a href="../../blog/tag/projects.html">projects</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-1">
+        <a href="../../blog/tag/python.html">python</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-1">
+        <a href="../../blog/tag/readline.html">readline</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-1">
+        <a href="../../blog/tag/remind.html">remind</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-1">
+        <a href="../../blog/tag/site.html">site</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-2">
+        <a href="../../blog/tag/software.html">software</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-5">
+        <a href="../../blog/tag/styling.html">styling</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-1">
+        <a href="../../blog/tag/sup.html">sup</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-1">
+        <a href="../../blog/tag/testing.html">testing</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-1">
+        <a href="../../blog/tag/three.html">three</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-2">
+        <a href="../../blog/tag/unix.html">unix</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-4">
+        <a href="../../blog/tag/vcs.html">vcs</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-4">
+        <a href="../../blog/tag/vim.html">vim</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-1">
+        <a href="../../blog/tag/web.html">web</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-3">
+        <a href="../../blog/tag/work.html">work</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-1">
+        <a href="../../blog/tag/zsh.html">zsh</a></li>
+      
+    
+  </ul>
+
+  <h3><a href="../../blog/archive.html">Archives</a></h3>
+  <ul>
+  
+    
+    <li><a href="../../blog/2018.html">2018 (2)</a></li>
+    
+  
+    
+    <li><a href="../../blog/2017.html">2017 (1)</a></li>
+    
+  
+    
+    <li><a href="../../blog/2014.html">2014 (12)</a></li>
+    
+  
+    
+    <li><a href="../../blog/2013.html">2013 (2)</a></li>
+    
+  
+    
+    <li><a href="../../blog/2011.html">2011 (1)</a></li>
+    
+  
+    
+    <li><a href="../../blog/2010.html">2010 (1)</a></li>
+    
+  
+    
+    <li><a href="../../blog/2009.html">2009 (24)</a></li>
+    
+  
+    
+    <li><a href="../../blog/2007.html">2007 (2)</a></li>
+    
+  
+    
+    <li><a href="../../blog/2003.html">2003 (1)</a></li>
+    
+  
+  </ul>
+
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    </div>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2009-2018  James Rowe.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.7.6</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.11</a>
+      
+    </div>
+
+    
+
+    
+  </body>
+</html>

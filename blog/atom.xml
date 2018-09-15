@@ -2,11 +2,148 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title type="text">JNRowe</title>
   <id>https://jnrowe.github.io/blog/atom.xml</id>
-  <updated>2018-06-08T00:00:00Z</updated>
+  <updated>2018-09-15T00:00:00Z</updated>
   <link href="https://jnrowe.github.io/" />
   <link href="https://jnrowe.github.io/blog/atom.xml" rel="self" />
   <subtitle type="text">Ramblings of a tired mind</subtitle>
   <generator uri="http://ablog.readthedocs.org" version="0.9.2">ABlog</generator>
+  <entry xml:base="https://jnrowe.github.io/blog/atom.xml">
+    <title type="text">Vim with day/night colourschemes</title>
+    <id>https://jnrowe.github.io/articles/tips/vim_day_night_colourscheme.html</id>
+    <updated>2018-09-15T00:00:00Z</updated>
+    <published>2018-09-15T00:00:00Z</published>
+    <link href="https://jnrowe.github.io/articles/tips/vim_day_night_colourscheme.html" />
+    <author>
+      <name>James Rowe</name>
+    </author>
+    <content type="html">&lt;div class=&quot;section&quot; id=&quot;vim-with-day-night-colourschemes&quot;&gt;
+
+&lt;p&gt;The fabulous Miss Biddulph asks via our EADS Linux list:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;div&gt;&lt;p&gt;I lurve &lt;a class=&quot;reference external&quot; href=&quot;https://www.vim.org/scripts/script.php?script_id=594&quot;&gt;taqua&lt;/a&gt; in &lt;a class=&quot;reference external&quot; href=&quot;http://www.vim.org&quot;&gt;vim&lt;/a&gt; during the day, but now the days are getting shorter
+it is beginning to destroy me.  Is there a way to make &lt;strong class=&quot;command&quot;&gt;vim&lt;/strong&gt; use
+different colourschemes depending on time?&lt;/p&gt;
+&lt;/div&gt;&lt;/blockquote&gt;
+&lt;p&gt;So, like most things this can either be &lt;em&gt;really&lt;/em&gt; simple or horribly convoluted
+depending on where you wish to draw the usability line.  Because Laura is
+asking, we’ll scratch the surface of a few odd ways to do this.&lt;/p&gt;
+&lt;div class=&quot;section&quot; id=&quot;the-simple-solution&quot;&gt;
+&lt;h2&gt;The simple solution&lt;/h2&gt;
+&lt;p&gt;In many ways this is related to my &lt;a class=&quot;reference external&quot; href=&quot;https://github.com/JNRowe/awesome-timed-wallpaper/&quot;&gt;awesome-timed-wallpaper&lt;/a&gt; hack, and to start
+with I’m going to proceed in a similar way.&lt;/p&gt;
+&lt;p&gt;The snippet below will configure the &lt;a class=&quot;reference external&quot; href=&quot;http://vimdoc.sourceforge.net/htmldoc/options.html#'background'&quot;&gt;background&lt;/a&gt; and &lt;a class=&quot;reference external&quot; href=&quot;http://vimdoc.sourceforge.net/htmldoc/syntax.html#:colorscheme&quot;&gt;colourscheme&lt;/a&gt; depending on
+the time of day.  You can change the bounds in any way you see fit&lt;a class=&quot;footnote-reference brackets&quot; href=&quot;#id3&quot; id=&quot;id1&quot;&gt;1&lt;/a&gt;.&lt;/p&gt;
+&lt;div class=&quot;highlight-vim notranslate&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;let&lt;/span&gt; hour &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; strftime&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;%H&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; hour &lt;span class=&quot;p&quot;&gt;&amp;gt;=&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;18&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;set&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;background&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;dark&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;colorscheme&lt;/span&gt; jnrowe  &lt;span class=&quot;c&quot;&gt;&amp;quot; Best theme&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;elseif&lt;/span&gt; hour &lt;span class=&quot;p&quot;&gt;&amp;gt;=&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;9&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;set&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;background&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;light&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;colorscheme&lt;/span&gt; taqua
+&lt;span class=&quot;k&quot;&gt;else&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;    &amp;quot; Midnight to 08:59&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;set&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;background&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;dark&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;colorscheme&lt;/span&gt; monokai
+&lt;span class=&quot;k&quot;&gt;endif&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;If you (re-)start &lt;strong class=&quot;command&quot;&gt;vim&lt;/strong&gt; regularly this is all you’ll probably need.
+If — like me — you have &lt;em&gt;very&lt;/em&gt; long running &lt;strong class=&quot;command&quot;&gt;vim&lt;/strong&gt; sessions, you’ll have
+to put in some more effort to make it work:&lt;/p&gt;
+&lt;ul class=&quot;simple&quot;&gt;
+&lt;li&gt;&lt;p&gt;The easiest option would be &lt;a class=&quot;reference external&quot; href=&quot;http://vimdoc.sourceforge.net/htmldoc/map.html#:nmap&quot;&gt;binding it to a key&lt;/a&gt; and triggering it when you
+notice eye strain&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Use vim 8’s new asynchronous timer support, see &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;:h&lt;/span&gt; &lt;span class=&quot;pre&quot;&gt;timer&lt;/span&gt;&lt;/code&gt;&lt;a class=&quot;footnote-reference brackets&quot; href=&quot;#id4&quot; id=&quot;id2&quot;&gt;2&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Support pre-v8 vim by adding an &lt;a class=&quot;reference external&quot; href=&quot;http://vimdoc.sourceforge.net/htmldoc/autocmd.html#:autocmd&quot;&gt;autocmd&lt;/a&gt; on &lt;a class=&quot;reference external&quot; href=&quot;http://vimdoc.sourceforge.net/htmldoc/autocmd.html#CursorHold&quot;&gt;CursorHold&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Script vim externally using vim’s &lt;a class=&quot;reference external&quot; href=&quot;http://vimdoc.sourceforge.net/htmldoc/remote.html#--remote-send&quot;&gt;client server support&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;…&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Create a &lt;a class=&quot;reference external&quot; href=&quot;https://www.freedesktop.org/wiki/Software/systemd&quot;&gt;systemd&lt;/a&gt; user timer that triggers at a given time ;)&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class=&quot;section&quot; id=&quot;the-ridiculous-solution&quot;&gt;
+&lt;h2&gt;The ridiculous solution&lt;/h2&gt;
+&lt;p&gt;We’ll need to figure out the actual daylight state.  There are an enormous
+number of options available.&lt;/p&gt;
+&lt;div class=&quot;section&quot; id=&quot;upoints&quot;&gt;
+&lt;h3&gt;&lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;upoints&lt;/span&gt;&lt;/code&gt;&lt;/h3&gt;
+&lt;p&gt;My &lt;a class=&quot;reference external&quot; href=&quot;https://pypi.org/project/upoints/&quot;&gt;upoints&lt;/a&gt; package can calculate sunrise and sunset:&lt;/p&gt;
+&lt;div class=&quot;highlight-python notranslate&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&quot;gp&quot;&gt;&amp;gt;&amp;gt;&amp;gt; &lt;/span&gt;&lt;span class=&quot;kn&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;upoints.point&lt;/span&gt; &lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Point&lt;/span&gt;
+&lt;span class=&quot;gp&quot;&gt;&amp;gt;&amp;gt;&amp;gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;p&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Point&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mf&quot;&gt;52.2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;0.2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;gp&quot;&gt;&amp;gt;&amp;gt;&amp;gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;p&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;sun_events&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;  &lt;span class=&quot;c1&quot;&gt;# UTC results&lt;/span&gt;
+&lt;span class=&quot;go&quot;&gt;(datetime.time(5, 32), datetime.time(18, 15))&lt;/span&gt;
+&lt;span class=&quot;gp&quot;&gt;&amp;gt;&amp;gt;&amp;gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;p&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;sun_events&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;zenith&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;civil&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;   &lt;span class=&quot;c1&quot;&gt;# twilight&lt;/span&gt;
+&lt;span class=&quot;go&quot;&gt;(datetime.time(4, 58), datetime.time(18, 49))&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;section&quot; id=&quot;redshift&quot;&gt;
+&lt;h3&gt;&lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;redshift&lt;/span&gt;&lt;/code&gt;&lt;/h3&gt;
+&lt;p&gt;If you already use &lt;a class=&quot;reference external&quot; href=&quot;http://jonls.dk/redshift/&quot;&gt;redshift&lt;/a&gt; — and you should — getting the current state is
+quite easy.  Below is example output, and a quick &lt;a class=&quot;reference external&quot; href=&quot;http://sed.sourceforge.net/&quot;&gt;sed&lt;/a&gt;-based method to parse the
+output for script usage:&lt;/p&gt;
+&lt;div class=&quot;highlight-sh notranslate&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;$ redshift -p
+Waiting &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; current location to become available...
+Location: &lt;span class=&quot;m&quot;&gt;52&lt;/span&gt;.2 N, &lt;span class=&quot;m&quot;&gt;0&lt;/span&gt;.2 E
+Period: Night
+Colour temperature: 4500K
+Brightness: &lt;span class=&quot;m&quot;&gt;1&lt;/span&gt;.00
+$ redshift -p &lt;span class=&quot;m&quot;&gt;2&lt;/span&gt;&amp;gt;/dev/null &lt;span class=&quot;p&quot;&gt;|&lt;/span&gt; sed -n &lt;span class=&quot;s1&quot;&gt;&amp;#39;/^Period/s,\(.*\): \(.*\),\U\1=\L\2,p&amp;#39;&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;PERIOD&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;night
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;Another option might be to use &lt;strong class=&quot;command&quot;&gt;redshift&lt;/strong&gt;’s hook support, see the man
+page for how to configure hooks.&lt;/p&gt;
+&lt;div class=&quot;highlight-sh notranslate&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&quot;ch&quot;&gt;#!/bin/zsh&lt;/span&gt;
+
+&lt;span class=&quot;k&quot;&gt;case&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$1&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;period-changed&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;case&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$3&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;day&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt; notify-send &lt;span class=&quot;s2&quot;&gt;&amp;quot;Make bright&amp;quot;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;;;&lt;/span&gt;
+    &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;night&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt; notify-send &lt;span class=&quot;s2&quot;&gt;&amp;quot;Make dark&amp;quot;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;;;&lt;/span&gt;
+    &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;section&quot; id=&quot;camera-input&quot;&gt;
+&lt;h3&gt;Camera input&lt;/h3&gt;
+&lt;p&gt;Assuming you have access to either a very good or &lt;em&gt;very&lt;/em&gt; bad webcam you could
+even script support that takes in to account cloud cover, or occultation caused
+by buildings and trees.&lt;/p&gt;
+&lt;p&gt;For example, &lt;a class=&quot;reference external&quot; href=&quot;https://www.imagemagick.org/&quot;&gt;ImageMagick&lt;/a&gt; can be used to extract brightness from an image:&lt;/p&gt;
+&lt;div class=&quot;highlight-shell-session notranslate&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&quot;gp&quot;&gt;$&lt;/span&gt; curl &lt;span class=&quot;nv&quot;&gt;$cam_url&lt;/span&gt; &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;|&lt;/span&gt; convert - -colorspace Gray -format &lt;span class=&quot;s2&quot;&gt;&amp;quot;%[fx:quantumrange*mean]&amp;quot;&lt;/span&gt; info:
+&lt;span class=&quot;go&quot;&gt;38244.2&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;The above will only really work with very poor webcams that don’t attempt to
+autobalance their images, with reasonable devices it will be close to useless.&lt;/p&gt;
+&lt;p&gt;However, if you have a good quality camera image you may be able to extract the
+balancing data used from the image tags, and use that to infer the light level.
+&lt;a class=&quot;reference external&quot; href=&quot;http://www.exiv2.org/&quot;&gt;exiv2&lt;/a&gt; is great option to extract that data when available, and also supports
+&lt;a class=&quot;reference external&quot; href=&quot;https://wiki.gnome.org/Projects/GObjectIntrospection&quot;&gt;gobject introspection&lt;/a&gt; making it possible to use it with &lt;a class=&quot;reference external&quot; href=&quot;https://github.com/pavouk/lgi&quot;&gt;lgi&lt;/a&gt; in &lt;a class=&quot;reference external&quot; href=&quot;https://awesomewm.org/&quot;&gt;awesome&lt;/a&gt; for
+desktop colours too!&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;section&quot; id=&quot;thoughts&quot;&gt;
+&lt;h2&gt;Thoughts&lt;/h2&gt;
+&lt;p&gt;That is definitely enough of that rabbit hole for me right now… I’m really
+looking forward to seeing people code golf some other solutions, be they useful
+or [hopefully] intriguing variations.&lt;/p&gt;
+&lt;p class=&quot;rubric&quot;&gt;Footnotes&lt;/p&gt;
+&lt;dl class=&quot;footnote brackets&quot;&gt;
+&lt;dt class=&quot;label&quot; id=&quot;id3&quot;&gt;&lt;span class=&quot;brackets&quot;&gt;&lt;a class=&quot;fn-backref&quot; href=&quot;#id1&quot;&gt;1&lt;/a&gt;&lt;/span&gt;&lt;/dt&gt;
+&lt;dd&gt;&lt;p&gt;If add more branches you can also wonder why &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;vimscript&lt;/span&gt;&lt;/code&gt; doesn’t have
+a switch statement.&lt;/p&gt;
+&lt;/dd&gt;
+&lt;dt class=&quot;label&quot; id=&quot;id4&quot;&gt;&lt;span class=&quot;brackets&quot;&gt;&lt;a class=&quot;fn-backref&quot; href=&quot;#id2&quot;&gt;2&lt;/a&gt;&lt;/span&gt;&lt;/dt&gt;
+&lt;dd&gt;&lt;p&gt;No HTML link, as vimdoc is still on vim 7.3&lt;/p&gt;
+&lt;/dd&gt;
+&lt;/dl&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</content>
+  </entry>
   <entry xml:base="https://jnrowe.github.io/blog/atom.xml">
     <title type="text">brexit through the gift shop</title>
     <id>https://jnrowe.github.io/thoughts/brexit_through_the_gift_shop.html</id>
@@ -14,7 +151,7 @@
     <published>2018-06-08T00:00:00Z</published>
     <link href="https://jnrowe.github.io/thoughts/brexit_through_the_gift_shop.html" />
     <author>
-      <name></name>
+      <name>James Rowe</name>
     </author>
     <content type="html">&lt;div class=&quot;section&quot; id=&quot;brexit-through-the-gift-shop&quot;&gt;
 
@@ -111,7 +248,7 @@ other people with the necessary skills have been moved to Germany.&lt;/p&gt;
     <published>2017-09-03T00:00:00Z</published>
     <link href="https://jnrowe.github.io/thoughts/metro_city.html" />
     <author>
-      <name></name>
+      <name>James Rowe</name>
     </author>
     <content type="html">&lt;div class=&quot;section&quot; id=&quot;burning-down-the-streets&quot;&gt;
 
@@ -212,7 +349,7 @@ yourself and society at large a serious injustice.&lt;/p&gt;
     <published>2014-11-12T00:00:00Z</published>
     <link href="https://jnrowe.github.io/articles/fossil.html" />
     <author>
-      <name></name>
+      <name>James Rowe</name>
     </author>
     <content type="html">&lt;div class=&quot;section&quot; id=&quot;fossil-experiments&quot;&gt;
 
@@ -386,7 +523,7 @@ a command against all repositories configured in &lt;code class=&quot;file docut
     <published>2014-09-18T00:00:00Z</published>
     <link href="https://jnrowe.github.io/thoughts/disconnect.html" />
     <author>
-      <name></name>
+      <name>James Rowe</name>
     </author>
     <content type="html">&lt;div class=&quot;section&quot; id=&quot;cleanse-thy-soul&quot;&gt;
 
@@ -525,7 +662,7 @@ does act as a nice sieve for everything else right now.&lt;/p&gt;
     <published>2014-09-03T00:00:00Z</published>
     <link href="https://jnrowe.github.io/thoughts/burn_out.html" />
     <author>
-      <name></name>
+      <name>James Rowe</name>
     </author>
     <content type="html">&lt;div class=&quot;section&quot; id=&quot;open-source-and-enjoyment&quot;&gt;
 
@@ -652,7 +789,7 @@ personally.&lt;/p&gt;
     <published>2014-06-30T00:00:00Z</published>
     <link href="https://jnrowe.github.io/articles/probits/jnrowe-misc.html" />
     <author>
-      <name></name>
+      <name>James Rowe</name>
     </author>
     <content type="html">&lt;div class=&quot;section&quot; id=&quot;jnrowe-misc-the-unsorted-package-overlay&quot;&gt;
 
@@ -713,7 +850,7 @@ past couple of years, and it is as refreshing as it is saddening.&lt;/p&gt;
     <published>2014-06-30T00:00:00Z</published>
     <link href="https://jnrowe.github.io/articles/probits/index.html" />
     <author>
-      <name></name>
+      <name>James Rowe</name>
     </author>
     <content type="html">&lt;div class=&quot;section&quot; id=&quot;project-postmortems&quot;&gt;
 
@@ -751,7 +888,7 @@ situations.  This category, and the accompanying index, below are that attempt.&
     <published>2014-06-29T00:00:00Z</published>
     <link href="https://jnrowe.github.io/articles/dropping_gentoo_reflex.html" />
     <author>
-      <name></name>
+      <name>James Rowe</name>
     </author>
     <content type="html">&lt;div class=&quot;section&quot; id=&quot;dropping-gentoo-reflex&quot;&gt;
 
@@ -890,7 +1027,7 @@ makes dependency handling work among other things.&lt;/p&gt;
     <published>2014-06-18T00:00:00Z</published>
     <link href="https://jnrowe.github.io/articles/dropping_gentoo.html" />
     <author>
-      <name></name>
+      <name>James Rowe</name>
     </author>
     <content type="html">&lt;div class=&quot;section&quot; id=&quot;dropping-gentoo&quot;&gt;
 
@@ -1089,7 +1226,7 @@ track for the next ten years.&lt;/p&gt;
     <published>2014-04-09T00:00:00Z</published>
     <link href="https://jnrowe.github.io/thoughts/delayed_flashover.html" />
     <author>
-      <name></name>
+      <name>James Rowe</name>
     </author>
     <content type="html">&lt;div class=&quot;section&quot; id=&quot;delayed-flashover&quot;&gt;
 
@@ -1138,7 +1275,7 @@ sponsorship options in check, she’ll destroy the target time.  Go Rach!&lt;/p&
     <published>2014-02-24T00:00:00Z</published>
     <link href="https://jnrowe.github.io/thoughts/reset_in_ten.html" />
     <author>
-      <name></name>
+      <name>James Rowe</name>
     </author>
     <content type="html">&lt;div class=&quot;section&quot; id=&quot;hitting-lifes-reset-button&quot;&gt;
 
@@ -1192,7 +1329,7 @@ today.  The others well, they’ll hopefully remain hidden away from view.&lt;/p
     <published>2014-01-27T00:00:00Z</published>
     <link href="https://jnrowe.github.io/thoughts/the_returned.html" />
     <author>
-      <name></name>
+      <name>James Rowe</name>
     </author>
     <content type="html">&lt;div class=&quot;section&quot; id=&quot;return-to-rambling&quot;&gt;
 
@@ -1234,7 +1371,7 @@ absolutely extended to this site and the new content I post.&lt;/p&gt;
     <published>2014-01-25T00:00:00Z</published>
     <link href="https://jnrowe.github.io/thoughts/important_balance.html" />
     <author>
-      <name></name>
+      <name>James Rowe</name>
     </author>
     <content type="html">&lt;div class=&quot;section&quot; id=&quot;murdering-morality-with-ferocious-fire&quot;&gt;
 
@@ -1293,7 +1430,7 @@ line up with your definition of “strong moral values” ;)&lt;/p&gt;
     <published>2014-01-06T00:00:00Z</published>
     <link href="https://jnrowe.github.io/thoughts/dopplr_effects.html" />
     <author>
-      <name></name>
+      <name>James Rowe</name>
     </author>
     <content type="html">&lt;div class=&quot;section&quot; id=&quot;dopplr-defects&quot;&gt;
 
@@ -1337,113 +1474,6 @@ actually use, but sadly I can’t even picture how it should work.&lt;/p&gt;
 &lt;/dd&gt;
 &lt;/dl&gt;
 &lt;span class=&quot;target&quot; id=&quot;backstory&quot;&gt;&lt;/span&gt;&lt;/div&gt;
-</content>
-  </entry>
-  <entry xml:base="https://jnrowe.github.io/blog/atom.xml">
-    <title type="text">Tell me a nice story, please</title>
-    <id>https://jnrowe.github.io/thoughts/nice_stories.html</id>
-    <updated>2013-12-23T00:00:00Z</updated>
-    <published>2013-12-23T00:00:00Z</published>
-    <link href="https://jnrowe.github.io/thoughts/nice_stories.html" />
-    <author>
-      <name></name>
-    </author>
-    <content type="html">&lt;div class=&quot;section&quot; id=&quot;tell-me-a-nice-story-please&quot;&gt;
-
-&lt;p&gt;I’m fed up of hearing bad stories, I really am.  Often it feels like every
-person I know simply revels in the misfortune or missteps of others, and it is
-beginning to truly annoy me.&lt;/p&gt;
-&lt;p&gt;I can’t work out if it is the result of malicious envy, angry spitefulness or
-just a sad realisation that those stories seem to engage others more easily.
-That said I don’t believe the reason matters, it is wrong and it needs to stop.&lt;/p&gt;
-&lt;blockquote class=&quot;epigraph&quot;&gt;
-&lt;div&gt;&lt;p&gt;You cannot strengthen one by weakening another; and you cannot add to the
-stature of a dwarf by cutting off the leg of a giant&lt;/p&gt;
-&lt;p class=&quot;attribution&quot;&gt;—Benjamin Franklin Fairless&lt;/p&gt;
-&lt;/div&gt;&lt;/blockquote&gt;
-&lt;div class=&quot;section&quot; id=&quot;in-examples&quot;&gt;
-&lt;h2&gt;In examples&lt;/h2&gt;
-&lt;p&gt;Hmm, this is hard.  How does one express examples without explicitly re-telling
-the nasty stories?&lt;/p&gt;
-&lt;p&gt;The stories you are about to hear are true.  The scenes have been munged to
-protect the innocent.&lt;/p&gt;
-&lt;div class=&quot;section&quot; id=&quot;exhibit-a&quot;&gt;
-&lt;h3&gt;Exhibit A&lt;/h3&gt;
-&lt;p&gt;About five years ago I found out that an old school friend had made a serious,
-yet possibly singular, morally irresponsible mistake.  This is a man who was
-close to the top of his chosen career tree, with a string of impressive
-achievements to his name.&lt;/p&gt;
-&lt;p&gt;The thing that bugged me about it, and to this day it is still does, is that I’d
-never heard anyone remark on his successes prior to this.  I was &lt;em&gt;entirely&lt;/em&gt;
-unaware of how his life had turned out prior to this story, and I was completely
-unaware of any of the success he had made for himself.&lt;/p&gt;
-&lt;p&gt;However, the moment there is a tale with the sprinkled essence of schadenfreude
-it felt like you couldn’t go a week without being told about it.  People would
-post about it on social-network-du-jour, drop it in to unrelated conversations
-and literally stop you in the street to tell you.&lt;/p&gt;
-&lt;p&gt;&lt;em&gt;Why couldn’t I have heard a fantastic story about an old friend’s success when
-trying to feed my shocking biscuit habit at Sainsbury’s?&lt;/em&gt;&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class=&quot;section&quot; id=&quot;exhibit-b&quot;&gt;
-&lt;h3&gt;Exhibit B&lt;/h3&gt;
-&lt;p&gt;In the mid-naughties a conference friend sold his web service for an apparently
-healthy chunk of change.  I remember bumping in to the founding team at a boring
-conference and listening to their happiness at the outcome.  They were looking
-forward to working on the service itself more, and removing some of the
-day-to-day woes of running the business on fumes.  All seemed good.&lt;/p&gt;
-&lt;p&gt;That same day we, along with a bunch of ten or so others, headed off for lunch.
-We got to hear some interesting war stories, and some fun tales of moments when
-they were writing their “service suicide” notes.  The end of the lunch arrives,
-and they decided to pick up the whole tab.  An absolutely unnecessary gesture
-given that most, if not all, of us were expensed for the day anyway.  They did
-it simply because they’re nice guys.&lt;/p&gt;
-&lt;p&gt;As we started to break up and head back I noticed a few people were now telling
-other stories.  Some had heard that the specific amount of money wasn’t worth
-the grief, others expressed doubts the site would live on post acquisition, etc.&lt;/p&gt;
-&lt;p&gt;I hadn’t realised initially, but this change in tone appeared to happen almost
-the moment the founders left.  Friends who had found success, regaled us with
-their stories and kindly paid for our semi-liquid lunch were suddenly being
-beaten down for their apparent success.&lt;/p&gt;
-&lt;p&gt;&lt;em&gt;Why can’t people just find some happiness in the happiness of others?&lt;/em&gt;&lt;/p&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class=&quot;section&quot; id=&quot;what-to-do&quot;&gt;
-&lt;h2&gt;What to do&lt;/h2&gt;
-&lt;p&gt;I’m not perfect, well not quite anyway ;)&lt;/p&gt;
-&lt;p&gt;If I wasn’t so terribly, terribly ill today I’d be preparing to head to our
-Winterval shutdown party.  You’d no doubt find I like to have a little gossip
-and moan about things I shouldn’t, and I might even commit a couple of the faux
-pas I’ve mentioned above.  Yes, that upsets me. It really does, but I’m trying
-to change.&lt;/p&gt;
-&lt;div class=&quot;section&quot; id=&quot;a-pledge&quot;&gt;
-&lt;h3&gt;A pledge&lt;/h3&gt;
-&lt;p&gt;If you catch me using the failure of others for entertainment or to make
-a point, feel free to berate me for it.  It might even be time to start offering
-fantastic prizes&lt;a class=&quot;footnote-reference brackets&quot; href=&quot;#s1&quot; id=&quot;id1&quot;&gt;1&lt;/a&gt; to people who catch me doing so, as it is probably the only
-way I’ll really learn.&lt;/p&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class=&quot;section&quot; id=&quot;what-i-want-to-hear&quot;&gt;
-&lt;h2&gt;What I want to hear&lt;/h2&gt;
-&lt;p&gt;Simply tell me about that friend who is getting married, don’t tell the story
-by mentioning that it is their third marriage.  I also don’t need to hear about
-that messy relationship breakdown.  [The exception — of course — being if it is
-that one girl who I’d sell my soul for a second chance with]&lt;/p&gt;
-&lt;p&gt;Tell me about that friend whose child aced the &lt;a class=&quot;reference external&quot; href=&quot;http://en.wikipedia.org/wiki/Eleven_plus_exam&quot;&gt;Eleven Plus&lt;/a&gt;, and has been
-accepted in to the school we all wish we had attended.&lt;/p&gt;
-&lt;p&gt;Tell me about that old school friend who is building their own &lt;a class=&quot;reference external&quot; href=&quot;http://www.channel4.com/programmes/grand-designs&quot;&gt;Grand
-Designs&lt;/a&gt;-esque house.&lt;/p&gt;
-&lt;p&gt;I guess there is one reason I want to hear the bad stories, and it is very
-simple.  &lt;em&gt;Iff&lt;/em&gt; there is some actionable thing I can do to help, then I &lt;em&gt;want&lt;/em&gt; to
-know about it.  If that isn’t the case, just keep it to yourself.&lt;/p&gt;
-&lt;p class=&quot;rubric&quot;&gt;Footnotes&lt;/p&gt;
-&lt;dl class=&quot;footnote brackets&quot;&gt;
-&lt;dt class=&quot;label&quot; id=&quot;s1&quot;&gt;&lt;span class=&quot;brackets&quot;&gt;&lt;a class=&quot;fn-backref&quot; href=&quot;#id1&quot;&gt;1&lt;/a&gt;&lt;/span&gt;&lt;/dt&gt;
-&lt;dd&gt;&lt;p&gt;Okay, probably just a coffee or a beer&lt;/p&gt;
-&lt;/dd&gt;
-&lt;/dl&gt;
-&lt;/div&gt;
-&lt;/div&gt;
 </content>
   </entry>
 </feed>

@@ -14,7 +14,7 @@
     <published>2009-10-03T00:00:00Z</published>
     <link href="https://jnrowe.github.io/articles/tips/Disabling_cursor_blinking_in_GTK.html" />
     <author>
-      <name></name>
+      <name>James Rowe</name>
     </author>
     <content type="html">&lt;div class=&quot;section&quot; id=&quot;disabling-cursor-blinking-in-gtk&quot;&gt;
 
@@ -62,7 +62,7 @@ the console too then add the next little snippet to your shell’s startup file:
     <published>2009-10-01T00:00:00Z</published>
     <link href="https://jnrowe.github.io/articles/tips/Custom_locations_in_the_GTK_filechooser.html" />
     <author>
-      <name></name>
+      <name>James Rowe</name>
     </author>
     <content type="html">&lt;div class=&quot;section&quot; id=&quot;custom-keybindings-in-the-gtk-file-dialogs&quot;&gt;
 
@@ -173,7 +173,7 @@ share, for this you can use the &lt;code class=&quot;docutils literal notranslat
     <published>2007-03-05T00:00:00Z</published>
     <link href="https://jnrowe.github.io/articles/tips/emacs_gtk_shortcuts.html" />
     <author>
-      <name></name>
+      <name>James Rowe</name>
     </author>
     <content type="html">&lt;div class=&quot;section&quot; id=&quot;proper-keyboard-shortcuts-in-gtk&quot;&gt;
 
