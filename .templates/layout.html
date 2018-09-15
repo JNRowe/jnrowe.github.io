@@ -15,6 +15,8 @@
     {{ super() }}
 
     {%- if pagename is not index and 'blog/' not in pagename %}
+        <hr>
+
         <p class="keybase-verify">
             Authenticate this page by pasting <a
                 href="https://raw.githubusercontent.com/JNRowe/jnrowe.github.io/source/{{
