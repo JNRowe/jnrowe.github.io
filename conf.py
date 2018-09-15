@@ -107,6 +107,12 @@ extlinks = {
 # ablog extension settings {{{
 blog_title = project
 blog_baseurl = 'https://jnrowe.github.io/'
+
+blog_authors = {
+    'JNRowe': ('James Rowe', 'https://jnrowe.github.io/'),
+}
+blog_default_author = 'JNRowe'
+
 post_date_format = '%F'
 post_redirect_refresh = 1
 
