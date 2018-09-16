@@ -110,13 +110,25 @@ Assuming you have access to either a very good or *very* bad webcam you could
 even script support that takes in to account cloud cover, or occultation caused
 by buildings and trees.
 
-For example, ImageMagick_ can be used to extract brightness from an image:
+For example, ImageMagick_ can be used to `extract brightness`_ from an image.
 
 .. code-block:: shell-session
 
     $ curl $cam_url \
-        | convert - -colorspace Gray -format "%[fx:quantumrange*mean]" info:
+        | convert - -colorspace Gray -format "%[fx:quantumrange*image.mean]" info:
     38244.2
+    $ convert pattern:GRAY0 -format "%[fx:quantumrange*image.mean]" info:
+    0
+    $ convert pattern:GRAY100 -format "%[fx:quantumrange*image.mean]" info:
+    65535
+
+.. note::
+
+    As can be seen from the black(``GRAY0``) and white(``GRAY100``) examples,
+    the result on *my* system is a value between 0 and 65535.  You should take
+    note that ``quantumrange`` is a compile time depth setting; it can be
+    queried with the ``%q`` escape, or by checking the ``Q`` value in the
+    ``convert --version`` output.
 
 The above will only really work with very poor webcams that don’t attempt to
 autobalance their images, with reasonable devices it will be close to useless.
@@ -154,6 +166,7 @@ or [hopefully] intriguing variations.
 .. _redshift: http://jonls.dk/redshift/
 .. _sed: http://sed.sourceforge.net/
 .. _ImageMagick: https://www.imagemagick.org/
+.. _extract brightness: https://www.imagemagick.org/script/escape.php
 .. _exiv2: http://www.exiv2.org/
 .. _gobject introspection: https://wiki.gnome.org/Projects/GObjectIntrospection
 .. _lgi: https://github.com/pavouk/lgi
