@@ -110,11 +110,23 @@ page for how to configure hooks.&lt;/p&gt;
 &lt;p&gt;Assuming you have access to either a very good or &lt;em&gt;very&lt;/em&gt; bad webcam you could
 even script support that takes in to account cloud cover, or occultation caused
 by buildings and trees.&lt;/p&gt;
-&lt;p&gt;For example, &lt;a class=&quot;reference external&quot; href=&quot;https://www.imagemagick.org/&quot;&gt;ImageMagick&lt;/a&gt; can be used to extract brightness from an image:&lt;/p&gt;
+&lt;p&gt;For example, &lt;a class=&quot;reference external&quot; href=&quot;https://www.imagemagick.org/&quot;&gt;ImageMagick&lt;/a&gt; can be used to &lt;a class=&quot;reference external&quot; href=&quot;https://www.imagemagick.org/script/escape.php&quot;&gt;extract brightness&lt;/a&gt; from an image.&lt;/p&gt;
 &lt;div class=&quot;highlight-shell-session notranslate&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&quot;gp&quot;&gt;$&lt;/span&gt; curl &lt;span class=&quot;nv&quot;&gt;$cam_url&lt;/span&gt; &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
-    &lt;span class=&quot;p&quot;&gt;|&lt;/span&gt; convert - -colorspace Gray -format &lt;span class=&quot;s2&quot;&gt;&amp;quot;%[fx:quantumrange*mean]&amp;quot;&lt;/span&gt; info:
+    &lt;span class=&quot;p&quot;&gt;|&lt;/span&gt; convert - -colorspace Gray -format &lt;span class=&quot;s2&quot;&gt;&amp;quot;%[fx:quantumrange*image.mean]&amp;quot;&lt;/span&gt; info:
 &lt;span class=&quot;go&quot;&gt;38244.2&lt;/span&gt;
+&lt;span class=&quot;gp&quot;&gt;$&lt;/span&gt; convert pattern:GRAY0 -format &lt;span class=&quot;s2&quot;&gt;&amp;quot;%[fx:quantumrange*image.mean]&amp;quot;&lt;/span&gt; info:
+&lt;span class=&quot;go&quot;&gt;0&lt;/span&gt;
+&lt;span class=&quot;gp&quot;&gt;$&lt;/span&gt; convert pattern:GRAY100 -format &lt;span class=&quot;s2&quot;&gt;&amp;quot;%[fx:quantumrange*image.mean]&amp;quot;&lt;/span&gt; info:
+&lt;span class=&quot;go&quot;&gt;65535&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;admonition note&quot;&gt;
+&lt;p class=&quot;admonition-title&quot;&gt;Note&lt;/p&gt;
+&lt;p&gt;As can be seen from the black(&lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;GRAY0&lt;/span&gt;&lt;/code&gt;) and white(&lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;GRAY100&lt;/span&gt;&lt;/code&gt;) examples,
+the result on &lt;em&gt;my&lt;/em&gt; system is a value between 0 and 65535.  You should take
+note that &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;quantumrange&lt;/span&gt;&lt;/code&gt; is a compile time depth setting; it can be
+queried with the &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;%q&lt;/span&gt;&lt;/code&gt; escape, or by checking the &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;Q&lt;/span&gt;&lt;/code&gt; value in the
+&lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;convert&lt;/span&gt; &lt;span class=&quot;pre&quot;&gt;--version&lt;/span&gt;&lt;/code&gt; output.&lt;/p&gt;
 &lt;/div&gt;
 &lt;p&gt;The above will only really work with very poor webcams that don’t attempt to
 autobalance their images, with reasonable devices it will be close to useless.&lt;/p&gt;

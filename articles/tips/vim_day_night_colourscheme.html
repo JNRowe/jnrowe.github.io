@@ -147,11 +147,23 @@ page for how to configure hooks.</p>
 <p>Assuming you have access to either a very good or <em>very</em> bad webcam you could
 even script support that takes in to account cloud cover, or occultation caused
 by buildings and trees.</p>
-<p>For example, <a class="reference external" href="https://www.imagemagick.org/">ImageMagick</a> can be used to extract brightness from an image:</p>
+<p>For example, <a class="reference external" href="https://www.imagemagick.org/">ImageMagick</a> can be used to <a class="reference external" href="https://www.imagemagick.org/script/escape.php">extract brightness</a> from an image.</p>
 <div class="highlight-shell-session notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> curl <span class="nv">$cam_url</span> <span class="se">\</span>
-    <span class="p">|</span> convert - -colorspace Gray -format <span class="s2">&quot;%[fx:quantumrange*mean]&quot;</span> info:
+    <span class="p">|</span> convert - -colorspace Gray -format <span class="s2">&quot;%[fx:quantumrange*image.mean]&quot;</span> info:
 <span class="go">38244.2</span>
+<span class="gp">$</span> convert pattern:GRAY0 -format <span class="s2">&quot;%[fx:quantumrange*image.mean]&quot;</span> info:
+<span class="go">0</span>
+<span class="gp">$</span> convert pattern:GRAY100 -format <span class="s2">&quot;%[fx:quantumrange*image.mean]&quot;</span> info:
+<span class="go">65535</span>
 </pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>As can be seen from the black(<code class="docutils literal notranslate"><span class="pre">GRAY0</span></code>) and white(<code class="docutils literal notranslate"><span class="pre">GRAY100</span></code>) examples,
+the result on <em>my</em> system is a value between 0 and 65535.  You should take
+note that <code class="docutils literal notranslate"><span class="pre">quantumrange</span></code> is a compile time depth setting; it can be
+queried with the <code class="docutils literal notranslate"><span class="pre">%q</span></code> escape, or by checking the <code class="docutils literal notranslate"><span class="pre">Q</span></code> value in the
+<code class="docutils literal notranslate"><span class="pre">convert</span> <span class="pre">--version</span></code> output.</p>
 </div>
 <p>The above will only really work with very poor webcams that don’t attempt to
 autobalance their images, with reasonable devices it will be close to useless.</p>
