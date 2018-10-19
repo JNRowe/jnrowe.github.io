@@ -1,0 +1,726 @@
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" />
+    <title>Advent of Code 2017 &#8212; JNRowe</title>
+    <link rel="stylesheet" href="../_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <link rel="shortcut icon" href="../_static/icon.ico"/>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="copyright" title="Copyright" href="../copyright.html" />
+    <link rel="next" title="Dropping Gentoo" href="dropping_gentoo.html" />
+    <link rel="prev" title="Articles" href="index.html" />
+  
+   
+  <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  
+  <link rel="alternate" type="application/atom+xml"  href="../blog/atom.xml" title="JNRowe">
+  
+  
+  <style type="text/css">
+    ul.ablog-archive {list-style: none; overflow: auto; margin-left: 0px}
+    ul.ablog-archive li {float: left; margin-right: 5px; font-size: 80%}
+    ul.postlist a {font-style: italic;}
+    ul.postlist-style-disc {list-style-type: disc;}
+    ul.postlist-style-none {list-style-type: none;}
+    ul.postlist-style-circle {list-style-type: circle;}
+  </style>
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+    <p class="read-time">
+      <b>Estimated reading time</b>:
+      7 minutes
+    </p>
+  
+
+  <div class="section" id="advent-of-code-2017">
+<h1>Advent of Code 2017<a class="headerlink" href="#advent-of-code-2017" title="Permalink to this headline">¶</a></h1>
+<p>A very evil friend pointed me to <a class="reference external" href="http://adventofcode.com/">Advent of Code</a> last December, and I burnt
+a fair chunk of time on it.  I mean… yeah, it <em>was</em> hugely fun but be warned it
+is enormously addictive<a class="footnote-reference brackets" href="#id5" id="id1">1</a>.</p>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>I must say that I meant to write this last December, but things got in the
+way and writing doesn’t earn me enough valuable Internet points.  Don’t
+take this being 10 months late as a knock against <abbr title="Advent of Code">AoC</abbr>, but more as me
+thinking we’re on the cusp of a one month countdown to it beginning
+again(hopefully).</p>
+</div>
+<div class="section" id="why">
+<h2>Why?<a class="headerlink" href="#why" title="Permalink to this headline">¶</a></h2>
+<p>This answer should be obvious; puzzles are fun, competitive ones where you
+prove yourself against co-workers and <em>total</em> strangers even more so.  If that
+isn’t enough reason to have a go, then I simply don’t want to know you.</p>
+</div>
+<div class="section" id="lessons">
+<h2>Lessons<a class="headerlink" href="#lessons" title="Permalink to this headline">¶</a></h2>
+<p>It is huge fun, but if you want to get on the leaderboards you <em>must</em> be up
+when the puzzle is released.  Sadly, in the UK that means waking up for
+a <strong>five in the morning</strong> start.</p>
+<p>If you look at my completion screenshot, you’ll also see I have the
+<a class="reference external" href="https://docs.python.org/3/library/itertools.html#module-itertools" title="(in Python v3.7)"><code class="xref py py-mod docutils literal notranslate"><span class="pre">itertools</span></code></a> documentation open.  If you’re going to use Python for <abbr title="Advent of Code">AoC</abbr>
+study up on <a class="reference external" href="https://docs.python.org/3/library/itertools.html#module-itertools" title="(in Python v3.7)"><code class="xref py py-mod docutils literal notranslate"><span class="pre">itertools</span></code></a>, it will help no end<a class="footnote-reference brackets" href="#id6" id="id2">2</a>.</p>
+<a class="reference internal image-reference" href="../_images/2017-12-29-advent_of_code.png"><img alt="Ta-da! Calendar complete" src="../_images/2017-12-29-advent_of_code.png" style="width: 800.0px; height: 450.0px;" /></a>
+<p>The other thing you can see in my screenshot is that I didn’t complete the
+event on Christmas Day, in fact I took a break and finally mashed through the
+final week on the evening of the 28th.  Infinite time or unemployment would be
+a great help here.</p>
+</div>
+<div class="section" id="approach">
+<h2>Approach<a class="headerlink" href="#approach" title="Permalink to this headline">¶</a></h2>
+<p>With the exception of one day — where the answer just jumped out at me — I used
+exactly the same approach.  Whack out <em>a</em> solution for the given samples that
+tested green, then chuck in my magic string to get a hopefully correct answer
+to submit.  Once successful I’d return to the code to clean it up, and also to
+think through the problems a bit more.  As with many things in life, there can
+be a lot to learn through posthockery.</p>
+<p>If we look at the description for <a class="reference external" href="https://adventofcode.com/2017/day/1">day 1</a>:</p>
+<blockquote>
+<div><p>The captcha requires you to review a sequence of digits (your puzzle input)
+and find the sum of all digits that match the next digit in the list. The
+list is circular, so the digit after the last digit is the first digit in
+the list.</p>
+<p>For example:</p>
+<ul class="simple">
+<li><p>1122 produces a sum of 3 ( 1 + 2) because the first digit ( 1) matches the
+second digit and the third digit (2) matches the fourth digit.</p></li>
+<li><p>1111 produces 4 because each digit (all 1) matches the next.</p></li>
+<li><p>1234 produces 0 because no digit matches the next.</p></li>
+<li><p>91212129 produces 9 because the only digit that matches the next one is
+the last digit, 9.</p></li>
+</ul>
+</div></blockquote>
+<p>I immediately dumped the samples in to a Python file as:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">&gt;&gt;&gt; captcha(&#39;1122&#39;)</span>
+<span class="sd">3</span>
+<span class="sd">&gt;&gt;&gt; captcha(&#39;1111&#39;)</span>
+<span class="sd">4</span>
+<span class="sd">&gt;&gt;&gt; captcha(&#39;1234&#39;)</span>
+<span class="sd">0</span>
+<span class="sd">&gt;&gt;&gt; captcha(&#39;91212129&#39;)</span>
+<span class="sd">9</span>
+<span class="sd">&quot;&quot;&quot;</span>
+</pre></div>
+</div>
+<p>Now we’ll know we’re on the right track when <code class="docutils literal notranslate"><span class="pre">python3</span> <span class="pre">-m</span> <span class="pre">doctest</span> <span class="pre">day01.py</span></code>
+stops spitting out errors.  Looking at my git repository it looks like my first
+dirty solution was:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nd">@str_to_ints</span>
+<span class="k">def</span> <span class="nf">captcha</span><span class="p">(</span><span class="n">ints</span><span class="p">):</span>
+   <span class="n">total</span> <span class="o">=</span> <span class="mi">0</span>
+   <span class="k">for</span> <span class="n">n</span><span class="p">,</span> <span class="n">last</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">ints</span><span class="p">,</span> <span class="p">[</span><span class="n">ints</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">],</span> <span class="p">]</span> <span class="o">+</span> <span class="n">ints</span><span class="p">[:</span><span class="o">-</span><span class="mi">1</span><span class="p">]):</span>
+      <span class="k">if</span> <span class="n">n</span> <span class="o">==</span> <span class="n">last</span><span class="p">:</span>
+            <span class="n">total</span> <span class="o">+=</span> <span class="n">n</span>
+
+   <span class="k">return</span> <span class="n">total</span>
+</pre></div>
+</div>
+<p>You’ll notice I’ve slapped a decorator on the function, with the assumption
+that I’ll want to convert an iterable to integers again before the month is
+out(I was right).  Its implementation was a rather basic:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">str_to_ints</span><span class="p">(</span><span class="n">fn</span><span class="p">):</span>
+   <span class="k">def</span> <span class="nf">wrapper</span><span class="p">(</span><span class="n">s</span><span class="p">):</span>
+      <span class="n">ints</span> <span class="o">=</span> <span class="p">[</span><span class="nb">int</span><span class="p">(</span><span class="n">c</span><span class="p">)</span> <span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="n">s</span><span class="p">]</span>
+      <span class="k">return</span> <span class="n">fn</span><span class="p">(</span><span class="n">ints</span><span class="p">)</span>
+   <span class="k">return</span> <span class="n">wrapper</span>
+</pre></div>
+</div>
+<p>Eagle-eyed Pythonistas will spot the horrific error here, I forgot that
+decorators will wipe out my docstring and the <a class="reference external" href="https://docs.python.org/3/library/doctest.html#module-doctest" title="(in Python v3.7)"><code class="xref py py-mod docutils literal notranslate"><span class="pre">doctest</span></code></a> runner won’t pick
+up my <code class="docutils literal notranslate"><span class="pre">captcha</span></code> tests at all.  The solution is to reach for
+<a class="reference external" href="https://docs.python.org/3/library/functools.html#functools.wraps" title="(in Python v3.7)"><code class="xref py py-func docutils literal notranslate"><span class="pre">functools.wraps()</span></code></a> and a tiny edit:</p>
+<div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- a</span>
+<span class="gi">+++ b</span>
+<span class="gu">@@ -1,2 +1,3 @@</span>
+ def str_to_ints(fn):
+<span class="gi">+    @wraps(fn)</span>
+     def wrapper(s):
+</pre></div>
+</div>
+<p>I know full well that this is a better solution than diving in to the <abbr title="Read–eval–print loop">REPL</abbr>
+for me.  I tend toward <a href="#id10"><span class="problematic" id="id11">`code golfing`_</span></a> myself in a <abbr title="Read–eval–print loop">REPL</abbr>, so I’d end up with
+something more like this:</p>
+<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">i1</span><span class="p">,</span> <span class="n">i2</span> <span class="o">=</span> <span class="n">tee</span><span class="p">(</span><span class="nb">map</span><span class="p">(</span><span class="nb">int</span><span class="p">,</span> <span class="s1">&#39;91212129&#39;</span><span class="p">),</span> <span class="mi">2</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">sum</span><span class="p">(</span><span class="n">x</span> <span class="k">for</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">i1</span><span class="p">,</span> <span class="n">islice</span><span class="p">(</span><span class="n">cycle</span><span class="p">(</span><span class="n">i2</span><span class="p">),</span> <span class="mi">1</span><span class="p">,</span> <span class="bp">None</span><span class="p">))</span> <span class="k">if</span> <span class="n">x</span> <span class="o">==</span> <span class="n">y</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>I wish I could say this was made up to prove a point, but that is a chunk from
+my <a class="reference external" href="https://pypi.org/project/ptpython/">ptpython</a> history when I was playing around trying to think of a “cleaner”
+solution after getting the correct answer<a class="footnote-reference brackets" href="#id7" id="id3">3</a>.</p>
+<p>I followed the same basic pattern for each puzzle, always using the same file
+for part one and part two of the puzzles.  Occasionally needing to refine my
+part one solution for an edge case that part two exposed.  I’ll spare you the
+blow-by-blow of the other 24 days, as frankly the code is the least interesting
+part of the puzzles in my opinion.</p>
+</div>
+<div class="section" id="implementation">
+<h2>Implementation<a class="headerlink" href="#implementation" title="Permalink to this headline">¶</a></h2>
+<div class="figure" id="id9">
+<a class="reference internal image-reference" href="../_images/2018-10-19-aoc_calendar.png"><img alt="Languages used for tasks" src="../_images/2018-10-19-aoc_calendar.png" style="width: 273.5px; height: 181.0px;" /></a>
+<p class="caption"><span class="caption-text">Language frequency for <abbr title="Advent of Code">AoC</abbr> puzzles</span></p>
+<div class="legend">
+<table class="docutils">
+<colgroup>
+<col style="width: 26%" />
+<col style="width: 35%" />
+<col style="width: 39%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Colour</p></th>
+<th class="head"><p>Language</p></th>
+<th class="head"><p>Frequency</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>red</p></td>
+<td><p><a class="reference external" href="https://www.python.org/">Python</a></p></td>
+<td><p>11</p></td>
+</tr>
+<tr class="row-odd"><td><p>blue</p></td>
+<td><p><a class="reference external" href="http://pypy.org/">PyPY</a></p></td>
+<td><p>4</p></td>
+</tr>
+<tr class="row-even"><td><p>green</p></td>
+<td><p><a class="reference external" href="https://nim-lang.org/">nim</a></p></td>
+<td><p>5</p></td>
+</tr>
+<tr class="row-odd"><td><p>yellow</p></td>
+<td><p><a class="reference external" href="http://www.lua.org/">lua</a></p></td>
+<td><p>4</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<p>I used <a class="reference external" href="https://www.python.org/">Python</a> for over half the days, <a class="reference external" href="http://pypy.org/">PyPY</a> for a few where my immediate
+thought was to reach for brute forcing a solution with a naïve algorithm, <a class="reference external" href="http://www.lua.org/">lua</a>
+via <a class="reference external" href="https://github.com/dpapavas/luaprompt">luaprompt</a> on one day where it was clear all I really needed was
+a calculator, and <a class="reference external" href="https://nim-lang.org/">nim</a> on five days where I was using my Winterval break to
+learn <a class="reference external" href="https://nim-lang.org/">nim</a>.</p>
+</div>
+<div class="section" id="results">
+<h2>Results<a class="headerlink" href="#results" title="Permalink to this headline">¶</a></h2>
+<p>I only made it on to the leaderboard once, and I was excited.</p>
+<blockquote>
+<div><p>Got myself on the #aoc leaderboard this morning(#91)… now back to sleep
+as its 5am 😴 <a class="reference external" href="http://adventofcode.com/2017/leaderboard/day/9">http://adventofcode.com/2017/leaderboard/day/9</a></p>
+<p class="attribution">—2017-12-09T05:22:29+00:00</p>
+</div></blockquote>
+<p>I like to think I could have done better if it didn’t require getting up at
+five in the morning to compete, but that is the just the lie I’m telling myself
+to feel better.</p>
+<p>All told, I spent nine hours on <abbr title="Advent of Code">AoC</abbr> and those hours were spread pretty evenly
+between the “live” 2017 puzzles and the previous years too.  I’m up for calling
+it personal development, and I’m hoping it returns this year!</p>
+</div>
+<div class="section" id="tips">
+<h2>Tips<a class="headerlink" href="#tips" title="Permalink to this headline">¶</a></h2>
+<p>Honestly, I’m going to push against the grain on this.  All my co-workers who
+have commented on this have said <abbr title="Advent of Code">AoC</abbr> is a great way to learn a new language,
+but I massively disagree.  Even if you ignore the leaderboard, you’re only
+making tiny little one-off programs without the need for any real design.
+Granted you can learn some of the basics quite well, but it feels closer to
+doing a few <a class="reference external" href="https://en.m.wikipedia.org/wiki/%22Hello,_World!%22_program">“hello world”</a> implementations.  The puzzles themselves are more
+in depth than “Hello world” for sure, but the implementations aren’t likely to
+be very interesting or didactically useful.</p>
+<p><em>Read</em> the problems and <em>think</em> first, obvious I know… but when the stopwatch
+is running it is easy to jump to the editor.  For example, <a class="reference external" href="https://adventofcode.com/2017/day/12">day 12</a> is clearly
+pretty easy to solve by reaching for new code, but even easier to solve with
+<a class="reference external" href="https://www.graphviz.org/">graphviz</a>.  In this specific instance you can use <a class="reference external" href="http://sed.sourceforge.net/">sed</a> to fiddle the input,
+<code class="docutils literal notranslate"><span class="pre">ccomps</span></code> to filter the input for the <code class="docutils literal notranslate"><span class="pre">0</span></code> node, and finally use <code class="docutils literal notranslate"><span class="pre">gc</span></code> to
+count the nodes<a class="footnote-reference brackets" href="#id8" id="id4">4</a>.  I’ll admit here the code I used to submit my answer was
+all new, and I didn’t use <a class="reference external" href="https://www.graphviz.org/">graphviz</a> until I thought about how to refactor my
+20 lines of Python.  I did use <a class="reference external" href="https://www.graphviz.org/">graphviz</a> to solve <a class="reference external" href="https://adventofcode.com/2017/day/24">day 24</a>’s puzzle, so
+even I <em>can</em> learn from my own advice on occasion.</p>
+<p>I used <a class="reference external" href="https://github.com/leafo/moonscript/">moonscript</a> for <a class="reference external" href="https://adventofcode.com/2017/day/21">day 21</a>, which was a mistake because the syntax wasn’t
+a good fit.  It would have been faster, shorter and cleaner to use Haskell, as
+I did when I reworked it after submitting.  Really, this is the same point as
+the last but should be repeated: <em>think</em> first, <em>appropriate</em> tools matter.</p>
+<p>If you’re going for the leaderboard you need to be <em>really</em> fast, so: Use fast
+languages, be <em>all over</em> your chosen weapon’s standard library, and use your
+editor’s <a class="reference external" href="https://github.com/SirVer/ultisnips">snippets</a> well.  <strong>Every</strong>. <strong>Second</strong>. <strong>Counts</strong>.</p>
+<p>And finally, keep your old solutions around either in files or in your <abbr title="Read–eval–print loop">REPL</abbr>’s
+history as you might end up revisiting them, as was the case with <a class="reference external" href="https://adventofcode.com/2017/day/14">day 14</a> for
+example.</p>
+</div>
+<div class="section" id="hopes-for-2018">
+<h2>Hopes for 2018?<a class="headerlink" href="#hopes-for-2018" title="Permalink to this headline">¶</a></h2>
+<p>Number one?  That it returns.  It was a great deal of fun.  It spawned a fair
+amount of interesting water cooler chat too.</p>
+<p>Number two?  That the options to pay for it are better this year.  Last year
+I had a friend tip some money towards the AOC++ scheme in my place, as the
+available options wouldn’t work for me at all.</p>
+<p>If I had a number three it would be to figure out a way to make it work without
+having to get up at five, I just can’t even imagine what that could be.</p>
+<p class="rubric">Footnotes</p>
+<dl class="footnote brackets">
+<dt class="label" id="id5"><span class="brackets"><a class="fn-backref" href="#id1">1</a></span></dt>
+<dd><p>More so as the puzzles from previous years are still online, so you can
+end up sucked in to old puzzles very easily.</p>
+</dd>
+<dt class="label" id="id6"><span class="brackets"><a class="fn-backref" href="#id2">2</a></span></dt>
+<dd><p>Frankly, I’m of the strong opionion that you should be studying up on
+<code class="docutils literal notranslate"><span class="pre">itertools</span></code> <em>all</em> the time anyway.  It just that other Python
+developers aren’t always familiar enough with the module for use in
+large shared code bases, so help to make this a reality!</p>
+</dd>
+<dt class="label" id="id7"><span class="brackets"><a class="fn-backref" href="#id3">3</a></span></dt>
+<dd><p>For some value of “cleaner” which is both unique to me and a totally
+untrue.</p>
+</dd>
+<dt class="label" id="id8"><span class="brackets"><a class="fn-backref" href="#id4">4</a></span></dt>
+<dd><p>In fact, this tip isn’t specific to <abbr title="Advent of Code">AoC</abbr> at all.  Just stop reading
+now and learn to use <a class="reference external" href="https://www.graphviz.org/">graphviz</a>, it can be used to solve so <em>many</em>
+engineering problems.</p>
+</dd>
+</dl>
+</div>
+</div>
+
+    <hr>
+
+    <p class="keybase-verify">
+      Authenticate this page by pasting <a
+        href="https://raw.githubusercontent.com/JNRowe/jnrowe.github.io/source/articles/advent_of_code.rst.asc">this signature</a> into
+      <a href="https://keybase.io/verify">Keybase</a>.
+    </p>
+
+    <p class="edit-page">
+      Have a suggestion or see a typo?  <a href="https://github.com/JNRowe/jnrowe.github.io/edit/source/articles/advent_of_code.rst">Edit this page</a>
+    </p>
+  
+
+  <div class="section">
+  
+  
+  </div>
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<p class="logo">
+  <a href="../index.html">
+    <img class="logo" src="../_static/logo.png" alt="Logo"/>
+    
+  </a>
+</p>
+
+
+
+
+
+
+
+
+
+
+<h3>Navigation</h3>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../projects.html">Projects</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Articles</a><ul class="current">
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Advent of Code 2017</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dropping_gentoo.html">Dropping Gentoo</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dropping_gentoo_reflex.html">Dropping Gentoo reflex</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fossil.html"><strong class="command">fossil</strong> experiments</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mutt_config_snippets.html"><strong class="command">mutt</strong> configuration snippets</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rcs.html">Introduction to <abbr title="GNU Revision Control System">RCS</abbr></a></li>
+<li class="toctree-l2"><a class="reference internal" href="tdd_distros.html"><abbr title="Test Driven Development">TDD</abbr> distro development</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tiling_vs_tabbing.html">Tiling vs tabbing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#further-categories">Further categories</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../thoughts/index.html">Thoughts</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../colophon.html">Colophon</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../contact.html">Contact details</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../consult.html">Consulting services</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../copyright.html">Copyright information</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../glossary.html">Glossary</a></li>
+</ul>
+
+
+  <h3><a href="../blog.html">Recent Posts</a></h3>
+  <ul>
+    
+    
+      <li><a href="tiling_vs_tabbing.html">08 October - Tiling vs tabbing</a></li>
+    
+      <li><a href="tips/vim_day_night_colourscheme.html">15 September - Vim with day/night colourschemes</a></li>
+    
+      <li><a href="../thoughts/brexit_through_the_gift_shop.html">08 June - brexit through the gift shop</a></li>
+    
+      <li><a href="../thoughts/metro_city.html">03 September - Burning down the streets</a></li>
+    
+      <li><a href="fossil.html">12 November - fossil experiments</a></li>
+    
+  </ul>
+
+  <h3><a href="../blog/tag.html">Tags</a></h3>
+  <style type="text/css">
+    ul.ablog-cloud {list-style: none; overflow: auto;}
+    ul.ablog-cloud li {float: left; height: 20pt; line-height: 18pt; margin-right: 5px;}
+    ul.ablog-cloud a {text-decoration: none; vertical-align: middle;}
+    li.ablog-cloud-1{font-size: 80%;}
+    li.ablog-cloud-2{font-size: 95%;}
+    li.ablog-cloud-3{font-size: 110%;}
+    li.ablog-cloud-4{font-size: 125%;}
+    li.ablog-cloud-5{font-size: 140%;}
+  </style>
+  <ul class="ablog-cloud">
+    
+      
+      <li class="ablog-cloud ablog-cloud-3">
+        <a href="../blog/tag/gtk.html">GTK+</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-2">
+        <a href="../blog/tag/x11.html">X11</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-2">
+        <a href="../blog/tag/abook.html">abook</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-3">
+        <a href="../blog/tag/awesome.html">awesome</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-2">
+        <a href="../blog/tag/bash.html">bash</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-1">
+        <a href="../blog/tag/blog.html">blog</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-1">
+        <a href="../blog/tag/bts.html">bts</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-1">
+        <a href="../blog/tag/bugzilla.html">bugzilla</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-1">
+        <a href="../blog/tag/burnout.html">burnout</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-2">
+        <a href="../blog/tag/configs.html">configs</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-1">
+        <a href="../blog/tag/csv.html">csv</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-1">
+        <a href="../blog/tag/denoise.html">denoise</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-1">
+        <a href="../blog/tag/desktop.html">desktop</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-3">
+        <a href="../blog/tag/devel.html">devel</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-1">
+        <a href="../blog/tag/development.html">development</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-1">
+        <a href="../blog/tag/emacs.html">emacs</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-1">
+        <a href="../blog/tag/focus.html">focus</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-1">
+        <a href="../blog/tag/fossil.html">fossil</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-4">
+        <a href="../blog/tag/gentoo.html">gentoo</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-2">
+        <a href="../blog/tag/git.html">git</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-1">
+        <a href="../blog/tag/gmail.html">gmail</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-1">
+        <a href="../blog/tag/history.html">history</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-1">
+        <a href="../blog/tag/hobbies.html">hobbies</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-1">
+        <a href="../blog/tag/jnrowe-misc.html">jnrowe-misc</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-5">
+        <a href="../blog/tag/life.html">life</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-3">
+        <a href="../blog/tag/linux.html">linux</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-2">
+        <a href="../blog/tag/mail.html">mail</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-3">
+        <a href="../blog/tag/mutt.html">mutt</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-1">
+        <a href="../blog/tag/net.html">net</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-1">
+        <a href="../blog/tag/noise.html">noise</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-1">
+        <a href="../blog/tag/oss.html">oss</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-2">
+        <a href="../blog/tag/politics.html">politics</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-1">
+        <a href="../blog/tag/privacy.html">privacy</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-1">
+        <a href="../blog/tag/probit.html">probit</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-2">
+        <a href="../blog/tag/projects.html">projects</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-1">
+        <a href="../blog/tag/python.html">python</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-1">
+        <a href="../blog/tag/readline.html">readline</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-1">
+        <a href="../blog/tag/remind.html">remind</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-1">
+        <a href="../blog/tag/site.html">site</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-2">
+        <a href="../blog/tag/software.html">software</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-5">
+        <a href="../blog/tag/styling.html">styling</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-1">
+        <a href="../blog/tag/sup.html">sup</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-1">
+        <a href="../blog/tag/tabbed.html">tabbed</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-1">
+        <a href="../blog/tag/testing.html">testing</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-1">
+        <a href="../blog/tag/three.html">three</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-1">
+        <a href="../blog/tag/tiling.html">tiling</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-2">
+        <a href="../blog/tag/unix.html">unix</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-4">
+        <a href="../blog/tag/vcs.html">vcs</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-4">
+        <a href="../blog/tag/vim.html">vim</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-1">
+        <a href="../blog/tag/web.html">web</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-3">
+        <a href="../blog/tag/work.html">work</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-1">
+        <a href="../blog/tag/zsh.html">zsh</a></li>
+      
+    
+  </ul>
+
+  <h3><a href="../blog/archive.html">Archives</a></h3>
+  <ul>
+  
+    
+    <li><a href="../blog/2018.html">2018 (3)</a></li>
+    
+  
+    
+    <li><a href="../blog/2017.html">2017 (1)</a></li>
+    
+  
+    
+    <li><a href="../blog/2014.html">2014 (12)</a></li>
+    
+  
+    
+    <li><a href="../blog/2013.html">2013 (2)</a></li>
+    
+  
+    
+    <li><a href="../blog/2011.html">2011 (1)</a></li>
+    
+  
+    
+    <li><a href="../blog/2010.html">2010 (1)</a></li>
+    
+  
+    
+    <li><a href="../blog/2009.html">2009 (24)</a></li>
+    
+  
+    
+    <li><a href="../blog/2007.html">2007 (2)</a></li>
+    
+  
+    
+    <li><a href="../blog/2003.html">2003 (1)</a></li>
+    
+  
+  </ul>
+
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    </div>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2009-2018  James Rowe.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.7.6</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.11</a>
+      
+    </div>
+
+    
+
+    
+  </body>
+</html>
