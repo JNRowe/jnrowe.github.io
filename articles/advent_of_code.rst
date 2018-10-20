@@ -247,7 +247,7 @@ having to get up at five, I just can’t even imagine what that could be.
 
 .. _Advent of Code: http://adventofcode.com/
 .. _day 1: https://adventofcode.com/2017/day/1
-.. _code golf: https://en.m.wikipedia.org/wiki/Code_golf
+.. _code golfing: https://en.m.wikipedia.org/wiki/Code_golf
 .. _ptpython: https://pypi.org/project/ptpython/
 .. _Python: https://www.python.org/
 .. _PyPY: http://pypy.org/
