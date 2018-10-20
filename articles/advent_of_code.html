@@ -83,8 +83,8 @@ study up on <a class="reference external" href="https://docs.python.org/3/librar
 <a class="reference internal image-reference" href="../_images/2017-12-29-advent_of_code.png"><img alt="Ta-da! Calendar complete" src="../_images/2017-12-29-advent_of_code.png" style="width: 800.0px; height: 450.0px;" /></a>
 <p>The other thing you can see in my screenshot is that I didn’t complete the
 event on Christmas Day, in fact I took a break and finally mashed through the
-final week on the evening of the 28th.  Infinite time or unemployment would be
-a great help here.</p>
+final week on the evening of the 28th.  Infinite time, unemployment or being
+smarter would be a great help here.</p>
 </div>
 <div class="section" id="approach">
 <h2>Approach<a class="headerlink" href="#approach" title="Permalink to this headline">¶</a></h2>
@@ -159,7 +159,7 @@ up my <code class="docutils literal notranslate"><span class="pre">captcha</span
 </pre></div>
 </div>
 <p>I know full well that this is a better solution than diving in to the <abbr title="Read–eval–print loop">REPL</abbr>
-for me.  I tend toward <a href="#id10"><span class="problematic" id="id11">`code golfing`_</span></a> myself in a <abbr title="Read–eval–print loop">REPL</abbr>, so I’d end up with
+for me.  I tend toward <a class="reference external" href="https://en.m.wikipedia.org/wiki/Code_golf">code golfing</a> myself in a <abbr title="Read–eval–print loop">REPL</abbr>, so I’d end up with
 something more like this:</p>
 <div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">i1</span><span class="p">,</span> <span class="n">i2</span> <span class="o">=</span> <span class="n">tee</span><span class="p">(</span><span class="nb">map</span><span class="p">(</span><span class="nb">int</span><span class="p">,</span> <span class="s1">&#39;91212129&#39;</span><span class="p">),</span> <span class="mi">2</span><span class="p">)</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="nb">sum</span><span class="p">(</span><span class="n">x</span> <span class="k">for</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">i1</span><span class="p">,</span> <span class="n">islice</span><span class="p">(</span><span class="n">cycle</span><span class="p">(</span><span class="n">i2</span><span class="p">),</span> <span class="mi">1</span><span class="p">,</span> <span class="bp">None</span><span class="p">))</span> <span class="k">if</span> <span class="n">x</span> <span class="o">==</span> <span class="n">y</span><span class="p">)</span>
