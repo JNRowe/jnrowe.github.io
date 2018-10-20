@@ -40,8 +40,8 @@ study up on :mod:`itertools`, it will help no end [#]_.
 
 The other thing you can see in my screenshot is that I didn’t complete the
 event on Christmas Day, in fact I took a break and finally mashed through the
-final week on the evening of the 28th.  Infinite time or unemployment would be
-a great help here.
+final week on the evening of the 28th.  Infinite time, unemployment or being
+smarter would be a great help here.
 
 Approach
 --------
