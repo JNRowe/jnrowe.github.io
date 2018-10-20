@@ -138,8 +138,8 @@ notice eye strain&lt;/p&gt;&lt;/li&gt;
 &lt;h2&gt;The ridiculous solution&lt;/h2&gt;
 &lt;p&gt;We’ll need to figure out the actual daylight state.  There are an enormous
 number of options available.&lt;/p&gt;
-&lt;div class=&quot;section&quot; id=&quot;upoints&quot;&gt;
-&lt;h3&gt;&lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;upoints&lt;/span&gt;&lt;/code&gt;&lt;/h3&gt;
+&lt;div class=&quot;section&quot; id=&quot;with-python&quot;&gt;
+&lt;h3&gt;With Python&lt;/h3&gt;
 &lt;p&gt;My &lt;a class=&quot;reference external&quot; href=&quot;https://pypi.org/project/upoints/&quot;&gt;upoints&lt;/a&gt; package can calculate sunrise and sunset:&lt;/p&gt;
 &lt;div class=&quot;highlight-python notranslate&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&quot;gp&quot;&gt;&amp;gt;&amp;gt;&amp;gt; &lt;/span&gt;&lt;span class=&quot;kn&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;upoints.point&lt;/span&gt; &lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Point&lt;/span&gt;
 &lt;span class=&quot;gp&quot;&gt;&amp;gt;&amp;gt;&amp;gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;p&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Point&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mf&quot;&gt;52.2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;0.2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
@@ -150,8 +150,8 @@ number of options available.&lt;/p&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;div class=&quot;section&quot; id=&quot;redshift&quot;&gt;
-&lt;h3&gt;&lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;redshift&lt;/span&gt;&lt;/code&gt;&lt;/h3&gt;
+&lt;div class=&quot;section&quot; id=&quot;with-redshift&quot;&gt;
+&lt;h3&gt;With &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;redshift&lt;/span&gt;&lt;/code&gt;&lt;/h3&gt;
 &lt;p&gt;If you already use &lt;a class=&quot;reference external&quot; href=&quot;http://jonls.dk/redshift/&quot;&gt;redshift&lt;/a&gt; — and you should — getting the current state is
 quite easy.  Below is example output, and a quick &lt;a class=&quot;reference external&quot; href=&quot;http://sed.sourceforge.net/&quot;&gt;sed&lt;/a&gt;-based method to parse the
 output for script usage:&lt;/p&gt;
@@ -793,8 +793,8 @@ I saw someone else using.  So try spot it early, and put a stop to it.&lt;/p&gt;
 a single penny cost to opening issues or sending a mail it would do wonders for
 communication in general.  I suspect that would remain true even if you
 reimbursed that penny immediately.&lt;/p&gt;
-&lt;div class=&quot;section&quot; id=&quot;the-answer&quot;&gt;
-&lt;h3&gt;The answer&lt;/h3&gt;
+&lt;div class=&quot;section&quot; id=&quot;the-simple-answer&quot;&gt;
+&lt;h3&gt;The simple answer&lt;/h3&gt;
 &lt;p&gt;I figured out how to work with this entirely by accident.  Politely offer
 answers that move them away from you.  It is by far the easiest solution.&lt;/p&gt;
 &lt;p&gt;In one instance I suggested alternative packages to an expensive user, with the
@@ -825,7 +825,7 @@ recompress a tarball on &lt;abbr title=&quot;Python Package Index&quot;&gt;PyPI&
 abuse.  I ignored the abuse, uploaded another tarball and then received another
 abusive email in return the next day.  That was a long time ago, far before the
 burnout started to creep in so I just addressed the actual issue and moved on.&lt;/p&gt;
-&lt;div class=&quot;section&quot; id=&quot;id1&quot;&gt;
+&lt;div class=&quot;section&quot; id=&quot;the-answer&quot;&gt;
 &lt;h3&gt;The answer&lt;/h3&gt;
 &lt;p&gt;I had forgotten about that whole previous story until at &lt;a class=&quot;reference external&quot; href=&quot;https://europython.eu/&quot;&gt;Europython&lt;/a&gt; a friend
 was telling me about someone who was banned from a number of events, hell-banned

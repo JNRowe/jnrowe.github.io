@@ -30,8 +30,8 @@ Any clues about where to look?&lt;/p&gt;
 &lt;li&gt;&lt;p&gt;Failure to use &lt;a class=&quot;reference external&quot; href=&quot;http://docs.python.org/tutorial/introduction.html#strings&quot;&gt;raw strings&lt;/a&gt; when including backslashes in the &lt;abbr title=&quot;Regular Expression&quot;&gt;RegEx&lt;/abbr&gt;&lt;/p&gt;&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;Choosing to use a &lt;abbr title=&quot;Regular Expression&quot;&gt;RegEx&lt;/abbr&gt; when a better tool for the job exists&lt;/p&gt;&lt;/li&gt;
 &lt;/ol&gt;
-&lt;div class=&quot;section&quot; id=&quot;raw-strings&quot;&gt;
-&lt;h2&gt;Raw strings&lt;/h2&gt;
+&lt;div class=&quot;section&quot; id=&quot;using-raw-strings&quot;&gt;
+&lt;h2&gt;Using raw strings&lt;/h2&gt;
 &lt;p&gt;In Rob’s code he had failed to take in to account the backslash escaping
 problem.  A simplified example of what he was trying to do would be:&lt;/p&gt;
 &lt;div class=&quot;highlight-pycon notranslate&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&quot;gp&quot;&gt;&amp;gt;&amp;gt;&amp;gt; &lt;/span&gt;&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;re&lt;/span&gt;

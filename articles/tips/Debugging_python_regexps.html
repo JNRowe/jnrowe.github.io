@@ -7,10 +7,12 @@
     <title>Debugging Python RegEx &#8212; JNRowe</title>
     <link rel="stylesheet" href="../../_static/alabaster.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/custom.css" />
     <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
     <script type="text/javascript" src="../../_static/jquery.js"></script>
     <script type="text/javascript" src="../../_static/underscore.js"></script>
     <script type="text/javascript" src="../../_static/doctools.js"></script>
+    <link rel="canonical" href="https://jnrowe.github.io/articles/tips/Debugging_python_regexps.html" />
     <link rel="shortcut icon" href="../../_static/icon.ico"/>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
@@ -19,7 +21,6 @@
     <link rel="prev" title="Custom keybindings in the GTK+ file dialogs" href="Custom_locations_in_the_GTK_filechooser.html" />
   
    
-  <link rel="stylesheet" href="../../_static/custom.css" type="text/css" />
   
   
   <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
@@ -67,8 +68,8 @@ Any clues about where to look?</p>
 <li><p>Failure to use <a class="reference external" href="http://docs.python.org/tutorial/introduction.html#strings">raw strings</a> when including backslashes in the <abbr title="Regular Expression">RegEx</abbr></p></li>
 <li><p>Choosing to use a <abbr title="Regular Expression">RegEx</abbr> when a better tool for the job exists</p></li>
 </ol>
-<div class="section" id="raw-strings">
-<h2>Raw strings<a class="headerlink" href="#raw-strings" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="using-raw-strings">
+<h2>Using raw strings<a class="headerlink" href="#using-raw-strings" title="Permalink to this headline">¶</a></h2>
 <p>In Rob’s code he had failed to take in to account the backslash escaping
 problem.  A simplified example of what he was trying to do would be:</p>
 <div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">re</span>
@@ -662,8 +663,8 @@ a <abbr title="Regular Expression">RegEx</abbr>.</p>
       &copy;2009-2018  James Rowe.
       
       |
-      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.7.6</a>
-      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.11</a>
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.8.1</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
       
     </div>
 

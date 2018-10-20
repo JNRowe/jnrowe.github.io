@@ -138,8 +138,8 @@ notice eye strain&lt;/p&gt;&lt;/li&gt;
 &lt;h2&gt;The ridiculous solution&lt;/h2&gt;
 &lt;p&gt;We’ll need to figure out the actual daylight state.  There are an enormous
 number of options available.&lt;/p&gt;
-&lt;div class=&quot;section&quot; id=&quot;upoints&quot;&gt;
-&lt;h3&gt;&lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;upoints&lt;/span&gt;&lt;/code&gt;&lt;/h3&gt;
+&lt;div class=&quot;section&quot; id=&quot;with-python&quot;&gt;
+&lt;h3&gt;With Python&lt;/h3&gt;
 &lt;p&gt;My &lt;a class=&quot;reference external&quot; href=&quot;https://pypi.org/project/upoints/&quot;&gt;upoints&lt;/a&gt; package can calculate sunrise and sunset:&lt;/p&gt;
 &lt;div class=&quot;highlight-python notranslate&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&quot;gp&quot;&gt;&amp;gt;&amp;gt;&amp;gt; &lt;/span&gt;&lt;span class=&quot;kn&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;upoints.point&lt;/span&gt; &lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Point&lt;/span&gt;
 &lt;span class=&quot;gp&quot;&gt;&amp;gt;&amp;gt;&amp;gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;p&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Point&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mf&quot;&gt;52.2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;0.2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
@@ -150,8 +150,8 @@ number of options available.&lt;/p&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;div class=&quot;section&quot; id=&quot;redshift&quot;&gt;
-&lt;h3&gt;&lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;redshift&lt;/span&gt;&lt;/code&gt;&lt;/h3&gt;
+&lt;div class=&quot;section&quot; id=&quot;with-redshift&quot;&gt;
+&lt;h3&gt;With &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;redshift&lt;/span&gt;&lt;/code&gt;&lt;/h3&gt;
 &lt;p&gt;If you already use &lt;a class=&quot;reference external&quot; href=&quot;http://jonls.dk/redshift/&quot;&gt;redshift&lt;/a&gt; — and you should — getting the current state is
 quite easy.  Below is example output, and a quick &lt;a class=&quot;reference external&quot; href=&quot;http://sed.sourceforge.net/&quot;&gt;sed&lt;/a&gt;-based method to parse the
 output for script usage:&lt;/p&gt;

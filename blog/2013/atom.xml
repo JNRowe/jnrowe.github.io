@@ -161,10 +161,10 @@ diversity.&lt;/p&gt;
 GitHub profile&lt;/a&gt; or links from my browser’s bookmarks, but that should be
 descriptive enough to get the point across.&lt;/p&gt;
 &lt;/div&gt;
-&lt;div class=&quot;section&quot; id=&quot;gentoo&quot;&gt;
-&lt;h3&gt;Gentoo&lt;/h3&gt;
+&lt;div class=&quot;section&quot; id=&quot;gentoo-packages&quot;&gt;
+&lt;h3&gt;Gentoo packages&lt;/h3&gt;
 &lt;p&gt;Over the past decade I’ve spent a lot of time hacking on things related to
-&lt;a class=&quot;reference external&quot; href=&quot;http://gentoo.org/&quot;&gt;Gentoo&lt;/a&gt;.  Some of that for work projects and some of it for &lt;a class=&quot;reference external&quot; href=&quot;https://jnrowe-misc.rtfd.org/&quot;&gt;personal
+&lt;a class=&quot;reference external&quot; href=&quot;http://gentoo.org/&quot;&gt;Gentoo&lt;/a&gt;.  Some of that for work projects and some of it for &lt;a class=&quot;reference external&quot; href=&quot;https://jnrowe-misc.readthedocs.io/&quot;&gt;personal
 projects&lt;/a&gt;.  I’ve also experienced my fair share of troubles, and have &lt;a class=&quot;reference external&quot; href=&quot;https://bugs.gentoo.org/buglist.cgi?email1=jnrowe%40gmail.com&amp;amp;emailassigned_to1=1&amp;amp;emailcc1=1&amp;amp;emaillongdesc1=1&amp;amp;emailreporter1=1&amp;amp;emailtype1=substring&amp;amp;query_format=advanced&quot;&gt;reported
 a few bugs&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;At one time I even hoped to &lt;a class=&quot;reference external&quot; href=&quot;https://bugs.gentoo.org/show_bug.cgi?id=142090&quot;&gt;become a developer&lt;/a&gt;, but that didn’t work out for
@@ -189,16 +189,16 @@ shouldn’t trust the dubious statistics from &lt;abbr title=&quot;Python Packag
 &lt;/div&gt;
 &lt;div class=&quot;section&quot; id=&quot;rdial&quot;&gt;
 &lt;h3&gt;&lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;rdial&lt;/span&gt;&lt;/code&gt;&lt;/h3&gt;
-&lt;p&gt;&lt;a class=&quot;reference external&quot; href=&quot;http://rdial.rtfd.org/&quot;&gt;rdial&lt;/a&gt; is a time tracking tool, and a perfect example for me.  I played with it
-for over a year before anyone else saw it, just because it scratched an itch
-I had.  I never imagined it would be useful to others.  Turns out it was, and
-there is now a small yet faithful band of users.&lt;/p&gt;
+&lt;p&gt;&lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;rdial&lt;/span&gt;&lt;/code&gt; is a &lt;a class=&quot;reference external&quot; href=&quot;https://rdial.readthedocs.io/&quot;&gt;time tracking tool&lt;/a&gt;, and a perfect example for me.  I played
+with it for over a year before anyone else saw it, just because it scratched an
+itch I had.  I never imagined it would be useful to others.  Turns out it was,
+and there is now a small yet faithful band of users.&lt;/p&gt;
 &lt;p&gt;I even received the great honour of a few summer evening beers for releasing it.
 A beer being second only to a patch in the table of project endorsements
 that I subscribe to.&lt;/p&gt;
 &lt;/div&gt;
-&lt;div class=&quot;section&quot; id=&quot;upoints&quot;&gt;
-&lt;h3&gt;&lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;upoints&lt;/span&gt;&lt;/code&gt;&lt;/h3&gt;
+&lt;div class=&quot;section&quot; id=&quot;upoints-nee-earth-distance&quot;&gt;
+&lt;h3&gt;&lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;upoints&lt;/span&gt;&lt;/code&gt; née &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;earth_distance&lt;/span&gt;&lt;/code&gt;&lt;/h3&gt;
 &lt;p&gt;&lt;a class=&quot;reference external&quot; href=&quot;https://jnrowe.github.io/upoints/&quot;&gt;upoints&lt;/a&gt; is a strange one.  It started as a &lt;a class=&quot;reference external&quot; href=&quot;http://jnrowe.github.io/upoints/geolocation_and_pathcross.html&quot;&gt;stupid hack&lt;/a&gt; to figure out some
 silly travel planning drama, it proceeded to take on a life of its own.  Over
 the years it attracted a fair amount of users, and I still receive email about

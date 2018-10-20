@@ -30,8 +30,8 @@ Any clues about where to look?&lt;/p&gt;
 &lt;li&gt;&lt;p&gt;Failure to use &lt;a class=&quot;reference external&quot; href=&quot;http://docs.python.org/tutorial/introduction.html#strings&quot;&gt;raw strings&lt;/a&gt; when including backslashes in the &lt;abbr title=&quot;Regular Expression&quot;&gt;RegEx&lt;/abbr&gt;&lt;/p&gt;&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;Choosing to use a &lt;abbr title=&quot;Regular Expression&quot;&gt;RegEx&lt;/abbr&gt; when a better tool for the job exists&lt;/p&gt;&lt;/li&gt;
 &lt;/ol&gt;
-&lt;div class=&quot;section&quot; id=&quot;raw-strings&quot;&gt;
-&lt;h2&gt;Raw strings&lt;/h2&gt;
+&lt;div class=&quot;section&quot; id=&quot;using-raw-strings&quot;&gt;
+&lt;h2&gt;Using raw strings&lt;/h2&gt;
 &lt;p&gt;In Rob’s code he had failed to take in to account the backslash escaping
 problem.  A simplified example of what he was trying to do would be:&lt;/p&gt;
 &lt;div class=&quot;highlight-pycon notranslate&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&quot;gp&quot;&gt;&amp;gt;&amp;gt;&amp;gt; &lt;/span&gt;&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;re&lt;/span&gt;
@@ -520,8 +520,8 @@ the question at hand, but surprisingly little dissent over the choices.&lt;/p&gt
 &lt;/div&gt;&lt;/blockquote&gt;
 &lt;p&gt;I agree with Matt’s answer but I want to point a couple of possibly non-obvious
 web servers that they, and you, are likely to have installed already.&lt;/p&gt;
-&lt;div class=&quot;section&quot; id=&quot;busybox&quot;&gt;
-&lt;h2&gt;Busybox&lt;/h2&gt;
+&lt;div class=&quot;section&quot; id=&quot;busybox-applet&quot;&gt;
+&lt;h2&gt;Busybox applet&lt;/h2&gt;
 &lt;p&gt;All our Linux systems at the office include &lt;a class=&quot;reference external&quot; href=&quot;http://www.busybox.net/&quot;&gt;busybox&lt;/a&gt;, and in the configuration
 we use the &lt;a class=&quot;reference external&quot; href=&quot;http://www.busybox.net/downloads/BusyBox.html#httpd&quot;&gt;httpd&lt;/a&gt; applet is built.  It is very lightweight, and incredibly
 stable.  I often use it when testing or as a weak way to transfer files between
@@ -543,8 +543,8 @@ server:&lt;/p&gt;
 &lt;p&gt;&lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;http_serve_location&lt;/span&gt;&lt;/code&gt; is set elsewhere in my configuration file, so that I can
 keep per-machine settings separate.&lt;/p&gt;
 &lt;/div&gt;
-&lt;div class=&quot;section&quot; id=&quot;python&quot;&gt;
-&lt;h2&gt;Python&lt;/h2&gt;
+&lt;div class=&quot;section&quot; id=&quot;python-built-in&quot;&gt;
+&lt;h2&gt;Python built-in&lt;/h2&gt;
 &lt;p&gt;&lt;a class=&quot;reference external&quot; href=&quot;http://www.python.org/&quot;&gt;Python&lt;/a&gt; comes with its own basic web server, and it is very easy to use:&lt;/p&gt;
 &lt;div class=&quot;highlight-console notranslate&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&quot;gp&quot;&gt;$&lt;/span&gt; python2.6 -m SimpleHTTPServer &lt;span class=&quot;m&quot;&gt;8080&lt;/span&gt;
 &lt;span class=&quot;go&quot;&gt;Serving HTTP on 0.0.0.0 port 8080 ...&lt;/span&gt;
@@ -566,8 +566,8 @@ keep per-machine settings separate.&lt;/p&gt;
 server port would be 8000.  If port 8000 is acceptable for you then you can save
 yourself five keystrokes.&lt;/p&gt;
 &lt;/div&gt;
-&lt;div class=&quot;section&quot; id=&quot;ruby&quot;&gt;
-&lt;h2&gt;Ruby&lt;/h2&gt;
+&lt;div class=&quot;section&quot; id=&quot;ruby-built-in&quot;&gt;
+&lt;h2&gt;Ruby built-in&lt;/h2&gt;
 &lt;p&gt;&lt;a class=&quot;reference external&quot; href=&quot;http://www.ruby-lang.org/&quot;&gt;ruby&lt;/a&gt; also comes with its own web server, one that you’re probably already
 familiar with if you’re a &lt;a class=&quot;reference external&quot; href=&quot;http://www.rubyonrails.org/&quot;&gt;rails&lt;/a&gt; user, called &lt;a class=&quot;reference external&quot; href=&quot;http://www.webrick.org/&quot;&gt;webrick&lt;/a&gt;.  We need a little script
 to use &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;webrick&lt;/span&gt;&lt;/code&gt;:&lt;/p&gt;
