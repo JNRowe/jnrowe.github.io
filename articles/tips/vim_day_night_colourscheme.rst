@@ -56,7 +56,7 @@ The ridiculous solution
 We’ll need to figure out the actual daylight state.  There are an enormous
 number of options available.
 
-``upoints``
+With Python
 '''''''''''
 
 My upoints_ package can calculate sunrise and sunset:
@@ -70,8 +70,8 @@ My upoints_ package can calculate sunrise and sunset:
     >>> p.sun_events(zenith='civil')   # twilight
     (datetime.time(4, 58), datetime.time(18, 49))
 
-``redshift``
-''''''''''''
+With ``redshift``
+'''''''''''''''''
 
 If you already use redshift_ — and you should — getting the current state is
 quite easy.  Below is example output, and a quick sed_-based method to parse the

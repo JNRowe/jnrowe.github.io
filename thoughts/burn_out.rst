@@ -62,8 +62,8 @@ a single penny cost to opening issues or sending a mail it would do wonders for
 communication in general.  I suspect that would remain true even if you
 reimbursed that penny immediately.
 
-The answer
-''''''''''
+The simple answer
+'''''''''''''''''
 
 I figured out how to work with this entirely by accident.  Politely offer
 answers that move them away from you.  It is by far the easiest solution.

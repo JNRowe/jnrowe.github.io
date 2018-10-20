@@ -21,8 +21,8 @@ Matt Traner’s reply sums up the general feeling quite nicely:
 I agree with Matt’s answer but I want to point a couple of possibly non-obvious
 web servers that they, and you, are likely to have installed already.
 
-Busybox
--------
+Busybox applet
+--------------
 
 All our Linux systems at the office include busybox_, and in the configuration
 we use the httpd_ applet is built.  It is very lightweight, and incredibly
@@ -47,8 +47,8 @@ server:
 ``http_serve_location`` is set elsewhere in my configuration file, so that I can
 keep per-machine settings separate.
 
-Python
-------
+Python built-in
+---------------
 
 Python_ comes with its own basic web server, and it is very easy to use:
 
@@ -74,8 +74,8 @@ I’ve specified the port 8080 to both calls in the snippet above, by default th
 server port would be 8000.  If port 8000 is acceptable for you then you can save
 yourself five keystrokes.
 
-Ruby
-----
+Ruby built-in
+-------------
 
 ruby_ also comes with its own web server, one that you’re probably already
 familiar with if you’re a rails_ user, called webrick_.  We need a little script

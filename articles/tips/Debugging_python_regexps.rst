@@ -19,8 +19,8 @@ The answer to these types of questions is more often than not one of two things:
 
 2. Choosing to use a |RegEx| when a better tool for the job exists
 
-Raw strings
------------
+Using raw strings
+-----------------
 
 In Rob’s code he had failed to take in to account the backslash escaping
 problem.  A simplified example of what he was trying to do would be::

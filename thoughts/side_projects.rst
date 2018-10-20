@@ -61,8 +61,8 @@ diversity.
 
 .. _my GitHub profile: https://github.com/JNRowe/
 
-Gentoo
-''''''
+Gentoo packages
+'''''''''''''''
 
 Over the past decade I’ve spent a lot of time hacking on things related to
 Gentoo_.  Some of that for work projects and some of it for `personal
@@ -105,19 +105,19 @@ shouldn’t trust the dubious statistics from |PyPI| ;)
 ``rdial``
 '''''''''
 
-rdial_ is a time tracking tool, and a perfect example for me.  I played with it
-for over a year before anyone else saw it, just because it scratched an itch
-I had.  I never imagined it would be useful to others.  Turns out it was, and
-there is now a small yet faithful band of users.
+``rdial`` is a `time tracking tool`_, and a perfect example for me.  I played
+with it for over a year before anyone else saw it, just because it scratched an
+itch I had.  I never imagined it would be useful to others.  Turns out it was,
+and there is now a small yet faithful band of users.
 
 I even received the great honour of a few summer evening beers for releasing it.
 A beer being second only to a patch in the table of project endorsements
 that I subscribe to.
 
-.. _rdial: http://rdial.rtfd.org/
+.. _time tracking tool: http://rdial.rtfd.org/
 
-``upoints``
-'''''''''''
+``upoints`` née ``earth_distance``
+''''''''''''''''''''''''''''''''''
 
 upoints_ is a strange one.  It started as a `stupid hack`_ to figure out some
 silly travel planning drama, it proceeded to take on a life of its own.  Over
