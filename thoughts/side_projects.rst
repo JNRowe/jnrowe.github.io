@@ -73,7 +73,7 @@ At one time I even hoped to `become a developer`_, but that didn’t work out fo
 a bunch of reasons.
 
 .. _Gentoo: http://gentoo.org/
-.. _personal projects: https://jnrowe-misc.rtfd.org/
+.. _personal projects: https://jnrowe-misc.readthedocs.io/
 .. _reported a few bugs: https://bugs.gentoo.org/buglist.cgi?email1=jnrowe%40gmail.com&emailassigned_to1=1&emailcc1=1&emaillongdesc1=1&emailreporter1=1&emailtype1=substring&query_format=advanced
 .. _become a developer: https://bugs.gentoo.org/show_bug.cgi?id=142090
 
@@ -114,7 +114,7 @@ I even received the great honour of a few summer evening beers for releasing it.
 A beer being second only to a patch in the table of project endorsements
 that I subscribe to.
 
-.. _time tracking tool: http://rdial.rtfd.org/
+.. _time tracking tool: https://rdial.readthedocs.io/
 
 ``upoints`` née ``earth_distance``
 ''''''''''''''''''''''''''''''''''
