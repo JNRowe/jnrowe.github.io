@@ -58,7 +58,8 @@ nitpicky = True
 
 # Project information {{{
 project = 'JNRowe'
-copyright = '2009-2018  James Rowe'
+author = 'James Rowe'
+copyright = f'2009-2018  {author}'
 
 version = '0.1'
 release = '0.1.0'
@@ -78,9 +79,11 @@ html_theme_options = {
     'show_related': True,
 }
 html_theme_path = [alabaster.get_path(), ]
+html_css_files = ['custom.css', ]
 
 html_title = 'JNRowe'
 
+html_baseurl = 'https://jnrowe.github.io/'
 html_context = {'feed_link': True}
 html_favicon = '.static/icon.ico'
 html_static_path = ['.static', ]
@@ -106,10 +109,10 @@ extlinks = {
 
 # ablog extension settings {{{
 blog_title = project
-blog_baseurl = 'https://jnrowe.github.io/'
+blog_baseurl = html_baseurl
 
 blog_authors = {
-    'JNRowe': ('James Rowe', 'https://jnrowe.github.io/'),
+    'JNRowe': (author, html_baseurl),
 }
 blog_default_author = 'JNRowe'
 
