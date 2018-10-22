@@ -16,6 +16,9 @@ side.  Instead of configuring individual applications to behave in a tabbed and
 custom way, why not just rely on that behaviour globally?  Allow me to
 illustrate with the following examples.
 
+.. image:: /.images/2018-10-08-tiling.jpg
+    :alt: Example of awesomewm’s tile.right layout
+
 If I want two terminals next to each other I’ll just switch to a layout that
 supports that(in awesomewm_ I’d probably choose ``tile.right``) .  If I want
 various image viewer windows open and a nice tabbed interface to access them,
