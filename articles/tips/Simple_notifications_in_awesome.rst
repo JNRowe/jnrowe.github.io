@@ -90,14 +90,14 @@ way I don’t miss windows opening on tags I’m not currently viewing.
 
 ::
 
-    awful.hooks.manage.register (startup) =>
+    client.connect_signal "manage", (using nil) =>
         -- Display the window’s name, or just Application if it isn’t set
         notify.start "#{@name or 'Application'} started"
 
 Network notifications
 ---------------------
 
-I also have the following awful_ hook set to toggle my network monitor between
+I also have the following gears_ timer set to toggle my network monitor between
 ``lo`` and ``ppp0`` depending on whether my remote network interface is up.
 Having the little popups to show when the network has gone down or come up is
 quite nice, and definitely more noticeable than just changing the text in the
@@ -107,7 +107,7 @@ switches the network graph widget to use the appropriate input too.
 ::
 
     netiface = "lo"
-    awful.hooks.timer.register 3, ->
+    gears.timer 3, ->
         iface, state = if netiface == "lo" and io.open "/var/lock/LCK..ttyUSB0"
             "ppp0", "up"
         elseif netiface == "ppp0" and not io.open "/var/lock/LCK..ttyUSB0"
@@ -119,11 +119,11 @@ switches the network graph widget to use the appropriate input too.
             "download"
         notify.start "PPP0 interface has come #{state}"
 
-.. _awesome: http://awesome.naquadah.org/
-.. _naughty: http://awesome.naquadah.org/doc/api/modules/naughty.html
+.. _awesome: https://awesomewm.org/
+.. _naughty: https://awesomewm.org/apidoc/libraries/naughty.html
 .. _moonscript: https://github.com/leafo/moonscript/
 .. _lua: http://www.lua.org/
 .. _lua-functional: http://github.com/samsarin/lua-functional
 .. _pango: http://www.pango.org/
-.. _awful: http://awesome.naquadah.org/doc/api/modules/awful.hooks.html
-.. _wibox: http://awesome.naquadah.org/doc/api/modules/wibox.html
+.. _gears: https://awesomewm.org/apidoc/libraries/gears.html
+.. _wibox: https://awesomewm.org/apidoc/libraries/awful.wibox.html

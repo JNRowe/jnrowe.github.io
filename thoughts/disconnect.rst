@@ -151,5 +151,4 @@ you regain some of that is very comforting.
 .. _Russia Today: http://rt.com/
 .. _Al Jazeera: http://www.aljazeera.net/
 .. _vnstat: http://humdi.net/vnstat/
-.. _awesome: http://awesome.naquadah.org/
-
+.. _awesome: https://awesomewm.org/

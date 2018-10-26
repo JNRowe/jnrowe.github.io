@@ -57,8 +57,8 @@ background image if it is desired.
 Click on the thumbnail image above to see the full desktop image and the effect
 in full.
 
-.. _awesome: http://awesome.naquadah.org/
-.. _wibox: http://awesome.naquadah.org/doc/api/modules/wibox.html
+.. _awesome: https://awesomewm.org/
+.. _wibox: https://awesomewm.org/apidoc/libraries/awful.wibox.html
 .. _GTK+: http://www.gtk.org/
 .. _ImageMagick: http://www.imagemagick.org/index.php
 .. _gimp: http://www.gimp.org/

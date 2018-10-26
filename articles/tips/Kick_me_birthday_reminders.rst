@@ -99,7 +99,7 @@ measure I hope!
 .. _remind: http://www.roaringpenguin.com/products/remind
 .. _ncurses: http://dickey.his.com/ncurses/
 .. _Python: http://www.python.org/
-.. _awesome: http://awesome.naquadah.org/
+.. _awesome: https://awesomewm.org/
 .. _hCalender: http://microformats.org/wiki/hcalendar
 .. _make: http://www.gnu.org/software/make/make.html
 .. _git: http://www.git-scm.com/
