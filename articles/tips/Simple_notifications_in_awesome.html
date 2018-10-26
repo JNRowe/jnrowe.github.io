@@ -56,7 +56,7 @@
 
   <div class="section" id="simple-notifications-in-awesome">
 <h1>Simple notifications in awesome<a class="headerlink" href="#simple-notifications-in-awesome" title="Permalink to this headline">¶</a></h1>
-<p>On seeing my window notifications in <a class="reference external" href="http://awesome.naquadah.org/">awesome</a> from a screencast for a new
+<p>On seeing my window notifications in <a class="reference external" href="https://awesomewm.org/">awesome</a> from a screencast for a new
 project at work Matt Cooper asks:</p>
 <blockquote>
 <div><p>Is there a library that does those fancy notifications or do you have to
@@ -64,7 +64,7 @@ hack it up yourself?</p>
 </div></blockquote>
 <img alt="notifications in awesome" class="align-right" src="../../_images/2009-10-04-awesome_notifications.png" />
 <p>There is a library to make notification popups in <strong class="command">awesome</strong>, and it is
-called <a class="reference external" href="http://awesome.naquadah.org/doc/api/modules/naughty.html">naughty</a>.  With it notifications are as simple as calling
+called <a class="reference external" href="https://awesomewm.org/apidoc/libraries/naughty.html">naughty</a>.  With it notifications are as simple as calling
 <code class="docutils literal notranslate"><span class="pre">naughty.notify</span></code>, for example:</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
@@ -131,7 +131,7 @@ either).</p>
 <h1>Window creation notifications<a class="headerlink" href="#window-creation-notifications" title="Permalink to this headline">¶</a></h1>
 <p>One of the notifications I like to have is for when new windows are opened, this
 way I don’t miss windows opening on tags I’m not currently viewing.</p>
-<div class="highlight-moon notranslate"><div class="highlight"><pre><span></span><span class="n">awful</span><span class="o">.</span><span class="n">hooks</span><span class="o">.</span><span class="n">manage</span><span class="o">.</span><span class="n">register</span> <span class="kt">(</span><span class="n">startup</span><span class="kt">)</span> <span class="nf">=&gt;</span>
+<div class="highlight-moon notranslate"><div class="highlight"><pre><span></span><span class="n">client</span><span class="o">.</span><span class="n">connect_signal</span> <span class="s2">&quot;</span><span class="s">manage</span><span class="s2">&quot;</span><span class="p">,</span> <span class="kt">(</span><span class="k">using</span> <span class="kc">nil</span><span class="kt">)</span> <span class="nf">=&gt;</span>
     <span class="c1">-- Display the window’s name, or just Application if it isn’t set</span>
     <span class="n">notify</span><span class="o">.</span><span class="n">start</span> <span class="s2">&quot;</span><span class="s">#{@name or &#39;Application&#39;} started</span><span class="s2">&quot;</span>
 </pre></div>
@@ -139,14 +139,14 @@ way I don’t miss windows opening on tags I’m not currently viewing.</p>
 </div>
 <div class="section" id="network-notifications">
 <h1>Network notifications<a class="headerlink" href="#network-notifications" title="Permalink to this headline">¶</a></h1>
-<p>I also have the following <a class="reference external" href="http://awesome.naquadah.org/doc/api/modules/awful.hooks.html">awful</a> hook set to toggle my network monitor between
+<p>I also have the following <a class="reference external" href="https://awesomewm.org/apidoc/libraries/gears.html">gears</a> timer set to toggle my network monitor between
 <code class="docutils literal notranslate"><span class="pre">lo</span></code> and <code class="docutils literal notranslate"><span class="pre">ppp0</span></code> depending on whether my remote network interface is up.
 Having the little popups to show when the network has gone down or come up is
 quite nice, and definitely more noticeable than just changing the text in the
-<a class="reference external" href="http://awesome.naquadah.org/doc/api/modules/wibox.html">wibox</a>.  The code below changes the interface name in the <code class="docutils literal notranslate"><span class="pre">wibox</span></code>, and
+<a class="reference external" href="https://awesomewm.org/apidoc/libraries/awful.wibox.html">wibox</a>.  The code below changes the interface name in the <code class="docutils literal notranslate"><span class="pre">wibox</span></code>, and
 switches the network graph widget to use the appropriate input too.</p>
 <div class="highlight-moon notranslate"><div class="highlight"><pre><span></span><span class="n">netiface</span> <span class="o">=</span> <span class="s2">&quot;</span><span class="s">lo</span><span class="s2">&quot;</span>
-<span class="n">awful</span><span class="o">.</span><span class="n">hooks</span><span class="o">.</span><span class="n">timer</span><span class="o">.</span><span class="n">register</span> <span class="mi">3</span><span class="p">,</span> <span class="nf">-&gt;</span>
+<span class="n">gears</span><span class="o">.</span><span class="n">timer</span> <span class="mi">3</span><span class="p">,</span> <span class="nf">-&gt;</span>
     <span class="n">iface</span><span class="p">,</span> <span class="n">state</span> <span class="o">=</span> <span class="k">if</span> <span class="n">netiface</span> <span class="o">==</span> <span class="s2">&quot;</span><span class="s">lo</span><span class="s2">&quot;</span> <span class="k">and</span> <span class="nb">io.open</span> <span class="s2">&quot;</span><span class="s">/var/lock/LCK..ttyUSB0</span><span class="s2">&quot;</span>
         <span class="s2">&quot;</span><span class="s">ppp0</span><span class="s2">&quot;</span><span class="p">,</span> <span class="s2">&quot;</span><span class="s">up</span><span class="s2">&quot;</span>
     <span class="k">elseif</span> <span class="n">netiface</span> <span class="o">==</span> <span class="s2">&quot;</span><span class="s">ppp0</span><span class="s2">&quot;</span> <span class="k">and</span> <span class="k">not</span> <span class="nb">io.open</span> <span class="s2">&quot;</span><span class="s">/var/lock/LCK..ttyUSB0</span><span class="s2">&quot;</span>
@@ -293,6 +293,8 @@ switches the network graph widget to use the appropriate input too.</p>
   <ul>
     
     
+      <li><a href="readline_rename_imv.html">26 October - File renaming for the lazy</a></li>
+    
       <li><a href="../tiling_vs_tabbing.html">08 October - Tiling vs tabbing</a></li>
     
       <li><a href="vim_day_night_colourscheme.html">15 September - Vim with day/night colourschemes</a></li>
@@ -300,8 +302,6 @@ switches the network graph widget to use the appropriate input too.</p>
       <li><a href="../../thoughts/brexit_through_the_gift_shop.html">08 June - brexit through the gift shop</a></li>
     
       <li><a href="../../thoughts/metro_city.html">03 September - Burning down the streets</a></li>
-    
-      <li><a href="../fossil.html">12 November - fossil experiments</a></li>
     
   </ul>
 
@@ -435,6 +435,11 @@ switches the network graph widget to use the appropriate input too.</p>
     
       
       <li class="ablog-cloud ablog-cloud-1">
+        <a href="../../blog/tag/imv.html">imv</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-1">
         <a href="../../blog/tag/jnrowe-misc.html">jnrowe-misc</a></li>
       
     
@@ -500,12 +505,22 @@ switches the network graph widget to use the appropriate input too.</p>
     
       
       <li class="ablog-cloud ablog-cloud-1">
+        <a href="../../blog/tag/qmv.html">qmv</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-2">
         <a href="../../blog/tag/readline.html">readline</a></li>
       
     
       
       <li class="ablog-cloud ablog-cloud-1">
         <a href="../../blog/tag/remind.html">remind</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-1">
+        <a href="../../blog/tag/renameutils.html">renameutils</a></li>
       
     
       
@@ -584,7 +599,7 @@ switches the network graph widget to use the appropriate input too.</p>
   <ul>
   
     
-    <li><a href="../../blog/2018.html">2018 (3)</a></li>
+    <li><a href="../../blog/2018.html">2018 (4)</a></li>
     
   
     

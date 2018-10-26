@@ -2,11 +2,153 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title type="text">JNRowe - Posts by James Rowe</title>
   <id>https://jnrowe.github.io/blog/author/james-rowe/atom.xml</id>
-  <updated>2018-10-08T00:00:00Z</updated>
+  <updated>2018-10-26T00:00:00Z</updated>
   <link href="https://jnrowe.github.io/" />
   <link href="https://jnrowe.github.io/blog/author/james-rowe/atom.xml" rel="self" />
   <subtitle type="text">Ramblings of a tired mind</subtitle>
   <generator uri="http://ablog.readthedocs.org" version="0.9.2">ABlog</generator>
+  <entry xml:base="https://jnrowe.github.io/blog/author/james-rowe/atom.xml">
+    <title type="text">File renaming for the lazy</title>
+    <id>https://jnrowe.github.io/articles/tips/readline_rename_imv.html</id>
+    <updated>2018-10-26T00:00:00Z</updated>
+    <published>2018-10-26T00:00:00Z</published>
+    <link href="https://jnrowe.github.io/articles/tips/readline_rename_imv.html" />
+    <author>
+      <name>James Rowe</name>
+    </author>
+    <content type="html">&lt;div class=&quot;section&quot; id=&quot;file-renaming-for-the-lazy&quot;&gt;
+
+&lt;p&gt;Over at HN in a &lt;a class=&quot;reference external&quot; href=&quot;https://news.ycombinator.com/item?id=18290344&quot;&gt;stolen topic&lt;/a&gt;:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;div&gt;&lt;p&gt;however, i miss one feature for which i’d use a filemanager: in-place file
+renaming. in most cases when i want to rename a file, i want to change
+a small part of it, and i don’t want to have to retype the whole filename.&lt;/p&gt;
+&lt;p&gt;i have yet to find a commandline utility (emacs doesn’t count ;-) that
+offers that.&lt;/p&gt;
+&lt;p class=&quot;attribution&quot;&gt;—em-bee&lt;/p&gt;
+&lt;/div&gt;&lt;/blockquote&gt;
+&lt;p&gt;There a few interesting replies there, but I want to flesh out my replies
+a little after the fact.&lt;/p&gt;
+&lt;div class=&quot;section&quot; id=&quot;the-new-tool-solution&quot;&gt;
+&lt;h2&gt;The new tool solution&lt;/h2&gt;
+&lt;p&gt;My initial reply was&lt;a class=&quot;footnote-reference brackets&quot; href=&quot;#id3&quot; id=&quot;id1&quot;&gt;1&lt;/a&gt;:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;div&gt;&lt;p&gt;If I’m understanding you correctly, then &lt;a class=&quot;reference external&quot; href=&quot;http://www.nongnu.org/renameutils/&quot;&gt;renameutils&lt;/a&gt;’s &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;imv&lt;/span&gt;&lt;/code&gt; is a great
+tool for this.  &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;imv&lt;/span&gt; &lt;span class=&quot;pre&quot;&gt;$filename&lt;/span&gt;&lt;/code&gt; pops you in to a &lt;a class=&quot;reference external&quot; href=&quot;http://cnswww.cns.cwru.edu/php/chet/readline/rltop.html&quot;&gt;readline&lt;/a&gt; enabled prompt
+to edit &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;$filename&lt;/span&gt;&lt;/code&gt;.  Given that it is &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;readline&lt;/span&gt;&lt;/code&gt; you can even add
+extra options in your &lt;code class=&quot;file docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;~/.inputrc&lt;/span&gt;&lt;/code&gt; to add additional features to it,
+I have mappings for custom directory prefixes for example.&lt;/p&gt;
+&lt;p&gt;It also comes with &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;qmv&lt;/span&gt;&lt;/code&gt;, which will pop open an editor for you to
+perform inplace edits on filenames.   Which is kinda like &lt;a class=&quot;reference external&quot; href=&quot;https://en.m.wikipedia.org/wiki/Dired&quot;&gt;dired&lt;/a&gt; as an
+&lt;a class=&quot;reference external&quot; href=&quot;https://www.gnu.org/software/emacs/&quot;&gt;emacs&lt;/a&gt; comparison, at least if you squint an awful lot.&lt;/p&gt;
+&lt;/div&gt;&lt;/blockquote&gt;
+&lt;p&gt;I recommend &lt;a class=&quot;reference external&quot; href=&quot;http://www.nongnu.org/renameutils/&quot;&gt;renameutils&lt;/a&gt; a lot.  I’ve given talks that have digressed in to
+“why you should use &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;qmv&lt;/span&gt;&lt;/code&gt;”, I’ve mocked co-workers when I’ve spotted them
+doing things &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;imv&lt;/span&gt;&lt;/code&gt; would be a billion times better for, and it looks like
+I even &lt;a class=&quot;reference external&quot; href=&quot;https://bugs.gentoo.org/show_bug.cgi?id=64479&quot;&gt;pimped it&lt;/a&gt; to distro folks in the past&lt;a class=&quot;footnote-reference brackets&quot; href=&quot;#id4&quot; id=&quot;id2&quot;&gt;2&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;I sped across the usage in the HN comment, but there is some interesting
+functionality hidden in there.  As stated, &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;imv&lt;/span&gt;&lt;/code&gt; uses &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;readline&lt;/span&gt;&lt;/code&gt; so you
+have an enormous amount of &lt;a class=&quot;reference external&quot; href=&quot;https://tiswww.cwru.edu/php/chet/readline/rluserman.html&quot;&gt;editing power&lt;/a&gt; at your disposal, and it is all the
+same stuff you have in your shell; &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;&amp;lt;M-{b,f}&amp;gt;&lt;/span&gt;&lt;/code&gt; word jumps, &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;&amp;lt;M-C-]&amp;gt;&lt;/span&gt;&lt;/code&gt;
+character searches, &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;&amp;lt;C-t&amp;gt;&lt;/span&gt;&lt;/code&gt; to transpose typo fixes, &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;&amp;lt;M-[count]&amp;gt;&lt;/span&gt;&lt;/code&gt; repeats,
+and many more.&lt;/p&gt;
+&lt;p&gt;I also hinted at config file support.  &lt;code class=&quot;file docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;~/.inputrc`&lt;/span&gt;&lt;/code&gt;, or whatever
+&lt;span class=&quot;target&quot; id=&quot;index-0&quot;&gt;&lt;/span&gt;&lt;code class=&quot;xref std std-envvar docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;$INPUTRC&lt;/span&gt;&lt;/code&gt; points at, can be used to change the behaviour of all
+&lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;readline&lt;/span&gt;&lt;/code&gt; using tools.  Excitingly though, it can also be used to change the
+behaviour of specific tools only.&lt;/p&gt;
+&lt;p&gt;For example, I often find myself writing throwaway scripts that I suddenly
+decide I’ll want again in the future.  When that happens they move to
+&lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;~/.local/bin&lt;/span&gt;&lt;/code&gt;, and I can do that with &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;imv&lt;/span&gt;&lt;/code&gt; by tapping &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;&amp;lt;C-v&amp;gt;&lt;/span&gt;&lt;/code&gt; at the
+prompt.  This is really useful when I want to rename &lt;code class=&quot;file docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;foo.sh&lt;/span&gt;&lt;/code&gt; to
+&lt;code class=&quot;file docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;~/.local/bin/change_the_world.sh&lt;/span&gt;&lt;/code&gt;.&lt;/p&gt;
+&lt;div class=&quot;highlight-text notranslate&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;$if imv
+    set expand-tilde on
+    C-v: &amp;#39;\C-a~/.local/bin\C-i&amp;#39;
+$endif
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;The above snippet might deserve a little explanation.  The &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;&amp;lt;C-v&amp;gt;&lt;/span&gt;&lt;/code&gt; mapping
+inputs &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;&amp;lt;C-a&amp;gt;&lt;/span&gt;&lt;/code&gt; to move to the beginning of the line, the literal string
+&lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;~/.local/bin&lt;/span&gt;&lt;/code&gt;, and finally the tab character(&lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;&amp;lt;C-i&amp;gt;&lt;/span&gt;&lt;/code&gt;)  to expand the tilde
+for me.&lt;/p&gt;
+&lt;p&gt;Obviously, you can place whatever you want in there.  And if you take advantage
+of the application guard as above, you can even override bindings that you
+won’t find yourself using in &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;imv&lt;/span&gt;&lt;/code&gt; without breaking your shell or other
+tools.&lt;/p&gt;
+&lt;div class=&quot;figure&quot; id=&quot;id5&quot;&gt;
+&lt;a class=&quot;reference external image-reference&quot; href=&quot;https://xkcd.com/1806/&quot;&gt;&lt;img alt=&quot;Borrow Your Laptop&quot; src=&quot;../../_images/borrow_your_laptop.png&quot; style=&quot;width: 167.0px; height: 246.5px;&quot; /&gt;&lt;/a&gt;
+&lt;p class=&quot;caption&quot;&gt;&lt;span class=&quot;caption-text&quot;&gt;As always, &lt;a class=&quot;reference external&quot; href=&quot;https://xkcd.com/&quot;&gt;xkcd&lt;/a&gt; has a pre-canned explanation for why you shouldn’t listen
+to me.  Image: &lt;a class=&quot;reference external&quot; href=&quot;http://creativecommons.org/licenses/by-nc/2.5/&quot;&gt;CC by-nc&lt;/a&gt;.&lt;/span&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;section&quot; id=&quot;the-old-tool-solution&quot;&gt;
+&lt;h2&gt;The old tool solution&lt;/h2&gt;
+&lt;p&gt;My other comment there was:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;div&gt;&lt;p&gt;If you’re a &lt;a class=&quot;reference external&quot; href=&quot;https://www.zsh.org/&quot;&gt;zsh&lt;/a&gt; user you can also use the other &lt;a class=&quot;reference external&quot; href=&quot;https://linux.die.net/man/1/zshexpn&quot;&gt;zshexpn(1)&lt;/a&gt; stuff too.
+Like &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;mv&lt;/span&gt; &lt;span class=&quot;pre&quot;&gt;file.ext{,(:r)}&lt;/span&gt;&lt;/code&gt; to perform &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;mv&lt;/span&gt; &lt;span class=&quot;pre&quot;&gt;file.ext&lt;/span&gt; &lt;span class=&quot;pre&quot;&gt;file&lt;/span&gt;&lt;/code&gt;, or &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;:l&lt;/span&gt;&lt;/code&gt; to
+lowercase a filename, or any number of other sometimes useful(and often
+pointless things).  I’ve used &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;:l&lt;/span&gt;&lt;/code&gt; a number of times, but &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;:s&lt;/span&gt;&lt;/code&gt; for
+substitution is probably the most useful in general.&lt;/p&gt;
+&lt;/div&gt;&lt;/blockquote&gt;
+&lt;p&gt;If you’re already using &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;zsh&lt;/span&gt;&lt;/code&gt; (and you should be!), you have an enormously
+powerful suite of functionality at your fingertips for every task including
+simple renames.&lt;/p&gt;
+&lt;p&gt;I’ll show a few examples from a &lt;a class=&quot;reference external&quot; href=&quot;https://linux.die.net/man/1/script&quot;&gt;quick interactive session&lt;/a&gt; to hopefully make
+the point.&lt;/p&gt;
+&lt;div class=&quot;highlight-zsh notranslate&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;$   &lt;span class=&quot;c1&quot;&gt;# Real file names from my shared tips folder; co-workers look at&lt;/span&gt;
+$   &lt;span class=&quot;c1&quot;&gt;# ``~JNRowe/public/tips`` for the actual content ;)&lt;/span&gt;
+$ &lt;span class=&quot;nb&quot;&gt;echo&lt;/span&gt; xclip.rst&lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;,&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;:r&lt;span class=&quot;o&quot;&gt;)}&lt;/span&gt;  &lt;span class=&quot;c1&quot;&gt;# Remove extension&lt;/span&gt;
+xclip.rst xclip
+$ &lt;span class=&quot;nb&quot;&gt;echo&lt;/span&gt; tile_in_60_seconds.rst&lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;,&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;:u&lt;span class=&quot;o&quot;&gt;)}&lt;/span&gt;  &lt;span class=&quot;c1&quot;&gt;# Change to all caps&lt;/span&gt;
+tile_in_60_seconds.rst TILE_IN_60_SECONDS.RST
+$ &lt;span class=&quot;nb&quot;&gt;echo&lt;/span&gt; fzf_pkg_manager.rst&lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;,&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;:u:A&lt;span class=&quot;o&quot;&gt;)}&lt;/span&gt;  &lt;span class=&quot;c1&quot;&gt;# Change to all caps, and make path absolute&lt;/span&gt;
+fzf_pkg_manager.rst /home/jay/export/public/tips/FZF_PKG_MANAGER.RST
+$ &lt;span class=&quot;nb&quot;&gt;echo&lt;/span&gt; dc.rst&lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;,&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;:e&lt;span class=&quot;o&quot;&gt;)}&lt;/span&gt;  &lt;span class=&quot;c1&quot;&gt;# Extract only extension&lt;/span&gt;
+dc.rst rst
+$ &lt;span class=&quot;nb&quot;&gt;echo&lt;/span&gt; ogrmerge_layer_cake.rst&lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;,&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;:A:h:h&lt;span class=&quot;o&quot;&gt;)}&lt;/span&gt;  &lt;span class=&quot;c1&quot;&gt;# Extract parent directory from file&lt;/span&gt;
+ogrmerge_layer_cake.rst /home/jay/export/public
+$ &lt;span class=&quot;nb&quot;&gt;echo&lt;/span&gt; xclip.rst&lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;,&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;:s/clip/sel&lt;span class=&quot;o&quot;&gt;)}&lt;/span&gt;  &lt;span class=&quot;c1&quot;&gt;# Apply substitution of “clip” to “sel”&lt;/span&gt;
+xclip.rst xsel.rst
+$ &lt;span class=&quot;nb&quot;&gt;echo&lt;/span&gt; emacs_explore.rst&lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;,&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;:s/e/X&lt;span class=&quot;o&quot;&gt;)}&lt;/span&gt;  &lt;span class=&quot;c1&quot;&gt;# Apply subtitution of “e” to “X”&lt;/span&gt;
+emacs_explore.rst Xmacs_explore.rst
+$ &lt;span class=&quot;nb&quot;&gt;echo&lt;/span&gt; emacs_explore.rst&lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;,&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;:gs/e/X&lt;span class=&quot;o&quot;&gt;)}&lt;/span&gt;  &lt;span class=&quot;c1&quot;&gt;# … add the g flag for global replace&lt;/span&gt;
+emacs_explore.rst Xmacs_XxplorX.rst
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;admonition note&quot;&gt;
+&lt;p class=&quot;admonition-title&quot;&gt;Note&lt;/p&gt;
+&lt;p&gt;Order matters.  For example: in the &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;(:u:A)&lt;/span&gt;&lt;/code&gt; example above we apply the
+uppercase filter first, and then convert to an absolute path.  If we’d
+reversed the modifiers the &lt;em&gt;entire&lt;/em&gt; path would be converted to uppercase.&lt;/p&gt;
+&lt;/div&gt;
+&lt;p&gt;The modifiers are &lt;em&gt;hugely&lt;/em&gt; powerful, and are definitely worth the effort to
+learn in my opinion.  Combined with the &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;readline&lt;/span&gt;&lt;/code&gt; emulation that &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;zsh&lt;/span&gt;&lt;/code&gt;
+provides you can do some amazing things at the prompt.&lt;/p&gt;
+&lt;p&gt;They’re also available in non-interactive mode when writing scripts, and that
+is probably when they’re at their most useful as you can apply them to other
+constructs such as arrays as well.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;section&quot; id=&quot;thoughts&quot;&gt;
+&lt;h2&gt;Thoughts&lt;/h2&gt;
+&lt;p&gt;Small tools that do incredible things are &lt;em&gt;everywhere&lt;/em&gt;, I clearly love
+&lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;renameutils&lt;/span&gt;&lt;/code&gt; but I’d also like to hear about those things you enjoy too.
+Drop me a &lt;a class=&quot;reference external&quot; href=&quot;mailto:jnrowe&amp;#37;&amp;#52;&amp;#48;gmail&amp;#46;com&quot;&gt;mail&lt;/a&gt;, link me a blog post or stop me in the corridor to tell me
+about them.&lt;/p&gt;
+&lt;p class=&quot;rubric&quot;&gt;Footnotes&lt;/p&gt;
+&lt;dl class=&quot;footnote brackets&quot;&gt;
+&lt;dt class=&quot;label&quot; id=&quot;id3&quot;&gt;&lt;span class=&quot;brackets&quot;&gt;&lt;a class=&quot;fn-backref&quot; href=&quot;#id1&quot;&gt;1&lt;/a&gt;&lt;/span&gt;&lt;/dt&gt;
+&lt;dd&gt;&lt;p&gt;Lightly edited, because useful markup exists outside of HN.&lt;/p&gt;
+&lt;/dd&gt;
+&lt;dt class=&quot;label&quot; id=&quot;id4&quot;&gt;&lt;span class=&quot;brackets&quot;&gt;&lt;a class=&quot;fn-backref&quot; href=&quot;#id2&quot;&gt;2&lt;/a&gt;&lt;/span&gt;&lt;/dt&gt;
+&lt;dd&gt;&lt;p&gt;So long ago that &lt;em&gt;I&lt;/em&gt; was surprised to find that out from a &lt;a class=&quot;reference external&quot; href=&quot;http://www.rpcurnow.force9.co.uk/mairix/&quot;&gt;mairix&lt;/a&gt;
+search to look for times when I’ve mentioned it.&lt;/p&gt;
+&lt;/dd&gt;
+&lt;/dl&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</content>
+  </entry>
   <entry xml:base="https://jnrowe.github.io/blog/author/james-rowe/atom.xml">
     <title type="text">Tiling vs tabbing</title>
     <id>https://jnrowe.github.io/articles/tiling_vs_tabbing.html</id>
@@ -680,7 +822,7 @@ on the whitelist for two weeks in June with six visits, which happens to
 coincide with a project that involved porting a tool to Windows.&lt;/p&gt;
 &lt;p&gt;The act of using a whitelist makes the point of procrastination noticeable and
 adds a cost to even starting it.  Every time I want to visit a new site&lt;a class=&quot;footnote-reference brackets&quot; href=&quot;#s2&quot; id=&quot;id2&quot;&gt;2&lt;/a&gt;,
-I have to highlight the &lt;abbr title=&quot;Uniform Resource Locator&quot;&gt;URL&lt;/abbr&gt; and rattle a key combo in &lt;a class=&quot;reference external&quot; href=&quot;http://awesome.naquadah.org/&quot;&gt;awesome&lt;/a&gt; that updates
+I have to highlight the &lt;abbr title=&quot;Uniform Resource Locator&quot;&gt;URL&lt;/abbr&gt; and rattle a key combo in &lt;a class=&quot;reference external&quot; href=&quot;https://awesomewm.org/&quot;&gt;awesome&lt;/a&gt; that updates
 the whitelist to enable access to it.&lt;/p&gt;
 &lt;/div&gt;
 &lt;div class=&quot;section&quot; id=&quot;on-the-knoll&quot;&gt;
@@ -1448,65 +1590,6 @@ I remain in touch with to this day.&lt;/p&gt;
 me for the opinions I express or information I spread.  And that invitation is
 absolutely extended to this site and the new content I post.&lt;/p&gt;
 &lt;/div&gt;
-&lt;/div&gt;
-</content>
-  </entry>
-  <entry xml:base="https://jnrowe.github.io/blog/author/james-rowe/atom.xml">
-    <title type="text">Murdering morality with ferocious fire</title>
-    <id>https://jnrowe.github.io/thoughts/important_balance.html</id>
-    <updated>2014-01-25T00:00:00Z</updated>
-    <published>2014-01-25T00:00:00Z</published>
-    <link href="https://jnrowe.github.io/thoughts/important_balance.html" />
-    <author>
-      <name>James Rowe</name>
-    </author>
-    <content type="html">&lt;div class=&quot;section&quot; id=&quot;murdering-morality-with-ferocious-fire&quot;&gt;
-
-&lt;blockquote class=&quot;epigraph&quot;&gt;
-&lt;div&gt;&lt;p&gt;Morality is herd instinct in the individual.&lt;/p&gt;
-&lt;p class=&quot;attribution&quot;&gt;—Friedrich Nietzsche&lt;/p&gt;
-&lt;/div&gt;&lt;/blockquote&gt;
-&lt;p&gt;When I look back at my life’s work thus far I often find myself asking the
-question “was it worth it?”&lt;/p&gt;
-&lt;p&gt;That question isn’t meant in some kind of crazed suicidal manner, I just mean
-specifically the projects I’ve worked on and the things I do.  Are they just?
-Should I be doing this?&lt;/p&gt;
-&lt;p&gt;I truly hope it doesn’t come as a surprise to people who know me, but I consider
-myself to be a person of strong moral values&lt;a class=&quot;footnote-reference brackets&quot; href=&quot;#s1&quot; id=&quot;id1&quot;&gt;1&lt;/a&gt;.  I probably shouldn’t admit
-this publicly, but over the years I have turned down several projects I didn’t
-feel ethically comfortable working on.  And it has &lt;em&gt;demonstrably&lt;/em&gt; held my career
-progression back.  I mostly fine with that.  No, I really am.&lt;/p&gt;
-&lt;p&gt;The simple fact is that I’m due for a HR review, overdue actually, and these
-questions have started to come to the fore again.  I’ll lay in bed thinking
-about them, I’ll sit here typing about them, I’ll judge other people to gauge
-the validity of my position and I’ll bore people who’ll listen with my
-dilemmas.&lt;/p&gt;
-&lt;p&gt;One shouldn’t really use the word “dilemma” here, these issues are practically
-the definition of “First World Problems”.  Part of me is disgusted to waste so
-much time on frankly trivial introspection, but for better or worse it is
-a &lt;em&gt;huge&lt;/em&gt; part of my self-identity.&lt;/p&gt;
-&lt;p&gt;I feel that — to some extent — I’m living a weak, self-imposed and
-inconsequential version of &lt;a class=&quot;reference external&quot; href=&quot;http://en.m.wikipedia.org/wiki/Pascal's_wager&quot;&gt;Pascal’s Gambit&lt;/a&gt;.  I know full well that the works
-I’ve rejected have been seen to completion by others.  I’ve not scuppered them,
-nor have I even attempted to.  Not having me work on them has perhaps even made
-them far more effective at whatever aspect I took exception to.  I’m making
-moral decisions with no weight beyond my own mind, no ripple beyond my own
-insignificant life puddle and no wake beyond this now excessively long essay.&lt;/p&gt;
-&lt;p&gt;However, in the face of these realisations I still find myself unable to
-consider the decisions wrong.  I’d still choose to reject them now, and
-I suspect that will remain true in the future.  I like that these decisions are
-defensible to &lt;em&gt;me&lt;/em&gt;, that they &lt;em&gt;must&lt;/em&gt; be defensible to me.  I love that the thing
-that keeps me awake at night is not the thought of the possibly nefarious
-effects of my works, but rather the exceedingly minor issue of not having
-a glistening and well-spec’d M6 in the garage.&lt;/p&gt;
-&lt;p&gt;Now, let me sleep.&lt;/p&gt;
-&lt;p class=&quot;rubric&quot;&gt;Footnotes&lt;/p&gt;
-&lt;dl class=&quot;footnote brackets&quot;&gt;
-&lt;dt class=&quot;label&quot; id=&quot;s1&quot;&gt;&lt;span class=&quot;brackets&quot;&gt;&lt;a class=&quot;fn-backref&quot; href=&quot;#id1&quot;&gt;1&lt;/a&gt;&lt;/span&gt;&lt;/dt&gt;
-&lt;dd&gt;&lt;p&gt;For those values to be strong doesn’t necessarily mean they have to
-line up with your definition of “strong moral values” ;)&lt;/p&gt;
-&lt;/dd&gt;
-&lt;/dl&gt;
 &lt;/div&gt;
 </content>
   </entry>

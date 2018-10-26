@@ -53,7 +53,7 @@ extended 256 colour palette.  For more information on accessing the colours from
 the extended palette see the earlier &lt;span class=&quot;xref std std-doc&quot;&gt;Uber_pink_prompts&lt;/span&gt; tip.&lt;/p&gt;
 &lt;p&gt;You can also use the &lt;a class=&quot;reference external&quot; href=&quot;http://vimdoc.sourceforge.net/htmldoc/autocmd.html#InsertEnter&quot;&gt;InsertEnter&lt;/a&gt; and &lt;a class=&quot;reference external&quot; href=&quot;http://vimdoc.sourceforge.net/htmldoc/autocmd.html#InsertLeave&quot;&gt;InsertLeave&lt;/a&gt; events to call a function
 when changing mode.  There really is no limit to what kind of notifications you
-can use with this method.  Taking the idea too far we could use the &lt;a class=&quot;reference external&quot; href=&quot;http://awesome.naquadah.org/&quot;&gt;awesome&lt;/a&gt;
+can use with this method.  Taking the idea too far we could use the &lt;a class=&quot;reference external&quot; href=&quot;https://awesomewm.org/&quot;&gt;awesome&lt;/a&gt;
 notifications from &lt;span class=&quot;xref std std-doc&quot;&gt;Simple_notifications_in_awesome&lt;/span&gt; to display popups
 when we change mode:&lt;/p&gt;
 &lt;div class=&quot;highlight-vim notranslate&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;au&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;InsertEnter&lt;/span&gt; * &lt;span class=&quot;p&quot;&gt;!&lt;/span&gt;echo &lt;span class=&quot;s2&quot;&gt;&amp;quot;notify.start(&amp;#39;Insert mode started&amp;#39;)&amp;quot;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;|&lt;/span&gt; awesome&lt;span class=&quot;p&quot;&gt;-&lt;/span&gt;client
@@ -75,7 +75,7 @@ when we change mode:&lt;/p&gt;
     </author>
     <content type="html">&lt;div class=&quot;section&quot; id=&quot;simple-notifications-in-awesome&quot;&gt;
 
-&lt;p&gt;On seeing my window notifications in &lt;a class=&quot;reference external&quot; href=&quot;http://awesome.naquadah.org/&quot;&gt;awesome&lt;/a&gt; from a screencast for a new
+&lt;p&gt;On seeing my window notifications in &lt;a class=&quot;reference external&quot; href=&quot;https://awesomewm.org/&quot;&gt;awesome&lt;/a&gt; from a screencast for a new
 project at work Matt Cooper asks:&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;div&gt;&lt;p&gt;Is there a library that does those fancy notifications or do you have to
@@ -83,7 +83,7 @@ hack it up yourself?&lt;/p&gt;
 &lt;/div&gt;&lt;/blockquote&gt;
 &lt;img alt=&quot;notifications in awesome&quot; class=&quot;align-right&quot; src=&quot;../../_images/2009-10-04-awesome_notifications.png&quot; /&gt;
 &lt;p&gt;There is a library to make notification popups in &lt;strong class=&quot;command&quot;&gt;awesome&lt;/strong&gt;, and it is
-called &lt;a class=&quot;reference external&quot; href=&quot;http://awesome.naquadah.org/doc/api/modules/naughty.html&quot;&gt;naughty&lt;/a&gt;.  With it notifications are as simple as calling
+called &lt;a class=&quot;reference external&quot; href=&quot;https://awesomewm.org/apidoc/libraries/naughty.html&quot;&gt;naughty&lt;/a&gt;.  With it notifications are as simple as calling
 &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;naughty.notify&lt;/span&gt;&lt;/code&gt;, for example:&lt;/p&gt;
 &lt;div class=&quot;admonition note&quot;&gt;
 &lt;p class=&quot;admonition-title&quot;&gt;Note&lt;/p&gt;
@@ -150,7 +150,7 @@ either).&lt;/p&gt;
 &lt;h1&gt;Window creation notifications&lt;/h1&gt;
 &lt;p&gt;One of the notifications I like to have is for when new windows are opened, this
 way I don’t miss windows opening on tags I’m not currently viewing.&lt;/p&gt;
-&lt;div class=&quot;highlight-moon notranslate&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;awful&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;hooks&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;manage&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;register&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;startup&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;=&amp;gt;&lt;/span&gt;
+&lt;div class=&quot;highlight-moon notranslate&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;client&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;connect_signal&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;manage&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;using&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;nil&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;=&amp;gt;&lt;/span&gt;
     &lt;span class=&quot;c1&quot;&gt;-- Display the window’s name, or just Application if it isn’t set&lt;/span&gt;
     &lt;span class=&quot;n&quot;&gt;notify&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;start&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;#{@name or &amp;#39;Application&amp;#39;} started&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
@@ -158,14 +158,14 @@ way I don’t miss windows opening on tags I’m not currently viewing.&lt;/p&gt
 &lt;/div&gt;
 &lt;div class=&quot;section&quot; id=&quot;network-notifications&quot;&gt;
 &lt;h1&gt;Network notifications&lt;/h1&gt;
-&lt;p&gt;I also have the following &lt;a class=&quot;reference external&quot; href=&quot;http://awesome.naquadah.org/doc/api/modules/awful.hooks.html&quot;&gt;awful&lt;/a&gt; hook set to toggle my network monitor between
+&lt;p&gt;I also have the following &lt;a class=&quot;reference external&quot; href=&quot;https://awesomewm.org/apidoc/libraries/gears.html&quot;&gt;gears&lt;/a&gt; timer set to toggle my network monitor between
 &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;lo&lt;/span&gt;&lt;/code&gt; and &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;ppp0&lt;/span&gt;&lt;/code&gt; depending on whether my remote network interface is up.
 Having the little popups to show when the network has gone down or come up is
 quite nice, and definitely more noticeable than just changing the text in the
-&lt;a class=&quot;reference external&quot; href=&quot;http://awesome.naquadah.org/doc/api/modules/wibox.html&quot;&gt;wibox&lt;/a&gt;.  The code below changes the interface name in the &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;wibox&lt;/span&gt;&lt;/code&gt;, and
+&lt;a class=&quot;reference external&quot; href=&quot;https://awesomewm.org/apidoc/libraries/awful.wibox.html&quot;&gt;wibox&lt;/a&gt;.  The code below changes the interface name in the &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;wibox&lt;/span&gt;&lt;/code&gt;, and
 switches the network graph widget to use the appropriate input too.&lt;/p&gt;
 &lt;div class=&quot;highlight-moon notranslate&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;netiface&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;lo&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;awful&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;hooks&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;timer&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;register&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;-&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;gears&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;timer&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;-&amp;gt;&lt;/span&gt;
     &lt;span class=&quot;n&quot;&gt;iface&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;state&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;netiface&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;lo&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;and&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;io.open&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;/var/lock/LCK..ttyUSB0&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;&lt;/span&gt;
         &lt;span class=&quot;s2&quot;&gt;&amp;quot;&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;ppp0&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;up&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;&lt;/span&gt;
     &lt;span class=&quot;k&quot;&gt;elseif&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;netiface&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;ppp0&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;and&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;not&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;io.open&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;/var/lock/LCK..ttyUSB0&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;&lt;/span&gt;
@@ -195,7 +195,7 @@ switches the network graph widget to use the appropriate input too.&lt;/p&gt;
 &lt;a class=&quot;reference external image-reference&quot; href=&quot;/.images/2009-09-28-awesome_theming.png&quot;&gt;&lt;img alt=&quot;Awesome screenshot&quot; class=&quot;align-right&quot; src=&quot;../../_images/2009-09-28-awesome_theming-mini.png&quot; /&gt;&lt;/a&gt;
 &lt;p&gt;People, mostly named Neil Blake, who shouldn’t look over my shoulder ask:&lt;/p&gt;
 &lt;blockquote&gt;
-&lt;div&gt;&lt;p&gt;How do you make &lt;a class=&quot;reference external&quot; href=&quot;http://awesome.naquadah.org/&quot;&gt;awesome&lt;/a&gt; use &lt;em&gt;purdy&lt;/em&gt; pixmap backgrounds for the &lt;a class=&quot;reference external&quot; href=&quot;http://awesome.naquadah.org/doc/api/modules/wibox.html&quot;&gt;wibox&lt;/a&gt;?&lt;/p&gt;
+&lt;div&gt;&lt;p&gt;How do you make &lt;a class=&quot;reference external&quot; href=&quot;https://awesomewm.org/&quot;&gt;awesome&lt;/a&gt; use &lt;em&gt;purdy&lt;/em&gt; pixmap backgrounds for the &lt;a class=&quot;reference external&quot; href=&quot;https://awesomewm.org/apidoc/libraries/awful.wibox.html&quot;&gt;wibox&lt;/a&gt;?&lt;/p&gt;
 &lt;/div&gt;&lt;/blockquote&gt;
 &lt;p&gt;Simple answer today; cheat.&lt;/p&gt;
 &lt;p&gt;As you can see in the screenshot on the right my wibox appears to be using the

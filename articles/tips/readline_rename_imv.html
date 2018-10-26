@@ -1,0 +1,699 @@
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" />
+    <title>File renaming for the lazy &#8212; JNRowe</title>
+    <link rel="stylesheet" href="../../_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/custom.css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../_static/doctools.js"></script>
+    <link rel="canonical" href="https://jnrowe.github.io/articles/tips/readline_rename_imv.html" />
+    <link rel="shortcut icon" href="../../_static/icon.ico"/>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="copyright" title="Copyright" href="../../copyright.html" />
+    <link rel="next" title="Vim with day/night colourschemes" href="vim_day_night_colourscheme.html" />
+    <link rel="prev" title="Proper keyboard shortcuts in GTK+" href="emacs_gtk_shortcuts.html" />
+  
+   
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  
+  <link rel="alternate" type="application/atom+xml"  href="../../blog/atom.xml" title="JNRowe">
+  
+  
+  <style type="text/css">
+    ul.ablog-archive {list-style: none; overflow: auto; margin-left: 0px}
+    ul.ablog-archive li {float: left; margin-right: 5px; font-size: 80%}
+    ul.postlist a {font-style: italic;}
+    ul.postlist-style-disc {list-style-type: disc;}
+    ul.postlist-style-none {list-style-type: none;}
+    ul.postlist-style-circle {list-style-type: circle;}
+  </style>
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+    <p class="read-time">
+      <b>Estimated reading time</b>:
+      5 minutes
+    </p>
+  
+
+  <div class="section" id="file-renaming-for-the-lazy">
+<h1>File renaming for the lazy<a class="headerlink" href="#file-renaming-for-the-lazy" title="Permalink to this headline">¶</a></h1>
+<p>Over at HN in a <a class="reference external" href="https://news.ycombinator.com/item?id=18290344">stolen topic</a>:</p>
+<blockquote>
+<div><p>however, i miss one feature for which i’d use a filemanager: in-place file
+renaming. in most cases when i want to rename a file, i want to change
+a small part of it, and i don’t want to have to retype the whole filename.</p>
+<p>i have yet to find a commandline utility (emacs doesn’t count ;-) that
+offers that.</p>
+<p class="attribution">—em-bee</p>
+</div></blockquote>
+<p>There a few interesting replies there, but I want to flesh out my replies
+a little after the fact.</p>
+<div class="section" id="the-new-tool-solution">
+<h2>The new tool solution<a class="headerlink" href="#the-new-tool-solution" title="Permalink to this headline">¶</a></h2>
+<p>My initial reply was<a class="footnote-reference brackets" href="#id3" id="id1">1</a>:</p>
+<blockquote>
+<div><p>If I’m understanding you correctly, then <a class="reference external" href="http://www.nongnu.org/renameutils/">renameutils</a>’s <code class="docutils literal notranslate"><span class="pre">imv</span></code> is a great
+tool for this.  <code class="docutils literal notranslate"><span class="pre">imv</span> <span class="pre">$filename</span></code> pops you in to a <a class="reference external" href="http://cnswww.cns.cwru.edu/php/chet/readline/rltop.html">readline</a> enabled prompt
+to edit <code class="docutils literal notranslate"><span class="pre">$filename</span></code>.  Given that it is <code class="docutils literal notranslate"><span class="pre">readline</span></code> you can even add
+extra options in your <code class="file docutils literal notranslate"><span class="pre">~/.inputrc</span></code> to add additional features to it,
+I have mappings for custom directory prefixes for example.</p>
+<p>It also comes with <code class="docutils literal notranslate"><span class="pre">qmv</span></code>, which will pop open an editor for you to
+perform inplace edits on filenames.   Which is kinda like <a class="reference external" href="https://en.m.wikipedia.org/wiki/Dired">dired</a> as an
+<a class="reference external" href="https://www.gnu.org/software/emacs/">emacs</a> comparison, at least if you squint an awful lot.</p>
+</div></blockquote>
+<p>I recommend <a class="reference external" href="http://www.nongnu.org/renameutils/">renameutils</a> a lot.  I’ve given talks that have digressed in to
+“why you should use <code class="docutils literal notranslate"><span class="pre">qmv</span></code>”, I’ve mocked co-workers when I’ve spotted them
+doing things <code class="docutils literal notranslate"><span class="pre">imv</span></code> would be a billion times better for, and it looks like
+I even <a class="reference external" href="https://bugs.gentoo.org/show_bug.cgi?id=64479">pimped it</a> to distro folks in the past<a class="footnote-reference brackets" href="#id4" id="id2">2</a>.</p>
+<p>I sped across the usage in the HN comment, but there is some interesting
+functionality hidden in there.  As stated, <code class="docutils literal notranslate"><span class="pre">imv</span></code> uses <code class="docutils literal notranslate"><span class="pre">readline</span></code> so you
+have an enormous amount of <a class="reference external" href="https://tiswww.cwru.edu/php/chet/readline/rluserman.html">editing power</a> at your disposal, and it is all the
+same stuff you have in your shell; <code class="docutils literal notranslate"><span class="pre">&lt;M-{b,f}&gt;</span></code> word jumps, <code class="docutils literal notranslate"><span class="pre">&lt;M-C-]&gt;</span></code>
+character searches, <code class="docutils literal notranslate"><span class="pre">&lt;C-t&gt;</span></code> to transpose typo fixes, <code class="docutils literal notranslate"><span class="pre">&lt;M-[count]&gt;</span></code> repeats,
+and many more.</p>
+<p>I also hinted at config file support.  <code class="file docutils literal notranslate"><span class="pre">~/.inputrc`</span></code>, or whatever
+<span class="target" id="index-0"></span><code class="xref std std-envvar docutils literal notranslate"><span class="pre">$INPUTRC</span></code> points at, can be used to change the behaviour of all
+<code class="docutils literal notranslate"><span class="pre">readline</span></code> using tools.  Excitingly though, it can also be used to change the
+behaviour of specific tools only.</p>
+<p>For example, I often find myself writing throwaway scripts that I suddenly
+decide I’ll want again in the future.  When that happens they move to
+<code class="docutils literal notranslate"><span class="pre">~/.local/bin</span></code>, and I can do that with <code class="docutils literal notranslate"><span class="pre">imv</span></code> by tapping <code class="docutils literal notranslate"><span class="pre">&lt;C-v&gt;</span></code> at the
+prompt.  This is really useful when I want to rename <code class="file docutils literal notranslate"><span class="pre">foo.sh</span></code> to
+<code class="file docutils literal notranslate"><span class="pre">~/.local/bin/change_the_world.sh</span></code>.</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>$if imv
+    set expand-tilde on
+    C-v: &#39;\C-a~/.local/bin\C-i&#39;
+$endif
+</pre></div>
+</div>
+<p>The above snippet might deserve a little explanation.  The <code class="docutils literal notranslate"><span class="pre">&lt;C-v&gt;</span></code> mapping
+inputs <code class="docutils literal notranslate"><span class="pre">&lt;C-a&gt;</span></code> to move to the beginning of the line, the literal string
+<code class="docutils literal notranslate"><span class="pre">~/.local/bin</span></code>, and finally the tab character(<code class="docutils literal notranslate"><span class="pre">&lt;C-i&gt;</span></code>)  to expand the tilde
+for me.</p>
+<p>Obviously, you can place whatever you want in there.  And if you take advantage
+of the application guard as above, you can even override bindings that you
+won’t find yourself using in <code class="docutils literal notranslate"><span class="pre">imv</span></code> without breaking your shell or other
+tools.</p>
+<div class="figure" id="id5">
+<a class="reference external image-reference" href="https://xkcd.com/1806/"><img alt="Borrow Your Laptop" src="../../_images/borrow_your_laptop.png" style="width: 167.0px; height: 246.5px;" /></a>
+<p class="caption"><span class="caption-text">As always, <a class="reference external" href="https://xkcd.com/">xkcd</a> has a pre-canned explanation for why you shouldn’t listen
+to me.  Image: <a class="reference external" href="http://creativecommons.org/licenses/by-nc/2.5/">CC by-nc</a>.</span></p>
+</div>
+</div>
+<div class="section" id="the-old-tool-solution">
+<h2>The old tool solution<a class="headerlink" href="#the-old-tool-solution" title="Permalink to this headline">¶</a></h2>
+<p>My other comment there was:</p>
+<blockquote>
+<div><p>If you’re a <a class="reference external" href="https://www.zsh.org/">zsh</a> user you can also use the other <a class="reference external" href="https://linux.die.net/man/1/zshexpn">zshexpn(1)</a> stuff too.
+Like <code class="docutils literal notranslate"><span class="pre">mv</span> <span class="pre">file.ext{,(:r)}</span></code> to perform <code class="docutils literal notranslate"><span class="pre">mv</span> <span class="pre">file.ext</span> <span class="pre">file</span></code>, or <code class="docutils literal notranslate"><span class="pre">:l</span></code> to
+lowercase a filename, or any number of other sometimes useful(and often
+pointless things).  I’ve used <code class="docutils literal notranslate"><span class="pre">:l</span></code> a number of times, but <code class="docutils literal notranslate"><span class="pre">:s</span></code> for
+substitution is probably the most useful in general.</p>
+</div></blockquote>
+<p>If you’re already using <code class="docutils literal notranslate"><span class="pre">zsh</span></code> (and you should be!), you have an enormously
+powerful suite of functionality at your fingertips for every task including
+simple renames.</p>
+<p>I’ll show a few examples from a <a class="reference external" href="https://linux.die.net/man/1/script">quick interactive session</a> to hopefully make
+the point.</p>
+<div class="highlight-zsh notranslate"><div class="highlight"><pre><span></span>$   <span class="c1"># Real file names from my shared tips folder; co-workers look at</span>
+$   <span class="c1"># ``~JNRowe/public/tips`` for the actual content ;)</span>
+$ <span class="nb">echo</span> xclip.rst<span class="o">{</span>,<span class="o">(</span>:r<span class="o">)}</span>  <span class="c1"># Remove extension</span>
+xclip.rst xclip
+$ <span class="nb">echo</span> tile_in_60_seconds.rst<span class="o">{</span>,<span class="o">(</span>:u<span class="o">)}</span>  <span class="c1"># Change to all caps</span>
+tile_in_60_seconds.rst TILE_IN_60_SECONDS.RST
+$ <span class="nb">echo</span> fzf_pkg_manager.rst<span class="o">{</span>,<span class="o">(</span>:u:A<span class="o">)}</span>  <span class="c1"># Change to all caps, and make path absolute</span>
+fzf_pkg_manager.rst /home/jay/export/public/tips/FZF_PKG_MANAGER.RST
+$ <span class="nb">echo</span> dc.rst<span class="o">{</span>,<span class="o">(</span>:e<span class="o">)}</span>  <span class="c1"># Extract only extension</span>
+dc.rst rst
+$ <span class="nb">echo</span> ogrmerge_layer_cake.rst<span class="o">{</span>,<span class="o">(</span>:A:h:h<span class="o">)}</span>  <span class="c1"># Extract parent directory from file</span>
+ogrmerge_layer_cake.rst /home/jay/export/public
+$ <span class="nb">echo</span> xclip.rst<span class="o">{</span>,<span class="o">(</span>:s/clip/sel<span class="o">)}</span>  <span class="c1"># Apply substitution of “clip” to “sel”</span>
+xclip.rst xsel.rst
+$ <span class="nb">echo</span> emacs_explore.rst<span class="o">{</span>,<span class="o">(</span>:s/e/X<span class="o">)}</span>  <span class="c1"># Apply subtitution of “e” to “X”</span>
+emacs_explore.rst Xmacs_explore.rst
+$ <span class="nb">echo</span> emacs_explore.rst<span class="o">{</span>,<span class="o">(</span>:gs/e/X<span class="o">)}</span>  <span class="c1"># … add the g flag for global replace</span>
+emacs_explore.rst Xmacs_XxplorX.rst
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Order matters.  For example: in the <code class="docutils literal notranslate"><span class="pre">(:u:A)</span></code> example above we apply the
+uppercase filter first, and then convert to an absolute path.  If we’d
+reversed the modifiers the <em>entire</em> path would be converted to uppercase.</p>
+</div>
+<p>The modifiers are <em>hugely</em> powerful, and are definitely worth the effort to
+learn in my opinion.  Combined with the <code class="docutils literal notranslate"><span class="pre">readline</span></code> emulation that <code class="docutils literal notranslate"><span class="pre">zsh</span></code>
+provides you can do some amazing things at the prompt.</p>
+<p>They’re also available in non-interactive mode when writing scripts, and that
+is probably when they’re at their most useful as you can apply them to other
+constructs such as arrays as well.</p>
+</div>
+<div class="section" id="thoughts">
+<h2>Thoughts<a class="headerlink" href="#thoughts" title="Permalink to this headline">¶</a></h2>
+<p>Small tools that do incredible things are <em>everywhere</em>, I clearly love
+<code class="docutils literal notranslate"><span class="pre">renameutils</span></code> but I’d also like to hear about those things you enjoy too.
+Drop me a <a class="reference external" href="mailto:jnrowe&#37;&#52;&#48;gmail&#46;com">mail</a>, link me a blog post or stop me in the corridor to tell me
+about them.</p>
+<p class="rubric">Footnotes</p>
+<dl class="footnote brackets">
+<dt class="label" id="id3"><span class="brackets"><a class="fn-backref" href="#id1">1</a></span></dt>
+<dd><p>Lightly edited, because useful markup exists outside of HN.</p>
+</dd>
+<dt class="label" id="id4"><span class="brackets"><a class="fn-backref" href="#id2">2</a></span></dt>
+<dd><p>So long ago that <em>I</em> was surprised to find that out from a <a class="reference external" href="http://www.rpcurnow.force9.co.uk/mairix/">mairix</a>
+search to look for times when I’ve mentioned it.</p>
+</dd>
+</dl>
+</div>
+</div>
+
+    <hr>
+
+    <p class="keybase-verify">
+      Authenticate this page by pasting <a
+        href="https://raw.githubusercontent.com/JNRowe/jnrowe.github.io/source/articles/tips/readline_rename_imv.rst.asc">this signature</a> into
+      <a href="https://keybase.io/verify">Keybase</a>.
+    </p>
+
+    <p class="edit-page">
+      Have a suggestion or see a typo?  <a href="https://github.com/JNRowe/jnrowe.github.io/edit/source/articles/tips/readline_rename_imv.rst">Edit this page</a>
+    </p>
+  
+
+  <div class="section">
+  
+    
+
+
+<div class="section">
+  <span style="float: left;">
+  
+  Previous: 
+  <a href="../tiling_vs_tabbing.html">
+    
+    Tiling vs tabbing
+  </a>
+  
+  </span>
+  <span>&nbsp;</span>
+  <span style="float: right;">
+  
+</div>
+
+  
+  
+  </div>
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<p class="logo">
+  <a href="../../index.html">
+    <img class="logo" src="../../_static/logo.png" alt="Logo"/>
+    
+  </a>
+</p>
+
+
+
+
+
+
+
+
+
+  
+  
+  <h2>
+  
+  
+    2018-10-26
+  
+  </h2>
+
+  <ul>
+    
+
+  
+  <li id="author"><span>Author:</span>
+    
+      
+      <a href="../../blog/author/james-rowe.html">James Rowe</a>
+      
+    </li>
+  
+
+  
+
+  
+
+  
+
+  
+  <li id="tags"><span>Tags:</span>
+      
+    
+      
+      <a href="../../blog/tag/readline.html">readline</a>
+      
+    
+      
+      <a href="../../blog/tag/imv.html">imv</a>
+      
+    
+      
+      <a href="../../blog/tag/qmv.html">qmv</a>
+      
+    
+      
+      <a href="../../blog/tag/renameutils.html">renameutils</a>
+      
+    </li>
+  
+  
+  </ul>
+
+
+<h3>Navigation</h3>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../projects.html">Projects</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">Articles</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../advent_of_code.html">Advent of Code 2017</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../dropping_gentoo.html">Dropping Gentoo</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../dropping_gentoo_reflex.html">Dropping Gentoo reflex</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../fossil.html"><strong class="command">fossil</strong> experiments</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../mutt_config_snippets.html"><strong class="command">mutt</strong> configuration snippets</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../rcs.html">Introduction to <abbr title="GNU Revision Control System">RCS</abbr></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../tdd_distros.html"><abbr title="Test Driven Development">TDD</abbr> distro development</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../tiling_vs_tabbing.html">Tiling vs tabbing</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../index.html#further-categories">Further categories</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../thoughts/index.html">Thoughts</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../colophon.html">Colophon</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../contact.html">Contact details</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../consult.html">Consulting services</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../copyright.html">Copyright information</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../glossary.html">Glossary</a></li>
+</ul>
+
+
+  <h3><a href="../../blog.html">Recent Posts</a></h3>
+  <ul>
+    
+    
+      <li><a href="../tiling_vs_tabbing.html">08 October - Tiling vs tabbing</a></li>
+    
+      <li><a href="vim_day_night_colourscheme.html">15 September - Vim with day/night colourschemes</a></li>
+    
+      <li><a href="../../thoughts/brexit_through_the_gift_shop.html">08 June - brexit through the gift shop</a></li>
+    
+      <li><a href="../../thoughts/metro_city.html">03 September - Burning down the streets</a></li>
+    
+      <li><a href="../fossil.html">12 November - fossil experiments</a></li>
+    
+  </ul>
+
+  <h3><a href="../../blog/tag.html">Tags</a></h3>
+  <style type="text/css">
+    ul.ablog-cloud {list-style: none; overflow: auto;}
+    ul.ablog-cloud li {float: left; height: 20pt; line-height: 18pt; margin-right: 5px;}
+    ul.ablog-cloud a {text-decoration: none; vertical-align: middle;}
+    li.ablog-cloud-1{font-size: 80%;}
+    li.ablog-cloud-2{font-size: 95%;}
+    li.ablog-cloud-3{font-size: 110%;}
+    li.ablog-cloud-4{font-size: 125%;}
+    li.ablog-cloud-5{font-size: 140%;}
+  </style>
+  <ul class="ablog-cloud">
+    
+      
+      <li class="ablog-cloud ablog-cloud-3">
+        <a href="../../blog/tag/gtk.html">GTK+</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-2">
+        <a href="../../blog/tag/x11.html">X11</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-2">
+        <a href="../../blog/tag/abook.html">abook</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-3">
+        <a href="../../blog/tag/awesome.html">awesome</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-2">
+        <a href="../../blog/tag/bash.html">bash</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-1">
+        <a href="../../blog/tag/blog.html">blog</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-1">
+        <a href="../../blog/tag/bts.html">bts</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-1">
+        <a href="../../blog/tag/bugzilla.html">bugzilla</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-1">
+        <a href="../../blog/tag/burnout.html">burnout</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-2">
+        <a href="../../blog/tag/configs.html">configs</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-1">
+        <a href="../../blog/tag/csv.html">csv</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-1">
+        <a href="../../blog/tag/denoise.html">denoise</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-1">
+        <a href="../../blog/tag/desktop.html">desktop</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-3">
+        <a href="../../blog/tag/devel.html">devel</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-1">
+        <a href="../../blog/tag/development.html">development</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-1">
+        <a href="../../blog/tag/emacs.html">emacs</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-1">
+        <a href="../../blog/tag/focus.html">focus</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-1">
+        <a href="../../blog/tag/fossil.html">fossil</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-4">
+        <a href="../../blog/tag/gentoo.html">gentoo</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-2">
+        <a href="../../blog/tag/git.html">git</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-1">
+        <a href="../../blog/tag/gmail.html">gmail</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-1">
+        <a href="../../blog/tag/history.html">history</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-1">
+        <a href="../../blog/tag/hobbies.html">hobbies</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-1">
+        <a href="../../blog/tag/imv.html">imv</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-1">
+        <a href="../../blog/tag/jnrowe-misc.html">jnrowe-misc</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-5">
+        <a href="../../blog/tag/life.html">life</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-3">
+        <a href="../../blog/tag/linux.html">linux</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-2">
+        <a href="../../blog/tag/mail.html">mail</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-3">
+        <a href="../../blog/tag/mutt.html">mutt</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-1">
+        <a href="../../blog/tag/net.html">net</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-1">
+        <a href="../../blog/tag/noise.html">noise</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-1">
+        <a href="../../blog/tag/oss.html">oss</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-2">
+        <a href="../../blog/tag/politics.html">politics</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-1">
+        <a href="../../blog/tag/privacy.html">privacy</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-1">
+        <a href="../../blog/tag/probit.html">probit</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-2">
+        <a href="../../blog/tag/projects.html">projects</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-1">
+        <a href="../../blog/tag/python.html">python</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-1">
+        <a href="../../blog/tag/qmv.html">qmv</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-2">
+        <a href="../../blog/tag/readline.html">readline</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-1">
+        <a href="../../blog/tag/remind.html">remind</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-1">
+        <a href="../../blog/tag/renameutils.html">renameutils</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-1">
+        <a href="../../blog/tag/site.html">site</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-2">
+        <a href="../../blog/tag/software.html">software</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-5">
+        <a href="../../blog/tag/styling.html">styling</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-1">
+        <a href="../../blog/tag/sup.html">sup</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-1">
+        <a href="../../blog/tag/tabbed.html">tabbed</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-1">
+        <a href="../../blog/tag/testing.html">testing</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-1">
+        <a href="../../blog/tag/three.html">three</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-1">
+        <a href="../../blog/tag/tiling.html">tiling</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-2">
+        <a href="../../blog/tag/unix.html">unix</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-4">
+        <a href="../../blog/tag/vcs.html">vcs</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-4">
+        <a href="../../blog/tag/vim.html">vim</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-1">
+        <a href="../../blog/tag/web.html">web</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-3">
+        <a href="../../blog/tag/work.html">work</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-1">
+        <a href="../../blog/tag/zsh.html">zsh</a></li>
+      
+    
+  </ul>
+
+  <h3><a href="../../blog/archive.html">Archives</a></h3>
+  <ul>
+  
+    
+    <li><a href="../../blog/2018.html">2018 (4)</a></li>
+    
+  
+    
+    <li><a href="../../blog/2017.html">2017 (1)</a></li>
+    
+  
+    
+    <li><a href="../../blog/2014.html">2014 (12)</a></li>
+    
+  
+    
+    <li><a href="../../blog/2013.html">2013 (2)</a></li>
+    
+  
+    
+    <li><a href="../../blog/2011.html">2011 (1)</a></li>
+    
+  
+    
+    <li><a href="../../blog/2010.html">2010 (1)</a></li>
+    
+  
+    
+    <li><a href="../../blog/2009.html">2009 (24)</a></li>
+    
+  
+    
+    <li><a href="../../blog/2007.html">2007 (2)</a></li>
+    
+  
+    
+    <li><a href="../../blog/2003.html">2003 (1)</a></li>
+    
+  
+  </ul>
+
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    </div>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2009-2018  James Rowe.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.8.1</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+    </div>
+
+    
+
+    
+  </body>
+</html>

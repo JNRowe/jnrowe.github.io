@@ -202,7 +202,7 @@ extended 256 colour palette.  For more information on accessing the colours from
 the extended palette see the earlier &lt;span class=&quot;xref std std-doc&quot;&gt;Uber_pink_prompts&lt;/span&gt; tip.&lt;/p&gt;
 &lt;p&gt;You can also use the &lt;a class=&quot;reference external&quot; href=&quot;http://vimdoc.sourceforge.net/htmldoc/autocmd.html#InsertEnter&quot;&gt;InsertEnter&lt;/a&gt; and &lt;a class=&quot;reference external&quot; href=&quot;http://vimdoc.sourceforge.net/htmldoc/autocmd.html#InsertLeave&quot;&gt;InsertLeave&lt;/a&gt; events to call a function
 when changing mode.  There really is no limit to what kind of notifications you
-can use with this method.  Taking the idea too far we could use the &lt;a class=&quot;reference external&quot; href=&quot;http://awesome.naquadah.org/&quot;&gt;awesome&lt;/a&gt;
+can use with this method.  Taking the idea too far we could use the &lt;a class=&quot;reference external&quot; href=&quot;https://awesomewm.org/&quot;&gt;awesome&lt;/a&gt;
 notifications from &lt;span class=&quot;xref std std-doc&quot;&gt;Simple_notifications_in_awesome&lt;/span&gt; to display popups
 when we change mode:&lt;/p&gt;
 &lt;div class=&quot;highlight-vim notranslate&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;au&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;InsertEnter&lt;/span&gt; * &lt;span class=&quot;p&quot;&gt;!&lt;/span&gt;echo &lt;span class=&quot;s2&quot;&gt;&amp;quot;notify.start(&amp;#39;Insert mode started&amp;#39;)&amp;quot;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;|&lt;/span&gt; awesome&lt;span class=&quot;p&quot;&gt;-&lt;/span&gt;client
