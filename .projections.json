@@ -1,0 +1,37 @@
+{
+    "*": {
+        "make": "./build.sh"
+    },
+    "conf.py": {
+        "type": "conf"
+    },
+    "README.rst": {
+        "type": "readme"
+    },
+    "requirements.txt": {
+        "type": "requirements"
+    },
+    "wordlist.txt": {
+        "type": "wordlist"
+    },
+    "*.rst": {
+        "template": [
+            ".. post:: <date>",
+            "   :tags: <tag>",
+            "",
+            "{basename}",
+            "===",
+            ""
+        ],
+        "type": "post"
+    },
+    "articles/*.rst": {
+        "type": "article"
+    },
+    "articles/tips/*.rst": {
+        "type": "tip"
+    },
+    "thoughts/*.rst": {
+        "type": "thought"
+    }
+}
