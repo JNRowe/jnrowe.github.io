@@ -67,4 +67,4 @@ Note that I didn’t say it was a good idea, just that it was possible!
 .. _rxvt-unicode: http://software.schmorp.de/
 .. _InsertEnter: http://vimdoc.sourceforge.net/htmldoc/autocmd.html#InsertEnter
 .. _InsertLeave: http://vimdoc.sourceforge.net/htmldoc/autocmd.html#InsertLeave
-.. _awesome: http://awesome.naquadah.org/
+.. _awesome: https://awesomewm.org/
