@@ -1,0 +1,677 @@
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" />
+    <title>Evil Emacs steals my heart &#8212; JNRowe</title>
+    <link rel="stylesheet" href="../_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/custom.css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <link rel="canonical" href="https://jnrowe.github.io/articles/evil_emacs_steals_my_heart.html" />
+    <link rel="shortcut icon" href="../_static/icon.ico"/>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="copyright" title="Copyright" href="../copyright.html" />
+    <link rel="next" title="fossil experiments" href="fossil.html" />
+    <link rel="prev" title="Dropping Gentoo reflex" href="dropping_gentoo_reflex.html" />
+  
+   
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  
+  <link rel="alternate" type="application/atom+xml"  href="../blog/atom.xml" title="JNRowe">
+  
+  
+  <style type="text/css">
+    ul.ablog-archive {list-style: none; overflow: auto; margin-left: 0px}
+    ul.ablog-archive li {float: left; margin-right: 5px; font-size: 80%}
+    ul.postlist a {font-style: italic;}
+    ul.postlist-style-disc {list-style-type: disc;}
+    ul.postlist-style-none {list-style-type: none;}
+    ul.postlist-style-circle {list-style-type: circle;}
+  </style>
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+    <p class="read-time">
+      <b>Estimated reading time</b>:
+      4 minutes
+    </p>
+  
+
+  <div class="section" id="evil-emacs-steals-my-heart">
+<h1>Evil Emacs steals my heart<a class="headerlink" href="#evil-emacs-steals-my-heart" title="Permalink to this headline">¶</a></h1>
+<p><em>Many</em> of my co-workers use <a class="reference external" href="https://www.gnu.org/software/emacs/">emacs</a>, it is probably the most popular editor on
+our team and I understand why.</p>
+<img alt="Editor icons" class="align-right" src="../_images/standoff.png" />
+<p>I was an <code class="docutils literal notranslate"><span class="pre">emacs</span></code> user — via <a class="reference external" href="ftp://ftp.cs.helsinki.fi/pub/Software/Local/uEmacs-PK/">MicroEMACS</a> and later <a class="reference external" href="https://www.gnu.org/software/emacs/">GNU Emacs</a> — for many
+years but at some point I switched to <a class="reference external" href="https://vim.sourceforge.io/">vim</a>.  I can’t even remember the exact
+catalyst for change, but I am pretty fickle so it may not have even been all
+that important.</p>
+<p>Lately, I’ve found myself diving back in to <code class="docutils literal notranslate"><span class="pre">emacs</span></code>.  In large part this is
+because of <a class="reference external" href="https://github.com/emacs-evil/evil">evil</a>; I can be <em>in</em> <code class="docutils literal notranslate"><span class="pre">emacs</span></code>, but <em>live</em> <code class="docutils literal notranslate"><span class="pre">vim</span></code>.</p>
+<div class="section" id="evil-isnt-always-evil">
+<h2>Evil isn’t always evil<a class="headerlink" href="#evil-isnt-always-evil" title="Permalink to this headline">¶</a></h2>
+<p>So, <code class="docutils literal notranslate"><span class="pre">evil-mode</span></code> <em>is</em> awesome.</p>
+<p>The kindest thing I can think to say about it is this: You’ll be angry when it
+doesn’t work</p>
+<p>This isn’t because it often breaks, quite the contrary.  It is simply because
+it feels largely seamless.  I’ll give an example that mimics a recent session
+to make my point.  For example, you’re hovering over a number you need to
+change:</p>
+<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="kt">int</span> <span class="n">magic_const</span> <span class="o">=</span> <span class="mi">974</span><span class="p">;</span>
+</pre></div>
+</div>
+<p>In <code class="docutils literal notranslate"><span class="pre">vim</span></code>, you can execute <kbd class="kbd docutils literal notranslate">ciw&lt;C-r&gt;=&#64;&quot;/2&lt;CR&gt;</kbd> to cleave the number.  The
+command itself is saying:</p>
+<dl class="simple">
+<dt><kbd class="kbd docutils literal notranslate">ciw</kbd></dt>
+<dd><p>Change the word my cursor is on(<kbd class="kbd docutils literal notranslate">c</kbd>hange <kbd class="kbd docutils literal notranslate">i</kbd>nner <kbd class="kbd docutils literal notranslate">w</kbd>ord)</p>
+</dd>
+<dt><kbd class="kbd docutils literal notranslate">&lt;C-r&gt;=</kbd></dt>
+<dd><p>Insert the result of an expression(see <code class="docutils literal notranslate"><span class="pre">:h</span> <span class="pre">i_CTRL-R_=</span></code> for awesomeness)</p>
+</dd>
+<dt><kbd class="kbd docutils literal notranslate">&#64;&quot;</kbd></dt>
+<dd><p>Use the text from last filled register, ie the text we just marked to be
+changed</p>
+</dd>
+<dt><kbd class="kbd docutils literal notranslate">/2</kbd></dt>
+<dd><p>Half it</p>
+</dd>
+<dt><kbd class="kbd docutils literal notranslate">&lt;CR&gt;</kbd></dt>
+<dd><p>Wow.</p>
+</dd>
+</dl>
+<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="kt">int</span> <span class="n">magic_const</span> <span class="o">=</span> <span class="mi">487</span><span class="p">;</span>
+</pre></div>
+</div>
+<p>Whilst performing the same task thing in <code class="docutils literal notranslate"><span class="pre">evil-mode</span></code> I receive an error.
+Emacs — quite rightly — expects you to write an <a class="reference external" href="https://en.m.wikipedia.org/wiki/Elisp">elisp</a> expression.  There is
+nothing wrong with this, but it is a sign of how good <code class="docutils literal notranslate"><span class="pre">evil-mode</span></code> is.  It is
+literally <em>so</em> good I forget I’m not using <code class="docutils literal notranslate"><span class="pre">vim</span></code>.</p>
+<p>Oftentimes a tool’s <code class="docutils literal notranslate"><span class="pre">vim</span></code> emulation can be summed up as needing to press
+a key that kind of matches what something in <code class="docutils literal notranslate"><span class="pre">vim</span></code> might be, assuming you
+didn’t really know what the key might be or when you’d use it.  Be that
+<a class="reference external" href="https://www.sublimetext.com">sublimetext</a>’s <code class="docutils literal notranslate"><span class="pre">vintage</span></code> package that isn’t much more than normal and insert
+mode, or <a class="reference external" href="https://github.com/gentoo/elogv">elogv</a>’s bindings that mean you have to issue <kbd class="kbd docutils literal notranslate">dd</kbd> to kill an
+entry.  Frankly, many of the emulation layers often feel like you’re just
+doubling the number of keys you have to press without any benefits<a class="footnote-reference brackets" href="#id4" id="id1">1</a>.</p>
+</div>
+<div class="section" id="quirking-the-quirky">
+<h2>Quirking the quirky<a class="headerlink" href="#quirking-the-quirky" title="Permalink to this headline">¶</a></h2>
+<a class="reference internal image-reference" href="../_images/evil_emacs.png"><img alt="Emacs screenshot" class="align-right" src="../_images/evil_emacs.png" style="width: 407.5px; height: 270.0px;" /></a>
+<p>I’ll freely admit I’ve <code class="docutils literal notranslate"><span class="pre">vim</span></code>ified my <code class="docutils literal notranslate"><span class="pre">emacs</span></code>.  I use <a class="reference external" href="https://github.com/emacs-evil/evil">evil</a>, my mode line
+uses <a class="reference external" href="http://github.com/milkypostman/powerline/">powerline</a> to match <a class="reference external" href="https://github.com/vim-airline/vim-airline">vim-airline</a>.  I have <code class="docutils literal notranslate"><span class="pre">zap-up-to-char</span></code> mapped so
+that I can mimic <kbd class="kbd docutils literal notranslate">dt</kbd> when <code class="docutils literal notranslate"><span class="pre">evil-mode</span></code> is disabled.</p>
+<p>Screenshots for <code class="docutils literal notranslate"><span class="pre">emacs</span></code> and <code class="docutils literal notranslate"><span class="pre">vim</span></code> really aren’t all that useful, because it
+is the workflow that makes these tools powerful… but, above is my current
+<code class="docutils literal notranslate"><span class="pre">emacs</span></code> and below is my current <code class="docutils literal notranslate"><span class="pre">vim</span></code>.</p>
+<a class="reference internal image-reference" href="../_images/delinquent_vim.png"><img alt="vim screenshot" class="align-left" src="../_images/delinquent_vim.png" style="width: 422.0px; height: 263.5px;" /></a>
+<p>The big thing you’ll notice is the fonts.  In <code class="docutils literal notranslate"><span class="pre">emacs</span></code> I’m using scaled text
+for headings in <a class="reference external" href="http://docutils.sourceforge.net/docs/user/rst/">reST</a> files.  I’m close to believing that headings,
+proportional fonts for comments and the occasional inline image are enough to
+switch to <code class="docutils literal notranslate"><span class="pre">emacs</span></code>.</p>
+<a class="reference internal image-reference" href="../_images/misfeasant_emacs.png"><img alt="Inline images in Emacs" class="align-right" src="../_images/misfeasant_emacs.png" style="width: 398.5px; height: 225.0px;" /></a>
+<p>In the third image you can see <code class="docutils literal notranslate"><span class="pre">emacs</span></code> is <em>displaying</em> the <code class="docutils literal notranslate"><span class="pre">emacs</span></code>
+screenshot in the buffer for <em>this</em> post.  This example may be quite pointless<a class="footnote-reference brackets" href="#id5" id="id2">2</a>, but it can be nice to have <a class="reference external" href="https://www.graphviz.org/">graphviz</a> output class hierarchies in to
+a buffer or database schema popups(like below).</p>
+<a class="reference internal image-reference" href="../_images/immoral_model.png"><img alt="Schema diagram" class="align-left" src="../_images/immoral_model.png" style="width: 174.5px; height: 141.5px;" /></a>
+</div>
+<div class="section" id="walking-the-branches">
+<h2>Walking the branches<a class="headerlink" href="#walking-the-branches" title="Permalink to this headline">¶</a></h2>
+<p>I’ve decided to really dig in this time, not just switch on a whim.  I’m using
+<code class="docutils literal notranslate"><span class="pre">emacs</span></code> and <em>only</em> <code class="docutils literal notranslate"><span class="pre">emacs</span></code> for a month, followed by <code class="docutils literal notranslate"><span class="pre">vim</span></code> and <em>only</em>
+<code class="docutils literal notranslate"><span class="pre">vim</span></code> for a month.  I’m busily writing a document of bugbears about both<a class="footnote-reference brackets" href="#id6" id="id3">3</a>, and then figuring out which I want to fully invest in to.  I need to stop
+flip-flopping.</p>
+<p>I will say that there isn’t much in it.  With a converging setup there are
+fewer and fewer differences to care about.  Things like the expression register
+usage above, or built-in versus external HTML preview for documents like this.</p>
+<p>I’m actually wondering whether a <a class="reference external" href="https://neovim.io">neovim</a> client <em>in</em> a <code class="docutils literal notranslate"><span class="pre">emacs</span></code> frame would be
+the golden option.  If you know of such a thing or a better option, drop me
+a <a class="reference external" href="mailto:jnrowe&#37;&#52;&#48;gmail&#46;com">mail</a>!</p>
+<p class="rubric">Footnotes</p>
+<dl class="footnote brackets">
+<dt class="label" id="id4"><span class="brackets"><a class="fn-backref" href="#id1">1</a></span></dt>
+<dd><p><a class="reference external" href="https://github.com/gentoo/elogv">elogv</a> for Gentoo is probably the worst example of this, as <kbd class="kbd docutils literal notranslate">d</kbd>
+<em>almost</em> works like <code class="docutils literal notranslate"><span class="pre">vim</span></code> but nothing does.</p>
+</dd>
+<dt class="label" id="id5"><span class="brackets"><a class="fn-backref" href="#id2">2</a></span></dt>
+<dd><p>Okay, completely pointless.</p>
+</dd>
+<dt class="label" id="id6"><span class="brackets"><a class="fn-backref" href="#id3">3</a></span></dt>
+<dd><p><a class="reference external" href="https://www.orgmode.org/">org-mode</a> and <a class="reference external" href="https://github.com/jceb/vim-orgmode">vim-orgmode</a> allows me to keep this across editors.  There
+is very little point publishing it, as it can be summed up as “James
+pressed <kbd class="kbd docutils literal notranslate">&lt;C-x&gt;$something</kbd> and was surprised.”</p>
+</dd>
+</dl>
+</div>
+</div>
+
+    <hr>
+
+    <p class="keybase-verify">
+      Authenticate this page by pasting <a
+        href="https://raw.githubusercontent.com/JNRowe/jnrowe.github.io/source/articles/evil_emacs_steals_my_heart.rst.asc">this signature</a> into
+      <a href="https://keybase.io/verify">Keybase</a>.
+    </p>
+
+    <p class="edit-page">
+      Have a suggestion or see a typo?  <a href="https://github.com/JNRowe/jnrowe.github.io/edit/source/articles/evil_emacs_steals_my_heart.rst">Edit this page</a>
+    </p>
+  
+
+  <div class="section">
+  
+    
+
+
+<div class="section">
+  <span style="float: left;">
+  
+  Previous: 
+  <a href="tips/readline_rename_imv.html">
+    
+    File renaming for the lazy
+  </a>
+  
+  </span>
+  <span>&nbsp;</span>
+  <span style="float: right;">
+  
+</div>
+
+  
+  
+  </div>
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<p class="logo">
+  <a href="../index.html">
+    <img class="logo" src="../_static/logo.png" alt="Logo"/>
+    
+  </a>
+</p>
+
+
+
+
+
+
+
+
+
+  
+  
+  <h2>
+  
+  
+    2018-11-05
+  
+  </h2>
+
+  <ul>
+    
+
+  
+  <li id="author"><span>Author:</span>
+    
+      
+      <a href="../blog/author/james-rowe.html">James Rowe</a>
+      
+    </li>
+  
+
+  
+
+  
+
+  
+
+  
+  <li id="tags"><span>Tags:</span>
+      
+    
+      
+      <a href="../blog/tag/emacs.html">emacs</a>
+      
+    
+      
+      <a href="../blog/tag/vim.html">vim</a>
+      
+    
+      
+      <a href="../blog/tag/evil.html">evil</a>
+      
+    </li>
+  
+  
+  </ul>
+
+
+<h3>Navigation</h3>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../projects.html">Projects</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Articles</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="advent_of_code.html">Advent of Code 2017</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dropping_gentoo.html">Dropping Gentoo</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dropping_gentoo_reflex.html">Dropping Gentoo reflex</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Evil Emacs steals my heart</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fossil.html"><strong class="command">fossil</strong> experiments</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mutt_config_snippets.html"><strong class="command">mutt</strong> configuration snippets</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rcs.html">Introduction to <abbr title="GNU Revision Control System">RCS</abbr></a></li>
+<li class="toctree-l2"><a class="reference internal" href="tdd_distros.html"><abbr title="Test Driven Development">TDD</abbr> distro development</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tiling_vs_tabbing.html">Tiling vs tabbing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#further-categories">Further categories</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../thoughts/index.html">Thoughts</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../colophon.html">Colophon</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../contact.html">Contact details</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../consult.html">Consulting services</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../copyright.html">Copyright information</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../glossary.html">Glossary</a></li>
+</ul>
+
+
+  <h3><a href="../blog.html">Recent Posts</a></h3>
+  <ul>
+    
+    
+      <li><a href="tips/readline_rename_imv.html">26 October - File renaming for the lazy</a></li>
+    
+      <li><a href="tiling_vs_tabbing.html">08 October - Tiling vs tabbing</a></li>
+    
+      <li><a href="tips/vim_day_night_colourscheme.html">15 September - Vim with day/night colourschemes</a></li>
+    
+      <li><a href="../thoughts/brexit_through_the_gift_shop.html">08 June - brexit through the gift shop</a></li>
+    
+      <li><a href="../thoughts/metro_city.html">03 September - Burning down the streets</a></li>
+    
+  </ul>
+
+  <h3><a href="../blog/tag.html">Tags</a></h3>
+  <style type="text/css">
+    ul.ablog-cloud {list-style: none; overflow: auto;}
+    ul.ablog-cloud li {float: left; height: 20pt; line-height: 18pt; margin-right: 5px;}
+    ul.ablog-cloud a {text-decoration: none; vertical-align: middle;}
+    li.ablog-cloud-1{font-size: 80%;}
+    li.ablog-cloud-2{font-size: 95%;}
+    li.ablog-cloud-3{font-size: 110%;}
+    li.ablog-cloud-4{font-size: 125%;}
+    li.ablog-cloud-5{font-size: 140%;}
+  </style>
+  <ul class="ablog-cloud">
+    
+      
+      <li class="ablog-cloud ablog-cloud-3">
+        <a href="../blog/tag/gtk.html">GTK+</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-2">
+        <a href="../blog/tag/x11.html">X11</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-2">
+        <a href="../blog/tag/abook.html">abook</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-3">
+        <a href="../blog/tag/awesome.html">awesome</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-2">
+        <a href="../blog/tag/bash.html">bash</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-1">
+        <a href="../blog/tag/blog.html">blog</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-1">
+        <a href="../blog/tag/bts.html">bts</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-1">
+        <a href="../blog/tag/bugzilla.html">bugzilla</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-1">
+        <a href="../blog/tag/burnout.html">burnout</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-2">
+        <a href="../blog/tag/configs.html">configs</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-1">
+        <a href="../blog/tag/csv.html">csv</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-1">
+        <a href="../blog/tag/denoise.html">denoise</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-1">
+        <a href="../blog/tag/desktop.html">desktop</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-3">
+        <a href="../blog/tag/devel.html">devel</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-1">
+        <a href="../blog/tag/development.html">development</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-2">
+        <a href="../blog/tag/emacs.html">emacs</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-1">
+        <a href="../blog/tag/evil.html">evil</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-1">
+        <a href="../blog/tag/focus.html">focus</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-1">
+        <a href="../blog/tag/fossil.html">fossil</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-4">
+        <a href="../blog/tag/gentoo.html">gentoo</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-2">
+        <a href="../blog/tag/git.html">git</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-1">
+        <a href="../blog/tag/gmail.html">gmail</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-1">
+        <a href="../blog/tag/history.html">history</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-1">
+        <a href="../blog/tag/hobbies.html">hobbies</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-1">
+        <a href="../blog/tag/imv.html">imv</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-1">
+        <a href="../blog/tag/jnrowe-misc.html">jnrowe-misc</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-5">
+        <a href="../blog/tag/life.html">life</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-3">
+        <a href="../blog/tag/linux.html">linux</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-2">
+        <a href="../blog/tag/mail.html">mail</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-3">
+        <a href="../blog/tag/mutt.html">mutt</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-1">
+        <a href="../blog/tag/net.html">net</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-1">
+        <a href="../blog/tag/noise.html">noise</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-1">
+        <a href="../blog/tag/oss.html">oss</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-2">
+        <a href="../blog/tag/politics.html">politics</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-1">
+        <a href="../blog/tag/privacy.html">privacy</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-1">
+        <a href="../blog/tag/probit.html">probit</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-2">
+        <a href="../blog/tag/projects.html">projects</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-1">
+        <a href="../blog/tag/python.html">python</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-1">
+        <a href="../blog/tag/qmv.html">qmv</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-2">
+        <a href="../blog/tag/readline.html">readline</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-1">
+        <a href="../blog/tag/remind.html">remind</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-1">
+        <a href="../blog/tag/renameutils.html">renameutils</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-1">
+        <a href="../blog/tag/site.html">site</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-2">
+        <a href="../blog/tag/software.html">software</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-5">
+        <a href="../blog/tag/styling.html">styling</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-1">
+        <a href="../blog/tag/sup.html">sup</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-1">
+        <a href="../blog/tag/tabbed.html">tabbed</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-1">
+        <a href="../blog/tag/testing.html">testing</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-1">
+        <a href="../blog/tag/three.html">three</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-1">
+        <a href="../blog/tag/tiling.html">tiling</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-2">
+        <a href="../blog/tag/unix.html">unix</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-4">
+        <a href="../blog/tag/vcs.html">vcs</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-5">
+        <a href="../blog/tag/vim.html">vim</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-1">
+        <a href="../blog/tag/web.html">web</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-3">
+        <a href="../blog/tag/work.html">work</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-1">
+        <a href="../blog/tag/zsh.html">zsh</a></li>
+      
+    
+  </ul>
+
+  <h3><a href="../blog/archive.html">Archives</a></h3>
+  <ul>
+  
+    
+    <li><a href="../blog/2018.html">2018 (5)</a></li>
+    
+  
+    
+    <li><a href="../blog/2017.html">2017 (1)</a></li>
+    
+  
+    
+    <li><a href="../blog/2014.html">2014 (12)</a></li>
+    
+  
+    
+    <li><a href="../blog/2013.html">2013 (2)</a></li>
+    
+  
+    
+    <li><a href="../blog/2011.html">2011 (1)</a></li>
+    
+  
+    
+    <li><a href="../blog/2010.html">2010 (1)</a></li>
+    
+  
+    
+    <li><a href="../blog/2009.html">2009 (24)</a></li>
+    
+  
+    
+    <li><a href="../blog/2007.html">2007 (2)</a></li>
+    
+  
+    
+    <li><a href="../blog/2003.html">2003 (1)</a></li>
+    
+  
+  </ul>
+
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    </div>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2009-2018  James Rowe.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.8.1</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+    </div>
+
+    
+
+    
+  </body>
+</html>
