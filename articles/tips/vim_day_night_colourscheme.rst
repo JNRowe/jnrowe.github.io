@@ -1,5 +1,6 @@
 .. post:: 2018-09-15
    :tags: vim
+   :excerpt: 2
 
 Vim with day/night colourschemes
 ================================
