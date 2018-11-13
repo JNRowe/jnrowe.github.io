@@ -96,7 +96,7 @@ a leap year once senility begins to set in.
     def show_progress(title, percent, width):
         subprocess.run(['gdbar', '-l', title, '-w', str(width), '-fg',
                         pcnt_colour(percent)],
-                    input=str(percent).encode())
+                       input=str(percent).encode())
 
 We’ll also create a utility function to generate the :command:`dzen2` markup
 required to output our little blocks of data.
