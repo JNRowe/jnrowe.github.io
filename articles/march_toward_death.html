@@ -1,0 +1,688 @@
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" />
+    <title>Visualising the progress of time &#8212; JNRowe</title>
+    <link rel="stylesheet" href="../_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/custom.css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <link rel="canonical" href="https://jnrowe.github.io/articles/march_toward_death.html" />
+    <link rel="shortcut icon" href="../_static/icon.ico"/>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="copyright" title="Copyright" href="../copyright.html" />
+    <link rel="next" title="mutt configuration snippets" href="mutt_config_snippets.html" />
+    <link rel="prev" title="fossil experiments" href="fossil.html" />
+  
+   
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  
+  <link rel="alternate" type="application/atom+xml"  href="../blog/atom.xml" title="JNRowe">
+  
+  
+  <style type="text/css">
+    ul.ablog-archive {list-style: none; overflow: auto; margin-left: 0px}
+    ul.ablog-archive li {float: left; margin-right: 5px; font-size: 80%}
+    ul.postlist a {font-style: italic;}
+    ul.postlist-style-disc {list-style-type: disc;}
+    ul.postlist-style-none {list-style-type: none;}
+    ul.postlist-style-circle {list-style-type: circle;}
+  </style>
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+    <p class="read-time">
+      <b>Estimated reading time</b>:
+      5 minutes
+    </p>
+  
+
+  <div class="section" id="visualising-the-progress-of-time">
+<h1>Visualising the progress of time<a class="headerlink" href="#visualising-the-progress-of-time" title="Permalink to this headline">¶</a></h1>
+<a class="reference external image-reference" href="https://www.progressbarosx.com/"><img alt="Screenshot of Progress Bar OSX in action" src="../_images/time_progress.jpg" /></a>
+<p>A co-worker was demoing a user session today, and pointed out a neat tool for
+MacOS that displays the “continual march toward death”.  That tool was
+<a class="reference external" href="https://www.progressbarosx.com/">Progress Bar OSX</a>, and it is pretty cool.  Sadly it is only available for
+MacOS, so we’ll need to make something similar.</p>
+<p><em>All</em> popup problems on Linux should be solved with <a class="reference external" href="https://github.com/robm/dzen">dzen</a>, it is awesome.  You
+know this because it comes equipped with the option to produce <abbr title="Knight Industries Two Thousand">KITT</abbr> <a class="reference external" href="https://en.m.wikipedia.org/wiki/KITT">Anamorphic Equalizer</a> emulation.</p>
+<div class="figure" id="id5">
+<a class="reference external image-reference" href="../_static/kitt.gif"><img alt="Multi-band scanner in action" src="../_images/kitt06.png" /></a>
+<p class="caption"><span class="caption-text">Click the image for an animated GIF, I’ll spare you the flashing lights in
+case you wish to read on.</span></p>
+</div>
+<div class="section" id="step-one">
+<h2>Step one<a class="headerlink" href="#step-one" title="Permalink to this headline">¶</a></h2>
+<p>First we’ll want to display the year:</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>gdbar -w <span class="m">1500</span> -h <span class="m">20</span> <span class="se">\</span>
+   <span class="o">&lt;&lt;&lt;</span> <span class="k">$(($(</span>date +%j<span class="k">)</span> <span class="o">/</span> <span class="k">$(</span>date -d<span class="s1">&#39;Dec 31&#39;</span> +%j<span class="k">)</span>.0 <span class="o">*</span> <span class="m">100</span><span class="k">))</span> <span class="se">\</span>
+   <span class="p">|</span> dzen2 -p <span class="m">5</span>
+</pre></div>
+</div>
+<p>which results in:</p>
+<img alt="Screenshot of simple day of year bar on 2018-11-13" src="../_images/day_bar.png" />
+<p>The logic should be simple enough to follow:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">current</span> <span class="pre">day</span> <span class="pre">in</span> <span class="pre">year</span></code><a class="footnote-reference brackets" href="#id3" id="id1">1</a> / <code class="docutils literal notranslate"><span class="pre">number</span> <span class="pre">of</span> <span class="pre">days</span> <span class="pre">in</span> <span class="pre">year</span></code><a class="footnote-reference brackets" href="#id4" id="id2">2</a> * <code class="docutils literal notranslate"><span class="pre">100</span></code> for
+position in year as percentage</p></li>
+<li><p>Generate the <strong class="command">dzen2</strong> markup for a bar of <code class="docutils literal notranslate"><span class="pre">1500</span></code> pixels wide and
+<code class="docutils literal notranslate"><span class="pre">20</span></code> pixels high</p></li>
+<li><p>Display it for for <code class="docutils literal notranslate"><span class="pre">5</span></code> seconds</p></li>
+</ul>
+<p>We can repeat the same process for day ratio; using <code class="docutils literal notranslate"><span class="pre">date</span> <span class="pre">-d</span> <span class="pre">&quot;00:00&quot;</span> <span class="pre">+%s</span></code> to
+calculate number of seconds passed from the 86400 we’ll see today.  And then
+simply using <code class="docutils literal notranslate"><span class="pre">date</span> <span class="pre">+%m</span></code> to get today’s month as a number.</p>
+</div>
+<div class="section" id="step-two">
+<h2>Step two<a class="headerlink" href="#step-two" title="Permalink to this headline">¶</a></h2>
+<p>We can definitely up our game here.  Why not use colours?  We’ll switch to
+<a class="reference external" href="https://www.python.org/">Python</a> now, as the gigantic standard library allows us to be lazy.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">pcnt_colour</span><span class="p">(</span><span class="n">percent</span><span class="p">):</span>
+    <span class="n">h</span> <span class="o">=</span> <span class="mi">1</span><span class="o">/</span><span class="mi">3</span> <span class="o">-</span> <span class="p">(</span><span class="mi">1</span><span class="o">/</span><span class="mi">3</span> <span class="o">*</span> <span class="n">percent</span><span class="o">/</span><span class="mi">100</span><span class="p">)</span>
+    <span class="k">return</span> <span class="s1">&#39;#&#39;</span> <span class="o">+</span> <span class="s1">&#39;&#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">f</span><span class="s1">&#39;{min(int(n*256), 255):02x}&#39;</span>
+                         <span class="k">for</span> <span class="n">n</span> <span class="ow">in</span> <span class="n">colorsys</span><span class="o">.</span><span class="n">hls_to_rgb</span><span class="p">(</span><span class="n">h</span><span class="p">,</span> <span class="o">.</span><span class="mi">5</span><span class="p">,</span> <span class="mi">1</span><span class="p">))</span>
+</pre></div>
+</div>
+<p>The function above converts a percentage value in to a hex triplet across
+a green to red gradient, we use <a class="reference external" href="https://docs.python.org/3/library/colorsys.html#colorsys.hls_to_rgb" title="(in Python v3.7)"><code class="xref py py-func docutils literal notranslate"><span class="pre">hls_to_rgb()</span></code></a> here as the <a class="reference external" href="https://en.m.wikipedia.org/wiki/HLS_color_space">HLS
+colour space</a> is more amenable to generating smooth gradients.</p>
+<p>Now that we’re using <a class="reference external" href="https://www.python.org/">Python</a> we may as well take advantage of its
+<a class="reference external" href="https://docs.python.org/3/library/calendar.html#module-calendar" title="(in Python v3.7)"><code class="xref py py-mod docutils literal notranslate"><span class="pre">calendar</span></code></a> module:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">month_days</span><span class="p">(</span><span class="n">date</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">calendar</span><span class="o">.</span><span class="n">monthrange</span><span class="p">(</span><span class="n">date</span><span class="o">.</span><span class="n">year</span><span class="p">,</span> <span class="n">date</span><span class="o">.</span><span class="n">month</span><span class="p">)[</span><span class="mi">1</span><span class="p">]</span>
+</pre></div>
+</div>
+<p>The <a class="reference external" href="https://docs.python.org/3/library/calendar.html#calendar.monthrange" title="(in Python v3.7)"><code class="xref py py-func docutils literal notranslate"><span class="pre">monthrange()</span></code></a> function returns a tuple where the second item
+is the number of days in the current month.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">days_in_year</span><span class="p">(</span><span class="n">date</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">calendar</span><span class="o">.</span><span class="n">isleap</span><span class="p">(</span><span class="n">date</span><span class="o">.</span><span class="n">year</span><span class="p">):</span>
+        <span class="n">days</span> <span class="o">=</span> <span class="mi">366</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">days</span> <span class="o">=</span> <span class="mi">365</span>
+    <span class="k">return</span> <span class="n">days</span>
+</pre></div>
+</div>
+<p><a class="reference external" href="https://docs.python.org/3/library/calendar.html#calendar.isleap" title="(in Python v3.7)"><code class="xref py py-func docutils literal notranslate"><span class="pre">isleap()</span></code></a> allows us to offload figuring out whether 2700 is
+a leap year once senility begins to set in.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">show_progress</span><span class="p">(</span><span class="n">title</span><span class="p">,</span> <span class="n">percent</span><span class="p">,</span> <span class="n">width</span><span class="p">):</span>
+    <span class="n">subprocess</span><span class="o">.</span><span class="n">run</span><span class="p">([</span><span class="s1">&#39;gdbar&#39;</span><span class="p">,</span> <span class="s1">&#39;-l&#39;</span><span class="p">,</span> <span class="n">title</span><span class="p">,</span> <span class="s1">&#39;-w&#39;</span><span class="p">,</span> <span class="nb">str</span><span class="p">(</span><span class="n">width</span><span class="p">),</span> <span class="s1">&#39;-fg&#39;</span><span class="p">,</span>
+                    <span class="n">pcnt_colour</span><span class="p">(</span><span class="n">percent</span><span class="p">)],</span>
+                <span class="nb">input</span><span class="o">=</span><span class="nb">str</span><span class="p">(</span><span class="n">percent</span><span class="p">)</span><span class="o">.</span><span class="n">encode</span><span class="p">())</span>
+</pre></div>
+</div>
+<p>We’ll also create a utility function to generate the <strong class="command">dzen2</strong> markup
+required to output our little blocks of data.</p>
+<p>Putting it altogether we can display our pretty little blocks with something
+like the following:</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>./time_progress.py -w <span class="m">1500</span> <span class="se">\</span>
+    <span class="p">|</span> dzen2 -l <span class="m">3</span> -p <span class="m">3</span> -fn monospace-15 -e <span class="s1">&#39;onstart=uncollapse&#39;</span>
+</pre></div>
+</div>
+<p>This creates the markup and makes <strong class="command">dzen2</strong> display the output for
+3 seconds.</p>
+<img alt="Screenshot of colourful progress in time" src="../_images/progress_bar.png" />
+<p>The <code class="docutils literal notranslate"><span class="pre">onstart=uncollapse</span></code> attribute tell <strong class="command">dzen2</strong> that we want to see
+the full output on startup, without it we’d see just the title bar until we
+moved our pointer over the header.</p>
+</div>
+<div class="section" id="step-four">
+<h2>Step four<a class="headerlink" href="#step-four" title="Permalink to this headline">¶</a></h2>
+<p>You can find the script I used <a class="reference download internal" download="" href="../_downloads/532537fa2e75eea4fdea920b6b2b7bb0/time_progress.py"><code class="xref download docutils literal notranslate"><span class="pre">here</span></code></a>.  It isn’t
+pretty, but it will do.  If I come to depend on it I’m sure that I’ll make
+something better.</p>
+<p>I think it is important to note that if you’ve got this far and you’re thinking
+about doing this yourself you should consider buying the <a class="reference external" href="https://www.progressbarosx.com/">Progress Bar OSX</a>
+app.  This document wouldn’t exist without it and rewarding creators is
+important, even when they ignore your chosen platform.</p>
+</div>
+<div class="section" id="step">
+<h2>Step ∞<a class="headerlink" href="#step" title="Permalink to this headline">¶</a></h2>
+<p>As always with any code that touches dates <a class="reference external" href="https://en.m.wikipedia.org/wiki/Here_be_dragons">“Here be dragons”</a>.  For example,
+I’ll leave it as an exercise for the reader how to handle calculations for days
+with <abbr title="Daylight Saving Time">DST</abbr> transitions.</p>
+<p class="rubric">Footnotes</p>
+<dl class="footnote brackets">
+<dt class="label" id="id3"><span class="brackets"><a class="fn-backref" href="#id1">1</a></span></dt>
+<dd><p><strong class="command">date</strong>’s <code class="xref std std-option docutils literal notranslate"><span class="pre">%j</span></code> format gives us the day of year, see
+<em class="manpage">strftime(3)</em> if this is new to you.</p>
+</dd>
+<dt class="label" id="id4"><span class="brackets"><a class="fn-backref" href="#id2">2</a></span></dt>
+<dd><p>Calculating the day of year for December 31ˢᵗ allows to work in leap
+years.</p>
+</dd>
+</dl>
+</div>
+</div>
+
+    <hr>
+
+    <p class="keybase-verify">
+      Authenticate this page by pasting <a
+        href="https://raw.githubusercontent.com/JNRowe/jnrowe.github.io/source/articles/march_toward_death.rst.asc">this signature</a> into
+      <a href="https://keybase.io/verify">Keybase</a>.
+    </p>
+
+    <p class="edit-page">
+      Have a suggestion or see a typo?  <a href="https://github.com/JNRowe/jnrowe.github.io/edit/source/articles/march_toward_death.rst">Edit this page</a>
+    </p>
+  
+
+  <div class="section">
+  
+    
+
+
+<div class="section">
+  <span style="float: left;">
+  
+  Previous: 
+  <a href="evil_emacs_steals_my_heart.html">
+    
+    Evil Emacs steals my heart
+  </a>
+  
+  </span>
+  <span>&nbsp;</span>
+  <span style="float: right;">
+  
+</div>
+
+  
+  
+  </div>
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<p class="logo">
+  <a href="../index.html">
+    <img class="logo" src="../_static/logo.png" alt="Logo"/>
+    
+  </a>
+</p>
+
+
+
+
+
+
+
+
+
+  
+  
+  <h2>
+  
+  
+    2018-11-13
+  
+  </h2>
+
+  <ul>
+    
+
+  
+  <li id="author"><span>Author:</span>
+    
+      
+      <a href="../blog/author/james-rowe.html">James Rowe</a>
+      
+    </li>
+  
+
+  
+
+  
+
+  
+
+  
+  <li id="tags"><span>Tags:</span>
+      
+    
+      
+      <a href="../blog/tag/linux.html">linux</a>
+      
+    
+      
+      <a href="../blog/tag/dzen.html">dzen</a>
+      
+    </li>
+  
+  
+  </ul>
+
+
+<h3>Navigation</h3>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../projects.html">Projects</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Articles</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="advent_of_code.html">Advent of Code 2017</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dropping_gentoo.html">Dropping Gentoo</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dropping_gentoo_reflex.html">Dropping Gentoo reflex</a></li>
+<li class="toctree-l2"><a class="reference internal" href="evil_emacs_steals_my_heart.html">Evil Emacs steals my heart</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fossil.html"><strong class="command">fossil</strong> experiments</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Visualising the progress of time</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mutt_config_snippets.html"><strong class="command">mutt</strong> configuration snippets</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rcs.html">Introduction to <abbr title="GNU Revision Control System">RCS</abbr></a></li>
+<li class="toctree-l2"><a class="reference internal" href="tdd_distros.html"><abbr title="Test Driven Development">TDD</abbr> distro development</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tiling_vs_tabbing.html">Tiling vs tabbing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#further-categories">Further categories</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../thoughts/index.html">Thoughts</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../colophon.html">Colophon</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../contact.html">Contact details</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../consult.html">Consulting services</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../copyright.html">Copyright information</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../glossary.html">Glossary</a></li>
+</ul>
+
+
+  <h3><a href="../blog.html">Recent Posts</a></h3>
+  <ul>
+    
+    
+      <li><a href="evil_emacs_steals_my_heart.html">05 November - Evil Emacs steals my heart</a></li>
+    
+      <li><a href="tips/readline_rename_imv.html">26 October - File renaming for the lazy</a></li>
+    
+      <li><a href="tiling_vs_tabbing.html">08 October - Tiling vs tabbing</a></li>
+    
+      <li><a href="tips/vim_day_night_colourscheme.html">15 September - Vim with day/night colourschemes</a></li>
+    
+      <li><a href="../thoughts/brexit_through_the_gift_shop.html">08 June - brexit through the gift shop</a></li>
+    
+  </ul>
+
+  <h3><a href="../blog/tag.html">Tags</a></h3>
+  <style type="text/css">
+    ul.ablog-cloud {list-style: none; overflow: auto;}
+    ul.ablog-cloud li {float: left; height: 20pt; line-height: 18pt; margin-right: 5px;}
+    ul.ablog-cloud a {text-decoration: none; vertical-align: middle;}
+    li.ablog-cloud-1{font-size: 80%;}
+    li.ablog-cloud-2{font-size: 95%;}
+    li.ablog-cloud-3{font-size: 110%;}
+    li.ablog-cloud-4{font-size: 125%;}
+    li.ablog-cloud-5{font-size: 140%;}
+  </style>
+  <ul class="ablog-cloud">
+    
+      
+      <li class="ablog-cloud ablog-cloud-3">
+        <a href="../blog/tag/gtk.html">GTK+</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-2">
+        <a href="../blog/tag/x11.html">X11</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-2">
+        <a href="../blog/tag/abook.html">abook</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-3">
+        <a href="../blog/tag/awesome.html">awesome</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-2">
+        <a href="../blog/tag/bash.html">bash</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-1">
+        <a href="../blog/tag/blog.html">blog</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-1">
+        <a href="../blog/tag/bts.html">bts</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-1">
+        <a href="../blog/tag/bugzilla.html">bugzilla</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-1">
+        <a href="../blog/tag/burnout.html">burnout</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-2">
+        <a href="../blog/tag/configs.html">configs</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-1">
+        <a href="../blog/tag/csv.html">csv</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-1">
+        <a href="../blog/tag/denoise.html">denoise</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-1">
+        <a href="../blog/tag/desktop.html">desktop</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-3">
+        <a href="../blog/tag/devel.html">devel</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-1">
+        <a href="../blog/tag/development.html">development</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-1">
+        <a href="../blog/tag/dzen.html">dzen</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-2">
+        <a href="../blog/tag/emacs.html">emacs</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-1">
+        <a href="../blog/tag/evil.html">evil</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-1">
+        <a href="../blog/tag/focus.html">focus</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-1">
+        <a href="../blog/tag/fossil.html">fossil</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-4">
+        <a href="../blog/tag/gentoo.html">gentoo</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-2">
+        <a href="../blog/tag/git.html">git</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-1">
+        <a href="../blog/tag/gmail.html">gmail</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-1">
+        <a href="../blog/tag/history.html">history</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-1">
+        <a href="../blog/tag/hobbies.html">hobbies</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-1">
+        <a href="../blog/tag/imv.html">imv</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-1">
+        <a href="../blog/tag/jnrowe-misc.html">jnrowe-misc</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-5">
+        <a href="../blog/tag/life.html">life</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-4">
+        <a href="../blog/tag/linux.html">linux</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-2">
+        <a href="../blog/tag/mail.html">mail</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-3">
+        <a href="../blog/tag/mutt.html">mutt</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-1">
+        <a href="../blog/tag/net.html">net</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-1">
+        <a href="../blog/tag/noise.html">noise</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-1">
+        <a href="../blog/tag/oss.html">oss</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-2">
+        <a href="../blog/tag/politics.html">politics</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-1">
+        <a href="../blog/tag/privacy.html">privacy</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-1">
+        <a href="../blog/tag/probit.html">probit</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-2">
+        <a href="../blog/tag/projects.html">projects</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-1">
+        <a href="../blog/tag/python.html">python</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-1">
+        <a href="../blog/tag/qmv.html">qmv</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-2">
+        <a href="../blog/tag/readline.html">readline</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-1">
+        <a href="../blog/tag/remind.html">remind</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-1">
+        <a href="../blog/tag/renameutils.html">renameutils</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-1">
+        <a href="../blog/tag/site.html">site</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-2">
+        <a href="../blog/tag/software.html">software</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-5">
+        <a href="../blog/tag/styling.html">styling</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-1">
+        <a href="../blog/tag/sup.html">sup</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-1">
+        <a href="../blog/tag/tabbed.html">tabbed</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-1">
+        <a href="../blog/tag/testing.html">testing</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-1">
+        <a href="../blog/tag/three.html">three</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-1">
+        <a href="../blog/tag/tiling.html">tiling</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-2">
+        <a href="../blog/tag/unix.html">unix</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-4">
+        <a href="../blog/tag/vcs.html">vcs</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-5">
+        <a href="../blog/tag/vim.html">vim</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-1">
+        <a href="../blog/tag/web.html">web</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-3">
+        <a href="../blog/tag/work.html">work</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-1">
+        <a href="../blog/tag/zsh.html">zsh</a></li>
+      
+    
+  </ul>
+
+  <h3><a href="../blog/archive.html">Archives</a></h3>
+  <ul>
+  
+    
+    <li><a href="../blog/2018.html">2018 (6)</a></li>
+    
+  
+    
+    <li><a href="../blog/2017.html">2017 (1)</a></li>
+    
+  
+    
+    <li><a href="../blog/2014.html">2014 (12)</a></li>
+    
+  
+    
+    <li><a href="../blog/2013.html">2013 (2)</a></li>
+    
+  
+    
+    <li><a href="../blog/2011.html">2011 (1)</a></li>
+    
+  
+    
+    <li><a href="../blog/2010.html">2010 (1)</a></li>
+    
+  
+    
+    <li><a href="../blog/2009.html">2009 (24)</a></li>
+    
+  
+    
+    <li><a href="../blog/2007.html">2007 (2)</a></li>
+    
+  
+    
+    <li><a href="../blog/2003.html">2003 (1)</a></li>
+    
+  
+  </ul>
+
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    </div>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2009-2018  James Rowe.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.8.1</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+    </div>
+
+    
+
+    
+  </body>
+</html>

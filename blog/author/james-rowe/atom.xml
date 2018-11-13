@@ -2,11 +2,138 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title type="text">JNRowe - Posts by James Rowe</title>
   <id>https://jnrowe.github.io/blog/author/james-rowe/atom.xml</id>
-  <updated>2018-11-05T00:00:00Z</updated>
+  <updated>2018-11-13T00:00:00Z</updated>
   <link href="https://jnrowe.github.io/" />
   <link href="https://jnrowe.github.io/blog/author/james-rowe/atom.xml" rel="self" />
   <subtitle type="text">Ramblings of a tired mind</subtitle>
   <generator uri="http://ablog.readthedocs.org" version="0.9.2">ABlog</generator>
+  <entry xml:base="https://jnrowe.github.io/blog/author/james-rowe/atom.xml">
+    <title type="text">Visualising the progress of time</title>
+    <id>https://jnrowe.github.io/articles/march_toward_death.html</id>
+    <updated>2018-11-13T00:00:00Z</updated>
+    <published>2018-11-13T00:00:00Z</published>
+    <link href="https://jnrowe.github.io/articles/march_toward_death.html" />
+    <author>
+      <name>James Rowe</name>
+    </author>
+    <content type="html">&lt;div class=&quot;section&quot; id=&quot;visualising-the-progress-of-time&quot;&gt;
+
+&lt;a class=&quot;reference external image-reference&quot; href=&quot;https://www.progressbarosx.com/&quot;&gt;&lt;img alt=&quot;Screenshot of Progress Bar OSX in action&quot; src=&quot;../../_images/time_progress.jpg&quot; /&gt;&lt;/a&gt;
+&lt;p&gt;A co-worker was demoing a user session today, and pointed out a neat tool for
+MacOS that displays the “continual march toward death”.  That tool was
+&lt;a class=&quot;reference external&quot; href=&quot;https://www.progressbarosx.com/&quot;&gt;Progress Bar OSX&lt;/a&gt;, and it is pretty cool.  Sadly it is only available for
+MacOS, so we’ll need to make something similar.&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;All&lt;/em&gt; popup problems on Linux should be solved with &lt;a class=&quot;reference external&quot; href=&quot;https://github.com/robm/dzen&quot;&gt;dzen&lt;/a&gt;, it is awesome.  You
+know this because it comes equipped with the option to produce &lt;abbr title=&quot;Knight Industries Two Thousand&quot;&gt;KITT&lt;/abbr&gt; &lt;a class=&quot;reference external&quot; href=&quot;https://en.m.wikipedia.org/wiki/KITT&quot;&gt;Anamorphic Equalizer&lt;/a&gt; emulation.&lt;/p&gt;
+&lt;div class=&quot;figure&quot; id=&quot;id5&quot;&gt;
+&lt;a class=&quot;reference external image-reference&quot; href=&quot;../_static/kitt.gif&quot;&gt;&lt;img alt=&quot;Multi-band scanner in action&quot; src=&quot;../../_images/kitt06.png&quot; /&gt;&lt;/a&gt;
+&lt;p class=&quot;caption&quot;&gt;&lt;span class=&quot;caption-text&quot;&gt;Click the image for an animated GIF, I’ll spare you the flashing lights in
+case you wish to read on.&lt;/span&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;section&quot; id=&quot;step-one&quot;&gt;
+&lt;h2&gt;Step one&lt;/h2&gt;
+&lt;p&gt;First we’ll want to display the year:&lt;/p&gt;
+&lt;div class=&quot;highlight-sh notranslate&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;gdbar -w &lt;span class=&quot;m&quot;&gt;1500&lt;/span&gt; -h &lt;span class=&quot;m&quot;&gt;20&lt;/span&gt; &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
+   &lt;span class=&quot;o&quot;&gt;&amp;lt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;$(($(&lt;/span&gt;date +%j&lt;span class=&quot;k&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;/&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;$(&lt;/span&gt;date -d&lt;span class=&quot;s1&quot;&gt;&amp;#39;Dec 31&amp;#39;&lt;/span&gt; +%j&lt;span class=&quot;k&quot;&gt;)&lt;/span&gt;.0 &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;100&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;))&lt;/span&gt; &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
+   &lt;span class=&quot;p&quot;&gt;|&lt;/span&gt; dzen2 -p &lt;span class=&quot;m&quot;&gt;5&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;which results in:&lt;/p&gt;
+&lt;img alt=&quot;Screenshot of simple day of year bar on 2018-11-13&quot; src=&quot;../../_images/day_bar.png&quot; /&gt;
+&lt;p&gt;The logic should be simple enough to follow:&lt;/p&gt;
+&lt;ul class=&quot;simple&quot;&gt;
+&lt;li&gt;&lt;p&gt;&lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;current&lt;/span&gt; &lt;span class=&quot;pre&quot;&gt;day&lt;/span&gt; &lt;span class=&quot;pre&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;pre&quot;&gt;year&lt;/span&gt;&lt;/code&gt;&lt;a class=&quot;footnote-reference brackets&quot; href=&quot;#id3&quot; id=&quot;id1&quot;&gt;1&lt;/a&gt; / &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;number&lt;/span&gt; &lt;span class=&quot;pre&quot;&gt;of&lt;/span&gt; &lt;span class=&quot;pre&quot;&gt;days&lt;/span&gt; &lt;span class=&quot;pre&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;pre&quot;&gt;year&lt;/span&gt;&lt;/code&gt;&lt;a class=&quot;footnote-reference brackets&quot; href=&quot;#id4&quot; id=&quot;id2&quot;&gt;2&lt;/a&gt; * &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;100&lt;/span&gt;&lt;/code&gt; for
+position in year as percentage&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Generate the &lt;strong class=&quot;command&quot;&gt;dzen2&lt;/strong&gt; markup for a bar of &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;1500&lt;/span&gt;&lt;/code&gt; pixels wide and
+&lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;20&lt;/span&gt;&lt;/code&gt; pixels high&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Display it for for &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;5&lt;/span&gt;&lt;/code&gt; seconds&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;We can repeat the same process for day ratio; using &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;date&lt;/span&gt; &lt;span class=&quot;pre&quot;&gt;-d&lt;/span&gt; &lt;span class=&quot;pre&quot;&gt;&amp;quot;00:00&amp;quot;&lt;/span&gt; &lt;span class=&quot;pre&quot;&gt;+%s&lt;/span&gt;&lt;/code&gt; to
+calculate number of seconds passed from the 86400 we’ll see today.  And then
+simply using &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;date&lt;/span&gt; &lt;span class=&quot;pre&quot;&gt;+%m&lt;/span&gt;&lt;/code&gt; to get today’s month as a number.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;section&quot; id=&quot;step-two&quot;&gt;
+&lt;h2&gt;Step two&lt;/h2&gt;
+&lt;p&gt;We can definitely up our game here.  Why not use colours?  We’ll switch to
+&lt;a class=&quot;reference external&quot; href=&quot;https://www.python.org/&quot;&gt;Python&lt;/a&gt; now, as the gigantic standard library allows us to be lazy.&lt;/p&gt;
+&lt;div class=&quot;highlight-default notranslate&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;pcnt_colour&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;percent&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;h&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;percent&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;100&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;#&amp;#39;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;&amp;#39;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;join&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;f&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;{min(int(n*256), 255):02x}&amp;#39;&lt;/span&gt;
+                         &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;n&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;colorsys&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;hls_to_rgb&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;h&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;The function above converts a percentage value in to a hex triplet across
+a green to red gradient, we use &lt;a class=&quot;reference external&quot; href=&quot;https://docs.python.org/3/library/colorsys.html#colorsys.hls_to_rgb&quot; title=&quot;(in Python v3.7)&quot;&gt;&lt;code class=&quot;xref py py-func docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;hls_to_rgb()&lt;/span&gt;&lt;/code&gt;&lt;/a&gt; here as the &lt;a class=&quot;reference external&quot; href=&quot;https://en.m.wikipedia.org/wiki/HLS_color_space&quot;&gt;HLS
+colour space&lt;/a&gt; is more amenable to generating smooth gradients.&lt;/p&gt;
+&lt;p&gt;Now that we’re using &lt;a class=&quot;reference external&quot; href=&quot;https://www.python.org/&quot;&gt;Python&lt;/a&gt; we may as well take advantage of its
+&lt;a class=&quot;reference external&quot; href=&quot;https://docs.python.org/3/library/calendar.html#module-calendar&quot; title=&quot;(in Python v3.7)&quot;&gt;&lt;code class=&quot;xref py py-mod docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;calendar&lt;/span&gt;&lt;/code&gt;&lt;/a&gt; module:&lt;/p&gt;
+&lt;div class=&quot;highlight-default notranslate&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;month_days&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;date&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;calendar&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;monthrange&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;date&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;year&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;date&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;month&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;The &lt;a class=&quot;reference external&quot; href=&quot;https://docs.python.org/3/library/calendar.html#calendar.monthrange&quot; title=&quot;(in Python v3.7)&quot;&gt;&lt;code class=&quot;xref py py-func docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;monthrange()&lt;/span&gt;&lt;/code&gt;&lt;/a&gt; function returns a tuple where the second item
+is the number of days in the current month.&lt;/p&gt;
+&lt;div class=&quot;highlight-default notranslate&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;days_in_year&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;date&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;calendar&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;isleap&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;date&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;year&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;days&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;366&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;else&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;days&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;365&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;days&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;&lt;a class=&quot;reference external&quot; href=&quot;https://docs.python.org/3/library/calendar.html#calendar.isleap&quot; title=&quot;(in Python v3.7)&quot;&gt;&lt;code class=&quot;xref py py-func docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;isleap()&lt;/span&gt;&lt;/code&gt;&lt;/a&gt; allows us to offload figuring out whether 2700 is
+a leap year once senility begins to set in.&lt;/p&gt;
+&lt;div class=&quot;highlight-default notranslate&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;show_progress&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;title&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;percent&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;width&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;subprocess&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;run&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;([&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;gdbar&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;-l&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;title&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;-w&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;str&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;width&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;-fg&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+                    &lt;span class=&quot;n&quot;&gt;pcnt_colour&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;percent&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)],&lt;/span&gt;
+                &lt;span class=&quot;nb&quot;&gt;input&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;str&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;percent&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;encode&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;())&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;We’ll also create a utility function to generate the &lt;strong class=&quot;command&quot;&gt;dzen2&lt;/strong&gt; markup
+required to output our little blocks of data.&lt;/p&gt;
+&lt;p&gt;Putting it altogether we can display our pretty little blocks with something
+like the following:&lt;/p&gt;
+&lt;div class=&quot;highlight-shell notranslate&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;./time_progress.py -w &lt;span class=&quot;m&quot;&gt;1500&lt;/span&gt; &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;|&lt;/span&gt; dzen2 -l &lt;span class=&quot;m&quot;&gt;3&lt;/span&gt; -p &lt;span class=&quot;m&quot;&gt;3&lt;/span&gt; -fn monospace-15 -e &lt;span class=&quot;s1&quot;&gt;&amp;#39;onstart=uncollapse&amp;#39;&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;This creates the markup and makes &lt;strong class=&quot;command&quot;&gt;dzen2&lt;/strong&gt; display the output for
+3 seconds.&lt;/p&gt;
+&lt;img alt=&quot;Screenshot of colourful progress in time&quot; src=&quot;../../_images/progress_bar.png&quot; /&gt;
+&lt;p&gt;The &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;onstart=uncollapse&lt;/span&gt;&lt;/code&gt; attribute tell &lt;strong class=&quot;command&quot;&gt;dzen2&lt;/strong&gt; that we want to see
+the full output on startup, without it we’d see just the title bar until we
+moved our pointer over the header.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;section&quot; id=&quot;step-four&quot;&gt;
+&lt;h2&gt;Step four&lt;/h2&gt;
+&lt;p&gt;You can find the script I used &lt;a class=&quot;reference download internal&quot; download=&quot;&quot; href=&quot;../../_downloads/532537fa2e75eea4fdea920b6b2b7bb0/time_progress.py&quot;&gt;&lt;code class=&quot;xref download docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;here&lt;/span&gt;&lt;/code&gt;&lt;/a&gt;.  It isn’t
+pretty, but it will do.  If I come to depend on it I’m sure that I’ll make
+something better.&lt;/p&gt;
+&lt;p&gt;I think it is important to note that if you’ve got this far and you’re thinking
+about doing this yourself you should consider buying the &lt;a class=&quot;reference external&quot; href=&quot;https://www.progressbarosx.com/&quot;&gt;Progress Bar OSX&lt;/a&gt;
+app.  This document wouldn’t exist without it and rewarding creators is
+important, even when they ignore your chosen platform.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;section&quot; id=&quot;step&quot;&gt;
+&lt;h2&gt;Step ∞&lt;/h2&gt;
+&lt;p&gt;As always with any code that touches dates &lt;a class=&quot;reference external&quot; href=&quot;https://en.m.wikipedia.org/wiki/Here_be_dragons&quot;&gt;“Here be dragons”&lt;/a&gt;.  For example,
+I’ll leave it as an exercise for the reader how to handle calculations for days
+with &lt;abbr title=&quot;Daylight Saving Time&quot;&gt;DST&lt;/abbr&gt; transitions.&lt;/p&gt;
+&lt;p class=&quot;rubric&quot;&gt;Footnotes&lt;/p&gt;
+&lt;dl class=&quot;footnote brackets&quot;&gt;
+&lt;dt class=&quot;label&quot; id=&quot;id3&quot;&gt;&lt;span class=&quot;brackets&quot;&gt;&lt;a class=&quot;fn-backref&quot; href=&quot;#id1&quot;&gt;1&lt;/a&gt;&lt;/span&gt;&lt;/dt&gt;
+&lt;dd&gt;&lt;p&gt;&lt;strong class=&quot;command&quot;&gt;date&lt;/strong&gt;’s &lt;code class=&quot;xref std std-option docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;%j&lt;/span&gt;&lt;/code&gt; format gives us the day of year, see
+&lt;em class=&quot;manpage&quot;&gt;strftime(3)&lt;/em&gt; if this is new to you.&lt;/p&gt;
+&lt;/dd&gt;
+&lt;dt class=&quot;label&quot; id=&quot;id4&quot;&gt;&lt;span class=&quot;brackets&quot;&gt;&lt;a class=&quot;fn-backref&quot; href=&quot;#id2&quot;&gt;2&lt;/a&gt;&lt;/span&gt;&lt;/dt&gt;
+&lt;dd&gt;&lt;p&gt;Calculating the day of year for December 31ˢᵗ allows to work in leap
+years.&lt;/p&gt;
+&lt;/dd&gt;
+&lt;/dl&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</content>
+  </entry>
   <entry xml:base="https://jnrowe.github.io/blog/author/james-rowe/atom.xml">
     <title type="text">Evil Emacs steals my heart</title>
     <id>https://jnrowe.github.io/articles/evil_emacs_steals_my_heart.html</id>
@@ -110,7 +237,7 @@ a &lt;a class=&quot;reference external&quot; href=&quot;mailto:jnrowe&amp;#37;&a
 &lt;dl class=&quot;footnote brackets&quot;&gt;
 &lt;dt class=&quot;label&quot; id=&quot;id4&quot;&gt;&lt;span class=&quot;brackets&quot;&gt;&lt;a class=&quot;fn-backref&quot; href=&quot;#id1&quot;&gt;1&lt;/a&gt;&lt;/span&gt;&lt;/dt&gt;
 &lt;dd&gt;&lt;p&gt;&lt;a class=&quot;reference external&quot; href=&quot;https://github.com/gentoo/elogv&quot;&gt;elogv&lt;/a&gt; for Gentoo is probably the worst example of this, as &lt;kbd class=&quot;kbd docutils literal notranslate&quot;&gt;d&lt;/kbd&gt;
-&lt;em&gt;almost&lt;/em&gt; works like &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;vim&lt;/span&gt;&lt;/code&gt; but nothing does.&lt;/p&gt;
+&lt;em&gt;almost&lt;/em&gt; works like &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;vim&lt;/span&gt;&lt;/code&gt; but nothing else does.&lt;/p&gt;
 &lt;/dd&gt;
 &lt;dt class=&quot;label&quot; id=&quot;id5&quot;&gt;&lt;span class=&quot;brackets&quot;&gt;&lt;a class=&quot;fn-backref&quot; href=&quot;#id2&quot;&gt;2&lt;/a&gt;&lt;/span&gt;&lt;/dt&gt;
 &lt;dd&gt;&lt;p&gt;Okay, completely pointless.&lt;/p&gt;
@@ -1612,60 +1739,6 @@ sponsorship options in check, she’ll destroy the target time.  Go Rach!&lt;/p&
 &lt;dd&gt;&lt;p&gt;a term which makes me think they bring fizzy drinks and sugary cakes&lt;/p&gt;
 &lt;/dd&gt;
 &lt;/dl&gt;
-&lt;/div&gt;
-</content>
-  </entry>
-  <entry xml:base="https://jnrowe.github.io/blog/author/james-rowe/atom.xml">
-    <title type="text">Hitting life’s reset button</title>
-    <id>https://jnrowe.github.io/thoughts/reset_in_ten.html</id>
-    <updated>2014-02-24T00:00:00Z</updated>
-    <published>2014-02-24T00:00:00Z</published>
-    <link href="https://jnrowe.github.io/thoughts/reset_in_ten.html" />
-    <author>
-      <name>James Rowe</name>
-    </author>
-    <content type="html">&lt;div class=&quot;section&quot; id=&quot;hitting-lifes-reset-button&quot;&gt;
-
-&lt;p&gt;Seven months ago while enjoying a little Saturday afternoon cricket picnic,
-a friend posed the question:&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;div&gt;&lt;p&gt;“If life had a reset button when would you have used it?”&lt;/p&gt;
-&lt;/div&gt;&lt;/blockquote&gt;
-&lt;p&gt;Now, I understand the point and the purpose of this.  Catherine was hoping to
-elicit some deep truths, with the eventual goal that people would bond further.
-That doesn’t mean I played the game though.&lt;/p&gt;
-&lt;p&gt;I recall my answer was somewhat flippant:&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;div&gt;&lt;p&gt;“I’d have used it repeatedly half an hour ago, until I figured out the magic
-incantation that convinces that cashier in the ‘Express to join me for
-a picnic… and then I would have ditched you suckers.”&lt;/p&gt;
-&lt;/div&gt;&lt;/blockquote&gt;
-&lt;p&gt;It was an honest-ish answer;  I mean yeah, she may have been worth messing with
-the universe for.  It wasn’t, however, the correct kind of reply.  I should
-have been describing some dreadful mistake I made, both to make my friends
-laugh and also to let them in a little closer.&lt;/p&gt;
-&lt;p&gt;I didn’t choose to answer that way to be deliberately obtuse, I answered
-that way simply because it was how I felt at the time.&lt;/p&gt;
-&lt;p&gt;Since then, and I direct you to the first three words of this post, I’ve been
-mildly obsessed with the question.  I have a twenty heading document where I’ve
-described branch points in my life, specifically the ones with the deepest joy
-and most painful regrets.  I hoped I’d see a pattern of some kind, and that
-would allow me to direct myself toward the happier paths in future.&lt;/p&gt;
-&lt;p&gt;I didn’t, and it hasn’t.  Not even a little bit.&lt;/p&gt;
-&lt;p&gt;I don’t seem to find myself in the situations where I could repeat the most
-foolish decisions that I really regret.  And I wonder whether that is because
-I’ve eventually been smart enough to learn my lessons, or stupid enough that
-I’m unable to spot the new mistakes yet.&lt;/p&gt;
-&lt;p&gt;The whole process has been very cathartic though. Despite having
-a &lt;em&gt;significantly&lt;/em&gt; higher proportion of regrets than successes in my list,
-I kind of enjoying reviewing it in a cringe ridden way.&lt;/p&gt;
-&lt;p&gt;I’d really like to thank Catherine for offering the mirror, it has been
-intriguing in a terrifying and horrific kind of way.  Unfortunately, I can’t.
-It is too late, and there is another lesson for me to learn.&lt;/p&gt;
-&lt;hr class=&quot;docutils&quot; /&gt;
-&lt;p&gt;For what it’s worth, that girl still works at the ‘Express and I’ve done
-nothing useful about it.  Internet, this is the foolish truth I proffer you
-today.  The others well, they’ll hopefully remain hidden away from view.&lt;/p&gt;
 &lt;/div&gt;
 </content>
   </entry>
