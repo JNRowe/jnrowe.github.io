@@ -129,7 +129,7 @@ a mail_!
 .. rubric:: Footnotes
 
 .. [#] elogv_ for Gentoo is probably the worst example of this, as :kbd:`d`
-       *almost* works like ``vim`` but nothing does.
+       *almost* works like ``vim`` but nothing else does.
 .. [#] Okay, completely pointless.
 .. [#] org-mode_ and vim-orgmode_ allows me to keep this across editors.  There
        is very little point publishing it, as it can be summed up as “James
