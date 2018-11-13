@@ -1,6 +1,7 @@
 .. post:: 2018-10-26
    :tags: readline, imv, qmv, renameutils
    :excerpt: 2
+   :image: 1
 
 File renaming for the lazy
 ==========================
