@@ -1,5 +1,6 @@
 .. post:: 2018-10-08
    :tags: desktop, tiling, tabbed
+   :image: 1
 
 Tiling vs tabbing
 =================

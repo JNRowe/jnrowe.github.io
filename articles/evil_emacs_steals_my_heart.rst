@@ -1,5 +1,6 @@
 .. post:: 2018-11-05
    :tags: emacs, vim, evil
+   :image: 2
 
 Evil Emacs steals my heart
 ==========================
