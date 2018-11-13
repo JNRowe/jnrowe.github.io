@@ -124,7 +124,7 @@ a leap year once senility begins to set in.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">show_progress</span><span class="p">(</span><span class="n">title</span><span class="p">,</span> <span class="n">percent</span><span class="p">,</span> <span class="n">width</span><span class="p">):</span>
     <span class="n">subprocess</span><span class="o">.</span><span class="n">run</span><span class="p">([</span><span class="s1">&#39;gdbar&#39;</span><span class="p">,</span> <span class="s1">&#39;-l&#39;</span><span class="p">,</span> <span class="n">title</span><span class="p">,</span> <span class="s1">&#39;-w&#39;</span><span class="p">,</span> <span class="nb">str</span><span class="p">(</span><span class="n">width</span><span class="p">),</span> <span class="s1">&#39;-fg&#39;</span><span class="p">,</span>
                     <span class="n">pcnt_colour</span><span class="p">(</span><span class="n">percent</span><span class="p">)],</span>
-                <span class="nb">input</span><span class="o">=</span><span class="nb">str</span><span class="p">(</span><span class="n">percent</span><span class="p">)</span><span class="o">.</span><span class="n">encode</span><span class="p">())</span>
+                   <span class="nb">input</span><span class="o">=</span><span class="nb">str</span><span class="p">(</span><span class="n">percent</span><span class="p">)</span><span class="o">.</span><span class="n">encode</span><span class="p">())</span>
 </pre></div>
 </div>
 <p>We’ll also create a utility function to generate the <strong class="command">dzen2</strong> markup
