@@ -49,6 +49,12 @@ The logic should be simple enough to follow:
   ``20`` pixels high
 * Display it for for ``5`` seconds
 
+.. warning::
+
+   Be sure to notice that we force ``number of days in year`` to be a float
+   with the addition of ``.0``.  Without it the result would be rounded toward
+   zero, ie zero on every day but December 31ˢᵗ.
+
 We can repeat the same process for day ratio; using ``date -d "00:00" +%s`` to
 calculate number of seconds passed from the 86400 we’ll see today.  And then
 simply using ``date +%m`` to get today’s month as a number.
