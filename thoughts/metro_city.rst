@@ -74,7 +74,7 @@ in fact that the site was taken down within a day, and the work became a mostly
 offline exhibit in a little gallery for other evening school art students.
 
 I can understand the sentiment in many ways, and perhaps should have seen it
-coming.  When I saw people I knew in a visualisation I was ashamed, truly
+coming.  When I saw a person I knew in a visualisation I was ashamed, truly
 ashamed.  I mean not to the point of thinking it is appropriate to post all
 their personal details for the internet vigilantes, but enough that I knew
 I would not want to be linked to them through work or social circles.

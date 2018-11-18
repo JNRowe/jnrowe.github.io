@@ -177,8 +177,8 @@ five in the morning to compete, but that is the just the lie I’m telling mysel
 to feel better.
 
 All told, I spent nine hours on |AOC| and those hours were spread pretty evenly
-between the “live” 2017 puzzles and the previous years too.  I’m up for calling
-it personal development, and I’m hoping it returns this year!
+between the “live” 2017 puzzles and the previous years.  I’m up for calling it
+personal development, and I’m hoping it returns this year!
 
 Tips
 ----

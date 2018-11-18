@@ -47,7 +47,7 @@ same stuff you have in your shell; ``<M-{b,f}>`` word jumps, ``<M-C-]>``
 character searches, ``<C-t>`` to transpose typo fixes, ``<M-[count]>`` repeats,
 and many more.
 
-I also hinted at config file support.  :file:`~/.inputrc``, or whatever
+I also hinted at config file support.  :file:`~/.inputrc`, or whatever
 :envvar:`$INPUTRC` points at, can be used to change the behaviour of all
 ``readline`` using tools.  Excitingly though, it can also be used to change the
 behaviour of specific tools only.

@@ -45,7 +45,7 @@ and switch between both layouts with a rattle of the keyboard.  The exact same
 interface you’d use for any other layout change too, not one that is specific
 to ``tmux`` or ``tabbed``.
 
-It seems strange to me that given the option to performs tasks like this at the
+It seems strange to me that given the option to perform tasks like this at the
 window manager level people would *choose* to insert an extra layer in the
 middle that does less.  By using actual windows you sidestep the problems with
 mouse selection in pseudo-windows in ``tmux``, and you can change your mind
