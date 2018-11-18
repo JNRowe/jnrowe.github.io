@@ -135,7 +135,7 @@ something better.
 I think it is important to note that if you’ve got this far and you’re thinking
 about doing this yourself you should consider buying the `Progress Bar OSX`_
 app.  This document wouldn’t exist without it and rewarding creators is
-important, even when they ignore your chosen platform.
+important, even when they ignore your chosen platform ;)
 
 Step ∞
 ------
