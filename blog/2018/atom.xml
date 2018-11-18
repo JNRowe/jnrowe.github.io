@@ -23,9 +23,27 @@
 MacOS that displays the “continual march toward death”.  That tool was
 &lt;a class=&quot;reference external&quot; href=&quot;https://www.progressbarosx.com/&quot;&gt;Progress Bar OSX&lt;/a&gt;, and it is pretty cool.  Sadly it is only available for
 MacOS, so we’ll need to make something similar.&lt;/p&gt;
-&lt;p&gt;&lt;em&gt;All&lt;/em&gt; popup problems on Linux should be solved with &lt;a class=&quot;reference external&quot; href=&quot;https://github.com/robm/dzen&quot;&gt;dzen&lt;/a&gt;, it is awesome.  You
-know this because it comes equipped with the option to produce &lt;abbr title=&quot;Knight Industries Two Thousand&quot;&gt;KITT&lt;/abbr&gt; &lt;a class=&quot;reference external&quot; href=&quot;https://en.m.wikipedia.org/wiki/KITT&quot;&gt;Anamorphic Equalizer&lt;/a&gt; emulation.&lt;/p&gt;
-&lt;div class=&quot;figure&quot; id=&quot;id5&quot;&gt;
+&lt;div class=&quot;h-review&quot;&gt;
+    &lt;p&gt;
+        &lt;span class=&quot;p-name&quot;&gt;
+            &lt;em&gt;All&lt;/em&gt; popup problems on
+            &lt;span class=&quot;p-category&quot;&gt;Linux&lt;/span&gt;
+            should be solved with
+            &lt;a href=&quot;https://github.com/robm/dzen&quot; class&quot;p-item h-item&quot;&gt;
+                dzen
+            &lt;/a&gt;
+        &lt;/span&gt;, it is
+        &lt;data class=&quot;p-rating&quot; value=&quot;5&quot;&gt;awesome&lt;/data&gt;.
+        &lt;span class=&quot;e-content&quot;&gt;
+            You know this because it comes equipped with the option to
+            produce
+            &lt;abbr title=&quot;Knight Industries Two Thousand&quot;&gt;KITT&lt;/abbr&gt;
+            &lt;a href=&quot;https://en.m.wikipedia.org/wiki/KITT&quot;&gt;
+                Anamorphic Equalizer&lt;/a&gt;
+            emulation.
+        &lt;/span&gt;
+    &lt;/p&gt;
+&lt;/div&gt;&lt;div class=&quot;figure&quot; id=&quot;id5&quot;&gt;
 &lt;a class=&quot;reference external image-reference&quot; href=&quot;../_static/kitt.gif&quot;&gt;&lt;img alt=&quot;Multi-band scanner in action&quot; src=&quot;../_images/kitt06.png&quot; /&gt;&lt;/a&gt;
 &lt;p class=&quot;caption&quot;&gt;&lt;span class=&quot;caption-text&quot;&gt;Click the image for an animated GIF, I’ll spare you the flashing lights in
 case you wish to read on.&lt;/span&gt;&lt;/p&gt;
@@ -304,7 +322,7 @@ have an enormous amount of &lt;a class=&quot;reference external&quot; href=&quot
 same stuff you have in your shell; &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;&amp;lt;M-{b,f}&amp;gt;&lt;/span&gt;&lt;/code&gt; word jumps, &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;&amp;lt;M-C-]&amp;gt;&lt;/span&gt;&lt;/code&gt;
 character searches, &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;&amp;lt;C-t&amp;gt;&lt;/span&gt;&lt;/code&gt; to transpose typo fixes, &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;&amp;lt;M-[count]&amp;gt;&lt;/span&gt;&lt;/code&gt; repeats,
 and many more.&lt;/p&gt;
-&lt;p&gt;I also hinted at config file support.  &lt;code class=&quot;file docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;~/.inputrc`&lt;/span&gt;&lt;/code&gt;, or whatever
+&lt;p&gt;I also hinted at config file support.  &lt;code class=&quot;file docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;~/.inputrc&lt;/span&gt;&lt;/code&gt;, or whatever
 &lt;span class=&quot;target&quot; id=&quot;index-0&quot;&gt;&lt;/span&gt;&lt;code class=&quot;xref std std-envvar docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;$INPUTRC&lt;/span&gt;&lt;/code&gt; points at, can be used to change the behaviour of all
 &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;readline&lt;/span&gt;&lt;/code&gt; using tools.  Excitingly though, it can also be used to change the
 behaviour of specific tools only.&lt;/p&gt;
@@ -445,7 +463,7 @@ for running tests, then you can simply apply two tags to the &lt;code class=&quo
 and switch between both layouts with a rattle of the keyboard.  The exact same
 interface you’d use for any other layout change too, not one that is specific
 to &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;tmux&lt;/span&gt;&lt;/code&gt; or &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;tabbed&lt;/span&gt;&lt;/code&gt;.&lt;/p&gt;
-&lt;p&gt;It seems strange to me that given the option to performs tasks like this at the
+&lt;p&gt;It seems strange to me that given the option to perform tasks like this at the
 window manager level people would &lt;em&gt;choose&lt;/em&gt; to insert an extra layer in the
 middle that does less.  By using actual windows you sidestep the problems with
 mouse selection in pseudo-windows in &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;tmux&lt;/span&gt;&lt;/code&gt;, and you can change your mind

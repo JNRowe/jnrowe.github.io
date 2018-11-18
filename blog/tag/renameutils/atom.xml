@@ -52,7 +52,7 @@ have an enormous amount of &lt;a class=&quot;reference external&quot; href=&quot
 same stuff you have in your shell; &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;&amp;lt;M-{b,f}&amp;gt;&lt;/span&gt;&lt;/code&gt; word jumps, &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;&amp;lt;M-C-]&amp;gt;&lt;/span&gt;&lt;/code&gt;
 character searches, &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;&amp;lt;C-t&amp;gt;&lt;/span&gt;&lt;/code&gt; to transpose typo fixes, &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;&amp;lt;M-[count]&amp;gt;&lt;/span&gt;&lt;/code&gt; repeats,
 and many more.&lt;/p&gt;
-&lt;p&gt;I also hinted at config file support.  &lt;code class=&quot;file docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;~/.inputrc`&lt;/span&gt;&lt;/code&gt;, or whatever
+&lt;p&gt;I also hinted at config file support.  &lt;code class=&quot;file docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;~/.inputrc&lt;/span&gt;&lt;/code&gt;, or whatever
 &lt;span class=&quot;target&quot; id=&quot;index-0&quot;&gt;&lt;/span&gt;&lt;code class=&quot;xref std std-envvar docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;$INPUTRC&lt;/span&gt;&lt;/code&gt; points at, can be used to change the behaviour of all
 &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;readline&lt;/span&gt;&lt;/code&gt; using tools.  Excitingly though, it can also be used to change the
 behaviour of specific tools only.&lt;/p&gt;
