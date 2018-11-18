@@ -104,6 +104,7 @@ html_experimental_html5_writer = True
 extlinks = {
     'gist': ('http://gist.github.com/%s', 'gist #'),
     'pypi': ('https://pypi.python.org/pypi/%s', ''),
+    'µnote': ('https://jnrowe.github.io/mnotes/#%s', '')
 }
 # }}}
 

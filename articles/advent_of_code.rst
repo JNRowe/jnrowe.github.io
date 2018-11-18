@@ -170,7 +170,7 @@ I only made it on to the leaderboard once, and I was excited.
     Got myself on the #aoc leaderboard this morning(#91)… now back to sleep
     as its 5am 😴 http://adventofcode.com/2017/leaderboard/day/9
 
-    -- 2017-12-09T05:22:29+00:00
+    -- :µnote:`2017-12-09T05:22:29+00:00`
 
 I like to think I could have done better if it didn’t require getting up at
 five in the morning to compete, but that is the just the lie I’m telling myself
