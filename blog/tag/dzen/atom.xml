@@ -48,6 +48,12 @@ position in year as percentage&lt;/p&gt;&lt;/li&gt;
 &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;20&lt;/span&gt;&lt;/code&gt; pixels high&lt;/p&gt;&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;Display it for for &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;5&lt;/span&gt;&lt;/code&gt; seconds&lt;/p&gt;&lt;/li&gt;
 &lt;/ul&gt;
+&lt;div class=&quot;admonition warning&quot;&gt;
+&lt;p class=&quot;admonition-title&quot;&gt;Warning&lt;/p&gt;
+&lt;p&gt;Be sure to notice that we force &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;number&lt;/span&gt; &lt;span class=&quot;pre&quot;&gt;of&lt;/span&gt; &lt;span class=&quot;pre&quot;&gt;days&lt;/span&gt; &lt;span class=&quot;pre&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;pre&quot;&gt;year&lt;/span&gt;&lt;/code&gt; to be a float
+with the addition of &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;.0&lt;/span&gt;&lt;/code&gt;.  Without it the result would be rounded toward
+zero, ie zero on every day but December 31ˢᵗ.&lt;/p&gt;
+&lt;/div&gt;
 &lt;p&gt;We can repeat the same process for day ratio; using &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;date&lt;/span&gt; &lt;span class=&quot;pre&quot;&gt;-d&lt;/span&gt; &lt;span class=&quot;pre&quot;&gt;&amp;quot;00:00&amp;quot;&lt;/span&gt; &lt;span class=&quot;pre&quot;&gt;+%s&lt;/span&gt;&lt;/code&gt; to
 calculate number of seconds passed from the 86400 we’ll see today.  And then
 simply using &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;date&lt;/span&gt; &lt;span class=&quot;pre&quot;&gt;+%m&lt;/span&gt;&lt;/code&gt; to get today’s month as a number.&lt;/p&gt;
@@ -112,7 +118,7 @@ something better.&lt;/p&gt;
 &lt;p&gt;I think it is important to note that if you’ve got this far and you’re thinking
 about doing this yourself you should consider buying the &lt;a class=&quot;reference external&quot; href=&quot;https://www.progressbarosx.com/&quot;&gt;Progress Bar OSX&lt;/a&gt;
 app.  This document wouldn’t exist without it and rewarding creators is
-important, even when they ignore your chosen platform.&lt;/p&gt;
+important, even when they ignore your chosen platform ;)&lt;/p&gt;
 &lt;/div&gt;
 &lt;div class=&quot;section&quot; id=&quot;step&quot;&gt;
 &lt;h2&gt;Step ∞&lt;/h2&gt;

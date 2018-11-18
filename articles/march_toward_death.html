@@ -37,7 +37,6 @@
     ul.postlist-style-none {list-style-type: none;}
     ul.postlist-style-circle {list-style-type: circle;}
   </style>
-
   </head><body>
   
 
@@ -86,6 +85,12 @@ position in year as percentage</p></li>
 <code class="docutils literal notranslate"><span class="pre">20</span></code> pixels high</p></li>
 <li><p>Display it for for <code class="docutils literal notranslate"><span class="pre">5</span></code> seconds</p></li>
 </ul>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Be sure to notice that we force <code class="docutils literal notranslate"><span class="pre">number</span> <span class="pre">of</span> <span class="pre">days</span> <span class="pre">in</span> <span class="pre">year</span></code> to be a float
+with the addition of <code class="docutils literal notranslate"><span class="pre">.0</span></code>.  Without it the result would be rounded toward
+zero, ie zero on every day but December 31ˢᵗ.</p>
+</div>
 <p>We can repeat the same process for day ratio; using <code class="docutils literal notranslate"><span class="pre">date</span> <span class="pre">-d</span> <span class="pre">&quot;00:00&quot;</span> <span class="pre">+%s</span></code> to
 calculate number of seconds passed from the 86400 we’ll see today.  And then
 simply using <code class="docutils literal notranslate"><span class="pre">date</span> <span class="pre">+%m</span></code> to get today’s month as a number.</p>
@@ -150,7 +155,7 @@ something better.</p>
 <p>I think it is important to note that if you’ve got this far and you’re thinking
 about doing this yourself you should consider buying the <a class="reference external" href="https://www.progressbarosx.com/">Progress Bar OSX</a>
 app.  This document wouldn’t exist without it and rewarding creators is
-important, even when they ignore your chosen platform.</p>
+important, even when they ignore your chosen platform ;)</p>
 </div>
 <div class="section" id="step">
 <h2>Step ∞<a class="headerlink" href="#step" title="Permalink to this headline">¶</a></h2>
@@ -673,7 +678,12 @@ years.</p>
       <div class="clearer"></div>
     </div>
     <div class="footer">
-      &copy;2009-2018  James Rowe.
+      
+         &copy;2009-2018  James Rowe, released under
+         <a href="http://creativecommons.org/licenses/by-sa/4.0/" rel="license">
+             Creative Commons Attribution-ShareAlike 4.0
+         </a> license.
+      
       
       |
       Powered by <a href="http://sphinx-doc.org/">Sphinx 1.8.1</a>

@@ -145,7 +145,7 @@ people don’t like standard &lt;strong class=&quot;command&quot;&gt;getopt&lt;/
 every other tool you use has chosen it.&lt;/p&gt;
 &lt;p&gt;Some of the interface decisions are actively bad, for example there appears to
 be no way to delegate password configuration to a trusted system service or even
-&lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;netrc&lt;/span&gt;&lt;/code&gt;.  Specifying passwords in &lt;abbr title=&quot;Uniform Resource Locator&quot;&gt;URL&lt;/abbr&gt;s on the command line is a &lt;strong&gt;huge&lt;/strong&gt;
+&lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;netrc&lt;/span&gt;&lt;/code&gt;.  Specifying passwords in &lt;abbr title=&quot;Uniform Resource Locator&quot;&gt;URL&lt;/abbr&gt;’s on the command line is a &lt;strong&gt;huge&lt;/strong&gt;
 anti-pattern, and I just hope you don’t have any multiseat systems if you’re
 using that method.&lt;/p&gt;
 &lt;/div&gt;

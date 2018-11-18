@@ -102,7 +102,8 @@ a buffer or database schema popups(like below).&lt;/p&gt;
 flip-flopping.&lt;/p&gt;
 &lt;p&gt;I will say that there isn’t much in it.  With a converging setup there are
 fewer and fewer differences to care about.  Things like the expression register
-usage above, or built-in versus external HTML preview for documents like this.&lt;/p&gt;
+usage above, or built-in versus external &lt;abbr title=&quot;HyperText Markup Language&quot;&gt;HTML&lt;/abbr&gt; preview for documents like
+this.&lt;/p&gt;
 &lt;p&gt;I’m actually wondering whether a &lt;a class=&quot;reference external&quot; href=&quot;https://neovim.io&quot;&gt;neovim&lt;/a&gt; client &lt;em&gt;in&lt;/em&gt; a &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;emacs&lt;/span&gt;&lt;/code&gt; frame would be
 the golden option.  If you know of such a thing or a better option, drop me
 a &lt;a class=&quot;reference external&quot; href=&quot;mailto:jnrowe&amp;#37;&amp;#52;&amp;#48;gmail&amp;#46;com&quot;&gt;mail&lt;/a&gt;!&lt;/p&gt;
@@ -267,7 +268,7 @@ or [hopefully] intriguing variations.&lt;/p&gt;
 a switch statement.&lt;/p&gt;
 &lt;/dd&gt;
 &lt;dt class=&quot;label&quot; id=&quot;id4&quot;&gt;&lt;span class=&quot;brackets&quot;&gt;&lt;a class=&quot;fn-backref&quot; href=&quot;#id2&quot;&gt;2&lt;/a&gt;&lt;/span&gt;&lt;/dt&gt;
-&lt;dd&gt;&lt;p&gt;No HTML link, as vimdoc is still on vim 7.3&lt;/p&gt;
+&lt;dd&gt;&lt;p&gt;No &lt;abbr title=&quot;HyperText Markup Language&quot;&gt;HTML&lt;/abbr&gt; link, as vimdoc is still on vim 7.3&lt;/p&gt;
 &lt;/dd&gt;
 &lt;/dl&gt;
 &lt;/div&gt;
