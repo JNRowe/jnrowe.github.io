@@ -1,7 +1,7 @@
 {% extends "alabaster/layout.html" %}
 
 {%- block extrabody %}
-    {%- if pagename is not index and pagename != 'projects' %}
+    {%- if 'index' not in pagename and pagename != 'projects' %}
         <p class="read-time">
             {#-
                 Super rough reading time estimation, but I appreciate it
@@ -14,7 +14,7 @@
 
     {{ super() }}
 
-    {%- if pagename is not index and 'blog/' not in pagename %}
+    {%- if 'index' not in pagename and 'blog/' not in pagename %}
         <hr>
 
         <p class="keybase-verify">
