@@ -14,9 +14,29 @@ MacOS that displays the “continual march toward death”.  That tool was
 `Progress Bar OSX`_, and it is pretty cool.  Sadly it is only available for
 MacOS, so we’ll need to make something similar.
 
-*All* popup problems on Linux should be solved with dzen_, it is awesome.  You
-know this because it comes equipped with the option to produce :abbr:`KITT
-(Knight Industries Two Thousand)` `Anamorphic Equalizer`_ emulation.
+.. raw:: html
+
+    <div class="h-review">
+        <p>
+            <span class="p-name">
+                <em>All</em> popup problems on
+                <span class="p-category">Linux</span>
+                should be solved with
+                <a href="https://github.com/robm/dzen" class"p-item h-item">
+                    dzen
+                </a>
+            </span>, it is
+            <data class="p-rating" value="5">awesome</data>.
+            <span class="e-content">
+                You know this because it comes equipped with the option to
+                produce
+                <abbr title="Knight Industries Two Thousand">KITT</abbr>
+                <a href="https://en.m.wikipedia.org/wiki/KITT">
+                    Anamorphic Equalizer</a>
+                emulation.
+            </span>
+        </p>
+    </div>
 
 .. figure:: /.images/kitt06.png
    :alt: Multi-band scanner in action
@@ -152,8 +172,6 @@ with :abbr:`DST (Daylight Saving Time)` transitions.
        years.
 
 .. _Progress Bar OSX: https://www.progressbarosx.com/
-.. _dzen: https://github.com/robm/dzen
-.. _Anamorphic Equalizer: https://en.m.wikipedia.org/wiki/KITT
 .. _Python: https://www.python.org/
 .. _HLS colour space: https://en.m.wikipedia.org/wiki/HLS_color_space
 .. _“Here be dragons”: https://en.m.wikipedia.org/wiki/Here_be_dragons
