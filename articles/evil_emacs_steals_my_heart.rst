@@ -121,7 +121,8 @@ flip-flopping.
 
 I will say that there isn’t much in it.  With a converging setup there are
 fewer and fewer differences to care about.  Things like the expression register
-usage above, or built-in versus external HTML preview for documents like this.
+usage above, or built-in versus external |HTML| preview for documents like
+this.
 
 I’m actually wondering whether a neovim_ client *in* a ``emacs`` frame would be
 the golden option.  If you know of such a thing or a better option, drop me

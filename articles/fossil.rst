@@ -155,7 +155,7 @@ every other tool you use has chosen it.
 
 Some of the interface decisions are actively bad, for example there appears to
 be no way to delegate password configuration to a trusted system service or even
-``netrc``.  Specifying passwords in |URL|\ s on the command line is a **huge**
+``netrc``.  Specifying passwords in |URL|\’s on the command line is a **huge**
 anti-pattern, and I just hope you don’t have any multiseat systems if you’re
 using that method.
 

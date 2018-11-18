@@ -151,7 +151,7 @@ or [hopefully] intriguing variations.
 
 .. [#] If add more branches you can also wonder why ``vimscript`` doesn’t have
        a switch statement.
-.. [#] No HTML link, as vimdoc is still on vim 7.3
+.. [#] No |HTML| link, as vimdoc is still on vim 7.3
 
 .. _taqua: https://www.vim.org/scripts/script.php?script_id=594
 .. _vim: http://www.vim.org
