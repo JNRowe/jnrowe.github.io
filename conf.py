@@ -38,6 +38,7 @@ templates_path = ['.templates', ablog.get_html_templates_path()]
 
 rst_epilog = """
 .. |CLA| replace:: :abbr:`CLA (Contributor License Agreement)`
+.. |DAG|  replace:: :abbr:`DAG (Directed Acyclic Graph)`
 .. |DVCS| replace:: :abbr:`DVCS (Distributed Version Control System)`
 .. |HTML| replace:: :abbr:`HTML (HyperText Markup Language)`
 .. |IRC| replace:: :abbr:`IRC (Internet Relay Chat)`

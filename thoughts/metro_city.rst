@@ -28,10 +28,10 @@ Notation)`, process it *somehow* and spit out results that could be used in an
 artsy manner that I would likely not understand.
 
 The initial concept worked by scanning a firehose of tweets for keywords which
-seemed likely to be hugely poisonous, and then create a :abbr:`DAG (Directed
-Acyclic Graph)` as the basis to rate users who were retweeting them.  Later
-versions were self-training using a naïve Bayes classifier, which allowed us to
-find offensive tweets using words I was previously happily unaware of.
+seemed likely to be hugely poisonous, and then create a |DAG| as the basis to
+rate users who were retweeting them.  Later versions were self-training using
+a naïve Bayes classifier, which allowed us to find offensive tweets using words
+I was previously happily unaware of.
 
 Early on it became obvious that another effect presented itself.  There were
 *masses* of users who were retweeting users who would later be banned, and
