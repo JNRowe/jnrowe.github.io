@@ -124,11 +124,11 @@ option you’d choose on their own.&lt;/p&gt;
 &lt;p&gt;The help output for new users is, in my opinion, really irritating.  The default
 command message tells you to run &lt;strong class=&quot;command&quot;&gt;fossil help&lt;/strong&gt; or &lt;strong class=&quot;command&quot;&gt;fossil
 help COMMAND&lt;/strong&gt;, without providing the names of any of the common commands.  The
-&lt;strong class=&quot;command&quot;&gt;fossil help&lt;/strong&gt; output emulates a &lt;strong class=&quot;command&quot;&gt;tsort&lt;/strong&gt; filter of the command
-names, listing commands with unique to &lt;strong class=&quot;command&quot;&gt;fossil&lt;/strong&gt; terminology and no
-short descriptions.  &lt;strong class=&quot;command&quot;&gt;fossil help --all&lt;/strong&gt; feels like it should be more
-useful, but just creates a larger table of commands with uncommon names and
-still no descriptions.&lt;/p&gt;
+&lt;strong class=&quot;command&quot;&gt;fossil help&lt;/strong&gt; output emulates a &lt;strong class=&quot;command&quot;&gt;column -t&lt;/strong&gt; filter of the
+command names, listing commands with unique to &lt;strong class=&quot;command&quot;&gt;fossil&lt;/strong&gt; terminology
+and no short descriptions.  &lt;strong class=&quot;command&quot;&gt;fossil help --all&lt;/strong&gt; feels like it should
+be more useful, but just creates a larger table of commands with uncommon names
+and still no descriptions.&lt;/p&gt;
 &lt;p&gt;It makes very little sense to organise the help in this manner because as you
 get used to the naming and non-standard option style you will need the help
 less.  I’ve patched this for our packages, and if people like it I’ll try to

@@ -1,0 +1,383 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title type="text">JNRowe - Posts tagged make</title>
+  <id>https://jnrowe.github.io/blog/tag/make/atom.xml</id>
+  <updated>2018-11-23T00:00:00Z</updated>
+  <link href="https://jnrowe.github.io/" />
+  <link href="https://jnrowe.github.io/blog/tag/make/atom.xml" rel="self" />
+  <subtitle type="text">Ramblings of a tired mind</subtitle>
+  <generator uri="http://ablog.readthedocs.org" version="0.9.2">ABlog</generator>
+  <entry xml:base="https://jnrowe.github.io/blog/tag/make/atom.xml">
+    <title type="text">while $sun; do make hay; done</title>
+    <id>https://jnrowe.github.io/articles/redo_ninja_make.html</id>
+    <updated>2018-11-23T00:00:00Z</updated>
+    <published>2018-11-23T00:00:00Z</published>
+    <link href="https://jnrowe.github.io/articles/redo_ninja_make.html" />
+    <author>
+      <name>James Rowe</name>
+    </author>
+    <content type="html">&lt;div class=&quot;section&quot; id=&quot;while-sun-do-make-hay-done&quot;&gt;
+
+&lt;div class=&quot;admonition warning&quot;&gt;
+&lt;p class=&quot;admonition-title&quot;&gt;Warning&lt;/p&gt;
+&lt;p&gt;This is a &lt;strong&gt;massive&lt;/strong&gt; brain dump, which I plan to rewrite in to a series at
+some point.  However, until that imaginary date arrives…&lt;/p&gt;
+&lt;/div&gt;
+&lt;p&gt;I have a fondness for &lt;a class=&quot;reference external&quot; href=&quot;https://en.m.wikipedia.org/wiki/Make_(software)&quot;&gt;make&lt;/a&gt;, but don’t quite know why.  On some days it is
+&lt;em&gt;the&lt;/em&gt; bane of my life, and I feel we could better.  It is, however, incredibly
+useful and allows us to perform so many of the repetitive tasks we in the
+software world have lucked ourselves in to.&lt;/p&gt;
+&lt;p&gt;One project that I’ve worked on for a decade has &lt;em&gt;ten thousand&lt;/em&gt; lines of hand
+written &lt;code class=&quot;file docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;Makefile&lt;/span&gt;&lt;/code&gt;s, which is just plain ridiculous.  Nobody should be
+hand writing that much build infrastructure, even if it started with good
+intentions and a scant 120 lines.&lt;/p&gt;
+&lt;div class=&quot;section&quot; id=&quot;which-make&quot;&gt;
+&lt;h2&gt;Which &lt;strong class=&quot;command&quot;&gt;make&lt;/strong&gt;?&lt;/h2&gt;
+&lt;p&gt;A hardly insignificant number of those 10,000 lines are to workaround
+incompatibilities in various tools that advertise themselves as &lt;strong class=&quot;command&quot;&gt;make&lt;/strong&gt;.
+Forcing a dependency on &lt;a class=&quot;reference external&quot; href=&quot;https://www.gnu.org/software/make/make.html&quot;&gt;GNU make&lt;/a&gt; wouldn’t suddenly drop the line count by
+60% or magically transform the robustness of our builds, but it would help.&lt;/p&gt;
+&lt;p&gt;I’ll take a tiny example from the project I’m working on right now.  Which
+common versions of &lt;strong class=&quot;command&quot;&gt;make&lt;/strong&gt; will it fail on and why?&lt;/p&gt;
+&lt;div class=&quot;highlight-make notranslate&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;MAKE_SUBDIRS &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;::&lt;/span&gt;= …
+
+&lt;span class=&quot;nf&quot;&gt;m/clean&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;$(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;subst&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;m&lt;/span&gt;/&lt;span class=&quot;nv&quot;&gt;clean&lt;/span&gt;,,&lt;span class=&quot;k&quot;&gt;$(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;MAKE_SUBDIRS&lt;/span&gt;:%=%/&lt;span class=&quot;nv&quot;&gt;clean&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;))&lt;/span&gt;
+    +echo &lt;span class=&quot;s2&quot;&gt;&amp;quot;Don’t use &amp;#39;make -n&amp;#39; to test without side effects either&amp;quot;&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;We even have a 800 line &lt;code class=&quot;file docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;Makefile.debug&lt;/span&gt;&lt;/code&gt; include which defines
+a namespace of subcommands(like the &lt;strong&gt;m&lt;/strong&gt;aintainer namespace above) to aid
+when the inevitable errors show up.  Most of the stuff in that file is
+&lt;em&gt;absolutely amazing&lt;/em&gt;, I’m working with a few genuine &lt;strong class=&quot;command&quot;&gt;make&lt;/strong&gt; masters.&lt;/p&gt;
+&lt;p&gt;I’m not a &lt;strong class=&quot;command&quot;&gt;make&lt;/strong&gt; master.&lt;/p&gt;
+&lt;p&gt;I often find myself forgetting which &lt;strong class=&quot;command&quot;&gt;make&lt;/strong&gt; supports some feature, or which one
+fails horribly when you use that one “standard” feature every &lt;strong class=&quot;command&quot;&gt;make&lt;/strong&gt; supports.
+Even in the minutia of the build there are things that are subobtimal, for
+example in the previously mentioned project there are a variety of suffix rules
+&lt;em&gt;and&lt;/em&gt; pattern rules which &lt;em&gt;could&lt;/em&gt; be uniform if only we’d managed to force
+a specific style&lt;a class=&quot;footnote-reference brackets&quot; href=&quot;#id8&quot; id=&quot;id1&quot;&gt;1&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Late last year I posted the following note:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;div&gt;&lt;p&gt;Just finished my 1º &lt;strong&gt;#guile&lt;/strong&gt; &lt;strong&gt;make&lt;/strong&gt; extension… &lt;abbr title=&quot;Today I Learned&quot;&gt;TIL&lt;/abbr&gt; none of our &lt;abbr title=&quot;Continuous Integration&quot;&gt;CI&lt;/abbr&gt; servers have
+&lt;strong&gt;#make&lt;/strong&gt; with &lt;strong&gt;#guile&lt;/strong&gt; support, and many devs have pre-GPL3 make.&lt;/p&gt;
+&lt;p class=&quot;attribution&quot;&gt;—&lt;a class=&quot;reference external&quot; href=&quot;https://jnrowe.github.io/mnotes/#2017-12-07T17:40:14+00:00&quot;&gt;2017-12-07T17:40:14+00:00&lt;/a&gt;&lt;/p&gt;
+&lt;/div&gt;&lt;/blockquote&gt;
+&lt;p&gt;It is still mostly true, our build servers and many developers still don’t have
+a &lt;a class=&quot;reference external&quot; href=&quot;https://www.gnu.org/software/guile/&quot;&gt;guile&lt;/a&gt; enabled &lt;a class=&quot;reference external&quot; href=&quot;https://www.gnu.org/software/make/make.html&quot;&gt;GNU make&lt;/a&gt;.  The build servers don’t because &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;guile&lt;/span&gt;&lt;/code&gt;
+support isn’t enabled in the packages for some reason, and the devs that use
+systems which refuse to ship a recent enough versions of &lt;a class=&quot;reference external&quot; href=&quot;https://www.gnu.org/software/make/make.html&quot;&gt;GNU make&lt;/a&gt; to avoid
+the GPLv3&lt;a class=&quot;footnote-reference brackets&quot; href=&quot;#id9&quot; id=&quot;id2&quot;&gt;2&lt;/a&gt; don’t have it either.&lt;/p&gt;
+&lt;p&gt;There has to be a better way…&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;section&quot; id=&quot;redo&quot;&gt;
+&lt;h2&gt;&lt;strong class=&quot;command&quot;&gt;redo&lt;/strong&gt;&lt;/h2&gt;
+&lt;p&gt;&lt;abbr title=&quot;Daniel J. Bernstein&quot;&gt;djb&lt;/abbr&gt;’s &lt;strong class=&quot;command&quot;&gt;redo&lt;/strong&gt; is a &lt;em&gt;huge&lt;/em&gt; step in the right
+direction&lt;a class=&quot;footnote-reference brackets&quot; href=&quot;#id10&quot; id=&quot;id3&quot;&gt;3&lt;/a&gt;, but its various implementations are plagued by many of the
+problems that &lt;strong class=&quot;command&quot;&gt;make&lt;/strong&gt; has.  There is &lt;em&gt;no&lt;/em&gt; single tool that can uniformly be
+recognised as &lt;strong class=&quot;command&quot;&gt;redo&lt;/strong&gt;, in fact it feels like somehow there are as many
+implementations of &lt;strong class=&quot;command&quot;&gt;redo&lt;/strong&gt; floating around as there are of &lt;strong class=&quot;command&quot;&gt;make&lt;/strong&gt; even though it
+&lt;em&gt;thirty years younger&lt;/em&gt;.&lt;/p&gt;
+&lt;p&gt;While &lt;strong class=&quot;command&quot;&gt;redo&lt;/strong&gt; is awesome in many of its implementations you find yourself having
+to remember the idiosyncrasies of yet another collection of slightly
+incompatible tools.  If you’re using Avery Pennarun’s popular &lt;a class=&quot;reference external&quot; href=&quot;https://github.com/apenwarr/redo/&quot;&gt;Python
+implementation&lt;/a&gt; then you may not remember to make your &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;.do&lt;/span&gt;&lt;/code&gt; files
+executable or to give them a proper &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;#!&lt;/span&gt;&lt;/code&gt; line, as it doesn’t necessarily
+require them.  If you using Jonathan de Boyne Pollard’s impressive &lt;a class=&quot;reference external&quot; href=&quot;http:/homepage.ntlworld.com./j.deboynepollard/Softwares/redo/&quot;&gt;C
+implementation&lt;/a&gt; you may not remember that you don’t have &lt;strong class=&quot;command&quot;&gt;redo-stamp&lt;/strong&gt;
+available to you.  As &lt;strong class=&quot;command&quot;&gt;redo&lt;/strong&gt; is less common specifying the &lt;em&gt;exact&lt;/em&gt; tool you’re
+calling &lt;strong class=&quot;command&quot;&gt;redo&lt;/strong&gt; is &lt;em&gt;far&lt;/em&gt; easier than with &lt;strong class=&quot;command&quot;&gt;make&lt;/strong&gt; though, and I’m yet to see an
+angry issue reported in projects that do so&lt;a class=&quot;footnote-reference brackets&quot; href=&quot;#id11&quot; id=&quot;id4&quot;&gt;4&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;So, once you’ve managed to keep your eyes on the shifting landscape — or have
+forced a specific implementation of &lt;strong class=&quot;command&quot;&gt;redo&lt;/strong&gt; — you have to turn your attention to
+your &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;.do&lt;/span&gt;&lt;/code&gt; files.  Is &lt;strong class=&quot;command&quot;&gt;/bin/sh&lt;/strong&gt; &lt;a class=&quot;reference external&quot; href=&quot;http://tiswww.case.edu/php/chet/bash/bashtop.html&quot;&gt;bash&lt;/a&gt;, &lt;a class=&quot;reference external&quot; href=&quot;http://gondor.apana.org.au/~herbert/dash/&quot;&gt;dash&lt;/a&gt;, or something else
+entirely?  Is that large &lt;strong class=&quot;command&quot;&gt;find&lt;/strong&gt; to &lt;strong class=&quot;command&quot;&gt;xargs&lt;/strong&gt; pipe you’re using
+to pump &lt;strong class=&quot;command&quot;&gt;redo-ifchange&lt;/strong&gt; going to fail because some platform’s
+&lt;strong class=&quot;command&quot;&gt;find&lt;/strong&gt; treats links differently?  Do you need to specify
+&lt;strong class=&quot;command&quot;&gt;gsed&lt;/strong&gt; on MacOS to work around issues with the default &lt;strong class=&quot;command&quot;&gt;sed&lt;/strong&gt;
+command?  As a first port of call &lt;em&gt;at least&lt;/em&gt; run &lt;strong class=&quot;command&quot;&gt;checkbashisms&lt;/strong&gt; from
+the &lt;a class=&quot;reference external&quot; href=&quot;https://packages.debian.org/devscripts&quot;&gt;devscripts&lt;/a&gt; package on your public &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;.do&lt;/span&gt;&lt;/code&gt; files.&lt;/p&gt;
+&lt;p&gt;I mean to an extent you need to be on top of these things in your &lt;strong class=&quot;command&quot;&gt;make&lt;/strong&gt; usage
+too, but you’re likely to have far more complex &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;.do&lt;/span&gt;&lt;/code&gt; files than the shell
+incantations in your rule’s recipes.&lt;/p&gt;
+&lt;div class=&quot;admonition tip&quot;&gt;
+&lt;p class=&quot;admonition-title&quot;&gt;Tip&lt;/p&gt;
+&lt;p&gt;If you’re using the Python &lt;strong class=&quot;command&quot;&gt;redo&lt;/strong&gt; implementation you should be considering
+the speed of the tools too, so as to not adversely affect your build times.
+For example, it is good practice to collect &lt;em&gt;all&lt;/em&gt; dependencies before
+calling &lt;strong class=&quot;command&quot;&gt;redo-ifchange&lt;/strong&gt; instead of staggering their addition
+throughout your &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;.do&lt;/span&gt;&lt;/code&gt; file as you encounter them.&lt;/p&gt;
+&lt;/div&gt;
+&lt;p&gt;All this is worth the cost though.  You end up with stable, self encapsulated
+build rules such as the following:&lt;/p&gt;
+&lt;div class=&quot;highlight-sh notranslate&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;redo-ifchange ./.meta/cc ./.meta/cflags
+&lt;span class=&quot;nb&quot;&gt;read&lt;/span&gt; cc &amp;lt; ./.meta/cc
+&lt;span class=&quot;nb&quot;&gt;read&lt;/span&gt; ccflags &amp;lt; ./.meta/cflags
+&lt;span class=&quot;nv&quot;&gt;$cc&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$cflags&lt;/span&gt; -o &lt;span class=&quot;s2&quot;&gt;&amp;quot;&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$3&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;&lt;/span&gt; -c &lt;span class=&quot;s2&quot;&gt;&amp;quot;&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$2&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;.c&amp;quot;&lt;/span&gt; -MD -MF &lt;span class=&quot;s2&quot;&gt;&amp;quot;&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$2&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;.d&amp;quot;&lt;/span&gt;
+sed -e &lt;span class=&quot;s2&quot;&gt;&amp;quot;s|^&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$3&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;:||&amp;quot;&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$2&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;.d&amp;quot;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;|&lt;/span&gt; xargs redo-ifchange
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;That is a cropped excerpt from a project’s &lt;code class=&quot;file docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;default.o.do&lt;/span&gt;&lt;/code&gt;.  It defines
+a rule that builds &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;.o&lt;/span&gt;&lt;/code&gt; files from their corresponding &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;.c&lt;/span&gt;&lt;/code&gt; file, and it
+makes sure those files are rebuilt in the event that you change the value of
+&lt;span class=&quot;target&quot; id=&quot;index-0&quot;&gt;&lt;/span&gt;&lt;a class=&quot;reference internal&quot; href=&quot;../../glossary.html#envvar-CC&quot;&gt;&lt;code class=&quot;xref std std-envvar docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;CC&lt;/span&gt;&lt;/code&gt;&lt;/a&gt; or &lt;span class=&quot;target&quot; id=&quot;index-1&quot;&gt;&lt;/span&gt;&lt;a class=&quot;reference internal&quot; href=&quot;../../glossary.html#envvar-CFLAGS&quot;&gt;&lt;code class=&quot;xref std std-envvar docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;CFLAGS&lt;/span&gt;&lt;/code&gt;&lt;/a&gt;.  It also handles &lt;em&gt;all&lt;/em&gt; the dependencies your
+&lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;#include&lt;/span&gt;&lt;/code&gt; directives gave by taking advantage of the compiler’s knowledge of
+the build.  Implementing the same functionality with &lt;strong class=&quot;command&quot;&gt;make&lt;/strong&gt; is far more
+convoluted, and requires a heap of code if you wish to use finer grained
+controls than simply rebuilding &lt;em&gt;everything&lt;/em&gt; by depending on your
+&lt;code class=&quot;file docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;Makefile&lt;/span&gt;&lt;/code&gt; from within your rules.&lt;/p&gt;
+&lt;p&gt;Still &lt;strong class=&quot;command&quot;&gt;redo&lt;/strong&gt; is a big leap forward from plain &lt;strong class=&quot;command&quot;&gt;make&lt;/strong&gt;, and I do recommend it.
+I even gave a talk on it at LoFu ‘16, and I know some people switched after
+hearing that as I’ve been fielding informal support requests ever since ;)&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;section&quot; id=&quot;gup&quot;&gt;
+&lt;h2&gt;&lt;strong class=&quot;command&quot;&gt;gup&lt;/strong&gt;&lt;/h2&gt;
+&lt;p&gt;I want to give &lt;a class=&quot;reference external&quot; href=&quot;https://github.com/timbertson/gup/&quot;&gt;Tim Cuthbertson’s gup&lt;/a&gt; an honourable mention here.  &lt;strong class=&quot;command&quot;&gt;gup&lt;/strong&gt; is
+an improved &lt;strong class=&quot;command&quot;&gt;redo&lt;/strong&gt; implementation, but is wholly incompatible with it.  It is
+available in both a &lt;a class=&quot;reference external&quot; href=&quot;https://github.com/timbertson/gup/tree/master/python&quot;&gt;Python&lt;/a&gt; and &lt;a class=&quot;reference external&quot; href=&quot;https://github.com/timbertson/gup/tree/master/ocaml&quot;&gt;ocaml&lt;/a&gt; version.  It fixes a few of the most
+annoying problems in &lt;strong class=&quot;command&quot;&gt;redo&lt;/strong&gt;, but operates in largely the same way conceptually.
+Any thing you’ve learnt from &lt;strong class=&quot;command&quot;&gt;redo&lt;/strong&gt; is easy to transfer, and you can update
+your builds to use &lt;strong class=&quot;command&quot;&gt;gup&lt;/strong&gt; with very little effort.&lt;/p&gt;
+&lt;p&gt;I’m a big fan of &lt;strong class=&quot;command&quot;&gt;gup&lt;/strong&gt;, and for a couple of years I even used it to power my
+home directory having &lt;span class=&quot;xref std std-doc&quot;&gt;moved on from make&lt;/span&gt;.  An
+excerpt from my homedir’s debug support can perhaps serve as an example of its
+usage:&lt;/p&gt;
+&lt;div class=&quot;highlight-sh notranslate&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&quot;ch&quot;&gt;#!sh&lt;/span&gt;
+
+&lt;span class=&quot;nv&quot;&gt;self&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;$(&lt;/span&gt;realpath &lt;span class=&quot;nv&quot;&gt;$0&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$self&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;si&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;HOME&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;}&lt;/span&gt;/gup/lib.sh &lt;span class=&quot;o&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;then&lt;/span&gt;
+    &lt;span class=&quot;nb&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$0&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;: Only for use within a gup file&amp;quot;&lt;/span&gt; &amp;gt;&lt;span class=&quot;p&quot;&gt;&amp;amp;&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;2&lt;/span&gt;
+    &lt;span class=&quot;nb&quot;&gt;exit&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;255&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;fi&lt;/span&gt;
+
+&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;GUP_XTRACE&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;:-&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;&lt;/span&gt; -eq &lt;span class=&quot;m&quot;&gt;1&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;set&lt;/span&gt; -x
+&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$GUP_VERBOSE&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;&lt;/span&gt; -ge &lt;span class=&quot;m&quot;&gt;1&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;set&lt;/span&gt; -v
+
+&lt;span class=&quot;nb&quot;&gt;set&lt;/span&gt; -eu
+
+gup -u &lt;span class=&quot;nv&quot;&gt;$self&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;Outside of my own projects I’ve never seen &lt;strong class=&quot;command&quot;&gt;gup&lt;/strong&gt; in use, which anecdotally
+makes it even less common than &lt;strong class=&quot;command&quot;&gt;redo&lt;/strong&gt;.  Whether that is a deal breaker for you
+isn’t for me to decide, but I would recommend that you check it out if you’re
+considering using &lt;strong class=&quot;command&quot;&gt;redo&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;I want to add a final note that Tim is nice to work with.  I’ve filed bugs in
+other projects that he maintains and it has been a good experience each time.
+I’m sure you’ll get the same great service if you were to find a problem in
+&lt;strong class=&quot;command&quot;&gt;gup&lt;/strong&gt;!&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;section&quot; id=&quot;ninja&quot;&gt;
+&lt;h2&gt;&lt;strong class=&quot;command&quot;&gt;ninja&lt;/strong&gt;&lt;/h2&gt;
+&lt;p&gt;Enter the &lt;a class=&quot;reference external&quot; href=&quot;https://ninja-build.org/&quot;&gt;ninja&lt;/a&gt;.  I’ve switched many projects to
+&lt;strong class=&quot;command&quot;&gt;ninja&lt;/strong&gt;, but not because it is my new favourite tool.  I’ve switched entirely
+because it &lt;em&gt;feels&lt;/em&gt; like it has the momentum to supplant &lt;strong class=&quot;command&quot;&gt;make&lt;/strong&gt;.  Given the
+choice I’d honestly rather see a &lt;strong class=&quot;command&quot;&gt;redo&lt;/strong&gt; implementation such as &lt;strong class=&quot;command&quot;&gt;gup&lt;/strong&gt; succeed,
+but &lt;strong class=&quot;command&quot;&gt;ninja&lt;/strong&gt; is a great alternative.&lt;/p&gt;
+&lt;div class=&quot;sidebar&quot;&gt;
+&lt;p class=&quot;sidebar-title&quot;&gt;Implementations&lt;/p&gt;
+&lt;p&gt;In a &lt;em&gt;massive&lt;/em&gt; change from the previous sections I can mention a tool with
+alternatives where compatibility is &lt;strong&gt;100%&lt;/strong&gt;.  &lt;a class=&quot;reference external&quot; href=&quot;https://github.com/michaelforney/samurai/&quot;&gt;samurai&lt;/a&gt; is an alternative
+&lt;strong class=&quot;command&quot;&gt;ninja&lt;/strong&gt; implementation which is drop-in replacement, without any
+incompatible features changes.  &lt;a class=&quot;reference external&quot; href=&quot;http://shakebuild.com/&quot;&gt;shake&lt;/a&gt; is an alternative build tool with
+support for processing &lt;code class=&quot;file docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;build.ninja&lt;/span&gt;&lt;/code&gt; baked in, and has some
+interesting functionality for inspecting your builds that &lt;strong class=&quot;command&quot;&gt;ninja&lt;/strong&gt; itself
+doesn’t provide.&lt;/p&gt;
+&lt;/div&gt;
+&lt;p&gt;I’ll make a confession here, my home directory now requires &lt;strong class=&quot;command&quot;&gt;ninja&lt;/strong&gt;.  Yes, my
+config files have made the progression from &lt;strong class=&quot;command&quot;&gt;make&lt;/strong&gt; to &lt;strong class=&quot;command&quot;&gt;redo&lt;/strong&gt; to &lt;strong class=&quot;command&quot;&gt;gup&lt;/strong&gt; and now
+to &lt;strong class=&quot;command&quot;&gt;ninja&lt;/strong&gt;.&lt;/p&gt;
+&lt;div class=&quot;highlight-console notranslate&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&quot;gp&quot;&gt;$&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;alias&lt;/span&gt; homeninja
+&lt;span class=&quot;go&quot;&gt;homeninja=&amp;#39;ninja -C ~ -j1&amp;#39;&lt;/span&gt;
+&lt;span class=&quot;gp&quot;&gt;$&lt;/span&gt; homeninja -t targets &lt;span class=&quot;p&quot;&gt;|&lt;/span&gt; wc -l
+&lt;span class=&quot;go&quot;&gt;423&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;figure&quot; id=&quot;id15&quot;&gt;
+&lt;img alt=&quot;Digraph of home directory’s top level build&quot; src=&quot;../../_images/homeninja.png&quot; style=&quot;width: 390.25px; height: 186.25px;&quot; /&gt;
+&lt;p class=&quot;caption&quot;&gt;&lt;span class=&quot;caption-text&quot;&gt;A chunk of the &lt;abbr title=&quot;Directed Acyclic Graph&quot;&gt;DAG&lt;/abbr&gt; for my home directory under &lt;strong class=&quot;command&quot;&gt;ninja&lt;/strong&gt;.  The full image is
+both &lt;em&gt;chock full&lt;/em&gt; of private data and 9 &lt;abbr title=&quot;MegaBytes&quot;&gt;MB&lt;/abbr&gt;(29000 pixels
+tall), so I’ll save all of us from that.&lt;/span&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;p&gt;We’ve already seen a benefit of &lt;strong class=&quot;command&quot;&gt;ninja&lt;/strong&gt; here, it can immediately display
+a &lt;abbr title=&quot;Directed Acyclic Graph&quot;&gt;DAG&lt;/abbr&gt; to help in debugging by giving the option &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;-t&lt;/span&gt; &lt;span class=&quot;pre&quot;&gt;graph&lt;/span&gt;&lt;/code&gt;.  While both
+&lt;strong class=&quot;command&quot;&gt;gup&lt;/strong&gt; and &lt;strong class=&quot;command&quot;&gt;redo&lt;/strong&gt; can be easily tamed to produce a simple &lt;a class=&quot;reference external&quot; href=&quot;https://www.graphviz.org/&quot;&gt;graphviz&lt;/a&gt; image as
+above&lt;a class=&quot;footnote-reference brackets&quot; href=&quot;#id12&quot; id=&quot;id5&quot;&gt;5&lt;/a&gt;, doing so with &lt;strong class=&quot;command&quot;&gt;make&lt;/strong&gt; is very difficult&lt;a class=&quot;footnote-reference brackets&quot; href=&quot;#id13&quot; id=&quot;id6&quot;&gt;6&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;strong class=&quot;command&quot;&gt;ninja&lt;/strong&gt; shares a lot in common with &lt;strong class=&quot;command&quot;&gt;redo&lt;/strong&gt;.  It automatically depends on its
+build rules, and any changes to them cleanly ripple out through the build.  It
+also makes adding computed dependencies very easy, although you need to mangle
+them &lt;em&gt;in to&lt;/em&gt; &lt;strong class=&quot;command&quot;&gt;make&lt;/strong&gt; format instead of extracting &lt;em&gt;from&lt;/em&gt; &lt;strong class=&quot;command&quot;&gt;make&lt;/strong&gt; format as you
+would have with &lt;strong class=&quot;command&quot;&gt;redo&lt;/strong&gt;.  An quick example of how to make &lt;a class=&quot;reference external&quot; href=&quot;http://docutils.sourceforge.net/&quot;&gt;docutils&lt;/a&gt; dependencies
+work is below:&lt;/p&gt;
+&lt;div class=&quot;highlight-ini notranslate&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;command&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;rst2html.py --record-dependencies $out.d.tmp $in $out; $&lt;/span&gt;
+&lt;span class=&quot;s&quot;&gt;    [ -f $out.d.tmp ] &amp;amp;&amp;amp; echo $out: $$(cat $out.d.tmp) &amp;gt; $out.d; $&lt;/span&gt;
+&lt;span class=&quot;s&quot;&gt;    rm -f $out.d.tmp&lt;/span&gt;
+&lt;span class=&quot;na&quot;&gt;depfile&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;$out.d&lt;/span&gt;
+&lt;span class=&quot;na&quot;&gt;deps&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;gcc&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;Of course we’re making trade offs at this point, and they are basically:&lt;/p&gt;
+&lt;table class=&quot;docutils&quot;&gt;
+&lt;colgroup&gt;
+&lt;col style=&quot;width: 19%&quot; /&gt;
+&lt;col style=&quot;width: 29%&quot; /&gt;
+&lt;col style=&quot;width: 52%&quot; /&gt;
+&lt;/colgroup&gt;
+&lt;thead&gt;
+&lt;tr class=&quot;row-odd&quot;&gt;&lt;th class=&quot;head&quot;&gt;&lt;p&gt;Tool&lt;/p&gt;&lt;/th&gt;
+&lt;th class=&quot;head&quot;&gt;&lt;p&gt;Simple tasks&lt;/p&gt;&lt;/th&gt;
+&lt;th class=&quot;head&quot;&gt;&lt;p&gt;Complex tasks&lt;/p&gt;&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr class=&quot;row-even&quot;&gt;&lt;td&gt;&lt;p&gt;&lt;strong class=&quot;command&quot;&gt;make&lt;/strong&gt;&lt;/p&gt;&lt;/td&gt;
+&lt;td&gt;&lt;p&gt;Easy&lt;/p&gt;&lt;/td&gt;
+&lt;td&gt;&lt;p&gt;Tricky, and brittle&lt;/p&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&quot;row-odd&quot;&gt;&lt;td&gt;&lt;p&gt;&lt;strong class=&quot;command&quot;&gt;redo&lt;/strong&gt;&lt;/p&gt;&lt;/td&gt;
+&lt;td&gt;&lt;p&gt;Easy&lt;/p&gt;&lt;/td&gt;
+&lt;td&gt;&lt;p&gt;Repetitive, but simple&lt;/p&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&quot;row-even&quot;&gt;&lt;td&gt;&lt;p&gt;&lt;strong class=&quot;command&quot;&gt;ninja&lt;/strong&gt;&lt;/p&gt;&lt;/td&gt;
+&lt;td&gt;&lt;p&gt;Easy&lt;/p&gt;&lt;/td&gt;
+&lt;td&gt;&lt;p&gt;Offload to another tool&lt;/p&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;&lt;strong class=&quot;command&quot;&gt;ninja&lt;/strong&gt; really does make the easy parts easy, and there are a variety of tools
+to work with more complex builds.  You might even find you can get away with
+a tiny bit of scripting around &lt;a class=&quot;reference external&quot; href=&quot;https://pypi.python.org/pypi/ninja_syntax&quot;&gt;ninja_syntax&lt;/a&gt;, but the manual work will
+quickly build up with that approach.&lt;/p&gt;
+&lt;div class=&quot;section&quot; id=&quot;meson&quot;&gt;
+&lt;h3&gt;&lt;strong class=&quot;command&quot;&gt;meson&lt;/strong&gt;&lt;/h3&gt;
+&lt;p&gt;The &lt;a class=&quot;reference external&quot; href=&quot;http://mesonbuild.com/&quot;&gt;meson build system&lt;/a&gt; is probably the frontrunner today.&lt;/p&gt;
+&lt;p&gt;In a move that feels like it is simply meant to &lt;a class=&quot;reference external&quot; href=&quot;http://suckless.org/philosophy/&quot;&gt;annoy the people behind
+suckless&lt;/a&gt; I use &lt;strong class=&quot;command&quot;&gt;meson&lt;/strong&gt; to build my &lt;a class=&quot;reference external&quot; href=&quot;https://dwm.suckless.org/&quot;&gt;dwm&lt;/a&gt; configuration.  Not because it is
+in an important choice, but simply because it was a small and simple package
+that made learning the basics of &lt;strong class=&quot;command&quot;&gt;meson&lt;/strong&gt; simple.  A trimmed down version of the
+&lt;code class=&quot;file docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;meson.build&lt;/span&gt;&lt;/code&gt; is below:&lt;/p&gt;
+&lt;div class=&quot;highlight-default notranslate&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;project&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;dwm&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;c&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;],&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;default_options&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;std=c99&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;],&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;license&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;MIT&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+
+&lt;span class=&quot;n&quot;&gt;fontconfig_dep&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;dependency&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;fontconfig&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;x11_dep&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;dependency&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;x11&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;xft_dep&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;dependency&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;xft&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;xinerama_dep&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;dependency&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;xinerama&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;required&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;false&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;xinerama_dep&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;found&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;add_project_arguments&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;-DXINERAMA&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;language&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;c&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;endif&lt;/span&gt;
+
+&lt;span class=&quot;n&quot;&gt;config_h&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;custom_target&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;gen-config&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;input&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;config.def.h&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+                         &lt;span class=&quot;n&quot;&gt;output&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;config.h&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+                         &lt;span class=&quot;n&quot;&gt;command&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;cp&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;--no-clobber&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;@INPUT@&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+                                   &lt;span class=&quot;s1&quot;&gt;&amp;#39;@OUTPUT@&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;])&lt;/span&gt;
+
+&lt;span class=&quot;n&quot;&gt;executable&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;dwm&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;drw.c&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;dwm.c&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;util.c&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;config_h&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt;
+           &lt;span class=&quot;n&quot;&gt;dependencies&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;fontconfig_dep&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;x11_dep&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;xft_dep&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;xinerama_dep&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt;
+           &lt;span class=&quot;n&quot;&gt;install&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;true&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+
+&lt;span class=&quot;n&quot;&gt;install_man&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;dwm.1&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;This is broadly comparable with an &lt;a class=&quot;reference external&quot; href=&quot;https://www.gnu.org/software/autoconf/&quot;&gt;autoconf&lt;/a&gt; and &lt;a class=&quot;reference external&quot; href=&quot;https://www.gnu.org/software/automake/&quot;&gt;automake&lt;/a&gt; solution for
+a similar task, albeit with far less behind the scenes complexity.  It is
+a superior solution to upstream’s choice of hand editing a &lt;code class=&quot;file docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;Makefile&lt;/span&gt;&lt;/code&gt;, as
+it handles rebuilds when you change options automatically too.&lt;/p&gt;
+&lt;p&gt;&lt;strong class=&quot;command&quot;&gt;meson&lt;/strong&gt; supports many languages out of the box; C, C++, &lt;a class=&quot;reference external&quot; href=&quot;https://wiki.gnome.org/Projects/Vala&quot;&gt;vala&lt;/a&gt;, &lt;a class=&quot;reference external&quot; href=&quot;https://www.rust-lang.org/&quot;&gt;rust&lt;/a&gt;, &amp;amp;c.  If
+you find yourself needing to add your own it is quite simple, just subclass
+&lt;a class=&quot;reference external&quot; href=&quot;https://github.com/mesonbuild/meson/blob/master/mesonbuild/compilers/compilers.py&quot;&gt;Compiler&lt;/a&gt; and set a few methods.  It took less than five minutes to add support
+for the transpiler we use on some of our projects&lt;a class=&quot;footnote-reference brackets&quot; href=&quot;#id14&quot; id=&quot;id7&quot;&gt;7&lt;/a&gt;, and probably another 10
+a few weeks later to tighten it up and add tests when &lt;strong class=&quot;command&quot;&gt;meson&lt;/strong&gt; support was
+merged.&lt;/p&gt;
+&lt;p&gt;In fact because &lt;strong class=&quot;command&quot;&gt;meson&lt;/strong&gt; is such a well defined wrapper around &lt;strong class=&quot;command&quot;&gt;ninja&lt;/strong&gt; I’d
+recommend it &lt;em&gt;after&lt;/em&gt; &lt;strong class=&quot;command&quot;&gt;ninja&lt;/strong&gt;.  If you start a small project where a simple
+static &lt;code class=&quot;file docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;build.ninja&lt;/span&gt;&lt;/code&gt; is enough, then “upgrading” to &lt;strong class=&quot;command&quot;&gt;meson&lt;/strong&gt; &lt;em&gt;iff&lt;/em&gt; the
+need arises at some point is really easy.&lt;/p&gt;
+&lt;div class=&quot;admonition hint&quot;&gt;
+&lt;p class=&quot;admonition-title&quot;&gt;Hint&lt;/p&gt;
+&lt;p&gt;Co-workers can see this in action in the &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;zephyr_ground_station&lt;/span&gt;&lt;/code&gt;
+repository.  I started out with mock up graphics from the Zephyr spec,
+added a manual &lt;code class=&quot;file docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;build.ninja&lt;/span&gt;&lt;/code&gt; as I started to code the interface,
+switched to a simple generated file using &lt;strong class=&quot;command&quot;&gt;ninja&lt;/strong&gt;’s &lt;a class=&quot;reference external&quot; href=&quot;https://pypi.python.org/pypi/ninja_syntax&quot;&gt;ninja_syntax&lt;/a&gt;
+module when the project grew, and eventually changed to &lt;strong class=&quot;command&quot;&gt;meson&lt;/strong&gt; with a few
+edits when the project was eventually greenlit.  It was a really clean
+process, and one I’d follow again.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;section&quot; id=&quot;googles-kati&quot;&gt;
+&lt;h3&gt;Google’s kati&lt;/h3&gt;
+&lt;p&gt;&lt;a class=&quot;reference external&quot; href=&quot;https://github.com/google/kati/&quot;&gt;kati&lt;/a&gt; is a nice first step if you’re currently using &lt;strong class=&quot;command&quot;&gt;make&lt;/strong&gt; and want to try out
+&lt;strong class=&quot;command&quot;&gt;ninja&lt;/strong&gt;.  It will generate a &lt;code class=&quot;file docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;build.ninja&lt;/span&gt;&lt;/code&gt; from your &lt;code class=&quot;file docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;Makefile&lt;/span&gt;&lt;/code&gt;,
+but it won’t be very idiomatic.&lt;/p&gt;
+&lt;p&gt;It does serve as an immediate example of the difference you get with a no-op
+build from &lt;strong class=&quot;command&quot;&gt;make&lt;/strong&gt; and &lt;strong class=&quot;command&quot;&gt;ninja&lt;/strong&gt; though, and sometimes that alone feels like
+enough to integrate &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;kati&lt;/span&gt;&lt;/code&gt; in to your build.&lt;/p&gt;
+&lt;p&gt;Because it mechanically converts rules from &lt;strong class=&quot;command&quot;&gt;make&lt;/strong&gt; to &lt;strong class=&quot;command&quot;&gt;ninja&lt;/strong&gt; it is incredibly
+verbose, but it does so in such a manner that it is easy to use the output as
+a basis for full switch.&lt;/p&gt;
+&lt;div class=&quot;admonition attention&quot;&gt;
+&lt;p class=&quot;admonition-title&quot;&gt;Attention&lt;/p&gt;
+&lt;p&gt;I should mention &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;cmake&lt;/span&gt;&lt;/code&gt; at least once, just so that readers know that
+I’m aware of it.  I’m ignoring it because of its inscrutable syntax, its
+&lt;em&gt;interesting&lt;/em&gt; &lt;a class=&quot;reference external&quot; href=&quot;https://pkgconfig.freedesktop.org/wiki/&quot;&gt;pkg-config&lt;/a&gt; story, its propensity for creating ten minute
+multi-pass pre-build steps, and its love for running the &lt;strong class=&quot;command&quot;&gt;cmake&lt;/strong&gt;
+binary thousands of times in each build.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;section&quot; id=&quot;conclusions&quot;&gt;
+&lt;h2&gt;Conclusions&lt;/h2&gt;
+&lt;p&gt;There are a lot of options available if you’re feeling growing pains with
+&lt;strong class=&quot;command&quot;&gt;make&lt;/strong&gt;, or are just looking to tighten up builds.  I’ve covered a few here, but
+there are many more out there.  I’ve ignored a few excellent options that
+fit within the realms of what we commonly refer to as a build system(&lt;a class=&quot;reference external&quot; href=&quot;https://premake.github.io/&quot;&gt;premake&lt;/a&gt;
+and &lt;a class=&quot;reference external&quot; href=&quot;http://gittup.org/tup&quot;&gt;tup&lt;/a&gt; both spring to mind), in part because I don’t have enough real world
+experience to comment on them.&lt;/p&gt;
+&lt;p&gt;This has turned in to a much longer document than I had originally envisioned,
+but I hope there is enough meat in to make that worthwhile.&lt;/p&gt;
+&lt;p&gt;Finally, in much the same way I tend to finish my build system talks with an
+offer to help in the final slide, I’ll add one here too .  If you’ve made it
+this far and need a little help, don’t hesitate to get in &lt;span class=&quot;xref std std-doc&quot;&gt;contact&lt;/span&gt;.&lt;/p&gt;
+&lt;p class=&quot;rubric&quot;&gt;Footnotes&lt;/p&gt;
+&lt;dl class=&quot;footnote brackets&quot;&gt;
+&lt;dt class=&quot;label&quot; id=&quot;id8&quot;&gt;&lt;span class=&quot;brackets&quot;&gt;&lt;a class=&quot;fn-backref&quot; href=&quot;#id1&quot;&gt;1&lt;/a&gt;&lt;/span&gt;&lt;/dt&gt;
+&lt;dd&gt;&lt;p&gt;From today that should be no more.  I’ve added a rule to break the build
+if you add a suffix rule, but I’m sure we’ll see some commentary on
+whether that was the right way to pin it.&lt;/p&gt;
+&lt;/dd&gt;
+&lt;dt class=&quot;label&quot; id=&quot;id9&quot;&gt;&lt;span class=&quot;brackets&quot;&gt;&lt;a class=&quot;fn-backref&quot; href=&quot;#id2&quot;&gt;2&lt;/a&gt;&lt;/span&gt;&lt;/dt&gt;
+&lt;dd&gt;&lt;p&gt;For the projects I’m currently working the number of devs using systems
+with pre-GPLv3 make is very low, but it is &lt;em&gt;entirely&lt;/em&gt; dependent on the
+ecosystem of a given project.&lt;/p&gt;
+&lt;/dd&gt;
+&lt;dt class=&quot;label&quot; id=&quot;id10&quot;&gt;&lt;span class=&quot;brackets&quot;&gt;&lt;a class=&quot;fn-backref&quot; href=&quot;#id3&quot;&gt;3&lt;/a&gt;&lt;/span&gt;&lt;/dt&gt;
+&lt;dd&gt;&lt;p&gt;It is defined only in &lt;a class=&quot;reference external&quot; href=&quot;http://cr.yp.to/redo.html&quot;&gt;a collection of short descriptions&lt;/a&gt; on djb’s
+website, and there is no known reference implementation.&lt;/p&gt;
+&lt;/dd&gt;
+&lt;dt class=&quot;label&quot; id=&quot;id11&quot;&gt;&lt;span class=&quot;brackets&quot;&gt;&lt;a class=&quot;fn-backref&quot; href=&quot;#id4&quot;&gt;4&lt;/a&gt;&lt;/span&gt;&lt;/dt&gt;
+&lt;dd&gt;&lt;p&gt;This is defintely not true of &lt;strong class=&quot;command&quot;&gt;make&lt;/strong&gt; requirements, I’ve seen many angry
+bugs filed when builds only work with &lt;a class=&quot;reference external&quot; href=&quot;https://www.gnu.org/software/make/make.html&quot;&gt;GNU make&lt;/a&gt;.&lt;/p&gt;
+&lt;/dd&gt;
+&lt;dt class=&quot;label&quot; id=&quot;id12&quot;&gt;&lt;span class=&quot;brackets&quot;&gt;&lt;a class=&quot;fn-backref&quot; href=&quot;#id5&quot;&gt;5&lt;/a&gt;&lt;/span&gt;&lt;/dt&gt;
+&lt;dd&gt;&lt;p&gt;Avery Pennarun’s &lt;a class=&quot;reference external&quot; href=&quot;https://github.com/apenwarr/redo/&quot;&gt;Python implementation&lt;/a&gt; of &lt;strong class=&quot;command&quot;&gt;redo&lt;/strong&gt; outputs its progress
+as depth indented text, so is easy to transform in to a &lt;strong class=&quot;command&quot;&gt;dot&lt;/strong&gt;
+compliant input.  For instance, here is my &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;dzen2&lt;/span&gt;&lt;/code&gt; tree as built by
+&lt;strong class=&quot;command&quot;&gt;redo&lt;/strong&gt;:&lt;/p&gt;
+&lt;img alt=&quot;Digraph of dzen2 build with redo&quot; src=&quot;../../_images/dzen.png&quot; style=&quot;width: 487.41px; height: 163.68px;&quot; /&gt;
+&lt;/dd&gt;
+&lt;dt class=&quot;label&quot; id=&quot;id13&quot;&gt;&lt;span class=&quot;brackets&quot;&gt;&lt;a class=&quot;fn-backref&quot; href=&quot;#id6&quot;&gt;6&lt;/a&gt;&lt;/span&gt;&lt;/dt&gt;
+&lt;dd&gt;&lt;p&gt;A search yields a few attempts to do so, many requiring large runtimes
+and all with a list of limitations likely to fall far below a projects
+actual usage of &lt;strong class=&quot;command&quot;&gt;make&lt;/strong&gt;.  The two I popped open rely on parsing the
+output from &lt;strong class=&quot;command&quot;&gt;make -pn&lt;/strong&gt; for example, and neither took in to
+account &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;+&lt;/span&gt;&lt;/code&gt; code execution either.&lt;/p&gt;
+&lt;/dd&gt;
+&lt;dt class=&quot;label&quot; id=&quot;id14&quot;&gt;&lt;span class=&quot;brackets&quot;&gt;&lt;a class=&quot;fn-backref&quot; href=&quot;#id7&quot;&gt;7&lt;/a&gt;&lt;/span&gt;&lt;/dt&gt;
+&lt;dd&gt;&lt;p&gt;If you need a custom compiler the &lt;a class=&quot;reference external&quot; href=&quot;https://github.com/mesonbuild/meson/blob/master/mesonbuild/compilers/vala.py&quot;&gt;vala support&lt;/a&gt; is probably a good
+starting point as it is not too complex, and implements a good subset of
+required interface.&lt;/p&gt;
+&lt;/dd&gt;
+&lt;/dl&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</content>
+  </entry>
+</feed>

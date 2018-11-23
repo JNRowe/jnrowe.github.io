@@ -1,0 +1,978 @@
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" />
+    <title>while $sun; do make hay; done &#8212; JNRowe</title>
+    <link rel="stylesheet" href="../_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/custom.css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <link rel="canonical" href="https://jnrowe.github.io/articles/redo_ninja_make.html" />
+    <link rel="shortcut icon" href="../_static/icon.ico"/>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="copyright" title="Copyright" href="../copyright.html" />
+    <link rel="next" title="TDD distro development" href="tdd_distros.html" />
+    <link rel="prev" title="Introduction to RCS" href="rcs.html" />
+  
+   
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  
+  <link rel="alternate" type="application/atom+xml"  href="../blog/atom.xml" title="JNRowe">
+  
+  
+  <style type="text/css">
+    ul.ablog-archive {list-style: none; overflow: auto; margin-left: 0px}
+    ul.ablog-archive li {float: left; margin-right: 5px; font-size: 80%}
+    ul.postlist a {font-style: italic;}
+    ul.postlist-style-disc {list-style-type: disc;}
+    ul.postlist-style-none {list-style-type: none;}
+    ul.postlist-style-circle {list-style-type: circle;}
+  </style>
+    <link href="https://jnrowe.github.io/" rel="me" />
+  
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+    <p class="read-time">
+      <b>Estimated reading time</b>:
+      12 minutes
+    </p>
+  
+
+  <div class="section" id="while-sun-do-make-hay-done">
+<h1>while $sun; do <strong class="command">make</strong> hay; done<a class="headerlink" href="#while-sun-do-make-hay-done" title="Permalink to this headline">¶</a></h1>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>This is a <strong>massive</strong> brain dump, which I plan to rewrite in to a series at
+some point.  However, until that imaginary date arrives…</p>
+</div>
+<p>I have a fondness for <a class="reference external" href="https://en.m.wikipedia.org/wiki/Make_(software)">make</a>, but don’t quite know why.  On some days it is
+<em>the</em> bane of my life, and I feel we could better.  It is, however, incredibly
+useful and allows us to perform so many of the repetitive tasks we in the
+software world have lucked ourselves in to.</p>
+<p>One project that I’ve worked on for a decade has <em>ten thousand</em> lines of hand
+written <code class="file docutils literal notranslate"><span class="pre">Makefile</span></code>s, which is just plain ridiculous.  Nobody should be
+hand writing that much build infrastructure, even if it started with good
+intentions and a scant 120 lines.</p>
+<div class="section" id="which-make">
+<h2>Which <strong class="command">make</strong>?<a class="headerlink" href="#which-make" title="Permalink to this headline">¶</a></h2>
+<p>A hardly insignificant number of those 10,000 lines are to workaround
+incompatibilities in various tools that advertise themselves as <strong class="command">make</strong>.
+Forcing a dependency on <a class="reference external" href="https://www.gnu.org/software/make/make.html">GNU make</a> wouldn’t suddenly drop the line count by
+60% or magically transform the robustness of our builds, but it would help.</p>
+<p>I’ll take a tiny example from the project I’m working on right now.  Which
+common versions of <strong class="command">make</strong> will it fail on and why?</p>
+<div class="highlight-make notranslate"><div class="highlight"><pre><span></span><span class="nf">MAKE_SUBDIRS </span><span class="o">::</span>= …
+
+<span class="nf">m/clean</span><span class="o">:</span> <span class="k">$(</span><span class="nv">subst</span> <span class="nv">m</span>/<span class="nv">clean</span>,,<span class="k">$(</span><span class="nv">MAKE_SUBDIRS</span>:%=%/<span class="nv">clean</span><span class="k">))</span>
+    +echo <span class="s2">&quot;Don’t use &#39;make -n&#39; to test without side effects either&quot;</span>
+</pre></div>
+</div>
+<p>We even have a 800 line <code class="file docutils literal notranslate"><span class="pre">Makefile.debug</span></code> include which defines
+a namespace of subcommands(like the <strong>m</strong>aintainer namespace above) to aid
+when the inevitable errors show up.  Most of the stuff in that file is
+<em>absolutely amazing</em>, I’m working with a few genuine <strong class="command">make</strong> masters.</p>
+<p>I’m not a <strong class="command">make</strong> master.</p>
+<p>I often find myself forgetting which <strong class="command">make</strong> supports some feature, or which one
+fails horribly when you use that one “standard” feature every <strong class="command">make</strong> supports.
+Even in the minutia of the build there are things that are subobtimal, for
+example in the previously mentioned project there are a variety of suffix rules
+<em>and</em> pattern rules which <em>could</em> be uniform if only we’d managed to force
+a specific style<a class="footnote-reference brackets" href="#id8" id="id1">1</a>.</p>
+<p>Late last year I posted the following note:</p>
+<blockquote>
+<div><p>Just finished my 1º <strong>#guile</strong> <strong>make</strong> extension… <abbr title="Today I Learned">TIL</abbr> none of our <abbr title="Continuous Integration">CI</abbr> servers have
+<strong>#make</strong> with <strong>#guile</strong> support, and many devs have pre-GPL3 make.</p>
+<p class="attribution">—<a class="reference external" href="https://jnrowe.github.io/mnotes/#2017-12-07T17:40:14+00:00">2017-12-07T17:40:14+00:00</a></p>
+</div></blockquote>
+<p>It is still mostly true, our build servers and many developers still don’t have
+a <a class="reference external" href="https://www.gnu.org/software/guile/">guile</a> enabled <a class="reference external" href="https://www.gnu.org/software/make/make.html">GNU make</a>.  The build servers don’t because <code class="docutils literal notranslate"><span class="pre">guile</span></code>
+support isn’t enabled in the packages for some reason, and the devs that use
+systems which refuse to ship a recent enough versions of <a class="reference external" href="https://www.gnu.org/software/make/make.html">GNU make</a> to avoid
+the GPLv3<a class="footnote-reference brackets" href="#id9" id="id2">2</a> don’t have it either.</p>
+<p>There has to be a better way…</p>
+</div>
+<div class="section" id="redo">
+<h2><strong class="command">redo</strong><a class="headerlink" href="#redo" title="Permalink to this headline">¶</a></h2>
+<p><abbr title="Daniel J. Bernstein">djb</abbr>’s <strong class="command">redo</strong> is a <em>huge</em> step in the right
+direction<a class="footnote-reference brackets" href="#id10" id="id3">3</a>, but its various implementations are plagued by many of the
+problems that <strong class="command">make</strong> has.  There is <em>no</em> single tool that can uniformly be
+recognised as <strong class="command">redo</strong>, in fact it feels like somehow there are as many
+implementations of <strong class="command">redo</strong> floating around as there are of <strong class="command">make</strong> even though it
+<em>thirty years younger</em>.</p>
+<p>While <strong class="command">redo</strong> is awesome in many of its implementations you find yourself having
+to remember the idiosyncrasies of yet another collection of slightly
+incompatible tools.  If you’re using Avery Pennarun’s popular <a class="reference external" href="https://github.com/apenwarr/redo/">Python
+implementation</a> then you may not remember to make your <code class="docutils literal notranslate"><span class="pre">.do</span></code> files
+executable or to give them a proper <code class="docutils literal notranslate"><span class="pre">#!</span></code> line, as it doesn’t necessarily
+require them.  If you using Jonathan de Boyne Pollard’s impressive <a class="reference external" href="http:/homepage.ntlworld.com./j.deboynepollard/Softwares/redo/">C
+implementation</a> you may not remember that you don’t have <strong class="command">redo-stamp</strong>
+available to you.  As <strong class="command">redo</strong> is less common specifying the <em>exact</em> tool you’re
+calling <strong class="command">redo</strong> is <em>far</em> easier than with <strong class="command">make</strong> though, and I’m yet to see an
+angry issue reported in projects that do so<a class="footnote-reference brackets" href="#id11" id="id4">4</a>.</p>
+<p>So, once you’ve managed to keep your eyes on the shifting landscape — or have
+forced a specific implementation of <strong class="command">redo</strong> — you have to turn your attention to
+your <code class="docutils literal notranslate"><span class="pre">.do</span></code> files.  Is <strong class="command">/bin/sh</strong> <a class="reference external" href="http://tiswww.case.edu/php/chet/bash/bashtop.html">bash</a>, <a class="reference external" href="http://gondor.apana.org.au/~herbert/dash/">dash</a>, or something else
+entirely?  Is that large <strong class="command">find</strong> to <strong class="command">xargs</strong> pipe you’re using
+to pump <strong class="command">redo-ifchange</strong> going to fail because some platform’s
+<strong class="command">find</strong> treats links differently?  Do you need to specify
+<strong class="command">gsed</strong> on MacOS to work around issues with the default <strong class="command">sed</strong>
+command?  As a first port of call <em>at least</em> run <strong class="command">checkbashisms</strong> from
+the <a class="reference external" href="https://packages.debian.org/devscripts">devscripts</a> package on your public <code class="docutils literal notranslate"><span class="pre">.do</span></code> files.</p>
+<p>I mean to an extent you need to be on top of these things in your <strong class="command">make</strong> usage
+too, but you’re likely to have far more complex <code class="docutils literal notranslate"><span class="pre">.do</span></code> files than the shell
+incantations in your rule’s recipes.</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>If you’re using the Python <strong class="command">redo</strong> implementation you should be considering
+the speed of the tools too, so as to not adversely affect your build times.
+For example, it is good practice to collect <em>all</em> dependencies before
+calling <strong class="command">redo-ifchange</strong> instead of staggering their addition
+throughout your <code class="docutils literal notranslate"><span class="pre">.do</span></code> file as you encounter them.</p>
+</div>
+<p>All this is worth the cost though.  You end up with stable, self encapsulated
+build rules such as the following:</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>redo-ifchange ./.meta/cc ./.meta/cflags
+<span class="nb">read</span> cc &lt; ./.meta/cc
+<span class="nb">read</span> ccflags &lt; ./.meta/cflags
+<span class="nv">$cc</span> <span class="nv">$cflags</span> -o <span class="s2">&quot;</span><span class="nv">$3</span><span class="s2">&quot;</span> -c <span class="s2">&quot;</span><span class="nv">$2</span><span class="s2">.c&quot;</span> -MD -MF <span class="s2">&quot;</span><span class="nv">$2</span><span class="s2">.d&quot;</span>
+sed -e <span class="s2">&quot;s|^</span><span class="nv">$3</span><span class="s2">:||&quot;</span> <span class="s2">&quot;</span><span class="nv">$2</span><span class="s2">.d&quot;</span> <span class="p">|</span> xargs redo-ifchange
+</pre></div>
+</div>
+<p>That is a cropped excerpt from a project’s <code class="file docutils literal notranslate"><span class="pre">default.o.do</span></code>.  It defines
+a rule that builds <code class="docutils literal notranslate"><span class="pre">.o</span></code> files from their corresponding <code class="docutils literal notranslate"><span class="pre">.c</span></code> file, and it
+makes sure those files are rebuilt in the event that you change the value of
+<span class="target" id="index-0"></span><a class="reference internal" href="../glossary.html#envvar-CC"><code class="xref std std-envvar docutils literal notranslate"><span class="pre">CC</span></code></a> or <span class="target" id="index-1"></span><a class="reference internal" href="../glossary.html#envvar-CFLAGS"><code class="xref std std-envvar docutils literal notranslate"><span class="pre">CFLAGS</span></code></a>.  It also handles <em>all</em> the dependencies your
+<code class="docutils literal notranslate"><span class="pre">#include</span></code> directives gave by taking advantage of the compiler’s knowledge of
+the build.  Implementing the same functionality with <strong class="command">make</strong> is far more
+convoluted, and requires a heap of code if you wish to use finer grained
+controls than simply rebuilding <em>everything</em> by depending on your
+<code class="file docutils literal notranslate"><span class="pre">Makefile</span></code> from within your rules.</p>
+<p>Still <strong class="command">redo</strong> is a big leap forward from plain <strong class="command">make</strong>, and I do recommend it.
+I even gave a talk on it at LoFu ‘16, and I know some people switched after
+hearing that as I’ve been fielding informal support requests ever since ;)</p>
+</div>
+<div class="section" id="gup">
+<h2><strong class="command">gup</strong><a class="headerlink" href="#gup" title="Permalink to this headline">¶</a></h2>
+<p>I want to give <a class="reference external" href="https://github.com/timbertson/gup/">Tim Cuthbertson’s gup</a> an honourable mention here.  <strong class="command">gup</strong> is
+an improved <strong class="command">redo</strong> implementation, but is wholly incompatible with it.  It is
+available in both a <a class="reference external" href="https://github.com/timbertson/gup/tree/master/python">Python</a> and <a class="reference external" href="https://github.com/timbertson/gup/tree/master/ocaml">ocaml</a> version.  It fixes a few of the most
+annoying problems in <strong class="command">redo</strong>, but operates in largely the same way conceptually.
+Any thing you’ve learnt from <strong class="command">redo</strong> is easy to transfer, and you can update
+your builds to use <strong class="command">gup</strong> with very little effort.</p>
+<p>I’m a big fan of <strong class="command">gup</strong>, and for a couple of years I even used it to power my
+home directory having <a class="reference internal" href="tips/Making_a_nice_home.html"><span class="doc">moved on from make</span></a>.  An
+excerpt from my homedir’s debug support can perhaps serve as an example of its
+usage:</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span><span class="ch">#!sh</span>
+
+<span class="nv">self</span><span class="o">=</span><span class="k">$(</span>realpath <span class="nv">$0</span><span class="k">)</span>
+<span class="k">if</span> <span class="o">[</span> <span class="nv">$self</span> <span class="o">=</span> <span class="si">${</span><span class="nv">HOME</span><span class="si">}</span>/gup/lib.sh <span class="o">]</span><span class="p">;</span> <span class="k">then</span>
+    <span class="nb">echo</span> <span class="s2">&quot;</span><span class="nv">$0</span><span class="s2">: Only for use within a gup file&quot;</span> &gt;<span class="p">&amp;</span><span class="m">2</span>
+    <span class="nb">exit</span> <span class="m">255</span>
+<span class="k">fi</span>
+
+<span class="o">[</span> <span class="s2">&quot;</span><span class="si">${</span><span class="nv">GUP_XTRACE</span><span class="k">:-</span><span class="nv">0</span><span class="si">}</span><span class="s2">&quot;</span> -eq <span class="m">1</span> <span class="o">]</span> <span class="o">&amp;&amp;</span> <span class="nb">set</span> -x
+<span class="o">[</span> <span class="s2">&quot;</span><span class="nv">$GUP_VERBOSE</span><span class="s2">&quot;</span> -ge <span class="m">1</span> <span class="o">]</span> <span class="o">&amp;&amp;</span> <span class="nb">set</span> -v
+
+<span class="nb">set</span> -eu
+
+gup -u <span class="nv">$self</span>
+</pre></div>
+</div>
+<p>Outside of my own projects I’ve never seen <strong class="command">gup</strong> in use, which anecdotally
+makes it even less common than <strong class="command">redo</strong>.  Whether that is a deal breaker for you
+isn’t for me to decide, but I would recommend that you check it out if you’re
+considering using <strong class="command">redo</strong>.</p>
+<p>I want to add a final note that Tim is nice to work with.  I’ve filed bugs in
+other projects that he maintains and it has been a good experience each time.
+I’m sure you’ll get the same great service if you were to find a problem in
+<strong class="command">gup</strong>!</p>
+</div>
+<div class="section" id="ninja">
+<h2><strong class="command">ninja</strong><a class="headerlink" href="#ninja" title="Permalink to this headline">¶</a></h2>
+<p>Enter the <a class="reference external" href="https://ninja-build.org/">ninja</a>.  I’ve switched many projects to
+<strong class="command">ninja</strong>, but not because it is my new favourite tool.  I’ve switched entirely
+because it <em>feels</em> like it has the momentum to supplant <strong class="command">make</strong>.  Given the
+choice I’d honestly rather see a <strong class="command">redo</strong> implementation such as <strong class="command">gup</strong> succeed,
+but <strong class="command">ninja</strong> is a great alternative.</p>
+<div class="sidebar">
+<p class="sidebar-title">Implementations</p>
+<p>In a <em>massive</em> change from the previous sections I can mention a tool with
+alternatives where compatibility is <strong>100%</strong>.  <a class="reference external" href="https://github.com/michaelforney/samurai/">samurai</a> is an alternative
+<strong class="command">ninja</strong> implementation which is drop-in replacement, without any
+incompatible features changes.  <a class="reference external" href="http://shakebuild.com/">shake</a> is an alternative build tool with
+support for processing <code class="file docutils literal notranslate"><span class="pre">build.ninja</span></code> baked in, and has some
+interesting functionality for inspecting your builds that <strong class="command">ninja</strong> itself
+doesn’t provide.</p>
+</div>
+<p>I’ll make a confession here, my home directory now requires <strong class="command">ninja</strong>.  Yes, my
+config files have made the progression from <strong class="command">make</strong> to <strong class="command">redo</strong> to <strong class="command">gup</strong> and now
+to <strong class="command">ninja</strong>.</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> <span class="nb">alias</span> homeninja
+<span class="go">homeninja=&#39;ninja -C ~ -j1&#39;</span>
+<span class="gp">$</span> homeninja -t targets <span class="p">|</span> wc -l
+<span class="go">423</span>
+</pre></div>
+</div>
+<div class="figure" id="id15">
+<a class="reference internal image-reference" href="../_images/homeninja.png"><img alt="Digraph of home directory’s top level build" src="../_images/homeninja.png" style="width: 390.25px; height: 186.25px;" /></a>
+<p class="caption"><span class="caption-text">A chunk of the <abbr title="Directed Acyclic Graph">DAG</abbr> for my home directory under <strong class="command">ninja</strong>.  The full image is
+both <em>chock full</em> of private data and 9 <abbr title="MegaBytes">MB</abbr>(29000 pixels
+tall), so I’ll save all of us from that.</span></p>
+</div>
+<p>We’ve already seen a benefit of <strong class="command">ninja</strong> here, it can immediately display
+a <abbr title="Directed Acyclic Graph">DAG</abbr> to help in debugging by giving the option <code class="docutils literal notranslate"><span class="pre">-t</span> <span class="pre">graph</span></code>.  While both
+<strong class="command">gup</strong> and <strong class="command">redo</strong> can be easily tamed to produce a simple <a class="reference external" href="https://www.graphviz.org/">graphviz</a> image as
+above<a class="footnote-reference brackets" href="#id12" id="id5">5</a>, doing so with <strong class="command">make</strong> is very difficult<a class="footnote-reference brackets" href="#id13" id="id6">6</a>.</p>
+<p><strong class="command">ninja</strong> shares a lot in common with <strong class="command">redo</strong>.  It automatically depends on its
+build rules, and any changes to them cleanly ripple out through the build.  It
+also makes adding computed dependencies very easy, although you need to mangle
+them <em>in to</em> <strong class="command">make</strong> format instead of extracting <em>from</em> <strong class="command">make</strong> format as you
+would have with <strong class="command">redo</strong>.  An quick example of how to make <a class="reference external" href="http://docutils.sourceforge.net/">docutils</a> dependencies
+work is below:</p>
+<div class="highlight-ini notranslate"><div class="highlight"><pre><span></span><span class="na">command</span> <span class="o">=</span> <span class="s">rst2html.py --record-dependencies $out.d.tmp $in $out; $</span>
+<span class="s">    [ -f $out.d.tmp ] &amp;&amp; echo $out: $$(cat $out.d.tmp) &gt; $out.d; $</span>
+<span class="s">    rm -f $out.d.tmp</span>
+<span class="na">depfile</span> <span class="o">=</span> <span class="s">$out.d</span>
+<span class="na">deps</span> <span class="o">=</span> <span class="s">gcc</span>
+</pre></div>
+</div>
+<p>Of course we’re making trade offs at this point, and they are basically:</p>
+<table class="docutils">
+<colgroup>
+<col style="width: 19%" />
+<col style="width: 29%" />
+<col style="width: 52%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Tool</p></th>
+<th class="head"><p>Simple tasks</p></th>
+<th class="head"><p>Complex tasks</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><strong class="command">make</strong></p></td>
+<td><p>Easy</p></td>
+<td><p>Tricky, and brittle</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong class="command">redo</strong></p></td>
+<td><p>Easy</p></td>
+<td><p>Repetitive, but simple</p></td>
+</tr>
+<tr class="row-even"><td><p><strong class="command">ninja</strong></p></td>
+<td><p>Easy</p></td>
+<td><p>Offload to another tool</p></td>
+</tr>
+</tbody>
+</table>
+<p><strong class="command">ninja</strong> really does make the easy parts easy, and there are a variety of tools
+to work with more complex builds.  You might even find you can get away with
+a tiny bit of scripting around <a class="reference external" href="https://pypi.python.org/pypi/ninja_syntax">ninja_syntax</a>, but the manual work will
+quickly build up with that approach.</p>
+<div class="section" id="meson">
+<h3><strong class="command">meson</strong><a class="headerlink" href="#meson" title="Permalink to this headline">¶</a></h3>
+<p>The <a class="reference external" href="http://mesonbuild.com/">meson build system</a> is probably the frontrunner today.</p>
+<p>In a move that feels like it is simply meant to <a class="reference external" href="http://suckless.org/philosophy/">annoy the people behind
+suckless</a> I use <strong class="command">meson</strong> to build my <a class="reference external" href="https://dwm.suckless.org/">dwm</a> configuration.  Not because it is
+in an important choice, but simply because it was a small and simple package
+that made learning the basics of <strong class="command">meson</strong> simple.  A trimmed down version of the
+<code class="file docutils literal notranslate"><span class="pre">meson.build</span></code> is below:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">project</span><span class="p">(</span><span class="s1">&#39;dwm&#39;</span><span class="p">,</span> <span class="p">[</span><span class="s1">&#39;c&#39;</span><span class="p">,</span> <span class="p">],</span> <span class="n">default_options</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;std=c99&#39;</span><span class="p">,</span> <span class="p">],</span> <span class="n">license</span><span class="p">:</span> <span class="s1">&#39;MIT&#39;</span><span class="p">)</span>
+
+<span class="n">fontconfig_dep</span> <span class="o">=</span> <span class="n">dependency</span><span class="p">(</span><span class="s1">&#39;fontconfig&#39;</span><span class="p">)</span>
+<span class="n">x11_dep</span> <span class="o">=</span> <span class="n">dependency</span><span class="p">(</span><span class="s1">&#39;x11&#39;</span><span class="p">)</span>
+<span class="n">xft_dep</span> <span class="o">=</span> <span class="n">dependency</span><span class="p">(</span><span class="s1">&#39;xft&#39;</span><span class="p">)</span>
+<span class="n">xinerama_dep</span> <span class="o">=</span> <span class="n">dependency</span><span class="p">(</span><span class="s1">&#39;xinerama&#39;</span><span class="p">,</span> <span class="n">required</span><span class="p">:</span> <span class="n">false</span><span class="p">)</span>
+<span class="k">if</span> <span class="n">xinerama_dep</span><span class="o">.</span><span class="n">found</span><span class="p">()</span>
+    <span class="n">add_project_arguments</span><span class="p">(</span><span class="s1">&#39;-DXINERAMA&#39;</span><span class="p">,</span> <span class="n">language</span><span class="p">:</span> <span class="s1">&#39;c&#39;</span><span class="p">)</span>
+<span class="n">endif</span>
+
+<span class="n">config_h</span> <span class="o">=</span> <span class="n">custom_target</span><span class="p">(</span><span class="s1">&#39;gen-config&#39;</span><span class="p">,</span> <span class="nb">input</span><span class="p">:</span> <span class="s1">&#39;config.def.h&#39;</span><span class="p">,</span>
+                         <span class="n">output</span><span class="p">:</span> <span class="s1">&#39;config.h&#39;</span><span class="p">,</span>
+                         <span class="n">command</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;cp&#39;</span><span class="p">,</span> <span class="s1">&#39;--no-clobber&#39;</span><span class="p">,</span> <span class="s1">&#39;@INPUT@&#39;</span><span class="p">,</span>
+                                   <span class="s1">&#39;@OUTPUT@&#39;</span><span class="p">])</span>
+
+<span class="n">executable</span><span class="p">(</span><span class="s1">&#39;dwm&#39;</span><span class="p">,</span> <span class="p">[</span><span class="s1">&#39;drw.c&#39;</span><span class="p">,</span> <span class="s1">&#39;dwm.c&#39;</span><span class="p">,</span> <span class="s1">&#39;util.c&#39;</span><span class="p">,</span> <span class="n">config_h</span><span class="p">],</span>
+           <span class="n">dependencies</span><span class="p">:</span> <span class="p">[</span><span class="n">fontconfig_dep</span><span class="p">,</span> <span class="n">x11_dep</span><span class="p">,</span> <span class="n">xft_dep</span><span class="p">,</span> <span class="n">xinerama_dep</span><span class="p">],</span>
+           <span class="n">install</span><span class="p">:</span> <span class="n">true</span><span class="p">)</span>
+
+<span class="n">install_man</span><span class="p">(</span><span class="s1">&#39;dwm.1&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>This is broadly comparable with an <a class="reference external" href="https://www.gnu.org/software/autoconf/">autoconf</a> and <a class="reference external" href="https://www.gnu.org/software/automake/">automake</a> solution for
+a similar task, albeit with far less behind the scenes complexity.  It is
+a superior solution to upstream’s choice of hand editing a <code class="file docutils literal notranslate"><span class="pre">Makefile</span></code>, as
+it handles rebuilds when you change options automatically too.</p>
+<p><strong class="command">meson</strong> supports many languages out of the box; C, C++, <a class="reference external" href="https://wiki.gnome.org/Projects/Vala">vala</a>, <a class="reference external" href="https://www.rust-lang.org/">rust</a>, &amp;c.  If
+you find yourself needing to add your own it is quite simple, just subclass
+<a class="reference external" href="https://github.com/mesonbuild/meson/blob/master/mesonbuild/compilers/compilers.py">Compiler</a> and set a few methods.  It took less than five minutes to add support
+for the transpiler we use on some of our projects<a class="footnote-reference brackets" href="#id14" id="id7">7</a>, and probably another 10
+a few weeks later to tighten it up and add tests when <strong class="command">meson</strong> support was
+merged.</p>
+<p>In fact because <strong class="command">meson</strong> is such a well defined wrapper around <strong class="command">ninja</strong> I’d
+recommend it <em>after</em> <strong class="command">ninja</strong>.  If you start a small project where a simple
+static <code class="file docutils literal notranslate"><span class="pre">build.ninja</span></code> is enough, then “upgrading” to <strong class="command">meson</strong> <em>iff</em> the
+need arises at some point is really easy.</p>
+<div class="admonition hint">
+<p class="admonition-title">Hint</p>
+<p>Co-workers can see this in action in the <code class="docutils literal notranslate"><span class="pre">zephyr_ground_station</span></code>
+repository.  I started out with mock up graphics from the Zephyr spec,
+added a manual <code class="file docutils literal notranslate"><span class="pre">build.ninja</span></code> as I started to code the interface,
+switched to a simple generated file using <strong class="command">ninja</strong>’s <a class="reference external" href="https://pypi.python.org/pypi/ninja_syntax">ninja_syntax</a>
+module when the project grew, and eventually changed to <strong class="command">meson</strong> with a few
+edits when the project was eventually greenlit.  It was a really clean
+process, and one I’d follow again.</p>
+</div>
+</div>
+<div class="section" id="googles-kati">
+<h3>Google’s kati<a class="headerlink" href="#googles-kati" title="Permalink to this headline">¶</a></h3>
+<p><a class="reference external" href="https://github.com/google/kati/">kati</a> is a nice first step if you’re currently using <strong class="command">make</strong> and want to try out
+<strong class="command">ninja</strong>.  It will generate a <code class="file docutils literal notranslate"><span class="pre">build.ninja</span></code> from your <code class="file docutils literal notranslate"><span class="pre">Makefile</span></code>,
+but it won’t be very idiomatic.</p>
+<p>It does serve as an immediate example of the difference you get with a no-op
+build from <strong class="command">make</strong> and <strong class="command">ninja</strong> though, and sometimes that alone feels like
+enough to integrate <code class="docutils literal notranslate"><span class="pre">kati</span></code> in to your build.</p>
+<p>Because it mechanically converts rules from <strong class="command">make</strong> to <strong class="command">ninja</strong> it is incredibly
+verbose, but it does so in such a manner that it is easy to use the output as
+a basis for full switch.</p>
+<div class="admonition attention">
+<p class="admonition-title">Attention</p>
+<p>I should mention <code class="docutils literal notranslate"><span class="pre">cmake</span></code> at least once, just so that readers know that
+I’m aware of it.  I’m ignoring it because of its inscrutable syntax, its
+<em>interesting</em> <a class="reference external" href="https://pkgconfig.freedesktop.org/wiki/">pkg-config</a> story, its propensity for creating ten minute
+multi-pass pre-build steps, and its love for running the <strong class="command">cmake</strong>
+binary thousands of times in each build.</p>
+</div>
+</div>
+</div>
+<div class="section" id="conclusions">
+<h2>Conclusions<a class="headerlink" href="#conclusions" title="Permalink to this headline">¶</a></h2>
+<p>There are a lot of options available if you’re feeling growing pains with
+<strong class="command">make</strong>, or are just looking to tighten up builds.  I’ve covered a few here, but
+there are many more out there.  I’ve ignored a few excellent options that
+fit within the realms of what we commonly refer to as a build system(<a class="reference external" href="https://premake.github.io/">premake</a>
+and <a class="reference external" href="http://gittup.org/tup">tup</a> both spring to mind), in part because I don’t have enough real world
+experience to comment on them.</p>
+<p>This has turned in to a much longer document than I had originally envisioned,
+but I hope there is enough meat in to make that worthwhile.</p>
+<p>Finally, in much the same way I tend to finish my build system talks with an
+offer to help in the final slide, I’ll add one here too .  If you’ve made it
+this far and need a little help, don’t hesitate to get in <a class="reference internal" href="../contact.html"><span class="doc">contact</span></a>.</p>
+<p class="rubric">Footnotes</p>
+<dl class="footnote brackets">
+<dt class="label" id="id8"><span class="brackets"><a class="fn-backref" href="#id1">1</a></span></dt>
+<dd><p>From today that should be no more.  I’ve added a rule to break the build
+if you add a suffix rule, but I’m sure we’ll see some commentary on
+whether that was the right way to pin it.</p>
+</dd>
+<dt class="label" id="id9"><span class="brackets"><a class="fn-backref" href="#id2">2</a></span></dt>
+<dd><p>For the projects I’m currently working the number of devs using systems
+with pre-GPLv3 make is very low, but it is <em>entirely</em> dependent on the
+ecosystem of a given project.</p>
+</dd>
+<dt class="label" id="id10"><span class="brackets"><a class="fn-backref" href="#id3">3</a></span></dt>
+<dd><p>It is defined only in <a class="reference external" href="http://cr.yp.to/redo.html">a collection of short descriptions</a> on djb’s
+website, and there is no known reference implementation.</p>
+</dd>
+<dt class="label" id="id11"><span class="brackets"><a class="fn-backref" href="#id4">4</a></span></dt>
+<dd><p>This is defintely not true of <strong class="command">make</strong> requirements, I’ve seen many angry
+bugs filed when builds only work with <a class="reference external" href="https://www.gnu.org/software/make/make.html">GNU make</a>.</p>
+</dd>
+<dt class="label" id="id12"><span class="brackets"><a class="fn-backref" href="#id5">5</a></span></dt>
+<dd><p>Avery Pennarun’s <a class="reference external" href="https://github.com/apenwarr/redo/">Python implementation</a> of <strong class="command">redo</strong> outputs its progress
+as depth indented text, so is easy to transform in to a <strong class="command">dot</strong>
+compliant input.  For instance, here is my <code class="docutils literal notranslate"><span class="pre">dzen2</span></code> tree as built by
+<strong class="command">redo</strong>:</p>
+<a class="reference internal image-reference" href="../_images/dzen.png"><img alt="Digraph of dzen2 build with redo" src="../_images/dzen.png" style="width: 487.41px; height: 163.68px;" /></a>
+</dd>
+<dt class="label" id="id13"><span class="brackets"><a class="fn-backref" href="#id6">6</a></span></dt>
+<dd><p>A search yields a few attempts to do so, many requiring large runtimes
+and all with a list of limitations likely to fall far below a projects
+actual usage of <strong class="command">make</strong>.  The two I popped open rely on parsing the
+output from <strong class="command">make -pn</strong> for example, and neither took in to
+account <code class="docutils literal notranslate"><span class="pre">+</span></code> code execution either.</p>
+</dd>
+<dt class="label" id="id14"><span class="brackets"><a class="fn-backref" href="#id7">7</a></span></dt>
+<dd><p>If you need a custom compiler the <a class="reference external" href="https://github.com/mesonbuild/meson/blob/master/mesonbuild/compilers/vala.py">vala support</a> is probably a good
+starting point as it is not too complex, and implements a good subset of
+required interface.</p>
+</dd>
+</dl>
+</div>
+</div>
+
+    <hr>
+
+    <p class="keybase-verify">
+      Authenticate this page by pasting <a
+        href="https://raw.githubusercontent.com/JNRowe/jnrowe.github.io/source/articles/redo_ninja_make.rst.asc">this signature</a> into
+      <a href="https://keybase.io/verify">Keybase</a>.
+    </p>
+
+    <p class="edit-page">
+      Have a suggestion or see a typo?  <a href="https://github.com/JNRowe/jnrowe.github.io/edit/source/articles/redo_ninja_make.rst">Edit this page</a>
+    </p>
+  
+
+  <div class="section">
+  
+    
+
+
+<div class="section">
+  <span style="float: left;">
+  
+  Previous: 
+  <a href="march_toward_death.html">
+    
+    Visualising the progress of time
+  </a>
+  
+  </span>
+  <span>&nbsp;</span>
+  <span style="float: right;">
+  
+</div>
+
+  
+  
+  </div>
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<p class="logo">
+  <a href="../index.html">
+    <img class="logo" src="../_static/logo.png" alt="Logo"/>
+    
+  </a>
+</p>
+
+
+
+
+
+
+
+
+
+  
+  
+  <h2>
+  
+  
+    2018-11-23
+  
+  </h2>
+
+  <ul>
+    
+
+  
+  <li id="author"><span>Author:</span>
+    
+      
+      <a href="../blog/author/james-rowe.html">James Rowe</a>
+      
+    </li>
+  
+
+  
+
+  
+
+  
+
+  
+  <li id="tags"><span>Tags:</span>
+      
+    
+      
+      <a href="../blog/tag/tools.html">tools</a>
+      
+    
+      
+      <a href="../blog/tag/build.html">build</a>
+      
+    
+      
+      <a href="../blog/tag/make.html">make</a>
+      
+    
+      
+      <a href="../blog/tag/ninja.html">ninja</a>
+      
+    
+      
+      <a href="../blog/tag/redo.html">redo</a>
+      
+    </li>
+  
+  
+  </ul>
+
+
+<h3>Navigation</h3>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../projects.html">Projects</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Articles</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="advent_of_code.html">Advent of Code 2017</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dropping_gentoo.html">Dropping Gentoo</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dropping_gentoo_reflex.html">Dropping Gentoo reflex</a></li>
+<li class="toctree-l2"><a class="reference internal" href="evil_emacs_steals_my_heart.html">Evil Emacs steals my heart</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fossil.html"><strong class="command">fossil</strong> experiments</a></li>
+<li class="toctree-l2"><a class="reference internal" href="march_toward_death.html">Visualising the progress of time</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mutt_config_snippets.html"><strong class="command">mutt</strong> configuration snippets</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rcs.html">Introduction to <abbr title="GNU Revision Control System">RCS</abbr></a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">while $sun; do <strong class="command">make</strong> hay; done</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tdd_distros.html"><abbr title="Test Driven Development">TDD</abbr> distro development</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tiling_vs_tabbing.html">Tiling vs tabbing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#further-categories">Further categories</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../thoughts/index.html">Thoughts</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../colophon.html">Colophon</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../contact.html">Contact details</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../consult.html">Consulting services</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../copyright.html">Copyright information</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../glossary.html">Glossary</a></li>
+</ul>
+
+
+  <h3><a href="../blog.html">Recent Posts</a></h3>
+  <ul>
+    
+    
+      <li><a href="march_toward_death.html">13 November - Visualising the progress of time</a></li>
+    
+      <li><a href="evil_emacs_steals_my_heart.html">05 November - Evil Emacs steals my heart</a></li>
+    
+      <li><a href="tips/readline_rename_imv.html">26 October - File renaming for the lazy</a></li>
+    
+      <li><a href="tiling_vs_tabbing.html">08 October - Tiling vs tabbing</a></li>
+    
+      <li><a href="tips/vim_day_night_colourscheme.html">15 September - Vim with day/night colourschemes</a></li>
+    
+  </ul>
+
+  <h3><a href="../blog/tag.html">Tags</a></h3>
+  <style type="text/css">
+    ul.ablog-cloud {list-style: none; overflow: auto;}
+    ul.ablog-cloud li {float: left; height: 20pt; line-height: 18pt; margin-right: 5px;}
+    ul.ablog-cloud a {text-decoration: none; vertical-align: middle;}
+    li.ablog-cloud-1{font-size: 80%;}
+    li.ablog-cloud-2{font-size: 95%;}
+    li.ablog-cloud-3{font-size: 110%;}
+    li.ablog-cloud-4{font-size: 125%;}
+    li.ablog-cloud-5{font-size: 140%;}
+  </style>
+  <ul class="ablog-cloud">
+    
+      
+      <li class="ablog-cloud ablog-cloud-3">
+        <a href="../blog/tag/gtk.html">GTK+</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-2">
+        <a href="../blog/tag/x11.html">X11</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-2">
+        <a href="../blog/tag/abook.html">abook</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-3">
+        <a href="../blog/tag/awesome.html">awesome</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-2">
+        <a href="../blog/tag/bash.html">bash</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-1">
+        <a href="../blog/tag/blog.html">blog</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-1">
+        <a href="../blog/tag/bts.html">bts</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-1">
+        <a href="../blog/tag/bugzilla.html">bugzilla</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-1">
+        <a href="../blog/tag/build.html">build</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-1">
+        <a href="../blog/tag/burnout.html">burnout</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-2">
+        <a href="../blog/tag/configs.html">configs</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-1">
+        <a href="../blog/tag/csv.html">csv</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-1">
+        <a href="../blog/tag/denoise.html">denoise</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-1">
+        <a href="../blog/tag/desktop.html">desktop</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-3">
+        <a href="../blog/tag/devel.html">devel</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-1">
+        <a href="../blog/tag/development.html">development</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-1">
+        <a href="../blog/tag/dzen.html">dzen</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-2">
+        <a href="../blog/tag/emacs.html">emacs</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-1">
+        <a href="../blog/tag/evil.html">evil</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-1">
+        <a href="../blog/tag/focus.html">focus</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-1">
+        <a href="../blog/tag/fossil.html">fossil</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-4">
+        <a href="../blog/tag/gentoo.html">gentoo</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-2">
+        <a href="../blog/tag/git.html">git</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-1">
+        <a href="../blog/tag/gmail.html">gmail</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-1">
+        <a href="../blog/tag/history.html">history</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-1">
+        <a href="../blog/tag/hobbies.html">hobbies</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-1">
+        <a href="../blog/tag/imv.html">imv</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-1">
+        <a href="../blog/tag/jnrowe-misc.html">jnrowe-misc</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-5">
+        <a href="../blog/tag/life.html">life</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-4">
+        <a href="../blog/tag/linux.html">linux</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-2">
+        <a href="../blog/tag/mail.html">mail</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-1">
+        <a href="../blog/tag/make.html">make</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-3">
+        <a href="../blog/tag/mutt.html">mutt</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-1">
+        <a href="../blog/tag/net.html">net</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-1">
+        <a href="../blog/tag/ninja.html">ninja</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-1">
+        <a href="../blog/tag/noise.html">noise</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-1">
+        <a href="../blog/tag/oss.html">oss</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-2">
+        <a href="../blog/tag/politics.html">politics</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-1">
+        <a href="../blog/tag/privacy.html">privacy</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-1">
+        <a href="../blog/tag/probit.html">probit</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-2">
+        <a href="../blog/tag/projects.html">projects</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-1">
+        <a href="../blog/tag/python.html">python</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-1">
+        <a href="../blog/tag/qmv.html">qmv</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-2">
+        <a href="../blog/tag/readline.html">readline</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-1">
+        <a href="../blog/tag/redo.html">redo</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-1">
+        <a href="../blog/tag/remind.html">remind</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-1">
+        <a href="../blog/tag/renameutils.html">renameutils</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-1">
+        <a href="../blog/tag/site.html">site</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-2">
+        <a href="../blog/tag/software.html">software</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-5">
+        <a href="../blog/tag/styling.html">styling</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-1">
+        <a href="../blog/tag/sup.html">sup</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-1">
+        <a href="../blog/tag/tabbed.html">tabbed</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-1">
+        <a href="../blog/tag/testing.html">testing</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-1">
+        <a href="../blog/tag/three.html">three</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-1">
+        <a href="../blog/tag/tiling.html">tiling</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-1">
+        <a href="../blog/tag/tools.html">tools</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-2">
+        <a href="../blog/tag/unix.html">unix</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-4">
+        <a href="../blog/tag/vcs.html">vcs</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-5">
+        <a href="../blog/tag/vim.html">vim</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-1">
+        <a href="../blog/tag/web.html">web</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-3">
+        <a href="../blog/tag/work.html">work</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-1">
+        <a href="../blog/tag/zsh.html">zsh</a></li>
+      
+    
+  </ul>
+
+  <h3><a href="../blog/archive.html">Archives</a></h3>
+  <ul>
+  
+    
+    <li><a href="../blog/2018.html">2018 (7)</a></li>
+    
+  
+    
+    <li><a href="../blog/2017.html">2017 (1)</a></li>
+    
+  
+    
+    <li><a href="../blog/2014.html">2014 (12)</a></li>
+    
+  
+    
+    <li><a href="../blog/2013.html">2013 (2)</a></li>
+    
+  
+    
+    <li><a href="../blog/2011.html">2011 (1)</a></li>
+    
+  
+    
+    <li><a href="../blog/2010.html">2010 (1)</a></li>
+    
+  
+    
+    <li><a href="../blog/2009.html">2009 (24)</a></li>
+    
+  
+    
+    <li><a href="../blog/2007.html">2007 (2)</a></li>
+    
+  
+    
+    <li><a href="../blog/2003.html">2003 (1)</a></li>
+    
+  
+  </ul>
+
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    </div>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      
+         &copy;2009-2018  James Rowe, released under
+         <a href="http://creativecommons.org/licenses/by-sa/4.0/" rel="license">
+             Creative Commons Attribution-ShareAlike 4.0
+         </a> license.
+      
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.8.1</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+    </div>
+
+    
+
+    
+  </body>
+</html>
