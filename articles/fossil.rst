@@ -132,11 +132,11 @@ Interface
 The help output for new users is, in my opinion, really irritating.  The default
 command message tells you to run :command:`fossil help` or :command:`fossil
 help COMMAND`, without providing the names of any of the common commands.  The
-:command:`fossil help` output emulates a :command:`tsort` filter of the command
-names, listing commands with unique to :command:`fossil` terminology and no
-short descriptions.  :command:`fossil help --all` feels like it should be more
-useful, but just creates a larger table of commands with uncommon names and
-still no descriptions.
+:command:`fossil help` output emulates a :command:`column -t` filter of the
+command names, listing commands with unique to :command:`fossil` terminology
+and no short descriptions.  :command:`fossil help --all` feels like it should
+be more useful, but just creates a larger table of commands with uncommon names
+and still no descriptions.
 
 It makes very little sense to organise the help in this manner because as you
 get used to the naming and non-standard option style you will need the help
