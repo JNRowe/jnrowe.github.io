@@ -61,9 +61,10 @@ which results in:
 .. image:: /.images/day_bar.png
    :alt: Screenshot of simple day of year bar on 2018-11-13
 
-The logic should be simple enough to follow:
+The logic should be simple enough to follow(if you’re familiar with
+:command:`date`’s :option:`%j formatter <date %j>`):
 
-* ``current day in year`` [#]_ / ``number of days in year`` [#]_ * ``100`` for
+* ``current day in year`` / ``number of days in year`` [#]_ * ``100`` for
   position in year as percentage
 * Generate the :command:`dzen2` markup for a bar of ``1500`` pixels wide and
   ``20`` pixels high
@@ -166,10 +167,15 @@ with :abbr:`DST (Daylight Saving Time)` transitions.
 
 .. rubric:: Footnotes
 
-.. [#] :command:`date`’s :option:`%j` format gives us the day of year, see
-       :manpage:`strftime(3)` if this is new to you.
 .. [#] Calculating the day of year for December 31ˢᵗ allows to work in leap
        years.
+
+.. program:: date
+
+.. option:: %j
+
+    Displays the day number of the given year, see :manpage:`strftime(3)` if
+    this is new to you.
 
 .. _Progress Bar OSX: https://www.progressbarosx.com/
 .. _Python: https://www.python.org/
