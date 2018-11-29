@@ -611,7 +611,7 @@ of code.&lt;/p&gt;
     </author>
     <content type="html">&lt;div class=&quot;section&quot; id=&quot;making-a-nice-home&quot;&gt;
 
-&lt;p&gt;Back in &lt;span class=&quot;xref std std-doc&quot;&gt;Kick_me_birthday_reminders&lt;/span&gt; I said:&lt;/p&gt;
+&lt;p&gt;Back in &lt;span class=&quot;xref std std-ref&quot;&gt;Kick_me_birthday_reminders&lt;/span&gt; I said:&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;div&gt;&lt;p&gt;You could trigger a rebuild in your &lt;code class=&quot;file docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;~/.bashrc&lt;/span&gt;&lt;/code&gt; before you call
 &lt;strong class=&quot;command&quot;&gt;rem&lt;/strong&gt; to see the reminders, so they are always up to date at

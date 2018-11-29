@@ -396,10 +396,10 @@ website, and there is no known reference implementation.</p>
 bugs filed when builds only work with <a class="reference external" href="https://www.gnu.org/software/make/make.html">GNU make</a>.</p>
 </dd>
 <dt class="label" id="id12"><span class="brackets"><a class="fn-backref" href="#id5">5</a></span></dt>
-<dd><p>Avery Pennarun’s <a class="reference external" href="https://github.com/apenwarr/redo/">Python implementation</a> of <strong class="command">redo</strong> outputs its progress
-as depth indented text, so is easy to transform in to a <strong class="command">dot</strong>
-compliant input.  For instance, here is my <code class="docutils literal notranslate"><span class="pre">dzen2</span></code> tree as built by
-<strong class="command">redo</strong>:</p>
+<dd><p>Avery Pennarun’s <a class="reference external" href="https://github.com/apenwarr/redo/">Python implementation</a> of <strong class="command">redo</strong> stores it dependency
+data in a <a href="#id16"><span class="problematic" id="id17">sqlite_</span></a> database named <code class="file docutils literal notranslate"><span class="pre">.redo/redo.sqlite3</span></code>, making it
+is easy to transform in to a <strong class="command">dot</strong> compliant input.  For
+instance, here is my <code class="docutils literal notranslate"><span class="pre">dzen2</span></code> tree as built by <strong class="command">redo</strong>:</p>
 <a class="reference internal image-reference" href="../_images/dzen.png"><img alt="Digraph of dzen2 build with redo" src="../_images/dzen.png" style="width: 487.41px; height: 163.68px;" /></a>
 </dd>
 <dt class="label" id="id13"><span class="brackets"><a class="fn-backref" href="#id6">6</a></span></dt>

@@ -321,7 +321,7 @@ that can display them.&lt;/p&gt;
     </author>
     <content type="html">&lt;div class=&quot;section&quot; id=&quot;making-a-nice-home&quot;&gt;
 
-&lt;p&gt;Back in &lt;span class=&quot;xref std std-doc&quot;&gt;Kick_me_birthday_reminders&lt;/span&gt; I said:&lt;/p&gt;
+&lt;p&gt;Back in &lt;span class=&quot;xref std std-ref&quot;&gt;Kick_me_birthday_reminders&lt;/span&gt; I said:&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;div&gt;&lt;p&gt;You could trigger a rebuild in your &lt;code class=&quot;file docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;~/.bashrc&lt;/span&gt;&lt;/code&gt; before you call
 &lt;strong class=&quot;command&quot;&gt;rem&lt;/strong&gt; to see the reminders, so they are always up to date at
@@ -509,15 +509,15 @@ is to check out a read-only version of the file.&lt;/p&gt;
 &lt;span class=&quot;go&quot;&gt;done&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
-&lt;p&gt;The &lt;code class=&quot;xref std std-option docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;-l&lt;/span&gt;&lt;/code&gt; option to &lt;strong class=&quot;command&quot;&gt;co&lt;/strong&gt; (and also &lt;strong class=&quot;command&quot;&gt;ci&lt;/strong&gt; ) is used to
-lock the file. This file now becomes a working file, which is writable, and it
-also means other people can’t edit it until you have released it or checked it
-in again.&lt;/p&gt;
-&lt;p&gt;Blindly using the &lt;code class=&quot;xref std std-option docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;-l&lt;/span&gt;&lt;/code&gt; option to &lt;strong class=&quot;command&quot;&gt;ci&lt;/strong&gt;/&lt;strong class=&quot;command&quot;&gt;co&lt;/strong&gt; is not
-advisable, you should get in to the habit now of only locking files you are
+&lt;p&gt;The &lt;a class=&quot;reference internal&quot; href=&quot;../../articles/rcs.html#cmdoption-co-l&quot;&gt;&lt;code class=&quot;xref std std-option docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;-l&lt;/span&gt;&lt;/code&gt;&lt;/a&gt; option to &lt;strong class=&quot;command&quot;&gt;co&lt;/strong&gt; (and also &lt;strong class=&quot;command&quot;&gt;ci&lt;/strong&gt; ) is
+used to lock the file. This file now becomes a working file, which is writable,
+and it also means other people can’t edit it until you have released it or
+checked it in again.&lt;/p&gt;
+&lt;p&gt;Blindly using the &lt;a class=&quot;reference internal&quot; href=&quot;../../articles/rcs.html#cmdoption-co-l&quot;&gt;&lt;code class=&quot;xref std std-option docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;-l&lt;/span&gt;&lt;/code&gt;&lt;/a&gt; option to &lt;strong class=&quot;command&quot;&gt;ci&lt;/strong&gt;/&lt;strong class=&quot;command&quot;&gt;co&lt;/strong&gt; is
+not advisable, you should get in to the habit now of only locking files you are
 working on.  &lt;abbr title=&quot;GNU Revision Control System&quot;&gt;RCS&lt;/abbr&gt; uses locking to block other users from checking in changes
 and will cause much grief if you use &lt;abbr title=&quot;GNU Revision Control System&quot;&gt;RCS&lt;/abbr&gt; on multi-user projects. It is much
-better to use &lt;a class=&quot;reference external&quot; href=&quot;https://docs.python.org/3/using/cmdline.html#cmdoption-u&quot; title=&quot;(in Python v3.7)&quot;&gt;&lt;code class=&quot;xref std std-option docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;-u&lt;/span&gt;&lt;/code&gt;&lt;/a&gt; (or unlocked) when you &lt;strong class=&quot;command&quot;&gt;ci&lt;/strong&gt; in new
+better to use &lt;a class=&quot;reference internal&quot; href=&quot;../../articles/rcs.html#cmdoption-ci-u&quot;&gt;&lt;code class=&quot;xref std std-option docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;-u&lt;/span&gt;&lt;/code&gt;&lt;/a&gt; (or unlocked) when you &lt;strong class=&quot;command&quot;&gt;ci&lt;/strong&gt; in new
 files/changes this way you will have access to a read-only version of the file
 and it will allow other users to edit it.&lt;/p&gt;
 &lt;div class=&quot;highlight-console notranslate&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&quot;gp&quot;&gt;$&lt;/span&gt; cat myscript.sh
@@ -633,17 +633,16 @@ the &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&q
 files, it accepts multiple files per command line(using normal shell
 wild-carding) and provides all the information &lt;abbr title=&quot;GNU Revision Control System&quot;&gt;RCS&lt;/abbr&gt; has on a file. Should you
 ever need to only know the changes that were made to the current revision you
-can use the &lt;code class=&quot;xref std std-option docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;-r&lt;/span&gt;&lt;/code&gt; option as in &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;rlog&lt;/span&gt; &lt;span class=&quot;pre&quot;&gt;-r&lt;/span&gt; &lt;span class=&quot;pre&quot;&gt;filename&lt;/span&gt;&lt;/code&gt;. You can also check
-changes between revisions of files using the command like &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;rlog&lt;/span&gt; &lt;span class=&quot;pre&quot;&gt;-r1.1,1.2&lt;/span&gt;
-&lt;span class=&quot;pre&quot;&gt;filename&lt;/span&gt;&lt;/code&gt;.&lt;/p&gt;
-&lt;p&gt;The &lt;code class=&quot;xref std std-option docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;-r&lt;/span&gt;&lt;/code&gt; option of &lt;abbr title=&quot;GNU Revision Control System&quot;&gt;RCS&lt;/abbr&gt; is one of its most powerful, it is available
-in all the commands and shares the same semantics throughout. If &lt;code class=&quot;xref std std-option docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;-r&lt;/span&gt;&lt;/code&gt;
-is used with &lt;strong class=&quot;command&quot;&gt;ci&lt;/strong&gt; it forces a bump, for example &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;ci&lt;/span&gt; &lt;span class=&quot;pre&quot;&gt;-r1.7&lt;/span&gt; &lt;span class=&quot;pre&quot;&gt;filename&lt;/span&gt;&lt;/code&gt;
-will force &lt;abbr title=&quot;GNU Revision Control System&quot;&gt;RCS&lt;/abbr&gt; to check in filename as revision 1.7. Used with &lt;strong class=&quot;command&quot;&gt;co&lt;/strong&gt;
-you can pull any revision of the file from &lt;abbr title=&quot;GNU Revision Control System&quot;&gt;RCS&lt;/abbr&gt; history. Used with
-&lt;strong class=&quot;command&quot;&gt;rcsdiff&lt;/strong&gt; you can create a diff between any revision under &lt;abbr title=&quot;GNU Revision Control System&quot;&gt;RCS&lt;/abbr&gt;, for
-example &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;rcsdiff&lt;/span&gt; &lt;span class=&quot;pre&quot;&gt;-r1.1,1.8&lt;/span&gt; &lt;span class=&quot;pre&quot;&gt;-u&lt;/span&gt; &lt;span class=&quot;pre&quot;&gt;filename&lt;/span&gt;&lt;/code&gt; will output a unified context diff of
-the changes from revision
+can use the &lt;a class=&quot;reference internal&quot; href=&quot;../../articles/rcs.html#cmdoption-rlog-r&quot;&gt;&lt;code class=&quot;xref std std-option docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;-r&lt;/span&gt;&lt;/code&gt;&lt;/a&gt; option as in &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;rlog&lt;/span&gt; &lt;span class=&quot;pre&quot;&gt;-r&lt;/span&gt; &lt;span class=&quot;pre&quot;&gt;filename&lt;/span&gt;&lt;/code&gt;. You can
+also check changes between revisions of files using the command like &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;rlog&lt;/span&gt;
+&lt;span class=&quot;pre&quot;&gt;-r1.1,1.2&lt;/span&gt; &lt;span class=&quot;pre&quot;&gt;filename&lt;/span&gt;&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;The &lt;a class=&quot;reference internal&quot; href=&quot;../../articles/rcs.html#cmdoption-r&quot;&gt;&lt;code class=&quot;xref std std-option docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;-r&lt;/span&gt;&lt;/code&gt;&lt;/a&gt; option of &lt;abbr title=&quot;GNU Revision Control System&quot;&gt;RCS&lt;/abbr&gt; is one of its most powerful, it is available
+in all the commands and shares the same semantics throughout. If &lt;a class=&quot;reference internal&quot; href=&quot;../../articles/rcs.html#cmdoption-ci-r&quot;&gt;&lt;code class=&quot;xref std std-option docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;-r&lt;/span&gt;&lt;/code&gt;&lt;/a&gt; is used with &lt;strong class=&quot;command&quot;&gt;ci&lt;/strong&gt; it forces a bump, for example &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;ci&lt;/span&gt; &lt;span class=&quot;pre&quot;&gt;-r1.7&lt;/span&gt;
+&lt;span class=&quot;pre&quot;&gt;filename&lt;/span&gt;&lt;/code&gt; will force &lt;abbr title=&quot;GNU Revision Control System&quot;&gt;RCS&lt;/abbr&gt; to check in filename as revision 1.7. Used with
+&lt;strong class=&quot;command&quot;&gt;co&lt;/strong&gt; you can pull any revision of the file from &lt;abbr title=&quot;GNU Revision Control System&quot;&gt;RCS&lt;/abbr&gt; history. Used
+with &lt;strong class=&quot;command&quot;&gt;rcsdiff&lt;/strong&gt; you can create a diff between any revision under &lt;abbr title=&quot;GNU Revision Control System&quot;&gt;RCS&lt;/abbr&gt;,
+for example &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;rcsdiff&lt;/span&gt; &lt;span class=&quot;pre&quot;&gt;-r1.1,1.8&lt;/span&gt; &lt;span class=&quot;pre&quot;&gt;-u&lt;/span&gt; &lt;span class=&quot;pre&quot;&gt;filename&lt;/span&gt;&lt;/code&gt; will output a unified context
+diff of the changes from revision
 1.1 to 1.8.&lt;/p&gt;
 &lt;p&gt;&lt;abbr title=&quot;GNU Revision Control System&quot;&gt;RCS&lt;/abbr&gt; really is that simple to use, it does have many more options that are not
 covered here(see the man pages) but the power of &lt;abbr title=&quot;GNU Revision Control System&quot;&gt;RCS&lt;/abbr&gt; is how simple it is to
@@ -692,15 +691,51 @@ man page and &lt;code class=&quot;file docutils literal notranslate&quot;&gt;&lt
 a config file which is maintained using &lt;abbr title=&quot;GNU Revision Control System&quot;&gt;RCS&lt;/abbr&gt; by Gentoo’s
 &lt;strong class=&quot;command&quot;&gt;dispatch-conf&lt;/strong&gt; tool.  It allows you to simply see which revision
 introduced a change to a specific line.  You can also choose to annotate
-specific &lt;abbr title=&quot;GNU Revision Control System&quot;&gt;RCS&lt;/abbr&gt; revisions using the &lt;code class=&quot;xref std std-option docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;--revision&lt;/span&gt;&lt;/code&gt; option, or specific
-dates with &lt;code class=&quot;xref std std-option docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;--date&lt;/span&gt;&lt;/code&gt; option.  &lt;a class=&quot;reference external&quot; href=&quot;http://blame.sourceforge.net/&quot;&gt;blame&lt;/a&gt; has also has a very comprehensive
-manual page included with it which you should read if you want to enjoy its
-full power.&lt;/p&gt;
+specific &lt;abbr title=&quot;GNU Revision Control System&quot;&gt;RCS&lt;/abbr&gt; revisions using the &lt;a class=&quot;reference internal&quot; href=&quot;../../articles/rcs.html#cmdoption-blame-revision&quot;&gt;&lt;code class=&quot;xref std std-option docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;--revision&lt;/span&gt;&lt;/code&gt;&lt;/a&gt;
+option, or specific dates with &lt;a class=&quot;reference internal&quot; href=&quot;../../articles/rcs.html#cmdoption-blame-date&quot;&gt;&lt;code class=&quot;xref std std-option docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;--date&lt;/span&gt;&lt;/code&gt;&lt;/a&gt; option.  &lt;a class=&quot;reference external&quot; href=&quot;http://blame.sourceforge.net/&quot;&gt;blame&lt;/a&gt;
+has also has a very comprehensive manual page included with it which you should
+read if you want to enjoy its full power.&lt;/p&gt;
 &lt;p&gt;There are many other tools available which use &lt;abbr title=&quot;GNU Revision Control System&quot;&gt;RCS&lt;/abbr&gt; as a backend, and as long
 as you can access the &lt;abbr title=&quot;GNU Revision Control System&quot;&gt;RCS&lt;/abbr&gt; data files blame can help to understand what is
 happening with them too.&lt;/p&gt;
 &lt;p&gt;If you know of any interesting &lt;abbr title=&quot;GNU Revision Control System&quot;&gt;RCS&lt;/abbr&gt; uses please drop me a mail, and I hope
 this short text has been helpful to you.&lt;/p&gt;
+&lt;p class=&quot;rubric&quot;&gt;Footnotes&lt;/p&gt;
+&lt;dl class=&quot;option&quot;&gt;
+&lt;dt id=&quot;cmdoption-r&quot;&gt;
+&lt;code class=&quot;descname&quot;&gt;-r&lt;/code&gt;&lt;code class=&quot;descclassname&quot;&gt;&lt;/code&gt;&lt;/dt&gt;
+&lt;dd&gt;&lt;/dd&gt;&lt;/dl&gt;
+
+&lt;dl class=&quot;option&quot;&gt;
+&lt;dt id=&quot;cmdoption-blame-date&quot;&gt;
+&lt;code class=&quot;descname&quot;&gt;--date&lt;/code&gt;&lt;code class=&quot;descclassname&quot;&gt;&lt;/code&gt;&lt;/dt&gt;
+&lt;dd&gt;&lt;/dd&gt;&lt;/dl&gt;
+
+&lt;dl class=&quot;option&quot;&gt;
+&lt;dt id=&quot;cmdoption-blame-revision&quot;&gt;
+&lt;code class=&quot;descname&quot;&gt;--revision&lt;/code&gt;&lt;code class=&quot;descclassname&quot;&gt;&lt;/code&gt;&lt;/dt&gt;
+&lt;dd&gt;&lt;/dd&gt;&lt;/dl&gt;
+
+&lt;dl class=&quot;option&quot;&gt;
+&lt;dt id=&quot;cmdoption-ci-r&quot;&gt;
+&lt;code class=&quot;descname&quot;&gt;-r&lt;/code&gt;&lt;code class=&quot;descclassname&quot;&gt;&lt;/code&gt;&lt;/dt&gt;
+&lt;dd&gt;&lt;/dd&gt;&lt;/dl&gt;
+
+&lt;dl class=&quot;option&quot;&gt;
+&lt;dt id=&quot;cmdoption-ci-u&quot;&gt;
+&lt;code class=&quot;descname&quot;&gt;-u&lt;/code&gt;&lt;code class=&quot;descclassname&quot;&gt;&lt;/code&gt;&lt;/dt&gt;
+&lt;dd&gt;&lt;/dd&gt;&lt;/dl&gt;
+
+&lt;dl class=&quot;option&quot;&gt;
+&lt;dt id=&quot;cmdoption-co-l&quot;&gt;
+&lt;code class=&quot;descname&quot;&gt;-l&lt;/code&gt;&lt;code class=&quot;descclassname&quot;&gt;&lt;/code&gt;&lt;/dt&gt;
+&lt;dd&gt;&lt;/dd&gt;&lt;/dl&gt;
+
+&lt;dl class=&quot;option&quot;&gt;
+&lt;dt id=&quot;cmdoption-rlog-r&quot;&gt;
+&lt;code class=&quot;descname&quot;&gt;-r&lt;/code&gt;&lt;code class=&quot;descclassname&quot;&gt;&lt;/code&gt;&lt;/dt&gt;
+&lt;dd&gt;&lt;/dd&gt;&lt;/dl&gt;
+
 &lt;/div&gt;
 &lt;/div&gt;
 </content>

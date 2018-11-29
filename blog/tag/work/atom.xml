@@ -115,7 +115,7 @@ other people with the necessary skills have been moved to Germany.&lt;/p&gt;
     </author>
     <content type="html">&lt;div class=&quot;section&quot; id=&quot;dropping-gentoo-reflex&quot;&gt;
 
-&lt;p&gt;After hitting the publish button on &lt;span class=&quot;xref std std-doc&quot;&gt;dropping_gentoo&lt;/span&gt; a few friends
+&lt;p&gt;After hitting the publish button on &lt;a class=&quot;reference internal&quot; href=&quot;../../articles/dropping_gentoo.html#dropping_gentoo&quot;&gt;&lt;span class=&quot;std std-ref&quot;&gt;Dropping Gentoo&lt;/span&gt;&lt;/a&gt; a few friends
 commented that I was either unnecessarily harsh about Gentoo or we wasted an
 enormous amount of time on it.  It definitely was the former, and I feel
 a touch ashamed for implying the latter.&lt;/p&gt;
@@ -136,7 +136,7 @@ if you share binary packages.&lt;/p&gt;
 binary package user on Gentoo is just how slow package installation and removal
 is.  Binary package installation on Gentoo feels on par with a distribution
 like Slackware, and what passes for package management there is just choosing
-the right argument to &lt;strong class=&quot;command&quot;&gt;tar&lt;/strong&gt;’s &lt;code class=&quot;xref std std-option docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;-C&lt;/span&gt;&lt;/code&gt; option&lt;a class=&quot;footnote-reference brackets&quot; href=&quot;#id2&quot; id=&quot;id1&quot;&gt;*&lt;/a&gt;.&lt;/p&gt;
+the right argument to &lt;strong class=&quot;command&quot;&gt;tar&lt;/strong&gt;’s &lt;a class=&quot;reference internal&quot; href=&quot;../../articles/dropping_gentoo_reflex.html#cmdoption-tar-c&quot;&gt;&lt;code class=&quot;xref std std-option docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;-C&lt;/span&gt;&lt;/code&gt;&lt;/a&gt; option&lt;a class=&quot;footnote-reference brackets&quot; href=&quot;#id2&quot; id=&quot;id1&quot;&gt;*&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;Where Gentoo really excels though is in the speed of creating new packages or
 editing existing packages.&lt;/p&gt;
 &lt;p&gt;Lets take a look at an example.  Say, for example, that you just found out that
@@ -239,6 +239,14 @@ fun memories.&lt;/p&gt;
 makes dependency handling work among other things.&lt;/p&gt;
 &lt;/dd&gt;
 &lt;/dl&gt;
+&lt;dl class=&quot;option&quot;&gt;
+&lt;dt id=&quot;cmdoption-tar-c&quot;&gt;
+&lt;code class=&quot;descname&quot;&gt;-C&lt;/code&gt;&lt;code class=&quot;descclassname&quot;&gt;&lt;/code&gt;&lt;/dt&gt;
+&lt;dd&gt;&lt;p&gt;This option tells &lt;strong class=&quot;command&quot;&gt;tar&lt;/strong&gt; to change directory before performing its
+duty.  For example using &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;-C&lt;/span&gt; &lt;span class=&quot;pre&quot;&gt;/&lt;/span&gt;&lt;/code&gt; will switch to &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;/&lt;/span&gt;&lt;/code&gt;, and can be used to
+unpack a tarball directly over the root filesystem.&lt;/p&gt;
+&lt;/dd&gt;&lt;/dl&gt;
+
 &lt;/div&gt;
 &lt;/div&gt;
 </content>

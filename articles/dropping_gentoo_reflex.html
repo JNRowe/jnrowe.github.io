@@ -57,7 +57,7 @@
 
   <div class="section" id="dropping-gentoo-reflex">
 <h1>Dropping Gentoo reflex<a class="headerlink" href="#dropping-gentoo-reflex" title="Permalink to this headline">¶</a></h1>
-<p>After hitting the publish button on <a class="reference internal" href="dropping_gentoo.html"><span class="doc">Dropping Gentoo</span></a> a few friends
+<p>After hitting the publish button on <a class="reference internal" href="dropping_gentoo.html#dropping_gentoo"><span class="std std-ref">Dropping Gentoo</span></a> a few friends
 commented that I was either unnecessarily harsh about Gentoo or we wasted an
 enormous amount of time on it.  It definitely was the former, and I feel
 a touch ashamed for implying the latter.</p>
@@ -78,7 +78,7 @@ if you share binary packages.</p>
 binary package user on Gentoo is just how slow package installation and removal
 is.  Binary package installation on Gentoo feels on par with a distribution
 like Slackware, and what passes for package management there is just choosing
-the right argument to <strong class="command">tar</strong>’s <code class="xref std std-option docutils literal notranslate"><span class="pre">-C</span></code> option<a class="footnote-reference brackets" href="#id2" id="id1">*</a>.</p>
+the right argument to <strong class="command">tar</strong>’s <a class="reference internal" href="#cmdoption-tar-c"><code class="xref std std-option docutils literal notranslate"><span class="pre">-C</span></code></a> option<a class="footnote-reference brackets" href="#id2" id="id1">*</a>.</p>
 <p>Where Gentoo really excels though is in the speed of creating new packages or
 editing existing packages.</p>
 <p>Lets take a look at an example.  Say, for example, that you just found out that
@@ -181,6 +181,14 @@ fun memories.</p>
 makes dependency handling work among other things.</p>
 </dd>
 </dl>
+<dl class="option">
+<dt id="cmdoption-tar-c">
+<code class="descname">-C</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-tar-c" title="Permalink to this definition">¶</a></dt>
+<dd><p>This option tells <strong class="command">tar</strong> to change directory before performing its
+duty.  For example using <code class="docutils literal notranslate"><span class="pre">-C</span> <span class="pre">/</span></code> will switch to <code class="docutils literal notranslate"><span class="pre">/</span></code>, and can be used to
+unpack a tarball directly over the root filesystem.</p>
+</dd></dl>
+
 </div>
 </div>
 

@@ -51,7 +51,7 @@
             
     <p class="read-time">
       <b>Estimated reading time</b>:
-      8 minutes
+      9 minutes
     </p>
   
 
@@ -141,15 +141,15 @@ is to check out a read-only version of the file.</p>
 <span class="go">done</span>
 </pre></div>
 </div>
-<p>The <code class="xref std std-option docutils literal notranslate"><span class="pre">-l</span></code> option to <strong class="command">co</strong> (and also <strong class="command">ci</strong> ) is used to
-lock the file. This file now becomes a working file, which is writable, and it
-also means other people can’t edit it until you have released it or checked it
-in again.</p>
-<p>Blindly using the <code class="xref std std-option docutils literal notranslate"><span class="pre">-l</span></code> option to <strong class="command">ci</strong>/<strong class="command">co</strong> is not
-advisable, you should get in to the habit now of only locking files you are
+<p>The <a class="reference internal" href="#cmdoption-co-l"><code class="xref std std-option docutils literal notranslate"><span class="pre">-l</span></code></a> option to <strong class="command">co</strong> (and also <strong class="command">ci</strong> ) is
+used to lock the file. This file now becomes a working file, which is writable,
+and it also means other people can’t edit it until you have released it or
+checked it in again.</p>
+<p>Blindly using the <a class="reference internal" href="#cmdoption-co-l"><code class="xref std std-option docutils literal notranslate"><span class="pre">-l</span></code></a> option to <strong class="command">ci</strong>/<strong class="command">co</strong> is
+not advisable, you should get in to the habit now of only locking files you are
 working on.  <abbr title="GNU Revision Control System">RCS</abbr> uses locking to block other users from checking in changes
 and will cause much grief if you use <abbr title="GNU Revision Control System">RCS</abbr> on multi-user projects. It is much
-better to use <a class="reference external" href="https://docs.python.org/3/using/cmdline.html#cmdoption-u" title="(in Python v3.7)"><code class="xref std std-option docutils literal notranslate"><span class="pre">-u</span></code></a> (or unlocked) when you <strong class="command">ci</strong> in new
+better to use <a class="reference internal" href="#cmdoption-ci-u"><code class="xref std std-option docutils literal notranslate"><span class="pre">-u</span></code></a> (or unlocked) when you <strong class="command">ci</strong> in new
 files/changes this way you will have access to a read-only version of the file
 and it will allow other users to edit it.</p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> cat myscript.sh
@@ -265,17 +265,16 @@ the <code class="docutils literal notranslate"><span class="pre">$Id$</span></co
 files, it accepts multiple files per command line(using normal shell
 wild-carding) and provides all the information <abbr title="GNU Revision Control System">RCS</abbr> has on a file. Should you
 ever need to only know the changes that were made to the current revision you
-can use the <code class="xref std std-option docutils literal notranslate"><span class="pre">-r</span></code> option as in <code class="docutils literal notranslate"><span class="pre">rlog</span> <span class="pre">-r</span> <span class="pre">filename</span></code>. You can also check
-changes between revisions of files using the command like <code class="docutils literal notranslate"><span class="pre">rlog</span> <span class="pre">-r1.1,1.2</span>
-<span class="pre">filename</span></code>.</p>
-<p>The <code class="xref std std-option docutils literal notranslate"><span class="pre">-r</span></code> option of <abbr title="GNU Revision Control System">RCS</abbr> is one of its most powerful, it is available
-in all the commands and shares the same semantics throughout. If <code class="xref std std-option docutils literal notranslate"><span class="pre">-r</span></code>
-is used with <strong class="command">ci</strong> it forces a bump, for example <code class="docutils literal notranslate"><span class="pre">ci</span> <span class="pre">-r1.7</span> <span class="pre">filename</span></code>
-will force <abbr title="GNU Revision Control System">RCS</abbr> to check in filename as revision 1.7. Used with <strong class="command">co</strong>
-you can pull any revision of the file from <abbr title="GNU Revision Control System">RCS</abbr> history. Used with
-<strong class="command">rcsdiff</strong> you can create a diff between any revision under <abbr title="GNU Revision Control System">RCS</abbr>, for
-example <code class="docutils literal notranslate"><span class="pre">rcsdiff</span> <span class="pre">-r1.1,1.8</span> <span class="pre">-u</span> <span class="pre">filename</span></code> will output a unified context diff of
-the changes from revision
+can use the <a class="reference internal" href="#cmdoption-rlog-r"><code class="xref std std-option docutils literal notranslate"><span class="pre">-r</span></code></a> option as in <code class="docutils literal notranslate"><span class="pre">rlog</span> <span class="pre">-r</span> <span class="pre">filename</span></code>. You can
+also check changes between revisions of files using the command like <code class="docutils literal notranslate"><span class="pre">rlog</span>
+<span class="pre">-r1.1,1.2</span> <span class="pre">filename</span></code>.</p>
+<p>The <a class="reference internal" href="#cmdoption-r"><code class="xref std std-option docutils literal notranslate"><span class="pre">-r</span></code></a> option of <abbr title="GNU Revision Control System">RCS</abbr> is one of its most powerful, it is available
+in all the commands and shares the same semantics throughout. If <a class="reference internal" href="#cmdoption-ci-r"><code class="xref std std-option docutils literal notranslate"><span class="pre">-r</span></code></a> is used with <strong class="command">ci</strong> it forces a bump, for example <code class="docutils literal notranslate"><span class="pre">ci</span> <span class="pre">-r1.7</span>
+<span class="pre">filename</span></code> will force <abbr title="GNU Revision Control System">RCS</abbr> to check in filename as revision 1.7. Used with
+<strong class="command">co</strong> you can pull any revision of the file from <abbr title="GNU Revision Control System">RCS</abbr> history. Used
+with <strong class="command">rcsdiff</strong> you can create a diff between any revision under <abbr title="GNU Revision Control System">RCS</abbr>,
+for example <code class="docutils literal notranslate"><span class="pre">rcsdiff</span> <span class="pre">-r1.1,1.8</span> <span class="pre">-u</span> <span class="pre">filename</span></code> will output a unified context
+diff of the changes from revision
 1.1 to 1.8.</p>
 <p><abbr title="GNU Revision Control System">RCS</abbr> really is that simple to use, it does have many more options that are not
 covered here(see the man pages) but the power of <abbr title="GNU Revision Control System">RCS</abbr> is how simple it is to
@@ -324,15 +323,51 @@ man page and <code class="file docutils literal notranslate"><span class="pre">R
 a config file which is maintained using <abbr title="GNU Revision Control System">RCS</abbr> by Gentoo’s
 <strong class="command">dispatch-conf</strong> tool.  It allows you to simply see which revision
 introduced a change to a specific line.  You can also choose to annotate
-specific <abbr title="GNU Revision Control System">RCS</abbr> revisions using the <code class="xref std std-option docutils literal notranslate"><span class="pre">--revision</span></code> option, or specific
-dates with <code class="xref std std-option docutils literal notranslate"><span class="pre">--date</span></code> option.  <a class="reference external" href="http://blame.sourceforge.net/">blame</a> has also has a very comprehensive
-manual page included with it which you should read if you want to enjoy its
-full power.</p>
+specific <abbr title="GNU Revision Control System">RCS</abbr> revisions using the <a class="reference internal" href="#cmdoption-blame-revision"><code class="xref std std-option docutils literal notranslate"><span class="pre">--revision</span></code></a>
+option, or specific dates with <a class="reference internal" href="#cmdoption-blame-date"><code class="xref std std-option docutils literal notranslate"><span class="pre">--date</span></code></a> option.  <a class="reference external" href="http://blame.sourceforge.net/">blame</a>
+has also has a very comprehensive manual page included with it which you should
+read if you want to enjoy its full power.</p>
 <p>There are many other tools available which use <abbr title="GNU Revision Control System">RCS</abbr> as a backend, and as long
 as you can access the <abbr title="GNU Revision Control System">RCS</abbr> data files blame can help to understand what is
 happening with them too.</p>
 <p>If you know of any interesting <abbr title="GNU Revision Control System">RCS</abbr> uses please drop me a mail, and I hope
 this short text has been helpful to you.</p>
+<p class="rubric">Footnotes</p>
+<dl class="option">
+<dt id="cmdoption-r">
+<code class="descname">-r</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-r" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-blame-date">
+<code class="descname">--date</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-blame-date" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-blame-revision">
+<code class="descname">--revision</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-blame-revision" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-ci-r">
+<code class="descname">-r</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-ci-r" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-ci-u">
+<code class="descname">-u</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-ci-u" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-co-l">
+<code class="descname">-l</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-co-l" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="option">
+<dt id="cmdoption-rlog-r">
+<code class="descname">-r</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-rlog-r" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
 </div>
 </div>
 

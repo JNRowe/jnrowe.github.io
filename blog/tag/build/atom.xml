@@ -357,10 +357,10 @@ website, and there is no known reference implementation.&lt;/p&gt;
 bugs filed when builds only work with &lt;a class=&quot;reference external&quot; href=&quot;https://www.gnu.org/software/make/make.html&quot;&gt;GNU make&lt;/a&gt;.&lt;/p&gt;
 &lt;/dd&gt;
 &lt;dt class=&quot;label&quot; id=&quot;id12&quot;&gt;&lt;span class=&quot;brackets&quot;&gt;&lt;a class=&quot;fn-backref&quot; href=&quot;#id5&quot;&gt;5&lt;/a&gt;&lt;/span&gt;&lt;/dt&gt;
-&lt;dd&gt;&lt;p&gt;Avery Pennarun’s &lt;a class=&quot;reference external&quot; href=&quot;https://github.com/apenwarr/redo/&quot;&gt;Python implementation&lt;/a&gt; of &lt;strong class=&quot;command&quot;&gt;redo&lt;/strong&gt; outputs its progress
-as depth indented text, so is easy to transform in to a &lt;strong class=&quot;command&quot;&gt;dot&lt;/strong&gt;
-compliant input.  For instance, here is my &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;dzen2&lt;/span&gt;&lt;/code&gt; tree as built by
-&lt;strong class=&quot;command&quot;&gt;redo&lt;/strong&gt;:&lt;/p&gt;
+&lt;dd&gt;&lt;p&gt;Avery Pennarun’s &lt;a class=&quot;reference external&quot; href=&quot;https://github.com/apenwarr/redo/&quot;&gt;Python implementation&lt;/a&gt; of &lt;strong class=&quot;command&quot;&gt;redo&lt;/strong&gt; stores it dependency
+data in a &lt;a href=&quot;#id16&quot;&gt;&lt;span class=&quot;problematic&quot; id=&quot;id17&quot;&gt;sqlite_&lt;/span&gt;&lt;/a&gt; database named &lt;code class=&quot;file docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;.redo/redo.sqlite3&lt;/span&gt;&lt;/code&gt;, making it
+is easy to transform in to a &lt;strong class=&quot;command&quot;&gt;dot&lt;/strong&gt; compliant input.  For
+instance, here is my &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;dzen2&lt;/span&gt;&lt;/code&gt; tree as built by &lt;strong class=&quot;command&quot;&gt;redo&lt;/strong&gt;:&lt;/p&gt;
 &lt;img alt=&quot;Digraph of dzen2 build with redo&quot; src=&quot;../../_images/dzen.png&quot; style=&quot;width: 487.41px; height: 163.68px;&quot; /&gt;
 &lt;/dd&gt;
 &lt;dt class=&quot;label&quot; id=&quot;id13&quot;&gt;&lt;span class=&quot;brackets&quot;&gt;&lt;a class=&quot;fn-backref&quot; href=&quot;#id6&quot;&gt;6&lt;/a&gt;&lt;/span&gt;&lt;/dt&gt;

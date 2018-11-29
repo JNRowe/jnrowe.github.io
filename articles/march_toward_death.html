@@ -82,7 +82,7 @@ MacOS, so we’ll need to make something similar.</p>
             emulation.
         </span>
     </p>
-</div><div class="figure" id="id5">
+</div><div class="figure" id="id3">
 <a class="reference external image-reference" href="../_static/kitt.gif"><img alt="Multi-band scanner in action" src="../_images/kitt06.png" /></a>
 <p class="caption"><span class="caption-text">Click the image for an animated GIF, I’ll spare you the flashing lights in
 case you wish to read on.</span></p>
@@ -97,9 +97,10 @@ case you wish to read on.</span></p>
 </div>
 <p>which results in:</p>
 <img alt="Screenshot of simple day of year bar on 2018-11-13" src="../_images/day_bar.png" />
-<p>The logic should be simple enough to follow:</p>
+<p>The logic should be simple enough to follow(if you’re familiar with
+<strong class="command">date</strong>’s <a class="reference internal" href="#cmdoption-date-arg-j"><code class="xref std std-option docutils literal notranslate"><span class="pre">%j</span> <span class="pre">formatter</span></code></a>):</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">current</span> <span class="pre">day</span> <span class="pre">in</span> <span class="pre">year</span></code><a class="footnote-reference brackets" href="#id3" id="id1">1</a> / <code class="docutils literal notranslate"><span class="pre">number</span> <span class="pre">of</span> <span class="pre">days</span> <span class="pre">in</span> <span class="pre">year</span></code><a class="footnote-reference brackets" href="#id4" id="id2">2</a> * <code class="docutils literal notranslate"><span class="pre">100</span></code> for
+<li><p><code class="docutils literal notranslate"><span class="pre">current</span> <span class="pre">day</span> <span class="pre">in</span> <span class="pre">year</span></code> / <code class="docutils literal notranslate"><span class="pre">number</span> <span class="pre">of</span> <span class="pre">days</span> <span class="pre">in</span> <span class="pre">year</span></code><a class="footnote-reference brackets" href="#id2" id="id1">1</a> * <code class="docutils literal notranslate"><span class="pre">100</span></code> for
 position in year as percentage</p></li>
 <li><p>Generate the <strong class="command">dzen2</strong> markup for a bar of <code class="docutils literal notranslate"><span class="pre">1500</span></code> pixels wide and
 <code class="docutils literal notranslate"><span class="pre">20</span></code> pixels high</p></li>
@@ -184,15 +185,18 @@ I’ll leave it as an exercise for the reader how to handle calculations for day
 with <abbr title="Daylight Saving Time">DST</abbr> transitions.</p>
 <p class="rubric">Footnotes</p>
 <dl class="footnote brackets">
-<dt class="label" id="id3"><span class="brackets"><a class="fn-backref" href="#id1">1</a></span></dt>
-<dd><p><strong class="command">date</strong>’s <code class="xref std std-option docutils literal notranslate"><span class="pre">%j</span></code> format gives us the day of year, see
-<em class="manpage">strftime(3)</em> if this is new to you.</p>
-</dd>
-<dt class="label" id="id4"><span class="brackets"><a class="fn-backref" href="#id2">2</a></span></dt>
+<dt class="label" id="id2"><span class="brackets"><a class="fn-backref" href="#id1">1</a></span></dt>
 <dd><p>Calculating the day of year for December 31ˢᵗ allows to work in leap
 years.</p>
 </dd>
 </dl>
+<dl class="option">
+<dt id="cmdoption-date-arg-j">
+<code class="descname">%j</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-date-arg-j" title="Permalink to this definition">¶</a></dt>
+<dd><p>Displays the day number of the given year, see <em class="manpage">strftime(3)</em> if
+this is new to you.</p>
+</dd></dl>
+
 </div>
 </div>
 
