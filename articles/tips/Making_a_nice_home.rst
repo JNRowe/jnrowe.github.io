@@ -6,7 +6,7 @@ Making a nice home
 
 .. highlight:: make
 
-Back in :doc:`Kick_me_birthday_reminders` I said:
+Back in :ref:`Kick_me_birthday_reminders` I said:
 
     You could trigger a rebuild in your :file:`~/.bashrc` before you call
     :command:`rem` to see the reminders, so they are always up to date at
