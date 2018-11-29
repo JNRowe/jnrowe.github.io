@@ -69,7 +69,7 @@ If we look at the description for `day 1`_:
    - 91212129 produces 9 because the only digit that matches the next one is
      the last digit, 9.
 
-I immediately dumped the samples in to a Python file as::
+I immediately dumped the samples in to a Python :mod:`doctest` file as::
 
     """
     >>> captcha('1122')
