@@ -4,7 +4,7 @@
 Dropping Gentoo reflex
 ======================
 
-After hitting the publish button on :doc:`dropping_gentoo` a few friends
+After hitting the publish button on :ref:`dropping_gentoo` a few friends
 commented that I was either unnecessarily harsh about Gentoo or we wasted an
 enormous amount of time on it.  It definitely was the former, and I feel
 a touch ashamed for implying the latter.
@@ -31,7 +31,7 @@ Almost the first thing you notice when switching to Debian or Fedora as a heavy
 binary package user on Gentoo is just how slow package installation and removal
 is.  Binary package installation on Gentoo feels on par with a distribution
 like Slackware, and what passes for package management there is just choosing
-the right argument to :command:`tar`’s :option:`-C` option [*]_.
+the right argument to :command:`tar`’s :option:`-C <tar -C>` option [*]_.
 
 Where Gentoo really excels though is in the speed of creating new packages or
 editing existing packages.
@@ -152,5 +152,13 @@ fun memories.
 .. [*] To be fair ``.tbz2`` files on Gentoo are just tarballs with a binary
        ``xpak`` appended.  Those extra bits beyond “just a tar -C” are what
        makes dependency handling work among other things.
+
+.. program:: tar
+
+.. option:: -C
+
+    This option tells :command:`tar` to change directory before performing its
+    duty.  For example using ``-C /`` will switch to ``/``, and can be used to
+    unpack a tarball directly over the root filesystem.
 
 .. |PMS| replace:: :abbr:`PMS (Package Manager Specification)`
