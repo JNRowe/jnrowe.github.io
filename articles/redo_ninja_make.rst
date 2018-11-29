@@ -365,10 +365,10 @@ this far and need a little help, don’t hesitate to get in :doc:`contact
        website, and there is no known reference implementation.
 .. [#] This is defintely not true of |make| requirements, I’ve seen many angry
        bugs filed when builds only work with `GNU make`_.
-.. [#] Avery Pennarun’s `Python implementation`_ of |redo| outputs its progress
-       as depth indented text, so is easy to transform in to a :command:`dot`
-       compliant input.  For instance, here is my ``dzen2`` tree as built by
-       |redo|:
+.. [#] Avery Pennarun’s `Python implementation`_ of |redo| stores it dependency
+       data in a sqlite_ database named :file:`.redo/redo.sqlite3`, making it
+       is easy to transform in to a :command:`dot` compliant input.  For
+       instance, here is my ``dzen2`` tree as built by |redo|:
 
        .. image:: /.images/dzen.png
           :scale: 33%
