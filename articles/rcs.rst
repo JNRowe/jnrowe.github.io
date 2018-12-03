@@ -109,16 +109,16 @@ is to check out a read-only version of the file.
     revision 1.1 (locked)
     done
 
-The :option:`-l` option to :command:`co` (and also :command:`ci` ) is used to
-lock the file. This file now becomes a working file, which is writable, and it
-also means other people can’t edit it until you have released it or checked it
-in again.
+The :option:`-l <co -l>` option to :command:`co` (and also :command:`ci` ) is
+used to lock the file. This file now becomes a working file, which is writable,
+and it also means other people can’t edit it until you have released it or
+checked it in again.
 
-Blindly using the :option:`-l` option to :command:`ci`/:command:`co` is not
-advisable, you should get in to the habit now of only locking files you are
+Blindly using the :option:`-l <co -l>` option to :command:`ci`/:command:`co` is
+not advisable, you should get in to the habit now of only locking files you are
 working on.  |RCS| uses locking to block other users from checking in changes
 and will cause much grief if you use |RCS| on multi-user projects. It is much
-better to use :option:`-u` (or unlocked) when you :command:`ci` in new
+better to use :option:`-u <ci -u>` (or unlocked) when you :command:`ci` in new
 files/changes this way you will have access to a read-only version of the file
 and it will allow other users to edit it.
 
@@ -247,18 +247,18 @@ The command :command:`rlog` provides quick access to revision history for
 files, it accepts multiple files per command line(using normal shell
 wild-carding) and provides all the information |RCS| has on a file. Should you
 ever need to only know the changes that were made to the current revision you
-can use the :option:`-r` option as in ``rlog -r filename``. You can also check
-changes between revisions of files using the command like ``rlog -r1.1,1.2
-filename``.
+can use the :option:`-r <rlog -r>` option as in ``rlog -r filename``. You can
+also check changes between revisions of files using the command like ``rlog
+-r1.1,1.2 filename``.
 
 The :option:`-r` option of |RCS| is one of its most powerful, it is available
-in all the commands and shares the same semantics throughout. If :option:`-r`
-is used with :command:`ci` it forces a bump, for example ``ci -r1.7 filename``
-will force |RCS| to check in filename as revision 1.7. Used with :command:`co`
-you can pull any revision of the file from |RCS| history. Used with
-:command:`rcsdiff` you can create a diff between any revision under |RCS|, for
-example ``rcsdiff -r1.1,1.8 -u filename`` will output a unified context diff of
-the changes from revision
+in all the commands and shares the same semantics throughout. If :option:`-r
+<ci -r>` is used with :command:`ci` it forces a bump, for example ``ci -r1.7
+filename`` will force |RCS| to check in filename as revision 1.7. Used with
+:command:`co` you can pull any revision of the file from |RCS| history. Used
+with :command:`rcsdiff` you can create a diff between any revision under |RCS|,
+for example ``rcsdiff -r1.1,1.8 -u filename`` will output a unified context
+diff of the changes from revision
 1.1 to 1.8.
 
 |RCS| really is that simple to use, it does have many more options that are not
@@ -315,10 +315,10 @@ The above excerpt is a sample of the output from blame_ being run against
 a config file which is maintained using |RCS| by Gentoo’s
 :command:`dispatch-conf` tool.  It allows you to simply see which revision
 introduced a change to a specific line.  You can also choose to annotate
-specific |RCS| revisions using the :option:`--revision` option, or specific
-dates with :option:`--date` option.  blame_ has also has a very comprehensive
-manual page included with it which you should read if you want to enjoy its
-full power.
+specific |RCS| revisions using the :option:`--revision <blame --revision>`
+option, or specific dates with :option:`--date <blame --date>` option.  blame_
+has also has a very comprehensive manual page included with it which you should
+read if you want to enjoy its full power.
 
 There are many other tools available which use |RCS| as a backend, and as long
 as you can access the |RCS| data files blame can help to understand what is
@@ -326,6 +326,56 @@ happening with them too.
 
 If you know of any interesting |RCS| uses please drop me a mail, and I hope
 this short text has been helpful to you.
+
+.. rubric:: Footnotes
+
+|RCS| options:
+
+.. option:: -r
+
+    Specify the revision to work with.  Common across all of |RCS|’s tools.
+
+``blame`` options:
+
+.. program:: blame
+
+.. option:: --date
+
+    Annotate the revision that closest to, but not after, the given date.
+
+.. option:: --revision
+
+    Annotate the revision numerically closest to, but not exceeding, the given
+    revision.
+
+``ci`` options:
+
+.. program:: ci
+
+.. option:: -r
+
+    Perform checkin, and store with provided revision identifier.
+
+.. option:: -u
+
+    Don’t lock the file on checkin.
+
+``co`` options:
+
+.. program:: co
+
+.. option:: -l
+
+    Lock the file for editing on checkout.
+
+``rlog`` options:
+
+.. program:: rlog
+
+.. option:: -r
+
+    Specify revisions to perform log against, can be a comma seperated list of
+    ranges.
 
 .. |RCS| replace:: :abbr:`RCS (GNU Revision Control System)`
 
