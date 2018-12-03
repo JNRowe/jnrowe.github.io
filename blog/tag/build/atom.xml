@@ -96,9 +96,9 @@ to pump &lt;strong class=&quot;command&quot;&gt;redo-ifchange&lt;/strong&gt; goi
 &lt;strong class=&quot;command&quot;&gt;gsed&lt;/strong&gt; on MacOS to work around issues with the default &lt;strong class=&quot;command&quot;&gt;sed&lt;/strong&gt;
 command?  As a first port of call &lt;em&gt;at least&lt;/em&gt; run &lt;strong class=&quot;command&quot;&gt;checkbashisms&lt;/strong&gt; from
 the &lt;a class=&quot;reference external&quot; href=&quot;https://packages.debian.org/devscripts&quot;&gt;devscripts&lt;/a&gt; package on your public &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;.do&lt;/span&gt;&lt;/code&gt; files.&lt;/p&gt;
-&lt;p&gt;I mean to an extent you need to be on top of these things in your &lt;strong class=&quot;command&quot;&gt;make&lt;/strong&gt; usage
-too, but you’re likely to have far more complex &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;.do&lt;/span&gt;&lt;/code&gt; files than the shell
-incantations in your rule’s recipes.&lt;/p&gt;
+&lt;p&gt;I mean — to an extent — you need to be on top of these things in your &lt;strong class=&quot;command&quot;&gt;make&lt;/strong&gt;
+usage too, but you’re likely to have far more complex &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;.do&lt;/span&gt;&lt;/code&gt; files than the
+shell incantations in your rule’s recipes.&lt;/p&gt;
 &lt;div class=&quot;admonition tip&quot;&gt;
 &lt;p class=&quot;admonition-title&quot;&gt;Tip&lt;/p&gt;
 &lt;p&gt;If you’re using the Python &lt;strong class=&quot;command&quot;&gt;redo&lt;/strong&gt; implementation you should be considering
@@ -126,8 +126,9 @@ convoluted, and requires a heap of code if you wish to use finer grained
 controls than simply rebuilding &lt;em&gt;everything&lt;/em&gt; by depending on your
 &lt;code class=&quot;file docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;Makefile&lt;/span&gt;&lt;/code&gt; from within your rules.&lt;/p&gt;
 &lt;p&gt;Still &lt;strong class=&quot;command&quot;&gt;redo&lt;/strong&gt; is a big leap forward from plain &lt;strong class=&quot;command&quot;&gt;make&lt;/strong&gt;, and I do recommend it.
-I even gave a talk on it at LoFu ‘16, and I know some people switched after
-hearing that as I’ve been fielding informal support requests ever since ;)&lt;/p&gt;
+I even gave a talk on it at &lt;abbr title=&quot;London Functional&quot;&gt;LoFu&lt;/abbr&gt; ‘16, and I know
+some people switched after hearing that as I’ve been fielding informal support
+requests ever since ;)&lt;/p&gt;
 &lt;/div&gt;
 &lt;div class=&quot;section&quot; id=&quot;gup&quot;&gt;
 &lt;h2&gt;&lt;strong class=&quot;command&quot;&gt;gup&lt;/strong&gt;&lt;/h2&gt;
@@ -135,8 +136,8 @@ hearing that as I’ve been fielding informal support requests ever since ;)&lt;
 an improved &lt;strong class=&quot;command&quot;&gt;redo&lt;/strong&gt; implementation, but is wholly incompatible with it.  It is
 available in both a &lt;a class=&quot;reference external&quot; href=&quot;https://github.com/timbertson/gup/tree/master/python&quot;&gt;Python&lt;/a&gt; and &lt;a class=&quot;reference external&quot; href=&quot;https://github.com/timbertson/gup/tree/master/ocaml&quot;&gt;ocaml&lt;/a&gt; version.  It fixes a few of the most
 annoying problems in &lt;strong class=&quot;command&quot;&gt;redo&lt;/strong&gt;, but operates in largely the same way conceptually.
-Any thing you’ve learnt from &lt;strong class=&quot;command&quot;&gt;redo&lt;/strong&gt; is easy to transfer, and you can update
-your builds to use &lt;strong class=&quot;command&quot;&gt;gup&lt;/strong&gt; with very little effort.&lt;/p&gt;
+Any the skills you’ve learnt with &lt;strong class=&quot;command&quot;&gt;redo&lt;/strong&gt; is easy to transfer, and you can
+update your builds to use &lt;strong class=&quot;command&quot;&gt;gup&lt;/strong&gt; with very little effort.&lt;/p&gt;
 &lt;p&gt;I’m a big fan of &lt;strong class=&quot;command&quot;&gt;gup&lt;/strong&gt;, and for a couple of years I even used it to power my
 home directory having &lt;span class=&quot;xref std std-doc&quot;&gt;moved on from make&lt;/span&gt;.  An
 excerpt from my homedir’s debug support can perhaps serve as an example of its
@@ -358,7 +359,7 @@ bugs filed when builds only work with &lt;a class=&quot;reference external&quot;
 &lt;/dd&gt;
 &lt;dt class=&quot;label&quot; id=&quot;id12&quot;&gt;&lt;span class=&quot;brackets&quot;&gt;&lt;a class=&quot;fn-backref&quot; href=&quot;#id5&quot;&gt;5&lt;/a&gt;&lt;/span&gt;&lt;/dt&gt;
 &lt;dd&gt;&lt;p&gt;Avery Pennarun’s &lt;a class=&quot;reference external&quot; href=&quot;https://github.com/apenwarr/redo/&quot;&gt;Python implementation&lt;/a&gt; of &lt;strong class=&quot;command&quot;&gt;redo&lt;/strong&gt; stores it dependency
-data in a &lt;a href=&quot;#id16&quot;&gt;&lt;span class=&quot;problematic&quot; id=&quot;id17&quot;&gt;sqlite_&lt;/span&gt;&lt;/a&gt; database named &lt;code class=&quot;file docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;.redo/redo.sqlite3&lt;/span&gt;&lt;/code&gt;, making it
+data in a &lt;a class=&quot;reference external&quot; href=&quot;https://sqlite.org/&quot;&gt;sqlite&lt;/a&gt; database named &lt;code class=&quot;file docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;.redo/redo.sqlite3&lt;/span&gt;&lt;/code&gt;, making it
 is easy to transform in to a &lt;strong class=&quot;command&quot;&gt;dot&lt;/strong&gt; compliant input.  For
 instance, here is my &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;dzen2&lt;/span&gt;&lt;/code&gt; tree as built by &lt;strong class=&quot;command&quot;&gt;redo&lt;/strong&gt;:&lt;/p&gt;
 &lt;img alt=&quot;Digraph of dzen2 build with redo&quot; src=&quot;../../_images/dzen.png&quot; style=&quot;width: 487.41px; height: 163.68px;&quot; /&gt;

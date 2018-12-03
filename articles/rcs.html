@@ -59,21 +59,21 @@
 <h1>Introduction to <abbr title="GNU Revision Control System">RCS</abbr><a class="headerlink" href="#introduction-to-rcs" title="Permalink to this headline">¶</a></h1>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
-<p>I’ve resurrected this text from my old UKFSN site because a couple of people
-asked me to, but I wouldn’t recommend using <abbr title="GNU Revision Control System">RCS</abbr> to anyone at this point.
-It is mainly to help people who need to understand <abbr title="GNU Revision Control System">RCS</abbr> because they have
-no choice, for example Gentoo users who are stuck with
+<p>I’ve resurrected this text from my old UKFSN site because a couple of
+people asked me to, but I wouldn’t recommend using <abbr title="GNU Revision Control System">RCS</abbr> to anyone at this
+point.  It is mainly to help people who need to understand <abbr title="GNU Revision Control System">RCS</abbr> because
+they have no choice, for example Gentoo users who are stuck with
 <strong class="command">dispatch-conf</strong> (or so my mails tell me).</p>
 </div>
 <div class="section" id="abstract">
 <h2>Abstract<a class="headerlink" href="#abstract" title="Permalink to this headline">¶</a></h2>
 <p>This introduction is aimed at people with no experience of a <abbr title="Version Control System">VCS</abbr> at all, but
 who do have a need for an easy to use and non-intrusive way to backup, store
-and annotate configuration files or 5000 file C source trees. This text is by
+and annotate configuration files or 5000 file C source trees.  This text is by
 no means an in-depth <abbr title="GNU Revision Control System">RCS</abbr> usage manual, it is a short and fast way to get
 working with <abbr title="GNU Revision Control System">RCS</abbr>.</p>
 <p><abbr title="GNU Revision Control System">RCS</abbr> is great for small projects or managing the wealth of configuration files
-in <code class="docutils literal notranslate"><span class="pre">/etc</span></code>. It provides a way to reduce the need for file backups(without
+in <code class="docutils literal notranslate"><span class="pre">/etc</span></code>.  It provides a way to reduce the need for file backups(without
 losing any backup quality or quantity), to annotate changes made to a file, to
 allow other people to work on a file and an easy method to package patch/diff
 files for distribution.</p>
@@ -115,14 +115,14 @@ and use <strong class="command">ci</strong> to add the file to revision control.
 </pre></div>
 </div>
 <p>The file we checked in appears to have disappeared, obviously it hasn’t but the
-default behaviour of <abbr title="GNU Revision Control System">RCS</abbr> is to remove the file we check in. You can choose to
-keep a working copy with <code class="docutils literal notranslate"><span class="pre">ci</span> <span class="pre">-u</span></code> or <code class="docutils literal notranslate"><span class="pre">ci</span> <span class="pre">-l</span></code> (covered below).</p>
+default behaviour of <abbr title="GNU Revision Control System">RCS</abbr> is to remove the file we check in.  You can choose
+to keep a working copy with <code class="docutils literal notranslate"><span class="pre">ci</span> <span class="pre">-u</span></code> or <code class="docutils literal notranslate"><span class="pre">ci</span> <span class="pre">-l</span></code> (covered below).</p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> ls ./RCS/
 <span class="go">myscript.sh,v</span>
 </pre></div>
 </div>
 <p>In the <abbr title="GNU Revision Control System">RCS</abbr> directory a file now exists with the same name as our script plus
-a <code class="docutils literal notranslate"><span class="pre">,v</span></code>. This is the file <abbr title="GNU Revision Control System">RCS</abbr> uses to store all of its data in.</p>
+a <code class="docutils literal notranslate"><span class="pre">,v</span></code>.  This is the file <abbr title="GNU Revision Control System">RCS</abbr> uses to store all of its data in.</p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> co myscript.sh
 <span class="go">RCS/myscript.sh,v  --&gt;  myscript.sh</span>
 <span class="go">revision 1.1</span>
@@ -133,7 +133,7 @@ a <code class="docutils literal notranslate"><span class="pre">,v</span></code>.
 </pre></div>
 </div>
 <p>The command <strong class="command">co</strong> (check out) pulls a current version(by default) from
-the <abbr title="GNU Revision Control System">RCS</abbr> repository and places it in the current directory. Default behaviour
+the <abbr title="GNU Revision Control System">RCS</abbr> repository and places it in the current directory.  Default behaviour
 is to check out a read-only version of the file.</p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> co -l myscript.sh
 <span class="go">./RCS/myscript.sh,v  --&gt;  ./myscript.sh</span>
@@ -142,13 +142,13 @@ is to check out a read-only version of the file.</p>
 </pre></div>
 </div>
 <p>The <a class="reference internal" href="#cmdoption-co-l"><code class="xref std std-option docutils literal notranslate"><span class="pre">-l</span></code></a> option to <strong class="command">co</strong> (and also <strong class="command">ci</strong> ) is
-used to lock the file. This file now becomes a working file, which is writable,
-and it also means other people can’t edit it until you have released it or
-checked it in again.</p>
+used to lock the file.  This file now becomes a working file, which is
+writable, and it also means other people can’t edit it until you have released
+it or checked it in again.</p>
 <p>Blindly using the <a class="reference internal" href="#cmdoption-co-l"><code class="xref std std-option docutils literal notranslate"><span class="pre">-l</span></code></a> option to <strong class="command">ci</strong>/<strong class="command">co</strong> is
 not advisable, you should get in to the habit now of only locking files you are
 working on.  <abbr title="GNU Revision Control System">RCS</abbr> uses locking to block other users from checking in changes
-and will cause much grief if you use <abbr title="GNU Revision Control System">RCS</abbr> on multi-user projects. It is much
+and will cause much grief if you use <abbr title="GNU Revision Control System">RCS</abbr> on multi-user projects.  It is much
 better to use <a class="reference internal" href="#cmdoption-ci-u"><code class="xref std std-option docutils literal notranslate"><span class="pre">-u</span></code></a> (or unlocked) when you <strong class="command">ci</strong> in new
 files/changes this way you will have access to a read-only version of the file
 and it will allow other users to edit it.</p>
@@ -161,18 +161,24 @@ and it will allow other users to edit it.</p>
 </div>
 <p>If you remember from the original file it contained <code class="docutils literal notranslate"><span class="pre">$Id$</span></code> on a commented
 line, this <code class="docutils literal notranslate"><span class="pre">$Id$</span></code> is a keyword used by <abbr title="GNU Revision Control System">RCS</abbr> that is substituted with
-information about the current file. In this example the tag <code class="docutils literal notranslate"><span class="pre">$Id$</span></code> is
+information about the current file.  In this example the tag <code class="docutils literal notranslate"><span class="pre">$Id$</span></code> is
 expanded to read the filename, the revision number, the date and time of the
 check in, the person who checked in the file, the state of the file and the
 owner of the lock(if any).</p>
 <p>There are many keywords available, including:</p>
-<ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">$Author$</span></code> - the name of the person who did the check in</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">$Header$</span></code> - the same as <code class="docutils literal notranslate"><span class="pre">$Id$</span></code> but including the path for the file</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">$Log$</span></code> - a full changelog for file from the <strong class="command">ci</strong> annotations</p></li>
-</ul>
+<dl class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">$Author$</span></code></dt>
+<dd><p>The name of the person who did the check in</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">$Header$</span></code></dt>
+<dd><p>The same as <code class="docutils literal notranslate"><span class="pre">$Id$</span></code> but including the path for the file</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">$Log$</span></code></dt>
+<dd><p>A full changelog for file from the <strong class="command">ci</strong> annotations</p>
+</dd>
+</dl>
 <p>Although using <code class="docutils literal notranslate"><span class="pre">$Log$</span></code> seems like a good idea it does mean the size of the
-file is increased a huge amount. All the changelog data is available with the
+file is increased a huge amount.  All the changelog data is available with the
 <strong class="command">rlog</strong> command at any time and without filling the source file.</p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> sed -ie <span class="s1">&#39;s/World/${USER}/&#39;</span> myscript.sh
 <span class="gp">$</span> cat myscript.sh
@@ -184,8 +190,7 @@ file is increased a huge amount. All the changelog data is available with the
 <span class="go">Hello james!</span>
 </pre></div>
 </div>
-<p>So we have decided to make some changes to the file, and then tested it
-works.</p>
+<p>So we have decided to make some changes to the file, and then tested it works.</p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> rcsdiff myscript.sh
 <span class="go">===================================================================</span>
 <span class="go">RCS file: RCS/myscript.sh,v</span>
@@ -227,8 +232,8 @@ should output a unified context diff.</p>
 </div>
 <p>So now we have seen the changes made to the file, and are happy with them, we
 check in our new revision.  <abbr title="GNU Revision Control System">RCS</abbr> asks for a log entry, this will make our
-changelog output later. You can cancel the check in using the normal <kbd class="kbd docutils literal notranslate">C-c</kbd>
-(control C) method.</p>
+changelog output later.  You can cancel the check in using the normal
+<kbd class="kbd docutils literal notranslate">C-c</kbd> (control C) method.</p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> cat myscript.sh
 <span class="gp">#</span>! /bin/sh
 <span class="gp">#</span> <span class="nv">$Id</span>: myscript,v <span class="m">1</span>.2 <span class="m">2002</span>/11/04 <span class="m">11</span>:34:21 james Exp james $
@@ -263,15 +268,15 @@ the <code class="docutils literal notranslate"><span class="pre">$Id$</span></co
 </div>
 <p>The command <strong class="command">rlog</strong> provides quick access to revision history for
 files, it accepts multiple files per command line(using normal shell
-wild-carding) and provides all the information <abbr title="GNU Revision Control System">RCS</abbr> has on a file. Should you
+wild-carding) and provides all the information <abbr title="GNU Revision Control System">RCS</abbr> has on a file.  Should you
 ever need to only know the changes that were made to the current revision you
-can use the <a class="reference internal" href="#cmdoption-rlog-r"><code class="xref std std-option docutils literal notranslate"><span class="pre">-r</span></code></a> option as in <code class="docutils literal notranslate"><span class="pre">rlog</span> <span class="pre">-r</span> <span class="pre">filename</span></code>. You can
+can use the <a class="reference internal" href="#cmdoption-rlog-r"><code class="xref std std-option docutils literal notranslate"><span class="pre">-r</span></code></a> option as in <code class="docutils literal notranslate"><span class="pre">rlog</span> <span class="pre">-r</span> <span class="pre">filename</span></code>.  You can
 also check changes between revisions of files using the command like <code class="docutils literal notranslate"><span class="pre">rlog</span>
 <span class="pre">-r1.1,1.2</span> <span class="pre">filename</span></code>.</p>
 <p>The <a class="reference internal" href="#cmdoption-r"><code class="xref std std-option docutils literal notranslate"><span class="pre">-r</span></code></a> option of <abbr title="GNU Revision Control System">RCS</abbr> is one of its most powerful, it is available
-in all the commands and shares the same semantics throughout. If <a class="reference internal" href="#cmdoption-ci-r"><code class="xref std std-option docutils literal notranslate"><span class="pre">-r</span></code></a> is used with <strong class="command">ci</strong> it forces a bump, for example <code class="docutils literal notranslate"><span class="pre">ci</span> <span class="pre">-r1.7</span>
-<span class="pre">filename</span></code> will force <abbr title="GNU Revision Control System">RCS</abbr> to check in filename as revision 1.7. Used with
-<strong class="command">co</strong> you can pull any revision of the file from <abbr title="GNU Revision Control System">RCS</abbr> history. Used
+in all the commands and shares the same semantics throughout.  If <a class="reference internal" href="#cmdoption-ci-r"><code class="xref std std-option docutils literal notranslate"><span class="pre">-r</span></code></a> is used with <strong class="command">ci</strong> it forces a bump, for example <code class="docutils literal notranslate"><span class="pre">ci</span> <span class="pre">-r1.7</span>
+<span class="pre">filename</span></code> will force <abbr title="GNU Revision Control System">RCS</abbr> to check in filename as revision 1.7.  Used with
+<strong class="command">co</strong> you can pull any revision of the file from <abbr title="GNU Revision Control System">RCS</abbr> history.  Used
 with <strong class="command">rcsdiff</strong> you can create a diff between any revision under <abbr title="GNU Revision Control System">RCS</abbr>,
 for example <code class="docutils literal notranslate"><span class="pre">rcsdiff</span> <span class="pre">-r1.1,1.8</span> <span class="pre">-u</span> <span class="pre">filename</span></code> will output a unified context
 diff of the changes from revision
@@ -279,8 +284,8 @@ diff of the changes from revision
 <p><abbr title="GNU Revision Control System">RCS</abbr> really is that simple to use, it does have many more options that are not
 covered here(see the man pages) but the power of <abbr title="GNU Revision Control System">RCS</abbr> is how simple it is to
 use.  It takes almost no time to setup, and probably less time then you
-currently spend on arranging backups. The command syntax is simple, and stable
-across the separate commands. It provides an immensely powerful way to control
+currently spend on arranging backups.  The command syntax is simple, and stable
+across the separate commands.  It provides an immensely powerful way to control
 configuration files, source code, even revisions of binary files and of course
 silly little shell Hello World examples.</p>
 </div>
@@ -290,9 +295,10 @@ silly little shell Hello World examples.</p>
 <ul class="simple">
 <li><p>Make the <code class="docutils literal notranslate"><span class="pre">RCS</span></code> directory.</p></li>
 <li><p>Insert <abbr title="GNU Revision Control System">RCS</abbr> tags, such as <code class="docutils literal notranslate"><span class="pre">$Id$</span></code>, in to your original files to help you
-keep track.  - Edit your files.</p></li>
+keep track.</p></li>
+<li><p>Edit your files.</p></li>
 <li><p>Use <strong class="command">ci</strong> to commit your revisions to the <abbr title="GNU Revision Control System">RCS</abbr> history and annotate
-changes made. You can also use <strong class="command">rcsdiff</strong> to see what changes you
+changes made.  You can also use <strong class="command">rcsdiff</strong> to see what changes you
 have made, maybe to help you build your changelog information.</p></li>
 </ul>
 </div>
@@ -333,40 +339,54 @@ happening with them too.</p>
 <p>If you know of any interesting <abbr title="GNU Revision Control System">RCS</abbr> uses please drop me a mail, and I hope
 this short text has been helpful to you.</p>
 <p class="rubric">Footnotes</p>
+<p><abbr title="GNU Revision Control System">RCS</abbr> options:</p>
 <dl class="option">
 <dt id="cmdoption-r">
 <code class="descname">-r</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-r" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
+<dd><p>Specify the revision to work with.  Common across all of <abbr title="GNU Revision Control System">RCS</abbr>’s tools.</p>
+</dd></dl>
 
+<p><code class="docutils literal notranslate"><span class="pre">blame</span></code> options:</p>
 <dl class="option">
 <dt id="cmdoption-blame-date">
 <code class="descname">--date</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-blame-date" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
+<dd><p>Annotate the revision that closest to, but not after, the given date.</p>
+</dd></dl>
 
 <dl class="option">
 <dt id="cmdoption-blame-revision">
 <code class="descname">--revision</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-blame-revision" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
+<dd><p>Annotate the revision numerically closest to, but not exceeding, the given
+revision.</p>
+</dd></dl>
 
+<p><code class="docutils literal notranslate"><span class="pre">ci</span></code> options:</p>
 <dl class="option">
 <dt id="cmdoption-ci-r">
 <code class="descname">-r</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-ci-r" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
+<dd><p>Perform checkin, and store with provided revision identifier.</p>
+</dd></dl>
 
 <dl class="option">
 <dt id="cmdoption-ci-u">
 <code class="descname">-u</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-ci-u" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
+<dd><p>Don’t lock the file on checkin.</p>
+</dd></dl>
 
+<p><code class="docutils literal notranslate"><span class="pre">co</span></code> options:</p>
 <dl class="option">
 <dt id="cmdoption-co-l">
 <code class="descname">-l</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-co-l" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
+<dd><p>Lock the file for editing on checkout.</p>
+</dd></dl>
 
+<p><code class="docutils literal notranslate"><span class="pre">rlog</span></code> options:</p>
 <dl class="option">
 <dt id="cmdoption-rlog-r">
 <code class="descname">-r</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-rlog-r" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
+<dd><p>Specify revisions to perform log against, can be a comma seperated list of
+ranges.</p>
+</dd></dl>
 
 </div>
 </div>

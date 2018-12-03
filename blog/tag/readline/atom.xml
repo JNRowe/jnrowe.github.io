@@ -128,6 +128,14 @@ provides you can do some amazing things at the prompt.&lt;/p&gt;
 &lt;p&gt;They’re also available in non-interactive mode when writing scripts, and that
 is probably when they’re at their most useful as you can apply them to other
 constructs such as arrays as well.&lt;/p&gt;
+&lt;div class=&quot;admonition tip&quot;&gt;
+&lt;p class=&quot;admonition-title&quot;&gt;Tip&lt;/p&gt;
+&lt;p&gt;If you become accustomed to working with &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;zsh&lt;/span&gt;&lt;/code&gt; and its advanced
+modifiers, then be sure to take a look at &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;zmv&lt;/span&gt;&lt;/code&gt; which is bundled with
+&lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;zsh&lt;/span&gt;&lt;/code&gt;.  It provides a nice interface to copying and moving files that
+makes heavy use of &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;zsh&lt;/span&gt;&lt;/code&gt;’s advanced features.  You may find it suits your
+way of working better than &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;qmv&lt;/span&gt;&lt;/code&gt; for example.&lt;/p&gt;
+&lt;/div&gt;
 &lt;/div&gt;
 &lt;div class=&quot;section&quot; id=&quot;thoughts&quot;&gt;
 &lt;h2&gt;Thoughts&lt;/h2&gt;
