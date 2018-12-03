@@ -136,6 +136,14 @@ They’re also available in non-interactive mode when writing scripts, and that
 is probably when they’re at their most useful as you can apply them to other
 constructs such as arrays as well.
 
+.. tip::
+
+    If you become accustomed to working with ``zsh`` and its advanced
+    modifiers, then be sure to take a look at ``zmv`` which is bundled with
+    ``zsh``.  It provides a nice interface to copying and moving files that
+    makes heavy use of ``zsh``’s advanced features.  You may find it suits your
+    way of working better than ``qmv`` for example.
+
 Thoughts
 --------
 
