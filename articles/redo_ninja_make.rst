@@ -99,9 +99,9 @@ to pump :command:`redo-ifchange` going to fail because some platform’s
 command?  As a first port of call *at least* run :command:`checkbashisms` from
 the devscripts_ package on your public ``.do`` files.
 
-I mean to an extent you need to be on top of these things in your |make| usage
-too, but you’re likely to have far more complex ``.do`` files than the shell
-incantations in your rule’s recipes.
+I mean — to an extent — you need to be on top of these things in your |make|
+usage too, but you’re likely to have far more complex ``.do`` files than the
+shell incantations in your rule’s recipes.
 
 .. tip::
 
@@ -133,8 +133,9 @@ controls than simply rebuilding *everything* by depending on your
 :file:`Makefile` from within your rules.
 
 Still |redo| is a big leap forward from plain |make|, and I do recommend it.
-I even gave a talk on it at LoFu ‘16, and I know some people switched after
-hearing that as I’ve been fielding informal support requests ever since ;)
+I even gave a talk on it at :abbr:`LoFu (London Functional)` ‘16, and I know
+some people switched after hearing that as I’ve been fielding informal support
+requests ever since ;)
 
 |gup|
 -----
@@ -143,8 +144,8 @@ I want to give `Tim Cuthbertson’s gup`_ an honourable mention here.  |gup| is
 an improved |redo| implementation, but is wholly incompatible with it.  It is
 available in both a Python_ and ocaml_ version.  It fixes a few of the most
 annoying problems in |redo|, but operates in largely the same way conceptually.
-Any thing you’ve learnt from |redo| is easy to transfer, and you can update
-your builds to use |gup| with very little effort.
+Any the skills you’ve learnt with |redo| is easy to transfer, and you can
+update your builds to use |gup| with very little effort.
 
 I’m a big fan of |gup|, and for a couple of years I even used it to power my
 home directory having :doc:`moved on from make <tips/Making_a_nice_home>`.  An
@@ -418,3 +419,4 @@ this far and need a little help, don’t hesitate to get in :doc:`contact
 .. _vala support: https://github.com/mesonbuild/meson/blob/master/mesonbuild/compilers/vala.py
 .. _premake: https://premake.github.io/
 .. _tup: http://gittup.org/tup
+.. _sqlite: https://sqlite.org/
