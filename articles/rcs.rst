@@ -8,23 +8,23 @@ Introduction to |RCS|
 
 .. warning::
 
-   I’ve resurrected this text from my old UKFSN site because a couple of people
-   asked me to, but I wouldn’t recommend using |RCS| to anyone at this point.
-   It is mainly to help people who need to understand |RCS| because they have
-   no choice, for example Gentoo users who are stuck with
-   :command:`dispatch-conf` (or so my mails tell me).
+    I’ve resurrected this text from my old UKFSN site because a couple of
+    people asked me to, but I wouldn’t recommend using |RCS| to anyone at this
+    point.  It is mainly to help people who need to understand |RCS| because
+    they have no choice, for example Gentoo users who are stuck with
+    :command:`dispatch-conf` (or so my mails tell me).
 
 Abstract
 --------
 
 This introduction is aimed at people with no experience of a |VCS| at all, but
 who do have a need for an easy to use and non-intrusive way to backup, store
-and annotate configuration files or 5000 file C source trees. This text is by
+and annotate configuration files or 5000 file C source trees.  This text is by
 no means an in-depth |RCS| usage manual, it is a short and fast way to get
 working with |RCS|.
 
 |RCS| is great for small projects or managing the wealth of configuration files
-in ``/etc``. It provides a way to reduce the need for file backups(without
+in ``/etc``.  It provides a way to reduce the need for file backups(without
 losing any backup quality or quantity), to annotate changes made to a file, to
 allow other people to work on a file and an easy method to package patch/diff
 files for distribution.
@@ -33,9 +33,6 @@ If you want more in-depth information about using |RCS|, or when you find you
 need more functionality from |RCS|, there is a HOW-TO at `The Linux
 Documentation Project`_ (`direct link`_) and fantastic documentation is
 provided with the |RCS| package.
-
-.. _The Linux Documentation Project: http://www.tldp.org
-.. _direct link: http://tldp.org/HOWTO/RCS.html
 
 Diving in
 ---------
@@ -77,8 +74,8 @@ and use :command:`ci` to add the file to revision control.
     RCS
 
 The file we checked in appears to have disappeared, obviously it hasn’t but the
-default behaviour of |RCS| is to remove the file we check in. You can choose to
-keep a working copy with ``ci -u`` or ``ci -l`` (covered below).
+default behaviour of |RCS| is to remove the file we check in.  You can choose
+to keep a working copy with ``ci -u`` or ``ci -l`` (covered below).
 
 ::
 
@@ -86,7 +83,7 @@ keep a working copy with ``ci -u`` or ``ci -l`` (covered below).
     myscript.sh,v
 
 In the |RCS| directory a file now exists with the same name as our script plus
-a ``,v``. This is the file |RCS| uses to store all of its data in.
+a ``,v``.  This is the file |RCS| uses to store all of its data in.
 
 ::
 
@@ -99,7 +96,7 @@ a ``,v``. This is the file |RCS| uses to store all of its data in.
     -r--r--r--    1 james    james          95 Nov  4 11:29 myscript.sh
 
 The command :command:`co` (check out) pulls a current version(by default) from
-the |RCS| repository and places it in the current directory. Default behaviour
+the |RCS| repository and places it in the current directory.  Default behaviour
 is to check out a read-only version of the file.
 
 ::
@@ -110,14 +107,14 @@ is to check out a read-only version of the file.
     done
 
 The :option:`-l <co -l>` option to :command:`co` (and also :command:`ci` ) is
-used to lock the file. This file now becomes a working file, which is writable,
-and it also means other people can’t edit it until you have released it or
-checked it in again.
+used to lock the file.  This file now becomes a working file, which is
+writable, and it also means other people can’t edit it until you have released
+it or checked it in again.
 
 Blindly using the :option:`-l <co -l>` option to :command:`ci`/:command:`co` is
 not advisable, you should get in to the habit now of only locking files you are
 working on.  |RCS| uses locking to block other users from checking in changes
-and will cause much grief if you use |RCS| on multi-user projects. It is much
+and will cause much grief if you use |RCS| on multi-user projects.  It is much
 better to use :option:`-u <ci -u>` (or unlocked) when you :command:`ci` in new
 files/changes this way you will have access to a read-only version of the file
 and it will allow other users to edit it.
@@ -132,19 +129,22 @@ and it will allow other users to edit it.
 
 If you remember from the original file it contained ``$Id$`` on a commented
 line, this ``$Id$`` is a keyword used by |RCS| that is substituted with
-information about the current file. In this example the tag ``$Id$`` is
+information about the current file.  In this example the tag ``$Id$`` is
 expanded to read the filename, the revision number, the date and time of the
 check in, the person who checked in the file, the state of the file and the
 owner of the lock(if any).
 
 There are many keywords available, including:
 
-- ``$Author$`` - the name of the person who did the check in
-- ``$Header$`` - the same as ``$Id$`` but including the path for the file
-- ``$Log$`` - a full changelog for file from the :command:`ci` annotations
+``$Author$``
+   The name of the person who did the check in
+``$Header$``
+   The same as ``$Id$`` but including the path for the file
+``$Log$``
+   A full changelog for file from the :command:`ci` annotations
 
 Although using ``$Log$`` seems like a good idea it does mean the size of the
-file is increased a huge amount. All the changelog data is available with the
+file is increased a huge amount.  All the changelog data is available with the
 :command:`rlog` command at any time and without filling the source file.
 
 ::
@@ -158,8 +158,7 @@ file is increased a huge amount. All the changelog data is available with the
     $ sh ./myscript.sh
     Hello james!
 
-So we have decided to make some changes to the file, and then tested it
-works.
+So we have decided to make some changes to the file, and then tested it works.
 
 ::
 
@@ -205,8 +204,8 @@ should output a unified context diff.
 
 So now we have seen the changes made to the file, and are happy with them, we
 check in our new revision.  |RCS| asks for a log entry, this will make our
-changelog output later. You can cancel the check in using the normal :kbd:`C-c`
-(control C) method.
+changelog output later.  You can cancel the check in using the normal
+:kbd:`C-c` (control C) method.
 
 ::
 
@@ -245,17 +244,17 @@ the ``$Id$`` tag.
 
 The command :command:`rlog` provides quick access to revision history for
 files, it accepts multiple files per command line(using normal shell
-wild-carding) and provides all the information |RCS| has on a file. Should you
+wild-carding) and provides all the information |RCS| has on a file.  Should you
 ever need to only know the changes that were made to the current revision you
-can use the :option:`-r <rlog -r>` option as in ``rlog -r filename``. You can
+can use the :option:`-r <rlog -r>` option as in ``rlog -r filename``.  You can
 also check changes between revisions of files using the command like ``rlog
 -r1.1,1.2 filename``.
 
 The :option:`-r` option of |RCS| is one of its most powerful, it is available
-in all the commands and shares the same semantics throughout. If :option:`-r
+in all the commands and shares the same semantics throughout.  If :option:`-r
 <ci -r>` is used with :command:`ci` it forces a bump, for example ``ci -r1.7
-filename`` will force |RCS| to check in filename as revision 1.7. Used with
-:command:`co` you can pull any revision of the file from |RCS| history. Used
+filename`` will force |RCS| to check in filename as revision 1.7.  Used with
+:command:`co` you can pull any revision of the file from |RCS| history.  Used
 with :command:`rcsdiff` you can create a diff between any revision under |RCS|,
 for example ``rcsdiff -r1.1,1.8 -u filename`` will output a unified context
 diff of the changes from revision
@@ -264,8 +263,8 @@ diff of the changes from revision
 |RCS| really is that simple to use, it does have many more options that are not
 covered here(see the man pages) but the power of |RCS| is how simple it is to
 use.  It takes almost no time to setup, and probably less time then you
-currently spend on arranging backups. The command syntax is simple, and stable
-across the separate commands. It provides an immensely powerful way to control
+currently spend on arranging backups.  The command syntax is simple, and stable
+across the separate commands.  It provides an immensely powerful way to control
 configuration files, source code, even revisions of binary files and of course
 silly little shell Hello World examples.
 
@@ -276,9 +275,10 @@ To recap on |RCS| usage
 
 - Make the ``RCS`` directory.
 - Insert |RCS| tags, such as ``$Id$``, in to your original files to help you
-  keep track.  - Edit your files.
+  keep track.
+- Edit your files.
 - Use :command:`ci` to commit your revisions to the |RCS| history and annotate
-  changes made. You can also use :command:`rcsdiff` to see what changes you
+  changes made.  You can also use :command:`rcsdiff` to see what changes you
   have made, maybe to help you build your changelog information.
 
 Advanced
@@ -379,5 +379,7 @@ this short text has been helpful to you.
 
 .. |RCS| replace:: :abbr:`RCS (GNU Revision Control System)`
 
+.. _The Linux Documentation Project: http://www.tldp.org
+.. _direct link: http://tldp.org/HOWTO/RCS.html
 .. _rcsi: http://www.colinbrough.pwp.blueyonder.co.uk/rcsi.README.html
 .. _blame: http://blame.sourceforge.net/
