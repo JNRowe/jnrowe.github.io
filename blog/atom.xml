@@ -2,11 +2,136 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title type="text">JNRowe</title>
   <id>https://jnrowe.github.io/blog/atom.xml</id>
-  <updated>2018-11-23T00:00:00Z</updated>
+  <updated>2018-12-04T00:00:00Z</updated>
   <link href="https://jnrowe.github.io/" />
   <link href="https://jnrowe.github.io/blog/atom.xml" rel="self" />
   <subtitle type="text">Ramblings of a tired mind</subtitle>
   <generator uri="http://ablog.readthedocs.org" version="0.9.2">ABlog</generator>
+  <entry xml:base="https://jnrowe.github.io/blog/atom.xml">
+    <title type="text">Giddy new project love</title>
+    <id>https://jnrowe.github.io/articles/new_love_giddiness.html</id>
+    <updated>2018-12-04T00:00:00Z</updated>
+    <published>2018-12-04T00:00:00Z</published>
+    <link href="https://jnrowe.github.io/articles/new_love_giddiness.html" />
+    <author>
+      <name>James Rowe</name>
+    </author>
+    <content type="html">&lt;div class=&quot;section&quot; id=&quot;giddy-new-project-love&quot;&gt;
+
+&lt;p&gt;I’ve recently inherited a new tier-one project, which is great news!  Sadly, it
+is in real need of some Tender Loving Care™.  Was there ever an inherited
+project that wasn’t?&lt;/p&gt;
+&lt;p&gt;The project is our semi-custom transpiler for &lt;a class=&quot;reference external&quot; href=&quot;https://en.m.wikipedia.org/wiki/Ada_(programming_language)&quot;&gt;Ada&lt;/a&gt; affectionately called
+&lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;sandfly&lt;/span&gt;&lt;/code&gt;.  I say semi-custom as it was spun out from a consortium effort to
+“facilitate reliability and improve portability” of &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;Ada&lt;/span&gt;&lt;/code&gt; projects, which is
+a far loftier sounding goal than it need be.  In essence, it is the
+codification of rules and guidelines we’ve adhered to since a partner meeting
+in &lt;em&gt;1996&lt;/em&gt;, and that we find ourselves still following today&lt;a class=&quot;footnote-reference brackets&quot; href=&quot;#id4&quot; id=&quot;id1&quot;&gt;1&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;I wasn’t around back when the original group was formed, and it was disbanded
+before I’d even heard of &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;Ada&lt;/span&gt;&lt;/code&gt;.  This project is genuinely
+multi-generational, which &lt;em&gt;feels&lt;/em&gt; nice.  All too often our work in software can
+feel ephemeral; squeaked on a whiteboard in the morning, tapped in to
+a computer in the afternoon and swept away by the janitors as night falls.&lt;/p&gt;
+&lt;div class=&quot;section&quot; id=&quot;hopes-and-dreams&quot;&gt;
+&lt;h2&gt;Hopes and dreams&lt;/h2&gt;
+&lt;p&gt;As the project &lt;em&gt;should&lt;/em&gt; have significant longevity I find myself pondering the
+future.  &lt;em&gt;If&lt;/em&gt; I could changes things for the next 20 years, what should I do to
+make that experience better?  Should I do &lt;em&gt;nothing at all&lt;/em&gt; and just chug along
+reducing the anxiety that even small changes will evoke?&lt;/p&gt;
+&lt;p&gt;I also find myself pondering the present.  Could a truly radical change &lt;em&gt;today&lt;/em&gt;
+obviate the need for this project entirely before the next maintainer grabs the
+reins for their reign of anxiety?  Would that necessarily be a good thing?&lt;/p&gt;
+&lt;div class=&quot;sidebar&quot;&gt;
+&lt;p class=&quot;sidebar-title&quot;&gt;Common errors&lt;/p&gt;
+&lt;p&gt;I’ve always considered it odd that we can choose to attach a listing of
+common errors to a product and expect people to use it.  If we know it is
+common for users to make critical errors because of a design decision we
+need to make a new design, not a new bullet point on the list.&lt;/p&gt;
+&lt;p&gt;Even simple things like watching an &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;Ada&lt;/span&gt;&lt;/code&gt; beginner make the classic
+“atomic means atomic” mistake should be designed out, and not &lt;em&gt;solved&lt;/em&gt; with
+an addendum of “protected objects mean atomic” chicanery.&lt;/p&gt;
+&lt;/div&gt;
+&lt;p&gt;Many of the advantages that we associate with &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;Ada&lt;/span&gt;&lt;/code&gt; — such as its mighty type
+safety — no longer feel that advanced or remotely unique.  Even “hobby”
+languages such as &lt;a class=&quot;reference external&quot; href=&quot;https://nim-lang.org/&quot;&gt;nim&lt;/a&gt; implement many of the safety features we expect from
+&lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;Ada&lt;/span&gt;&lt;/code&gt; implementations&lt;a class=&quot;footnote-reference brackets&quot; href=&quot;#id5&quot; id=&quot;id2&quot;&gt;2&lt;/a&gt;; subrange types being a fine example where the
+&lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;nim&lt;/span&gt;&lt;/code&gt; designers have absorbed an &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;Ada&lt;/span&gt;&lt;/code&gt; feature.  And standard everyday
+languages now often have tooling that is capable of providing &lt;em&gt;many&lt;/em&gt; of the
+benefits of &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;Ada&lt;/span&gt;&lt;/code&gt;, and one should really only expect this to increase.&lt;/p&gt;
+&lt;p&gt;What really hammers home the point here is that a good number of the features
+one thinks about weren’t even available in &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;Ada&lt;/span&gt;&lt;/code&gt; when &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;sandfly&lt;/span&gt;&lt;/code&gt; began; fex
+contracts are from &lt;a class=&quot;reference external&quot; href=&quot;http://www.ada2012.org/&quot;&gt;Ada 2012&lt;/a&gt;.  Will languages leapfrog &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;Ada&lt;/span&gt;&lt;/code&gt; in its niche
+by borrowing and then sprint away by innovating as their uptake increases?&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;section&quot; id=&quot;benefits-of-transpilation&quot;&gt;
+&lt;h2&gt;Benefits of transpilation&lt;/h2&gt;
+&lt;p&gt;The original &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;sandfly&lt;/span&gt;&lt;/code&gt; authors implemented a transpiler because it made
+various checks simpler to carry out.  According to the documentation, it was
+never intended to become a full blown language in its own right… which of
+course it has.&lt;/p&gt;
+&lt;p&gt;Maybe we should take the opportunity to stay on top of the changing language
+landscape thanks to the side effect of &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;sandfly&lt;/span&gt;&lt;/code&gt;’s implementation details.
+Given that we’re already transpiling should we consider alternative targets?
+&lt;a class=&quot;reference external&quot; href=&quot;http://www.ocaml.org/&quot;&gt;ocaml&lt;/a&gt; is the language that immediately jumps to mind, as it is syntactically
+close to &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;sandfly&lt;/span&gt;&lt;/code&gt; and it has an excellent type system.  And once you have
+&lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;ocaml&lt;/span&gt;&lt;/code&gt; it is a smaller step to &lt;a class=&quot;reference external&quot; href=&quot;http://fsharp.org/&quot;&gt;F#&lt;/a&gt; thanks to its legacy &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;ocaml&lt;/span&gt;&lt;/code&gt; mode.&lt;/p&gt;
+&lt;p&gt;The code base is amenable to multiple targets already.  A couple of years ago
+I implemented support for testing without relying on the support kernel
+supplied by our compiler vendor&lt;a class=&quot;footnote-reference brackets&quot; href=&quot;#id6&quot; id=&quot;id3&quot;&gt;3&lt;/a&gt;.  At its base &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;sandfly&lt;/span&gt;&lt;/code&gt; will optionally
+generate &lt;a class=&quot;reference external&quot; href=&quot;http://www.lua.org/&quot;&gt;lua&lt;/a&gt; bytecode that is loaded in to a tiny emulator which can be driven
+by other &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;lua&lt;/span&gt;&lt;/code&gt; scripts to test an implementation.  Its main purpose was to
+allow early experimentation without the expense and time of waiting for
+hardware re-fabrication.&lt;/p&gt;
+&lt;div class=&quot;figure&quot; id=&quot;id7&quot;&gt;
+&lt;img alt=&quot;sandfly debug architecture&quot; src=&quot;_images/sandfly_use.png&quot; style=&quot;width: 279.5px; height: 358.0px;&quot; /&gt;
+&lt;p class=&quot;caption&quot;&gt;&lt;span class=&quot;caption-text&quot;&gt;As you can see from example usage, it’s source-to-source all the way down.
+If I’m writing &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;lua&lt;/span&gt;&lt;/code&gt; I’m using &lt;a class=&quot;reference external&quot; href=&quot;https://github.com/leafo/moonscript/&quot;&gt;moonscript&lt;/a&gt;, and so should you!&lt;/span&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;p&gt;I’m not sure it would even be a great stretch to change the main target, there
+would likely be significant support for it in fact.  It has already been
+suggested that we should exclusively switch to &lt;a class=&quot;reference external&quot; href=&quot;https://en.m.wikipedia.org/wiki/SPARK_(programming_language)&quot;&gt;spark&lt;/a&gt; on a number of occasions,
+especially since the reformation in Spark 2014.  If we could figure out the
+safety certification story I’m sure there would be a lot of traction for &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;F#&lt;/span&gt;&lt;/code&gt;
+as default.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;section&quot; id=&quot;final-thoughts&quot;&gt;
+&lt;h2&gt;Final thoughts&lt;/h2&gt;
+&lt;p&gt;I’ve always really appreciated &lt;a class=&quot;reference external&quot; href=&quot;https://en.m.wikipedia.org/wiki/Vala_(programming_language)&quot;&gt;vala&lt;/a&gt;’s alternative syntax support; &lt;a class=&quot;reference external&quot; href=&quot;https://en.m.wikipedia.org/wiki/C_Sharp_(programming_language)&quot;&gt;C#&lt;/a&gt; by
+default, but with first class support for &lt;a class=&quot;reference external&quot; href=&quot;https://en.m.wikipedia.org/wiki/Genie_(programming_language)&quot;&gt;genie&lt;/a&gt;’s &lt;a class=&quot;reference external&quot; href=&quot;http://boo-lang.org/&quot;&gt;boo&lt;/a&gt;-inspired syntax.
+I find myself thinking how nice it would be to emulate that and have multiple
+frontends, &lt;em&gt;and&lt;/em&gt; the previously described backends.&lt;/p&gt;
+&lt;p&gt;In fact I find myself thinking about &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;vala&lt;/span&gt;&lt;/code&gt; a lot as I write this.  It never
+had the uptake I would have hoped for when I first read about it.  It has
+however had a &lt;em&gt;huge&lt;/em&gt; impact in the places where it has been used.  That surely
+makes it a great role model for &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;sandfly&lt;/span&gt;&lt;/code&gt; going forward.  It is better to be
+an elusive Aston Martin &lt;a class=&quot;reference external&quot; href=&quot;https://en.m.wikipedia.org/wiki/Aston_Martin_DB5&quot;&gt;DB-5&lt;/a&gt; than a common as muck &lt;a class=&quot;reference external&quot; href=&quot;https://en.m.wikipedia.org/wiki/Ford_Focus&quot;&gt;Ford Focus&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;So, I’m deep in a pre-reality dream state where I want to add heaps of amazing
+new features and functionality, coupled with a cold light of day feeling that
+it could be nice to kill the project by transforming it in to a gateway out of
+&lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;Ada&lt;/span&gt;&lt;/code&gt;.  It could be the best &lt;em&gt;or&lt;/em&gt; worst project in the history of the world!
+I’m genuinely excited.&lt;/p&gt;
+&lt;p class=&quot;rubric&quot;&gt;Footnotes&lt;/p&gt;
+&lt;dl class=&quot;footnote brackets&quot;&gt;
+&lt;dt class=&quot;label&quot; id=&quot;id4&quot;&gt;&lt;span class=&quot;brackets&quot;&gt;&lt;a class=&quot;fn-backref&quot; href=&quot;#id1&quot;&gt;1&lt;/a&gt;&lt;/span&gt;&lt;/dt&gt;
+&lt;dd&gt;&lt;p&gt;It should be easy to guess why this project is being handed on, given
+that we’re talking about a twenty-one year old endeavour.&lt;/p&gt;
+&lt;/dd&gt;
+&lt;dt class=&quot;label&quot; id=&quot;id5&quot;&gt;&lt;span class=&quot;brackets&quot;&gt;&lt;a class=&quot;fn-backref&quot; href=&quot;#id2&quot;&gt;2&lt;/a&gt;&lt;/span&gt;&lt;/dt&gt;
+&lt;dd&gt;&lt;p&gt;This isn’t meant to disparage &lt;a class=&quot;reference external&quot; href=&quot;https://nim-lang.org/&quot;&gt;nim&lt;/a&gt;, as it is really quite interesting.
+I mean it purely in the sense that we haven’t &lt;em&gt;yet&lt;/em&gt; seen large industry
+adoption.&lt;/p&gt;
+&lt;/dd&gt;
+&lt;dt class=&quot;label&quot; id=&quot;id6&quot;&gt;&lt;span class=&quot;brackets&quot;&gt;&lt;a class=&quot;fn-backref&quot; href=&quot;#id3&quot;&gt;3&lt;/a&gt;&lt;/span&gt;&lt;/dt&gt;
+&lt;dd&gt;&lt;p&gt;I’m of the &lt;em&gt;strong&lt;/em&gt; opinion that vendors who forbid you from naming,
+shaming and even benchmarking them should be avoided at &lt;em&gt;all costs&lt;/em&gt;.
+However, I’m not on the procurement board and didn’t get to make that
+decision.&lt;/p&gt;
+&lt;/dd&gt;
+&lt;/dl&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</content>
+  </entry>
   <entry xml:base="https://jnrowe.github.io/blog/atom.xml">
     <title type="text">while $sun; do make hay; done</title>
     <id>https://jnrowe.github.io/articles/redo_ninja_make.html</id>
@@ -1910,205 +2035,6 @@ duty.  For example using &lt;code class=&quot;docutils literal notranslate&quot;
 unpack a tarball directly over the root filesystem.&lt;/p&gt;
 &lt;/dd&gt;&lt;/dl&gt;
 
-&lt;/div&gt;
-&lt;/div&gt;
-</content>
-  </entry>
-  <entry xml:base="https://jnrowe.github.io/blog/atom.xml">
-    <title type="text">Dropping Gentoo</title>
-    <id>https://jnrowe.github.io/articles/dropping_gentoo.html</id>
-    <updated>2014-06-18T00:00:00Z</updated>
-    <published>2014-06-18T00:00:00Z</published>
-    <link href="https://jnrowe.github.io/articles/dropping_gentoo.html" />
-    <author>
-      <name>James Rowe</name>
-    </author>
-    <content type="html">&lt;div class=&quot;section&quot; id=&quot;dropping-gentoo&quot;&gt;
-
-&lt;p&gt;We’ve been using &lt;a class=&quot;reference external&quot; href=&quot;http://gentoo.org&quot;&gt;Gentoo&lt;/a&gt; for shipped products since June 2005, and as
-a development platform since September 2004.  A long time, an incredibly long
-time in fact.&lt;/p&gt;
-&lt;p&gt;Today our final Gentoo using product shipped, with a single scheduled update
-promised in Q3-2015.  It is kind of sad day, but we all knew that day was coming
-and it takes only a little inside knowledge to know why.&lt;/p&gt;
-&lt;div class=&quot;admonition note&quot;&gt;
-&lt;p class=&quot;admonition-title&quot;&gt;Note&lt;/p&gt;
-&lt;p&gt;A couple of people have rightly pointed out that I was a little harsh in
-this document, so I’ve pushed a &lt;span class=&quot;xref std std-doc&quot;&gt;followup&lt;/span&gt;.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class=&quot;section&quot; id=&quot;landscapes-have-changed&quot;&gt;
-&lt;h2&gt;Landscapes have changed&lt;/h2&gt;
-&lt;p&gt;Back when we started using Gentoo it was clearly the best choice for what we
-needed; a easily coercible base on which to construct our Linux devices.  There
-actually weren’t a lot of viable choices back then.&lt;/p&gt;
-&lt;p&gt;&lt;a class=&quot;reference external&quot; href=&quot;http://debian.org&quot;&gt;Debian&lt;/a&gt;, which many of us loved, felt like the only mainstream distribution we
-could have used.  Unfortunately, it wasn’t available for the arches we needed.
-It also didn’t package many of things we used at that point, but to be fair
-there were &lt;abbr title=&quot;Intent to Package&quot;&gt;ITPs&lt;/abbr&gt; (were they called that back then?)
-already floating about for most of them.&lt;/p&gt;
-&lt;p&gt;The “from source” options available then would, for all intents and purposes,
-have meant taking on the support costs of the entire stack which nobody wanted
-to commit to.  As it turns out that burden slowly crept up on us over the next
-ten years anyway.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class=&quot;section&quot; id=&quot;take-a-left-in-100-metres&quot;&gt;
-&lt;h2&gt;Take a left in 100 metres&lt;/h2&gt;
-&lt;p&gt;Over the years we regrettably diverged heavily from upstream, almost to the
-point that saying we use Gentoo almost feels like a lie.&lt;/p&gt;
-&lt;p&gt;Before our first product shipped we had already switched to maintaining the
-essential toolchain packages like GCC and glibc ourselves.  I can’t recall the
-specific reasons as I didn’t work on them, but I recall agreeing with them.&lt;/p&gt;
-&lt;p&gt;At some point we started using a custom package manager, initially just a new
-drop-in resolver and eventually a completely independent package manager.
-&lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;portage&lt;/span&gt;&lt;/code&gt; was ferociously buggy in places and also appeared to be moribund, so
-it seemed like the correct choice.  We never supported the full range of
-features that Gentoo’s &lt;a class=&quot;reference external&quot; href=&quot;http://wiki.gentoo.org/wiki/Project:PMS&quot;&gt;PMS&lt;/a&gt; now defines, but it made the support surface a lot
-nicer.&lt;/p&gt;
-&lt;p&gt;There was a point where we seriously considered moving to a &lt;a class=&quot;reference external&quot; href=&quot;http://en.wikipedia.org/wiki/Conary_(package_manager)&quot;&gt;Conary&lt;/a&gt;-based
-infrastructure.  It did loads of the cool things we wanted to do and it mostly
-fitted our workflow with its “Gentoo done right” feel.  Sadly, it has
-a &lt;abbr title=&quot;Contributor License Agreement&quot;&gt;CLA&lt;/abbr&gt; which none of us could sign that practically guaranteed we would
-eventually be in the same place we were with Gentoo.  May have been
-a fortuitous roadblock in the end, as Conary never gained the traction it
-once promised(perhaps in part because of that &lt;abbr title=&quot;Contributor License Agreement&quot;&gt;CLA&lt;/abbr&gt;?).&lt;/p&gt;
-&lt;p&gt;Had we waited another five months, there would have been another open source
-package manager for Gentoo we could have easily switched to and hacked on.
-There is perhaps a pattern here…&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class=&quot;section&quot; id=&quot;upstreaming-changes&quot;&gt;
-&lt;h2&gt;Upstreaming changes&lt;/h2&gt;
-&lt;p&gt;Of course, running a non-standard package manager and a thick layer of custom
-packages at the bottom of the stack made contributing changes back upstream very
-time consuming.  Many of us tried, but eventually most stopped.&lt;/p&gt;
-&lt;p&gt;Anyone who was running Gentoo in the mid-00’s will recall the giant wedge that
-got in the way of reporting bugs, and sadly by the time it disappeared many of
-us had lost interest.&lt;/p&gt;
-&lt;p&gt;If you had ran the gauntlet and lucked out with a bug in front of a developer,
-there was a new barrier that many were irked by: lack of attribution.  It never
-bothered me, but the number of developers who wouldn’t even reference a bug
-report in the ChangeLog was huge.  That taught me a valuable personal lesson,
-I always attribute a commit to the reporter even when I’ve significantly mangled
-a patch to make it acceptable.&lt;/p&gt;
-&lt;p&gt;For a time, to ease the annoyance we used to play a game where we reported real
-bugs with patches, but using silly data for &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;emerge&lt;/span&gt; &lt;span class=&quot;pre&quot;&gt;--info&lt;/span&gt;&lt;/code&gt;.  It was
-definitely fun while it lasted, but it didn’t solve the pain points.  Not
-wanting to be associated with the bugs made people use pseudonyms, which also
-removed the expectation of attribution too.&lt;/p&gt;
-&lt;p&gt;I kept trying to report trivial and cosmetic bugs - ones which didn’t require
-a huge upfront investment - for some time, but they’d go unchanged for weeks or
-months so I stopped doing that too&lt;/p&gt;
-&lt;p&gt;Looking around now there is an automatically generated list of bugs with patches
-which we’ve fixed but haven’t upstreamed, and a few random entries from it look
-like this:&lt;/p&gt;
-&lt;div class=&quot;highlight-console notranslate&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&quot;gp&quot;&gt;$&lt;/span&gt; wc -l ~/gentoo/to_push/jay.rst
-&lt;span class=&quot;go&quot;&gt;1157 /home/jay/gentoo/to_push/jay.rst&lt;/span&gt;
-&lt;span class=&quot;gp&quot;&gt;$&lt;/span&gt; wc -l ~/gentoo/to_push/mattias.rst
-&lt;span class=&quot;go&quot;&gt;2104 /home/jay/gentoo/to_push/mattias.rst&lt;/span&gt;
-&lt;span class=&quot;gp&quot;&gt;$&lt;/span&gt; wc -l ~/gentoo/to_push/chrisp.rst
-&lt;span class=&quot;go&quot;&gt;873 /home/jay/gentoo/to_push/chrisp.rst&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-&lt;/div&gt;
-&lt;p&gt;That genuinely upsets me greatly.  The amount of potential duplicated effort
-they represent is enormous, and I don’t even want to attempt to put a figure on
-it.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class=&quot;section&quot; id=&quot;supporting-upstream&quot;&gt;
-&lt;h2&gt;Supporting upstream&lt;/h2&gt;
-&lt;p&gt;We’re entirely to blame.  We always planned on supporting upstream in whichever
-way we could.  That fell down for instances beyond sending patches too.&lt;/p&gt;
-&lt;p&gt;The story that comes to mind is from a chance encounter at LinuxWorld back in
-2005.  We had managed to gather a whole heap of really cool hardware to donate
-to projects who were exhibiting on the day we attended, and it felt nice handing
-out toys as a little “thank you” to the projects we depended on.&lt;/p&gt;
-&lt;p&gt;It wasn’t all roses though.  My manager went off to offer some ARM-based devices
-to the Gentoo guys who were there, but was met with “tremendous rudeness” from
-the person manning their desk at the time.  In hindsight people could have
-predicted a similar outcome, and it was just an unlucky moment for him to walk
-up.  That soured his enthusiasm no end, and it was the last time we managed to
-score bags of toys to randomly give away to developers on any project.&lt;/p&gt;
-&lt;p&gt;If you were one of the people who received a Nokia tablet or ZipIt in the Hand
-&amp;amp; Flower that evening, you now know the reason and perhaps you can even guess
-who to thank.&lt;/p&gt;
-&lt;p&gt;A year or so later I watched a similar scenario play out at the Gentoo UK
-conference with a potential sponsor and the same developer.  Evening beers were
-met with other people telling stories about that same person, which was a shame
-as it probably cost them a few good cash and infrastructure sponsors that day
-alone.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class=&quot;section&quot; id=&quot;support-costs&quot;&gt;
-&lt;h2&gt;Support costs&lt;/h2&gt;
-&lt;p&gt;Over time we’ve come to support most of the tree that people refer to as
-&lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;gentoo-x86&lt;/span&gt;&lt;/code&gt; ourselves.  The toolchain changes we needed at the time
-necessitated supporting a few packages further up the stack.  Our desire to trim
-the tree of a few categories that were problematic, meant replacing a variety of
-packages with then unavailable dependencies.&lt;/p&gt;
-&lt;p&gt;And there were many other examples too…&lt;/p&gt;
-&lt;div class=&quot;section&quot; id=&quot;matchbox&quot;&gt;
-&lt;h3&gt;matchbox&lt;/h3&gt;
-&lt;p&gt;We packaged &lt;a class=&quot;reference internal&quot; href=&quot;#matchbox&quot;&gt;matchbox&lt;/a&gt; and its associated packages a long, long time before they
-hit the official tree.  It was the first real pain point we had with packages
-appearing in the tree after we had already been using them.&lt;/p&gt;
-&lt;p&gt;When they did eventually hit the tree we had to carry workarounds for years.  At
-some point we stopped trying and just scrubbed the ebuilds that got in the way.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class=&quot;section&quot; id=&quot;python&quot;&gt;
-&lt;h3&gt;Python&lt;/h3&gt;
-&lt;p&gt;The state of the Python packaging a few years ago made us take the jump to
-replace or remove anything that packaged a Python module.  Initially very time
-consuming, but it saved an enormous amount of grief.&lt;/p&gt;
-&lt;p&gt;I suspect we could move closer to upstream at this point, but the point is now
-moot.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class=&quot;section&quot; id=&quot;systemd&quot;&gt;
-&lt;h3&gt;systemd&lt;/h3&gt;
-&lt;p&gt;We switched to &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;systemd&lt;/span&gt;&lt;/code&gt; before the package was in upstream’s tree, and we
-have had to keep supporting it to this day because of insurmountable packaging
-differences.&lt;/p&gt;
-&lt;p&gt;In a few places that means taking on packages with a reverse dependency too,
-where differences create issues.  And it clearly means taking on any package
-that depends on &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;openrc&lt;/span&gt;&lt;/code&gt; or Gentoo’s &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;baselayout&lt;/span&gt;&lt;/code&gt; package.  Those packages
-are becoming fewer and fewer by the day though, so that would have become
-a non-issue.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class=&quot;section&quot; id=&quot;x-org&quot;&gt;
-&lt;h3&gt;X.org&lt;/h3&gt;
-&lt;p&gt;We had been packaging x.org’s packages to work around some implementation
-differences with upstream since the dawn of modular X.  Mostly just to do with
-how dependencies were specified to start with, but they’re no longer even
-remotely similar.&lt;/p&gt;
-&lt;p&gt;Luckily there isn’t a great deal of churn in the packages we care about for the
-most part, so it never caused a huge time sink.&lt;/p&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class=&quot;section&quot; id=&quot;the-end-is-nigh&quot;&gt;
-&lt;h2&gt;The end is nigh&lt;/h2&gt;
-&lt;p&gt;At some point it began to feel like we were maintaining our own distribution
-from end-to-end, and that wasn’t fun.  It also wasn’t what any of us needed to
-do, and the time it was taking measurably ate in to &lt;em&gt;real&lt;/em&gt; project time.&lt;/p&gt;
-&lt;p&gt;The decision to start weaning ourselves off of Gentoo was made back in the
-summer of last year, and it has finally started to come in to effect.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class=&quot;section&quot; id=&quot;the-times-they-are-a-changing&quot;&gt;
-&lt;h2&gt;The Times They Are a-Changing&lt;/h2&gt;
-&lt;p&gt;There are plenty of good alternatives out there now for building systems that
-need to run on a variety of architectures.  Some binary, some source-based and
-a few hybrid approaches.&lt;/p&gt;
-&lt;p&gt;The project I’m working on right now is using Debian &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;testing&lt;/span&gt;&lt;/code&gt;, and it appears
-to be working out fine.  Some things still annoy me, like the time it takes to
-patch and recreate a package.  It is a trivial thing with Gentoo, but requires
-far too much work with Debian.  Perhaps we’ll improve the workflow enough as we
-develop more experience.&lt;/p&gt;
-&lt;p&gt;We’ve also hit a good moment to use Debian because a whole heap of work has gone
-in to making Debian easier to bootstrap, and it definitely shows.  When I find
-out who has done all the magic to make that happen I’ll scribble down a note to
-owe them some beers.&lt;/p&gt;
-&lt;p&gt;We’re also lucky in that we employ two Debian developers, one is practically
-a funded full-time Debian developer.  They’re incredibly knowledgeable and it
-makes working with Debian a lot easier, so thanks guys!&lt;/p&gt;
-&lt;p&gt;All told, things look good.  We’re still playing with some alternatives and as
-yet no concrete decisions have been made, but I feel like we’re on the right
-track for the next ten years.&lt;/p&gt;
-&lt;p&gt;So long Gentoo, and thanks for all fish!&lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 </content>
