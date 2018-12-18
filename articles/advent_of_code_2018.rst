@@ -23,7 +23,7 @@ floundered purely on the descriptions for the past couple of days, but I’m
 pretty sure that it is largely my problem too.
 
 I have 28 stars for completing both parts of every day so far this year, but
-I’m haven’t been enjoying it enough to warrant continuing.
+I haven’t been enjoying it enough to warrant continuing.
 
 Day 1
 -----
@@ -51,7 +51,7 @@ hit an annoying failure:
 
 It turns out that :command:`numsum` doesn’t like the leading ``+`` for positive
 numbers, and somehow I’ve never noticed.  I’m *just about* observant enough to
-notice that this was wrong though. so I didn’t submit the incorrect answer.
+notice that this was wrong though, so I didn’t submit the incorrect answer.
 The question does remain though: is it better that :command:`numsum` ignores
 “malformed” inputs or would a default strict mode be much nicer?
 
