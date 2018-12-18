@@ -88,6 +88,12 @@ two, ending up with the following::
             else:
                 seen.add(result)
 
+.. tip::
+
+    While it won’t make much difference in this instance we use a :class:`set`
+    for our ``seen`` bucket as it provides constant-time *O(1)* lookup, whereas
+    Python’s :class:`list` implementation would be linear.
+
 So, what have we here?  Well, we’ll want some kind of test runner for the
 remaining days, so I hacked up a quick decorator to run the examples.
 
@@ -132,6 +138,13 @@ The only other interesting thing in the part two solution is that we’ve
 immediately reached for :mod:`itertools`.  :func:`~itertools.cycle` allows us
 to avoid implementing our own looping, and also avoid concerning ourselves with
 the differences between iterators and iterables [#]_.
+
+.. note::
+
+    You could clearly implement the same thing with a ``while`` loop and an
+    index, but this method makes the reasoning obvious(at least in my eyes).
+    And that is the beauty of a lot of the helpers in :mod:`itertools`, they
+    improve readability by allowing you to “code the intent”.
 
 According to :pypi:`rdial` I could have been on the leaderboard for both parts
 if I’d woken up at five to work on it :/
