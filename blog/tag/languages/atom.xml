@@ -96,6 +96,19 @@ as default.&lt;/p&gt;
 &lt;/div&gt;
 &lt;div class=&quot;section&quot; id=&quot;final-thoughts&quot;&gt;
 &lt;h2&gt;Final thoughts&lt;/h2&gt;
+&lt;div class=&quot;sidebar&quot;&gt;
+&lt;p class=&quot;sidebar-title&quot;&gt;Open Sourcing &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;sandfly&lt;/span&gt;&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;There have been a few enquiries as to whether this work is Open Source, and
+sadly it isn’t.  However, if you work for one of the Atlas Consortium
+companies(or a significant partner of one) it is easy to arrange “source
+available” access.  I &lt;em&gt;know&lt;/em&gt; this isn’t the same thing, but it is the
+current situation.&lt;/p&gt;
+&lt;p&gt;The good news is that I’ve added an item to the issue tracker that includes
+making it Open Source, the bad news is that there is a lot of work needed
+— both by me and &lt;em&gt;many&lt;/em&gt; others — to make that happen.  I’ve kicked the
+initial process off by contacting legal for guidance, we’ll see what
+happens.&lt;/p&gt;
+&lt;/div&gt;
 &lt;p&gt;I’ve always really appreciated &lt;a class=&quot;reference external&quot; href=&quot;https://en.m.wikipedia.org/wiki/Vala_(programming_language)&quot;&gt;vala&lt;/a&gt;’s alternative syntax support; &lt;a class=&quot;reference external&quot; href=&quot;https://en.m.wikipedia.org/wiki/C_Sharp_(programming_language)&quot;&gt;C#&lt;/a&gt; by
 default, but with first class support for &lt;a class=&quot;reference external&quot; href=&quot;https://en.m.wikipedia.org/wiki/Genie_(programming_language)&quot;&gt;genie&lt;/a&gt;’s &lt;a class=&quot;reference external&quot; href=&quot;http://boo-lang.org/&quot;&gt;boo&lt;/a&gt;-inspired syntax.
 I find myself thinking how nice it would be to emulate that and have multiple

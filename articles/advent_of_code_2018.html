@@ -51,7 +51,7 @@
             
     <p class="read-time">
       <b>Estimated reading time</b>:
-      19 minutes
+      20 minutes
     </p>
   
 
@@ -135,6 +135,12 @@ two, ending up with the following:</p>
             <span class="n">seen</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">result</span><span class="p">)</span>
 </pre></div>
 </div>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>While it won’t make much difference in this instance we use a <a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#set" title="(in Python v3.7)"><code class="xref py py-class docutils literal notranslate"><span class="pre">set</span></code></a>
+for our <code class="docutils literal notranslate"><span class="pre">seen</span></code> bucket as it provides constant-time <em>O(1)</em> lookup, whereas
+Python’s <a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.7)"><code class="xref py py-class docutils literal notranslate"><span class="pre">list</span></code></a> implementation would be linear.</p>
+</div>
 <p>So, what have we here?  Well, we’ll want some kind of test runner for the
 remaining days, so I hacked up a quick decorator to run the examples.</p>
 <img alt="|AOC| example runner output" src="../_images/2018-12-15-advent_of_code.png" />
@@ -175,6 +181,13 @@ to the day’s input box.</p>
 immediately reached for <a class="reference external" href="https://docs.python.org/3/library/itertools.html#module-itertools" title="(in Python v3.7)"><code class="xref py py-mod docutils literal notranslate"><span class="pre">itertools</span></code></a>.  <a class="reference external" href="https://docs.python.org/3/library/itertools.html#itertools.cycle" title="(in Python v3.7)"><code class="xref py py-func docutils literal notranslate"><span class="pre">cycle()</span></code></a> allows us
 to avoid implementing our own looping, and also avoid concerning ourselves with
 the differences between iterators and iterables<a class="footnote-reference brackets" href="#id4" id="id1">1</a>.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>You could clearly implement the same thing with a <code class="docutils literal notranslate"><span class="pre">while</span></code> loop and an
+index, but this method makes the reasoning obvious(at least in my eyes).
+And that is the beauty of a lot of the helpers in <a class="reference external" href="https://docs.python.org/3/library/itertools.html#module-itertools" title="(in Python v3.7)"><code class="xref py py-mod docutils literal notranslate"><span class="pre">itertools</span></code></a>, they
+improve readability by allowing you to “code the intent”.</p>
+</div>
 <p>According to <a class="reference external" href="https://pypi.python.org/pypi/rdial">rdial</a> I could have been on the leaderboard for both parts
 if I’d woken up at five to work on it :/</p>
 </div>
@@ -572,6 +585,25 @@ concepts are often known by various common names.</p>
 
   <div class="section">
   
+    
+
+
+<div class="section">
+  <span style="float: left;">
+  
+  Previous: 
+  <a href="new_love_giddiness.html">
+    
+    Giddy new project love
+  </a>
+  
+  </span>
+  <span>&nbsp;</span>
+  <span style="float: right;">
+  
+</div>
+
+  
   
   </div>
 
@@ -595,6 +627,53 @@ concepts are often known by various common names.</p>
 
 
 
+
+  
+  
+  <h2>
+  
+  
+    2018-12-15
+  
+  </h2>
+
+  <ul>
+    
+
+  
+  <li id="author"><span>Author:</span>
+    
+      
+      <a href="../blog/author/james-rowe.html">James Rowe</a>
+      
+    </li>
+  
+
+  
+
+  
+
+  
+
+  
+  <li id="tags"><span>Tags:</span>
+      
+    
+      
+      <a href="../blog/tag/adventofcode.html">adventofcode</a>
+      
+    
+      
+      <a href="../blog/tag/coding.html">coding</a>
+      
+    
+      
+      <a href="../blog/tag/puzzles.html">puzzles</a>
+      
+    </li>
+  
+  
+  </ul>
 
 
 <h3>Navigation</h3>
@@ -671,6 +750,11 @@ concepts are often known by various common names.</p>
       
     
       
+      <li class="ablog-cloud ablog-cloud-2">
+        <a href="../blog/tag/adventofcode.html">adventofcode</a></li>
+      
+    
+      
       <li class="ablog-cloud ablog-cloud-3">
         <a href="../blog/tag/awesome.html">awesome</a></li>
       
@@ -703,6 +787,11 @@ concepts are often known by various common names.</p>
       
       <li class="ablog-cloud ablog-cloud-1">
         <a href="../blog/tag/burnout.html">burnout</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-2">
+        <a href="../blog/tag/coding.html">coding</a></li>
       
     
       
@@ -866,6 +955,11 @@ concepts are often known by various common names.</p>
       
     
       
+      <li class="ablog-cloud ablog-cloud-2">
+        <a href="../blog/tag/puzzles.html">puzzles</a></li>
+      
+    
+      
       <li class="ablog-cloud ablog-cloud-1">
         <a href="../blog/tag/python.html">python</a></li>
       
@@ -976,7 +1070,7 @@ concepts are often known by various common names.</p>
   <ul>
   
     
-    <li><a href="../blog/2018.html">2018 (8)</a></li>
+    <li><a href="../blog/2018.html">2018 (10)</a></li>
     
   
     
