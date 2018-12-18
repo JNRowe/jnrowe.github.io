@@ -98,6 +98,20 @@ as default.
 Final thoughts
 --------------
 
+.. sidebar:: Open Sourcing ``sandfly``
+
+    There have been a few enquiries as to whether this work is Open Source, and
+    sadly it isn’t.  However, if you work for one of the Atlas Consortium
+    companies(or a significant partner of one) it is easy to arrange “source
+    available” access.  I *know* this isn’t the same thing, but it is the
+    current situation.
+
+    The good news is that I’ve added an item to the issue tracker that includes
+    making it Open Source, the bad news is that there is a lot of work needed
+    — both by me and *many* others — to make that happen.  I’ve kicked the
+    initial process off by contacting legal for guidance, we’ll see what
+    happens.
+
 I’ve always really appreciated vala_\’s alternative syntax support; `C#`_ by
 default, but with first class support for genie_\’s boo_-inspired syntax.
 I find myself thinking how nice it would be to emulate that and have multiple
