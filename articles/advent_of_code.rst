@@ -1,5 +1,6 @@
-:date: 2018-10-19
-:tags: adventofcode, coding, puzzles
+.. post:: 2018-10-19
+   :tags: adventofcode, coding, puzzles
+   :image: 1
 
 Advent of Code 2017
 ===================
