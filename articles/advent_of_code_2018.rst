@@ -136,7 +136,7 @@ personal solution the runner will simply display it, so that you can dump it in
 to the day’s input box.
 
 The only other interesting thing in the part two solution is that we’ve
-immediately reached for :mod:`itertools`.  :func:`~itertools.cycle` allows us
+immediately reached for :mod:`itertools`.  :func:`~itertools.cycle` allowing us
 to avoid implementing our own looping, and also avoid concerning ourselves with
 the differences between iterators and iterables [#]_.
 
@@ -202,7 +202,10 @@ I feel like day three is the first day this year where we’ll need to do some
 actual work, but how much work we’ll need to do is dependent on our feelings on
 dependencies.  A few of my co-workers *claim* it is cheating to reach for an
 off the shelf solution, but as the previous sections prove I’m definitely not
-in that camp.
+in that camp.  I’m of the opinion you *should* use pre-written well-tested code
+in preference to writing your own code *every* time, otherwise we’re quickly
+falling in to a `No true Scotsman`_ argument as we chase are way back to
+building computers with hand cracked flints.
 
 For this puzzle we need to imagine a piece of mappable cloth, so a 2-d array is
 on the cards.  If we’re using Python then we’ll need to do a lot of work to
@@ -393,8 +396,8 @@ Anyway, it turns out I was right.  There were going to be some significant
 optimisations to make this work reasonably.  However, they didn’t show up until
 part two, and when they did it was easier to switch languages than acceptably
 speed up the Python version.  The result using the following ``C++`` is
-instantaneous on my machine, while the Python version takes about five seconds
-to produce the same answer.
+instantaneous on my machine, while the Python version takes few seconds per
+example to produce the same answer.
 
 .. code-block:: cpp
 
@@ -540,8 +543,8 @@ diving back in to complete the remaining days ;)
 .. rubric:: Footnotes
 
 .. [#] For those not too familiar with Python_ — and forgetful people like me
-       — it can be easy to trip oneself up on iterators over a list repeatably,
-       and then exhausting an iterable because you’re treating it as a list.
+       — it can be easy to trip oneself up when iterating over a :class:`list`
+       repeatably, and then exhausting an iterable when you pass that instead.
        :func:`~itertools.cycle` does the right thing either way.
 .. [#] Or for that matter ``numpy``’s own ``all()`` function which becomes
        useful when using ``numpy`` for more complicated tasks.
@@ -557,6 +560,7 @@ diving back in to complete the remaining days ;)
 .. _num-utils: http://suso.suso.org/programs/num-utils/
 .. _vim: https://github.com/vim/vim/
 .. _Python: https://www.python.org/
+.. _No true Scotsman: https://en.m.wikipedia.org/wiki/No_true_Scotsman
 .. _where: https://docs.scipy.org/doc/numpy-1.15.1/reference/generated/numpy.where.html
 .. _fat arrow: https://en.m.wikipedia.org/wiki/Fat_comma
 .. _leaderboard: https://adventofcode.com/2018/leaderboard
