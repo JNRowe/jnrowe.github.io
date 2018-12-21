@@ -100,7 +100,7 @@ hit an annoying failure:</p>
 </div>
 <p>It turns out that <strong class="command">numsum</strong> doesn’t like the leading <code class="docutils literal notranslate"><span class="pre">+</span></code> for positive
 numbers, and somehow I’ve never noticed.  I’m <em>just about</em> observant enough to
-notice that this was wrong though. so I didn’t submit the incorrect answer.
+notice that this was wrong though, so I didn’t submit the incorrect answer.
 The question does remain though: is it better that <strong class="command">numsum</strong> ignores
 “malformed” inputs or would a default strict mode be much nicer?</p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> tr -d + &lt; inputs/day01.txt <span class="p">|</span> numsum
@@ -178,7 +178,7 @@ test our final result if we’re refactoring.  If you provide examples with no
 personal solution the runner will simply display it, so that you can dump it in
 to the day’s input box.</p>
 <p>The only other interesting thing in the part two solution is that we’ve
-immediately reached for <a class="reference external" href="https://docs.python.org/3/library/itertools.html#module-itertools" title="(in Python v3.7)"><code class="xref py py-mod docutils literal notranslate"><span class="pre">itertools</span></code></a>.  <a class="reference external" href="https://docs.python.org/3/library/itertools.html#itertools.cycle" title="(in Python v3.7)"><code class="xref py py-func docutils literal notranslate"><span class="pre">cycle()</span></code></a> allows us
+immediately reached for <a class="reference external" href="https://docs.python.org/3/library/itertools.html#module-itertools" title="(in Python v3.7)"><code class="xref py py-mod docutils literal notranslate"><span class="pre">itertools</span></code></a>.  <a class="reference external" href="https://docs.python.org/3/library/itertools.html#itertools.cycle" title="(in Python v3.7)"><code class="xref py py-func docutils literal notranslate"><span class="pre">cycle()</span></code></a> allowing us
 to avoid implementing our own looping, and also avoid concerning ourselves with
 the differences between iterators and iterables<a class="footnote-reference brackets" href="#id4" id="id1">1</a>.</p>
 <div class="admonition note">
@@ -242,7 +242,10 @@ word and thus always has one perfect match.</p>
 actual work, but how much work we’ll need to do is dependent on our feelings on
 dependencies.  A few of my co-workers <em>claim</em> it is cheating to reach for an
 off the shelf solution, but as the previous sections prove I’m definitely not
-in that camp.</p>
+in that camp.  I’m of the opinion you <em>should</em> use pre-written well-tested code
+in preference to writing your own code <em>every</em> time, otherwise we’re quickly
+falling in to a <a class="reference external" href="https://en.m.wikipedia.org/wiki/No_true_Scotsman">No true Scotsman</a> argument as we chase are way back to
+building computers with hand cracked flints.</p>
 <p>For this puzzle we need to imagine a piece of mappable cloth, so a 2-d array is
 on the cards.  If we’re using Python then we’ll need to do a lot of work to
 operate on chunks of that array, but there is an easier way if we extend our
@@ -421,8 +424,8 @@ roughly the same time, but for paedagogy I’ve kept the <code class="docutils l
 optimisations to make this work reasonably.  However, they didn’t show up until
 part two, and when they did it was easier to switch languages than acceptably
 speed up the Python version.  The result using the following <code class="docutils literal notranslate"><span class="pre">C++</span></code> is
-instantaneous on my machine, while the Python version takes about five seconds
-to produce the same answer.</p>
+instantaneous on my machine, while the Python version takes few seconds per
+example to produce the same answer.</p>
 <div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span> <span class="cpf">&lt;iostream&gt;</span><span class="cp"></span>
 <span class="cp">#include</span> <span class="cpf">&lt;string&gt;</span><span class="cp"></span>
 <span class="cp">#include</span> <span class="cpf">&lt;vector&gt;</span><span class="cp"></span>
@@ -553,8 +556,8 @@ diving back in to complete the remaining days ;)</p>
 <dl class="footnote brackets">
 <dt class="label" id="id4"><span class="brackets"><a class="fn-backref" href="#id1">1</a></span></dt>
 <dd><p>For those not too familiar with <a class="reference external" href="https://www.python.org/">Python</a> — and forgetful people like me
-— it can be easy to trip oneself up on iterators over a list repeatably,
-and then exhausting an iterable because you’re treating it as a list.
+— it can be easy to trip oneself up when iterating over a <a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.7)"><code class="xref py py-class docutils literal notranslate"><span class="pre">list</span></code></a>
+repeatably, and then exhausting an iterable when you pass that instead.
 <a class="reference external" href="https://docs.python.org/3/library/itertools.html#itertools.cycle" title="(in Python v3.7)"><code class="xref py py-func docutils literal notranslate"><span class="pre">cycle()</span></code></a> does the right thing either way.</p>
 </dd>
 <dt class="label" id="id5"><span class="brackets"><a class="fn-backref" href="#id2">2</a></span></dt>

@@ -61,7 +61,7 @@ hit an annoying failure:&lt;/p&gt;
 &lt;/div&gt;
 &lt;p&gt;It turns out that &lt;strong class=&quot;command&quot;&gt;numsum&lt;/strong&gt; doesn’t like the leading &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;+&lt;/span&gt;&lt;/code&gt; for positive
 numbers, and somehow I’ve never noticed.  I’m &lt;em&gt;just about&lt;/em&gt; observant enough to
-notice that this was wrong though. so I didn’t submit the incorrect answer.
+notice that this was wrong though, so I didn’t submit the incorrect answer.
 The question does remain though: is it better that &lt;strong class=&quot;command&quot;&gt;numsum&lt;/strong&gt; ignores
 “malformed” inputs or would a default strict mode be much nicer?&lt;/p&gt;
 &lt;div class=&quot;highlight-console notranslate&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&quot;gp&quot;&gt;$&lt;/span&gt; tr -d + &amp;lt; inputs/day01.txt &lt;span class=&quot;p&quot;&gt;|&lt;/span&gt; numsum
@@ -139,7 +139,7 @@ test our final result if we’re refactoring.  If you provide examples with no
 personal solution the runner will simply display it, so that you can dump it in
 to the day’s input box.&lt;/p&gt;
 &lt;p&gt;The only other interesting thing in the part two solution is that we’ve
-immediately reached for &lt;a class=&quot;reference external&quot; href=&quot;https://docs.python.org/3/library/itertools.html#module-itertools&quot; title=&quot;(in Python v3.7)&quot;&gt;&lt;code class=&quot;xref py py-mod docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;itertools&lt;/span&gt;&lt;/code&gt;&lt;/a&gt;.  &lt;a class=&quot;reference external&quot; href=&quot;https://docs.python.org/3/library/itertools.html#itertools.cycle&quot; title=&quot;(in Python v3.7)&quot;&gt;&lt;code class=&quot;xref py py-func docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;cycle()&lt;/span&gt;&lt;/code&gt;&lt;/a&gt; allows us
+immediately reached for &lt;a class=&quot;reference external&quot; href=&quot;https://docs.python.org/3/library/itertools.html#module-itertools&quot; title=&quot;(in Python v3.7)&quot;&gt;&lt;code class=&quot;xref py py-mod docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;itertools&lt;/span&gt;&lt;/code&gt;&lt;/a&gt;.  &lt;a class=&quot;reference external&quot; href=&quot;https://docs.python.org/3/library/itertools.html#itertools.cycle&quot; title=&quot;(in Python v3.7)&quot;&gt;&lt;code class=&quot;xref py py-func docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;cycle()&lt;/span&gt;&lt;/code&gt;&lt;/a&gt; allowing us
 to avoid implementing our own looping, and also avoid concerning ourselves with
 the differences between iterators and iterables&lt;a class=&quot;footnote-reference brackets&quot; href=&quot;#id4&quot; id=&quot;id1&quot;&gt;1&lt;/a&gt;.&lt;/p&gt;
 &lt;div class=&quot;admonition note&quot;&gt;
@@ -203,7 +203,10 @@ word and thus always has one perfect match.&lt;/p&gt;
 actual work, but how much work we’ll need to do is dependent on our feelings on
 dependencies.  A few of my co-workers &lt;em&gt;claim&lt;/em&gt; it is cheating to reach for an
 off the shelf solution, but as the previous sections prove I’m definitely not
-in that camp.&lt;/p&gt;
+in that camp.  I’m of the opinion you &lt;em&gt;should&lt;/em&gt; use pre-written well-tested code
+in preference to writing your own code &lt;em&gt;every&lt;/em&gt; time, otherwise we’re quickly
+falling in to a &lt;a class=&quot;reference external&quot; href=&quot;https://en.m.wikipedia.org/wiki/No_true_Scotsman&quot;&gt;No true Scotsman&lt;/a&gt; argument as we chase are way back to
+building computers with hand cracked flints.&lt;/p&gt;
 &lt;p&gt;For this puzzle we need to imagine a piece of mappable cloth, so a 2-d array is
 on the cards.  If we’re using Python then we’ll need to do a lot of work to
 operate on chunks of that array, but there is an easier way if we extend our
@@ -382,8 +385,8 @@ roughly the same time, but for paedagogy I’ve kept the &lt;code class=&quot;do
 optimisations to make this work reasonably.  However, they didn’t show up until
 part two, and when they did it was easier to switch languages than acceptably
 speed up the Python version.  The result using the following &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;C++&lt;/span&gt;&lt;/code&gt; is
-instantaneous on my machine, while the Python version takes about five seconds
-to produce the same answer.&lt;/p&gt;
+instantaneous on my machine, while the Python version takes few seconds per
+example to produce the same answer.&lt;/p&gt;
 &lt;div class=&quot;highlight-cpp notranslate&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&quot;cp&quot;&gt;#include&lt;/span&gt; &lt;span class=&quot;cpf&quot;&gt;&amp;lt;iostream&amp;gt;&lt;/span&gt;&lt;span class=&quot;cp&quot;&gt;&lt;/span&gt;
 &lt;span class=&quot;cp&quot;&gt;#include&lt;/span&gt; &lt;span class=&quot;cpf&quot;&gt;&amp;lt;string&amp;gt;&lt;/span&gt;&lt;span class=&quot;cp&quot;&gt;&lt;/span&gt;
 &lt;span class=&quot;cp&quot;&gt;#include&lt;/span&gt; &lt;span class=&quot;cpf&quot;&gt;&amp;lt;vector&amp;gt;&lt;/span&gt;&lt;span class=&quot;cp&quot;&gt;&lt;/span&gt;
@@ -514,8 +517,8 @@ diving back in to complete the remaining days ;)&lt;/p&gt;
 &lt;dl class=&quot;footnote brackets&quot;&gt;
 &lt;dt class=&quot;label&quot; id=&quot;id4&quot;&gt;&lt;span class=&quot;brackets&quot;&gt;&lt;a class=&quot;fn-backref&quot; href=&quot;#id1&quot;&gt;1&lt;/a&gt;&lt;/span&gt;&lt;/dt&gt;
 &lt;dd&gt;&lt;p&gt;For those not too familiar with &lt;a class=&quot;reference external&quot; href=&quot;https://www.python.org/&quot;&gt;Python&lt;/a&gt; — and forgetful people like me
-— it can be easy to trip oneself up on iterators over a list repeatably,
-and then exhausting an iterable because you’re treating it as a list.
+— it can be easy to trip oneself up when iterating over a &lt;a class=&quot;reference external&quot; href=&quot;https://docs.python.org/3/library/stdtypes.html#list&quot; title=&quot;(in Python v3.7)&quot;&gt;&lt;code class=&quot;xref py py-class docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;list&lt;/span&gt;&lt;/code&gt;&lt;/a&gt;
+repeatably, and then exhausting an iterable when you pass that instead.
 &lt;a class=&quot;reference external&quot; href=&quot;https://docs.python.org/3/library/itertools.html#itertools.cycle&quot; title=&quot;(in Python v3.7)&quot;&gt;&lt;code class=&quot;xref py py-func docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;cycle()&lt;/span&gt;&lt;/code&gt;&lt;/a&gt; does the right thing either way.&lt;/p&gt;
 &lt;/dd&gt;
 &lt;dt class=&quot;label&quot; id=&quot;id5&quot;&gt;&lt;span class=&quot;brackets&quot;&gt;&lt;a class=&quot;fn-backref&quot; href=&quot;#id2&quot;&gt;2&lt;/a&gt;&lt;/span&gt;&lt;/dt&gt;
@@ -2024,7 +2027,7 @@ anybody understands the feeling that your career is dead, then surely it is me.
 However, now is not the time to be turning on your co-workers(and in many cases
 close friends).&lt;/p&gt;
 &lt;p&gt;My career is over in its current form, my future is close to non-existent at
-this point, and I mourn what now feels like a wasted twenty years of my life.
+this point, and I mourn what now feels like a wasted fifteen years of my life.
 Not one of those things would be less true if somebody was now grinding on
 projects that they believed to be reprehensible.  In fact, they’d remain true
 and I’d feel far worse for having to live with the damage I’m doing to that
