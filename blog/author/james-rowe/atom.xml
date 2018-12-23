@@ -2,11 +2,73 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title type="text">JNRowe - Posts by James Rowe</title>
   <id>https://jnrowe.github.io/blog/author/james-rowe/atom.xml</id>
-  <updated>2018-12-15T00:00:00Z</updated>
+  <updated>2018-12-23T00:00:00Z</updated>
   <link href="https://jnrowe.github.io/" />
   <link href="https://jnrowe.github.io/blog/author/james-rowe/atom.xml" rel="self" />
   <subtitle type="text">Ramblings of a tired mind</subtitle>
   <generator uri="http://ablog.readthedocs.org" version="0.9.2">ABlog</generator>
+  <entry xml:base="https://jnrowe.github.io/blog/author/james-rowe/atom.xml">
+    <title type="text">Office hours</title>
+    <id>https://jnrowe.github.io/office_hours.html</id>
+    <updated>2018-12-23T00:00:00Z</updated>
+    <published>2018-12-23T00:00:00Z</published>
+    <link href="https://jnrowe.github.io/office_hours.html" />
+    <author>
+      <name>James Rowe</name>
+    </author>
+    <content type="html">&lt;div class=&quot;section&quot; id=&quot;office-hours&quot;&gt;
+
+&lt;p&gt;A few co-workers have started offering office hours, seemingly spurred on by
+a post by &lt;a class=&quot;reference external&quot; href=&quot;https://robertheaton.com/2018/10/22/slash-office-hours/&quot;&gt;Robert Heaton&lt;/a&gt;.  I’m going to try this a little closer to Robert’s
+original idea, and make &lt;em&gt;this&lt;/em&gt; offer to strangers too&lt;a class=&quot;footnote-reference brackets&quot; href=&quot;#id2&quot; id=&quot;id1&quot;&gt;1&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;If you want to chat, I want to help.&lt;/p&gt;
+&lt;img alt=&quot;Appointment icon [from Adwaita icons]&quot; class=&quot;align-left&quot; src=&quot;../../_images/appointment-new.png&quot; /&gt;
+&lt;div class=&quot;section&quot; id=&quot;what-topics&quot;&gt;
+&lt;h2&gt;What topics?&lt;/h2&gt;
+&lt;p&gt;You choose, that is the point.  That said, here are some thoughts…&lt;/p&gt;
+&lt;p&gt;My career thus far has mainly been focused on navigation systems, both
+&lt;abbr title=&quot;Global Navigation Satellite System&quot;&gt;GNSS&lt;/abbr&gt; and land-based; if you’re
+interested in chatting about that &lt;em&gt;absolutely&lt;/em&gt; get in touch.&lt;/p&gt;
+&lt;p&gt;If you’re heading for your first clearance interview, and want to practise with
+someone who has both passed &lt;em&gt;and&lt;/em&gt; failed get in touch.&lt;/p&gt;
+&lt;p&gt;If you don’t have many connections in industry and are just looking for general
+advice, then by all means get in touch.&lt;/p&gt;
+&lt;p&gt;You just need a little &lt;a class=&quot;reference external&quot; href=&quot;https://en.m.wikipedia.org/wiki/Rubber_duck_debugging&quot;&gt;rubber duck&lt;/a&gt; time, let us make it happen!&lt;/p&gt;
+&lt;p&gt;Basically, get in touch and we’ll see what happens!&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;section&quot; id=&quot;what-do-you-need-to-know&quot;&gt;
+&lt;h2&gt;What do you need to know?&lt;/h2&gt;
+&lt;p&gt;Be aware that if this works out I’ll likely write my own &lt;a class=&quot;reference external&quot; href=&quot;https://robertheaton.com/2018/10/02/lessons-from-my-first-20-office-hours/&quot;&gt;retrospective&lt;/a&gt;, so
+don’t expect total privacy.  I’m also a fan of &lt;span class=&quot;xref std std-doc&quot;&gt;writing tips&lt;/span&gt;, so I might take any questions and run with them!&lt;/p&gt;
+&lt;p&gt;I’m not going to lie to you, I do plan on having a quick poke around before
+agreeing to a call.  If you’re socially or professionally poisonous to me,
+I &lt;em&gt;won’t&lt;/em&gt; make time for you.  It sounds harsh, but I want to be upfront about
+that.&lt;/p&gt;
+&lt;p&gt;I often have a rough schedule, but I’ll try to make time.  Even though I’m UK
+based, my schedule pins me to other timezones on occasion and I may be able to
+accommodate you even if you’re far away.&lt;/p&gt;
+&lt;p&gt;I am a native English speaker, confident social German speaker, muddling
+Castilian speaker, and I’m told by my French co-workers that I’m fluent in
+French docker… so you will need to be able to communicate in one of those or
+wish to &lt;em&gt;teach me&lt;/em&gt; another.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;section&quot; id=&quot;how&quot;&gt;
+&lt;h2&gt;How?&lt;/h2&gt;
+&lt;p&gt;The easiest way to make this happen is to drop me a &lt;a class=&quot;reference external&quot; href=&quot;mailto:jnrowe&amp;#37;&amp;#52;&amp;#48;gmail&amp;#46;com&quot;&gt;mail&lt;/a&gt;.  If the idea gets
+any traction I’ll look at better ways of scheduling, but until then mail should
+be fine.&lt;/p&gt;
+&lt;p class=&quot;rubric&quot;&gt;Footnotes&lt;/p&gt;
+&lt;dl class=&quot;footnote brackets&quot;&gt;
+&lt;dt class=&quot;label&quot; id=&quot;id2&quot;&gt;&lt;span class=&quot;brackets&quot;&gt;&lt;a class=&quot;fn-backref&quot; href=&quot;#id1&quot;&gt;1&lt;/a&gt;&lt;/span&gt;&lt;/dt&gt;
+&lt;dd&gt;&lt;p&gt;It seems that the norm for my co-workers is to make this offer on our
+semi-private mastodon instance, but I’d like to think I was implicitely
+offering help there anyway.&lt;/p&gt;
+&lt;/dd&gt;
+&lt;/dl&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</content>
+  </entry>
   <entry xml:base="https://jnrowe.github.io/blog/author/james-rowe/atom.xml">
     <title type="text">Advent of Code 2018</title>
     <id>https://jnrowe.github.io/articles/advent_of_code_2018.html</id>
@@ -1028,7 +1090,7 @@ bugs filed when builds only work with &lt;a class=&quot;reference external&quot;
 data in a &lt;a class=&quot;reference external&quot; href=&quot;https://sqlite.org/&quot;&gt;sqlite&lt;/a&gt; database named &lt;code class=&quot;file docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;.redo/redo.sqlite3&lt;/span&gt;&lt;/code&gt;, making it
 is easy to transform in to a &lt;strong class=&quot;command&quot;&gt;dot&lt;/strong&gt; compliant input.  For
 instance, here is my &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;dzen2&lt;/span&gt;&lt;/code&gt; tree as built by &lt;strong class=&quot;command&quot;&gt;redo&lt;/strong&gt;:&lt;/p&gt;
-&lt;img alt=&quot;Digraph of dzen2 build with redo&quot; src=&quot;../../_images/dzen.png&quot; style=&quot;width: 487.41px; height: 163.68px;&quot; /&gt;
+&lt;img alt=&quot;Digraph of dzen2 build with redo&quot; src=&quot;.images/dzen.png&quot; style=&quot;width: 487.41px; height: 163.68px;&quot; /&gt;
 &lt;/dd&gt;
 &lt;dt class=&quot;label&quot; id=&quot;id13&quot;&gt;&lt;span class=&quot;brackets&quot;&gt;&lt;a class=&quot;fn-backref&quot; href=&quot;#id6&quot;&gt;6&lt;/a&gt;&lt;/span&gt;&lt;/dt&gt;
 &lt;dd&gt;&lt;p&gt;A search yields a few attempts to do so, many requiring large runtimes
@@ -1058,7 +1120,7 @@ required interface.&lt;/p&gt;
     </author>
     <content type="html">&lt;div class=&quot;section&quot; id=&quot;visualising-the-progress-of-time&quot;&gt;
 
-&lt;a class=&quot;reference external image-reference&quot; href=&quot;https://www.progressbarosx.com/&quot;&gt;&lt;img alt=&quot;Screenshot of Progress Bar OSX in action&quot; src=&quot;../../_images/time_progress.jpg&quot; /&gt;&lt;/a&gt;
+&lt;a class=&quot;reference external image-reference&quot; href=&quot;https://www.progressbarosx.com/&quot;&gt;&lt;img alt=&quot;Screenshot of Progress Bar OSX in action&quot; src=&quot;.images/time_progress.jpg&quot; /&gt;&lt;/a&gt;
 &lt;p&gt;A co-worker was demoing a user session today, and pointed out a neat tool for
 MacOS that displays the “continual march toward death”.  That tool was
 &lt;a class=&quot;reference external&quot; href=&quot;https://www.progressbarosx.com/&quot;&gt;Progress Bar OSX&lt;/a&gt;, and it is pretty cool.  Sadly it is only available for
@@ -1084,7 +1146,7 @@ MacOS, so we’ll need to make something similar.&lt;/p&gt;
         &lt;/span&gt;
     &lt;/p&gt;
 &lt;/div&gt;&lt;div class=&quot;figure&quot; id=&quot;id3&quot;&gt;
-&lt;a class=&quot;reference external image-reference&quot; href=&quot;../_static/kitt.gif&quot;&gt;&lt;img alt=&quot;Multi-band scanner in action&quot; src=&quot;../../_images/kitt06.png&quot; /&gt;&lt;/a&gt;
+&lt;a class=&quot;reference external image-reference&quot; href=&quot;../_static/kitt.gif&quot;&gt;&lt;img alt=&quot;Multi-band scanner in action&quot; src=&quot;.images/kitt06.png&quot; /&gt;&lt;/a&gt;
 &lt;p class=&quot;caption&quot;&gt;&lt;span class=&quot;caption-text&quot;&gt;Click the image for an animated GIF, I’ll spare you the flashing lights in
 case you wish to read on.&lt;/span&gt;&lt;/p&gt;
 &lt;/div&gt;
@@ -1097,7 +1159,7 @@ case you wish to read on.&lt;/span&gt;&lt;/p&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
 &lt;p&gt;which results in:&lt;/p&gt;
-&lt;img alt=&quot;Screenshot of simple day of year bar on 2018-11-13&quot; src=&quot;../../_images/day_bar.png&quot; /&gt;
+&lt;img alt=&quot;Screenshot of simple day of year bar on 2018-11-13&quot; src=&quot;.images/day_bar.png&quot; /&gt;
 &lt;p&gt;The logic should be simple enough to follow(if you’re familiar with
 &lt;strong class=&quot;command&quot;&gt;date&lt;/strong&gt;’s &lt;a class=&quot;reference internal&quot; href=&quot;../../articles/march_toward_death.html#cmdoption-date-arg-j&quot;&gt;&lt;code class=&quot;xref std std-option docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;%j&lt;/span&gt; &lt;span class=&quot;pre&quot;&gt;formatter&lt;/span&gt;&lt;/code&gt;&lt;/a&gt;):&lt;/p&gt;
 &lt;ul class=&quot;simple&quot;&gt;
@@ -1215,7 +1277,7 @@ this is new to you.&lt;/p&gt;
 
 &lt;p&gt;&lt;em&gt;Many&lt;/em&gt; of my co-workers use &lt;a class=&quot;reference external&quot; href=&quot;https://www.gnu.org/software/emacs/&quot;&gt;emacs&lt;/a&gt;, it is probably the most popular editor on
 our team and I understand why.&lt;/p&gt;
-&lt;img alt=&quot;Editor icons&quot; class=&quot;align-right&quot; src=&quot;../../_images/standoff.png&quot; /&gt;
+&lt;img alt=&quot;Editor icons&quot; class=&quot;align-right&quot; src=&quot;.images/standoff.png&quot; /&gt;
 &lt;p&gt;I was an &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;emacs&lt;/span&gt;&lt;/code&gt; user — via &lt;a class=&quot;reference external&quot; href=&quot;ftp://ftp.cs.helsinki.fi/pub/Software/Local/uEmacs-PK/&quot;&gt;MicroEMACS&lt;/a&gt; and later &lt;a class=&quot;reference external&quot; href=&quot;https://www.gnu.org/software/emacs/&quot;&gt;GNU Emacs&lt;/a&gt; — for many
 years but at some point I switched to &lt;a class=&quot;reference external&quot; href=&quot;https://vim.sourceforge.io/&quot;&gt;vim&lt;/a&gt;.  I can’t even remember the exact
 catalyst for change, but I am pretty fickle so it may not have even been all
@@ -1271,23 +1333,23 @@ doubling the number of keys you have to press without any benefits&lt;a class=&q
 &lt;/div&gt;
 &lt;div class=&quot;section&quot; id=&quot;quirking-the-quirky&quot;&gt;
 &lt;h2&gt;Quirking the quirky&lt;/h2&gt;
-&lt;img alt=&quot;Emacs screenshot&quot; class=&quot;align-right&quot; src=&quot;../../_images/evil_emacs.png&quot; style=&quot;width: 407.5px; height: 270.0px;&quot; /&gt;
+&lt;img alt=&quot;Emacs screenshot&quot; class=&quot;align-right&quot; src=&quot;.images/evil_emacs.png&quot; style=&quot;width: 407.5px; height: 270.0px;&quot; /&gt;
 &lt;p&gt;I’ll freely admit I’ve &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;vim&lt;/span&gt;&lt;/code&gt;ified my &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;emacs&lt;/span&gt;&lt;/code&gt;.  I use &lt;a class=&quot;reference external&quot; href=&quot;https://github.com/emacs-evil/evil&quot;&gt;evil&lt;/a&gt;, my mode line
 uses &lt;a class=&quot;reference external&quot; href=&quot;http://github.com/milkypostman/powerline/&quot;&gt;powerline&lt;/a&gt; to match &lt;a class=&quot;reference external&quot; href=&quot;https://github.com/vim-airline/vim-airline&quot;&gt;vim-airline&lt;/a&gt;.  I have &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;zap-up-to-char&lt;/span&gt;&lt;/code&gt; mapped so
 that I can mimic &lt;kbd class=&quot;kbd docutils literal notranslate&quot;&gt;dt&lt;/kbd&gt; when &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;evil-mode&lt;/span&gt;&lt;/code&gt; is disabled.&lt;/p&gt;
 &lt;p&gt;Screenshots for &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;emacs&lt;/span&gt;&lt;/code&gt; and &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;vim&lt;/span&gt;&lt;/code&gt; really aren’t all that useful, because it
 is the workflow that makes these tools powerful… but, above is my current
 &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;emacs&lt;/span&gt;&lt;/code&gt; and below is my current &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;vim&lt;/span&gt;&lt;/code&gt;.&lt;/p&gt;
-&lt;img alt=&quot;vim screenshot&quot; class=&quot;align-left&quot; src=&quot;../../_images/delinquent_vim.png&quot; style=&quot;width: 422.0px; height: 263.5px;&quot; /&gt;
+&lt;img alt=&quot;vim screenshot&quot; class=&quot;align-left&quot; src=&quot;.images/delinquent_vim.png&quot; style=&quot;width: 422.0px; height: 263.5px;&quot; /&gt;
 &lt;p&gt;The big thing you’ll notice is the fonts.  In &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;emacs&lt;/span&gt;&lt;/code&gt; I’m using scaled text
 for headings in &lt;a class=&quot;reference external&quot; href=&quot;http://docutils.sourceforge.net/docs/user/rst/&quot;&gt;reST&lt;/a&gt; files.  I’m close to believing that headings,
 proportional fonts for comments and the occasional inline image are enough to
 switch to &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;emacs&lt;/span&gt;&lt;/code&gt;.&lt;/p&gt;
-&lt;img alt=&quot;Inline images in Emacs&quot; class=&quot;align-right&quot; src=&quot;../../_images/misfeasant_emacs.png&quot; style=&quot;width: 398.5px; height: 225.0px;&quot; /&gt;
+&lt;img alt=&quot;Inline images in Emacs&quot; class=&quot;align-right&quot; src=&quot;.images/misfeasant_emacs.png&quot; style=&quot;width: 398.5px; height: 225.0px;&quot; /&gt;
 &lt;p&gt;In the third image you can see &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;emacs&lt;/span&gt;&lt;/code&gt; is &lt;em&gt;displaying&lt;/em&gt; the &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;emacs&lt;/span&gt;&lt;/code&gt;
 screenshot in the buffer for &lt;em&gt;this&lt;/em&gt; post.  This example may be quite pointless&lt;a class=&quot;footnote-reference brackets&quot; href=&quot;#id5&quot; id=&quot;id2&quot;&gt;2&lt;/a&gt;, but it can be nice to have &lt;a class=&quot;reference external&quot; href=&quot;https://www.graphviz.org/&quot;&gt;graphviz&lt;/a&gt; output class hierarchies in to
 a buffer or database schema popups(like below).&lt;/p&gt;
-&lt;img alt=&quot;Schema diagram&quot; class=&quot;align-left&quot; src=&quot;../../_images/immoral_model.png&quot; style=&quot;width: 174.5px; height: 141.5px;&quot; /&gt;
+&lt;img alt=&quot;Schema diagram&quot; class=&quot;align-left&quot; src=&quot;.images/immoral_model.png&quot; style=&quot;width: 174.5px; height: 141.5px;&quot; /&gt;
 &lt;/div&gt;
 &lt;div class=&quot;section&quot; id=&quot;walking-the-branches&quot;&gt;
 &lt;h2&gt;Walking the branches&lt;/h2&gt;
@@ -1390,7 +1452,7 @@ of the application guard as above, you can even override bindings that you
 won’t find yourself using in &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;imv&lt;/span&gt;&lt;/code&gt; without breaking your shell or other
 tools.&lt;/p&gt;
 &lt;div class=&quot;figure&quot; id=&quot;id5&quot;&gt;
-&lt;a class=&quot;reference external image-reference&quot; href=&quot;https://xkcd.com/1806/&quot;&gt;&lt;img alt=&quot;Borrow Your Laptop&quot; src=&quot;../../_images/borrow_your_laptop.png&quot; style=&quot;width: 167.0px; height: 246.5px;&quot; /&gt;&lt;/a&gt;
+&lt;a class=&quot;reference external image-reference&quot; href=&quot;https://xkcd.com/1806/&quot;&gt;&lt;img alt=&quot;Borrow Your Laptop&quot; src=&quot;.images/borrow_your_laptop.png&quot; style=&quot;width: 167.0px; height: 246.5px;&quot; /&gt;&lt;/a&gt;
 &lt;p class=&quot;caption&quot;&gt;&lt;span class=&quot;caption-text&quot;&gt;As always, &lt;a class=&quot;reference external&quot; href=&quot;https://xkcd.com/&quot;&gt;xkcd&lt;/a&gt; has a pre-canned explanation for why you shouldn’t listen
 to me.  Image: &lt;a class=&quot;reference external&quot; href=&quot;http://creativecommons.org/licenses/by-nc/2.5/&quot;&gt;CC by-nc&lt;/a&gt;.&lt;/span&gt;&lt;/p&gt;
 &lt;/div&gt;
@@ -1507,7 +1569,7 @@ a &lt;strong&gt;five in the morning&lt;/strong&gt; start.&lt;/p&gt;
 &lt;p&gt;If you look at my completion screenshot, you’ll also see I have the
 &lt;a class=&quot;reference external&quot; href=&quot;https://docs.python.org/3/library/itertools.html#module-itertools&quot; title=&quot;(in Python v3.7)&quot;&gt;&lt;code class=&quot;xref py py-mod docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;itertools&lt;/span&gt;&lt;/code&gt;&lt;/a&gt; documentation open.  If you’re going to use Python for &lt;abbr title=&quot;Advent of Code&quot;&gt;AoC&lt;/abbr&gt;
 study up on &lt;a class=&quot;reference external&quot; href=&quot;https://docs.python.org/3/library/itertools.html#module-itertools&quot; title=&quot;(in Python v3.7)&quot;&gt;&lt;code class=&quot;xref py py-mod docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;itertools&lt;/span&gt;&lt;/code&gt;&lt;/a&gt;, it will help no end&lt;a class=&quot;footnote-reference brackets&quot; href=&quot;#id6&quot; id=&quot;id2&quot;&gt;2&lt;/a&gt;.&lt;/p&gt;
-&lt;img alt=&quot;Ta-da! Calendar complete&quot; src=&quot;../../_images/2017-12-29-advent_of_code.png&quot; style=&quot;width: 800.0px; height: 450.0px;&quot; /&gt;
+&lt;img alt=&quot;Ta-da! Calendar complete&quot; src=&quot;.images/2017-12-29-advent_of_code.png&quot; style=&quot;width: 800.0px; height: 450.0px;&quot; /&gt;
 &lt;p&gt;The other thing you can see in my screenshot is that I didn’t complete the
 event on Christmas Day, in fact I took a break and finally mashed through the
 final week on the evening of the 28th.  Infinite time, unemployment or being
@@ -1604,7 +1666,7 @@ part of the puzzles in my opinion.&lt;/p&gt;
 &lt;div class=&quot;section&quot; id=&quot;implementation&quot;&gt;
 &lt;h2&gt;Implementation&lt;/h2&gt;
 &lt;div class=&quot;figure&quot; id=&quot;id9&quot;&gt;
-&lt;img alt=&quot;Languages used for tasks&quot; src=&quot;../../_images/2018-10-19-aoc_calendar.png&quot; style=&quot;width: 273.5px; height: 181.0px;&quot; /&gt;
+&lt;img alt=&quot;Languages used for tasks&quot; src=&quot;.images/2018-10-19-aoc_calendar.png&quot; style=&quot;width: 273.5px; height: 181.0px;&quot; /&gt;
 &lt;p class=&quot;caption&quot;&gt;&lt;span class=&quot;caption-text&quot;&gt;Language frequency for &lt;abbr title=&quot;Advent of Code&quot;&gt;AoC&lt;/abbr&gt; puzzles&lt;/span&gt;&lt;/p&gt;
 &lt;div class=&quot;legend&quot;&gt;
 &lt;table class=&quot;docutils&quot;&gt;
@@ -1747,7 +1809,7 @@ They feel, to me, like they’re attacking the problem from entirely the wrong
 side.  Instead of configuring individual applications to behave in a tabbed and
 custom way, why not just rely on that behaviour globally?  Allow me to
 illustrate with the following examples.&lt;/p&gt;
-&lt;img alt=&quot;Example of awesomewm’s tile.right layout&quot; src=&quot;../../_images/2018-10-08-tiling.jpg&quot; /&gt;
+&lt;img alt=&quot;Example of awesomewm’s tile.right layout&quot; src=&quot;.images/2018-10-08-tiling.jpg&quot; /&gt;
 &lt;p&gt;If I want two terminals next to each other I’ll just switch to a layout that
 supports that(in &lt;a class=&quot;reference external&quot; href=&quot;https://awesomewm.org/&quot;&gt;awesomewm&lt;/a&gt; I’d probably choose &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;tile.right&lt;/span&gt;&lt;/code&gt;) .  If I want
 various image viewer windows open and a nice tabbed interface to access them,
@@ -2083,7 +2145,7 @@ I was previously happily unaware of.&lt;/p&gt;
 &lt;em&gt;masses&lt;/em&gt; of users who were retweeting users who would later be banned, and
 those retweeting users would move on to retweeting new users who themselves
 would often end up banned.&lt;/p&gt;
-&lt;img alt=&quot;Route of evil&quot; class=&quot;align-right&quot; src=&quot;../../_images/final_plight.png&quot; /&gt;
+&lt;img alt=&quot;Route of evil&quot; class=&quot;align-right&quot; src=&quot;.images/final_plight.png&quot; /&gt;
 &lt;p&gt;The interesting point to me was that there were large numbers of &lt;em&gt;actual&lt;/em&gt; users
 — not bots — who redirect the hate storm and almost nothing else.  Many of
 these users were in an anechoic chamber, sucking in tweets from many users and
@@ -2099,7 +2161,7 @@ depleted.  Each new visualisation started from a map, much like the game’s
 levels, and showed a real city with its real occupants.  The intent was to
 allow people to experience a location they knew but with its foetid underbelly
 exposed.&lt;/p&gt;
-&lt;a class=&quot;reference external image-reference&quot; href=&quot;https://en.m.wikipedia.org/wiki/Final_Fight&quot;&gt;&lt;img alt=&quot;Final Fight One on the GBA&quot; class=&quot;align-right&quot; src=&quot;../../_images/final_fight_one.png&quot; style=&quot;width: 237.60000000000002px; height: 158.4px;&quot; /&gt;&lt;/a&gt;
+&lt;a class=&quot;reference external image-reference&quot; href=&quot;https://en.m.wikipedia.org/wiki/Final_Fight&quot;&gt;&lt;img alt=&quot;Final Fight One on the GBA&quot; class=&quot;align-right&quot; src=&quot;.images/final_fight_one.png&quot; style=&quot;width: 237.60000000000002px; height: 158.4px;&quot; /&gt;&lt;/a&gt;
 &lt;/div&gt;
 &lt;div class=&quot;section&quot; id=&quot;what-happened-next&quot;&gt;
 &lt;h2&gt;What happened next?&lt;/h2&gt;
@@ -2585,67 +2647,6 @@ A lot of the actively poisonous people who contact you aren’t providing any re
 value to you, and they’re probably never going to.  If you can remove them
 somehow you’re probably not losing anything, but you’ll be gaining a whole lot
 personally.&lt;/p&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-</content>
-  </entry>
-  <entry xml:base="https://jnrowe.github.io/blog/author/james-rowe/atom.xml">
-    <title type="text">jnrowe-misc - The unsorted package overlay</title>
-    <id>https://jnrowe.github.io/articles/probits/jnrowe-misc.html</id>
-    <updated>2014-06-30T00:00:00Z</updated>
-    <published>2014-06-30T00:00:00Z</published>
-    <link href="https://jnrowe.github.io/articles/probits/jnrowe-misc.html" />
-    <author>
-      <name>James Rowe</name>
-    </author>
-    <content type="html">&lt;div class=&quot;section&quot; id=&quot;jnrowe-misc-the-unsorted-package-overlay&quot;&gt;
-
-&lt;blockquote&gt;
-&lt;div&gt;&lt;p&gt;A collection of &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;ebuild&lt;/span&gt;&lt;/code&gt; files with no overall theme.&lt;/p&gt;
-&lt;/div&gt;&lt;/blockquote&gt;
-&lt;p&gt;&lt;abbr title=&quot;Too Long; Didn’t Read&quot;&gt;TLDR&lt;/abbr&gt;; For what it was &lt;a class=&quot;reference external&quot; href=&quot;https://github.com/JNRowe/jnrowe-misc&quot;&gt;jnrowe-misc&lt;/a&gt; served its
-purpose well.&lt;/p&gt;
-&lt;div class=&quot;section&quot; id=&quot;an-island-unto-itself&quot;&gt;
-&lt;h2&gt;An island unto itself&lt;/h2&gt;
-&lt;p&gt;While it may come as a surprise to a few of the users(which would be most of
-them) the overlay available on GitHub wasn’t the deliverable at any point in
-time.  In fact, the often convoluted merge history in the repository probably
-hinted at that quite a bit.&lt;/p&gt;
-&lt;img alt=&quot;Tree view of ``jnrowe-misc`` history&quot; class=&quot;align-right&quot; src=&quot;../../_images/jnrowe-misc.png&quot; style=&quot;width: 50%;&quot; /&gt;
-&lt;p&gt;&lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;jnrowe-misc&lt;/span&gt;&lt;/code&gt; was always the combination of a few independently managed
-repositories that I bundled up to make available for public consumption.
-Eventually it ended up being mostly Python stuff, but that was because the
-support burden of other packages was becoming more time consuming than I could
-justify.&lt;/p&gt;
-&lt;p&gt;The &lt;em&gt;real&lt;/em&gt; audience for the overlay, my co-workers, saw a different beast
-entirely.  It used our keyword types and rules, it came bundled &lt;span class=&quot;xref std std-doc&quot;&gt;with the
-tests&lt;/span&gt; I was unable to share and had a tighter schedule for
-maintenance.&lt;/p&gt;
-&lt;p&gt;Still, I received a fair number of emails and live comments from users so I’ll
-call that a success!&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class=&quot;section&quot; id=&quot;upstreamed&quot;&gt;
-&lt;h2&gt;Upstreamed&lt;/h2&gt;
-&lt;p&gt;Sadly, very little was ever taken upstream(even less if you count the parts that
-were credited).  This was entirely my fault.  I originally started exporting the
-overlay because I was fed up with the new package process upstream, and it seemed
-like the best way to deal with that for me.&lt;/p&gt;
-&lt;p&gt;I had hoped that some packages would be picked up, but didn’t actively push them
-after the first few.&lt;/p&gt;
-&lt;p&gt;The overlay should have never touched packages that were available upstream, but
-occasionally they overlapped when upstream added them.  The use of &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;::shadow&lt;/span&gt;&lt;/code&gt;
-to workaround problems when new packages were added upstream worked &lt;em&gt;really&lt;/em&gt;
-well, and saved the few remaining hairs on my balding head.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class=&quot;section&quot; id=&quot;legacy&quot;&gt;
-&lt;h2&gt;Legacy&lt;/h2&gt;
-&lt;p&gt;It looks like the majority of packages will continue to be maintained for the
-foreseeable future, but regrettably it looks like the result will not be
-available beyond a “open to all people who know where to look” organisation on
-GitHub.&lt;/p&gt;
-&lt;p&gt;I’d like to change the new maintainer’s mind, but in all honesty I understand
-their reasons.  I’ve stopped maintaining a lot of once public projects over the
-past couple of years, and it is as refreshing as it is saddening.&lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 </content>

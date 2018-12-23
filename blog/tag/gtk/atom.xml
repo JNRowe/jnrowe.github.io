@@ -68,7 +68,7 @@ the console too then add the next little snippet to your shell’s startup file:
 
 &lt;p&gt;In &lt;span class=&quot;xref std std-ref&quot;&gt;Fancy_awesome_theming&lt;/span&gt; I included a screenshot that, by accident more
 than design, spawned today’s tip.&lt;/p&gt;
-&lt;a class=&quot;reference external image-reference&quot; href=&quot;/.images/2009-09-28-awesome_theming.png&quot;&gt;&lt;img alt=&quot;gtkrc in vim screenshot&quot; class=&quot;align-right&quot; src=&quot;../../_images/2009-10-01-gtkrc-mini.png&quot; /&gt;&lt;/a&gt;
+&lt;a class=&quot;reference external image-reference&quot; href=&quot;/.images/2009-09-28-awesome_theming.png&quot;&gt;&lt;img alt=&quot;gtkrc in vim screenshot&quot; class=&quot;align-right&quot; src=&quot;.images/2009-10-01-gtkrc-mini.png&quot; /&gt;&lt;/a&gt;
 &lt;p&gt;Laura Biddulph sent me a &lt;abbr title=&quot;Short Message Service&quot;&gt;SMS&lt;/abbr&gt; message that read:&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;div&gt;&lt;p&gt;Thanks! I saw your &lt;code class=&quot;file docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;gtkrc&lt;/span&gt;&lt;/code&gt;, and now I have keybound faves in the file
@@ -107,7 +107,7 @@ delete the word under the cursor.  You can read more about
 &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;gtk-key-theme-name&lt;/span&gt;&lt;/code&gt; in &lt;span class=&quot;xref std std-doc&quot;&gt;emacs_gtk_shortcuts&lt;/span&gt;.&lt;/p&gt;
 &lt;p&gt;All of the settings above are configurable with a &lt;abbr title=&quot;Graphical User Interface&quot;&gt;GUI&lt;/abbr&gt; if you use gnome or &lt;a class=&quot;reference external&quot; href=&quot;http://www.xfce.org/&quot;&gt;xfce&lt;/a&gt;, but for those of who don’t use those
 desktop environments editing the &lt;code class=&quot;file docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;~/.gtkrc-2.0&lt;/span&gt;&lt;/code&gt; is a reasonable solution.&lt;/p&gt;
-&lt;a class=&quot;reference external image-reference&quot; href=&quot;/_images/2009-10-01-GTK_filechooser.png&quot;&gt;&lt;img alt=&quot;GTK file chooser screenshot&quot; class=&quot;align-left&quot; src=&quot;../../_images/2009-10-01-GTK_filechooser-mini.png&quot; /&gt;&lt;/a&gt;
+&lt;a class=&quot;reference external image-reference&quot; href=&quot;/_images/2009-10-01-GTK_filechooser.png&quot;&gt;&lt;img alt=&quot;GTK file chooser screenshot&quot; class=&quot;align-left&quot; src=&quot;.images/2009-10-01-GTK_filechooser-mini.png&quot; /&gt;&lt;/a&gt;
 &lt;p&gt;The “some-shortcuts” section is the interesting one for today, it is telling
 GTK+ applications that we want to have our own extra keybindings available when
 opening or saving files.  &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;GTKFileChooser&lt;/span&gt;&lt;/code&gt; is the modern GTK+ file dialog, and
@@ -204,7 +204,7 @@ your &lt;code class=&quot;file docutils literal notranslate&quot;&gt;&lt;span cl
 the comments in your &lt;code class=&quot;file docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;~/.gtkrc-2.0&lt;/span&gt;&lt;/code&gt; if you use either of these theme
 switchers.&lt;/p&gt;
 &lt;div class=&quot;figure&quot;&gt;
-&lt;img alt=&quot;XFce4 keyboard settings window&quot; src=&quot;../../_images/xfce4_keyboard.png&quot; /&gt;
+&lt;img alt=&quot;XFce4 keyboard settings window&quot; src=&quot;.images/xfce4_keyboard.png&quot; /&gt;
 &lt;/div&gt;
 &lt;p&gt;If you’re an &lt;a class=&quot;reference external&quot; href=&quot;http://www.xfce.org/&quot;&gt;XFce&lt;/a&gt; user you can select the Emacs keyboard shortcuts using the
 keyboard settings dialog.&lt;/p&gt;

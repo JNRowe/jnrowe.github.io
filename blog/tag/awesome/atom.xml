@@ -30,7 +30,7 @@ the screen.&lt;/p&gt;
 ”Paul” can cause &lt;strong class=&quot;command&quot;&gt;vim&lt;/strong&gt; to insert a huge amount of text at the cursor.
 The text comes from the &lt;a class=&quot;reference external&quot; href=&quot;http://vimdoc.sourceforge.net/htmldoc/change.html#quote&quot;&gt;unnamed register&lt;/a&gt;, so it will be whatever potentially
 very large chunk of text he deleted or &lt;a class=&quot;reference external&quot; href=&quot;http://vimdoc.sourceforge.net/htmldoc/change.html#yank&quot;&gt;yanked&lt;/a&gt; last.&lt;/p&gt;
-&lt;img alt=&quot;mode identifier in vim&quot; class=&quot;align-right&quot; src=&quot;../../_images/2009-10-13-vim_screenshot.png&quot; /&gt;
+&lt;img alt=&quot;mode identifier in vim&quot; class=&quot;align-right&quot; src=&quot;.images/2009-10-13-vim_screenshot.png&quot; /&gt;
 &lt;p&gt;If he had just added &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;set&lt;/span&gt; &lt;span class=&quot;pre&quot;&gt;showmode&lt;/span&gt;&lt;/code&gt; to his &lt;code class=&quot;file docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;~/.vimrc&lt;/span&gt;&lt;/code&gt; he would have
 a nice &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;--&lt;/span&gt; &lt;span class=&quot;pre&quot;&gt;INSERT&lt;/span&gt; &lt;span class=&quot;pre&quot;&gt;--&lt;/span&gt;&lt;/code&gt; reminder in the bottom of his terminal window when in
 insert mode, as can be seen in the screenshot on the right.&lt;/p&gt;
@@ -81,7 +81,7 @@ project at work Matt Cooper asks:&lt;/p&gt;
 &lt;div&gt;&lt;p&gt;Is there a library that does those fancy notifications or do you have to
 hack it up yourself?&lt;/p&gt;
 &lt;/div&gt;&lt;/blockquote&gt;
-&lt;img alt=&quot;notifications in awesome&quot; class=&quot;align-right&quot; src=&quot;../../_images/2009-10-04-awesome_notifications.png&quot; /&gt;
+&lt;img alt=&quot;notifications in awesome&quot; class=&quot;align-right&quot; src=&quot;.images/2009-10-04-awesome_notifications.png&quot; /&gt;
 &lt;p&gt;There is a library to make notification popups in &lt;strong class=&quot;command&quot;&gt;awesome&lt;/strong&gt;, and it is
 called &lt;a class=&quot;reference external&quot; href=&quot;https://awesomewm.org/apidoc/libraries/naughty.html&quot;&gt;naughty&lt;/a&gt;.  With it notifications are as simple as calling
 &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;naughty.notify&lt;/span&gt;&lt;/code&gt;, for example:&lt;/p&gt;
@@ -192,7 +192,7 @@ switches the network graph widget to use the appropriate input too.&lt;/p&gt;
     </author>
     <content type="html">&lt;div class=&quot;section&quot; id=&quot;fancy-awesome-theming&quot;&gt;
 
-&lt;a class=&quot;reference external image-reference&quot; href=&quot;/.images/2009-09-28-awesome_theming.png&quot;&gt;&lt;img alt=&quot;Awesome screenshot&quot; class=&quot;align-right&quot; src=&quot;../../_images/2009-09-28-awesome_theming-mini.png&quot; /&gt;&lt;/a&gt;
+&lt;a class=&quot;reference external image-reference&quot; href=&quot;/.images/2009-09-28-awesome_theming.png&quot;&gt;&lt;img alt=&quot;Awesome screenshot&quot; class=&quot;align-right&quot; src=&quot;.images/2009-09-28-awesome_theming-mini.png&quot; /&gt;&lt;/a&gt;
 &lt;p&gt;People, mostly named Neil Blake, who shouldn’t look over my shoulder ask:&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;div&gt;&lt;p&gt;How do you make &lt;a class=&quot;reference external&quot; href=&quot;https://awesomewm.org/&quot;&gt;awesome&lt;/a&gt; use &lt;em&gt;purdy&lt;/em&gt; pixmap backgrounds for the &lt;a class=&quot;reference external&quot; href=&quot;https://awesomewm.org/apidoc/libraries/awful.wibox.html&quot;&gt;wibox&lt;/a&gt;?&lt;/p&gt;

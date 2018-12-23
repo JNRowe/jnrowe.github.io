@@ -175,7 +175,7 @@ the console too then add the next little snippet to your shell’s startup file:
     </author>
     <content type="html">&lt;div class=&quot;section&quot; id=&quot;fancy-awesome-theming&quot;&gt;
 
-&lt;a class=&quot;reference external image-reference&quot; href=&quot;/.images/2009-09-28-awesome_theming.png&quot;&gt;&lt;img alt=&quot;Awesome screenshot&quot; class=&quot;align-right&quot; src=&quot;../../_images/2009-09-28-awesome_theming-mini.png&quot; /&gt;&lt;/a&gt;
+&lt;a class=&quot;reference external image-reference&quot; href=&quot;/.images/2009-09-28-awesome_theming.png&quot;&gt;&lt;img alt=&quot;Awesome screenshot&quot; class=&quot;align-right&quot; src=&quot;.images/2009-09-28-awesome_theming-mini.png&quot; /&gt;&lt;/a&gt;
 &lt;p&gt;People, mostly named Neil Blake, who shouldn’t look over my shoulder ask:&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;div&gt;&lt;p&gt;How do you make &lt;a class=&quot;reference external&quot; href=&quot;https://awesomewm.org/&quot;&gt;awesome&lt;/a&gt; use &lt;em&gt;purdy&lt;/em&gt; pixmap backgrounds for the &lt;a class=&quot;reference external&quot; href=&quot;https://awesomewm.org/apidoc/libraries/awful.wibox.html&quot;&gt;wibox&lt;/a&gt;?&lt;/p&gt;
@@ -267,7 +267,7 @@ can use the following little loop:&lt;/p&gt;
 &lt;span class=&quot;k&quot;&gt;done&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
-&lt;img alt=&quot;xterm's 256 colour palette&quot; src=&quot;../../_images/2009-09-25-256_colours.png&quot; /&gt;
+&lt;img alt=&quot;xterm's 256 colour palette&quot; src=&quot;.images/2009-09-25-256_colours.png&quot; /&gt;
 &lt;p&gt;There is one other important point to make here, you must set the prompt based
 on terminal type now as some terminals and the console won’t recognise the
 sequences correctly.  Test the terminal type by checking &lt;span class=&quot;target&quot; id=&quot;index-0&quot;&gt;&lt;/span&gt;&lt;code class=&quot;xref std std-envvar docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;$TERM&lt;/span&gt;&lt;/code&gt; in

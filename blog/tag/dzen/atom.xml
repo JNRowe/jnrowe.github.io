@@ -18,7 +18,7 @@
     </author>
     <content type="html">&lt;div class=&quot;section&quot; id=&quot;visualising-the-progress-of-time&quot;&gt;
 
-&lt;a class=&quot;reference external image-reference&quot; href=&quot;https://www.progressbarosx.com/&quot;&gt;&lt;img alt=&quot;Screenshot of Progress Bar OSX in action&quot; src=&quot;../../_images/time_progress.jpg&quot; /&gt;&lt;/a&gt;
+&lt;a class=&quot;reference external image-reference&quot; href=&quot;https://www.progressbarosx.com/&quot;&gt;&lt;img alt=&quot;Screenshot of Progress Bar OSX in action&quot; src=&quot;.images/time_progress.jpg&quot; /&gt;&lt;/a&gt;
 &lt;p&gt;A co-worker was demoing a user session today, and pointed out a neat tool for
 MacOS that displays the “continual march toward death”.  That tool was
 &lt;a class=&quot;reference external&quot; href=&quot;https://www.progressbarosx.com/&quot;&gt;Progress Bar OSX&lt;/a&gt;, and it is pretty cool.  Sadly it is only available for
@@ -44,7 +44,7 @@ MacOS, so we’ll need to make something similar.&lt;/p&gt;
         &lt;/span&gt;
     &lt;/p&gt;
 &lt;/div&gt;&lt;div class=&quot;figure&quot; id=&quot;id3&quot;&gt;
-&lt;a class=&quot;reference external image-reference&quot; href=&quot;../_static/kitt.gif&quot;&gt;&lt;img alt=&quot;Multi-band scanner in action&quot; src=&quot;../../_images/kitt06.png&quot; /&gt;&lt;/a&gt;
+&lt;a class=&quot;reference external image-reference&quot; href=&quot;../_static/kitt.gif&quot;&gt;&lt;img alt=&quot;Multi-band scanner in action&quot; src=&quot;.images/kitt06.png&quot; /&gt;&lt;/a&gt;
 &lt;p class=&quot;caption&quot;&gt;&lt;span class=&quot;caption-text&quot;&gt;Click the image for an animated GIF, I’ll spare you the flashing lights in
 case you wish to read on.&lt;/span&gt;&lt;/p&gt;
 &lt;/div&gt;
@@ -57,7 +57,7 @@ case you wish to read on.&lt;/span&gt;&lt;/p&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
 &lt;p&gt;which results in:&lt;/p&gt;
-&lt;img alt=&quot;Screenshot of simple day of year bar on 2018-11-13&quot; src=&quot;../../_images/day_bar.png&quot; /&gt;
+&lt;img alt=&quot;Screenshot of simple day of year bar on 2018-11-13&quot; src=&quot;.images/day_bar.png&quot; /&gt;
 &lt;p&gt;The logic should be simple enough to follow(if you’re familiar with
 &lt;strong class=&quot;command&quot;&gt;date&lt;/strong&gt;’s &lt;a class=&quot;reference internal&quot; href=&quot;../../articles/march_toward_death.html#cmdoption-date-arg-j&quot;&gt;&lt;code class=&quot;xref std std-option docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;%j&lt;/span&gt; &lt;span class=&quot;pre&quot;&gt;formatter&lt;/span&gt;&lt;/code&gt;&lt;/a&gt;):&lt;/p&gt;
 &lt;ul class=&quot;simple&quot;&gt;
