@@ -6,7 +6,7 @@
   <link href="https://jnrowe.github.io/" />
   <link href="https://jnrowe.github.io/blog/tag/linux/atom.xml" rel="self" />
   <subtitle type="text">Ramblings of a tired mind</subtitle>
-  <generator uri="http://ablog.readthedocs.org" version="0.9.2">ABlog</generator>
+  <generator uri="http://ablog.readthedocs.org" version="0.9.3">ABlog</generator>
   <entry xml:base="https://jnrowe.github.io/blog/tag/linux/atom.xml">
     <title type="text">Visualising the progress of time</title>
     <id>https://jnrowe.github.io/articles/march_toward_death.html</id>
@@ -18,7 +18,7 @@
     </author>
     <content type="html">&lt;div class=&quot;section&quot; id=&quot;visualising-the-progress-of-time&quot;&gt;
 
-&lt;a class=&quot;reference external image-reference&quot; href=&quot;https://www.progressbarosx.com/&quot;&gt;&lt;img alt=&quot;Screenshot of Progress Bar OSX in action&quot; src=&quot;.images/time_progress.jpg&quot; /&gt;&lt;/a&gt;
+&lt;a class=&quot;reference external image-reference&quot; href=&quot;https://www.progressbarosx.com/&quot;&gt;&lt;img alt=&quot;Screenshot of Progress Bar OSX in action&quot; src=&quot;../../_images/time_progress.jpg&quot; /&gt;&lt;/a&gt;
 &lt;p&gt;A co-worker was demoing a user session today, and pointed out a neat tool for
 MacOS that displays the “continual march toward death”.  That tool was
 &lt;a class=&quot;reference external&quot; href=&quot;https://www.progressbarosx.com/&quot;&gt;Progress Bar OSX&lt;/a&gt;, and it is pretty cool.  Sadly it is only available for
@@ -44,7 +44,7 @@ MacOS, so we’ll need to make something similar.&lt;/p&gt;
         &lt;/span&gt;
     &lt;/p&gt;
 &lt;/div&gt;&lt;div class=&quot;figure&quot; id=&quot;id3&quot;&gt;
-&lt;a class=&quot;reference external image-reference&quot; href=&quot;../_static/kitt.gif&quot;&gt;&lt;img alt=&quot;Multi-band scanner in action&quot; src=&quot;.images/kitt06.png&quot; /&gt;&lt;/a&gt;
+&lt;a class=&quot;reference external image-reference&quot; href=&quot;../_static/kitt.gif&quot;&gt;&lt;img alt=&quot;Multi-band scanner in action&quot; src=&quot;../../_images/kitt06.png&quot; /&gt;&lt;/a&gt;
 &lt;p class=&quot;caption&quot;&gt;&lt;span class=&quot;caption-text&quot;&gt;Click the image for an animated GIF, I’ll spare you the flashing lights in
 case you wish to read on.&lt;/span&gt;&lt;/p&gt;
 &lt;/div&gt;
@@ -57,7 +57,7 @@ case you wish to read on.&lt;/span&gt;&lt;/p&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
 &lt;p&gt;which results in:&lt;/p&gt;
-&lt;img alt=&quot;Screenshot of simple day of year bar on 2018-11-13&quot; src=&quot;.images/day_bar.png&quot; /&gt;
+&lt;img alt=&quot;Screenshot of simple day of year bar on 2018-11-13&quot; src=&quot;../../_images/day_bar.png&quot; /&gt;
 &lt;p&gt;The logic should be simple enough to follow(if you’re familiar with
 &lt;strong class=&quot;command&quot;&gt;date&lt;/strong&gt;’s &lt;a class=&quot;reference internal&quot; href=&quot;../../articles/march_toward_death.html#cmdoption-date-arg-j&quot;&gt;&lt;code class=&quot;xref std std-option docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;%j&lt;/span&gt; &lt;span class=&quot;pre&quot;&gt;formatter&lt;/span&gt;&lt;/code&gt;&lt;/a&gt;):&lt;/p&gt;
 &lt;ul class=&quot;simple&quot;&gt;
@@ -131,7 +131,7 @@ moved our pointer over the header.&lt;/p&gt;
 &lt;/div&gt;
 &lt;div class=&quot;section&quot; id=&quot;step-four&quot;&gt;
 &lt;h2&gt;Step four&lt;/h2&gt;
-&lt;p&gt;You can find the script I used &lt;a class=&quot;reference download internal&quot; download=&quot;&quot; href=&quot;../../_downloads/532537fa2e75eea4fdea920b6b2b7bb0/time_progress.py&quot;&gt;&lt;code class=&quot;xref download docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;here&lt;/span&gt;&lt;/code&gt;&lt;/a&gt;.  It isn’t
+&lt;p&gt;You can find the script I used &lt;a class=&quot;reference download internal&quot; download=&quot;&quot; href=&quot;../../_downloads/8247878d1cce93d38b5fe2e1628c5a40/time_progress.py&quot;&gt;&lt;code class=&quot;xref download docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;here&lt;/span&gt;&lt;/code&gt;&lt;/a&gt;.  It isn’t
 pretty, but it will do.  If I come to depend on it I’m sure that I’ll make
 something better.&lt;/p&gt;
 &lt;p&gt;I think it is important to note that if you’ve got this far and you’re thinking

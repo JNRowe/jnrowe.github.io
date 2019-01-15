@@ -6,7 +6,7 @@
   <link href="https://jnrowe.github.io/" />
   <link href="https://jnrowe.github.io/blog/tag/make/atom.xml" rel="self" />
   <subtitle type="text">Ramblings of a tired mind</subtitle>
-  <generator uri="http://ablog.readthedocs.org" version="0.9.2">ABlog</generator>
+  <generator uri="http://ablog.readthedocs.org" version="0.9.3">ABlog</generator>
   <entry xml:base="https://jnrowe.github.io/blog/tag/make/atom.xml">
     <title type="text">while $sun; do make hay; done</title>
     <id>https://jnrowe.github.io/articles/redo_ninja_make.html</id>
@@ -362,7 +362,7 @@ bugs filed when builds only work with &lt;a class=&quot;reference external&quot;
 data in a &lt;a class=&quot;reference external&quot; href=&quot;https://sqlite.org/&quot;&gt;sqlite&lt;/a&gt; database named &lt;code class=&quot;file docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;.redo/redo.sqlite3&lt;/span&gt;&lt;/code&gt;, making it
 is easy to transform in to a &lt;strong class=&quot;command&quot;&gt;dot&lt;/strong&gt; compliant input.  For
 instance, here is my &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;dzen2&lt;/span&gt;&lt;/code&gt; tree as built by &lt;strong class=&quot;command&quot;&gt;redo&lt;/strong&gt;:&lt;/p&gt;
-&lt;img alt=&quot;Digraph of dzen2 build with redo&quot; src=&quot;.images/dzen.png&quot; style=&quot;width: 487.41px; height: 163.68px;&quot; /&gt;
+&lt;img alt=&quot;Digraph of dzen2 build with redo&quot; src=&quot;../../_images/dzen.png&quot; style=&quot;width: 487.41px; height: 163.68px;&quot; /&gt;
 &lt;/dd&gt;
 &lt;dt class=&quot;label&quot; id=&quot;id13&quot;&gt;&lt;span class=&quot;brackets&quot;&gt;&lt;a class=&quot;fn-backref&quot; href=&quot;#id6&quot;&gt;6&lt;/a&gt;&lt;/span&gt;&lt;/dt&gt;
 &lt;dd&gt;&lt;p&gt;A search yields a few attempts to do so, many requiring large runtimes

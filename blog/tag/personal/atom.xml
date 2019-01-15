@@ -6,7 +6,7 @@
   <link href="https://jnrowe.github.io/" />
   <link href="https://jnrowe.github.io/blog/tag/personal/atom.xml" rel="self" />
   <subtitle type="text">Ramblings of a tired mind</subtitle>
-  <generator uri="http://ablog.readthedocs.org" version="0.9.2">ABlog</generator>
+  <generator uri="http://ablog.readthedocs.org" version="0.9.3">ABlog</generator>
   <entry xml:base="https://jnrowe.github.io/blog/tag/personal/atom.xml">
     <title type="text">Office hours</title>
     <id>https://jnrowe.github.io/office_hours.html</id>
@@ -57,6 +57,20 @@ wish to &lt;em&gt;teach me&lt;/em&gt; another.&lt;/p&gt;
 &lt;p&gt;The easiest way to make this happen is to drop me a &lt;a class=&quot;reference external&quot; href=&quot;mailto:jnrowe&amp;#37;&amp;#52;&amp;#48;gmail&amp;#46;com&quot;&gt;mail&lt;/a&gt;.  If the idea gets
 any traction I’ll look at better ways of scheduling, but until then mail should
 be fine.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;section&quot; id=&quot;updates-2019-01-15&quot;&gt;
+&lt;h2&gt;Updates - 2019-01-15&lt;/h2&gt;
+&lt;p&gt;So, I’ve just completed my second appointments, and it seems to be working out
+okay.  Both have been fun(at least for me), and I’m planning on continuing this
+experiment for a little while longer.  Do get in touch!&lt;/p&gt;
+&lt;p&gt;I’ve also passed on two “applicants” who I felt would be better served by other
+people, and that seems like a very valuable feature to add to the idea.
+I passed both of them on to co-workers, and I could only do this easily because
+I knew they were playing around with the idea of &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;/office-hours&lt;/span&gt;&lt;/code&gt;.  It would
+be nice if there was a register that made it is easier to link poor matches
+with better matches.  Obviously it needs to be weighted in some way, “show me
+&lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;$connections&lt;/span&gt;&lt;/code&gt; using &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;office-hours&lt;/span&gt;&lt;/code&gt; with &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;$tag&lt;/span&gt;&lt;/code&gt;” for example, but it
+might be a nice idea for a weekend hack.&lt;/p&gt;
 &lt;p class=&quot;rubric&quot;&gt;Footnotes&lt;/p&gt;
 &lt;dl class=&quot;footnote brackets&quot;&gt;
 &lt;dt class=&quot;label&quot; id=&quot;id2&quot;&gt;&lt;span class=&quot;brackets&quot;&gt;&lt;a class=&quot;fn-backref&quot; href=&quot;#id1&quot;&gt;1&lt;/a&gt;&lt;/span&gt;&lt;/dt&gt;

@@ -6,7 +6,7 @@
   <link href="https://jnrowe.github.io/" />
   <link href="https://jnrowe.github.io/blog/tag/coding/atom.xml" rel="self" />
   <subtitle type="text">Ramblings of a tired mind</subtitle>
-  <generator uri="http://ablog.readthedocs.org" version="0.9.2">ABlog</generator>
+  <generator uri="http://ablog.readthedocs.org" version="0.9.3">ABlog</generator>
   <entry xml:base="https://jnrowe.github.io/blog/tag/coding/atom.xml">
     <title type="text">Advent of Code 2018</title>
     <id>https://jnrowe.github.io/articles/advent_of_code_2018.html</id>
@@ -571,7 +571,7 @@ a &lt;strong&gt;five in the morning&lt;/strong&gt; start.&lt;/p&gt;
 &lt;p&gt;If you look at my completion screenshot, you’ll also see I have the
 &lt;a class=&quot;reference external&quot; href=&quot;https://docs.python.org/3/library/itertools.html#module-itertools&quot; title=&quot;(in Python v3.7)&quot;&gt;&lt;code class=&quot;xref py py-mod docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;itertools&lt;/span&gt;&lt;/code&gt;&lt;/a&gt; documentation open.  If you’re going to use Python for &lt;abbr title=&quot;Advent of Code&quot;&gt;AoC&lt;/abbr&gt;
 study up on &lt;a class=&quot;reference external&quot; href=&quot;https://docs.python.org/3/library/itertools.html#module-itertools&quot; title=&quot;(in Python v3.7)&quot;&gt;&lt;code class=&quot;xref py py-mod docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;itertools&lt;/span&gt;&lt;/code&gt;&lt;/a&gt;, it will help no end&lt;a class=&quot;footnote-reference brackets&quot; href=&quot;#id6&quot; id=&quot;id2&quot;&gt;2&lt;/a&gt;.&lt;/p&gt;
-&lt;img alt=&quot;Ta-da! Calendar complete&quot; src=&quot;.images/2017-12-29-advent_of_code.png&quot; style=&quot;width: 800.0px; height: 450.0px;&quot; /&gt;
+&lt;img alt=&quot;Ta-da! Calendar complete&quot; src=&quot;../../_images/2017-12-29-advent_of_code.png&quot; style=&quot;width: 800.0px; height: 450.0px;&quot; /&gt;
 &lt;p&gt;The other thing you can see in my screenshot is that I didn’t complete the
 event on Christmas Day, in fact I took a break and finally mashed through the
 final week on the evening of the 28th.  Infinite time, unemployment or being
@@ -668,7 +668,7 @@ part of the puzzles in my opinion.&lt;/p&gt;
 &lt;div class=&quot;section&quot; id=&quot;implementation&quot;&gt;
 &lt;h2&gt;Implementation&lt;/h2&gt;
 &lt;div class=&quot;figure&quot; id=&quot;id9&quot;&gt;
-&lt;img alt=&quot;Languages used for tasks&quot; src=&quot;.images/2018-10-19-aoc_calendar.png&quot; style=&quot;width: 273.5px; height: 181.0px;&quot; /&gt;
+&lt;img alt=&quot;Languages used for tasks&quot; src=&quot;../../_images/2018-10-19-aoc_calendar.png&quot; style=&quot;width: 273.5px; height: 181.0px;&quot; /&gt;
 &lt;p class=&quot;caption&quot;&gt;&lt;span class=&quot;caption-text&quot;&gt;Language frequency for &lt;abbr title=&quot;Advent of Code&quot;&gt;AoC&lt;/abbr&gt; puzzles&lt;/span&gt;&lt;/p&gt;
 &lt;div class=&quot;legend&quot;&gt;
 &lt;table class=&quot;docutils&quot;&gt;

@@ -6,7 +6,7 @@
   <link href="https://jnrowe.github.io/" />
   <link href="https://jnrowe.github.io/blog/tag/emacs/atom.xml" rel="self" />
   <subtitle type="text">Ramblings of a tired mind</subtitle>
-  <generator uri="http://ablog.readthedocs.org" version="0.9.2">ABlog</generator>
+  <generator uri="http://ablog.readthedocs.org" version="0.9.3">ABlog</generator>
   <entry xml:base="https://jnrowe.github.io/blog/tag/emacs/atom.xml">
     <title type="text">Evil Emacs steals my heart</title>
     <id>https://jnrowe.github.io/articles/evil_emacs_steals_my_heart.html</id>
@@ -20,7 +20,7 @@
 
 &lt;p&gt;&lt;em&gt;Many&lt;/em&gt; of my co-workers use &lt;a class=&quot;reference external&quot; href=&quot;https://www.gnu.org/software/emacs/&quot;&gt;emacs&lt;/a&gt;, it is probably the most popular editor on
 our team and I understand why.&lt;/p&gt;
-&lt;img alt=&quot;Editor icons&quot; class=&quot;align-right&quot; src=&quot;.images/standoff.png&quot; /&gt;
+&lt;img alt=&quot;Editor icons&quot; class=&quot;align-right&quot; src=&quot;../../_images/standoff.png&quot; /&gt;
 &lt;p&gt;I was an &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;emacs&lt;/span&gt;&lt;/code&gt; user — via &lt;a class=&quot;reference external&quot; href=&quot;ftp://ftp.cs.helsinki.fi/pub/Software/Local/uEmacs-PK/&quot;&gt;MicroEMACS&lt;/a&gt; and later &lt;a class=&quot;reference external&quot; href=&quot;https://www.gnu.org/software/emacs/&quot;&gt;GNU Emacs&lt;/a&gt; — for many
 years but at some point I switched to &lt;a class=&quot;reference external&quot; href=&quot;https://vim.sourceforge.io/&quot;&gt;vim&lt;/a&gt;.  I can’t even remember the exact
 catalyst for change, but I am pretty fickle so it may not have even been all
@@ -76,23 +76,23 @@ doubling the number of keys you have to press without any benefits&lt;a class=&q
 &lt;/div&gt;
 &lt;div class=&quot;section&quot; id=&quot;quirking-the-quirky&quot;&gt;
 &lt;h2&gt;Quirking the quirky&lt;/h2&gt;
-&lt;img alt=&quot;Emacs screenshot&quot; class=&quot;align-right&quot; src=&quot;.images/evil_emacs.png&quot; style=&quot;width: 407.5px; height: 270.0px;&quot; /&gt;
+&lt;img alt=&quot;Emacs screenshot&quot; class=&quot;align-right&quot; src=&quot;../../_images/evil_emacs.png&quot; style=&quot;width: 407.5px; height: 270.0px;&quot; /&gt;
 &lt;p&gt;I’ll freely admit I’ve &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;vim&lt;/span&gt;&lt;/code&gt;ified my &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;emacs&lt;/span&gt;&lt;/code&gt;.  I use &lt;a class=&quot;reference external&quot; href=&quot;https://github.com/emacs-evil/evil&quot;&gt;evil&lt;/a&gt;, my mode line
 uses &lt;a class=&quot;reference external&quot; href=&quot;http://github.com/milkypostman/powerline/&quot;&gt;powerline&lt;/a&gt; to match &lt;a class=&quot;reference external&quot; href=&quot;https://github.com/vim-airline/vim-airline&quot;&gt;vim-airline&lt;/a&gt;.  I have &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;zap-up-to-char&lt;/span&gt;&lt;/code&gt; mapped so
 that I can mimic &lt;kbd class=&quot;kbd docutils literal notranslate&quot;&gt;dt&lt;/kbd&gt; when &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;evil-mode&lt;/span&gt;&lt;/code&gt; is disabled.&lt;/p&gt;
 &lt;p&gt;Screenshots for &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;emacs&lt;/span&gt;&lt;/code&gt; and &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;vim&lt;/span&gt;&lt;/code&gt; really aren’t all that useful, because it
 is the workflow that makes these tools powerful… but, above is my current
 &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;emacs&lt;/span&gt;&lt;/code&gt; and below is my current &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;vim&lt;/span&gt;&lt;/code&gt;.&lt;/p&gt;
-&lt;img alt=&quot;vim screenshot&quot; class=&quot;align-left&quot; src=&quot;.images/delinquent_vim.png&quot; style=&quot;width: 422.0px; height: 263.5px;&quot; /&gt;
+&lt;img alt=&quot;vim screenshot&quot; class=&quot;align-left&quot; src=&quot;../../_images/delinquent_vim.png&quot; style=&quot;width: 422.0px; height: 263.5px;&quot; /&gt;
 &lt;p&gt;The big thing you’ll notice is the fonts.  In &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;emacs&lt;/span&gt;&lt;/code&gt; I’m using scaled text
 for headings in &lt;a class=&quot;reference external&quot; href=&quot;http://docutils.sourceforge.net/docs/user/rst/&quot;&gt;reST&lt;/a&gt; files.  I’m close to believing that headings,
 proportional fonts for comments and the occasional inline image are enough to
 switch to &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;emacs&lt;/span&gt;&lt;/code&gt;.&lt;/p&gt;
-&lt;img alt=&quot;Inline images in Emacs&quot; class=&quot;align-right&quot; src=&quot;.images/misfeasant_emacs.png&quot; style=&quot;width: 398.5px; height: 225.0px;&quot; /&gt;
+&lt;img alt=&quot;Inline images in Emacs&quot; class=&quot;align-right&quot; src=&quot;../../_images/misfeasant_emacs.png&quot; style=&quot;width: 398.5px; height: 225.0px;&quot; /&gt;
 &lt;p&gt;In the third image you can see &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;emacs&lt;/span&gt;&lt;/code&gt; is &lt;em&gt;displaying&lt;/em&gt; the &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;emacs&lt;/span&gt;&lt;/code&gt;
 screenshot in the buffer for &lt;em&gt;this&lt;/em&gt; post.  This example may be quite pointless&lt;a class=&quot;footnote-reference brackets&quot; href=&quot;#id5&quot; id=&quot;id2&quot;&gt;2&lt;/a&gt;, but it can be nice to have &lt;a class=&quot;reference external&quot; href=&quot;https://www.graphviz.org/&quot;&gt;graphviz&lt;/a&gt; output class hierarchies in to
 a buffer or database schema popups(like below).&lt;/p&gt;
-&lt;img alt=&quot;Schema diagram&quot; class=&quot;align-left&quot; src=&quot;.images/immoral_model.png&quot; style=&quot;width: 174.5px; height: 141.5px;&quot; /&gt;
+&lt;img alt=&quot;Schema diagram&quot; class=&quot;align-left&quot; src=&quot;../../_images/immoral_model.png&quot; style=&quot;width: 174.5px; height: 141.5px;&quot; /&gt;
 &lt;/div&gt;
 &lt;div class=&quot;section&quot; id=&quot;walking-the-branches&quot;&gt;
 &lt;h2&gt;Walking the branches&lt;/h2&gt;
@@ -164,7 +164,7 @@ your &lt;code class=&quot;file docutils literal notranslate&quot;&gt;&lt;span cl
 the comments in your &lt;code class=&quot;file docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;~/.gtkrc-2.0&lt;/span&gt;&lt;/code&gt; if you use either of these theme
 switchers.&lt;/p&gt;
 &lt;div class=&quot;figure&quot;&gt;
-&lt;img alt=&quot;XFce4 keyboard settings window&quot; src=&quot;.images/xfce4_keyboard.png&quot; /&gt;
+&lt;img alt=&quot;XFce4 keyboard settings window&quot; src=&quot;../../_images/xfce4_keyboard.png&quot; /&gt;
 &lt;/div&gt;
 &lt;p&gt;If you’re an &lt;a class=&quot;reference external&quot; href=&quot;http://www.xfce.org/&quot;&gt;XFce&lt;/a&gt; user you can select the Emacs keyboard shortcuts using the
 keyboard settings dialog.&lt;/p&gt;

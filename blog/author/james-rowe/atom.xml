@@ -6,7 +6,7 @@
   <link href="https://jnrowe.github.io/" />
   <link href="https://jnrowe.github.io/blog/author/james-rowe/atom.xml" rel="self" />
   <subtitle type="text">Ramblings of a tired mind</subtitle>
-  <generator uri="http://ablog.readthedocs.org" version="0.9.2">ABlog</generator>
+  <generator uri="http://ablog.readthedocs.org" version="0.9.3">ABlog</generator>
   <entry xml:base="https://jnrowe.github.io/blog/author/james-rowe/atom.xml">
     <title type="text">Office hours</title>
     <id>https://jnrowe.github.io/office_hours.html</id>
@@ -57,6 +57,20 @@ wish to &lt;em&gt;teach me&lt;/em&gt; another.&lt;/p&gt;
 &lt;p&gt;The easiest way to make this happen is to drop me a &lt;a class=&quot;reference external&quot; href=&quot;mailto:jnrowe&amp;#37;&amp;#52;&amp;#48;gmail&amp;#46;com&quot;&gt;mail&lt;/a&gt;.  If the idea gets
 any traction I’ll look at better ways of scheduling, but until then mail should
 be fine.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;section&quot; id=&quot;updates-2019-01-15&quot;&gt;
+&lt;h2&gt;Updates - 2019-01-15&lt;/h2&gt;
+&lt;p&gt;So, I’ve just completed my second appointments, and it seems to be working out
+okay.  Both have been fun(at least for me), and I’m planning on continuing this
+experiment for a little while longer.  Do get in touch!&lt;/p&gt;
+&lt;p&gt;I’ve also passed on two “applicants” who I felt would be better served by other
+people, and that seems like a very valuable feature to add to the idea.
+I passed both of them on to co-workers, and I could only do this easily because
+I knew they were playing around with the idea of &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;/office-hours&lt;/span&gt;&lt;/code&gt;.  It would
+be nice if there was a register that made it is easier to link poor matches
+with better matches.  Obviously it needs to be weighted in some way, “show me
+&lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;$connections&lt;/span&gt;&lt;/code&gt; using &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;office-hours&lt;/span&gt;&lt;/code&gt; with &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;$tag&lt;/span&gt;&lt;/code&gt;” for example, but it
+might be a nice idea for a weekend hack.&lt;/p&gt;
 &lt;p class=&quot;rubric&quot;&gt;Footnotes&lt;/p&gt;
 &lt;dl class=&quot;footnote brackets&quot;&gt;
 &lt;dt class=&quot;label&quot; id=&quot;id2&quot;&gt;&lt;span class=&quot;brackets&quot;&gt;&lt;a class=&quot;fn-backref&quot; href=&quot;#id1&quot;&gt;1&lt;/a&gt;&lt;/span&gt;&lt;/dt&gt;
@@ -1090,7 +1104,7 @@ bugs filed when builds only work with &lt;a class=&quot;reference external&quot;
 data in a &lt;a class=&quot;reference external&quot; href=&quot;https://sqlite.org/&quot;&gt;sqlite&lt;/a&gt; database named &lt;code class=&quot;file docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;.redo/redo.sqlite3&lt;/span&gt;&lt;/code&gt;, making it
 is easy to transform in to a &lt;strong class=&quot;command&quot;&gt;dot&lt;/strong&gt; compliant input.  For
 instance, here is my &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;dzen2&lt;/span&gt;&lt;/code&gt; tree as built by &lt;strong class=&quot;command&quot;&gt;redo&lt;/strong&gt;:&lt;/p&gt;
-&lt;img alt=&quot;Digraph of dzen2 build with redo&quot; src=&quot;.images/dzen.png&quot; style=&quot;width: 487.41px; height: 163.68px;&quot; /&gt;
+&lt;img alt=&quot;Digraph of dzen2 build with redo&quot; src=&quot;../../_images/dzen.png&quot; style=&quot;width: 487.41px; height: 163.68px;&quot; /&gt;
 &lt;/dd&gt;
 &lt;dt class=&quot;label&quot; id=&quot;id13&quot;&gt;&lt;span class=&quot;brackets&quot;&gt;&lt;a class=&quot;fn-backref&quot; href=&quot;#id6&quot;&gt;6&lt;/a&gt;&lt;/span&gt;&lt;/dt&gt;
 &lt;dd&gt;&lt;p&gt;A search yields a few attempts to do so, many requiring large runtimes
@@ -1120,7 +1134,7 @@ required interface.&lt;/p&gt;
     </author>
     <content type="html">&lt;div class=&quot;section&quot; id=&quot;visualising-the-progress-of-time&quot;&gt;
 
-&lt;a class=&quot;reference external image-reference&quot; href=&quot;https://www.progressbarosx.com/&quot;&gt;&lt;img alt=&quot;Screenshot of Progress Bar OSX in action&quot; src=&quot;.images/time_progress.jpg&quot; /&gt;&lt;/a&gt;
+&lt;a class=&quot;reference external image-reference&quot; href=&quot;https://www.progressbarosx.com/&quot;&gt;&lt;img alt=&quot;Screenshot of Progress Bar OSX in action&quot; src=&quot;../../_images/time_progress.jpg&quot; /&gt;&lt;/a&gt;
 &lt;p&gt;A co-worker was demoing a user session today, and pointed out a neat tool for
 MacOS that displays the “continual march toward death”.  That tool was
 &lt;a class=&quot;reference external&quot; href=&quot;https://www.progressbarosx.com/&quot;&gt;Progress Bar OSX&lt;/a&gt;, and it is pretty cool.  Sadly it is only available for
@@ -1146,7 +1160,7 @@ MacOS, so we’ll need to make something similar.&lt;/p&gt;
         &lt;/span&gt;
     &lt;/p&gt;
 &lt;/div&gt;&lt;div class=&quot;figure&quot; id=&quot;id3&quot;&gt;
-&lt;a class=&quot;reference external image-reference&quot; href=&quot;../_static/kitt.gif&quot;&gt;&lt;img alt=&quot;Multi-band scanner in action&quot; src=&quot;.images/kitt06.png&quot; /&gt;&lt;/a&gt;
+&lt;a class=&quot;reference external image-reference&quot; href=&quot;../_static/kitt.gif&quot;&gt;&lt;img alt=&quot;Multi-band scanner in action&quot; src=&quot;../../_images/kitt06.png&quot; /&gt;&lt;/a&gt;
 &lt;p class=&quot;caption&quot;&gt;&lt;span class=&quot;caption-text&quot;&gt;Click the image for an animated GIF, I’ll spare you the flashing lights in
 case you wish to read on.&lt;/span&gt;&lt;/p&gt;
 &lt;/div&gt;
@@ -1159,7 +1173,7 @@ case you wish to read on.&lt;/span&gt;&lt;/p&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
 &lt;p&gt;which results in:&lt;/p&gt;
-&lt;img alt=&quot;Screenshot of simple day of year bar on 2018-11-13&quot; src=&quot;.images/day_bar.png&quot; /&gt;
+&lt;img alt=&quot;Screenshot of simple day of year bar on 2018-11-13&quot; src=&quot;../../_images/day_bar.png&quot; /&gt;
 &lt;p&gt;The logic should be simple enough to follow(if you’re familiar with
 &lt;strong class=&quot;command&quot;&gt;date&lt;/strong&gt;’s &lt;a class=&quot;reference internal&quot; href=&quot;../../articles/march_toward_death.html#cmdoption-date-arg-j&quot;&gt;&lt;code class=&quot;xref std std-option docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;%j&lt;/span&gt; &lt;span class=&quot;pre&quot;&gt;formatter&lt;/span&gt;&lt;/code&gt;&lt;/a&gt;):&lt;/p&gt;
 &lt;ul class=&quot;simple&quot;&gt;
@@ -1233,7 +1247,7 @@ moved our pointer over the header.&lt;/p&gt;
 &lt;/div&gt;
 &lt;div class=&quot;section&quot; id=&quot;step-four&quot;&gt;
 &lt;h2&gt;Step four&lt;/h2&gt;
-&lt;p&gt;You can find the script I used &lt;a class=&quot;reference download internal&quot; download=&quot;&quot; href=&quot;../../_downloads/532537fa2e75eea4fdea920b6b2b7bb0/time_progress.py&quot;&gt;&lt;code class=&quot;xref download docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;here&lt;/span&gt;&lt;/code&gt;&lt;/a&gt;.  It isn’t
+&lt;p&gt;You can find the script I used &lt;a class=&quot;reference download internal&quot; download=&quot;&quot; href=&quot;../../_downloads/8247878d1cce93d38b5fe2e1628c5a40/time_progress.py&quot;&gt;&lt;code class=&quot;xref download docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;here&lt;/span&gt;&lt;/code&gt;&lt;/a&gt;.  It isn’t
 pretty, but it will do.  If I come to depend on it I’m sure that I’ll make
 something better.&lt;/p&gt;
 &lt;p&gt;I think it is important to note that if you’ve got this far and you’re thinking
@@ -1277,7 +1291,7 @@ this is new to you.&lt;/p&gt;
 
 &lt;p&gt;&lt;em&gt;Many&lt;/em&gt; of my co-workers use &lt;a class=&quot;reference external&quot; href=&quot;https://www.gnu.org/software/emacs/&quot;&gt;emacs&lt;/a&gt;, it is probably the most popular editor on
 our team and I understand why.&lt;/p&gt;
-&lt;img alt=&quot;Editor icons&quot; class=&quot;align-right&quot; src=&quot;.images/standoff.png&quot; /&gt;
+&lt;img alt=&quot;Editor icons&quot; class=&quot;align-right&quot; src=&quot;../../_images/standoff.png&quot; /&gt;
 &lt;p&gt;I was an &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;emacs&lt;/span&gt;&lt;/code&gt; user — via &lt;a class=&quot;reference external&quot; href=&quot;ftp://ftp.cs.helsinki.fi/pub/Software/Local/uEmacs-PK/&quot;&gt;MicroEMACS&lt;/a&gt; and later &lt;a class=&quot;reference external&quot; href=&quot;https://www.gnu.org/software/emacs/&quot;&gt;GNU Emacs&lt;/a&gt; — for many
 years but at some point I switched to &lt;a class=&quot;reference external&quot; href=&quot;https://vim.sourceforge.io/&quot;&gt;vim&lt;/a&gt;.  I can’t even remember the exact
 catalyst for change, but I am pretty fickle so it may not have even been all
@@ -1333,23 +1347,23 @@ doubling the number of keys you have to press without any benefits&lt;a class=&q
 &lt;/div&gt;
 &lt;div class=&quot;section&quot; id=&quot;quirking-the-quirky&quot;&gt;
 &lt;h2&gt;Quirking the quirky&lt;/h2&gt;
-&lt;img alt=&quot;Emacs screenshot&quot; class=&quot;align-right&quot; src=&quot;.images/evil_emacs.png&quot; style=&quot;width: 407.5px; height: 270.0px;&quot; /&gt;
+&lt;img alt=&quot;Emacs screenshot&quot; class=&quot;align-right&quot; src=&quot;../../_images/evil_emacs.png&quot; style=&quot;width: 407.5px; height: 270.0px;&quot; /&gt;
 &lt;p&gt;I’ll freely admit I’ve &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;vim&lt;/span&gt;&lt;/code&gt;ified my &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;emacs&lt;/span&gt;&lt;/code&gt;.  I use &lt;a class=&quot;reference external&quot; href=&quot;https://github.com/emacs-evil/evil&quot;&gt;evil&lt;/a&gt;, my mode line
 uses &lt;a class=&quot;reference external&quot; href=&quot;http://github.com/milkypostman/powerline/&quot;&gt;powerline&lt;/a&gt; to match &lt;a class=&quot;reference external&quot; href=&quot;https://github.com/vim-airline/vim-airline&quot;&gt;vim-airline&lt;/a&gt;.  I have &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;zap-up-to-char&lt;/span&gt;&lt;/code&gt; mapped so
 that I can mimic &lt;kbd class=&quot;kbd docutils literal notranslate&quot;&gt;dt&lt;/kbd&gt; when &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;evil-mode&lt;/span&gt;&lt;/code&gt; is disabled.&lt;/p&gt;
 &lt;p&gt;Screenshots for &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;emacs&lt;/span&gt;&lt;/code&gt; and &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;vim&lt;/span&gt;&lt;/code&gt; really aren’t all that useful, because it
 is the workflow that makes these tools powerful… but, above is my current
 &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;emacs&lt;/span&gt;&lt;/code&gt; and below is my current &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;vim&lt;/span&gt;&lt;/code&gt;.&lt;/p&gt;
-&lt;img alt=&quot;vim screenshot&quot; class=&quot;align-left&quot; src=&quot;.images/delinquent_vim.png&quot; style=&quot;width: 422.0px; height: 263.5px;&quot; /&gt;
+&lt;img alt=&quot;vim screenshot&quot; class=&quot;align-left&quot; src=&quot;../../_images/delinquent_vim.png&quot; style=&quot;width: 422.0px; height: 263.5px;&quot; /&gt;
 &lt;p&gt;The big thing you’ll notice is the fonts.  In &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;emacs&lt;/span&gt;&lt;/code&gt; I’m using scaled text
 for headings in &lt;a class=&quot;reference external&quot; href=&quot;http://docutils.sourceforge.net/docs/user/rst/&quot;&gt;reST&lt;/a&gt; files.  I’m close to believing that headings,
 proportional fonts for comments and the occasional inline image are enough to
 switch to &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;emacs&lt;/span&gt;&lt;/code&gt;.&lt;/p&gt;
-&lt;img alt=&quot;Inline images in Emacs&quot; class=&quot;align-right&quot; src=&quot;.images/misfeasant_emacs.png&quot; style=&quot;width: 398.5px; height: 225.0px;&quot; /&gt;
+&lt;img alt=&quot;Inline images in Emacs&quot; class=&quot;align-right&quot; src=&quot;../../_images/misfeasant_emacs.png&quot; style=&quot;width: 398.5px; height: 225.0px;&quot; /&gt;
 &lt;p&gt;In the third image you can see &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;emacs&lt;/span&gt;&lt;/code&gt; is &lt;em&gt;displaying&lt;/em&gt; the &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;emacs&lt;/span&gt;&lt;/code&gt;
 screenshot in the buffer for &lt;em&gt;this&lt;/em&gt; post.  This example may be quite pointless&lt;a class=&quot;footnote-reference brackets&quot; href=&quot;#id5&quot; id=&quot;id2&quot;&gt;2&lt;/a&gt;, but it can be nice to have &lt;a class=&quot;reference external&quot; href=&quot;https://www.graphviz.org/&quot;&gt;graphviz&lt;/a&gt; output class hierarchies in to
 a buffer or database schema popups(like below).&lt;/p&gt;
-&lt;img alt=&quot;Schema diagram&quot; class=&quot;align-left&quot; src=&quot;.images/immoral_model.png&quot; style=&quot;width: 174.5px; height: 141.5px;&quot; /&gt;
+&lt;img alt=&quot;Schema diagram&quot; class=&quot;align-left&quot; src=&quot;../../_images/immoral_model.png&quot; style=&quot;width: 174.5px; height: 141.5px;&quot; /&gt;
 &lt;/div&gt;
 &lt;div class=&quot;section&quot; id=&quot;walking-the-branches&quot;&gt;
 &lt;h2&gt;Walking the branches&lt;/h2&gt;
@@ -1452,7 +1466,7 @@ of the application guard as above, you can even override bindings that you
 won’t find yourself using in &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;imv&lt;/span&gt;&lt;/code&gt; without breaking your shell or other
 tools.&lt;/p&gt;
 &lt;div class=&quot;figure&quot; id=&quot;id5&quot;&gt;
-&lt;a class=&quot;reference external image-reference&quot; href=&quot;https://xkcd.com/1806/&quot;&gt;&lt;img alt=&quot;Borrow Your Laptop&quot; src=&quot;.images/borrow_your_laptop.png&quot; style=&quot;width: 167.0px; height: 246.5px;&quot; /&gt;&lt;/a&gt;
+&lt;a class=&quot;reference external image-reference&quot; href=&quot;https://xkcd.com/1806/&quot;&gt;&lt;img alt=&quot;Borrow Your Laptop&quot; src=&quot;../../_images/borrow_your_laptop.png&quot; style=&quot;width: 167.0px; height: 246.5px;&quot; /&gt;&lt;/a&gt;
 &lt;p class=&quot;caption&quot;&gt;&lt;span class=&quot;caption-text&quot;&gt;As always, &lt;a class=&quot;reference external&quot; href=&quot;https://xkcd.com/&quot;&gt;xkcd&lt;/a&gt; has a pre-canned explanation for why you shouldn’t listen
 to me.  Image: &lt;a class=&quot;reference external&quot; href=&quot;http://creativecommons.org/licenses/by-nc/2.5/&quot;&gt;CC by-nc&lt;/a&gt;.&lt;/span&gt;&lt;/p&gt;
 &lt;/div&gt;
@@ -1569,7 +1583,7 @@ a &lt;strong&gt;five in the morning&lt;/strong&gt; start.&lt;/p&gt;
 &lt;p&gt;If you look at my completion screenshot, you’ll also see I have the
 &lt;a class=&quot;reference external&quot; href=&quot;https://docs.python.org/3/library/itertools.html#module-itertools&quot; title=&quot;(in Python v3.7)&quot;&gt;&lt;code class=&quot;xref py py-mod docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;itertools&lt;/span&gt;&lt;/code&gt;&lt;/a&gt; documentation open.  If you’re going to use Python for &lt;abbr title=&quot;Advent of Code&quot;&gt;AoC&lt;/abbr&gt;
 study up on &lt;a class=&quot;reference external&quot; href=&quot;https://docs.python.org/3/library/itertools.html#module-itertools&quot; title=&quot;(in Python v3.7)&quot;&gt;&lt;code class=&quot;xref py py-mod docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;itertools&lt;/span&gt;&lt;/code&gt;&lt;/a&gt;, it will help no end&lt;a class=&quot;footnote-reference brackets&quot; href=&quot;#id6&quot; id=&quot;id2&quot;&gt;2&lt;/a&gt;.&lt;/p&gt;
-&lt;img alt=&quot;Ta-da! Calendar complete&quot; src=&quot;.images/2017-12-29-advent_of_code.png&quot; style=&quot;width: 800.0px; height: 450.0px;&quot; /&gt;
+&lt;img alt=&quot;Ta-da! Calendar complete&quot; src=&quot;../../_images/2017-12-29-advent_of_code.png&quot; style=&quot;width: 800.0px; height: 450.0px;&quot; /&gt;
 &lt;p&gt;The other thing you can see in my screenshot is that I didn’t complete the
 event on Christmas Day, in fact I took a break and finally mashed through the
 final week on the evening of the 28th.  Infinite time, unemployment or being
@@ -1666,7 +1680,7 @@ part of the puzzles in my opinion.&lt;/p&gt;
 &lt;div class=&quot;section&quot; id=&quot;implementation&quot;&gt;
 &lt;h2&gt;Implementation&lt;/h2&gt;
 &lt;div class=&quot;figure&quot; id=&quot;id9&quot;&gt;
-&lt;img alt=&quot;Languages used for tasks&quot; src=&quot;.images/2018-10-19-aoc_calendar.png&quot; style=&quot;width: 273.5px; height: 181.0px;&quot; /&gt;
+&lt;img alt=&quot;Languages used for tasks&quot; src=&quot;../../_images/2018-10-19-aoc_calendar.png&quot; style=&quot;width: 273.5px; height: 181.0px;&quot; /&gt;
 &lt;p class=&quot;caption&quot;&gt;&lt;span class=&quot;caption-text&quot;&gt;Language frequency for &lt;abbr title=&quot;Advent of Code&quot;&gt;AoC&lt;/abbr&gt; puzzles&lt;/span&gt;&lt;/p&gt;
 &lt;div class=&quot;legend&quot;&gt;
 &lt;table class=&quot;docutils&quot;&gt;
@@ -1809,7 +1823,7 @@ They feel, to me, like they’re attacking the problem from entirely the wrong
 side.  Instead of configuring individual applications to behave in a tabbed and
 custom way, why not just rely on that behaviour globally?  Allow me to
 illustrate with the following examples.&lt;/p&gt;
-&lt;img alt=&quot;Example of awesomewm’s tile.right layout&quot; src=&quot;.images/2018-10-08-tiling.jpg&quot; /&gt;
+&lt;img alt=&quot;Example of awesomewm’s tile.right layout&quot; src=&quot;../../_images/2018-10-08-tiling.jpg&quot; /&gt;
 &lt;p&gt;If I want two terminals next to each other I’ll just switch to a layout that
 supports that(in &lt;a class=&quot;reference external&quot; href=&quot;https://awesomewm.org/&quot;&gt;awesomewm&lt;/a&gt; I’d probably choose &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;tile.right&lt;/span&gt;&lt;/code&gt;) .  If I want
 various image viewer windows open and a nice tabbed interface to access them,
@@ -2145,7 +2159,7 @@ I was previously happily unaware of.&lt;/p&gt;
 &lt;em&gt;masses&lt;/em&gt; of users who were retweeting users who would later be banned, and
 those retweeting users would move on to retweeting new users who themselves
 would often end up banned.&lt;/p&gt;
-&lt;img alt=&quot;Route of evil&quot; class=&quot;align-right&quot; src=&quot;.images/final_plight.png&quot; /&gt;
+&lt;img alt=&quot;Route of evil&quot; class=&quot;align-right&quot; src=&quot;../../_images/final_plight.png&quot; /&gt;
 &lt;p&gt;The interesting point to me was that there were large numbers of &lt;em&gt;actual&lt;/em&gt; users
 — not bots — who redirect the hate storm and almost nothing else.  Many of
 these users were in an anechoic chamber, sucking in tweets from many users and
@@ -2161,7 +2175,7 @@ depleted.  Each new visualisation started from a map, much like the game’s
 levels, and showed a real city with its real occupants.  The intent was to
 allow people to experience a location they knew but with its foetid underbelly
 exposed.&lt;/p&gt;
-&lt;a class=&quot;reference external image-reference&quot; href=&quot;https://en.m.wikipedia.org/wiki/Final_Fight&quot;&gt;&lt;img alt=&quot;Final Fight One on the GBA&quot; class=&quot;align-right&quot; src=&quot;.images/final_fight_one.png&quot; style=&quot;width: 237.60000000000002px; height: 158.4px;&quot; /&gt;&lt;/a&gt;
+&lt;a class=&quot;reference external image-reference&quot; href=&quot;https://en.m.wikipedia.org/wiki/Final_Fight&quot;&gt;&lt;img alt=&quot;Final Fight One on the GBA&quot; class=&quot;align-right&quot; src=&quot;../../_images/final_fight_one.png&quot; style=&quot;width: 237.60000000000002px; height: 158.4px;&quot; /&gt;&lt;/a&gt;
 &lt;/div&gt;
 &lt;div class=&quot;section&quot; id=&quot;what-happened-next&quot;&gt;
 &lt;h2&gt;What happened next?&lt;/h2&gt;

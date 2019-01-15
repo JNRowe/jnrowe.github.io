@@ -6,7 +6,7 @@
   <link href="https://jnrowe.github.io/" />
   <link href="https://jnrowe.github.io/blog/tag/vcs/atom.xml" rel="self" />
   <subtitle type="text">Ramblings of a tired mind</subtitle>
-  <generator uri="http://ablog.readthedocs.org" version="0.9.2">ABlog</generator>
+  <generator uri="http://ablog.readthedocs.org" version="0.9.3">ABlog</generator>
   <entry xml:base="https://jnrowe.github.io/blog/tag/vcs/atom.xml">
     <title type="text">fossil experiments</title>
     <id>https://jnrowe.github.io/articles/fossil.html</id>
@@ -192,7 +192,7 @@ a command against all repositories configured in &lt;code class=&quot;file docut
     </author>
     <content type="html">&lt;div class=&quot;section&quot; id=&quot;zsh-and-the-vcs&quot;&gt;
 
-&lt;img alt=&quot;Git prompt screenshot&quot; class=&quot;align-right&quot; src=&quot;.images/2009-10-28-git_prompt.png&quot; /&gt;
+&lt;img alt=&quot;Git prompt screenshot&quot; class=&quot;align-right&quot; src=&quot;../../_images/2009-10-28-git_prompt.png&quot; /&gt;
 &lt;p&gt;I’ve recently switched to &lt;a class=&quot;reference external&quot; href=&quot;http://www.zsh.org/&quot;&gt;Zsh&lt;/a&gt; as my login shell after
 9 years of using &lt;a class=&quot;reference external&quot; href=&quot;http://cnswww.cns.cwru.edu/~chet/bash/bashtop.html&quot;&gt;bash&lt;/a&gt;, and for no particularly good reason either as they’re
 both great interactive shells.  I guess all the &lt;em&gt;Kool Kids&lt;/em&gt; are doing it, and
@@ -673,7 +673,7 @@ have made, maybe to help you build your changelog information.&lt;/p&gt;&lt;/li&
 &lt;div class=&quot;section&quot; id=&quot;advanced&quot;&gt;
 &lt;h2&gt;Advanced&lt;/h2&gt;
 &lt;div class=&quot;figure&quot;&gt;
-&lt;img alt=&quot;rcsi screenshot&quot; src=&quot;.images/rcsi.png&quot; style=&quot;width: 500px; height: 114px;&quot; /&gt;
+&lt;img alt=&quot;rcsi screenshot&quot; src=&quot;../../_images/rcsi.png&quot; style=&quot;width: 500px; height: 114px;&quot; /&gt;
 &lt;/div&gt;
 &lt;p&gt;There are many tools available that can help you to manage your &lt;abbr title=&quot;GNU Revision Control System&quot;&gt;RCS&lt;/abbr&gt; files,
 including the &lt;abbr title=&quot;GNU Revision Control System&quot;&gt;RCS&lt;/abbr&gt; status monitor &lt;a class=&quot;reference external&quot; href=&quot;http://www.colinbrough.pwp.blueyonder.co.uk/rcsi.README.html&quot;&gt;rcsi&lt;/a&gt; and &lt;a class=&quot;reference external&quot; href=&quot;http://blame.sourceforge.net/&quot;&gt;blame&lt;/a&gt; &lt;abbr title=&quot;GNU Revision Control System&quot;&gt;RCS&lt;/abbr&gt; file annotator.&lt;/p&gt;

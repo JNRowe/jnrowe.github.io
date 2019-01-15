@@ -6,7 +6,7 @@
   <link href="https://jnrowe.github.io/" />
   <link href="https://jnrowe.github.io/blog/tag/imv/atom.xml" rel="self" />
   <subtitle type="text">Ramblings of a tired mind</subtitle>
-  <generator uri="http://ablog.readthedocs.org" version="0.9.2">ABlog</generator>
+  <generator uri="http://ablog.readthedocs.org" version="0.9.3">ABlog</generator>
   <entry xml:base="https://jnrowe.github.io/blog/tag/imv/atom.xml">
     <title type="text">File renaming for the lazy</title>
     <id>https://jnrowe.github.io/articles/tips/readline_rename_imv.html</id>
@@ -76,7 +76,7 @@ of the application guard as above, you can even override bindings that you
 won’t find yourself using in &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;imv&lt;/span&gt;&lt;/code&gt; without breaking your shell or other
 tools.&lt;/p&gt;
 &lt;div class=&quot;figure&quot; id=&quot;id5&quot;&gt;
-&lt;a class=&quot;reference external image-reference&quot; href=&quot;https://xkcd.com/1806/&quot;&gt;&lt;img alt=&quot;Borrow Your Laptop&quot; src=&quot;.images/borrow_your_laptop.png&quot; style=&quot;width: 167.0px; height: 246.5px;&quot; /&gt;&lt;/a&gt;
+&lt;a class=&quot;reference external image-reference&quot; href=&quot;https://xkcd.com/1806/&quot;&gt;&lt;img alt=&quot;Borrow Your Laptop&quot; src=&quot;../../_images/borrow_your_laptop.png&quot; style=&quot;width: 167.0px; height: 246.5px;&quot; /&gt;&lt;/a&gt;
 &lt;p class=&quot;caption&quot;&gt;&lt;span class=&quot;caption-text&quot;&gt;As always, &lt;a class=&quot;reference external&quot; href=&quot;https://xkcd.com/&quot;&gt;xkcd&lt;/a&gt; has a pre-canned explanation for why you shouldn’t listen
 to me.  Image: &lt;a class=&quot;reference external&quot; href=&quot;http://creativecommons.org/licenses/by-nc/2.5/&quot;&gt;CC by-nc&lt;/a&gt;.&lt;/span&gt;&lt;/p&gt;
 &lt;/div&gt;

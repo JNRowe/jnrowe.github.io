@@ -6,7 +6,7 @@
   <link href="https://jnrowe.github.io/" />
   <link href="https://jnrowe.github.io/blog/tag/tiling/atom.xml" rel="self" />
   <subtitle type="text">Ramblings of a tired mind</subtitle>
-  <generator uri="http://ablog.readthedocs.org" version="0.9.2">ABlog</generator>
+  <generator uri="http://ablog.readthedocs.org" version="0.9.3">ABlog</generator>
   <entry xml:base="https://jnrowe.github.io/blog/tag/tiling/atom.xml">
     <title type="text">Tiling vs tabbing</title>
     <id>https://jnrowe.github.io/articles/tiling_vs_tabbing.html</id>
@@ -28,7 +28,7 @@ They feel, to me, like they’re attacking the problem from entirely the wrong
 side.  Instead of configuring individual applications to behave in a tabbed and
 custom way, why not just rely on that behaviour globally?  Allow me to
 illustrate with the following examples.&lt;/p&gt;
-&lt;img alt=&quot;Example of awesomewm’s tile.right layout&quot; src=&quot;.images/2018-10-08-tiling.jpg&quot; /&gt;
+&lt;img alt=&quot;Example of awesomewm’s tile.right layout&quot; src=&quot;../../_images/2018-10-08-tiling.jpg&quot; /&gt;
 &lt;p&gt;If I want two terminals next to each other I’ll just switch to a layout that
 supports that(in &lt;a class=&quot;reference external&quot; href=&quot;https://awesomewm.org/&quot;&gt;awesomewm&lt;/a&gt; I’d probably choose &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;tile.right&lt;/span&gt;&lt;/code&gt;) .  If I want
 various image viewer windows open and a nice tabbed interface to access them,
