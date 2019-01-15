@@ -62,6 +62,22 @@ The easiest way to make this happen is to drop me a mail_.  If the idea gets
 any traction I’ll look at better ways of scheduling, but until then mail should
 be fine.
 
+Updates - 2019-01-15
+--------------------
+
+So, I’ve just completed my second appointments, and it seems to be working out
+okay.  Both have been fun(at least for me), and I’m planning on continuing this
+experiment for a little while longer.  Do get in touch!
+
+I’ve also passed on two “applicants” who I felt would be better served by other
+people, and that seems like a very valuable feature to add to the idea.
+I passed both of them on to co-workers, and I could only do this easily because
+I knew they were playing around with the idea of ``/office-hours``.  It would
+be nice if there was a register that made it is easier to link poor matches
+with better matches.  Obviously it needs to be weighted in some way, “show me
+``$connections`` using ``office-hours`` with ``$tag``\” for example, but it
+might be a nice idea for a weekend hack.
+
 .. rubric:: Footnotes
 
 .. [#] It seems that the norm for my co-workers is to make this offer on our
