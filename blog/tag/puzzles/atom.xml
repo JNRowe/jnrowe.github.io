@@ -205,7 +205,7 @@ dependencies.  A few of my co-workers &lt;em&gt;claim&lt;/em&gt; it is cheating 
 off the shelf solution, but as the previous sections prove I’m definitely not
 in that camp.  I’m of the opinion you &lt;em&gt;should&lt;/em&gt; use pre-written well-tested code
 in preference to writing your own code &lt;em&gt;every&lt;/em&gt; time, otherwise we’re quickly
-falling in to a &lt;a class=&quot;reference external&quot; href=&quot;https://en.m.wikipedia.org/wiki/No_true_Scotsman&quot;&gt;No true Scotsman&lt;/a&gt; argument as we chase are way back to
+falling in to a &lt;a class=&quot;reference external&quot; href=&quot;https://en.m.wikipedia.org/wiki/No_true_Scotsman&quot;&gt;No true Scotsman&lt;/a&gt; argument as we chase our way back to
 building computers with hand cracked flints.&lt;/p&gt;
 &lt;p&gt;For this puzzle we need to imagine a piece of mappable cloth, so a 2-d array is
 on the cards.  If we’re using Python then we’ll need to do a lot of work to
@@ -224,7 +224,7 @@ general-purpose data-base applications.”&lt;/p&gt;
 &lt;p&gt;&lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;numpy&lt;/span&gt;&lt;/code&gt; supports addressing sub-arrays with &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;array[x1:x2,y1:y2]&lt;/span&gt;&lt;/code&gt;, and
 combined with its fast and efficient array creation we can solve this with low
 effort.  So, we can prime an empty array and increment each element when it is
-touched by elf:&lt;/p&gt;
+touched by an elf:&lt;/p&gt;
 &lt;div class=&quot;highlight-default notranslate&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Geometry&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;namedtuple&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;Geometry&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;x, y, w h&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
 
 &lt;span class=&quot;n&quot;&gt;data&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Dict&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;int&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Geometry&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;process_input&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;inputs&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
@@ -327,7 +327,7 @@ formatting for example.&lt;/p&gt;
 &lt;div class=&quot;highlight-default notranslate&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;sleepiest&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;max&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;guards&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;items&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(),&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;key&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;itemgetter&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
-&lt;p&gt;The &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;key&lt;/span&gt;&lt;/code&gt; argument cause &lt;a class=&quot;reference external&quot; href=&quot;https://docs.python.org/3/library/functions.html#max&quot; title=&quot;(in Python v3.7)&quot;&gt;&lt;code class=&quot;xref py py-func docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;max()&lt;/span&gt;&lt;/code&gt;&lt;/a&gt; to sort based on the tuple’s second
+&lt;p&gt;The &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;key&lt;/span&gt;&lt;/code&gt; argument causes &lt;a class=&quot;reference external&quot; href=&quot;https://docs.python.org/3/library/functions.html#max&quot; title=&quot;(in Python v3.7)&quot;&gt;&lt;code class=&quot;xref py py-func docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;max()&lt;/span&gt;&lt;/code&gt;&lt;/a&gt; to sort based on the tuple’s second
 element.   Using &lt;a class=&quot;reference external&quot; href=&quot;https://docs.python.org/3/library/operator.html#module-operator&quot; title=&quot;(in Python v3.7)&quot;&gt;&lt;code class=&quot;xref py py-mod docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;operator&lt;/span&gt;&lt;/code&gt;&lt;/a&gt;’s &lt;a class=&quot;reference external&quot; href=&quot;https://docs.python.org/3/library/operator.html#operator.itemgetter&quot; title=&quot;(in Python v3.7)&quot;&gt;&lt;code class=&quot;xref py py-func docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;itemgetter()&lt;/span&gt;&lt;/code&gt;&lt;/a&gt; here feels
 nicer than a &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;lambda&lt;/span&gt;&lt;/code&gt;, although the effect is the same.  Every time I reach
 for &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;itemgetter()&lt;/span&gt;&lt;/code&gt; or &lt;a class=&quot;reference external&quot; href=&quot;https://docs.python.org/3/library/operator.html#operator.attrgetter&quot; title=&quot;(in Python v3.7)&quot;&gt;&lt;code class=&quot;xref py py-func docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;attrgetter()&lt;/span&gt;&lt;/code&gt;&lt;/a&gt; I yearn for quick
@@ -379,8 +379,9 @@ and other cools things my version wouldn’t.&lt;/p&gt;
 &lt;/div&gt;
 &lt;p&gt;I’ve since benchmarked a couple of alternatives, such as iterating over
 &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;string.ascii_lowercase&lt;/span&gt;&lt;/code&gt; and calling &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;str.replace()&lt;/span&gt;&lt;/code&gt; until the
-string no longer changes.  Many are simpler to reason about and perform in
-roughly the same time, but for paedagogy I’ve kept the &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;deque&lt;/span&gt;&lt;/code&gt; version here.&lt;/p&gt;
+string no longer changes.  Many are simpler to reason about and have roughly
+the same runtime, but for paedagogical honesty I’ve kept the &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;deque&lt;/span&gt;&lt;/code&gt; version
+here.&lt;/p&gt;
 &lt;p&gt;Anyway, it turns out I was right.  There were going to be some significant
 optimisations to make this work reasonably.  However, they didn’t show up until
 part two, and when they did it was easier to switch languages than acceptably

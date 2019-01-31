@@ -117,7 +117,7 @@ direction<a class="footnote-reference brackets" href="#id10" id="id3">3</a>, but
 problems that <strong class="command">make</strong> has.  There is <em>no</em> single tool that can uniformly be
 recognised as <strong class="command">redo</strong>, in fact it feels like somehow there are as many
 implementations of <strong class="command">redo</strong> floating around as there are of <strong class="command">make</strong> even though it
-<em>thirty years younger</em>.</p>
+is <em>thirty years younger</em>.</p>
 <p>While <strong class="command">redo</strong> is awesome in many of its implementations you find yourself having
 to remember the idiosyncrasies of yet another collection of slightly
 incompatible tools.  If you’re using Avery Pennarun’s popular <a class="reference external" href="https://github.com/apenwarr/redo/">Python
@@ -177,7 +177,7 @@ requests ever since ;)</p>
 an improved <strong class="command">redo</strong> implementation, but is wholly incompatible with it.  It is
 available in both a <a class="reference external" href="https://github.com/timbertson/gup/tree/master/python">Python</a> and <a class="reference external" href="https://github.com/timbertson/gup/tree/master/ocaml">ocaml</a> version.  It fixes a few of the most
 annoying problems in <strong class="command">redo</strong>, but operates in largely the same way conceptually.
-Any the skills you’ve learnt with <strong class="command">redo</strong> is easy to transfer, and you can
+Any of the skills you’ve learnt with <strong class="command">redo</strong> are easy to transfer, and you can
 update your builds to use <strong class="command">gup</strong> with very little effort.</p>
 <p>I’m a big fan of <strong class="command">gup</strong>, and for a couple of years I even used it to power my
 home directory having <a class="reference internal" href="tips/Making_a_nice_home.html"><span class="doc">moved on from make</span></a>.  An
@@ -220,7 +220,7 @@ but <strong class="command">ninja</strong> is a great alternative.</p>
 <p>In a <em>massive</em> change from the previous sections I can mention a tool with
 alternatives where compatibility is <strong>100%</strong>.  <a class="reference external" href="https://github.com/michaelforney/samurai/">samurai</a> is an alternative
 <strong class="command">ninja</strong> implementation which is drop-in replacement, without any
-incompatible features changes.  <a class="reference external" href="http://shakebuild.com/">shake</a> is an alternative build tool with
+incompatible feature changes.  <a class="reference external" href="http://shakebuild.com/">shake</a> is an alternative build tool with
 support for processing <code class="file docutils literal notranslate"><span class="pre">build.ninja</span></code> baked in, and has some
 interesting functionality for inspecting your builds that <strong class="command">ninja</strong> itself
 doesn’t provide.</p>
@@ -248,7 +248,7 @@ above<a class="footnote-reference brackets" href="#id12" id="id5">5</a>, doing s
 build rules, and any changes to them cleanly ripple out through the build.  It
 also makes adding computed dependencies very easy, although you need to mangle
 them <em>in to</em> <strong class="command">make</strong> format instead of extracting <em>from</em> <strong class="command">make</strong> format as you
-would have with <strong class="command">redo</strong>.  An quick example of how to make <a class="reference external" href="http://docutils.sourceforge.net/">docutils</a> dependencies
+would have with <strong class="command">redo</strong>.  A quick example of how to make <a class="reference external" href="http://docutils.sourceforge.net/">docutils</a> dependencies
 work is below:</p>
 <div class="highlight-ini notranslate"><div class="highlight"><pre><span></span><span class="na">command</span> <span class="o">=</span> <span class="s">rst2html.py --record-dependencies $out.d.tmp $in $out; $</span>
 <span class="s">    [ -f $out.d.tmp ] &amp;&amp; echo $out: $$(cat $out.d.tmp) &gt; $out.d; $</span>
@@ -293,9 +293,9 @@ quickly build up with that approach.</p>
 <h3><strong class="command">meson</strong><a class="headerlink" href="#meson" title="Permalink to this headline">¶</a></h3>
 <p>The <a class="reference external" href="http://mesonbuild.com/">meson build system</a> is probably the frontrunner today.</p>
 <p>In a move that feels like it is simply meant to <a class="reference external" href="http://suckless.org/philosophy/">annoy the people behind
-suckless</a> I use <strong class="command">meson</strong> to build my <a class="reference external" href="https://dwm.suckless.org/">dwm</a> configuration.  Not because it is
-in an important choice, but simply because it was a small and simple package
-that made learning the basics of <strong class="command">meson</strong> simple.  A trimmed down version of the
+suckless</a> I use <strong class="command">meson</strong> to build my <a class="reference external" href="https://dwm.suckless.org/">dwm</a> configuration.  Not because it is in
+an important choice, but solely because it was a small and simple package that
+made learning the basics of <strong class="command">meson</strong> easier.  A trimmed down version of the
 <code class="file docutils literal notranslate"><span class="pre">meson.build</span></code> is below:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">project</span><span class="p">(</span><span class="s1">&#39;dwm&#39;</span><span class="p">,</span> <span class="p">[</span><span class="s1">&#39;c&#39;</span><span class="p">,</span> <span class="p">],</span> <span class="n">default_options</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;std=c99&#39;</span><span class="p">,</span> <span class="p">],</span> <span class="n">license</span><span class="p">:</span> <span class="s1">&#39;MIT&#39;</span><span class="p">)</span>
 
@@ -376,7 +376,7 @@ experience to comment on them.</p>
 <p>This has turned in to a much longer document than I had originally envisioned,
 but I hope there is enough meat in to make that worthwhile.</p>
 <p>Finally, in much the same way I tend to finish my build system talks with an
-offer to help in the final slide, I’ll add one here too .  If you’ve made it
+offer to help in the final slide, I’ll add one here too.  If you’ve made it
 this far and need a little help, don’t hesitate to get in <a class="reference internal" href="../contact.html"><span class="doc">contact</span></a>.</p>
 <p class="rubric">Footnotes</p>
 <dl class="footnote brackets">
@@ -395,8 +395,8 @@ ecosystem of a given project.</p>
 website, and there is no known reference implementation.</p>
 </dd>
 <dt class="label" id="id11"><span class="brackets"><a class="fn-backref" href="#id4">4</a></span></dt>
-<dd><p>This is defintely not true of <strong class="command">make</strong> requirements, I’ve seen many angry
-bugs filed when builds only work with <a class="reference external" href="https://www.gnu.org/software/make/make.html">GNU make</a>.</p>
+<dd><p>This is defintely not true of <strong class="command">make</strong> requirements, I’ve seen many
+ridiculously angry bugs filed when builds only work with <a class="reference external" href="https://www.gnu.org/software/make/make.html">GNU make</a>.</p>
 </dd>
 <dt class="label" id="id12"><span class="brackets"><a class="fn-backref" href="#id5">5</a></span></dt>
 <dd><p>Avery Pennarun’s <a class="reference external" href="https://github.com/apenwarr/redo/">Python implementation</a> of <strong class="command">redo</strong> stores it dependency
@@ -995,10 +995,10 @@ required interface.</p>
       <div class="clearer"></div>
     </div>
     <div class="footer">
-      &copy;2009-2018  James Rowe,
+      &copy;2009-2019  James Rowe,
       <a href="http://creativecommons.org/licenses/by-sa/4.0/" rel="license">
           Creative Commons Attribution-ShareAlike 4.0
-     </a> license.
+      </a> license.
       
       |
       Powered by <a href="http://sphinx-doc.org/">Sphinx 1.8.1</a>

@@ -246,7 +246,7 @@ dependencies.  A few of my co-workers <em>claim</em> it is cheating to reach for
 off the shelf solution, but as the previous sections prove I’m definitely not
 in that camp.  I’m of the opinion you <em>should</em> use pre-written well-tested code
 in preference to writing your own code <em>every</em> time, otherwise we’re quickly
-falling in to a <a class="reference external" href="https://en.m.wikipedia.org/wiki/No_true_Scotsman">No true Scotsman</a> argument as we chase are way back to
+falling in to a <a class="reference external" href="https://en.m.wikipedia.org/wiki/No_true_Scotsman">No true Scotsman</a> argument as we chase our way back to
 building computers with hand cracked flints.</p>
 <p>For this puzzle we need to imagine a piece of mappable cloth, so a 2-d array is
 on the cards.  If we’re using Python then we’ll need to do a lot of work to
@@ -265,7 +265,7 @@ general-purpose data-base applications.”</p>
 <p><code class="docutils literal notranslate"><span class="pre">numpy</span></code> supports addressing sub-arrays with <code class="docutils literal notranslate"><span class="pre">array[x1:x2,y1:y2]</span></code>, and
 combined with its fast and efficient array creation we can solve this with low
 effort.  So, we can prime an empty array and increment each element when it is
-touched by elf:</p>
+touched by an elf:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Geometry</span> <span class="o">=</span> <span class="n">namedtuple</span><span class="p">(</span><span class="s1">&#39;Geometry&#39;</span><span class="p">,</span> <span class="s1">&#39;x, y, w h&#39;</span><span class="p">)</span>
 
 <span class="n">data</span><span class="p">:</span> <span class="n">Dict</span><span class="p">[</span><span class="nb">int</span><span class="p">,</span> <span class="n">Geometry</span><span class="p">]</span> <span class="o">=</span> <span class="n">process_input</span><span class="p">(</span><span class="n">inputs</span><span class="p">)</span>
@@ -368,7 +368,7 @@ formatting for example.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sleepiest</span> <span class="o">=</span> <span class="nb">max</span><span class="p">(</span><span class="n">guards</span><span class="o">.</span><span class="n">items</span><span class="p">(),</span> <span class="n">key</span><span class="o">=</span><span class="n">itemgetter</span><span class="p">(</span><span class="mi">1</span><span class="p">))[</span><span class="mi">0</span><span class="p">]</span>
 </pre></div>
 </div>
-<p>The <code class="docutils literal notranslate"><span class="pre">key</span></code> argument cause <a class="reference external" href="https://docs.python.org/3/library/functions.html#max" title="(in Python v3.7)"><code class="xref py py-func docutils literal notranslate"><span class="pre">max()</span></code></a> to sort based on the tuple’s second
+<p>The <code class="docutils literal notranslate"><span class="pre">key</span></code> argument causes <a class="reference external" href="https://docs.python.org/3/library/functions.html#max" title="(in Python v3.7)"><code class="xref py py-func docutils literal notranslate"><span class="pre">max()</span></code></a> to sort based on the tuple’s second
 element.   Using <a class="reference external" href="https://docs.python.org/3/library/operator.html#module-operator" title="(in Python v3.7)"><code class="xref py py-mod docutils literal notranslate"><span class="pre">operator</span></code></a>’s <a class="reference external" href="https://docs.python.org/3/library/operator.html#operator.itemgetter" title="(in Python v3.7)"><code class="xref py py-func docutils literal notranslate"><span class="pre">itemgetter()</span></code></a> here feels
 nicer than a <code class="docutils literal notranslate"><span class="pre">lambda</span></code>, although the effect is the same.  Every time I reach
 for <code class="docutils literal notranslate"><span class="pre">itemgetter()</span></code> or <a class="reference external" href="https://docs.python.org/3/library/operator.html#operator.attrgetter" title="(in Python v3.7)"><code class="xref py py-func docutils literal notranslate"><span class="pre">attrgetter()</span></code></a> I yearn for quick
@@ -420,8 +420,9 @@ and other cools things my version wouldn’t.</p>
 </div>
 <p>I’ve since benchmarked a couple of alternatives, such as iterating over
 <code class="docutils literal notranslate"><span class="pre">string.ascii_lowercase</span></code> and calling <code class="docutils literal notranslate"><span class="pre">str.replace()</span></code> until the
-string no longer changes.  Many are simpler to reason about and perform in
-roughly the same time, but for paedagogy I’ve kept the <code class="docutils literal notranslate"><span class="pre">deque</span></code> version here.</p>
+string no longer changes.  Many are simpler to reason about and have roughly
+the same runtime, but for paedagogical honesty I’ve kept the <code class="docutils literal notranslate"><span class="pre">deque</span></code> version
+here.</p>
 <p>Anyway, it turns out I was right.  There were going to be some significant
 optimisations to make this work reasonably.  However, they didn’t show up until
 part two, and when they did it was easier to switch languages than acceptably
@@ -1141,10 +1142,10 @@ concepts are often known by various common names.</p>
       <div class="clearer"></div>
     </div>
     <div class="footer">
-      &copy;2009-2018  James Rowe,
+      &copy;2009-2019  James Rowe,
       <a href="http://creativecommons.org/licenses/by-sa/4.0/" rel="license">
           Creative Commons Attribution-ShareAlike 4.0
-     </a> license.
+      </a> license.
       
       |
       Powered by <a href="http://sphinx-doc.org/">Sphinx 1.8.1</a>

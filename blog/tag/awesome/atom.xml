@@ -225,11 +225,11 @@ theme’s background.&lt;/p&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
 &lt;p&gt;Colours are specified in the de facto standard format of
-&lt;code class=&quot;samp docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;#[&lt;/span&gt;&lt;em&gt;&lt;span class=&quot;pre&quot;&gt;red&lt;/span&gt;&lt;/em&gt;&lt;span class=&quot;pre&quot;&gt;][&lt;/span&gt;&lt;em&gt;&lt;span class=&quot;pre&quot;&gt;green&lt;/span&gt;&lt;/em&gt;&lt;span class=&quot;pre&quot;&gt;][&lt;/span&gt;&lt;em&gt;&lt;span class=&quot;pre&quot;&gt;blue&lt;/span&gt;&lt;/em&gt;&lt;span class=&quot;pre&quot;&gt;][&lt;/span&gt;&lt;em&gt;&lt;span class=&quot;pre&quot;&gt;alpha&lt;/span&gt;&lt;/em&gt;&lt;span class=&quot;pre&quot;&gt;]`&lt;/span&gt;&lt;/code&gt;, the &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;00&lt;/span&gt;&lt;/code&gt; value for alpha in the above example
-means we want a fully transparent theme background.  You could include some
-colour values and varying levels of alpha transparency to tint the background
-image, however that could also be achieved with ImageMagick when building the
-background image if it is desired.&lt;/p&gt;
+&lt;code class=&quot;samp docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;#[&lt;/span&gt;&lt;em&gt;&lt;span class=&quot;pre&quot;&gt;red&lt;/span&gt;&lt;/em&gt;&lt;span class=&quot;pre&quot;&gt;][&lt;/span&gt;&lt;em&gt;&lt;span class=&quot;pre&quot;&gt;green&lt;/span&gt;&lt;/em&gt;&lt;span class=&quot;pre&quot;&gt;][&lt;/span&gt;&lt;em&gt;&lt;span class=&quot;pre&quot;&gt;blue&lt;/span&gt;&lt;/em&gt;&lt;span class=&quot;pre&quot;&gt;][&lt;/span&gt;&lt;em&gt;&lt;span class=&quot;pre&quot;&gt;alpha&lt;/span&gt;&lt;/em&gt;&lt;span class=&quot;pre&quot;&gt;]&lt;/span&gt;&lt;/code&gt;, the &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;00&lt;/span&gt;&lt;/code&gt; value for alpha in the
+above example means we want a fully transparent theme background.  You could
+include some colour values and varying levels of alpha transparency to tint the
+background image, however that could also be achieved with ImageMagick when
+building the background image if it is desired.&lt;/p&gt;
 &lt;p&gt;Click on the thumbnail image above to see the full desktop image and the effect
 in full.&lt;/p&gt;
 &lt;/div&gt;

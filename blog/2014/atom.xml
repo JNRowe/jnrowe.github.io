@@ -239,9 +239,9 @@ I choose to let it slide for the most part.&lt;/p&gt;
 &lt;p&gt;For the two-thirds of the year that I have internet access, I’ve started to
 severely restrict access.&lt;/p&gt;
 &lt;p&gt;It all started with a friend who — while wearing his tinfoil hat — preached
-about how we all need to consider blocking sites that use &lt;abbr title=&quot;Content Delivery Network&quot;&gt;CDNs&lt;/abbr&gt; in much the
+about how we all need to consider blocking sites that use a &lt;abbr title=&quot;Content Delivery Network&quot;&gt;CDN&lt;/abbr&gt; in much the
 same way that many of us block web analytics companies.  We’re probably giving
-up more tracking data to the large &lt;abbr title=&quot;Content Delivery Network&quot;&gt;CDNs&lt;/abbr&gt;s then we do to the simple analytics
+up more tracking data to the large &lt;abbr title=&quot;Content Delivery Network&quot;&gt;CDN&lt;/abbr&gt;s then we do to the simple analytics
 companies.&lt;/p&gt;
 &lt;p&gt;The thought popped in to my mind that a whitelist, instead of a blacklist, might
 actually be workable and since last November I’ve taken to doing just that.&lt;/p&gt;

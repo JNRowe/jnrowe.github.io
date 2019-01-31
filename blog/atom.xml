@@ -60,7 +60,7 @@ be fine.&lt;/p&gt;
 &lt;/div&gt;
 &lt;div class=&quot;section&quot; id=&quot;updates-2019-01-15&quot;&gt;
 &lt;h2&gt;Updates - 2019-01-15&lt;/h2&gt;
-&lt;p&gt;So, I’ve just completed my second appointments, and it seems to be working out
+&lt;p&gt;So, I’ve just completed my second appointment, and it seems to be working out
 okay.  Both have been fun(at least for me), and I’m planning on continuing this
 experiment for a little while longer.  Do get in touch!&lt;/p&gt;
 &lt;p&gt;I’ve also passed on two “applicants” who I felt would be better served by other
@@ -281,7 +281,7 @@ dependencies.  A few of my co-workers &lt;em&gt;claim&lt;/em&gt; it is cheating 
 off the shelf solution, but as the previous sections prove I’m definitely not
 in that camp.  I’m of the opinion you &lt;em&gt;should&lt;/em&gt; use pre-written well-tested code
 in preference to writing your own code &lt;em&gt;every&lt;/em&gt; time, otherwise we’re quickly
-falling in to a &lt;a class=&quot;reference external&quot; href=&quot;https://en.m.wikipedia.org/wiki/No_true_Scotsman&quot;&gt;No true Scotsman&lt;/a&gt; argument as we chase are way back to
+falling in to a &lt;a class=&quot;reference external&quot; href=&quot;https://en.m.wikipedia.org/wiki/No_true_Scotsman&quot;&gt;No true Scotsman&lt;/a&gt; argument as we chase our way back to
 building computers with hand cracked flints.&lt;/p&gt;
 &lt;p&gt;For this puzzle we need to imagine a piece of mappable cloth, so a 2-d array is
 on the cards.  If we’re using Python then we’ll need to do a lot of work to
@@ -300,7 +300,7 @@ general-purpose data-base applications.”&lt;/p&gt;
 &lt;p&gt;&lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;numpy&lt;/span&gt;&lt;/code&gt; supports addressing sub-arrays with &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;array[x1:x2,y1:y2]&lt;/span&gt;&lt;/code&gt;, and
 combined with its fast and efficient array creation we can solve this with low
 effort.  So, we can prime an empty array and increment each element when it is
-touched by elf:&lt;/p&gt;
+touched by an elf:&lt;/p&gt;
 &lt;div class=&quot;highlight-default notranslate&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Geometry&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;namedtuple&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;Geometry&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;x, y, w h&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
 
 &lt;span class=&quot;n&quot;&gt;data&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Dict&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;int&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Geometry&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;process_input&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;inputs&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
@@ -403,7 +403,7 @@ formatting for example.&lt;/p&gt;
 &lt;div class=&quot;highlight-default notranslate&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;sleepiest&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;max&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;guards&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;items&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(),&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;key&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;itemgetter&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
-&lt;p&gt;The &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;key&lt;/span&gt;&lt;/code&gt; argument cause &lt;a class=&quot;reference external&quot; href=&quot;https://docs.python.org/3/library/functions.html#max&quot; title=&quot;(in Python v3.7)&quot;&gt;&lt;code class=&quot;xref py py-func docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;max()&lt;/span&gt;&lt;/code&gt;&lt;/a&gt; to sort based on the tuple’s second
+&lt;p&gt;The &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;key&lt;/span&gt;&lt;/code&gt; argument causes &lt;a class=&quot;reference external&quot; href=&quot;https://docs.python.org/3/library/functions.html#max&quot; title=&quot;(in Python v3.7)&quot;&gt;&lt;code class=&quot;xref py py-func docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;max()&lt;/span&gt;&lt;/code&gt;&lt;/a&gt; to sort based on the tuple’s second
 element.   Using &lt;a class=&quot;reference external&quot; href=&quot;https://docs.python.org/3/library/operator.html#module-operator&quot; title=&quot;(in Python v3.7)&quot;&gt;&lt;code class=&quot;xref py py-mod docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;operator&lt;/span&gt;&lt;/code&gt;&lt;/a&gt;’s &lt;a class=&quot;reference external&quot; href=&quot;https://docs.python.org/3/library/operator.html#operator.itemgetter&quot; title=&quot;(in Python v3.7)&quot;&gt;&lt;code class=&quot;xref py py-func docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;itemgetter()&lt;/span&gt;&lt;/code&gt;&lt;/a&gt; here feels
 nicer than a &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;lambda&lt;/span&gt;&lt;/code&gt;, although the effect is the same.  Every time I reach
 for &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;itemgetter()&lt;/span&gt;&lt;/code&gt; or &lt;a class=&quot;reference external&quot; href=&quot;https://docs.python.org/3/library/operator.html#operator.attrgetter&quot; title=&quot;(in Python v3.7)&quot;&gt;&lt;code class=&quot;xref py py-func docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;attrgetter()&lt;/span&gt;&lt;/code&gt;&lt;/a&gt; I yearn for quick
@@ -455,8 +455,9 @@ and other cools things my version wouldn’t.&lt;/p&gt;
 &lt;/div&gt;
 &lt;p&gt;I’ve since benchmarked a couple of alternatives, such as iterating over
 &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;string.ascii_lowercase&lt;/span&gt;&lt;/code&gt; and calling &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;str.replace()&lt;/span&gt;&lt;/code&gt; until the
-string no longer changes.  Many are simpler to reason about and perform in
-roughly the same time, but for paedagogy I’ve kept the &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;deque&lt;/span&gt;&lt;/code&gt; version here.&lt;/p&gt;
+string no longer changes.  Many are simpler to reason about and have roughly
+the same runtime, but for paedagogical honesty I’ve kept the &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;deque&lt;/span&gt;&lt;/code&gt; version
+here.&lt;/p&gt;
 &lt;p&gt;Anyway, it turns out I was right.  There were going to be some significant
 optimisations to make this work reasonably.  However, they didn’t show up until
 part two, and when they did it was easier to switch languages than acceptably
@@ -639,7 +640,7 @@ a computer in the afternoon and swept away by the janitors as night falls.&lt;/p
 &lt;div class=&quot;section&quot; id=&quot;hopes-and-dreams&quot;&gt;
 &lt;h2&gt;Hopes and dreams&lt;/h2&gt;
 &lt;p&gt;As the project &lt;em&gt;should&lt;/em&gt; have significant longevity I find myself pondering the
-future.  &lt;em&gt;If&lt;/em&gt; I could changes things for the next 20 years, what should I do to
+future.  &lt;em&gt;If&lt;/em&gt; I could change things for the next 20 years, what should I do to
 make that experience better?  Should I do &lt;em&gt;nothing at all&lt;/em&gt; and just chug along
 reducing the anxiety that even small changes will evoke?&lt;/p&gt;
 &lt;p&gt;I also find myself pondering the present.  Could a truly radical change &lt;em&gt;today&lt;/em&gt;
@@ -818,7 +819,7 @@ direction&lt;a class=&quot;footnote-reference brackets&quot; href=&quot;#id10&qu
 problems that &lt;strong class=&quot;command&quot;&gt;make&lt;/strong&gt; has.  There is &lt;em&gt;no&lt;/em&gt; single tool that can uniformly be
 recognised as &lt;strong class=&quot;command&quot;&gt;redo&lt;/strong&gt;, in fact it feels like somehow there are as many
 implementations of &lt;strong class=&quot;command&quot;&gt;redo&lt;/strong&gt; floating around as there are of &lt;strong class=&quot;command&quot;&gt;make&lt;/strong&gt; even though it
-&lt;em&gt;thirty years younger&lt;/em&gt;.&lt;/p&gt;
+is &lt;em&gt;thirty years younger&lt;/em&gt;.&lt;/p&gt;
 &lt;p&gt;While &lt;strong class=&quot;command&quot;&gt;redo&lt;/strong&gt; is awesome in many of its implementations you find yourself having
 to remember the idiosyncrasies of yet another collection of slightly
 incompatible tools.  If you’re using Avery Pennarun’s popular &lt;a class=&quot;reference external&quot; href=&quot;https://github.com/apenwarr/redo/&quot;&gt;Python
@@ -878,7 +879,7 @@ requests ever since ;)&lt;/p&gt;
 an improved &lt;strong class=&quot;command&quot;&gt;redo&lt;/strong&gt; implementation, but is wholly incompatible with it.  It is
 available in both a &lt;a class=&quot;reference external&quot; href=&quot;https://github.com/timbertson/gup/tree/master/python&quot;&gt;Python&lt;/a&gt; and &lt;a class=&quot;reference external&quot; href=&quot;https://github.com/timbertson/gup/tree/master/ocaml&quot;&gt;ocaml&lt;/a&gt; version.  It fixes a few of the most
 annoying problems in &lt;strong class=&quot;command&quot;&gt;redo&lt;/strong&gt;, but operates in largely the same way conceptually.
-Any the skills you’ve learnt with &lt;strong class=&quot;command&quot;&gt;redo&lt;/strong&gt; is easy to transfer, and you can
+Any of the skills you’ve learnt with &lt;strong class=&quot;command&quot;&gt;redo&lt;/strong&gt; are easy to transfer, and you can
 update your builds to use &lt;strong class=&quot;command&quot;&gt;gup&lt;/strong&gt; with very little effort.&lt;/p&gt;
 &lt;p&gt;I’m a big fan of &lt;strong class=&quot;command&quot;&gt;gup&lt;/strong&gt;, and for a couple of years I even used it to power my
 home directory having &lt;span class=&quot;xref std std-doc&quot;&gt;moved on from make&lt;/span&gt;.  An
@@ -921,7 +922,7 @@ but &lt;strong class=&quot;command&quot;&gt;ninja&lt;/strong&gt; is a great alte
 &lt;p&gt;In a &lt;em&gt;massive&lt;/em&gt; change from the previous sections I can mention a tool with
 alternatives where compatibility is &lt;strong&gt;100%&lt;/strong&gt;.  &lt;a class=&quot;reference external&quot; href=&quot;https://github.com/michaelforney/samurai/&quot;&gt;samurai&lt;/a&gt; is an alternative
 &lt;strong class=&quot;command&quot;&gt;ninja&lt;/strong&gt; implementation which is drop-in replacement, without any
-incompatible features changes.  &lt;a class=&quot;reference external&quot; href=&quot;http://shakebuild.com/&quot;&gt;shake&lt;/a&gt; is an alternative build tool with
+incompatible feature changes.  &lt;a class=&quot;reference external&quot; href=&quot;http://shakebuild.com/&quot;&gt;shake&lt;/a&gt; is an alternative build tool with
 support for processing &lt;code class=&quot;file docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;build.ninja&lt;/span&gt;&lt;/code&gt; baked in, and has some
 interesting functionality for inspecting your builds that &lt;strong class=&quot;command&quot;&gt;ninja&lt;/strong&gt; itself
 doesn’t provide.&lt;/p&gt;
@@ -949,7 +950,7 @@ above&lt;a class=&quot;footnote-reference brackets&quot; href=&quot;#id12&quot; 
 build rules, and any changes to them cleanly ripple out through the build.  It
 also makes adding computed dependencies very easy, although you need to mangle
 them &lt;em&gt;in to&lt;/em&gt; &lt;strong class=&quot;command&quot;&gt;make&lt;/strong&gt; format instead of extracting &lt;em&gt;from&lt;/em&gt; &lt;strong class=&quot;command&quot;&gt;make&lt;/strong&gt; format as you
-would have with &lt;strong class=&quot;command&quot;&gt;redo&lt;/strong&gt;.  An quick example of how to make &lt;a class=&quot;reference external&quot; href=&quot;http://docutils.sourceforge.net/&quot;&gt;docutils&lt;/a&gt; dependencies
+would have with &lt;strong class=&quot;command&quot;&gt;redo&lt;/strong&gt;.  A quick example of how to make &lt;a class=&quot;reference external&quot; href=&quot;http://docutils.sourceforge.net/&quot;&gt;docutils&lt;/a&gt; dependencies
 work is below:&lt;/p&gt;
 &lt;div class=&quot;highlight-ini notranslate&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;command&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;rst2html.py --record-dependencies $out.d.tmp $in $out; $&lt;/span&gt;
 &lt;span class=&quot;s&quot;&gt;    [ -f $out.d.tmp ] &amp;amp;&amp;amp; echo $out: $$(cat $out.d.tmp) &amp;gt; $out.d; $&lt;/span&gt;
@@ -994,9 +995,9 @@ quickly build up with that approach.&lt;/p&gt;
 &lt;h3&gt;&lt;strong class=&quot;command&quot;&gt;meson&lt;/strong&gt;&lt;/h3&gt;
 &lt;p&gt;The &lt;a class=&quot;reference external&quot; href=&quot;http://mesonbuild.com/&quot;&gt;meson build system&lt;/a&gt; is probably the frontrunner today.&lt;/p&gt;
 &lt;p&gt;In a move that feels like it is simply meant to &lt;a class=&quot;reference external&quot; href=&quot;http://suckless.org/philosophy/&quot;&gt;annoy the people behind
-suckless&lt;/a&gt; I use &lt;strong class=&quot;command&quot;&gt;meson&lt;/strong&gt; to build my &lt;a class=&quot;reference external&quot; href=&quot;https://dwm.suckless.org/&quot;&gt;dwm&lt;/a&gt; configuration.  Not because it is
-in an important choice, but simply because it was a small and simple package
-that made learning the basics of &lt;strong class=&quot;command&quot;&gt;meson&lt;/strong&gt; simple.  A trimmed down version of the
+suckless&lt;/a&gt; I use &lt;strong class=&quot;command&quot;&gt;meson&lt;/strong&gt; to build my &lt;a class=&quot;reference external&quot; href=&quot;https://dwm.suckless.org/&quot;&gt;dwm&lt;/a&gt; configuration.  Not because it is in
+an important choice, but solely because it was a small and simple package that
+made learning the basics of &lt;strong class=&quot;command&quot;&gt;meson&lt;/strong&gt; easier.  A trimmed down version of the
 &lt;code class=&quot;file docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;meson.build&lt;/span&gt;&lt;/code&gt; is below:&lt;/p&gt;
 &lt;div class=&quot;highlight-default notranslate&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;project&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;dwm&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;c&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;],&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;default_options&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;std=c99&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;],&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;license&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;MIT&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
 
@@ -1077,7 +1078,7 @@ experience to comment on them.&lt;/p&gt;
 &lt;p&gt;This has turned in to a much longer document than I had originally envisioned,
 but I hope there is enough meat in to make that worthwhile.&lt;/p&gt;
 &lt;p&gt;Finally, in much the same way I tend to finish my build system talks with an
-offer to help in the final slide, I’ll add one here too .  If you’ve made it
+offer to help in the final slide, I’ll add one here too.  If you’ve made it
 this far and need a little help, don’t hesitate to get in &lt;a class=&quot;reference internal&quot; href=&quot;contact.html&quot;&gt;&lt;span class=&quot;doc&quot;&gt;contact&lt;/span&gt;&lt;/a&gt;.&lt;/p&gt;
 &lt;p class=&quot;rubric&quot;&gt;Footnotes&lt;/p&gt;
 &lt;dl class=&quot;footnote brackets&quot;&gt;
@@ -1096,8 +1097,8 @@ ecosystem of a given project.&lt;/p&gt;
 website, and there is no known reference implementation.&lt;/p&gt;
 &lt;/dd&gt;
 &lt;dt class=&quot;label&quot; id=&quot;id11&quot;&gt;&lt;span class=&quot;brackets&quot;&gt;&lt;a class=&quot;fn-backref&quot; href=&quot;#id4&quot;&gt;4&lt;/a&gt;&lt;/span&gt;&lt;/dt&gt;
-&lt;dd&gt;&lt;p&gt;This is defintely not true of &lt;strong class=&quot;command&quot;&gt;make&lt;/strong&gt; requirements, I’ve seen many angry
-bugs filed when builds only work with &lt;a class=&quot;reference external&quot; href=&quot;https://www.gnu.org/software/make/make.html&quot;&gt;GNU make&lt;/a&gt;.&lt;/p&gt;
+&lt;dd&gt;&lt;p&gt;This is defintely not true of &lt;strong class=&quot;command&quot;&gt;make&lt;/strong&gt; requirements, I’ve seen many
+ridiculously angry bugs filed when builds only work with &lt;a class=&quot;reference external&quot; href=&quot;https://www.gnu.org/software/make/make.html&quot;&gt;GNU make&lt;/a&gt;.&lt;/p&gt;
 &lt;/dd&gt;
 &lt;dt class=&quot;label&quot; id=&quot;id12&quot;&gt;&lt;span class=&quot;brackets&quot;&gt;&lt;a class=&quot;fn-backref&quot; href=&quot;#id5&quot;&gt;5&lt;/a&gt;&lt;/span&gt;&lt;/dt&gt;
 &lt;dd&gt;&lt;p&gt;Avery Pennarun’s &lt;a class=&quot;reference external&quot; href=&quot;https://github.com/apenwarr/redo/&quot;&gt;Python implementation&lt;/a&gt; of &lt;strong class=&quot;command&quot;&gt;redo&lt;/strong&gt; stores it dependency
@@ -2003,8 +2004,8 @@ autobalance their images, with reasonable devices it will be close to useless.&l
 &lt;p&gt;However, if you have a good quality camera image you may be able to extract the
 balancing data used from the image tags, and use that to infer the light level.
 &lt;a class=&quot;reference external&quot; href=&quot;http://www.exiv2.org/&quot;&gt;exiv2&lt;/a&gt; is great option to extract that data when available, and also supports
-&lt;a class=&quot;reference external&quot; href=&quot;https://wiki.gnome.org/Projects/GObjectIntrospection&quot;&gt;gobject introspection&lt;/a&gt; making it possible to use it with &lt;a class=&quot;reference external&quot; href=&quot;https://github.com/pavouk/lgi&quot;&gt;lgi&lt;/a&gt; in &lt;a class=&quot;reference external&quot; href=&quot;https://awesomewm.org/&quot;&gt;awesome&lt;/a&gt; for
-desktop colours too!&lt;/p&gt;
+&lt;a class=&quot;reference external&quot; href=&quot;https://wiki.gnome.org/Projects/GObjectIntrospection&quot;&gt;gobject introspection&lt;/a&gt; making it possible to use it with &lt;a class=&quot;reference external&quot; href=&quot;https://github.com/pavouk/lgi&quot;&gt;lgi&lt;/a&gt; in &lt;a class=&quot;reference external&quot; href=&quot;https://awesomewm.org/&quot;&gt;awesomewm&lt;/a&gt;
+for desktop colours too!&lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;div class=&quot;section&quot; id=&quot;thoughts&quot;&gt;
@@ -2015,8 +2016,8 @@ or [hopefully] intriguing variations.&lt;/p&gt;
 &lt;p class=&quot;rubric&quot;&gt;Footnotes&lt;/p&gt;
 &lt;dl class=&quot;footnote brackets&quot;&gt;
 &lt;dt class=&quot;label&quot; id=&quot;id3&quot;&gt;&lt;span class=&quot;brackets&quot;&gt;&lt;a class=&quot;fn-backref&quot; href=&quot;#id1&quot;&gt;1&lt;/a&gt;&lt;/span&gt;&lt;/dt&gt;
-&lt;dd&gt;&lt;p&gt;If add more branches you can also wonder why &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;vimscript&lt;/span&gt;&lt;/code&gt; doesn’t have
-a switch statement.&lt;/p&gt;
+&lt;dd&gt;&lt;p&gt;If you need more branches you can also wonder why &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;vimscript&lt;/span&gt;&lt;/code&gt; doesn’t
+have a switch statement.&lt;/p&gt;
 &lt;/dd&gt;
 &lt;dt class=&quot;label&quot; id=&quot;id4&quot;&gt;&lt;span class=&quot;brackets&quot;&gt;&lt;a class=&quot;fn-backref&quot; href=&quot;#id2&quot;&gt;2&lt;/a&gt;&lt;/span&gt;&lt;/dt&gt;
 &lt;dd&gt;&lt;p&gt;No &lt;abbr title=&quot;HyperText Markup Language&quot;&gt;HTML&lt;/abbr&gt; link, as vimdoc is still on vim 7.3&lt;/p&gt;
@@ -2457,9 +2458,9 @@ I choose to let it slide for the most part.&lt;/p&gt;
 &lt;p&gt;For the two-thirds of the year that I have internet access, I’ve started to
 severely restrict access.&lt;/p&gt;
 &lt;p&gt;It all started with a friend who — while wearing his tinfoil hat — preached
-about how we all need to consider blocking sites that use &lt;abbr title=&quot;Content Delivery Network&quot;&gt;CDNs&lt;/abbr&gt; in much the
+about how we all need to consider blocking sites that use a &lt;abbr title=&quot;Content Delivery Network&quot;&gt;CDN&lt;/abbr&gt; in much the
 same way that many of us block web analytics companies.  We’re probably giving
-up more tracking data to the large &lt;abbr title=&quot;Content Delivery Network&quot;&gt;CDNs&lt;/abbr&gt;s then we do to the simple analytics
+up more tracking data to the large &lt;abbr title=&quot;Content Delivery Network&quot;&gt;CDN&lt;/abbr&gt;s then we do to the simple analytics
 companies.&lt;/p&gt;
 &lt;p&gt;The thought popped in to my mind that a whitelist, instead of a blacklist, might
 actually be workable and since last November I’ve taken to doing just that.&lt;/p&gt;

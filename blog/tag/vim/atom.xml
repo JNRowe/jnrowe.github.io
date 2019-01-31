@@ -252,8 +252,8 @@ autobalance their images, with reasonable devices it will be close to useless.&l
 &lt;p&gt;However, if you have a good quality camera image you may be able to extract the
 balancing data used from the image tags, and use that to infer the light level.
 &lt;a class=&quot;reference external&quot; href=&quot;http://www.exiv2.org/&quot;&gt;exiv2&lt;/a&gt; is great option to extract that data when available, and also supports
-&lt;a class=&quot;reference external&quot; href=&quot;https://wiki.gnome.org/Projects/GObjectIntrospection&quot;&gt;gobject introspection&lt;/a&gt; making it possible to use it with &lt;a class=&quot;reference external&quot; href=&quot;https://github.com/pavouk/lgi&quot;&gt;lgi&lt;/a&gt; in &lt;a class=&quot;reference external&quot; href=&quot;https://awesomewm.org/&quot;&gt;awesome&lt;/a&gt; for
-desktop colours too!&lt;/p&gt;
+&lt;a class=&quot;reference external&quot; href=&quot;https://wiki.gnome.org/Projects/GObjectIntrospection&quot;&gt;gobject introspection&lt;/a&gt; making it possible to use it with &lt;a class=&quot;reference external&quot; href=&quot;https://github.com/pavouk/lgi&quot;&gt;lgi&lt;/a&gt; in &lt;a class=&quot;reference external&quot; href=&quot;https://awesomewm.org/&quot;&gt;awesomewm&lt;/a&gt;
+for desktop colours too!&lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;div class=&quot;section&quot; id=&quot;thoughts&quot;&gt;
@@ -264,8 +264,8 @@ or [hopefully] intriguing variations.&lt;/p&gt;
 &lt;p class=&quot;rubric&quot;&gt;Footnotes&lt;/p&gt;
 &lt;dl class=&quot;footnote brackets&quot;&gt;
 &lt;dt class=&quot;label&quot; id=&quot;id3&quot;&gt;&lt;span class=&quot;brackets&quot;&gt;&lt;a class=&quot;fn-backref&quot; href=&quot;#id1&quot;&gt;1&lt;/a&gt;&lt;/span&gt;&lt;/dt&gt;
-&lt;dd&gt;&lt;p&gt;If add more branches you can also wonder why &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;vimscript&lt;/span&gt;&lt;/code&gt; doesn’t have
-a switch statement.&lt;/p&gt;
+&lt;dd&gt;&lt;p&gt;If you need more branches you can also wonder why &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;vimscript&lt;/span&gt;&lt;/code&gt; doesn’t
+have a switch statement.&lt;/p&gt;
 &lt;/dd&gt;
 &lt;dt class=&quot;label&quot; id=&quot;id4&quot;&gt;&lt;span class=&quot;brackets&quot;&gt;&lt;a class=&quot;fn-backref&quot; href=&quot;#id2&quot;&gt;2&lt;/a&gt;&lt;/span&gt;&lt;/dt&gt;
 &lt;dd&gt;&lt;p&gt;No &lt;abbr title=&quot;HyperText Markup Language&quot;&gt;HTML&lt;/abbr&gt; link, as vimdoc is still on vim 7.3&lt;/p&gt;
