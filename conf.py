@@ -60,7 +60,7 @@ nitpicky = True
 # Project information {{{
 project = 'JNRowe'
 author = 'James Rowe'
-copyright = '2009-2018  %s' % author
+copyright = '2009-2019  %s' % author
 
 version = '0.1'
 release = '0.1.0'
