@@ -48,11 +48,11 @@ theme’s background.
     mywibox[s] = wibox position: "top", fg: beautiful.fg_normal, bg: "#00000000"
 
 Colours are specified in the de facto standard format of
-:samp:`#[{red}][{green}][{blue}][{alpha}]``, the ``00`` value for alpha in the above example
-means we want a fully transparent theme background.  You could include some
-colour values and varying levels of alpha transparency to tint the background
-image, however that could also be achieved with ImageMagick when building the
-background image if it is desired.
+:samp:`#[{red}][{green}][{blue}][{alpha}]`, the ``00`` value for alpha in the
+above example means we want a fully transparent theme background.  You could
+include some colour values and varying levels of alpha transparency to tint the
+background image, however that could also be achieved with ImageMagick when
+building the background image if it is desired.
 
 Click on the thumbnail image above to see the full desktop image and the effect
 in full.

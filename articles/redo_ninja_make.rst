@@ -76,7 +76,7 @@ direction [#]_, but its various implementations are plagued by many of the
 problems that |make| has.  There is *no* single tool that can uniformly be
 recognised as |redo|, in fact it feels like somehow there are as many
 implementations of |redo| floating around as there are of |make| even though it
-*thirty years younger*.
+is *thirty years younger*.
 
 While |redo| is awesome in many of its implementations you find yourself having
 to remember the idiosyncrasies of yet another collection of slightly
@@ -144,7 +144,7 @@ I want to give `Tim Cuthbertson’s gup`_ an honourable mention here.  |gup| is
 an improved |redo| implementation, but is wholly incompatible with it.  It is
 available in both a Python_ and ocaml_ version.  It fixes a few of the most
 annoying problems in |redo|, but operates in largely the same way conceptually.
-Any the skills you’ve learnt with |redo| is easy to transfer, and you can
+Any of the skills you’ve learnt with |redo| are easy to transfer, and you can
 update your builds to use |gup| with very little effort.
 
 I’m a big fan of |gup|, and for a couple of years I even used it to power my
@@ -193,7 +193,7 @@ but |ninja| is a great alternative.
     In a *massive* change from the previous sections I can mention a tool with
     alternatives where compatibility is **100%**.  samurai_ is an alternative
     |ninja| implementation which is drop-in replacement, without any
-    incompatible features changes.  shake_ is an alternative build tool with
+    incompatible feature changes.  shake_ is an alternative build tool with
     support for processing :file:`build.ninja` baked in, and has some
     interesting functionality for inspecting your builds that |ninja| itself
     doesn’t provide.
@@ -226,7 +226,7 @@ above [#]_, doing so with |make| is very difficult [#]_.
 build rules, and any changes to them cleanly ripple out through the build.  It
 also makes adding computed dependencies very easy, although you need to mangle
 them *in to* |make| format instead of extracting *from* |make| format as you
-would have with |redo|.  An quick example of how to make docutils_ dependencies
+would have with |redo|.  A quick example of how to make docutils_ dependencies
 work is below:
 
 .. code-block:: ini
@@ -260,9 +260,9 @@ quickly build up with that approach.
 The `meson build system`_ is probably the frontrunner today.
 
 In a move that feels like it is simply meant to `annoy the people behind
-suckless`_ I use |meson| to build my dwm_ configuration.  Not because it is
-in an important choice, but simply because it was a small and simple package
-that made learning the basics of |meson| simple.  A trimmed down version of the
+suckless`_ I use |meson| to build my dwm_ configuration.  Not because it is in
+an important choice, but solely because it was a small and simple package that
+made learning the basics of |meson| easier.  A trimmed down version of the
 :file:`meson.build` is below::
 
     project('dwm', ['c', ], default_options: ['std=c99', ], license: 'MIT')
@@ -350,7 +350,7 @@ This has turned in to a much longer document than I had originally envisioned,
 but I hope there is enough meat in to make that worthwhile.
 
 Finally, in much the same way I tend to finish my build system talks with an
-offer to help in the final slide, I’ll add one here too .  If you’ve made it
+offer to help in the final slide, I’ll add one here too.  If you’ve made it
 this far and need a little help, don’t hesitate to get in :doc:`contact
 <../contact>`.
 
@@ -364,8 +364,8 @@ this far and need a little help, don’t hesitate to get in :doc:`contact
        ecosystem of a given project.
 .. [#] It is defined only in `a collection of short descriptions`_ on djb’s
        website, and there is no known reference implementation.
-.. [#] This is defintely not true of |make| requirements, I’ve seen many angry
-       bugs filed when builds only work with `GNU make`_.
+.. [#] This is defintely not true of |make| requirements, I’ve seen many
+       ridiculously angry bugs filed when builds only work with `GNU make`_.
 .. [#] Avery Pennarun’s `Python implementation`_ of |redo| stores it dependency
        data in a sqlite_ database named :file:`.redo/redo.sqlite3`, making it
        is easy to transform in to a :command:`dot` compliant input.  For

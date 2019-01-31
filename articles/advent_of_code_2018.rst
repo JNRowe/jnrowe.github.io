@@ -204,7 +204,7 @@ dependencies.  A few of my co-workers *claim* it is cheating to reach for an
 off the shelf solution, but as the previous sections prove I’m definitely not
 in that camp.  I’m of the opinion you *should* use pre-written well-tested code
 in preference to writing your own code *every* time, otherwise we’re quickly
-falling in to a `No true Scotsman`_ argument as we chase are way back to
+falling in to a `No true Scotsman`_ argument as we chase our way back to
 building computers with hand cracked flints.
 
 For this puzzle we need to imagine a piece of mappable cloth, so a 2-d array is
@@ -225,7 +225,7 @@ tools to include :pypi:`numpy`.
 ``numpy`` supports addressing sub-arrays with ``array[x1:x2,y1:y2]``, and
 combined with its fast and efficient array creation we can solve this with low
 effort.  So, we can prime an empty array and increment each element when it is
-touched by elf::
+touched by an elf::
 
     Geometry = namedtuple('Geometry', 'x, y, w h')
 
@@ -332,7 +332,7 @@ Once we’ve processed our input we can find the sleepiest guard::
 
    sleepiest = max(guards.items(), key=itemgetter(1))[0]
 
-The ``key`` argument cause :func:`max` to sort based on the tuple’s second
+The ``key`` argument causes :func:`max` to sort based on the tuple’s second
 element.   Using :mod:`operator`’s :func:`~operator.itemgetter` here feels
 nicer than a ``lambda``, although the effect is the same.  Every time I reach
 for ``itemgetter()`` or :func:`~operator.attrgetter` I yearn for quick
@@ -389,8 +389,9 @@ removes the need to test both ``Aa`` and ``aA`` for example.
 
 I’ve since benchmarked a couple of alternatives, such as iterating over
 ``string.ascii_lowercase`` and calling ``str.replace()`` until the
-string no longer changes.  Many are simpler to reason about and perform in
-roughly the same time, but for paedagogy I’ve kept the ``deque`` version here.
+string no longer changes.  Many are simpler to reason about and have roughly
+the same runtime, but for paedagogical honesty I’ve kept the ``deque`` version
+here.
 
 Anyway, it turns out I was right.  There were going to be some significant
 optimisations to make this work reasonably.  However, they didn’t show up until

@@ -65,7 +65,7 @@ be fine.
 Updates - 2019-01-15
 --------------------
 
-So, I’ve just completed my second appointments, and it seems to be working out
+So, I’ve just completed my second appointment, and it seems to be working out
 okay.  Both have been fun(at least for me), and I’m planning on continuing this
 experiment for a little while longer.  Do get in touch!
 

@@ -137,8 +137,8 @@ autobalance their images, with reasonable devices it will be close to useless.
 However, if you have a good quality camera image you may be able to extract the
 balancing data used from the image tags, and use that to infer the light level.
 exiv2_ is great option to extract that data when available, and also supports
-`gobject introspection`_ making it possible to use it with lgi_ in awesome_ for
-desktop colours too!
+`gobject introspection`_ making it possible to use it with lgi_ in awesomewm_
+for desktop colours too!
 
 Thoughts
 --------
@@ -149,8 +149,8 @@ or [hopefully] intriguing variations.
 
 .. rubric:: Footnotes
 
-.. [#] If add more branches you can also wonder why ``vimscript`` doesn’t have
-       a switch statement.
+.. [#] If you need more branches you can also wonder why ``vimscript`` doesn’t
+       have a switch statement.
 .. [#] No |HTML| link, as vimdoc is still on vim 7.3
 
 .. _taqua: https://www.vim.org/scripts/script.php?script_id=594
@@ -171,5 +171,5 @@ or [hopefully] intriguing variations.
 .. _exiv2: http://www.exiv2.org/
 .. _gobject introspection: https://wiki.gnome.org/Projects/GObjectIntrospection
 .. _lgi: https://github.com/pavouk/lgi
-.. _awesome: https://awesomewm.org/
+.. _awesomewm: https://awesomewm.org/
 
