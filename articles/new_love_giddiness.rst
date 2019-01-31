@@ -26,7 +26,7 @@ Hopes and dreams
 ----------------
 
 As the project *should* have significant longevity I find myself pondering the
-future.  *If* I could changes things for the next 20 years, what should I do to
+future.  *If* I could change things for the next 20 years, what should I do to
 make that experience better?  Should I do *nothing at all* and just chug along
 reducing the anxiety that even small changes will evoke?
 

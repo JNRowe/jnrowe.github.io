@@ -61,7 +61,7 @@ For the two-thirds of the year that I have internet access, I’ve started to
 severely restrict access.
 
 It all started with a friend who — while wearing his tinfoil hat — preached
-about how we all need to consider blocking sites that use |CDN| in much the
+about how we all need to consider blocking sites that use a |CDN| in much the
 same way that many of us block web analytics companies.  We’re probably giving
 up more tracking data to the large |CDN|\ s then we do to the simple analytics
 companies.
@@ -144,7 +144,7 @@ you regain some of that is very comforting.
    gmail for work or mail that I’d be uncomfortable reading in public, but it
    does act as a nice sieve for everything else right now.
 
-.. |CDN| replace:: :abbr:`CDNs (Content Delivery Network)`
+.. |CDN| replace:: :abbr:`CDN (Content Delivery Network)`
 
 .. _email: jnrowe@gmail.com
 .. _trivium: http://chneukirchen.org/trivium/
