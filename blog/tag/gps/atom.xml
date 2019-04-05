@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title type="text">JNRowe - Posts tagged gps</title>
+  <id>https://jnrowe.github.io/blog/tag/gps/atom.xml</id>
+  <updated>2019-04-05T00:00:00Z</updated>
+  <link href="https://jnrowe.github.io/" />
+  <link href="https://jnrowe.github.io/blog/tag/gps/atom.xml" rel="self" />
+  <subtitle type="text">Ramblings of a tired mind</subtitle>
+  <generator uri="http://ablog.readthedocs.org" version="0.9.3">ABlog</generator>
+  <entry xml:base="https://jnrowe.github.io/blog/tag/gps/atom.xml">
+    <title type="text">GPS rollover 2019</title>
+    <id>https://jnrowe.github.io/articles/gps_rollover_2019.html</id>
+    <updated>2019-04-05T00:00:00Z</updated>
+    <published>2019-04-05T00:00:00Z</published>
+    <link href="https://jnrowe.github.io/articles/gps_rollover_2019.html" />
+    <author>
+      <name>James Rowe</name>
+    </author>
+    <content type="html">&lt;div class=&quot;section&quot; id=&quot;gps-rollover-2019&quot;&gt;
+
+&lt;p&gt;Tomorrow we’re going to experience the simultaneously cataclysmic and mundane
+consequences of a &lt;abbr title=&quot;Global Positioning System&quot;&gt;GPS&lt;/abbr&gt; rollover event.  &lt;em&gt;Many&lt;/em&gt; things will break, &lt;em&gt;many&lt;/em&gt; will
+continue to work and &lt;em&gt;many&lt;/em&gt; will just take a step closer to breaking… the fun
+of date handling never ends.&lt;/p&gt;
+&lt;img alt=&quot;Pick a year, win a prize&quot; class=&quot;align-right&quot; src=&quot;../../_images/gps_calendar.png&quot; /&gt;
+&lt;div class=&quot;admonition note&quot;&gt;
+&lt;p class=&quot;admonition-title&quot;&gt;Note&lt;/p&gt;
+&lt;p&gt;This is an informal piece, not an official support channel.  If you use
+hardware I’m involved in building then contact your support channel, they
+are there to help.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;section&quot; id=&quot;what-is-the-issue&quot;&gt;
+&lt;h2&gt;What is the issue?&lt;/h2&gt;
+&lt;p&gt;Since 1981 &lt;abbr title=&quot;Global Positioning System&quot;&gt;GPS&lt;/abbr&gt; signals have included a week number, which is provided as
+a 10-bit field and as such can only store 1024 values(around 19.5 years).
+Every time we hit that limit the week number rolls back to zero, and things may
+fail to work correctly following that.&lt;/p&gt;
+&lt;div class=&quot;sidebar&quot;&gt;
+&lt;p class=&quot;sidebar-title&quot;&gt;Prior to ‘81&lt;/p&gt;
+&lt;p&gt;As a side note very early &lt;abbr title=&quot;Global Positioning System&quot;&gt;GPS&lt;/abbr&gt; transmissions didn’t even include week
+numbers in the signal.  Time was represented simply as a value &lt;em&gt;within&lt;/em&gt;
+a week, and not &lt;em&gt;belonging&lt;/em&gt; to a week.  If you work in the industry you
+still occasionally come across implementations that work like this, or
+issues that are caused by this.&lt;/p&gt;
+&lt;p&gt;There have been a surprising number of other largely backward compatible
+upgrades to the &lt;abbr title=&quot;Global Positioning System&quot;&gt;GPS&lt;/abbr&gt; signal over the approaching fifty years of its
+development.  Coupled with the out of band enhancements such as &lt;abbr title=&quot;Wide Area Augmentation System&quot;&gt;WAAS&lt;/abbr&gt;, the accuracy and uses of &lt;abbr title=&quot;Global Positioning System&quot;&gt;GPS&lt;/abbr&gt;-based
+systems have increased a tremendous amount.&lt;/p&gt;
+&lt;/div&gt;
+&lt;p&gt;This is the second operational rollover event, the first happened in August
+1999.  We — that is developers of &lt;abbr title=&quot;Global Navigation Satellite System&quot;&gt;GNSS&lt;/abbr&gt;-using systems — &lt;em&gt;are&lt;/em&gt; prepared for
+this, but the level of preparedness is unfortunately not uniform or indicative
+of how well we’re handling this.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;section&quot; id=&quot;mitigations&quot;&gt;
+&lt;h2&gt;Mitigations&lt;/h2&gt;
+&lt;p&gt;As this problem is quite well understood there has been an awful lot of effort
+put in to working around it, some quite simple and some quite interesting.&lt;/p&gt;
+&lt;div class=&quot;section&quot; id=&quot;stored-offset&quot;&gt;
+&lt;h3&gt;Stored offset&lt;/h3&gt;
+&lt;p&gt;The gold standard is systems that could afford the addition of &lt;abbr title=&quot;Non-Volatile Random Access Memory&quot;&gt;NVRAM&lt;/abbr&gt;.  If we have a storage medium then the
+previous known week number is often used as a check against rollover.  If we
+know an initial epoch number from manufacturing date, and can see the
+changeover at &lt;em&gt;some&lt;/em&gt; point than you &lt;em&gt;shouldn’t&lt;/em&gt; experience errors from
+a rollover.&lt;/p&gt;
+&lt;p&gt;The obvious drawback being if a system is dormant for twenty years, but that
+isn’t likely to be a real problem.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;section&quot; id=&quot;week-number-offset&quot;&gt;
+&lt;h3&gt;Week number offset&lt;/h3&gt;
+&lt;p&gt;One of the most common mechanisms for dealing with rollover has been to bind it
+to the firmware running on the device.  You simply assume the week number is
+relative to a value given in the firmware.  For example, if we have firmware
+from 2010 we can:&lt;/p&gt;
+&lt;ol class=&quot;arabic simple&quot;&gt;
+&lt;li&gt;&lt;p&gt;Assume we’re not running in 1999 via a time machine&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Know we can’t see week numbers prior to our 2010 release date&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Accept the given week number as valid through to 1023&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;After rollover treat week number 0 through 540 as being an offset past 1023&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;This is a reasonable solution in many circumstances, and one that exists in
+many products in the field.  It also hints at part of the problem with this
+method, and that is that a significant number of systems that will present
+problems at various stages of their lives.  In the above example our system
+&lt;em&gt;should&lt;/em&gt; work through the epoch change in 2019, but will likely fail in August
+2029 without intervention as we’ll trip over &lt;em&gt;our&lt;/em&gt; workaround with our own
+rollover bug causing it to reset to 2010.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;section&quot; id=&quot;gnss-voting-comparisons&quot;&gt;
+&lt;h3&gt;&lt;abbr title=&quot;Global Navigation Satellite System&quot;&gt;GNSS&lt;/abbr&gt; voting comparisons&lt;/h3&gt;
+&lt;p&gt;Many modern receivers support multiple signals; &lt;abbr title=&quot;Global Positioning System&quot;&gt;GPS&lt;/abbr&gt;, GLONASS, Beidou, &amp;amp;c.
+Given this we can use consensus building to validate information.  If one of
+the inputs is providing time data that is years away from the others you can
+simply exclude it.&lt;/p&gt;
+&lt;div class=&quot;admonition tip&quot;&gt;
+&lt;p class=&quot;admonition-title&quot;&gt;Tip&lt;/p&gt;
+&lt;p&gt;Often systems may have alternative time sources available such as a regular
+low quality &lt;abbr title=&quot;Real Time Clock&quot;&gt;RTC&lt;/abbr&gt;, these can also be used as a hint
+towards consensus building too.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;section&quot; id=&quot;leap-second-heuristic&quot;&gt;
+&lt;h3&gt;Leap second heuristic&lt;/h3&gt;
+&lt;p&gt;&lt;abbr title=&quot;Global Positioning System&quot;&gt;GPS&lt;/abbr&gt; time is not corrected for leap seconds and as such increasingly drifts
+from &lt;abbr title=&quot;Coordinated Universal Time&quot;&gt;UTC&lt;/abbr&gt; over the years.  However, the current offset from &lt;abbr title=&quot;Coordinated Universal Time&quot;&gt;UTC&lt;/abbr&gt; is
+transmitted, and it can be used as an heuristic to configure the device from.&lt;/p&gt;
+&lt;p&gt;For example, when the first epoch ended in 1999 there was a 13 second offset
+against &lt;abbr title=&quot;Coordinated Universal Time&quot;&gt;UTC&lt;/abbr&gt;.  The switch to the third epoch happens with an 18 second offset.
+Keying the epoch number off of the leap second offset &lt;em&gt;should&lt;/em&gt; be a reasonable
+way to handle rollover&lt;a class=&quot;footnote-reference brackets&quot; href=&quot;#id3&quot; id=&quot;id1&quot;&gt;1&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Forthcoming leap second adjustments are also published, so we can know both
+the current offset and the maximum date given that future dates must be in the
+future.&lt;/p&gt;
+&lt;div class=&quot;admonition note&quot;&gt;
+&lt;p class=&quot;admonition-title&quot;&gt;Note&lt;/p&gt;
+&lt;p&gt;Leap second information is only published within &lt;abbr title=&quot;Global Positioning System&quot;&gt;GPS&lt;/abbr&gt; almanac, and is not
+available immediately following a cold boot of a device.  Depending on
+circumstances the 12 minute wait to acquire the almanac data may not be an
+issue.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;section&quot; id=&quot;what-should-i-do&quot;&gt;
+&lt;h2&gt;What should I do?&lt;/h2&gt;
+&lt;p&gt;First check with your system’s supplier, they &lt;em&gt;should&lt;/em&gt; have information on what
+mitigations they have in place and what effects you should see now or at other
+times in the future.&lt;/p&gt;
+&lt;p&gt;The next step should be to &lt;em&gt;ignore&lt;/em&gt; what they told you and run a signal
+simulator to figure out what is actually happening.  Date handling bugs happen
+in so many layers you should have a testing procedure in place regardless of
+your trust in a supplier&lt;a class=&quot;footnote-reference brackets&quot; href=&quot;#id4&quot; id=&quot;id2&quot;&gt;2&lt;/a&gt;.&lt;/p&gt;
+&lt;div class=&quot;admonition warning&quot;&gt;
+&lt;p class=&quot;admonition-title&quot;&gt;Warning&lt;/p&gt;
+&lt;p&gt;Fully read the documentation for simulators and receivers as many devices
+require a deep reset to make use of a simulated signal.  The P3200 sitting
+on my desk requires a hardware switch to be toggled before it will do
+anything beyond report “spoofing detected” if it receives unexpected
+signals, with the exception of a &lt;abbr title=&quot;Trust On First Use&quot;&gt;TOFU&lt;/abbr&gt; event
+following a deep reset.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;section&quot; id=&quot;should-i-set-an-alarm-for-november-2038&quot;&gt;
+&lt;h2&gt;Should I set an alarm for November 2038?&lt;/h2&gt;
+&lt;p&gt;Yes and no.&lt;/p&gt;
+&lt;p&gt;The next rollover will occur in 2038, but new message types that use a 13-bit
+week number field are available and increasingly being used.  This enhancement
+changes the cycle to nearly 157 years, so we can naïvely hope this shouldn’t be
+an issue again.&lt;/p&gt;
+&lt;p&gt;However, there &lt;em&gt;will&lt;/em&gt; be systems that are still in the field that were
+developed prior to the upgrade and there &lt;em&gt;will&lt;/em&gt; be systems that were designed
+later that still use the old 10-bit field for their week data.&lt;/p&gt;
+&lt;p&gt;Like I said in the previous section make sure you’re testing these things as
+they’ll catch you out at some point.  Maybe even in fun ways such as exciting
+interactions between the fourth GPS epoch and the &lt;em&gt;other&lt;/em&gt; &lt;a class=&quot;reference external&quot; href=&quot;https://en.wikipedia.org/wiki/Y2038_problem&quot;&gt;2038 problem&lt;/a&gt; in
+January of that same year.&lt;/p&gt;
+&lt;p class=&quot;rubric&quot;&gt;Footnotes&lt;/p&gt;
+&lt;dl class=&quot;footnote brackets&quot;&gt;
+&lt;dt class=&quot;label&quot; id=&quot;id3&quot;&gt;&lt;span class=&quot;brackets&quot;&gt;&lt;a class=&quot;fn-backref&quot; href=&quot;#id1&quot;&gt;1&lt;/a&gt;&lt;/span&gt;&lt;/dt&gt;
+&lt;dd&gt;&lt;p&gt;We’re assuming the earth doesn’t suddenly speed up enough that we need
+to start issuing negative leap seconds.&lt;/p&gt;
+&lt;/dd&gt;
+&lt;dt class=&quot;label&quot; id=&quot;id4&quot;&gt;&lt;span class=&quot;brackets&quot;&gt;&lt;a class=&quot;fn-backref&quot; href=&quot;#id2&quot;&gt;2&lt;/a&gt;&lt;/span&gt;&lt;/dt&gt;
+&lt;dd&gt;&lt;p&gt;I’m &lt;em&gt;absolutely&lt;/em&gt; including products worked on by myself and my
+co-workers(forgive me!) in this.  People make mistakes, systems fail and
+skies may fall; having a good testing infrastructure is a must.&lt;/p&gt;
+&lt;/dd&gt;
+&lt;/dl&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</content>
+  </entry>
+</feed>

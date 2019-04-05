@@ -1,0 +1,806 @@
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" />
+    <title>GPS rollover 2019 &#8212; JNRowe</title>
+    <link rel="stylesheet" href="../_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/custom.css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    
+    <link rel="canonical" href="https://jnrowe.github.io/articles/gps_rollover_2019.html" />
+    <link rel="shortcut icon" href="../_static/icon.ico"/>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="copyright" title="Copyright" href="../copyright.html" />
+    <link rel="next" title="Visualising the progress of time" href="march_toward_death.html" />
+    <link rel="prev" title="fossil experiments" href="fossil.html" />
+  
+   
+  <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  
+  <link rel="alternate" type="application/atom+xml"  href="../blog/atom.xml" title="JNRowe">
+  
+  
+  <style type="text/css">
+    ul.ablog-archive {list-style: none; overflow: auto; margin-left: 0px}
+    ul.ablog-archive li {float: left; margin-right: 5px; font-size: 80%}
+    ul.postlist a {font-style: italic;}
+    ul.postlist-style-disc {list-style-type: disc;}
+    ul.postlist-style-none {list-style-type: none;}
+    ul.postlist-style-circle {list-style-type: circle;}
+  </style>
+    <link href="https://jnrowe.github.io/" rel="me" />
+  
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+    <p class="read-time">
+      <b>Estimated reading time</b>:
+      4 minutes
+    </p>
+  
+
+  <div class="section" id="gps-rollover-2019">
+<h1>GPS rollover 2019<a class="headerlink" href="#gps-rollover-2019" title="Permalink to this headline">¶</a></h1>
+<p>Tomorrow we’re going to experience the simultaneously cataclysmic and mundane
+consequences of a <abbr title="Global Positioning System">GPS</abbr> rollover event.  <em>Many</em> things will break, <em>many</em> will
+continue to work and <em>many</em> will just take a step closer to breaking… the fun
+of date handling never ends.</p>
+<img alt="Pick a year, win a prize" class="align-right" src="../_images/gps_calendar.png" />
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This is an informal piece, not an official support channel.  If you use
+hardware I’m involved in building then contact your support channel, they
+are there to help.</p>
+</div>
+<div class="section" id="what-is-the-issue">
+<h2>What is the issue?<a class="headerlink" href="#what-is-the-issue" title="Permalink to this headline">¶</a></h2>
+<p>Since 1981 <abbr title="Global Positioning System">GPS</abbr> signals have included a week number, which is provided as
+a 10-bit field and as such can only store 1024 values(around 19.5 years).
+Every time we hit that limit the week number rolls back to zero, and things may
+fail to work correctly following that.</p>
+<div class="sidebar">
+<p class="sidebar-title">Prior to ‘81</p>
+<p>As a side note very early <abbr title="Global Positioning System">GPS</abbr> transmissions didn’t even include week
+numbers in the signal.  Time was represented simply as a value <em>within</em>
+a week, and not <em>belonging</em> to a week.  If you work in the industry you
+still occasionally come across implementations that work like this, or
+issues that are caused by this.</p>
+<p>There have been a surprising number of other largely backward compatible
+upgrades to the <abbr title="Global Positioning System">GPS</abbr> signal over the approaching fifty years of its
+development.  Coupled with the out of band enhancements such as <abbr title="Wide Area Augmentation System">WAAS</abbr>, the accuracy and uses of <abbr title="Global Positioning System">GPS</abbr>-based
+systems have increased a tremendous amount.</p>
+</div>
+<p>This is the second operational rollover event, the first happened in August
+1999.  We — that is developers of <abbr title="Global Navigation Satellite System">GNSS</abbr>-using systems — <em>are</em> prepared for
+this, but the level of preparedness is unfortunately not uniform or indicative
+of how well we’re handling this.</p>
+</div>
+<div class="section" id="mitigations">
+<h2>Mitigations<a class="headerlink" href="#mitigations" title="Permalink to this headline">¶</a></h2>
+<p>As this problem is quite well understood there has been an awful lot of effort
+put in to working around it, some quite simple and some quite interesting.</p>
+<div class="section" id="stored-offset">
+<h3>Stored offset<a class="headerlink" href="#stored-offset" title="Permalink to this headline">¶</a></h3>
+<p>The gold standard is systems that could afford the addition of <abbr title="Non-Volatile Random Access Memory">NVRAM</abbr>.  If we have a storage medium then the
+previous known week number is often used as a check against rollover.  If we
+know an initial epoch number from manufacturing date, and can see the
+changeover at <em>some</em> point than you <em>shouldn’t</em> experience errors from
+a rollover.</p>
+<p>The obvious drawback being if a system is dormant for twenty years, but that
+isn’t likely to be a real problem.</p>
+</div>
+<div class="section" id="week-number-offset">
+<h3>Week number offset<a class="headerlink" href="#week-number-offset" title="Permalink to this headline">¶</a></h3>
+<p>One of the most common mechanisms for dealing with rollover has been to bind it
+to the firmware running on the device.  You simply assume the week number is
+relative to a value given in the firmware.  For example, if we have firmware
+from 2010 we can:</p>
+<ol class="arabic simple">
+<li><p>Assume we’re not running in 1999 via a time machine</p></li>
+<li><p>Know we can’t see week numbers prior to our 2010 release date</p></li>
+<li><p>Accept the given week number as valid through to 1023</p></li>
+<li><p>After rollover treat week number 0 through 540 as being an offset past 1023</p></li>
+</ol>
+<p>This is a reasonable solution in many circumstances, and one that exists in
+many products in the field.  It also hints at part of the problem with this
+method, and that is that a significant number of systems that will present
+problems at various stages of their lives.  In the above example our system
+<em>should</em> work through the epoch change in 2019, but will likely fail in August
+2029 without intervention as we’ll trip over <em>our</em> workaround with our own
+rollover bug causing it to reset to 2010.</p>
+</div>
+<div class="section" id="gnss-voting-comparisons">
+<h3><abbr title="Global Navigation Satellite System">GNSS</abbr> voting comparisons<a class="headerlink" href="#gnss-voting-comparisons" title="Permalink to this headline">¶</a></h3>
+<p>Many modern receivers support multiple signals; <abbr title="Global Positioning System">GPS</abbr>, GLONASS, Beidou, &amp;c.
+Given this we can use consensus building to validate information.  If one of
+the inputs is providing time data that is years away from the others you can
+simply exclude it.</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Often systems may have alternative time sources available such as a regular
+low quality <abbr title="Real Time Clock">RTC</abbr>, these can also be used as a hint
+towards consensus building too.</p>
+</div>
+</div>
+<div class="section" id="leap-second-heuristic">
+<h3>Leap second heuristic<a class="headerlink" href="#leap-second-heuristic" title="Permalink to this headline">¶</a></h3>
+<p><abbr title="Global Positioning System">GPS</abbr> time is not corrected for leap seconds and as such increasingly drifts
+from <abbr title="Coordinated Universal Time">UTC</abbr> over the years.  However, the current offset from <abbr title="Coordinated Universal Time">UTC</abbr> is
+transmitted, and it can be used as an heuristic to configure the device from.</p>
+<p>For example, when the first epoch ended in 1999 there was a 13 second offset
+against <abbr title="Coordinated Universal Time">UTC</abbr>.  The switch to the third epoch happens with an 18 second offset.
+Keying the epoch number off of the leap second offset <em>should</em> be a reasonable
+way to handle rollover<a class="footnote-reference brackets" href="#id3" id="id1">1</a>.</p>
+<p>Forthcoming leap second adjustments are also published, so we can know both
+the current offset and the maximum date given that future dates must be in the
+future.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Leap second information is only published within <abbr title="Global Positioning System">GPS</abbr> almanac, and is not
+available immediately following a cold boot of a device.  Depending on
+circumstances the 12 minute wait to acquire the almanac data may not be an
+issue.</p>
+</div>
+</div>
+</div>
+<div class="section" id="what-should-i-do">
+<h2>What should I do?<a class="headerlink" href="#what-should-i-do" title="Permalink to this headline">¶</a></h2>
+<p>First check with your system’s supplier, they <em>should</em> have information on what
+mitigations they have in place and what effects you should see now or at other
+times in the future.</p>
+<p>The next step should be to <em>ignore</em> what they told you and run a signal
+simulator to figure out what is actually happening.  Date handling bugs happen
+in so many layers you should have a testing procedure in place regardless of
+your trust in a supplier<a class="footnote-reference brackets" href="#id4" id="id2">2</a>.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Fully read the documentation for simulators and receivers as many devices
+require a deep reset to make use of a simulated signal.  The P3200 sitting
+on my desk requires a hardware switch to be toggled before it will do
+anything beyond report “spoofing detected” if it receives unexpected
+signals, with the exception of a <abbr title="Trust On First Use">TOFU</abbr> event
+following a deep reset.</p>
+</div>
+</div>
+<div class="section" id="should-i-set-an-alarm-for-november-2038">
+<h2>Should I set an alarm for November 2038?<a class="headerlink" href="#should-i-set-an-alarm-for-november-2038" title="Permalink to this headline">¶</a></h2>
+<p>Yes and no.</p>
+<p>The next rollover will occur in 2038, but new message types that use a 13-bit
+week number field are available and increasingly being used.  This enhancement
+changes the cycle to nearly 157 years, so we can naïvely hope this shouldn’t be
+an issue again.</p>
+<p>However, there <em>will</em> be systems that are still in the field that were
+developed prior to the upgrade and there <em>will</em> be systems that were designed
+later that still use the old 10-bit field for their week data.</p>
+<p>Like I said in the previous section make sure you’re testing these things as
+they’ll catch you out at some point.  Maybe even in fun ways such as exciting
+interactions between the fourth GPS epoch and the <em>other</em> <a class="reference external" href="https://en.wikipedia.org/wiki/Y2038_problem">2038 problem</a> in
+January of that same year.</p>
+<p class="rubric">Footnotes</p>
+<dl class="footnote brackets">
+<dt class="label" id="id3"><span class="brackets"><a class="fn-backref" href="#id1">1</a></span></dt>
+<dd><p>We’re assuming the earth doesn’t suddenly speed up enough that we need
+to start issuing negative leap seconds.</p>
+</dd>
+<dt class="label" id="id4"><span class="brackets"><a class="fn-backref" href="#id2">2</a></span></dt>
+<dd><p>I’m <em>absolutely</em> including products worked on by myself and my
+co-workers(forgive me!) in this.  People make mistakes, systems fail and
+skies may fall; having a good testing infrastructure is a must.</p>
+</dd>
+</dl>
+</div>
+</div>
+
+    <hr>
+
+    <p class="keybase-verify">
+      Authenticate this page by pasting <a
+        href="https://raw.githubusercontent.com/JNRowe/jnrowe.github.io/source/articles/gps_rollover_2019.rst.asc">this signature</a> into
+      <a href="https://keybase.io/verify">Keybase</a>.
+    </p>
+
+    <p class="edit-page">
+      Have a suggestion or see a typo?  <a href="https://github.com/JNRowe/jnrowe.github.io/edit/source/articles/gps_rollover_2019.rst">Edit this page</a>
+    </p>
+  
+
+  <div class="section">
+  
+    
+
+
+<div class="section">
+  <span style="float: left;">
+  
+  Previous: 
+  <a href="../office_hours.html">
+    
+    Office hours
+  </a>
+  
+  </span>
+  <span>&nbsp;</span>
+  <span style="float: right;">
+  
+</div>
+
+  
+  
+  </div>
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<p class="logo">
+  <a href="../index.html">
+    <img class="logo" src="../_static/logo.png" alt="Logo"/>
+    
+  </a>
+</p>
+
+
+
+
+
+
+
+
+
+  
+  
+  <h2>
+  
+  
+    2019-04-05
+  
+  </h2>
+
+  <ul>
+    
+
+  
+  <li id="author"><span>Author:</span>
+    
+      
+      <a href="../blog/author/james-rowe.html">James Rowe</a>
+      
+    </li>
+  
+
+  
+
+  
+
+  
+
+  
+  <li id="tags"><span>Tags:
+      </span>
+    
+      
+      <a href="../blog/tag/gps.html">gps</a>
+      
+    
+      
+      <a href="../blog/tag/time.html">time</a>
+      
+    
+      
+      <a href="../blog/tag/bugs.html">bugs</a>
+      
+    </li>
+  
+  
+  </ul>
+
+
+<h3>Navigation</h3>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../projects.html">Projects</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Articles</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="advent_of_code.html">Advent of Code 2017</a></li>
+<li class="toctree-l2"><a class="reference internal" href="advent_of_code_2018.html">Advent of Code 2018</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dropping_gentoo.html">Dropping Gentoo</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dropping_gentoo_reflex.html">Dropping Gentoo reflex</a></li>
+<li class="toctree-l2"><a class="reference internal" href="evil_emacs_steals_my_heart.html">Evil Emacs steals my heart</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fossil.html"><strong class="command">fossil</strong> experiments</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">GPS rollover 2019</a></li>
+<li class="toctree-l2"><a class="reference internal" href="march_toward_death.html">Visualising the progress of time</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mutt_config_snippets.html"><strong class="command">mutt</strong> configuration snippets</a></li>
+<li class="toctree-l2"><a class="reference internal" href="new_love_giddiness.html">Giddy new project love</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rcs.html">Introduction to <abbr title="GNU Revision Control System">RCS</abbr></a></li>
+<li class="toctree-l2"><a class="reference internal" href="redo_ninja_make.html">while $sun; do <strong class="command">make</strong> hay; done</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tdd_distros.html"><abbr title="Test Driven Development">TDD</abbr> distro development</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tiling_vs_tabbing.html">Tiling vs tabbing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#further-categories">Further categories</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../thoughts/index.html">Thoughts</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../colophon.html">Colophon</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../contact.html">Contact details</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../consult.html">Consulting services</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../copyright.html">Copyright information</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../glossary.html">Glossary</a></li>
+</ul>
+
+
+  <h3><a href="../blog.html">Recent Posts</a></h3>
+  <ul>
+    
+    
+      <li><a href="../office_hours.html">23 December - Office hours</a></li>
+    
+      <li><a href="advent_of_code_2018.html">15 December - Advent of Code 2018</a></li>
+    
+      <li><a href="new_love_giddiness.html">04 December - Giddy new project love</a></li>
+    
+      <li><a href="redo_ninja_make.html">23 November - while $sun; do make hay; done</a></li>
+    
+      <li><a href="march_toward_death.html">13 November - Visualising the progress of time</a></li>
+    
+  </ul>
+
+  <h3><a href="../blog/tag.html">Tags</a></h3>
+  <style type="text/css">
+    ul.ablog-cloud {list-style: none; overflow: auto;}
+    ul.ablog-cloud li {float: left; height: 20pt; line-height: 18pt; margin-right: 5px;}
+    ul.ablog-cloud a {text-decoration: none; vertical-align: middle;}
+    li.ablog-cloud-1{font-size: 80%;}
+    li.ablog-cloud-2{font-size: 95%;}
+    li.ablog-cloud-3{font-size: 110%;}
+    li.ablog-cloud-4{font-size: 125%;}
+    li.ablog-cloud-5{font-size: 140%;}
+  </style>
+  <ul class="ablog-cloud">
+    
+      
+      <li class="ablog-cloud ablog-cloud-3">
+        <a href="../blog/tag/gtk.html">GTK+</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-2">
+        <a href="../blog/tag/x11.html">X11</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-2">
+        <a href="../blog/tag/abook.html">abook</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-2">
+        <a href="../blog/tag/adventofcode.html">adventofcode</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-3">
+        <a href="../blog/tag/awesome.html">awesome</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-2">
+        <a href="../blog/tag/bash.html">bash</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-1">
+        <a href="../blog/tag/blog.html">blog</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-1">
+        <a href="../blog/tag/bts.html">bts</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-1">
+        <a href="../blog/tag/bugs.html">bugs</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-1">
+        <a href="../blog/tag/bugzilla.html">bugzilla</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-1">
+        <a href="../blog/tag/build.html">build</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-1">
+        <a href="../blog/tag/burnout.html">burnout</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-2">
+        <a href="../blog/tag/coding.html">coding</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-2">
+        <a href="../blog/tag/configs.html">configs</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-1">
+        <a href="../blog/tag/csv.html">csv</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-1">
+        <a href="../blog/tag/denoise.html">denoise</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-1">
+        <a href="../blog/tag/desktop.html">desktop</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-3">
+        <a href="../blog/tag/devel.html">devel</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-1">
+        <a href="../blog/tag/development.html">development</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-1">
+        <a href="../blog/tag/dzen.html">dzen</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-2">
+        <a href="../blog/tag/emacs.html">emacs</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-1">
+        <a href="../blog/tag/evil.html">evil</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-1">
+        <a href="../blog/tag/focus.html">focus</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-1">
+        <a href="../blog/tag/fossil.html">fossil</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-4">
+        <a href="../blog/tag/gentoo.html">gentoo</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-2">
+        <a href="../blog/tag/git.html">git</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-1">
+        <a href="../blog/tag/gmail.html">gmail</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-1">
+        <a href="../blog/tag/gps.html">gps</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-1">
+        <a href="../blog/tag/history.html">history</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-1">
+        <a href="../blog/tag/hobbies.html">hobbies</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-1">
+        <a href="../blog/tag/imv.html">imv</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-1">
+        <a href="../blog/tag/jnrowe-misc.html">jnrowe-misc</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-1">
+        <a href="../blog/tag/languages.html">languages</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-5">
+        <a href="../blog/tag/life.html">life</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-4">
+        <a href="../blog/tag/linux.html">linux</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-2">
+        <a href="../blog/tag/mail.html">mail</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-1">
+        <a href="../blog/tag/make.html">make</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-3">
+        <a href="../blog/tag/mutt.html">mutt</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-1">
+        <a href="../blog/tag/net.html">net</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-1">
+        <a href="../blog/tag/ninja.html">ninja</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-1">
+        <a href="../blog/tag/noise.html">noise</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-1">
+        <a href="../blog/tag/oss.html">oss</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-1">
+        <a href="../blog/tag/personal.html">personal</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-2">
+        <a href="../blog/tag/politics.html">politics</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-1">
+        <a href="../blog/tag/privacy.html">privacy</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-1">
+        <a href="../blog/tag/probit.html">probit</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-3">
+        <a href="../blog/tag/projects.html">projects</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-2">
+        <a href="../blog/tag/puzzles.html">puzzles</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-1">
+        <a href="../blog/tag/python.html">python</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-1">
+        <a href="../blog/tag/qmv.html">qmv</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-2">
+        <a href="../blog/tag/readline.html">readline</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-1">
+        <a href="../blog/tag/redo.html">redo</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-1">
+        <a href="../blog/tag/remind.html">remind</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-1">
+        <a href="../blog/tag/renameutils.html">renameutils</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-1">
+        <a href="../blog/tag/site.html">site</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-2">
+        <a href="../blog/tag/software.html">software</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-5">
+        <a href="../blog/tag/styling.html">styling</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-1">
+        <a href="../blog/tag/sup.html">sup</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-1">
+        <a href="../blog/tag/tabbed.html">tabbed</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-1">
+        <a href="../blog/tag/testing.html">testing</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-1">
+        <a href="../blog/tag/three.html">three</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-1">
+        <a href="../blog/tag/tiling.html">tiling</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-1">
+        <a href="../blog/tag/time.html">time</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-2">
+        <a href="../blog/tag/tools.html">tools</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-2">
+        <a href="../blog/tag/unix.html">unix</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-4">
+        <a href="../blog/tag/vcs.html">vcs</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-5">
+        <a href="../blog/tag/vim.html">vim</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-1">
+        <a href="../blog/tag/web.html">web</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-3">
+        <a href="../blog/tag/work.html">work</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-1">
+        <a href="../blog/tag/zsh.html">zsh</a></li>
+      
+    
+  </ul>
+
+  <h3><a href="../blog/archive.html">Archives</a></h3>
+  <ul>
+  
+    
+    <li><a href="../blog/2019.html">2019 (1)</a></li>
+    
+  
+    
+    <li><a href="../blog/2018.html">2018 (11)</a></li>
+    
+  
+    
+    <li><a href="../blog/2017.html">2017 (1)</a></li>
+    
+  
+    
+    <li><a href="../blog/2014.html">2014 (12)</a></li>
+    
+  
+    
+    <li><a href="../blog/2013.html">2013 (2)</a></li>
+    
+  
+    
+    <li><a href="../blog/2011.html">2011 (1)</a></li>
+    
+  
+    
+    <li><a href="../blog/2010.html">2010 (1)</a></li>
+    
+  
+    
+    <li><a href="../blog/2009.html">2009 (24)</a></li>
+    
+  
+    
+    <li><a href="../blog/2007.html">2007 (2)</a></li>
+    
+  
+    
+    <li><a href="../blog/2003.html">2003 (1)</a></li>
+    
+  
+  </ul>
+
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    </div>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2009-2019  James Rowe,
+      <a href="http://creativecommons.org/licenses/by-sa/4.0/" rel="license">
+          Creative Commons Attribution-ShareAlike 4.0
+      </a> license.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.8.1</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+    </div>
+
+    
+
+    
+  </body>
+</html>
