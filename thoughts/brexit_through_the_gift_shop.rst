@@ -27,7 +27,7 @@ Background
 We used to work in an environment where we could :doc:`reject projects
 <important_balance>` on moral grounds with ease.  In fact, :abbr:`IRBs
 (Institutional Review Board)` exist for that exact reason.  Times were good,
-projects were plentiful, and it was just the ways things were.
+projects were plentiful, and it was just the way things were.
 
 This is definitely no longer true.  As we continue to rearrange some projects
 for their move to the continent, and lose access to many of the future projects
