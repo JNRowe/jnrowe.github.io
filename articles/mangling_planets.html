@@ -1,0 +1,881 @@
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" />
+    <title>Mangling planets &#8212; JNRowe</title>
+    <link rel="stylesheet" href="../_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/custom.css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    
+    <link rel="canonical" href="https://jnrowe.github.io/articles/mangling_planets.html" />
+    <link rel="shortcut icon" href="../_static/icon.ico"/>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="copyright" title="Copyright" href="../copyright.html" />
+    <link rel="next" title="Visualising the progress of time" href="march_toward_death.html" />
+    <link rel="prev" title="GPS rollover 2019" href="gps_rollover_2019.html" />
+  
+   
+  <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  
+  <link rel="alternate" type="application/atom+xml"  href="../blog/atom.xml" title="JNRowe">
+  
+  
+  <style type="text/css">
+    ul.ablog-archive {list-style: none; overflow: auto; margin-left: 0px}
+    ul.ablog-archive li {float: left; margin-right: 5px; font-size: 80%}
+    ul.postlist a {font-style: italic;}
+    ul.postlist-style-disc {list-style-type: disc;}
+    ul.postlist-style-none {list-style-type: none;}
+    ul.postlist-style-circle {list-style-type: circle;}
+  </style>
+    <link href="https://jnrowe.github.io/" rel="me" />
+  
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+    <p class="read-time">
+      <b>Estimated reading time</b>:
+      6 minutes
+    </p>
+  
+
+  <div class="section" id="mangling-planets">
+<h1>Mangling planets<a class="headerlink" href="#mangling-planets" title="Permalink to this headline">¶</a></h1>
+<p>Over lunch today a few people were talking about <a class="reference external" href="http://www.planetplanet.org/">planet</a> feeds, and the topics
+mostly revolved around why they don’t read them.  I was quite surprised how
+many people miss out on the often marvellous insights in to the projects we use
+everyday, but I think I understand the reasoning.</p>
+<p>Reading the output of some planets can soak up an awful lot of time, and the
+posts aren’t always about topics that interest you.  I don’t treat this is
+a bug, skimming the musings of talented people often leads you to think about
+problems you’re facing differently and that is a good thing.</p>
+<p>I’m wondering if some of the problems people face are because their workflows
+for processing all that content aren’t good enough, so I’m going to mention one
+of the techniques I use.  Maybe it will help you, or maybe you’ll <a class="reference external" href="mailto:jnrowe&#37;&#52;&#48;gmail&#46;com">suggest
+a better idea</a> to me.</p>
+<div class="section" id="the-feeds">
+<h2>The feeds<a class="headerlink" href="#the-feeds" title="Permalink to this headline">¶</a></h2>
+<p>I subscribe to <a class="reference external" href="http://planet.debian.net/">Planet Debian</a>, <a class="reference external" href="http://planet.freedesktop.org/">Planet Freedesktop.org</a>, <a class="reference external" href="http://planet.gnome.org/">Planet gnome</a>,
+<a class="reference external" href="http://planet.gentoo.org/">Planet Gentoo</a>, <a class="reference external" href="http://planet.haskell.org/">Planet Haskell</a> and <a class="reference external" href="http://planet.python.org/">Planet Python</a>.  These planets
+syndicate a large number of feeds, see the table below for a breakdown of
+yesterday.</p>
+<table class="docutils">
+<colgroup>
+<col style="width: 65%" />
+<col style="width: 35%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Planet</p></th>
+<th class="head"><p>Entries</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Debian</p></td>
+<td><p>8</p></td>
+</tr>
+<tr class="row-odd"><td><p>Freedesktop.org</p></td>
+<td><p>1</p></td>
+</tr>
+<tr class="row-even"><td><p>gnome</p></td>
+<td><p>8</p></td>
+</tr>
+<tr class="row-odd"><td><p>Gentoo</p></td>
+<td><p>3</p></td>
+</tr>
+<tr class="row-even"><td><p>Haskell</p></td>
+<td><p>3</p></td>
+</tr>
+<tr class="row-odd"><td><p>Python</p></td>
+<td><p>3</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>Total</strong></p></td>
+<td><p><strong>26</strong></p></td>
+</tr>
+</tbody>
+</table>
+<p>26 new entries for yesterday and that is excluding other feeds I subscribe to;
+news, friends blogs, feeds for work projects, service updates and possibly
+others I’m forgetting as I write this.  Reading all this would drain a huge
+amount of time, much more than a train commute or whatever other dead time
+there is to fill.  My answer is quite simple, I don’t read it all.</p>
+<p>We’ll examine just the planets, but what I’m going to say mostly applies to the
+other content too.</p>
+</div>
+<div class="section" id="the-task">
+<h2>The task<a class="headerlink" href="#the-task" title="Permalink to this headline">¶</a></h2>
+<p>Not all the entries are new, some are duplicates(this is especially between
+Debian and gnome planets).  Some are uninteresting to me, talk of technologies
+I won’t(not don’t) use.  Some are the minutiae of their author’s day, which I’m
+sure are interesting if you know the authors but if I did know them they’d be
+in the friends feed category already.</p>
+<p>The question quickly becomes how to filter them, and the answer is: use <a class="reference external" href="http://pipes.yahoo.com/">Yahoo!
+Pipes</a>.</p>
+<p>Yahoo! Pipes is a clever little web-based tool for mangling data hosted on the
+internet, be it single pages or feeds or even <abbr title="Comma Separated Values">CSV</abbr> data files.  The interface is a friendly Javascript drag-and-drop
+affair, just select the tools you wish to use and literally connect the dots.</p>
+</div>
+<div class="section" id="fetching-feeds">
+<h2>Fetching feeds<a class="headerlink" href="#fetching-feeds" title="Permalink to this headline">¶</a></h2>
+<img alt="Fetch feeds" src="../_images/2010-09-17-feed_fetch.png" />
+<p>Fetching the planet feeds is simple, just select the <code class="docutils literal notranslate"><span class="pre">Fetch</span> <span class="pre">feed</span></code> item in the
+<code class="docutils literal notranslate"><span class="pre">Sources</span></code> menu to create a new object, and enter the <abbr title="Uniform Resource Locator">URL</abbr>s of the feeds you
+wish to play with.  In this instance it is a heap of planet feeds, but you can
+put anything you want in there.  I should add that it handles the various RSS
+formats better than you may expect for such a poorly specified format.</p>
+<p>Note that at this point you could just connect the feeds object to the <code class="docutils literal notranslate"><span class="pre">Pipe</span>
+<span class="pre">output</span></code> and you’ll have a single, yet humongous, feed that contains the
+content from the all individual feeds.  The way to think of <code class="docutils literal notranslate"><span class="pre">Fetch</span> <span class="pre">feed</span></code> is
+as a <em class="manpage">cat(1)</em> for feeds.</p>
+</div>
+<div class="section" id="uniquify">
+<h2>Uniquify<a class="headerlink" href="#uniquify" title="Permalink to this headline">¶</a></h2>
+<p>To remove duplicates we add a <code class="docutils literal notranslate"><span class="pre">Unique</span></code> object from the <code class="docutils literal notranslate"><span class="pre">Operators</span></code> menu to
+the diagram, and choose the element we wish to use for testing equality.  We’re
+choosing to calculate an entry’s uniqueness by checking the value of the
+<code class="docutils literal notranslate"><span class="pre">link</span></code> element, while noting that this makes the hopefully reasonable
+assumption that people are smart enough not to use the same link for multiple
+entries.</p>
+<img alt="uniquify" src="../_images/2010-09-17-feed_uniq.png" />
+<p>With these two simple objects we already have a combined feed of all the planet
+outputs with the duplicates removed.  However, using it directly like this
+would probably not be a good use of resources, as its update frequency would be
+significantly higher than the individual feeds.  We would also lose the
+bandwidth savings of the <code class="docutils literal notranslate"><span class="pre">Last-modified</span></code> and <code class="docutils literal notranslate"><span class="pre">etag</span></code> headers for each feed,
+which can be very useful for feeds that don’t update very often.</p>
+<p>If we were to compare <code class="docutils literal notranslate"><span class="pre">Unique</span></code> to a command line tool it would be
+<em class="manpage">uniq</em>, with a variety of <code class="docutils literal notranslate"><span class="pre">--check-chars</span></code> and <code class="docutils literal notranslate"><span class="pre">--skip-fields</span></code>
+options to define our filter.</p>
+</div>
+<div class="section" id="filter-it">
+<h2>Filter it<a class="headerlink" href="#filter-it" title="Permalink to this headline">¶</a></h2>
+<img alt="Filter entries" src="../_images/2010-09-17-feed_filter.png" />
+<p>At this point we want to filter entries that are of no interest to us, for
+whatever reasons we may have.  If we add a <code class="docutils literal notranslate"><span class="pre">Filter</span></code> item from the
+<code class="docutils literal notranslate"><span class="pre">Operators</span></code> menu we can filter in many, many ways.  This is perhaps a good
+time to note that each object has a very useful set of documentation and
+normally at least one usage example available, just click the <code class="docutils literal notranslate"><span class="pre">?</span></code> icon on an
+object, or select it within the menu.</p>
+<p>For starters, we may as well filter entries we have seen before.  My feed
+reader automatically fetches feeds once a day, so there is no point whatsoever
+fetching entries that are older than a day.  We can use the
+<code class="docutils literal notranslate"><span class="pre">item.y:published.utime</span></code> selector to filter based on publication date.  To
+supply the date with which to filter we use the <code class="docutils literal notranslate"><span class="pre">Date</span> <span class="pre">Builder</span></code> item from the
+<code class="docutils literal notranslate"><span class="pre">Date</span></code> menu, it accepts string date expressions so we can use <code class="docutils literal notranslate"><span class="pre">30</span> <span class="pre">hours</span>
+<span class="pre">ago</span></code> as a value.  We use 30 hours instead of 24 hours to account for
+occasional problems with the <code class="docutils literal notranslate"><span class="pre">cron</span></code> job, such as errors caused by network
+outages.</p>
+<p>You need to be very careful when specifying dates or times in this way as the
+parsing is very lax.  It uses US-style date formats and defaults to 12-hour
+clock for times, so it is unlikely to do what you expect.  Be sure to check the
+debug window to see what value it has parsed from your input.  <em>If it sounds
+like I’ve been caught by this before, then you’re hearing the echoes of my pain
+clearly.</em></p>
+<img alt="Build date object to filter by" src="../_images/2010-09-17-date_builder.png" />
+<p>Another filtering example, that I mentioned at the start, is to filter for
+authors who write entries we aren’t interested in.  In this instance the filter
+we want to use is the <code class="docutils literal notranslate"><span class="pre">item.link</span></code> selector with a unique string from their
+entry <abbr title="Uniform Resource Locator">URL</abbr>s.  The hostname is often perfect for this, but any unique
+identifying string is usable; their user name on a shared server for example
+<code class="docutils literal notranslate"><span class="pre">project/~nobody/</span></code></p>
+<p>Taking the other example from above we will filter entries with references to
+technologies that are of no interest to us.  We can access the entry’s content
+with the <code class="docutils literal notranslate"><span class="pre">item.content.content</span></code> selector and then apply a string match or
+regular expression that marks an entry as uninteresting to us.  You should note
+that Yahoo! Pipes uses extended regular expression syntax, so for example
+<code class="docutils literal notranslate"><span class="pre">\s+</span></code> matches multiple whitespace characters(this seems to trip a lot of
+people up who are used to <code class="docutils literal notranslate"><span class="pre">grep</span></code>’s <abbr title="Basic Regular Expression">BRE</abbr>
+behaviour).</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>I’ve purposely chosen not to show the filtered people or technologies in
+the screenshots, as it isn’t really fair.  Some of the people I filter do
+some great work on their respective projects, but their blogs include
+information I’m not particularly interested in seeing.  I don’t believe it
+has harmed the examples too much, but if something isn’t clear just ask!</p>
+</div>
+</div>
+<div class="section" id="output">
+<h2>Output<a class="headerlink" href="#output" title="Permalink to this headline">¶</a></h2>
+<p>I’m a neat freak, so I always re-sort the output before finally delivering it.
+I sort it based on publication date, so that it is easier to scan the output by
+hand if the need arises.</p>
+<img alt="Sort remaining entries" src="../_images/2010-09-17-feed_sort.png" />
+<p>If you weren’t to sort the final output then it would be in the order it was
+included in to the stream, grouped first by feed <abbr title="Uniform Resource Locator">URL</abbr> and in whatever order
+the original feed had.  Again very much following the format you’d expect from
+a simple <em class="manpage">cat(1)</em>-based pipe.</p>
+<p>The methods outlined here also save us a very small amount of daily data
+transfer too, without the splicing and filtering today’s data would be 1.3MiB
+and after it is mangled it is less than 200KiB.  Of course, these figures will
+vary considerably based on the activity in the feeds.</p>
+<p>The other quite interesting thing to note is that Yahoo! Pipes allows you to
+output data in various formats.  The <a class="reference external" href="http://www.json.org/">JSON</a> output, for example, makes it very
+easy to post-process the data locally using <a class="reference external" href="http://flori.github.com/json/">Ruby</a> or <a class="reference external" href="http://docs.python.org/library/json.html">Python</a>.  Some of the
+reasons you may wish to do that are best left for another day.</p>
+</div>
+<div class="section" id="sidenotes">
+<h2>Sidenotes<a class="headerlink" href="#sidenotes" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>Every time I play with Yahoo! Pipes I wonder why people(including myself)
+still write manual scraping tools, it is just <em>that</em> good.  Pull resources,
+filter resources, mangle them, output as RSS or <a class="reference external" href="http://www.json.org/">JSON</a>.  However, despite what
+the documentation says <a class="reference external" href="http://atomenabled.org/">Atom</a> still appears to be unsupported, which is
+a great shame as nobody should really be recommending RSS 2.0 at this point.</p></li>
+<li><p>While Yahoo! Pipes is a lot of fun for just playing with feeds, it is also
+very powerful for processing many other forms of data.  The sources module
+contains lots of methods for pulling data from the internet, so play around
+with it.</p></li>
+<li><p>One special supported source is <a class="reference external" href="http://developer.yahoo.com/yql/">YQL</a>, a <abbr title="Structured Query Language">SQL</abbr>-alike language created by Yahoo.  It is often described as “select
+* from internet”, and that is a very accurate description.  It really does
+make scraping and mangling data as simple as forming some structured queries.
+If you do any scraping or processing of external data be sure to have a quick
+read of the <a class="reference external" href="http://developer.yahoo.com/yql/guide/two-minute-tutorial.html">the two-minute tutorial</a>.</p></li>
+</ul>
+</div>
+</div>
+
+    <hr>
+
+    <p class="keybase-verify">
+      Authenticate this page by pasting <a
+        href="https://raw.githubusercontent.com/JNRowe/jnrowe.github.io/source/articles/mangling_planets.rst.asc">this signature</a> into
+      <a href="https://keybase.io/verify">Keybase</a>.
+    </p>
+
+    <p class="edit-page">
+      Have a suggestion or see a typo?  <a href="https://github.com/JNRowe/jnrowe.github.io/edit/source/articles/mangling_planets.rst">Edit this page</a>
+    </p>
+  
+
+  <div class="section">
+  
+    
+
+
+<div class="section">
+  <span style="float: left;">
+  
+  Previous: 
+  <a href="tips/Populating_sup_contacts_from_abook.html">
+    
+    Populating sup contacts from abook
+  </a>
+  
+  </span>
+  <span>&nbsp;</span>
+  <span style="float: right;">
+  
+  Next: 
+  <a href="tdd_distros.html">
+    TDD distro development
+    
+  </a>
+  </span>
+  
+</div>
+
+  
+  
+  </div>
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<p class="logo">
+  <a href="../index.html">
+    <img class="logo" src="../_static/logo.png" alt="Logo"/>
+    
+  </a>
+</p>
+
+
+
+
+
+
+
+
+
+  
+  
+  <h2>
+  
+  
+    2010-09-17
+  
+  </h2>
+
+  <ul>
+    
+
+  
+  <li id="author"><span>Author:</span>
+    
+      
+      <a href="../blog/author/james-rowe.html">James Rowe</a>
+      
+    </li>
+  
+
+  
+
+  
+
+  
+
+  
+  <li id="tags"><span>Tags:
+      </span>
+    
+      
+      <a href="../blog/tag/atom.html">atom</a>
+      
+    
+      
+      <a href="../blog/tag/feed.html">feed</a>
+      
+    
+      
+      <a href="../blog/tag/pipes.html">pipes</a>
+      
+    
+      
+      <a href="../blog/tag/yahoo.html">yahoo</a>
+      
+    </li>
+  
+  
+  </ul>
+
+
+<h3>Navigation</h3>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../projects.html">Projects</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Articles</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="advent_of_code.html">Advent of Code 2017</a></li>
+<li class="toctree-l2"><a class="reference internal" href="advent_of_code_2018.html">Advent of Code 2018</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dropping_gentoo.html">Dropping Gentoo</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dropping_gentoo_reflex.html">Dropping Gentoo reflex</a></li>
+<li class="toctree-l2"><a class="reference internal" href="evil_emacs_steals_my_heart.html">Evil Emacs steals my heart</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fossil.html"><strong class="command">fossil</strong> experiments</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gps_rollover_2019.html">GPS rollover 2019</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Mangling planets</a></li>
+<li class="toctree-l2"><a class="reference internal" href="march_toward_death.html">Visualising the progress of time</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mutt_config_snippets.html"><strong class="command">mutt</strong> configuration snippets</a></li>
+<li class="toctree-l2"><a class="reference internal" href="new_love_giddiness.html">Giddy new project love</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rcs.html">Introduction to <abbr title="GNU Revision Control System">RCS</abbr></a></li>
+<li class="toctree-l2"><a class="reference internal" href="redo_ninja_make.html">while $sun; do <strong class="command">make</strong> hay; done</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tdd_distros.html"><abbr title="Test Driven Development">TDD</abbr> distro development</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tiling_vs_tabbing.html">Tiling vs tabbing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#further-categories">Further categories</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../thoughts/index.html">Thoughts</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../colophon.html">Colophon</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../contact.html">Contact details</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../consult.html">Consulting services</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../copyright.html">Copyright information</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../glossary.html">Glossary</a></li>
+</ul>
+
+
+  <h3><a href="../blog.html">Recent Posts</a></h3>
+  <ul>
+    
+    
+      <li><a href="gps_rollover_2019.html">05 April - GPS rollover 2019</a></li>
+    
+      <li><a href="../office_hours.html">23 December - Office hours</a></li>
+    
+      <li><a href="advent_of_code_2018.html">15 December - Advent of Code 2018</a></li>
+    
+      <li><a href="new_love_giddiness.html">04 December - Giddy new project love</a></li>
+    
+      <li><a href="redo_ninja_make.html">23 November - while $sun; do make hay; done</a></li>
+    
+  </ul>
+
+  <h3><a href="../blog/tag.html">Tags</a></h3>
+  <style type="text/css">
+    ul.ablog-cloud {list-style: none; overflow: auto;}
+    ul.ablog-cloud li {float: left; height: 20pt; line-height: 18pt; margin-right: 5px;}
+    ul.ablog-cloud a {text-decoration: none; vertical-align: middle;}
+    li.ablog-cloud-1{font-size: 80%;}
+    li.ablog-cloud-2{font-size: 95%;}
+    li.ablog-cloud-3{font-size: 110%;}
+    li.ablog-cloud-4{font-size: 125%;}
+    li.ablog-cloud-5{font-size: 140%;}
+  </style>
+  <ul class="ablog-cloud">
+    
+      
+      <li class="ablog-cloud ablog-cloud-3">
+        <a href="../blog/tag/gtk.html">GTK+</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-2">
+        <a href="../blog/tag/x11.html">X11</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-2">
+        <a href="../blog/tag/abook.html">abook</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-2">
+        <a href="../blog/tag/adventofcode.html">adventofcode</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-1">
+        <a href="../blog/tag/atom.html">atom</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-3">
+        <a href="../blog/tag/awesome.html">awesome</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-2">
+        <a href="../blog/tag/bash.html">bash</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-1">
+        <a href="../blog/tag/blog.html">blog</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-1">
+        <a href="../blog/tag/bts.html">bts</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-1">
+        <a href="../blog/tag/bugs.html">bugs</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-1">
+        <a href="../blog/tag/bugzilla.html">bugzilla</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-1">
+        <a href="../blog/tag/build.html">build</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-1">
+        <a href="../blog/tag/burnout.html">burnout</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-2">
+        <a href="../blog/tag/coding.html">coding</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-2">
+        <a href="../blog/tag/configs.html">configs</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-1">
+        <a href="../blog/tag/csv.html">csv</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-1">
+        <a href="../blog/tag/denoise.html">denoise</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-1">
+        <a href="../blog/tag/desktop.html">desktop</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-3">
+        <a href="../blog/tag/devel.html">devel</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-1">
+        <a href="../blog/tag/development.html">development</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-1">
+        <a href="../blog/tag/dzen.html">dzen</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-2">
+        <a href="../blog/tag/emacs.html">emacs</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-1">
+        <a href="../blog/tag/evil.html">evil</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-1">
+        <a href="../blog/tag/feed.html">feed</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-1">
+        <a href="../blog/tag/focus.html">focus</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-1">
+        <a href="../blog/tag/fossil.html">fossil</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-4">
+        <a href="../blog/tag/gentoo.html">gentoo</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-2">
+        <a href="../blog/tag/git.html">git</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-1">
+        <a href="../blog/tag/gmail.html">gmail</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-1">
+        <a href="../blog/tag/gps.html">gps</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-1">
+        <a href="../blog/tag/history.html">history</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-1">
+        <a href="../blog/tag/hobbies.html">hobbies</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-1">
+        <a href="../blog/tag/imv.html">imv</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-1">
+        <a href="../blog/tag/jnrowe-misc.html">jnrowe-misc</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-1">
+        <a href="../blog/tag/languages.html">languages</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-5">
+        <a href="../blog/tag/life.html">life</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-4">
+        <a href="../blog/tag/linux.html">linux</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-2">
+        <a href="../blog/tag/mail.html">mail</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-1">
+        <a href="../blog/tag/make.html">make</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-3">
+        <a href="../blog/tag/mutt.html">mutt</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-1">
+        <a href="../blog/tag/net.html">net</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-1">
+        <a href="../blog/tag/ninja.html">ninja</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-1">
+        <a href="../blog/tag/noise.html">noise</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-1">
+        <a href="../blog/tag/oss.html">oss</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-1">
+        <a href="../blog/tag/personal.html">personal</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-1">
+        <a href="../blog/tag/pipes.html">pipes</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-2">
+        <a href="../blog/tag/politics.html">politics</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-1">
+        <a href="../blog/tag/privacy.html">privacy</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-1">
+        <a href="../blog/tag/probit.html">probit</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-3">
+        <a href="../blog/tag/projects.html">projects</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-2">
+        <a href="../blog/tag/puzzles.html">puzzles</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-1">
+        <a href="../blog/tag/python.html">python</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-1">
+        <a href="../blog/tag/qmv.html">qmv</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-2">
+        <a href="../blog/tag/readline.html">readline</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-1">
+        <a href="../blog/tag/redo.html">redo</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-1">
+        <a href="../blog/tag/remind.html">remind</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-1">
+        <a href="../blog/tag/renameutils.html">renameutils</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-1">
+        <a href="../blog/tag/site.html">site</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-2">
+        <a href="../blog/tag/software.html">software</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-5">
+        <a href="../blog/tag/styling.html">styling</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-1">
+        <a href="../blog/tag/sup.html">sup</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-1">
+        <a href="../blog/tag/tabbed.html">tabbed</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-1">
+        <a href="../blog/tag/testing.html">testing</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-1">
+        <a href="../blog/tag/three.html">three</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-1">
+        <a href="../blog/tag/tiling.html">tiling</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-1">
+        <a href="../blog/tag/time.html">time</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-2">
+        <a href="../blog/tag/tools.html">tools</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-2">
+        <a href="../blog/tag/unix.html">unix</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-4">
+        <a href="../blog/tag/vcs.html">vcs</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-5">
+        <a href="../blog/tag/vim.html">vim</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-1">
+        <a href="../blog/tag/web.html">web</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-3">
+        <a href="../blog/tag/work.html">work</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-1">
+        <a href="../blog/tag/yahoo.html">yahoo</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-1">
+        <a href="../blog/tag/zsh.html">zsh</a></li>
+      
+    
+  </ul>
+
+  <h3><a href="../blog/archive.html">Archives</a></h3>
+  <ul>
+  
+    
+    <li><a href="../blog/2019.html">2019 (1)</a></li>
+    
+  
+    
+    <li><a href="../blog/2018.html">2018 (11)</a></li>
+    
+  
+    
+    <li><a href="../blog/2017.html">2017 (1)</a></li>
+    
+  
+    
+    <li><a href="../blog/2014.html">2014 (12)</a></li>
+    
+  
+    
+    <li><a href="../blog/2013.html">2013 (2)</a></li>
+    
+  
+    
+    <li><a href="../blog/2011.html">2011 (1)</a></li>
+    
+  
+    
+    <li><a href="../blog/2010.html">2010 (2)</a></li>
+    
+  
+    
+    <li><a href="../blog/2009.html">2009 (24)</a></li>
+    
+  
+    
+    <li><a href="../blog/2007.html">2007 (2)</a></li>
+    
+  
+    
+    <li><a href="../blog/2003.html">2003 (1)</a></li>
+    
+  
+  </ul>
+
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    </div>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2009-2019  James Rowe,
+      <a href="http://creativecommons.org/licenses/by-sa/4.0/" rel="license">
+          Creative Commons Attribution-ShareAlike 4.0
+      </a> license.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.8.1</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+    </div>
+
+    
+
+    
+  </body>
+</html>
