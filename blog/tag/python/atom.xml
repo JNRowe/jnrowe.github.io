@@ -6,7 +6,7 @@
   <link href="https://jnrowe.github.io/" />
   <link href="https://jnrowe.github.io/blog/tag/python/atom.xml" rel="self" />
   <subtitle type="text">Ramblings of a tired mind</subtitle>
-  <generator uri="http://ablog.readthedocs.org" version="0.9.3">ABlog</generator>
+  <generator uri="http://ablog.readthedocs.org" version="0.9.4">ABlog</generator>
   <entry xml:base="https://jnrowe.github.io/blog/tag/python/atom.xml">
     <title type="text">Debugging Python RegEx</title>
     <id>https://jnrowe.github.io/articles/tips/Debugging_python_regexps.html</id>

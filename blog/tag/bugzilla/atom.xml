@@ -6,7 +6,7 @@
   <link href="https://jnrowe.github.io/" />
   <link href="https://jnrowe.github.io/blog/tag/bugzilla/atom.xml" rel="self" />
   <subtitle type="text">Ramblings of a tired mind</subtitle>
-  <generator uri="http://ablog.readthedocs.org" version="0.9.3">ABlog</generator>
+  <generator uri="http://ablog.readthedocs.org" version="0.9.4">ABlog</generator>
   <entry xml:base="https://jnrowe.github.io/blog/tag/bugzilla/atom.xml">
     <title type="text">Bugzilla mail with real names</title>
     <id>https://jnrowe.github.io/articles/tips/Bugzilla_real_names.html</id>
