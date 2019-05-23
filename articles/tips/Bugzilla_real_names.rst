@@ -20,8 +20,8 @@ lbdb_.
 but it does not require you to use or even install :command:`mutt`.  What we
 are going to do is use :command:`lbdb` and our own incoming mail to seed an
 email-to-name database for our bugspam filtering.  We don’t even need to
-configure lbdb to use it for our purposes, although I do recommend giving the
-package a try even if you use another mail client.
+configure :command:`lbdb` to use it for our purposes, although I do recommend
+giving the package a try even if you use another mail client.
 
 The :command:`lbdb` tool we want to use is :command:`lbdb-fetchaddr` which is
 designed to generate an address search database for the :command:`lbdb`
