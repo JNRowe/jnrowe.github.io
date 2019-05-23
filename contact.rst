@@ -20,7 +20,7 @@ Contact details
     <p class="p-note">
         I’m
         <a href="https://jnrowe.github.io/" class="u-url" rel="me">
-            <span class="p-name">James Rowe</a>
+            <span class="p-name">James Rowe</span>
         </a>, a
         <span class="p-job-title">Senior <span class="p-role">Developer</span></span>
         with
