@@ -20,6 +20,12 @@ for processing all that content aren’t good enough, so I’m going to mention 
 of the techniques I use.  Maybe it will help you, or maybe you’ll `suggest
 a better idea`_ to me.
 
+.. note::
+
+    Now that Yahoo have shut down Pipes, I’m even more interested in
+    alternatives options.  If you know of any interesting tools to do similar
+    tasks :doc:`get in touch <../contact>`.
+
 The feeds
 ---------
 
