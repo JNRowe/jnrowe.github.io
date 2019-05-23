@@ -70,9 +70,9 @@ the ordinal_ for ``0`` and ``9`` respectively.  Following that we see a match
 for ``literal 91``, ``chr(91)`` shows us that the character we are matching is
 a ``[``.  With this information it is easy to see where the problem is.
 
-If you need to use more than one flag, such as often useful :data:`re.VERBOSE`
-flag, you can combine them with ``|`` (bitwise OR) as the flags are just named
-constants(``DEBUG`` is 128 for example).
+If you need to use more than one flag, such as the often useful
+:data:`re.VERBOSE` flag, you can combine them with ``|`` (bitwise OR) as the
+flags are just named constants(``DEBUG`` is 128 for example).
 
 ::
 

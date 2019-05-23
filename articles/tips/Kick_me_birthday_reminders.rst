@@ -23,8 +23,8 @@ to practically anything with only a small Python_ script using
 :command:`remind` is a functional **to the point of insanity** text-based
 reminder tool.  I use it mainly to remind me of tasks that need completing when
 I login, although I do have a hook in awesome_ to display the :command:`remind`
-output at other times.  Again the file format is quite sensible which makes
-writing importers and exporters simple enough.  As an example, I generate my
+output at other times.  The file format is simple and expressive which makes
+writing importers and exporters easy enough.  As an example, I generate my
 :file:`~/.reminders.d/meetings` file from a hCalender_ page.
 
 .. image:: /.images/2009-09-26-abook_screenshot-mini.png
