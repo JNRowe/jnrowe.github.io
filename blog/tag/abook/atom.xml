@@ -107,8 +107,8 @@ to practically anything with only a small &lt;a class=&quot;reference external&q
 &lt;p&gt;&lt;strong class=&quot;command&quot;&gt;remind&lt;/strong&gt; is a functional &lt;strong&gt;to the point of insanity&lt;/strong&gt; text-based
 reminder tool.  I use it mainly to remind me of tasks that need completing when
 I login, although I do have a hook in &lt;a class=&quot;reference external&quot; href=&quot;https://awesomewm.org/&quot;&gt;awesome&lt;/a&gt; to display the &lt;strong class=&quot;command&quot;&gt;remind&lt;/strong&gt;
-output at other times.  Again the file format is quite sensible which makes
-writing importers and exporters simple enough.  As an example, I generate my
+output at other times.  The file format is simple and expressive which makes
+writing importers and exporters easy enough.  As an example, I generate my
 &lt;code class=&quot;file docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;~/.reminders.d/meetings&lt;/span&gt;&lt;/code&gt; file from a &lt;a class=&quot;reference external&quot; href=&quot;http://microformats.org/wiki/hcalendar&quot;&gt;hCalender&lt;/a&gt; page.&lt;/p&gt;
 &lt;img alt=&quot;abook displaying custom tab&quot; src=&quot;../../_images/2009-09-26-abook_screenshot-mini.png&quot; /&gt;
 &lt;p&gt;Now the birthday trick is a cool one, &lt;strong class=&quot;command&quot;&gt;abook&lt;/strong&gt; allows the use of custom
