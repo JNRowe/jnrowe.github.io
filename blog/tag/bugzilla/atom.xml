@@ -33,8 +33,8 @@ mail easily, and the second is that you install
 but it does not require you to use or even install &lt;strong class=&quot;command&quot;&gt;mutt&lt;/strong&gt;.  What we
 are going to do is use &lt;strong class=&quot;command&quot;&gt;lbdb&lt;/strong&gt; and our own incoming mail to seed an
 email-to-name database for our bugspam filtering.  We don’t even need to
-configure lbdb to use it for our purposes, although I do recommend giving the
-package a try even if you use another mail client.&lt;/p&gt;
+configure &lt;strong class=&quot;command&quot;&gt;lbdb&lt;/strong&gt; to use it for our purposes, although I do recommend
+giving the package a try even if you use another mail client.&lt;/p&gt;
 &lt;p&gt;The &lt;strong class=&quot;command&quot;&gt;lbdb&lt;/strong&gt; tool we want to use is &lt;strong class=&quot;command&quot;&gt;lbdb-fetchaddr&lt;/strong&gt; which is
 designed to generate an address search database for the &lt;strong class=&quot;command&quot;&gt;lbdb&lt;/strong&gt;
 &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;m_inmail&lt;/span&gt;&lt;/code&gt; method.  &lt;strong class=&quot;command&quot;&gt;lbdb-fetchaddr&lt;/strong&gt; keeps a text database of all
