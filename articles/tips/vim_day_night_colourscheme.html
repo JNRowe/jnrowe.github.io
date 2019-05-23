@@ -128,8 +128,10 @@ Location: <span class="m">52</span>.2 N, <span class="m">0</span>.2 E
 Period: Night
 Colour temperature: 4500K
 Brightness: <span class="m">1</span>.00
-$ redshift -p <span class="m">2</span>&gt;/dev/null <span class="p">|</span> sed -n <span class="s1">&#39;/^Period/s,\(.*\): \(.*\),\U\1=\L\2,p&#39;</span>
-<span class="nv">PERIOD</span><span class="o">=</span>night
+$ redshift -p <span class="m">2</span>&gt;/dev/null <span class="p">|</span> sed -E <span class="s1">&#39;/:/s,(.*): (.*),\U\1\E=&quot;\2&quot;, ; s,(\b) (\b),\1_\2,g&#39;</span>
+<span class="nv">PERIOD</span><span class="o">=</span><span class="s2">&quot;Night&quot;</span>
+<span class="nv">COLOUR_TEMPERATURE</span><span class="o">=</span><span class="s2">&quot;4500K&quot;</span>
+<span class="nv">BRIGHTNESS</span><span class="o">=</span><span class="s2">&quot;1.00&quot;</span>
 </pre></div>
 </div>
 <p>Another option might be to use <strong class="command">redshift</strong>’s hook support, see the man

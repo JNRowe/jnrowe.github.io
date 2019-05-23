@@ -2243,8 +2243,10 @@ Location: &lt;span class=&quot;m&quot;&gt;52&lt;/span&gt;.2 N, &lt;span class=&q
 Period: Night
 Colour temperature: 4500K
 Brightness: &lt;span class=&quot;m&quot;&gt;1&lt;/span&gt;.00
-$ redshift -p &lt;span class=&quot;m&quot;&gt;2&lt;/span&gt;&amp;gt;/dev/null &lt;span class=&quot;p&quot;&gt;|&lt;/span&gt; sed -n &lt;span class=&quot;s1&quot;&gt;&amp;#39;/^Period/s,\(.*\): \(.*\),\U\1=\L\2,p&amp;#39;&lt;/span&gt;
-&lt;span class=&quot;nv&quot;&gt;PERIOD&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;night
+$ redshift -p &lt;span class=&quot;m&quot;&gt;2&lt;/span&gt;&amp;gt;/dev/null &lt;span class=&quot;p&quot;&gt;|&lt;/span&gt; sed -E &lt;span class=&quot;s1&quot;&gt;&amp;#39;/:/s,(.*): (.*),\U\1\E=&amp;quot;\2&amp;quot;, ; s,(\b) (\b),\1_\2,g&amp;#39;&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;PERIOD&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;Night&amp;quot;&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;COLOUR_TEMPERATURE&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;4500K&amp;quot;&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;BRIGHTNESS&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;1.00&amp;quot;&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
 &lt;p&gt;Another option might be to use &lt;strong class=&quot;command&quot;&gt;redshift&lt;/strong&gt;’s hook support, see the man
