@@ -972,7 +972,7 @@ generate &lt;a class=&quot;reference external&quot; href=&quot;http://www.lua.or
 by other &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;lua&lt;/span&gt;&lt;/code&gt; scripts to test an implementation.  Its main purpose was to
 allow early experimentation without the expense and time of waiting for
 hardware re-fabrication.&lt;/p&gt;
-&lt;div class=&quot;figure&quot; id=&quot;id7&quot;&gt;
+&lt;div class=&quot;figure align-center&quot; id=&quot;id7&quot;&gt;
 &lt;img alt=&quot;sandfly debug architecture&quot; src=&quot;_images/sandfly_use.png&quot; style=&quot;width: 279.5px; height: 358.0px;&quot; /&gt;
 &lt;p class=&quot;caption&quot;&gt;&lt;span class=&quot;caption-text&quot;&gt;As you can see from example usage, it’s source-to-source all the way down.
 If I’m writing &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;lua&lt;/span&gt;&lt;/code&gt; I’m using &lt;a class=&quot;reference external&quot; href=&quot;https://github.com/leafo/moonscript/&quot;&gt;moonscript&lt;/a&gt;, and so should you!&lt;/span&gt;&lt;/p&gt;
@@ -1221,7 +1221,7 @@ to &lt;strong class=&quot;command&quot;&gt;ninja&lt;/strong&gt;.&lt;/p&gt;
 &lt;span class=&quot;go&quot;&gt;423&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
-&lt;div class=&quot;figure&quot; id=&quot;id15&quot;&gt;
+&lt;div class=&quot;figure align-center&quot; id=&quot;id15&quot;&gt;
 &lt;img alt=&quot;Digraph of home directory’s top level build&quot; src=&quot;_images/homeninja.png&quot; style=&quot;width: 390.25px; height: 186.25px;&quot; /&gt;
 &lt;p class=&quot;caption&quot;&gt;&lt;span class=&quot;caption-text&quot;&gt;A chunk of the &lt;abbr title=&quot;Directed Acyclic Graph&quot;&gt;DAG&lt;/abbr&gt; for my home directory under &lt;strong class=&quot;command&quot;&gt;ninja&lt;/strong&gt;.  The full image is
 both &lt;em&gt;chock full&lt;/em&gt; of private data and 9 &lt;abbr title=&quot;MegaBytes&quot;&gt;MB&lt;/abbr&gt;(29000 pixels
@@ -1245,7 +1245,7 @@ work is below:&lt;/p&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
 &lt;p&gt;Of course we’re making trade offs at this point, and they are basically:&lt;/p&gt;
-&lt;table class=&quot;docutils&quot;&gt;
+&lt;table class=&quot;docutils align-center&quot;&gt;
 &lt;colgroup&gt;
 &lt;col style=&quot;width: 19%&quot; /&gt;
 &lt;col style=&quot;width: 29%&quot; /&gt;
@@ -1445,7 +1445,7 @@ MacOS, so we’ll need to make something similar.&lt;/p&gt;
             emulation.
         &lt;/span&gt;
     &lt;/p&gt;
-&lt;/div&gt;&lt;div class=&quot;figure&quot; id=&quot;id3&quot;&gt;
+&lt;/div&gt;&lt;div class=&quot;figure align-center&quot; id=&quot;id3&quot;&gt;
 &lt;a class=&quot;reference external image-reference&quot; href=&quot;../_static/kitt.gif&quot;&gt;&lt;img alt=&quot;Multi-band scanner in action&quot; src=&quot;_images/kitt06.png&quot; /&gt;&lt;/a&gt;
 &lt;p class=&quot;caption&quot;&gt;&lt;span class=&quot;caption-text&quot;&gt;Click the image for an animated GIF, I’ll spare you the flashing lights in
 case you wish to read on.&lt;/span&gt;&lt;/p&gt;
@@ -1599,21 +1599,16 @@ change:&lt;/p&gt;
 &lt;p&gt;In &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;vim&lt;/span&gt;&lt;/code&gt;, you can execute &lt;kbd class=&quot;kbd docutils literal notranslate&quot;&gt;ciw&amp;lt;C-r&amp;gt;=&amp;#64;&amp;quot;/2&amp;lt;CR&amp;gt;&lt;/kbd&gt; to cleave the number.  The
 command itself is saying:&lt;/p&gt;
 &lt;dl class=&quot;simple&quot;&gt;
-&lt;dt&gt;&lt;kbd class=&quot;kbd docutils literal notranslate&quot;&gt;ciw&lt;/kbd&gt;&lt;/dt&gt;
-&lt;dd&gt;&lt;p&gt;Change the word my cursor is on(&lt;kbd class=&quot;kbd docutils literal notranslate&quot;&gt;c&lt;/kbd&gt;hange &lt;kbd class=&quot;kbd docutils literal notranslate&quot;&gt;i&lt;/kbd&gt;nner &lt;kbd class=&quot;kbd docutils literal notranslate&quot;&gt;w&lt;/kbd&gt;ord)&lt;/p&gt;
+&lt;dt&gt;&lt;kbd class=&quot;kbd docutils literal notranslate&quot;&gt;ciw&lt;/kbd&gt;&lt;/dt&gt;&lt;dd&gt;&lt;p&gt;Change the word my cursor is on(&lt;kbd class=&quot;kbd docutils literal notranslate&quot;&gt;c&lt;/kbd&gt;hange &lt;kbd class=&quot;kbd docutils literal notranslate&quot;&gt;i&lt;/kbd&gt;nner &lt;kbd class=&quot;kbd docutils literal notranslate&quot;&gt;w&lt;/kbd&gt;ord)&lt;/p&gt;
 &lt;/dd&gt;
-&lt;dt&gt;&lt;kbd class=&quot;kbd docutils literal notranslate&quot;&gt;&amp;lt;C-r&amp;gt;=&lt;/kbd&gt;&lt;/dt&gt;
-&lt;dd&gt;&lt;p&gt;Insert the result of an expression(see &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;:h&lt;/span&gt; &lt;span class=&quot;pre&quot;&gt;i_CTRL-R_=&lt;/span&gt;&lt;/code&gt; for awesomeness)&lt;/p&gt;
+&lt;dt&gt;&lt;kbd class=&quot;kbd docutils literal notranslate&quot;&gt;&amp;lt;C-r&amp;gt;=&lt;/kbd&gt;&lt;/dt&gt;&lt;dd&gt;&lt;p&gt;Insert the result of an expression(see &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;:h&lt;/span&gt; &lt;span class=&quot;pre&quot;&gt;i_CTRL-R_=&lt;/span&gt;&lt;/code&gt; for awesomeness)&lt;/p&gt;
 &lt;/dd&gt;
-&lt;dt&gt;&lt;kbd class=&quot;kbd docutils literal notranslate&quot;&gt;&amp;#64;&amp;quot;&lt;/kbd&gt;&lt;/dt&gt;
-&lt;dd&gt;&lt;p&gt;Use the text from last filled register, ie the text we just marked to be
+&lt;dt&gt;&lt;kbd class=&quot;kbd docutils literal notranslate&quot;&gt;&amp;#64;&amp;quot;&lt;/kbd&gt;&lt;/dt&gt;&lt;dd&gt;&lt;p&gt;Use the text from last filled register, ie the text we just marked to be
 changed&lt;/p&gt;
 &lt;/dd&gt;
-&lt;dt&gt;&lt;kbd class=&quot;kbd docutils literal notranslate&quot;&gt;/2&lt;/kbd&gt;&lt;/dt&gt;
-&lt;dd&gt;&lt;p&gt;Half it&lt;/p&gt;
+&lt;dt&gt;&lt;kbd class=&quot;kbd docutils literal notranslate&quot;&gt;/2&lt;/kbd&gt;&lt;/dt&gt;&lt;dd&gt;&lt;p&gt;Half it&lt;/p&gt;
 &lt;/dd&gt;
-&lt;dt&gt;&lt;kbd class=&quot;kbd docutils literal notranslate&quot;&gt;&amp;lt;CR&amp;gt;&lt;/kbd&gt;&lt;/dt&gt;
-&lt;dd&gt;&lt;p&gt;Wow.&lt;/p&gt;
+&lt;dt&gt;&lt;kbd class=&quot;kbd docutils literal notranslate&quot;&gt;&amp;lt;CR&amp;gt;&lt;/kbd&gt;&lt;/dt&gt;&lt;dd&gt;&lt;p&gt;Wow.&lt;/p&gt;
 &lt;/dd&gt;
 &lt;/dl&gt;
 &lt;div class=&quot;highlight-c notranslate&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;magic_const&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;487&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
@@ -1751,7 +1746,7 @@ for me.&lt;/p&gt;
 of the application guard as above, you can even override bindings that you
 won’t find yourself using in &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;imv&lt;/span&gt;&lt;/code&gt; without breaking your shell or other
 tools.&lt;/p&gt;
-&lt;div class=&quot;figure&quot; id=&quot;id5&quot;&gt;
+&lt;div class=&quot;figure align-center&quot; id=&quot;id5&quot;&gt;
 &lt;a class=&quot;reference external image-reference&quot; href=&quot;https://xkcd.com/1806/&quot;&gt;&lt;img alt=&quot;Borrow Your Laptop&quot; src=&quot;_images/borrow_your_laptop.png&quot; style=&quot;width: 167.0px; height: 246.5px;&quot; /&gt;&lt;/a&gt;
 &lt;p class=&quot;caption&quot;&gt;&lt;span class=&quot;caption-text&quot;&gt;As always, &lt;a class=&quot;reference external&quot; href=&quot;https://xkcd.com/&quot;&gt;xkcd&lt;/a&gt; has a pre-canned explanation for why you shouldn’t listen
 to me.  Image: &lt;a class=&quot;reference external&quot; href=&quot;http://creativecommons.org/licenses/by-nc/2.5/&quot;&gt;CC by-nc&lt;/a&gt;.&lt;/span&gt;&lt;/p&gt;
@@ -1965,11 +1960,11 @@ part of the puzzles in my opinion.&lt;/p&gt;
 &lt;/div&gt;
 &lt;div class=&quot;section&quot; id=&quot;implementation&quot;&gt;
 &lt;h2&gt;Implementation&lt;/h2&gt;
-&lt;div class=&quot;figure&quot; id=&quot;id9&quot;&gt;
+&lt;div class=&quot;figure align-center&quot; id=&quot;id9&quot;&gt;
 &lt;img alt=&quot;Languages used for tasks&quot; src=&quot;_images/2018-10-19-aoc_calendar.png&quot; style=&quot;width: 273.5px; height: 181.0px;&quot; /&gt;
 &lt;p class=&quot;caption&quot;&gt;&lt;span class=&quot;caption-text&quot;&gt;Language frequency for &lt;abbr title=&quot;Advent of Code&quot;&gt;AoC&lt;/abbr&gt; puzzles&lt;/span&gt;&lt;/p&gt;
 &lt;div class=&quot;legend&quot;&gt;
-&lt;table class=&quot;docutils&quot;&gt;
+&lt;table class=&quot;docutils align-center&quot;&gt;
 &lt;colgroup&gt;
 &lt;col style=&quot;width: 26%&quot; /&gt;
 &lt;col style=&quot;width: 35%&quot; /&gt;

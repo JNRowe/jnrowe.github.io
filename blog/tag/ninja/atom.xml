@@ -193,7 +193,7 @@ to &lt;strong class=&quot;command&quot;&gt;ninja&lt;/strong&gt;.&lt;/p&gt;
 &lt;span class=&quot;go&quot;&gt;423&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
-&lt;div class=&quot;figure&quot; id=&quot;id15&quot;&gt;
+&lt;div class=&quot;figure align-center&quot; id=&quot;id15&quot;&gt;
 &lt;img alt=&quot;Digraph of home directory’s top level build&quot; src=&quot;../../_images/homeninja.png&quot; style=&quot;width: 390.25px; height: 186.25px;&quot; /&gt;
 &lt;p class=&quot;caption&quot;&gt;&lt;span class=&quot;caption-text&quot;&gt;A chunk of the &lt;abbr title=&quot;Directed Acyclic Graph&quot;&gt;DAG&lt;/abbr&gt; for my home directory under &lt;strong class=&quot;command&quot;&gt;ninja&lt;/strong&gt;.  The full image is
 both &lt;em&gt;chock full&lt;/em&gt; of private data and 9 &lt;abbr title=&quot;MegaBytes&quot;&gt;MB&lt;/abbr&gt;(29000 pixels
@@ -217,7 +217,7 @@ work is below:&lt;/p&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
 &lt;p&gt;Of course we’re making trade offs at this point, and they are basically:&lt;/p&gt;
-&lt;table class=&quot;docutils&quot;&gt;
+&lt;table class=&quot;docutils align-center&quot;&gt;
 &lt;colgroup&gt;
 &lt;col style=&quot;width: 19%&quot; /&gt;
 &lt;col style=&quot;width: 29%&quot; /&gt;

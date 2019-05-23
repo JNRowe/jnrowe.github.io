@@ -42,7 +42,7 @@ tasks &lt;a class=&quot;reference internal&quot; href=&quot;../contact.html&quot
 &lt;a class=&quot;reference external&quot; href=&quot;http://planet.gentoo.org/&quot;&gt;Planet Gentoo&lt;/a&gt;, &lt;a class=&quot;reference external&quot; href=&quot;http://planet.haskell.org/&quot;&gt;Planet Haskell&lt;/a&gt; and &lt;a class=&quot;reference external&quot; href=&quot;http://planet.python.org/&quot;&gt;Planet Python&lt;/a&gt;.  These planets
 syndicate a large number of feeds, see the table below for a breakdown of
 yesterday.&lt;/p&gt;
-&lt;table class=&quot;docutils&quot;&gt;
+&lt;table class=&quot;docutils align-center&quot;&gt;
 &lt;colgroup&gt;
 &lt;col style=&quot;width: 65%&quot; /&gt;
 &lt;col style=&quot;width: 35%&quot; /&gt;

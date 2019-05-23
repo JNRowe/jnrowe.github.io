@@ -235,7 +235,7 @@ reason we display exactly 12 characters of the spam value is so that the
 columns line up correctly regardless of whether we display a date or a spam
 value.  An example can be seen on the right featuring a few snippets from a ham
 mailbox and my spam mailbox:&lt;/p&gt;
-&lt;div class=&quot;figure&quot;&gt;
+&lt;div class=&quot;figure align-center&quot;&gt;
 &lt;img alt=&quot;Spam field alignment in :command:`mutt`&quot; src=&quot;../../_images/mutt_spam.png&quot; /&gt;
 &lt;/div&gt;
 &lt;p&gt;The final, and perhaps most interesting, file is &lt;code class=&quot;file docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;score.rc&lt;/span&gt;&lt;/code&gt; where

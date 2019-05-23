@@ -218,7 +218,7 @@ telling in itself.&lt;/p&gt;
 &lt;h2&gt;Repository state&lt;/h2&gt;
 &lt;p&gt;The “funky arrows” Dan asks about are dependent on the state of the current
 working directory as can be seen in the screenshot at the top of this page.&lt;/p&gt;
-&lt;table class=&quot;docutils&quot;&gt;
+&lt;table class=&quot;docutils align-center&quot;&gt;
 &lt;colgroup&gt;
 &lt;col style=&quot;width: 20%&quot; /&gt;
 &lt;col style=&quot;width: 80%&quot; /&gt;

@@ -12,7 +12,7 @@
     <script type="text/javascript" src="../_static/jquery.js"></script>
     <script type="text/javascript" src="../_static/underscore.js"></script>
     <script type="text/javascript" src="../_static/doctools.js"></script>
-    
+    <script type="text/javascript" src="../_static/language_data.js"></script>
     <link rel="canonical" href="https://jnrowe.github.io/articles/evil_emacs_steals_my_heart.html" />
     <link rel="shortcut icon" href="../_static/icon.ico"/>
     <link rel="index" title="Index" href="../genindex.html" />
@@ -83,21 +83,16 @@ change:</p>
 <p>In <code class="docutils literal notranslate"><span class="pre">vim</span></code>, you can execute <kbd class="kbd docutils literal notranslate">ciw&lt;C-r&gt;=&#64;&quot;/2&lt;CR&gt;</kbd> to cleave the number.  The
 command itself is saying:</p>
 <dl class="simple">
-<dt><kbd class="kbd docutils literal notranslate">ciw</kbd></dt>
-<dd><p>Change the word my cursor is on(<kbd class="kbd docutils literal notranslate">c</kbd>hange <kbd class="kbd docutils literal notranslate">i</kbd>nner <kbd class="kbd docutils literal notranslate">w</kbd>ord)</p>
+<dt><kbd class="kbd docutils literal notranslate">ciw</kbd></dt><dd><p>Change the word my cursor is on(<kbd class="kbd docutils literal notranslate">c</kbd>hange <kbd class="kbd docutils literal notranslate">i</kbd>nner <kbd class="kbd docutils literal notranslate">w</kbd>ord)</p>
 </dd>
-<dt><kbd class="kbd docutils literal notranslate">&lt;C-r&gt;=</kbd></dt>
-<dd><p>Insert the result of an expression(see <code class="docutils literal notranslate"><span class="pre">:h</span> <span class="pre">i_CTRL-R_=</span></code> for awesomeness)</p>
+<dt><kbd class="kbd docutils literal notranslate">&lt;C-r&gt;=</kbd></dt><dd><p>Insert the result of an expression(see <code class="docutils literal notranslate"><span class="pre">:h</span> <span class="pre">i_CTRL-R_=</span></code> for awesomeness)</p>
 </dd>
-<dt><kbd class="kbd docutils literal notranslate">&#64;&quot;</kbd></dt>
-<dd><p>Use the text from last filled register, ie the text we just marked to be
+<dt><kbd class="kbd docutils literal notranslate">&#64;&quot;</kbd></dt><dd><p>Use the text from last filled register, ie the text we just marked to be
 changed</p>
 </dd>
-<dt><kbd class="kbd docutils literal notranslate">/2</kbd></dt>
-<dd><p>Half it</p>
+<dt><kbd class="kbd docutils literal notranslate">/2</kbd></dt><dd><p>Half it</p>
 </dd>
-<dt><kbd class="kbd docutils literal notranslate">&lt;CR&gt;</kbd></dt>
-<dd><p>Wow.</p>
+<dt><kbd class="kbd docutils literal notranslate">&lt;CR&gt;</kbd></dt><dd><p>Wow.</p>
 </dd>
 </dl>
 <div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="kt">int</span> <span class="n">magic_const</span> <span class="o">=</span> <span class="mi">487</span><span class="p">;</span>
@@ -777,8 +772,6 @@ pressed <kbd class="kbd docutils literal notranslate">&lt;C-x&gt;$something</kbd
     <form class="search" action="../search.html" method="get">
       <input type="text" name="q" />
       <input type="submit" value="Go" />
-      <input type="hidden" name="check_keywords" value="yes" />
-      <input type="hidden" name="area" value="default" />
     </form>
     </div>
 </div>
@@ -794,7 +787,7 @@ pressed <kbd class="kbd docutils literal notranslate">&lt;C-x&gt;$something</kbd
       </a> license.
       
       |
-      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.8.1</a>
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 2.0.1</a>
       &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
       
     </div>

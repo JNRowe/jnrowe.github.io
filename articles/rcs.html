@@ -12,7 +12,7 @@
     <script type="text/javascript" src="../_static/jquery.js"></script>
     <script type="text/javascript" src="../_static/underscore.js"></script>
     <script type="text/javascript" src="../_static/doctools.js"></script>
-    
+    <script type="text/javascript" src="../_static/language_data.js"></script>
     <link rel="canonical" href="https://jnrowe.github.io/articles/rcs.html" />
     <link rel="shortcut icon" href="../_static/icon.ico"/>
     <link rel="index" title="Index" href="../genindex.html" />
@@ -169,14 +169,11 @@ check in, the person who checked in the file, the state of the file and the
 owner of the lock(if any).</p>
 <p>There are many keywords available, including:</p>
 <dl class="simple">
-<dt><code class="docutils literal notranslate"><span class="pre">$Author$</span></code></dt>
-<dd><p>The name of the person who did the check in</p>
+<dt><code class="docutils literal notranslate"><span class="pre">$Author$</span></code></dt><dd><p>The name of the person who did the check in</p>
 </dd>
-<dt><code class="docutils literal notranslate"><span class="pre">$Header$</span></code></dt>
-<dd><p>The same as <code class="docutils literal notranslate"><span class="pre">$Id$</span></code> but including the path for the file</p>
+<dt><code class="docutils literal notranslate"><span class="pre">$Header$</span></code></dt><dd><p>The same as <code class="docutils literal notranslate"><span class="pre">$Id$</span></code> but including the path for the file</p>
 </dd>
-<dt><code class="docutils literal notranslate"><span class="pre">$Log$</span></code></dt>
-<dd><p>A full changelog for file from the <strong class="command">ci</strong> annotations</p>
+<dt><code class="docutils literal notranslate"><span class="pre">$Log$</span></code></dt><dd><p>A full changelog for file from the <strong class="command">ci</strong> annotations</p>
 </dd>
 </dl>
 <p>Although using <code class="docutils literal notranslate"><span class="pre">$Log$</span></code> seems like a good idea it does mean the size of the
@@ -306,7 +303,7 @@ have made, maybe to help you build your changelog information.</p></li>
 </div>
 <div class="section" id="advanced">
 <h2>Advanced<a class="headerlink" href="#advanced" title="Permalink to this headline">¶</a></h2>
-<div class="figure">
+<div class="figure align-center">
 <a class="reference internal image-reference" href="../_images/rcsi.png"><img alt="rcsi screenshot" src="../_images/rcsi.png" style="width: 500px; height: 114px;" /></a>
 </div>
 <p>There are many tools available that can help you to manage your <abbr title="GNU Revision Control System">RCS</abbr> files,
@@ -989,8 +986,6 @@ ranges.</p>
     <form class="search" action="../search.html" method="get">
       <input type="text" name="q" />
       <input type="submit" value="Go" />
-      <input type="hidden" name="check_keywords" value="yes" />
-      <input type="hidden" name="area" value="default" />
     </form>
     </div>
 </div>
@@ -1006,7 +1001,7 @@ ranges.</p>
       </a> license.
       
       |
-      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.8.1</a>
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 2.0.1</a>
       &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
       
     </div>

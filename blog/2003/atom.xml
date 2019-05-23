@@ -128,14 +128,11 @@ check in, the person who checked in the file, the state of the file and the
 owner of the lock(if any).&lt;/p&gt;
 &lt;p&gt;There are many keywords available, including:&lt;/p&gt;
 &lt;dl class=&quot;simple&quot;&gt;
-&lt;dt&gt;&lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;$Author$&lt;/span&gt;&lt;/code&gt;&lt;/dt&gt;
-&lt;dd&gt;&lt;p&gt;The name of the person who did the check in&lt;/p&gt;
+&lt;dt&gt;&lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;$Author$&lt;/span&gt;&lt;/code&gt;&lt;/dt&gt;&lt;dd&gt;&lt;p&gt;The name of the person who did the check in&lt;/p&gt;
 &lt;/dd&gt;
-&lt;dt&gt;&lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;$Header$&lt;/span&gt;&lt;/code&gt;&lt;/dt&gt;
-&lt;dd&gt;&lt;p&gt;The same as &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;$Id$&lt;/span&gt;&lt;/code&gt; but including the path for the file&lt;/p&gt;
+&lt;dt&gt;&lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;$Header$&lt;/span&gt;&lt;/code&gt;&lt;/dt&gt;&lt;dd&gt;&lt;p&gt;The same as &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;$Id$&lt;/span&gt;&lt;/code&gt; but including the path for the file&lt;/p&gt;
 &lt;/dd&gt;
-&lt;dt&gt;&lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;$Log$&lt;/span&gt;&lt;/code&gt;&lt;/dt&gt;
-&lt;dd&gt;&lt;p&gt;A full changelog for file from the &lt;strong class=&quot;command&quot;&gt;ci&lt;/strong&gt; annotations&lt;/p&gt;
+&lt;dt&gt;&lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;$Log$&lt;/span&gt;&lt;/code&gt;&lt;/dt&gt;&lt;dd&gt;&lt;p&gt;A full changelog for file from the &lt;strong class=&quot;command&quot;&gt;ci&lt;/strong&gt; annotations&lt;/p&gt;
 &lt;/dd&gt;
 &lt;/dl&gt;
 &lt;p&gt;Although using &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;$Log$&lt;/span&gt;&lt;/code&gt; seems like a good idea it does mean the size of the
@@ -265,7 +262,7 @@ have made, maybe to help you build your changelog information.&lt;/p&gt;&lt;/li&
 &lt;/div&gt;
 &lt;div class=&quot;section&quot; id=&quot;advanced&quot;&gt;
 &lt;h2&gt;Advanced&lt;/h2&gt;
-&lt;div class=&quot;figure&quot;&gt;
+&lt;div class=&quot;figure align-center&quot;&gt;
 &lt;img alt=&quot;rcsi screenshot&quot; src=&quot;../_images/rcsi.png&quot; style=&quot;width: 500px; height: 114px;&quot; /&gt;
 &lt;/div&gt;
 &lt;p&gt;There are many tools available that can help you to manage your &lt;abbr title=&quot;GNU Revision Control System&quot;&gt;RCS&lt;/abbr&gt; files,
