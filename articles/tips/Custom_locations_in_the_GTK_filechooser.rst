@@ -8,7 +8,7 @@ Custom keybindings in the GTK+ file dialogs
 
 .. highlight:: cpp
 
-In :ref:`Fancy_awesome_theming` I included a screenshot that, by accident more
+In :doc:`Fancy_awesome_theming` I included a screenshot that, by accident more
 than design, spawned today’s tip.
 
 .. image:: /.images/2009-10-01-gtkrc-mini.png
