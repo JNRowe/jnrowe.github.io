@@ -86,8 +86,10 @@ output for script usage:
     Period: Night
     Colour temperature: 4500K
     Brightness: 1.00
-    $ redshift -p 2>/dev/null | sed -n '/^Period/s,\(.*\): \(.*\),\U\1=\L\2,p'
-    PERIOD=night
+    $ redshift -p 2>/dev/null | sed -E '/:/s,(.*): (.*),\U\1\E="\2", ; s,(\b) (\b),\1_\2,g'
+    PERIOD="Night"
+    COLOUR_TEMPERATURE="4500K"
+    BRIGHTNESS="1.00"
 
 Another option might be to use :command:`redshift`’s hook support, see the man
 page for how to configure hooks.
