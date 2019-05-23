@@ -1,3 +1,6 @@
 .edit-page, .keybase-verify, .read-time {
     text-align: right;
 }
+.read-time {
+    font-size: smaller;
+}
