@@ -30,8 +30,6 @@ except ImportError:
 else:
     extensions.append('sphinxcontrib.spelling')
 
-master_doc = 'index'
-
 exclude_patterns = ['README.rst', '.build', 'draft']
 
 templates_path = ['.templates', ablog.get_html_templates_path()]
@@ -97,8 +95,6 @@ with suppress(CalledProcessError):
     html_last_updated_fmt = proc.stdout.decode()
 
 html_copy_source = False
-
-html_experimental_html5_writer = True
 # }}}
 
 # extlinks extension settings {{{
