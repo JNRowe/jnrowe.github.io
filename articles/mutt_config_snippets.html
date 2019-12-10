@@ -131,7 +131,7 @@ reason we display exactly 12 characters of the spam value is so that the
 columns line up correctly regardless of whether we display a date or a spam
 value.  An example can be seen on the right featuring a few snippets from a ham
 mailbox and my spam mailbox:</p>
-<div class="figure align-center">
+<div class="figure align-default">
 <img alt="Spam field alignment in :command:`mutt`" src="../_images/mutt_spam.png" />
 </div>
 <p>The final, and perhaps most interesting, file is <code class="file docutils literal notranslate"><span class="pre">score.rc</span></code> where
@@ -801,10 +801,10 @@ Happy <strong class="command">mutt</strong>’ing.</p>
   </ul>
 
 <div id="searchbox" style="display: none" role="search">
-  <h3>Quick search</h3>
+  <h3 id="searchlabel">Quick search</h3>
     <div class="searchformwrapper">
     <form class="search" action="../search.html" method="get">
-      <input type="text" name="q" />
+      <input type="text" name="q" aria-labelledby="searchlabel" />
       <input type="submit" value="Go" />
     </form>
     </div>
@@ -821,7 +821,7 @@ Happy <strong class="command">mutt</strong>’ing.</p>
       </a> license.
       
       |
-      Powered by <a href="http://sphinx-doc.org/">Sphinx 2.0.1</a>
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 2.2.0</a>
       &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
       
     </div>

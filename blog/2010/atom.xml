@@ -6,7 +6,7 @@
   <link href="https://jnrowe.github.io/" />
   <link href="https://jnrowe.github.io/blog/2010/atom.xml" rel="self" />
   <subtitle type="text">Ramblings of a tired mind</subtitle>
-  <generator uri="http://ablog.readthedocs.org" version="0.9.4">ABlog</generator>
+  <generator uri="https://ablog.readthedocs.org" version="0.10.0">ABlog</generator>
   <entry xml:base="https://jnrowe.github.io/blog/2010/atom.xml">
     <title type="text">Mangling planets</title>
     <id>https://jnrowe.github.io/articles/mangling_planets.html</id>
@@ -42,7 +42,7 @@ tasks &lt;a class=&quot;reference internal&quot; href=&quot;../contact.html&quot
 &lt;a class=&quot;reference external&quot; href=&quot;http://planet.gentoo.org/&quot;&gt;Planet Gentoo&lt;/a&gt;, &lt;a class=&quot;reference external&quot; href=&quot;http://planet.haskell.org/&quot;&gt;Planet Haskell&lt;/a&gt; and &lt;a class=&quot;reference external&quot; href=&quot;http://planet.python.org/&quot;&gt;Planet Python&lt;/a&gt;.  These planets
 syndicate a large number of feeds, see the table below for a breakdown of
 yesterday.&lt;/p&gt;
-&lt;table class=&quot;docutils align-center&quot;&gt;
+&lt;table class=&quot;docutils align-default&quot;&gt;
 &lt;colgroup&gt;
 &lt;col style=&quot;width: 65%&quot; /&gt;
 &lt;col style=&quot;width: 35%&quot; /&gt;
@@ -268,7 +268,7 @@ a few lines of code:&lt;/p&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
 &lt;p&gt;The script requires the excellent &lt;a class=&quot;reference external&quot; href=&quot;http://www.voidspace.org.uk/python/configobj.html&quot;&gt;configobj&lt;/a&gt; module.  You could also use the
-&lt;a class=&quot;reference external&quot; href=&quot;https://docs.python.org/3/library/configparser.html#module-configparser&quot; title=&quot;(in Python v3.7)&quot;&gt;&lt;code class=&quot;xref py py-mod docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;configparser&lt;/span&gt;&lt;/code&gt;&lt;/a&gt; module from the Python standard library, but &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;configobj&lt;/span&gt;&lt;/code&gt;
+&lt;a class=&quot;reference external&quot; href=&quot;https://docs.python.org/3/library/configparser.html#module-configparser&quot; title=&quot;(in Python v3.8)&quot;&gt;&lt;code class=&quot;xref py py-mod docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;configparser&lt;/span&gt;&lt;/code&gt;&lt;/a&gt; module from the Python standard library, but &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;configobj&lt;/span&gt;&lt;/code&gt;
 allows my laziness to shine through with its simple dictionary-based access to
 the parsed data.&lt;/p&gt;
 &lt;p&gt;The script opens either the named or default &lt;strong class=&quot;command&quot;&gt;abook&lt;/strong&gt; addressbook and

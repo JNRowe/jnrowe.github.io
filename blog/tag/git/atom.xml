@@ -6,7 +6,7 @@
   <link href="https://jnrowe.github.io/" />
   <link href="https://jnrowe.github.io/blog/tag/git/atom.xml" rel="self" />
   <subtitle type="text">Ramblings of a tired mind</subtitle>
-  <generator uri="http://ablog.readthedocs.org" version="0.9.4">ABlog</generator>
+  <generator uri="https://ablog.readthedocs.org" version="0.10.0">ABlog</generator>
   <entry xml:base="https://jnrowe.github.io/blog/tag/git/atom.xml">
     <title type="text">Zsh and the VCS</title>
     <id>https://jnrowe.github.io/articles/tips/Zsh_and_the_vcs.html</id>
@@ -79,7 +79,7 @@ telling in itself.&lt;/p&gt;
 &lt;h2&gt;Repository state&lt;/h2&gt;
 &lt;p&gt;The “funky arrows” Dan asks about are dependent on the state of the current
 working directory as can be seen in the screenshot at the top of this page.&lt;/p&gt;
-&lt;table class=&quot;docutils align-center&quot;&gt;
+&lt;table class=&quot;docutils align-default&quot;&gt;
 &lt;colgroup&gt;
 &lt;col style=&quot;width: 20%&quot; /&gt;
 &lt;col style=&quot;width: 80%&quot; /&gt;

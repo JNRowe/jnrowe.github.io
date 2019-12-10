@@ -6,7 +6,7 @@
   <link href="https://jnrowe.github.io/" />
   <link href="https://jnrowe.github.io/blog/tag/configs/atom.xml" rel="self" />
   <subtitle type="text">Ramblings of a tired mind</subtitle>
-  <generator uri="http://ablog.readthedocs.org" version="0.9.4">ABlog</generator>
+  <generator uri="https://ablog.readthedocs.org" version="0.10.0">ABlog</generator>
   <entry xml:base="https://jnrowe.github.io/blog/tag/configs/atom.xml">
     <title type="text">mutt configuration snippets</title>
     <id>https://jnrowe.github.io/articles/mutt_config_snippets.html</id>
@@ -90,7 +90,7 @@ reason we display exactly 12 characters of the spam value is so that the
 columns line up correctly regardless of whether we display a date or a spam
 value.  An example can be seen on the right featuring a few snippets from a ham
 mailbox and my spam mailbox:&lt;/p&gt;
-&lt;div class=&quot;figure align-center&quot;&gt;
+&lt;div class=&quot;figure align-default&quot;&gt;
 &lt;img alt=&quot;Spam field alignment in :command:`mutt`&quot; src=&quot;../../_images/mutt_spam.png&quot; /&gt;
 &lt;/div&gt;
 &lt;p&gt;The final, and perhaps most interesting, file is &lt;code class=&quot;file docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;score.rc&lt;/span&gt;&lt;/code&gt; where
@@ -192,7 +192,7 @@ class &amp;quot;GtkTextView&amp;quot; binding &amp;quot;gtk-emacs-text-entry&amp
 your &lt;code class=&quot;file docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;~/.gtkrc.mine&lt;/span&gt;&lt;/code&gt; so it isn’t overwritten when you change themes.  See
 the comments in your &lt;code class=&quot;file docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;~/.gtkrc-2.0&lt;/span&gt;&lt;/code&gt; if you use either of these theme
 switchers.&lt;/p&gt;
-&lt;div class=&quot;figure align-center&quot;&gt;
+&lt;div class=&quot;figure align-default&quot;&gt;
 &lt;img alt=&quot;XFce4 keyboard settings window&quot; src=&quot;../../_images/xfce4_keyboard.png&quot; /&gt;
 &lt;/div&gt;
 &lt;p&gt;If you’re an &lt;a class=&quot;reference external&quot; href=&quot;http://www.xfce.org/&quot;&gt;XFce&lt;/a&gt; user you can select the Emacs keyboard shortcuts using the

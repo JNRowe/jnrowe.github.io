@@ -89,7 +89,7 @@ the desktops we develop on and the laptops we play on.  The methods we use vary
 greatly, so I’m going to present the simple case of testing console applications
 only.  It is the practise that is important, not the process.</p>
 <p>The easiest method we use is via <a class="reference external" href="https://pypi.python.org/pypi/shelldoctest">shelldoctest</a>, a module that implements
-a <a class="reference external" href="https://docs.python.org/3/library/doctest.html#module-doctest" title="(in Python v3.7)"><code class="xref py py-mod docutils literal notranslate"><span class="pre">doctest</span></code></a> interface for testing shell commands.  The package provides
+a <a class="reference external" href="https://docs.python.org/3/library/doctest.html#module-doctest" title="(in Python v3.8)"><code class="xref py py-mod docutils literal notranslate"><span class="pre">doctest</span></code></a> interface for testing shell commands.  The package provides
 a user-level script for running shell sessions in Python docstrings.  A simple
 example could be:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="sd">&quot;&quot;&quot;</span>
@@ -177,7 +177,7 @@ Doing this encourages you to write nicely formatted documentation to accompany
 your tests.  You can also leverage your tests that are written in this way as
 documentation using the excellent <a class="reference external" href="http://sphinx-doc.org/">Sphinx</a> tool.</p>
 <p>The following script shows an extremely basic, yet fully functional, example of
-how to combine the <a class="reference external" href="https://docs.python.org/3/library/doctest.html#module-doctest" title="(in Python v3.7)"><code class="xref py py-mod docutils literal notranslate"><span class="pre">doctest</span></code></a> module’s <a class="reference external" href="https://docs.python.org/3/library/doctest.html#doctest.testfile" title="(in Python v3.7)"><code class="xref py py-func docutils literal notranslate"><span class="pre">testfile()</span></code></a> function
+how to combine the <a class="reference external" href="https://docs.python.org/3/library/doctest.html#module-doctest" title="(in Python v3.8)"><code class="xref py py-mod docutils literal notranslate"><span class="pre">doctest</span></code></a> module’s <a class="reference external" href="https://docs.python.org/3/library/doctest.html#doctest.testfile" title="(in Python v3.8)"><code class="xref py py-func docutils literal notranslate"><span class="pre">testfile()</span></code></a> function
 with <code class="docutils literal notranslate"><span class="pre">shelldoctest</span></code>:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="ch">#! /usr/bin/python -tt</span>
 <span class="kn">import</span> <span class="nn">doctest</span>
@@ -813,10 +813,10 @@ a <code class="docutils literal notranslate"><span class="pre">reST</span></code
   </ul>
 
 <div id="searchbox" style="display: none" role="search">
-  <h3>Quick search</h3>
+  <h3 id="searchlabel">Quick search</h3>
     <div class="searchformwrapper">
     <form class="search" action="../search.html" method="get">
-      <input type="text" name="q" />
+      <input type="text" name="q" aria-labelledby="searchlabel" />
       <input type="submit" value="Go" />
     </form>
     </div>
@@ -833,7 +833,7 @@ a <code class="docutils literal notranslate"><span class="pre">reST</span></code
       </a> license.
       
       |
-      Powered by <a href="http://sphinx-doc.org/">Sphinx 2.0.1</a>
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 2.2.0</a>
       &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
       
     </div>

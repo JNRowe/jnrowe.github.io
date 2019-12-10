@@ -72,7 +72,7 @@ address book.  For some years now I’ve been using <strong class="command">aboo
 personal address book, as it is both small and quite featureful.  The address
 file is in a standard <code class="docutils literal notranslate"><span class="pre">ini</span></code> format that I can easily import from and export
 to practically anything with only a small <a class="reference external" href="http://www.python.org/">Python</a> script using
-<a class="reference external" href="https://docs.python.org/3/library/configparser.html#configparser.ConfigParser" title="(in Python v3.7)"><code class="xref py py-class docutils literal notranslate"><span class="pre">ConfigParser</span></code></a>.</p>
+<a class="reference external" href="https://docs.python.org/3/library/configparser.html#configparser.ConfigParser" title="(in Python v3.8)"><code class="xref py py-class docutils literal notranslate"><span class="pre">ConfigParser</span></code></a>.</p>
 <p><strong class="command">remind</strong> is a functional <strong>to the point of insanity</strong> text-based
 reminder tool.  I use it mainly to remind me of tasks that need completing when
 I login, although I do have a hook in <a class="reference external" href="https://awesomewm.org/">awesome</a> to display the <strong class="command">remind</strong>
@@ -738,10 +738,10 @@ measure I hope!</p>
   </ul>
 
 <div id="searchbox" style="display: none" role="search">
-  <h3>Quick search</h3>
+  <h3 id="searchlabel">Quick search</h3>
     <div class="searchformwrapper">
     <form class="search" action="../../search.html" method="get">
-      <input type="text" name="q" />
+      <input type="text" name="q" aria-labelledby="searchlabel" />
       <input type="submit" value="Go" />
     </form>
     </div>
@@ -758,7 +758,7 @@ measure I hope!</p>
       </a> license.
       
       |
-      Powered by <a href="http://sphinx-doc.org/">Sphinx 2.0.1</a>
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 2.2.0</a>
       &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
       
     </div>

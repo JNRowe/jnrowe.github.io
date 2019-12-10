@@ -6,7 +6,7 @@
   <link href="https://jnrowe.github.io/" />
   <link href="https://jnrowe.github.io/blog/tag/vcs/atom.xml" rel="self" />
   <subtitle type="text">Ramblings of a tired mind</subtitle>
-  <generator uri="http://ablog.readthedocs.org" version="0.9.4">ABlog</generator>
+  <generator uri="https://ablog.readthedocs.org" version="0.10.0">ABlog</generator>
   <entry xml:base="https://jnrowe.github.io/blog/tag/vcs/atom.xml">
     <title type="text">fossil experiments</title>
     <id>https://jnrowe.github.io/articles/fossil.html</id>
@@ -253,7 +253,7 @@ telling in itself.&lt;/p&gt;
 &lt;h2&gt;Repository state&lt;/h2&gt;
 &lt;p&gt;The “funky arrows” Dan asks about are dependent on the state of the current
 working directory as can be seen in the screenshot at the top of this page.&lt;/p&gt;
-&lt;table class=&quot;docutils align-center&quot;&gt;
+&lt;table class=&quot;docutils align-default&quot;&gt;
 &lt;colgroup&gt;
 &lt;col style=&quot;width: 20%&quot; /&gt;
 &lt;col style=&quot;width: 80%&quot; /&gt;
@@ -378,7 +378,7 @@ probably for &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span
         --exclude&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;*/test/* --exclude&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;*/tests/* --languages&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;python &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
         -R -f &lt;span class=&quot;nv&quot;&gt;$@&lt;/span&gt; $&amp;lt;
 
-&lt;span class=&quot;nf&quot;&gt;doc/tags&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;$(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;filter&lt;/span&gt;-&lt;span class=&quot;nv&quot;&gt;out&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;doc&lt;/span&gt;/&lt;span class=&quot;nv&quot;&gt;tags&lt;/span&gt;, &lt;span class=&quot;k&quot;&gt;$(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;wildcard&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;doc&lt;/span&gt;/*&lt;span class=&quot;k&quot;&gt;))&lt;/span&gt;
+&lt;span class=&quot;nf&quot;&gt;doc/tags&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;$(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;filter-out&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;doc&lt;/span&gt;/&lt;span class=&quot;nv&quot;&gt;tags&lt;/span&gt;, &lt;span class=&quot;k&quot;&gt;$(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;wildcard&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;doc&lt;/span&gt;/*&lt;span class=&quot;k&quot;&gt;))&lt;/span&gt;
     vim -X -u NONE -c &lt;span class=&quot;s1&quot;&gt;&amp;#39;helptags $(dir $@)&amp;#39;&lt;/span&gt; -c &lt;span class=&quot;s1&quot;&gt;&amp;#39;:q&amp;#39;&lt;/span&gt; &amp;lt;/dev/null &lt;span class=&quot;p&quot;&gt;&amp;amp;&lt;/span&gt;&amp;gt;/dev/null
 
 &lt;span class=&quot;nf&quot;&gt;clean&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;
@@ -584,7 +584,7 @@ file is increased a huge amount.  All the changelog data is available with the
 Using &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;rcsdiff&lt;/span&gt; &lt;span class=&quot;pre&quot;&gt;filename&lt;/span&gt;&lt;/code&gt; will output a generic context-free diff(and a small
 &lt;abbr title=&quot;GNU Revision Control System&quot;&gt;RCS&lt;/abbr&gt; header to &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;stderr&lt;/span&gt;&lt;/code&gt; ), or you can pass normal &lt;strong class=&quot;command&quot;&gt;diff&lt;/strong&gt; options to
 &lt;strong class=&quot;command&quot;&gt;rcsdiff&lt;/strong&gt;.  In the second &lt;strong class=&quot;command&quot;&gt;rcsdiff&lt;/strong&gt; command the
-&lt;strong class=&quot;command&quot;&gt;diff&lt;/strong&gt; option &lt;a class=&quot;reference external&quot; href=&quot;https://docs.python.org/3/using/cmdline.html#cmdoption-u&quot; title=&quot;(in Python v3.7)&quot;&gt;&lt;code class=&quot;xref std std-option docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;-u&lt;/span&gt;&lt;/code&gt;&lt;/a&gt; is given to tell &lt;strong class=&quot;command&quot;&gt;rcsdiff&lt;/strong&gt; it
+&lt;strong class=&quot;command&quot;&gt;diff&lt;/strong&gt; option &lt;a class=&quot;reference external&quot; href=&quot;https://docs.python.org/3/using/cmdline.html#cmdoption-u&quot; title=&quot;(in Python v3.8)&quot;&gt;&lt;code class=&quot;xref std std-option docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;-u&lt;/span&gt;&lt;/code&gt;&lt;/a&gt; is given to tell &lt;strong class=&quot;command&quot;&gt;rcsdiff&lt;/strong&gt; it
 should output a unified context diff.&lt;/p&gt;
 &lt;div class=&quot;highlight-console notranslate&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&quot;gp&quot;&gt;$&lt;/span&gt; ci -u ./myscript.sh
 &lt;span class=&quot;go&quot;&gt;./RCS/myscript.sh,v  &amp;lt;--  ./myscript.sh&lt;/span&gt;
@@ -669,7 +669,7 @@ have made, maybe to help you build your changelog information.&lt;/p&gt;&lt;/li&
 &lt;/div&gt;
 &lt;div class=&quot;section&quot; id=&quot;advanced&quot;&gt;
 &lt;h2&gt;Advanced&lt;/h2&gt;
-&lt;div class=&quot;figure align-center&quot;&gt;
+&lt;div class=&quot;figure align-default&quot;&gt;
 &lt;img alt=&quot;rcsi screenshot&quot; src=&quot;../../_images/rcsi.png&quot; style=&quot;width: 500px; height: 114px;&quot; /&gt;
 &lt;/div&gt;
 &lt;p&gt;There are many tools available that can help you to manage your &lt;abbr title=&quot;GNU Revision Control System&quot;&gt;RCS&lt;/abbr&gt; files,
@@ -707,20 +707,20 @@ this short text has been helpful to you.&lt;/p&gt;
 &lt;p&gt;&lt;abbr title=&quot;GNU Revision Control System&quot;&gt;RCS&lt;/abbr&gt; options:&lt;/p&gt;
 &lt;dl class=&quot;option&quot;&gt;
 &lt;dt id=&quot;cmdoption-r&quot;&gt;
-&lt;code class=&quot;descname&quot;&gt;-r&lt;/code&gt;&lt;code class=&quot;descclassname&quot;&gt;&lt;/code&gt;&lt;/dt&gt;
+&lt;code class=&quot;sig-name descname&quot;&gt;-r&lt;/code&gt;&lt;code class=&quot;sig-prename descclassname&quot;&gt;&lt;/code&gt;&lt;/dt&gt;
 &lt;dd&gt;&lt;p&gt;Specify the revision to work with.  Common across all of &lt;abbr title=&quot;GNU Revision Control System&quot;&gt;RCS&lt;/abbr&gt;’s tools.&lt;/p&gt;
 &lt;/dd&gt;&lt;/dl&gt;
 
 &lt;p&gt;&lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;blame&lt;/span&gt;&lt;/code&gt; options:&lt;/p&gt;
 &lt;dl class=&quot;option&quot;&gt;
 &lt;dt id=&quot;cmdoption-blame-date&quot;&gt;
-&lt;code class=&quot;descname&quot;&gt;--date&lt;/code&gt;&lt;code class=&quot;descclassname&quot;&gt;&lt;/code&gt;&lt;/dt&gt;
+&lt;code class=&quot;sig-name descname&quot;&gt;--date&lt;/code&gt;&lt;code class=&quot;sig-prename descclassname&quot;&gt;&lt;/code&gt;&lt;/dt&gt;
 &lt;dd&gt;&lt;p&gt;Annotate the revision that closest to, but not after, the given date.&lt;/p&gt;
 &lt;/dd&gt;&lt;/dl&gt;
 
 &lt;dl class=&quot;option&quot;&gt;
 &lt;dt id=&quot;cmdoption-blame-revision&quot;&gt;
-&lt;code class=&quot;descname&quot;&gt;--revision&lt;/code&gt;&lt;code class=&quot;descclassname&quot;&gt;&lt;/code&gt;&lt;/dt&gt;
+&lt;code class=&quot;sig-name descname&quot;&gt;--revision&lt;/code&gt;&lt;code class=&quot;sig-prename descclassname&quot;&gt;&lt;/code&gt;&lt;/dt&gt;
 &lt;dd&gt;&lt;p&gt;Annotate the revision numerically closest to, but not exceeding, the given
 revision.&lt;/p&gt;
 &lt;/dd&gt;&lt;/dl&gt;
@@ -728,27 +728,27 @@ revision.&lt;/p&gt;
 &lt;p&gt;&lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;ci&lt;/span&gt;&lt;/code&gt; options:&lt;/p&gt;
 &lt;dl class=&quot;option&quot;&gt;
 &lt;dt id=&quot;cmdoption-ci-r&quot;&gt;
-&lt;code class=&quot;descname&quot;&gt;-r&lt;/code&gt;&lt;code class=&quot;descclassname&quot;&gt;&lt;/code&gt;&lt;/dt&gt;
+&lt;code class=&quot;sig-name descname&quot;&gt;-r&lt;/code&gt;&lt;code class=&quot;sig-prename descclassname&quot;&gt;&lt;/code&gt;&lt;/dt&gt;
 &lt;dd&gt;&lt;p&gt;Perform checkin, and store with provided revision identifier.&lt;/p&gt;
 &lt;/dd&gt;&lt;/dl&gt;
 
 &lt;dl class=&quot;option&quot;&gt;
 &lt;dt id=&quot;cmdoption-ci-u&quot;&gt;
-&lt;code class=&quot;descname&quot;&gt;-u&lt;/code&gt;&lt;code class=&quot;descclassname&quot;&gt;&lt;/code&gt;&lt;/dt&gt;
+&lt;code class=&quot;sig-name descname&quot;&gt;-u&lt;/code&gt;&lt;code class=&quot;sig-prename descclassname&quot;&gt;&lt;/code&gt;&lt;/dt&gt;
 &lt;dd&gt;&lt;p&gt;Don’t lock the file on checkin.&lt;/p&gt;
 &lt;/dd&gt;&lt;/dl&gt;
 
 &lt;p&gt;&lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;co&lt;/span&gt;&lt;/code&gt; options:&lt;/p&gt;
 &lt;dl class=&quot;option&quot;&gt;
 &lt;dt id=&quot;cmdoption-co-l&quot;&gt;
-&lt;code class=&quot;descname&quot;&gt;-l&lt;/code&gt;&lt;code class=&quot;descclassname&quot;&gt;&lt;/code&gt;&lt;/dt&gt;
+&lt;code class=&quot;sig-name descname&quot;&gt;-l&lt;/code&gt;&lt;code class=&quot;sig-prename descclassname&quot;&gt;&lt;/code&gt;&lt;/dt&gt;
 &lt;dd&gt;&lt;p&gt;Lock the file for editing on checkout.&lt;/p&gt;
 &lt;/dd&gt;&lt;/dl&gt;
 
 &lt;p&gt;&lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;rlog&lt;/span&gt;&lt;/code&gt; options:&lt;/p&gt;
 &lt;dl class=&quot;option&quot;&gt;
 &lt;dt id=&quot;cmdoption-rlog-r&quot;&gt;
-&lt;code class=&quot;descname&quot;&gt;-r&lt;/code&gt;&lt;code class=&quot;descclassname&quot;&gt;&lt;/code&gt;&lt;/dt&gt;
+&lt;code class=&quot;sig-name descname&quot;&gt;-r&lt;/code&gt;&lt;code class=&quot;sig-prename descclassname&quot;&gt;&lt;/code&gt;&lt;/dt&gt;
 &lt;dd&gt;&lt;p&gt;Specify revisions to perform log against, can be a comma seperated list of
 ranges.&lt;/p&gt;
 &lt;/dd&gt;&lt;/dl&gt;

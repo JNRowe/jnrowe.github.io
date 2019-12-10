@@ -82,8 +82,8 @@ isn’t enough reason to have a go, then I simply don’t want to know you.</p>
 when the puzzle is released.  Sadly, in the UK that means waking up for
 a <strong>five in the morning</strong> start.</p>
 <p>If you look at my completion screenshot, you’ll also see I have the
-<a class="reference external" href="https://docs.python.org/3/library/itertools.html#module-itertools" title="(in Python v3.7)"><code class="xref py py-mod docutils literal notranslate"><span class="pre">itertools</span></code></a> documentation open.  If you’re going to use Python for <abbr title="Advent of Code">AoC</abbr>
-study up on <a class="reference external" href="https://docs.python.org/3/library/itertools.html#module-itertools" title="(in Python v3.7)"><code class="xref py py-mod docutils literal notranslate"><span class="pre">itertools</span></code></a>, it will help no end<a class="footnote-reference brackets" href="#id6" id="id2">2</a>.</p>
+<a class="reference external" href="https://docs.python.org/3/library/itertools.html#module-itertools" title="(in Python v3.8)"><code class="xref py py-mod docutils literal notranslate"><span class="pre">itertools</span></code></a> documentation open.  If you’re going to use Python for <abbr title="Advent of Code">AoC</abbr>
+study up on <a class="reference external" href="https://docs.python.org/3/library/itertools.html#module-itertools" title="(in Python v3.8)"><code class="xref py py-mod docutils literal notranslate"><span class="pre">itertools</span></code></a>, it will help no end<a class="footnote-reference brackets" href="#id6" id="id2">2</a>.</p>
 <a class="reference internal image-reference" href="../_images/2017-12-29-advent_of_code.png"><img alt="Ta-da! Calendar complete" src="../_images/2017-12-29-advent_of_code.png" style="width: 800.0px; height: 450.0px;" /></a>
 <p>The other thing you can see in my screenshot is that I didn’t complete the
 event on Christmas Day, in fact I took a break and finally mashed through the
@@ -114,7 +114,7 @@ second digit and the third digit (2) matches the fourth digit.</p></li>
 the last digit, 9.</p></li>
 </ul>
 </div></blockquote>
-<p>I immediately dumped the samples in to a Python <a class="reference external" href="https://docs.python.org/3/library/doctest.html#module-doctest" title="(in Python v3.7)"><code class="xref py py-mod docutils literal notranslate"><span class="pre">doctest</span></code></a> file as:</p>
+<p>I immediately dumped the samples in to a Python <a class="reference external" href="https://docs.python.org/3/library/doctest.html#module-doctest" title="(in Python v3.8)"><code class="xref py py-mod docutils literal notranslate"><span class="pre">doctest</span></code></a> file as:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">&gt;&gt;&gt; captcha(&#39;1122&#39;)</span>
 <span class="sd">3</span>
@@ -151,9 +151,9 @@ out(I was right).  Its implementation was a rather basic:</p>
 </pre></div>
 </div>
 <p>Eagle-eyed Pythonistas will spot the horrific error here, I forgot that
-decorators will wipe out my docstring and the <a class="reference external" href="https://docs.python.org/3/library/doctest.html#module-doctest" title="(in Python v3.7)"><code class="xref py py-mod docutils literal notranslate"><span class="pre">doctest</span></code></a> runner won’t pick
+decorators will wipe out my docstring and the <a class="reference external" href="https://docs.python.org/3/library/doctest.html#module-doctest" title="(in Python v3.8)"><code class="xref py py-mod docutils literal notranslate"><span class="pre">doctest</span></code></a> runner won’t pick
 up my <code class="docutils literal notranslate"><span class="pre">captcha</span></code> tests at all.  The solution is to reach for
-<a class="reference external" href="https://docs.python.org/3/library/functools.html#functools.wraps" title="(in Python v3.7)"><code class="xref py py-func docutils literal notranslate"><span class="pre">functools.wraps()</span></code></a> and a tiny edit:</p>
+<a class="reference external" href="https://docs.python.org/3/library/functools.html#functools.wraps" title="(in Python v3.8)"><code class="xref py py-func docutils literal notranslate"><span class="pre">functools.wraps()</span></code></a> and a tiny edit:</p>
 <div class="highlight-diff notranslate"><div class="highlight"><pre><span></span><span class="gd">--- a</span>
 <span class="gi">+++ b</span>
 <span class="gu">@@ -1,2 +1,3 @@</span>
@@ -180,11 +180,11 @@ part of the puzzles in my opinion.</p>
 </div>
 <div class="section" id="implementation">
 <h2>Implementation<a class="headerlink" href="#implementation" title="Permalink to this headline">¶</a></h2>
-<div class="figure align-center" id="id9">
+<div class="figure align-default" id="id9">
 <a class="reference internal image-reference" href="../_images/2018-10-19-aoc_calendar.png"><img alt="Languages used for tasks" src="../_images/2018-10-19-aoc_calendar.png" style="width: 273.5px; height: 181.0px;" /></a>
 <p class="caption"><span class="caption-text">Language frequency for <abbr title="Advent of Code">AoC</abbr> puzzles</span><a class="headerlink" href="#id9" title="Permalink to this image">¶</a></p>
 <div class="legend">
-<table class="docutils align-center">
+<table class="docutils align-default">
 <colgroup>
 <col style="width: 26%" />
 <col style="width: 35%" />
@@ -908,10 +908,10 @@ engineering problems.</p>
   </ul>
 
 <div id="searchbox" style="display: none" role="search">
-  <h3>Quick search</h3>
+  <h3 id="searchlabel">Quick search</h3>
     <div class="searchformwrapper">
     <form class="search" action="../search.html" method="get">
-      <input type="text" name="q" />
+      <input type="text" name="q" aria-labelledby="searchlabel" />
       <input type="submit" value="Go" />
     </form>
     </div>
@@ -928,7 +928,7 @@ engineering problems.</p>
       </a> license.
       
       |
-      Powered by <a href="http://sphinx-doc.org/">Sphinx 2.0.1</a>
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 2.2.0</a>
       &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
       
     </div>

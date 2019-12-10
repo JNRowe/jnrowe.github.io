@@ -6,7 +6,7 @@
   <link href="https://jnrowe.github.io/" />
   <link href="https://jnrowe.github.io/blog/tag/bts/atom.xml" rel="self" />
   <subtitle type="text">Ramblings of a tired mind</subtitle>
-  <generator uri="http://ablog.readthedocs.org" version="0.9.4">ABlog</generator>
+  <generator uri="https://ablog.readthedocs.org" version="0.10.0">ABlog</generator>
   <entry xml:base="https://jnrowe.github.io/blog/tag/bts/atom.xml">
     <title type="text">BTS as a task manager</title>
     <id>https://jnrowe.github.io/articles/tips/BTS_as_a_task_manager.html</id>
@@ -102,8 +102,8 @@ field is an &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span 
 character is the severity indicator(where the &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;s&lt;/span&gt;&lt;/code&gt; for bug &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;ec4&lt;/span&gt;&lt;/code&gt; tells us it
 is marked as serious).&lt;/p&gt;
 &lt;p&gt;You can also limit the bugs shown with &lt;strong class=&quot;command&quot;&gt;be list&lt;/strong&gt; by specifying
-severities with &lt;a class=&quot;reference external&quot; href=&quot;https://docs.python.org/3/using/cmdline.html#id4&quot; title=&quot;(in Python v3.7)&quot;&gt;&lt;code class=&quot;xref std std-option docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;-v&lt;/span&gt;&lt;/code&gt;&lt;/a&gt;.  Or bugs that are assigned to a certain user with
-&lt;code class=&quot;xref std std-option docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;-a&lt;/span&gt;&lt;/code&gt;, and you can use &lt;a class=&quot;reference external&quot; href=&quot;https://docs.python.org/3/using/cmdline.html#cmdoption-m&quot; title=&quot;(in Python v3.7)&quot;&gt;&lt;code class=&quot;xref std std-option docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;-m&lt;/span&gt;&lt;/code&gt;&lt;/a&gt; to list bugs assigned to yourself.&lt;/p&gt;
+severities with &lt;a class=&quot;reference external&quot; href=&quot;https://docs.python.org/3/using/cmdline.html#id4&quot; title=&quot;(in Python v3.8)&quot;&gt;&lt;code class=&quot;xref std std-option docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;-v&lt;/span&gt;&lt;/code&gt;&lt;/a&gt;.  Or bugs that are assigned to a certain user with
+&lt;code class=&quot;xref std std-option docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;-a&lt;/span&gt;&lt;/code&gt;, and you can use &lt;a class=&quot;reference external&quot; href=&quot;https://docs.python.org/3/using/cmdline.html#cmdoption-m&quot; title=&quot;(in Python v3.8)&quot;&gt;&lt;code class=&quot;xref std std-option docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;-m&lt;/span&gt;&lt;/code&gt;&lt;/a&gt; to list bugs assigned to yourself.&lt;/p&gt;
 &lt;p&gt;When we wish to inspect individual bugs, to see there full status or comments,
 we use the &lt;strong class=&quot;command&quot;&gt;be show&lt;/strong&gt; command:&lt;/p&gt;
 &lt;div class=&quot;highlight-console notranslate&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&quot;gp&quot;&gt;$&lt;/span&gt; be show a09

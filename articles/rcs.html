@@ -218,7 +218,7 @@ file is increased a huge amount.  All the changelog data is available with the
 Using <code class="docutils literal notranslate"><span class="pre">rcsdiff</span> <span class="pre">filename</span></code> will output a generic context-free diff(and a small
 <abbr title="GNU Revision Control System">RCS</abbr> header to <code class="docutils literal notranslate"><span class="pre">stderr</span></code> ), or you can pass normal <strong class="command">diff</strong> options to
 <strong class="command">rcsdiff</strong>.  In the second <strong class="command">rcsdiff</strong> command the
-<strong class="command">diff</strong> option <a class="reference external" href="https://docs.python.org/3/using/cmdline.html#cmdoption-u" title="(in Python v3.7)"><code class="xref std std-option docutils literal notranslate"><span class="pre">-u</span></code></a> is given to tell <strong class="command">rcsdiff</strong> it
+<strong class="command">diff</strong> option <a class="reference external" href="https://docs.python.org/3/using/cmdline.html#cmdoption-u" title="(in Python v3.8)"><code class="xref std std-option docutils literal notranslate"><span class="pre">-u</span></code></a> is given to tell <strong class="command">rcsdiff</strong> it
 should output a unified context diff.</p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> ci -u ./myscript.sh
 <span class="go">./RCS/myscript.sh,v  &lt;--  ./myscript.sh</span>
@@ -303,7 +303,7 @@ have made, maybe to help you build your changelog information.</p></li>
 </div>
 <div class="section" id="advanced">
 <h2>Advanced<a class="headerlink" href="#advanced" title="Permalink to this headline">¶</a></h2>
-<div class="figure align-center">
+<div class="figure align-default">
 <a class="reference internal image-reference" href="../_images/rcsi.png"><img alt="rcsi screenshot" src="../_images/rcsi.png" style="width: 500px; height: 114px;" /></a>
 </div>
 <p>There are many tools available that can help you to manage your <abbr title="GNU Revision Control System">RCS</abbr> files,
@@ -341,20 +341,20 @@ this short text has been helpful to you.</p>
 <p><abbr title="GNU Revision Control System">RCS</abbr> options:</p>
 <dl class="option">
 <dt id="cmdoption-r">
-<code class="descname">-r</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-r" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">-r</code><code class="sig-prename descclassname"></code><a class="headerlink" href="#cmdoption-r" title="Permalink to this definition">¶</a></dt>
 <dd><p>Specify the revision to work with.  Common across all of <abbr title="GNU Revision Control System">RCS</abbr>’s tools.</p>
 </dd></dl>
 
 <p><code class="docutils literal notranslate"><span class="pre">blame</span></code> options:</p>
 <dl class="option">
 <dt id="cmdoption-blame-date">
-<code class="descname">--date</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-blame-date" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">--date</code><code class="sig-prename descclassname"></code><a class="headerlink" href="#cmdoption-blame-date" title="Permalink to this definition">¶</a></dt>
 <dd><p>Annotate the revision that closest to, but not after, the given date.</p>
 </dd></dl>
 
 <dl class="option">
 <dt id="cmdoption-blame-revision">
-<code class="descname">--revision</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-blame-revision" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">--revision</code><code class="sig-prename descclassname"></code><a class="headerlink" href="#cmdoption-blame-revision" title="Permalink to this definition">¶</a></dt>
 <dd><p>Annotate the revision numerically closest to, but not exceeding, the given
 revision.</p>
 </dd></dl>
@@ -362,27 +362,27 @@ revision.</p>
 <p><code class="docutils literal notranslate"><span class="pre">ci</span></code> options:</p>
 <dl class="option">
 <dt id="cmdoption-ci-r">
-<code class="descname">-r</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-ci-r" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">-r</code><code class="sig-prename descclassname"></code><a class="headerlink" href="#cmdoption-ci-r" title="Permalink to this definition">¶</a></dt>
 <dd><p>Perform checkin, and store with provided revision identifier.</p>
 </dd></dl>
 
 <dl class="option">
 <dt id="cmdoption-ci-u">
-<code class="descname">-u</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-ci-u" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">-u</code><code class="sig-prename descclassname"></code><a class="headerlink" href="#cmdoption-ci-u" title="Permalink to this definition">¶</a></dt>
 <dd><p>Don’t lock the file on checkin.</p>
 </dd></dl>
 
 <p><code class="docutils literal notranslate"><span class="pre">co</span></code> options:</p>
 <dl class="option">
 <dt id="cmdoption-co-l">
-<code class="descname">-l</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-co-l" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">-l</code><code class="sig-prename descclassname"></code><a class="headerlink" href="#cmdoption-co-l" title="Permalink to this definition">¶</a></dt>
 <dd><p>Lock the file for editing on checkout.</p>
 </dd></dl>
 
 <p><code class="docutils literal notranslate"><span class="pre">rlog</span></code> options:</p>
 <dl class="option">
 <dt id="cmdoption-rlog-r">
-<code class="descname">-r</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-rlog-r" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">-r</code><code class="sig-prename descclassname"></code><a class="headerlink" href="#cmdoption-rlog-r" title="Permalink to this definition">¶</a></dt>
 <dd><p>Specify revisions to perform log against, can be a comma seperated list of
 ranges.</p>
 </dd></dl>
@@ -981,10 +981,10 @@ ranges.</p>
   </ul>
 
 <div id="searchbox" style="display: none" role="search">
-  <h3>Quick search</h3>
+  <h3 id="searchlabel">Quick search</h3>
     <div class="searchformwrapper">
     <form class="search" action="../search.html" method="get">
-      <input type="text" name="q" />
+      <input type="text" name="q" aria-labelledby="searchlabel" />
       <input type="submit" value="Go" />
     </form>
     </div>
@@ -1001,7 +1001,7 @@ ranges.</p>
       </a> license.
       
       |
-      Powered by <a href="http://sphinx-doc.org/">Sphinx 2.0.1</a>
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 2.2.0</a>
       &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
       
     </div>

@@ -143,8 +143,8 @@ field is an <code class="docutils literal notranslate"><span class="pre">o</span
 character is the severity indicator(where the <code class="docutils literal notranslate"><span class="pre">s</span></code> for bug <code class="docutils literal notranslate"><span class="pre">ec4</span></code> tells us it
 is marked as serious).</p>
 <p>You can also limit the bugs shown with <strong class="command">be list</strong> by specifying
-severities with <a class="reference external" href="https://docs.python.org/3/using/cmdline.html#id4" title="(in Python v3.7)"><code class="xref std std-option docutils literal notranslate"><span class="pre">-v</span></code></a>.  Or bugs that are assigned to a certain user with
-<code class="xref std std-option docutils literal notranslate"><span class="pre">-a</span></code>, and you can use <a class="reference external" href="https://docs.python.org/3/using/cmdline.html#cmdoption-m" title="(in Python v3.7)"><code class="xref std std-option docutils literal notranslate"><span class="pre">-m</span></code></a> to list bugs assigned to yourself.</p>
+severities with <a class="reference external" href="https://docs.python.org/3/using/cmdline.html#id4" title="(in Python v3.8)"><code class="xref std std-option docutils literal notranslate"><span class="pre">-v</span></code></a>.  Or bugs that are assigned to a certain user with
+<code class="xref std std-option docutils literal notranslate"><span class="pre">-a</span></code>, and you can use <a class="reference external" href="https://docs.python.org/3/using/cmdline.html#cmdoption-m" title="(in Python v3.8)"><code class="xref std std-option docutils literal notranslate"><span class="pre">-m</span></code></a> to list bugs assigned to yourself.</p>
 <p>When we wish to inspect individual bugs, to see there full status or comments,
 we use the <strong class="command">be show</strong> command:</p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> be show a09
@@ -836,10 +836,10 @@ Feel free to post updates to the gist!</p>
   </ul>
 
 <div id="searchbox" style="display: none" role="search">
-  <h3>Quick search</h3>
+  <h3 id="searchlabel">Quick search</h3>
     <div class="searchformwrapper">
     <form class="search" action="../../search.html" method="get">
-      <input type="text" name="q" />
+      <input type="text" name="q" aria-labelledby="searchlabel" />
       <input type="submit" value="Go" />
     </form>
     </div>
@@ -856,7 +856,7 @@ Feel free to post updates to the gist!</p>
       </a> license.
       
       |
-      Powered by <a href="http://sphinx-doc.org/">Sphinx 2.0.1</a>
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 2.2.0</a>
       &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
       
     </div>

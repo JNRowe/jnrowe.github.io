@@ -6,7 +6,7 @@
   <link href="https://jnrowe.github.io/" />
   <link href="https://jnrowe.github.io/blog/tag/remind/atom.xml" rel="self" />
   <subtitle type="text">Ramblings of a tired mind</subtitle>
-  <generator uri="http://ablog.readthedocs.org" version="0.9.4">ABlog</generator>
+  <generator uri="https://ablog.readthedocs.org" version="0.10.0">ABlog</generator>
   <entry xml:base="https://jnrowe.github.io/blog/tag/remind/atom.xml">
     <title type="text">“Kick me” birthday reminders</title>
     <id>https://jnrowe.github.io/articles/tips/Kick_me_birthday_reminders.html</id>
@@ -31,7 +31,7 @@ address book.  For some years now I’ve been using &lt;strong class=&quot;comma
 personal address book, as it is both small and quite featureful.  The address
 file is in a standard &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;ini&lt;/span&gt;&lt;/code&gt; format that I can easily import from and export
 to practically anything with only a small &lt;a class=&quot;reference external&quot; href=&quot;http://www.python.org/&quot;&gt;Python&lt;/a&gt; script using
-&lt;a class=&quot;reference external&quot; href=&quot;https://docs.python.org/3/library/configparser.html#configparser.ConfigParser&quot; title=&quot;(in Python v3.7)&quot;&gt;&lt;code class=&quot;xref py py-class docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;ConfigParser&lt;/span&gt;&lt;/code&gt;&lt;/a&gt;.&lt;/p&gt;
+&lt;a class=&quot;reference external&quot; href=&quot;https://docs.python.org/3/library/configparser.html#configparser.ConfigParser&quot; title=&quot;(in Python v3.8)&quot;&gt;&lt;code class=&quot;xref py py-class docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;ConfigParser&lt;/span&gt;&lt;/code&gt;&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;&lt;strong class=&quot;command&quot;&gt;remind&lt;/strong&gt; is a functional &lt;strong&gt;to the point of insanity&lt;/strong&gt; text-based
 reminder tool.  I use it mainly to remind me of tasks that need completing when
 I login, although I do have a hook in &lt;a class=&quot;reference external&quot; href=&quot;https://awesomewm.org/&quot;&gt;awesome&lt;/a&gt; to display the &lt;strong class=&quot;command&quot;&gt;remind&lt;/strong&gt;

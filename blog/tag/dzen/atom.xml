@@ -6,7 +6,7 @@
   <link href="https://jnrowe.github.io/" />
   <link href="https://jnrowe.github.io/blog/tag/dzen/atom.xml" rel="self" />
   <subtitle type="text">Ramblings of a tired mind</subtitle>
-  <generator uri="http://ablog.readthedocs.org" version="0.9.4">ABlog</generator>
+  <generator uri="https://ablog.readthedocs.org" version="0.10.0">ABlog</generator>
   <entry xml:base="https://jnrowe.github.io/blog/tag/dzen/atom.xml">
     <title type="text">Visualising the progress of time</title>
     <id>https://jnrowe.github.io/articles/march_toward_death.html</id>
@@ -43,7 +43,7 @@ MacOS, so we’ll need to make something similar.&lt;/p&gt;
             emulation.
         &lt;/span&gt;
     &lt;/p&gt;
-&lt;/div&gt;&lt;div class=&quot;figure align-center&quot; id=&quot;id3&quot;&gt;
+&lt;/div&gt;&lt;div class=&quot;figure align-default&quot; id=&quot;id3&quot;&gt;
 &lt;a class=&quot;reference external image-reference&quot; href=&quot;../_static/kitt.gif&quot;&gt;&lt;img alt=&quot;Multi-band scanner in action&quot; src=&quot;../../_images/kitt06.png&quot; /&gt;&lt;/a&gt;
 &lt;p class=&quot;caption&quot;&gt;&lt;span class=&quot;caption-text&quot;&gt;Click the image for an animated GIF, I’ll spare you the flashing lights in
 case you wish to read on.&lt;/span&gt;&lt;/p&gt;
@@ -88,15 +88,15 @@ simply using &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
 &lt;p&gt;The function above converts a percentage value in to a hex triplet across
-a green to red gradient, we use &lt;a class=&quot;reference external&quot; href=&quot;https://docs.python.org/3/library/colorsys.html#colorsys.hls_to_rgb&quot; title=&quot;(in Python v3.7)&quot;&gt;&lt;code class=&quot;xref py py-func docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;hls_to_rgb()&lt;/span&gt;&lt;/code&gt;&lt;/a&gt; here as the &lt;a class=&quot;reference external&quot; href=&quot;https://en.m.wikipedia.org/wiki/HLS_color_space&quot;&gt;HLS
+a green to red gradient, we use &lt;a class=&quot;reference external&quot; href=&quot;https://docs.python.org/3/library/colorsys.html#colorsys.hls_to_rgb&quot; title=&quot;(in Python v3.8)&quot;&gt;&lt;code class=&quot;xref py py-func docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;hls_to_rgb()&lt;/span&gt;&lt;/code&gt;&lt;/a&gt; here as the &lt;a class=&quot;reference external&quot; href=&quot;https://en.m.wikipedia.org/wiki/HLS_color_space&quot;&gt;HLS
 colour space&lt;/a&gt; is more amenable to generating smooth gradients.&lt;/p&gt;
 &lt;p&gt;Now that we’re using &lt;a class=&quot;reference external&quot; href=&quot;https://www.python.org/&quot;&gt;Python&lt;/a&gt; we may as well take advantage of its
-&lt;a class=&quot;reference external&quot; href=&quot;https://docs.python.org/3/library/calendar.html#module-calendar&quot; title=&quot;(in Python v3.7)&quot;&gt;&lt;code class=&quot;xref py py-mod docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;calendar&lt;/span&gt;&lt;/code&gt;&lt;/a&gt; module:&lt;/p&gt;
+&lt;a class=&quot;reference external&quot; href=&quot;https://docs.python.org/3/library/calendar.html#module-calendar&quot; title=&quot;(in Python v3.8)&quot;&gt;&lt;code class=&quot;xref py py-mod docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;calendar&lt;/span&gt;&lt;/code&gt;&lt;/a&gt; module:&lt;/p&gt;
 &lt;div class=&quot;highlight-default notranslate&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;month_days&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;date&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
     &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;calendar&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;monthrange&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;date&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;year&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;date&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;month&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
-&lt;p&gt;The &lt;a class=&quot;reference external&quot; href=&quot;https://docs.python.org/3/library/calendar.html#calendar.monthrange&quot; title=&quot;(in Python v3.7)&quot;&gt;&lt;code class=&quot;xref py py-func docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;monthrange()&lt;/span&gt;&lt;/code&gt;&lt;/a&gt; function returns a tuple where the second item
+&lt;p&gt;The &lt;a class=&quot;reference external&quot; href=&quot;https://docs.python.org/3/library/calendar.html#calendar.monthrange&quot; title=&quot;(in Python v3.8)&quot;&gt;&lt;code class=&quot;xref py py-func docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;monthrange()&lt;/span&gt;&lt;/code&gt;&lt;/a&gt; function returns a tuple where the second item
 is the number of days in the current month.&lt;/p&gt;
 &lt;div class=&quot;highlight-default notranslate&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;days_in_year&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;date&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
     &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;calendar&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;isleap&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;date&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;year&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
@@ -106,7 +106,7 @@ is the number of days in the current month.&lt;/p&gt;
     &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;days&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
-&lt;p&gt;&lt;a class=&quot;reference external&quot; href=&quot;https://docs.python.org/3/library/calendar.html#calendar.isleap&quot; title=&quot;(in Python v3.7)&quot;&gt;&lt;code class=&quot;xref py py-func docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;isleap()&lt;/span&gt;&lt;/code&gt;&lt;/a&gt; allows us to offload figuring out whether 2700 is
+&lt;p&gt;&lt;a class=&quot;reference external&quot; href=&quot;https://docs.python.org/3/library/calendar.html#calendar.isleap&quot; title=&quot;(in Python v3.8)&quot;&gt;&lt;code class=&quot;xref py py-func docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;isleap()&lt;/span&gt;&lt;/code&gt;&lt;/a&gt; allows us to offload figuring out whether 2700 is
 a leap year once senility begins to set in.&lt;/p&gt;
 &lt;div class=&quot;highlight-default notranslate&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;show_progress&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;title&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;percent&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;width&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
     &lt;span class=&quot;n&quot;&gt;subprocess&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;run&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;([&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;gdbar&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;-l&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;title&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;-w&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;str&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;width&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;-fg&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
@@ -131,7 +131,7 @@ moved our pointer over the header.&lt;/p&gt;
 &lt;/div&gt;
 &lt;div class=&quot;section&quot; id=&quot;step-four&quot;&gt;
 &lt;h2&gt;Step four&lt;/h2&gt;
-&lt;p&gt;You can find the script I used &lt;a class=&quot;reference download internal&quot; download=&quot;&quot; href=&quot;../../_downloads/8247878d1cce93d38b5fe2e1628c5a40/time_progress.py&quot;&gt;&lt;code class=&quot;xref download docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;here&lt;/span&gt;&lt;/code&gt;&lt;/a&gt;.  It isn’t
+&lt;p&gt;You can find the script I used &lt;a class=&quot;reference download internal&quot; download=&quot;&quot; href=&quot;../../_downloads/8bb0952b2cf5d96d60e8d4457de4c840/time_progress.py&quot;&gt;&lt;code class=&quot;xref download docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;here&lt;/span&gt;&lt;/code&gt;&lt;/a&gt;.  It isn’t
 pretty, but it will do.  If I come to depend on it I’m sure that I’ll make
 something better.&lt;/p&gt;
 &lt;p&gt;I think it is important to note that if you’ve got this far and you’re thinking
@@ -153,7 +153,7 @@ years.&lt;/p&gt;
 &lt;/dl&gt;
 &lt;dl class=&quot;option&quot;&gt;
 &lt;dt id=&quot;cmdoption-date-arg-j&quot;&gt;
-&lt;code class=&quot;descname&quot;&gt;%j&lt;/code&gt;&lt;code class=&quot;descclassname&quot;&gt;&lt;/code&gt;&lt;/dt&gt;
+&lt;code class=&quot;sig-name descname&quot;&gt;%j&lt;/code&gt;&lt;code class=&quot;sig-prename descclassname&quot;&gt;&lt;/code&gt;&lt;/dt&gt;
 &lt;dd&gt;&lt;p&gt;Displays the day number of the given year, see &lt;em class=&quot;manpage&quot;&gt;strftime(3)&lt;/em&gt; if
 this is new to you.&lt;/p&gt;
 &lt;/dd&gt;&lt;/dl&gt;

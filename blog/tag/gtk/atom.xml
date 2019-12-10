@@ -6,7 +6,7 @@
   <link href="https://jnrowe.github.io/" />
   <link href="https://jnrowe.github.io/blog/tag/gtk/atom.xml" rel="self" />
   <subtitle type="text">Ramblings of a tired mind</subtitle>
-  <generator uri="http://ablog.readthedocs.org" version="0.9.4">ABlog</generator>
+  <generator uri="https://ablog.readthedocs.org" version="0.10.0">ABlog</generator>
   <entry xml:base="https://jnrowe.github.io/blog/tag/gtk/atom.xml">
     <title type="text">Disabling cursor blinking in GTK+</title>
     <id>https://jnrowe.github.io/articles/tips/Disabling_cursor_blinking_in_GTK.html</id>
@@ -112,7 +112,7 @@ desktop environments editing the &lt;code class=&quot;file docutils literal notr
 GTK+ applications that we want to have our own extra keybindings available when
 opening or saving files.  &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;GTKFileChooser&lt;/span&gt;&lt;/code&gt; is the modern GTK+ file dialog, and
 it already has a set of useful keybindings including:&lt;/p&gt;
-&lt;table class=&quot;docutils align-center&quot;&gt;
+&lt;table class=&quot;docutils align-default&quot;&gt;
 &lt;colgroup&gt;
 &lt;col style=&quot;width: 31%&quot; /&gt;
 &lt;col style=&quot;width: 69%&quot; /&gt;
@@ -203,7 +203,7 @@ class &amp;quot;GtkTextView&amp;quot; binding &amp;quot;gtk-emacs-text-entry&amp
 your &lt;code class=&quot;file docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;~/.gtkrc.mine&lt;/span&gt;&lt;/code&gt; so it isn’t overwritten when you change themes.  See
 the comments in your &lt;code class=&quot;file docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;~/.gtkrc-2.0&lt;/span&gt;&lt;/code&gt; if you use either of these theme
 switchers.&lt;/p&gt;
-&lt;div class=&quot;figure align-center&quot;&gt;
+&lt;div class=&quot;figure align-default&quot;&gt;
 &lt;img alt=&quot;XFce4 keyboard settings window&quot; src=&quot;../../_images/xfce4_keyboard.png&quot; /&gt;
 &lt;/div&gt;
 &lt;p&gt;If you’re an &lt;a class=&quot;reference external&quot; href=&quot;http://www.xfce.org/&quot;&gt;XFce&lt;/a&gt; user you can select the Emacs keyboard shortcuts using the

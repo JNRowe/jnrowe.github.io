@@ -6,7 +6,7 @@
   <link href="https://jnrowe.github.io/" />
   <link href="https://jnrowe.github.io/blog/tag/projects/atom.xml" rel="self" />
   <subtitle type="text">Ramblings of a tired mind</subtitle>
-  <generator uri="http://ablog.readthedocs.org" version="0.9.4">ABlog</generator>
+  <generator uri="https://ablog.readthedocs.org" version="0.10.0">ABlog</generator>
   <entry xml:base="https://jnrowe.github.io/blog/tag/projects/atom.xml">
     <title type="text">Giddy new project love</title>
     <id>https://jnrowe.github.io/articles/new_love_giddiness.html</id>
@@ -82,7 +82,7 @@ generate &lt;a class=&quot;reference external&quot; href=&quot;http://www.lua.or
 by other &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;lua&lt;/span&gt;&lt;/code&gt; scripts to test an implementation.  Its main purpose was to
 allow early experimentation without the expense and time of waiting for
 hardware re-fabrication.&lt;/p&gt;
-&lt;div class=&quot;figure align-center&quot; id=&quot;id7&quot;&gt;
+&lt;div class=&quot;figure align-default&quot; id=&quot;id7&quot;&gt;
 &lt;img alt=&quot;sandfly debug architecture&quot; src=&quot;../../_images/sandfly_use.png&quot; style=&quot;width: 279.5px; height: 358.0px;&quot; /&gt;
 &lt;p class=&quot;caption&quot;&gt;&lt;span class=&quot;caption-text&quot;&gt;As you can see from example usage, it’s source-to-source all the way down.
 If I’m writing &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;lua&lt;/span&gt;&lt;/code&gt; I’m using &lt;a class=&quot;reference external&quot; href=&quot;https://github.com/leafo/moonscript/&quot;&gt;moonscript&lt;/a&gt;, and so should you!&lt;/span&gt;&lt;/p&gt;

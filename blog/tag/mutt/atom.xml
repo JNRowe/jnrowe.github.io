@@ -6,7 +6,7 @@
   <link href="https://jnrowe.github.io/" />
   <link href="https://jnrowe.github.io/blog/tag/mutt/atom.xml" rel="self" />
   <subtitle type="text">Ramblings of a tired mind</subtitle>
-  <generator uri="http://ablog.readthedocs.org" version="0.9.4">ABlog</generator>
+  <generator uri="https://ablog.readthedocs.org" version="0.10.0">ABlog</generator>
   <entry xml:base="https://jnrowe.github.io/blog/tag/mutt/atom.xml">
     <title type="text">Importing gmail filters in mutt</title>
     <id>https://jnrowe.github.io/articles/tips/Importing_gmail_filters_in_mutt.html</id>
@@ -235,7 +235,7 @@ reason we display exactly 12 characters of the spam value is so that the
 columns line up correctly regardless of whether we display a date or a spam
 value.  An example can be seen on the right featuring a few snippets from a ham
 mailbox and my spam mailbox:&lt;/p&gt;
-&lt;div class=&quot;figure align-center&quot;&gt;
+&lt;div class=&quot;figure align-default&quot;&gt;
 &lt;img alt=&quot;Spam field alignment in :command:`mutt`&quot; src=&quot;../../_images/mutt_spam.png&quot; /&gt;
 &lt;/div&gt;
 &lt;p&gt;The final, and perhaps most interesting, file is &lt;code class=&quot;file docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;score.rc&lt;/span&gt;&lt;/code&gt; where

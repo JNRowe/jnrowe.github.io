@@ -105,7 +105,7 @@ desktop environments editing the <code class="file docutils literal notranslate"
 GTK+ applications that we want to have our own extra keybindings available when
 opening or saving files.  <code class="docutils literal notranslate"><span class="pre">GTKFileChooser</span></code> is the modern GTK+ file dialog, and
 it already has a set of useful keybindings including:</p>
-<table class="docutils align-center">
+<table class="docutils align-default">
 <colgroup>
 <col style="width: 31%" />
 <col style="width: 69%" />
@@ -755,10 +755,10 @@ share, for this you can use the <code class="docutils literal notranslate"><span
   </ul>
 
 <div id="searchbox" style="display: none" role="search">
-  <h3>Quick search</h3>
+  <h3 id="searchlabel">Quick search</h3>
     <div class="searchformwrapper">
     <form class="search" action="../../search.html" method="get">
-      <input type="text" name="q" />
+      <input type="text" name="q" aria-labelledby="searchlabel" />
       <input type="submit" value="Go" />
     </form>
     </div>
@@ -775,7 +775,7 @@ share, for this you can use the <code class="docutils literal notranslate"><span
       </a> license.
       
       |
-      Powered by <a href="http://sphinx-doc.org/">Sphinx 2.0.1</a>
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 2.2.0</a>
       &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
       
     </div>

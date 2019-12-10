@@ -6,7 +6,7 @@
   <link href="https://jnrowe.github.io/" />
   <link href="https://jnrowe.github.io/blog/2014/atom.xml" rel="self" />
   <subtitle type="text">Ramblings of a tired mind</subtitle>
-  <generator uri="http://ablog.readthedocs.org" version="0.9.4">ABlog</generator>
+  <generator uri="https://ablog.readthedocs.org" version="0.10.0">ABlog</generator>
   <entry xml:base="https://jnrowe.github.io/blog/2014/atom.xml">
     <title type="text">fossil experiments</title>
     <id>https://jnrowe.github.io/articles/fossil.html</id>
@@ -683,7 +683,7 @@ makes dependency handling work among other things.&lt;/p&gt;
 &lt;/dl&gt;
 &lt;dl class=&quot;option&quot;&gt;
 &lt;dt id=&quot;cmdoption-tar-c&quot;&gt;
-&lt;code class=&quot;descname&quot;&gt;-C&lt;/code&gt;&lt;code class=&quot;descclassname&quot;&gt;&lt;/code&gt;&lt;/dt&gt;
+&lt;code class=&quot;sig-name descname&quot;&gt;-C&lt;/code&gt;&lt;code class=&quot;sig-prename descclassname&quot;&gt;&lt;/code&gt;&lt;/dt&gt;
 &lt;dd&gt;&lt;p&gt;This option tells &lt;strong class=&quot;command&quot;&gt;tar&lt;/strong&gt; to change directory before performing its
 duty.  For example using &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;-C&lt;/span&gt; &lt;span class=&quot;pre&quot;&gt;/&lt;/span&gt;&lt;/code&gt; will switch to &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;/&lt;/span&gt;&lt;/code&gt;, and can be used to
 unpack a tarball directly over the root filesystem.&lt;/p&gt;

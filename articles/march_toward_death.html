@@ -84,7 +84,7 @@ MacOS, so we’ll need to make something similar.</p>
             emulation.
         </span>
     </p>
-</div><div class="figure align-center" id="id3">
+</div><div class="figure align-default" id="id3">
 <a class="reference external image-reference" href="../_static/kitt.gif"><img alt="Multi-band scanner in action" src="../_images/kitt06.png" /></a>
 <p class="caption"><span class="caption-text">Click the image for an animated GIF, I’ll spare you the flashing lights in
 case you wish to read on.</span><a class="headerlink" href="#id3" title="Permalink to this image">¶</a></p>
@@ -129,15 +129,15 @@ simply using <code class="docutils literal notranslate"><span class="pre">date</
 </pre></div>
 </div>
 <p>The function above converts a percentage value in to a hex triplet across
-a green to red gradient, we use <a class="reference external" href="https://docs.python.org/3/library/colorsys.html#colorsys.hls_to_rgb" title="(in Python v3.7)"><code class="xref py py-func docutils literal notranslate"><span class="pre">hls_to_rgb()</span></code></a> here as the <a class="reference external" href="https://en.m.wikipedia.org/wiki/HLS_color_space">HLS
+a green to red gradient, we use <a class="reference external" href="https://docs.python.org/3/library/colorsys.html#colorsys.hls_to_rgb" title="(in Python v3.8)"><code class="xref py py-func docutils literal notranslate"><span class="pre">hls_to_rgb()</span></code></a> here as the <a class="reference external" href="https://en.m.wikipedia.org/wiki/HLS_color_space">HLS
 colour space</a> is more amenable to generating smooth gradients.</p>
 <p>Now that we’re using <a class="reference external" href="https://www.python.org/">Python</a> we may as well take advantage of its
-<a class="reference external" href="https://docs.python.org/3/library/calendar.html#module-calendar" title="(in Python v3.7)"><code class="xref py py-mod docutils literal notranslate"><span class="pre">calendar</span></code></a> module:</p>
+<a class="reference external" href="https://docs.python.org/3/library/calendar.html#module-calendar" title="(in Python v3.8)"><code class="xref py py-mod docutils literal notranslate"><span class="pre">calendar</span></code></a> module:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">month_days</span><span class="p">(</span><span class="n">date</span><span class="p">):</span>
     <span class="k">return</span> <span class="n">calendar</span><span class="o">.</span><span class="n">monthrange</span><span class="p">(</span><span class="n">date</span><span class="o">.</span><span class="n">year</span><span class="p">,</span> <span class="n">date</span><span class="o">.</span><span class="n">month</span><span class="p">)[</span><span class="mi">1</span><span class="p">]</span>
 </pre></div>
 </div>
-<p>The <a class="reference external" href="https://docs.python.org/3/library/calendar.html#calendar.monthrange" title="(in Python v3.7)"><code class="xref py py-func docutils literal notranslate"><span class="pre">monthrange()</span></code></a> function returns a tuple where the second item
+<p>The <a class="reference external" href="https://docs.python.org/3/library/calendar.html#calendar.monthrange" title="(in Python v3.8)"><code class="xref py py-func docutils literal notranslate"><span class="pre">monthrange()</span></code></a> function returns a tuple where the second item
 is the number of days in the current month.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">days_in_year</span><span class="p">(</span><span class="n">date</span><span class="p">):</span>
     <span class="k">if</span> <span class="n">calendar</span><span class="o">.</span><span class="n">isleap</span><span class="p">(</span><span class="n">date</span><span class="o">.</span><span class="n">year</span><span class="p">):</span>
@@ -147,7 +147,7 @@ is the number of days in the current month.</p>
     <span class="k">return</span> <span class="n">days</span>
 </pre></div>
 </div>
-<p><a class="reference external" href="https://docs.python.org/3/library/calendar.html#calendar.isleap" title="(in Python v3.7)"><code class="xref py py-func docutils literal notranslate"><span class="pre">isleap()</span></code></a> allows us to offload figuring out whether 2700 is
+<p><a class="reference external" href="https://docs.python.org/3/library/calendar.html#calendar.isleap" title="(in Python v3.8)"><code class="xref py py-func docutils literal notranslate"><span class="pre">isleap()</span></code></a> allows us to offload figuring out whether 2700 is
 a leap year once senility begins to set in.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">show_progress</span><span class="p">(</span><span class="n">title</span><span class="p">,</span> <span class="n">percent</span><span class="p">,</span> <span class="n">width</span><span class="p">):</span>
     <span class="n">subprocess</span><span class="o">.</span><span class="n">run</span><span class="p">([</span><span class="s1">&#39;gdbar&#39;</span><span class="p">,</span> <span class="s1">&#39;-l&#39;</span><span class="p">,</span> <span class="n">title</span><span class="p">,</span> <span class="s1">&#39;-w&#39;</span><span class="p">,</span> <span class="nb">str</span><span class="p">(</span><span class="n">width</span><span class="p">),</span> <span class="s1">&#39;-fg&#39;</span><span class="p">,</span>
@@ -172,7 +172,7 @@ moved our pointer over the header.</p>
 </div>
 <div class="section" id="step-four">
 <h2>Step four<a class="headerlink" href="#step-four" title="Permalink to this headline">¶</a></h2>
-<p>You can find the script I used <a class="reference download internal" download="" href="../_downloads/8247878d1cce93d38b5fe2e1628c5a40/time_progress.py"><code class="xref download docutils literal notranslate"><span class="pre">here</span></code></a>.  It isn’t
+<p>You can find the script I used <a class="reference download internal" download="" href="../_downloads/8bb0952b2cf5d96d60e8d4457de4c840/time_progress.py"><code class="xref download docutils literal notranslate"><span class="pre">here</span></code></a>.  It isn’t
 pretty, but it will do.  If I come to depend on it I’m sure that I’ll make
 something better.</p>
 <p>I think it is important to note that if you’ve got this far and you’re thinking
@@ -194,7 +194,7 @@ years.</p>
 </dl>
 <dl class="option">
 <dt id="cmdoption-date-arg-j">
-<code class="descname">%j</code><code class="descclassname"></code><a class="headerlink" href="#cmdoption-date-arg-j" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">%j</code><code class="sig-prename descclassname"></code><a class="headerlink" href="#cmdoption-date-arg-j" title="Permalink to this definition">¶</a></dt>
 <dd><p>Displays the day number of the given year, see <em class="manpage">strftime(3)</em> if
 this is new to you.</p>
 </dd></dl>
@@ -804,10 +804,10 @@ this is new to you.</p>
   </ul>
 
 <div id="searchbox" style="display: none" role="search">
-  <h3>Quick search</h3>
+  <h3 id="searchlabel">Quick search</h3>
     <div class="searchformwrapper">
     <form class="search" action="../search.html" method="get">
-      <input type="text" name="q" />
+      <input type="text" name="q" aria-labelledby="searchlabel" />
       <input type="submit" value="Go" />
     </form>
     </div>
@@ -824,7 +824,7 @@ this is new to you.</p>
       </a> license.
       
       |
-      Powered by <a href="http://sphinx-doc.org/">Sphinx 2.0.1</a>
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 2.2.0</a>
       &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
       
     </div>

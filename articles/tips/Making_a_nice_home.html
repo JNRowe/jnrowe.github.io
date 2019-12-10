@@ -116,7 +116,7 @@ probably for <code class="docutils literal notranslate"><span class="pre">.vim</
         --exclude<span class="o">=</span>*/test/* --exclude<span class="o">=</span>*/tests/* --languages<span class="o">=</span>python <span class="se">\</span>
         -R -f <span class="nv">$@</span> $&lt;
 
-<span class="nf">doc/tags</span><span class="o">:</span> <span class="k">$(</span><span class="nv">filter</span>-<span class="nv">out</span> <span class="nv">doc</span>/<span class="nv">tags</span>, <span class="k">$(</span><span class="nv">wildcard</span> <span class="nv">doc</span>/*<span class="k">))</span>
+<span class="nf">doc/tags</span><span class="o">:</span> <span class="k">$(</span><span class="nv">filter-out</span> <span class="nv">doc</span>/<span class="nv">tags</span>, <span class="k">$(</span><span class="nv">wildcard</span> <span class="nv">doc</span>/*<span class="k">))</span>
     vim -X -u NONE -c <span class="s1">&#39;helptags $(dir $@)&#39;</span> -c <span class="s1">&#39;:q&#39;</span> &lt;/dev/null <span class="p">&amp;</span>&gt;/dev/null
 
 <span class="nf">clean</span><span class="o">:</span>
@@ -753,10 +753,10 @@ markup language.</p>
   </ul>
 
 <div id="searchbox" style="display: none" role="search">
-  <h3>Quick search</h3>
+  <h3 id="searchlabel">Quick search</h3>
     <div class="searchformwrapper">
     <form class="search" action="../../search.html" method="get">
-      <input type="text" name="q" />
+      <input type="text" name="q" aria-labelledby="searchlabel" />
       <input type="submit" value="Go" />
     </form>
     </div>
@@ -773,7 +773,7 @@ markup language.</p>
       </a> license.
       
       |
-      Powered by <a href="http://sphinx-doc.org/">Sphinx 2.0.1</a>
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 2.2.0</a>
       &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
       
     </div>

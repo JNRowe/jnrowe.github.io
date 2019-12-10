@@ -6,7 +6,7 @@
   <link href="https://jnrowe.github.io/" />
   <link href="https://jnrowe.github.io/blog/tag/yahoo/atom.xml" rel="self" />
   <subtitle type="text">Ramblings of a tired mind</subtitle>
-  <generator uri="http://ablog.readthedocs.org" version="0.9.4">ABlog</generator>
+  <generator uri="https://ablog.readthedocs.org" version="0.10.0">ABlog</generator>
   <entry xml:base="https://jnrowe.github.io/blog/tag/yahoo/atom.xml">
     <title type="text">Mangling planets</title>
     <id>https://jnrowe.github.io/articles/mangling_planets.html</id>
@@ -42,7 +42,7 @@ tasks &lt;span class=&quot;xref std std-doc&quot;&gt;get in touch&lt;/span&gt;.&
 &lt;a class=&quot;reference external&quot; href=&quot;http://planet.gentoo.org/&quot;&gt;Planet Gentoo&lt;/a&gt;, &lt;a class=&quot;reference external&quot; href=&quot;http://planet.haskell.org/&quot;&gt;Planet Haskell&lt;/a&gt; and &lt;a class=&quot;reference external&quot; href=&quot;http://planet.python.org/&quot;&gt;Planet Python&lt;/a&gt;.  These planets
 syndicate a large number of feeds, see the table below for a breakdown of
 yesterday.&lt;/p&gt;
-&lt;table class=&quot;docutils align-center&quot;&gt;
+&lt;table class=&quot;docutils align-default&quot;&gt;
 &lt;colgroup&gt;
 &lt;col style=&quot;width: 65%&quot; /&gt;
 &lt;col style=&quot;width: 35%&quot; /&gt;
