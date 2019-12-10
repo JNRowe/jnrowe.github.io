@@ -110,7 +110,7 @@ Wait, am I talking myself out of learning?
 
 I know this has sounded like a sweetheart letter aimed at
 sqlalchemy_/activerecord_/odb_, but it isn’t meant that way.  Okay, it kinda of
-is.  However, I want to more.
+is.  However, I want to know more.
 
 I’m tired of needing to enlist the help of others when I want a deeper
 understanding of what is causing slowdowns with complex queries, or having to
