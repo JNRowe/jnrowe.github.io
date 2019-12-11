@@ -121,7 +121,7 @@ A slightly trimmed version of it follows::
                 result = fn(f)
             if final_result:
                 assert result == final_result, \
-                    err_msg.format(name, 'file:' + input_, result, final_result)
+                    err_msg.format(name, 'file:' + fname, result, final_result)
                 passed += 1
             else:
                 print(f'{name}:', style(str(result), fg='green'))
@@ -304,8 +304,8 @@ The first thing to take note of here is that while we’re given a timestamp,
 we’re told we only need to care about the minutes so there is no need to
 parse the whole string.  We need to keep an inventory for each guard, and
 I chose to just keep two lookup tables for quicker implementation in my
-:abbr:`REPL (Read–eval–print loop)`; one for the guard’s time asleep
-``Dict[int, int]``, and one for minutes they sleep on ``Dict[int, List[int]]``.
+|REPL|; one for the guard’s time asleep ``Dict[int, int]``, and one for minutes
+they sleep on ``Dict[int, List[int]]``.
 
 Once again the standard library provides us with some functionality to make
 this easier, and this time it is :mod:`collections`’s
@@ -538,7 +538,7 @@ hope I’m in a better place personally next time.
 What’s next?
 ------------
 
-Let us be honest here.  Winteral is almost upon us and I’ll probably end up
+Let us be honest here.  Winterval is almost upon us and I’ll probably end up
 diving back in to complete the remaining days ;)
 
 .. rubric:: Footnotes
