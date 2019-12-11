@@ -1,0 +1,1165 @@
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" />
+    <title>Advent of Code 2019 &#8212; JNRowe</title>
+    <link rel="stylesheet" href="../_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/custom.css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="../_static/language_data.js"></script>
+    <link rel="canonical" href="https://jnrowe.github.io/articles/advent_of_code_2019.html" />
+    <link rel="shortcut icon" href="../_static/icon.ico"/>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="copyright" title="Copyright" href="../copyright.html" />
+    <link rel="next" title="Dropping Gentoo" href="dropping_gentoo.html" />
+    <link rel="prev" title="Advent of Code 2018" href="advent_of_code_2018.html" />
+  
+   
+  <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  
+  <link rel="alternate" type="application/atom+xml"  href="../blog/atom.xml" title="JNRowe">
+  
+  
+  <style type="text/css">
+    ul.ablog-archive {list-style: none; overflow: auto; margin-left: 0px}
+    ul.ablog-archive li {float: left; margin-right: 5px; font-size: 80%}
+    ul.postlist a {font-style: italic;}
+    ul.postlist-style-disc {list-style-type: disc;}
+    ul.postlist-style-none {list-style-type: none;}
+    ul.postlist-style-circle {list-style-type: circle;}
+  </style>
+    <link href="https://jnrowe.github.io/" rel="me" />
+  
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+    <p class="read-time">
+      <b>Estimated reading time</b>:
+      18 minutes
+    </p>
+  
+
+  <div class="section" id="advent-of-code-2019">
+<h1>Advent of Code 2019<a class="headerlink" href="#advent-of-code-2019" title="Permalink to this headline">¶</a></h1>
+<p>With a touch of sadness, I’ve given up on <abbr title="Advent of Code">AoC</abbr> for this year.  I’m writing this
+is a journal entry, more for myself than others.  You’ve been warned!</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>As always <a class="reference external" href="http://adventofcode.com/2018">Advent of Code</a> is fun, even when it doesn’t always feel like
+it.  If you’re enjoying it, <em>or</em> currently screaming at it, <a class="reference external" href="https://adventofcode.com/2019/support">tip the
+creator</a> so that we can smile and shout at it next year.</p>
+</div>
+<div class="section" id="why-quit">
+<h2>Why quit?<a class="headerlink" href="#why-quit" title="Permalink to this headline">¶</a></h2>
+<p>The puzzles aren’t my cup of tea this year, but I’m not complaining.  Our
+leader board for the office has twice as many people as last year, so clearly it
+is my problem and not <abbr title="Advent of Code">AoC</abbr>’s.</p>
+<p>The reasons for my lack of enjoyment are largely a general malaise that
+manifests itself as I chew through the texts.  A chunk of my day job resembles
+the type of puzzles I’ve completed, and if I wanted more of that I could knock
+some real items off my to–do list.</p>
+<p>I have 22 stars for completing both parts of every day so far this year, but
+I’m taking a break until I have a bit more downtime.</p>
+</div>
+<div class="section" id="day-1">
+<h2>Day 1<a class="headerlink" href="#day-1" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p><a class="reference external" href="https://adventofcode.com/2019/day/1">The Tyranny of the Rocket Equation</a></p></li>
+</ul>
+<p>I jumped in with my toolset from last year, so my solution for part one is:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nd">@aoc_run</span><span class="p">({</span>
+        <span class="s1">&#39;12&#39;</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span>
+        <span class="s1">&#39;14&#39;</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span>
+        <span class="s1">&#39;1969&#39;</span><span class="p">:</span> <span class="mi">654</span><span class="p">,</span>
+        <span class="s1">&#39;100756&#39;</span><span class="p">:</span> <span class="mi">33583</span><span class="p">,</span>
+    <span class="p">},</span>
+    <span class="mi">3329926</span>
+<span class="p">)</span>
+<span class="nd">@read_data</span>
+<span class="k">def</span> <span class="nf">fuel_requirements</span><span class="p">(</span><span class="n">inputs</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">str</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
+    <span class="k">return</span> <span class="nb">sum</span><span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="n">l</span><span class="p">)</span> <span class="o">//</span> <span class="mi">3</span> <span class="o">-</span> <span class="mi">2</span> <span class="k">for</span> <span class="n">l</span> <span class="ow">in</span> <span class="n">inputs</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>The <code class="docutils literal notranslate"><span class="pre">aoc_run</span></code> decorator configures a test runner using the examples from
+description, and if provided the second argument confirms my output when I’m
+refactoring the code(which I won’t be doing in this instance).  If the second
+argument isn’t provided, such as when you’re writing your code, it will output
+the result for you to submit.</p>
+<p>There is nothing interesting with the code for solution itself, possibly beyond
+the fact that we’re using <code class="docutils literal notranslate"><span class="pre">//</span></code>(floor division) to handle the rounding for
+us.</p>
+<p>This could be performed just as easily with <a class="reference external" href="http://ftp.gnu.org/gnu/bc/">bc</a> and/or <a class="reference external" href="http://suso.suso.org/programs/num-utils/">num-utils</a>.  I had
+<a class="reference external" href="https://github.com/SirVer/ultisnips">ultisnips</a> configured to create a skeleton from last year, so only had type
+the tests and the <a class="reference external" href="https://docs.python.org/3/library/functions.html#sum" title="(in Python v3.8)"><code class="xref py py-func docutils literal notranslate"><span class="pre">sum()</span></code></a> call to complete the first part.</p>
+<p>Part two leans toward a solution using recursion, and allows us to introduce one
+of the many useful tools from Python’s stdlib <a class="reference external" href="https://docs.python.org/3/library/itertools.html#itertools.takewhile" title="(in Python v3.8)"><code class="xref py py-func docutils literal notranslate"><span class="pre">itertools.takewhile()</span></code></a>.  This
+function consumes an iterator until the given condition no longer holds.  In
+this instance we’re told to recurse until our additional fuel is just a rounding
+error, we can code this with a simple <code class="docutils literal notranslate"><span class="pre">takewhile(lambda</span> <span class="pre">x:</span> <span class="pre">x</span> <span class="pre">&gt;</span> <span class="pre">0,</span>
+<span class="pre">fuel_recurse(int(l)))</span></code>.</p>
+<p>The recursion itself is a simple infinite generator:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">fuel_recurse</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+    <span class="n">mod</span> <span class="o">=</span> <span class="n">n</span>
+    <span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
+        <span class="n">mod</span> <span class="o">=</span> <span class="n">mod</span> <span class="o">//</span> <span class="mi">3</span> <span class="o">-</span> <span class="mi">2</span>
+        <span class="k">yield</span> <span class="n">mod</span>
+</pre></div>
+</div>
+<p>The call to <a class="reference external" href="https://docs.python.org/3/library/itertools.html#itertools.takewhile" title="(in Python v3.8)"><code class="xref py py-func docutils literal notranslate"><span class="pre">takewhile()</span></code></a> will slurp up results for each module,
+and then we can simply call <a class="reference external" href="https://docs.python.org/3/library/functions.html#sum" title="(in Python v3.8)"><code class="xref py py-func docutils literal notranslate"><span class="pre">sum()</span></code></a> on them.  It only depends on your taste
+whether you choose to flatten the results from each module, or whether you call
+<a class="reference external" href="https://docs.python.org/3/library/functions.html#sum" title="(in Python v3.8)"><code class="xref py py-func docutils literal notranslate"><span class="pre">sum()</span></code></a> on per-module <a class="reference external" href="https://docs.python.org/3/library/functions.html#sum" title="(in Python v3.8)"><code class="xref py py-func docutils literal notranslate"><span class="pre">sum()</span></code></a> results.</p>
+<p>In my rush to hit the leaderboard I introduced a really stupid logic bug,
+my original <abbr title="Read–eval–print loop">REPL</abbr> code was <code class="docutils literal notranslate"><span class="pre">mod</span> <span class="pre">//=</span> <span class="pre">3</span> <span class="pre">-</span> <span class="pre">2</span></code>.  Clearly this won’t work as it is
+simply dividing <code class="docutils literal notranslate"><span class="pre">mod</span></code> by 1.  I’d be number one on the leaderboard for
+idiocy with a bug that foolish, but luckily I’m too stoopid to find it.  I’m
+admitting this in the open to remind myself to think a little more in the
+following days.</p>
+</div>
+<div class="section" id="day-2">
+<span id="day-two-label"></span><h2>Day 2<a class="headerlink" href="#day-2" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p><a class="reference external" href="https://adventofcode.com/2018/day/2">Inventory Management System</a></p></li>
+</ul>
+<p>Annoyingly this problem introduces examples that function differently from your
+user input.  If, like me, you collect the examples for use as a test case you’ll
+need to treat your output differently to account for the “<strong>before running the
+program</strong>, replace position 1 with the value 12 and replace position 2 with the
+value 2” caveat.</p>
+<p>I wasted a moment or two trying to decide whether to do The Right Thing™ or
+special case the user input.  I chose to special case it initially, by
+implementing a guard based on program length.  I’m acknowledging this to make
+a point, it is very tempting to produce awful hacks in the eternal pursuit of
+valuable internet points.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">init_computer</span><span class="p">(</span><span class="n">inputs</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">str</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
+    <span class="n">program</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">extract_numbers</span><span class="p">(</span><span class="n">inputs</span><span class="p">[</span><span class="mi">0</span><span class="p">]))</span>
+    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">program</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">10</span><span class="p">:</span>
+        <span class="n">program</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="mi">12</span>
+        <span class="n">program</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="o">=</span> <span class="mi">2</span>
+    <span class="k">return</span> <span class="n">run_program</span><span class="p">(</span><span class="n">program</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span>
+</pre></div>
+</div>
+<p>I had to go back and fix it before I tackled part two, as it <em>really</em> annoyed me
+having to look at it in my editor.</p>
+<p>The actual implementation of the <code class="docutils literal notranslate"><span class="pre">IntCode</span></code> processor is not interesting,
+purely a simple <abbr title="Finite State Machine">FSM</abbr>.  If I was to re-implement it
+from scratch I’d probably do the same, but would be more likely to use a hash to
+lookup opcode implementations instead of a multi-armed <code class="docutils literal notranslate"><span class="pre">if</span></code> statement.  Mostly
+because invalid opcodes are then automatically rejected with a <code class="docutils literal notranslate"><span class="pre">KeyError</span></code>, but
+also because you know it is going to become a hairy <a class="reference external" href="https://en.m.wikipedia.org/wiki/Cyclomatic_complexity">McCabe complexity</a>
+nightmare if you start adding more branches as the days push on.</p>
+<p>The only value to using a multi-armed <code class="docutils literal notranslate"><span class="pre">if</span></code> is that you can match multiple
+opcodes far more easily that you can with simple <code class="docutils literal notranslate"><span class="pre">{opcode:</span> <span class="pre">func}</span></code> approach,
+for example:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="n">opcode</span> <span class="ow">in</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">]:</span>
+    <span class="n">argc</span> <span class="o">=</span> <span class="mi">4</span>
+    <span class="n">p1</span><span class="p">,</span> <span class="n">p2</span><span class="p">,</span> <span class="n">r</span> <span class="o">=</span> <span class="n">memory</span><span class="p">[</span><span class="n">pos</span> <span class="o">+</span> <span class="mi">1</span><span class="p">:</span><span class="n">pos</span> <span class="o">+</span> <span class="n">argc</span><span class="p">]</span>
+    <span class="n">memory</span><span class="p">[</span><span class="n">r</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="kc">None</span><span class="p">,</span> <span class="n">add</span><span class="p">,</span> <span class="n">mul</span><span class="p">][</span><span class="n">opcode</span><span class="p">](</span><span class="n">memory</span><span class="p">[</span><span class="n">p1</span><span class="p">],</span> <span class="n">memory</span><span class="p">[</span><span class="n">p2</span><span class="p">])</span>
+</pre></div>
+</div>
+<p>For part two, I was super lazy and simply ran all ten-thousand inputs.
+Computers are fast enough that even noodling about optimisation for this is
+a wasteful trade off.  Instead, I spent a few minutes making my test runner
+output colours on failures for the greater good.</p>
+<img alt="|AOC| example runner failure" src="../_images/2019-12-11-advent_of_code.png" />
+</div>
+<div class="section" id="day-3">
+<h2>Day 3<a class="headerlink" href="#day-3" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p><a class="reference external" href="https://adventofcode.com/2019/day/3">Crossed Wires</a></p></li>
+</ul>
+<p>We’ve fallen in to actual thought territory today.</p>
+<p><a class="reference external" href="/articles/advent_of_code_2018.html#day-3">This time last year</a> I mentioned <a class="reference external" href="http://www.numpy.org/">numpy</a>, and that advice holds again today.
+If you’re planning on simply bruteforcing the circuit on to a giant grid, expect
+a lot of memory pressure and simply switching to <code class="docutils literal notranslate"><span class="pre">numpy</span></code> will do wonders.
+A quick test looks like you’ll be looking at a few gigabytes of memory for the
+super naïve method with Python lists.</p>
+<p>Personally I just went for storing the intersections in a <code class="docutils literal notranslate"><span class="pre">Dict[Tuple[int,</span>
+<span class="pre">int],</span> <span class="pre">int]</span></code>.  There was a niggling feeling in my mind that part two might
+expose a requirement that meant my processing time would explode exponentially,
+or there would be a region painting question that would make having access to
+the populated grid easier.  It wasn’t the case in the end, and we’ll save
+breaking out <code class="docutils literal notranslate"><span class="pre">numpy</span></code> for another day.</p>
+<p>I wrote very few lines of code today, although my solution was rather large.
+This is the result of simply tugging my <code class="docutils literal notranslate"><span class="pre">Point</span></code> object with its pre-written
+<a class="reference external" href="https://en.wikipedia.org/wiki/Taxicab_geometry">Manhattan distance</a> methods from 2018’s <a class="reference external" href="https://adventofcode.com/2018/day/6">Chronal Coordinates</a> solution.  I’m
+unsure whether this makes me happy for code reuse or sad for cheating the puzzle
+a little.</p>
+<p>The only interesting element from today is relying on a bunch of default
+functionality that Python gives us.  Instead of needing to write our own matcher
+to find the overlapping wires, we can simply call <code class="docutils literal notranslate"><span class="pre">wire1.keys()</span> <span class="pre">&amp;</span> <span class="pre">wire2</span></code> and
+Python gives us the intersection points directly.</p>
+</div>
+<div class="section" id="day-4">
+<h2>Day 4<a class="headerlink" href="#day-4" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p><a class="reference external" href="https://adventofcode.com/2019/day/4">Secure Container</a></p></li>
+</ul>
+<p>We’re attempting to find a six digit password, the problem space is small enough
+that we can just code the rules without thought for speed.  Simply iterate over
+the given range, while treating the numbers as strings.</p>
+<p>Rule three states “two adjacent digits are the same”.  That is a <a class="reference external" href="http://regex.info/blog/2006-09-15/247">simple regex
+away</a>, <a class="reference external" href="https://docs.python.org/3/library/re.html#re.search" title="(in Python v3.8)"><code class="xref py py-func docutils literal notranslate"><span class="pre">re.search()</span></code></a> allows us to search for <code class="docutils literal notranslate"><span class="pre">(\d)\1</span></code> to find any
+duplicated value.  Job done.  If you were so inclined you could use
+<a class="reference external" href="https://docs.python.org/3/library/itertools.html#itertools.groupby" title="(in Python v3.8)"><code class="xref py py-func docutils literal notranslate"><span class="pre">groupby()</span></code></a> to pluck repeats out instead.</p>
+<p>Rule four says “Going from left to right, the digits <strong>never decrease</strong>; they
+only ever increase or stay the same”.  Quickest answer was just to compare the
+password to a sorted version of itself, if they’re equal then the password
+passes.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nb">sorted</span><span class="p">(</span><span class="n">s</span><span class="p">)</span> <span class="o">==</span> <span class="nb">list</span><span class="p">(</span><span class="n">s</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Clearly, there is a bunch of ugly type shifting going on here; <a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.8)"><code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code></a> from
+<a class="reference external" href="https://docs.python.org/3/library/functions.html#func-range">range()</a>, <a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.8)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a> from <a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.8)"><code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code></a>, <a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.8)"><code class="xref py py-class docutils literal notranslate"><span class="pre">list</span></code></a> from <a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.8)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a>.
+However, it just isn’t worth the effort to improve this.  Arguably, you could
+iterate over the characters manually to avoid the final conversion but
+<a class="reference external" href="https://docs.python.org/3/library/timeit.html#module-timeit" title="(in Python v3.8)"><code class="xref py py-mod docutils literal notranslate"><span class="pre">timeit</span></code></a> shows it takes twice as long anyway.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nb">all</span><span class="p">(</span><span class="n">n1</span> <span class="o">&lt;=</span> <span class="n">n2</span> <span class="k">for</span> <span class="n">n1</span><span class="p">,</span> <span class="n">n2</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">s</span><span class="p">,</span> <span class="n">s</span><span class="p">[</span><span class="mi">1</span><span class="p">:]))</span>
+</pre></div>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Using <a class="reference external" href="https://docs.python.org/3/library/functions.html#all" title="(in Python v3.8)"><code class="xref py py-func docutils literal notranslate"><span class="pre">all()</span></code></a> we’re short-circuiting the failure case in exactly the
+same way as the <a class="reference external" href="https://docs.python.org/3/library/functions.html#sorted" title="(in Python v3.8)"><code class="xref py py-func docutils literal notranslate"><span class="pre">sorted()</span></code></a> comparison.  While <a class="reference external" href="https://docs.python.org/3/library/functions.html#all" title="(in Python v3.8)"><code class="xref py py-func docutils literal notranslate"><span class="pre">all()</span></code></a>, <a class="reference external" href="https://docs.python.org/3/library/functions.html#any" title="(in Python v3.8)"><code class="xref py py-func docutils literal notranslate"><span class="pre">any()</span></code></a>,
+and the tools in <a class="reference external" href="https://docs.python.org/3/library/functools.html#module-functools" title="(in Python v3.8)"><code class="xref py py-mod docutils literal notranslate"><span class="pre">functools</span></code></a> aren’t <em>fashionable</em> in Python circles
+they can often make a whole lot of code more readable.</p>
+</div>
+<p>Part two slightly modified the third rule to say “the two adjacent matching
+digits <strong>are not part of a larger group of matching digits</strong>”.  Laziest method
+won again, Python provides a <a class="reference external" href="https://docs.python.org/3/library/collections.html#collections.Counter" title="(in Python v3.8)"><code class="xref py py-class docutils literal notranslate"><span class="pre">Counter</span></code></a> object that does all
+the work for us:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="mi">2</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">collections</span><span class="o">.</span><span class="n">Counter</span><span class="p">(</span><span class="n">s</span><span class="p">):</span>
+    <span class="k">continue</span>
+</pre></div>
+</div>
+<p>At another time I may have reached for <code class="docutils literal notranslate"><span class="pre">Counter</span></code> in the first part.  I find it
+quite interesting how a previous unrelated task colours the work one produces on
+an another.</p>
+<p>If you’re allergic to <abbr title="Regular Expression">RegEx</abbr> look away now, but…   You can still perform the
+match by using a positive look behind to effectually make the match available
+<em>before</em> you saw it.  <code class="docutils literal notranslate"><span class="pre">(\d)(?&lt;!\1.)\1(?!\1)</span></code>, or with the benefit of
+<a class="reference external" href="https://docs.python.org/3/library/re.html#re.VERBOSE" title="(in Python v3.8)"><code class="xref py py-data docutils literal notranslate"><span class="pre">re.VERBOSE</span></code></a>:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">matcher</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span><span class="sa">r</span><span class="s2">&quot;&quot;&quot;</span>
+<span class="s2">    (\d)      # a digit</span>
+<span class="s2">    (?&lt;!\1.)  # check character *before* doesn&#39;t match</span>
+<span class="s2">    \1        # repeated character</span>
+<span class="s2">    (?!\1)    # check character *after* doesn&#39;t match</span>
+<span class="s2">&quot;&quot;&quot;</span><span class="p">,</span> <span class="n">re</span><span class="o">.</span><span class="n">VERBOSE</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>We wouldn’t want to do that though, as it makes kittens weep.</p>
+</div>
+<div class="section" id="day-5">
+<span id="day-five-label"></span><h2>Day 5<a class="headerlink" href="#day-5" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p><a class="reference external" href="https://adventofcode.com/2019/day/5">Sunny with a Chance of Asteroids</a></p></li>
+</ul>
+<p>To be honest, today’s puzzle bored me.  It was just a matter of translating
+a few more rules in to our <code class="docutils literal notranslate"><span class="pre">IntCode</span></code> state machine.  I may have been tempted
+to skip it for now, but all <abbr title="Advent of Code">AoC</abbr> players know we’ll need to implement it all if
+we want to continue with further days.</p>
+<p>I can’t get over how impenetrable the wording felt to me.  I think it is simply
+the choice of using non-standard “simple” wording to make the text more
+approachable to non-CS people that left me having to re-read paragraphs multiple
+times.  This isn’t a complaint aimed at the creator, more an admission of one of
+my shortcomings<a class="footnote-reference brackets" href="#id4" id="id1">1</a>.</p>
+<p>Instead of simply expanding my Python implementation from <a class="reference internal" href="#day-two-label"><span class="std std-ref">day two</span></a>, I took the <a class="reference external" href="http://www.joelonsoftware.com/items/2008/05/01.html">architecture astronaut</a> approach and created
+a standalone <a class="reference external" href="https://nim-lang.org/">nim</a> implementation that was <em>far</em> faster.  It also provides the
+benefit of being usable regardless of what language I choose to attack a future
+puzzle in, or even to use from the shell in a pipeline.</p>
+<p>If you’re into such shenanigans yourself, <a class="reference external" href="https://github.com/yglukhov/nimpy/">nimpy</a> provides a really nice method
+to do so.  You can create your standalone binary implementing a task, but also
+make it usable directly <em>from</em> Python with a simple import.</p>
+<a class="reference internal image-reference" href="../_images/2019-12-11-intcode_memory.png"><img alt="Example display from IntCode emulator" src="../_images/2019-12-11-intcode_memory.png" style="width: 389.07px; height: 266.97px;" /></a>
+<p>I think this is probably my tip of the day, if you find a puzzle a little
+uninteresting just <em>make it more interesting</em>.  Implementing the <code class="docutils literal notranslate"><span class="pre">nim</span></code> version
+with human-readable and <abbr title="JavaScript Object Notation">JSON</abbr> output,
+MovieOS memory display while running, tacking on <a class="reference external" href="http://blockdiag.com/">seqdiag</a> output for bug
+inspection was glossy, and optimising it in ridiculous ways with branch
+prediction to take some advantage of all my <abbr title="Central Processing Unit">CPU</abbr> cores was a lot of fun.</p>
+</div>
+<div class="section" id="day-6">
+<h2>Day 6<a class="headerlink" href="#day-6" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p><a class="reference external" href="https://adventofcode.com/2019/day/6">Universal Orbit Map</a></p></li>
+</ul>
+<p>Much like my experience with <a class="reference external" href="/articles/advent_of_code_2018.html#day-7">day 7 from last year</a>, this is a no-brainer
+if you recognise the problem and know where to find a pre-made solution.</p>
+<blockquote>
+<div><p>NetworkX is a Python package for the creation, manipulation, and study of
+the structure, dynamics, and functions of complex networks.</p>
+</div></blockquote>
+<p>Today that solution comes in the form of <a class="reference external" href="http://networkx.github.io/">networkx</a>, an incredibly useful package
+for mangling graph structures at scale.  We can create a directed graph from our
+puzzle input by splitting lines on <code class="docutils literal notranslate"><span class="pre">)</span></code>.  We can then use <code class="docutils literal notranslate"><span class="pre">networkx</span></code> to count
+up all the orbits:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">orbits</span> <span class="o">=</span> <span class="n">nx</span><span class="o">.</span><span class="n">DiGraph</span><span class="p">(</span><span class="n">line</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;)&#39;</span><span class="p">)</span> <span class="k">for</span> <span class="n">l</span> <span class="ow">in</span> <span class="n">inputs</span><span class="p">)</span>
+
+<span class="k">return</span> <span class="nb">sum</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">nx</span><span class="o">.</span><span class="n">ancestors</span><span class="p">(</span><span class="n">orbits</span><span class="p">,</span> <span class="n">n</span><span class="p">))</span> <span class="k">for</span> <span class="n">n</span> <span class="ow">in</span> <span class="n">orbits</span><span class="o">.</span><span class="n">nodes</span><span class="p">())</span>
+</pre></div>
+</div>
+<p>For part two we need to find the <code class="docutils literal notranslate"><span class="pre">shortest</span> <span class="pre">path</span> <span class="pre">length</span></code>, and for that we only
+really need to find an underscore or two:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">return</span> <span class="n">nx</span><span class="o">.</span><span class="n">shortest_path_length</span><span class="p">(</span><span class="n">orbits</span><span class="o">.</span><span class="n">to_undirected</span><span class="p">(),</span> <span class="s1">&#39;YOU&#39;</span><span class="p">,</span> <span class="s1">&#39;SAN&#39;</span><span class="p">)</span> <span class="o">-</span> <span class="mi">2</span>
+</pre></div>
+</div>
+<p>If you’re interested in approaching the problem from a little further down, the
+Python docs have an interesting essay on <a class="reference external" href="https://www.python.org/doc/essays/graphs/">implementing graph structures</a> just
+for you.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p><a class="reference external" href="https://www.graphviz.org/">graphviz</a> provides all the required functionality too, and the input is
+trivially convertible to a directed graph with a <strong class="command">sed</strong>.  If you’re
+only aware of simple <strong class="command">dot</strong> usage I really recommend digging in to
+the documentation for the many other tools in the package.  Today you’d have
+wanted to read about <strong class="command">ccomps</strong>, <strong class="command">dijkstra</strong>, and maybe
+<strong class="command">nop</strong> for <abbr title="Obsessive–compulsive disorder">OCD</abbr>-compliance.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sed</span> <span class="o">-</span><span class="n">e</span> <span class="s2">&quot;1idigraph {&quot;</span> <span class="o">-</span><span class="n">e</span> <span class="s1">&#39;$a}&#39;</span> \
+    <span class="o">-</span><span class="n">e</span> <span class="s1">&#39;s,\(.*\))\(.*\),&quot;</span><span class="se">\1</span><span class="s1">&quot;-&gt;&quot;</span><span class="se">\2</span><span class="s1">&quot;,&#39;</span> <span class="n">day06</span><span class="o">.</span><span class="n">txt</span> \
+    <span class="o">|</span> <span class="n">nop</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="day-7">
+<h2>Day 7<a class="headerlink" href="#day-7" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p><a class="reference external" href="https://adventofcode.com/2019/day/7">Amplification Circuit</a></p></li>
+</ul>
+<p>Back in <a class="reference internal" href="#day-five-label"><span class="std std-ref">day five</span></a> I sounded like a fool for implementing
+standalone <code class="docutils literal notranslate"><span class="pre">IntCode</span></code> interpreters, today I inhale the plaudits as
+a double-bacon-genius.</p>
+<p>Part one requires us to simply tie a few interpreters together.  I decided to do
+this from my shell, as it didn’t look that difficult.  We need to test all
+permutations of <code class="docutils literal notranslate"><span class="pre">{0…4}</span></code>, and there are plenty ways to do this.  I’m going to
+use <a class="reference external" href="http://sourceforge.net/projects/crunch-wordlist/">crunch</a> with the <code class="docutils literal notranslate"><span class="pre">-p</span></code>[ermutations] option as it was already installed:</p>
+<div class="highlight-zsh notranslate"><div class="highlight"><pre><span></span><span class="nv">choices</span><span class="o">=(</span><span class="k">$(</span>crunch <span class="m">0</span> <span class="m">0</span> -p <span class="o">{</span><span class="m">0</span>..4<span class="o">}</span><span class="k">)</span><span class="o">)</span>
+</pre></div>
+</div>
+<p>We’ll now want to iterate over the array testing our amplifiers, which I chose
+to do with a loop because it was quicker than adding more argument parsing to my
+<code class="docutils literal notranslate"><span class="pre">IntCode</span></code> interpreter to make this possible with a pipe chain.</p>
+<div class="highlight-zsh notranslate"><div class="highlight"><pre><span></span><span class="nv">rv</span><span class="o">=</span><span class="m">0</span>
+<span class="k">for</span> choice <span class="o">(</span><span class="nv">$choices</span><span class="o">)</span> <span class="o">{</span>
+    <span class="k">for</span> input <span class="o">(</span><span class="si">${</span><span class="p">(ps::)choice</span><span class="si">}</span><span class="o">)</span> <span class="o">{</span>
+        <span class="nv">rv</span><span class="o">=</span><span class="k">$(</span>./intcode inputs/day07.txt <span class="o">&lt;&lt;&lt;</span> <span class="nv">$input</span><span class="s1">$&#39;\n&#39;</span><span class="nv">$rv</span><span class="k">)</span>
+    <span class="o">}</span>
+    <span class="nb">echo</span> <span class="nv">$rv</span>
+<span class="o">}</span>
+</pre></div>
+</div>
+<p>There are a couple of things going on here that aren’t all that common.  First,
+I’m a <a class="reference external" href="https://www.zsh.org/">zsh</a> user and I tend to prefer the <a class="reference external" href="http://zsh.sourceforge.net/Doc/Release/Shell-Grammar.html#Alternate-Forms-For-Complex-Commands">short syntax</a> format.  It is
+functionally identical to “standard” syntax, but I find it more clear.</p>
+<p>Second, we can take advantage of <strong class="command">zsh</strong>’s <a class="reference external" href="http://zsh.sourceforge.net/Doc/Release/Expansion.html#Parameter-Expansion-Flags">parameter expansion flags</a>
+to split our five character string in to an array of individual characters.  The
+<code class="docutils literal notranslate"><span class="pre">${(ps::)choice}</span></code> construct tells zsh to split the string with an empty
+delimiter, but the normal way to use it would be to split based on a character
+such as a comma(<code class="docutils literal notranslate"><span class="pre">${(ps:,:)csv_record}</span></code>)</p>
+<p>Finally, we’re using a <a class="reference external" href="http://zsh.sourceforge.net/Doc/Release/Redirection.html#Redirection">here-string</a> to feed <code class="docutils literal notranslate"><span class="pre">stdin</span></code> for our interpreter.  The
+oddness with <code class="docutils literal notranslate"><span class="pre">$'\n'</span></code> is a <a class="reference external" href="http://zsh.sourceforge.net/Doc/Release/Shell-Grammar.html#Quoting">quoting form</a> that tells zsh to interpret the text
+as it would for <code class="docutils literal notranslate"><span class="pre">print</span></code>, that is it expands the newline escape sequence for
+us.</p>
+<p>With that block written we now have each possible output, and the original
+question told us to provide the highest value as our answer.  <a class="reference external" href="http://suso.suso.org/programs/num-utils/">num-utils</a>
+provides <code class="docutils literal notranslate"><span class="pre">numbound</span></code> for exactly this sort of purpose,  and simply tacking <code class="docutils literal notranslate"><span class="pre">|</span>
+<span class="pre">numbound</span></code> on to our outerloop gives us the final result for part one.</p>
+<p>Part two is simply a matter of changing the input and loop condition, and
+contains nothing new or interesting.  If you’re doing something similar
+I strongly suggest getting to know the <a class="reference external" href="http://zsh.sourceforge.net/Doc/Release/Shell-Builtin-Commands.html#Shell-Builtin-Commands">fc builtin</a>, which allows you to edit
+your shell session in a real editor instead of needing to manually switch
+between your editor and terminal when composing more complex shell blocks.</p>
+</div>
+<div class="section" id="day-8">
+<h2>Day 8<a class="headerlink" href="#day-8" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p><a class="reference external" href="https://adventofcode.com/2019/day/8">Space Image Format</a></p></li>
+</ul>
+<p>We’re going to want a chunker to implement this, and oddly for something so
+common Python doesn’t seem to provide one<a class="footnote-reference brackets" href="#id5" id="id2">2</a>.  Perhaps the reason is how
+simple it is to implement, but then what would explain <a class="reference external" href="https://docs.python.org/3/library/math.html#math.copysign" title="(in Python v3.8)"><code class="xref py py-func docutils literal notranslate"><span class="pre">math.copysign()</span></code></a>?</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">chunks</span><span class="p">(</span><span class="n">l</span><span class="p">:</span> <span class="n">List</span><span class="p">,</span> <span class="n">n</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Generator</span><span class="p">[</span><span class="n">List</span><span class="p">,</span> <span class="kc">None</span><span class="p">,</span> <span class="kc">None</span><span class="p">]:</span>
+    <span class="sd">&quot;&quot;&quot;Generate n-sized chunks from list.&quot;&quot;&quot;</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">l</span><span class="p">),</span> <span class="n">n</span><span class="p">):</span>
+        <span class="k">yield</span> <span class="n">l</span><span class="p">[</span><span class="n">i</span><span class="p">:</span><span class="n">i</span> <span class="o">+</span> <span class="n">n</span><span class="p">]</span>
+</pre></div>
+</div>
+<p>For part one all we need to do is count “pixel” values in each frame, and we
+once again use a <a class="reference external" href="https://docs.python.org/3/library/collections.html#collections.Counter" title="(in Python v3.8)"><code class="xref py py-class docutils literal notranslate"><span class="pre">Counter</span></code></a> to do the lifting:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">layers</span> <span class="o">=</span> <span class="p">[</span><span class="n">Counter</span><span class="p">(</span><span class="n">l</span><span class="p">)</span> <span class="k">for</span> <span class="n">l</span> <span class="ow">in</span> <span class="n">chunks</span><span class="p">(</span><span class="n">inputs</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="mi">25</span> <span class="o">*</span> <span class="mi">6</span><span class="p">)]</span>
+</pre></div>
+</div>
+<p>Then we need to select the layer with the fewest zeroes, and calculate
+a rudimentary checksum for the elves to verify:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">zero_layer</span> <span class="o">=</span> <span class="nb">min</span><span class="p">(</span><span class="n">layers</span><span class="p">,</span> <span class="n">key</span><span class="o">=</span><span class="n">itemgetter</span><span class="p">(</span><span class="mi">0</span><span class="p">))</span>
+<span class="k">return</span> <span class="n">zero_layer</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">*</span> <span class="n">zero_layer</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span>
+</pre></div>
+</div>
+<p>My point for showing the whole code for such a simple task is to reiterate the
+point I’m making a lot, if you’re aiming for speed then be sure to leverage the
+tools that are available to you.  This <em>entire</em> solution can be <abbr title="Read–eval–print loop">REPL</abbr>’d in less
+than five lines without even resorting to <a class="reference external" href="https://en.m.wikipedia.org/wiki/Code_golf">code golfing</a>.</p>
+<p>For part two we need to iterate over the layers applying a basic rule.  As we’re
+told to iterate in reverse order, we simply skip “transparent” pixels and
+only apply black and white.  Once again taking advantage of <a class="reference external" href="https://docs.python.org/3/library/functions.html">built-ins</a> allows us
+to write basically zero code:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">layer</span> <span class="ow">in</span> <span class="nb">reversed</span><span class="p">(</span><span class="n">layers</span><span class="p">):</span>
+    <span class="k">for</span> <span class="n">n</span><span class="p">,</span> <span class="n">p</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">layer</span><span class="p">):</span>
+        <span class="k">if</span> <span class="n">p</span> <span class="o">!=</span> <span class="mi">2</span><span class="p">:</span>
+            <span class="n">image</span><span class="p">[</span><span class="n">n</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39; █&#39;</span><span class="p">[</span><span class="n">p</span><span class="p">]</span>
+</pre></div>
+</div>
+<p>Those four lines were my first attempt in the <abbr title="Read–eval–print loop">REPL</abbr>, and I only burst the
+<code class="docutils literal notranslate"><span class="pre">if</span></code> statement for readability when I moved it to a file.</p>
+<p>As I wrote less than ten lines to submit my answers, I decided to make a little
+more work for myself.  I give you images of images…</p>
+<div class="figure align-default" id="id7">
+<a class="reference external image-reference" href="../_static/2019-12-11-space_image.mp4"><img alt="Frames from the image decoding" src="../_images/2019-12-11-space_image.png" style="width: 319.44px; height: 221.76000000000002px;" /></a>
+<p class="caption"><span class="caption-text">Click the image for an animation, if you want to see the image decoding.</span><a class="headerlink" href="#id7" title="Permalink to this image">¶</a></p>
+</div>
+<p>A more interesting question might be: without reversing the frames how quickly
+can we apply <abbr title="Optical Character Recognition">OCR</abbr> to guess the incomplete
+text?  Had the input data been larger it might have been an interesting approach
+to solving this puzzle.  Install <a class="reference external" href="https://github.com/tesseract-ocr/">tesseract</a>, figure it out and drop me a <a class="reference external" href="mailto:jnrowe&#37;&#52;&#48;gmail&#46;com">mail</a>.</p>
+</div>
+<div class="section" id="day-9">
+<h2>Day 9<a class="headerlink" href="#day-9" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p><a class="reference external" href="https://adventofcode.com/2019/day/9">Sensor Boost</a></p></li>
+</ul>
+<p>Hrmmph.  The puzzle text took me longer to read than the extra opcode and mode
+took to add to my interpreter.  There was nothing new or noteworthy in the
+implmentation either, just another state variable and <code class="docutils literal notranslate"><span class="pre">switch</span></code> arm.</p>
+</div>
+<div class="section" id="day-10">
+<h2>Day 10<a class="headerlink" href="#day-10" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p><a class="reference external" href="https://adventofcode.com/2019/day/10">Monitoring Station</a></p></li>
+</ul>
+<p>Part one was easy enough, after having put in some legwork to re-read topics
+I have a tendancy to forget through lack of use.  I took a ten minute diversion
+to refresh myself on <a class="reference external" href="https://nrich.maths.org/13746">polar coordinates</a><a class="footnote-reference brackets" href="#id6" id="id3">3</a>, then a little <a class="reference external" href="https://docs.python.org/3/library/cmath.html#module-cmath" title="(in Python v3.8)"><code class="xref py py-mod docutils literal notranslate"><span class="pre">cmath</span></code></a>
+refresher.</p>
+<p>Research over.  All we need to do is map the asteroid coordinates as complex
+numbers, then iterate with more stdlib magic to count unique angles.  Dumping
+the output of <a class="reference external" href="https://docs.python.org/3/library/cmath.html#cmath.phase" title="(in Python v3.8)"><code class="xref py py-func docutils literal notranslate"><span class="pre">cmath.phase()</span></code></a> in to a set comprehension strips the
+duplicates for us.  We can think of it as a naïve form of <a class="reference external" href="https://en.m.wikipedia.org/wiki/Raycasting">ray casting</a> to
+“hide” the hidden asteroids.</p>
+<p>I think the interesting part of today’s puzzle is yet another stdlib reminder.
+Should you wish to use cartesian coordinates to operate on the asteroids you
+have pre-built <a class="reference external" href="https://docs.python.org/3/library/math.html#math.gcd" title="(in Python v3.8)"><code class="xref py py-func docutils literal notranslate"><span class="pre">gcd()</span></code></a> or <a class="reference external" href="https://docs.python.org/3/library/fractions.html#fractions.Fraction" title="(in Python v3.8)"><code class="xref py py-class docutils literal notranslate"><span class="pre">Fraction</span></code></a> functionality
+for your angle representations, and if you opt for 1-dimensional polar
+coordinates you have <a class="reference external" href="https://docs.python.org/3/library/cmath.html#module-cmath" title="(in Python v3.8)"><code class="xref py py-mod docutils literal notranslate"><span class="pre">cmath</span></code></a> functions at your fingertips.</p>
+<p>And <em>iff</em> you outgrow the stdlib the Python ecosystem is great.  As an example,
+you <em>could</em> read the whole input in to a <a class="reference external" href="https://numpy.org/devdocs/reference/arrays.html#array-objects">numpy.array</a> for the map.  Then take
+advantage of <a class="reference external" href="https://numpy.org/doc/1.16/reference/generated/numpy.nonzero.html">numpy.nonzero()</a> to extract the asteroid coordinates to iterate
+over.</p>
+<p>The other thing I learnt is my co-worker Karl is <em>amazing</em>, his solution
+included a <a class="reference external" href="http://www.pygame.org/">pygame</a>-based radar sweep display of the asteroid field.</p>
+</div>
+<div class="section" id="day-11">
+<h2>Day 11<a class="headerlink" href="#day-11" title="Permalink to this headline">¶</a></h2>
+<p>I’ve kind of lost interest today.  This puzzle was largely just tying your
+<code class="docutils literal notranslate"><span class="pre">IntCode</span></code> interpreter in to a <a class="reference external" href="https://en.m.wikipedia.org/wiki/Logo_(programming_language)">Logo</a>-esque walker from various other puzzles,
+it felt more like busywork than an actual challenge.</p>
+<p>I’m pretty sure I’ll come back to <abbr title="Advent of Code">AoC</abbr> 2019 during my Winterval break, but that
+is it for now.</p>
+<img alt="Calendar showing current count of 22 stars" src="../_images/2019-12-11-aoc_calendar.png" />
+</div>
+<div class="section" id="tips">
+<h2>Tips<a class="headerlink" href="#tips" title="Permalink to this headline">¶</a></h2>
+<p>I’m mostly repeating my tips from <a class="reference internal" href="advent_of_code_2018.html"><span class="doc">last year</span></a> and the
+<a class="reference internal" href="advent_of_code.html"><span class="doc">year before</span></a>.</p>
+<p>Don’t use this as an excuse to learn a new language.  The puzzles aren’t really
+complicated enough to learn a new language beyond basic grammar.  You may as
+well use it as an excuse to explore new features in a language you already
+know, or as an excuse to explore the standard library of your chosen language
+some more.</p>
+<p>Read the problems <em>deeply</em>.  The artificial nature of the puzzles often elides
+important information, or at least can often feel that way.  These <em>are</em>
+puzzles so you should expect some vexation, and skimming for speed will make
+this worse!</p>
+<p>If you’re going for the leaderboard you need to be <em>really</em> fast, so: Use fast
+languages, be <em>all over</em> your chosen weapon’s standard library, and use your
+editor’s <a class="reference external" href="https://github.com/SirVer/ultisnips/">snippets</a> well.  <strong>Every</strong>. <strong>Second</strong>. <strong>Counts</strong>.</p>
+<p>And finally, keep your old solutions around either in files or in your <abbr title="Read–eval–print loop">REPL</abbr>’s
+history as you’ll probably end up revisiting them, if not this year then maybe
+in the next.</p>
+</div>
+<div class="section" id="hopes-for-2020">
+<h2>Hopes for 2020?<a class="headerlink" href="#hopes-for-2020" title="Permalink to this headline">¶</a></h2>
+<p>Repeating number one from last year: That the options to pay for it are better
+next year.  Each year I have to find a friend to make a donation in my place as
+the payment options are weak.  It would be nice to not have to do so, and
+limiting payments to PayPal and Coinbase <em>must</em> be putting others off a donation
+entirely.</p>
+<p>Number two?  That it returns.  I know I’ve moaned a couple of times in this
+document, but that is the joy of puzzles.  If they’re not annoying you then
+they’re not challenging enough.</p>
+<p class="rubric">Footnotes</p>
+<dl class="footnote brackets">
+<dt class="label" id="id4"><span class="brackets"><a class="fn-backref" href="#id1">1</a></span></dt>
+<dd><p>I actually <a class="reference external" href="https://en.wikipedia.org/wiki/Extended_Backus%E2%80%93Naur_form">EBNF</a>’d the spec in my editor to pin down the rules from the
+prose.  In part because my editor is configured with snippets to quickly
+hammer out <abbr title="Extended Backus–Naur Form">EBNF</abbr> rules.</p>
+</dd>
+<dt class="label" id="id5"><span class="brackets"><a class="fn-backref" href="#id2">2</a></span></dt>
+<dd><p>If you know of a way to perform this with the standard library drop me
+a <a class="reference external" href="mailto:jnrowe&#37;&#52;&#48;gmail&#46;com">mail</a>, I’d love to hear about it!</p>
+</dd>
+<dt class="label" id="id6"><span class="brackets"><a class="fn-backref" href="#id3">3</a></span></dt>
+<dd><p>I <em>literally</em> only have to consider polar coordinates once a year.  Why?
+Simple, <abbr title="Advent of Code">AoC</abbr> always has a puzzle or two which benefit from using them.</p>
+</dd>
+</dl>
+</div>
+</div>
+
+    <hr>
+
+    <p class="keybase-verify">
+      Authenticate this page by pasting <a
+        href="https://raw.githubusercontent.com/JNRowe/jnrowe.github.io/source/articles/advent_of_code_2019.rst.asc">this signature</a> into
+      <a href="https://keybase.io/verify">Keybase</a>.
+    </p>
+
+    <p class="edit-page">
+      Have a suggestion or see a typo?  <a href="https://github.com/JNRowe/jnrowe.github.io/edit/source/articles/advent_of_code_2019.rst">Edit this page</a>
+    </p>
+  
+
+  <div class="section">
+  
+    
+
+
+<div class="section">
+  <span style="float: left;">
+  
+  Previous: 
+  <a href="../thoughts/i_have_a_secret.html">
+    
+    I have a secret
+  </a>
+  
+  </span>
+  <span>&nbsp;</span>
+  <span style="float: right;">
+  
+</div>
+
+  
+  
+  </div>
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<p class="logo">
+  <a href="../index.html">
+    <img class="logo" src="../_static/logo.png" alt="Logo"/>
+    
+  </a>
+</p>
+
+
+
+
+
+
+
+
+
+  
+  
+  <h2>
+  
+  
+    2019-12-11
+  
+  </h2>
+
+  <ul>
+    
+
+  
+  <li id="author"><span>Author:</span>
+    
+      
+      <a href="../blog/author/james-rowe.html">James Rowe</a>
+      
+    </li>
+  
+
+  
+
+  
+
+  
+
+  
+  <li id="tags"><span>Tags:
+      </span>
+    
+      
+      <a href="../blog/tag/adventofcode.html">adventofcode</a>
+      
+    
+      
+      <a href="../blog/tag/coding.html">coding</a>
+      
+    
+      
+      <a href="../blog/tag/puzzles.html">puzzles</a>
+      
+    </li>
+  
+  
+  </ul>
+
+
+<h3>Navigation</h3>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../projects.html">Projects</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Articles</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="advent_of_code.html">Advent of Code 2017</a></li>
+<li class="toctree-l2"><a class="reference internal" href="advent_of_code_2018.html">Advent of Code 2018</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Advent of Code 2019</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dropping_gentoo.html">Dropping Gentoo</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dropping_gentoo_reflex.html">Dropping Gentoo reflex</a></li>
+<li class="toctree-l2"><a class="reference internal" href="evil_emacs_steals_my_heart.html">Evil Emacs steals my heart</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fossil.html"><strong class="command">fossil</strong> experiments</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gps_rollover_2019.html">GPS rollover 2019</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mangling_planets.html">Mangling planets</a></li>
+<li class="toctree-l2"><a class="reference internal" href="march_toward_death.html">Visualising the progress of time</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mutt_config_snippets.html"><strong class="command">mutt</strong> configuration snippets</a></li>
+<li class="toctree-l2"><a class="reference internal" href="new_love_giddiness.html">Giddy new project love</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rcs.html">Introduction to <abbr title="GNU Revision Control System">RCS</abbr></a></li>
+<li class="toctree-l2"><a class="reference internal" href="redo_ninja_make.html">while $sun; do <strong class="command">make</strong> hay; done</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tdd_distros.html"><abbr title="Test Driven Development">TDD</abbr> distro development</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tiling_vs_tabbing.html">Tiling vs tabbing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#further-categories">Further categories</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../thoughts/index.html">Thoughts</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../colophon.html">Colophon</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../contact.html">Contact details</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../consult.html">Consulting services</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../copyright.html">Copyright information</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../glossary.html">Glossary</a></li>
+</ul>
+
+
+  <h3><a href="../blog.html">Recent Posts</a></h3>
+  <ul>
+    
+    
+      <li><a href="../thoughts/i_have_a_secret.html">24 May - I have a secret</a></li>
+    
+      <li><a href="gps_rollover_2019.html">05 April - GPS rollover 2019</a></li>
+    
+      <li><a href="../office_hours.html">23 December - Office hours</a></li>
+    
+      <li><a href="advent_of_code_2018.html">15 December - Advent of Code 2018</a></li>
+    
+      <li><a href="new_love_giddiness.html">04 December - Giddy new project love</a></li>
+    
+  </ul>
+
+  <h3><a href="../blog/tag.html">Tags</a></h3>
+  <style type="text/css">
+    ul.ablog-cloud {list-style: none; overflow: auto;}
+    ul.ablog-cloud li {float: left; height: 20pt; line-height: 18pt; margin-right: 5px;}
+    ul.ablog-cloud a {text-decoration: none; vertical-align: middle;}
+    li.ablog-cloud-1{font-size: 80%;}
+    li.ablog-cloud-2{font-size: 95%;}
+    li.ablog-cloud-3{font-size: 110%;}
+    li.ablog-cloud-4{font-size: 125%;}
+    li.ablog-cloud-5{font-size: 140%;}
+  </style>
+  <ul class="ablog-cloud">
+    
+      
+      <li class="ablog-cloud ablog-cloud-3">
+        <a href="../blog/tag/gtk.html">GTK+</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-2">
+        <a href="../blog/tag/x11.html">X11</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-2">
+        <a href="../blog/tag/abook.html">abook</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-3">
+        <a href="../blog/tag/adventofcode.html">adventofcode</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-1">
+        <a href="../blog/tag/atom.html">atom</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-3">
+        <a href="../blog/tag/awesome.html">awesome</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-2">
+        <a href="../blog/tag/bash.html">bash</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-1">
+        <a href="../blog/tag/blog.html">blog</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-1">
+        <a href="../blog/tag/bts.html">bts</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-1">
+        <a href="../blog/tag/bugs.html">bugs</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-1">
+        <a href="../blog/tag/bugzilla.html">bugzilla</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-1">
+        <a href="../blog/tag/build.html">build</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-1">
+        <a href="../blog/tag/burnout.html">burnout</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-3">
+        <a href="../blog/tag/coding.html">coding</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-2">
+        <a href="../blog/tag/configs.html">configs</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-1">
+        <a href="../blog/tag/csv.html">csv</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-1">
+        <a href="../blog/tag/databases.html">databases</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-1">
+        <a href="../blog/tag/denoise.html">denoise</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-1">
+        <a href="../blog/tag/desktop.html">desktop</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-3">
+        <a href="../blog/tag/devel.html">devel</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-1">
+        <a href="../blog/tag/development.html">development</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-1">
+        <a href="../blog/tag/dzen.html">dzen</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-2">
+        <a href="../blog/tag/emacs.html">emacs</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-1">
+        <a href="../blog/tag/evil.html">evil</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-1">
+        <a href="../blog/tag/feed.html">feed</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-1">
+        <a href="../blog/tag/focus.html">focus</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-1">
+        <a href="../blog/tag/fossil.html">fossil</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-4">
+        <a href="../blog/tag/gentoo.html">gentoo</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-2">
+        <a href="../blog/tag/git.html">git</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-1">
+        <a href="../blog/tag/gmail.html">gmail</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-1">
+        <a href="../blog/tag/gps.html">gps</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-1">
+        <a href="../blog/tag/history.html">history</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-1">
+        <a href="../blog/tag/hobbies.html">hobbies</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-1">
+        <a href="../blog/tag/imv.html">imv</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-1">
+        <a href="../blog/tag/jnrowe-misc.html">jnrowe-misc</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-1">
+        <a href="../blog/tag/languages.html">languages</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-1">
+        <a href="../blog/tag/learning.html">learning</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-5">
+        <a href="../blog/tag/life.html">life</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-4">
+        <a href="../blog/tag/linux.html">linux</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-2">
+        <a href="../blog/tag/mail.html">mail</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-1">
+        <a href="../blog/tag/make.html">make</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-3">
+        <a href="../blog/tag/mutt.html">mutt</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-1">
+        <a href="../blog/tag/net.html">net</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-1">
+        <a href="../blog/tag/ninja.html">ninja</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-1">
+        <a href="../blog/tag/noise.html">noise</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-1">
+        <a href="../blog/tag/oss.html">oss</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-1">
+        <a href="../blog/tag/personal.html">personal</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-1">
+        <a href="../blog/tag/pipes.html">pipes</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-2">
+        <a href="../blog/tag/politics.html">politics</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-1">
+        <a href="../blog/tag/privacy.html">privacy</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-1">
+        <a href="../blog/tag/probit.html">probit</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-3">
+        <a href="../blog/tag/projects.html">projects</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-3">
+        <a href="../blog/tag/puzzles.html">puzzles</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-1">
+        <a href="../blog/tag/python.html">python</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-1">
+        <a href="../blog/tag/qmv.html">qmv</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-2">
+        <a href="../blog/tag/readline.html">readline</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-1">
+        <a href="../blog/tag/redo.html">redo</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-1">
+        <a href="../blog/tag/remind.html">remind</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-1">
+        <a href="../blog/tag/renameutils.html">renameutils</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-1">
+        <a href="../blog/tag/site.html">site</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-2">
+        <a href="../blog/tag/software.html">software</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-1">
+        <a href="../blog/tag/sql.html">sql</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-5">
+        <a href="../blog/tag/styling.html">styling</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-1">
+        <a href="../blog/tag/sup.html">sup</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-1">
+        <a href="../blog/tag/tabbed.html">tabbed</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-1">
+        <a href="../blog/tag/testing.html">testing</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-1">
+        <a href="../blog/tag/three.html">three</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-1">
+        <a href="../blog/tag/tiling.html">tiling</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-1">
+        <a href="../blog/tag/time.html">time</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-2">
+        <a href="../blog/tag/tools.html">tools</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-2">
+        <a href="../blog/tag/unix.html">unix</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-4">
+        <a href="../blog/tag/vcs.html">vcs</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-5">
+        <a href="../blog/tag/vim.html">vim</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-1">
+        <a href="../blog/tag/web.html">web</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-3">
+        <a href="../blog/tag/work.html">work</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-1">
+        <a href="../blog/tag/yahoo.html">yahoo</a></li>
+      
+    
+      
+      <li class="ablog-cloud ablog-cloud-1">
+        <a href="../blog/tag/zsh.html">zsh</a></li>
+      
+    
+  </ul>
+
+  <h3><a href="../blog/archive.html">Archives</a></h3>
+  <ul>
+  
+    
+    <li><a href="../blog/2019.html">2019 (3)</a></li>
+    
+  
+    
+    <li><a href="../blog/2018.html">2018 (11)</a></li>
+    
+  
+    
+    <li><a href="../blog/2017.html">2017 (1)</a></li>
+    
+  
+    
+    <li><a href="../blog/2014.html">2014 (12)</a></li>
+    
+  
+    
+    <li><a href="../blog/2013.html">2013 (2)</a></li>
+    
+  
+    
+    <li><a href="../blog/2011.html">2011 (1)</a></li>
+    
+  
+    
+    <li><a href="../blog/2010.html">2010 (2)</a></li>
+    
+  
+    
+    <li><a href="../blog/2009.html">2009 (24)</a></li>
+    
+  
+    
+    <li><a href="../blog/2007.html">2007 (2)</a></li>
+    
+  
+    
+    <li><a href="../blog/2003.html">2003 (1)</a></li>
+    
+  
+  </ul>
+
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2009-2019  James Rowe,
+      <a href="http://creativecommons.org/licenses/by-sa/4.0/" rel="license">
+          Creative Commons Attribution-ShareAlike 4.0
+      </a> license.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 2.2.0</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+    </div>
+
+    
+
+    
+  </body>
+</html>

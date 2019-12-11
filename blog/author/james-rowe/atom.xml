@@ -2,11 +2,497 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title type="text">JNRowe - Posts by James Rowe</title>
   <id>https://jnrowe.github.io/blog/author/james-rowe/atom.xml</id>
-  <updated>2019-05-24T00:00:00Z</updated>
+  <updated>2019-12-11T00:00:00Z</updated>
   <link href="https://jnrowe.github.io/" />
   <link href="https://jnrowe.github.io/blog/author/james-rowe/atom.xml" rel="self" />
   <subtitle type="text">Ramblings of a tired mind</subtitle>
   <generator uri="https://ablog.readthedocs.org" version="0.10.0">ABlog</generator>
+  <entry xml:base="https://jnrowe.github.io/blog/author/james-rowe/atom.xml">
+    <title type="text">Advent of Code 2019</title>
+    <id>https://jnrowe.github.io/articles/advent_of_code_2019.html</id>
+    <updated>2019-12-11T00:00:00Z</updated>
+    <published>2019-12-11T00:00:00Z</published>
+    <link href="https://jnrowe.github.io/articles/advent_of_code_2019.html" />
+    <author>
+      <name>James Rowe</name>
+    </author>
+    <content type="html">&lt;div class=&quot;section&quot; id=&quot;advent-of-code-2019&quot;&gt;
+
+&lt;p&gt;With a touch of sadness, I’ve given up on &lt;abbr title=&quot;Advent of Code&quot;&gt;AoC&lt;/abbr&gt; for this year.  I’m writing this
+is a journal entry, more for myself than others.  You’ve been warned!&lt;/p&gt;
+&lt;div class=&quot;admonition note&quot;&gt;
+&lt;p class=&quot;admonition-title&quot;&gt;Note&lt;/p&gt;
+&lt;p&gt;As always &lt;a class=&quot;reference external&quot; href=&quot;http://adventofcode.com/2018&quot;&gt;Advent of Code&lt;/a&gt; is fun, even when it doesn’t always feel like
+it.  If you’re enjoying it, &lt;em&gt;or&lt;/em&gt; currently screaming at it, &lt;a class=&quot;reference external&quot; href=&quot;https://adventofcode.com/2019/support&quot;&gt;tip the
+creator&lt;/a&gt; so that we can smile and shout at it next year.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;section&quot; id=&quot;why-quit&quot;&gt;
+&lt;h2&gt;Why quit?&lt;/h2&gt;
+&lt;p&gt;The puzzles aren’t my cup of tea this year, but I’m not complaining.  Our
+leader board for the office has twice as many people as last year, so clearly it
+is my problem and not &lt;abbr title=&quot;Advent of Code&quot;&gt;AoC&lt;/abbr&gt;’s.&lt;/p&gt;
+&lt;p&gt;The reasons for my lack of enjoyment are largely a general malaise that
+manifests itself as I chew through the texts.  A chunk of my day job resembles
+the type of puzzles I’ve completed, and if I wanted more of that I could knock
+some real items off my to–do list.&lt;/p&gt;
+&lt;p&gt;I have 22 stars for completing both parts of every day so far this year, but
+I’m taking a break until I have a bit more downtime.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;section&quot; id=&quot;day-1&quot;&gt;
+&lt;h2&gt;Day 1&lt;/h2&gt;
+&lt;ul class=&quot;simple&quot;&gt;
+&lt;li&gt;&lt;p&gt;&lt;a class=&quot;reference external&quot; href=&quot;https://adventofcode.com/2019/day/1&quot;&gt;The Tyranny of the Rocket Equation&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;I jumped in with my toolset from last year, so my solution for part one is:&lt;/p&gt;
+&lt;div class=&quot;highlight-default notranslate&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&quot;nd&quot;&gt;@aoc_run&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;({&lt;/span&gt;
+        &lt;span class=&quot;s1&quot;&gt;&amp;#39;12&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+        &lt;span class=&quot;s1&quot;&gt;&amp;#39;14&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+        &lt;span class=&quot;s1&quot;&gt;&amp;#39;1969&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;654&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+        &lt;span class=&quot;s1&quot;&gt;&amp;#39;100756&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;33583&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;},&lt;/span&gt;
+    &lt;span class=&quot;mi&quot;&gt;3329926&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;nd&quot;&gt;@read_data&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;fuel_requirements&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;inputs&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;List&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;str&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;])&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&amp;gt;&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;int&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;sum&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;int&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;l&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;//&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;l&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;inputs&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;The &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;aoc_run&lt;/span&gt;&lt;/code&gt; decorator configures a test runner using the examples from
+description, and if provided the second argument confirms my output when I’m
+refactoring the code(which I won’t be doing in this instance).  If the second
+argument isn’t provided, such as when you’re writing your code, it will output
+the result for you to submit.&lt;/p&gt;
+&lt;p&gt;There is nothing interesting with the code for solution itself, possibly beyond
+the fact that we’re using &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;//&lt;/span&gt;&lt;/code&gt;(floor division) to handle the rounding for
+us.&lt;/p&gt;
+&lt;p&gt;This could be performed just as easily with &lt;a class=&quot;reference external&quot; href=&quot;http://ftp.gnu.org/gnu/bc/&quot;&gt;bc&lt;/a&gt; and/or &lt;a class=&quot;reference external&quot; href=&quot;http://suso.suso.org/programs/num-utils/&quot;&gt;num-utils&lt;/a&gt;.  I had
+&lt;a class=&quot;reference external&quot; href=&quot;https://github.com/SirVer/ultisnips&quot;&gt;ultisnips&lt;/a&gt; configured to create a skeleton from last year, so only had type
+the tests and the &lt;a class=&quot;reference external&quot; href=&quot;https://docs.python.org/3/library/functions.html#sum&quot; title=&quot;(in Python v3.8)&quot;&gt;&lt;code class=&quot;xref py py-func docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;sum()&lt;/span&gt;&lt;/code&gt;&lt;/a&gt; call to complete the first part.&lt;/p&gt;
+&lt;p&gt;Part two leans toward a solution using recursion, and allows us to introduce one
+of the many useful tools from Python’s stdlib &lt;a class=&quot;reference external&quot; href=&quot;https://docs.python.org/3/library/itertools.html#itertools.takewhile&quot; title=&quot;(in Python v3.8)&quot;&gt;&lt;code class=&quot;xref py py-func docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;itertools.takewhile()&lt;/span&gt;&lt;/code&gt;&lt;/a&gt;.  This
+function consumes an iterator until the given condition no longer holds.  In
+this instance we’re told to recurse until our additional fuel is just a rounding
+error, we can code this with a simple &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;takewhile(lambda&lt;/span&gt; &lt;span class=&quot;pre&quot;&gt;x:&lt;/span&gt; &lt;span class=&quot;pre&quot;&gt;x&lt;/span&gt; &lt;span class=&quot;pre&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;pre&quot;&gt;0,&lt;/span&gt;
+&lt;span class=&quot;pre&quot;&gt;fuel_recurse(int(l)))&lt;/span&gt;&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;The recursion itself is a simple infinite generator:&lt;/p&gt;
+&lt;div class=&quot;highlight-default notranslate&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;fuel_recurse&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;n&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;mod&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;n&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;while&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;True&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;mod&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;mod&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;//&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;yield&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;mod&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;The call to &lt;a class=&quot;reference external&quot; href=&quot;https://docs.python.org/3/library/itertools.html#itertools.takewhile&quot; title=&quot;(in Python v3.8)&quot;&gt;&lt;code class=&quot;xref py py-func docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;takewhile()&lt;/span&gt;&lt;/code&gt;&lt;/a&gt; will slurp up results for each module,
+and then we can simply call &lt;a class=&quot;reference external&quot; href=&quot;https://docs.python.org/3/library/functions.html#sum&quot; title=&quot;(in Python v3.8)&quot;&gt;&lt;code class=&quot;xref py py-func docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;sum()&lt;/span&gt;&lt;/code&gt;&lt;/a&gt; on them.  It only depends on your taste
+whether you choose to flatten the results from each module, or whether you call
+&lt;a class=&quot;reference external&quot; href=&quot;https://docs.python.org/3/library/functions.html#sum&quot; title=&quot;(in Python v3.8)&quot;&gt;&lt;code class=&quot;xref py py-func docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;sum()&lt;/span&gt;&lt;/code&gt;&lt;/a&gt; on per-module &lt;a class=&quot;reference external&quot; href=&quot;https://docs.python.org/3/library/functions.html#sum&quot; title=&quot;(in Python v3.8)&quot;&gt;&lt;code class=&quot;xref py py-func docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;sum()&lt;/span&gt;&lt;/code&gt;&lt;/a&gt; results.&lt;/p&gt;
+&lt;p&gt;In my rush to hit the leaderboard I introduced a really stupid logic bug,
+my original &lt;abbr title=&quot;Read–eval–print loop&quot;&gt;REPL&lt;/abbr&gt; code was &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;mod&lt;/span&gt; &lt;span class=&quot;pre&quot;&gt;//=&lt;/span&gt; &lt;span class=&quot;pre&quot;&gt;3&lt;/span&gt; &lt;span class=&quot;pre&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;pre&quot;&gt;2&lt;/span&gt;&lt;/code&gt;.  Clearly this won’t work as it is
+simply dividing &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;mod&lt;/span&gt;&lt;/code&gt; by 1.  I’d be number one on the leaderboard for
+idiocy with a bug that foolish, but luckily I’m too stoopid to find it.  I’m
+admitting this in the open to remind myself to think a little more in the
+following days.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;section&quot; id=&quot;day-2&quot;&gt;
+&lt;span id=&quot;day-two-label&quot;&gt;&lt;/span&gt;&lt;h2&gt;Day 2&lt;/h2&gt;
+&lt;ul class=&quot;simple&quot;&gt;
+&lt;li&gt;&lt;p&gt;&lt;a class=&quot;reference external&quot; href=&quot;https://adventofcode.com/2018/day/2&quot;&gt;Inventory Management System&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Annoyingly this problem introduces examples that function differently from your
+user input.  If, like me, you collect the examples for use as a test case you’ll
+need to treat your output differently to account for the “&lt;strong&gt;before running the
+program&lt;/strong&gt;, replace position 1 with the value 12 and replace position 2 with the
+value 2” caveat.&lt;/p&gt;
+&lt;p&gt;I wasted a moment or two trying to decide whether to do The Right Thing™ or
+special case the user input.  I chose to special case it initially, by
+implementing a guard based on program length.  I’m acknowledging this to make
+a point, it is very tempting to produce awful hacks in the eternal pursuit of
+valuable internet points.&lt;/p&gt;
+&lt;div class=&quot;highlight-default notranslate&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;init_computer&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;inputs&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;List&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;str&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;])&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&amp;gt;&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;int&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;program&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;list&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;extract_numbers&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;inputs&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]))&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;len&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;program&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;program&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;12&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;program&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;run_program&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;program&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;I had to go back and fix it before I tackled part two, as it &lt;em&gt;really&lt;/em&gt; annoyed me
+having to look at it in my editor.&lt;/p&gt;
+&lt;p&gt;The actual implementation of the &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;IntCode&lt;/span&gt;&lt;/code&gt; processor is not interesting,
+purely a simple &lt;abbr title=&quot;Finite State Machine&quot;&gt;FSM&lt;/abbr&gt;.  If I was to re-implement it
+from scratch I’d probably do the same, but would be more likely to use a hash to
+lookup opcode implementations instead of a multi-armed &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;if&lt;/span&gt;&lt;/code&gt; statement.  Mostly
+because invalid opcodes are then automatically rejected with a &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;KeyError&lt;/span&gt;&lt;/code&gt;, but
+also because you know it is going to become a hairy &lt;a class=&quot;reference external&quot; href=&quot;https://en.m.wikipedia.org/wiki/Cyclomatic_complexity&quot;&gt;McCabe complexity&lt;/a&gt;
+nightmare if you start adding more branches as the days push on.&lt;/p&gt;
+&lt;p&gt;The only value to using a multi-armed &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;if&lt;/span&gt;&lt;/code&gt; is that you can match multiple
+opcodes far more easily that you can with simple &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;{opcode:&lt;/span&gt; &lt;span class=&quot;pre&quot;&gt;func}&lt;/span&gt;&lt;/code&gt; approach,
+for example:&lt;/p&gt;
+&lt;div class=&quot;highlight-default notranslate&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;opcode&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]:&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;argc&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;p1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;p2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;r&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;memory&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;pos&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;pos&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;argc&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;memory&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;r&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;kc&quot;&gt;None&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;add&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;mul&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;][&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;opcode&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;](&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;memory&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;p1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;memory&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;p2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;])&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;For part two, I was super lazy and simply ran all ten-thousand inputs.
+Computers are fast enough that even noodling about optimisation for this is
+a wasteful trade off.  Instead, I spent a few minutes making my test runner
+output colours on failures for the greater good.&lt;/p&gt;
+&lt;img alt=&quot;|AOC| example runner failure&quot; src=&quot;../../_images/2019-12-11-advent_of_code.png&quot; /&gt;
+&lt;/div&gt;
+&lt;div class=&quot;section&quot; id=&quot;day-3&quot;&gt;
+&lt;h2&gt;Day 3&lt;/h2&gt;
+&lt;ul class=&quot;simple&quot;&gt;
+&lt;li&gt;&lt;p&gt;&lt;a class=&quot;reference external&quot; href=&quot;https://adventofcode.com/2019/day/3&quot;&gt;Crossed Wires&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;We’ve fallen in to actual thought territory today.&lt;/p&gt;
+&lt;p&gt;&lt;a class=&quot;reference external&quot; href=&quot;/articles/advent_of_code_2018.html#day-3&quot;&gt;This time last year&lt;/a&gt; I mentioned &lt;a class=&quot;reference external&quot; href=&quot;http://www.numpy.org/&quot;&gt;numpy&lt;/a&gt;, and that advice holds again today.
+If you’re planning on simply bruteforcing the circuit on to a giant grid, expect
+a lot of memory pressure and simply switching to &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;numpy&lt;/span&gt;&lt;/code&gt; will do wonders.
+A quick test looks like you’ll be looking at a few gigabytes of memory for the
+super naïve method with Python lists.&lt;/p&gt;
+&lt;p&gt;Personally I just went for storing the intersections in a &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;Dict[Tuple[int,&lt;/span&gt;
+&lt;span class=&quot;pre&quot;&gt;int],&lt;/span&gt; &lt;span class=&quot;pre&quot;&gt;int]&lt;/span&gt;&lt;/code&gt;.  There was a niggling feeling in my mind that part two might
+expose a requirement that meant my processing time would explode exponentially,
+or there would be a region painting question that would make having access to
+the populated grid easier.  It wasn’t the case in the end, and we’ll save
+breaking out &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;numpy&lt;/span&gt;&lt;/code&gt; for another day.&lt;/p&gt;
+&lt;p&gt;I wrote very few lines of code today, although my solution was rather large.
+This is the result of simply tugging my &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;Point&lt;/span&gt;&lt;/code&gt; object with its pre-written
+&lt;a class=&quot;reference external&quot; href=&quot;https://en.wikipedia.org/wiki/Taxicab_geometry&quot;&gt;Manhattan distance&lt;/a&gt; methods from 2018’s &lt;a class=&quot;reference external&quot; href=&quot;https://adventofcode.com/2018/day/6&quot;&gt;Chronal Coordinates&lt;/a&gt; solution.  I’m
+unsure whether this makes me happy for code reuse or sad for cheating the puzzle
+a little.&lt;/p&gt;
+&lt;p&gt;The only interesting element from today is relying on a bunch of default
+functionality that Python gives us.  Instead of needing to write our own matcher
+to find the overlapping wires, we can simply call &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;wire1.keys()&lt;/span&gt; &lt;span class=&quot;pre&quot;&gt;&amp;amp;&lt;/span&gt; &lt;span class=&quot;pre&quot;&gt;wire2&lt;/span&gt;&lt;/code&gt; and
+Python gives us the intersection points directly.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;section&quot; id=&quot;day-4&quot;&gt;
+&lt;h2&gt;Day 4&lt;/h2&gt;
+&lt;ul class=&quot;simple&quot;&gt;
+&lt;li&gt;&lt;p&gt;&lt;a class=&quot;reference external&quot; href=&quot;https://adventofcode.com/2019/day/4&quot;&gt;Secure Container&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;We’re attempting to find a six digit password, the problem space is small enough
+that we can just code the rules without thought for speed.  Simply iterate over
+the given range, while treating the numbers as strings.&lt;/p&gt;
+&lt;p&gt;Rule three states “two adjacent digits are the same”.  That is a &lt;a class=&quot;reference external&quot; href=&quot;http://regex.info/blog/2006-09-15/247&quot;&gt;simple regex
+away&lt;/a&gt;, &lt;a class=&quot;reference external&quot; href=&quot;https://docs.python.org/3/library/re.html#re.search&quot; title=&quot;(in Python v3.8)&quot;&gt;&lt;code class=&quot;xref py py-func docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;re.search()&lt;/span&gt;&lt;/code&gt;&lt;/a&gt; allows us to search for &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;(\d)\1&lt;/span&gt;&lt;/code&gt; to find any
+duplicated value.  Job done.  If you were so inclined you could use
+&lt;a class=&quot;reference external&quot; href=&quot;https://docs.python.org/3/library/itertools.html#itertools.groupby&quot; title=&quot;(in Python v3.8)&quot;&gt;&lt;code class=&quot;xref py py-func docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;groupby()&lt;/span&gt;&lt;/code&gt;&lt;/a&gt; to pluck repeats out instead.&lt;/p&gt;
+&lt;p&gt;Rule four says “Going from left to right, the digits &lt;strong&gt;never decrease&lt;/strong&gt;; they
+only ever increase or stay the same”.  Quickest answer was just to compare the
+password to a sorted version of itself, if they’re equal then the password
+passes.&lt;/p&gt;
+&lt;div class=&quot;highlight-default notranslate&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;sorted&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;s&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;list&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;s&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;Clearly, there is a bunch of ugly type shifting going on here; &lt;a class=&quot;reference external&quot; href=&quot;https://docs.python.org/3/library/functions.html#int&quot; title=&quot;(in Python v3.8)&quot;&gt;&lt;code class=&quot;xref py py-class docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;int&lt;/span&gt;&lt;/code&gt;&lt;/a&gt; from
+&lt;a class=&quot;reference external&quot; href=&quot;https://docs.python.org/3/library/functions.html#func-range&quot;&gt;range()&lt;/a&gt;, &lt;a class=&quot;reference external&quot; href=&quot;https://docs.python.org/3/library/stdtypes.html#str&quot; title=&quot;(in Python v3.8)&quot;&gt;&lt;code class=&quot;xref py py-class docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;str&lt;/span&gt;&lt;/code&gt;&lt;/a&gt; from &lt;a class=&quot;reference external&quot; href=&quot;https://docs.python.org/3/library/functions.html#int&quot; title=&quot;(in Python v3.8)&quot;&gt;&lt;code class=&quot;xref py py-class docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;int&lt;/span&gt;&lt;/code&gt;&lt;/a&gt;, &lt;a class=&quot;reference external&quot; href=&quot;https://docs.python.org/3/library/stdtypes.html#list&quot; title=&quot;(in Python v3.8)&quot;&gt;&lt;code class=&quot;xref py py-class docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;list&lt;/span&gt;&lt;/code&gt;&lt;/a&gt; from &lt;a class=&quot;reference external&quot; href=&quot;https://docs.python.org/3/library/stdtypes.html#str&quot; title=&quot;(in Python v3.8)&quot;&gt;&lt;code class=&quot;xref py py-class docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;str&lt;/span&gt;&lt;/code&gt;&lt;/a&gt;.
+However, it just isn’t worth the effort to improve this.  Arguably, you could
+iterate over the characters manually to avoid the final conversion but
+&lt;a class=&quot;reference external&quot; href=&quot;https://docs.python.org/3/library/timeit.html#module-timeit&quot; title=&quot;(in Python v3.8)&quot;&gt;&lt;code class=&quot;xref py py-mod docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;timeit&lt;/span&gt;&lt;/code&gt;&lt;/a&gt; shows it takes twice as long anyway.&lt;/p&gt;
+&lt;div class=&quot;highlight-default notranslate&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;all&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;n1&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;n2&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;n1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;n2&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;zip&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;s&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;s&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:]))&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;admonition tip&quot;&gt;
+&lt;p class=&quot;admonition-title&quot;&gt;Tip&lt;/p&gt;
+&lt;p&gt;Using &lt;a class=&quot;reference external&quot; href=&quot;https://docs.python.org/3/library/functions.html#all&quot; title=&quot;(in Python v3.8)&quot;&gt;&lt;code class=&quot;xref py py-func docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;all()&lt;/span&gt;&lt;/code&gt;&lt;/a&gt; we’re short-circuiting the failure case in exactly the
+same way as the &lt;a class=&quot;reference external&quot; href=&quot;https://docs.python.org/3/library/functions.html#sorted&quot; title=&quot;(in Python v3.8)&quot;&gt;&lt;code class=&quot;xref py py-func docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;sorted()&lt;/span&gt;&lt;/code&gt;&lt;/a&gt; comparison.  While &lt;a class=&quot;reference external&quot; href=&quot;https://docs.python.org/3/library/functions.html#all&quot; title=&quot;(in Python v3.8)&quot;&gt;&lt;code class=&quot;xref py py-func docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;all()&lt;/span&gt;&lt;/code&gt;&lt;/a&gt;, &lt;a class=&quot;reference external&quot; href=&quot;https://docs.python.org/3/library/functions.html#any&quot; title=&quot;(in Python v3.8)&quot;&gt;&lt;code class=&quot;xref py py-func docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;any()&lt;/span&gt;&lt;/code&gt;&lt;/a&gt;,
+and the tools in &lt;a class=&quot;reference external&quot; href=&quot;https://docs.python.org/3/library/functools.html#module-functools&quot; title=&quot;(in Python v3.8)&quot;&gt;&lt;code class=&quot;xref py py-mod docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;functools&lt;/span&gt;&lt;/code&gt;&lt;/a&gt; aren’t &lt;em&gt;fashionable&lt;/em&gt; in Python circles
+they can often make a whole lot of code more readable.&lt;/p&gt;
+&lt;/div&gt;
+&lt;p&gt;Part two slightly modified the third rule to say “the two adjacent matching
+digits &lt;strong&gt;are not part of a larger group of matching digits&lt;/strong&gt;”.  Laziest method
+won again, Python provides a &lt;a class=&quot;reference external&quot; href=&quot;https://docs.python.org/3/library/collections.html#collections.Counter&quot; title=&quot;(in Python v3.8)&quot;&gt;&lt;code class=&quot;xref py py-class docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;Counter&lt;/span&gt;&lt;/code&gt;&lt;/a&gt; object that does all
+the work for us:&lt;/p&gt;
+&lt;div class=&quot;highlight-default notranslate&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;not&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;collections&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Counter&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;s&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;continue&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;At another time I may have reached for &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;Counter&lt;/span&gt;&lt;/code&gt; in the first part.  I find it
+quite interesting how a previous unrelated task colours the work one produces on
+an another.&lt;/p&gt;
+&lt;p&gt;If you’re allergic to &lt;abbr title=&quot;Regular Expression&quot;&gt;RegEx&lt;/abbr&gt; look away now, but…   You can still perform the
+match by using a positive look behind to effectually make the match available
+&lt;em&gt;before&lt;/em&gt; you saw it.  &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;(\d)(?&amp;lt;!\1.)\1(?!\1)&lt;/span&gt;&lt;/code&gt;, or with the benefit of
+&lt;a class=&quot;reference external&quot; href=&quot;https://docs.python.org/3/library/re.html#re.VERBOSE&quot; title=&quot;(in Python v3.8)&quot;&gt;&lt;code class=&quot;xref py py-data docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;re.VERBOSE&lt;/span&gt;&lt;/code&gt;&lt;/a&gt;:&lt;/p&gt;
+&lt;div class=&quot;highlight-default notranslate&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;matcher&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;re&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;compile&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;sa&quot;&gt;r&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;&amp;quot;&amp;quot;&lt;/span&gt;
+&lt;span class=&quot;s2&quot;&gt;    (\d)      # a digit&lt;/span&gt;
+&lt;span class=&quot;s2&quot;&gt;    (?&amp;lt;!\1.)  # check character *before* doesn&amp;#39;t match&lt;/span&gt;
+&lt;span class=&quot;s2&quot;&gt;    \1        # repeated character&lt;/span&gt;
+&lt;span class=&quot;s2&quot;&gt;    (?!\1)    # check character *after* doesn&amp;#39;t match&lt;/span&gt;
+&lt;span class=&quot;s2&quot;&gt;&amp;quot;&amp;quot;&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;re&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;VERBOSE&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;We wouldn’t want to do that though, as it makes kittens weep.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;section&quot; id=&quot;day-5&quot;&gt;
+&lt;span id=&quot;day-five-label&quot;&gt;&lt;/span&gt;&lt;h2&gt;Day 5&lt;/h2&gt;
+&lt;ul class=&quot;simple&quot;&gt;
+&lt;li&gt;&lt;p&gt;&lt;a class=&quot;reference external&quot; href=&quot;https://adventofcode.com/2019/day/5&quot;&gt;Sunny with a Chance of Asteroids&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;To be honest, today’s puzzle bored me.  It was just a matter of translating
+a few more rules in to our &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;IntCode&lt;/span&gt;&lt;/code&gt; state machine.  I may have been tempted
+to skip it for now, but all &lt;abbr title=&quot;Advent of Code&quot;&gt;AoC&lt;/abbr&gt; players know we’ll need to implement it all if
+we want to continue with further days.&lt;/p&gt;
+&lt;p&gt;I can’t get over how impenetrable the wording felt to me.  I think it is simply
+the choice of using non-standard “simple” wording to make the text more
+approachable to non-CS people that left me having to re-read paragraphs multiple
+times.  This isn’t a complaint aimed at the creator, more an admission of one of
+my shortcomings&lt;a class=&quot;footnote-reference brackets&quot; href=&quot;#id4&quot; id=&quot;id1&quot;&gt;1&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Instead of simply expanding my Python implementation from &lt;a class=&quot;reference internal&quot; href=&quot;../../articles/advent_of_code_2019.html#day-two-label&quot;&gt;&lt;span class=&quot;std std-ref&quot;&gt;day two&lt;/span&gt;&lt;/a&gt;, I took the &lt;a class=&quot;reference external&quot; href=&quot;http://www.joelonsoftware.com/items/2008/05/01.html&quot;&gt;architecture astronaut&lt;/a&gt; approach and created
+a standalone &lt;a class=&quot;reference external&quot; href=&quot;https://nim-lang.org/&quot;&gt;nim&lt;/a&gt; implementation that was &lt;em&gt;far&lt;/em&gt; faster.  It also provides the
+benefit of being usable regardless of what language I choose to attack a future
+puzzle in, or even to use from the shell in a pipeline.&lt;/p&gt;
+&lt;p&gt;If you’re into such shenanigans yourself, &lt;a class=&quot;reference external&quot; href=&quot;https://github.com/yglukhov/nimpy/&quot;&gt;nimpy&lt;/a&gt; provides a really nice method
+to do so.  You can create your standalone binary implementing a task, but also
+make it usable directly &lt;em&gt;from&lt;/em&gt; Python with a simple import.&lt;/p&gt;
+&lt;img alt=&quot;Example display from IntCode emulator&quot; src=&quot;../../_images/2019-12-11-intcode_memory.png&quot; style=&quot;width: 389.07px; height: 266.97px;&quot; /&gt;
+&lt;p&gt;I think this is probably my tip of the day, if you find a puzzle a little
+uninteresting just &lt;em&gt;make it more interesting&lt;/em&gt;.  Implementing the &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;nim&lt;/span&gt;&lt;/code&gt; version
+with human-readable and &lt;abbr title=&quot;JavaScript Object Notation&quot;&gt;JSON&lt;/abbr&gt; output,
+MovieOS memory display while running, tacking on &lt;a class=&quot;reference external&quot; href=&quot;http://blockdiag.com/&quot;&gt;seqdiag&lt;/a&gt; output for bug
+inspection was glossy, and optimising it in ridiculous ways with branch
+prediction to take some advantage of all my &lt;abbr title=&quot;Central Processing Unit&quot;&gt;CPU&lt;/abbr&gt; cores was a lot of fun.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;section&quot; id=&quot;day-6&quot;&gt;
+&lt;h2&gt;Day 6&lt;/h2&gt;
+&lt;ul class=&quot;simple&quot;&gt;
+&lt;li&gt;&lt;p&gt;&lt;a class=&quot;reference external&quot; href=&quot;https://adventofcode.com/2019/day/6&quot;&gt;Universal Orbit Map&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Much like my experience with &lt;a class=&quot;reference external&quot; href=&quot;/articles/advent_of_code_2018.html#day-7&quot;&gt;day 7 from last year&lt;/a&gt;, this is a no-brainer
+if you recognise the problem and know where to find a pre-made solution.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;div&gt;&lt;p&gt;NetworkX is a Python package for the creation, manipulation, and study of
+the structure, dynamics, and functions of complex networks.&lt;/p&gt;
+&lt;/div&gt;&lt;/blockquote&gt;
+&lt;p&gt;Today that solution comes in the form of &lt;a class=&quot;reference external&quot; href=&quot;http://networkx.github.io/&quot;&gt;networkx&lt;/a&gt;, an incredibly useful package
+for mangling graph structures at scale.  We can create a directed graph from our
+puzzle input by splitting lines on &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;)&lt;/span&gt;&lt;/code&gt;.  We can then use &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;networkx&lt;/span&gt;&lt;/code&gt; to count
+up all the orbits:&lt;/p&gt;
+&lt;div class=&quot;highlight-default notranslate&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;orbits&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;nx&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;DiGraph&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;line&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;split&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;)&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;l&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;inputs&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+
+&lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;sum&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;len&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;nx&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ancestors&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;orbits&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;n&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;n&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;orbits&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;nodes&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;())&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;For part two we need to find the &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;shortest&lt;/span&gt; &lt;span class=&quot;pre&quot;&gt;path&lt;/span&gt; &lt;span class=&quot;pre&quot;&gt;length&lt;/span&gt;&lt;/code&gt;, and for that we only
+really need to find an underscore or two:&lt;/p&gt;
+&lt;div class=&quot;highlight-default notranslate&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;nx&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;shortest_path_length&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;orbits&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;to_undirected&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(),&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;YOU&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;SAN&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;If you’re interested in approaching the problem from a little further down, the
+Python docs have an interesting essay on &lt;a class=&quot;reference external&quot; href=&quot;https://www.python.org/doc/essays/graphs/&quot;&gt;implementing graph structures&lt;/a&gt; just
+for you.&lt;/p&gt;
+&lt;div class=&quot;admonition note&quot;&gt;
+&lt;p class=&quot;admonition-title&quot;&gt;Note&lt;/p&gt;
+&lt;p&gt;&lt;a class=&quot;reference external&quot; href=&quot;https://www.graphviz.org/&quot;&gt;graphviz&lt;/a&gt; provides all the required functionality too, and the input is
+trivially convertible to a directed graph with a &lt;strong class=&quot;command&quot;&gt;sed&lt;/strong&gt;.  If you’re
+only aware of simple &lt;strong class=&quot;command&quot;&gt;dot&lt;/strong&gt; usage I really recommend digging in to
+the documentation for the many other tools in the package.  Today you’d have
+wanted to read about &lt;strong class=&quot;command&quot;&gt;ccomps&lt;/strong&gt;, &lt;strong class=&quot;command&quot;&gt;dijkstra&lt;/strong&gt;, and maybe
+&lt;strong class=&quot;command&quot;&gt;nop&lt;/strong&gt; for &lt;abbr title=&quot;Obsessive–compulsive disorder&quot;&gt;OCD&lt;/abbr&gt;-compliance.&lt;/p&gt;
+&lt;div class=&quot;highlight-default notranslate&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;sed&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;e&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;1idigraph {&amp;quot;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;e&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;$a}&amp;#39;&lt;/span&gt; \
+    &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;e&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;s,\(.*\))\(.*\),&amp;quot;&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\1&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;quot;-&amp;gt;&amp;quot;&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\2&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;quot;,&amp;#39;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;day06&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;txt&lt;/span&gt; \
+    &lt;span class=&quot;o&quot;&gt;|&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;nop&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;section&quot; id=&quot;day-7&quot;&gt;
+&lt;h2&gt;Day 7&lt;/h2&gt;
+&lt;ul class=&quot;simple&quot;&gt;
+&lt;li&gt;&lt;p&gt;&lt;a class=&quot;reference external&quot; href=&quot;https://adventofcode.com/2019/day/7&quot;&gt;Amplification Circuit&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Back in &lt;a class=&quot;reference internal&quot; href=&quot;../../articles/advent_of_code_2019.html#day-five-label&quot;&gt;&lt;span class=&quot;std std-ref&quot;&gt;day five&lt;/span&gt;&lt;/a&gt; I sounded like a fool for implementing
+standalone &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;IntCode&lt;/span&gt;&lt;/code&gt; interpreters, today I inhale the plaudits as
+a double-bacon-genius.&lt;/p&gt;
+&lt;p&gt;Part one requires us to simply tie a few interpreters together.  I decided to do
+this from my shell, as it didn’t look that difficult.  We need to test all
+permutations of &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;{0…4}&lt;/span&gt;&lt;/code&gt;, and there are plenty ways to do this.  I’m going to
+use &lt;a class=&quot;reference external&quot; href=&quot;http://sourceforge.net/projects/crunch-wordlist/&quot;&gt;crunch&lt;/a&gt; with the &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;-p&lt;/span&gt;&lt;/code&gt;[ermutations] option as it was already installed:&lt;/p&gt;
+&lt;div class=&quot;highlight-zsh notranslate&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;choices&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;$(&lt;/span&gt;crunch &lt;span class=&quot;m&quot;&gt;0&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;0&lt;/span&gt; -p &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;0&lt;/span&gt;..4&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;We’ll now want to iterate over the array testing our amplifiers, which I chose
+to do with a loop because it was quicker than adding more argument parsing to my
+&lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;IntCode&lt;/span&gt;&lt;/code&gt; interpreter to make this possible with a pipe chain.&lt;/p&gt;
+&lt;div class=&quot;highlight-zsh notranslate&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;rv&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;0&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; choice &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$choices&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; input &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(ps::)choice&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;nv&quot;&gt;rv&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;$(&lt;/span&gt;./intcode inputs/day07.txt &lt;span class=&quot;o&quot;&gt;&amp;lt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$input&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;$&amp;#39;\n&amp;#39;&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$rv&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+    &lt;span class=&quot;nb&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$rv&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;There are a couple of things going on here that aren’t all that common.  First,
+I’m a &lt;a class=&quot;reference external&quot; href=&quot;https://www.zsh.org/&quot;&gt;zsh&lt;/a&gt; user and I tend to prefer the &lt;a class=&quot;reference external&quot; href=&quot;http://zsh.sourceforge.net/Doc/Release/Shell-Grammar.html#Alternate-Forms-For-Complex-Commands&quot;&gt;short syntax&lt;/a&gt; format.  It is
+functionally identical to “standard” syntax, but I find it more clear.&lt;/p&gt;
+&lt;p&gt;Second, we can take advantage of &lt;strong class=&quot;command&quot;&gt;zsh&lt;/strong&gt;’s &lt;a class=&quot;reference external&quot; href=&quot;http://zsh.sourceforge.net/Doc/Release/Expansion.html#Parameter-Expansion-Flags&quot;&gt;parameter expansion flags&lt;/a&gt;
+to split our five character string in to an array of individual characters.  The
+&lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;${(ps::)choice}&lt;/span&gt;&lt;/code&gt; construct tells zsh to split the string with an empty
+delimiter, but the normal way to use it would be to split based on a character
+such as a comma(&lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;${(ps:,:)csv_record}&lt;/span&gt;&lt;/code&gt;)&lt;/p&gt;
+&lt;p&gt;Finally, we’re using a &lt;a class=&quot;reference external&quot; href=&quot;http://zsh.sourceforge.net/Doc/Release/Redirection.html#Redirection&quot;&gt;here-string&lt;/a&gt; to feed &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;stdin&lt;/span&gt;&lt;/code&gt; for our interpreter.  The
+oddness with &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;$'\n'&lt;/span&gt;&lt;/code&gt; is a &lt;a class=&quot;reference external&quot; href=&quot;http://zsh.sourceforge.net/Doc/Release/Shell-Grammar.html#Quoting&quot;&gt;quoting form&lt;/a&gt; that tells zsh to interpret the text
+as it would for &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;print&lt;/span&gt;&lt;/code&gt;, that is it expands the newline escape sequence for
+us.&lt;/p&gt;
+&lt;p&gt;With that block written we now have each possible output, and the original
+question told us to provide the highest value as our answer.  &lt;a class=&quot;reference external&quot; href=&quot;http://suso.suso.org/programs/num-utils/&quot;&gt;num-utils&lt;/a&gt;
+provides &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;numbound&lt;/span&gt;&lt;/code&gt; for exactly this sort of purpose,  and simply tacking &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;|&lt;/span&gt;
+&lt;span class=&quot;pre&quot;&gt;numbound&lt;/span&gt;&lt;/code&gt; on to our outerloop gives us the final result for part one.&lt;/p&gt;
+&lt;p&gt;Part two is simply a matter of changing the input and loop condition, and
+contains nothing new or interesting.  If you’re doing something similar
+I strongly suggest getting to know the &lt;a class=&quot;reference external&quot; href=&quot;http://zsh.sourceforge.net/Doc/Release/Shell-Builtin-Commands.html#Shell-Builtin-Commands&quot;&gt;fc builtin&lt;/a&gt;, which allows you to edit
+your shell session in a real editor instead of needing to manually switch
+between your editor and terminal when composing more complex shell blocks.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;section&quot; id=&quot;day-8&quot;&gt;
+&lt;h2&gt;Day 8&lt;/h2&gt;
+&lt;ul class=&quot;simple&quot;&gt;
+&lt;li&gt;&lt;p&gt;&lt;a class=&quot;reference external&quot; href=&quot;https://adventofcode.com/2019/day/8&quot;&gt;Space Image Format&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;We’re going to want a chunker to implement this, and oddly for something so
+common Python doesn’t seem to provide one&lt;a class=&quot;footnote-reference brackets&quot; href=&quot;#id5&quot; id=&quot;id2&quot;&gt;2&lt;/a&gt;.  Perhaps the reason is how
+simple it is to implement, but then what would explain &lt;a class=&quot;reference external&quot; href=&quot;https://docs.python.org/3/library/math.html#math.copysign&quot; title=&quot;(in Python v3.8)&quot;&gt;&lt;code class=&quot;xref py py-func docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;math.copysign()&lt;/span&gt;&lt;/code&gt;&lt;/a&gt;?&lt;/p&gt;
+&lt;div class=&quot;highlight-default notranslate&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;chunks&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;l&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;List&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;n&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;int&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Generator&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;List&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;None&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;None&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]:&lt;/span&gt;
+    &lt;span class=&quot;sd&quot;&gt;&amp;quot;&amp;quot;&amp;quot;Generate n-sized chunks from list.&amp;quot;&amp;quot;&amp;quot;&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;range&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;len&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;l&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;n&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;yield&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;l&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;n&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;For part one all we need to do is count “pixel” values in each frame, and we
+once again use a &lt;a class=&quot;reference external&quot; href=&quot;https://docs.python.org/3/library/collections.html#collections.Counter&quot; title=&quot;(in Python v3.8)&quot;&gt;&lt;code class=&quot;xref py py-class docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;Counter&lt;/span&gt;&lt;/code&gt;&lt;/a&gt; to do the lifting:&lt;/p&gt;
+&lt;div class=&quot;highlight-default notranslate&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;layers&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Counter&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;l&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;l&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;chunks&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;inputs&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;25&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;6&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)]&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;Then we need to select the layer with the fewest zeroes, and calculate
+a rudimentary checksum for the elves to verify:&lt;/p&gt;
+&lt;div class=&quot;highlight-default notranslate&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;zero_layer&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;min&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;layers&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;key&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;itemgetter&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;zero_layer&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;zero_layer&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;My point for showing the whole code for such a simple task is to reiterate the
+point I’m making a lot, if you’re aiming for speed then be sure to leverage the
+tools that are available to you.  This &lt;em&gt;entire&lt;/em&gt; solution can be &lt;abbr title=&quot;Read–eval–print loop&quot;&gt;REPL&lt;/abbr&gt;’d in less
+than five lines without even resorting to &lt;a class=&quot;reference external&quot; href=&quot;https://en.m.wikipedia.org/wiki/Code_golf&quot;&gt;code golfing&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;For part two we need to iterate over the layers applying a basic rule.  As we’re
+told to iterate in reverse order, we simply skip “transparent” pixels and
+only apply black and white.  Once again taking advantage of &lt;a class=&quot;reference external&quot; href=&quot;https://docs.python.org/3/library/functions.html&quot;&gt;built-ins&lt;/a&gt; allows us
+to write basically zero code:&lt;/p&gt;
+&lt;div class=&quot;highlight-default notranslate&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;layer&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;reversed&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;layers&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;n&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;p&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;enumerate&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;layer&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;p&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;!=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
+            &lt;span class=&quot;n&quot;&gt;image&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;n&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39; █&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;p&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;Those four lines were my first attempt in the &lt;abbr title=&quot;Read–eval–print loop&quot;&gt;REPL&lt;/abbr&gt;, and I only burst the
+&lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;if&lt;/span&gt;&lt;/code&gt; statement for readability when I moved it to a file.&lt;/p&gt;
+&lt;p&gt;As I wrote less than ten lines to submit my answers, I decided to make a little
+more work for myself.  I give you images of images…&lt;/p&gt;
+&lt;div class=&quot;figure align-default&quot; id=&quot;id7&quot;&gt;
+&lt;a class=&quot;reference external image-reference&quot; href=&quot;../_static/2019-12-11-space_image.mp4&quot;&gt;&lt;img alt=&quot;Frames from the image decoding&quot; src=&quot;../../_images/2019-12-11-space_image.png&quot; style=&quot;width: 319.44px; height: 221.76000000000002px;&quot; /&gt;&lt;/a&gt;
+&lt;p class=&quot;caption&quot;&gt;&lt;span class=&quot;caption-text&quot;&gt;Click the image for an animation, if you want to see the image decoding.&lt;/span&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;p&gt;A more interesting question might be: without reversing the frames how quickly
+can we apply &lt;abbr title=&quot;Optical Character Recognition&quot;&gt;OCR&lt;/abbr&gt; to guess the incomplete
+text?  Had the input data been larger it might have been an interesting approach
+to solving this puzzle.  Install &lt;a class=&quot;reference external&quot; href=&quot;https://github.com/tesseract-ocr/&quot;&gt;tesseract&lt;/a&gt;, figure it out and drop me a &lt;a class=&quot;reference external&quot; href=&quot;mailto:jnrowe&amp;#37;&amp;#52;&amp;#48;gmail&amp;#46;com&quot;&gt;mail&lt;/a&gt;.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;section&quot; id=&quot;day-9&quot;&gt;
+&lt;h2&gt;Day 9&lt;/h2&gt;
+&lt;ul class=&quot;simple&quot;&gt;
+&lt;li&gt;&lt;p&gt;&lt;a class=&quot;reference external&quot; href=&quot;https://adventofcode.com/2019/day/9&quot;&gt;Sensor Boost&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Hrmmph.  The puzzle text took me longer to read than the extra opcode and mode
+took to add to my interpreter.  There was nothing new or noteworthy in the
+implmentation either, just another state variable and &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;switch&lt;/span&gt;&lt;/code&gt; arm.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;section&quot; id=&quot;day-10&quot;&gt;
+&lt;h2&gt;Day 10&lt;/h2&gt;
+&lt;ul class=&quot;simple&quot;&gt;
+&lt;li&gt;&lt;p&gt;&lt;a class=&quot;reference external&quot; href=&quot;https://adventofcode.com/2019/day/10&quot;&gt;Monitoring Station&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Part one was easy enough, after having put in some legwork to re-read topics
+I have a tendancy to forget through lack of use.  I took a ten minute diversion
+to refresh myself on &lt;a class=&quot;reference external&quot; href=&quot;https://nrich.maths.org/13746&quot;&gt;polar coordinates&lt;/a&gt;&lt;a class=&quot;footnote-reference brackets&quot; href=&quot;#id6&quot; id=&quot;id3&quot;&gt;3&lt;/a&gt;, then a little &lt;a class=&quot;reference external&quot; href=&quot;https://docs.python.org/3/library/cmath.html#module-cmath&quot; title=&quot;(in Python v3.8)&quot;&gt;&lt;code class=&quot;xref py py-mod docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;cmath&lt;/span&gt;&lt;/code&gt;&lt;/a&gt;
+refresher.&lt;/p&gt;
+&lt;p&gt;Research over.  All we need to do is map the asteroid coordinates as complex
+numbers, then iterate with more stdlib magic to count unique angles.  Dumping
+the output of &lt;a class=&quot;reference external&quot; href=&quot;https://docs.python.org/3/library/cmath.html#cmath.phase&quot; title=&quot;(in Python v3.8)&quot;&gt;&lt;code class=&quot;xref py py-func docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;cmath.phase()&lt;/span&gt;&lt;/code&gt;&lt;/a&gt; in to a set comprehension strips the
+duplicates for us.  We can think of it as a naïve form of &lt;a class=&quot;reference external&quot; href=&quot;https://en.m.wikipedia.org/wiki/Raycasting&quot;&gt;ray casting&lt;/a&gt; to
+“hide” the hidden asteroids.&lt;/p&gt;
+&lt;p&gt;I think the interesting part of today’s puzzle is yet another stdlib reminder.
+Should you wish to use cartesian coordinates to operate on the asteroids you
+have pre-built &lt;a class=&quot;reference external&quot; href=&quot;https://docs.python.org/3/library/math.html#math.gcd&quot; title=&quot;(in Python v3.8)&quot;&gt;&lt;code class=&quot;xref py py-func docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;gcd()&lt;/span&gt;&lt;/code&gt;&lt;/a&gt; or &lt;a class=&quot;reference external&quot; href=&quot;https://docs.python.org/3/library/fractions.html#fractions.Fraction&quot; title=&quot;(in Python v3.8)&quot;&gt;&lt;code class=&quot;xref py py-class docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;Fraction&lt;/span&gt;&lt;/code&gt;&lt;/a&gt; functionality
+for your angle representations, and if you opt for 1-dimensional polar
+coordinates you have &lt;a class=&quot;reference external&quot; href=&quot;https://docs.python.org/3/library/cmath.html#module-cmath&quot; title=&quot;(in Python v3.8)&quot;&gt;&lt;code class=&quot;xref py py-mod docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;cmath&lt;/span&gt;&lt;/code&gt;&lt;/a&gt; functions at your fingertips.&lt;/p&gt;
+&lt;p&gt;And &lt;em&gt;iff&lt;/em&gt; you outgrow the stdlib the Python ecosystem is great.  As an example,
+you &lt;em&gt;could&lt;/em&gt; read the whole input in to a &lt;a class=&quot;reference external&quot; href=&quot;https://numpy.org/devdocs/reference/arrays.html#array-objects&quot;&gt;numpy.array&lt;/a&gt; for the map.  Then take
+advantage of &lt;a class=&quot;reference external&quot; href=&quot;https://numpy.org/doc/1.16/reference/generated/numpy.nonzero.html&quot;&gt;numpy.nonzero()&lt;/a&gt; to extract the asteroid coordinates to iterate
+over.&lt;/p&gt;
+&lt;p&gt;The other thing I learnt is my co-worker Karl is &lt;em&gt;amazing&lt;/em&gt;, his solution
+included a &lt;a class=&quot;reference external&quot; href=&quot;http://www.pygame.org/&quot;&gt;pygame&lt;/a&gt;-based radar sweep display of the asteroid field.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;section&quot; id=&quot;day-11&quot;&gt;
+&lt;h2&gt;Day 11&lt;/h2&gt;
+&lt;p&gt;I’ve kind of lost interest today.  This puzzle was largely just tying your
+&lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;IntCode&lt;/span&gt;&lt;/code&gt; interpreter in to a &lt;a class=&quot;reference external&quot; href=&quot;https://en.m.wikipedia.org/wiki/Logo_(programming_language)&quot;&gt;Logo&lt;/a&gt;-esque walker from various other puzzles,
+it felt more like busywork than an actual challenge.&lt;/p&gt;
+&lt;p&gt;I’m pretty sure I’ll come back to &lt;abbr title=&quot;Advent of Code&quot;&gt;AoC&lt;/abbr&gt; 2019 during my Winterval break, but that
+is it for now.&lt;/p&gt;
+&lt;img alt=&quot;Calendar showing current count of 22 stars&quot; src=&quot;../../_images/2019-12-11-aoc_calendar.png&quot; /&gt;
+&lt;/div&gt;
+&lt;div class=&quot;section&quot; id=&quot;tips&quot;&gt;
+&lt;h2&gt;Tips&lt;/h2&gt;
+&lt;p&gt;I’m mostly repeating my tips from &lt;span class=&quot;xref std std-doc&quot;&gt;last year&lt;/span&gt; and the
+&lt;span class=&quot;xref std std-doc&quot;&gt;year before&lt;/span&gt;.&lt;/p&gt;
+&lt;p&gt;Don’t use this as an excuse to learn a new language.  The puzzles aren’t really
+complicated enough to learn a new language beyond basic grammar.  You may as
+well use it as an excuse to explore new features in a language you already
+know, or as an excuse to explore the standard library of your chosen language
+some more.&lt;/p&gt;
+&lt;p&gt;Read the problems &lt;em&gt;deeply&lt;/em&gt;.  The artificial nature of the puzzles often elides
+important information, or at least can often feel that way.  These &lt;em&gt;are&lt;/em&gt;
+puzzles so you should expect some vexation, and skimming for speed will make
+this worse!&lt;/p&gt;
+&lt;p&gt;If you’re going for the leaderboard you need to be &lt;em&gt;really&lt;/em&gt; fast, so: Use fast
+languages, be &lt;em&gt;all over&lt;/em&gt; your chosen weapon’s standard library, and use your
+editor’s &lt;a class=&quot;reference external&quot; href=&quot;https://github.com/SirVer/ultisnips/&quot;&gt;snippets&lt;/a&gt; well.  &lt;strong&gt;Every&lt;/strong&gt;. &lt;strong&gt;Second&lt;/strong&gt;. &lt;strong&gt;Counts&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;And finally, keep your old solutions around either in files or in your &lt;abbr title=&quot;Read–eval–print loop&quot;&gt;REPL&lt;/abbr&gt;’s
+history as you’ll probably end up revisiting them, if not this year then maybe
+in the next.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;section&quot; id=&quot;hopes-for-2020&quot;&gt;
+&lt;h2&gt;Hopes for 2020?&lt;/h2&gt;
+&lt;p&gt;Repeating number one from last year: That the options to pay for it are better
+next year.  Each year I have to find a friend to make a donation in my place as
+the payment options are weak.  It would be nice to not have to do so, and
+limiting payments to PayPal and Coinbase &lt;em&gt;must&lt;/em&gt; be putting others off a donation
+entirely.&lt;/p&gt;
+&lt;p&gt;Number two?  That it returns.  I know I’ve moaned a couple of times in this
+document, but that is the joy of puzzles.  If they’re not annoying you then
+they’re not challenging enough.&lt;/p&gt;
+&lt;p class=&quot;rubric&quot;&gt;Footnotes&lt;/p&gt;
+&lt;dl class=&quot;footnote brackets&quot;&gt;
+&lt;dt class=&quot;label&quot; id=&quot;id4&quot;&gt;&lt;span class=&quot;brackets&quot;&gt;&lt;a class=&quot;fn-backref&quot; href=&quot;#id1&quot;&gt;1&lt;/a&gt;&lt;/span&gt;&lt;/dt&gt;
+&lt;dd&gt;&lt;p&gt;I actually &lt;a class=&quot;reference external&quot; href=&quot;https://en.wikipedia.org/wiki/Extended_Backus%E2%80%93Naur_form&quot;&gt;EBNF&lt;/a&gt;’d the spec in my editor to pin down the rules from the
+prose.  In part because my editor is configured with snippets to quickly
+hammer out &lt;abbr title=&quot;Extended Backus–Naur Form&quot;&gt;EBNF&lt;/abbr&gt; rules.&lt;/p&gt;
+&lt;/dd&gt;
+&lt;dt class=&quot;label&quot; id=&quot;id5&quot;&gt;&lt;span class=&quot;brackets&quot;&gt;&lt;a class=&quot;fn-backref&quot; href=&quot;#id2&quot;&gt;2&lt;/a&gt;&lt;/span&gt;&lt;/dt&gt;
+&lt;dd&gt;&lt;p&gt;If you know of a way to perform this with the standard library drop me
+a &lt;a class=&quot;reference external&quot; href=&quot;mailto:jnrowe&amp;#37;&amp;#52;&amp;#48;gmail&amp;#46;com&quot;&gt;mail&lt;/a&gt;, I’d love to hear about it!&lt;/p&gt;
+&lt;/dd&gt;
+&lt;dt class=&quot;label&quot; id=&quot;id6&quot;&gt;&lt;span class=&quot;brackets&quot;&gt;&lt;a class=&quot;fn-backref&quot; href=&quot;#id3&quot;&gt;3&lt;/a&gt;&lt;/span&gt;&lt;/dt&gt;
+&lt;dd&gt;&lt;p&gt;I &lt;em&gt;literally&lt;/em&gt; only have to consider polar coordinates once a year.  Why?
+Simple, &lt;abbr title=&quot;Advent of Code&quot;&gt;AoC&lt;/abbr&gt; always has a puzzle or two which benefit from using them.&lt;/p&gt;
+&lt;/dd&gt;
+&lt;/dl&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</content>
+  </entry>
   <entry xml:base="https://jnrowe.github.io/blog/author/james-rowe/atom.xml">
     <title type="text">I have a secret</title>
     <id>https://jnrowe.github.io/thoughts/i_have_a_secret.html</id>
@@ -485,7 +971,7 @@ remaining days, so I hacked up a quick decorator to run the examples.&lt;/p&gt;
             &lt;span class=&quot;n&quot;&gt;result&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;fn&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;f&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
         &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;final_result&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
             &lt;span class=&quot;k&quot;&gt;assert&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;result&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;final_result&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; \
-                &lt;span class=&quot;n&quot;&gt;err_msg&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;format&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;file:&amp;#39;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;input_&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;result&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;final_result&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+                &lt;span class=&quot;n&quot;&gt;err_msg&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;format&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;file:&amp;#39;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;fname&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;result&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;final_result&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
             &lt;span class=&quot;n&quot;&gt;passed&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;
         &lt;span class=&quot;k&quot;&gt;else&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
             &lt;span class=&quot;nb&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;f&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;{name}&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;:&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;style&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;str&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;result&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;fg&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;green&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
@@ -662,8 +1148,8 @@ very small and the array slicing syntax more than makes up for that.&lt;/p&gt;
 we’re told we only need to care about the minutes so there is no need to
 parse the whole string.  We need to keep an inventory for each guard, and
 I chose to just keep two lookup tables for quicker implementation in my
-&lt;abbr title=&quot;Read–eval–print loop&quot;&gt;REPL&lt;/abbr&gt;; one for the guard’s time asleep
-&lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;Dict[int,&lt;/span&gt; &lt;span class=&quot;pre&quot;&gt;int]&lt;/span&gt;&lt;/code&gt;, and one for minutes they sleep on &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;Dict[int,&lt;/span&gt; &lt;span class=&quot;pre&quot;&gt;List[int]]&lt;/span&gt;&lt;/code&gt;.&lt;/p&gt;
+&lt;abbr title=&quot;Read–eval–print loop&quot;&gt;REPL&lt;/abbr&gt;; one for the guard’s time asleep &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;Dict[int,&lt;/span&gt; &lt;span class=&quot;pre&quot;&gt;int]&lt;/span&gt;&lt;/code&gt;, and one for minutes
+they sleep on &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;Dict[int,&lt;/span&gt; &lt;span class=&quot;pre&quot;&gt;List[int]]&lt;/span&gt;&lt;/code&gt;.&lt;/p&gt;
 &lt;p&gt;Once again the standard library provides us with some functionality to make
 this easier, and this time it is &lt;a class=&quot;reference external&quot; href=&quot;https://docs.python.org/3/library/collections.html#module-collections&quot; title=&quot;(in Python v3.8)&quot;&gt;&lt;code class=&quot;xref py py-mod docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;collections&lt;/span&gt;&lt;/code&gt;&lt;/a&gt;’s
 &lt;a class=&quot;reference external&quot; href=&quot;https://docs.python.org/3/library/collections.html#collections.defaultdict&quot; title=&quot;(in Python v3.8)&quot;&gt;&lt;code class=&quot;xref py py-obj docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;defaultdict&lt;/span&gt;&lt;/code&gt;&lt;/a&gt;.  Instead of needing to handle adding guards
@@ -873,7 +1359,7 @@ hope I’m in a better place personally next time.&lt;/p&gt;
 &lt;/div&gt;
 &lt;div class=&quot;section&quot; id=&quot;whats-next&quot;&gt;
 &lt;h2&gt;What’s next?&lt;/h2&gt;
-&lt;p&gt;Let us be honest here.  Winteral is almost upon us and I’ll probably end up
+&lt;p&gt;Let us be honest here.  Winterval is almost upon us and I’ll probably end up
 diving back in to complete the remaining days ;)&lt;/p&gt;
 &lt;p class=&quot;rubric&quot;&gt;Footnotes&lt;/p&gt;
 &lt;dl class=&quot;footnote brackets&quot;&gt;
@@ -2504,180 +2990,6 @@ approval to people’s views when you continue to follow them, even if you’re 
 actively engaging with them.  The simple act of not confronting them is
 normalising the behaviour.  If you’re not calling them out on it, you’re doing
 yourself and society at large a serious injustice.&lt;/p&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-</content>
-  </entry>
-  <entry xml:base="https://jnrowe.github.io/blog/author/james-rowe/atom.xml">
-    <title type="text">fossil experiments</title>
-    <id>https://jnrowe.github.io/articles/fossil.html</id>
-    <updated>2014-11-12T00:00:00Z</updated>
-    <published>2014-11-12T00:00:00Z</published>
-    <link href="https://jnrowe.github.io/articles/fossil.html" />
-    <author>
-      <name>James Rowe</name>
-    </author>
-    <content type="html">&lt;div class=&quot;section&quot; id=&quot;fossil-experiments&quot;&gt;
-
-&lt;p&gt;For a variety of reasons we can no longer use GitHub at work for any project
-which isn’t Open Source.  And since that decision was thrust upon us we’ve been
-playing with some alternatives for our workflow.  We’ll probably end up choosing
-one of the self hosted clones at some point, but it was decided early on that we
-should evaluate a variety of options.&lt;/p&gt;
-&lt;p&gt;I was tasked with testing out &lt;a class=&quot;reference external&quot; href=&quot;http://www.fossil-scm.org/&quot;&gt;fossil&lt;/a&gt; on a couple of small side projects, and
-these are my &lt;em&gt;absolutely&lt;/em&gt; biased personal findings.&lt;/p&gt;
-&lt;p&gt;Before I start I should add that while what I’m about to write probably sounds
-harsh, I do like &lt;strong class=&quot;command&quot;&gt;fossil&lt;/strong&gt; the concept.  I like the single &lt;a class=&quot;reference external&quot; href=&quot;http://sqlite.org/&quot;&gt;sqlite&lt;/a&gt;
-project repository, I like the small-enough-to-grok-in-an-afternoon code base
-and I like the idea of a totally reproducible project state including all
-metadata.&lt;/p&gt;
-&lt;div class=&quot;section&quot; id=&quot;testing-fossil&quot;&gt;
-&lt;h2&gt;Testing &lt;strong class=&quot;command&quot;&gt;fossil&lt;/strong&gt;&lt;/h2&gt;
-&lt;p&gt;The good news is that testing &lt;strong class=&quot;command&quot;&gt;fossil&lt;/strong&gt; is a piece of cake.  It
-supports both reading and writing &lt;strong class=&quot;command&quot;&gt;git&lt;/strong&gt;’s &lt;a class=&quot;reference external&quot; href=&quot;http://git-scm.com/docs/git-fast-import&quot;&gt;fast-import&lt;/a&gt; format.  If you
-want to test it out just dump an existing &lt;a class=&quot;reference external&quot; href=&quot;http://www.git-scm.com/&quot;&gt;git&lt;/a&gt; repository(or &lt;a class=&quot;reference external&quot; href=&quot;http://mercurial.selenic.com/wiki/FastImportExtension&quot;&gt;mercurial with an
-extension&lt;/a&gt;), and feed it &lt;strong class=&quot;command&quot;&gt;fossil import&lt;/strong&gt;.  If you later change your
-mind you can run &lt;strong class=&quot;command&quot;&gt;fossil export&lt;/strong&gt;.&lt;/p&gt;
-&lt;p&gt;Sadly supporting incremental two-way mirroring didn’t work out for us, but
-perhaps it will for simpler projects.  In the end I simply mirrored the
-&lt;strong class=&quot;command&quot;&gt;git&lt;/strong&gt; repositories to &lt;strong class=&quot;command&quot;&gt;fossil&lt;/strong&gt;, marked the &lt;strong class=&quot;command&quot;&gt;git&lt;/strong&gt;
-repositories as read-only and forced contributors to work with
-&lt;strong class=&quot;command&quot;&gt;fossil&lt;/strong&gt; from the outset.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class=&quot;section&quot; id=&quot;packaging&quot;&gt;
-&lt;h2&gt;Packaging&lt;/h2&gt;
-&lt;p&gt;The &lt;strong class=&quot;command&quot;&gt;fossil&lt;/strong&gt; project sells itself on being a single file binary
-install, and that probably works well for a subset of users.  We’re not that in
-that subset though, and &lt;strong class=&quot;command&quot;&gt;fossil&lt;/strong&gt; is more than a little annoying to
-wrangle in to our environment.&lt;/p&gt;
-&lt;p&gt;The tarball ships without any &lt;em&gt;directly&lt;/em&gt; usable documentation, so you end up
-with either no system documentation or a collection of docs sprinkled with wiki
-markup in &lt;code class=&quot;file docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;/usr/share/doc&lt;/span&gt;&lt;/code&gt;.&lt;/p&gt;
-&lt;p&gt;By default &lt;strong class=&quot;command&quot;&gt;fossil&lt;/strong&gt; builds in a manner which unfortunately breaks most
-packaging standards.  If you’re building packages you’ll likely need to write an
-awful lot of custom workarounds to get a compliant and usable package, see
-&lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;lst-pkgs/utils/dev/fossil&lt;/span&gt;&lt;/code&gt; build for the gory details of my hacks.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class=&quot;section&quot; id=&quot;uptake&quot;&gt;
-&lt;h2&gt;Uptake&lt;/h2&gt;
-&lt;p&gt;I don’t really want to hold this against &lt;strong class=&quot;command&quot;&gt;fossil&lt;/strong&gt;, but it &lt;em&gt;is&lt;/em&gt;
-important to note that for all intents and purposes no one is familiar with it.
-No upstream projects we actively track use it, there isn’t a single person who
-chooses to use it on our site(which is why I had to handle the packaging) and
-expecting new hires to have even heard of it is probably a stretch.&lt;/p&gt;
-&lt;p&gt;It wouldn’t be such an issue if the choice was a &lt;strong class=&quot;command&quot;&gt;git&lt;/strong&gt; vs &lt;a class=&quot;reference external&quot; href=&quot;http://mercurial.selenic.com/&quot;&gt;mercurial&lt;/a&gt;
-one, where the few differences are mostly cosmetic.  &lt;strong class=&quot;command&quot;&gt;fossil&lt;/strong&gt; is
-a completely different beast, and requires an enormous rethink in the way you
-handle version control.&lt;/p&gt;
-&lt;p&gt;Ten years ago when people were on the whole still familiar with the &lt;abbr title=&quot;Concurrent Versions System&quot;&gt;CVS&lt;/abbr&gt; and
-Subversion way of working that wouldn’t have been such an issue, but times have
-most definitely changed.&lt;/p&gt;
-&lt;p&gt;The vocabulary in the documentation is likely to be foreign to users of any
-version control system, and the workflow examples in the documentation are
-entirely foreign to how we have developed any project in at least the past
-decade.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class=&quot;section&quot; id=&quot;all-in-one-solution&quot;&gt;
-&lt;h2&gt;All-in-one solution&lt;/h2&gt;
-&lt;p&gt;One of the proclaimed benefits of using &lt;strong class=&quot;command&quot;&gt;fossil&lt;/strong&gt; is that it handles
-many aspects of a project’s &lt;abbr title=&quot;Application Lifecycle Management&quot;&gt;ALM&lt;/abbr&gt;; version control, issue tracking,
-documentation(via a wiki), etc.  However, and this is only my opinion, it feels
-like it does all of these in a suboptimal manner.&lt;/p&gt;
-&lt;div class=&quot;section&quot; id=&quot;version-control&quot;&gt;
-&lt;h3&gt;Version control&lt;/h3&gt;
-&lt;p&gt;The version control feels quite nice for the most part, definitely usable but
-a little annoying to work with if you’re used to a modern &lt;abbr title=&quot;Distributed Version Control System&quot;&gt;DVCS&lt;/abbr&gt; like we are.&lt;/p&gt;
-&lt;p&gt;That said it does feel like a &lt;em&gt;huge&lt;/em&gt; step backwards when working with branches,
-and you should set aside quite a lot of time for integration issues when you
-have &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;autosync&lt;/span&gt;&lt;/code&gt; disabled.  And I can’t imagine a scenario where &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;autosync&lt;/span&gt;&lt;/code&gt;
-could work for us, without rewriting our entire way of working or returning to
-&lt;abbr title=&quot;Concurrent Versions System&quot;&gt;CVS&lt;/abbr&gt;-style mega commits and a manual patch stack layered on top.&lt;/p&gt;
-&lt;p&gt;If you read &lt;strong class=&quot;command&quot;&gt;fossil&lt;/strong&gt;’s &lt;a class=&quot;reference external&quot; href=&quot;http://www.bugzilla.org&quot;&gt;Branching, Forking, Merging, and Tagging&lt;/a&gt;
-documentation it appears that this is a design feature for the creators.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class=&quot;section&quot; id=&quot;issue-tracker&quot;&gt;
-&lt;h3&gt;Issue tracker&lt;/h3&gt;
-&lt;p&gt;The issue tracker feels like someone has tried to improve on &lt;a class=&quot;reference external&quot; href=&quot;http://www.bugzilla.org&quot;&gt;Bugzilla&lt;/a&gt;, without
-taking a look at modern trackers.  It is definitely the weakest part of
-&lt;strong class=&quot;command&quot;&gt;fossil&lt;/strong&gt; in my opinion, using it is both a mental and eye-stabbing
-pain at the same time.&lt;/p&gt;
-&lt;p&gt;Luckily you can rework a lot of it by fiddling around with the administration
-settings exposed by &lt;strong class=&quot;command&quot;&gt;fossil ui&lt;/strong&gt;.&lt;/p&gt;
-&lt;p&gt;This also exposes one of the best features of &lt;strong class=&quot;command&quot;&gt;fossil&lt;/strong&gt;, you can create
-a custom &lt;abbr title=&quot;Structured Query Language&quot;&gt;SQL&lt;/abbr&gt; script that configures the project(issue tracking, pretty theme,
-etc) and just blast it in to the project’s database.  Or you can create
-a custom file that makes all your edits and pump it in with &lt;strong class=&quot;command&quot;&gt;fossil
-config import&lt;/strong&gt;.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class=&quot;section&quot; id=&quot;wiki&quot;&gt;
-&lt;h3&gt;Wiki&lt;/h3&gt;
-&lt;p&gt;The wiki system is actually really good for what it does, but it has very few of
-the features we use for our documentation.  I don’t want to hold that against it
-though, as it just a impedance mismatch.&lt;/p&gt;
-&lt;p&gt;The end result of the integrated components feels to me like you’ve chosen
-a usable, but weak, component for some of the  most important parts of your
-project’s &lt;abbr title=&quot;Application Lifecycle Management&quot;&gt;ALM&lt;/abbr&gt;.  The bits work well together, but none of them seem like an
-option you’d choose on their own.&lt;/p&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class=&quot;section&quot; id=&quot;interface&quot;&gt;
-&lt;h2&gt;Interface&lt;/h2&gt;
-&lt;p&gt;The help output for new users is, in my opinion, really irritating.  The default
-command message tells you to run &lt;strong class=&quot;command&quot;&gt;fossil help&lt;/strong&gt; or &lt;strong class=&quot;command&quot;&gt;fossil
-help COMMAND&lt;/strong&gt;, without providing the names of any of the common commands.  The
-&lt;strong class=&quot;command&quot;&gt;fossil help&lt;/strong&gt; output emulates a &lt;strong class=&quot;command&quot;&gt;column -t&lt;/strong&gt; filter of the
-command names, listing commands with unique to &lt;strong class=&quot;command&quot;&gt;fossil&lt;/strong&gt; terminology
-and no short descriptions.  &lt;strong class=&quot;command&quot;&gt;fossil help --all&lt;/strong&gt; feels like it should
-be more useful, but just creates a larger table of commands with uncommon names
-and still no descriptions.&lt;/p&gt;
-&lt;p&gt;It makes very little sense to organise the help in this manner because as you
-get used to the naming and non-standard option style you will need the help
-less.  I’ve patched this for our packages, and if people like it I’ll try to
-push it upstream.&lt;/p&gt;
-&lt;div class=&quot;admonition note&quot;&gt;
-&lt;p class=&quot;admonition-title&quot;&gt;Note&lt;/p&gt;
-&lt;p&gt;It turns out I won’t be pushing the changes upstream.  They require
-a &lt;abbr title=&quot;Contributor License Agreement&quot;&gt;CLA&lt;/abbr&gt; that I can not sign in good faith, which is a shame.&lt;/p&gt;
-&lt;/div&gt;
-&lt;p&gt;The option handling &lt;em&gt;will&lt;/em&gt; trip you up endlessly.  Just the little things like
-being unable to chain options, and needing an endless stream of &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;C-p&lt;/span&gt; &lt;span class=&quot;pre&quot;&gt;M-5&lt;/span&gt; &lt;span class=&quot;pre&quot;&gt;M-b&lt;/span&gt;
-&lt;span class=&quot;pre&quot;&gt;&amp;lt;space&amp;gt;&lt;/span&gt;&lt;/code&gt; to add a space before a commit message for example.  Yes, I know some
-people don’t like standard &lt;strong class=&quot;command&quot;&gt;getopt&lt;/strong&gt; or GNU-style option parsing, but
-every other tool you use has chosen it.&lt;/p&gt;
-&lt;p&gt;Some of the interface decisions are actively bad, for example there appears to
-be no way to delegate password configuration to a trusted system service or even
-&lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;netrc&lt;/span&gt;&lt;/code&gt;.  Specifying passwords in &lt;abbr title=&quot;Uniform Resource Locator&quot;&gt;URL&lt;/abbr&gt;’s on the command line is a &lt;strong&gt;huge&lt;/strong&gt;
-anti-pattern, and I just hope you don’t have any multiseat systems if you’re
-using that method.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class=&quot;section&quot; id=&quot;speed&quot;&gt;
-&lt;h2&gt;Speed&lt;/h2&gt;
-&lt;p&gt;On the whole &lt;strong class=&quot;command&quot;&gt;fossil&lt;/strong&gt; is fast, not &lt;strong class=&quot;command&quot;&gt;git&lt;/strong&gt; fast but fast
-nonetheless.  Commits do take a disturbingly long time to complete for some
-reason, but most of the other commands are fast enough.&lt;/p&gt;
-&lt;p&gt;Mangling a repository is actually a lot faster with &lt;strong class=&quot;command&quot;&gt;fossil&lt;/strong&gt; than any
-other system I can think of, as you can just throw the power of &lt;abbr title=&quot;Structured Query Language&quot;&gt;SQL&lt;/abbr&gt; at it.
-You can find some &lt;a class=&quot;reference external&quot; href=&quot;http://www.sqlalchemy.org/&quot;&gt;sqlalchemy&lt;/a&gt; &lt;abbr title=&quot;Object relational mapping&quot;&gt;ORM&lt;/abbr&gt;
-definitions in &lt;code class=&quot;file docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;/usr/share/doc/fossil/orm&lt;/span&gt;&lt;/code&gt; in my packages.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class=&quot;section&quot; id=&quot;conclusion&quot;&gt;
-&lt;h2&gt;Conclusion&lt;/h2&gt;
-&lt;p&gt;I mentioned this in this first paragraph, but I don’t see us moving to
-&lt;strong class=&quot;command&quot;&gt;fossil&lt;/strong&gt;.  It is a nice system, but it just wouldn’t work for us as
-is.&lt;/p&gt;
-&lt;p&gt;Part of me is tempted to attempt to fix the problems, but then we’d be left with
-a system that is more obscure than &lt;strong class=&quot;command&quot;&gt;fossil&lt;/strong&gt;.  If you read the &lt;a class=&quot;reference external&quot; href=&quot;http://fossil-scm.org/xfer/doc/tip/www/concepts.wiki&quot;&gt;Fossil
-Concepts&lt;/a&gt; and &lt;a class=&quot;reference external&quot; href=&quot;http://www.fossil-scm.org/xfer/doc/tip/www/faq.wiki&quot;&gt;Frequently Asked Questions&lt;/a&gt; documents you’ll see that the most
-significant problems for us are actually features for upstream, and that is
-obviously fine but it does mean upstreaming changes would be impossible.&lt;/p&gt;
-&lt;div class=&quot;admonition note&quot;&gt;
-&lt;p class=&quot;admonition-title&quot;&gt;Note&lt;/p&gt;
-&lt;p&gt;As noted above, it turns out they require a &lt;abbr title=&quot;Contributor License Agreement&quot;&gt;CLA&lt;/abbr&gt; which means we couldn’t
-send changes upstream anyway.&lt;/p&gt;
-&lt;/div&gt;
-&lt;p&gt;That said I’m am planning on stealing some of the ideas that I really liked
-about &lt;strong class=&quot;command&quot;&gt;fossil&lt;/strong&gt; for my own use.  &lt;strong class=&quot;command&quot;&gt;fossil all&lt;/strong&gt;’s ability to run
-a command against all repositories configured in &lt;code class=&quot;file docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;~/.fossil&lt;/span&gt;&lt;/code&gt; for example.&lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 </content>
