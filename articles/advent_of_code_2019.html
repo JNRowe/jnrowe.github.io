@@ -60,7 +60,7 @@
   <div class="section" id="advent-of-code-2019">
 <h1>Advent of Code 2019<a class="headerlink" href="#advent-of-code-2019" title="Permalink to this headline">¶</a></h1>
 <p>With a touch of sadness, I’ve given up on <abbr title="Advent of Code">AoC</abbr> for this year.  I’m writing this
-is a journal entry, more for myself than others.  You’ve been warned!</p>
+as a journal entry, more for myself than others.  You’ve been warned!</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>As always <a class="reference external" href="http://adventofcode.com/2018">Advent of Code</a> is fun, even when it doesn’t always feel like
@@ -103,12 +103,12 @@ description, and if provided the second argument confirms my output when I’m
 refactoring the code(which I won’t be doing in this instance).  If the second
 argument isn’t provided, such as when you’re writing your code, it will output
 the result for you to submit.</p>
-<p>There is nothing interesting with the code for solution itself, possibly beyond
-the fact that we’re using <code class="docutils literal notranslate"><span class="pre">//</span></code>(floor division) to handle the rounding for
-us.</p>
+<p>There is nothing interesting with the code for the solution itself, possibly
+beyond the fact that we’re using <code class="docutils literal notranslate"><span class="pre">//</span></code>(floor division) to handle the rounding
+for us.</p>
 <p>This could be performed just as easily with <a class="reference external" href="http://ftp.gnu.org/gnu/bc/">bc</a> and/or <a class="reference external" href="http://suso.suso.org/programs/num-utils/">num-utils</a>.  I had
-<a class="reference external" href="https://github.com/SirVer/ultisnips">ultisnips</a> configured to create a skeleton from last year, so only had type
-the tests and the <a class="reference external" href="https://docs.python.org/3/library/functions.html#sum" title="(in Python v3.8)"><code class="xref py py-func docutils literal notranslate"><span class="pre">sum()</span></code></a> call to complete the first part.</p>
+<a class="reference external" href="https://github.com/SirVer/ultisnips">ultisnips</a> configured to create a skeleton from last year, so only had to paste
+the tests and type the <a class="reference external" href="https://docs.python.org/3/library/functions.html#sum" title="(in Python v3.8)"><code class="xref py py-func docutils literal notranslate"><span class="pre">sum()</span></code></a> call to complete the first part.</p>
 <p>Part two leans toward a solution using recursion, and allows us to introduce one
 of the many useful tools from Python’s stdlib <a class="reference external" href="https://docs.python.org/3/library/itertools.html#itertools.takewhile" title="(in Python v3.8)"><code class="xref py py-func docutils literal notranslate"><span class="pre">itertools.takewhile()</span></code></a>.  This
 function consumes an iterator until the given condition no longer holds.  In
@@ -278,9 +278,9 @@ to skip it for now, but all <abbr title="Advent of Code">AoC</abbr> players know
 we want to continue with further days.</p>
 <p>I can’t get over how impenetrable the wording felt to me.  I think it is simply
 the choice of using non-standard “simple” wording to make the text more
-approachable to non-CS people that left me having to re-read paragraphs multiple
-times.  This isn’t a complaint aimed at the creator, more an admission of one of
-my shortcomings<a class="footnote-reference brackets" href="#id4" id="id1">1</a>.</p>
+approachable to non-<abbr title="Computer Science">CS</abbr> people that left me having to
+re-read paragraphs multiple times.  This isn’t a complaint aimed at the creator,
+more an admission of one of my shortcomings<a class="footnote-reference brackets" href="#id4" id="id1">1</a>.</p>
 <p>Instead of simply expanding my Python implementation from <a class="reference internal" href="#day-two-label"><span class="std std-ref">day two</span></a>, I took the <a class="reference external" href="http://www.joelonsoftware.com/items/2008/05/01.html">architecture astronaut</a> approach and created
 a standalone <a class="reference external" href="https://nim-lang.org/">nim</a> implementation that was <em>far</em> faster.  It also provides the
 benefit of being usable regardless of what language I choose to attack a future
@@ -349,8 +349,9 @@ standalone <code class="docutils literal notranslate"><span class="pre">IntCode<
 a double-bacon-genius.</p>
 <p>Part one requires us to simply tie a few interpreters together.  I decided to do
 this from my shell, as it didn’t look that difficult.  We need to test all
-permutations of <code class="docutils literal notranslate"><span class="pre">{0…4}</span></code>, and there are plenty ways to do this.  I’m going to
-use <a class="reference external" href="http://sourceforge.net/projects/crunch-wordlist/">crunch</a> with the <code class="docutils literal notranslate"><span class="pre">-p</span></code>[ermutations] option as it was already installed:</p>
+permutations of <code class="docutils literal notranslate"><span class="pre">{0…4}</span></code>, and there are plenty of ways to do this.  I’m going
+to use <a class="reference external" href="http://sourceforge.net/projects/crunch-wordlist/">crunch</a> with the <code class="docutils literal notranslate"><span class="pre">-p</span></code>[ermutations] option as it was already
+installed:</p>
 <div class="highlight-zsh notranslate"><div class="highlight"><pre><span></span><span class="nv">choices</span><span class="o">=(</span><span class="k">$(</span>crunch <span class="m">0</span> <span class="m">0</span> -p <span class="o">{</span><span class="m">0</span>..4<span class="o">}</span><span class="k">)</span><span class="o">)</span>
 </pre></div>
 </div>
@@ -367,8 +368,8 @@ to do with a loop because it was quicker than adding more argument parsing to my
 </pre></div>
 </div>
 <p>There are a couple of things going on here that aren’t all that common.  First,
-I’m a <a class="reference external" href="https://www.zsh.org/">zsh</a> user and I tend to prefer the <a class="reference external" href="http://zsh.sourceforge.net/Doc/Release/Shell-Grammar.html#Alternate-Forms-For-Complex-Commands">short syntax</a> format.  It is
-functionally identical to “standard” syntax, but I find it more clear.</p>
+I’m a <a class="reference external" href="https://www.zsh.org/">zsh</a> user and I tend to prefer the <a class="reference external" href="http://zsh.sourceforge.net/Doc/Release/Shell-Grammar.html#Alternate-Forms-For-Complex-Commands">short syntax</a>.  It is functionally
+identical to “standard” syntax, but I find it more clear.</p>
 <p>Second, we can take advantage of <strong class="command">zsh</strong>’s <a class="reference external" href="http://zsh.sourceforge.net/Doc/Release/Expansion.html#Parameter-Expansion-Flags">parameter expansion flags</a>
 to split our five character string in to an array of individual characters.  The
 <code class="docutils literal notranslate"><span class="pre">${(ps::)choice}</span></code> construct tells zsh to split the string with an empty
