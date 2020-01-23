@@ -6,7 +6,7 @@ Advent of Code 2018
 ===================
 
 I’ve given up on |AoC| for this year, so we’ll have a ten day early
-retrospective.  I’m writing this is a journal entry, more for myself than
+retrospective.  I’m writing this as a journal entry, more for myself than
 others.  You’ve been warned!
 
 .. note::

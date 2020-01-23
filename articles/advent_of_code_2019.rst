@@ -6,7 +6,7 @@ Advent of Code 2019
 ===================
 
 With a touch of sadness, I’ve given up on |AoC| for this year.  I’m writing this
-is a journal entry, more for myself than others.  You’ve been warned!
+as a journal entry, more for myself than others.  You’ve been warned!
 
 .. note::
 
@@ -54,13 +54,13 @@ refactoring the code(which I won’t be doing in this instance).  If the second
 argument isn’t provided, such as when you’re writing your code, it will output
 the result for you to submit.
 
-There is nothing interesting with the code for solution itself, possibly beyond
-the fact that we’re using ``//``\ (floor division) to handle the rounding for
-us.
+There is nothing interesting with the code for the solution itself, possibly
+beyond the fact that we’re using ``//``\ (floor division) to handle the rounding
+for us.
 
 This could be performed just as easily with bc_ and/or num-utils_.  I had
-ultisnips_ configured to create a skeleton from last year, so only had type
-the tests and the :func:`sum` call to complete the first part.
+ultisnips_ configured to create a skeleton from last year, so only had to paste
+the tests and type the :func:`sum` call to complete the first part.
 
 Part two leans toward a solution using recursion, and allows us to introduce one
 of the many useful tools from Python’s stdlib :func:`itertools.takewhile`.  This
@@ -256,9 +256,9 @@ we want to continue with further days.
 
 I can’t get over how impenetrable the wording felt to me.  I think it is simply
 the choice of using non-standard “simple” wording to make the text more
-approachable to non-CS people that left me having to re-read paragraphs multiple
-times.  This isn’t a complaint aimed at the creator, more an admission of one of
-my shortcomings [#]_.
+approachable to non-:abbr:`CS (Computer Science)` people that left me having to
+re-read paragraphs multiple times.  This isn’t a complaint aimed at the creator,
+more an admission of one of my shortcomings [#]_.
 
 Instead of simply expanding my Python implementation from :ref:`day two
 <day-two-label>`, I took the `architecture astronaut`_ approach and created
@@ -337,8 +337,9 @@ a double-bacon-genius.
 
 Part one requires us to simply tie a few interpreters together.  I decided to do
 this from my shell, as it didn’t look that difficult.  We need to test all
-permutations of ``{0…4}``, and there are plenty ways to do this.  I’m going to
-use crunch_ with the ``-p``\ [ermutations] option as it was already installed:
+permutations of ``{0…4}``, and there are plenty of ways to do this.  I’m going
+to use crunch_ with the ``-p``\ [ermutations] option as it was already
+installed:
 
 .. code-block:: zsh
 
@@ -359,8 +360,8 @@ to do with a loop because it was quicker than adding more argument parsing to my
     }
 
 There are a couple of things going on here that aren’t all that common.  First,
-I’m a zsh_ user and I tend to prefer the `short syntax`_ format.  It is
-functionally identical to “standard” syntax, but I find it more clear.
+I’m a zsh_ user and I tend to prefer the `short syntax`_.  It is functionally
+identical to “standard” syntax, but I find it more clear.
 
 Second, we can take advantage of :command:`zsh`’s `parameter expansion flags`_
 to split our five character string in to an array of individual characters.  The
