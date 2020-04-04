@@ -8,11 +8,11 @@
     <link rel="stylesheet" href="../_static/alabaster.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../_static/custom.css" />
-    <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
-    <script type="text/javascript" src="../_static/jquery.js"></script>
-    <script type="text/javascript" src="../_static/underscore.js"></script>
-    <script type="text/javascript" src="../_static/doctools.js"></script>
-    <script type="text/javascript" src="../_static/language_data.js"></script>
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/language_data.js"></script>
     <link rel="canonical" href="https://jnrowe.github.io/articles/advent_of_code_2019.html" />
     <link rel="shortcut icon" href="../_static/icon.ico"/>
     <link rel="index" title="Index" href="../genindex.html" />
@@ -128,7 +128,7 @@ and then we can simply call <a class="reference external" href="https://docs.pyt
 whether you choose to flatten the results from each module, or whether you call
 <a class="reference external" href="https://docs.python.org/3/library/functions.html#sum" title="(in Python v3.8)"><code class="xref py py-func docutils literal notranslate"><span class="pre">sum()</span></code></a> on per-module <a class="reference external" href="https://docs.python.org/3/library/functions.html#sum" title="(in Python v3.8)"><code class="xref py py-func docutils literal notranslate"><span class="pre">sum()</span></code></a> results.</p>
 <p>In my rush to hit the leaderboard I introduced a really stupid logic bug,
-my original <abbr title="Read–eval–print loop">REPL</abbr> code was <code class="docutils literal notranslate"><span class="pre">mod</span> <span class="pre">//=</span> <span class="pre">3</span> <span class="pre">-</span> <span class="pre">2</span></code>.  Clearly this won’t work as it is
+my original <abbr title="Read–Eval–Print Loop">REPL</abbr> code was <code class="docutils literal notranslate"><span class="pre">mod</span> <span class="pre">//=</span> <span class="pre">3</span> <span class="pre">-</span> <span class="pre">2</span></code>.  Clearly this won’t work as it is
 simply dividing <code class="docutils literal notranslate"><span class="pre">mod</span></code> by 1.  I’d be number one on the leaderboard for
 idiocy with a bug that foolish, but luckily I’m too stoopid to find it.  I’m
 admitting this in the open to remind myself to think a little more in the
@@ -416,7 +416,7 @@ a rudimentary checksum for the elves to verify:</p>
 </div>
 <p>My point for showing the whole code for such a simple task is to reiterate the
 point I’m making a lot, if you’re aiming for speed then be sure to leverage the
-tools that are available to you.  This <em>entire</em> solution can be <abbr title="Read–eval–print loop">REPL</abbr>’d in less
+tools that are available to you.  This <em>entire</em> solution can be <abbr title="Read–Eval–Print Loop">REPL</abbr>’d in less
 than five lines without even resorting to <a class="reference external" href="https://en.m.wikipedia.org/wiki/Code_golf">code golfing</a>.</p>
 <p>For part two we need to iterate over the layers applying a basic rule.  As we’re
 told to iterate in reverse order, we simply skip “transparent” pixels and
@@ -428,7 +428,7 @@ to write basically zero code:</p>
             <span class="n">image</span><span class="p">[</span><span class="n">n</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39; █&#39;</span><span class="p">[</span><span class="n">p</span><span class="p">]</span>
 </pre></div>
 </div>
-<p>Those four lines were my first attempt in the <abbr title="Read–eval–print loop">REPL</abbr>, and I only burst the
+<p>Those four lines were my first attempt in the <abbr title="Read–Eval–Print Loop">REPL</abbr>, and I only burst the
 <code class="docutils literal notranslate"><span class="pre">if</span></code> statement for readability when I moved it to a file.</p>
 <p>As I wrote less than ten lines to submit my answers, I decided to make a little
 more work for myself.  I give you images of images…</p>
@@ -501,7 +501,7 @@ this worse!</p>
 <p>If you’re going for the leaderboard you need to be <em>really</em> fast, so: Use fast
 languages, be <em>all over</em> your chosen weapon’s standard library, and use your
 editor’s <a class="reference external" href="https://github.com/SirVer/ultisnips/">snippets</a> well.  <strong>Every</strong>. <strong>Second</strong>. <strong>Counts</strong>.</p>
-<p>And finally, keep your old solutions around either in files or in your <abbr title="Read–eval–print loop">REPL</abbr>’s
+<p>And finally, keep your old solutions around either in files or in your <abbr title="Read–Eval–Print Loop">REPL</abbr>’s
 history as you’ll probably end up revisiting them, if not this year then maybe
 in the next.</p>
 </div>
@@ -565,6 +565,7 @@ Simple, <abbr title="Advent of Code">AoC</abbr> always has a puzzle or two which
   <span>&nbsp;</span>
   <span style="float: right;">
   
+  </span>
 </div>
 
   
@@ -1142,7 +1143,7 @@ Simple, <abbr title="Advent of Code">AoC</abbr> always has a puzzle or two which
     </form>
     </div>
 </div>
-<script type="text/javascript">$('#searchbox').show(0);</script>
+<script>$('#searchbox').show(0);</script>
         </div>
       </div>
       <div class="clearer"></div>
@@ -1154,7 +1155,7 @@ Simple, <abbr title="Advent of Code">AoC</abbr> always has a puzzle or two which
       </a> license.
       
       |
-      Powered by <a href="http://sphinx-doc.org/">Sphinx 2.2.0</a>
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 2.4.4</a>
       &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
       
     </div>

@@ -6,7 +6,7 @@
   <link href="https://jnrowe.github.io/" />
   <link href="https://jnrowe.github.io/blog/atom.xml" rel="self" />
   <subtitle type="text">Ramblings of a tired mind</subtitle>
-  <generator uri="https://ablog.readthedocs.org" version="0.10.0">ABlog</generator>
+  <generator uri="https://ablog.readthedocs.org" version="0.10.4">ABlog</generator>
   <entry xml:base="https://jnrowe.github.io/blog/atom.xml">
     <title type="text">Advent of Code 2019</title>
     <id>https://jnrowe.github.io/articles/advent_of_code_2019.html</id>
@@ -87,7 +87,7 @@ and then we can simply call &lt;a class=&quot;reference external&quot; href=&quo
 whether you choose to flatten the results from each module, or whether you call
 &lt;a class=&quot;reference external&quot; href=&quot;https://docs.python.org/3/library/functions.html#sum&quot; title=&quot;(in Python v3.8)&quot;&gt;&lt;code class=&quot;xref py py-func docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;sum()&lt;/span&gt;&lt;/code&gt;&lt;/a&gt; on per-module &lt;a class=&quot;reference external&quot; href=&quot;https://docs.python.org/3/library/functions.html#sum&quot; title=&quot;(in Python v3.8)&quot;&gt;&lt;code class=&quot;xref py py-func docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;sum()&lt;/span&gt;&lt;/code&gt;&lt;/a&gt; results.&lt;/p&gt;
 &lt;p&gt;In my rush to hit the leaderboard I introduced a really stupid logic bug,
-my original &lt;abbr title=&quot;Read–eval–print loop&quot;&gt;REPL&lt;/abbr&gt; code was &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;mod&lt;/span&gt; &lt;span class=&quot;pre&quot;&gt;//=&lt;/span&gt; &lt;span class=&quot;pre&quot;&gt;3&lt;/span&gt; &lt;span class=&quot;pre&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;pre&quot;&gt;2&lt;/span&gt;&lt;/code&gt;.  Clearly this won’t work as it is
+my original &lt;abbr title=&quot;Read–Eval–Print Loop&quot;&gt;REPL&lt;/abbr&gt; code was &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;mod&lt;/span&gt; &lt;span class=&quot;pre&quot;&gt;//=&lt;/span&gt; &lt;span class=&quot;pre&quot;&gt;3&lt;/span&gt; &lt;span class=&quot;pre&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;pre&quot;&gt;2&lt;/span&gt;&lt;/code&gt;.  Clearly this won’t work as it is
 simply dividing &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;mod&lt;/span&gt;&lt;/code&gt; by 1.  I’d be number one on the leaderboard for
 idiocy with a bug that foolish, but luckily I’m too stoopid to find it.  I’m
 admitting this in the open to remind myself to think a little more in the
@@ -375,7 +375,7 @@ a rudimentary checksum for the elves to verify:&lt;/p&gt;
 &lt;/div&gt;
 &lt;p&gt;My point for showing the whole code for such a simple task is to reiterate the
 point I’m making a lot, if you’re aiming for speed then be sure to leverage the
-tools that are available to you.  This &lt;em&gt;entire&lt;/em&gt; solution can be &lt;abbr title=&quot;Read–eval–print loop&quot;&gt;REPL&lt;/abbr&gt;’d in less
+tools that are available to you.  This &lt;em&gt;entire&lt;/em&gt; solution can be &lt;abbr title=&quot;Read–Eval–Print Loop&quot;&gt;REPL&lt;/abbr&gt;’d in less
 than five lines without even resorting to &lt;a class=&quot;reference external&quot; href=&quot;https://en.m.wikipedia.org/wiki/Code_golf&quot;&gt;code golfing&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;For part two we need to iterate over the layers applying a basic rule.  As we’re
 told to iterate in reverse order, we simply skip “transparent” pixels and
@@ -387,7 +387,7 @@ to write basically zero code:&lt;/p&gt;
             &lt;span class=&quot;n&quot;&gt;image&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;n&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39; █&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;p&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
-&lt;p&gt;Those four lines were my first attempt in the &lt;abbr title=&quot;Read–eval–print loop&quot;&gt;REPL&lt;/abbr&gt;, and I only burst the
+&lt;p&gt;Those four lines were my first attempt in the &lt;abbr title=&quot;Read–Eval–Print Loop&quot;&gt;REPL&lt;/abbr&gt;, and I only burst the
 &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;if&lt;/span&gt;&lt;/code&gt; statement for readability when I moved it to a file.&lt;/p&gt;
 &lt;p&gt;As I wrote less than ten lines to submit my answers, I decided to make a little
 more work for myself.  I give you images of images…&lt;/p&gt;
@@ -460,7 +460,7 @@ this worse!&lt;/p&gt;
 &lt;p&gt;If you’re going for the leaderboard you need to be &lt;em&gt;really&lt;/em&gt; fast, so: Use fast
 languages, be &lt;em&gt;all over&lt;/em&gt; your chosen weapon’s standard library, and use your
 editor’s &lt;a class=&quot;reference external&quot; href=&quot;https://github.com/SirVer/ultisnips/&quot;&gt;snippets&lt;/a&gt; well.  &lt;strong&gt;Every&lt;/strong&gt;. &lt;strong&gt;Second&lt;/strong&gt;. &lt;strong&gt;Counts&lt;/strong&gt;.&lt;/p&gt;
-&lt;p&gt;And finally, keep your old solutions around either in files or in your &lt;abbr title=&quot;Read–eval–print loop&quot;&gt;REPL&lt;/abbr&gt;’s
+&lt;p&gt;And finally, keep your old solutions around either in files or in your &lt;abbr title=&quot;Read–Eval–Print Loop&quot;&gt;REPL&lt;/abbr&gt;’s
 history as you’ll probably end up revisiting them, if not this year then maybe
 in the next.&lt;/p&gt;
 &lt;/div&gt;
@@ -1149,7 +1149,7 @@ very small and the array slicing syntax more than makes up for that.&lt;/p&gt;
 we’re told we only need to care about the minutes so there is no need to
 parse the whole string.  We need to keep an inventory for each guard, and
 I chose to just keep two lookup tables for quicker implementation in my
-&lt;abbr title=&quot;Read–eval–print loop&quot;&gt;REPL&lt;/abbr&gt;; one for the guard’s time asleep &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;Dict[int,&lt;/span&gt; &lt;span class=&quot;pre&quot;&gt;int]&lt;/span&gt;&lt;/code&gt;, and one for minutes
+&lt;abbr title=&quot;Read–Eval–Print Loop&quot;&gt;REPL&lt;/abbr&gt;; one for the guard’s time asleep &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;Dict[int,&lt;/span&gt; &lt;span class=&quot;pre&quot;&gt;int]&lt;/span&gt;&lt;/code&gt;, and one for minutes
 they sleep on &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;Dict[int,&lt;/span&gt; &lt;span class=&quot;pre&quot;&gt;List[int]]&lt;/span&gt;&lt;/code&gt;.&lt;/p&gt;
 &lt;p&gt;Once again the standard library provides us with some functionality to make
 this easier, and this time it is &lt;a class=&quot;reference external&quot; href=&quot;https://docs.python.org/3/library/collections.html#module-collections&quot; title=&quot;(in Python v3.8)&quot;&gt;&lt;code class=&quot;xref py py-mod docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;collections&lt;/span&gt;&lt;/code&gt;&lt;/a&gt;’s
@@ -1345,7 +1345,7 @@ this worse!&lt;/p&gt;
 &lt;p&gt;If you’re going for the leaderboard you need to be &lt;em&gt;really&lt;/em&gt; fast, so: Use fast
 languages, be &lt;em&gt;all over&lt;/em&gt; your chosen weapon’s standard library, and use your
 editor’s &lt;a class=&quot;reference external&quot; href=&quot;https://github.com/SirVer/ultisnips/&quot;&gt;snippets&lt;/a&gt; well.  &lt;strong&gt;Every&lt;/strong&gt;. &lt;strong&gt;Second&lt;/strong&gt;. &lt;strong&gt;Counts&lt;/strong&gt;.&lt;/p&gt;
-&lt;p&gt;And finally, keep your old solutions around either in files or in your &lt;abbr title=&quot;Read–eval–print loop&quot;&gt;REPL&lt;/abbr&gt;’s
+&lt;p&gt;And finally, keep your old solutions around either in files or in your &lt;abbr title=&quot;Read–Eval–Print Loop&quot;&gt;REPL&lt;/abbr&gt;’s
 history as you’ll probably end up revisiting them.&lt;/p&gt;
 &lt;/div&gt;
 &lt;div class=&quot;section&quot; id=&quot;hopes-for-2019&quot;&gt;
@@ -2429,8 +2429,8 @@ up my &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=
      def wrapper(s):
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
-&lt;p&gt;I know full well that this is a better solution than diving in to the &lt;abbr title=&quot;Read–eval–print loop&quot;&gt;REPL&lt;/abbr&gt;
-for me.  I tend toward &lt;a class=&quot;reference external&quot; href=&quot;https://en.m.wikipedia.org/wiki/Code_golf&quot;&gt;code golfing&lt;/a&gt; myself in a &lt;abbr title=&quot;Read–eval–print loop&quot;&gt;REPL&lt;/abbr&gt;, so I’d end up with
+&lt;p&gt;I know full well that this is a better solution than diving in to the &lt;abbr title=&quot;Read–Eval–Print Loop&quot;&gt;REPL&lt;/abbr&gt;
+for me.  I tend toward &lt;a class=&quot;reference external&quot; href=&quot;https://en.m.wikipedia.org/wiki/Code_golf&quot;&gt;code golfing&lt;/a&gt; myself in a &lt;abbr title=&quot;Read–Eval–Print Loop&quot;&gt;REPL&lt;/abbr&gt;, so I’d end up with
 something more like this:&lt;/p&gt;
 &lt;div class=&quot;highlight-pycon notranslate&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&quot;gp&quot;&gt;&amp;gt;&amp;gt;&amp;gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i2&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;tee&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;map&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;int&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;91212129&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
 &lt;span class=&quot;gp&quot;&gt;&amp;gt;&amp;gt;&amp;gt; &lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;sum&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;x&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;y&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;zip&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;islice&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;cycle&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;bp&quot;&gt;None&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;x&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;y&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
@@ -2531,7 +2531,7 @@ the last but should be repeated: &lt;em&gt;think&lt;/em&gt; first, &lt;em&gt;app
 &lt;p&gt;If you’re going for the leaderboard you need to be &lt;em&gt;really&lt;/em&gt; fast, so: Use fast
 languages, be &lt;em&gt;all over&lt;/em&gt; your chosen weapon’s standard library, and use your
 editor’s &lt;a class=&quot;reference external&quot; href=&quot;https://github.com/SirVer/ultisnips&quot;&gt;snippets&lt;/a&gt; well.  &lt;strong&gt;Every&lt;/strong&gt;. &lt;strong&gt;Second&lt;/strong&gt;. &lt;strong&gt;Counts&lt;/strong&gt;.&lt;/p&gt;
-&lt;p&gt;And finally, keep your old solutions around either in files or in your &lt;abbr title=&quot;Read–eval–print loop&quot;&gt;REPL&lt;/abbr&gt;’s
+&lt;p&gt;And finally, keep your old solutions around either in files or in your &lt;abbr title=&quot;Read–Eval–Print Loop&quot;&gt;REPL&lt;/abbr&gt;’s
 history as you might end up revisiting them, as was the case with &lt;a class=&quot;reference external&quot; href=&quot;https://adventofcode.com/2017/day/14&quot;&gt;day 14&lt;/a&gt; for
 example.&lt;/p&gt;
 &lt;/div&gt;

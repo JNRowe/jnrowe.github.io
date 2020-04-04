@@ -6,7 +6,7 @@
   <link href="https://jnrowe.github.io/" />
   <link href="https://jnrowe.github.io/blog/2003/atom.xml" rel="self" />
   <subtitle type="text">Ramblings of a tired mind</subtitle>
-  <generator uri="https://ablog.readthedocs.org" version="0.10.0">ABlog</generator>
+  <generator uri="https://ablog.readthedocs.org" version="0.10.4">ABlog</generator>
   <entry xml:base="https://jnrowe.github.io/blog/2003/atom.xml">
     <title type="text">Introduction to RCS</title>
     <id>https://jnrowe.github.io/articles/rcs.html</id>

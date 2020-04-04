@@ -6,7 +6,7 @@
   <link href="https://jnrowe.github.io/" />
   <link href="https://jnrowe.github.io/blog/tag/styling/atom.xml" rel="self" />
   <subtitle type="text">Ramblings of a tired mind</subtitle>
-  <generator uri="https://ablog.readthedocs.org" version="0.10.0">ABlog</generator>
+  <generator uri="https://ablog.readthedocs.org" version="0.10.4">ABlog</generator>
   <entry xml:base="https://jnrowe.github.io/blog/tag/styling/atom.xml">
     <title type="text">Sharing Xresources between systems</title>
     <id>https://jnrowe.github.io/articles/tips/Sharing_Xresources_between_systems.html</id>

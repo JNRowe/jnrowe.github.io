@@ -8,11 +8,11 @@
     <link rel="stylesheet" href="../_static/alabaster.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../_static/custom.css" />
-    <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
-    <script type="text/javascript" src="../_static/jquery.js"></script>
-    <script type="text/javascript" src="../_static/underscore.js"></script>
-    <script type="text/javascript" src="../_static/doctools.js"></script>
-    <script type="text/javascript" src="../_static/language_data.js"></script>
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/language_data.js"></script>
     <link rel="canonical" href="https://jnrowe.github.io/articles/advent_of_code.html" />
     <link rel="shortcut icon" href="../_static/icon.ico"/>
     <link rel="index" title="Index" href="../genindex.html" />
@@ -162,8 +162,8 @@ up my <code class="docutils literal notranslate"><span class="pre">captcha</span
      def wrapper(s):
 </pre></div>
 </div>
-<p>I know full well that this is a better solution than diving in to the <abbr title="Read–eval–print loop">REPL</abbr>
-for me.  I tend toward <a class="reference external" href="https://en.m.wikipedia.org/wiki/Code_golf">code golfing</a> myself in a <abbr title="Read–eval–print loop">REPL</abbr>, so I’d end up with
+<p>I know full well that this is a better solution than diving in to the <abbr title="Read–Eval–Print Loop">REPL</abbr>
+for me.  I tend toward <a class="reference external" href="https://en.m.wikipedia.org/wiki/Code_golf">code golfing</a> myself in a <abbr title="Read–Eval–Print Loop">REPL</abbr>, so I’d end up with
 something more like this:</p>
 <div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">i1</span><span class="p">,</span> <span class="n">i2</span> <span class="o">=</span> <span class="n">tee</span><span class="p">(</span><span class="nb">map</span><span class="p">(</span><span class="nb">int</span><span class="p">,</span> <span class="s1">&#39;91212129&#39;</span><span class="p">),</span> <span class="mi">2</span><span class="p">)</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="nb">sum</span><span class="p">(</span><span class="n">x</span> <span class="k">for</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">i1</span><span class="p">,</span> <span class="n">islice</span><span class="p">(</span><span class="n">cycle</span><span class="p">(</span><span class="n">i2</span><span class="p">),</span> <span class="mi">1</span><span class="p">,</span> <span class="bp">None</span><span class="p">))</span> <span class="k">if</span> <span class="n">x</span> <span class="o">==</span> <span class="n">y</span><span class="p">)</span>
@@ -264,7 +264,7 @@ the last but should be repeated: <em>think</em> first, <em>appropriate</em> tool
 <p>If you’re going for the leaderboard you need to be <em>really</em> fast, so: Use fast
 languages, be <em>all over</em> your chosen weapon’s standard library, and use your
 editor’s <a class="reference external" href="https://github.com/SirVer/ultisnips">snippets</a> well.  <strong>Every</strong>. <strong>Second</strong>. <strong>Counts</strong>.</p>
-<p>And finally, keep your old solutions around either in files or in your <abbr title="Read–eval–print loop">REPL</abbr>’s
+<p>And finally, keep your old solutions around either in files or in your <abbr title="Read–Eval–Print Loop">REPL</abbr>’s
 history as you might end up revisiting them, as was the case with <a class="reference external" href="https://adventofcode.com/2017/day/14">day 14</a> for
 example.</p>
 </div>
@@ -338,8 +338,8 @@ engineering problems.</p>
     File renaming for the lazy
     
   </a>
-  </span>
   
+  </span>
 </div>
 
   
@@ -917,7 +917,7 @@ engineering problems.</p>
     </form>
     </div>
 </div>
-<script type="text/javascript">$('#searchbox').show(0);</script>
+<script>$('#searchbox').show(0);</script>
         </div>
       </div>
       <div class="clearer"></div>
@@ -929,7 +929,7 @@ engineering problems.</p>
       </a> license.
       
       |
-      Powered by <a href="http://sphinx-doc.org/">Sphinx 2.2.0</a>
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 2.4.4</a>
       &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
       
     </div>

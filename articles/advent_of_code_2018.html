@@ -8,11 +8,11 @@
     <link rel="stylesheet" href="../_static/alabaster.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../_static/custom.css" />
-    <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
-    <script type="text/javascript" src="../_static/jquery.js"></script>
-    <script type="text/javascript" src="../_static/underscore.js"></script>
-    <script type="text/javascript" src="../_static/doctools.js"></script>
-    <script type="text/javascript" src="../_static/language_data.js"></script>
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/language_data.js"></script>
     <link rel="canonical" href="https://jnrowe.github.io/articles/advent_of_code_2018.html" />
     <link rel="shortcut icon" href="../_static/icon.ico"/>
     <link rel="index" title="Index" href="../genindex.html" />
@@ -342,7 +342,7 @@ very small and the array slicing syntax more than makes up for that.</p>
 we’re told we only need to care about the minutes so there is no need to
 parse the whole string.  We need to keep an inventory for each guard, and
 I chose to just keep two lookup tables for quicker implementation in my
-<abbr title="Read–eval–print loop">REPL</abbr>; one for the guard’s time asleep <code class="docutils literal notranslate"><span class="pre">Dict[int,</span> <span class="pre">int]</span></code>, and one for minutes
+<abbr title="Read–Eval–Print Loop">REPL</abbr>; one for the guard’s time asleep <code class="docutils literal notranslate"><span class="pre">Dict[int,</span> <span class="pre">int]</span></code>, and one for minutes
 they sleep on <code class="docutils literal notranslate"><span class="pre">Dict[int,</span> <span class="pre">List[int]]</span></code>.</p>
 <p>Once again the standard library provides us with some functionality to make
 this easier, and this time it is <a class="reference external" href="https://docs.python.org/3/library/collections.html#module-collections" title="(in Python v3.8)"><code class="xref py py-mod docutils literal notranslate"><span class="pre">collections</span></code></a>’s
@@ -538,7 +538,7 @@ this worse!</p>
 <p>If you’re going for the leaderboard you need to be <em>really</em> fast, so: Use fast
 languages, be <em>all over</em> your chosen weapon’s standard library, and use your
 editor’s <a class="reference external" href="https://github.com/SirVer/ultisnips/">snippets</a> well.  <strong>Every</strong>. <strong>Second</strong>. <strong>Counts</strong>.</p>
-<p>And finally, keep your old solutions around either in files or in your <abbr title="Read–eval–print loop">REPL</abbr>’s
+<p>And finally, keep your old solutions around either in files or in your <abbr title="Read–Eval–Print Loop">REPL</abbr>’s
 history as you’ll probably end up revisiting them.</p>
 </div>
 <div class="section" id="hopes-for-2019">
@@ -612,8 +612,8 @@ concepts are often known by various common names.</p>
     Office hours
     
   </a>
-  </span>
   
+  </span>
 </div>
 
   
@@ -1191,7 +1191,7 @@ concepts are often known by various common names.</p>
     </form>
     </div>
 </div>
-<script type="text/javascript">$('#searchbox').show(0);</script>
+<script>$('#searchbox').show(0);</script>
         </div>
       </div>
       <div class="clearer"></div>
@@ -1203,7 +1203,7 @@ concepts are often known by various common names.</p>
       </a> license.
       
       |
-      Powered by <a href="http://sphinx-doc.org/">Sphinx 2.2.0</a>
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 2.4.4</a>
       &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
       
     </div>

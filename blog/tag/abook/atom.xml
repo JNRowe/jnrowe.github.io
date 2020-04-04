@@ -6,7 +6,7 @@
   <link href="https://jnrowe.github.io/" />
   <link href="https://jnrowe.github.io/blog/tag/abook/atom.xml" rel="self" />
   <subtitle type="text">Ramblings of a tired mind</subtitle>
-  <generator uri="https://ablog.readthedocs.org" version="0.10.0">ABlog</generator>
+  <generator uri="https://ablog.readthedocs.org" version="0.10.4">ABlog</generator>
   <entry xml:base="https://jnrowe.github.io/blog/tag/abook/atom.xml">
     <title type="text">Populating sup contacts from abook</title>
     <id>https://jnrowe.github.io/articles/tips/Populating_sup_contacts_from_abook.html</id>
