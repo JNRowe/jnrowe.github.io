@@ -42,6 +42,7 @@ rst_epilog = """
 .. |IRC| replace:: :abbr:`IRC (Internet Relay Chat)`
 .. |ISO| replace:: :abbr:`ISO (International Organization for Standardization)`
 .. |PyPI| replace:: :abbr:`PyPI (Python Package Index)`
+.. |REPL| replace:: :abbr:`REPL (Read–Eval–Print Loop)`
 .. |RegEx| replace:: :abbr:`RegEx (Regular Expression)`
 .. |URL| replace:: :abbr:`URL (Uniform Resource Locator)`
 .. |VCS| replace:: :abbr:`VCS (Version Control System)`
