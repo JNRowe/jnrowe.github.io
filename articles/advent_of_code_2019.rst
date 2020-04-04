@@ -546,7 +546,6 @@ they’re not challenging enough.
        Simple, |AoC| always has a puzzle or two which benefit from using them.
 
 .. |AoC| replace:: :abbr:`AoC (Advent of Code)`
-.. |REPL| replace:: :abbr:`REPL (Read–eval–print loop)`
 
 .. _Advent of Code: http://adventofcode.com/2018
 .. _tip the creator: https://adventofcode.com/2019/support

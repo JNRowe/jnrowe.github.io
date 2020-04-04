@@ -244,7 +244,6 @@ having to get up at five, I just can’t even imagine what that could be.
        engineering problems.
 
 .. |AoC| replace:: :abbr:`AoC (Advent of Code)`
-.. |REPL| replace:: :abbr:`REPL (Read–eval–print loop)`
 
 .. _Advent of Code: http://adventofcode.com/
 .. _day 1: https://adventofcode.com/2017/day/1

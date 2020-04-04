@@ -554,7 +554,6 @@ diving back in to complete the remaining days ;)
        concepts are often known by various common names.
 
 .. |AoC| replace:: :abbr:`AoC (Advent of Code)`
-.. |REPL| replace:: :abbr:`REPL (Read–eval–print loop)`
 
 .. _Advent of Code: http://adventofcode.com/2018
 .. _tip the creator: https://adventofcode.com/2018/support
