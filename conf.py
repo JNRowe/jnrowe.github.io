@@ -15,7 +15,7 @@ sys.path.extend([os.path.curdir, os.path.pardir])
 # General configuration {{{
 extensions = \
     ['sphinx.ext.%s' % ext
-     for ext in ['extlinks', 'githubpages', 'intersphinx', ]] + \
+     for ext in ['duration', 'extlinks', 'githubpages', 'intersphinx', ]] + \
     ['sphinxcontrib.%s' % ext for ext in []] + \
     ['ext.%s' % ext for ext in ['jinja', ]] + \
     ['ablog', 'alabaster']
@@ -51,7 +51,7 @@ rst_epilog = """
 
 default_role = 'any'
 
-needs_sphinx = '1.6'
+needs_sphinx = '2.4'
 
 nitpicky = True
 # }}}
