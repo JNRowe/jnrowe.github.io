@@ -65,7 +65,6 @@ Elsewhere
     <ul>
         <li><a href="https://github.com/JNRowe" rel="me">GitHub</a></li>
         <li><a href="https://micro.blog/JNRowe" rel="me">micro.blog</a></li>
-        <li><a href="sms:+447479331445" class="p-tel" rel="me">SMS</a></li>
     </ul>
 
 .. raw:: html
