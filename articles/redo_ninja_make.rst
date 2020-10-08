@@ -43,7 +43,7 @@ a namespace of subcommands(like the **m**\aintainer namespace above) to aid
 when the inevitable errors show up.  Most of the stuff in that file is
 *absolutely amazing*, I’m working with a few genuine |make| masters.
 
-I’m not a |make| master.
+*I am not a |make| master*.
 
 I often find myself forgetting which |make| supports some feature, or which one
 fails horribly when you use that one “standard” feature every |make| supports.

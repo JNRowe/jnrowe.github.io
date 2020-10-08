@@ -29,7 +29,7 @@ a better idea`_ to me.
 The feeds
 ---------
 
-I subscribe to `Planet Debian`_, `Planet Freedesktop.org`_, `Planet gnome`_,
+I subscribe to `Planet Debian`_, `Planet Freedesktop.org`_, `Planet GNOME`_,
 `Planet Gentoo`_, `Planet Haskell`_ and `Planet Python`_.  These planets
 syndicate a large number of feeds, see the table below for a breakdown of
 yesterday.
@@ -41,7 +41,7 @@ yesterday.
 +-----------------+---------+
 | Freedesktop.org |       1 |
 +-----------------+---------+
-| gnome           |       8 |
+| GNOME           |       8 |
 +-----------------+---------+
 | Gentoo          |       3 |
 +-----------------+---------+
@@ -65,7 +65,7 @@ The task
 --------
 
 Not all the entries are new, some are duplicates(this is especially between
-Debian and gnome planets).  Some are uninteresting to me, talk of technologies
+Debian and GNOME planets).  Some are uninteresting to me, talk of technologies
 I won’t(not don’t) use.  Some are the minutiae of their author’s day, which I’m
 sure are interesting if you know the authors but if I did know them they’d be
 in the friends feed category already.
@@ -226,7 +226,7 @@ Sidenotes
 .. _suggest a better idea: jnrowe@gmail.com
 .. _Planet Debian: http://planet.debian.net/
 .. _Planet Freedesktop.org: http://planet.freedesktop.org/
-.. _Planet gnome: http://planet.gnome.org/
+.. _Planet GNOME: http://planet.gnome.org/
 .. _Planet Gentoo: http://planet.gentoo.org/
 .. _Planet Haskell: http://planet.haskell.org/
 .. _Planet Python: http://planet.python.org/

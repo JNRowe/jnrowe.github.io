@@ -452,7 +452,7 @@ Day 9
 
 Hrmmph.  The puzzle text took me longer to read than the extra opcode and mode
 took to add to my interpreter.  There was nothing new or noteworthy in the
-implmentation either, just another state variable and ``switch`` arm.
+implementation either, just another state variable and ``switch`` arm.
 
 Day 10
 ------

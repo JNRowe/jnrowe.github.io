@@ -117,7 +117,7 @@ the point.
     ogrmerge_layer_cake.rst /home/jay/export/public
     $ echo xclip.rst{,(:s/clip/sel)}  # Apply substitution of “clip” to “sel”
     xclip.rst xsel.rst
-    $ echo emacs_explore.rst{,(:s/e/X)}  # Apply subtitution of “e” to “X”
+    $ echo emacs_explore.rst{,(:s/e/X)}  # Apply substitution of “e” to “X”
     emacs_explore.rst Xmacs_explore.rst
     $ echo emacs_explore.rst{,(:gs/e/X)}  # … add the g flag for global replace
     emacs_explore.rst Xmacs_XxplorX.rst

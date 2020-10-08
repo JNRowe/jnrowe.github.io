@@ -68,7 +68,7 @@ The logic should be simple enough to follow(if you’re familiar with
   position in year as percentage
 * Generate the :command:`dzen2` markup for a bar of ``1500`` pixels wide and
   ``20`` pixels high
-* Display it for for ``5`` seconds
+* Display it for ``5`` seconds
 
 .. warning::
 
@@ -167,7 +167,7 @@ with :abbr:`DST (Daylight Saving Time)` transitions.
 
 .. rubric:: Footnotes
 
-.. [#] Calculating the day of year for December 31ˢᵗ allows to work in leap
+.. [#] Calculating the day of year for December 31ˢᵗ allows one to work in leap
        years.
 
 .. program:: date
