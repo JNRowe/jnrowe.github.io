@@ -1,9 +1,10 @@
 
 <!DOCTYPE html>
 
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html>
   <head>
     <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dropping Gentoo reflex &#8212; JNRowe</title>
     <link rel="stylesheet" href="../_static/alabaster.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
@@ -80,7 +81,7 @@ if you share binary packages.</p>
 binary package user on Gentoo is just how slow package installation and removal
 is.  Binary package installation on Gentoo feels on par with a distribution
 like Slackware, and what passes for package management there is just choosing
-the right argument to <strong class="command">tar</strong>’s <a class="reference internal" href="#cmdoption-tar-c"><code class="xref std std-option docutils literal notranslate"><span class="pre">-C</span></code></a> option<a class="footnote-reference brackets" href="#id2" id="id1">*</a>.</p>
+the right argument to <strong class="command">tar</strong>’s <a class="reference internal" href="#cmdoption-tar-C"><code class="xref std std-option docutils literal notranslate"><span class="pre">-C</span></code></a> option<a class="footnote-reference brackets" href="#id2" id="id1">*</a>.</p>
 <p>Where Gentoo really excels though is in the speed of creating new packages or
 editing existing packages.</p>
 <p>Lets take a look at an example.  Say, for example, that you just found out that
@@ -183,9 +184,9 @@ fun memories.</p>
 makes dependency handling work among other things.</p>
 </dd>
 </dl>
-<dl class="option">
-<dt id="cmdoption-tar-c">
-<code class="sig-name descname">-C</code><code class="sig-prename descclassname"></code><a class="headerlink" href="#cmdoption-tar-c" title="Permalink to this definition">¶</a></dt>
+<dl class="std option">
+<dt id="cmdoption-tar-C">
+<code class="sig-name descname">-C</code><code class="sig-prename descclassname"></code><a class="headerlink" href="#cmdoption-tar-C" title="Permalink to this definition">¶</a></dt>
 <dd><p>This option tells <strong class="command">tar</strong> to change directory before performing its
 duty.  For example using <code class="docutils literal notranslate"><span class="pre">-C</span> <span class="pre">/</span></code> will switch to <code class="docutils literal notranslate"><span class="pre">/</span></code>, and can be used to
 unpack a tarball directly over the root filesystem.</p>
@@ -821,7 +822,7 @@ unpack a tarball directly over the root filesystem.</p>
       </a> license.
       
       |
-      Powered by <a href="http://sphinx-doc.org/">Sphinx 2.4.4</a>
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 3.1.2</a>
       &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
       
     </div>

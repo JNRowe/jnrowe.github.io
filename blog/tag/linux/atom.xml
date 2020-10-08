@@ -83,7 +83,7 @@ simply using &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span
 &lt;a class=&quot;reference external&quot; href=&quot;https://www.python.org/&quot;&gt;Python&lt;/a&gt; now, as the gigantic standard library allows us to be lazy.&lt;/p&gt;
 &lt;div class=&quot;highlight-default notranslate&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;pcnt_colour&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;percent&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
     &lt;span class=&quot;n&quot;&gt;h&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;percent&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;100&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;#&amp;#39;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;&amp;#39;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;join&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;f&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;{min(int(n*256), 255):02x}&amp;#39;&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;#&amp;#39;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;&amp;#39;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;join&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;sa&quot;&gt;f&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;min&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;int&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;n&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;256&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;255&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;02x&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;&lt;/span&gt;
                          &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;n&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;colorsys&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;hls_to_rgb&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;h&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
@@ -151,7 +151,7 @@ with &lt;abbr title=&quot;Daylight Saving Time&quot;&gt;DST&lt;/abbr&gt; transit
 years.&lt;/p&gt;
 &lt;/dd&gt;
 &lt;/dl&gt;
-&lt;dl class=&quot;option&quot;&gt;
+&lt;dl class=&quot;std option&quot;&gt;
 &lt;dt id=&quot;cmdoption-date-arg-j&quot;&gt;
 &lt;code class=&quot;sig-name descname&quot;&gt;%j&lt;/code&gt;&lt;code class=&quot;sig-prename descclassname&quot;&gt;&lt;/code&gt;&lt;/dt&gt;
 &lt;dd&gt;&lt;p&gt;Displays the day number of the given year, see &lt;em class=&quot;manpage&quot;&gt;strftime(3)&lt;/em&gt; if
@@ -194,7 +194,7 @@ if you share binary packages.&lt;/p&gt;
 binary package user on Gentoo is just how slow package installation and removal
 is.  Binary package installation on Gentoo feels on par with a distribution
 like Slackware, and what passes for package management there is just choosing
-the right argument to &lt;strong class=&quot;command&quot;&gt;tar&lt;/strong&gt;’s &lt;a class=&quot;reference internal&quot; href=&quot;../../articles/dropping_gentoo_reflex.html#cmdoption-tar-c&quot;&gt;&lt;code class=&quot;xref std std-option docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;-C&lt;/span&gt;&lt;/code&gt;&lt;/a&gt; option&lt;a class=&quot;footnote-reference brackets&quot; href=&quot;#id2&quot; id=&quot;id1&quot;&gt;*&lt;/a&gt;.&lt;/p&gt;
+the right argument to &lt;strong class=&quot;command&quot;&gt;tar&lt;/strong&gt;’s &lt;a class=&quot;reference internal&quot; href=&quot;../../articles/dropping_gentoo_reflex.html#cmdoption-tar-C&quot;&gt;&lt;code class=&quot;xref std std-option docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;-C&lt;/span&gt;&lt;/code&gt;&lt;/a&gt; option&lt;a class=&quot;footnote-reference brackets&quot; href=&quot;#id2&quot; id=&quot;id1&quot;&gt;*&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;Where Gentoo really excels though is in the speed of creating new packages or
 editing existing packages.&lt;/p&gt;
 &lt;p&gt;Lets take a look at an example.  Say, for example, that you just found out that
@@ -297,8 +297,8 @@ fun memories.&lt;/p&gt;
 makes dependency handling work among other things.&lt;/p&gt;
 &lt;/dd&gt;
 &lt;/dl&gt;
-&lt;dl class=&quot;option&quot;&gt;
-&lt;dt id=&quot;cmdoption-tar-c&quot;&gt;
+&lt;dl class=&quot;std option&quot;&gt;
+&lt;dt id=&quot;cmdoption-tar-C&quot;&gt;
 &lt;code class=&quot;sig-name descname&quot;&gt;-C&lt;/code&gt;&lt;code class=&quot;sig-prename descclassname&quot;&gt;&lt;/code&gt;&lt;/dt&gt;
 &lt;dd&gt;&lt;p&gt;This option tells &lt;strong class=&quot;command&quot;&gt;tar&lt;/strong&gt; to change directory before performing its
 duty.  For example using &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;-C&lt;/span&gt; &lt;span class=&quot;pre&quot;&gt;/&lt;/span&gt;&lt;/code&gt; will switch to &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;/&lt;/span&gt;&lt;/code&gt;, and can be used to

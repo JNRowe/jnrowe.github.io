@@ -1,9 +1,10 @@
 
 <!DOCTYPE html>
 
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html>
   <head>
     <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TDD distro development &#8212; JNRowe</title>
     <link rel="stylesheet" href="../_static/alabaster.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
@@ -183,9 +184,9 @@ with <code class="docutils literal notranslate"><span class="pre">shelldoctest</
 <span class="kn">import</span> <span class="nn">doctest</span>
 <span class="kn">import</span> <span class="nn">sys</span>
 
-<span class="kn">import</span> <span class="nn">shelldoctest</span> <span class="kn">as</span> <span class="nn">sd</span>
+<span class="kn">import</span> <span class="nn">shelldoctest</span> <span class="k">as</span> <span class="nn">sd</span>
 
-<span class="n">sys</span><span class="o">.</span><span class="n">exit</span><span class="p">(</span><span class="n">doctest</span><span class="o">.</span><span class="n">testfile</span><span class="p">(</span><span class="n">sys</span><span class="o">.</span><span class="n">argv</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">module_relative</span><span class="o">=</span><span class="bp">False</span><span class="p">,</span>
+<span class="n">sys</span><span class="o">.</span><span class="n">exit</span><span class="p">(</span><span class="n">doctest</span><span class="o">.</span><span class="n">testfile</span><span class="p">(</span><span class="n">sys</span><span class="o">.</span><span class="n">argv</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">module_relative</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
                           <span class="n">extraglobs</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;system_command&quot;</span><span class="p">:</span> <span class="n">sd</span><span class="o">.</span><span class="n">system_command</span><span class="p">},</span>
                           <span class="n">parser</span><span class="o">=</span><span class="n">sd</span><span class="o">.</span><span class="n">ShellDocTestParser</span><span class="p">())[</span><span class="mi">0</span><span class="p">])</span>
 </pre></div>
@@ -834,7 +835,7 @@ a <code class="docutils literal notranslate"><span class="pre">reST</span></code
       </a> license.
       
       |
-      Powered by <a href="http://sphinx-doc.org/">Sphinx 2.4.4</a>
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 3.1.2</a>
       &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
       
     </div>

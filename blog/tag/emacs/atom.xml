@@ -39,12 +39,12 @@ change:&lt;/p&gt;
 &lt;div class=&quot;highlight-c notranslate&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;magic_const&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;974&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
-&lt;p&gt;In &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;vim&lt;/span&gt;&lt;/code&gt;, you can execute &lt;kbd class=&quot;kbd docutils literal notranslate&quot;&gt;ciw&amp;lt;C-r&amp;gt;=&amp;#64;&amp;quot;/2&amp;lt;CR&amp;gt;&lt;/kbd&gt; to cleave the number.  The
+&lt;p&gt;In &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;vim&lt;/span&gt;&lt;/code&gt;, you can execute &lt;kbd class=&quot;kbd docutils literal notranslate&quot;&gt;&lt;kbd class=&quot;kbd docutils literal notranslate&quot;&gt;ciw&amp;lt;C&lt;/kbd&gt;-&lt;kbd class=&quot;kbd docutils literal notranslate&quot;&gt;r&amp;gt;=&amp;#64;&amp;quot;/2&amp;lt;CR&amp;gt;&lt;/kbd&gt;&lt;/kbd&gt; to cleave the number.  The
 command itself is saying:&lt;/p&gt;
 &lt;dl class=&quot;simple&quot;&gt;
 &lt;dt&gt;&lt;kbd class=&quot;kbd docutils literal notranslate&quot;&gt;ciw&lt;/kbd&gt;&lt;/dt&gt;&lt;dd&gt;&lt;p&gt;Change the word my cursor is on(&lt;kbd class=&quot;kbd docutils literal notranslate&quot;&gt;c&lt;/kbd&gt;hange &lt;kbd class=&quot;kbd docutils literal notranslate&quot;&gt;i&lt;/kbd&gt;nner &lt;kbd class=&quot;kbd docutils literal notranslate&quot;&gt;w&lt;/kbd&gt;ord)&lt;/p&gt;
 &lt;/dd&gt;
-&lt;dt&gt;&lt;kbd class=&quot;kbd docutils literal notranslate&quot;&gt;&amp;lt;C-r&amp;gt;=&lt;/kbd&gt;&lt;/dt&gt;&lt;dd&gt;&lt;p&gt;Insert the result of an expression(see &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;:h&lt;/span&gt; &lt;span class=&quot;pre&quot;&gt;i_CTRL-R_=&lt;/span&gt;&lt;/code&gt; for awesomeness)&lt;/p&gt;
+&lt;dt&gt;&lt;kbd class=&quot;kbd docutils literal notranslate&quot;&gt;&lt;kbd class=&quot;kbd docutils literal notranslate&quot;&gt;&amp;lt;C&lt;/kbd&gt;-&lt;kbd class=&quot;kbd docutils literal notranslate&quot;&gt;r&amp;gt;=&lt;/kbd&gt;&lt;/kbd&gt;&lt;/dt&gt;&lt;dd&gt;&lt;p&gt;Insert the result of an expression(see &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;:h&lt;/span&gt; &lt;span class=&quot;pre&quot;&gt;i_CTRL-R_=&lt;/span&gt;&lt;/code&gt; for awesomeness)&lt;/p&gt;
 &lt;/dd&gt;
 &lt;dt&gt;&lt;kbd class=&quot;kbd docutils literal notranslate&quot;&gt;&amp;#64;&amp;quot;&lt;/kbd&gt;&lt;/dt&gt;&lt;dd&gt;&lt;p&gt;Use the text from last filled register, ie the text we just marked to be
 changed&lt;/p&gt;
@@ -114,7 +114,7 @@ a &lt;a class=&quot;reference external&quot; href=&quot;mailto:jnrowe&amp;#37;&a
 &lt;dt class=&quot;label&quot; id=&quot;id6&quot;&gt;&lt;span class=&quot;brackets&quot;&gt;&lt;a class=&quot;fn-backref&quot; href=&quot;#id3&quot;&gt;3&lt;/a&gt;&lt;/span&gt;&lt;/dt&gt;
 &lt;dd&gt;&lt;p&gt;&lt;a class=&quot;reference external&quot; href=&quot;https://www.orgmode.org/&quot;&gt;org-mode&lt;/a&gt; and &lt;a class=&quot;reference external&quot; href=&quot;https://github.com/jceb/vim-orgmode&quot;&gt;vim-orgmode&lt;/a&gt; allows me to keep this across editors.  There
 is very little point publishing it, as it can be summed up as “James
-pressed &lt;kbd class=&quot;kbd docutils literal notranslate&quot;&gt;&amp;lt;C-x&amp;gt;$something&lt;/kbd&gt; and was surprised.”&lt;/p&gt;
+pressed &lt;kbd class=&quot;kbd docutils literal notranslate&quot;&gt;&lt;kbd class=&quot;kbd docutils literal notranslate&quot;&gt;&amp;lt;C&lt;/kbd&gt;-&lt;kbd class=&quot;kbd docutils literal notranslate&quot;&gt;x&amp;gt;$something&lt;/kbd&gt;&lt;/kbd&gt; and was surprised.”&lt;/p&gt;
 &lt;/dd&gt;
 &lt;/dl&gt;
 &lt;/div&gt;
@@ -144,7 +144,7 @@ add the following to your &lt;code class=&quot;file docutils literal notranslate
 bindings in GNOME you should use the control centre.&lt;/p&gt;
 &lt;/div&gt;
 &lt;p&gt;Using the above you can return to the old default format, but if you only want
-to enable &lt;kbd class=&quot;kbd docutils literal notranslate&quot;&gt;&amp;lt;C-w&amp;gt;&lt;/kbd&gt; and keep the other Windows-style shortcuts you can just
+to enable &lt;kbd class=&quot;kbd docutils literal notranslate&quot;&gt;&lt;kbd class=&quot;kbd docutils literal notranslate&quot;&gt;&amp;lt;C&lt;/kbd&gt;-&lt;kbd class=&quot;kbd docutils literal notranslate&quot;&gt;w&amp;gt;&lt;/kbd&gt;&lt;/kbd&gt; and keep the other Windows-style shortcuts you can just
 add:&lt;/p&gt;
 &lt;div class=&quot;highlight-text notranslate&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;binding &amp;quot;gtk-emacs-text-entry&amp;quot;
 {
@@ -165,7 +165,7 @@ switchers.&lt;/p&gt;
 keyboard settings dialog.&lt;/p&gt;
 &lt;p&gt;If you can’t change the settings for some reason, then you can still use
 a shortcut to delete words.  The default setting, up to at least GTK+ v2.10.9,
-is the finger-stretching &lt;kbd class=&quot;kbd docutils literal notranslate&quot;&gt;&amp;lt;C-backspace&amp;gt;&lt;/kbd&gt;.&lt;/p&gt;
+is the finger-stretching &lt;kbd class=&quot;kbd docutils literal notranslate&quot;&gt;&lt;kbd class=&quot;kbd docutils literal notranslate&quot;&gt;&amp;lt;C&lt;/kbd&gt;-&lt;kbd class=&quot;kbd docutils literal notranslate&quot;&gt;backspace&amp;gt;&lt;/kbd&gt;&lt;/kbd&gt;.&lt;/p&gt;
 &lt;p&gt;And finally, if you manage to convince upstream that the default behaviour
 should be the settings in the Emacs theme I’ll owe you a few beers!&lt;/p&gt;
 &lt;/div&gt;

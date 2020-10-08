@@ -102,7 +102,7 @@ settings are basic theme related options.  &lt;code class=&quot;docutils literal
 &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;gtk-icon-theme-name&lt;/span&gt;&lt;/code&gt; set the style and icon groups for GTK+ apps
 respectively.  &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;gtk-key-theme-name&lt;/span&gt;&lt;/code&gt; sets the default keybindings for GTK+
 apps.  By setting it to &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;Emacs&lt;/span&gt;&lt;/code&gt; we have access to the “normal” keybindings we
-expect if we use &lt;a class=&quot;reference external&quot; href=&quot;http://cnswww.cns.cwru.edu/~chet/bash/bashtop.html&quot;&gt;bash&lt;/a&gt; or other common Linux tools, such as &lt;kbd class=&quot;kbd docutils literal notranslate&quot;&gt;C-w&lt;/kbd&gt; to
+expect if we use &lt;a class=&quot;reference external&quot; href=&quot;http://cnswww.cns.cwru.edu/~chet/bash/bashtop.html&quot;&gt;bash&lt;/a&gt; or other common Linux tools, such as &lt;kbd class=&quot;kbd docutils literal notranslate&quot;&gt;&lt;kbd class=&quot;kbd docutils literal notranslate&quot;&gt;C&lt;/kbd&gt;-&lt;kbd class=&quot;kbd docutils literal notranslate&quot;&gt;w&lt;/kbd&gt;&lt;/kbd&gt; to
 delete the word under the cursor.  You can read more about
 &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;gtk-key-theme-name&lt;/span&gt;&lt;/code&gt; in &lt;span class=&quot;xref std std-doc&quot;&gt;emacs_gtk_shortcuts&lt;/span&gt;.&lt;/p&gt;
 &lt;p&gt;All of the settings above are configurable with a &lt;abbr title=&quot;Graphical User Interface&quot;&gt;GUI&lt;/abbr&gt; if you use GNOME or &lt;a class=&quot;reference external&quot; href=&quot;http://www.xfce.org/&quot;&gt;Xfce&lt;/a&gt;, but for those of who don’t use those
@@ -123,22 +123,22 @@ it already has a set of useful keybindings including:&lt;/p&gt;
 &lt;/tr&gt;
 &lt;/thead&gt;
 &lt;tbody&gt;
-&lt;tr class=&quot;row-even&quot;&gt;&lt;td&gt;&lt;p&gt;&lt;kbd class=&quot;kbd docutils literal notranslate&quot;&gt;M-&amp;lt;Home&amp;gt;&lt;/kbd&gt;&lt;/p&gt;&lt;/td&gt;
+&lt;tr class=&quot;row-even&quot;&gt;&lt;td&gt;&lt;p&gt;&lt;kbd class=&quot;kbd docutils literal notranslate&quot;&gt;&lt;kbd class=&quot;kbd docutils literal notranslate&quot;&gt;M&lt;/kbd&gt;-&lt;kbd class=&quot;kbd docutils literal notranslate&quot;&gt;&amp;lt;Home&amp;gt;&lt;/kbd&gt;&lt;/kbd&gt;&lt;/p&gt;&lt;/td&gt;
 &lt;td&gt;&lt;p&gt;Jump to your home directory&lt;/p&gt;&lt;/td&gt;
 &lt;/tr&gt;
-&lt;tr class=&quot;row-odd&quot;&gt;&lt;td&gt;&lt;p&gt;&lt;kbd class=&quot;kbd docutils literal notranslate&quot;&gt;M-D&lt;/kbd&gt;&lt;/p&gt;&lt;/td&gt;
+&lt;tr class=&quot;row-odd&quot;&gt;&lt;td&gt;&lt;p&gt;&lt;kbd class=&quot;kbd docutils literal notranslate&quot;&gt;&lt;kbd class=&quot;kbd docutils literal notranslate&quot;&gt;M&lt;/kbd&gt;-&lt;kbd class=&quot;kbd docutils literal notranslate&quot;&gt;D&lt;/kbd&gt;&lt;/kbd&gt;&lt;/p&gt;&lt;/td&gt;
 &lt;td&gt;&lt;p&gt;Jump to your &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;~/Desktop&lt;/span&gt;&lt;/code&gt; directory&lt;/p&gt;&lt;/td&gt;
 &lt;/tr&gt;
-&lt;tr class=&quot;row-even&quot;&gt;&lt;td&gt;&lt;p&gt;&lt;kbd class=&quot;kbd docutils literal notranslate&quot;&gt;M-&amp;lt;Up&amp;gt;&lt;/kbd&gt;&lt;/p&gt;&lt;/td&gt;
+&lt;tr class=&quot;row-even&quot;&gt;&lt;td&gt;&lt;p&gt;&lt;kbd class=&quot;kbd docutils literal notranslate&quot;&gt;&lt;kbd class=&quot;kbd docutils literal notranslate&quot;&gt;M&lt;/kbd&gt;-&lt;kbd class=&quot;kbd docutils literal notranslate&quot;&gt;&amp;lt;Up&amp;gt;&lt;/kbd&gt;&lt;/kbd&gt;&lt;/p&gt;&lt;/td&gt;
 &lt;td&gt;&lt;p&gt;Go to current directory’s parent&lt;/p&gt;&lt;/td&gt;
 &lt;/tr&gt;
-&lt;tr class=&quot;row-odd&quot;&gt;&lt;td&gt;&lt;p&gt;&lt;kbd class=&quot;kbd docutils literal notranslate&quot;&gt;C-L&lt;/kbd&gt;&lt;/p&gt;&lt;/td&gt;
+&lt;tr class=&quot;row-odd&quot;&gt;&lt;td&gt;&lt;p&gt;&lt;kbd class=&quot;kbd docutils literal notranslate&quot;&gt;&lt;kbd class=&quot;kbd docutils literal notranslate&quot;&gt;C&lt;/kbd&gt;-&lt;kbd class=&quot;kbd docutils literal notranslate&quot;&gt;L&lt;/kbd&gt;&lt;/kbd&gt;&lt;/p&gt;&lt;/td&gt;
 &lt;td&gt;&lt;p&gt;Display the text location entry box&lt;/p&gt;&lt;/td&gt;
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
 &lt;p&gt;We could actually use the file chooser’s bookmark feature, and access the
-bookmarks with &lt;kbd class=&quot;kbd docutils literal notranslate&quot;&gt;M-1&lt;/kbd&gt; through &lt;kbd class=&quot;kbd docutils literal notranslate&quot;&gt;M-9&lt;/kbd&gt; and &lt;kbd class=&quot;kbd docutils literal notranslate&quot;&gt;M-0&lt;/kbd&gt; for bookmark number
+bookmarks with &lt;kbd class=&quot;kbd docutils literal notranslate&quot;&gt;&lt;kbd class=&quot;kbd docutils literal notranslate&quot;&gt;M&lt;/kbd&gt;-&lt;kbd class=&quot;kbd docutils literal notranslate&quot;&gt;1&lt;/kbd&gt;&lt;/kbd&gt; through &lt;kbd class=&quot;kbd docutils literal notranslate&quot;&gt;&lt;kbd class=&quot;kbd docutils literal notranslate&quot;&gt;M&lt;/kbd&gt;-&lt;kbd class=&quot;kbd docutils literal notranslate&quot;&gt;9&lt;/kbd&gt;&lt;/kbd&gt; and &lt;kbd class=&quot;kbd docutils literal notranslate&quot;&gt;&lt;kbd class=&quot;kbd docutils literal notranslate&quot;&gt;M&lt;/kbd&gt;-&lt;kbd class=&quot;kbd docutils literal notranslate&quot;&gt;0&lt;/kbd&gt;&lt;/kbd&gt; for bookmark number
 ten from the dialog.  However, I find it more practical to be able to use
 mnemonic names for favourite locations.  You could even use both if you have an
 excellent memory and a lot of favourite locations!&lt;/p&gt;
@@ -146,7 +146,7 @@ excellent memory and a lot of favourite locations!&lt;/p&gt;
 self-explanatory, just don’t forget to link your bindings to the correct class
 or they will not work.&lt;/p&gt;
 &lt;p&gt;You can also change the default bindings by specifying them in the
-configuration file, for example to use &lt;kbd class=&quot;kbd docutils literal notranslate&quot;&gt;M-&amp;lt;left&amp;gt;&lt;/kbd&gt; and &lt;kbd class=&quot;kbd docutils literal notranslate&quot;&gt;M-&amp;lt;right&amp;gt;&lt;/kbd&gt; to
+configuration file, for example to use &lt;kbd class=&quot;kbd docutils literal notranslate&quot;&gt;&lt;kbd class=&quot;kbd docutils literal notranslate&quot;&gt;M&lt;/kbd&gt;-&lt;kbd class=&quot;kbd docutils literal notranslate&quot;&gt;&amp;lt;left&amp;gt;&lt;/kbd&gt;&lt;/kbd&gt; and &lt;kbd class=&quot;kbd docutils literal notranslate&quot;&gt;&lt;kbd class=&quot;kbd docutils literal notranslate&quot;&gt;M&lt;/kbd&gt;-&lt;kbd class=&quot;kbd docutils literal notranslate&quot;&gt;&amp;lt;right&amp;gt;&lt;/kbd&gt;&lt;/kbd&gt; to
 skip backward and forward along the directory path:&lt;/p&gt;
 &lt;div class=&quot;highlight-cpp notranslate&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;bind&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;&amp;lt;Alt&amp;gt;Left&amp;quot;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
     &lt;span class=&quot;s&quot;&gt;&amp;quot;up-folder&amp;quot;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
@@ -189,7 +189,7 @@ add the following to your &lt;code class=&quot;file docutils literal notranslate
 bindings in GNOME you should use the control centre.&lt;/p&gt;
 &lt;/div&gt;
 &lt;p&gt;Using the above you can return to the old default format, but if you only want
-to enable &lt;kbd class=&quot;kbd docutils literal notranslate&quot;&gt;&amp;lt;C-w&amp;gt;&lt;/kbd&gt; and keep the other Windows-style shortcuts you can just
+to enable &lt;kbd class=&quot;kbd docutils literal notranslate&quot;&gt;&lt;kbd class=&quot;kbd docutils literal notranslate&quot;&gt;&amp;lt;C&lt;/kbd&gt;-&lt;kbd class=&quot;kbd docutils literal notranslate&quot;&gt;w&amp;gt;&lt;/kbd&gt;&lt;/kbd&gt; and keep the other Windows-style shortcuts you can just
 add:&lt;/p&gt;
 &lt;div class=&quot;highlight-text notranslate&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;binding &amp;quot;gtk-emacs-text-entry&amp;quot;
 {
@@ -210,7 +210,7 @@ switchers.&lt;/p&gt;
 keyboard settings dialog.&lt;/p&gt;
 &lt;p&gt;If you can’t change the settings for some reason, then you can still use
 a shortcut to delete words.  The default setting, up to at least GTK+ v2.10.9,
-is the finger-stretching &lt;kbd class=&quot;kbd docutils literal notranslate&quot;&gt;&amp;lt;C-backspace&amp;gt;&lt;/kbd&gt;.&lt;/p&gt;
+is the finger-stretching &lt;kbd class=&quot;kbd docutils literal notranslate&quot;&gt;&lt;kbd class=&quot;kbd docutils literal notranslate&quot;&gt;&amp;lt;C&lt;/kbd&gt;-&lt;kbd class=&quot;kbd docutils literal notranslate&quot;&gt;backspace&amp;gt;&lt;/kbd&gt;&lt;/kbd&gt;.&lt;/p&gt;
 &lt;p&gt;And finally, if you manage to convince upstream that the default behaviour
 should be the settings in the Emacs theme I’ll owe you a few beers!&lt;/p&gt;
 &lt;/div&gt;

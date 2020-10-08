@@ -1,9 +1,10 @@
 
 <!DOCTYPE html>
 
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html>
   <head>
     <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Visualising the progress of time &#8212; JNRowe</title>
     <link rel="stylesheet" href="../_static/alabaster.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
@@ -124,7 +125,7 @@ simply using <code class="docutils literal notranslate"><span class="pre">date</
 <a class="reference external" href="https://www.python.org/">Python</a> now, as the gigantic standard library allows us to be lazy.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">pcnt_colour</span><span class="p">(</span><span class="n">percent</span><span class="p">):</span>
     <span class="n">h</span> <span class="o">=</span> <span class="mi">1</span><span class="o">/</span><span class="mi">3</span> <span class="o">-</span> <span class="p">(</span><span class="mi">1</span><span class="o">/</span><span class="mi">3</span> <span class="o">*</span> <span class="n">percent</span><span class="o">/</span><span class="mi">100</span><span class="p">)</span>
-    <span class="k">return</span> <span class="s1">&#39;#&#39;</span> <span class="o">+</span> <span class="s1">&#39;&#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">f</span><span class="s1">&#39;{min(int(n*256), 255):02x}&#39;</span>
+    <span class="k">return</span> <span class="s1">&#39;#&#39;</span> <span class="o">+</span> <span class="s1">&#39;&#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="nb">min</span><span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="n">n</span><span class="o">*</span><span class="mi">256</span><span class="p">),</span> <span class="mi">255</span><span class="p">)</span><span class="si">:</span><span class="s1">02x</span><span class="si">}</span><span class="s1">&#39;</span>
                          <span class="k">for</span> <span class="n">n</span> <span class="ow">in</span> <span class="n">colorsys</span><span class="o">.</span><span class="n">hls_to_rgb</span><span class="p">(</span><span class="n">h</span><span class="p">,</span> <span class="o">.</span><span class="mi">5</span><span class="p">,</span> <span class="mi">1</span><span class="p">))</span>
 </pre></div>
 </div>
@@ -192,7 +193,7 @@ with <abbr title="Daylight Saving Time">DST</abbr> transitions.</p>
 years.</p>
 </dd>
 </dl>
-<dl class="option">
+<dl class="std option">
 <dt id="cmdoption-date-arg-j">
 <code class="sig-name descname">%j</code><code class="sig-prename descclassname"></code><a class="headerlink" href="#cmdoption-date-arg-j" title="Permalink to this definition">¶</a></dt>
 <dd><p>Displays the day number of the given year, see <em class="manpage">strftime(3)</em> if
@@ -825,7 +826,7 @@ this is new to you.</p>
       </a> license.
       
       |
-      Powered by <a href="http://sphinx-doc.org/">Sphinx 2.4.4</a>
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 3.1.2</a>
       &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
       
     </div>

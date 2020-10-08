@@ -1,9 +1,10 @@
 
 <!DOCTYPE html>
 
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html>
   <head>
     <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Beyond simple tab completion &#8212; JNRowe</title>
     <link rel="stylesheet" href="../../_static/alabaster.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
@@ -88,8 +89,8 @@ $endif
 </pre></div>
 </div>
 <p>The above tells <code class="docutils literal notranslate"><span class="pre">readline</span></code> we wish to bind <code class="docutils literal notranslate"><span class="pre">menu-complete</span></code> to
-<kbd class="kbd docutils literal notranslate">Control-a</kbd>, I find that key combination quite comfortable as
-<kbd class="kbd docutils literal notranslate">Control-a</kbd> is easy to reach the my keyboard layout and is of little use
+<kbd class="kbd docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Control</kbd>-<kbd class="kbd docutils literal notranslate">a</kbd></kbd>, I find that key combination quite comfortable as
+<kbd class="kbd docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Control</kbd>-<kbd class="kbd docutils literal notranslate">a</kbd></kbd> is easy to reach the my keyboard layout and is of little use
 in any of the apps I use on a regular basis(I’d feel differently if <kbd class="kbd docutils literal notranslate">Home</kbd>
 was inaccessible).  You must either re-read the configuration file or restart
 the <strong class="command">bash</strong> session to enable this binding.</p>
@@ -106,20 +107,20 @@ completion context aware, in much the same the <a class="reference external" hre
 without having to write new completion scripts.  There are some other quite
 useful completion modes available in <strong class="command">bash</strong>, I’ll describe a few
 below.</p>
-<p><kbd class="kbd docutils literal notranslate">M-!</kbd> tells <strong class="command">bash</strong> to complete command names; be they actual
-on-disk commands, functions or aliases. <kbd class="kbd docutils literal notranslate">M-/</kbd> completes only filenames,
+<p><kbd class="kbd docutils literal notranslate"><kbd class="kbd docutils literal notranslate">M</kbd>-<kbd class="kbd docutils literal notranslate">!</kbd></kbd> tells <strong class="command">bash</strong> to complete command names; be they actual
+on-disk commands, functions or aliases. <kbd class="kbd docutils literal notranslate"><kbd class="kbd docutils literal notranslate">M</kbd>-<kbd class="kbd docutils literal notranslate">/</kbd></kbd> completes only filenames,
 this can be very useful when <code class="docutils literal notranslate"><span class="pre">bash-completion</span></code> is refusing to tab complete
-a filename for you.  <kbd class="kbd docutils literal notranslate">C-$</kbd> implements variable name completion, this is
+a filename for you.  <kbd class="kbd docutils literal notranslate"><kbd class="kbd docutils literal notranslate">C</kbd>-<kbd class="kbd docutils literal notranslate">$</kbd></kbd> implements variable name completion, this is
 most useful when you’re looking to unset or re-set a variable.  Variable name
 completion isn’t actually necessary if you have <code class="docutils literal notranslate"><span class="pre">bash-completion</span></code> installed
 as it is smart enough to handle this for you in most cases.</p>
 <p>And finally, there is a one more incredibly useful completion mode in
-<strong class="command">bash</strong> and that is <kbd class="kbd docutils literal notranslate">M-{</kbd>, it adds all possible completions to the
+<strong class="command">bash</strong> and that is <kbd class="kbd docutils literal notranslate"><kbd class="kbd docutils literal notranslate">M</kbd>-<kbd class="kbd docutils literal notranslate">{</kbd></kbd>, it adds all possible completions to the
 command line using the brace expansion syntax.  For example, if I type <code class="docutils literal notranslate"><span class="pre">ls</span>
 <span class="pre">~/Git/Local/&lt;M-{&gt;</span></code> it completes to
 <code class="docutils literal notranslate"><span class="pre">/home/jay/Git/Local/{Makefile,countless,dot-configs,haskvim,jrutils}</span></code>.
-Using <code class="docutils literal notranslate"><span class="pre">readline</span></code> motion commands, especially word motions such as <kbd class="kbd docutils literal notranslate">M-f</kbd>
-and <kbd class="kbd docutils literal notranslate">M-b</kbd> to jump forward and backward one word, I can easily apply
+Using <code class="docutils literal notranslate"><span class="pre">readline</span></code> motion commands, especially word motions such as <kbd class="kbd docutils literal notranslate"><kbd class="kbd docutils literal notranslate">M</kbd>-<kbd class="kbd docutils literal notranslate">f</kbd></kbd>
+and <kbd class="kbd docutils literal notranslate"><kbd class="kbd docutils literal notranslate">M</kbd>-<kbd class="kbd docutils literal notranslate">b</kbd></kbd> to jump forward and backward one word, I can easily apply
 a command to a certain set of files in a directory.  Just don’t try it on
 <code class="docutils literal notranslate"><span class="pre">/usr/bin</span></code> unless you want to see how <strong class="command">bash</strong> handles massive command
 lines!!</p>
@@ -748,7 +749,7 @@ lines!!</p>
       </a> license.
       
       |
-      Powered by <a href="http://sphinx-doc.org/">Sphinx 2.4.4</a>
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 3.1.2</a>
       &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
       
     </div>

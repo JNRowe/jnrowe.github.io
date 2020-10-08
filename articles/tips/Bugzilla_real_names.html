@@ -1,9 +1,10 @@
 
 <!DOCTYPE html>
 
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html>
   <head>
     <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bugzilla mail with real names &#8212; JNRowe</title>
     <link rel="stylesheet" href="../../_static/alabaster.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
@@ -117,7 +118,7 @@ more than a little overkill to me.</p>
 
 <span class="n">message</span> <span class="o">=</span> <span class="n">message_from_file</span><span class="p">(</span><span class="n">stdin</span><span class="p">)</span>
 
-<span class="n">commenter</span> <span class="o">=</span> <span class="bp">None</span>
+<span class="n">commenter</span> <span class="o">=</span> <span class="kc">None</span>
 <span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">message</span><span class="o">.</span><span class="n">get_payload</span><span class="p">()</span><span class="o">.</span><span class="n">splitlines</span><span class="p">():</span>
     <span class="k">if</span> <span class="n">line</span><span class="o">.</span><span class="n">endswith</span><span class="p">(</span><span class="s1">&#39; changed:&#39;</span><span class="p">):</span>
         <span class="n">commenter</span> <span class="o">=</span> <span class="n">line</span><span class="o">.</span><span class="n">split</span><span class="p">()[</span><span class="mi">0</span><span class="p">]</span>
@@ -139,7 +140,7 @@ more than a little overkill to me.</p>
     <span class="n">message</span><span class="o">.</span><span class="n">replace_header</span><span class="p">(</span><span class="s1">&#39;from&#39;</span><span class="p">,</span>
                            <span class="s1">&#39;&quot;</span><span class="si">%s</span><span class="s1">&quot; &lt;</span><span class="si">%s</span><span class="s1">&gt;&#39;</span> <span class="o">%</span> <span class="p">(</span><span class="n">addresses</span><span class="p">[</span><span class="n">commenter</span><span class="p">],</span> <span class="n">commenter</span><span class="p">))</span>
 
-<span class="k">print</span><span class="p">(</span><span class="n">message</span><span class="o">.</span><span class="n">as_string</span><span class="p">())</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">message</span><span class="o">.</span><span class="n">as_string</span><span class="p">())</span>
 </pre></div>
 </div>
 <p>The final addition to our <code class="file docutils literal notranslate"><span class="pre">~/.mailfilter</span></code> file enables our little Python
@@ -780,7 +781,7 @@ easier to filter and process it in your favourite mail client.</p>
       </a> license.
       
       |
-      Powered by <a href="http://sphinx-doc.org/">Sphinx 2.4.4</a>
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 3.1.2</a>
       &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
       
     </div>

@@ -178,7 +178,7 @@ add the following to your &lt;code class=&quot;file docutils literal notranslate
 bindings in GNOME you should use the control centre.&lt;/p&gt;
 &lt;/div&gt;
 &lt;p&gt;Using the above you can return to the old default format, but if you only want
-to enable &lt;kbd class=&quot;kbd docutils literal notranslate&quot;&gt;&amp;lt;C-w&amp;gt;&lt;/kbd&gt; and keep the other Windows-style shortcuts you can just
+to enable &lt;kbd class=&quot;kbd docutils literal notranslate&quot;&gt;&lt;kbd class=&quot;kbd docutils literal notranslate&quot;&gt;&amp;lt;C&lt;/kbd&gt;-&lt;kbd class=&quot;kbd docutils literal notranslate&quot;&gt;w&amp;gt;&lt;/kbd&gt;&lt;/kbd&gt; and keep the other Windows-style shortcuts you can just
 add:&lt;/p&gt;
 &lt;div class=&quot;highlight-text notranslate&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;binding &amp;quot;gtk-emacs-text-entry&amp;quot;
 {
@@ -199,7 +199,7 @@ switchers.&lt;/p&gt;
 keyboard settings dialog.&lt;/p&gt;
 &lt;p&gt;If you can’t change the settings for some reason, then you can still use
 a shortcut to delete words.  The default setting, up to at least GTK+ v2.10.9,
-is the finger-stretching &lt;kbd class=&quot;kbd docutils literal notranslate&quot;&gt;&amp;lt;C-backspace&amp;gt;&lt;/kbd&gt;.&lt;/p&gt;
+is the finger-stretching &lt;kbd class=&quot;kbd docutils literal notranslate&quot;&gt;&lt;kbd class=&quot;kbd docutils literal notranslate&quot;&gt;&amp;lt;C&lt;/kbd&gt;-&lt;kbd class=&quot;kbd docutils literal notranslate&quot;&gt;backspace&amp;gt;&lt;/kbd&gt;&lt;/kbd&gt;.&lt;/p&gt;
 &lt;p&gt;And finally, if you manage to convince upstream that the default behaviour
 should be the settings in the Emacs theme I’ll owe you a few beers!&lt;/p&gt;
 &lt;/div&gt;

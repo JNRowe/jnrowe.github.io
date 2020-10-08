@@ -47,8 +47,8 @@ $endif
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
 &lt;p&gt;The above tells &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;readline&lt;/span&gt;&lt;/code&gt; we wish to bind &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;menu-complete&lt;/span&gt;&lt;/code&gt; to
-&lt;kbd class=&quot;kbd docutils literal notranslate&quot;&gt;Control-a&lt;/kbd&gt;, I find that key combination quite comfortable as
-&lt;kbd class=&quot;kbd docutils literal notranslate&quot;&gt;Control-a&lt;/kbd&gt; is easy to reach the my keyboard layout and is of little use
+&lt;kbd class=&quot;kbd docutils literal notranslate&quot;&gt;&lt;kbd class=&quot;kbd docutils literal notranslate&quot;&gt;Control&lt;/kbd&gt;-&lt;kbd class=&quot;kbd docutils literal notranslate&quot;&gt;a&lt;/kbd&gt;&lt;/kbd&gt;, I find that key combination quite comfortable as
+&lt;kbd class=&quot;kbd docutils literal notranslate&quot;&gt;&lt;kbd class=&quot;kbd docutils literal notranslate&quot;&gt;Control&lt;/kbd&gt;-&lt;kbd class=&quot;kbd docutils literal notranslate&quot;&gt;a&lt;/kbd&gt;&lt;/kbd&gt; is easy to reach the my keyboard layout and is of little use
 in any of the apps I use on a regular basis(I’d feel differently if &lt;kbd class=&quot;kbd docutils literal notranslate&quot;&gt;Home&lt;/kbd&gt;
 was inaccessible).  You must either re-read the configuration file or restart
 the &lt;strong class=&quot;command&quot;&gt;bash&lt;/strong&gt; session to enable this binding.&lt;/p&gt;
@@ -65,20 +65,20 @@ completion context aware, in much the same the &lt;a class=&quot;reference exter
 without having to write new completion scripts.  There are some other quite
 useful completion modes available in &lt;strong class=&quot;command&quot;&gt;bash&lt;/strong&gt;, I’ll describe a few
 below.&lt;/p&gt;
-&lt;p&gt;&lt;kbd class=&quot;kbd docutils literal notranslate&quot;&gt;M-!&lt;/kbd&gt; tells &lt;strong class=&quot;command&quot;&gt;bash&lt;/strong&gt; to complete command names; be they actual
-on-disk commands, functions or aliases. &lt;kbd class=&quot;kbd docutils literal notranslate&quot;&gt;M-/&lt;/kbd&gt; completes only filenames,
+&lt;p&gt;&lt;kbd class=&quot;kbd docutils literal notranslate&quot;&gt;&lt;kbd class=&quot;kbd docutils literal notranslate&quot;&gt;M&lt;/kbd&gt;-&lt;kbd class=&quot;kbd docutils literal notranslate&quot;&gt;!&lt;/kbd&gt;&lt;/kbd&gt; tells &lt;strong class=&quot;command&quot;&gt;bash&lt;/strong&gt; to complete command names; be they actual
+on-disk commands, functions or aliases. &lt;kbd class=&quot;kbd docutils literal notranslate&quot;&gt;&lt;kbd class=&quot;kbd docutils literal notranslate&quot;&gt;M&lt;/kbd&gt;-&lt;kbd class=&quot;kbd docutils literal notranslate&quot;&gt;/&lt;/kbd&gt;&lt;/kbd&gt; completes only filenames,
 this can be very useful when &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;bash-completion&lt;/span&gt;&lt;/code&gt; is refusing to tab complete
-a filename for you.  &lt;kbd class=&quot;kbd docutils literal notranslate&quot;&gt;C-$&lt;/kbd&gt; implements variable name completion, this is
+a filename for you.  &lt;kbd class=&quot;kbd docutils literal notranslate&quot;&gt;&lt;kbd class=&quot;kbd docutils literal notranslate&quot;&gt;C&lt;/kbd&gt;-&lt;kbd class=&quot;kbd docutils literal notranslate&quot;&gt;$&lt;/kbd&gt;&lt;/kbd&gt; implements variable name completion, this is
 most useful when you’re looking to unset or re-set a variable.  Variable name
 completion isn’t actually necessary if you have &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;bash-completion&lt;/span&gt;&lt;/code&gt; installed
 as it is smart enough to handle this for you in most cases.&lt;/p&gt;
 &lt;p&gt;And finally, there is a one more incredibly useful completion mode in
-&lt;strong class=&quot;command&quot;&gt;bash&lt;/strong&gt; and that is &lt;kbd class=&quot;kbd docutils literal notranslate&quot;&gt;M-{&lt;/kbd&gt;, it adds all possible completions to the
+&lt;strong class=&quot;command&quot;&gt;bash&lt;/strong&gt; and that is &lt;kbd class=&quot;kbd docutils literal notranslate&quot;&gt;&lt;kbd class=&quot;kbd docutils literal notranslate&quot;&gt;M&lt;/kbd&gt;-&lt;kbd class=&quot;kbd docutils literal notranslate&quot;&gt;{&lt;/kbd&gt;&lt;/kbd&gt;, it adds all possible completions to the
 command line using the brace expansion syntax.  For example, if I type &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;ls&lt;/span&gt;
 &lt;span class=&quot;pre&quot;&gt;~/Git/Local/&amp;lt;M-{&amp;gt;&lt;/span&gt;&lt;/code&gt; it completes to
 &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;/home/jay/Git/Local/{Makefile,countless,dot-configs,haskvim,jrutils}&lt;/span&gt;&lt;/code&gt;.
-Using &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;readline&lt;/span&gt;&lt;/code&gt; motion commands, especially word motions such as &lt;kbd class=&quot;kbd docutils literal notranslate&quot;&gt;M-f&lt;/kbd&gt;
-and &lt;kbd class=&quot;kbd docutils literal notranslate&quot;&gt;M-b&lt;/kbd&gt; to jump forward and backward one word, I can easily apply
+Using &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;readline&lt;/span&gt;&lt;/code&gt; motion commands, especially word motions such as &lt;kbd class=&quot;kbd docutils literal notranslate&quot;&gt;&lt;kbd class=&quot;kbd docutils literal notranslate&quot;&gt;M&lt;/kbd&gt;-&lt;kbd class=&quot;kbd docutils literal notranslate&quot;&gt;f&lt;/kbd&gt;&lt;/kbd&gt;
+and &lt;kbd class=&quot;kbd docutils literal notranslate&quot;&gt;&lt;kbd class=&quot;kbd docutils literal notranslate&quot;&gt;M&lt;/kbd&gt;-&lt;kbd class=&quot;kbd docutils literal notranslate&quot;&gt;b&lt;/kbd&gt;&lt;/kbd&gt; to jump forward and backward one word, I can easily apply
 a command to a certain set of files in a directory.  Just don’t try it on
 &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;/usr/bin&lt;/span&gt;&lt;/code&gt; unless you want to see how &lt;strong class=&quot;command&quot;&gt;bash&lt;/strong&gt; handles massive command
 lines!!&lt;/p&gt;

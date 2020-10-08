@@ -191,7 +191,7 @@ should output a unified context diff.&lt;/p&gt;
 &lt;p&gt;So now we have seen the changes made to the file, and are happy with them, we
 check in our new revision.  &lt;abbr title=&quot;GNU Revision Control System&quot;&gt;RCS&lt;/abbr&gt; asks for a log entry, this will make our
 changelog output later.  You can cancel the check in using the normal
-&lt;kbd class=&quot;kbd docutils literal notranslate&quot;&gt;C-c&lt;/kbd&gt; (control C) method.&lt;/p&gt;
+&lt;kbd class=&quot;kbd docutils literal notranslate&quot;&gt;&lt;kbd class=&quot;kbd docutils literal notranslate&quot;&gt;C&lt;/kbd&gt;-&lt;kbd class=&quot;kbd docutils literal notranslate&quot;&gt;c&lt;/kbd&gt;&lt;/kbd&gt; (control C) method.&lt;/p&gt;
 &lt;div class=&quot;highlight-console notranslate&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&quot;gp&quot;&gt;$&lt;/span&gt; cat myscript.sh
 &lt;span class=&quot;gp&quot;&gt;#&lt;/span&gt;! /bin/sh
 &lt;span class=&quot;gp&quot;&gt;#&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$Id&lt;/span&gt;: myscript,v &lt;span class=&quot;m&quot;&gt;1&lt;/span&gt;.2 &lt;span class=&quot;m&quot;&gt;2002&lt;/span&gt;/11/04 &lt;span class=&quot;m&quot;&gt;11&lt;/span&gt;:34:21 james Exp james $
@@ -298,20 +298,20 @@ happening with them too.&lt;/p&gt;
 this short text has been helpful to you.&lt;/p&gt;
 &lt;p class=&quot;rubric&quot;&gt;Footnotes&lt;/p&gt;
 &lt;p&gt;&lt;abbr title=&quot;GNU Revision Control System&quot;&gt;RCS&lt;/abbr&gt; options:&lt;/p&gt;
-&lt;dl class=&quot;option&quot;&gt;
+&lt;dl class=&quot;std option&quot;&gt;
 &lt;dt id=&quot;cmdoption-r&quot;&gt;
 &lt;code class=&quot;sig-name descname&quot;&gt;-r&lt;/code&gt;&lt;code class=&quot;sig-prename descclassname&quot;&gt;&lt;/code&gt;&lt;/dt&gt;
 &lt;dd&gt;&lt;p&gt;Specify the revision to work with.  Common across all of &lt;abbr title=&quot;GNU Revision Control System&quot;&gt;RCS&lt;/abbr&gt;’s tools.&lt;/p&gt;
 &lt;/dd&gt;&lt;/dl&gt;
 
 &lt;p&gt;&lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;blame&lt;/span&gt;&lt;/code&gt; options:&lt;/p&gt;
-&lt;dl class=&quot;option&quot;&gt;
+&lt;dl class=&quot;std option&quot;&gt;
 &lt;dt id=&quot;cmdoption-blame-date&quot;&gt;
 &lt;code class=&quot;sig-name descname&quot;&gt;--date&lt;/code&gt;&lt;code class=&quot;sig-prename descclassname&quot;&gt;&lt;/code&gt;&lt;/dt&gt;
 &lt;dd&gt;&lt;p&gt;Annotate the revision that closest to, but not after, the given date.&lt;/p&gt;
 &lt;/dd&gt;&lt;/dl&gt;
 
-&lt;dl class=&quot;option&quot;&gt;
+&lt;dl class=&quot;std option&quot;&gt;
 &lt;dt id=&quot;cmdoption-blame-revision&quot;&gt;
 &lt;code class=&quot;sig-name descname&quot;&gt;--revision&lt;/code&gt;&lt;code class=&quot;sig-prename descclassname&quot;&gt;&lt;/code&gt;&lt;/dt&gt;
 &lt;dd&gt;&lt;p&gt;Annotate the revision numerically closest to, but not exceeding, the given
@@ -319,27 +319,27 @@ revision.&lt;/p&gt;
 &lt;/dd&gt;&lt;/dl&gt;
 
 &lt;p&gt;&lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;ci&lt;/span&gt;&lt;/code&gt; options:&lt;/p&gt;
-&lt;dl class=&quot;option&quot;&gt;
+&lt;dl class=&quot;std option&quot;&gt;
 &lt;dt id=&quot;cmdoption-ci-r&quot;&gt;
 &lt;code class=&quot;sig-name descname&quot;&gt;-r&lt;/code&gt;&lt;code class=&quot;sig-prename descclassname&quot;&gt;&lt;/code&gt;&lt;/dt&gt;
 &lt;dd&gt;&lt;p&gt;Perform checkin, and store with provided revision identifier.&lt;/p&gt;
 &lt;/dd&gt;&lt;/dl&gt;
 
-&lt;dl class=&quot;option&quot;&gt;
+&lt;dl class=&quot;std option&quot;&gt;
 &lt;dt id=&quot;cmdoption-ci-u&quot;&gt;
 &lt;code class=&quot;sig-name descname&quot;&gt;-u&lt;/code&gt;&lt;code class=&quot;sig-prename descclassname&quot;&gt;&lt;/code&gt;&lt;/dt&gt;
 &lt;dd&gt;&lt;p&gt;Don’t lock the file on checkin.&lt;/p&gt;
 &lt;/dd&gt;&lt;/dl&gt;
 
 &lt;p&gt;&lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;co&lt;/span&gt;&lt;/code&gt; options:&lt;/p&gt;
-&lt;dl class=&quot;option&quot;&gt;
+&lt;dl class=&quot;std option&quot;&gt;
 &lt;dt id=&quot;cmdoption-co-l&quot;&gt;
 &lt;code class=&quot;sig-name descname&quot;&gt;-l&lt;/code&gt;&lt;code class=&quot;sig-prename descclassname&quot;&gt;&lt;/code&gt;&lt;/dt&gt;
 &lt;dd&gt;&lt;p&gt;Lock the file for editing on checkout.&lt;/p&gt;
 &lt;/dd&gt;&lt;/dl&gt;
 
 &lt;p&gt;&lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;rlog&lt;/span&gt;&lt;/code&gt; options:&lt;/p&gt;
-&lt;dl class=&quot;option&quot;&gt;
+&lt;dl class=&quot;std option&quot;&gt;
 &lt;dt id=&quot;cmdoption-rlog-r&quot;&gt;
 &lt;code class=&quot;sig-name descname&quot;&gt;-r&lt;/code&gt;&lt;code class=&quot;sig-prename descclassname&quot;&gt;&lt;/code&gt;&lt;/dt&gt;
 &lt;dd&gt;&lt;p&gt;Specify revisions to perform log against, can be a comma separated list of
