@@ -38,7 +38,7 @@ tasks &lt;a class=&quot;reference internal&quot; href=&quot;../contact.html&quot
 &lt;/div&gt;
 &lt;div class=&quot;section&quot; id=&quot;the-feeds&quot;&gt;
 &lt;h2&gt;The feeds&lt;/h2&gt;
-&lt;p&gt;I subscribe to &lt;a class=&quot;reference external&quot; href=&quot;http://planet.debian.net/&quot;&gt;Planet Debian&lt;/a&gt;, &lt;a class=&quot;reference external&quot; href=&quot;http://planet.freedesktop.org/&quot;&gt;Planet Freedesktop.org&lt;/a&gt;, &lt;a class=&quot;reference external&quot; href=&quot;http://planet.gnome.org/&quot;&gt;Planet gnome&lt;/a&gt;,
+&lt;p&gt;I subscribe to &lt;a class=&quot;reference external&quot; href=&quot;http://planet.debian.net/&quot;&gt;Planet Debian&lt;/a&gt;, &lt;a class=&quot;reference external&quot; href=&quot;http://planet.freedesktop.org/&quot;&gt;Planet Freedesktop.org&lt;/a&gt;, &lt;a class=&quot;reference external&quot; href=&quot;http://planet.gnome.org/&quot;&gt;Planet GNOME&lt;/a&gt;,
 &lt;a class=&quot;reference external&quot; href=&quot;http://planet.gentoo.org/&quot;&gt;Planet Gentoo&lt;/a&gt;, &lt;a class=&quot;reference external&quot; href=&quot;http://planet.haskell.org/&quot;&gt;Planet Haskell&lt;/a&gt; and &lt;a class=&quot;reference external&quot; href=&quot;http://planet.python.org/&quot;&gt;Planet Python&lt;/a&gt;.  These planets
 syndicate a large number of feeds, see the table below for a breakdown of
 yesterday.&lt;/p&gt;
@@ -59,7 +59,7 @@ yesterday.&lt;/p&gt;
 &lt;tr class=&quot;row-odd&quot;&gt;&lt;td&gt;&lt;p&gt;Freedesktop.org&lt;/p&gt;&lt;/td&gt;
 &lt;td&gt;&lt;p&gt;1&lt;/p&gt;&lt;/td&gt;
 &lt;/tr&gt;
-&lt;tr class=&quot;row-even&quot;&gt;&lt;td&gt;&lt;p&gt;gnome&lt;/p&gt;&lt;/td&gt;
+&lt;tr class=&quot;row-even&quot;&gt;&lt;td&gt;&lt;p&gt;GNOME&lt;/p&gt;&lt;/td&gt;
 &lt;td&gt;&lt;p&gt;8&lt;/p&gt;&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr class=&quot;row-odd&quot;&gt;&lt;td&gt;&lt;p&gt;Gentoo&lt;/p&gt;&lt;/td&gt;
@@ -87,7 +87,7 @@ other content too.&lt;/p&gt;
 &lt;div class=&quot;section&quot; id=&quot;the-task&quot;&gt;
 &lt;h2&gt;The task&lt;/h2&gt;
 &lt;p&gt;Not all the entries are new, some are duplicates(this is especially between
-Debian and gnome planets).  Some are uninteresting to me, talk of technologies
+Debian and GNOME planets).  Some are uninteresting to me, talk of technologies
 I won’t(not don’t) use.  Some are the minutiae of their author’s day, which I’m
 sure are interesting if you know the authors but if I did know them they’d be
 in the friends feed category already.&lt;/p&gt;
@@ -268,7 +268,7 @@ a few lines of code:&lt;/p&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
 &lt;p&gt;The script requires the excellent &lt;a class=&quot;reference external&quot; href=&quot;http://www.voidspace.org.uk/python/configobj.html&quot;&gt;configobj&lt;/a&gt; module.  You could also use the
-&lt;a class=&quot;reference external&quot; href=&quot;https://docs.python.org/3/library/configparser.html#module-configparser&quot; title=&quot;(in Python v3.8)&quot;&gt;&lt;code class=&quot;xref py py-mod docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;configparser&lt;/span&gt;&lt;/code&gt;&lt;/a&gt; module from the Python standard library, but &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;configobj&lt;/span&gt;&lt;/code&gt;
+&lt;a class=&quot;reference external&quot; href=&quot;https://docs.python.org/3/library/configparser.html#module-configparser&quot; title=&quot;(in Python v3.9)&quot;&gt;&lt;code class=&quot;xref py py-mod docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;configparser&lt;/span&gt;&lt;/code&gt;&lt;/a&gt; module from the Python standard library, but &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;configobj&lt;/span&gt;&lt;/code&gt;
 allows my laziness to shine through with its simple dictionary-based access to
 the parsed data.&lt;/p&gt;
 &lt;p&gt;The script opens either the named or default &lt;strong class=&quot;command&quot;&gt;abook&lt;/strong&gt; addressbook and

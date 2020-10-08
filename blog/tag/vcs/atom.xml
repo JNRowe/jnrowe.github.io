@@ -114,7 +114,7 @@ config import&lt;/strong&gt;.&lt;/p&gt;
 the features we use for our documentation.  I don’t want to hold that against it
 though, as it just a impedance mismatch.&lt;/p&gt;
 &lt;p&gt;The end result of the integrated components feels to me like you’ve chosen
-a usable, but weak, component for some of the  most important parts of your
+a usable, but weak, component for some of the most important parts of your
 project’s &lt;abbr title=&quot;Application Lifecycle Management&quot;&gt;ALM&lt;/abbr&gt;.  The bits work well together, but none of them seem like an
 option you’d choose on their own.&lt;/p&gt;
 &lt;/div&gt;
@@ -584,7 +584,7 @@ file is increased a huge amount.  All the changelog data is available with the
 Using &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;rcsdiff&lt;/span&gt; &lt;span class=&quot;pre&quot;&gt;filename&lt;/span&gt;&lt;/code&gt; will output a generic context-free diff(and a small
 &lt;abbr title=&quot;GNU Revision Control System&quot;&gt;RCS&lt;/abbr&gt; header to &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;stderr&lt;/span&gt;&lt;/code&gt; ), or you can pass normal &lt;strong class=&quot;command&quot;&gt;diff&lt;/strong&gt; options to
 &lt;strong class=&quot;command&quot;&gt;rcsdiff&lt;/strong&gt;.  In the second &lt;strong class=&quot;command&quot;&gt;rcsdiff&lt;/strong&gt; command the
-&lt;strong class=&quot;command&quot;&gt;diff&lt;/strong&gt; option &lt;a class=&quot;reference external&quot; href=&quot;https://docs.python.org/3/using/cmdline.html#cmdoption-u&quot; title=&quot;(in Python v3.8)&quot;&gt;&lt;code class=&quot;xref std std-option docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;-u&lt;/span&gt;&lt;/code&gt;&lt;/a&gt; is given to tell &lt;strong class=&quot;command&quot;&gt;rcsdiff&lt;/strong&gt; it
+&lt;strong class=&quot;command&quot;&gt;diff&lt;/strong&gt; option &lt;a class=&quot;reference external&quot; href=&quot;https://docs.python.org/3/using/cmdline.html#cmdoption-u&quot; title=&quot;(in Python v3.9)&quot;&gt;&lt;code class=&quot;xref std std-option docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;-u&lt;/span&gt;&lt;/code&gt;&lt;/a&gt; is given to tell &lt;strong class=&quot;command&quot;&gt;rcsdiff&lt;/strong&gt; it
 should output a unified context diff.&lt;/p&gt;
 &lt;div class=&quot;highlight-console notranslate&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&quot;gp&quot;&gt;$&lt;/span&gt; ci -u ./myscript.sh
 &lt;span class=&quot;go&quot;&gt;./RCS/myscript.sh,v  &amp;lt;--  ./myscript.sh&lt;/span&gt;
@@ -749,7 +749,7 @@ revision.&lt;/p&gt;
 &lt;dl class=&quot;option&quot;&gt;
 &lt;dt id=&quot;cmdoption-rlog-r&quot;&gt;
 &lt;code class=&quot;sig-name descname&quot;&gt;-r&lt;/code&gt;&lt;code class=&quot;sig-prename descclassname&quot;&gt;&lt;/code&gt;&lt;/dt&gt;
-&lt;dd&gt;&lt;p&gt;Specify revisions to perform log against, can be a comma seperated list of
+&lt;dd&gt;&lt;p&gt;Specify revisions to perform log against, can be a comma separated list of
 ranges.&lt;/p&gt;
 &lt;/dd&gt;&lt;/dl&gt;
 

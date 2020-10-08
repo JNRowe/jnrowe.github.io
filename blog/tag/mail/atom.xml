@@ -57,7 +57,7 @@ a few lines of code:&lt;/p&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
 &lt;p&gt;The script requires the excellent &lt;a class=&quot;reference external&quot; href=&quot;http://www.voidspace.org.uk/python/configobj.html&quot;&gt;configobj&lt;/a&gt; module.  You could also use the
-&lt;a class=&quot;reference external&quot; href=&quot;https://docs.python.org/3/library/configparser.html#module-configparser&quot; title=&quot;(in Python v3.8)&quot;&gt;&lt;code class=&quot;xref py py-mod docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;configparser&lt;/span&gt;&lt;/code&gt;&lt;/a&gt; module from the Python standard library, but &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;configobj&lt;/span&gt;&lt;/code&gt;
+&lt;a class=&quot;reference external&quot; href=&quot;https://docs.python.org/3/library/configparser.html#module-configparser&quot; title=&quot;(in Python v3.9)&quot;&gt;&lt;code class=&quot;xref py py-mod docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;configparser&lt;/span&gt;&lt;/code&gt;&lt;/a&gt; module from the Python standard library, but &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;configobj&lt;/span&gt;&lt;/code&gt;
 allows my laziness to shine through with its simple dictionary-based access to
 the parsed data.&lt;/p&gt;
 &lt;p&gt;The script opens either the named or default &lt;strong class=&quot;command&quot;&gt;abook&lt;/strong&gt; addressbook and
@@ -126,7 +126,7 @@ processing time.  I use &lt;a class=&quot;reference external&quot; href=&quot;ht
 easy sorting and parsing should the need arise.  Now every mail that is
 delivered with &lt;strong class=&quot;command&quot;&gt;maildrop&lt;/strong&gt; and isn’t too large will have the sender
 name and address recorded in &lt;code class=&quot;file docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;~/.lbdb/m_inmail.list&lt;/span&gt;&lt;/code&gt;.&lt;/p&gt;
-&lt;p&gt;Now on to the actual filtering script, which is is written in &lt;a class=&quot;reference external&quot; href=&quot;http://www.python.org/&quot;&gt;Python&lt;/a&gt;.  It only
+&lt;p&gt;Now on to the actual filtering script, which is written in &lt;a class=&quot;reference external&quot; href=&quot;http://www.python.org/&quot;&gt;Python&lt;/a&gt;.  It only
 uses modules from the Python standard library, so you don’t need to install
 anything else.  I have tested it with 25000 unique entries in
 &lt;code class=&quot;file docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;~/.lbdb/m_inmail.list&lt;/span&gt;&lt;/code&gt; and it still takes less than a thirtieth of

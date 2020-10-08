@@ -108,9 +108,9 @@ beyond the fact that we’re using <code class="docutils literal notranslate"><s
 for us.</p>
 <p>This could be performed just as easily with <a class="reference external" href="http://ftp.gnu.org/gnu/bc/">bc</a> and/or <a class="reference external" href="http://suso.suso.org/programs/num-utils/">num-utils</a>.  I had
 <a class="reference external" href="https://github.com/SirVer/ultisnips">ultisnips</a> configured to create a skeleton from last year, so only had to paste
-the tests and type the <a class="reference external" href="https://docs.python.org/3/library/functions.html#sum" title="(in Python v3.8)"><code class="xref py py-func docutils literal notranslate"><span class="pre">sum()</span></code></a> call to complete the first part.</p>
+the tests and type the <a class="reference external" href="https://docs.python.org/3/library/functions.html#sum" title="(in Python v3.9)"><code class="xref py py-func docutils literal notranslate"><span class="pre">sum()</span></code></a> call to complete the first part.</p>
 <p>Part two leans toward a solution using recursion, and allows us to introduce one
-of the many useful tools from Python’s stdlib <a class="reference external" href="https://docs.python.org/3/library/itertools.html#itertools.takewhile" title="(in Python v3.8)"><code class="xref py py-func docutils literal notranslate"><span class="pre">itertools.takewhile()</span></code></a>.  This
+of the many useful tools from Python’s stdlib <a class="reference external" href="https://docs.python.org/3/library/itertools.html#itertools.takewhile" title="(in Python v3.9)"><code class="xref py py-func docutils literal notranslate"><span class="pre">itertools.takewhile()</span></code></a>.  This
 function consumes an iterator until the given condition no longer holds.  In
 this instance we’re told to recurse until our additional fuel is just a rounding
 error, we can code this with a simple <code class="docutils literal notranslate"><span class="pre">takewhile(lambda</span> <span class="pre">x:</span> <span class="pre">x</span> <span class="pre">&gt;</span> <span class="pre">0,</span>
@@ -123,10 +123,10 @@ error, we can code this with a simple <code class="docutils literal notranslate"
         <span class="k">yield</span> <span class="n">mod</span>
 </pre></div>
 </div>
-<p>The call to <a class="reference external" href="https://docs.python.org/3/library/itertools.html#itertools.takewhile" title="(in Python v3.8)"><code class="xref py py-func docutils literal notranslate"><span class="pre">takewhile()</span></code></a> will slurp up results for each module,
-and then we can simply call <a class="reference external" href="https://docs.python.org/3/library/functions.html#sum" title="(in Python v3.8)"><code class="xref py py-func docutils literal notranslate"><span class="pre">sum()</span></code></a> on them.  It only depends on your taste
+<p>The call to <a class="reference external" href="https://docs.python.org/3/library/itertools.html#itertools.takewhile" title="(in Python v3.9)"><code class="xref py py-func docutils literal notranslate"><span class="pre">takewhile()</span></code></a> will slurp up results for each module,
+and then we can simply call <a class="reference external" href="https://docs.python.org/3/library/functions.html#sum" title="(in Python v3.9)"><code class="xref py py-func docutils literal notranslate"><span class="pre">sum()</span></code></a> on them.  It only depends on your taste
 whether you choose to flatten the results from each module, or whether you call
-<a class="reference external" href="https://docs.python.org/3/library/functions.html#sum" title="(in Python v3.8)"><code class="xref py py-func docutils literal notranslate"><span class="pre">sum()</span></code></a> on per-module <a class="reference external" href="https://docs.python.org/3/library/functions.html#sum" title="(in Python v3.8)"><code class="xref py py-func docutils literal notranslate"><span class="pre">sum()</span></code></a> results.</p>
+<a class="reference external" href="https://docs.python.org/3/library/functions.html#sum" title="(in Python v3.9)"><code class="xref py py-func docutils literal notranslate"><span class="pre">sum()</span></code></a> on per-module <a class="reference external" href="https://docs.python.org/3/library/functions.html#sum" title="(in Python v3.9)"><code class="xref py py-func docutils literal notranslate"><span class="pre">sum()</span></code></a> results.</p>
 <p>In my rush to hit the leaderboard I introduced a really stupid logic bug,
 my original <abbr title="Read–Eval–Print Loop">REPL</abbr> code was <code class="docutils literal notranslate"><span class="pre">mod</span> <span class="pre">//=</span> <span class="pre">3</span> <span class="pre">-</span> <span class="pre">2</span></code>.  Clearly this won’t work as it is
 simply dividing <code class="docutils literal notranslate"><span class="pre">mod</span></code> by 1.  I’d be number one on the leaderboard for
@@ -217,9 +217,9 @@ Python gives us the intersection points directly.</p>
 that we can just code the rules without thought for speed.  Simply iterate over
 the given range, while treating the numbers as strings.</p>
 <p>Rule three states “two adjacent digits are the same”.  That is a <a class="reference external" href="http://regex.info/blog/2006-09-15/247">simple regex
-away</a>, <a class="reference external" href="https://docs.python.org/3/library/re.html#re.search" title="(in Python v3.8)"><code class="xref py py-func docutils literal notranslate"><span class="pre">re.search()</span></code></a> allows us to search for <code class="docutils literal notranslate"><span class="pre">(\d)\1</span></code> to find any
+away</a>, <a class="reference external" href="https://docs.python.org/3/library/re.html#re.search" title="(in Python v3.9)"><code class="xref py py-func docutils literal notranslate"><span class="pre">re.search()</span></code></a> allows us to search for <code class="docutils literal notranslate"><span class="pre">(\d)\1</span></code> to find any
 duplicated value.  Job done.  If you were so inclined you could use
-<a class="reference external" href="https://docs.python.org/3/library/itertools.html#itertools.groupby" title="(in Python v3.8)"><code class="xref py py-func docutils literal notranslate"><span class="pre">groupby()</span></code></a> to pluck repeats out instead.</p>
+<a class="reference external" href="https://docs.python.org/3/library/itertools.html#itertools.groupby" title="(in Python v3.9)"><code class="xref py py-func docutils literal notranslate"><span class="pre">groupby()</span></code></a> to pluck repeats out instead.</p>
 <p>Rule four says “Going from left to right, the digits <strong>never decrease</strong>; they
 only ever increase or stay the same”.  Quickest answer was just to compare the
 password to a sorted version of itself, if they’re equal then the password
@@ -227,24 +227,24 @@ passes.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nb">sorted</span><span class="p">(</span><span class="n">s</span><span class="p">)</span> <span class="o">==</span> <span class="nb">list</span><span class="p">(</span><span class="n">s</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>Clearly, there is a bunch of ugly type shifting going on here; <a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.8)"><code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code></a> from
-<a class="reference external" href="https://docs.python.org/3/library/functions.html#func-range">range()</a>, <a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.8)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a> from <a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.8)"><code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code></a>, <a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.8)"><code class="xref py py-class docutils literal notranslate"><span class="pre">list</span></code></a> from <a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.8)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a>.
+<p>Clearly, there is a bunch of ugly type shifting going on here; <a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.9)"><code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code></a> from
+<a class="reference external" href="https://docs.python.org/3/library/functions.html#func-range">range()</a>, <a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.9)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a> from <a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.9)"><code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code></a>, <a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.9)"><code class="xref py py-class docutils literal notranslate"><span class="pre">list</span></code></a> from <a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.9)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a>.
 However, it just isn’t worth the effort to improve this.  Arguably, you could
 iterate over the characters manually to avoid the final conversion but
-<a class="reference external" href="https://docs.python.org/3/library/timeit.html#module-timeit" title="(in Python v3.8)"><code class="xref py py-mod docutils literal notranslate"><span class="pre">timeit</span></code></a> shows it takes twice as long anyway.</p>
+<a class="reference external" href="https://docs.python.org/3/library/timeit.html#module-timeit" title="(in Python v3.9)"><code class="xref py py-mod docutils literal notranslate"><span class="pre">timeit</span></code></a> shows it takes twice as long anyway.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nb">all</span><span class="p">(</span><span class="n">n1</span> <span class="o">&lt;=</span> <span class="n">n2</span> <span class="k">for</span> <span class="n">n1</span><span class="p">,</span> <span class="n">n2</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">s</span><span class="p">,</span> <span class="n">s</span><span class="p">[</span><span class="mi">1</span><span class="p">:]))</span>
 </pre></div>
 </div>
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
-<p>Using <a class="reference external" href="https://docs.python.org/3/library/functions.html#all" title="(in Python v3.8)"><code class="xref py py-func docutils literal notranslate"><span class="pre">all()</span></code></a> we’re short-circuiting the failure case in exactly the
-same way as the <a class="reference external" href="https://docs.python.org/3/library/functions.html#sorted" title="(in Python v3.8)"><code class="xref py py-func docutils literal notranslate"><span class="pre">sorted()</span></code></a> comparison.  While <a class="reference external" href="https://docs.python.org/3/library/functions.html#all" title="(in Python v3.8)"><code class="xref py py-func docutils literal notranslate"><span class="pre">all()</span></code></a>, <a class="reference external" href="https://docs.python.org/3/library/functions.html#any" title="(in Python v3.8)"><code class="xref py py-func docutils literal notranslate"><span class="pre">any()</span></code></a>,
-and the tools in <a class="reference external" href="https://docs.python.org/3/library/functools.html#module-functools" title="(in Python v3.8)"><code class="xref py py-mod docutils literal notranslate"><span class="pre">functools</span></code></a> aren’t <em>fashionable</em> in Python circles
+<p>Using <a class="reference external" href="https://docs.python.org/3/library/functions.html#all" title="(in Python v3.9)"><code class="xref py py-func docutils literal notranslate"><span class="pre">all()</span></code></a> we’re short-circuiting the failure case in exactly the
+same way as the <a class="reference external" href="https://docs.python.org/3/library/functions.html#sorted" title="(in Python v3.9)"><code class="xref py py-func docutils literal notranslate"><span class="pre">sorted()</span></code></a> comparison.  While <a class="reference external" href="https://docs.python.org/3/library/functions.html#all" title="(in Python v3.9)"><code class="xref py py-func docutils literal notranslate"><span class="pre">all()</span></code></a>, <a class="reference external" href="https://docs.python.org/3/library/functions.html#any" title="(in Python v3.9)"><code class="xref py py-func docutils literal notranslate"><span class="pre">any()</span></code></a>,
+and the tools in <a class="reference external" href="https://docs.python.org/3/library/functools.html#module-functools" title="(in Python v3.9)"><code class="xref py py-mod docutils literal notranslate"><span class="pre">functools</span></code></a> aren’t <em>fashionable</em> in Python circles
 they can often make a whole lot of code more readable.</p>
 </div>
 <p>Part two slightly modified the third rule to say “the two adjacent matching
 digits <strong>are not part of a larger group of matching digits</strong>”.  Laziest method
-won again, Python provides a <a class="reference external" href="https://docs.python.org/3/library/collections.html#collections.Counter" title="(in Python v3.8)"><code class="xref py py-class docutils literal notranslate"><span class="pre">Counter</span></code></a> object that does all
+won again, Python provides a <a class="reference external" href="https://docs.python.org/3/library/collections.html#collections.Counter" title="(in Python v3.9)"><code class="xref py py-class docutils literal notranslate"><span class="pre">Counter</span></code></a> object that does all
 the work for us:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="mi">2</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">collections</span><span class="o">.</span><span class="n">Counter</span><span class="p">(</span><span class="n">s</span><span class="p">):</span>
     <span class="k">continue</span>
@@ -256,7 +256,7 @@ an another.</p>
 <p>If you’re allergic to <abbr title="Regular Expression">RegEx</abbr> look away now, but…   You can still perform the
 match by using a positive look behind to effectually make the match available
 <em>before</em> you saw it.  <code class="docutils literal notranslate"><span class="pre">(\d)(?&lt;!\1.)\1(?!\1)</span></code>, or with the benefit of
-<a class="reference external" href="https://docs.python.org/3/library/re.html#re.VERBOSE" title="(in Python v3.8)"><code class="xref py py-data docutils literal notranslate"><span class="pre">re.VERBOSE</span></code></a>:</p>
+<a class="reference external" href="https://docs.python.org/3/library/re.html#re.VERBOSE" title="(in Python v3.9)"><code class="xref py py-data docutils literal notranslate"><span class="pre">re.VERBOSE</span></code></a>:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">matcher</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span><span class="sa">r</span><span class="s2">&quot;&quot;&quot;</span>
 <span class="s2">    (\d)      # a digit</span>
 <span class="s2">    (?&lt;!\1.)  # check character *before* doesn&#39;t match</span>
@@ -396,7 +396,7 @@ between your editor and terminal when composing more complex shell blocks.</p>
 </ul>
 <p>We’re going to want a chunker to implement this, and oddly for something so
 common Python doesn’t seem to provide one<a class="footnote-reference brackets" href="#id5" id="id2">2</a>.  Perhaps the reason is how
-simple it is to implement, but then what would explain <a class="reference external" href="https://docs.python.org/3/library/math.html#math.copysign" title="(in Python v3.8)"><code class="xref py py-func docutils literal notranslate"><span class="pre">math.copysign()</span></code></a>?</p>
+simple it is to implement, but then what would explain <a class="reference external" href="https://docs.python.org/3/library/math.html#math.copysign" title="(in Python v3.9)"><code class="xref py py-func docutils literal notranslate"><span class="pre">math.copysign()</span></code></a>?</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">chunks</span><span class="p">(</span><span class="n">l</span><span class="p">:</span> <span class="n">List</span><span class="p">,</span> <span class="n">n</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Generator</span><span class="p">[</span><span class="n">List</span><span class="p">,</span> <span class="kc">None</span><span class="p">,</span> <span class="kc">None</span><span class="p">]:</span>
     <span class="sd">&quot;&quot;&quot;Generate n-sized chunks from list.&quot;&quot;&quot;</span>
     <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">l</span><span class="p">),</span> <span class="n">n</span><span class="p">):</span>
@@ -404,7 +404,7 @@ simple it is to implement, but then what would explain <a class="reference exter
 </pre></div>
 </div>
 <p>For part one all we need to do is count “pixel” values in each frame, and we
-once again use a <a class="reference external" href="https://docs.python.org/3/library/collections.html#collections.Counter" title="(in Python v3.8)"><code class="xref py py-class docutils literal notranslate"><span class="pre">Counter</span></code></a> to do the lifting:</p>
+once again use a <a class="reference external" href="https://docs.python.org/3/library/collections.html#collections.Counter" title="(in Python v3.9)"><code class="xref py py-class docutils literal notranslate"><span class="pre">Counter</span></code></a> to do the lifting:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">layers</span> <span class="o">=</span> <span class="p">[</span><span class="n">Counter</span><span class="p">(</span><span class="n">l</span><span class="p">)</span> <span class="k">for</span> <span class="n">l</span> <span class="ow">in</span> <span class="n">chunks</span><span class="p">(</span><span class="n">inputs</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="mi">25</span> <span class="o">*</span> <span class="mi">6</span><span class="p">)]</span>
 </pre></div>
 </div>
@@ -448,7 +448,7 @@ to solving this puzzle.  Install <a class="reference external" href="https://git
 </ul>
 <p>Hrmmph.  The puzzle text took me longer to read than the extra opcode and mode
 took to add to my interpreter.  There was nothing new or noteworthy in the
-implmentation either, just another state variable and <code class="docutils literal notranslate"><span class="pre">switch</span></code> arm.</p>
+implementation either, just another state variable and <code class="docutils literal notranslate"><span class="pre">switch</span></code> arm.</p>
 </div>
 <div class="section" id="day-10">
 <h2>Day 10<a class="headerlink" href="#day-10" title="Permalink to this headline">¶</a></h2>
@@ -457,18 +457,18 @@ implmentation either, just another state variable and <code class="docutils lite
 </ul>
 <p>Part one was easy enough, after having put in some legwork to re-read topics
 I have a tendancy to forget through lack of use.  I took a ten minute diversion
-to refresh myself on <a class="reference external" href="https://nrich.maths.org/13746">polar coordinates</a><a class="footnote-reference brackets" href="#id6" id="id3">3</a>, then a little <a class="reference external" href="https://docs.python.org/3/library/cmath.html#module-cmath" title="(in Python v3.8)"><code class="xref py py-mod docutils literal notranslate"><span class="pre">cmath</span></code></a>
+to refresh myself on <a class="reference external" href="https://nrich.maths.org/13746">polar coordinates</a><a class="footnote-reference brackets" href="#id6" id="id3">3</a>, then a little <a class="reference external" href="https://docs.python.org/3/library/cmath.html#module-cmath" title="(in Python v3.9)"><code class="xref py py-mod docutils literal notranslate"><span class="pre">cmath</span></code></a>
 refresher.</p>
 <p>Research over.  All we need to do is map the asteroid coordinates as complex
 numbers, then iterate with more stdlib magic to count unique angles.  Dumping
-the output of <a class="reference external" href="https://docs.python.org/3/library/cmath.html#cmath.phase" title="(in Python v3.8)"><code class="xref py py-func docutils literal notranslate"><span class="pre">cmath.phase()</span></code></a> in to a set comprehension strips the
+the output of <a class="reference external" href="https://docs.python.org/3/library/cmath.html#cmath.phase" title="(in Python v3.9)"><code class="xref py py-func docutils literal notranslate"><span class="pre">cmath.phase()</span></code></a> in to a set comprehension strips the
 duplicates for us.  We can think of it as a naïve form of <a class="reference external" href="https://en.m.wikipedia.org/wiki/Raycasting">ray casting</a> to
 “hide” the hidden asteroids.</p>
 <p>I think the interesting part of today’s puzzle is yet another stdlib reminder.
 Should you wish to use cartesian coordinates to operate on the asteroids you
-have pre-built <a class="reference external" href="https://docs.python.org/3/library/math.html#math.gcd" title="(in Python v3.8)"><code class="xref py py-func docutils literal notranslate"><span class="pre">gcd()</span></code></a> or <a class="reference external" href="https://docs.python.org/3/library/fractions.html#fractions.Fraction" title="(in Python v3.8)"><code class="xref py py-class docutils literal notranslate"><span class="pre">Fraction</span></code></a> functionality
+have pre-built <a class="reference external" href="https://docs.python.org/3/library/math.html#math.gcd" title="(in Python v3.9)"><code class="xref py py-func docutils literal notranslate"><span class="pre">gcd()</span></code></a> or <a class="reference external" href="https://docs.python.org/3/library/fractions.html#fractions.Fraction" title="(in Python v3.9)"><code class="xref py py-class docutils literal notranslate"><span class="pre">Fraction</span></code></a> functionality
 for your angle representations, and if you opt for 1-dimensional polar
-coordinates you have <a class="reference external" href="https://docs.python.org/3/library/cmath.html#module-cmath" title="(in Python v3.8)"><code class="xref py py-mod docutils literal notranslate"><span class="pre">cmath</span></code></a> functions at your fingertips.</p>
+coordinates you have <a class="reference external" href="https://docs.python.org/3/library/cmath.html#module-cmath" title="(in Python v3.9)"><code class="xref py py-mod docutils literal notranslate"><span class="pre">cmath</span></code></a> functions at your fingertips.</p>
 <p>And <em>iff</em> you outgrow the stdlib the Python ecosystem is great.  As an example,
 you <em>could</em> read the whole input in to a <a class="reference external" href="https://numpy.org/devdocs/reference/arrays.html#array-objects">numpy.array</a> for the map.  Then take
 advantage of <a class="reference external" href="https://numpy.org/doc/1.16/reference/generated/numpy.nonzero.html">numpy.nonzero()</a> to extract the asteroid coordinates to iterate

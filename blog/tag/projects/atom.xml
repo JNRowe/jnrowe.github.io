@@ -252,7 +252,7 @@ config import&lt;/strong&gt;.&lt;/p&gt;
 the features we use for our documentation.  I don’t want to hold that against it
 though, as it just a impedance mismatch.&lt;/p&gt;
 &lt;p&gt;The end result of the integrated components feels to me like you’ve chosen
-a usable, but weak, component for some of the  most important parts of your
+a usable, but weak, component for some of the most important parts of your
 project’s &lt;abbr title=&quot;Application Lifecycle Management&quot;&gt;ALM&lt;/abbr&gt;.  The bits work well together, but none of them seem like an
 option you’d choose on their own.&lt;/p&gt;
 &lt;/div&gt;

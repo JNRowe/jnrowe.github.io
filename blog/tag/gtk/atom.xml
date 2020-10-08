@@ -32,9 +32,9 @@ my favourite &lt;a class=&quot;reference external&quot; href=&quot;http://www.bi
 question at hand…&lt;/p&gt;
 &lt;p&gt;Cursor blinking is a severe annoyance for some people(not me, I patch apps to
 add it), and disabling it for GTK+ applications is really quite simple.   If
-you’re a &lt;a class=&quot;reference external&quot; href=&quot;http://www.gnome.org/&quot;&gt;gnome&lt;/a&gt; user then the setting to change blinking is in the keyboard
+you’re a &lt;a class=&quot;reference external&quot; href=&quot;http://www.gnome.org/&quot;&gt;GNOME&lt;/a&gt; user then the setting to change blinking is in the keyboard
 properties dialog that can be found in the system menu.  If you’re using &lt;a class=&quot;reference external&quot; href=&quot;http://www.kde.org/&quot;&gt;KDE&lt;/a&gt;
-you should edit &lt;code class=&quot;file docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;~/.gtkrc-2.0-kde&lt;/span&gt;&lt;/code&gt;.  If you’re using neither gnome or KDE
+you should edit &lt;code class=&quot;file docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;~/.gtkrc-2.0-kde&lt;/span&gt;&lt;/code&gt;.  If you’re using neither GNOME or KDE
 you can add a directive to your &lt;code class=&quot;file docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;~/.gtkrc-2.0&lt;/span&gt;&lt;/code&gt;:&lt;/p&gt;
 &lt;div class=&quot;highlight-cpp notranslate&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;gtk&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;cursor&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;blink&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
@@ -77,7 +77,7 @@ dialog.&lt;/p&gt;
 &lt;p&gt;The &lt;code class=&quot;file docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;gtkrc&lt;/span&gt;&lt;/code&gt; being referenced is my &lt;a class=&quot;reference external&quot; href=&quot;http://www.gtk.org/&quot;&gt;GTK+&lt;/a&gt; configuration file that could
 be seen in the right hand &lt;a class=&quot;reference external&quot; href=&quot;http://www.vim.org/&quot;&gt;vim&lt;/a&gt; window of the screenshot from that earlier post.
 It was actually open in that screenshot because I was changing my GTK+ theme,
-and not being a &lt;a class=&quot;reference external&quot; href=&quot;http://www.gnome.org/&quot;&gt;gnome&lt;/a&gt; user the simplest way to change it is via my
+and not being a &lt;a class=&quot;reference external&quot; href=&quot;http://www.gnome.org/&quot;&gt;GNOME&lt;/a&gt; user the simplest way to change it is via my
 &lt;code class=&quot;file docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;~/.gtkrc-2.0&lt;/span&gt;&lt;/code&gt;.  And, if you’re using &lt;a class=&quot;reference external&quot; href=&quot;http://www.kde.org/&quot;&gt;KDE&lt;/a&gt; and wish to the settings for
 GTK+ applications you should edit &lt;code class=&quot;file docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;~/.gtkrc-2.0-kde&lt;/span&gt;&lt;/code&gt;.&lt;/p&gt;
 &lt;p&gt;So the question becomes, what were the options in that screenshot, and are there
@@ -105,7 +105,7 @@ apps.  By setting it to &lt;code class=&quot;docutils literal notranslate&quot;&
 expect if we use &lt;a class=&quot;reference external&quot; href=&quot;http://cnswww.cns.cwru.edu/~chet/bash/bashtop.html&quot;&gt;bash&lt;/a&gt; or other common Linux tools, such as &lt;kbd class=&quot;kbd docutils literal notranslate&quot;&gt;C-w&lt;/kbd&gt; to
 delete the word under the cursor.  You can read more about
 &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;gtk-key-theme-name&lt;/span&gt;&lt;/code&gt; in &lt;span class=&quot;xref std std-doc&quot;&gt;emacs_gtk_shortcuts&lt;/span&gt;.&lt;/p&gt;
-&lt;p&gt;All of the settings above are configurable with a &lt;abbr title=&quot;Graphical User Interface&quot;&gt;GUI&lt;/abbr&gt; if you use gnome or &lt;a class=&quot;reference external&quot; href=&quot;http://www.xfce.org/&quot;&gt;xfce&lt;/a&gt;, but for those of who don’t use those
+&lt;p&gt;All of the settings above are configurable with a &lt;abbr title=&quot;Graphical User Interface&quot;&gt;GUI&lt;/abbr&gt; if you use GNOME or &lt;a class=&quot;reference external&quot; href=&quot;http://www.xfce.org/&quot;&gt;Xfce&lt;/a&gt;, but for those of who don’t use those
 desktop environments editing the &lt;code class=&quot;file docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;~/.gtkrc-2.0&lt;/span&gt;&lt;/code&gt; is a reasonable solution.&lt;/p&gt;
 &lt;a class=&quot;reference external image-reference&quot; href=&quot;/_images/2009-10-01-GTK_filechooser.png&quot;&gt;&lt;img alt=&quot;GTK file chooser screenshot&quot; class=&quot;align-left&quot; src=&quot;../../_images/2009-10-01-GTK_filechooser-mini.png&quot; /&gt;&lt;/a&gt;
 &lt;p&gt;The “some-shortcuts” section is the interesting one for today, it is telling

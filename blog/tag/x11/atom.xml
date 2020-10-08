@@ -183,7 +183,7 @@ symbols that are normally exported by &lt;strong class=&quot;command&quot;&gt;xr
 &lt;p&gt;You can also choose a different preprocessor if &lt;strong class=&quot;command&quot;&gt;cpp&lt;/strong&gt; isn’t up to your
 needs by specifying a &lt;strong class=&quot;command&quot;&gt;-cpp&lt;/strong&gt; option to &lt;strong class=&quot;command&quot;&gt;xrdb&lt;/strong&gt;.  The only
 caveat is that must accept &lt;code class=&quot;xref std std-option docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;-D&lt;/span&gt;&lt;/code&gt; for defines, &lt;code class=&quot;xref std std-option docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;-U&lt;/span&gt;&lt;/code&gt; for symbol
-cancelling and &lt;a class=&quot;reference external&quot; href=&quot;https://docs.python.org/3/using/cmdline.html#id2&quot; title=&quot;(in Python v3.8)&quot;&gt;&lt;code class=&quot;xref std std-option docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;-I&lt;/span&gt;&lt;/code&gt;&lt;/a&gt; for include paths.  An example that does fit these
+cancelling and &lt;a class=&quot;reference external&quot; href=&quot;https://docs.python.org/3/using/cmdline.html#id2&quot; title=&quot;(in Python v3.9)&quot;&gt;&lt;code class=&quot;xref std std-option docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;-I&lt;/span&gt;&lt;/code&gt;&lt;/a&gt; for include paths.  An example that does fit these
 restrictions is &lt;a class=&quot;reference external&quot; href=&quot;http://www.gnu.org/software/m4/m4.html&quot;&gt;m4&lt;/a&gt;, and it might be a good choice if you wish to do mode
 advanced things in your configuration file such as fancy filtering or the use
 of loops for defining colour tables.&lt;/p&gt;

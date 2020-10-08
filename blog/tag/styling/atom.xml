@@ -108,7 +108,7 @@ symbols that are normally exported by &lt;strong class=&quot;command&quot;&gt;xr
 &lt;p&gt;You can also choose a different preprocessor if &lt;strong class=&quot;command&quot;&gt;cpp&lt;/strong&gt; isn’t up to your
 needs by specifying a &lt;strong class=&quot;command&quot;&gt;-cpp&lt;/strong&gt; option to &lt;strong class=&quot;command&quot;&gt;xrdb&lt;/strong&gt;.  The only
 caveat is that must accept &lt;code class=&quot;xref std std-option docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;-D&lt;/span&gt;&lt;/code&gt; for defines, &lt;code class=&quot;xref std std-option docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;-U&lt;/span&gt;&lt;/code&gt; for symbol
-cancelling and &lt;a class=&quot;reference external&quot; href=&quot;https://docs.python.org/3/using/cmdline.html#id2&quot; title=&quot;(in Python v3.8)&quot;&gt;&lt;code class=&quot;xref std std-option docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;-I&lt;/span&gt;&lt;/code&gt;&lt;/a&gt; for include paths.  An example that does fit these
+cancelling and &lt;a class=&quot;reference external&quot; href=&quot;https://docs.python.org/3/using/cmdline.html#id2&quot; title=&quot;(in Python v3.9)&quot;&gt;&lt;code class=&quot;xref std std-option docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;-I&lt;/span&gt;&lt;/code&gt;&lt;/a&gt; for include paths.  An example that does fit these
 restrictions is &lt;a class=&quot;reference external&quot; href=&quot;http://www.gnu.org/software/m4/m4.html&quot;&gt;m4&lt;/a&gt;, and it might be a good choice if you wish to do mode
 advanced things in your configuration file such as fancy filtering or the use
 of loops for defining colour tables.&lt;/p&gt;
@@ -141,9 +141,9 @@ my favourite &lt;a class=&quot;reference external&quot; href=&quot;http://www.bi
 question at hand…&lt;/p&gt;
 &lt;p&gt;Cursor blinking is a severe annoyance for some people(not me, I patch apps to
 add it), and disabling it for GTK+ applications is really quite simple.   If
-you’re a &lt;a class=&quot;reference external&quot; href=&quot;http://www.gnome.org/&quot;&gt;gnome&lt;/a&gt; user then the setting to change blinking is in the keyboard
+you’re a &lt;a class=&quot;reference external&quot; href=&quot;http://www.gnome.org/&quot;&gt;GNOME&lt;/a&gt; user then the setting to change blinking is in the keyboard
 properties dialog that can be found in the system menu.  If you’re using &lt;a class=&quot;reference external&quot; href=&quot;http://www.kde.org/&quot;&gt;KDE&lt;/a&gt;
-you should edit &lt;code class=&quot;file docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;~/.gtkrc-2.0-kde&lt;/span&gt;&lt;/code&gt;.  If you’re using neither gnome or KDE
+you should edit &lt;code class=&quot;file docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;~/.gtkrc-2.0-kde&lt;/span&gt;&lt;/code&gt;.  If you’re using neither GNOME or KDE
 you can add a directive to your &lt;code class=&quot;file docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;~/.gtkrc-2.0&lt;/span&gt;&lt;/code&gt;:&lt;/p&gt;
 &lt;div class=&quot;highlight-cpp notranslate&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;gtk&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;cursor&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;blink&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;

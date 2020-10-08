@@ -187,7 +187,7 @@ common versions of &lt;strong class=&quot;command&quot;&gt;make&lt;/strong&gt; w
 a namespace of subcommands(like the &lt;strong&gt;m&lt;/strong&gt;aintainer namespace above) to aid
 when the inevitable errors show up.  Most of the stuff in that file is
 &lt;em&gt;absolutely amazing&lt;/em&gt;, I’m working with a few genuine &lt;strong class=&quot;command&quot;&gt;make&lt;/strong&gt; masters.&lt;/p&gt;
-&lt;p&gt;I’m not a &lt;strong class=&quot;command&quot;&gt;make&lt;/strong&gt; master.&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;I am not a |make| master&lt;/em&gt;.&lt;/p&gt;
 &lt;p&gt;I often find myself forgetting which &lt;strong class=&quot;command&quot;&gt;make&lt;/strong&gt; supports some feature, or which one
 fails horribly when you use that one “standard” feature every &lt;strong class=&quot;command&quot;&gt;make&lt;/strong&gt; supports.
 Even in the minutia of the build there are things that are subobtimal, for

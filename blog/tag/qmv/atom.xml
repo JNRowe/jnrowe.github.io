@@ -110,7 +110,7 @@ $ &lt;span class=&quot;nb&quot;&gt;echo&lt;/span&gt; ogrmerge_layer_cake.rst&lt;
 ogrmerge_layer_cake.rst /home/jay/export/public
 $ &lt;span class=&quot;nb&quot;&gt;echo&lt;/span&gt; xclip.rst&lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;,&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;:s/clip/sel&lt;span class=&quot;o&quot;&gt;)}&lt;/span&gt;  &lt;span class=&quot;c1&quot;&gt;# Apply substitution of “clip” to “sel”&lt;/span&gt;
 xclip.rst xsel.rst
-$ &lt;span class=&quot;nb&quot;&gt;echo&lt;/span&gt; emacs_explore.rst&lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;,&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;:s/e/X&lt;span class=&quot;o&quot;&gt;)}&lt;/span&gt;  &lt;span class=&quot;c1&quot;&gt;# Apply subtitution of “e” to “X”&lt;/span&gt;
+$ &lt;span class=&quot;nb&quot;&gt;echo&lt;/span&gt; emacs_explore.rst&lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;,&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;:s/e/X&lt;span class=&quot;o&quot;&gt;)}&lt;/span&gt;  &lt;span class=&quot;c1&quot;&gt;# Apply substitution of “e” to “X”&lt;/span&gt;
 emacs_explore.rst Xmacs_explore.rst
 $ &lt;span class=&quot;nb&quot;&gt;echo&lt;/span&gt; emacs_explore.rst&lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;,&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;:gs/e/X&lt;span class=&quot;o&quot;&gt;)}&lt;/span&gt;  &lt;span class=&quot;c1&quot;&gt;# … add the g flag for global replace&lt;/span&gt;
 emacs_explore.rst Xmacs_XxplorX.rst
