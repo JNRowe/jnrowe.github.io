@@ -45,7 +45,7 @@ easy sorting and parsing should the need arise.  Now every mail that is
 delivered with :command:`maildrop` and isn’t too large will have the sender
 name and address recorded in :file:`~/.lbdb/m_inmail.list`.
 
-Now on to the actual filtering script, which is is written in Python_.  It only
+Now on to the actual filtering script, which is written in Python_.  It only
 uses modules from the Python standard library, so you don’t need to install
 anything else.  I have tested it with 25000 unique entries in
 :file:`~/.lbdb/m_inmail.list` and it still takes less than a thirtieth of

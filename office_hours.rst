@@ -81,7 +81,7 @@ might be a nice idea for a weekend hack.
 .. rubric:: Footnotes
 
 .. [#] It seems that the norm for my co-workers is to make this offer on our
-       semi-private mastodon instance, but I’d like to think I was implicitely
+       semi-private mastodon instance, but I’d like to think I was implicitly
        offering help there anyway.
 
 .. _Robert Heaton: https://robertheaton.com/2018/10/22/slash-office-hours/

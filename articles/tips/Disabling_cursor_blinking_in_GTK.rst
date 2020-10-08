@@ -19,9 +19,9 @@ question at hand…
 
 Cursor blinking is a severe annoyance for some people(not me, I patch apps to
 add it), and disabling it for GTK+ applications is really quite simple.   If
-you’re a gnome_ user then the setting to change blinking is in the keyboard
+you’re a GNOME_ user then the setting to change blinking is in the keyboard
 properties dialog that can be found in the system menu.  If you’re using KDE_
-you should edit :file:`~/.gtkrc-2.0-kde`.  If you’re using neither gnome or KDE
+you should edit :file:`~/.gtkrc-2.0-kde`.  If you’re using neither GNOME or KDE
 you can add a directive to your :file:`~/.gtkrc-2.0`:
 
 .. code-block:: cpp
@@ -53,5 +53,5 @@ the console too then add the next little snippet to your shell’s startup file:
 .. _emacs: http://www.xemacs.org/
 .. _gajim: http://www.gajim.org/
 .. _bitlbee: http://www.bitlbee.org/
-.. _gnome: http://www.gnome.org/
+.. _GNOME: http://www.gnome.org/
 .. _KDE: http://www.kde.org/

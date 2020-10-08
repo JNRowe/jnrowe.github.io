@@ -374,7 +374,7 @@ this short text has been helpful to you.
 
 .. option:: -r
 
-    Specify revisions to perform log against, can be a comma seperated list of
+    Specify revisions to perform log against, can be a comma separated list of
     ranges.
 
 .. |RCS| replace:: :abbr:`RCS (GNU Revision Control System)`

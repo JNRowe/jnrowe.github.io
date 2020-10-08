@@ -24,7 +24,7 @@ Laura Biddulph sent me a :abbr:`SMS (Short Message Service)` message that read:
 The :file:`gtkrc` being referenced is my `GTK+`_ configuration file that could
 be seen in the right hand vim_ window of the screenshot from that earlier post.
 It was actually open in that screenshot because I was changing my GTK+ theme,
-and not being a gnome_ user the simplest way to change it is via my
+and not being a GNOME_ user the simplest way to change it is via my
 :file:`~/.gtkrc-2.0`.  And, if you’re using KDE_ and wish to the settings for
 GTK+ applications you should edit :file:`~/.gtkrc-2.0-kde`.
 
@@ -57,7 +57,7 @@ delete the word under the cursor.  You can read more about
 ``gtk-key-theme-name`` in :doc:`emacs_gtk_shortcuts`.
 
 All of the settings above are configurable with a :abbr:`GUI (Graphical User
-Interface)` if you use gnome or xfce_, but for those of who don’t use those
+Interface)` if you use GNOME or Xfce_, but for those of who don’t use those
 desktop environments editing the :file:`~/.gtkrc-2.0` is a reasonable solution.
 
 .. image:: /.images/2009-10-01-GTK_filechooser-mini.png
@@ -114,8 +114,8 @@ share, for this you can use the ``include`` directive.  An example would be:
 
 .. _GTK+: http://www.gtk.org/
 .. _vim: http://www.vim.org/
-.. _gnome: http://www.gnome.org/
+.. _GNOME: http://www.gnome.org/
 .. _KDE: http://www.kde.org/
 .. _modeline: http://vimdoc.sourceforge.net/htmldoc/options.html#modeline
 .. _bash: http://cnswww.cns.cwru.edu/~chet/bash/bashtop.html
-.. _xfce: http://www.xfce.org/
+.. _Xfce: http://www.xfce.org/

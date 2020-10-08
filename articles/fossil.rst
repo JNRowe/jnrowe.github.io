@@ -122,7 +122,7 @@ the features we use for our documentation.  I don’t want to hold that against 
 though, as it just a impedance mismatch.
 
 The end result of the integrated components feels to me like you’ve chosen
-a usable, but weak, component for some of the  most important parts of your
+a usable, but weak, component for some of the most important parts of your
 project’s |ALM|.  The bits work well together, but none of them seem like an
 option you’d choose on their own.
 
