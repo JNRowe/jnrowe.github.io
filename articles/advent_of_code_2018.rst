@@ -95,6 +95,8 @@ two, ending up with the following::
     for our ``seen`` bucket as it provides constant-time *O(1)* lookup, whereas
     Python’s :class:`list` implementation would be linear.
 
+.. _test-runner-label:
+
 So, what have we here?  Well, we’ll want some kind of test runner for the
 remaining days, so I hacked up a quick decorator to run the examples.
 
