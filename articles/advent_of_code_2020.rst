@@ -369,10 +369,10 @@ here.  Should we be making a generic virtual machine straight away to speed up
 the following days?
 
 There is actually very little of interest in today’s solution, the only oddity
-at all was that I added branch for the ``nop`` for some reason.  It is
+at all was that I added a branch for the ``nop`` for some reason.  It is
 a no-operation_ how could it possibly need a handler?
 
-The issue I did have trouble with was why the runtime being too long.  My
+The issue I did have trouble with was the runtime being far too long.  My
 initial effort in the |REPL| took 17 seconds, and that felt *very* wrong.  On
 closer inspection I was stupidly re-parsing the input on each loop for part
 two, but even that shouldn’t have been that slow.  Let’s ask hyperfine_
@@ -394,7 +394,7 @@ Kicking the parsing out of the loop is a huge improvement:
     Range (min … max):   234.9 ms … 253.7 ms    11 runs
 
 Turns out using :pypi:`parse` to grab the data is quite expensive.  Switching
-to a regular string splitting like so::
+to regular string splitting like so::
 
     def parse():
         insts = []
