@@ -1,139 +1,139 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version='1.0' encoding='UTF-8'?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <title type="text">JNRowe - Posts tagged zsh</title>
-  <id>https://jnrowe.github.io/blog/tag/zsh/atom.xml</id>
-  <updated>2009-10-28T00:00:00Z</updated>
-  <link href="https://jnrowe.github.io/" />
-  <link href="https://jnrowe.github.io/blog/tag/zsh/atom.xml" rel="self" />
-  <subtitle type="text">Ramblings of a tired mind</subtitle>
-  <generator uri="https://ablog.readthedocs.org" version="0.10.4">ABlog</generator>
-  <entry xml:base="https://jnrowe.github.io/blog/tag/zsh/atom.xml">
-    <title type="text">Zsh and the VCS</title>
+  <id>https://jnrowe.github.io/</id>
+  <title>JNRowe - Posts tagged zsh</title>
+  <updated>2021-03-21T11:06:01.943937+00:00</updated>
+  <link href="https://jnrowe.github.io/"/>
+  <link href="https://jnrowe.github.io/blog/tag/zsh/atom.xml"/>
+  <generator uri="https://ablog.readthedocs.org" version="0.10.12">ABlog</generator>
+  <subtitle>Ramblings of a tired mind</subtitle>
+  <entry>
     <id>https://jnrowe.github.io/articles/tips/Zsh_and_the_vcs.html</id>
-    <updated>2009-10-28T00:00:00Z</updated>
-    <published>2009-10-28T00:00:00Z</published>
-    <link href="https://jnrowe.github.io/articles/tips/Zsh_and_the_vcs.html" />
+    <title>Zsh and the VCS</title>
+    <updated>2009-10-28T00:00:00+00:00</updated>
     <author>
       <name>James Rowe</name>
     </author>
-    <content type="html">&lt;div class=&quot;section&quot; id=&quot;zsh-and-the-vcs&quot;&gt;
+    <content type="html">&lt;div class="section" id="zsh-and-the-vcs"&gt;
 
-&lt;img alt=&quot;Git prompt screenshot&quot; class=&quot;align-right&quot; src=&quot;../../_images/2009-10-28-git_prompt.png&quot; /&gt;
-&lt;p&gt;I’ve recently switched to &lt;a class=&quot;reference external&quot; href=&quot;http://www.zsh.org/&quot;&gt;Zsh&lt;/a&gt; as my login shell after
-9 years of using &lt;a class=&quot;reference external&quot; href=&quot;http://cnswww.cns.cwru.edu/~chet/bash/bashtop.html&quot;&gt;bash&lt;/a&gt;, and for no particularly good reason either as they’re
+&lt;img alt="Git prompt screenshot" class="align-right" src="../../_images/2009-10-28-git_prompt.png" /&gt;
+&lt;p&gt;I’ve recently switched to &lt;a class="reference external" href="http://www.zsh.org/"&gt;Zsh&lt;/a&gt; as my login shell after
+9 years of using &lt;a class="reference external" href="http://cnswww.cns.cwru.edu/~chet/bash/bashtop.html"&gt;bash&lt;/a&gt;, and for no particularly good reason either as they’re
 both great interactive shells.  I guess all the &lt;em&gt;Kool Kids&lt;/em&gt; are doing it, and
 I’m just playing catchup.  The one side effect of that is I’m now scribbling
-tips about &lt;strong class=&quot;command&quot;&gt;zsh&lt;/strong&gt; too…&lt;/p&gt;
+tips about &lt;strong class="command"&gt;zsh&lt;/strong&gt; too…&lt;/p&gt;
 &lt;p&gt;In a screenshot I posted in our bugtracker — that was considerably less staged
-than the example above — one of my more visual hunks of &lt;strong class=&quot;command&quot;&gt;zsh&lt;/strong&gt;
+than the example above — one of my more visual hunks of &lt;strong class="command"&gt;zsh&lt;/strong&gt;
 configuration was visible, leading to the following question from Dan Wilson:&lt;/p&gt;
 &lt;blockquote&gt;
-&lt;div&gt;&lt;p&gt;Okay, ‘fess time.  How do you get &lt;strong class=&quot;command&quot;&gt;git&lt;/strong&gt; branch names in the
+&lt;div&gt;&lt;p&gt;Okay, ‘fess time.  How do you get &lt;strong class="command"&gt;git&lt;/strong&gt; branch names in the
 prompt?  How do you make the funky arrows show repo status?&lt;/p&gt;
 &lt;/div&gt;&lt;/blockquote&gt;
-&lt;p&gt;Firstly, I use &lt;a class=&quot;reference external&quot; href=&quot;http://github.com/robbyrussell/oh-my-zsh&quot;&gt;oh-my-zsh&lt;/a&gt; which is an excellent basis for &lt;strong class=&quot;command&quot;&gt;zsh&lt;/strong&gt;
+&lt;p&gt;Firstly, I use &lt;a class="reference external" href="http://github.com/robbyrussell/oh-my-zsh"&gt;oh-my-zsh&lt;/a&gt; which is an excellent basis for &lt;strong class="command"&gt;zsh&lt;/strong&gt;
 configuration files.  My prompt settings work within that framework, although
-they could be converted to work with &lt;em&gt;plain&lt;/em&gt; &lt;strong class=&quot;command&quot;&gt;zsh&lt;/strong&gt; if you have the
+they could be converted to work with &lt;em&gt;plain&lt;/em&gt; &lt;strong class="command"&gt;zsh&lt;/strong&gt; if you have the
 inclination.&lt;/p&gt;
-&lt;p&gt;If you want to see my entire “theme” file you can &lt;a class=&quot;reference external&quot; href=&quot;http://github.com/JNRowe/oh-my-zsh&quot;&gt;clone my fork&lt;/a&gt; and look at
-&lt;a class=&quot;reference external&quot; href=&quot;http://github.com/JNRowe/oh-my-zsh/blob/master/themes/jnrowe.zsh-theme&quot;&gt;oh-my-zsh/themes/jnrowe.zsh-theme&lt;/a&gt;.&lt;/p&gt;
-&lt;div class=&quot;section&quot; id=&quot;branch-names&quot;&gt;
+&lt;p&gt;If you want to see my entire “theme” file you can &lt;a class="reference external" href="http://github.com/JNRowe/oh-my-zsh"&gt;clone my fork&lt;/a&gt; and look at
+&lt;a class="reference external" href="http://github.com/JNRowe/oh-my-zsh/blob/master/themes/jnrowe.zsh-theme"&gt;oh-my-zsh/themes/jnrowe.zsh-theme&lt;/a&gt;.&lt;/p&gt;
+&lt;div class="section" id="branch-names"&gt;
 &lt;h2&gt;Branch names&lt;/h2&gt;
-&lt;p&gt;&lt;strong class=&quot;command&quot;&gt;zsh&lt;/strong&gt; comes with some neat &lt;abbr title=&quot;Version Control System&quot;&gt;VCS&lt;/abbr&gt; integration, that is exceptionally
-&lt;a class=&quot;reference external&quot; href=&quot;http://zsh.sourceforge.net/Doc/Release/User-Contributions.html#SEC273&quot;&gt;documented&lt;/a&gt; in the manual.  I use that code to enable branch names in my
-prompt, I use it directly instead of the code in &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;oh-my-zsh&lt;/span&gt;&lt;/code&gt; that handles
-&lt;strong class=&quot;command&quot;&gt;git&lt;/strong&gt; status because it doesn’t do what I want [yet].  I use a format
-that matches the default(&lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;robbyrussell&lt;/span&gt;&lt;/code&gt;) theme in &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;oh-my-zsh&lt;/span&gt;&lt;/code&gt;.&lt;/p&gt;
-&lt;div class=&quot;highlight-zsh notranslate&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;autoload -Uz vcs_info
+&lt;p&gt;&lt;strong class="command"&gt;zsh&lt;/strong&gt; comes with some neat &lt;abbr title="Version Control System"&gt;VCS&lt;/abbr&gt; integration, that is exceptionally
+&lt;a class="reference external" href="http://zsh.sourceforge.net/Doc/Release/User-Contributions.html#SEC273"&gt;documented&lt;/a&gt; in the manual.  I use that code to enable branch names in my
+prompt, I use it directly instead of the code in &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;oh-my-zsh&lt;/span&gt;&lt;/code&gt; that handles
+&lt;strong class="command"&gt;git&lt;/strong&gt; status because it doesn’t do what I want [yet].  I use a format
+that matches the default(&lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;robbyrussell&lt;/span&gt;&lt;/code&gt;) theme in &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;oh-my-zsh&lt;/span&gt;&lt;/code&gt;.&lt;/p&gt;
+&lt;div class="highlight-zsh notranslate"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;autoload -Uz vcs_info
 
-&lt;span class=&quot;c1&quot;&gt;# See the documentation for the format string definition&lt;/span&gt;
-&lt;span class=&quot;c1&quot;&gt;# This generates a fancy coloured string with $vcs:($branch)&lt;/span&gt;
-zstyle &lt;span class=&quot;s1&quot;&gt;&amp;#39;:vcs_info:*&amp;#39;&lt;/span&gt; formats &lt;span class=&quot;s1&quot;&gt;&amp;#39;%F{2}%s%F{7}:%F{2}(%F{1}%b%F{2})%f &amp;#39;&lt;/span&gt;
-zstyle &lt;span class=&quot;s1&quot;&gt;&amp;#39;:vcs_info:*&amp;#39;&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;enable&lt;/span&gt; git
+&lt;span class="c1"&gt;# See the documentation for the format string definition&lt;/span&gt;
+&lt;span class="c1"&gt;# This generates a fancy coloured string with $vcs:($branch)&lt;/span&gt;
+zstyle &lt;span class="s1"&gt;&amp;#39;:vcs_info:*&amp;#39;&lt;/span&gt; formats &lt;span class="s1"&gt;&amp;#39;%F{2}%s%F{7}:%F{2}(%F{1}%b%F{2})%f &amp;#39;&lt;/span&gt;
+zstyle &lt;span class="s1"&gt;&amp;#39;:vcs_info:*&amp;#39;&lt;/span&gt; &lt;span class="nb"&gt;enable&lt;/span&gt; git
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
-&lt;p&gt;Once we’ve configured &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;vcs_info&lt;/span&gt;&lt;/code&gt; we just need to include
-&lt;span class=&quot;target&quot; id=&quot;index-0&quot;&gt;&lt;/span&gt;&lt;code class=&quot;xref std std-envvar docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;${vcs_info_msg_0_}&lt;/span&gt;&lt;/code&gt; somewhere in our prompt to display the &lt;abbr title=&quot;Version Control System&quot;&gt;VCS&lt;/abbr&gt; and
+&lt;p&gt;Once we’ve configured &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;vcs_info&lt;/span&gt;&lt;/code&gt; we just need to include
+&lt;span class="target" id="index-0"&gt;&lt;/span&gt;&lt;code class="xref std std-envvar docutils literal notranslate"&gt;&lt;span class="pre"&gt;${vcs_info_msg_0_}&lt;/span&gt;&lt;/code&gt; somewhere in our prompt to display the &lt;abbr title="Version Control System"&gt;VCS&lt;/abbr&gt; and
 current branch name.&lt;/p&gt;
-&lt;p&gt;&lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;vcs_info&lt;/span&gt;&lt;/code&gt; works quite well, and supports many different systems(both common
-and uncommon).  As the code snippet shows I enable support for &lt;a class=&quot;reference external&quot; href=&quot;http://www.git-scm.com/&quot;&gt;git&lt;/a&gt; exclusively.
-I’ve used it with &lt;a class=&quot;reference external&quot; href=&quot;http://www.selenic.com/mercurial/&quot;&gt;mercurial&lt;/a&gt; too, and it works well.  &lt;a class=&quot;reference external&quot; href=&quot;http://darcs.net&quot;&gt;darcs&lt;/a&gt; also appears to
+&lt;p&gt;&lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;vcs_info&lt;/span&gt;&lt;/code&gt; works quite well, and supports many different systems(both common
+and uncommon).  As the code snippet shows I enable support for &lt;a class="reference external" href="http://www.git-scm.com/"&gt;git&lt;/a&gt; exclusively.
+I’ve used it with &lt;a class="reference external" href="http://www.selenic.com/mercurial/"&gt;mercurial&lt;/a&gt; too, and it works well.  &lt;a class="reference external" href="http://darcs.net"&gt;darcs&lt;/a&gt; also appears to
 work well, but it isn’t a system I use often enough to have tested it
 thoroughly.&lt;/p&gt;
-&lt;p&gt;I tested &lt;strong class=&quot;command&quot;&gt;bzr&lt;/strong&gt; support while writing this but it is totally unusable
-because of just how painfully slow &lt;strong class=&quot;command&quot;&gt;bzr&lt;/strong&gt; is.  On my system it adds
+&lt;p&gt;I tested &lt;strong class="command"&gt;bzr&lt;/strong&gt; support while writing this but it is totally unusable
+because of just how painfully slow &lt;strong class="command"&gt;bzr&lt;/strong&gt; is.  On my system it adds
 close to one and half seconds to every prompt display, although that could be
-improved if I wasn’t using conservative &lt;abbr title=&quot;Central Processing Unit&quot;&gt;CPU&lt;/abbr&gt;
-scaling to save power.  As a comparison the &lt;strong class=&quot;command&quot;&gt;git&lt;/strong&gt; info takes less than
-a tenth of a second to calculate on the same system, and &lt;strong class=&quot;command&quot;&gt;mercurial&lt;/strong&gt;
+improved if I wasn’t using conservative &lt;abbr title="Central Processing Unit"&gt;CPU&lt;/abbr&gt;
+scaling to save power.  As a comparison the &lt;strong class="command"&gt;git&lt;/strong&gt; info takes less than
+a tenth of a second to calculate on the same system, and &lt;strong class="command"&gt;mercurial&lt;/strong&gt;
 around three times that which is most definitely still usable.&lt;/p&gt;
-&lt;div class=&quot;admonition note&quot;&gt;
-&lt;p class=&quot;admonition-title&quot;&gt;Note&lt;/p&gt;
-&lt;p&gt;There is a &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;use-simple&lt;/span&gt;&lt;/code&gt; setting for the &lt;strong class=&quot;command&quot;&gt;bzr&lt;/strong&gt; support that may
-make the &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;vcs_info&lt;/span&gt;&lt;/code&gt; functionality faster for you, albeit not noticeably on
-my system.  It is also the only &lt;abbr title=&quot;Version Control System&quot;&gt;VCS&lt;/abbr&gt; that has such a hack, which is quite
+&lt;div class="admonition note"&gt;
+&lt;p class="admonition-title"&gt;Note&lt;/p&gt;
+&lt;p&gt;There is a &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;use-simple&lt;/span&gt;&lt;/code&gt; setting for the &lt;strong class="command"&gt;bzr&lt;/strong&gt; support that may
+make the &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;vcs_info&lt;/span&gt;&lt;/code&gt; functionality faster for you, albeit not noticeably on
+my system.  It is also the only &lt;abbr title="Version Control System"&gt;VCS&lt;/abbr&gt; that has such a hack, which is quite
 telling in itself.&lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;div class=&quot;section&quot; id=&quot;repository-state&quot;&gt;
+&lt;div class="section" id="repository-state"&gt;
 &lt;h2&gt;Repository state&lt;/h2&gt;
 &lt;p&gt;The “funky arrows” Dan asks about are dependent on the state of the current
 working directory as can be seen in the screenshot at the top of this page.&lt;/p&gt;
-&lt;table class=&quot;docutils align-default&quot;&gt;
+&lt;table class="docutils align-default"&gt;
 &lt;colgroup&gt;
-&lt;col style=&quot;width: 20%&quot; /&gt;
-&lt;col style=&quot;width: 80%&quot; /&gt;
+&lt;col style="width: 20%" /&gt;
+&lt;col style="width: 80%" /&gt;
 &lt;/colgroup&gt;
 &lt;thead&gt;
-&lt;tr class=&quot;row-odd&quot;&gt;&lt;th class=&quot;head&quot;&gt;&lt;p&gt;Identifier&lt;/p&gt;&lt;/th&gt;
-&lt;th class=&quot;head&quot;&gt;&lt;p&gt;Description&lt;/p&gt;&lt;/th&gt;
+&lt;tr class="row-odd"&gt;&lt;th class="head"&gt;&lt;p&gt;Identifier&lt;/p&gt;&lt;/th&gt;
+&lt;th class="head"&gt;&lt;p&gt;Description&lt;/p&gt;&lt;/th&gt;
 &lt;/tr&gt;
 &lt;/thead&gt;
 &lt;tbody&gt;
-&lt;tr class=&quot;row-even&quot;&gt;&lt;td&gt;&lt;p&gt;white →&lt;/p&gt;&lt;/td&gt;
-&lt;td&gt;&lt;p&gt;Not a &lt;strong class=&quot;command&quot;&gt;git&lt;/strong&gt; repository&lt;/p&gt;&lt;/td&gt;
+&lt;tr class="row-even"&gt;&lt;td&gt;&lt;p&gt;white →&lt;/p&gt;&lt;/td&gt;
+&lt;td&gt;&lt;p&gt;Not a &lt;strong class="command"&gt;git&lt;/strong&gt; repository&lt;/p&gt;&lt;/td&gt;
 &lt;/tr&gt;
-&lt;tr class=&quot;row-odd&quot;&gt;&lt;td&gt;&lt;p&gt;green ▶&lt;/p&gt;&lt;/td&gt;
-&lt;td&gt;&lt;p&gt;Clean &lt;strong class=&quot;command&quot;&gt;git&lt;/strong&gt; repository&lt;/p&gt;&lt;/td&gt;
+&lt;tr class="row-odd"&gt;&lt;td&gt;&lt;p&gt;green ▶&lt;/p&gt;&lt;/td&gt;
+&lt;td&gt;&lt;p&gt;Clean &lt;strong class="command"&gt;git&lt;/strong&gt; repository&lt;/p&gt;&lt;/td&gt;
 &lt;/tr&gt;
-&lt;tr class=&quot;row-even&quot;&gt;&lt;td&gt;&lt;p&gt;red ▶&lt;/p&gt;&lt;/td&gt;
-&lt;td&gt;&lt;p&gt;Staged changes in &lt;strong class=&quot;command&quot;&gt;git&lt;/strong&gt; repository&lt;/p&gt;&lt;/td&gt;
+&lt;tr class="row-even"&gt;&lt;td&gt;&lt;p&gt;red ▶&lt;/p&gt;&lt;/td&gt;
+&lt;td&gt;&lt;p&gt;Staged changes in &lt;strong class="command"&gt;git&lt;/strong&gt; repository&lt;/p&gt;&lt;/td&gt;
 &lt;/tr&gt;
-&lt;tr class=&quot;row-odd&quot;&gt;&lt;td&gt;&lt;p&gt;yellow ▶&lt;/p&gt;&lt;/td&gt;
-&lt;td&gt;&lt;p&gt;Unstaged changes in &lt;strong class=&quot;command&quot;&gt;git&lt;/strong&gt; repository&lt;/p&gt;&lt;/td&gt;
+&lt;tr class="row-odd"&gt;&lt;td&gt;&lt;p&gt;yellow ▶&lt;/p&gt;&lt;/td&gt;
+&lt;td&gt;&lt;p&gt;Unstaged changes in &lt;strong class="command"&gt;git&lt;/strong&gt; repository&lt;/p&gt;&lt;/td&gt;
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
 &lt;p&gt;Using these visual markers it is always obvious what state a directory is in,
 I’ve toyed with adding more but suspect the lack of complexity is what makes
 them so useful.&lt;/p&gt;
-&lt;p&gt;To enable them we need to add a &lt;a class=&quot;reference external&quot; href=&quot;http://zsh.sourceforge.net/Doc/Release/Functions.html#SEC45&quot;&gt;precmd hook&lt;/a&gt; to calculate the repository
+&lt;p&gt;To enable them we need to add a &lt;a class="reference external" href="http://zsh.sourceforge.net/Doc/Release/Functions.html#SEC45"&gt;precmd hook&lt;/a&gt; to calculate the repository
 status:&lt;/p&gt;
-&lt;div class=&quot;highlight-zsh notranslate&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;autoload -U add-zsh-hook
+&lt;div class="highlight-zsh notranslate"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;autoload -U add-zsh-hook
 add-zsh-hook precmd prompt_jnrowe_precmd
 
-prompt_jnrowe_precmd &lt;span class=&quot;o&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+prompt_jnrowe_precmd &lt;span class="o"&gt;()&lt;/span&gt; &lt;span class="o"&gt;{&lt;/span&gt;
     vcs_info
 
-    &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt; -z &lt;span class=&quot;s2&quot;&gt;&amp;quot;&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;vcs_info_msg_0_&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-        &lt;span class=&quot;nv&quot;&gt;dir_status&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;%F{2}→%f&amp;quot;&lt;/span&gt;
-    &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;elif&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;[[&lt;/span&gt; -n &lt;span class=&quot;s2&quot;&gt;&amp;quot;&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;$(&lt;/span&gt;git diff --cached --name-status &lt;span class=&quot;m&quot;&gt;2&lt;/span&gt;&amp;gt;/dev/null &lt;span class=&quot;k&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;]]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-        &lt;span class=&quot;nv&quot;&gt;dir_status&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;%F{1}▶%f&amp;quot;&lt;/span&gt;
-    &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;elif&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;[[&lt;/span&gt; -n &lt;span class=&quot;s2&quot;&gt;&amp;quot;&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;$(&lt;/span&gt;git diff --name-status &lt;span class=&quot;m&quot;&gt;2&lt;/span&gt;&amp;gt;/dev/null &lt;span class=&quot;k&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;]]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-        &lt;span class=&quot;nv&quot;&gt;dir_status&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;%F{3}▶%f&amp;quot;&lt;/span&gt;
-    &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;else&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-        &lt;span class=&quot;nv&quot;&gt;dir_status&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;%F{2}▶%f&amp;quot;&lt;/span&gt;
-    &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+    &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="o"&gt;[&lt;/span&gt; -z &lt;span class="s2"&gt;&amp;quot;&lt;/span&gt;&lt;span class="si"&gt;${&lt;/span&gt;&lt;span class="nv"&gt;vcs_info_msg_0_&lt;/span&gt;&lt;span class="si"&gt;}&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;&lt;/span&gt; &lt;span class="o"&gt;]&lt;/span&gt; &lt;span class="o"&gt;{&lt;/span&gt;
+        &lt;span class="nv"&gt;dir_status&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;%F{2}→%f&amp;quot;&lt;/span&gt;
+    &lt;span class="o"&gt;}&lt;/span&gt; &lt;span class="k"&gt;elif&lt;/span&gt; &lt;span class="o"&gt;[[&lt;/span&gt; -n &lt;span class="s2"&gt;&amp;quot;&lt;/span&gt;&lt;span class="k"&gt;$(&lt;/span&gt;git diff --cached --name-status &lt;span class="m"&gt;2&lt;/span&gt;&amp;gt;/dev/null &lt;span class="k"&gt;)&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;&lt;/span&gt; &lt;span class="o"&gt;]]&lt;/span&gt; &lt;span class="o"&gt;{&lt;/span&gt;
+        &lt;span class="nv"&gt;dir_status&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;%F{1}▶%f&amp;quot;&lt;/span&gt;
+    &lt;span class="o"&gt;}&lt;/span&gt; &lt;span class="k"&gt;elif&lt;/span&gt; &lt;span class="o"&gt;[[&lt;/span&gt; -n &lt;span class="s2"&gt;&amp;quot;&lt;/span&gt;&lt;span class="k"&gt;$(&lt;/span&gt;git diff --name-status &lt;span class="m"&gt;2&lt;/span&gt;&amp;gt;/dev/null &lt;span class="k"&gt;)&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;&lt;/span&gt; &lt;span class="o"&gt;]]&lt;/span&gt; &lt;span class="o"&gt;{&lt;/span&gt;
+        &lt;span class="nv"&gt;dir_status&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;%F{3}▶%f&amp;quot;&lt;/span&gt;
+    &lt;span class="o"&gt;}&lt;/span&gt; &lt;span class="k"&gt;else&lt;/span&gt; &lt;span class="o"&gt;{&lt;/span&gt;
+        &lt;span class="nv"&gt;dir_status&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;%F{2}▶%f&amp;quot;&lt;/span&gt;
+    &lt;span class="o"&gt;}&lt;/span&gt;
+&lt;span class="o"&gt;}&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
-&lt;p&gt;With this added the we just need to include &lt;span class=&quot;target&quot; id=&quot;index-1&quot;&gt;&lt;/span&gt;&lt;code class=&quot;xref std std-envvar docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;$dir_status&lt;/span&gt;&lt;/code&gt; in our prompt
+&lt;p&gt;With this added the we just need to include &lt;span class="target" id="index-1"&gt;&lt;/span&gt;&lt;code class="xref std std-envvar docutils literal notranslate"&gt;&lt;span class="pre"&gt;$dir_status&lt;/span&gt;&lt;/code&gt; in our prompt
 and the status identifiers will be used.&lt;/p&gt;
 &lt;p&gt;If you are using a font which doesn’t display the characters correctly, either
-change the characters in the &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;dir_status&lt;/span&gt;&lt;/code&gt; values or switch to a &lt;a class=&quot;reference external&quot; href=&quot;http://www.is-vn.bg/hamster/&quot;&gt;better font&lt;/a&gt;
+change the characters in the &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;dir_status&lt;/span&gt;&lt;/code&gt; values or switch to a &lt;a class="reference external" href="http://www.is-vn.bg/hamster/"&gt;better font&lt;/a&gt;
 that can display them.&lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 </content>
+    <link href="https://jnrowe.github.io/articles/tips/Zsh_and_the_vcs.html" rel="alternate"/>
+    <published>2009-10-28T00:00:00+00:00</published>
   </entry>
 </feed>

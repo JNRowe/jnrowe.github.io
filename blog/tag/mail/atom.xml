@@ -1,192 +1,192 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version='1.0' encoding='UTF-8'?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <title type="text">JNRowe - Posts tagged mail</title>
-  <id>https://jnrowe.github.io/blog/tag/mail/atom.xml</id>
-  <updated>2010-03-23T00:00:00Z</updated>
-  <link href="https://jnrowe.github.io/" />
-  <link href="https://jnrowe.github.io/blog/tag/mail/atom.xml" rel="self" />
-  <subtitle type="text">Ramblings of a tired mind</subtitle>
-  <generator uri="https://ablog.readthedocs.org" version="0.10.4">ABlog</generator>
-  <entry xml:base="https://jnrowe.github.io/blog/tag/mail/atom.xml">
-    <title type="text">Populating sup contacts from abook</title>
-    <id>https://jnrowe.github.io/articles/tips/Populating_sup_contacts_from_abook.html</id>
-    <updated>2010-03-23T00:00:00Z</updated>
-    <published>2010-03-23T00:00:00Z</published>
-    <link href="https://jnrowe.github.io/articles/tips/Populating_sup_contacts_from_abook.html" />
-    <author>
-      <name>James Rowe</name>
-    </author>
-    <content type="html">&lt;div class=&quot;section&quot; id=&quot;populating-sup-contacts-from-abook&quot;&gt;
-
-&lt;p&gt;A colleague from work, Adam Robertson, is switching to &lt;a class=&quot;reference external&quot; href=&quot;http://sup.rubyforge.org/&quot;&gt;Sup&lt;/a&gt; from &lt;a class=&quot;reference external&quot; href=&quot;http://www.mutt.org/&quot;&gt;mutt&lt;/a&gt; and
-wondering how to easily convert his contacts from &lt;a class=&quot;reference external&quot; href=&quot;http://abook.sourceforge.net/&quot;&gt;abook&lt;/a&gt;.  Given that it is my
-constant pimping of &lt;strong class=&quot;command&quot;&gt;sup&lt;/strong&gt; that has convinced him to switch I feel
-obliged to help with the conversion.&lt;/p&gt;
-&lt;p&gt;The first choice I may recommend is just to follow the &lt;a class=&quot;reference external&quot; href=&quot;http://sup.rubyforge.org/wiki/wiki.pl?LbdbIntegration&quot;&gt;wiki&lt;/a&gt; and use
-&lt;strong class=&quot;command&quot;&gt;abook&lt;/strong&gt; as a source for &lt;a class=&quot;reference external&quot; href=&quot;http://www.spinnaker.de/lbdb/&quot;&gt;lbdb&lt;/a&gt;.  I use a method similar to this quite
-successfully.&lt;/p&gt;
-&lt;p&gt;The second choice is to prime the contact list from &lt;strong class=&quot;command&quot;&gt;abook&lt;/strong&gt; with
-a little &lt;a class=&quot;reference external&quot; href=&quot;http://www.python.org/&quot;&gt;Python&lt;/a&gt; script.  The &lt;strong class=&quot;command&quot;&gt;sup&lt;/strong&gt; contacts list uses a &lt;a class=&quot;reference external&quot; href=&quot;http://sup.rubyforge.org/wiki/wiki.pl?ContactsList&quot;&gt;very simple
-format&lt;/a&gt; and mangling the &lt;strong class=&quot;command&quot;&gt;abook&lt;/strong&gt; addressbook is possible in only
-a few lines of code:&lt;/p&gt;
-&lt;div class=&quot;highlight-python notranslate&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&quot;ch&quot;&gt;#! /usr/bin/python3 -tt&lt;/span&gt;
-&lt;span class=&quot;sd&quot;&gt;&amp;quot;&amp;quot;&amp;quot;Generate a sup contacts list from abook&amp;quot;&amp;quot;&amp;quot;&lt;/span&gt;
-
-&lt;span class=&quot;kn&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;os&lt;/span&gt; &lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;path&lt;/span&gt;
-&lt;span class=&quot;kn&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;sys&lt;/span&gt; &lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;argv&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;exit&lt;/span&gt;
-
-&lt;span class=&quot;kn&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;configobj&lt;/span&gt; &lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ConfigObj&lt;/span&gt;
-
-&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;parse&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;fname&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;kc&quot;&gt;None&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;not&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;fname&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
-        &lt;span class=&quot;n&quot;&gt;fname&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;path&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;expanduser&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;~/.abook/addressbook&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;conf&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ConfigObj&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;fname&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;list_values&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;kc&quot;&gt;False&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;chunk&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;filter&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;lambda&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;d&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;nick&amp;#39;&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;d&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;and&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;email&amp;#39;&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;d&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;conf&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;values&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()):&lt;/span&gt;
-        &lt;span class=&quot;nb&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;{0[nick]}&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;: &lt;/span&gt;&lt;span class=&quot;si&quot;&gt;{0[name]}&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;format&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;chunk&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt;
-              &lt;span class=&quot;s1&quot;&gt;&amp;#39;&amp;lt;&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;{}&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;gt;&amp;#39;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;format&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;chunk&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;email&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;split&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;,&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]))&lt;/span&gt;
-
-&lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;vm&quot;&gt;__name__&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;__main__&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;len&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;argv&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
-        &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;argv&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;-h&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;--help&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
-            &lt;span class=&quot;nb&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;{}&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt; [addressbook]&amp;#39;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;format&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;argv&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]))&lt;/span&gt;
-            &lt;span class=&quot;n&quot;&gt;exit&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;255&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-        &lt;span class=&quot;n&quot;&gt;addressbook&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;argv&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;else&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
-        &lt;span class=&quot;n&quot;&gt;addressbook&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;None&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;parse&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;addressbook&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-&lt;/div&gt;
-&lt;p&gt;The script requires the excellent &lt;a class=&quot;reference external&quot; href=&quot;http://www.voidspace.org.uk/python/configobj.html&quot;&gt;configobj&lt;/a&gt; module.  You could also use the
-&lt;a class=&quot;reference external&quot; href=&quot;https://docs.python.org/3/library/configparser.html#module-configparser&quot; title=&quot;(in Python v3.9)&quot;&gt;&lt;code class=&quot;xref py py-mod docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;configparser&lt;/span&gt;&lt;/code&gt;&lt;/a&gt; module from the Python standard library, but &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;configobj&lt;/span&gt;&lt;/code&gt;
-allows my laziness to shine through with its simple dictionary-based access to
-the parsed data.&lt;/p&gt;
-&lt;p&gt;The script opens either the named or default &lt;strong class=&quot;command&quot;&gt;abook&lt;/strong&gt; addressbook and
-fetches any entries that contain both a &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;nick&lt;/span&gt;&lt;/code&gt; and &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;email&lt;/span&gt;&lt;/code&gt; section.  Those
-entries are then output in format that &lt;strong class=&quot;command&quot;&gt;sup&lt;/strong&gt; accepts.  It includes
-only the primary email address for the contact, as I tend to order contacts
-with multiple email addresses in address preference order.&lt;/p&gt;
-&lt;p&gt;As I’ve mentioned before in &lt;span class=&quot;xref std std-doc&quot;&gt;Making_a_nice_home&lt;/span&gt; all these tasks should be
-automated, and this one is no different.  To regenerate the contacts list when
-the addressbook has been updated we can use &lt;a class=&quot;reference external&quot; href=&quot;http://www.gnu.org/software/make/make.html&quot;&gt;make&lt;/a&gt;:&lt;/p&gt;
-&lt;div class=&quot;highlight-make notranslate&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;.sup/contacts.txt&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; .&lt;span class=&quot;n&quot;&gt;abook&lt;/span&gt;/&lt;span class=&quot;n&quot;&gt;addressbook&lt;/span&gt;
-    python3 sup_contacts.py $&amp;lt; &amp;gt;&lt;span class=&quot;nv&quot;&gt;$@&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-&lt;/div&gt;
-&lt;p&gt;Using this method allows us to continue using &lt;strong class=&quot;command&quot;&gt;abook&lt;/strong&gt; while having
-simple access to our contacts from within &lt;strong class=&quot;command&quot;&gt;sup&lt;/strong&gt;.  This is incredibly
-useful as it means we can continue to use &lt;strong class=&quot;command&quot;&gt;abook&lt;/strong&gt; for other things
-too, see &lt;span class=&quot;xref std std-doc&quot;&gt;Kick_me_birthday_reminders&lt;/span&gt;.&lt;/p&gt;
-&lt;/div&gt;
-</content>
-  </entry>
-  <entry xml:base="https://jnrowe.github.io/blog/tag/mail/atom.xml">
-    <title type="text">Bugzilla mail with real names</title>
+  <id>https://jnrowe.github.io/</id>
+  <title>JNRowe - Posts tagged mail</title>
+  <updated>2021-03-21T11:05:59.428026+00:00</updated>
+  <link href="https://jnrowe.github.io/"/>
+  <link href="https://jnrowe.github.io/blog/tag/mail/atom.xml"/>
+  <generator uri="https://ablog.readthedocs.org" version="0.10.12">ABlog</generator>
+  <subtitle>Ramblings of a tired mind</subtitle>
+  <entry>
     <id>https://jnrowe.github.io/articles/tips/Bugzilla_real_names.html</id>
-    <updated>2009-09-27T00:00:00Z</updated>
-    <published>2009-09-27T00:00:00Z</published>
-    <link href="https://jnrowe.github.io/articles/tips/Bugzilla_real_names.html" />
+    <title>Bugzilla mail with real names</title>
+    <updated>2009-09-27T00:00:00+01:00</updated>
     <author>
       <name>James Rowe</name>
     </author>
-    <content type="html">&lt;div class=&quot;section&quot; id=&quot;bugzilla-mail-with-real-names&quot;&gt;
+    <content type="html">&lt;div class="section" id="bugzilla-mail-with-real-names"&gt;
 
 &lt;p&gt;John Bateman rants on the EADS Linux list:&lt;/p&gt;
 &lt;blockquote&gt;
-&lt;div&gt;&lt;p&gt;&lt;a class=&quot;reference external&quot; href=&quot;http://www.bugzilla.org&quot;&gt;Bugzilla&lt;/a&gt; annoys the hell out of me, why I can’t just choose “spoof
-&lt;em class=&quot;mailheader&quot;&gt;From&lt;/em&gt; address” in bugspam is beyond me.  It makes filtering
+&lt;div&gt;&lt;p&gt;&lt;a class="reference external" href="http://www.bugzilla.org"&gt;Bugzilla&lt;/a&gt; annoys the hell out of me, why I can’t just choose “spoof
+&lt;em class="mailheader"&gt;From&lt;/em&gt; address” in bugspam is beyond me.  It makes filtering
 such a chore!!&lt;/p&gt;
 &lt;/div&gt;&lt;/blockquote&gt;
 &lt;p&gt;I agree, and I’ve long since decided to fix the problem locally.  There are
 unfortunately a couple of small prerequisites for using my method that you may
 not have.  The first is that you need to be able to filter the content of the
 mail easily, and the second is that you install
-&lt;a class=&quot;reference external&quot; href=&quot;http://www.spinnaker.de/lbdb/&quot;&gt;lbdb&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;&lt;strong class=&quot;command&quot;&gt;lbdb&lt;/strong&gt; is a small tool designed for handling mail addresses in &lt;a class=&quot;reference external&quot; href=&quot;http://www.mutt.org&quot;&gt;mutt&lt;/a&gt;,
-but it does not require you to use or even install &lt;strong class=&quot;command&quot;&gt;mutt&lt;/strong&gt;.  What we
-are going to do is use &lt;strong class=&quot;command&quot;&gt;lbdb&lt;/strong&gt; and our own incoming mail to seed an
+&lt;a class="reference external" href="http://www.spinnaker.de/lbdb/"&gt;lbdb&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;strong class="command"&gt;lbdb&lt;/strong&gt; is a small tool designed for handling mail addresses in &lt;a class="reference external" href="http://www.mutt.org"&gt;mutt&lt;/a&gt;,
+but it does not require you to use or even install &lt;strong class="command"&gt;mutt&lt;/strong&gt;.  What we
+are going to do is use &lt;strong class="command"&gt;lbdb&lt;/strong&gt; and our own incoming mail to seed an
 email-to-name database for our bugspam filtering.  We don’t even need to
-configure &lt;strong class=&quot;command&quot;&gt;lbdb&lt;/strong&gt; to use it for our purposes, although I do recommend
+configure &lt;strong class="command"&gt;lbdb&lt;/strong&gt; to use it for our purposes, although I do recommend
 giving the package a try even if you use another mail client.&lt;/p&gt;
-&lt;p&gt;The &lt;strong class=&quot;command&quot;&gt;lbdb&lt;/strong&gt; tool we want to use is &lt;strong class=&quot;command&quot;&gt;lbdb-fetchaddr&lt;/strong&gt; which is
-designed to generate an address search database for the &lt;strong class=&quot;command&quot;&gt;lbdb&lt;/strong&gt;
-&lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;m_inmail&lt;/span&gt;&lt;/code&gt; method.  &lt;strong class=&quot;command&quot;&gt;lbdb-fetchaddr&lt;/strong&gt; keeps a text database of all
+&lt;p&gt;The &lt;strong class="command"&gt;lbdb&lt;/strong&gt; tool we want to use is &lt;strong class="command"&gt;lbdb-fetchaddr&lt;/strong&gt; which is
+designed to generate an address search database for the &lt;strong class="command"&gt;lbdb&lt;/strong&gt;
+&lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;m_inmail&lt;/span&gt;&lt;/code&gt; method.  &lt;strong class="command"&gt;lbdb-fetchaddr&lt;/strong&gt; keeps a text database of all
 the names, addresses and the last seen date of every address we pass through
 it.  This allows our Bugzilla filter to work without us having to generate our
 own email-to-name list assuming we receive mail from the bug commenter either
 personally or on a list, at the cost of increased(albeit still negligible)
-processing time.  I use &lt;a class=&quot;reference external&quot; href=&quot;http://www.courier-mta.org/maildrop/&quot;&gt;maildrop&lt;/a&gt; to filter my mail and to tell the
-&lt;strong class=&quot;command&quot;&gt;maildrop&lt;/strong&gt; &lt;abbr title=&quot;Mail Delivery Agent&quot;&gt;MDA&lt;/abbr&gt; to update the
-&lt;strong class=&quot;command&quot;&gt;lbdb&lt;/strong&gt; database we add a simple rule to our &lt;code class=&quot;file docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;~/.mailfilter&lt;/span&gt;&lt;/code&gt;:&lt;/p&gt;
-&lt;div class=&quot;highlight-text notranslate&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;if ($SIZE &amp;lt; 32768)
+processing time.  I use &lt;a class="reference external" href="http://www.courier-mta.org/maildrop/"&gt;maildrop&lt;/a&gt; to filter my mail and to tell the
+&lt;strong class="command"&gt;maildrop&lt;/strong&gt; &lt;abbr title="Mail Delivery Agent"&gt;MDA&lt;/abbr&gt; to update the
+&lt;strong class="command"&gt;lbdb&lt;/strong&gt; database we add a simple rule to our &lt;code class="file docutils literal notranslate"&gt;&lt;span class="pre"&gt;~/.mailfilter&lt;/span&gt;&lt;/code&gt;:&lt;/p&gt;
+&lt;div class="highlight-text notranslate"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;if ($SIZE &amp;lt; 32768)
     cc &amp;#39;| lbdb-fetchaddr -d &amp;quot;%FT%T%z&amp;quot;&amp;#39;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
-&lt;p&gt;This tells &lt;strong class=&quot;command&quot;&gt;maildrop&lt;/strong&gt; to pass all mails less than 32k in size through
-&lt;strong class=&quot;command&quot;&gt;lbdq-fetchaddr&lt;/strong&gt;, and we specify a nice &lt;abbr title=&quot;International Organization for Standardization&quot;&gt;ISO&lt;/abbr&gt;-8601 time format for
+&lt;p&gt;This tells &lt;strong class="command"&gt;maildrop&lt;/strong&gt; to pass all mails less than 32k in size through
+&lt;strong class="command"&gt;lbdq-fetchaddr&lt;/strong&gt;, and we specify a nice &lt;abbr title="International Organization for Standardization"&gt;ISO&lt;/abbr&gt;-8601 time format for
 easy sorting and parsing should the need arise.  Now every mail that is
-delivered with &lt;strong class=&quot;command&quot;&gt;maildrop&lt;/strong&gt; and isn’t too large will have the sender
-name and address recorded in &lt;code class=&quot;file docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;~/.lbdb/m_inmail.list&lt;/span&gt;&lt;/code&gt;.&lt;/p&gt;
-&lt;p&gt;Now on to the actual filtering script, which is written in &lt;a class=&quot;reference external&quot; href=&quot;http://www.python.org/&quot;&gt;Python&lt;/a&gt;.  It only
+delivered with &lt;strong class="command"&gt;maildrop&lt;/strong&gt; and isn’t too large will have the sender
+name and address recorded in &lt;code class="file docutils literal notranslate"&gt;&lt;span class="pre"&gt;~/.lbdb/m_inmail.list&lt;/span&gt;&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;Now on to the actual filtering script, which is written in &lt;a class="reference external" href="http://www.python.org/"&gt;Python&lt;/a&gt;.  It only
 uses modules from the Python standard library, so you don’t need to install
 anything else.  I have tested it with 25000 unique entries in
-&lt;code class=&quot;file docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;~/.lbdb/m_inmail.list&lt;/span&gt;&lt;/code&gt; and it still takes less than a thirtieth of
+&lt;code class="file docutils literal notranslate"&gt;&lt;span class="pre"&gt;~/.lbdb/m_inmail.list&lt;/span&gt;&lt;/code&gt; and it still takes less than a thirtieth of
 a second to run the filter on my desktop, so processing the database each time
 we start up isn’t really an issue.  Also, the few small tests I’ve done suggest
 that using “real” database engines doesn’t help and the only way to speed it up
 significantly would be to write a small daemon to process the mail which seems
 more than a little overkill to me.&lt;/p&gt;
-&lt;div class=&quot;highlight-python notranslate&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&quot;ch&quot;&gt;#! /usr/bin/python3 -tt&lt;/span&gt;
+&lt;div class="highlight-python notranslate"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="ch"&gt;#! /usr/bin/python3 -tt&lt;/span&gt;
 
-&lt;span class=&quot;kn&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;csv&lt;/span&gt; &lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;reader&lt;/span&gt;
-&lt;span class=&quot;kn&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;email&lt;/span&gt; &lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;message_from_file&lt;/span&gt;
-&lt;span class=&quot;kn&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;os.path&lt;/span&gt; &lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;expanduser&lt;/span&gt;
-&lt;span class=&quot;kn&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;sys&lt;/span&gt; &lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;stdin&lt;/span&gt;
+&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;csv&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;reader&lt;/span&gt;
+&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;email&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;message_from_file&lt;/span&gt;
+&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;os.path&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;expanduser&lt;/span&gt;
+&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;sys&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;stdin&lt;/span&gt;
 
-&lt;span class=&quot;k&quot;&gt;with&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;open&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;expanduser&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;~/.lbdb/m_inmail.list&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;as&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;f&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;lbdb&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;reader&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;f&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;delimiter&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\t&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;addresses&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;dict&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;rec&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[:&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;rec&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;lbdb&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class="k"&gt;with&lt;/span&gt; &lt;span class="nb"&gt;open&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;expanduser&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;~/.lbdb/m_inmail.list&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt; &lt;span class="k"&gt;as&lt;/span&gt; &lt;span class="n"&gt;f&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+    &lt;span class="n"&gt;lbdb&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;reader&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;f&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;delimiter&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;&lt;/span&gt;&lt;span class="se"&gt;\t&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="n"&gt;addresses&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nb"&gt;dict&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;rec&lt;/span&gt;&lt;span class="p"&gt;[:&lt;/span&gt;&lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt; &lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;rec&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="n"&gt;lbdb&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 
-&lt;span class=&quot;n&quot;&gt;message&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;message_from_file&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;stdin&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class="n"&gt;message&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;message_from_file&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;stdin&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 
-&lt;span class=&quot;n&quot;&gt;commenter&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;None&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;line&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;message&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;get_payload&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;splitlines&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;():&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;line&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;endswith&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39; changed:&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
-        &lt;span class=&quot;n&quot;&gt;commenter&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;line&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;split&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
-        &lt;span class=&quot;k&quot;&gt;break&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;elif&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;line&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;startswith&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;------- Comment #&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
-        &lt;span class=&quot;n&quot;&gt;commenter&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;line&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;split&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
-        &lt;span class=&quot;k&quot;&gt;break&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;elif&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;line&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;startswith&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;        ReportedBy: &amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
-        &lt;span class=&quot;n&quot;&gt;commenter&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;line&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;split&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
-        &lt;span class=&quot;k&quot;&gt;break&lt;/span&gt;
+&lt;span class="n"&gt;commenter&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="kc"&gt;None&lt;/span&gt;
+&lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;line&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="n"&gt;message&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;get_payload&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;splitlines&lt;/span&gt;&lt;span class="p"&gt;():&lt;/span&gt;
+    &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="n"&gt;line&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;endswith&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39; changed:&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+        &lt;span class="n"&gt;commenter&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;line&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;split&lt;/span&gt;&lt;span class="p"&gt;()[&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
+        &lt;span class="k"&gt;break&lt;/span&gt;
+    &lt;span class="k"&gt;elif&lt;/span&gt; &lt;span class="n"&gt;line&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;startswith&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;------- Comment #&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+        &lt;span class="n"&gt;commenter&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;line&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;split&lt;/span&gt;&lt;span class="p"&gt;()[&lt;/span&gt;&lt;span class="mi"&gt;4&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
+        &lt;span class="k"&gt;break&lt;/span&gt;
+    &lt;span class="k"&gt;elif&lt;/span&gt; &lt;span class="n"&gt;line&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;startswith&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;        ReportedBy: &amp;#39;&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+        &lt;span class="n"&gt;commenter&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;line&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;split&lt;/span&gt;&lt;span class="p"&gt;()[&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
+        &lt;span class="k"&gt;break&lt;/span&gt;
 
-&lt;span class=&quot;c1&quot;&gt;# You could also filter the message content at this point if you wished.&lt;/span&gt;
-&lt;span class=&quot;c1&quot;&gt;# The following, for example, would remove the “https” link and some of&lt;/span&gt;
-&lt;span class=&quot;c1&quot;&gt;# the blank lines in Gentoo bugspam&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;message&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;set_payload&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\n&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;join&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;([&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;message&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;get_payload&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;splitlines&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
-                            &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;message&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;get_payload&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;splitlines&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;6&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:]))&lt;/span&gt;
+&lt;span class="c1"&gt;# You could also filter the message content at this point if you wished.&lt;/span&gt;
+&lt;span class="c1"&gt;# The following, for example, would remove the “https” link and some of&lt;/span&gt;
+&lt;span class="c1"&gt;# the blank lines in Gentoo bugspam&lt;/span&gt;
+&lt;span class="n"&gt;message&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;set_payload&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;&lt;/span&gt;&lt;span class="se"&gt;\n&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;join&lt;/span&gt;&lt;span class="p"&gt;([&lt;/span&gt;&lt;span class="n"&gt;message&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;get_payload&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;splitlines&lt;/span&gt;&lt;span class="p"&gt;()[&lt;/span&gt;&lt;span class="mi"&gt;3&lt;/span&gt;&lt;span class="p"&gt;],&lt;/span&gt; &lt;span class="p"&gt;]&lt;/span&gt;
+                            &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="n"&gt;message&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;get_payload&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;splitlines&lt;/span&gt;&lt;span class="p"&gt;()[&lt;/span&gt;&lt;span class="mi"&gt;6&lt;/span&gt;&lt;span class="p"&gt;:]))&lt;/span&gt;
 
-&lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;commenter&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;addresses&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;message&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;replace_header&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;from&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
-                           &lt;span class=&quot;s1&quot;&gt;&amp;#39;&amp;quot;&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;%s&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;quot; &amp;lt;&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;%s&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;gt;&amp;#39;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;%&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;addresses&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;commenter&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;commenter&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
+&lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="n"&gt;commenter&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="n"&gt;addresses&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+    &lt;span class="n"&gt;message&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;replace_header&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;from&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+                           &lt;span class="s1"&gt;&amp;#39;&amp;quot;&lt;/span&gt;&lt;span class="si"&gt;%s&lt;/span&gt;&lt;span class="s1"&gt;&amp;quot; &amp;lt;&lt;/span&gt;&lt;span class="si"&gt;%s&lt;/span&gt;&lt;span class="s1"&gt;&amp;gt;&amp;#39;&lt;/span&gt; &lt;span class="o"&gt;%&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;addresses&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;commenter&lt;/span&gt;&lt;span class="p"&gt;],&lt;/span&gt; &lt;span class="n"&gt;commenter&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;
 
-&lt;span class=&quot;nb&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;message&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;as_string&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;())&lt;/span&gt;
+&lt;span class="nb"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;message&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;as_string&lt;/span&gt;&lt;span class="p"&gt;())&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
-&lt;p&gt;The final addition to our &lt;code class=&quot;file docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;~/.mailfilter&lt;/span&gt;&lt;/code&gt; file enables our little Python
-filter to process mail from Bugzilla and change its &lt;em class=&quot;mailheader&quot;&gt;From&lt;/em&gt; address
-if we have the information in the &lt;code class=&quot;file docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;~/.lbdb/m_inmail.list&lt;/span&gt;&lt;/code&gt; database.&lt;/p&gt;
-&lt;div class=&quot;highlight-text notranslate&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;if (/^From: bugzilla-daemon@/)
+&lt;p&gt;The final addition to our &lt;code class="file docutils literal notranslate"&gt;&lt;span class="pre"&gt;~/.mailfilter&lt;/span&gt;&lt;/code&gt; file enables our little Python
+filter to process mail from Bugzilla and change its &lt;em class="mailheader"&gt;From&lt;/em&gt; address
+if we have the information in the &lt;code class="file docutils literal notranslate"&gt;&lt;span class="pre"&gt;~/.lbdb/m_inmail.list&lt;/span&gt;&lt;/code&gt; database.&lt;/p&gt;
+&lt;div class="highlight-text notranslate"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;if (/^From: bugzilla-daemon@/)
 {
     xfilter &amp;quot;~/.mailfilter.d/rewrite-name.py&amp;quot;
     to Mail/Gentoo-bugs
 }
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
-&lt;p&gt;And from now on, or at least once your &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;m_inmail.list&lt;/span&gt;&lt;/code&gt; is sufficiently seeded,
+&lt;p&gt;And from now on, or at least once your &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;m_inmail.list&lt;/span&gt;&lt;/code&gt; is sufficiently seeded,
 your bugspam will have the commenter’s name and email address, making it much
 easier to filter and process it in your favourite mail client.&lt;/p&gt;
 &lt;/div&gt;
 </content>
+    <link href="https://jnrowe.github.io/articles/tips/Bugzilla_real_names.html" rel="alternate"/>
+    <published>2009-09-27T00:00:00+01:00</published>
+  </entry>
+  <entry>
+    <id>https://jnrowe.github.io/articles/tips/Populating_sup_contacts_from_abook.html</id>
+    <title>Populating sup contacts from abook</title>
+    <updated>2010-03-23T00:00:00+00:00</updated>
+    <author>
+      <name>James Rowe</name>
+    </author>
+    <content type="html">&lt;div class="section" id="populating-sup-contacts-from-abook"&gt;
+
+&lt;p&gt;A colleague from work, Adam Robertson, is switching to &lt;a class="reference external" href="http://sup.rubyforge.org/"&gt;Sup&lt;/a&gt; from &lt;a class="reference external" href="http://www.mutt.org/"&gt;mutt&lt;/a&gt; and
+wondering how to easily convert his contacts from &lt;a class="reference external" href="http://abook.sourceforge.net/"&gt;abook&lt;/a&gt;.  Given that it is my
+constant pimping of &lt;strong class="command"&gt;sup&lt;/strong&gt; that has convinced him to switch I feel
+obliged to help with the conversion.&lt;/p&gt;
+&lt;p&gt;The first choice I may recommend is just to follow the &lt;a class="reference external" href="http://sup.rubyforge.org/wiki/wiki.pl?LbdbIntegration"&gt;wiki&lt;/a&gt; and use
+&lt;strong class="command"&gt;abook&lt;/strong&gt; as a source for &lt;a class="reference external" href="http://www.spinnaker.de/lbdb/"&gt;lbdb&lt;/a&gt;.  I use a method similar to this quite
+successfully.&lt;/p&gt;
+&lt;p&gt;The second choice is to prime the contact list from &lt;strong class="command"&gt;abook&lt;/strong&gt; with
+a little &lt;a class="reference external" href="http://www.python.org/"&gt;Python&lt;/a&gt; script.  The &lt;strong class="command"&gt;sup&lt;/strong&gt; contacts list uses a &lt;a class="reference external" href="http://sup.rubyforge.org/wiki/wiki.pl?ContactsList"&gt;very simple
+format&lt;/a&gt; and mangling the &lt;strong class="command"&gt;abook&lt;/strong&gt; addressbook is possible in only
+a few lines of code:&lt;/p&gt;
+&lt;div class="highlight-python notranslate"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="ch"&gt;#! /usr/bin/python3 -tt&lt;/span&gt;
+&lt;span class="sd"&gt;&amp;quot;&amp;quot;&amp;quot;Generate a sup contacts list from abook&amp;quot;&amp;quot;&amp;quot;&lt;/span&gt;
+
+&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;os&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;path&lt;/span&gt;
+&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;sys&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;argv&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;exit&lt;/span&gt;
+
+&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;configobj&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;ConfigObj&lt;/span&gt;
+
+&lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;parse&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;fname&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="kc"&gt;None&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+    &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="ow"&gt;not&lt;/span&gt; &lt;span class="n"&gt;fname&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+        &lt;span class="n"&gt;fname&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;path&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;expanduser&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;~/.abook/addressbook&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+    &lt;span class="n"&gt;conf&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;ConfigObj&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;fname&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;list_values&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="kc"&gt;False&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+    &lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;chunk&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="nb"&gt;filter&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="k"&gt;lambda&lt;/span&gt; &lt;span class="n"&gt;d&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;nick&amp;#39;&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="n"&gt;d&lt;/span&gt; &lt;span class="ow"&gt;and&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;email&amp;#39;&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="n"&gt;d&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;conf&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;values&lt;/span&gt;&lt;span class="p"&gt;()):&lt;/span&gt;
+        &lt;span class="nb"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;&lt;/span&gt;&lt;span class="si"&gt;{0[nick]}&lt;/span&gt;&lt;span class="s1"&gt;: &lt;/span&gt;&lt;span class="si"&gt;{0[name]}&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;format&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;chunk&lt;/span&gt;&lt;span class="p"&gt;),&lt;/span&gt;
+              &lt;span class="s1"&gt;&amp;#39;&amp;lt;&lt;/span&gt;&lt;span class="si"&gt;{}&lt;/span&gt;&lt;span class="s1"&gt;&amp;gt;&amp;#39;&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;format&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;chunk&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;email&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;split&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;,&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)[&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;]))&lt;/span&gt;
+
+&lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="vm"&gt;__name__&lt;/span&gt; &lt;span class="o"&gt;==&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;__main__&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+    &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="nb"&gt;len&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;argv&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="o"&gt;&amp;gt;&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+        &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="n"&gt;argv&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;-h&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;--help&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+            &lt;span class="nb"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;&lt;/span&gt;&lt;span class="si"&gt;{}&lt;/span&gt;&lt;span class="s1"&gt; [addressbook]&amp;#39;&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;format&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;argv&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;]))&lt;/span&gt;
+            &lt;span class="n"&gt;exit&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;255&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+        &lt;span class="n"&gt;addressbook&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;argv&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
+    &lt;span class="k"&gt;else&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+        &lt;span class="n"&gt;addressbook&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="kc"&gt;None&lt;/span&gt;
+    &lt;span class="n"&gt;parse&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;addressbook&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;The script requires the excellent &lt;a class="reference external" href="http://www.voidspace.org.uk/python/configobj.html"&gt;configobj&lt;/a&gt; module.  You could also use the
+&lt;a class="reference external" href="https://docs.python.org/3/library/configparser.html#module-configparser" title="(in Python v3.9)"&gt;&lt;code class="xref py py-mod docutils literal notranslate"&gt;&lt;span class="pre"&gt;configparser&lt;/span&gt;&lt;/code&gt;&lt;/a&gt; module from the Python standard library, but &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;configobj&lt;/span&gt;&lt;/code&gt;
+allows my laziness to shine through with its simple dictionary-based access to
+the parsed data.&lt;/p&gt;
+&lt;p&gt;The script opens either the named or default &lt;strong class="command"&gt;abook&lt;/strong&gt; addressbook and
+fetches any entries that contain both a &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;nick&lt;/span&gt;&lt;/code&gt; and &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;email&lt;/span&gt;&lt;/code&gt; section.  Those
+entries are then output in format that &lt;strong class="command"&gt;sup&lt;/strong&gt; accepts.  It includes
+only the primary email address for the contact, as I tend to order contacts
+with multiple email addresses in address preference order.&lt;/p&gt;
+&lt;p&gt;As I’ve mentioned before in &lt;span class="xref std std-doc"&gt;Making_a_nice_home&lt;/span&gt; all these tasks should be
+automated, and this one is no different.  To regenerate the contacts list when
+the addressbook has been updated we can use &lt;a class="reference external" href="http://www.gnu.org/software/make/make.html"&gt;make&lt;/a&gt;:&lt;/p&gt;
+&lt;div class="highlight-make notranslate"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="nf"&gt;.sup/contacts.txt&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; .&lt;span class="n"&gt;abook&lt;/span&gt;/&lt;span class="n"&gt;addressbook&lt;/span&gt;
+    python3 sup_contacts.py $&amp;lt; &amp;gt;&lt;span class="nv"&gt;$@&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;Using this method allows us to continue using &lt;strong class="command"&gt;abook&lt;/strong&gt; while having
+simple access to our contacts from within &lt;strong class="command"&gt;sup&lt;/strong&gt;.  This is incredibly
+useful as it means we can continue to use &lt;strong class="command"&gt;abook&lt;/strong&gt; for other things
+too, see &lt;span class="xref std std-doc"&gt;Kick_me_birthday_reminders&lt;/span&gt;.&lt;/p&gt;
+&lt;/div&gt;
+</content>
+    <link href="https://jnrowe.github.io/articles/tips/Populating_sup_contacts_from_abook.html" rel="alternate"/>
+    <published>2010-03-23T00:00:00+00:00</published>
   </entry>
 </feed>

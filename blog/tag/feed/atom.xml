@@ -1,24 +1,22 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version='1.0' encoding='UTF-8'?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <title type="text">JNRowe - Posts tagged feed</title>
-  <id>https://jnrowe.github.io/blog/tag/feed/atom.xml</id>
-  <updated>2010-09-17T00:00:00Z</updated>
-  <link href="https://jnrowe.github.io/" />
-  <link href="https://jnrowe.github.io/blog/tag/feed/atom.xml" rel="self" />
-  <subtitle type="text">Ramblings of a tired mind</subtitle>
-  <generator uri="https://ablog.readthedocs.org" version="0.10.4">ABlog</generator>
-  <entry xml:base="https://jnrowe.github.io/blog/tag/feed/atom.xml">
-    <title type="text">Mangling planets</title>
+  <id>https://jnrowe.github.io/</id>
+  <title>JNRowe - Posts tagged feed</title>
+  <updated>2021-03-21T11:05:58.866415+00:00</updated>
+  <link href="https://jnrowe.github.io/"/>
+  <link href="https://jnrowe.github.io/blog/tag/feed/atom.xml"/>
+  <generator uri="https://ablog.readthedocs.org" version="0.10.12">ABlog</generator>
+  <subtitle>Ramblings of a tired mind</subtitle>
+  <entry>
     <id>https://jnrowe.github.io/articles/mangling_planets.html</id>
-    <updated>2010-09-17T00:00:00Z</updated>
-    <published>2010-09-17T00:00:00Z</published>
-    <link href="https://jnrowe.github.io/articles/mangling_planets.html" />
+    <title>Mangling planets</title>
+    <updated>2010-09-17T00:00:00+01:00</updated>
     <author>
       <name>James Rowe</name>
     </author>
-    <content type="html">&lt;div class=&quot;section&quot; id=&quot;mangling-planets&quot;&gt;
+    <content type="html">&lt;div class="section" id="mangling-planets"&gt;
 
-&lt;p&gt;Over lunch today a few people were talking about &lt;a class=&quot;reference external&quot; href=&quot;http://www.planetplanet.org/&quot;&gt;planet&lt;/a&gt; feeds, and the topics
+&lt;p&gt;Over lunch today a few people were talking about &lt;a class="reference external" href="http://www.planetplanet.org/"&gt;planet&lt;/a&gt; feeds, and the topics
 mostly revolved around why they don’t read them.  I was quite surprised how
 many people miss out on the often marvellous insights in to the projects we use
 everyday, but I think I understand the reasoning.&lt;/p&gt;
@@ -28,50 +26,50 @@ a bug, skimming the musings of talented people often leads you to think about
 problems you’re facing differently and that is a good thing.&lt;/p&gt;
 &lt;p&gt;I’m wondering if some of the problems people face are because their workflows
 for processing all that content aren’t good enough, so I’m going to mention one
-of the techniques I use.  Maybe it will help you, or maybe you’ll &lt;a class=&quot;reference external&quot; href=&quot;mailto:jnrowe&amp;#37;&amp;#52;&amp;#48;gmail&amp;#46;com&quot;&gt;suggest
+of the techniques I use.  Maybe it will help you, or maybe you’ll &lt;a class="reference external" href="mailto:jnrowe&amp;#37;&amp;#52;&amp;#48;gmail&amp;#46;com"&gt;suggest
 a better idea&lt;/a&gt; to me.&lt;/p&gt;
-&lt;div class=&quot;admonition note&quot;&gt;
-&lt;p class=&quot;admonition-title&quot;&gt;Note&lt;/p&gt;
+&lt;div class="admonition note"&gt;
+&lt;p class="admonition-title"&gt;Note&lt;/p&gt;
 &lt;p&gt;Now that Yahoo have shut down Pipes, I’m even more interested in
 alternatives options.  If you know of any interesting tools to do similar
-tasks &lt;span class=&quot;xref std std-doc&quot;&gt;get in touch&lt;/span&gt;.&lt;/p&gt;
+tasks &lt;span class="xref std std-doc"&gt;get in touch&lt;/span&gt;.&lt;/p&gt;
 &lt;/div&gt;
-&lt;div class=&quot;section&quot; id=&quot;the-feeds&quot;&gt;
+&lt;div class="section" id="the-feeds"&gt;
 &lt;h2&gt;The feeds&lt;/h2&gt;
-&lt;p&gt;I subscribe to &lt;a class=&quot;reference external&quot; href=&quot;http://planet.debian.net/&quot;&gt;Planet Debian&lt;/a&gt;, &lt;a class=&quot;reference external&quot; href=&quot;http://planet.freedesktop.org/&quot;&gt;Planet Freedesktop.org&lt;/a&gt;, &lt;a class=&quot;reference external&quot; href=&quot;http://planet.gnome.org/&quot;&gt;Planet GNOME&lt;/a&gt;,
-&lt;a class=&quot;reference external&quot; href=&quot;http://planet.gentoo.org/&quot;&gt;Planet Gentoo&lt;/a&gt;, &lt;a class=&quot;reference external&quot; href=&quot;http://planet.haskell.org/&quot;&gt;Planet Haskell&lt;/a&gt; and &lt;a class=&quot;reference external&quot; href=&quot;http://planet.python.org/&quot;&gt;Planet Python&lt;/a&gt;.  These planets
+&lt;p&gt;I subscribe to &lt;a class="reference external" href="http://planet.debian.net/"&gt;Planet Debian&lt;/a&gt;, &lt;a class="reference external" href="http://planet.freedesktop.org/"&gt;Planet Freedesktop.org&lt;/a&gt;, &lt;a class="reference external" href="http://planet.gnome.org/"&gt;Planet GNOME&lt;/a&gt;,
+&lt;a class="reference external" href="http://planet.gentoo.org/"&gt;Planet Gentoo&lt;/a&gt;, &lt;a class="reference external" href="http://planet.haskell.org/"&gt;Planet Haskell&lt;/a&gt; and &lt;a class="reference external" href="http://planet.python.org/"&gt;Planet Python&lt;/a&gt;.  These planets
 syndicate a large number of feeds, see the table below for a breakdown of
 yesterday.&lt;/p&gt;
-&lt;table class=&quot;docutils align-default&quot;&gt;
+&lt;table class="docutils align-default"&gt;
 &lt;colgroup&gt;
-&lt;col style=&quot;width: 65%&quot; /&gt;
-&lt;col style=&quot;width: 35%&quot; /&gt;
+&lt;col style="width: 65%" /&gt;
+&lt;col style="width: 35%" /&gt;
 &lt;/colgroup&gt;
 &lt;thead&gt;
-&lt;tr class=&quot;row-odd&quot;&gt;&lt;th class=&quot;head&quot;&gt;&lt;p&gt;Planet&lt;/p&gt;&lt;/th&gt;
-&lt;th class=&quot;head&quot;&gt;&lt;p&gt;Entries&lt;/p&gt;&lt;/th&gt;
+&lt;tr class="row-odd"&gt;&lt;th class="head"&gt;&lt;p&gt;Planet&lt;/p&gt;&lt;/th&gt;
+&lt;th class="head"&gt;&lt;p&gt;Entries&lt;/p&gt;&lt;/th&gt;
 &lt;/tr&gt;
 &lt;/thead&gt;
 &lt;tbody&gt;
-&lt;tr class=&quot;row-even&quot;&gt;&lt;td&gt;&lt;p&gt;Debian&lt;/p&gt;&lt;/td&gt;
+&lt;tr class="row-even"&gt;&lt;td&gt;&lt;p&gt;Debian&lt;/p&gt;&lt;/td&gt;
 &lt;td&gt;&lt;p&gt;8&lt;/p&gt;&lt;/td&gt;
 &lt;/tr&gt;
-&lt;tr class=&quot;row-odd&quot;&gt;&lt;td&gt;&lt;p&gt;Freedesktop.org&lt;/p&gt;&lt;/td&gt;
+&lt;tr class="row-odd"&gt;&lt;td&gt;&lt;p&gt;Freedesktop.org&lt;/p&gt;&lt;/td&gt;
 &lt;td&gt;&lt;p&gt;1&lt;/p&gt;&lt;/td&gt;
 &lt;/tr&gt;
-&lt;tr class=&quot;row-even&quot;&gt;&lt;td&gt;&lt;p&gt;GNOME&lt;/p&gt;&lt;/td&gt;
+&lt;tr class="row-even"&gt;&lt;td&gt;&lt;p&gt;GNOME&lt;/p&gt;&lt;/td&gt;
 &lt;td&gt;&lt;p&gt;8&lt;/p&gt;&lt;/td&gt;
 &lt;/tr&gt;
-&lt;tr class=&quot;row-odd&quot;&gt;&lt;td&gt;&lt;p&gt;Gentoo&lt;/p&gt;&lt;/td&gt;
+&lt;tr class="row-odd"&gt;&lt;td&gt;&lt;p&gt;Gentoo&lt;/p&gt;&lt;/td&gt;
 &lt;td&gt;&lt;p&gt;3&lt;/p&gt;&lt;/td&gt;
 &lt;/tr&gt;
-&lt;tr class=&quot;row-even&quot;&gt;&lt;td&gt;&lt;p&gt;Haskell&lt;/p&gt;&lt;/td&gt;
+&lt;tr class="row-even"&gt;&lt;td&gt;&lt;p&gt;Haskell&lt;/p&gt;&lt;/td&gt;
 &lt;td&gt;&lt;p&gt;3&lt;/p&gt;&lt;/td&gt;
 &lt;/tr&gt;
-&lt;tr class=&quot;row-odd&quot;&gt;&lt;td&gt;&lt;p&gt;Python&lt;/p&gt;&lt;/td&gt;
+&lt;tr class="row-odd"&gt;&lt;td&gt;&lt;p&gt;Python&lt;/p&gt;&lt;/td&gt;
 &lt;td&gt;&lt;p&gt;3&lt;/p&gt;&lt;/td&gt;
 &lt;/tr&gt;
-&lt;tr class=&quot;row-even&quot;&gt;&lt;td&gt;&lt;p&gt;&lt;strong&gt;Total&lt;/strong&gt;&lt;/p&gt;&lt;/td&gt;
+&lt;tr class="row-even"&gt;&lt;td&gt;&lt;p&gt;&lt;strong&gt;Total&lt;/strong&gt;&lt;/p&gt;&lt;/td&gt;
 &lt;td&gt;&lt;p&gt;&lt;strong&gt;26&lt;/strong&gt;&lt;/p&gt;&lt;/td&gt;
 &lt;/tr&gt;
 &lt;/tbody&gt;
@@ -84,68 +82,68 @@ there is to fill.  My answer is quite simple, I don’t read it all.&lt;/p&gt;
 &lt;p&gt;We’ll examine just the planets, but what I’m going to say mostly applies to the
 other content too.&lt;/p&gt;
 &lt;/div&gt;
-&lt;div class=&quot;section&quot; id=&quot;the-task&quot;&gt;
+&lt;div class="section" id="the-task"&gt;
 &lt;h2&gt;The task&lt;/h2&gt;
 &lt;p&gt;Not all the entries are new, some are duplicates(this is especially between
 Debian and GNOME planets).  Some are uninteresting to me, talk of technologies
 I won’t(not don’t) use.  Some are the minutiae of their author’s day, which I’m
 sure are interesting if you know the authors but if I did know them they’d be
 in the friends feed category already.&lt;/p&gt;
-&lt;p&gt;The question quickly becomes how to filter them, and the answer is: use &lt;a class=&quot;reference external&quot; href=&quot;http://pipes.yahoo.com/&quot;&gt;Yahoo!
+&lt;p&gt;The question quickly becomes how to filter them, and the answer is: use &lt;a class="reference external" href="http://pipes.yahoo.com/"&gt;Yahoo!
 Pipes&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;Yahoo! Pipes is a clever little web-based tool for mangling data hosted on the
-internet, be it single pages or feeds or even &lt;abbr title=&quot;Comma Separated Values&quot;&gt;CSV&lt;/abbr&gt; data files.  The interface is a friendly Javascript drag-and-drop
+internet, be it single pages or feeds or even &lt;abbr title="Comma Separated Values"&gt;CSV&lt;/abbr&gt; data files.  The interface is a friendly Javascript drag-and-drop
 affair, just select the tools you wish to use and literally connect the dots.&lt;/p&gt;
 &lt;/div&gt;
-&lt;div class=&quot;section&quot; id=&quot;fetching-feeds&quot;&gt;
+&lt;div class="section" id="fetching-feeds"&gt;
 &lt;h2&gt;Fetching feeds&lt;/h2&gt;
-&lt;img alt=&quot;Fetch feeds&quot; src=&quot;../../_images/2010-09-17-feed_fetch.png&quot; /&gt;
-&lt;p&gt;Fetching the planet feeds is simple, just select the &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;Fetch&lt;/span&gt; &lt;span class=&quot;pre&quot;&gt;feed&lt;/span&gt;&lt;/code&gt; item in the
-&lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;Sources&lt;/span&gt;&lt;/code&gt; menu to create a new object, and enter the &lt;abbr title=&quot;Uniform Resource Locator&quot;&gt;URL&lt;/abbr&gt;s of the feeds you
+&lt;img alt="Fetch feeds" src="../../_images/2010-09-17-feed_fetch.png" /&gt;
+&lt;p&gt;Fetching the planet feeds is simple, just select the &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;Fetch&lt;/span&gt; &lt;span class="pre"&gt;feed&lt;/span&gt;&lt;/code&gt; item in the
+&lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;Sources&lt;/span&gt;&lt;/code&gt; menu to create a new object, and enter the &lt;abbr title="Uniform Resource Locator"&gt;URL&lt;/abbr&gt;s of the feeds you
 wish to play with.  In this instance it is a heap of planet feeds, but you can
 put anything you want in there.  I should add that it handles the various RSS
 formats better than you may expect for such a poorly specified format.&lt;/p&gt;
-&lt;p&gt;Note that at this point you could just connect the feeds object to the &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;Pipe&lt;/span&gt;
-&lt;span class=&quot;pre&quot;&gt;output&lt;/span&gt;&lt;/code&gt; and you’ll have a single, yet humongous, feed that contains the
-content from the all individual feeds.  The way to think of &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;Fetch&lt;/span&gt; &lt;span class=&quot;pre&quot;&gt;feed&lt;/span&gt;&lt;/code&gt; is
-as a &lt;em class=&quot;manpage&quot;&gt;cat(1)&lt;/em&gt; for feeds.&lt;/p&gt;
+&lt;p&gt;Note that at this point you could just connect the feeds object to the &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;Pipe&lt;/span&gt;
+&lt;span class="pre"&gt;output&lt;/span&gt;&lt;/code&gt; and you’ll have a single, yet humongous, feed that contains the
+content from the all individual feeds.  The way to think of &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;Fetch&lt;/span&gt; &lt;span class="pre"&gt;feed&lt;/span&gt;&lt;/code&gt; is
+as a &lt;em class="manpage"&gt;cat(1)&lt;/em&gt; for feeds.&lt;/p&gt;
 &lt;/div&gt;
-&lt;div class=&quot;section&quot; id=&quot;uniquify&quot;&gt;
+&lt;div class="section" id="uniquify"&gt;
 &lt;h2&gt;Uniquify&lt;/h2&gt;
-&lt;p&gt;To remove duplicates we add a &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;Unique&lt;/span&gt;&lt;/code&gt; object from the &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;Operators&lt;/span&gt;&lt;/code&gt; menu to
+&lt;p&gt;To remove duplicates we add a &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;Unique&lt;/span&gt;&lt;/code&gt; object from the &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;Operators&lt;/span&gt;&lt;/code&gt; menu to
 the diagram, and choose the element we wish to use for testing equality.  We’re
 choosing to calculate an entry’s uniqueness by checking the value of the
-&lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;link&lt;/span&gt;&lt;/code&gt; element, while noting that this makes the hopefully reasonable
+&lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;link&lt;/span&gt;&lt;/code&gt; element, while noting that this makes the hopefully reasonable
 assumption that people are smart enough not to use the same link for multiple
 entries.&lt;/p&gt;
-&lt;img alt=&quot;uniquify&quot; src=&quot;../../_images/2010-09-17-feed_uniq.png&quot; /&gt;
+&lt;img alt="uniquify" src="../../_images/2010-09-17-feed_uniq.png" /&gt;
 &lt;p&gt;With these two simple objects we already have a combined feed of all the planet
 outputs with the duplicates removed.  However, using it directly like this
 would probably not be a good use of resources, as its update frequency would be
 significantly higher than the individual feeds.  We would also lose the
-bandwidth savings of the &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;Last-modified&lt;/span&gt;&lt;/code&gt; and &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;etag&lt;/span&gt;&lt;/code&gt; headers for each feed,
+bandwidth savings of the &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;Last-modified&lt;/span&gt;&lt;/code&gt; and &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;etag&lt;/span&gt;&lt;/code&gt; headers for each feed,
 which can be very useful for feeds that don’t update very often.&lt;/p&gt;
-&lt;p&gt;If we were to compare &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;Unique&lt;/span&gt;&lt;/code&gt; to a command line tool it would be
-&lt;em class=&quot;manpage&quot;&gt;uniq&lt;/em&gt;, with a variety of &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;--check-chars&lt;/span&gt;&lt;/code&gt; and &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;--skip-fields&lt;/span&gt;&lt;/code&gt;
+&lt;p&gt;If we were to compare &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;Unique&lt;/span&gt;&lt;/code&gt; to a command line tool it would be
+&lt;em class="manpage"&gt;uniq&lt;/em&gt;, with a variety of &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;--check-chars&lt;/span&gt;&lt;/code&gt; and &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;--skip-fields&lt;/span&gt;&lt;/code&gt;
 options to define our filter.&lt;/p&gt;
 &lt;/div&gt;
-&lt;div class=&quot;section&quot; id=&quot;filter-it&quot;&gt;
+&lt;div class="section" id="filter-it"&gt;
 &lt;h2&gt;Filter it&lt;/h2&gt;
-&lt;img alt=&quot;Filter entries&quot; src=&quot;../../_images/2010-09-17-feed_filter.png&quot; /&gt;
+&lt;img alt="Filter entries" src="../../_images/2010-09-17-feed_filter.png" /&gt;
 &lt;p&gt;At this point we want to filter entries that are of no interest to us, for
-whatever reasons we may have.  If we add a &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;Filter&lt;/span&gt;&lt;/code&gt; item from the
-&lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;Operators&lt;/span&gt;&lt;/code&gt; menu we can filter in many, many ways.  This is perhaps a good
+whatever reasons we may have.  If we add a &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;Filter&lt;/span&gt;&lt;/code&gt; item from the
+&lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;Operators&lt;/span&gt;&lt;/code&gt; menu we can filter in many, many ways.  This is perhaps a good
 time to note that each object has a very useful set of documentation and
-normally at least one usage example available, just click the &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;?&lt;/span&gt;&lt;/code&gt; icon on an
+normally at least one usage example available, just click the &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;?&lt;/span&gt;&lt;/code&gt; icon on an
 object, or select it within the menu.&lt;/p&gt;
 &lt;p&gt;For starters, we may as well filter entries we have seen before.  My feed
 reader automatically fetches feeds once a day, so there is no point whatsoever
 fetching entries that are older than a day.  We can use the
-&lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;item.y:published.utime&lt;/span&gt;&lt;/code&gt; selector to filter based on publication date.  To
-supply the date with which to filter we use the &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;Date&lt;/span&gt; &lt;span class=&quot;pre&quot;&gt;Builder&lt;/span&gt;&lt;/code&gt; item from the
-&lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;Date&lt;/span&gt;&lt;/code&gt; menu, it accepts string date expressions so we can use &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;30&lt;/span&gt; &lt;span class=&quot;pre&quot;&gt;hours&lt;/span&gt;
-&lt;span class=&quot;pre&quot;&gt;ago&lt;/span&gt;&lt;/code&gt; as a value.  We use 30 hours instead of 24 hours to account for
-occasional problems with the &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;cron&lt;/span&gt;&lt;/code&gt; job, such as errors caused by network
+&lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;item.y:published.utime&lt;/span&gt;&lt;/code&gt; selector to filter based on publication date.  To
+supply the date with which to filter we use the &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;Date&lt;/span&gt; &lt;span class="pre"&gt;Builder&lt;/span&gt;&lt;/code&gt; item from the
+&lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;Date&lt;/span&gt;&lt;/code&gt; menu, it accepts string date expressions so we can use &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;30&lt;/span&gt; &lt;span class="pre"&gt;hours&lt;/span&gt;
+&lt;span class="pre"&gt;ago&lt;/span&gt;&lt;/code&gt; as a value.  We use 30 hours instead of 24 hours to account for
+occasional problems with the &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;cron&lt;/span&gt;&lt;/code&gt; job, such as errors caused by network
 outages.&lt;/p&gt;
 &lt;p&gt;You need to be very careful when specifying dates or times in this way as the
 parsing is very lax.  It uses US-style date formats and defaults to 12-hour
@@ -153,23 +151,23 @@ clock for times, so it is unlikely to do what you expect.  Be sure to check the
 debug window to see what value it has parsed from your input.  &lt;em&gt;If it sounds
 like I’ve been caught by this before, then you’re hearing the echoes of my pain
 clearly.&lt;/em&gt;&lt;/p&gt;
-&lt;img alt=&quot;Build date object to filter by&quot; src=&quot;../../_images/2010-09-17-date_builder.png&quot; /&gt;
+&lt;img alt="Build date object to filter by" src="../../_images/2010-09-17-date_builder.png" /&gt;
 &lt;p&gt;Another filtering example, that I mentioned at the start, is to filter for
 authors who write entries we aren’t interested in.  In this instance the filter
-we want to use is the &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;item.link&lt;/span&gt;&lt;/code&gt; selector with a unique string from their
-entry &lt;abbr title=&quot;Uniform Resource Locator&quot;&gt;URL&lt;/abbr&gt;s.  The hostname is often perfect for this, but any unique
+we want to use is the &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;item.link&lt;/span&gt;&lt;/code&gt; selector with a unique string from their
+entry &lt;abbr title="Uniform Resource Locator"&gt;URL&lt;/abbr&gt;s.  The hostname is often perfect for this, but any unique
 identifying string is usable; their user name on a shared server for example
-&lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;project/~nobody/&lt;/span&gt;&lt;/code&gt;&lt;/p&gt;
+&lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;project/~nobody/&lt;/span&gt;&lt;/code&gt;&lt;/p&gt;
 &lt;p&gt;Taking the other example from above we will filter entries with references to
 technologies that are of no interest to us.  We can access the entry’s content
-with the &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;item.content.content&lt;/span&gt;&lt;/code&gt; selector and then apply a string match or
+with the &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;item.content.content&lt;/span&gt;&lt;/code&gt; selector and then apply a string match or
 regular expression that marks an entry as uninteresting to us.  You should note
 that Yahoo! Pipes uses extended regular expression syntax, so for example
-&lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;\s+&lt;/span&gt;&lt;/code&gt; matches multiple whitespace characters(this seems to trip a lot of
-people up who are used to &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;grep&lt;/span&gt;&lt;/code&gt;’s &lt;abbr title=&quot;Basic Regular Expression&quot;&gt;BRE&lt;/abbr&gt;
+&lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;\s+&lt;/span&gt;&lt;/code&gt; matches multiple whitespace characters(this seems to trip a lot of
+people up who are used to &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;grep&lt;/span&gt;&lt;/code&gt;’s &lt;abbr title="Basic Regular Expression"&gt;BRE&lt;/abbr&gt;
 behaviour).&lt;/p&gt;
-&lt;div class=&quot;admonition note&quot;&gt;
-&lt;p class=&quot;admonition-title&quot;&gt;Note&lt;/p&gt;
+&lt;div class="admonition note"&gt;
+&lt;p class="admonition-title"&gt;Note&lt;/p&gt;
 &lt;p&gt;I’ve purposely chosen not to show the filtered people or technologies in
 the screenshots, as it isn’t really fair.  Some of the people I filter do
 some great work on their respective projects, but their blogs include
@@ -177,45 +175,47 @@ information I’m not particularly interested in seeing.  I don’t believe it
 has harmed the examples too much, but if something isn’t clear just ask!&lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;div class=&quot;section&quot; id=&quot;output&quot;&gt;
+&lt;div class="section" id="output"&gt;
 &lt;h2&gt;Output&lt;/h2&gt;
 &lt;p&gt;I’m a neat freak, so I always re-sort the output before finally delivering it.
 I sort it based on publication date, so that it is easier to scan the output by
 hand if the need arises.&lt;/p&gt;
-&lt;img alt=&quot;Sort remaining entries&quot; src=&quot;../../_images/2010-09-17-feed_sort.png&quot; /&gt;
+&lt;img alt="Sort remaining entries" src="../../_images/2010-09-17-feed_sort.png" /&gt;
 &lt;p&gt;If you weren’t to sort the final output then it would be in the order it was
-included in to the stream, grouped first by feed &lt;abbr title=&quot;Uniform Resource Locator&quot;&gt;URL&lt;/abbr&gt; and in whatever order
+included in to the stream, grouped first by feed &lt;abbr title="Uniform Resource Locator"&gt;URL&lt;/abbr&gt; and in whatever order
 the original feed had.  Again very much following the format you’d expect from
-a simple &lt;em class=&quot;manpage&quot;&gt;cat(1)&lt;/em&gt;-based pipe.&lt;/p&gt;
+a simple &lt;em class="manpage"&gt;cat(1)&lt;/em&gt;-based pipe.&lt;/p&gt;
 &lt;p&gt;The methods outlined here also save us a very small amount of daily data
 transfer too, without the splicing and filtering today’s data would be 1.3MiB
 and after it is mangled it is less than 200KiB.  Of course, these figures will
 vary considerably based on the activity in the feeds.&lt;/p&gt;
 &lt;p&gt;The other quite interesting thing to note is that Yahoo! Pipes allows you to
-output data in various formats.  The &lt;a class=&quot;reference external&quot; href=&quot;http://www.json.org/&quot;&gt;JSON&lt;/a&gt; output, for example, makes it very
-easy to post-process the data locally using &lt;a class=&quot;reference external&quot; href=&quot;http://flori.github.com/json/&quot;&gt;Ruby&lt;/a&gt; or &lt;a class=&quot;reference external&quot; href=&quot;http://docs.python.org/library/json.html&quot;&gt;Python&lt;/a&gt;.  Some of the
+output data in various formats.  The &lt;a class="reference external" href="http://www.json.org/"&gt;JSON&lt;/a&gt; output, for example, makes it very
+easy to post-process the data locally using &lt;a class="reference external" href="http://flori.github.com/json/"&gt;Ruby&lt;/a&gt; or &lt;a class="reference external" href="http://docs.python.org/library/json.html"&gt;Python&lt;/a&gt;.  Some of the
 reasons you may wish to do that are best left for another day.&lt;/p&gt;
 &lt;/div&gt;
-&lt;div class=&quot;section&quot; id=&quot;sidenotes&quot;&gt;
+&lt;div class="section" id="sidenotes"&gt;
 &lt;h2&gt;Sidenotes&lt;/h2&gt;
-&lt;ul class=&quot;simple&quot;&gt;
+&lt;ul class="simple"&gt;
 &lt;li&gt;&lt;p&gt;Every time I play with Yahoo! Pipes I wonder why people(including myself)
 still write manual scraping tools, it is just &lt;em&gt;that&lt;/em&gt; good.  Pull resources,
-filter resources, mangle them, output as RSS or &lt;a class=&quot;reference external&quot; href=&quot;http://www.json.org/&quot;&gt;JSON&lt;/a&gt;.  However, despite what
-the documentation says &lt;a class=&quot;reference external&quot; href=&quot;http://atomenabled.org/&quot;&gt;Atom&lt;/a&gt; still appears to be unsupported, which is
+filter resources, mangle them, output as RSS or &lt;a class="reference external" href="http://www.json.org/"&gt;JSON&lt;/a&gt;.  However, despite what
+the documentation says &lt;a class="reference external" href="http://atomenabled.org/"&gt;Atom&lt;/a&gt; still appears to be unsupported, which is
 a great shame as nobody should really be recommending RSS 2.0 at this point.&lt;/p&gt;&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;While Yahoo! Pipes is a lot of fun for just playing with feeds, it is also
 very powerful for processing many other forms of data.  The sources module
 contains lots of methods for pulling data from the internet, so play around
 with it.&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;One special supported source is &lt;a class=&quot;reference external&quot; href=&quot;http://developer.yahoo.com/yql/&quot;&gt;YQL&lt;/a&gt;, a &lt;abbr title=&quot;Structured Query Language&quot;&gt;SQL&lt;/abbr&gt;-alike language created by Yahoo.  It is often described as “select
+&lt;li&gt;&lt;p&gt;One special supported source is &lt;a class="reference external" href="http://developer.yahoo.com/yql/"&gt;YQL&lt;/a&gt;, a &lt;abbr title="Structured Query Language"&gt;SQL&lt;/abbr&gt;-alike language created by Yahoo.  It is often described as “select
 * from internet”, and that is a very accurate description.  It really does
 make scraping and mangling data as simple as forming some structured queries.
 If you do any scraping or processing of external data be sure to have a quick
-read of the &lt;a class=&quot;reference external&quot; href=&quot;http://developer.yahoo.com/yql/guide/two-minute-tutorial.html&quot;&gt;the two-minute tutorial&lt;/a&gt;.&lt;/p&gt;&lt;/li&gt;
+read of the &lt;a class="reference external" href="http://developer.yahoo.com/yql/guide/two-minute-tutorial.html"&gt;the two-minute tutorial&lt;/a&gt;.&lt;/p&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 </content>
+    <link href="https://jnrowe.github.io/articles/mangling_planets.html" rel="alternate"/>
+    <published>2010-09-17T00:00:00+01:00</published>
   </entry>
 </feed>

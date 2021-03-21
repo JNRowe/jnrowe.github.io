@@ -1,22 +1,137 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version='1.0' encoding='UTF-8'?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <title type="text">JNRowe - Posted in 2013</title>
-  <id>https://jnrowe.github.io/blog/2013/atom.xml</id>
-  <updated>2013-12-23T00:00:00Z</updated>
-  <link href="https://jnrowe.github.io/" />
-  <link href="https://jnrowe.github.io/blog/2013/atom.xml" rel="self" />
-  <subtitle type="text">Ramblings of a tired mind</subtitle>
-  <generator uri="https://ablog.readthedocs.org" version="0.10.4">ABlog</generator>
-  <entry xml:base="https://jnrowe.github.io/blog/2013/atom.xml">
-    <title type="text">Tell me a nice story, please</title>
-    <id>https://jnrowe.github.io/thoughts/nice_stories.html</id>
-    <updated>2013-12-23T00:00:00Z</updated>
-    <published>2013-12-23T00:00:00Z</published>
-    <link href="https://jnrowe.github.io/thoughts/nice_stories.html" />
+  <id>https://jnrowe.github.io/</id>
+  <title>JNRowe - Posted in 2013</title>
+  <updated>2021-03-21T11:05:56.073637+00:00</updated>
+  <link href="https://jnrowe.github.io/"/>
+  <link href="https://jnrowe.github.io/blog/2013/atom.xml"/>
+  <generator uri="https://ablog.readthedocs.org" version="0.10.12">ABlog</generator>
+  <subtitle>Ramblings of a tired mind</subtitle>
+  <entry>
+    <id>https://jnrowe.github.io/thoughts/side_projects.html</id>
+    <title>Side-projects</title>
+    <updated>2013-12-16T00:00:00+00:00</updated>
     <author>
       <name>James Rowe</name>
     </author>
-    <content type="html">&lt;div class=&quot;section&quot; id=&quot;tell-me-a-nice-story-please&quot;&gt;
+    <content type="html">&lt;div class="section" id="side-projects"&gt;
+
+&lt;p&gt;Chatting with my brother yesterday he expressed some disbelief when I mentioned
+&lt;em&gt;yet another&lt;/em&gt; friend who has a website related to some topic we were discussing:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;div&gt;&lt;p&gt;Does everyone you know run a website?&lt;/p&gt;
+&lt;/div&gt;&lt;/blockquote&gt;
+&lt;p&gt;Yes, yes, they do.&lt;/p&gt;
+&lt;p&gt;It hadn’t really occurred to me until I was reading a write up of a co-workers
+weekend hack.  The majority of nerdy people I know run websites, create
+iPhone/android apps or have other side projects in various states of completion.
+It’s just How Things Work®&lt;/p&gt;
+&lt;p&gt;I guess it is mostly a cultural issue, one which is quite strong behind the
+engineering side of the curtain in my workplace.  Sure, there are some “5:01”
+types who are out of the door as soon as the bell rings, but there are an awful
+lot who extend their tech creations in to a downtime hobby or side business.&lt;/p&gt;
+&lt;p&gt;To relate this to my brother I think of a family party we attended this past
+weekend.  When people asked me what my brother does I’d say that he works in
+logistics, and the conversation drifts from there.  When talking to the
+extended family that often seemed to head toward being about material
+possessions that work may afford him.  However, I’ve noticed in the past when
+I’m talking to people I’d call friends it often quickly digresses in to strange
+discussions about box packing, routing, &lt;a class="reference external" href="http://en.wikipedia.org/wiki/Travelling_salesman_problem"&gt;the curse of travelling salesmen&lt;/a&gt; or
+&lt;a class="reference external" href="http://en.wikipedia.org/wiki/Bridges_of_Konigsberg"&gt;bridges in some foreign land&lt;/a&gt;.  Because of the math and technology
+implications many of my friends have written tools to explore some of the
+practical and theoretical issues faced in logistics… often for fun.&lt;/p&gt;
+&lt;div class="section" id="it-is-all-about-me"&gt;
+&lt;h2&gt;It is all about me&lt;/h2&gt;
+&lt;p&gt;I’m not working on any public facing websites right now&lt;a class="footnote-reference brackets" href="#s1" id="id1"&gt;1&lt;/a&gt;, but I do play
+with a few public facing projects from time to time that should head towards
+proving my point.  I’m picking a few semi-randomly to illustrate a little
+diversity.&lt;/p&gt;
+&lt;div class="admonition note"&gt;
+&lt;p class="admonition-title"&gt;Note&lt;/p&gt;
+&lt;p&gt;To save myself some researching effort I’ll only link to things from &lt;a class="reference external" href="https://github.com/JNRowe/"&gt;my
+GitHub profile&lt;/a&gt; or links from my browser’s bookmarks, but that should be
+descriptive enough to get the point across.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="gentoo-packages"&gt;
+&lt;h3&gt;Gentoo packages&lt;/h3&gt;
+&lt;p&gt;Over the past decade I’ve spent a lot of time hacking on things related to
+&lt;a class="reference external" href="http://gentoo.org/"&gt;Gentoo&lt;/a&gt;.  Some of that for work projects and some of it for &lt;a class="reference external" href="https://jnrowe-misc.readthedocs.io/"&gt;personal
+projects&lt;/a&gt;.  I’ve also experienced my fair share of troubles, and have &lt;a class="reference external" href="https://bugs.gentoo.org/buglist.cgi?email1=jnrowe%40gmail.com&amp;amp;emailassigned_to1=1&amp;amp;emailcc1=1&amp;amp;emaillongdesc1=1&amp;amp;emailreporter1=1&amp;amp;emailtype1=substring&amp;amp;query_format=advanced"&gt;reported
+a few bugs&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;At one time I even hoped to &lt;a class="reference external" href="https://bugs.gentoo.org/show_bug.cgi?id=142090"&gt;become a developer&lt;/a&gt;, but that didn’t work out for
+a bunch of reasons.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="github2"&gt;
+&lt;h3&gt;&lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;github2&lt;/span&gt;&lt;/code&gt;&lt;/h3&gt;
+&lt;p&gt;For a year I &lt;a class="reference external" href="https://github.com/ask/python-github2/graphs/contributors"&gt;maintained&lt;/a&gt; a relatively popular &lt;a class="reference external" href="https://github.com/ask/python-github2"&gt;API wrapper&lt;/a&gt; to GitHub.  I did
+this because I found it fun.  It provided no economic benefit to me, and I never
+expected it to.  I know a lot of people used it when building their own toy
+projects and websites, because many were kind enough to link to it.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="pyisbn"&gt;
+&lt;h3&gt;&lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;pyisbn&lt;/span&gt;&lt;/code&gt;&lt;/h3&gt;
+&lt;p&gt;For seven years I’ve maintained a small library for &lt;a class="reference external" href="https://github.com/JNRowe/pyisbn/"&gt;validating ISBNs&lt;/a&gt;.
+&lt;em&gt;Yes, that is absolutely as boring as it sounds&lt;/em&gt;.&lt;/p&gt;
+&lt;p&gt;It was never meant to be used by others, I just needed something to validate
+entries in my e-book database.  Other people started using it, many for their
+own weird side projects including a number of book retail websites.  It has
+amassed literally tens of thousands of downloads from &lt;abbr title="Python Package Index"&gt;PyPI&lt;/abbr&gt;, but you really
+shouldn’t trust the dubious statistics from &lt;abbr title="Python Package Index"&gt;PyPI&lt;/abbr&gt; ;)&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="rdial"&gt;
+&lt;h3&gt;&lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;rdial&lt;/span&gt;&lt;/code&gt;&lt;/h3&gt;
+&lt;p&gt;&lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;rdial&lt;/span&gt;&lt;/code&gt; is a &lt;a class="reference external" href="https://rdial.readthedocs.io/"&gt;time tracking tool&lt;/a&gt;, and a perfect example for me.  I played
+with it for over a year before anyone else saw it, just because it scratched an
+itch I had.  I never imagined it would be useful to others.  Turns out it was,
+and there is now a small yet faithful band of users.&lt;/p&gt;
+&lt;p&gt;I even received the great honour of a few summer evening beers for releasing it.
+A beer being second only to a patch in the table of project endorsements
+that I subscribe to.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="upoints-nee-earth-distance"&gt;
+&lt;h3&gt;&lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;upoints&lt;/span&gt;&lt;/code&gt; née &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;earth_distance&lt;/span&gt;&lt;/code&gt;&lt;/h3&gt;
+&lt;p&gt;&lt;a class="reference external" href="https://jnrowe.github.io/upoints/"&gt;upoints&lt;/a&gt; is a strange one.  It started as a &lt;a class="reference external" href="http://jnrowe.github.io/upoints/geolocation_and_pathcross.html"&gt;stupid hack&lt;/a&gt; to figure out some
+silly travel planning drama, it proceeded to take on a life of its own.  Over
+the years it attracted a fair amount of users, and I still receive email about
+it now.&lt;/p&gt;
+&lt;p&gt;It did have some tangible benefit though, the sadly now defunct website it
+eventually spawned opened some nice doors for me.  I didn’t know it would or
+could at the time, so it didn’t affect how I spent my time when playing with it.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="section" id="cut-from-the-pattern"&gt;
+&lt;h2&gt;Cut from the pattern&lt;/h2&gt;
+&lt;p&gt;This isn’t specific to me, or even to the particularly nerdy among my
+co-workers.  If you &lt;a class="reference external" href="https://github.com/explore"&gt;dig around on GitHub&lt;/a&gt;, or even &lt;a class="reference external" href="http://makezine.com/"&gt;makezine&lt;/a&gt;, you’ll see
+people creating purely because they can.  This isn’t a new phenomenon either.
+If you were around pre-GitHub you’d see people making things on Sourceforge.  If
+you were around before Sourceforge, you’ll remember the good old days when life
+was simpler and people held doors open for you.&lt;/p&gt;
+&lt;p&gt;The point is simple.  Yes, I &lt;em&gt;may&lt;/em&gt; know someone who is working on
+project/website related to some topic, but that is only because many of the
+people I know are spitting out new projects on what often appears to be a weekly
+basis.&lt;/p&gt;
+&lt;p class="rubric"&gt;Footnotes&lt;/p&gt;
+&lt;dl class="footnote brackets"&gt;
+&lt;dt class="label" id="s1"&gt;&lt;span class="brackets"&gt;&lt;a class="fn-backref" href="#id1"&gt;1&lt;/a&gt;&lt;/span&gt;&lt;/dt&gt;
+&lt;dd&gt;&lt;p&gt;I really don’t count &lt;a class="reference external" href="http://jnrowe.github.io/"&gt;this site&lt;/a&gt;, as it
+is just a jumbled content dump with no real purpose.&lt;/p&gt;
+&lt;/dd&gt;
+&lt;/dl&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</content>
+    <link href="https://jnrowe.github.io/thoughts/side_projects.html" rel="alternate"/>
+    <published>2013-12-16T00:00:00+00:00</published>
+  </entry>
+  <entry>
+    <id>https://jnrowe.github.io/thoughts/nice_stories.html</id>
+    <title>Tell me a nice story, please</title>
+    <updated>2013-12-23T00:00:00+00:00</updated>
+    <author>
+      <name>James Rowe</name>
+    </author>
+    <content type="html">&lt;div class="section" id="tell-me-a-nice-story-please"&gt;
 
 &lt;p&gt;I’m fed up of hearing bad stories, I really am.  Often it feels like every
 person I know simply revels in the misfortune or missteps of others, and it is
@@ -24,18 +139,18 @@ beginning to truly annoy me.&lt;/p&gt;
 &lt;p&gt;I can’t work out if it is the result of malicious envy, angry spitefulness or
 just a sad realisation that those stories seem to engage others more easily.
 That said I don’t believe the reason matters, it is wrong and it needs to stop.&lt;/p&gt;
-&lt;blockquote class=&quot;epigraph&quot;&gt;
+&lt;blockquote class="epigraph"&gt;
 &lt;div&gt;&lt;p&gt;You cannot strengthen one by weakening another; and you cannot add to the
 stature of a dwarf by cutting off the leg of a giant&lt;/p&gt;
-&lt;p class=&quot;attribution&quot;&gt;—Benjamin Franklin Fairless&lt;/p&gt;
+&lt;p class="attribution"&gt;—Benjamin Franklin Fairless&lt;/p&gt;
 &lt;/div&gt;&lt;/blockquote&gt;
-&lt;div class=&quot;section&quot; id=&quot;in-examples&quot;&gt;
+&lt;div class="section" id="in-examples"&gt;
 &lt;h2&gt;In examples&lt;/h2&gt;
 &lt;p&gt;Hmm, this is hard.  How does one express examples without explicitly re-telling
 the nasty stories?&lt;/p&gt;
 &lt;p&gt;The stories you are about to hear are true.  The scenes have been munged to
 protect the innocent.&lt;/p&gt;
-&lt;div class=&quot;section&quot; id=&quot;exhibit-a&quot;&gt;
+&lt;div class="section" id="exhibit-a"&gt;
 &lt;h3&gt;Exhibit A&lt;/h3&gt;
 &lt;p&gt;About five years ago I found out that an old school friend had made a serious,
 yet possibly singular, morally irresponsible mistake.  This is a man who was
@@ -52,7 +167,7 @@ and literally stop you in the street to tell you.&lt;/p&gt;
 &lt;p&gt;&lt;em&gt;Why couldn’t I have heard a fantastic story about an old friend’s success when
 trying to feed my shocking biscuit habit at Sainsbury’s?&lt;/em&gt;&lt;/p&gt;
 &lt;/div&gt;
-&lt;div class=&quot;section&quot; id=&quot;exhibit-b&quot;&gt;
+&lt;div class="section" id="exhibit-b"&gt;
 &lt;h3&gt;Exhibit B&lt;/h3&gt;
 &lt;p&gt;In the mid-naughties a conference friend sold his web service for an apparently
 healthy chunk of change.  I remember bumping in to the founding team at a boring
@@ -75,7 +190,7 @@ beaten down for their apparent success.&lt;/p&gt;
 &lt;p&gt;&lt;em&gt;Why can’t people just find some happiness in the happiness of others?&lt;/em&gt;&lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;div class=&quot;section&quot; id=&quot;what-to-do&quot;&gt;
+&lt;div class="section" id="what-to-do"&gt;
 &lt;h2&gt;What to do&lt;/h2&gt;
 &lt;p&gt;I’m not perfect, well not quite anyway ;)&lt;/p&gt;
 &lt;p&gt;If I wasn’t so terribly, terribly ill today I’d be preparing to head to our
@@ -83,152 +198,37 @@ Winterval shutdown party.  You’d no doubt find I like to have a little gossip
 and moan about things I shouldn’t, and I might even commit a couple of the faux
 pas I’ve mentioned above.  Yes, that upsets me. It really does, but I’m trying
 to change.&lt;/p&gt;
-&lt;div class=&quot;section&quot; id=&quot;a-pledge&quot;&gt;
+&lt;div class="section" id="a-pledge"&gt;
 &lt;h3&gt;A pledge&lt;/h3&gt;
 &lt;p&gt;If you catch me using the failure of others for entertainment or to make
 a point, feel free to berate me for it.  It might even be time to start offering
-fantastic prizes&lt;a class=&quot;footnote-reference brackets&quot; href=&quot;#s1&quot; id=&quot;id1&quot;&gt;1&lt;/a&gt; to people who catch me doing so, as it is probably the only
+fantastic prizes&lt;a class="footnote-reference brackets" href="#s1" id="id1"&gt;1&lt;/a&gt; to people who catch me doing so, as it is probably the only
 way I’ll really learn.&lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;div class=&quot;section&quot; id=&quot;what-i-want-to-hear&quot;&gt;
+&lt;div class="section" id="what-i-want-to-hear"&gt;
 &lt;h2&gt;What I want to hear&lt;/h2&gt;
 &lt;p&gt;Simply tell me about that friend who is getting married, don’t tell the story
 by mentioning that it is their third marriage.  I also don’t need to hear about
 that messy relationship breakdown.  [The exception — of course — being if it is
 that one girl who I’d sell my soul for a second chance with]&lt;/p&gt;
-&lt;p&gt;Tell me about that friend whose child aced the &lt;a class=&quot;reference external&quot; href=&quot;http://en.wikipedia.org/wiki/Eleven_plus_exam&quot;&gt;Eleven Plus&lt;/a&gt;, and has been
+&lt;p&gt;Tell me about that friend whose child aced the &lt;a class="reference external" href="http://en.wikipedia.org/wiki/Eleven_plus_exam"&gt;Eleven Plus&lt;/a&gt;, and has been
 accepted in to the school we all wish we had attended.&lt;/p&gt;
-&lt;p&gt;Tell me about that old school friend who is building their own &lt;a class=&quot;reference external&quot; href=&quot;http://www.channel4.com/programmes/grand-designs&quot;&gt;Grand
+&lt;p&gt;Tell me about that old school friend who is building their own &lt;a class="reference external" href="http://www.channel4.com/programmes/grand-designs"&gt;Grand
 Designs&lt;/a&gt;-esque house.&lt;/p&gt;
 &lt;p&gt;I guess there is one reason I want to hear the bad stories, and it is very
 simple.  &lt;em&gt;Iff&lt;/em&gt; there is some actionable thing I can do to help, then I &lt;em&gt;want&lt;/em&gt; to
 know about it.  If that isn’t the case, just keep it to yourself.&lt;/p&gt;
-&lt;p class=&quot;rubric&quot;&gt;Footnotes&lt;/p&gt;
-&lt;dl class=&quot;footnote brackets&quot;&gt;
-&lt;dt class=&quot;label&quot; id=&quot;s1&quot;&gt;&lt;span class=&quot;brackets&quot;&gt;&lt;a class=&quot;fn-backref&quot; href=&quot;#id1&quot;&gt;1&lt;/a&gt;&lt;/span&gt;&lt;/dt&gt;
+&lt;p class="rubric"&gt;Footnotes&lt;/p&gt;
+&lt;dl class="footnote brackets"&gt;
+&lt;dt class="label" id="s1"&gt;&lt;span class="brackets"&gt;&lt;a class="fn-backref" href="#id1"&gt;1&lt;/a&gt;&lt;/span&gt;&lt;/dt&gt;
 &lt;dd&gt;&lt;p&gt;Okay, probably just a coffee or a beer&lt;/p&gt;
 &lt;/dd&gt;
 &lt;/dl&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 </content>
-  </entry>
-  <entry xml:base="https://jnrowe.github.io/blog/2013/atom.xml">
-    <title type="text">Side-projects</title>
-    <id>https://jnrowe.github.io/thoughts/side_projects.html</id>
-    <updated>2013-12-16T00:00:00Z</updated>
-    <published>2013-12-16T00:00:00Z</published>
-    <link href="https://jnrowe.github.io/thoughts/side_projects.html" />
-    <author>
-      <name>James Rowe</name>
-    </author>
-    <content type="html">&lt;div class=&quot;section&quot; id=&quot;side-projects&quot;&gt;
-
-&lt;p&gt;Chatting with my brother yesterday he expressed some disbelief when I mentioned
-&lt;em&gt;yet another&lt;/em&gt; friend who has a website related to some topic we were discussing:&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;div&gt;&lt;p&gt;Does everyone you know run a website?&lt;/p&gt;
-&lt;/div&gt;&lt;/blockquote&gt;
-&lt;p&gt;Yes, yes, they do.&lt;/p&gt;
-&lt;p&gt;It hadn’t really occurred to me until I was reading a write up of a co-workers
-weekend hack.  The majority of nerdy people I know run websites, create
-iPhone/android apps or have other side projects in various states of completion.
-It’s just How Things Work®&lt;/p&gt;
-&lt;p&gt;I guess it is mostly a cultural issue, one which is quite strong behind the
-engineering side of the curtain in my workplace.  Sure, there are some “5:01”
-types who are out of the door as soon as the bell rings, but there are an awful
-lot who extend their tech creations in to a downtime hobby or side business.&lt;/p&gt;
-&lt;p&gt;To relate this to my brother I think of a family party we attended this past
-weekend.  When people asked me what my brother does I’d say that he works in
-logistics, and the conversation drifts from there.  When talking to the
-extended family that often seemed to head toward being about material
-possessions that work may afford him.  However, I’ve noticed in the past when
-I’m talking to people I’d call friends it often quickly digresses in to strange
-discussions about box packing, routing, &lt;a class=&quot;reference external&quot; href=&quot;http://en.wikipedia.org/wiki/Travelling_salesman_problem&quot;&gt;the curse of travelling salesmen&lt;/a&gt; or
-&lt;a class=&quot;reference external&quot; href=&quot;http://en.wikipedia.org/wiki/Bridges_of_Konigsberg&quot;&gt;bridges in some foreign land&lt;/a&gt;.  Because of the math and technology
-implications many of my friends have written tools to explore some of the
-practical and theoretical issues faced in logistics… often for fun.&lt;/p&gt;
-&lt;div class=&quot;section&quot; id=&quot;it-is-all-about-me&quot;&gt;
-&lt;h2&gt;It is all about me&lt;/h2&gt;
-&lt;p&gt;I’m not working on any public facing websites right now&lt;a class=&quot;footnote-reference brackets&quot; href=&quot;#s1&quot; id=&quot;id1&quot;&gt;1&lt;/a&gt;, but I do play
-with a few public facing projects from time to time that should head towards
-proving my point.  I’m picking a few semi-randomly to illustrate a little
-diversity.&lt;/p&gt;
-&lt;div class=&quot;admonition note&quot;&gt;
-&lt;p class=&quot;admonition-title&quot;&gt;Note&lt;/p&gt;
-&lt;p&gt;To save myself some researching effort I’ll only link to things from &lt;a class=&quot;reference external&quot; href=&quot;https://github.com/JNRowe/&quot;&gt;my
-GitHub profile&lt;/a&gt; or links from my browser’s bookmarks, but that should be
-descriptive enough to get the point across.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class=&quot;section&quot; id=&quot;gentoo-packages&quot;&gt;
-&lt;h3&gt;Gentoo packages&lt;/h3&gt;
-&lt;p&gt;Over the past decade I’ve spent a lot of time hacking on things related to
-&lt;a class=&quot;reference external&quot; href=&quot;http://gentoo.org/&quot;&gt;Gentoo&lt;/a&gt;.  Some of that for work projects and some of it for &lt;a class=&quot;reference external&quot; href=&quot;https://jnrowe-misc.readthedocs.io/&quot;&gt;personal
-projects&lt;/a&gt;.  I’ve also experienced my fair share of troubles, and have &lt;a class=&quot;reference external&quot; href=&quot;https://bugs.gentoo.org/buglist.cgi?email1=jnrowe%40gmail.com&amp;amp;emailassigned_to1=1&amp;amp;emailcc1=1&amp;amp;emaillongdesc1=1&amp;amp;emailreporter1=1&amp;amp;emailtype1=substring&amp;amp;query_format=advanced&quot;&gt;reported
-a few bugs&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;At one time I even hoped to &lt;a class=&quot;reference external&quot; href=&quot;https://bugs.gentoo.org/show_bug.cgi?id=142090&quot;&gt;become a developer&lt;/a&gt;, but that didn’t work out for
-a bunch of reasons.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class=&quot;section&quot; id=&quot;github2&quot;&gt;
-&lt;h3&gt;&lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;github2&lt;/span&gt;&lt;/code&gt;&lt;/h3&gt;
-&lt;p&gt;For a year I &lt;a class=&quot;reference external&quot; href=&quot;https://github.com/ask/python-github2/graphs/contributors&quot;&gt;maintained&lt;/a&gt; a relatively popular &lt;a class=&quot;reference external&quot; href=&quot;https://github.com/ask/python-github2&quot;&gt;API wrapper&lt;/a&gt; to GitHub.  I did
-this because I found it fun.  It provided no economic benefit to me, and I never
-expected it to.  I know a lot of people used it when building their own toy
-projects and websites, because many were kind enough to link to it.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class=&quot;section&quot; id=&quot;pyisbn&quot;&gt;
-&lt;h3&gt;&lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;pyisbn&lt;/span&gt;&lt;/code&gt;&lt;/h3&gt;
-&lt;p&gt;For seven years I’ve maintained a small library for &lt;a class=&quot;reference external&quot; href=&quot;https://github.com/JNRowe/pyisbn/&quot;&gt;validating ISBNs&lt;/a&gt;.
-&lt;em&gt;Yes, that is absolutely as boring as it sounds&lt;/em&gt;.&lt;/p&gt;
-&lt;p&gt;It was never meant to be used by others, I just needed something to validate
-entries in my e-book database.  Other people started using it, many for their
-own weird side projects including a number of book retail websites.  It has
-amassed literally tens of thousands of downloads from &lt;abbr title=&quot;Python Package Index&quot;&gt;PyPI&lt;/abbr&gt;, but you really
-shouldn’t trust the dubious statistics from &lt;abbr title=&quot;Python Package Index&quot;&gt;PyPI&lt;/abbr&gt; ;)&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class=&quot;section&quot; id=&quot;rdial&quot;&gt;
-&lt;h3&gt;&lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;rdial&lt;/span&gt;&lt;/code&gt;&lt;/h3&gt;
-&lt;p&gt;&lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;rdial&lt;/span&gt;&lt;/code&gt; is a &lt;a class=&quot;reference external&quot; href=&quot;https://rdial.readthedocs.io/&quot;&gt;time tracking tool&lt;/a&gt;, and a perfect example for me.  I played
-with it for over a year before anyone else saw it, just because it scratched an
-itch I had.  I never imagined it would be useful to others.  Turns out it was,
-and there is now a small yet faithful band of users.&lt;/p&gt;
-&lt;p&gt;I even received the great honour of a few summer evening beers for releasing it.
-A beer being second only to a patch in the table of project endorsements
-that I subscribe to.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class=&quot;section&quot; id=&quot;upoints-nee-earth-distance&quot;&gt;
-&lt;h3&gt;&lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;upoints&lt;/span&gt;&lt;/code&gt; née &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;earth_distance&lt;/span&gt;&lt;/code&gt;&lt;/h3&gt;
-&lt;p&gt;&lt;a class=&quot;reference external&quot; href=&quot;https://jnrowe.github.io/upoints/&quot;&gt;upoints&lt;/a&gt; is a strange one.  It started as a &lt;a class=&quot;reference external&quot; href=&quot;http://jnrowe.github.io/upoints/geolocation_and_pathcross.html&quot;&gt;stupid hack&lt;/a&gt; to figure out some
-silly travel planning drama, it proceeded to take on a life of its own.  Over
-the years it attracted a fair amount of users, and I still receive email about
-it now.&lt;/p&gt;
-&lt;p&gt;It did have some tangible benefit though, the sadly now defunct website it
-eventually spawned opened some nice doors for me.  I didn’t know it would or
-could at the time, so it didn’t affect how I spent my time when playing with it.&lt;/p&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class=&quot;section&quot; id=&quot;cut-from-the-pattern&quot;&gt;
-&lt;h2&gt;Cut from the pattern&lt;/h2&gt;
-&lt;p&gt;This isn’t specific to me, or even to the particularly nerdy among my
-co-workers.  If you &lt;a class=&quot;reference external&quot; href=&quot;https://github.com/explore&quot;&gt;dig around on GitHub&lt;/a&gt;, or even &lt;a class=&quot;reference external&quot; href=&quot;http://makezine.com/&quot;&gt;makezine&lt;/a&gt;, you’ll see
-people creating purely because they can.  This isn’t a new phenomenon either.
-If you were around pre-GitHub you’d see people making things on Sourceforge.  If
-you were around before Sourceforge, you’ll remember the good old days when life
-was simpler and people held doors open for you.&lt;/p&gt;
-&lt;p&gt;The point is simple.  Yes, I &lt;em&gt;may&lt;/em&gt; know someone who is working on
-project/website related to some topic, but that is only because many of the
-people I know are spitting out new projects on what often appears to be a weekly
-basis.&lt;/p&gt;
-&lt;p class=&quot;rubric&quot;&gt;Footnotes&lt;/p&gt;
-&lt;dl class=&quot;footnote brackets&quot;&gt;
-&lt;dt class=&quot;label&quot; id=&quot;s1&quot;&gt;&lt;span class=&quot;brackets&quot;&gt;&lt;a class=&quot;fn-backref&quot; href=&quot;#id1&quot;&gt;1&lt;/a&gt;&lt;/span&gt;&lt;/dt&gt;
-&lt;dd&gt;&lt;p&gt;I really don’t count &lt;a class=&quot;reference external&quot; href=&quot;http://jnrowe.github.io/&quot;&gt;this site&lt;/a&gt;, as it
-is just a jumbled content dump with no real purpose.&lt;/p&gt;
-&lt;/dd&gt;
-&lt;/dl&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-</content>
+    <link href="https://jnrowe.github.io/thoughts/nice_stories.html" rel="alternate"/>
+    <published>2013-12-23T00:00:00+00:00</published>
   </entry>
 </feed>

@@ -1,36 +1,84 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version='1.0' encoding='UTF-8'?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <title type="text">JNRowe - Posted in 2007</title>
-  <id>https://jnrowe.github.io/blog/2007/atom.xml</id>
-  <updated>2007-03-05T00:00:00Z</updated>
-  <link href="https://jnrowe.github.io/" />
-  <link href="https://jnrowe.github.io/blog/2007/atom.xml" rel="self" />
-  <subtitle type="text">Ramblings of a tired mind</subtitle>
-  <generator uri="https://ablog.readthedocs.org" version="0.10.4">ABlog</generator>
-  <entry xml:base="https://jnrowe.github.io/blog/2007/atom.xml">
-    <title type="text">mutt configuration snippets</title>
-    <id>https://jnrowe.github.io/articles/mutt_config_snippets.html</id>
-    <updated>2007-03-05T00:00:00Z</updated>
-    <published>2007-03-05T00:00:00Z</published>
-    <link href="https://jnrowe.github.io/articles/mutt_config_snippets.html" />
+  <id>https://jnrowe.github.io/</id>
+  <title>JNRowe - Posted in 2007</title>
+  <updated>2021-03-21T11:05:56.622947+00:00</updated>
+  <link href="https://jnrowe.github.io/"/>
+  <link href="https://jnrowe.github.io/blog/2007/atom.xml"/>
+  <generator uri="https://ablog.readthedocs.org" version="0.10.12">ABlog</generator>
+  <subtitle>Ramblings of a tired mind</subtitle>
+  <entry>
+    <id>https://jnrowe.github.io/articles/tips/emacs_gtk_shortcuts.html</id>
+    <title>Proper keyboard shortcuts in GTK+</title>
+    <updated>2007-03-05T00:00:00+00:00</updated>
     <author>
       <name>James Rowe</name>
     </author>
-    <content type="html">&lt;div class=&quot;section&quot; id=&quot;mutt-configuration-snippets&quot;&gt;
+    <content type="html">&lt;div class="section" id="proper-keyboard-shortcuts-in-gtk"&gt;
 
-&lt;p&gt;&lt;a class=&quot;reference external&quot; href=&quot;http://www.mutt.org/&quot;&gt;mutt&lt;/a&gt; is my favourite &lt;abbr title=&quot;Mail User Agent&quot;&gt;MUA&lt;/abbr&gt;, one of the few tools
+&lt;p&gt;If you’re used to the old style &lt;a class="reference external" href="http://www.gtk.org/"&gt;GTK+&lt;/a&gt; keyboard shortcuts, and find yourself
+continually closing windows when you’re trying to delete a word (like me) then
+add the following to your &lt;code class="file docutils literal notranslate"&gt;&lt;span class="pre"&gt;~/.gtkrc-2.0&lt;/span&gt;&lt;/code&gt;:&lt;/p&gt;
+&lt;div class="highlight-text notranslate"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;gtk-key-theme-name = &amp;quot;Emacs&amp;quot;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="admonition note"&gt;
+&lt;p class="admonition-title"&gt;Note&lt;/p&gt;
+&lt;p&gt;This is for people using GTK+ apps, not GNOME.  If you wish to change
+bindings in GNOME you should use the control centre.&lt;/p&gt;
+&lt;/div&gt;
+&lt;p&gt;Using the above you can return to the old default format, but if you only want
+to enable &lt;kbd class="kbd docutils literal notranslate"&gt;&lt;kbd class="kbd docutils literal notranslate"&gt;&amp;lt;C&lt;/kbd&gt;-&lt;kbd class="kbd docutils literal notranslate"&gt;w&amp;gt;&lt;/kbd&gt;&lt;/kbd&gt; and keep the other Windows-style shortcuts you can just
+add:&lt;/p&gt;
+&lt;div class="highlight-text notranslate"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;binding &amp;quot;gtk-emacs-text-entry&amp;quot;
+{
+    bind &amp;quot;&amp;lt;ctrl&amp;gt;w&amp;quot; { &amp;quot;delete-from-cursor&amp;quot; (word-ends, -1) }
+}
+class &amp;quot;GtkEntry&amp;quot; binding &amp;quot;gtk-emacs-text-entry&amp;quot;
+class &amp;quot;GtkTextView&amp;quot; binding &amp;quot;gtk-emacs-text-entry&amp;quot;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;If you use &lt;a class="reference external" href="http://plasmasturm.org/code/gtk-chtheme/"&gt;gtk-chtheme&lt;/a&gt; or &lt;a class="reference external" href="http://www.muhri.net/nav.php3?node=gts"&gt;gtk-theme-switch&lt;/a&gt; you should add custom options to
+your &lt;code class="file docutils literal notranslate"&gt;&lt;span class="pre"&gt;~/.gtkrc.mine&lt;/span&gt;&lt;/code&gt; so it isn’t overwritten when you change themes.  See
+the comments in your &lt;code class="file docutils literal notranslate"&gt;&lt;span class="pre"&gt;~/.gtkrc-2.0&lt;/span&gt;&lt;/code&gt; if you use either of these theme
+switchers.&lt;/p&gt;
+&lt;div class="figure align-default"&gt;
+&lt;img alt="XFce4 keyboard settings window" src="../_images/xfce4_keyboard.png" /&gt;
+&lt;/div&gt;
+&lt;p&gt;If you’re an &lt;a class="reference external" href="http://www.xfce.org/"&gt;XFce&lt;/a&gt; user you can select the Emacs keyboard shortcuts using the
+keyboard settings dialog.&lt;/p&gt;
+&lt;p&gt;If you can’t change the settings for some reason, then you can still use
+a shortcut to delete words.  The default setting, up to at least GTK+ v2.10.9,
+is the finger-stretching &lt;kbd class="kbd docutils literal notranslate"&gt;&lt;kbd class="kbd docutils literal notranslate"&gt;&amp;lt;C&lt;/kbd&gt;-&lt;kbd class="kbd docutils literal notranslate"&gt;backspace&amp;gt;&lt;/kbd&gt;&lt;/kbd&gt;.&lt;/p&gt;
+&lt;p&gt;And finally, if you manage to convince upstream that the default behaviour
+should be the settings in the Emacs theme I’ll owe you a few beers!&lt;/p&gt;
+&lt;/div&gt;
+</content>
+    <link href="https://jnrowe.github.io/articles/tips/emacs_gtk_shortcuts.html" rel="alternate"/>
+    <published>2007-03-05T00:00:00+00:00</published>
+  </entry>
+  <entry>
+    <id>https://jnrowe.github.io/articles/mutt_config_snippets.html</id>
+    <title>mutt configuration snippets</title>
+    <updated>2007-03-05T00:00:00+00:00</updated>
+    <author>
+      <name>James Rowe</name>
+    </author>
+    <content type="html">&lt;div class="section" id="mutt-configuration-snippets"&gt;
+
+&lt;p&gt;&lt;a class="reference external" href="http://www.mutt.org/"&gt;mutt&lt;/a&gt; is my favourite &lt;abbr title="Mail User Agent"&gt;MUA&lt;/abbr&gt;, one of the few tools
 I truly believe I couldn’t manage without.  It is also one of those tools,
-along with &lt;a class=&quot;reference external&quot; href=&quot;http://www.vim.org/&quot;&gt;vim&lt;/a&gt;, which can end up sucking away all your free time to configure
+along with &lt;a class="reference external" href="http://www.vim.org/"&gt;vim&lt;/a&gt;, which can end up sucking away all your free time to configure
 it just how you want.&lt;/p&gt;
-&lt;p&gt;To get a quick idea of how many options you can configure with &lt;strong class=&quot;command&quot;&gt;mutt&lt;/strong&gt;
-run &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;mutt&lt;/span&gt; &lt;span class=&quot;pre&quot;&gt;-D&lt;/span&gt; &lt;span class=&quot;pre&quot;&gt;|&lt;/span&gt; &lt;span class=&quot;pre&quot;&gt;wc&lt;/span&gt; &lt;span class=&quot;pre&quot;&gt;-l&lt;/span&gt;&lt;/code&gt;, on my system with a heavily patched &lt;strong class=&quot;command&quot;&gt;mutt&lt;/strong&gt;
+&lt;p&gt;To get a quick idea of how many options you can configure with &lt;strong class="command"&gt;mutt&lt;/strong&gt;
+run &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;mutt&lt;/span&gt; &lt;span class="pre"&gt;-D&lt;/span&gt; &lt;span class="pre"&gt;|&lt;/span&gt; &lt;span class="pre"&gt;wc&lt;/span&gt; &lt;span class="pre"&gt;-l&lt;/span&gt;&lt;/code&gt;, on my system with a heavily patched &lt;strong class="command"&gt;mutt&lt;/strong&gt;
 1.5.13 it dumps just over 300 lines of output.  Of course, you shouldn’t need
 to edit all of those settings though.&lt;/p&gt;
 &lt;p&gt;With the possibility of such large configuration files segregation is
-important, and to aid that &lt;strong class=&quot;command&quot;&gt;mutt&lt;/strong&gt; supports config file inclusion.  My
-own &lt;code class=&quot;file docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;~/.muttrc&lt;/span&gt;&lt;/code&gt; takes advantage of this and consists of just the
+important, and to aid that &lt;strong class="command"&gt;mutt&lt;/strong&gt; supports config file inclusion.  My
+own &lt;code class="file docutils literal notranslate"&gt;&lt;span class="pre"&gt;~/.muttrc&lt;/span&gt;&lt;/code&gt; takes advantage of this and consists of just the
 following:&lt;/p&gt;
-&lt;div class=&quot;highlight-text notranslate&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;source ~/.mutt/boolean.rc
+&lt;div class="highlight-text notranslate"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;source ~/.mutt/boolean.rc
 source ~/.mutt/colour.rc
 source ~/.mutt/format.rc
 source ~/.mutt/keys.rc
@@ -45,15 +93,15 @@ push &amp;lt;show-version&amp;gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
 &lt;p&gt;The main config file simply includes all my other config files, and finally
-displays the &lt;strong class=&quot;command&quot;&gt;mutt&lt;/strong&gt; version number in the status line.  If you go down
-this route, and I recommend it, just keep in mind that &lt;strong class=&quot;command&quot;&gt;mutt&lt;/strong&gt;
+displays the &lt;strong class="command"&gt;mutt&lt;/strong&gt; version number in the status line.  If you go down
+this route, and I recommend it, just keep in mind that &lt;strong class="command"&gt;mutt&lt;/strong&gt;
 processes the files in order so you can’t use variables that are defined in
 later files.  The other thing to bear in mind while debugging is that
-&lt;strong class=&quot;command&quot;&gt;mutt&lt;/strong&gt; will be using the &lt;em&gt;last&lt;/em&gt; set option, so if you try to set the
-same variable in &lt;code class=&quot;file docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;boolean.rc&lt;/span&gt;&lt;/code&gt; and &lt;code class=&quot;file docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;gpg.rc&lt;/span&gt;&lt;/code&gt; &lt;strong class=&quot;command&quot;&gt;mutt&lt;/strong&gt; will
-override the value from &lt;code class=&quot;file docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;boolean.rc&lt;/span&gt;&lt;/code&gt; when it reads &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;gpg.rc&lt;/span&gt;&lt;/code&gt;.&lt;/p&gt;
-&lt;p&gt;The first config file to contain anything unusual is &lt;code class=&quot;file docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;colour.rc&lt;/span&gt;&lt;/code&gt;:&lt;/p&gt;
-&lt;div class=&quot;highlight-text notranslate&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;# Match URLs in mail
+&lt;strong class="command"&gt;mutt&lt;/strong&gt; will be using the &lt;em&gt;last&lt;/em&gt; set option, so if you try to set the
+same variable in &lt;code class="file docutils literal notranslate"&gt;&lt;span class="pre"&gt;boolean.rc&lt;/span&gt;&lt;/code&gt; and &lt;code class="file docutils literal notranslate"&gt;&lt;span class="pre"&gt;gpg.rc&lt;/span&gt;&lt;/code&gt; &lt;strong class="command"&gt;mutt&lt;/strong&gt; will
+override the value from &lt;code class="file docutils literal notranslate"&gt;&lt;span class="pre"&gt;boolean.rc&lt;/span&gt;&lt;/code&gt; when it reads &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;gpg.rc&lt;/span&gt;&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;The first config file to contain anything unusual is &lt;code class="file docutils literal notranslate"&gt;&lt;span class="pre"&gt;colour.rc&lt;/span&gt;&lt;/code&gt;:&lt;/p&gt;
+&lt;div class="highlight-text notranslate"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;# Match URLs in mail
 color body blue default &amp;quot;(finger|ftp|hg|http(|s)|news|tel)://[^ ]*&amp;quot;
 color body yellow black &amp;quot;mailto:[-a-z_0-9.]+@[-a-z_0-9.]+&amp;quot;
 # Match dates, both ISO-style and [YY]YY/MM/DD
@@ -67,42 +115,42 @@ color index brightmagenta brightblack &amp;quot;~h &amp;#39;^X-Spam-Status: Yes&
 color body yellow default &amp;quot;[-0-9]{9,12}[0-9X]&amp;quot;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
-&lt;p&gt;In &lt;code class=&quot;file docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;keys.rc&lt;/span&gt;&lt;/code&gt;:&lt;/p&gt;
-&lt;div class=&quot;highlight-text notranslate&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;# Read mail using text-to-speech engine
+&lt;p&gt;In &lt;code class="file docutils literal notranslate"&gt;&lt;span class="pre"&gt;keys.rc&lt;/span&gt;&lt;/code&gt;:&lt;/p&gt;
+&lt;div class="highlight-text notranslate"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;# Read mail using text-to-speech engine
 macro pager + &amp;quot;|festival --tts\r&amp;quot;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
-&lt;p&gt;In &lt;code class=&quot;file docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;misc.rc&lt;/span&gt;&lt;/code&gt; you can find:&lt;/p&gt;
-&lt;div class=&quot;highlight-text notranslate&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;# Fetch the spam rating as defined by qsf and SpamAssassin
+&lt;p&gt;In &lt;code class="file docutils literal notranslate"&gt;&lt;span class="pre"&gt;misc.rc&lt;/span&gt;&lt;/code&gt; you can find:&lt;/p&gt;
+&lt;div class="highlight-text notranslate"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;# Fetch the spam rating as defined by qsf and SpamAssassin
 spam &amp;quot;X-Spam-Status: Yes, hits=([0-9]+.[0-9]*)&amp;quot; &amp;quot;Spam [%1]&amp;quot;
 spam &amp;quot;X-Spam-Rating: ([7-9][0-9]+)&amp;quot; &amp;quot;Spam [%1]&amp;quot;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
-&lt;p&gt;You can then display the ratings in the &lt;strong class=&quot;command&quot;&gt;mutt&lt;/strong&gt; index by using &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;%H&lt;/span&gt;&lt;/code&gt;
-in your &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;index_format&lt;/span&gt;&lt;/code&gt; string.  I personally choose to display the spam
+&lt;p&gt;You can then display the ratings in the &lt;strong class="command"&gt;mutt&lt;/strong&gt; index by using &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;%H&lt;/span&gt;&lt;/code&gt;
+in your &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;index_format&lt;/span&gt;&lt;/code&gt; string.  I personally choose to display the spam
 rating instead of the date if it is found:&lt;/p&gt;
-&lt;div class=&quot;highlight-text notranslate&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;set index_format=&amp;quot;%Z %2N %?H?%-12.12H&amp;amp;%D? %-16.16F  %s&amp;quot;
+&lt;div class="highlight-text notranslate"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;set index_format=&amp;quot;%Z %2N %?H?%-12.12H&amp;amp;%D? %-16.16F  %s&amp;quot;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
-&lt;p&gt;The important bit there is &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;%?H?%-12.12H&amp;amp;%D?&lt;/span&gt;&lt;/code&gt; which displays twelve
+&lt;p&gt;The important bit there is &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;%?H?%-12.12H&amp;amp;%D?&lt;/span&gt;&lt;/code&gt; which displays twelve
 characters of the spam value if it is found, or failing that the date.  The
 reason we display exactly 12 characters of the spam value is so that the
 columns line up correctly regardless of whether we display a date or a spam
 value.  An example can be seen on the right featuring a few snippets from a ham
 mailbox and my spam mailbox:&lt;/p&gt;
-&lt;div class=&quot;figure align-default&quot;&gt;
-&lt;img alt=&quot;Spam field alignment in :command:`mutt`&quot; src=&quot;../_images/mutt_spam.png&quot; /&gt;
+&lt;div class="figure align-default"&gt;
+&lt;img alt="Spam field alignment in :command:`mutt`" src="../_images/mutt_spam.png" /&gt;
 &lt;/div&gt;
-&lt;p&gt;The final, and perhaps most interesting, file is &lt;code class=&quot;file docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;score.rc&lt;/span&gt;&lt;/code&gt; where
+&lt;p&gt;The final, and perhaps most interesting, file is &lt;code class="file docutils literal notranslate"&gt;&lt;span class="pre"&gt;score.rc&lt;/span&gt;&lt;/code&gt; where
 I define all my manual scoring and some per-mail colouring policies.&lt;/p&gt;
-&lt;p&gt;The first thing we need to understand is that &lt;strong class=&quot;command&quot;&gt;mutt&lt;/strong&gt; accumulates
+&lt;p&gt;The first thing we need to understand is that &lt;strong class="command"&gt;mutt&lt;/strong&gt; accumulates
 scoring and colouring over its run time.  If you set a scoring policy of +20
 for all mail from a certain domain each time you enter a folder 20 will be
-added to the score of any mail from that domain.  If you leave &lt;strong class=&quot;command&quot;&gt;mutt&lt;/strong&gt;
+added to the score of any mail from that domain.  If you leave &lt;strong class="command"&gt;mutt&lt;/strong&gt;
 running for a long time this can easily end up skewing the displayed score.
-The solution is simple, we tell &lt;strong class=&quot;command&quot;&gt;mutt&lt;/strong&gt; to re-source the score file and
+The solution is simple, we tell &lt;strong class="command"&gt;mutt&lt;/strong&gt; to re-source the score file and
 clear the settings every time we change folders:&lt;/p&gt;
-&lt;div class=&quot;highlight-text notranslate&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;# Reread this file on every folder change
+&lt;div class="highlight-text notranslate"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;# Reread this file on every folder change
 folder-hook . source ~/.mutt/score.rc
 unscore *
 uncolor index *
@@ -113,7 +161,7 @@ source ~/.mutt/colour.rc
 &lt;p&gt;Now we are free to setup our scoring policies without needing to worry about
 whether a score will be calculated twice.  We can also set up per-folder
 colouring much easier this way.&lt;/p&gt;
-&lt;div class=&quot;highlight-text notranslate&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;# Score mail to me, basically any mail which matches a value in
+&lt;div class="highlight-text notranslate"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;# Score mail to me, basically any mail which matches a value in
 # $alternates
 score ~p 40
 
@@ -129,80 +177,32 @@ folder-hook Gentoo-bugs color index brightred black ~hX-Resolved:
 folder-hook Gentoo-bugs &amp;#39;color index brightyellow default ~fseemant@gentoo\.org&amp;#39;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
-&lt;p&gt;&lt;strong class=&quot;command&quot;&gt;mutt&lt;/strong&gt; allows you to search the entire message using the &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;~b&lt;/span&gt;&lt;/code&gt;
+&lt;p&gt;&lt;strong class="command"&gt;mutt&lt;/strong&gt; allows you to search the entire message using the &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;~b&lt;/span&gt;&lt;/code&gt;
 qualifier, but it can take an incredible amount of time to scan a large mailbox
 if you use full body searches.  If you need to search in the mail body on
 a routine basis it is better to add custom headers to your mail during
-processing with your &lt;abbr title=&quot;Mail Delivery Agent&quot;&gt;MDA&lt;/abbr&gt;, and then trigger rules based on those headers.&lt;/p&gt;
+processing with your &lt;abbr title="Mail Delivery Agent"&gt;MDA&lt;/abbr&gt;, and then trigger rules based on those headers.&lt;/p&gt;
 &lt;p&gt;The Gentoo-bugs folder examples above use this method, because unfortunately
-&lt;a class=&quot;reference external&quot; href=&quot;http://www.bugzilla.org/&quot;&gt;Bugzilla&lt;/a&gt; doesn’t give us anything else to work with.  I add a &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;X-Resolved&lt;/span&gt;&lt;/code&gt;
-header if the mail contains &lt;code class=&quot;regexp docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;^&lt;/span&gt; &lt;span class=&quot;pre&quot;&gt;+Status|[^|]+|RESOLVED$&lt;/span&gt;&lt;/code&gt;.  And I set
-the &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;From&lt;/span&gt;&lt;/code&gt; header with the address taken from the first line that matches
-&lt;code class=&quot;regexp docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;^-{7}&lt;/span&gt; &lt;span class=&quot;pre&quot;&gt;Comment&lt;/span&gt; &lt;span class=&quot;pre&quot;&gt;#&lt;/span&gt;&lt;/code&gt;, or &lt;code class=&quot;regexp docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;^&lt;/span&gt; &lt;span class=&quot;pre&quot;&gt;{8}ReportedBy:&lt;/span&gt;&lt;/code&gt;.  Those two &lt;abbr title=&quot;Regular Expression&quot;&gt;RegEx&lt;/abbr&gt;
+&lt;a class="reference external" href="http://www.bugzilla.org/"&gt;Bugzilla&lt;/a&gt; doesn’t give us anything else to work with.  I add a &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;X-Resolved&lt;/span&gt;&lt;/code&gt;
+header if the mail contains &lt;code class="regexp docutils literal notranslate"&gt;&lt;span class="pre"&gt;^&lt;/span&gt; &lt;span class="pre"&gt;+Status|[^|]+|RESOLVED$&lt;/span&gt;&lt;/code&gt;.  And I set
+the &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;From&lt;/span&gt;&lt;/code&gt; header with the address taken from the first line that matches
+&lt;code class="regexp docutils literal notranslate"&gt;&lt;span class="pre"&gt;^-{7}&lt;/span&gt; &lt;span class="pre"&gt;Comment&lt;/span&gt; &lt;span class="pre"&gt;#&lt;/span&gt;&lt;/code&gt;, or &lt;code class="regexp docutils literal notranslate"&gt;&lt;span class="pre"&gt;^&lt;/span&gt; &lt;span class="pre"&gt;{8}ReportedBy:&lt;/span&gt;&lt;/code&gt;.  Those two &lt;abbr title="Regular Expression"&gt;RegEx&lt;/abbr&gt;
 catch every Gentoo Bugzilla mail I’ve come across, except external bug state
 changes which are left unchanged on purpose for easy highlighting.  I use
-a non-public &lt;abbr title=&quot;Mail Delivery Agent&quot;&gt;MDA&lt;/abbr&gt; system, so the actual rules aren’t very useful.&lt;/p&gt;
-&lt;p&gt;You can use any of the search attributes &lt;strong class=&quot;command&quot;&gt;mutt&lt;/strong&gt; defines to set up
+a non-public &lt;abbr title="Mail Delivery Agent"&gt;MDA&lt;/abbr&gt; system, so the actual rules aren’t very useful.&lt;/p&gt;
+&lt;p&gt;You can use any of the search attributes &lt;strong class="command"&gt;mutt&lt;/strong&gt; defines to set up
 scores or colouring.  For example, you could set all mail older than 1 week to
-a dull grey by matching on &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;~d&amp;gt;1w&lt;/span&gt;&lt;/code&gt; as in:&lt;/p&gt;
-&lt;div class=&quot;highlight-text notranslate&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;folder-hook Gentoo-bugs &amp;#39;color index brightblack default &amp;#39;~d&amp;gt;1w&amp;#39;&amp;#39;
+a dull grey by matching on &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;~d&amp;gt;1w&lt;/span&gt;&lt;/code&gt; as in:&lt;/p&gt;
+&lt;div class="highlight-text notranslate"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;folder-hook Gentoo-bugs &amp;#39;color index brightblack default &amp;#39;~d&amp;gt;1w&amp;#39;&amp;#39;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
-&lt;p&gt;There are a lot of possibilities with &lt;strong class=&quot;command&quot;&gt;mutt&lt;/strong&gt;, and there is a lot of
+&lt;p&gt;There are a lot of possibilities with &lt;strong class="command"&gt;mutt&lt;/strong&gt;, and there is a lot of
 in-depth documentation included in the package.  If your distribution doesn’t
-include it you can always head along to the &lt;a class=&quot;reference external&quot; href=&quot;http://www.mutt.org/&quot;&gt;mutt&lt;/a&gt; website and read it there.
-Happy &lt;strong class=&quot;command&quot;&gt;mutt&lt;/strong&gt;’ing.&lt;/p&gt;
+include it you can always head along to the &lt;a class="reference external" href="http://www.mutt.org/"&gt;mutt&lt;/a&gt; website and read it there.
+Happy &lt;strong class="command"&gt;mutt&lt;/strong&gt;’ing.&lt;/p&gt;
 &lt;/div&gt;
 </content>
-  </entry>
-  <entry xml:base="https://jnrowe.github.io/blog/2007/atom.xml">
-    <title type="text">Proper keyboard shortcuts in GTK+</title>
-    <id>https://jnrowe.github.io/articles/tips/emacs_gtk_shortcuts.html</id>
-    <updated>2007-03-05T00:00:00Z</updated>
-    <published>2007-03-05T00:00:00Z</published>
-    <link href="https://jnrowe.github.io/articles/tips/emacs_gtk_shortcuts.html" />
-    <author>
-      <name>James Rowe</name>
-    </author>
-    <content type="html">&lt;div class=&quot;section&quot; id=&quot;proper-keyboard-shortcuts-in-gtk&quot;&gt;
-
-&lt;p&gt;If you’re used to the old style &lt;a class=&quot;reference external&quot; href=&quot;http://www.gtk.org/&quot;&gt;GTK+&lt;/a&gt; keyboard shortcuts, and find yourself
-continually closing windows when you’re trying to delete a word (like me) then
-add the following to your &lt;code class=&quot;file docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;~/.gtkrc-2.0&lt;/span&gt;&lt;/code&gt;:&lt;/p&gt;
-&lt;div class=&quot;highlight-text notranslate&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;gtk-key-theme-name = &amp;quot;Emacs&amp;quot;
-&lt;/pre&gt;&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class=&quot;admonition note&quot;&gt;
-&lt;p class=&quot;admonition-title&quot;&gt;Note&lt;/p&gt;
-&lt;p&gt;This is for people using GTK+ apps, not GNOME.  If you wish to change
-bindings in GNOME you should use the control centre.&lt;/p&gt;
-&lt;/div&gt;
-&lt;p&gt;Using the above you can return to the old default format, but if you only want
-to enable &lt;kbd class=&quot;kbd docutils literal notranslate&quot;&gt;&lt;kbd class=&quot;kbd docutils literal notranslate&quot;&gt;&amp;lt;C&lt;/kbd&gt;-&lt;kbd class=&quot;kbd docutils literal notranslate&quot;&gt;w&amp;gt;&lt;/kbd&gt;&lt;/kbd&gt; and keep the other Windows-style shortcuts you can just
-add:&lt;/p&gt;
-&lt;div class=&quot;highlight-text notranslate&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;binding &amp;quot;gtk-emacs-text-entry&amp;quot;
-{
-    bind &amp;quot;&amp;lt;ctrl&amp;gt;w&amp;quot; { &amp;quot;delete-from-cursor&amp;quot; (word-ends, -1) }
-}
-class &amp;quot;GtkEntry&amp;quot; binding &amp;quot;gtk-emacs-text-entry&amp;quot;
-class &amp;quot;GtkTextView&amp;quot; binding &amp;quot;gtk-emacs-text-entry&amp;quot;
-&lt;/pre&gt;&lt;/div&gt;
-&lt;/div&gt;
-&lt;p&gt;If you use &lt;a class=&quot;reference external&quot; href=&quot;http://plasmasturm.org/code/gtk-chtheme/&quot;&gt;gtk-chtheme&lt;/a&gt; or &lt;a class=&quot;reference external&quot; href=&quot;http://www.muhri.net/nav.php3?node=gts&quot;&gt;gtk-theme-switch&lt;/a&gt; you should add custom options to
-your &lt;code class=&quot;file docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;~/.gtkrc.mine&lt;/span&gt;&lt;/code&gt; so it isn’t overwritten when you change themes.  See
-the comments in your &lt;code class=&quot;file docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;~/.gtkrc-2.0&lt;/span&gt;&lt;/code&gt; if you use either of these theme
-switchers.&lt;/p&gt;
-&lt;div class=&quot;figure align-default&quot;&gt;
-&lt;img alt=&quot;XFce4 keyboard settings window&quot; src=&quot;../_images/xfce4_keyboard.png&quot; /&gt;
-&lt;/div&gt;
-&lt;p&gt;If you’re an &lt;a class=&quot;reference external&quot; href=&quot;http://www.xfce.org/&quot;&gt;XFce&lt;/a&gt; user you can select the Emacs keyboard shortcuts using the
-keyboard settings dialog.&lt;/p&gt;
-&lt;p&gt;If you can’t change the settings for some reason, then you can still use
-a shortcut to delete words.  The default setting, up to at least GTK+ v2.10.9,
-is the finger-stretching &lt;kbd class=&quot;kbd docutils literal notranslate&quot;&gt;&lt;kbd class=&quot;kbd docutils literal notranslate&quot;&gt;&amp;lt;C&lt;/kbd&gt;-&lt;kbd class=&quot;kbd docutils literal notranslate&quot;&gt;backspace&amp;gt;&lt;/kbd&gt;&lt;/kbd&gt;.&lt;/p&gt;
-&lt;p&gt;And finally, if you manage to convince upstream that the default behaviour
-should be the settings in the Emacs theme I’ll owe you a few beers!&lt;/p&gt;
-&lt;/div&gt;
-</content>
+    <link href="https://jnrowe.github.io/articles/mutt_config_snippets.html" rel="alternate"/>
+    <published>2007-03-05T00:00:00+00:00</published>
   </entry>
 </feed>

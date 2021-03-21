@@ -1,22 +1,129 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version='1.0' encoding='UTF-8'?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <title type="text">JNRowe - Posts tagged X11</title>
-  <id>https://jnrowe.github.io/blog/tag/x11/atom.xml</id>
-  <updated>2009-10-06T00:00:00Z</updated>
-  <link href="https://jnrowe.github.io/" />
-  <link href="https://jnrowe.github.io/blog/tag/x11/atom.xml" rel="self" />
-  <subtitle type="text">Ramblings of a tired mind</subtitle>
-  <generator uri="https://ablog.readthedocs.org" version="0.10.4">ABlog</generator>
-  <entry xml:base="https://jnrowe.github.io/blog/tag/x11/atom.xml">
-    <title type="text">Finding a window’s owner</title>
-    <id>https://jnrowe.github.io/articles/tips/Finding_a_windows_owner.html</id>
-    <updated>2009-10-06T00:00:00Z</updated>
-    <published>2009-10-06T00:00:00Z</published>
-    <link href="https://jnrowe.github.io/articles/tips/Finding_a_windows_owner.html" />
+  <id>https://jnrowe.github.io/</id>
+  <title>JNRowe - Posts tagged X11</title>
+  <updated>2021-03-21T11:05:56.792130+00:00</updated>
+  <link href="https://jnrowe.github.io/"/>
+  <link href="https://jnrowe.github.io/blog/tag/x11/atom.xml"/>
+  <generator uri="https://ablog.readthedocs.org" version="0.10.12">ABlog</generator>
+  <subtitle>Ramblings of a tired mind</subtitle>
+  <entry>
+    <id>https://jnrowe.github.io/articles/tips/Sharing_Xresources_between_systems.html</id>
+    <title>Sharing Xresources between systems</title>
+    <updated>2009-10-05T00:00:00+01:00</updated>
     <author>
       <name>James Rowe</name>
     </author>
-    <content type="html">&lt;div class=&quot;section&quot; id=&quot;finding-a-windows-owner&quot;&gt;
+    <content type="html">&lt;div class="section" id="sharing-xresources-between-systems"&gt;
+
+&lt;p&gt;In amongst the rants in our watercooler channel at work comes this question:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;div&gt;&lt;p&gt;So then, how do custom settings in &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;Xresources&lt;/span&gt;&lt;/code&gt; work if you share your
+home directory between machines?&lt;/p&gt;
+&lt;/div&gt;&lt;/blockquote&gt;
+&lt;p&gt;The question arises from a much larger topic concerning keeping your home
+directory in a &lt;a class="reference external" href="http://www.git-scm.com/"&gt;git&lt;/a&gt; repository.  The issue Carl is having is that he needs to
+use different options on different machines and doesn’t relish the idea of
+having to pull and rebase branches just to keep files in sync.  Of course, he
+doesn’t have to do that and that is the point of this tip.&lt;/p&gt;
+&lt;div class="section" id="basic-conditionals"&gt;
+&lt;h2&gt;Basic conditionals&lt;/h2&gt;
+&lt;p&gt;With great foresight the authors of &lt;a class="reference external" href="http://www.xfree86.org/current/xrdb.1.html"&gt;xrdb&lt;/a&gt; decided that our &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;Xresources&lt;/span&gt;&lt;/code&gt; file
+should be preprocessed before it is used, the default preprocessor is
+&lt;strong class="command"&gt;cpp&lt;/strong&gt;.  On most of our systems at work, and likely most Linux systems
+in general, &lt;strong class="command"&gt;cpp&lt;/strong&gt; is &lt;a class="reference external" href="http://gcc.gnu.org/onlinedocs/gcc-4.4.1/cpp/"&gt;GNU cpp&lt;/a&gt;.  Don’t worry about the size of the
+manual though, the interesting features are easy to understand and use.  Let’s
+look at trimmed example from my configuration file:&lt;/p&gt;
+&lt;div class="highlight-c notranslate"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="cp"&gt;#ifndef FIXED_FONT&lt;/span&gt;
+    &lt;span class="cp"&gt;#define FIXED_FONT xft:Inconsolata:pixelsize=14:antialias=false&lt;/span&gt;
+&lt;span class="cp"&gt;#endif&lt;/span&gt;
+&lt;span class="cp"&gt;#ifndef BOLD_FIXED_FONT&lt;/span&gt;
+    &lt;span class="cp"&gt;#define BOLD_FIXED_FONT FIXED_FONT:bold&lt;/span&gt;
+&lt;span class="cp"&gt;#endif&lt;/span&gt;
+
+&lt;span class="n"&gt;urxvt&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nl"&gt;font&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="n"&gt;FIXED_FONT&lt;/span&gt;
+&lt;span class="n"&gt;urxvt&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nl"&gt;boldFont&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="n"&gt;BOLD_FIXED_FONT&lt;/span&gt;
+
+&lt;span class="n"&gt;irssi&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nl"&gt;font&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="n"&gt;FIXED_FONT&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;This small snippet sets a couple of default fonts that we can reference
+throughout our resource file as &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;FIXED_FONT&lt;/span&gt;&lt;/code&gt; and &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;BOLD_FIXED_FONT&lt;/span&gt;&lt;/code&gt;.  This
+way we can easily change the value in one place and it trickles down to all our
+programs.  Or we can define different options at runtime by specifying values
+to &lt;strong class="command"&gt;xrdb&lt;/strong&gt;, such as &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;xrdb&lt;/span&gt; &lt;span class="pre"&gt;-DFIXED_FONT=xft:Monospace:pixelsize=10&lt;/span&gt;&lt;/code&gt;.
+And don’t worry, &lt;strong class="command"&gt;cpp&lt;/strong&gt; is smart enough to cope with the use &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;=&lt;/span&gt;&lt;/code&gt; in
+our definition.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="per-system-conditionals"&gt;
+&lt;h2&gt;Per system conditionals&lt;/h2&gt;
+&lt;p&gt;On one system I use &lt;a class="reference external" href="http://www.levien.com/type/myfonts/inconsolata.html"&gt;Inconsolata&lt;/a&gt; is not installed, so the configuration above
+wouldn’t work on it.  &lt;strong class="command"&gt;xrdb&lt;/strong&gt; gives us a way around the problem though,
+it defines a set of symbols we can use including one to test the system’s
+&lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;hostname&lt;/span&gt;&lt;/code&gt;.  &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;nebula&lt;/span&gt;&lt;/code&gt;, the system that doesn’t have Inconsolata, does have
+&lt;a class="reference external" href="http://www.is-vn.bg/hamster/"&gt;terminus&lt;/a&gt; and I can use that on there with a couple of small changes.&lt;/p&gt;
+&lt;div class="highlight-c notranslate"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="cp"&gt;#ifndef FIXED_FONT&lt;/span&gt;
+    &lt;span class="cp"&gt;#ifdef SRVR_nebula&lt;/span&gt;
+        &lt;span class="cp"&gt;#define FIXED_FONT xft:Terminus:pixelsize=14:antialias=false&lt;/span&gt;
+    &lt;span class="cp"&gt;#else&lt;/span&gt;
+        &lt;span class="cp"&gt;#define FIXED_FONT xft:Inconsolata:pixelsize=14:antialias=false&lt;/span&gt;
+    &lt;span class="cp"&gt;#endif&lt;/span&gt;
+&lt;span class="cp"&gt;#endif&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="admonition note"&gt;
+&lt;p class="admonition-title"&gt;Note&lt;/p&gt;
+&lt;p&gt;As we’re using &lt;a class="reference external" href="http://xorg.freedesktop.org/"&gt;X11&lt;/a&gt;’s &lt;strong class="command"&gt;xrdb&lt;/strong&gt; it is network aware, it defines
+&lt;code class="samp docutils literal notranslate"&gt;&lt;span class="pre"&gt;SRVR_&lt;/span&gt;&lt;em&gt;&lt;span class="pre"&gt;name&lt;/span&gt;&lt;/em&gt;&lt;/code&gt; for the &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;X&lt;/span&gt;&lt;/code&gt; server name and &lt;code class="samp docutils literal notranslate"&gt;&lt;span class="pre"&gt;CLNT_&lt;/span&gt;&lt;em&gt;&lt;span class="pre"&gt;name&lt;/span&gt;&lt;/em&gt;&lt;/code&gt; for the
+client name.  Using these it is easy to configure systems where the server
+and clients are on different machines.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="section" id="conditionals-for-server-options"&gt;
+&lt;h2&gt;Conditionals for server options&lt;/h2&gt;
+&lt;p&gt;You can also change configured settings based on the extensions loaded in to the
+server, for example to disable the screensaver in &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;muxi&lt;/span&gt;&lt;/code&gt; if the &lt;abbr title="Display Power Management Signalling"&gt;DPMS&lt;/abbr&gt; extension is supported we’d test for
+&lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;EXT_DPMS&lt;/span&gt;&lt;/code&gt;:&lt;/p&gt;
+&lt;div class="highlight-c notranslate"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="cp"&gt;#ifdef EXT_DPMS&lt;/span&gt;
+    &lt;span class="n"&gt;muxi&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nl"&gt;screensaver&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="nb"&gt;false&lt;/span&gt;
+&lt;span class="cp"&gt;#endif&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="section" id="testing-your-resource-files"&gt;
+&lt;h2&gt;Testing your resource files&lt;/h2&gt;
+&lt;p&gt;When you’re testing your own &lt;code class="file docutils literal notranslate"&gt;&lt;span class="pre"&gt;~/.Xresources&lt;/span&gt;&lt;/code&gt; file you can use the
+&lt;code class="xref std std-option docutils literal notranslate"&gt;&lt;span class="pre"&gt;-n&lt;/span&gt;&lt;/code&gt; option with &lt;strong class="command"&gt;xrdb&lt;/strong&gt;, it tells &lt;strong class="command"&gt;xrdb&lt;/strong&gt; to dump the
+settings as they would be used instead of updating the resource database.  This
+makes it easy to check if our conditional statements are working correctly
+without having to open and close applications constantly.  You can also define
+and cancel symbol definitions with the &lt;code class="xref std std-option docutils literal notranslate"&gt;&lt;span class="pre"&gt;-D&lt;/span&gt;&lt;/code&gt; and &lt;code class="xref std std-option docutils literal notranslate"&gt;&lt;span class="pre"&gt;-U&lt;/span&gt;&lt;/code&gt; options
+for &lt;strong class="command"&gt;xrdb&lt;/strong&gt;, this allows you to test your modifications that rely on
+symbols that are normally exported by &lt;strong class="command"&gt;xrdb&lt;/strong&gt;.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="using-a-more-featureful-preprocessor"&gt;
+&lt;h2&gt;Using a more featureful preprocessor&lt;/h2&gt;
+&lt;p&gt;You can also choose a different preprocessor if &lt;strong class="command"&gt;cpp&lt;/strong&gt; isn’t up to your
+needs by specifying a &lt;strong class="command"&gt;-cpp&lt;/strong&gt; option to &lt;strong class="command"&gt;xrdb&lt;/strong&gt;.  The only
+caveat is that must accept &lt;code class="xref std std-option docutils literal notranslate"&gt;&lt;span class="pre"&gt;-D&lt;/span&gt;&lt;/code&gt; for defines, &lt;code class="xref std std-option docutils literal notranslate"&gt;&lt;span class="pre"&gt;-U&lt;/span&gt;&lt;/code&gt; for symbol
+cancelling and &lt;a class="reference external" href="https://docs.python.org/3/using/cmdline.html#id2" title="(in Python v3.9)"&gt;&lt;code class="xref std std-option docutils literal notranslate"&gt;&lt;span class="pre"&gt;-I&lt;/span&gt;&lt;/code&gt;&lt;/a&gt; for include paths.  An example that does fit these
+restrictions is &lt;a class="reference external" href="http://www.gnu.org/software/m4/m4.html"&gt;m4&lt;/a&gt;, and it might be a good choice if you wish to do mode
+advanced things in your configuration file such as fancy filtering or the use
+of loops for defining colour tables.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</content>
+    <link href="https://jnrowe.github.io/articles/tips/Sharing_Xresources_between_systems.html" rel="alternate"/>
+    <published>2009-10-05T00:00:00+01:00</published>
+  </entry>
+  <entry>
+    <id>https://jnrowe.github.io/articles/tips/Finding_a_windows_owner.html</id>
+    <title>Finding a window’s owner</title>
+    <updated>2009-10-06T00:00:00+01:00</updated>
+    <author>
+      <name>James Rowe</name>
+    </author>
+    <content type="html">&lt;div class="section" id="finding-a-windows-owner"&gt;
 
 &lt;p&gt;Rach Holmes asks on our Linux list:&lt;/p&gt;
 &lt;blockquote&gt;
@@ -24,171 +131,64 @@
 &lt;/div&gt;&lt;/blockquote&gt;
 &lt;p&gt;Jack McIntyre made a couple of outstanding correct guesses, but predictably Rach
 still wanted to know a generic solution and I offer this tip in response.&lt;/p&gt;
-&lt;div class=&quot;section&quot; id=&quot;the-easy-way&quot;&gt;
+&lt;div class="section" id="the-easy-way"&gt;
 &lt;h2&gt;The easy way&lt;/h2&gt;
-&lt;p&gt;Many windows define a &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;WM_COMMAND&lt;/span&gt;&lt;/code&gt; property that is set to the command name of
+&lt;p&gt;Many windows define a &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;WM_COMMAND&lt;/span&gt;&lt;/code&gt; property that is set to the command name of
 the application, if that exists all we have to do is read it:&lt;/p&gt;
-&lt;div class=&quot;highlight-console notranslate&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&quot;gp&quot;&gt;$&lt;/span&gt; xprop &lt;span class=&quot;p&quot;&gt;|&lt;/span&gt; grep WM_COMMAND
-&lt;span class=&quot;go&quot;&gt;WM_COMMAND(STRING) = { &amp;quot;urxvt&amp;quot;, &amp;quot;-cd&amp;quot;, &amp;quot;/home/jay/Desktop&amp;quot; }&lt;/span&gt;
+&lt;div class="highlight-console notranslate"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="gp"&gt;$&lt;/span&gt; xprop &lt;span class="p"&gt;|&lt;/span&gt; grep WM_COMMAND
+&lt;span class="go"&gt;WM_COMMAND(STRING) = { &amp;quot;urxvt&amp;quot;, &amp;quot;-cd&amp;quot;, &amp;quot;/home/jay/Desktop&amp;quot; }&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
 &lt;p&gt;However, not all applications set this property.  Examples of applications that
-don’t set this property include &lt;a class=&quot;reference external&quot; href=&quot;http://www.mozilla.com/firefox&quot;&gt;firefox&lt;/a&gt; and &lt;a class=&quot;reference external&quot; href=&quot;http://www.gimp.org/&quot;&gt;gimp&lt;/a&gt;.  In fact, many of the modern
+don’t set this property include &lt;a class="reference external" href="http://www.mozilla.com/firefox"&gt;firefox&lt;/a&gt; and &lt;a class="reference external" href="http://www.gimp.org/"&gt;gimp&lt;/a&gt;.  In fact, many of the modern
 applications you find on desktop systems don’t set this property at all.&lt;/p&gt;
 &lt;/div&gt;
-&lt;div class=&quot;section&quot; id=&quot;the-other-way&quot;&gt;
+&lt;div class="section" id="the-other-way"&gt;
 &lt;h2&gt;The other way&lt;/h2&gt;
-&lt;p&gt;&lt;a class=&quot;reference external&quot; href=&quot;http://standards.freedesktop.org/wm-spec/wm-spec-1.3.html&quot;&gt;EWMH&lt;/a&gt;, the Extended Window Manager Hints standard, defines a property called
-&lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;_NET_WM_PID&lt;/span&gt;&lt;/code&gt; that, if defined, is the process id of the application that
+&lt;p&gt;&lt;a class="reference external" href="http://standards.freedesktop.org/wm-spec/wm-spec-1.3.html"&gt;EWMH&lt;/a&gt;, the Extended Window Manager Hints standard, defines a property called
+&lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;_NET_WM_PID&lt;/span&gt;&lt;/code&gt; that, if defined, is the process id of the application that
 opened the window.  We have a couple of options to access that property, my
-favourite would be &lt;a class=&quot;reference external&quot; href=&quot;http://sweb.cz/tripie/utils/wmctrl/&quot;&gt;wmctrl&lt;/a&gt; and another would be &lt;a class=&quot;reference external&quot; href=&quot;http://www.xfree86.org/current/xprop.1.html&quot;&gt;xprop&lt;/a&gt; which is often installed
+favourite would be &lt;a class="reference external" href="http://sweb.cz/tripie/utils/wmctrl/"&gt;wmctrl&lt;/a&gt; and another would be &lt;a class="reference external" href="http://www.xfree86.org/current/xprop.1.html"&gt;xprop&lt;/a&gt; which is often installed
 by default.&lt;/p&gt;
-&lt;div class=&quot;highlight-console notranslate&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&quot;gp&quot;&gt;$&lt;/span&gt; wmctrl -lp
-&lt;span class=&quot;go&quot;&gt;0x01200003  2 13398  kate 2009-10-06-TaD-Finding_a_windows_owner.textile [+] - gvim&lt;/span&gt;
-&lt;span class=&quot;go&quot;&gt;0x01000006  3 9992   kate Irssi: [JNR___@freenode] [#github]&lt;/span&gt;
-&lt;span class=&quot;go&quot;&gt;0x00c00005  1 10134  kate SpotMe - Opera&lt;/span&gt;
-&lt;span class=&quot;go&quot;&gt;0x00600019  0 9992   kate jay@kate:~/Desktop/jnrowe.github.io&lt;/span&gt;
-&lt;span class=&quot;gp&quot;&gt;$&lt;/span&gt; xprop &lt;span class=&quot;p&quot;&gt;|&lt;/span&gt; awk &lt;span class=&quot;s1&quot;&gt;&amp;#39;/_NET_WM_PID/ {print $NF}&amp;#39;&lt;/span&gt;
-&lt;span class=&quot;go&quot;&gt;9992&lt;/span&gt;
-&lt;span class=&quot;gp&quot;&gt;$&lt;/span&gt; tr &lt;span class=&quot;s1&quot;&gt;&amp;#39;\000&amp;#39;&lt;/span&gt;  &lt;span class=&quot;s1&quot;&gt;&amp;#39; &amp;#39;&lt;/span&gt; &amp;lt; /proc/9992/cmdline
-&lt;span class=&quot;go&quot;&gt;/usr/bin/urxvtd -q -f -o&lt;/span&gt;
+&lt;div class="highlight-console notranslate"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="gp"&gt;$&lt;/span&gt; wmctrl -lp
+&lt;span class="go"&gt;0x01200003  2 13398  kate 2009-10-06-TaD-Finding_a_windows_owner.textile [+] - gvim&lt;/span&gt;
+&lt;span class="go"&gt;0x01000006  3 9992   kate Irssi: [JNR___@freenode] [#github]&lt;/span&gt;
+&lt;span class="go"&gt;0x00c00005  1 10134  kate SpotMe - Opera&lt;/span&gt;
+&lt;span class="go"&gt;0x00600019  0 9992   kate jay@kate:~/Desktop/jnrowe.github.io&lt;/span&gt;
+&lt;span class="gp"&gt;$&lt;/span&gt; xprop &lt;span class="p"&gt;|&lt;/span&gt; awk &lt;span class="s1"&gt;&amp;#39;/_NET_WM_PID/ {print $NF}&amp;#39;&lt;/span&gt;
+&lt;span class="go"&gt;9992&lt;/span&gt;
+&lt;span class="gp"&gt;$&lt;/span&gt; tr &lt;span class="s1"&gt;&amp;#39;\000&amp;#39;&lt;/span&gt;  &lt;span class="s1"&gt;&amp;#39; &amp;#39;&lt;/span&gt; &amp;lt; /proc/9992/cmdline
+&lt;span class="go"&gt;/usr/bin/urxvtd -q -f -o&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
-&lt;p&gt;The &lt;strong class=&quot;command&quot;&gt;wmctrl&lt;/strong&gt; output has five space aligned columns.  The first is the
+&lt;p&gt;The &lt;strong class="command"&gt;wmctrl&lt;/strong&gt; output has five space aligned columns.  The first is the
 window id, the second the desktop is visible on, the third is the process id,
 the fourth is the client machine and the fifth is the window’s title string.
-And with the &lt;strong class=&quot;command&quot;&gt;xprop&lt;/strong&gt; example we must select a window with the mouse
-when calling &lt;strong class=&quot;command&quot;&gt;xprop&lt;/strong&gt;, and then we pluck the process id from the
+And with the &lt;strong class="command"&gt;xprop&lt;/strong&gt; example we must select a window with the mouse
+when calling &lt;strong class="command"&gt;xprop&lt;/strong&gt;, and then we pluck the process id from the
 output.&lt;/p&gt;
-&lt;p&gt;The &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;cmdline&lt;/span&gt;&lt;/code&gt; value for the process from &lt;a class=&quot;reference external&quot; href=&quot;http://blogs.sun.com/eschrock/entry/the_power_of_proc&quot;&gt;procfs&lt;/a&gt; is finally read.  The
-&lt;strong class=&quot;command&quot;&gt;tr&lt;/strong&gt; command is needed because options are separated by null
+&lt;p&gt;The &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;cmdline&lt;/span&gt;&lt;/code&gt; value for the process from &lt;a class="reference external" href="http://blogs.sun.com/eschrock/entry/the_power_of_proc"&gt;procfs&lt;/a&gt; is finally read.  The
+&lt;strong class="command"&gt;tr&lt;/strong&gt; command is needed because options are separated by null
 terminators.&lt;/p&gt;
 &lt;/div&gt;
-&lt;div class=&quot;section&quot; id=&quot;the-problems&quot;&gt;
+&lt;div class="section" id="the-problems"&gt;
 &lt;h2&gt;The problems&lt;/h2&gt;
 &lt;p&gt;Back to the original question and Rach was looking for a way to stop the window
 from showing up, the immediate response to the annoying window problem is to
-find its process id and send it a &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;SIGTERM&lt;/span&gt;&lt;/code&gt;.  It seems like a reasonable idea,
-but I’ve been choosing the &lt;strong class=&quot;command&quot;&gt;urxvtd&lt;/strong&gt; examples on purpose to prove
+find its process id and send it a &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;SIGTERM&lt;/span&gt;&lt;/code&gt;.  It seems like a reasonable idea,
+but I’ve been choosing the &lt;strong class="command"&gt;urxvtd&lt;/strong&gt; examples on purpose to prove
 a point.&lt;/p&gt;
-&lt;p&gt;&lt;strong class=&quot;command&quot;&gt;urxvtd&lt;/strong&gt; is the terminal daemon provided by &lt;a class=&quot;reference external&quot; href=&quot;http://software.schmorp.de/&quot;&gt;rxvt-unicode&lt;/a&gt;, all
-terminals that are spawned by it will have the same &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;_NET_WM_PID&lt;/span&gt;&lt;/code&gt; value and
-&lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;WM_COMMAND&lt;/span&gt;&lt;/code&gt; string.  This isn’t just an issue with &lt;strong class=&quot;command&quot;&gt;urxvtd&lt;/strong&gt; either,
+&lt;p&gt;&lt;strong class="command"&gt;urxvtd&lt;/strong&gt; is the terminal daemon provided by &lt;a class="reference external" href="http://software.schmorp.de/"&gt;rxvt-unicode&lt;/a&gt;, all
+terminals that are spawned by it will have the same &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;_NET_WM_PID&lt;/span&gt;&lt;/code&gt; value and
+&lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;WM_COMMAND&lt;/span&gt;&lt;/code&gt; string.  This isn’t just an issue with &lt;strong class="command"&gt;urxvtd&lt;/strong&gt; either,
 it happens with all applications that operate in this way.  Sending
-a &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;SIGTERM&lt;/span&gt;&lt;/code&gt; to every terminal opened by &lt;strong class=&quot;command&quot;&gt;urxvtd&lt;/strong&gt; probably isn’t what
+a &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;SIGTERM&lt;/span&gt;&lt;/code&gt; to every terminal opened by &lt;strong class="command"&gt;urxvtd&lt;/strong&gt; probably isn’t what
 we would want to do, so you should always think very carefully before sending
 terminate signals.&lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 </content>
-  </entry>
-  <entry xml:base="https://jnrowe.github.io/blog/tag/x11/atom.xml">
-    <title type="text">Sharing Xresources between systems</title>
-    <id>https://jnrowe.github.io/articles/tips/Sharing_Xresources_between_systems.html</id>
-    <updated>2009-10-05T00:00:00Z</updated>
-    <published>2009-10-05T00:00:00Z</published>
-    <link href="https://jnrowe.github.io/articles/tips/Sharing_Xresources_between_systems.html" />
-    <author>
-      <name>James Rowe</name>
-    </author>
-    <content type="html">&lt;div class=&quot;section&quot; id=&quot;sharing-xresources-between-systems&quot;&gt;
-
-&lt;p&gt;In amongst the rants in our watercooler channel at work comes this question:&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;div&gt;&lt;p&gt;So then, how do custom settings in &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;Xresources&lt;/span&gt;&lt;/code&gt; work if you share your
-home directory between machines?&lt;/p&gt;
-&lt;/div&gt;&lt;/blockquote&gt;
-&lt;p&gt;The question arises from a much larger topic concerning keeping your home
-directory in a &lt;a class=&quot;reference external&quot; href=&quot;http://www.git-scm.com/&quot;&gt;git&lt;/a&gt; repository.  The issue Carl is having is that he needs to
-use different options on different machines and doesn’t relish the idea of
-having to pull and rebase branches just to keep files in sync.  Of course, he
-doesn’t have to do that and that is the point of this tip.&lt;/p&gt;
-&lt;div class=&quot;section&quot; id=&quot;basic-conditionals&quot;&gt;
-&lt;h2&gt;Basic conditionals&lt;/h2&gt;
-&lt;p&gt;With great foresight the authors of &lt;a class=&quot;reference external&quot; href=&quot;http://www.xfree86.org/current/xrdb.1.html&quot;&gt;xrdb&lt;/a&gt; decided that our &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;Xresources&lt;/span&gt;&lt;/code&gt; file
-should be preprocessed before it is used, the default preprocessor is
-&lt;strong class=&quot;command&quot;&gt;cpp&lt;/strong&gt;.  On most of our systems at work, and likely most Linux systems
-in general, &lt;strong class=&quot;command&quot;&gt;cpp&lt;/strong&gt; is &lt;a class=&quot;reference external&quot; href=&quot;http://gcc.gnu.org/onlinedocs/gcc-4.4.1/cpp/&quot;&gt;GNU cpp&lt;/a&gt;.  Don’t worry about the size of the
-manual though, the interesting features are easy to understand and use.  Let’s
-look at trimmed example from my configuration file:&lt;/p&gt;
-&lt;div class=&quot;highlight-c notranslate&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&quot;cp&quot;&gt;#ifndef FIXED_FONT&lt;/span&gt;
-    &lt;span class=&quot;cp&quot;&gt;#define FIXED_FONT xft:Inconsolata:pixelsize=14:antialias=false&lt;/span&gt;
-&lt;span class=&quot;cp&quot;&gt;#endif&lt;/span&gt;
-&lt;span class=&quot;cp&quot;&gt;#ifndef BOLD_FIXED_FONT&lt;/span&gt;
-    &lt;span class=&quot;cp&quot;&gt;#define BOLD_FIXED_FONT FIXED_FONT:bold&lt;/span&gt;
-&lt;span class=&quot;cp&quot;&gt;#endif&lt;/span&gt;
-
-&lt;span class=&quot;n&quot;&gt;urxvt&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;font&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;FIXED_FONT&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;urxvt&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;boldFont&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;BOLD_FIXED_FONT&lt;/span&gt;
-
-&lt;span class=&quot;n&quot;&gt;irssi&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;font&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;FIXED_FONT&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-&lt;/div&gt;
-&lt;p&gt;This small snippet sets a couple of default fonts that we can reference
-throughout our resource file as &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;FIXED_FONT&lt;/span&gt;&lt;/code&gt; and &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;BOLD_FIXED_FONT&lt;/span&gt;&lt;/code&gt;.  This
-way we can easily change the value in one place and it trickles down to all our
-programs.  Or we can define different options at runtime by specifying values
-to &lt;strong class=&quot;command&quot;&gt;xrdb&lt;/strong&gt;, such as &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;xrdb&lt;/span&gt; &lt;span class=&quot;pre&quot;&gt;-DFIXED_FONT=xft:Monospace:pixelsize=10&lt;/span&gt;&lt;/code&gt;.
-And don’t worry, &lt;strong class=&quot;command&quot;&gt;cpp&lt;/strong&gt; is smart enough to cope with the use &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;=&lt;/span&gt;&lt;/code&gt; in
-our definition.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class=&quot;section&quot; id=&quot;per-system-conditionals&quot;&gt;
-&lt;h2&gt;Per system conditionals&lt;/h2&gt;
-&lt;p&gt;On one system I use &lt;a class=&quot;reference external&quot; href=&quot;http://www.levien.com/type/myfonts/inconsolata.html&quot;&gt;Inconsolata&lt;/a&gt; is not installed, so the configuration above
-wouldn’t work on it.  &lt;strong class=&quot;command&quot;&gt;xrdb&lt;/strong&gt; gives us a way around the problem though,
-it defines a set of symbols we can use including one to test the system’s
-&lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;hostname&lt;/span&gt;&lt;/code&gt;.  &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;nebula&lt;/span&gt;&lt;/code&gt;, the system that doesn’t have Inconsolata, does have
-&lt;a class=&quot;reference external&quot; href=&quot;http://www.is-vn.bg/hamster/&quot;&gt;terminus&lt;/a&gt; and I can use that on there with a couple of small changes.&lt;/p&gt;
-&lt;div class=&quot;highlight-c notranslate&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&quot;cp&quot;&gt;#ifndef FIXED_FONT&lt;/span&gt;
-    &lt;span class=&quot;cp&quot;&gt;#ifdef SRVR_nebula&lt;/span&gt;
-        &lt;span class=&quot;cp&quot;&gt;#define FIXED_FONT xft:Terminus:pixelsize=14:antialias=false&lt;/span&gt;
-    &lt;span class=&quot;cp&quot;&gt;#else&lt;/span&gt;
-        &lt;span class=&quot;cp&quot;&gt;#define FIXED_FONT xft:Inconsolata:pixelsize=14:antialias=false&lt;/span&gt;
-    &lt;span class=&quot;cp&quot;&gt;#endif&lt;/span&gt;
-&lt;span class=&quot;cp&quot;&gt;#endif&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class=&quot;admonition note&quot;&gt;
-&lt;p class=&quot;admonition-title&quot;&gt;Note&lt;/p&gt;
-&lt;p&gt;As we’re using &lt;a class=&quot;reference external&quot; href=&quot;http://xorg.freedesktop.org/&quot;&gt;X11&lt;/a&gt;’s &lt;strong class=&quot;command&quot;&gt;xrdb&lt;/strong&gt; it is network aware, it defines
-&lt;code class=&quot;samp docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;SRVR_&lt;/span&gt;&lt;em&gt;&lt;span class=&quot;pre&quot;&gt;name&lt;/span&gt;&lt;/em&gt;&lt;/code&gt; for the &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;X&lt;/span&gt;&lt;/code&gt; server name and &lt;code class=&quot;samp docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;CLNT_&lt;/span&gt;&lt;em&gt;&lt;span class=&quot;pre&quot;&gt;name&lt;/span&gt;&lt;/em&gt;&lt;/code&gt; for the
-client name.  Using these it is easy to configure systems where the server
-and clients are on different machines.&lt;/p&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class=&quot;section&quot; id=&quot;conditionals-for-server-options&quot;&gt;
-&lt;h2&gt;Conditionals for server options&lt;/h2&gt;
-&lt;p&gt;You can also change configured settings based on the extensions loaded in to the
-server, for example to disable the screensaver in &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;muxi&lt;/span&gt;&lt;/code&gt; if the &lt;abbr title=&quot;Display Power Management Signalling&quot;&gt;DPMS&lt;/abbr&gt; extension is supported we’d test for
-&lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;EXT_DPMS&lt;/span&gt;&lt;/code&gt;:&lt;/p&gt;
-&lt;div class=&quot;highlight-c notranslate&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&quot;cp&quot;&gt;#ifdef EXT_DPMS&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;muxi&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;screensaver&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;false&lt;/span&gt;
-&lt;span class=&quot;cp&quot;&gt;#endif&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class=&quot;section&quot; id=&quot;testing-your-resource-files&quot;&gt;
-&lt;h2&gt;Testing your resource files&lt;/h2&gt;
-&lt;p&gt;When you’re testing your own &lt;code class=&quot;file docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;~/.Xresources&lt;/span&gt;&lt;/code&gt; file you can use the
-&lt;code class=&quot;xref std std-option docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;-n&lt;/span&gt;&lt;/code&gt; option with &lt;strong class=&quot;command&quot;&gt;xrdb&lt;/strong&gt;, it tells &lt;strong class=&quot;command&quot;&gt;xrdb&lt;/strong&gt; to dump the
-settings as they would be used instead of updating the resource database.  This
-makes it easy to check if our conditional statements are working correctly
-without having to open and close applications constantly.  You can also define
-and cancel symbol definitions with the &lt;code class=&quot;xref std std-option docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;-D&lt;/span&gt;&lt;/code&gt; and &lt;code class=&quot;xref std std-option docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;-U&lt;/span&gt;&lt;/code&gt; options
-for &lt;strong class=&quot;command&quot;&gt;xrdb&lt;/strong&gt;, this allows you to test your modifications that rely on
-symbols that are normally exported by &lt;strong class=&quot;command&quot;&gt;xrdb&lt;/strong&gt;.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class=&quot;section&quot; id=&quot;using-a-more-featureful-preprocessor&quot;&gt;
-&lt;h2&gt;Using a more featureful preprocessor&lt;/h2&gt;
-&lt;p&gt;You can also choose a different preprocessor if &lt;strong class=&quot;command&quot;&gt;cpp&lt;/strong&gt; isn’t up to your
-needs by specifying a &lt;strong class=&quot;command&quot;&gt;-cpp&lt;/strong&gt; option to &lt;strong class=&quot;command&quot;&gt;xrdb&lt;/strong&gt;.  The only
-caveat is that must accept &lt;code class=&quot;xref std std-option docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;-D&lt;/span&gt;&lt;/code&gt; for defines, &lt;code class=&quot;xref std std-option docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;-U&lt;/span&gt;&lt;/code&gt; for symbol
-cancelling and &lt;a class=&quot;reference external&quot; href=&quot;https://docs.python.org/3/using/cmdline.html#id2&quot; title=&quot;(in Python v3.9)&quot;&gt;&lt;code class=&quot;xref std std-option docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;-I&lt;/span&gt;&lt;/code&gt;&lt;/a&gt; for include paths.  An example that does fit these
-restrictions is &lt;a class=&quot;reference external&quot; href=&quot;http://www.gnu.org/software/m4/m4.html&quot;&gt;m4&lt;/a&gt;, and it might be a good choice if you wish to do mode
-advanced things in your configuration file such as fancy filtering or the use
-of loops for defining colour tables.&lt;/p&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-</content>
+    <link href="https://jnrowe.github.io/articles/tips/Finding_a_windows_owner.html" rel="alternate"/>
+    <published>2009-10-06T00:00:00+01:00</published>
   </entry>
 </feed>

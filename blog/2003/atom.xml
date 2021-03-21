@@ -1,278 +1,276 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version='1.0' encoding='UTF-8'?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <title type="text">JNRowe - Posted in 2003</title>
-  <id>https://jnrowe.github.io/blog/2003/atom.xml</id>
-  <updated>2003-09-05T00:00:00Z</updated>
-  <link href="https://jnrowe.github.io/" />
-  <link href="https://jnrowe.github.io/blog/2003/atom.xml" rel="self" />
-  <subtitle type="text">Ramblings of a tired mind</subtitle>
-  <generator uri="https://ablog.readthedocs.org" version="0.10.4">ABlog</generator>
-  <entry xml:base="https://jnrowe.github.io/blog/2003/atom.xml">
-    <title type="text">Introduction to RCS</title>
+  <id>https://jnrowe.github.io/</id>
+  <title>JNRowe - Posted in 2003</title>
+  <updated>2021-03-21T11:05:56.668365+00:00</updated>
+  <link href="https://jnrowe.github.io/"/>
+  <link href="https://jnrowe.github.io/blog/2003/atom.xml"/>
+  <generator uri="https://ablog.readthedocs.org" version="0.10.12">ABlog</generator>
+  <subtitle>Ramblings of a tired mind</subtitle>
+  <entry>
     <id>https://jnrowe.github.io/articles/rcs.html</id>
-    <updated>2003-09-05T00:00:00Z</updated>
-    <published>2003-09-05T00:00:00Z</published>
-    <link href="https://jnrowe.github.io/articles/rcs.html" />
+    <title>Introduction to RCS</title>
+    <updated>2003-09-05T00:00:00+01:00</updated>
     <author>
       <name>James Rowe</name>
     </author>
-    <content type="html">&lt;div class=&quot;section&quot; id=&quot;introduction-to-rcs&quot;&gt;
+    <content type="html">&lt;div class="section" id="introduction-to-rcs"&gt;
 
-&lt;div class=&quot;admonition warning&quot;&gt;
-&lt;p class=&quot;admonition-title&quot;&gt;Warning&lt;/p&gt;
+&lt;div class="admonition warning"&gt;
+&lt;p class="admonition-title"&gt;Warning&lt;/p&gt;
 &lt;p&gt;I’ve resurrected this text from my old UKFSN site because a couple of
-people asked me to, but I wouldn’t recommend using &lt;abbr title=&quot;GNU Revision Control System&quot;&gt;RCS&lt;/abbr&gt; to anyone at this
-point.  It is mainly to help people who need to understand &lt;abbr title=&quot;GNU Revision Control System&quot;&gt;RCS&lt;/abbr&gt; because
+people asked me to, but I wouldn’t recommend using &lt;abbr title="GNU Revision Control System"&gt;RCS&lt;/abbr&gt; to anyone at this
+point.  It is mainly to help people who need to understand &lt;abbr title="GNU Revision Control System"&gt;RCS&lt;/abbr&gt; because
 they have no choice, for example Gentoo users who are stuck with
-&lt;strong class=&quot;command&quot;&gt;dispatch-conf&lt;/strong&gt; (or so my mails tell me).&lt;/p&gt;
+&lt;strong class="command"&gt;dispatch-conf&lt;/strong&gt; (or so my mails tell me).&lt;/p&gt;
 &lt;/div&gt;
-&lt;div class=&quot;section&quot; id=&quot;abstract&quot;&gt;
+&lt;div class="section" id="abstract"&gt;
 &lt;h2&gt;Abstract&lt;/h2&gt;
-&lt;p&gt;This introduction is aimed at people with no experience of a &lt;abbr title=&quot;Version Control System&quot;&gt;VCS&lt;/abbr&gt; at all, but
+&lt;p&gt;This introduction is aimed at people with no experience of a &lt;abbr title="Version Control System"&gt;VCS&lt;/abbr&gt; at all, but
 who do have a need for an easy to use and non-intrusive way to backup, store
 and annotate configuration files or 5000 file C source trees.  This text is by
-no means an in-depth &lt;abbr title=&quot;GNU Revision Control System&quot;&gt;RCS&lt;/abbr&gt; usage manual, it is a short and fast way to get
-working with &lt;abbr title=&quot;GNU Revision Control System&quot;&gt;RCS&lt;/abbr&gt;.&lt;/p&gt;
-&lt;p&gt;&lt;abbr title=&quot;GNU Revision Control System&quot;&gt;RCS&lt;/abbr&gt; is great for small projects or managing the wealth of configuration files
-in &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;/etc&lt;/span&gt;&lt;/code&gt;.  It provides a way to reduce the need for file backups(without
+no means an in-depth &lt;abbr title="GNU Revision Control System"&gt;RCS&lt;/abbr&gt; usage manual, it is a short and fast way to get
+working with &lt;abbr title="GNU Revision Control System"&gt;RCS&lt;/abbr&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;abbr title="GNU Revision Control System"&gt;RCS&lt;/abbr&gt; is great for small projects or managing the wealth of configuration files
+in &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;/etc&lt;/span&gt;&lt;/code&gt;.  It provides a way to reduce the need for file backups(without
 losing any backup quality or quantity), to annotate changes made to a file, to
 allow other people to work on a file and an easy method to package patch/diff
 files for distribution.&lt;/p&gt;
-&lt;p&gt;If you want more in-depth information about using &lt;abbr title=&quot;GNU Revision Control System&quot;&gt;RCS&lt;/abbr&gt;, or when you find you
-need more functionality from &lt;abbr title=&quot;GNU Revision Control System&quot;&gt;RCS&lt;/abbr&gt;, there is a HOW-TO at &lt;a class=&quot;reference external&quot; href=&quot;http://www.tldp.org&quot;&gt;The Linux
-Documentation Project&lt;/a&gt; (&lt;a class=&quot;reference external&quot; href=&quot;http://tldp.org/HOWTO/RCS.html&quot;&gt;direct link&lt;/a&gt;) and fantastic documentation is
-provided with the &lt;abbr title=&quot;GNU Revision Control System&quot;&gt;RCS&lt;/abbr&gt; package.&lt;/p&gt;
+&lt;p&gt;If you want more in-depth information about using &lt;abbr title="GNU Revision Control System"&gt;RCS&lt;/abbr&gt;, or when you find you
+need more functionality from &lt;abbr title="GNU Revision Control System"&gt;RCS&lt;/abbr&gt;, there is a HOW-TO at &lt;a class="reference external" href="http://www.tldp.org"&gt;The Linux
+Documentation Project&lt;/a&gt; (&lt;a class="reference external" href="http://tldp.org/HOWTO/RCS.html"&gt;direct link&lt;/a&gt;) and fantastic documentation is
+provided with the &lt;abbr title="GNU Revision Control System"&gt;RCS&lt;/abbr&gt; package.&lt;/p&gt;
 &lt;/div&gt;
-&lt;div class=&quot;section&quot; id=&quot;diving-in&quot;&gt;
+&lt;div class="section" id="diving-in"&gt;
 &lt;h2&gt;Diving in&lt;/h2&gt;
-&lt;p&gt;&lt;abbr title=&quot;GNU Revision Control System&quot;&gt;RCS&lt;/abbr&gt; is that simple to use that I will jump straight in to an example.&lt;/p&gt;
-&lt;div class=&quot;highlight-console notranslate&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&quot;gp&quot;&gt;$&lt;/span&gt; mkdir RCS
+&lt;p&gt;&lt;abbr title="GNU Revision Control System"&gt;RCS&lt;/abbr&gt; is that simple to use that I will jump straight in to an example.&lt;/p&gt;
+&lt;div class="highlight-console notranslate"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="gp"&gt;$&lt;/span&gt; mkdir RCS
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
-&lt;p&gt;The &lt;abbr title=&quot;GNU Revision Control System&quot;&gt;RCS&lt;/abbr&gt; directory holds the &lt;abbr title=&quot;GNU Revision Control System&quot;&gt;RCS&lt;/abbr&gt; control files, they contain all the data
-&lt;abbr title=&quot;GNU Revision Control System&quot;&gt;RCS&lt;/abbr&gt; needs to work.&lt;/p&gt;
-&lt;div class=&quot;highlight-console notranslate&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&quot;gp&quot;&gt;$&lt;/span&gt; cat &amp;gt;myscript.sh &amp;lt;&amp;lt;EOF
-&lt;span class=&quot;gp&quot;&gt;#&lt;/span&gt;! /bin/sh
-&lt;span class=&quot;gp&quot;&gt;#&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$Id&lt;/span&gt;$
-&lt;span class=&quot;go&quot;&gt;echo &amp;quot;Hello World!&amp;quot;&lt;/span&gt;
-&lt;span class=&quot;go&quot;&gt;exit 0&lt;/span&gt;
-&lt;span class=&quot;go&quot;&gt;EOF&lt;/span&gt;
+&lt;p&gt;The &lt;abbr title="GNU Revision Control System"&gt;RCS&lt;/abbr&gt; directory holds the &lt;abbr title="GNU Revision Control System"&gt;RCS&lt;/abbr&gt; control files, they contain all the data
+&lt;abbr title="GNU Revision Control System"&gt;RCS&lt;/abbr&gt; needs to work.&lt;/p&gt;
+&lt;div class="highlight-console notranslate"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="gp"&gt;$&lt;/span&gt; cat &amp;gt;myscript.sh &amp;lt;&amp;lt;EOF
+&lt;span class="gp"&gt;#&lt;/span&gt;! /bin/sh
+&lt;span class="gp"&gt;#&lt;/span&gt; &lt;span class="nv"&gt;$Id&lt;/span&gt;$
+&lt;span class="go"&gt;echo &amp;quot;Hello World!&amp;quot;&lt;/span&gt;
+&lt;span class="go"&gt;exit 0&lt;/span&gt;
+&lt;span class="go"&gt;EOF&lt;/span&gt;
 
-&lt;span class=&quot;gp&quot;&gt;$&lt;/span&gt; ci myscript.sh
-&lt;span class=&quot;go&quot;&gt;RCS/myscript.sh,v  &amp;lt;--  myscript.sh&lt;/span&gt;
-&lt;span class=&quot;go&quot;&gt;enter description, terminated with single &amp;#39;.&amp;#39; or end of file:&lt;/span&gt;
-&lt;span class=&quot;go&quot;&gt;NOTE: This is NOT the log message!&lt;/span&gt;
-&lt;span class=&quot;gp&quot;&gt;&amp;gt;&lt;/span&gt;&amp;gt; /bin/sh &lt;span class=&quot;s2&quot;&gt;&amp;quot;Hello World!&amp;quot;&lt;/span&gt; example
-&lt;span class=&quot;gp&quot;&gt;&amp;gt;&lt;/span&gt;&amp;gt; .
-&lt;span class=&quot;go&quot;&gt;initial revision: 1.1&lt;/span&gt;
-&lt;span class=&quot;go&quot;&gt;done&lt;/span&gt;
+&lt;span class="gp"&gt;$&lt;/span&gt; ci myscript.sh
+&lt;span class="go"&gt;RCS/myscript.sh,v  &amp;lt;--  myscript.sh&lt;/span&gt;
+&lt;span class="go"&gt;enter description, terminated with single &amp;#39;.&amp;#39; or end of file:&lt;/span&gt;
+&lt;span class="go"&gt;NOTE: This is NOT the log message!&lt;/span&gt;
+&lt;span class="gp"&gt;&amp;gt;&lt;/span&gt;&amp;gt; /bin/sh &lt;span class="s2"&gt;&amp;quot;Hello World!&amp;quot;&lt;/span&gt; example
+&lt;span class="gp"&gt;&amp;gt;&lt;/span&gt;&amp;gt; .
+&lt;span class="go"&gt;initial revision: 1.1&lt;/span&gt;
+&lt;span class="go"&gt;done&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
-&lt;p&gt;The command &lt;strong class=&quot;command&quot;&gt;ci&lt;/strong&gt; (check in) is where the magic of &lt;abbr title=&quot;GNU Revision Control System&quot;&gt;RCS&lt;/abbr&gt; takes place.
-We have decided we want to make a snapshot of our file, &lt;code class=&quot;file docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;myscript.sh&lt;/span&gt;&lt;/code&gt;,
-and use &lt;strong class=&quot;command&quot;&gt;ci&lt;/strong&gt; to add the file to revision control.&lt;/p&gt;
-&lt;div class=&quot;highlight-console notranslate&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&quot;gp&quot;&gt;$&lt;/span&gt; ls
-&lt;span class=&quot;go&quot;&gt;RCS&lt;/span&gt;
+&lt;p&gt;The command &lt;strong class="command"&gt;ci&lt;/strong&gt; (check in) is where the magic of &lt;abbr title="GNU Revision Control System"&gt;RCS&lt;/abbr&gt; takes place.
+We have decided we want to make a snapshot of our file, &lt;code class="file docutils literal notranslate"&gt;&lt;span class="pre"&gt;myscript.sh&lt;/span&gt;&lt;/code&gt;,
+and use &lt;strong class="command"&gt;ci&lt;/strong&gt; to add the file to revision control.&lt;/p&gt;
+&lt;div class="highlight-console notranslate"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="gp"&gt;$&lt;/span&gt; ls
+&lt;span class="go"&gt;RCS&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
 &lt;p&gt;The file we checked in appears to have disappeared, obviously it hasn’t but the
-default behaviour of &lt;abbr title=&quot;GNU Revision Control System&quot;&gt;RCS&lt;/abbr&gt; is to remove the file we check in.  You can choose
-to keep a working copy with &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;ci&lt;/span&gt; &lt;span class=&quot;pre&quot;&gt;-u&lt;/span&gt;&lt;/code&gt; or &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;ci&lt;/span&gt; &lt;span class=&quot;pre&quot;&gt;-l&lt;/span&gt;&lt;/code&gt; (covered below).&lt;/p&gt;
-&lt;div class=&quot;highlight-console notranslate&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&quot;gp&quot;&gt;$&lt;/span&gt; ls ./RCS/
-&lt;span class=&quot;go&quot;&gt;myscript.sh,v&lt;/span&gt;
+default behaviour of &lt;abbr title="GNU Revision Control System"&gt;RCS&lt;/abbr&gt; is to remove the file we check in.  You can choose
+to keep a working copy with &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;ci&lt;/span&gt; &lt;span class="pre"&gt;-u&lt;/span&gt;&lt;/code&gt; or &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;ci&lt;/span&gt; &lt;span class="pre"&gt;-l&lt;/span&gt;&lt;/code&gt; (covered below).&lt;/p&gt;
+&lt;div class="highlight-console notranslate"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="gp"&gt;$&lt;/span&gt; ls ./RCS/
+&lt;span class="go"&gt;myscript.sh,v&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
-&lt;p&gt;In the &lt;abbr title=&quot;GNU Revision Control System&quot;&gt;RCS&lt;/abbr&gt; directory a file now exists with the same name as our script plus
-a &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;,v&lt;/span&gt;&lt;/code&gt;.  This is the file &lt;abbr title=&quot;GNU Revision Control System&quot;&gt;RCS&lt;/abbr&gt; uses to store all of its data in.&lt;/p&gt;
-&lt;div class=&quot;highlight-console notranslate&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&quot;gp&quot;&gt;$&lt;/span&gt; co myscript.sh
-&lt;span class=&quot;go&quot;&gt;RCS/myscript.sh,v  --&amp;gt;  myscript.sh&lt;/span&gt;
-&lt;span class=&quot;go&quot;&gt;revision 1.1&lt;/span&gt;
-&lt;span class=&quot;go&quot;&gt;done&lt;/span&gt;
-&lt;span class=&quot;gp&quot;&gt;$&lt;/span&gt; ls -l ./
-&lt;span class=&quot;go&quot;&gt;drwxr-xr-x    2 james    james        1024 Nov  4 11:29 RCS&lt;/span&gt;
-&lt;span class=&quot;go&quot;&gt;-r--r--r--    1 james    james          95 Nov  4 11:29 myscript.sh&lt;/span&gt;
+&lt;p&gt;In the &lt;abbr title="GNU Revision Control System"&gt;RCS&lt;/abbr&gt; directory a file now exists with the same name as our script plus
+a &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;,v&lt;/span&gt;&lt;/code&gt;.  This is the file &lt;abbr title="GNU Revision Control System"&gt;RCS&lt;/abbr&gt; uses to store all of its data in.&lt;/p&gt;
+&lt;div class="highlight-console notranslate"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="gp"&gt;$&lt;/span&gt; co myscript.sh
+&lt;span class="go"&gt;RCS/myscript.sh,v  --&amp;gt;  myscript.sh&lt;/span&gt;
+&lt;span class="go"&gt;revision 1.1&lt;/span&gt;
+&lt;span class="go"&gt;done&lt;/span&gt;
+&lt;span class="gp"&gt;$&lt;/span&gt; ls -l ./
+&lt;span class="go"&gt;drwxr-xr-x    2 james    james        1024 Nov  4 11:29 RCS&lt;/span&gt;
+&lt;span class="go"&gt;-r--r--r--    1 james    james          95 Nov  4 11:29 myscript.sh&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
-&lt;p&gt;The command &lt;strong class=&quot;command&quot;&gt;co&lt;/strong&gt; (check out) pulls a current version(by default) from
-the &lt;abbr title=&quot;GNU Revision Control System&quot;&gt;RCS&lt;/abbr&gt; repository and places it in the current directory.  Default behaviour
+&lt;p&gt;The command &lt;strong class="command"&gt;co&lt;/strong&gt; (check out) pulls a current version(by default) from
+the &lt;abbr title="GNU Revision Control System"&gt;RCS&lt;/abbr&gt; repository and places it in the current directory.  Default behaviour
 is to check out a read-only version of the file.&lt;/p&gt;
-&lt;div class=&quot;highlight-console notranslate&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&quot;gp&quot;&gt;$&lt;/span&gt; co -l myscript.sh
-&lt;span class=&quot;go&quot;&gt;./RCS/myscript.sh,v  --&amp;gt;  ./myscript.sh&lt;/span&gt;
-&lt;span class=&quot;go&quot;&gt;revision 1.1 (locked)&lt;/span&gt;
-&lt;span class=&quot;go&quot;&gt;done&lt;/span&gt;
+&lt;div class="highlight-console notranslate"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="gp"&gt;$&lt;/span&gt; co -l myscript.sh
+&lt;span class="go"&gt;./RCS/myscript.sh,v  --&amp;gt;  ./myscript.sh&lt;/span&gt;
+&lt;span class="go"&gt;revision 1.1 (locked)&lt;/span&gt;
+&lt;span class="go"&gt;done&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
-&lt;p&gt;The &lt;a class=&quot;reference internal&quot; href=&quot;../articles/rcs.html#cmdoption-co-l&quot;&gt;&lt;code class=&quot;xref std std-option docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;-l&lt;/span&gt;&lt;/code&gt;&lt;/a&gt; option to &lt;strong class=&quot;command&quot;&gt;co&lt;/strong&gt; (and also &lt;strong class=&quot;command&quot;&gt;ci&lt;/strong&gt; ) is
+&lt;p&gt;The &lt;a class="reference internal" href="../articles/rcs.html#cmdoption-co-l"&gt;&lt;code class="xref std std-option docutils literal notranslate"&gt;&lt;span class="pre"&gt;-l&lt;/span&gt;&lt;/code&gt;&lt;/a&gt; option to &lt;strong class="command"&gt;co&lt;/strong&gt; (and also &lt;strong class="command"&gt;ci&lt;/strong&gt; ) is
 used to lock the file.  This file now becomes a working file, which is
 writable, and it also means other people can’t edit it until you have released
 it or checked it in again.&lt;/p&gt;
-&lt;p&gt;Blindly using the &lt;a class=&quot;reference internal&quot; href=&quot;../articles/rcs.html#cmdoption-co-l&quot;&gt;&lt;code class=&quot;xref std std-option docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;-l&lt;/span&gt;&lt;/code&gt;&lt;/a&gt; option to &lt;strong class=&quot;command&quot;&gt;ci&lt;/strong&gt;/&lt;strong class=&quot;command&quot;&gt;co&lt;/strong&gt; is
+&lt;p&gt;Blindly using the &lt;a class="reference internal" href="../articles/rcs.html#cmdoption-co-l"&gt;&lt;code class="xref std std-option docutils literal notranslate"&gt;&lt;span class="pre"&gt;-l&lt;/span&gt;&lt;/code&gt;&lt;/a&gt; option to &lt;strong class="command"&gt;ci&lt;/strong&gt;/&lt;strong class="command"&gt;co&lt;/strong&gt; is
 not advisable, you should get in to the habit now of only locking files you are
-working on.  &lt;abbr title=&quot;GNU Revision Control System&quot;&gt;RCS&lt;/abbr&gt; uses locking to block other users from checking in changes
-and will cause much grief if you use &lt;abbr title=&quot;GNU Revision Control System&quot;&gt;RCS&lt;/abbr&gt; on multi-user projects.  It is much
-better to use &lt;a class=&quot;reference internal&quot; href=&quot;../articles/rcs.html#cmdoption-ci-u&quot;&gt;&lt;code class=&quot;xref std std-option docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;-u&lt;/span&gt;&lt;/code&gt;&lt;/a&gt; (or unlocked) when you &lt;strong class=&quot;command&quot;&gt;ci&lt;/strong&gt; in new
+working on.  &lt;abbr title="GNU Revision Control System"&gt;RCS&lt;/abbr&gt; uses locking to block other users from checking in changes
+and will cause much grief if you use &lt;abbr title="GNU Revision Control System"&gt;RCS&lt;/abbr&gt; on multi-user projects.  It is much
+better to use &lt;a class="reference internal" href="../articles/rcs.html#cmdoption-ci-u"&gt;&lt;code class="xref std std-option docutils literal notranslate"&gt;&lt;span class="pre"&gt;-u&lt;/span&gt;&lt;/code&gt;&lt;/a&gt; (or unlocked) when you &lt;strong class="command"&gt;ci&lt;/strong&gt; in new
 files/changes this way you will have access to a read-only version of the file
 and it will allow other users to edit it.&lt;/p&gt;
-&lt;div class=&quot;highlight-console notranslate&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&quot;gp&quot;&gt;$&lt;/span&gt; cat myscript.sh
-&lt;span class=&quot;gp&quot;&gt;#&lt;/span&gt;! /bin/sh
-&lt;span class=&quot;gp&quot;&gt;#&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$Id&lt;/span&gt;: myscript.sh,v &lt;span class=&quot;m&quot;&gt;1&lt;/span&gt;.1 &lt;span class=&quot;m&quot;&gt;2002&lt;/span&gt;/11/04 &lt;span class=&quot;m&quot;&gt;11&lt;/span&gt;:29:48 james Exp james $
-&lt;span class=&quot;go&quot;&gt;echo &amp;quot;Hello World!&amp;quot;&lt;/span&gt;
-&lt;span class=&quot;go&quot;&gt;exit 0&lt;/span&gt;
+&lt;div class="highlight-console notranslate"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="gp"&gt;$&lt;/span&gt; cat myscript.sh
+&lt;span class="gp"&gt;#&lt;/span&gt;! /bin/sh
+&lt;span class="gp"&gt;#&lt;/span&gt; &lt;span class="nv"&gt;$Id&lt;/span&gt;: myscript.sh,v &lt;span class="m"&gt;1&lt;/span&gt;.1 &lt;span class="m"&gt;2002&lt;/span&gt;/11/04 &lt;span class="m"&gt;11&lt;/span&gt;:29:48 james Exp james $
+&lt;span class="go"&gt;echo &amp;quot;Hello World!&amp;quot;&lt;/span&gt;
+&lt;span class="go"&gt;exit 0&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
-&lt;p&gt;If you remember from the original file it contained &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;$Id$&lt;/span&gt;&lt;/code&gt; on a commented
-line, this &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;$Id$&lt;/span&gt;&lt;/code&gt; is a keyword used by &lt;abbr title=&quot;GNU Revision Control System&quot;&gt;RCS&lt;/abbr&gt; that is substituted with
-information about the current file.  In this example the tag &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;$Id$&lt;/span&gt;&lt;/code&gt; is
+&lt;p&gt;If you remember from the original file it contained &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;$Id$&lt;/span&gt;&lt;/code&gt; on a commented
+line, this &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;$Id$&lt;/span&gt;&lt;/code&gt; is a keyword used by &lt;abbr title="GNU Revision Control System"&gt;RCS&lt;/abbr&gt; that is substituted with
+information about the current file.  In this example the tag &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;$Id$&lt;/span&gt;&lt;/code&gt; is
 expanded to read the filename, the revision number, the date and time of the
 check in, the person who checked in the file, the state of the file and the
 owner of the lock(if any).&lt;/p&gt;
 &lt;p&gt;There are many keywords available, including:&lt;/p&gt;
-&lt;dl class=&quot;simple&quot;&gt;
-&lt;dt&gt;&lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;$Author$&lt;/span&gt;&lt;/code&gt;&lt;/dt&gt;&lt;dd&gt;&lt;p&gt;The name of the person who did the check in&lt;/p&gt;
+&lt;dl class="simple"&gt;
+&lt;dt&gt;&lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;$Author$&lt;/span&gt;&lt;/code&gt;&lt;/dt&gt;&lt;dd&gt;&lt;p&gt;The name of the person who did the check in&lt;/p&gt;
 &lt;/dd&gt;
-&lt;dt&gt;&lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;$Header$&lt;/span&gt;&lt;/code&gt;&lt;/dt&gt;&lt;dd&gt;&lt;p&gt;The same as &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;$Id$&lt;/span&gt;&lt;/code&gt; but including the path for the file&lt;/p&gt;
+&lt;dt&gt;&lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;$Header$&lt;/span&gt;&lt;/code&gt;&lt;/dt&gt;&lt;dd&gt;&lt;p&gt;The same as &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;$Id$&lt;/span&gt;&lt;/code&gt; but including the path for the file&lt;/p&gt;
 &lt;/dd&gt;
-&lt;dt&gt;&lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;$Log$&lt;/span&gt;&lt;/code&gt;&lt;/dt&gt;&lt;dd&gt;&lt;p&gt;A full changelog for file from the &lt;strong class=&quot;command&quot;&gt;ci&lt;/strong&gt; annotations&lt;/p&gt;
+&lt;dt&gt;&lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;$Log$&lt;/span&gt;&lt;/code&gt;&lt;/dt&gt;&lt;dd&gt;&lt;p&gt;A full changelog for file from the &lt;strong class="command"&gt;ci&lt;/strong&gt; annotations&lt;/p&gt;
 &lt;/dd&gt;
 &lt;/dl&gt;
-&lt;p&gt;Although using &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;$Log$&lt;/span&gt;&lt;/code&gt; seems like a good idea it does mean the size of the
+&lt;p&gt;Although using &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;$Log$&lt;/span&gt;&lt;/code&gt; seems like a good idea it does mean the size of the
 file is increased a huge amount.  All the changelog data is available with the
-&lt;strong class=&quot;command&quot;&gt;rlog&lt;/strong&gt; command at any time and without filling the source file.&lt;/p&gt;
-&lt;div class=&quot;highlight-console notranslate&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&quot;gp&quot;&gt;$&lt;/span&gt; sed -ie &lt;span class=&quot;s1&quot;&gt;&amp;#39;s/World/${USER}/&amp;#39;&lt;/span&gt; myscript.sh
-&lt;span class=&quot;gp&quot;&gt;$&lt;/span&gt; cat myscript.sh
-&lt;span class=&quot;gp&quot;&gt;#&lt;/span&gt;! /bin/sh
-&lt;span class=&quot;gp&quot;&gt;#&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$Id&lt;/span&gt;: myscript.sh,v &lt;span class=&quot;m&quot;&gt;1&lt;/span&gt;.1 &lt;span class=&quot;m&quot;&gt;2002&lt;/span&gt;/11/04 &lt;span class=&quot;m&quot;&gt;11&lt;/span&gt;:29:48 james Exp james $
-&lt;span class=&quot;go&quot;&gt;echo &amp;quot;Hello ${USER}!&amp;quot;&lt;/span&gt;
-&lt;span class=&quot;go&quot;&gt;exit 0&lt;/span&gt;
-&lt;span class=&quot;gp&quot;&gt;$&lt;/span&gt; sh ./myscript.sh
-&lt;span class=&quot;go&quot;&gt;Hello james!&lt;/span&gt;
+&lt;strong class="command"&gt;rlog&lt;/strong&gt; command at any time and without filling the source file.&lt;/p&gt;
+&lt;div class="highlight-console notranslate"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="gp"&gt;$&lt;/span&gt; sed -ie &lt;span class="s1"&gt;&amp;#39;s/World/${USER}/&amp;#39;&lt;/span&gt; myscript.sh
+&lt;span class="gp"&gt;$&lt;/span&gt; cat myscript.sh
+&lt;span class="gp"&gt;#&lt;/span&gt;! /bin/sh
+&lt;span class="gp"&gt;#&lt;/span&gt; &lt;span class="nv"&gt;$Id&lt;/span&gt;: myscript.sh,v &lt;span class="m"&gt;1&lt;/span&gt;.1 &lt;span class="m"&gt;2002&lt;/span&gt;/11/04 &lt;span class="m"&gt;11&lt;/span&gt;:29:48 james Exp james $
+&lt;span class="go"&gt;echo &amp;quot;Hello ${USER}!&amp;quot;&lt;/span&gt;
+&lt;span class="go"&gt;exit 0&lt;/span&gt;
+&lt;span class="gp"&gt;$&lt;/span&gt; sh ./myscript.sh
+&lt;span class="go"&gt;Hello james!&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
 &lt;p&gt;So we have decided to make some changes to the file, and then tested it works.&lt;/p&gt;
-&lt;div class=&quot;highlight-console notranslate&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&quot;gp&quot;&gt;$&lt;/span&gt; rcsdiff myscript.sh
-&lt;span class=&quot;go&quot;&gt;===================================================================&lt;/span&gt;
-&lt;span class=&quot;go&quot;&gt;RCS file: RCS/myscript.sh,v&lt;/span&gt;
-&lt;span class=&quot;go&quot;&gt;retrieving revision 1.1&lt;/span&gt;
-&lt;span class=&quot;go&quot;&gt;diff -r1.1 myscript.sh&lt;/span&gt;
-&lt;span class=&quot;go&quot;&gt;3c3&lt;/span&gt;
-&lt;span class=&quot;go&quot;&gt;&amp;lt; echo &amp;quot;Hello World!&amp;quot;&lt;/span&gt;
-&lt;span class=&quot;go&quot;&gt;---&lt;/span&gt;
-&lt;span class=&quot;gp&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;Hello &lt;/span&gt;&lt;span class=&quot;si&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;USER&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;!&amp;quot;&lt;/span&gt;
-&lt;span class=&quot;go&quot;&gt;TEST$  rcsdiff -u myscript.sh&lt;/span&gt;
-&lt;span class=&quot;go&quot;&gt;===================================================================&lt;/span&gt;
-&lt;span class=&quot;go&quot;&gt;RCS file: RCS/myscript.sh,v&lt;/span&gt;
-&lt;span class=&quot;go&quot;&gt;retrieving revision 1.1&lt;/span&gt;
-&lt;span class=&quot;go&quot;&gt;diff -u -r1.1 myscript.sh&lt;/span&gt;
-&lt;span class=&quot;go&quot;&gt;--- myscript.sh 2002/11/04 11:57:51     1.1&lt;/span&gt;
-&lt;span class=&quot;go&quot;&gt;+++ myscript.sh 2002/11/05 03:52:14&lt;/span&gt;
-&lt;span class=&quot;go&quot;&gt;@@ -1,4 +1,4 @@&lt;/span&gt;
-&lt;span class=&quot;gp&quot;&gt; #&lt;/span&gt;! /bin/sh
-&lt;span class=&quot;gp&quot;&gt; #&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$Id&lt;/span&gt;: myscript,v &lt;span class=&quot;m&quot;&gt;1&lt;/span&gt;.1 &lt;span class=&quot;m&quot;&gt;2002&lt;/span&gt;/11/04 &lt;span class=&quot;m&quot;&gt;11&lt;/span&gt;:29:48 james Exp james $
-&lt;span class=&quot;go&quot;&gt;-echo &amp;quot;Hello World!&amp;quot;&lt;/span&gt;
-&lt;span class=&quot;go&quot;&gt;+echo &amp;quot;Hello ${USER}!&amp;quot;&lt;/span&gt;
-&lt;span class=&quot;go&quot;&gt; exit 0&lt;/span&gt;
+&lt;div class="highlight-console notranslate"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="gp"&gt;$&lt;/span&gt; rcsdiff myscript.sh
+&lt;span class="go"&gt;===================================================================&lt;/span&gt;
+&lt;span class="go"&gt;RCS file: RCS/myscript.sh,v&lt;/span&gt;
+&lt;span class="go"&gt;retrieving revision 1.1&lt;/span&gt;
+&lt;span class="go"&gt;diff -r1.1 myscript.sh&lt;/span&gt;
+&lt;span class="go"&gt;3c3&lt;/span&gt;
+&lt;span class="go"&gt;&amp;lt; echo &amp;quot;Hello World!&amp;quot;&lt;/span&gt;
+&lt;span class="go"&gt;---&lt;/span&gt;
+&lt;span class="gp"&gt;&amp;gt;&lt;/span&gt; &lt;span class="nb"&gt;echo&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;Hello &lt;/span&gt;&lt;span class="si"&gt;${&lt;/span&gt;&lt;span class="nv"&gt;USER&lt;/span&gt;&lt;span class="si"&gt;}&lt;/span&gt;&lt;span class="s2"&gt;!&amp;quot;&lt;/span&gt;
+&lt;span class="go"&gt;TEST$  rcsdiff -u myscript.sh&lt;/span&gt;
+&lt;span class="go"&gt;===================================================================&lt;/span&gt;
+&lt;span class="go"&gt;RCS file: RCS/myscript.sh,v&lt;/span&gt;
+&lt;span class="go"&gt;retrieving revision 1.1&lt;/span&gt;
+&lt;span class="go"&gt;diff -u -r1.1 myscript.sh&lt;/span&gt;
+&lt;span class="go"&gt;--- myscript.sh 2002/11/04 11:57:51     1.1&lt;/span&gt;
+&lt;span class="go"&gt;+++ myscript.sh 2002/11/05 03:52:14&lt;/span&gt;
+&lt;span class="go"&gt;@@ -1,4 +1,4 @@&lt;/span&gt;
+&lt;span class="gp"&gt; #&lt;/span&gt;! /bin/sh
+&lt;span class="gp"&gt; #&lt;/span&gt; &lt;span class="nv"&gt;$Id&lt;/span&gt;: myscript,v &lt;span class="m"&gt;1&lt;/span&gt;.1 &lt;span class="m"&gt;2002&lt;/span&gt;/11/04 &lt;span class="m"&gt;11&lt;/span&gt;:29:48 james Exp james $
+&lt;span class="go"&gt;-echo &amp;quot;Hello World!&amp;quot;&lt;/span&gt;
+&lt;span class="go"&gt;+echo &amp;quot;Hello ${USER}!&amp;quot;&lt;/span&gt;
+&lt;span class="go"&gt; exit 0&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
-&lt;p&gt;The command &lt;strong class=&quot;command&quot;&gt;rcsdiff&lt;/strong&gt; supplies an easy way to check changes in a file.
-Using &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;rcsdiff&lt;/span&gt; &lt;span class=&quot;pre&quot;&gt;filename&lt;/span&gt;&lt;/code&gt; will output a generic context-free diff(and a small
-&lt;abbr title=&quot;GNU Revision Control System&quot;&gt;RCS&lt;/abbr&gt; header to &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;stderr&lt;/span&gt;&lt;/code&gt; ), or you can pass normal &lt;strong class=&quot;command&quot;&gt;diff&lt;/strong&gt; options to
-&lt;strong class=&quot;command&quot;&gt;rcsdiff&lt;/strong&gt;.  In the second &lt;strong class=&quot;command&quot;&gt;rcsdiff&lt;/strong&gt; command the
-&lt;strong class=&quot;command&quot;&gt;diff&lt;/strong&gt; option &lt;a class=&quot;reference external&quot; href=&quot;https://docs.python.org/3/using/cmdline.html#cmdoption-u&quot; title=&quot;(in Python v3.9)&quot;&gt;&lt;code class=&quot;xref std std-option docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;-u&lt;/span&gt;&lt;/code&gt;&lt;/a&gt; is given to tell &lt;strong class=&quot;command&quot;&gt;rcsdiff&lt;/strong&gt; it
+&lt;p&gt;The command &lt;strong class="command"&gt;rcsdiff&lt;/strong&gt; supplies an easy way to check changes in a file.
+Using &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;rcsdiff&lt;/span&gt; &lt;span class="pre"&gt;filename&lt;/span&gt;&lt;/code&gt; will output a generic context-free diff(and a small
+&lt;abbr title="GNU Revision Control System"&gt;RCS&lt;/abbr&gt; header to &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;stderr&lt;/span&gt;&lt;/code&gt; ), or you can pass normal &lt;strong class="command"&gt;diff&lt;/strong&gt; options to
+&lt;strong class="command"&gt;rcsdiff&lt;/strong&gt;.  In the second &lt;strong class="command"&gt;rcsdiff&lt;/strong&gt; command the
+&lt;strong class="command"&gt;diff&lt;/strong&gt; option &lt;a class="reference external" href="https://docs.python.org/3/using/cmdline.html#cmdoption-u" title="(in Python v3.9)"&gt;&lt;code class="xref std std-option docutils literal notranslate"&gt;&lt;span class="pre"&gt;-u&lt;/span&gt;&lt;/code&gt;&lt;/a&gt; is given to tell &lt;strong class="command"&gt;rcsdiff&lt;/strong&gt; it
 should output a unified context diff.&lt;/p&gt;
-&lt;div class=&quot;highlight-console notranslate&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&quot;gp&quot;&gt;$&lt;/span&gt; ci -u ./myscript.sh
-&lt;span class=&quot;go&quot;&gt;./RCS/myscript.sh,v  &amp;lt;--  ./myscript.sh&lt;/span&gt;
-&lt;span class=&quot;go&quot;&gt;new revision: 1.2; previous revision: 1.1&lt;/span&gt;
-&lt;span class=&quot;go&quot;&gt;enter log message, terminated with single &amp;#39;.&amp;#39; or end of file:&lt;/span&gt;
-&lt;span class=&quot;gp&quot;&gt;&amp;gt;&lt;/span&gt;&amp;gt; Changed World to &lt;span class=&quot;si&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;USER&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;}&lt;/span&gt; to give a more personal feeling
-&lt;span class=&quot;gp&quot;&gt;&amp;gt;&lt;/span&gt;&amp;gt; .
-&lt;span class=&quot;go&quot;&gt;done&lt;/span&gt;
+&lt;div class="highlight-console notranslate"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="gp"&gt;$&lt;/span&gt; ci -u ./myscript.sh
+&lt;span class="go"&gt;./RCS/myscript.sh,v  &amp;lt;--  ./myscript.sh&lt;/span&gt;
+&lt;span class="go"&gt;new revision: 1.2; previous revision: 1.1&lt;/span&gt;
+&lt;span class="go"&gt;enter log message, terminated with single &amp;#39;.&amp;#39; or end of file:&lt;/span&gt;
+&lt;span class="gp"&gt;&amp;gt;&lt;/span&gt;&amp;gt; Changed World to &lt;span class="si"&gt;${&lt;/span&gt;&lt;span class="nv"&gt;USER&lt;/span&gt;&lt;span class="si"&gt;}&lt;/span&gt; to give a more personal feeling
+&lt;span class="gp"&gt;&amp;gt;&lt;/span&gt;&amp;gt; .
+&lt;span class="go"&gt;done&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
 &lt;p&gt;So now we have seen the changes made to the file, and are happy with them, we
-check in our new revision.  &lt;abbr title=&quot;GNU Revision Control System&quot;&gt;RCS&lt;/abbr&gt; asks for a log entry, this will make our
+check in our new revision.  &lt;abbr title="GNU Revision Control System"&gt;RCS&lt;/abbr&gt; asks for a log entry, this will make our
 changelog output later.  You can cancel the check in using the normal
-&lt;kbd class=&quot;kbd docutils literal notranslate&quot;&gt;&lt;kbd class=&quot;kbd docutils literal notranslate&quot;&gt;C&lt;/kbd&gt;-&lt;kbd class=&quot;kbd docutils literal notranslate&quot;&gt;c&lt;/kbd&gt;&lt;/kbd&gt; (control C) method.&lt;/p&gt;
-&lt;div class=&quot;highlight-console notranslate&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&quot;gp&quot;&gt;$&lt;/span&gt; cat myscript.sh
-&lt;span class=&quot;gp&quot;&gt;#&lt;/span&gt;! /bin/sh
-&lt;span class=&quot;gp&quot;&gt;#&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$Id&lt;/span&gt;: myscript,v &lt;span class=&quot;m&quot;&gt;1&lt;/span&gt;.2 &lt;span class=&quot;m&quot;&gt;2002&lt;/span&gt;/11/04 &lt;span class=&quot;m&quot;&gt;11&lt;/span&gt;:34:21 james Exp james $
-&lt;span class=&quot;go&quot;&gt;echo &amp;quot;Hello ${USER}!&amp;quot;&lt;/span&gt;
-&lt;span class=&quot;go&quot;&gt;exit 0&lt;/span&gt;
+&lt;kbd class="kbd docutils literal notranslate"&gt;&lt;kbd class="kbd docutils literal notranslate"&gt;C&lt;/kbd&gt;-&lt;kbd class="kbd docutils literal notranslate"&gt;c&lt;/kbd&gt;&lt;/kbd&gt; (control C) method.&lt;/p&gt;
+&lt;div class="highlight-console notranslate"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="gp"&gt;$&lt;/span&gt; cat myscript.sh
+&lt;span class="gp"&gt;#&lt;/span&gt;! /bin/sh
+&lt;span class="gp"&gt;#&lt;/span&gt; &lt;span class="nv"&gt;$Id&lt;/span&gt;: myscript,v &lt;span class="m"&gt;1&lt;/span&gt;.2 &lt;span class="m"&gt;2002&lt;/span&gt;/11/04 &lt;span class="m"&gt;11&lt;/span&gt;:34:21 james Exp james $
+&lt;span class="go"&gt;echo &amp;quot;Hello ${USER}!&amp;quot;&lt;/span&gt;
+&lt;span class="go"&gt;exit 0&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
-&lt;p&gt;You can see above that when &lt;abbr title=&quot;GNU Revision Control System&quot;&gt;RCS&lt;/abbr&gt; checked in the new revision it also updated
-the &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;$Id$&lt;/span&gt;&lt;/code&gt; tag.&lt;/p&gt;
-&lt;div class=&quot;highlight-console notranslate&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&quot;gp&quot;&gt;$&lt;/span&gt; rlog ./myscript.sh
+&lt;p&gt;You can see above that when &lt;abbr title="GNU Revision Control System"&gt;RCS&lt;/abbr&gt; checked in the new revision it also updated
+the &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;$Id$&lt;/span&gt;&lt;/code&gt; tag.&lt;/p&gt;
+&lt;div class="highlight-console notranslate"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="gp"&gt;$&lt;/span&gt; rlog ./myscript.sh
 
-&lt;span class=&quot;go&quot;&gt;RCS file: ./RCS/myscript.sh,v&lt;/span&gt;
-&lt;span class=&quot;go&quot;&gt;Working file: ./myscript.sh&lt;/span&gt;
-&lt;span class=&quot;go&quot;&gt;head: 1.2&lt;/span&gt;
-&lt;span class=&quot;go&quot;&gt;branch:&lt;/span&gt;
-&lt;span class=&quot;go&quot;&gt;locks: strict&lt;/span&gt;
-&lt;span class=&quot;go&quot;&gt;access list:&lt;/span&gt;
-&lt;span class=&quot;go&quot;&gt;symbolic names:&lt;/span&gt;
-&lt;span class=&quot;go&quot;&gt;keyword substitution: kv&lt;/span&gt;
-&lt;span class=&quot;go&quot;&gt;total revisions: 2;     selected revisions: 2&lt;/span&gt;
-&lt;span class=&quot;go&quot;&gt;description:&lt;/span&gt;
-&lt;span class=&quot;go&quot;&gt;----------------------------&lt;/span&gt;
-&lt;span class=&quot;go&quot;&gt;revision 1.2&lt;/span&gt;
-&lt;span class=&quot;go&quot;&gt;date: 2002/11/05 04:01:13;  author: james;  state: Exp;  lines: +2 -2&lt;/span&gt;
-&lt;span class=&quot;go&quot;&gt;Changed World to ${USER} to give a more personal feeling&lt;/span&gt;
-&lt;span class=&quot;go&quot;&gt;----------------------------&lt;/span&gt;
-&lt;span class=&quot;go&quot;&gt;revision 1.1&lt;/span&gt;
-&lt;span class=&quot;go&quot;&gt;date: 2002/11/04 11:57:51;  author: james;  state: Exp;&lt;/span&gt;
-&lt;span class=&quot;go&quot;&gt;Initial revision&lt;/span&gt;
-&lt;span class=&quot;go&quot;&gt;=============================================================================&lt;/span&gt;
+&lt;span class="go"&gt;RCS file: ./RCS/myscript.sh,v&lt;/span&gt;
+&lt;span class="go"&gt;Working file: ./myscript.sh&lt;/span&gt;
+&lt;span class="go"&gt;head: 1.2&lt;/span&gt;
+&lt;span class="go"&gt;branch:&lt;/span&gt;
+&lt;span class="go"&gt;locks: strict&lt;/span&gt;
+&lt;span class="go"&gt;access list:&lt;/span&gt;
+&lt;span class="go"&gt;symbolic names:&lt;/span&gt;
+&lt;span class="go"&gt;keyword substitution: kv&lt;/span&gt;
+&lt;span class="go"&gt;total revisions: 2;     selected revisions: 2&lt;/span&gt;
+&lt;span class="go"&gt;description:&lt;/span&gt;
+&lt;span class="go"&gt;----------------------------&lt;/span&gt;
+&lt;span class="go"&gt;revision 1.2&lt;/span&gt;
+&lt;span class="go"&gt;date: 2002/11/05 04:01:13;  author: james;  state: Exp;  lines: +2 -2&lt;/span&gt;
+&lt;span class="go"&gt;Changed World to ${USER} to give a more personal feeling&lt;/span&gt;
+&lt;span class="go"&gt;----------------------------&lt;/span&gt;
+&lt;span class="go"&gt;revision 1.1&lt;/span&gt;
+&lt;span class="go"&gt;date: 2002/11/04 11:57:51;  author: james;  state: Exp;&lt;/span&gt;
+&lt;span class="go"&gt;Initial revision&lt;/span&gt;
+&lt;span class="go"&gt;=============================================================================&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
-&lt;p&gt;The command &lt;strong class=&quot;command&quot;&gt;rlog&lt;/strong&gt; provides quick access to revision history for
+&lt;p&gt;The command &lt;strong class="command"&gt;rlog&lt;/strong&gt; provides quick access to revision history for
 files, it accepts multiple files per command line(using normal shell
-wild-carding) and provides all the information &lt;abbr title=&quot;GNU Revision Control System&quot;&gt;RCS&lt;/abbr&gt; has on a file.  Should you
+wild-carding) and provides all the information &lt;abbr title="GNU Revision Control System"&gt;RCS&lt;/abbr&gt; has on a file.  Should you
 ever need to only know the changes that were made to the current revision you
-can use the &lt;a class=&quot;reference internal&quot; href=&quot;../articles/rcs.html#cmdoption-rlog-r&quot;&gt;&lt;code class=&quot;xref std std-option docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;-r&lt;/span&gt;&lt;/code&gt;&lt;/a&gt; option as in &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;rlog&lt;/span&gt; &lt;span class=&quot;pre&quot;&gt;-r&lt;/span&gt; &lt;span class=&quot;pre&quot;&gt;filename&lt;/span&gt;&lt;/code&gt;.  You can
-also check changes between revisions of files using the command like &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;rlog&lt;/span&gt;
-&lt;span class=&quot;pre&quot;&gt;-r1.1,1.2&lt;/span&gt; &lt;span class=&quot;pre&quot;&gt;filename&lt;/span&gt;&lt;/code&gt;.&lt;/p&gt;
-&lt;p&gt;The &lt;a class=&quot;reference internal&quot; href=&quot;../articles/rcs.html#cmdoption-r&quot;&gt;&lt;code class=&quot;xref std std-option docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;-r&lt;/span&gt;&lt;/code&gt;&lt;/a&gt; option of &lt;abbr title=&quot;GNU Revision Control System&quot;&gt;RCS&lt;/abbr&gt; is one of its most powerful, it is available
-in all the commands and shares the same semantics throughout.  If &lt;a class=&quot;reference internal&quot; href=&quot;../articles/rcs.html#cmdoption-ci-r&quot;&gt;&lt;code class=&quot;xref std std-option docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;-r&lt;/span&gt;&lt;/code&gt;&lt;/a&gt; is used with &lt;strong class=&quot;command&quot;&gt;ci&lt;/strong&gt; it forces a bump, for example &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;ci&lt;/span&gt; &lt;span class=&quot;pre&quot;&gt;-r1.7&lt;/span&gt;
-&lt;span class=&quot;pre&quot;&gt;filename&lt;/span&gt;&lt;/code&gt; will force &lt;abbr title=&quot;GNU Revision Control System&quot;&gt;RCS&lt;/abbr&gt; to check in filename as revision 1.7.  Used with
-&lt;strong class=&quot;command&quot;&gt;co&lt;/strong&gt; you can pull any revision of the file from &lt;abbr title=&quot;GNU Revision Control System&quot;&gt;RCS&lt;/abbr&gt; history.  Used
-with &lt;strong class=&quot;command&quot;&gt;rcsdiff&lt;/strong&gt; you can create a diff between any revision under &lt;abbr title=&quot;GNU Revision Control System&quot;&gt;RCS&lt;/abbr&gt;,
-for example &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;rcsdiff&lt;/span&gt; &lt;span class=&quot;pre&quot;&gt;-r1.1,1.8&lt;/span&gt; &lt;span class=&quot;pre&quot;&gt;-u&lt;/span&gt; &lt;span class=&quot;pre&quot;&gt;filename&lt;/span&gt;&lt;/code&gt; will output a unified context
+can use the &lt;a class="reference internal" href="../articles/rcs.html#cmdoption-rlog-r"&gt;&lt;code class="xref std std-option docutils literal notranslate"&gt;&lt;span class="pre"&gt;-r&lt;/span&gt;&lt;/code&gt;&lt;/a&gt; option as in &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;rlog&lt;/span&gt; &lt;span class="pre"&gt;-r&lt;/span&gt; &lt;span class="pre"&gt;filename&lt;/span&gt;&lt;/code&gt;.  You can
+also check changes between revisions of files using the command like &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;rlog&lt;/span&gt;
+&lt;span class="pre"&gt;-r1.1,1.2&lt;/span&gt; &lt;span class="pre"&gt;filename&lt;/span&gt;&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;The &lt;a class="reference internal" href="../articles/rcs.html#cmdoption-r"&gt;&lt;code class="xref std std-option docutils literal notranslate"&gt;&lt;span class="pre"&gt;-r&lt;/span&gt;&lt;/code&gt;&lt;/a&gt; option of &lt;abbr title="GNU Revision Control System"&gt;RCS&lt;/abbr&gt; is one of its most powerful, it is available
+in all the commands and shares the same semantics throughout.  If &lt;a class="reference internal" href="../articles/rcs.html#cmdoption-ci-r"&gt;&lt;code class="xref std std-option docutils literal notranslate"&gt;&lt;span class="pre"&gt;-r&lt;/span&gt;&lt;/code&gt;&lt;/a&gt; is used with &lt;strong class="command"&gt;ci&lt;/strong&gt; it forces a bump, for example &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;ci&lt;/span&gt; &lt;span class="pre"&gt;-r1.7&lt;/span&gt;
+&lt;span class="pre"&gt;filename&lt;/span&gt;&lt;/code&gt; will force &lt;abbr title="GNU Revision Control System"&gt;RCS&lt;/abbr&gt; to check in filename as revision 1.7.  Used with
+&lt;strong class="command"&gt;co&lt;/strong&gt; you can pull any revision of the file from &lt;abbr title="GNU Revision Control System"&gt;RCS&lt;/abbr&gt; history.  Used
+with &lt;strong class="command"&gt;rcsdiff&lt;/strong&gt; you can create a diff between any revision under &lt;abbr title="GNU Revision Control System"&gt;RCS&lt;/abbr&gt;,
+for example &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;rcsdiff&lt;/span&gt; &lt;span class="pre"&gt;-r1.1,1.8&lt;/span&gt; &lt;span class="pre"&gt;-u&lt;/span&gt; &lt;span class="pre"&gt;filename&lt;/span&gt;&lt;/code&gt; will output a unified context
 diff of the changes from revision
 1.1 to 1.8.&lt;/p&gt;
-&lt;p&gt;&lt;abbr title=&quot;GNU Revision Control System&quot;&gt;RCS&lt;/abbr&gt; really is that simple to use, it does have many more options that are not
-covered here(see the man pages) but the power of &lt;abbr title=&quot;GNU Revision Control System&quot;&gt;RCS&lt;/abbr&gt; is how simple it is to
+&lt;p&gt;&lt;abbr title="GNU Revision Control System"&gt;RCS&lt;/abbr&gt; really is that simple to use, it does have many more options that are not
+covered here(see the man pages) but the power of &lt;abbr title="GNU Revision Control System"&gt;RCS&lt;/abbr&gt; is how simple it is to
 use.  It takes almost no time to setup, and probably less time then you
 currently spend on arranging backups.  The command syntax is simple, and stable
 across the separate commands.  It provides an immensely powerful way to control
 configuration files, source code, even revisions of binary files and of course
 silly little shell Hello World examples.&lt;/p&gt;
 &lt;/div&gt;
-&lt;div class=&quot;section&quot; id=&quot;recap&quot;&gt;
+&lt;div class="section" id="recap"&gt;
 &lt;h2&gt;Recap&lt;/h2&gt;
-&lt;p&gt;To recap on &lt;abbr title=&quot;GNU Revision Control System&quot;&gt;RCS&lt;/abbr&gt; usage&lt;/p&gt;
-&lt;ul class=&quot;simple&quot;&gt;
-&lt;li&gt;&lt;p&gt;Make the &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;RCS&lt;/span&gt;&lt;/code&gt; directory.&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;Insert &lt;abbr title=&quot;GNU Revision Control System&quot;&gt;RCS&lt;/abbr&gt; tags, such as &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;$Id$&lt;/span&gt;&lt;/code&gt;, in to your original files to help you
+&lt;p&gt;To recap on &lt;abbr title="GNU Revision Control System"&gt;RCS&lt;/abbr&gt; usage&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;&lt;p&gt;Make the &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;RCS&lt;/span&gt;&lt;/code&gt; directory.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Insert &lt;abbr title="GNU Revision Control System"&gt;RCS&lt;/abbr&gt; tags, such as &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;$Id$&lt;/span&gt;&lt;/code&gt;, in to your original files to help you
 keep track.&lt;/p&gt;&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;Edit your files.&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;Use &lt;strong class=&quot;command&quot;&gt;ci&lt;/strong&gt; to commit your revisions to the &lt;abbr title=&quot;GNU Revision Control System&quot;&gt;RCS&lt;/abbr&gt; history and annotate
-changes made.  You can also use &lt;strong class=&quot;command&quot;&gt;rcsdiff&lt;/strong&gt; to see what changes you
+&lt;li&gt;&lt;p&gt;Use &lt;strong class="command"&gt;ci&lt;/strong&gt; to commit your revisions to the &lt;abbr title="GNU Revision Control System"&gt;RCS&lt;/abbr&gt; history and annotate
+changes made.  You can also use &lt;strong class="command"&gt;rcsdiff&lt;/strong&gt; to see what changes you
 have made, maybe to help you build your changelog information.&lt;/p&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
-&lt;div class=&quot;section&quot; id=&quot;advanced&quot;&gt;
+&lt;div class="section" id="advanced"&gt;
 &lt;h2&gt;Advanced&lt;/h2&gt;
-&lt;div class=&quot;figure align-default&quot;&gt;
-&lt;img alt=&quot;rcsi screenshot&quot; src=&quot;../_images/rcsi.png&quot; style=&quot;width: 500px; height: 114px;&quot; /&gt;
+&lt;div class="figure align-default"&gt;
+&lt;img alt="rcsi screenshot" src="../_images/rcsi.png" style="width: 500px; height: 114px;" /&gt;
 &lt;/div&gt;
-&lt;p&gt;There are many tools available that can help you to manage your &lt;abbr title=&quot;GNU Revision Control System&quot;&gt;RCS&lt;/abbr&gt; files,
-including the &lt;abbr title=&quot;GNU Revision Control System&quot;&gt;RCS&lt;/abbr&gt; status monitor &lt;a class=&quot;reference external&quot; href=&quot;http://www.colinbrough.pwp.blueyonder.co.uk/rcsi.README.html&quot;&gt;rcsi&lt;/a&gt; and &lt;a class=&quot;reference external&quot; href=&quot;http://blame.sourceforge.net/&quot;&gt;blame&lt;/a&gt; &lt;abbr title=&quot;GNU Revision Control System&quot;&gt;RCS&lt;/abbr&gt; file annotator.&lt;/p&gt;
-&lt;p&gt;&lt;strong class=&quot;command&quot;&gt;rcsi&lt;/strong&gt; will display information about the files within a directory.&lt;/p&gt;
-&lt;p&gt;The screenshot to the right shows &lt;strong class=&quot;command&quot;&gt;rcsi&lt;/strong&gt; in use on a sample partially
-&lt;abbr title=&quot;GNU Revision Control System&quot;&gt;RCS&lt;/abbr&gt; controlled directory.  All the information it contains should be fairly
+&lt;p&gt;There are many tools available that can help you to manage your &lt;abbr title="GNU Revision Control System"&gt;RCS&lt;/abbr&gt; files,
+including the &lt;abbr title="GNU Revision Control System"&gt;RCS&lt;/abbr&gt; status monitor &lt;a class="reference external" href="http://www.colinbrough.pwp.blueyonder.co.uk/rcsi.README.html"&gt;rcsi&lt;/a&gt; and &lt;a class="reference external" href="http://blame.sourceforge.net/"&gt;blame&lt;/a&gt; &lt;abbr title="GNU Revision Control System"&gt;RCS&lt;/abbr&gt; file annotator.&lt;/p&gt;
+&lt;p&gt;&lt;strong class="command"&gt;rcsi&lt;/strong&gt; will display information about the files within a directory.&lt;/p&gt;
+&lt;p&gt;The screenshot to the right shows &lt;strong class="command"&gt;rcsi&lt;/strong&gt; in use on a sample partially
+&lt;abbr title="GNU Revision Control System"&gt;RCS&lt;/abbr&gt; controlled directory.  All the information it contains should be fairly
 self explanatory, and even if it isn’t the package comes with a comprehensive
-man page and &lt;code class=&quot;file docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;README&lt;/span&gt;&lt;/code&gt;.&lt;/p&gt;
-&lt;div class=&quot;highlight-text notranslate&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;1.2          (root     21-Aug-05):             eval find . -xdev -depth ${exceptions}   -type d -empty -exec rmdir &amp;#39;{}&amp;#39; \\&amp;#39;;&amp;#39;
+man page and &lt;code class="file docutils literal notranslate"&gt;&lt;span class="pre"&gt;README&lt;/span&gt;&lt;/code&gt;.&lt;/p&gt;
+&lt;div class="highlight-text notranslate"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;1.2          (root     21-Aug-05):             eval find . -xdev -depth ${exceptions}   -type d -empty -exec rmdir &amp;#39;{}&amp;#39; \\&amp;#39;;&amp;#39;
 1.2          (root     21-Aug-05):             eend 0
 1.2          (root     21-Aug-05):         else
 1.1          (root     16-Jul-05):             ebegin &amp;quot;Cleaning /tmp directory&amp;quot;
@@ -283,65 +281,65 @@ man page and &lt;code class=&quot;file docutils literal notranslate&quot;&gt;&lt
 1.4          (root     21-Jan-06):                 mkdir -p /tmp/.{ICE,X11}-unix
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
-&lt;p&gt;The above excerpt is a sample of the output from &lt;a class=&quot;reference external&quot; href=&quot;http://blame.sourceforge.net/&quot;&gt;blame&lt;/a&gt; being run against
-a config file which is maintained using &lt;abbr title=&quot;GNU Revision Control System&quot;&gt;RCS&lt;/abbr&gt; by Gentoo’s
-&lt;strong class=&quot;command&quot;&gt;dispatch-conf&lt;/strong&gt; tool.  It allows you to simply see which revision
+&lt;p&gt;The above excerpt is a sample of the output from &lt;a class="reference external" href="http://blame.sourceforge.net/"&gt;blame&lt;/a&gt; being run against
+a config file which is maintained using &lt;abbr title="GNU Revision Control System"&gt;RCS&lt;/abbr&gt; by Gentoo’s
+&lt;strong class="command"&gt;dispatch-conf&lt;/strong&gt; tool.  It allows you to simply see which revision
 introduced a change to a specific line.  You can also choose to annotate
-specific &lt;abbr title=&quot;GNU Revision Control System&quot;&gt;RCS&lt;/abbr&gt; revisions using the &lt;a class=&quot;reference internal&quot; href=&quot;../articles/rcs.html#cmdoption-blame-revision&quot;&gt;&lt;code class=&quot;xref std std-option docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;--revision&lt;/span&gt;&lt;/code&gt;&lt;/a&gt;
-option, or specific dates with &lt;a class=&quot;reference internal&quot; href=&quot;../articles/rcs.html#cmdoption-blame-date&quot;&gt;&lt;code class=&quot;xref std std-option docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;--date&lt;/span&gt;&lt;/code&gt;&lt;/a&gt; option.  &lt;a class=&quot;reference external&quot; href=&quot;http://blame.sourceforge.net/&quot;&gt;blame&lt;/a&gt;
+specific &lt;abbr title="GNU Revision Control System"&gt;RCS&lt;/abbr&gt; revisions using the &lt;a class="reference internal" href="../articles/rcs.html#cmdoption-blame-revision"&gt;&lt;code class="xref std std-option docutils literal notranslate"&gt;&lt;span class="pre"&gt;--revision&lt;/span&gt;&lt;/code&gt;&lt;/a&gt;
+option, or specific dates with &lt;a class="reference internal" href="../articles/rcs.html#cmdoption-blame-date"&gt;&lt;code class="xref std std-option docutils literal notranslate"&gt;&lt;span class="pre"&gt;--date&lt;/span&gt;&lt;/code&gt;&lt;/a&gt; option.  &lt;a class="reference external" href="http://blame.sourceforge.net/"&gt;blame&lt;/a&gt;
 has also has a very comprehensive manual page included with it which you should
 read if you want to enjoy its full power.&lt;/p&gt;
-&lt;p&gt;There are many other tools available which use &lt;abbr title=&quot;GNU Revision Control System&quot;&gt;RCS&lt;/abbr&gt; as a backend, and as long
-as you can access the &lt;abbr title=&quot;GNU Revision Control System&quot;&gt;RCS&lt;/abbr&gt; data files blame can help to understand what is
+&lt;p&gt;There are many other tools available which use &lt;abbr title="GNU Revision Control System"&gt;RCS&lt;/abbr&gt; as a backend, and as long
+as you can access the &lt;abbr title="GNU Revision Control System"&gt;RCS&lt;/abbr&gt; data files blame can help to understand what is
 happening with them too.&lt;/p&gt;
-&lt;p&gt;If you know of any interesting &lt;abbr title=&quot;GNU Revision Control System&quot;&gt;RCS&lt;/abbr&gt; uses please drop me a mail, and I hope
+&lt;p&gt;If you know of any interesting &lt;abbr title="GNU Revision Control System"&gt;RCS&lt;/abbr&gt; uses please drop me a mail, and I hope
 this short text has been helpful to you.&lt;/p&gt;
-&lt;p class=&quot;rubric&quot;&gt;Footnotes&lt;/p&gt;
-&lt;p&gt;&lt;abbr title=&quot;GNU Revision Control System&quot;&gt;RCS&lt;/abbr&gt; options:&lt;/p&gt;
-&lt;dl class=&quot;std option&quot;&gt;
-&lt;dt id=&quot;cmdoption-r&quot;&gt;
-&lt;code class=&quot;sig-name descname&quot;&gt;-r&lt;/code&gt;&lt;code class=&quot;sig-prename descclassname&quot;&gt;&lt;/code&gt;&lt;/dt&gt;
-&lt;dd&gt;&lt;p&gt;Specify the revision to work with.  Common across all of &lt;abbr title=&quot;GNU Revision Control System&quot;&gt;RCS&lt;/abbr&gt;’s tools.&lt;/p&gt;
+&lt;p class="rubric"&gt;Footnotes&lt;/p&gt;
+&lt;p&gt;&lt;abbr title="GNU Revision Control System"&gt;RCS&lt;/abbr&gt; options:&lt;/p&gt;
+&lt;dl class="std option"&gt;
+&lt;dt id="cmdoption-r"&gt;
+&lt;code class="sig-name descname"&gt;-r&lt;/code&gt;&lt;code class="sig-prename descclassname"&gt;&lt;/code&gt;&lt;/dt&gt;
+&lt;dd&gt;&lt;p&gt;Specify the revision to work with.  Common across all of &lt;abbr title="GNU Revision Control System"&gt;RCS&lt;/abbr&gt;’s tools.&lt;/p&gt;
 &lt;/dd&gt;&lt;/dl&gt;
 
-&lt;p&gt;&lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;blame&lt;/span&gt;&lt;/code&gt; options:&lt;/p&gt;
-&lt;dl class=&quot;std option&quot;&gt;
-&lt;dt id=&quot;cmdoption-blame-date&quot;&gt;
-&lt;code class=&quot;sig-name descname&quot;&gt;--date&lt;/code&gt;&lt;code class=&quot;sig-prename descclassname&quot;&gt;&lt;/code&gt;&lt;/dt&gt;
+&lt;p&gt;&lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;blame&lt;/span&gt;&lt;/code&gt; options:&lt;/p&gt;
+&lt;dl class="std option"&gt;
+&lt;dt id="cmdoption-blame-date"&gt;
+&lt;code class="sig-name descname"&gt;--date&lt;/code&gt;&lt;code class="sig-prename descclassname"&gt;&lt;/code&gt;&lt;/dt&gt;
 &lt;dd&gt;&lt;p&gt;Annotate the revision that closest to, but not after, the given date.&lt;/p&gt;
 &lt;/dd&gt;&lt;/dl&gt;
 
-&lt;dl class=&quot;std option&quot;&gt;
-&lt;dt id=&quot;cmdoption-blame-revision&quot;&gt;
-&lt;code class=&quot;sig-name descname&quot;&gt;--revision&lt;/code&gt;&lt;code class=&quot;sig-prename descclassname&quot;&gt;&lt;/code&gt;&lt;/dt&gt;
+&lt;dl class="std option"&gt;
+&lt;dt id="cmdoption-blame-revision"&gt;
+&lt;code class="sig-name descname"&gt;--revision&lt;/code&gt;&lt;code class="sig-prename descclassname"&gt;&lt;/code&gt;&lt;/dt&gt;
 &lt;dd&gt;&lt;p&gt;Annotate the revision numerically closest to, but not exceeding, the given
 revision.&lt;/p&gt;
 &lt;/dd&gt;&lt;/dl&gt;
 
-&lt;p&gt;&lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;ci&lt;/span&gt;&lt;/code&gt; options:&lt;/p&gt;
-&lt;dl class=&quot;std option&quot;&gt;
-&lt;dt id=&quot;cmdoption-ci-r&quot;&gt;
-&lt;code class=&quot;sig-name descname&quot;&gt;-r&lt;/code&gt;&lt;code class=&quot;sig-prename descclassname&quot;&gt;&lt;/code&gt;&lt;/dt&gt;
+&lt;p&gt;&lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;ci&lt;/span&gt;&lt;/code&gt; options:&lt;/p&gt;
+&lt;dl class="std option"&gt;
+&lt;dt id="cmdoption-ci-r"&gt;
+&lt;code class="sig-name descname"&gt;-r&lt;/code&gt;&lt;code class="sig-prename descclassname"&gt;&lt;/code&gt;&lt;/dt&gt;
 &lt;dd&gt;&lt;p&gt;Perform checkin, and store with provided revision identifier.&lt;/p&gt;
 &lt;/dd&gt;&lt;/dl&gt;
 
-&lt;dl class=&quot;std option&quot;&gt;
-&lt;dt id=&quot;cmdoption-ci-u&quot;&gt;
-&lt;code class=&quot;sig-name descname&quot;&gt;-u&lt;/code&gt;&lt;code class=&quot;sig-prename descclassname&quot;&gt;&lt;/code&gt;&lt;/dt&gt;
+&lt;dl class="std option"&gt;
+&lt;dt id="cmdoption-ci-u"&gt;
+&lt;code class="sig-name descname"&gt;-u&lt;/code&gt;&lt;code class="sig-prename descclassname"&gt;&lt;/code&gt;&lt;/dt&gt;
 &lt;dd&gt;&lt;p&gt;Don’t lock the file on checkin.&lt;/p&gt;
 &lt;/dd&gt;&lt;/dl&gt;
 
-&lt;p&gt;&lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;co&lt;/span&gt;&lt;/code&gt; options:&lt;/p&gt;
-&lt;dl class=&quot;std option&quot;&gt;
-&lt;dt id=&quot;cmdoption-co-l&quot;&gt;
-&lt;code class=&quot;sig-name descname&quot;&gt;-l&lt;/code&gt;&lt;code class=&quot;sig-prename descclassname&quot;&gt;&lt;/code&gt;&lt;/dt&gt;
+&lt;p&gt;&lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;co&lt;/span&gt;&lt;/code&gt; options:&lt;/p&gt;
+&lt;dl class="std option"&gt;
+&lt;dt id="cmdoption-co-l"&gt;
+&lt;code class="sig-name descname"&gt;-l&lt;/code&gt;&lt;code class="sig-prename descclassname"&gt;&lt;/code&gt;&lt;/dt&gt;
 &lt;dd&gt;&lt;p&gt;Lock the file for editing on checkout.&lt;/p&gt;
 &lt;/dd&gt;&lt;/dl&gt;
 
-&lt;p&gt;&lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;rlog&lt;/span&gt;&lt;/code&gt; options:&lt;/p&gt;
-&lt;dl class=&quot;std option&quot;&gt;
-&lt;dt id=&quot;cmdoption-rlog-r&quot;&gt;
-&lt;code class=&quot;sig-name descname&quot;&gt;-r&lt;/code&gt;&lt;code class=&quot;sig-prename descclassname&quot;&gt;&lt;/code&gt;&lt;/dt&gt;
+&lt;p&gt;&lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;rlog&lt;/span&gt;&lt;/code&gt; options:&lt;/p&gt;
+&lt;dl class="std option"&gt;
+&lt;dt id="cmdoption-rlog-r"&gt;
+&lt;code class="sig-name descname"&gt;-r&lt;/code&gt;&lt;code class="sig-prename descclassname"&gt;&lt;/code&gt;&lt;/dt&gt;
 &lt;dd&gt;&lt;p&gt;Specify revisions to perform log against, can be a comma separated list of
 ranges.&lt;/p&gt;
 &lt;/dd&gt;&lt;/dl&gt;
@@ -349,5 +347,7 @@ ranges.&lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 </content>
+    <link href="https://jnrowe.github.io/articles/rcs.html" rel="alternate"/>
+    <published>2003-09-05T00:00:00+01:00</published>
   </entry>
 </feed>

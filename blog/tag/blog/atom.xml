@@ -1,22 +1,20 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version='1.0' encoding='UTF-8'?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <title type="text">JNRowe - Posts tagged blog</title>
-  <id>https://jnrowe.github.io/blog/tag/blog/atom.xml</id>
-  <updated>2014-01-27T00:00:00Z</updated>
-  <link href="https://jnrowe.github.io/" />
-  <link href="https://jnrowe.github.io/blog/tag/blog/atom.xml" rel="self" />
-  <subtitle type="text">Ramblings of a tired mind</subtitle>
-  <generator uri="https://ablog.readthedocs.org" version="0.10.4">ABlog</generator>
-  <entry xml:base="https://jnrowe.github.io/blog/tag/blog/atom.xml">
-    <title type="text">Return to rambling</title>
+  <id>https://jnrowe.github.io/</id>
+  <title>JNRowe - Posts tagged blog</title>
+  <updated>2021-03-21T11:05:57.848445+00:00</updated>
+  <link href="https://jnrowe.github.io/"/>
+  <link href="https://jnrowe.github.io/blog/tag/blog/atom.xml"/>
+  <generator uri="https://ablog.readthedocs.org" version="0.10.12">ABlog</generator>
+  <subtitle>Ramblings of a tired mind</subtitle>
+  <entry>
     <id>https://jnrowe.github.io/thoughts/the_returned.html</id>
-    <updated>2014-01-27T00:00:00Z</updated>
-    <published>2014-01-27T00:00:00Z</published>
-    <link href="https://jnrowe.github.io/thoughts/the_returned.html" />
+    <title>Return to rambling</title>
+    <updated>2014-01-27T00:00:00+00:00</updated>
     <author>
       <name>James Rowe</name>
     </author>
-    <content type="html">&lt;div class=&quot;section&quot; id=&quot;return-to-rambling&quot;&gt;
+    <content type="html">&lt;div class="section" id="return-to-rambling"&gt;
 
 &lt;p&gt;I kept a public journal from about 2003 until 2009, with a new entry about every
 three days.  I enjoyed the act of writing it greatly, and often looked forward
@@ -28,7 +26,7 @@ issues, &amp;amp;c.  I realised, towards the end, that I would spend about the s
 amount of time editing a post as I would writing it.  Sometimes I would spend an
 hour on a short post and finally delete it entirely.  &lt;em&gt;All&lt;/em&gt; the love was gone,
 &lt;em&gt;all&lt;/em&gt; of it.&lt;/p&gt;
-&lt;div class=&quot;section&quot; id=&quot;unleash-the-shout-hole&quot;&gt;
+&lt;div class="section" id="unleash-the-shout-hole"&gt;
 &lt;h2&gt;Unleash the shout-hole&lt;/h2&gt;
 &lt;p&gt;So why return?  Simple, I’ve reached a stage in my life where I don’t have to be
 quite so concerned with outbound appearances for the sake of professional life,
@@ -48,5 +46,7 @@ absolutely extended to this site and the new content I post.&lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 </content>
+    <link href="https://jnrowe.github.io/thoughts/the_returned.html" rel="alternate"/>
+    <published>2014-01-27T00:00:00+00:00</published>
   </entry>
 </feed>

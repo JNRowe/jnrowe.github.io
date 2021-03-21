@@ -1,371 +1,85 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version='1.0' encoding='UTF-8'?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <title type="text">JNRowe - Posts tagged vim</title>
-  <id>https://jnrowe.github.io/blog/tag/vim/atom.xml</id>
-  <updated>2018-11-05T00:00:00Z</updated>
-  <link href="https://jnrowe.github.io/" />
-  <link href="https://jnrowe.github.io/blog/tag/vim/atom.xml" rel="self" />
-  <subtitle type="text">Ramblings of a tired mind</subtitle>
-  <generator uri="https://ablog.readthedocs.org" version="0.10.4">ABlog</generator>
-  <entry xml:base="https://jnrowe.github.io/blog/tag/vim/atom.xml">
-    <title type="text">Evil Emacs steals my heart</title>
-    <id>https://jnrowe.github.io/articles/evil_emacs_steals_my_heart.html</id>
-    <updated>2018-11-05T00:00:00Z</updated>
-    <published>2018-11-05T00:00:00Z</published>
-    <link href="https://jnrowe.github.io/articles/evil_emacs_steals_my_heart.html" />
+  <id>https://jnrowe.github.io/</id>
+  <title>JNRowe - Posts tagged vim</title>
+  <updated>2021-03-21T11:06:01.705315+00:00</updated>
+  <link href="https://jnrowe.github.io/"/>
+  <link href="https://jnrowe.github.io/blog/tag/vim/atom.xml"/>
+  <generator uri="https://ablog.readthedocs.org" version="0.10.12">ABlog</generator>
+  <subtitle>Ramblings of a tired mind</subtitle>
+  <entry>
+    <id>https://jnrowe.github.io/articles/tips/Compiling_in_vim.html</id>
+    <title>Compiling C source in vim</title>
+    <updated>2009-09-24T00:00:00+01:00</updated>
     <author>
       <name>James Rowe</name>
     </author>
-    <content type="html">&lt;div class=&quot;section&quot; id=&quot;evil-emacs-steals-my-heart&quot;&gt;
+    <content type="html">&lt;div class="section" id="compiling-c-source-in-vim"&gt;
 
-&lt;p&gt;&lt;em&gt;Many&lt;/em&gt; of my co-workers use &lt;a class=&quot;reference external&quot; href=&quot;https://www.gnu.org/software/emacs/&quot;&gt;emacs&lt;/a&gt;, it is probably the most popular editor on
-our team and I understand why.&lt;/p&gt;
-&lt;img alt=&quot;Editor icons&quot; class=&quot;align-right&quot; src=&quot;../../_images/standoff.png&quot; /&gt;
-&lt;p&gt;I was an &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;emacs&lt;/span&gt;&lt;/code&gt; user — via &lt;a class=&quot;reference external&quot; href=&quot;ftp://ftp.cs.helsinki.fi/pub/Software/Local/uEmacs-PK/&quot;&gt;MicroEMACS&lt;/a&gt; and later &lt;a class=&quot;reference external&quot; href=&quot;https://www.gnu.org/software/emacs/&quot;&gt;GNU Emacs&lt;/a&gt; — for many
-years but at some point I switched to &lt;a class=&quot;reference external&quot; href=&quot;https://vim.sourceforge.io/&quot;&gt;vim&lt;/a&gt;.  I can’t even remember the exact
-catalyst for change, but I am pretty fickle so it may not have even been all
-that important.&lt;/p&gt;
-&lt;p&gt;Lately, I’ve found myself diving back in to &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;emacs&lt;/span&gt;&lt;/code&gt;.  In large part this is
-because of &lt;a class=&quot;reference external&quot; href=&quot;https://github.com/emacs-evil/evil&quot;&gt;evil&lt;/a&gt;; I can be &lt;em&gt;in&lt;/em&gt; &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;emacs&lt;/span&gt;&lt;/code&gt;, but &lt;em&gt;live&lt;/em&gt; &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;vim&lt;/span&gt;&lt;/code&gt;.&lt;/p&gt;
-&lt;div class=&quot;section&quot; id=&quot;evil-isnt-always-evil&quot;&gt;
-&lt;h2&gt;Evil isn’t always evil&lt;/h2&gt;
-&lt;p&gt;So, &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;evil-mode&lt;/span&gt;&lt;/code&gt; &lt;em&gt;is&lt;/em&gt; awesome.&lt;/p&gt;
-&lt;p&gt;The kindest thing I can think to say about it is this: You’ll be angry when it
-doesn’t work&lt;/p&gt;
-&lt;p&gt;This isn’t because it often breaks, quite the contrary.  It is simply because
-it feels largely seamless.  I’ll give an example that mimics a recent session
-to make my point.  For example, you’re hovering over a number you need to
-change:&lt;/p&gt;
-&lt;div class=&quot;highlight-c notranslate&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;magic_const&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;974&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-&lt;/div&gt;
-&lt;p&gt;In &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;vim&lt;/span&gt;&lt;/code&gt;, you can execute &lt;kbd class=&quot;kbd docutils literal notranslate&quot;&gt;&lt;kbd class=&quot;kbd docutils literal notranslate&quot;&gt;ciw&amp;lt;C&lt;/kbd&gt;-&lt;kbd class=&quot;kbd docutils literal notranslate&quot;&gt;r&amp;gt;=&amp;#64;&amp;quot;/2&amp;lt;CR&amp;gt;&lt;/kbd&gt;&lt;/kbd&gt; to cleave the number.  The
-command itself is saying:&lt;/p&gt;
-&lt;dl class=&quot;simple&quot;&gt;
-&lt;dt&gt;&lt;kbd class=&quot;kbd docutils literal notranslate&quot;&gt;ciw&lt;/kbd&gt;&lt;/dt&gt;&lt;dd&gt;&lt;p&gt;Change the word my cursor is on(&lt;kbd class=&quot;kbd docutils literal notranslate&quot;&gt;c&lt;/kbd&gt;hange &lt;kbd class=&quot;kbd docutils literal notranslate&quot;&gt;i&lt;/kbd&gt;nner &lt;kbd class=&quot;kbd docutils literal notranslate&quot;&gt;w&lt;/kbd&gt;ord)&lt;/p&gt;
-&lt;/dd&gt;
-&lt;dt&gt;&lt;kbd class=&quot;kbd docutils literal notranslate&quot;&gt;&lt;kbd class=&quot;kbd docutils literal notranslate&quot;&gt;&amp;lt;C&lt;/kbd&gt;-&lt;kbd class=&quot;kbd docutils literal notranslate&quot;&gt;r&amp;gt;=&lt;/kbd&gt;&lt;/kbd&gt;&lt;/dt&gt;&lt;dd&gt;&lt;p&gt;Insert the result of an expression(see &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;:h&lt;/span&gt; &lt;span class=&quot;pre&quot;&gt;i_CTRL-R_=&lt;/span&gt;&lt;/code&gt; for awesomeness)&lt;/p&gt;
-&lt;/dd&gt;
-&lt;dt&gt;&lt;kbd class=&quot;kbd docutils literal notranslate&quot;&gt;&amp;#64;&amp;quot;&lt;/kbd&gt;&lt;/dt&gt;&lt;dd&gt;&lt;p&gt;Use the text from last filled register, ie the text we just marked to be
-changed&lt;/p&gt;
-&lt;/dd&gt;
-&lt;dt&gt;&lt;kbd class=&quot;kbd docutils literal notranslate&quot;&gt;/2&lt;/kbd&gt;&lt;/dt&gt;&lt;dd&gt;&lt;p&gt;Half it&lt;/p&gt;
-&lt;/dd&gt;
-&lt;dt&gt;&lt;kbd class=&quot;kbd docutils literal notranslate&quot;&gt;&amp;lt;CR&amp;gt;&lt;/kbd&gt;&lt;/dt&gt;&lt;dd&gt;&lt;p&gt;Wow.&lt;/p&gt;
-&lt;/dd&gt;
-&lt;/dl&gt;
-&lt;div class=&quot;highlight-c notranslate&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;magic_const&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;487&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-&lt;/div&gt;
-&lt;p&gt;Whilst performing the same task thing in &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;evil-mode&lt;/span&gt;&lt;/code&gt; I receive an error.
-Emacs — quite rightly — expects you to write an &lt;a class=&quot;reference external&quot; href=&quot;https://en.m.wikipedia.org/wiki/Elisp&quot;&gt;elisp&lt;/a&gt; expression.  There is
-nothing wrong with this, but it is a sign of how good &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;evil-mode&lt;/span&gt;&lt;/code&gt; is.  It is
-literally &lt;em&gt;so&lt;/em&gt; good I forget I’m not using &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;vim&lt;/span&gt;&lt;/code&gt;.&lt;/p&gt;
-&lt;p&gt;Oftentimes a tool’s &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;vim&lt;/span&gt;&lt;/code&gt; emulation can be summed up as needing to press
-a key that kind of matches what something in &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;vim&lt;/span&gt;&lt;/code&gt; might be, assuming you
-didn’t really know what the key might be or when you’d use it.  Be that
-&lt;a class=&quot;reference external&quot; href=&quot;https://www.sublimetext.com&quot;&gt;sublimetext&lt;/a&gt;’s &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;vintage&lt;/span&gt;&lt;/code&gt; package that isn’t much more than normal and insert
-mode, or &lt;a class=&quot;reference external&quot; href=&quot;https://github.com/gentoo/elogv&quot;&gt;elogv&lt;/a&gt;’s bindings that mean you have to issue &lt;kbd class=&quot;kbd docutils literal notranslate&quot;&gt;dd&lt;/kbd&gt; to kill an
-entry.  Frankly, many of the emulation layers often feel like you’re just
-doubling the number of keys you have to press without any benefits&lt;a class=&quot;footnote-reference brackets&quot; href=&quot;#id4&quot; id=&quot;id1&quot;&gt;1&lt;/a&gt;.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class=&quot;section&quot; id=&quot;quirking-the-quirky&quot;&gt;
-&lt;h2&gt;Quirking the quirky&lt;/h2&gt;
-&lt;img alt=&quot;Emacs screenshot&quot; class=&quot;align-right&quot; src=&quot;../../_images/evil_emacs.png&quot; style=&quot;width: 407.5px; height: 270.0px;&quot; /&gt;
-&lt;p&gt;I’ll freely admit I’ve &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;vim&lt;/span&gt;&lt;/code&gt;ified my &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;emacs&lt;/span&gt;&lt;/code&gt;.  I use &lt;a class=&quot;reference external&quot; href=&quot;https://github.com/emacs-evil/evil&quot;&gt;evil&lt;/a&gt;, my mode line
-uses &lt;a class=&quot;reference external&quot; href=&quot;http://github.com/milkypostman/powerline/&quot;&gt;powerline&lt;/a&gt; to match &lt;a class=&quot;reference external&quot; href=&quot;https://github.com/vim-airline/vim-airline&quot;&gt;vim-airline&lt;/a&gt;.  I have &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;zap-up-to-char&lt;/span&gt;&lt;/code&gt; mapped so
-that I can mimic &lt;kbd class=&quot;kbd docutils literal notranslate&quot;&gt;dt&lt;/kbd&gt; when &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;evil-mode&lt;/span&gt;&lt;/code&gt; is disabled.&lt;/p&gt;
-&lt;p&gt;Screenshots for &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;emacs&lt;/span&gt;&lt;/code&gt; and &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;vim&lt;/span&gt;&lt;/code&gt; really aren’t all that useful, because it
-is the workflow that makes these tools powerful… but, above is my current
-&lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;emacs&lt;/span&gt;&lt;/code&gt; and below is my current &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;vim&lt;/span&gt;&lt;/code&gt;.&lt;/p&gt;
-&lt;img alt=&quot;vim screenshot&quot; class=&quot;align-left&quot; src=&quot;../../_images/delinquent_vim.png&quot; style=&quot;width: 422.0px; height: 263.5px;&quot; /&gt;
-&lt;p&gt;The big thing you’ll notice is the fonts.  In &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;emacs&lt;/span&gt;&lt;/code&gt; I’m using scaled text
-for headings in &lt;a class=&quot;reference external&quot; href=&quot;http://docutils.sourceforge.net/docs/user/rst/&quot;&gt;reST&lt;/a&gt; files.  I’m close to believing that headings,
-proportional fonts for comments and the occasional inline image are enough to
-switch to &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;emacs&lt;/span&gt;&lt;/code&gt;.&lt;/p&gt;
-&lt;img alt=&quot;Inline images in Emacs&quot; class=&quot;align-right&quot; src=&quot;../../_images/misfeasant_emacs.png&quot; style=&quot;width: 398.5px; height: 225.0px;&quot; /&gt;
-&lt;p&gt;In the third image you can see &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;emacs&lt;/span&gt;&lt;/code&gt; is &lt;em&gt;displaying&lt;/em&gt; the &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;emacs&lt;/span&gt;&lt;/code&gt;
-screenshot in the buffer for &lt;em&gt;this&lt;/em&gt; post.  This example may be quite pointless&lt;a class=&quot;footnote-reference brackets&quot; href=&quot;#id5&quot; id=&quot;id2&quot;&gt;2&lt;/a&gt;, but it can be nice to have &lt;a class=&quot;reference external&quot; href=&quot;https://www.graphviz.org/&quot;&gt;graphviz&lt;/a&gt; output class hierarchies in to
-a buffer or database schema popups(like below).&lt;/p&gt;
-&lt;img alt=&quot;Schema diagram&quot; class=&quot;align-left&quot; src=&quot;../../_images/immoral_model.png&quot; style=&quot;width: 174.5px; height: 141.5px;&quot; /&gt;
-&lt;/div&gt;
-&lt;div class=&quot;section&quot; id=&quot;walking-the-branches&quot;&gt;
-&lt;h2&gt;Walking the branches&lt;/h2&gt;
-&lt;p&gt;I’ve decided to really dig in this time, not just switch on a whim.  I’m using
-&lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;emacs&lt;/span&gt;&lt;/code&gt; and &lt;em&gt;only&lt;/em&gt; &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;emacs&lt;/span&gt;&lt;/code&gt; for a month, followed by &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;vim&lt;/span&gt;&lt;/code&gt; and &lt;em&gt;only&lt;/em&gt;
-&lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;vim&lt;/span&gt;&lt;/code&gt; for a month.  I’m busily writing a document of bugbears about both&lt;a class=&quot;footnote-reference brackets&quot; href=&quot;#id6&quot; id=&quot;id3&quot;&gt;3&lt;/a&gt;, and then figuring out which I want to fully invest in to.  I need to stop
-flip-flopping.&lt;/p&gt;
-&lt;p&gt;I will say that there isn’t much in it.  With a converging setup there are
-fewer and fewer differences to care about.  Things like the expression register
-usage above, or built-in versus external &lt;abbr title=&quot;HyperText Markup Language&quot;&gt;HTML&lt;/abbr&gt; preview for documents like
-this.&lt;/p&gt;
-&lt;p&gt;I’m actually wondering whether a &lt;a class=&quot;reference external&quot; href=&quot;https://neovim.io&quot;&gt;neovim&lt;/a&gt; client &lt;em&gt;in&lt;/em&gt; a &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;emacs&lt;/span&gt;&lt;/code&gt; frame would be
-the golden option.  If you know of such a thing or a better option, drop me
-a &lt;a class=&quot;reference external&quot; href=&quot;mailto:jnrowe&amp;#37;&amp;#52;&amp;#48;gmail&amp;#46;com&quot;&gt;mail&lt;/a&gt;!&lt;/p&gt;
-&lt;p class=&quot;rubric&quot;&gt;Footnotes&lt;/p&gt;
-&lt;dl class=&quot;footnote brackets&quot;&gt;
-&lt;dt class=&quot;label&quot; id=&quot;id4&quot;&gt;&lt;span class=&quot;brackets&quot;&gt;&lt;a class=&quot;fn-backref&quot; href=&quot;#id1&quot;&gt;1&lt;/a&gt;&lt;/span&gt;&lt;/dt&gt;
-&lt;dd&gt;&lt;p&gt;&lt;a class=&quot;reference external&quot; href=&quot;https://github.com/gentoo/elogv&quot;&gt;elogv&lt;/a&gt; for Gentoo is probably the worst example of this, as &lt;kbd class=&quot;kbd docutils literal notranslate&quot;&gt;d&lt;/kbd&gt;
-&lt;em&gt;almost&lt;/em&gt; works like &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;vim&lt;/span&gt;&lt;/code&gt; but nothing else does.&lt;/p&gt;
-&lt;/dd&gt;
-&lt;dt class=&quot;label&quot; id=&quot;id5&quot;&gt;&lt;span class=&quot;brackets&quot;&gt;&lt;a class=&quot;fn-backref&quot; href=&quot;#id2&quot;&gt;2&lt;/a&gt;&lt;/span&gt;&lt;/dt&gt;
-&lt;dd&gt;&lt;p&gt;Okay, completely pointless.&lt;/p&gt;
-&lt;/dd&gt;
-&lt;dt class=&quot;label&quot; id=&quot;id6&quot;&gt;&lt;span class=&quot;brackets&quot;&gt;&lt;a class=&quot;fn-backref&quot; href=&quot;#id3&quot;&gt;3&lt;/a&gt;&lt;/span&gt;&lt;/dt&gt;
-&lt;dd&gt;&lt;p&gt;&lt;a class=&quot;reference external&quot; href=&quot;https://www.orgmode.org/&quot;&gt;org-mode&lt;/a&gt; and &lt;a class=&quot;reference external&quot; href=&quot;https://github.com/jceb/vim-orgmode&quot;&gt;vim-orgmode&lt;/a&gt; allows me to keep this across editors.  There
-is very little point publishing it, as it can be summed up as “James
-pressed &lt;kbd class=&quot;kbd docutils literal notranslate&quot;&gt;&lt;kbd class=&quot;kbd docutils literal notranslate&quot;&gt;&amp;lt;C&lt;/kbd&gt;-&lt;kbd class=&quot;kbd docutils literal notranslate&quot;&gt;x&amp;gt;$something&lt;/kbd&gt;&lt;/kbd&gt; and was surprised.”&lt;/p&gt;
-&lt;/dd&gt;
-&lt;/dl&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-</content>
-  </entry>
-  <entry xml:base="https://jnrowe.github.io/blog/tag/vim/atom.xml">
-    <title type="text">Vim with day/night colourschemes</title>
-    <id>https://jnrowe.github.io/articles/tips/vim_day_night_colourscheme.html</id>
-    <updated>2018-09-15T00:00:00Z</updated>
-    <published>2018-09-15T00:00:00Z</published>
-    <link href="https://jnrowe.github.io/articles/tips/vim_day_night_colourscheme.html" />
-    <author>
-      <name>James Rowe</name>
-    </author>
-    <content type="html">&lt;div class=&quot;section&quot; id=&quot;vim-with-day-night-colourschemes&quot;&gt;
-
-&lt;p&gt;The fabulous Miss Biddulph asks via our EADS Linux list:&lt;/p&gt;
+&lt;p&gt;The fabulous Miss Biddulph asks via the EADS Linux list:&lt;/p&gt;
 &lt;blockquote&gt;
-&lt;div&gt;&lt;p&gt;I lurve &lt;a class=&quot;reference external&quot; href=&quot;https://www.vim.org/scripts/script.php?script_id=594&quot;&gt;taqua&lt;/a&gt; in &lt;a class=&quot;reference external&quot; href=&quot;http://www.vim.org&quot;&gt;vim&lt;/a&gt; during the day, but now the days are getting shorter
-it is beginning to destroy me.  Is there a way to make &lt;strong class=&quot;command&quot;&gt;vim&lt;/strong&gt; use
-different colourschemes depending on time?&lt;/p&gt;
+&lt;div&gt;&lt;p&gt;Is there a way to make &lt;strong class="command"&gt;vim&lt;/strong&gt; compile C files without
+a &lt;code class="file docutils literal notranslate"&gt;&lt;span class="pre"&gt;Makefile&lt;/span&gt;&lt;/code&gt;?&lt;/p&gt;
 &lt;/div&gt;&lt;/blockquote&gt;
-&lt;p&gt;So, like most things this can either be &lt;em&gt;really&lt;/em&gt; simple or horribly convoluted
-depending on where you wish to draw the usability line.  Because Laura is
-asking, we’ll scratch the surface of a few odd ways to do this.&lt;/p&gt;
-&lt;div class=&quot;section&quot; id=&quot;the-simple-solution&quot;&gt;
-&lt;h2&gt;The simple solution&lt;/h2&gt;
-&lt;p&gt;In many ways this is related to my &lt;a class=&quot;reference external&quot; href=&quot;https://github.com/JNRowe/awesome-timed-wallpaper/&quot;&gt;awesome-timed-wallpaper&lt;/a&gt; hack, and to start
-with I’m going to proceed in a similar way.&lt;/p&gt;
-&lt;p&gt;The snippet below will configure the &lt;a class=&quot;reference external&quot; href=&quot;http://vimdoc.sourceforge.net/htmldoc/options.html#'background'&quot;&gt;background&lt;/a&gt; and &lt;a class=&quot;reference external&quot; href=&quot;http://vimdoc.sourceforge.net/htmldoc/syntax.html#:colorscheme&quot;&gt;colourscheme&lt;/a&gt; depending on
-the time of day.  You can change the bounds in any way you see fit&lt;a class=&quot;footnote-reference brackets&quot; href=&quot;#id3&quot; id=&quot;id1&quot;&gt;1&lt;/a&gt;.&lt;/p&gt;
-&lt;div class=&quot;highlight-vim notranslate&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;let&lt;/span&gt; hour &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; strftime&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;%H&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; hour &lt;span class=&quot;p&quot;&gt;&amp;gt;=&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;18&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;set&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;background&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;dark&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;colorscheme&lt;/span&gt; jnrowe  &lt;span class=&quot;c&quot;&gt;&amp;quot; Best theme&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;elseif&lt;/span&gt; hour &lt;span class=&quot;p&quot;&gt;&amp;gt;=&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;9&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;set&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;background&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;light&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;colorscheme&lt;/span&gt; taqua
-&lt;span class=&quot;k&quot;&gt;else&lt;/span&gt;
-&lt;span class=&quot;c&quot;&gt;    &amp;quot; Midnight to 08:59&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;set&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;background&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;dark&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;colorscheme&lt;/span&gt; monokai
-&lt;span class=&quot;k&quot;&gt;endif&lt;/span&gt;
+&lt;p&gt;A quick phone call later and we know that Laura wishes to emulate &lt;a class="reference external" href="http://www.gnu.org/software/make/make.html"&gt;make&lt;/a&gt;’s
+behaviour where calling &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;make&lt;/span&gt; &lt;span class="pre"&gt;my_code&lt;/span&gt;&lt;/code&gt; without a &lt;code class="file docutils literal notranslate"&gt;&lt;span class="pre"&gt;Makefile&lt;/span&gt;&lt;/code&gt; will
+attempt to build &lt;code class="file docutils literal notranslate"&gt;&lt;span class="pre"&gt;my_code&lt;/span&gt;&lt;/code&gt; from &lt;code class="file docutils literal notranslate"&gt;&lt;span class="pre"&gt;my_code.c&lt;/span&gt;&lt;/code&gt;. &lt;a class="reference external" href="http://www.vim.org"&gt;vim&lt;/a&gt;’s default
+&lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;:make&lt;/span&gt;&lt;/code&gt; command doesn’t quite do the trick as it just calls &lt;strong class="command"&gt;make&lt;/strong&gt;
+without any arguments.&lt;/p&gt;
+&lt;p&gt;&lt;strong class="command"&gt;vim&lt;/strong&gt; allows us to set options for specific file types only using the
+&lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;:autocmd&lt;/span&gt;&lt;/code&gt; command, and this is the perfect time to use it.  We will set the
+value of &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;makeprg&lt;/span&gt;&lt;/code&gt;, which &lt;strong class="command"&gt;vim&lt;/strong&gt; uses as the command to run with
+&lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;:make&lt;/span&gt;&lt;/code&gt;, for all C and C++ files.&lt;/p&gt;
+&lt;div class="highlight-vim notranslate"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;autocmd &lt;span class="nb"&gt;FileType&lt;/span&gt; &lt;span class="k"&gt;c&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;cpp
+    \ &lt;span class="k"&gt;if&lt;/span&gt; empty&lt;span class="p"&gt;(&lt;/span&gt;glob&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;[Mm]akefile&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt; &lt;span class="p"&gt;|&lt;/span&gt;
+    \   &lt;span class="k"&gt;setlocal&lt;/span&gt; &lt;span class="nb"&gt;makeprg&lt;/span&gt;&lt;span class="p"&gt;=&lt;/span&gt;&lt;span class="k"&gt;make&lt;/span&gt;\ %&lt;span class="p"&gt;&amp;lt;&lt;/span&gt; &lt;span class="p"&gt;|&lt;/span&gt;
+    \ &lt;span class="k"&gt;endif&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
-&lt;p&gt;If you (re-)start &lt;strong class=&quot;command&quot;&gt;vim&lt;/strong&gt; regularly this is all you’ll probably need.
-If — like me — you have &lt;em&gt;very&lt;/em&gt; long running &lt;strong class=&quot;command&quot;&gt;vim&lt;/strong&gt; sessions, you’ll have
-to put in some more effort to make it work:&lt;/p&gt;
-&lt;ul class=&quot;simple&quot;&gt;
-&lt;li&gt;&lt;p&gt;The easiest option would be &lt;a class=&quot;reference external&quot; href=&quot;http://vimdoc.sourceforge.net/htmldoc/map.html#:nmap&quot;&gt;binding it to a key&lt;/a&gt; and triggering it when you
-notice eye strain&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;Use vim 8’s new asynchronous timer support, see &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;:h&lt;/span&gt; &lt;span class=&quot;pre&quot;&gt;timer&lt;/span&gt;&lt;/code&gt;&lt;a class=&quot;footnote-reference brackets&quot; href=&quot;#id4&quot; id=&quot;id2&quot;&gt;2&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;Support pre-v8 vim by adding an &lt;a class=&quot;reference external&quot; href=&quot;http://vimdoc.sourceforge.net/htmldoc/autocmd.html#:autocmd&quot;&gt;autocmd&lt;/a&gt; on &lt;a class=&quot;reference external&quot; href=&quot;http://vimdoc.sourceforge.net/htmldoc/autocmd.html#CursorHold&quot;&gt;CursorHold&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;Script vim externally using vim’s &lt;a class=&quot;reference external&quot; href=&quot;http://vimdoc.sourceforge.net/htmldoc/remote.html#--remote-send&quot;&gt;client server support&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;…&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;Create a &lt;a class=&quot;reference external&quot; href=&quot;https://www.freedesktop.org/wiki/Software/systemd&quot;&gt;systemd&lt;/a&gt; user timer that triggers at a given time ;)&lt;/p&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/div&gt;
-&lt;div class=&quot;section&quot; id=&quot;the-ridiculous-solution&quot;&gt;
-&lt;h2&gt;The ridiculous solution&lt;/h2&gt;
-&lt;p&gt;We’ll need to figure out the actual daylight state.  There are an enormous
-number of options available.&lt;/p&gt;
-&lt;div class=&quot;section&quot; id=&quot;with-python&quot;&gt;
-&lt;h3&gt;With Python&lt;/h3&gt;
-&lt;p&gt;My &lt;a class=&quot;reference external&quot; href=&quot;https://pypi.org/project/upoints/&quot;&gt;upoints&lt;/a&gt; package can calculate sunrise and sunset:&lt;/p&gt;
-&lt;div class=&quot;highlight-python notranslate&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&quot;gp&quot;&gt;&amp;gt;&amp;gt;&amp;gt; &lt;/span&gt;&lt;span class=&quot;kn&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;upoints.point&lt;/span&gt; &lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Point&lt;/span&gt;
-&lt;span class=&quot;gp&quot;&gt;&amp;gt;&amp;gt;&amp;gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;p&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Point&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mf&quot;&gt;52.2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;0.2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;gp&quot;&gt;&amp;gt;&amp;gt;&amp;gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;p&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;sun_events&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;  &lt;span class=&quot;c1&quot;&gt;# UTC results&lt;/span&gt;
-&lt;span class=&quot;go&quot;&gt;(datetime.time(5, 32), datetime.time(18, 15))&lt;/span&gt;
-&lt;span class=&quot;gp&quot;&gt;&amp;gt;&amp;gt;&amp;gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;p&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;sun_events&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;zenith&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;civil&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;   &lt;span class=&quot;c1&quot;&gt;# twilight&lt;/span&gt;
-&lt;span class=&quot;go&quot;&gt;(datetime.time(4, 58), datetime.time(18, 49))&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class=&quot;section&quot; id=&quot;with-redshift&quot;&gt;
-&lt;h3&gt;With &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;redshift&lt;/span&gt;&lt;/code&gt;&lt;/h3&gt;
-&lt;p&gt;If you already use &lt;a class=&quot;reference external&quot; href=&quot;http://jonls.dk/redshift/&quot;&gt;redshift&lt;/a&gt; — and you should — getting the current state is
-quite easy.  Below is example output, and a quick &lt;a class=&quot;reference external&quot; href=&quot;http://sed.sourceforge.net/&quot;&gt;sed&lt;/a&gt;-based method to parse the
-output for script usage:&lt;/p&gt;
-&lt;div class=&quot;highlight-sh notranslate&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;$ redshift -p
-Waiting &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; current location to become available...
-Location: &lt;span class=&quot;m&quot;&gt;52&lt;/span&gt;.2 N, &lt;span class=&quot;m&quot;&gt;0&lt;/span&gt;.2 E
-Period: Night
-Colour temperature: 4500K
-Brightness: &lt;span class=&quot;m&quot;&gt;1&lt;/span&gt;.00
-$ redshift -p &lt;span class=&quot;m&quot;&gt;2&lt;/span&gt;&amp;gt;/dev/null &lt;span class=&quot;p&quot;&gt;|&lt;/span&gt; sed -E &lt;span class=&quot;s1&quot;&gt;&amp;#39;/:/s,(.*): (.*),\U\1\E=&amp;quot;\2&amp;quot;, ; s,(\b) (\b),\1_\2,g&amp;#39;&lt;/span&gt;
-&lt;span class=&quot;nv&quot;&gt;PERIOD&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;Night&amp;quot;&lt;/span&gt;
-&lt;span class=&quot;nv&quot;&gt;COLOUR_TEMPERATURE&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;4500K&amp;quot;&lt;/span&gt;
-&lt;span class=&quot;nv&quot;&gt;BRIGHTNESS&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;1.00&amp;quot;&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-&lt;/div&gt;
-&lt;p&gt;Another option might be to use &lt;strong class=&quot;command&quot;&gt;redshift&lt;/strong&gt;’s hook support, see the man
-page for how to configure hooks.&lt;/p&gt;
-&lt;div class=&quot;highlight-sh notranslate&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&quot;ch&quot;&gt;#!/bin/zsh&lt;/span&gt;
-
-&lt;span class=&quot;k&quot;&gt;case&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$1&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;period-changed&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;case&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$3&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;day&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt; notify-send &lt;span class=&quot;s2&quot;&gt;&amp;quot;Make bright&amp;quot;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;;;&lt;/span&gt;
-    &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;night&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt; notify-send &lt;span class=&quot;s2&quot;&gt;&amp;quot;Make dark&amp;quot;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;;;&lt;/span&gt;
-    &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class=&quot;section&quot; id=&quot;camera-input&quot;&gt;
-&lt;h3&gt;Camera input&lt;/h3&gt;
-&lt;p&gt;Assuming you have access to either a very good or &lt;em&gt;very&lt;/em&gt; bad webcam you could
-even script support that takes in to account cloud cover, or occultation caused
-by buildings and trees.&lt;/p&gt;
-&lt;p&gt;For example, &lt;a class=&quot;reference external&quot; href=&quot;https://www.imagemagick.org/&quot;&gt;ImageMagick&lt;/a&gt; can be used to &lt;a class=&quot;reference external&quot; href=&quot;https://www.imagemagick.org/script/escape.php&quot;&gt;extract brightness&lt;/a&gt; from an image.&lt;/p&gt;
-&lt;div class=&quot;highlight-shell-session notranslate&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&quot;gp&quot;&gt;$&lt;/span&gt; curl &lt;span class=&quot;nv&quot;&gt;$cam_url&lt;/span&gt; &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
-    &lt;span class=&quot;p&quot;&gt;|&lt;/span&gt; convert - -colorspace Gray -format &lt;span class=&quot;s2&quot;&gt;&amp;quot;%[fx:quantumrange*image.mean]&amp;quot;&lt;/span&gt; info:
-&lt;span class=&quot;go&quot;&gt;38244.2&lt;/span&gt;
-&lt;span class=&quot;gp&quot;&gt;$&lt;/span&gt; convert pattern:GRAY0 -format &lt;span class=&quot;s2&quot;&gt;&amp;quot;%[fx:quantumrange*image.mean]&amp;quot;&lt;/span&gt; info:
-&lt;span class=&quot;go&quot;&gt;0&lt;/span&gt;
-&lt;span class=&quot;gp&quot;&gt;$&lt;/span&gt; convert pattern:GRAY100 -format &lt;span class=&quot;s2&quot;&gt;&amp;quot;%[fx:quantumrange*image.mean]&amp;quot;&lt;/span&gt; info:
-&lt;span class=&quot;go&quot;&gt;65535&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class=&quot;admonition note&quot;&gt;
-&lt;p class=&quot;admonition-title&quot;&gt;Note&lt;/p&gt;
-&lt;p&gt;As can be seen from the black(&lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;GRAY0&lt;/span&gt;&lt;/code&gt;) and white(&lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;GRAY100&lt;/span&gt;&lt;/code&gt;) examples,
-the result on &lt;em&gt;my&lt;/em&gt; system is a value between 0 and 65535.  You should take
-note that &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;quantumrange&lt;/span&gt;&lt;/code&gt; is a compile time depth setting; it can be
-queried with the &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;%q&lt;/span&gt;&lt;/code&gt; escape, or by checking the &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;Q&lt;/span&gt;&lt;/code&gt; value in the
-&lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;convert&lt;/span&gt; &lt;span class=&quot;pre&quot;&gt;--version&lt;/span&gt;&lt;/code&gt; output.&lt;/p&gt;
-&lt;/div&gt;
-&lt;p&gt;The above will only really work with very poor webcams that don’t attempt to
-autobalance their images, with reasonable devices it will be close to useless.&lt;/p&gt;
-&lt;p&gt;However, if you have a good quality camera image you may be able to extract the
-balancing data used from the image tags, and use that to infer the light level.
-&lt;a class=&quot;reference external&quot; href=&quot;http://www.exiv2.org/&quot;&gt;exiv2&lt;/a&gt; is great option to extract that data when available, and also supports
-&lt;a class=&quot;reference external&quot; href=&quot;https://wiki.gnome.org/Projects/GObjectIntrospection&quot;&gt;gobject introspection&lt;/a&gt; making it possible to use it with &lt;a class=&quot;reference external&quot; href=&quot;https://github.com/pavouk/lgi&quot;&gt;lgi&lt;/a&gt; in &lt;a class=&quot;reference external&quot; href=&quot;https://awesomewm.org/&quot;&gt;awesomewm&lt;/a&gt;
-for desktop colours too!&lt;/p&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class=&quot;section&quot; id=&quot;thoughts&quot;&gt;
-&lt;h2&gt;Thoughts&lt;/h2&gt;
-&lt;p&gt;That is definitely enough of that rabbit hole for me right now… I’m really
-looking forward to seeing people code golf some other solutions, be they useful
-or [hopefully] intriguing variations.&lt;/p&gt;
-&lt;p class=&quot;rubric&quot;&gt;Footnotes&lt;/p&gt;
-&lt;dl class=&quot;footnote brackets&quot;&gt;
-&lt;dt class=&quot;label&quot; id=&quot;id3&quot;&gt;&lt;span class=&quot;brackets&quot;&gt;&lt;a class=&quot;fn-backref&quot; href=&quot;#id1&quot;&gt;1&lt;/a&gt;&lt;/span&gt;&lt;/dt&gt;
-&lt;dd&gt;&lt;p&gt;If you need more branches you can also wonder why &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;vimscript&lt;/span&gt;&lt;/code&gt; doesn’t
-have a switch statement.&lt;/p&gt;
-&lt;/dd&gt;
-&lt;dt class=&quot;label&quot; id=&quot;id4&quot;&gt;&lt;span class=&quot;brackets&quot;&gt;&lt;a class=&quot;fn-backref&quot; href=&quot;#id2&quot;&gt;2&lt;/a&gt;&lt;/span&gt;&lt;/dt&gt;
-&lt;dd&gt;&lt;p&gt;No &lt;abbr title=&quot;HyperText Markup Language&quot;&gt;HTML&lt;/abbr&gt; link, as vimdoc is still on vim 7.3&lt;/p&gt;
-&lt;/dd&gt;
-&lt;/dl&gt;
-&lt;/div&gt;
+&lt;p&gt;The &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;%&amp;lt;&lt;/span&gt;&lt;/code&gt; in our &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;makeprg&lt;/span&gt;&lt;/code&gt; definition refers to the current file with its
+extension stripped.  We specifically only change the behaviour if no
+&lt;code class="file docutils literal notranslate"&gt;&lt;span class="pre"&gt;Makefile&lt;/span&gt;&lt;/code&gt; exists so that we don’t interfere with the normal usage of the
+&lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;:make&lt;/span&gt;&lt;/code&gt; command.&lt;/p&gt;
 &lt;/div&gt;
 </content>
+    <link href="https://jnrowe.github.io/articles/tips/Compiling_in_vim.html" rel="alternate"/>
+    <published>2009-09-24T00:00:00+01:00</published>
   </entry>
-  <entry xml:base="https://jnrowe.github.io/blog/tag/vim/atom.xml">
-    <title type="text">Visual vim mode identifier</title>
-    <id>https://jnrowe.github.io/articles/tips/Visual_vim_mode_identifier.html</id>
-    <updated>2009-10-13T00:00:00Z</updated>
-    <published>2009-10-13T00:00:00Z</published>
-    <link href="https://jnrowe.github.io/articles/tips/Visual_vim_mode_identifier.html" />
-    <author>
-      <name>James Rowe</name>
-    </author>
-    <content type="html">&lt;div class=&quot;section&quot; id=&quot;visual-vim-mode-identifier&quot;&gt;
-
-&lt;p&gt;Paul Kerry rants about his problems with &lt;a class=&quot;reference external&quot; href=&quot;http://www.vim.org/&quot;&gt;vim&lt;/a&gt; over the cooler today, and as
-a long time &lt;strong class=&quot;command&quot;&gt;vim&lt;/strong&gt; user I found it hard not to respond to some of the
-points.&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;div&gt;&lt;p&gt;All this mode switching makes it hard to know whether typing “Paul” is going
-to insert a huge block of code from the ether or insert, you know, “Paul” on
-the screen.&lt;/p&gt;
-&lt;/div&gt;&lt;/blockquote&gt;
-&lt;p&gt;The point Paul is making is that when he is in &lt;a class=&quot;reference external&quot; href=&quot;http://vimdoc.sourceforge.net/htmldoc/intro.html#vim-modes&quot;&gt;normal mode&lt;/a&gt;, typing the “P” of
-”Paul” can cause &lt;strong class=&quot;command&quot;&gt;vim&lt;/strong&gt; to insert a huge amount of text at the cursor.
-The text comes from the &lt;a class=&quot;reference external&quot; href=&quot;http://vimdoc.sourceforge.net/htmldoc/change.html#quote&quot;&gt;unnamed register&lt;/a&gt;, so it will be whatever potentially
-very large chunk of text he deleted or &lt;a class=&quot;reference external&quot; href=&quot;http://vimdoc.sourceforge.net/htmldoc/change.html#yank&quot;&gt;yanked&lt;/a&gt; last.&lt;/p&gt;
-&lt;img alt=&quot;mode identifier in vim&quot; class=&quot;align-right&quot; src=&quot;../../_images/2009-10-13-vim_screenshot.png&quot; /&gt;
-&lt;p&gt;If he had just added &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;set&lt;/span&gt; &lt;span class=&quot;pre&quot;&gt;showmode&lt;/span&gt;&lt;/code&gt; to his &lt;code class=&quot;file docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;~/.vimrc&lt;/span&gt;&lt;/code&gt; he would have
-a nice &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;--&lt;/span&gt; &lt;span class=&quot;pre&quot;&gt;INSERT&lt;/span&gt; &lt;span class=&quot;pre&quot;&gt;--&lt;/span&gt;&lt;/code&gt; reminder in the bottom of his terminal window when in
-insert mode, as can be seen in the screenshot on the right.&lt;/p&gt;
-&lt;p&gt;Another option that I use, combined with &lt;a class=&quot;reference external&quot; href=&quot;http://vimdoc.sourceforge.net/htmldoc/options.html#'showmode'&quot;&gt;showmode&lt;/a&gt;, is to change the cursor
-colour when switching to and from &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;insert&lt;/span&gt;&lt;/code&gt; mode.  This unfortunately doesn’t
-work on all terminal types, which means you have to test them individually and
-then set appropriate values for &lt;a class=&quot;reference external&quot; href=&quot;http://vimdoc.sourceforge.net/htmldoc/term.html#'t_SI'&quot;&gt;t_SI&lt;/a&gt; and &lt;a class=&quot;reference external&quot; href=&quot;http://vimdoc.sourceforge.net/htmldoc/term.html#'t_EI'&quot;&gt;t_EI&lt;/a&gt; on each terminal type.  An
-example for &lt;a class=&quot;reference external&quot; href=&quot;http://rxvt.sourceforge.net/&quot;&gt;rxvt&lt;/a&gt;-based terminals, including my favourite &lt;a class=&quot;reference external&quot; href=&quot;http://software.schmorp.de/&quot;&gt;rxvt-unicode&lt;/a&gt;, is
-below:&lt;/p&gt;
-&lt;div class=&quot;highlight-vim notranslate&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &amp;amp;&lt;span class=&quot;nb&quot;&gt;term&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=~&lt;/span&gt;? &lt;span class=&quot;s1&quot;&gt;&amp;#39;^rxvt&amp;#39;&lt;/span&gt; &amp;amp;&amp;amp; exists&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;&amp;amp;t_EI&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;let&lt;/span&gt; &amp;amp;&lt;span class=&quot;nb&quot;&gt;t_EI&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;\033]12;red\007&amp;quot;&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;let&lt;/span&gt; &amp;amp;&lt;span class=&quot;nb&quot;&gt;t_SI&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;\033]12;green\007&amp;quot;&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;endif&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-&lt;/div&gt;
-&lt;p&gt;I use a green cursor to indicate &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;insert&lt;/span&gt;&lt;/code&gt; mode, I tried a number of alternatives
-but found keeping the same cursor colour as my shell sessions was the most
-useful for me.  You can use any colour your terminal supports, including the
-extended 256 colour palette.  For more information on accessing the colours from
-the extended palette see the earlier &lt;span class=&quot;xref std std-doc&quot;&gt;Uber_pink_prompts&lt;/span&gt; tip.&lt;/p&gt;
-&lt;p&gt;You can also use the &lt;a class=&quot;reference external&quot; href=&quot;http://vimdoc.sourceforge.net/htmldoc/autocmd.html#InsertEnter&quot;&gt;InsertEnter&lt;/a&gt; and &lt;a class=&quot;reference external&quot; href=&quot;http://vimdoc.sourceforge.net/htmldoc/autocmd.html#InsertLeave&quot;&gt;InsertLeave&lt;/a&gt; events to call a function
-when changing mode.  There really is no limit to what kind of notifications you
-can use with this method.  Taking the idea too far we could use the &lt;a class=&quot;reference external&quot; href=&quot;https://awesomewm.org/&quot;&gt;awesome&lt;/a&gt;
-notifications from &lt;span class=&quot;xref std std-doc&quot;&gt;Simple_notifications_in_awesome&lt;/span&gt; to display popups
-when we change mode:&lt;/p&gt;
-&lt;div class=&quot;highlight-vim notranslate&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;au&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;InsertEnter&lt;/span&gt; * &lt;span class=&quot;p&quot;&gt;!&lt;/span&gt;echo &lt;span class=&quot;s2&quot;&gt;&amp;quot;notify.start(&amp;#39;Insert mode started&amp;#39;)&amp;quot;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;|&lt;/span&gt; awesome&lt;span class=&quot;p&quot;&gt;-&lt;/span&gt;client
-&lt;span class=&quot;k&quot;&gt;au&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;InsertLeave&lt;/span&gt; * &lt;span class=&quot;p&quot;&gt;!&lt;/span&gt;echo &lt;span class=&quot;s2&quot;&gt;&amp;quot;notify.stop(&amp;#39;Insert mode finished&amp;#39;)&amp;quot;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;|&lt;/span&gt; awesome&lt;span class=&quot;p&quot;&gt;-&lt;/span&gt;client
-&lt;/pre&gt;&lt;/div&gt;
-&lt;/div&gt;
-&lt;p&gt;Note that I didn’t say it was a good idea, just that it was possible!&lt;/p&gt;
-&lt;/div&gt;
-</content>
-  </entry>
-  <entry xml:base="https://jnrowe.github.io/blog/tag/vim/atom.xml">
-    <title type="text">Toggling settings in vim</title>
+  <entry>
     <id>https://jnrowe.github.io/articles/tips/Toggling_settings_in_vim.html</id>
-    <updated>2009-10-02T00:00:00Z</updated>
-    <published>2009-10-02T00:00:00Z</published>
-    <link href="https://jnrowe.github.io/articles/tips/Toggling_settings_in_vim.html" />
+    <title>Toggling settings in vim</title>
+    <updated>2009-10-02T00:00:00+01:00</updated>
     <author>
       <name>James Rowe</name>
     </author>
-    <content type="html">&lt;div class=&quot;section&quot; id=&quot;toggling-settings-in-vim&quot;&gt;
+    <content type="html">&lt;div class="section" id="toggling-settings-in-vim"&gt;
 
-&lt;p&gt;As you can never have enough keybinding tips and &lt;a class=&quot;reference external&quot; href=&quot;http://www.vim.org&quot;&gt;vim&lt;/a&gt; helps to prove that, the
-tip for today answers Joshua’s question from &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;##purplism&lt;/span&gt;&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;As you can never have enough keybinding tips and &lt;a class="reference external" href="http://www.vim.org"&gt;vim&lt;/a&gt; helps to prove that, the
+tip for today answers Joshua’s question from &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;##purplism&lt;/span&gt;&lt;/code&gt;&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;div&gt;&lt;p&gt;can you toggle settings in vim with a key?&lt;/p&gt;
 &lt;/div&gt;&lt;/blockquote&gt;
 &lt;p&gt;The simple answer is yes, but how easy it is depends on what you’re trying to
 toggle.  We need a state to test when toggling settings, so as long as we can
 query the setting toggling it is easy.  For example, I have a binding in my
-&lt;code class=&quot;file docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;~/.vimrc&lt;/span&gt;&lt;/code&gt; to toggle the value of &lt;a class=&quot;reference external&quot; href=&quot;http://vimdoc.sourceforge.net/htmldoc/options.html#'background'&quot;&gt;background&lt;/a&gt;.  As I use transparent
+&lt;code class="file docutils literal notranslate"&gt;&lt;span class="pre"&gt;~/.vimrc&lt;/span&gt;&lt;/code&gt; to toggle the value of &lt;a class="reference external" href="http://vimdoc.sourceforge.net/htmldoc/options.html#'background'"&gt;background&lt;/a&gt;.  As I use transparent
 terminals the colours used for syntax highlighting can occasionally get
 a little difficult to read depending on the wallpaper I’m using, the following
-function allows me to quick toggle the &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;background&lt;/span&gt;&lt;/code&gt; setting:&lt;/p&gt;
-&lt;div class=&quot;highlight-vim notranslate&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&quot;c&quot;&gt;&amp;quot; Map Shift-F12 to switch between light and dark&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;!&lt;/span&gt; Switch_background&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &amp;amp;&lt;span class=&quot;nb&quot;&gt;background&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;light&amp;quot;&lt;/span&gt;
-        &lt;span class=&quot;k&quot;&gt;set&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;background&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;dark&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;else&lt;/span&gt;
-        &lt;span class=&quot;k&quot;&gt;set&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;background&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;light&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;endif&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;endfunction&lt;/span&gt;
-map &lt;span class=&quot;p&quot;&gt;&amp;lt;&lt;/span&gt;S&lt;span class=&quot;p&quot;&gt;-&lt;/span&gt;F12&lt;span class=&quot;p&quot;&gt;&amp;gt;&lt;/span&gt; :&lt;span class=&quot;k&quot;&gt;call&lt;/span&gt; Switch_background&lt;span class=&quot;p&quot;&gt;()&amp;lt;&lt;/span&gt;CR&lt;span class=&quot;p&quot;&gt;&amp;gt;&lt;/span&gt;
+function allows me to quick toggle the &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;background&lt;/span&gt;&lt;/code&gt; setting:&lt;/p&gt;
+&lt;div class="highlight-vim notranslate"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="c"&gt;&amp;quot; Map Shift-F12 to switch between light and dark&lt;/span&gt;
+&lt;span class="k"&gt;function&lt;/span&gt;&lt;span class="p"&gt;!&lt;/span&gt; Switch_background&lt;span class="p"&gt;()&lt;/span&gt;
+    &lt;span class="k"&gt;if&lt;/span&gt; &amp;amp;&lt;span class="nb"&gt;background&lt;/span&gt; &lt;span class="p"&gt;==&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;light&amp;quot;&lt;/span&gt;
+        &lt;span class="k"&gt;set&lt;/span&gt; &lt;span class="nb"&gt;background&lt;/span&gt;&lt;span class="p"&gt;=&lt;/span&gt;&lt;span class="nb"&gt;dark&lt;/span&gt;
+    &lt;span class="k"&gt;else&lt;/span&gt;
+        &lt;span class="k"&gt;set&lt;/span&gt; &lt;span class="nb"&gt;background&lt;/span&gt;&lt;span class="p"&gt;=&lt;/span&gt;&lt;span class="nb"&gt;light&lt;/span&gt;
+    &lt;span class="k"&gt;endif&lt;/span&gt;
+&lt;span class="k"&gt;endfunction&lt;/span&gt;
+map &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;S&lt;span class="p"&gt;-&lt;/span&gt;F12&lt;span class="p"&gt;&amp;gt;&lt;/span&gt; :&lt;span class="k"&gt;call&lt;/span&gt; Switch_background&lt;span class="p"&gt;()&amp;lt;&lt;/span&gt;CR&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
 &lt;p&gt;For some other commands such as toggling line numbering it can be much
 simpler:&lt;/p&gt;
-&lt;div class=&quot;highlight-vim notranslate&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;map &lt;span class=&quot;p&quot;&gt;&amp;lt;&lt;/span&gt;C&lt;span class=&quot;p&quot;&gt;-&lt;/span&gt;F12&lt;span class=&quot;p&quot;&gt;&amp;gt;&lt;/span&gt; :&lt;span class=&quot;k&quot;&gt;set&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;number&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;!&amp;lt;&lt;/span&gt;CR&lt;span class=&quot;p&quot;&gt;&amp;gt;&lt;/span&gt;
+&lt;div class="highlight-vim notranslate"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;map &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;C&lt;span class="p"&gt;-&lt;/span&gt;F12&lt;span class="p"&gt;&amp;gt;&lt;/span&gt; :&lt;span class="k"&gt;set&lt;/span&gt; &lt;span class="k"&gt;number&lt;/span&gt;&lt;span class="p"&gt;!&amp;lt;&lt;/span&gt;CR&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
 &lt;p&gt;For those times when we can’t easily flip the setting on and off or query state
@@ -375,63 +89,349 @@ While we could test one of the settings in the toggle function it can become
 quite brittle if we change those settings ourselves.  By storing our toggle
 state in a variable we can test that instead.  The final — totally contrived
 — example shows how to do that:&lt;/p&gt;
-&lt;div class=&quot;highlight-vim notranslate&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&quot;c&quot;&gt;&amp;quot; Map Mod1-F12 to toggle some vim goodness&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;!&lt;/span&gt; EditorvsNotepad&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;g&lt;/span&gt;:notepad &lt;span class=&quot;p&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;false&amp;quot;&lt;/span&gt;
-        &lt;span class=&quot;k&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;g&lt;/span&gt;:notepad&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;true&amp;quot;&lt;/span&gt;
-        &lt;span class=&quot;nb&quot;&gt;syntax&lt;/span&gt; off
-        &lt;span class=&quot;k&quot;&gt;set&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;nohlsearch&lt;/span&gt;
-        &lt;span class=&quot;k&quot;&gt;set&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;laststatus&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;0&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;else&lt;/span&gt;
-        &lt;span class=&quot;k&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;g&lt;/span&gt;:notepad&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;false&amp;quot;&lt;/span&gt;
-        &lt;span class=&quot;nb&quot;&gt;syntax&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;on&lt;/span&gt;
-        &lt;span class=&quot;k&quot;&gt;set&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;hlsearch&lt;/span&gt;
-        &lt;span class=&quot;k&quot;&gt;set&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;laststatus&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;2&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;endif&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;endfunction&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;g&lt;/span&gt;:notepad &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;false&amp;quot;&lt;/span&gt;
-map &lt;span class=&quot;p&quot;&gt;&amp;lt;&lt;/span&gt;M&lt;span class=&quot;p&quot;&gt;-&lt;/span&gt;F12&lt;span class=&quot;p&quot;&gt;&amp;gt;&lt;/span&gt; :&lt;span class=&quot;k&quot;&gt;call&lt;/span&gt; EditorvsNotepad&lt;span class=&quot;p&quot;&gt;()&amp;lt;&lt;/span&gt;CR&lt;span class=&quot;p&quot;&gt;&amp;gt;&lt;/span&gt;
+&lt;div class="highlight-vim notranslate"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="c"&gt;&amp;quot; Map Mod1-F12 to toggle some vim goodness&lt;/span&gt;
+&lt;span class="k"&gt;function&lt;/span&gt;&lt;span class="p"&gt;!&lt;/span&gt; EditorvsNotepad&lt;span class="p"&gt;()&lt;/span&gt;
+    &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="k"&gt;g&lt;/span&gt;:notepad &lt;span class="p"&gt;==&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;false&amp;quot;&lt;/span&gt;
+        &lt;span class="k"&gt;let&lt;/span&gt; &lt;span class="k"&gt;g&lt;/span&gt;:notepad&lt;span class="p"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;true&amp;quot;&lt;/span&gt;
+        &lt;span class="nb"&gt;syntax&lt;/span&gt; off
+        &lt;span class="k"&gt;set&lt;/span&gt; &lt;span class="k"&gt;nohlsearch&lt;/span&gt;
+        &lt;span class="k"&gt;set&lt;/span&gt; &lt;span class="nb"&gt;laststatus&lt;/span&gt;&lt;span class="p"&gt;=&lt;/span&gt;&lt;span class="m"&gt;0&lt;/span&gt;
+    &lt;span class="k"&gt;else&lt;/span&gt;
+        &lt;span class="k"&gt;let&lt;/span&gt; &lt;span class="k"&gt;g&lt;/span&gt;:notepad&lt;span class="p"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;false&amp;quot;&lt;/span&gt;
+        &lt;span class="nb"&gt;syntax&lt;/span&gt; &lt;span class="k"&gt;on&lt;/span&gt;
+        &lt;span class="k"&gt;set&lt;/span&gt; &lt;span class="nb"&gt;hlsearch&lt;/span&gt;
+        &lt;span class="k"&gt;set&lt;/span&gt; &lt;span class="nb"&gt;laststatus&lt;/span&gt;&lt;span class="p"&gt;=&lt;/span&gt;&lt;span class="m"&gt;2&lt;/span&gt;
+    &lt;span class="k"&gt;endif&lt;/span&gt;
+&lt;span class="k"&gt;endfunction&lt;/span&gt;
+&lt;span class="k"&gt;let&lt;/span&gt; &lt;span class="k"&gt;g&lt;/span&gt;:notepad &lt;span class="p"&gt;=&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;false&amp;quot;&lt;/span&gt;
+map &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;M&lt;span class="p"&gt;-&lt;/span&gt;F12&lt;span class="p"&gt;&amp;gt;&lt;/span&gt; :&lt;span class="k"&gt;call&lt;/span&gt; EditorvsNotepad&lt;span class="p"&gt;()&amp;lt;&lt;/span&gt;CR&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 </content>
+    <link href="https://jnrowe.github.io/articles/tips/Toggling_settings_in_vim.html" rel="alternate"/>
+    <published>2009-10-02T00:00:00+01:00</published>
   </entry>
-  <entry xml:base="https://jnrowe.github.io/blog/tag/vim/atom.xml">
-    <title type="text">Compiling C source in vim</title>
-    <id>https://jnrowe.github.io/articles/tips/Compiling_in_vim.html</id>
-    <updated>2009-09-24T00:00:00Z</updated>
-    <published>2009-09-24T00:00:00Z</published>
-    <link href="https://jnrowe.github.io/articles/tips/Compiling_in_vim.html" />
+  <entry>
+    <id>https://jnrowe.github.io/articles/tips/Visual_vim_mode_identifier.html</id>
+    <title>Visual vim mode identifier</title>
+    <updated>2009-10-13T00:00:00+01:00</updated>
     <author>
       <name>James Rowe</name>
     </author>
-    <content type="html">&lt;div class=&quot;section&quot; id=&quot;compiling-c-source-in-vim&quot;&gt;
+    <content type="html">&lt;div class="section" id="visual-vim-mode-identifier"&gt;
 
-&lt;p&gt;The fabulous Miss Biddulph asks via the EADS Linux list:&lt;/p&gt;
+&lt;p&gt;Paul Kerry rants about his problems with &lt;a class="reference external" href="http://www.vim.org/"&gt;vim&lt;/a&gt; over the cooler today, and as
+a long time &lt;strong class="command"&gt;vim&lt;/strong&gt; user I found it hard not to respond to some of the
+points.&lt;/p&gt;
 &lt;blockquote&gt;
-&lt;div&gt;&lt;p&gt;Is there a way to make &lt;strong class=&quot;command&quot;&gt;vim&lt;/strong&gt; compile C files without
-a &lt;code class=&quot;file docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;Makefile&lt;/span&gt;&lt;/code&gt;?&lt;/p&gt;
+&lt;div&gt;&lt;p&gt;All this mode switching makes it hard to know whether typing “Paul” is going
+to insert a huge block of code from the ether or insert, you know, “Paul” on
+the screen.&lt;/p&gt;
 &lt;/div&gt;&lt;/blockquote&gt;
-&lt;p&gt;A quick phone call later and we know that Laura wishes to emulate &lt;a class=&quot;reference external&quot; href=&quot;http://www.gnu.org/software/make/make.html&quot;&gt;make&lt;/a&gt;’s
-behaviour where calling &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;make&lt;/span&gt; &lt;span class=&quot;pre&quot;&gt;my_code&lt;/span&gt;&lt;/code&gt; without a &lt;code class=&quot;file docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;Makefile&lt;/span&gt;&lt;/code&gt; will
-attempt to build &lt;code class=&quot;file docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;my_code&lt;/span&gt;&lt;/code&gt; from &lt;code class=&quot;file docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;my_code.c&lt;/span&gt;&lt;/code&gt;. &lt;a class=&quot;reference external&quot; href=&quot;http://www.vim.org&quot;&gt;vim&lt;/a&gt;’s default
-&lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;:make&lt;/span&gt;&lt;/code&gt; command doesn’t quite do the trick as it just calls &lt;strong class=&quot;command&quot;&gt;make&lt;/strong&gt;
-without any arguments.&lt;/p&gt;
-&lt;p&gt;&lt;strong class=&quot;command&quot;&gt;vim&lt;/strong&gt; allows us to set options for specific file types only using the
-&lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;:autocmd&lt;/span&gt;&lt;/code&gt; command, and this is the perfect time to use it.  We will set the
-value of &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;makeprg&lt;/span&gt;&lt;/code&gt;, which &lt;strong class=&quot;command&quot;&gt;vim&lt;/strong&gt; uses as the command to run with
-&lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;:make&lt;/span&gt;&lt;/code&gt;, for all C and C++ files.&lt;/p&gt;
-&lt;div class=&quot;highlight-vim notranslate&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;autocmd &lt;span class=&quot;nb&quot;&gt;FileType&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;c&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;cpp
-    \ &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; empty&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;glob&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;[Mm]akefile&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;|&lt;/span&gt;
-    \   &lt;span class=&quot;k&quot;&gt;setlocal&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;makeprg&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;make&lt;/span&gt;\ %&lt;span class=&quot;p&quot;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;|&lt;/span&gt;
-    \ &lt;span class=&quot;k&quot;&gt;endif&lt;/span&gt;
+&lt;p&gt;The point Paul is making is that when he is in &lt;a class="reference external" href="http://vimdoc.sourceforge.net/htmldoc/intro.html#vim-modes"&gt;normal mode&lt;/a&gt;, typing the “P” of
+”Paul” can cause &lt;strong class="command"&gt;vim&lt;/strong&gt; to insert a huge amount of text at the cursor.
+The text comes from the &lt;a class="reference external" href="http://vimdoc.sourceforge.net/htmldoc/change.html#quote"&gt;unnamed register&lt;/a&gt;, so it will be whatever potentially
+very large chunk of text he deleted or &lt;a class="reference external" href="http://vimdoc.sourceforge.net/htmldoc/change.html#yank"&gt;yanked&lt;/a&gt; last.&lt;/p&gt;
+&lt;img alt="mode identifier in vim" class="align-right" src="../../_images/2009-10-13-vim_screenshot.png" /&gt;
+&lt;p&gt;If he had just added &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;set&lt;/span&gt; &lt;span class="pre"&gt;showmode&lt;/span&gt;&lt;/code&gt; to his &lt;code class="file docutils literal notranslate"&gt;&lt;span class="pre"&gt;~/.vimrc&lt;/span&gt;&lt;/code&gt; he would have
+a nice &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;--&lt;/span&gt; &lt;span class="pre"&gt;INSERT&lt;/span&gt; &lt;span class="pre"&gt;--&lt;/span&gt;&lt;/code&gt; reminder in the bottom of his terminal window when in
+insert mode, as can be seen in the screenshot on the right.&lt;/p&gt;
+&lt;p&gt;Another option that I use, combined with &lt;a class="reference external" href="http://vimdoc.sourceforge.net/htmldoc/options.html#'showmode'"&gt;showmode&lt;/a&gt;, is to change the cursor
+colour when switching to and from &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;insert&lt;/span&gt;&lt;/code&gt; mode.  This unfortunately doesn’t
+work on all terminal types, which means you have to test them individually and
+then set appropriate values for &lt;a class="reference external" href="http://vimdoc.sourceforge.net/htmldoc/term.html#'t_SI'"&gt;t_SI&lt;/a&gt; and &lt;a class="reference external" href="http://vimdoc.sourceforge.net/htmldoc/term.html#'t_EI'"&gt;t_EI&lt;/a&gt; on each terminal type.  An
+example for &lt;a class="reference external" href="http://rxvt.sourceforge.net/"&gt;rxvt&lt;/a&gt;-based terminals, including my favourite &lt;a class="reference external" href="http://software.schmorp.de/"&gt;rxvt-unicode&lt;/a&gt;, is
+below:&lt;/p&gt;
+&lt;div class="highlight-vim notranslate"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="k"&gt;if&lt;/span&gt; &amp;amp;&lt;span class="nb"&gt;term&lt;/span&gt; &lt;span class="p"&gt;=~&lt;/span&gt;? &lt;span class="s1"&gt;&amp;#39;^rxvt&amp;#39;&lt;/span&gt; &amp;amp;&amp;amp; exists&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;&amp;amp;t_EI&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+    &lt;span class="k"&gt;let&lt;/span&gt; &amp;amp;&lt;span class="nb"&gt;t_EI&lt;/span&gt;&lt;span class="p"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;\033]12;red\007&amp;quot;&lt;/span&gt;
+    &lt;span class="k"&gt;let&lt;/span&gt; &amp;amp;&lt;span class="nb"&gt;t_SI&lt;/span&gt;&lt;span class="p"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;\033]12;green\007&amp;quot;&lt;/span&gt;
+&lt;span class="k"&gt;endif&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
-&lt;p&gt;The &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;%&amp;lt;&lt;/span&gt;&lt;/code&gt; in our &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;makeprg&lt;/span&gt;&lt;/code&gt; definition refers to the current file with its
-extension stripped.  We specifically only change the behaviour if no
-&lt;code class=&quot;file docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;Makefile&lt;/span&gt;&lt;/code&gt; exists so that we don’t interfere with the normal usage of the
-&lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;:make&lt;/span&gt;&lt;/code&gt; command.&lt;/p&gt;
+&lt;p&gt;I use a green cursor to indicate &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;insert&lt;/span&gt;&lt;/code&gt; mode, I tried a number of alternatives
+but found keeping the same cursor colour as my shell sessions was the most
+useful for me.  You can use any colour your terminal supports, including the
+extended 256 colour palette.  For more information on accessing the colours from
+the extended palette see the earlier &lt;span class="xref std std-doc"&gt;Uber_pink_prompts&lt;/span&gt; tip.&lt;/p&gt;
+&lt;p&gt;You can also use the &lt;a class="reference external" href="http://vimdoc.sourceforge.net/htmldoc/autocmd.html#InsertEnter"&gt;InsertEnter&lt;/a&gt; and &lt;a class="reference external" href="http://vimdoc.sourceforge.net/htmldoc/autocmd.html#InsertLeave"&gt;InsertLeave&lt;/a&gt; events to call a function
+when changing mode.  There really is no limit to what kind of notifications you
+can use with this method.  Taking the idea too far we could use the &lt;a class="reference external" href="https://awesomewm.org/"&gt;awesome&lt;/a&gt;
+notifications from &lt;span class="xref std std-doc"&gt;Simple_notifications_in_awesome&lt;/span&gt; to display popups
+when we change mode:&lt;/p&gt;
+&lt;div class="highlight-vim notranslate"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="k"&gt;au&lt;/span&gt; &lt;span class="nb"&gt;InsertEnter&lt;/span&gt; * &lt;span class="p"&gt;!&lt;/span&gt;echo &lt;span class="s2"&gt;&amp;quot;notify.start(&amp;#39;Insert mode started&amp;#39;)&amp;quot;&lt;/span&gt; &lt;span class="p"&gt;|&lt;/span&gt; awesome&lt;span class="p"&gt;-&lt;/span&gt;client
+&lt;span class="k"&gt;au&lt;/span&gt; &lt;span class="nb"&gt;InsertLeave&lt;/span&gt; * &lt;span class="p"&gt;!&lt;/span&gt;echo &lt;span class="s2"&gt;&amp;quot;notify.stop(&amp;#39;Insert mode finished&amp;#39;)&amp;quot;&lt;/span&gt; &lt;span class="p"&gt;|&lt;/span&gt; awesome&lt;span class="p"&gt;-&lt;/span&gt;client
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;Note that I didn’t say it was a good idea, just that it was possible!&lt;/p&gt;
 &lt;/div&gt;
 </content>
+    <link href="https://jnrowe.github.io/articles/tips/Visual_vim_mode_identifier.html" rel="alternate"/>
+    <published>2009-10-13T00:00:00+01:00</published>
+  </entry>
+  <entry>
+    <id>https://jnrowe.github.io/articles/tips/vim_day_night_colourscheme.html</id>
+    <title>Vim with day/night colourschemes</title>
+    <updated>2018-09-15T00:00:00+01:00</updated>
+    <author>
+      <name>James Rowe</name>
+    </author>
+    <content type="html">&lt;div class="section" id="vim-with-day-night-colourschemes"&gt;
+
+&lt;p&gt;The fabulous Miss Biddulph asks via our EADS Linux list:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;div&gt;&lt;p&gt;I lurve &lt;a class="reference external" href="https://www.vim.org/scripts/script.php?script_id=594"&gt;taqua&lt;/a&gt; in &lt;a class="reference external" href="http://www.vim.org"&gt;vim&lt;/a&gt; during the day, but now the days are getting shorter
+it is beginning to destroy me.  Is there a way to make &lt;strong class="command"&gt;vim&lt;/strong&gt; use
+different colourschemes depending on time?&lt;/p&gt;
+&lt;/div&gt;&lt;/blockquote&gt;
+&lt;p&gt;So, like most things this can either be &lt;em&gt;really&lt;/em&gt; simple or horribly convoluted
+depending on where you wish to draw the usability line.  Because Laura is
+asking, we’ll scratch the surface of a few odd ways to do this.&lt;/p&gt;
+&lt;div class="section" id="the-simple-solution"&gt;
+&lt;h2&gt;The simple solution&lt;/h2&gt;
+&lt;p&gt;In many ways this is related to my &lt;a class="reference external" href="https://github.com/JNRowe/awesome-timed-wallpaper/"&gt;awesome-timed-wallpaper&lt;/a&gt; hack, and to start
+with I’m going to proceed in a similar way.&lt;/p&gt;
+&lt;p&gt;The snippet below will configure the &lt;a class="reference external" href="http://vimdoc.sourceforge.net/htmldoc/options.html#'background'"&gt;background&lt;/a&gt; and &lt;a class="reference external" href="http://vimdoc.sourceforge.net/htmldoc/syntax.html#:colorscheme"&gt;colourscheme&lt;/a&gt; depending on
+the time of day.  You can change the bounds in any way you see fit&lt;a class="footnote-reference brackets" href="#id3" id="id1"&gt;1&lt;/a&gt;.&lt;/p&gt;
+&lt;div class="highlight-vim notranslate"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="k"&gt;let&lt;/span&gt; hour &lt;span class="p"&gt;=&lt;/span&gt; strftime&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;%H&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="k"&gt;if&lt;/span&gt; hour &lt;span class="p"&gt;&amp;gt;=&lt;/span&gt; &lt;span class="m"&gt;18&lt;/span&gt;
+    &lt;span class="k"&gt;set&lt;/span&gt; &lt;span class="nb"&gt;background&lt;/span&gt;&lt;span class="p"&gt;=&lt;/span&gt;&lt;span class="nb"&gt;dark&lt;/span&gt;
+    &lt;span class="k"&gt;colorscheme&lt;/span&gt; jnrowe  &lt;span class="c"&gt;&amp;quot; Best theme&lt;/span&gt;
+&lt;span class="k"&gt;elseif&lt;/span&gt; hour &lt;span class="p"&gt;&amp;gt;=&lt;/span&gt; &lt;span class="m"&gt;9&lt;/span&gt;
+    &lt;span class="k"&gt;set&lt;/span&gt; &lt;span class="nb"&gt;background&lt;/span&gt;&lt;span class="p"&gt;=&lt;/span&gt;&lt;span class="nb"&gt;light&lt;/span&gt;
+    &lt;span class="k"&gt;colorscheme&lt;/span&gt; taqua
+&lt;span class="k"&gt;else&lt;/span&gt;
+&lt;span class="c"&gt;    &amp;quot; Midnight to 08:59&lt;/span&gt;
+    &lt;span class="k"&gt;set&lt;/span&gt; &lt;span class="nb"&gt;background&lt;/span&gt;&lt;span class="p"&gt;=&lt;/span&gt;&lt;span class="nb"&gt;dark&lt;/span&gt;
+    &lt;span class="k"&gt;colorscheme&lt;/span&gt; monokai
+&lt;span class="k"&gt;endif&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;If you (re-)start &lt;strong class="command"&gt;vim&lt;/strong&gt; regularly this is all you’ll probably need.
+If — like me — you have &lt;em&gt;very&lt;/em&gt; long running &lt;strong class="command"&gt;vim&lt;/strong&gt; sessions, you’ll have
+to put in some more effort to make it work:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;&lt;p&gt;The easiest option would be &lt;a class="reference external" href="http://vimdoc.sourceforge.net/htmldoc/map.html#:nmap"&gt;binding it to a key&lt;/a&gt; and triggering it when you
+notice eye strain&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Use vim 8’s new asynchronous timer support, see &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;:h&lt;/span&gt; &lt;span class="pre"&gt;timer&lt;/span&gt;&lt;/code&gt;&lt;a class="footnote-reference brackets" href="#id4" id="id2"&gt;2&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Support pre-v8 vim by adding an &lt;a class="reference external" href="http://vimdoc.sourceforge.net/htmldoc/autocmd.html#:autocmd"&gt;autocmd&lt;/a&gt; on &lt;a class="reference external" href="http://vimdoc.sourceforge.net/htmldoc/autocmd.html#CursorHold"&gt;CursorHold&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Script vim externally using vim’s &lt;a class="reference external" href="http://vimdoc.sourceforge.net/htmldoc/remote.html#--remote-send"&gt;client server support&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;…&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Create a &lt;a class="reference external" href="https://www.freedesktop.org/wiki/Software/systemd"&gt;systemd&lt;/a&gt; user timer that triggers at a given time ;)&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class="section" id="the-ridiculous-solution"&gt;
+&lt;h2&gt;The ridiculous solution&lt;/h2&gt;
+&lt;p&gt;We’ll need to figure out the actual daylight state.  There are an enormous
+number of options available.&lt;/p&gt;
+&lt;div class="section" id="with-python"&gt;
+&lt;h3&gt;With Python&lt;/h3&gt;
+&lt;p&gt;My &lt;a class="reference external" href="https://pypi.org/project/upoints/"&gt;upoints&lt;/a&gt; package can calculate sunrise and sunset:&lt;/p&gt;
+&lt;div class="highlight-python notranslate"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="gp"&gt;&amp;gt;&amp;gt;&amp;gt; &lt;/span&gt;&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;upoints.point&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;Point&lt;/span&gt;
+&lt;span class="gp"&gt;&amp;gt;&amp;gt;&amp;gt; &lt;/span&gt;&lt;span class="n"&gt;p&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;Point&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mf"&gt;52.2&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mf"&gt;0.2&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="gp"&gt;&amp;gt;&amp;gt;&amp;gt; &lt;/span&gt;&lt;span class="n"&gt;p&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;sun_events&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;  &lt;span class="c1"&gt;# UTC results&lt;/span&gt;
+&lt;span class="go"&gt;(datetime.time(5, 32), datetime.time(18, 15))&lt;/span&gt;
+&lt;span class="gp"&gt;&amp;gt;&amp;gt;&amp;gt; &lt;/span&gt;&lt;span class="n"&gt;p&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;sun_events&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;zenith&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;civil&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;   &lt;span class="c1"&gt;# twilight&lt;/span&gt;
+&lt;span class="go"&gt;(datetime.time(4, 58), datetime.time(18, 49))&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="section" id="with-redshift"&gt;
+&lt;h3&gt;With &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;redshift&lt;/span&gt;&lt;/code&gt;&lt;/h3&gt;
+&lt;p&gt;If you already use &lt;a class="reference external" href="http://jonls.dk/redshift/"&gt;redshift&lt;/a&gt; — and you should — getting the current state is
+quite easy.  Below is example output, and a quick &lt;a class="reference external" href="http://sed.sourceforge.net/"&gt;sed&lt;/a&gt;-based method to parse the
+output for script usage:&lt;/p&gt;
+&lt;div class="highlight-sh notranslate"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;$ redshift -p
+Waiting &lt;span class="k"&gt;for&lt;/span&gt; current location to become available...
+Location: &lt;span class="m"&gt;52&lt;/span&gt;.2 N, &lt;span class="m"&gt;0&lt;/span&gt;.2 E
+Period: Night
+Colour temperature: 4500K
+Brightness: &lt;span class="m"&gt;1&lt;/span&gt;.00
+$ redshift -p &lt;span class="m"&gt;2&lt;/span&gt;&amp;gt;/dev/null &lt;span class="p"&gt;|&lt;/span&gt; sed -E &lt;span class="s1"&gt;&amp;#39;/:/s,(.*): (.*),\U\1\E=&amp;quot;\2&amp;quot;, ; s,(\b) (\b),\1_\2,g&amp;#39;&lt;/span&gt;
+&lt;span class="nv"&gt;PERIOD&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;Night&amp;quot;&lt;/span&gt;
+&lt;span class="nv"&gt;COLOUR_TEMPERATURE&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;4500K&amp;quot;&lt;/span&gt;
+&lt;span class="nv"&gt;BRIGHTNESS&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;1.00&amp;quot;&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;Another option might be to use &lt;strong class="command"&gt;redshift&lt;/strong&gt;’s hook support, see the man
+page for how to configure hooks.&lt;/p&gt;
+&lt;div class="highlight-sh notranslate"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="ch"&gt;#!/bin/zsh&lt;/span&gt;
+
+&lt;span class="k"&gt;case&lt;/span&gt; &lt;span class="nv"&gt;$1&lt;/span&gt; &lt;span class="o"&gt;{&lt;/span&gt;
+&lt;span class="o"&gt;(&lt;/span&gt;period-changed&lt;span class="o"&gt;)&lt;/span&gt;
+    &lt;span class="k"&gt;case&lt;/span&gt; &lt;span class="nv"&gt;$3&lt;/span&gt; &lt;span class="o"&gt;{&lt;/span&gt;
+    &lt;span class="o"&gt;(&lt;/span&gt;day&lt;span class="o"&gt;)&lt;/span&gt; &lt;span class="o"&gt;{&lt;/span&gt; notify-send &lt;span class="s2"&gt;&amp;quot;Make bright&amp;quot;&lt;/span&gt; &lt;span class="o"&gt;}&lt;/span&gt; &lt;span class="p"&gt;;;&lt;/span&gt;
+    &lt;span class="o"&gt;(&lt;/span&gt;night&lt;span class="o"&gt;)&lt;/span&gt; &lt;span class="o"&gt;{&lt;/span&gt; notify-send &lt;span class="s2"&gt;&amp;quot;Make dark&amp;quot;&lt;/span&gt; &lt;span class="o"&gt;}&lt;/span&gt; &lt;span class="p"&gt;;;&lt;/span&gt;
+    &lt;span class="o"&gt;}&lt;/span&gt;
+&lt;span class="o"&gt;}&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="section" id="camera-input"&gt;
+&lt;h3&gt;Camera input&lt;/h3&gt;
+&lt;p&gt;Assuming you have access to either a very good or &lt;em&gt;very&lt;/em&gt; bad webcam you could
+even script support that takes in to account cloud cover, or occultation caused
+by buildings and trees.&lt;/p&gt;
+&lt;p&gt;For example, &lt;a class="reference external" href="https://www.imagemagick.org/"&gt;ImageMagick&lt;/a&gt; can be used to &lt;a class="reference external" href="https://www.imagemagick.org/script/escape.php"&gt;extract brightness&lt;/a&gt; from an image.&lt;/p&gt;
+&lt;div class="highlight-shell-session notranslate"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="gp"&gt;$&lt;/span&gt; curl &lt;span class="nv"&gt;$cam_url&lt;/span&gt; &lt;span class="se"&gt;\&lt;/span&gt;
+    &lt;span class="p"&gt;|&lt;/span&gt; convert - -colorspace Gray -format &lt;span class="s2"&gt;&amp;quot;%[fx:quantumrange*image.mean]&amp;quot;&lt;/span&gt; info:
+&lt;span class="go"&gt;38244.2&lt;/span&gt;
+&lt;span class="gp"&gt;$&lt;/span&gt; convert pattern:GRAY0 -format &lt;span class="s2"&gt;&amp;quot;%[fx:quantumrange*image.mean]&amp;quot;&lt;/span&gt; info:
+&lt;span class="go"&gt;0&lt;/span&gt;
+&lt;span class="gp"&gt;$&lt;/span&gt; convert pattern:GRAY100 -format &lt;span class="s2"&gt;&amp;quot;%[fx:quantumrange*image.mean]&amp;quot;&lt;/span&gt; info:
+&lt;span class="go"&gt;65535&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="admonition note"&gt;
+&lt;p class="admonition-title"&gt;Note&lt;/p&gt;
+&lt;p&gt;As can be seen from the black(&lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;GRAY0&lt;/span&gt;&lt;/code&gt;) and white(&lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;GRAY100&lt;/span&gt;&lt;/code&gt;) examples,
+the result on &lt;em&gt;my&lt;/em&gt; system is a value between 0 and 65535.  You should take
+note that &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;quantumrange&lt;/span&gt;&lt;/code&gt; is a compile time depth setting; it can be
+queried with the &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;%q&lt;/span&gt;&lt;/code&gt; escape, or by checking the &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;Q&lt;/span&gt;&lt;/code&gt; value in the
+&lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;convert&lt;/span&gt; &lt;span class="pre"&gt;--version&lt;/span&gt;&lt;/code&gt; output.&lt;/p&gt;
+&lt;/div&gt;
+&lt;p&gt;The above will only really work with very poor webcams that don’t attempt to
+autobalance their images, with reasonable devices it will be close to useless.&lt;/p&gt;
+&lt;p&gt;However, if you have a good quality camera image you may be able to extract the
+balancing data used from the image tags, and use that to infer the light level.
+&lt;a class="reference external" href="http://www.exiv2.org/"&gt;exiv2&lt;/a&gt; is great option to extract that data when available, and also supports
+&lt;a class="reference external" href="https://wiki.gnome.org/Projects/GObjectIntrospection"&gt;gobject introspection&lt;/a&gt; making it possible to use it with &lt;a class="reference external" href="https://github.com/pavouk/lgi"&gt;lgi&lt;/a&gt; in &lt;a class="reference external" href="https://awesomewm.org/"&gt;awesomewm&lt;/a&gt;
+for desktop colours too!&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="section" id="thoughts"&gt;
+&lt;h2&gt;Thoughts&lt;/h2&gt;
+&lt;p&gt;That is definitely enough of that rabbit hole for me right now… I’m really
+looking forward to seeing people code golf some other solutions, be they useful
+or [hopefully] intriguing variations.&lt;/p&gt;
+&lt;p class="rubric"&gt;Footnotes&lt;/p&gt;
+&lt;dl class="footnote brackets"&gt;
+&lt;dt class="label" id="id3"&gt;&lt;span class="brackets"&gt;&lt;a class="fn-backref" href="#id1"&gt;1&lt;/a&gt;&lt;/span&gt;&lt;/dt&gt;
+&lt;dd&gt;&lt;p&gt;If you need more branches you can also wonder why &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;vimscript&lt;/span&gt;&lt;/code&gt; doesn’t
+have a switch statement.&lt;/p&gt;
+&lt;/dd&gt;
+&lt;dt class="label" id="id4"&gt;&lt;span class="brackets"&gt;&lt;a class="fn-backref" href="#id2"&gt;2&lt;/a&gt;&lt;/span&gt;&lt;/dt&gt;
+&lt;dd&gt;&lt;p&gt;No &lt;abbr title="HyperText Markup Language"&gt;HTML&lt;/abbr&gt; link, as vimdoc is still on vim 7.3&lt;/p&gt;
+&lt;/dd&gt;
+&lt;/dl&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</content>
+    <link href="https://jnrowe.github.io/articles/tips/vim_day_night_colourscheme.html" rel="alternate"/>
+    <published>2018-09-15T00:00:00+01:00</published>
+  </entry>
+  <entry>
+    <id>https://jnrowe.github.io/articles/evil_emacs_steals_my_heart.html</id>
+    <title>Evil Emacs steals my heart</title>
+    <updated>2018-11-05T00:00:00+00:00</updated>
+    <author>
+      <name>James Rowe</name>
+    </author>
+    <content type="html">&lt;div class="section" id="evil-emacs-steals-my-heart"&gt;
+
+&lt;p&gt;&lt;em&gt;Many&lt;/em&gt; of my co-workers use &lt;a class="reference external" href="https://www.gnu.org/software/emacs/"&gt;emacs&lt;/a&gt;, it is probably the most popular editor on
+our team and I understand why.&lt;/p&gt;
+&lt;img alt="Editor icons" class="align-right" src="../../_images/standoff.png" /&gt;
+&lt;p&gt;I was an &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;emacs&lt;/span&gt;&lt;/code&gt; user — via &lt;a class="reference external" href="ftp://ftp.cs.helsinki.fi/pub/Software/Local/uEmacs-PK/"&gt;MicroEMACS&lt;/a&gt; and later &lt;a class="reference external" href="https://www.gnu.org/software/emacs/"&gt;GNU Emacs&lt;/a&gt; — for many
+years but at some point I switched to &lt;a class="reference external" href="https://vim.sourceforge.io/"&gt;vim&lt;/a&gt;.  I can’t even remember the exact
+catalyst for change, but I am pretty fickle so it may not have even been all
+that important.&lt;/p&gt;
+&lt;p&gt;Lately, I’ve found myself diving back in to &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;emacs&lt;/span&gt;&lt;/code&gt;.  In large part this is
+because of &lt;a class="reference external" href="https://github.com/emacs-evil/evil"&gt;evil&lt;/a&gt;; I can be &lt;em&gt;in&lt;/em&gt; &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;emacs&lt;/span&gt;&lt;/code&gt;, but &lt;em&gt;live&lt;/em&gt; &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;vim&lt;/span&gt;&lt;/code&gt;.&lt;/p&gt;
+&lt;div class="section" id="evil-isnt-always-evil"&gt;
+&lt;h2&gt;Evil isn’t always evil&lt;/h2&gt;
+&lt;p&gt;So, &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;evil-mode&lt;/span&gt;&lt;/code&gt; &lt;em&gt;is&lt;/em&gt; awesome.&lt;/p&gt;
+&lt;p&gt;The kindest thing I can think to say about it is this: You’ll be angry when it
+doesn’t work&lt;/p&gt;
+&lt;p&gt;This isn’t because it often breaks, quite the contrary.  It is simply because
+it feels largely seamless.  I’ll give an example that mimics a recent session
+to make my point.  For example, you’re hovering over a number you need to
+change:&lt;/p&gt;
+&lt;div class="highlight-c notranslate"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kt"&gt;int&lt;/span&gt; &lt;span class="n"&gt;magic_const&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;974&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;In &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;vim&lt;/span&gt;&lt;/code&gt;, you can execute &lt;kbd class="kbd docutils literal notranslate"&gt;&lt;kbd class="kbd docutils literal notranslate"&gt;ciw&amp;lt;C&lt;/kbd&gt;-&lt;kbd class="kbd docutils literal notranslate"&gt;r&amp;gt;=&amp;#64;&amp;quot;/2&amp;lt;CR&amp;gt;&lt;/kbd&gt;&lt;/kbd&gt; to cleave the number.  The
+command itself is saying:&lt;/p&gt;
+&lt;dl class="simple"&gt;
+&lt;dt&gt;&lt;kbd class="kbd docutils literal notranslate"&gt;ciw&lt;/kbd&gt;&lt;/dt&gt;&lt;dd&gt;&lt;p&gt;Change the word my cursor is on(&lt;kbd class="kbd docutils literal notranslate"&gt;c&lt;/kbd&gt;hange &lt;kbd class="kbd docutils literal notranslate"&gt;i&lt;/kbd&gt;nner &lt;kbd class="kbd docutils literal notranslate"&gt;w&lt;/kbd&gt;ord)&lt;/p&gt;
+&lt;/dd&gt;
+&lt;dt&gt;&lt;kbd class="kbd docutils literal notranslate"&gt;&lt;kbd class="kbd docutils literal notranslate"&gt;&amp;lt;C&lt;/kbd&gt;-&lt;kbd class="kbd docutils literal notranslate"&gt;r&amp;gt;=&lt;/kbd&gt;&lt;/kbd&gt;&lt;/dt&gt;&lt;dd&gt;&lt;p&gt;Insert the result of an expression(see &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;:h&lt;/span&gt; &lt;span class="pre"&gt;i_CTRL-R_=&lt;/span&gt;&lt;/code&gt; for awesomeness)&lt;/p&gt;
+&lt;/dd&gt;
+&lt;dt&gt;&lt;kbd class="kbd docutils literal notranslate"&gt;&amp;#64;&amp;quot;&lt;/kbd&gt;&lt;/dt&gt;&lt;dd&gt;&lt;p&gt;Use the text from last filled register, ie the text we just marked to be
+changed&lt;/p&gt;
+&lt;/dd&gt;
+&lt;dt&gt;&lt;kbd class="kbd docutils literal notranslate"&gt;/2&lt;/kbd&gt;&lt;/dt&gt;&lt;dd&gt;&lt;p&gt;Half it&lt;/p&gt;
+&lt;/dd&gt;
+&lt;dt&gt;&lt;kbd class="kbd docutils literal notranslate"&gt;&amp;lt;CR&amp;gt;&lt;/kbd&gt;&lt;/dt&gt;&lt;dd&gt;&lt;p&gt;Wow.&lt;/p&gt;
+&lt;/dd&gt;
+&lt;/dl&gt;
+&lt;div class="highlight-c notranslate"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kt"&gt;int&lt;/span&gt; &lt;span class="n"&gt;magic_const&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;487&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;Whilst performing the same task thing in &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;evil-mode&lt;/span&gt;&lt;/code&gt; I receive an error.
+Emacs — quite rightly — expects you to write an &lt;a class="reference external" href="https://en.m.wikipedia.org/wiki/Elisp"&gt;elisp&lt;/a&gt; expression.  There is
+nothing wrong with this, but it is a sign of how good &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;evil-mode&lt;/span&gt;&lt;/code&gt; is.  It is
+literally &lt;em&gt;so&lt;/em&gt; good I forget I’m not using &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;vim&lt;/span&gt;&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;Oftentimes a tool’s &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;vim&lt;/span&gt;&lt;/code&gt; emulation can be summed up as needing to press
+a key that kind of matches what something in &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;vim&lt;/span&gt;&lt;/code&gt; might be, assuming you
+didn’t really know what the key might be or when you’d use it.  Be that
+&lt;a class="reference external" href="https://www.sublimetext.com"&gt;sublimetext&lt;/a&gt;’s &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;vintage&lt;/span&gt;&lt;/code&gt; package that isn’t much more than normal and insert
+mode, or &lt;a class="reference external" href="https://github.com/gentoo/elogv"&gt;elogv&lt;/a&gt;’s bindings that mean you have to issue &lt;kbd class="kbd docutils literal notranslate"&gt;dd&lt;/kbd&gt; to kill an
+entry.  Frankly, many of the emulation layers often feel like you’re just
+doubling the number of keys you have to press without any benefits&lt;a class="footnote-reference brackets" href="#id4" id="id1"&gt;1&lt;/a&gt;.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="quirking-the-quirky"&gt;
+&lt;h2&gt;Quirking the quirky&lt;/h2&gt;
+&lt;img alt="Emacs screenshot" class="align-right" src="../../_images/evil_emacs.png" style="width: 407.5px; height: 270.0px;" /&gt;
+&lt;p&gt;I’ll freely admit I’ve &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;vim&lt;/span&gt;&lt;/code&gt;ified my &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;emacs&lt;/span&gt;&lt;/code&gt;.  I use &lt;a class="reference external" href="https://github.com/emacs-evil/evil"&gt;evil&lt;/a&gt;, my mode line
+uses &lt;a class="reference external" href="http://github.com/milkypostman/powerline/"&gt;powerline&lt;/a&gt; to match &lt;a class="reference external" href="https://github.com/vim-airline/vim-airline"&gt;vim-airline&lt;/a&gt;.  I have &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;zap-up-to-char&lt;/span&gt;&lt;/code&gt; mapped so
+that I can mimic &lt;kbd class="kbd docutils literal notranslate"&gt;dt&lt;/kbd&gt; when &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;evil-mode&lt;/span&gt;&lt;/code&gt; is disabled.&lt;/p&gt;
+&lt;p&gt;Screenshots for &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;emacs&lt;/span&gt;&lt;/code&gt; and &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;vim&lt;/span&gt;&lt;/code&gt; really aren’t all that useful, because it
+is the workflow that makes these tools powerful… but, above is my current
+&lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;emacs&lt;/span&gt;&lt;/code&gt; and below is my current &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;vim&lt;/span&gt;&lt;/code&gt;.&lt;/p&gt;
+&lt;img alt="vim screenshot" class="align-left" src="../../_images/delinquent_vim.png" style="width: 422.0px; height: 263.5px;" /&gt;
+&lt;p&gt;The big thing you’ll notice is the fonts.  In &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;emacs&lt;/span&gt;&lt;/code&gt; I’m using scaled text
+for headings in &lt;a class="reference external" href="http://docutils.sourceforge.net/docs/user/rst/"&gt;reST&lt;/a&gt; files.  I’m close to believing that headings,
+proportional fonts for comments and the occasional inline image are enough to
+switch to &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;emacs&lt;/span&gt;&lt;/code&gt;.&lt;/p&gt;
+&lt;img alt="Inline images in Emacs" class="align-right" src="../../_images/misfeasant_emacs.png" style="width: 398.5px; height: 225.0px;" /&gt;
+&lt;p&gt;In the third image you can see &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;emacs&lt;/span&gt;&lt;/code&gt; is &lt;em&gt;displaying&lt;/em&gt; the &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;emacs&lt;/span&gt;&lt;/code&gt;
+screenshot in the buffer for &lt;em&gt;this&lt;/em&gt; post.  This example may be quite pointless&lt;a class="footnote-reference brackets" href="#id5" id="id2"&gt;2&lt;/a&gt;, but it can be nice to have &lt;a class="reference external" href="https://www.graphviz.org/"&gt;graphviz&lt;/a&gt; output class hierarchies in to
+a buffer or database schema popups(like below).&lt;/p&gt;
+&lt;img alt="Schema diagram" class="align-left" src="../../_images/immoral_model.png" style="width: 174.5px; height: 141.5px;" /&gt;
+&lt;/div&gt;
+&lt;div class="section" id="walking-the-branches"&gt;
+&lt;h2&gt;Walking the branches&lt;/h2&gt;
+&lt;p&gt;I’ve decided to really dig in this time, not just switch on a whim.  I’m using
+&lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;emacs&lt;/span&gt;&lt;/code&gt; and &lt;em&gt;only&lt;/em&gt; &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;emacs&lt;/span&gt;&lt;/code&gt; for a month, followed by &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;vim&lt;/span&gt;&lt;/code&gt; and &lt;em&gt;only&lt;/em&gt;
+&lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;vim&lt;/span&gt;&lt;/code&gt; for a month.  I’m busily writing a document of bugbears about both&lt;a class="footnote-reference brackets" href="#id6" id="id3"&gt;3&lt;/a&gt;, and then figuring out which I want to fully invest in to.  I need to stop
+flip-flopping.&lt;/p&gt;
+&lt;p&gt;I will say that there isn’t much in it.  With a converging setup there are
+fewer and fewer differences to care about.  Things like the expression register
+usage above, or built-in versus external &lt;abbr title="HyperText Markup Language"&gt;HTML&lt;/abbr&gt; preview for documents like
+this.&lt;/p&gt;
+&lt;p&gt;I’m actually wondering whether a &lt;a class="reference external" href="https://neovim.io"&gt;neovim&lt;/a&gt; client &lt;em&gt;in&lt;/em&gt; a &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;emacs&lt;/span&gt;&lt;/code&gt; frame would be
+the golden option.  If you know of such a thing or a better option, drop me
+a &lt;a class="reference external" href="mailto:jnrowe&amp;#37;&amp;#52;&amp;#48;gmail&amp;#46;com"&gt;mail&lt;/a&gt;!&lt;/p&gt;
+&lt;p class="rubric"&gt;Footnotes&lt;/p&gt;
+&lt;dl class="footnote brackets"&gt;
+&lt;dt class="label" id="id4"&gt;&lt;span class="brackets"&gt;&lt;a class="fn-backref" href="#id1"&gt;1&lt;/a&gt;&lt;/span&gt;&lt;/dt&gt;
+&lt;dd&gt;&lt;p&gt;&lt;a class="reference external" href="https://github.com/gentoo/elogv"&gt;elogv&lt;/a&gt; for Gentoo is probably the worst example of this, as &lt;kbd class="kbd docutils literal notranslate"&gt;d&lt;/kbd&gt;
+&lt;em&gt;almost&lt;/em&gt; works like &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;vim&lt;/span&gt;&lt;/code&gt; but nothing else does.&lt;/p&gt;
+&lt;/dd&gt;
+&lt;dt class="label" id="id5"&gt;&lt;span class="brackets"&gt;&lt;a class="fn-backref" href="#id2"&gt;2&lt;/a&gt;&lt;/span&gt;&lt;/dt&gt;
+&lt;dd&gt;&lt;p&gt;Okay, completely pointless.&lt;/p&gt;
+&lt;/dd&gt;
+&lt;dt class="label" id="id6"&gt;&lt;span class="brackets"&gt;&lt;a class="fn-backref" href="#id3"&gt;3&lt;/a&gt;&lt;/span&gt;&lt;/dt&gt;
+&lt;dd&gt;&lt;p&gt;&lt;a class="reference external" href="https://www.orgmode.org/"&gt;org-mode&lt;/a&gt; and &lt;a class="reference external" href="https://github.com/jceb/vim-orgmode"&gt;vim-orgmode&lt;/a&gt; allows me to keep this across editors.  There
+is very little point publishing it, as it can be summed up as “James
+pressed &lt;kbd class="kbd docutils literal notranslate"&gt;&lt;kbd class="kbd docutils literal notranslate"&gt;&amp;lt;C&lt;/kbd&gt;-&lt;kbd class="kbd docutils literal notranslate"&gt;x&amp;gt;$something&lt;/kbd&gt;&lt;/kbd&gt; and was surprised.”&lt;/p&gt;
+&lt;/dd&gt;
+&lt;/dl&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</content>
+    <link href="https://jnrowe.github.io/articles/evil_emacs_steals_my_heart.html" rel="alternate"/>
+    <published>2018-11-05T00:00:00+00:00</published>
   </entry>
 </feed>

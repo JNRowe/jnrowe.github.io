@@ -1,45 +1,43 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version='1.0' encoding='UTF-8'?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <title type="text">JNRowe - Posts tagged personal</title>
-  <id>https://jnrowe.github.io/blog/tag/personal/atom.xml</id>
-  <updated>2018-12-23T00:00:00Z</updated>
-  <link href="https://jnrowe.github.io/" />
-  <link href="https://jnrowe.github.io/blog/tag/personal/atom.xml" rel="self" />
-  <subtitle type="text">Ramblings of a tired mind</subtitle>
-  <generator uri="https://ablog.readthedocs.org" version="0.10.4">ABlog</generator>
-  <entry xml:base="https://jnrowe.github.io/blog/tag/personal/atom.xml">
-    <title type="text">Office hours</title>
+  <id>https://jnrowe.github.io/</id>
+  <title>JNRowe - Posts tagged personal</title>
+  <updated>2021-03-21T11:05:59.790707+00:00</updated>
+  <link href="https://jnrowe.github.io/"/>
+  <link href="https://jnrowe.github.io/blog/tag/personal/atom.xml"/>
+  <generator uri="https://ablog.readthedocs.org" version="0.10.12">ABlog</generator>
+  <subtitle>Ramblings of a tired mind</subtitle>
+  <entry>
     <id>https://jnrowe.github.io/office_hours.html</id>
-    <updated>2018-12-23T00:00:00Z</updated>
-    <published>2018-12-23T00:00:00Z</published>
-    <link href="https://jnrowe.github.io/office_hours.html" />
+    <title>Office hours</title>
+    <updated>2018-12-23T00:00:00+00:00</updated>
     <author>
       <name>James Rowe</name>
     </author>
-    <content type="html">&lt;div class=&quot;section&quot; id=&quot;office-hours&quot;&gt;
+    <content type="html">&lt;div class="section" id="office-hours"&gt;
 
 &lt;p&gt;A few co-workers have started offering office hours, seemingly spurred on by
-a post by &lt;a class=&quot;reference external&quot; href=&quot;https://robertheaton.com/2018/10/22/slash-office-hours/&quot;&gt;Robert Heaton&lt;/a&gt;.  I’m going to try this a little closer to Robert’s
-original idea, and make &lt;em&gt;this&lt;/em&gt; offer to strangers too&lt;a class=&quot;footnote-reference brackets&quot; href=&quot;#id2&quot; id=&quot;id1&quot;&gt;1&lt;/a&gt;.&lt;/p&gt;
+a post by &lt;a class="reference external" href="https://robertheaton.com/2018/10/22/slash-office-hours/"&gt;Robert Heaton&lt;/a&gt;.  I’m going to try this a little closer to Robert’s
+original idea, and make &lt;em&gt;this&lt;/em&gt; offer to strangers too&lt;a class="footnote-reference brackets" href="#id2" id="id1"&gt;1&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;If you want to chat, I want to help.&lt;/p&gt;
-&lt;img alt=&quot;Appointment icon [from Adwaita icons]&quot; class=&quot;align-left&quot; src=&quot;../../_images/appointment-new.png&quot; /&gt;
-&lt;div class=&quot;section&quot; id=&quot;what-topics&quot;&gt;
+&lt;img alt="Appointment icon [from Adwaita icons]" class="align-left" src="../../_images/appointment-new.png" /&gt;
+&lt;div class="section" id="what-topics"&gt;
 &lt;h2&gt;What topics?&lt;/h2&gt;
 &lt;p&gt;You choose, that is the point.  That said, here are some thoughts…&lt;/p&gt;
 &lt;p&gt;My career thus far has mainly been focused on navigation systems, both
-&lt;abbr title=&quot;Global Navigation Satellite System&quot;&gt;GNSS&lt;/abbr&gt; and land-based; if you’re
+&lt;abbr title="Global Navigation Satellite System"&gt;GNSS&lt;/abbr&gt; and land-based; if you’re
 interested in chatting about that &lt;em&gt;absolutely&lt;/em&gt; get in touch.&lt;/p&gt;
 &lt;p&gt;If you’re heading for your first clearance interview, and want to practise with
 someone who has both passed &lt;em&gt;and&lt;/em&gt; failed get in touch.&lt;/p&gt;
 &lt;p&gt;If you don’t have many connections in industry and are just looking for general
 advice, then by all means get in touch.&lt;/p&gt;
-&lt;p&gt;You just need a little &lt;a class=&quot;reference external&quot; href=&quot;https://en.m.wikipedia.org/wiki/Rubber_duck_debugging&quot;&gt;rubber duck&lt;/a&gt; time, let us make it happen!&lt;/p&gt;
+&lt;p&gt;You just need a little &lt;a class="reference external" href="https://en.m.wikipedia.org/wiki/Rubber_duck_debugging"&gt;rubber duck&lt;/a&gt; time, let us make it happen!&lt;/p&gt;
 &lt;p&gt;Basically, get in touch and we’ll see what happens!&lt;/p&gt;
 &lt;/div&gt;
-&lt;div class=&quot;section&quot; id=&quot;what-do-you-need-to-know&quot;&gt;
+&lt;div class="section" id="what-do-you-need-to-know"&gt;
 &lt;h2&gt;What do you need to know?&lt;/h2&gt;
-&lt;p&gt;Be aware that if this works out I’ll likely write my own &lt;a class=&quot;reference external&quot; href=&quot;https://robertheaton.com/2018/10/02/lessons-from-my-first-20-office-hours/&quot;&gt;retrospective&lt;/a&gt;, so
-don’t expect total privacy.  I’m also a fan of &lt;span class=&quot;xref std std-doc&quot;&gt;writing tips&lt;/span&gt;, so I might take any questions and run with them!&lt;/p&gt;
+&lt;p&gt;Be aware that if this works out I’ll likely write my own &lt;a class="reference external" href="https://robertheaton.com/2018/10/02/lessons-from-my-first-20-office-hours/"&gt;retrospective&lt;/a&gt;, so
+don’t expect total privacy.  I’m also a fan of &lt;span class="xref std std-doc"&gt;writing tips&lt;/span&gt;, so I might take any questions and run with them!&lt;/p&gt;
 &lt;p&gt;I’m not going to lie to you, I do plan on having a quick poke around before
 agreeing to a call.  If you’re socially or professionally poisonous to me,
 I &lt;em&gt;won’t&lt;/em&gt; make time for you.  It sounds harsh, but I want to be upfront about
@@ -52,13 +50,13 @@ Castilian speaker, and I’m told by my French co-workers that I’m fluent in
 French docker… so you will need to be able to communicate in one of those or
 wish to &lt;em&gt;teach me&lt;/em&gt; another.&lt;/p&gt;
 &lt;/div&gt;
-&lt;div class=&quot;section&quot; id=&quot;how&quot;&gt;
+&lt;div class="section" id="how"&gt;
 &lt;h2&gt;How?&lt;/h2&gt;
-&lt;p&gt;The easiest way to make this happen is to drop me a &lt;a class=&quot;reference external&quot; href=&quot;mailto:jnrowe&amp;#37;&amp;#52;&amp;#48;gmail&amp;#46;com&quot;&gt;mail&lt;/a&gt;.  If the idea gets
+&lt;p&gt;The easiest way to make this happen is to drop me a &lt;a class="reference external" href="mailto:jnrowe&amp;#37;&amp;#52;&amp;#48;gmail&amp;#46;com"&gt;mail&lt;/a&gt;.  If the idea gets
 any traction I’ll look at better ways of scheduling, but until then mail should
 be fine.&lt;/p&gt;
 &lt;/div&gt;
-&lt;div class=&quot;section&quot; id=&quot;updates-2019-01-15&quot;&gt;
+&lt;div class="section" id="updates-2019-01-15"&gt;
 &lt;h2&gt;Updates - 2019-01-15&lt;/h2&gt;
 &lt;p&gt;So, I’ve just completed my second appointment, and it seems to be working out
 okay.  Both have been fun(at least for me), and I’m planning on continuing this
@@ -66,14 +64,14 @@ experiment for a little while longer.  Do get in touch!&lt;/p&gt;
 &lt;p&gt;I’ve also passed on two “applicants” who I felt would be better served by other
 people, and that seems like a very valuable feature to add to the idea.
 I passed both of them on to co-workers, and I could only do this easily because
-I knew they were playing around with the idea of &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;/office-hours&lt;/span&gt;&lt;/code&gt;.  It would
+I knew they were playing around with the idea of &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;/office-hours&lt;/span&gt;&lt;/code&gt;.  It would
 be nice if there was a register that made it is easier to link poor matches
 with better matches.  Obviously it needs to be weighted in some way, “show me
-&lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;$connections&lt;/span&gt;&lt;/code&gt; using &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;office-hours&lt;/span&gt;&lt;/code&gt; with &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;$tag&lt;/span&gt;&lt;/code&gt;” for example, but it
+&lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;$connections&lt;/span&gt;&lt;/code&gt; using &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;office-hours&lt;/span&gt;&lt;/code&gt; with &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;$tag&lt;/span&gt;&lt;/code&gt;” for example, but it
 might be a nice idea for a weekend hack.&lt;/p&gt;
-&lt;p class=&quot;rubric&quot;&gt;Footnotes&lt;/p&gt;
-&lt;dl class=&quot;footnote brackets&quot;&gt;
-&lt;dt class=&quot;label&quot; id=&quot;id2&quot;&gt;&lt;span class=&quot;brackets&quot;&gt;&lt;a class=&quot;fn-backref&quot; href=&quot;#id1&quot;&gt;1&lt;/a&gt;&lt;/span&gt;&lt;/dt&gt;
+&lt;p class="rubric"&gt;Footnotes&lt;/p&gt;
+&lt;dl class="footnote brackets"&gt;
+&lt;dt class="label" id="id2"&gt;&lt;span class="brackets"&gt;&lt;a class="fn-backref" href="#id1"&gt;1&lt;/a&gt;&lt;/span&gt;&lt;/dt&gt;
 &lt;dd&gt;&lt;p&gt;It seems that the norm for my co-workers is to make this offer on our
 semi-private mastodon instance, but I’d like to think I was implicitly
 offering help there anyway.&lt;/p&gt;
@@ -82,5 +80,7 @@ offering help there anyway.&lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 </content>
+    <link href="https://jnrowe.github.io/office_hours.html" rel="alternate"/>
+    <published>2018-12-23T00:00:00+00:00</published>
   </entry>
 </feed>

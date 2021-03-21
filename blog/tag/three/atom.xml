@@ -1,90 +1,88 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version='1.0' encoding='UTF-8'?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <title type="text">JNRowe - Posts tagged three</title>
-  <id>https://jnrowe.github.io/blog/tag/three/atom.xml</id>
-  <updated>2009-10-14T00:00:00Z</updated>
-  <link href="https://jnrowe.github.io/" />
-  <link href="https://jnrowe.github.io/blog/tag/three/atom.xml" rel="self" />
-  <subtitle type="text">Ramblings of a tired mind</subtitle>
-  <generator uri="https://ablog.readthedocs.org" version="0.10.4">ABlog</generator>
-  <entry xml:base="https://jnrowe.github.io/blog/tag/three/atom.xml">
-    <title type="text">Three mobile broadband in Linux</title>
+  <id>https://jnrowe.github.io/</id>
+  <title>JNRowe - Posts tagged three</title>
+  <updated>2021-03-21T11:06:01.021919+00:00</updated>
+  <link href="https://jnrowe.github.io/"/>
+  <link href="https://jnrowe.github.io/blog/tag/three/atom.xml"/>
+  <generator uri="https://ablog.readthedocs.org" version="0.10.12">ABlog</generator>
+  <subtitle>Ramblings of a tired mind</subtitle>
+  <entry>
     <id>https://jnrowe.github.io/articles/tips/Three_mobile_broadband_in_linux.html</id>
-    <updated>2009-10-14T00:00:00Z</updated>
-    <published>2009-10-14T00:00:00Z</published>
-    <link href="https://jnrowe.github.io/articles/tips/Three_mobile_broadband_in_linux.html" />
+    <title>Three mobile broadband in Linux</title>
+    <updated>2009-10-14T00:00:00+01:00</updated>
     <author>
       <name>James Rowe</name>
     </author>
-    <content type="html">&lt;div class=&quot;section&quot; id=&quot;three-mobile-broadband-in-linux&quot;&gt;
+    <content type="html">&lt;div class="section" id="three-mobile-broadband-in-linux"&gt;
 
-&lt;p&gt;Steve Lowry is picking up his &lt;a class=&quot;reference external&quot; href=&quot;http://three.co.uk&quot;&gt;Three&lt;/a&gt; modem this afternoon and asks on our
+&lt;p&gt;Steve Lowry is picking up his &lt;a class="reference external" href="http://three.co.uk"&gt;Three&lt;/a&gt; modem this afternoon and asks on our
 internal Linux list if it supports Linux.&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;div&gt;&lt;p&gt;I’ve ordered the Huawei E220 as it was free.  Is it likely to work with
 Linux?  And, if so what should I be looking for to set it up?&lt;/p&gt;
 &lt;/div&gt;&lt;/blockquote&gt;
-&lt;p&gt;I’ve had a Huawei &lt;abbr title=&quot;Universal Serial Bus&quot;&gt;USB&lt;/abbr&gt; modem for about six months now and it works fine in
+&lt;p&gt;I’ve had a Huawei &lt;abbr title="Universal Serial Bus"&gt;USB&lt;/abbr&gt; modem for about six months now and it works fine in
 Linux, although it is probably a slightly different model.  The box and case
-for mine claims it is a E160G, whereas &lt;strong class=&quot;command&quot;&gt;lsusb&lt;/strong&gt; from &lt;a class=&quot;reference external&quot; href=&quot;http://linux-usb.sourceforge.net/&quot;&gt;usbutils&lt;/a&gt; claims
+for mine claims it is a E160G, whereas &lt;strong class="command"&gt;lsusb&lt;/strong&gt; from &lt;a class="reference external" href="http://linux-usb.sourceforge.net/"&gt;usbutils&lt;/a&gt; claims
 it is a E220.  The manufacturers of these types of products routinely change
 the components and models without updating the product codes, so you’ll have to
 wait until you plug it in to see what model it actually is.&lt;/p&gt;
 &lt;p&gt;As for how to make it work?  Simply use a distribution that comes with
-&lt;a class=&quot;reference external&quot; href=&quot;http://www.gnome.org/projects/NetworkManager/&quot;&gt;NetworkManager&lt;/a&gt; and NetworkManager’s &lt;a class=&quot;reference external&quot; href=&quot;http://live.gnome.org/NetworkManager/MobileBroadband/ServiceProviders&quot;&gt;mobile broadband provider database&lt;/a&gt;.
+&lt;a class="reference external" href="http://www.gnome.org/projects/NetworkManager/"&gt;NetworkManager&lt;/a&gt; and NetworkManager’s &lt;a class="reference external" href="http://live.gnome.org/NetworkManager/MobileBroadband/ServiceProviders"&gt;mobile broadband provider database&lt;/a&gt;.
 When I tested it on a friend’s install with that setup last month it worked out
 of the box, all you had to do was plug it in and select the network.&lt;/p&gt;
-&lt;div class=&quot;section&quot; id=&quot;the-route-to-fail&quot;&gt;
+&lt;div class="section" id="the-route-to-fail"&gt;
 &lt;h2&gt;The route to fail&lt;/h2&gt;
 &lt;p&gt;If, like me, you’d prefer not to install NetworkManager you can manually
-configure the device using &lt;a class=&quot;reference external&quot; href=&quot;http://www.samba.org/ppp&quot;&gt;pppd&lt;/a&gt;, and life is even easier now than it was when
+configure the device using &lt;a class="reference external" href="http://www.samba.org/ppp"&gt;pppd&lt;/a&gt;, and life is even easier now than it was when
 I did it as there is plenty more information available(including this I guess).&lt;/p&gt;
-&lt;div class=&quot;section&quot; id=&quot;finding-the-apn&quot;&gt;
-&lt;h3&gt;Finding the &lt;abbr title=&quot;Access Point Name&quot;&gt;APN&lt;/abbr&gt;&lt;/h3&gt;
-&lt;p&gt;The first thing you need is your provider’s &lt;abbr title=&quot;Access Point Name&quot;&gt;APN&lt;/abbr&gt;, and the easiest place to
-find it is from the &lt;a class=&quot;reference external&quot; href=&quot;http://live.gnome.org/NetworkManager/MobileBroadband/ServiceProviders&quot;&gt;NetworkManager database&lt;/a&gt;.  If yours is not there you’ll
+&lt;div class="section" id="finding-the-apn"&gt;
+&lt;h3&gt;Finding the &lt;abbr title="Access Point Name"&gt;APN&lt;/abbr&gt;&lt;/h3&gt;
+&lt;p&gt;The first thing you need is your provider’s &lt;abbr title="Access Point Name"&gt;APN&lt;/abbr&gt;, and the easiest place to
+find it is from the &lt;a class="reference external" href="http://live.gnome.org/NetworkManager/MobileBroadband/ServiceProviders"&gt;NetworkManager database&lt;/a&gt;.  If yours is not there you’ll
 have to dig further.  When I originally got my device that database was
-practically empty, so I had to resort to other means to find the &lt;abbr title=&quot;Access Point Name&quot;&gt;APN&lt;/abbr&gt;.&lt;/p&gt;
-&lt;p&gt;We can extract the &lt;abbr title=&quot;Access Point Name&quot;&gt;APN&lt;/abbr&gt; from the Windows driver that came with the device.
+practically empty, so I had to resort to other means to find the &lt;abbr title="Access Point Name"&gt;APN&lt;/abbr&gt;.&lt;/p&gt;
+&lt;p&gt;We can extract the &lt;abbr title="Access Point Name"&gt;APN&lt;/abbr&gt; from the Windows driver that came with the device.
 The driver can be found on the device itself because it also acts a small
-&lt;abbr title=&quot;Small Computer Systems Interface&quot;&gt;SCSI&lt;/abbr&gt; device with a filesystem.  It
+&lt;abbr title="Small Computer Systems Interface"&gt;SCSI&lt;/abbr&gt; device with a filesystem.  It
 is actually pretty clever, assuming it works as advertised, as it can
 self-install its own driver when plugged in.&lt;/p&gt;
-&lt;p&gt;If we find the device name with &lt;strong class=&quot;command&quot;&gt;dmesg&lt;/strong&gt; we can mount it, and pull the
-&lt;abbr title=&quot;Access Point Name&quot;&gt;APN&lt;/abbr&gt; from the Windows driver:&lt;/p&gt;
-&lt;div class=&quot;highlight-bash notranslate&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;mkdir e220_drivers&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;cd&lt;/span&gt; e220_drivers
+&lt;p&gt;If we find the device name with &lt;strong class="command"&gt;dmesg&lt;/strong&gt; we can mount it, and pull the
+&lt;abbr title="Access Point Name"&gt;APN&lt;/abbr&gt; from the Windows driver:&lt;/p&gt;
+&lt;div class="highlight-bash notranslate"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;mkdir e220_drivers&lt;span class="p"&gt;;&lt;/span&gt; &lt;span class="nb"&gt;cd&lt;/span&gt; e220_drivers
 mount -t vfat /dev/sr2 /mnt/huawei
-&lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; file in /mnt/huawei/**/*.cab&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;do&lt;/span&gt; unpack &lt;span class=&quot;nv&quot;&gt;$file&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;done&lt;/span&gt;
+&lt;span class="k"&gt;for&lt;/span&gt; file in /mnt/huawei/**/*.cab&lt;span class="p"&gt;;&lt;/span&gt; &lt;span class="k"&gt;do&lt;/span&gt; unpack &lt;span class="nv"&gt;$file&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt; &lt;span class="k"&gt;done&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
-&lt;p&gt;The &lt;strong class=&quot;command&quot;&gt;unpack&lt;/strong&gt; tool from above is just a wrapper around common
-archivers, and the tool you actually need to extract the &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;cab&lt;/span&gt;&lt;/code&gt; files is
-&lt;a class=&quot;reference external&quot; href=&quot;http://synce.sourceforge.net/synce/unshield.php&quot;&gt;unshield&lt;/a&gt;.  Contrary to my first idea &lt;a class=&quot;reference external&quot; href=&quot;http://www.cabextract.org.uk/&quot;&gt;cabextract&lt;/a&gt; doesn’t work, as these files
-are actually made by &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;installshield&lt;/span&gt;&lt;/code&gt;.&lt;/p&gt;
-&lt;p&gt;With the &lt;abbr title=&quot;Access Point Name&quot;&gt;APN&lt;/abbr&gt; in hand all we need to do now is configure our system.&lt;/p&gt;
+&lt;p&gt;The &lt;strong class="command"&gt;unpack&lt;/strong&gt; tool from above is just a wrapper around common
+archivers, and the tool you actually need to extract the &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;cab&lt;/span&gt;&lt;/code&gt; files is
+&lt;a class="reference external" href="http://synce.sourceforge.net/synce/unshield.php"&gt;unshield&lt;/a&gt;.  Contrary to my first idea &lt;a class="reference external" href="http://www.cabextract.org.uk/"&gt;cabextract&lt;/a&gt; doesn’t work, as these files
+are actually made by &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;installshield&lt;/span&gt;&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;With the &lt;abbr title="Access Point Name"&gt;APN&lt;/abbr&gt; in hand all we need to do now is configure our system.&lt;/p&gt;
 &lt;/div&gt;
-&lt;div class=&quot;section&quot; id=&quot;kernel&quot;&gt;
+&lt;div class="section" id="kernel"&gt;
 &lt;h3&gt;Kernel&lt;/h3&gt;
 &lt;p&gt;If you’re using a vendor supplied kernel the options we need are hopefully
 already enabled.  If they’re not, or you build your own kernels, there are few
 changes we need to make to the kernel configuration.&lt;/p&gt;
-&lt;p&gt;The dongle itself needs &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;CONFIG_USB_SERIAL_OPTION&lt;/span&gt;&lt;/code&gt; enabled, which is labelled
-as &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;USB&lt;/span&gt; &lt;span class=&quot;pre&quot;&gt;driver&lt;/span&gt; &lt;span class=&quot;pre&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;pre&quot;&gt;GSM&lt;/span&gt; &lt;span class=&quot;pre&quot;&gt;and&lt;/span&gt; &lt;span class=&quot;pre&quot;&gt;CDMA&lt;/span&gt; &lt;span class=&quot;pre&quot;&gt;modems&lt;/span&gt;&lt;/code&gt; in the kernel’s &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;menuconfig&lt;/span&gt;&lt;/code&gt;.  It
+&lt;p&gt;The dongle itself needs &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;CONFIG_USB_SERIAL_OPTION&lt;/span&gt;&lt;/code&gt; enabled, which is labelled
+as &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;USB&lt;/span&gt; &lt;span class="pre"&gt;driver&lt;/span&gt; &lt;span class="pre"&gt;for&lt;/span&gt; &lt;span class="pre"&gt;GSM&lt;/span&gt; &lt;span class="pre"&gt;and&lt;/span&gt; &lt;span class="pre"&gt;CDMA&lt;/span&gt; &lt;span class="pre"&gt;modems&lt;/span&gt;&lt;/code&gt; in the kernel’s &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;menuconfig&lt;/span&gt;&lt;/code&gt;.  It
 can be found hidden away under the “USB Serial Converters” section in 2.6.31.&lt;/p&gt;
-&lt;p&gt;We also need &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;CONFIG_PPP&lt;/span&gt;&lt;/code&gt; and &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;CONFIG_PPP_ASYNC&lt;/span&gt;&lt;/code&gt; support, which can be
+&lt;p&gt;We also need &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;CONFIG_PPP&lt;/span&gt;&lt;/code&gt; and &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;CONFIG_PPP_ASYNC&lt;/span&gt;&lt;/code&gt; support, which can be
 found in the “Network devices” section of the config.  Unlike the old-style
-dialup you may be used to use there is no point enabling the &lt;abbr title=&quot;Point-to-Point Protocol&quot;&gt;PPP&lt;/abbr&gt; compression options as they are not supported by
+dialup you may be used to use there is no point enabling the &lt;abbr title="Point-to-Point Protocol"&gt;PPP&lt;/abbr&gt; compression options as they are not supported by
 mobile providers in general, partly because the data is already compressed.&lt;/p&gt;
 &lt;p&gt;Then just rebuild the kernel, and check that the dongle shows up in
-&lt;strong class=&quot;command&quot;&gt;dmesg&lt;/strong&gt; output when it is plugged in.  If it does we’re ready for the
+&lt;strong class="command"&gt;dmesg&lt;/strong&gt; output when it is plugged in.  If it does we’re ready for the
 next step.&lt;/p&gt;
 &lt;/div&gt;
-&lt;div class=&quot;section&quot; id=&quot;etc-chatscripts-three&quot;&gt;
+&lt;div class="section" id="etc-chatscripts-three"&gt;
 &lt;h3&gt;/etc/chatscripts/three&lt;/h3&gt;
-&lt;p&gt;We need a &lt;strong class=&quot;command&quot;&gt;pppd&lt;/strong&gt; chatscript for the connection, the format and
-settings of this file can be found in the &lt;em class=&quot;manpage&quot;&gt;chat(8)&lt;/em&gt; manpage.  My
+&lt;p&gt;We need a &lt;strong class="command"&gt;pppd&lt;/strong&gt; chatscript for the connection, the format and
+settings of this file can be found in the &lt;em class="manpage"&gt;chat(8)&lt;/em&gt; manpage.  My
 chatscript is below:&lt;/p&gt;
-&lt;div class=&quot;highlight-text notranslate&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;TIMEOUT 3
+&lt;div class="highlight-text notranslate"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;TIMEOUT 3
 ECHO ON
 ABORT &amp;#39;BUSY&amp;#39;
 ABORT &amp;#39;DELAYED&amp;#39;
@@ -99,20 +97,20 @@ OK ATD*99#
 CONNECT &amp;quot;&amp;quot;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
-&lt;p&gt;Exchange &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;3internet&lt;/span&gt;&lt;/code&gt; for your &lt;abbr title=&quot;Access Point Name&quot;&gt;APN&lt;/abbr&gt; in the example above, if it differs.&lt;/p&gt;
+&lt;p&gt;Exchange &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;3internet&lt;/span&gt;&lt;/code&gt; for your &lt;abbr title="Access Point Name"&gt;APN&lt;/abbr&gt; in the example above, if it differs.&lt;/p&gt;
 &lt;p&gt;It is also possible, yet unlikely, that you’ll have to call a different number
-to &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;*99#&lt;/span&gt;&lt;/code&gt;.  If this was the case you would have found that out from extracting
+to &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;*99#&lt;/span&gt;&lt;/code&gt;.  If this was the case you would have found that out from extracting
 the data from the drivers or looking your network up in the NetworkManager
 database.&lt;/p&gt;
 &lt;p&gt;Notice the very short value for timeout, I’ve come to that value empirically.
 If the connection isn’t up after 3 seconds it is not coming up, and you’re just
 wasting time before you retry.&lt;/p&gt;
 &lt;/div&gt;
-&lt;div class=&quot;section&quot; id=&quot;etc-ppp-peers-three&quot;&gt;
+&lt;div class="section" id="etc-ppp-peers-three"&gt;
 &lt;h3&gt;/etc/ppp/peers/three&lt;/h3&gt;
 &lt;p&gt;We also need a peer script, and the format of that file is described in the
-&lt;em class=&quot;manpage&quot;&gt;pppd(8)&lt;/em&gt; manpage.  Mine can be used as an example:&lt;/p&gt;
-&lt;div class=&quot;highlight-text notranslate&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;debug
+&lt;em class="manpage"&gt;pppd(8)&lt;/em&gt; manpage.  Mine can be used as an example:&lt;/p&gt;
+&lt;div class="highlight-text notranslate"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;debug
 noauth
 connect &amp;quot;/usr/sbin/chat -v -f /etc/chatscripts/three&amp;quot;
 noipdefault
@@ -125,48 +123,50 @@ lcp-echo-failure 0
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
 &lt;p&gt;You may have to change your device settings if the dongle doesn’t show up as
-&lt;code class=&quot;file docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;/dev/ttyUSB0&lt;/span&gt;&lt;/code&gt;, but other than that the file should be correct.&lt;/p&gt;
+&lt;code class="file docutils literal notranslate"&gt;&lt;span class="pre"&gt;/dev/ttyUSB0&lt;/span&gt;&lt;/code&gt;, but other than that the file should be correct.&lt;/p&gt;
 &lt;p&gt;Note that we don’t set a speed in our peer file, and this may appear unusual to
-you if you’ve configured &lt;strong class=&quot;command&quot;&gt;pppd&lt;/strong&gt; manually in the past.  The reason is
-that interface speed for &lt;abbr title=&quot;Universal Serial Bus&quot;&gt;USB&lt;/abbr&gt; modems is set by the kernel, and adding a value
+you if you’ve configured &lt;strong class="command"&gt;pppd&lt;/strong&gt; manually in the past.  The reason is
+that interface speed for &lt;abbr title="Universal Serial Bus"&gt;USB&lt;/abbr&gt; modems is set by the kernel, and adding a value
 here is pointless.&lt;/p&gt;
 &lt;/div&gt;
-&lt;div class=&quot;section&quot; id=&quot;passwords&quot;&gt;
+&lt;div class="section" id="passwords"&gt;
 &lt;h3&gt;passwords&lt;/h3&gt;
-&lt;p&gt;We don’t need to add an entry to &lt;code class=&quot;file docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;chap-secrets&lt;/span&gt;&lt;/code&gt; or &lt;code class=&quot;file docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;pap-secrets&lt;/span&gt;&lt;/code&gt; as
+&lt;p&gt;We don’t need to add an entry to &lt;code class="file docutils literal notranslate"&gt;&lt;span class="pre"&gt;chap-secrets&lt;/span&gt;&lt;/code&gt; or &lt;code class="file docutils literal notranslate"&gt;&lt;span class="pre"&gt;pap-secrets&lt;/span&gt;&lt;/code&gt; as
 authentication isn’t required, but if you’re following along having chosen to
-use a configuration tool such as &lt;a class=&quot;reference external&quot; href=&quot;http://http.us.debian.org/debian/pool/main/p/pppconfig/&quot;&gt;pppconfig&lt;/a&gt; just enter any values you wish as
+use a configuration tool such as &lt;a class="reference external" href="http://http.us.debian.org/debian/pool/main/p/pppconfig/"&gt;pppconfig&lt;/a&gt; just enter any values you wish as
 they’re silently ignored.&lt;/p&gt;
-&lt;p&gt;I’m told the same applies to &lt;a class=&quot;reference external&quot; href=&quot;http://alumnit.ca/wiki/?WvDial&quot;&gt;wvdial&lt;/a&gt;, so if it complains about requiring
+&lt;p&gt;I’m told the same applies to &lt;a class="reference external" href="http://alumnit.ca/wiki/?WvDial"&gt;wvdial&lt;/a&gt;, so if it complains about requiring
 a password just add an empty or random string to stop the errors.&lt;/p&gt;
 &lt;/div&gt;
-&lt;div class=&quot;section&quot; id=&quot;testing-the-connection&quot;&gt;
+&lt;div class="section" id="testing-the-connection"&gt;
 &lt;h3&gt;Testing the connection&lt;/h3&gt;
-&lt;p&gt;To test the connection all we need to do is issue &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;pon&lt;/span&gt; &lt;span class=&quot;pre&quot;&gt;three&lt;/span&gt;&lt;/code&gt;, or use the
+&lt;p&gt;To test the connection all we need to do is issue &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;pon&lt;/span&gt; &lt;span class="pre"&gt;three&lt;/span&gt;&lt;/code&gt;, or use the
 graphical tool in your distro if you wish.  The first time you do this you
 should watch the output of your syslog to look for errors, the errors can be
-found in syslog because we supplied &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;debug&lt;/span&gt;&lt;/code&gt; in our peer script.&lt;/p&gt;
-&lt;p&gt;On my system the log can be comfortably viewed with &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;tail&lt;/span&gt; &lt;span class=&quot;pre&quot;&gt;-f&lt;/span&gt;
-&lt;span class=&quot;pre&quot;&gt;/var/log/ppp/current&lt;/span&gt;&lt;/code&gt;, but it is system dependent and if you don’t use &lt;a class=&quot;reference external&quot; href=&quot;http://metalog.sourceforge.net/&quot;&gt;metalog&lt;/a&gt;
-it will definitely be somewhere else in &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;/var/log&lt;/span&gt;&lt;/code&gt;.&lt;/p&gt;
+found in syslog because we supplied &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;debug&lt;/span&gt;&lt;/code&gt; in our peer script.&lt;/p&gt;
+&lt;p&gt;On my system the log can be comfortably viewed with &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;tail&lt;/span&gt; &lt;span class="pre"&gt;-f&lt;/span&gt;
+&lt;span class="pre"&gt;/var/log/ppp/current&lt;/span&gt;&lt;/code&gt;, but it is system dependent and if you don’t use &lt;a class="reference external" href="http://metalog.sourceforge.net/"&gt;metalog&lt;/a&gt;
+it will definitely be somewhere else in &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;/var/log&lt;/span&gt;&lt;/code&gt;.&lt;/p&gt;
 &lt;p&gt;If the connection worked fine that is all there is to it, now just enable the
-connection at system startup or configure &lt;a class=&quot;reference external&quot; href=&quot;http://www.kernel.org/pub/linux/utils/kernel/hotplug/udev.html&quot;&gt;udev&lt;/a&gt; to connect when the device is
+connection at system startup or configure &lt;a class="reference external" href="http://www.kernel.org/pub/linux/utils/kernel/hotplug/udev.html"&gt;udev&lt;/a&gt; to connect when the device is
 inserted if it will not always be connected.&lt;/p&gt;
-&lt;div class=&quot;admonition note&quot;&gt;
-&lt;p class=&quot;admonition-title&quot;&gt;Note&lt;/p&gt;
+&lt;div class="admonition note"&gt;
+&lt;p class="admonition-title"&gt;Note&lt;/p&gt;
 &lt;p&gt;These devices can take anywhere between ten and thirty seconds to “settle”
 once plugged in. So, don’t block on this service if you add it to the system
 startup scripts as it can significantly slow down the system boot time.  On
 my dongle you can visually check how long the device takes to settle by
-watching the &lt;abbr title=&quot;Light Emitting Diode&quot;&gt;LED&lt;/abbr&gt; on the case, when it changes
+watching the &lt;abbr title="Light Emitting Diode"&gt;LED&lt;/abbr&gt; on the case, when it changes
 from green it has found a network signal and is ready to use.&lt;/p&gt;
 &lt;/div&gt;
 &lt;p&gt;If the connection didn’t work correctly look at the debugging output in syslog
-and check the &lt;strong class=&quot;command&quot;&gt;pppd&lt;/strong&gt; manual page to look up the error codes.&lt;/p&gt;
+and check the &lt;strong class="command"&gt;pppd&lt;/strong&gt; manual page to look up the error codes.&lt;/p&gt;
 &lt;p&gt;Happy, erm… mobility.&lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 </content>
+    <link href="https://jnrowe.github.io/articles/tips/Three_mobile_broadband_in_linux.html" rel="alternate"/>
+    <published>2009-10-14T00:00:00+01:00</published>
   </entry>
 </feed>

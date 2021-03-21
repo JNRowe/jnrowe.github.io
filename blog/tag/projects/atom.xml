@@ -1,334 +1,20 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version='1.0' encoding='UTF-8'?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <title type="text">JNRowe - Posts tagged projects</title>
-  <id>https://jnrowe.github.io/blog/tag/projects/atom.xml</id>
-  <updated>2018-12-04T00:00:00Z</updated>
-  <link href="https://jnrowe.github.io/" />
-  <link href="https://jnrowe.github.io/blog/tag/projects/atom.xml" rel="self" />
-  <subtitle type="text">Ramblings of a tired mind</subtitle>
-  <generator uri="https://ablog.readthedocs.org" version="0.10.4">ABlog</generator>
-  <entry xml:base="https://jnrowe.github.io/blog/tag/projects/atom.xml">
-    <title type="text">Giddy new project love</title>
-    <id>https://jnrowe.github.io/articles/new_love_giddiness.html</id>
-    <updated>2018-12-04T00:00:00Z</updated>
-    <published>2018-12-04T00:00:00Z</published>
-    <link href="https://jnrowe.github.io/articles/new_love_giddiness.html" />
-    <author>
-      <name>James Rowe</name>
-    </author>
-    <content type="html">&lt;div class=&quot;section&quot; id=&quot;giddy-new-project-love&quot;&gt;
-
-&lt;p&gt;I’ve recently inherited a new tier-one project, which is great news!  Sadly, it
-is in real need of some Tender Loving Care™.  Was there ever an inherited
-project that wasn’t?&lt;/p&gt;
-&lt;p&gt;The project is our semi-custom transpiler for &lt;a class=&quot;reference external&quot; href=&quot;https://en.m.wikipedia.org/wiki/Ada_(programming_language)&quot;&gt;Ada&lt;/a&gt; affectionately called
-&lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;sandfly&lt;/span&gt;&lt;/code&gt;.  I say semi-custom as it was spun out from a consortium effort to
-“facilitate reliability and improve portability” of &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;Ada&lt;/span&gt;&lt;/code&gt; projects, which is
-a far loftier sounding goal than it need be.  In essence, it is the
-codification of rules and guidelines we’ve adhered to since a partner meeting
-in &lt;em&gt;1996&lt;/em&gt;, and that we find ourselves still following today&lt;a class=&quot;footnote-reference brackets&quot; href=&quot;#id4&quot; id=&quot;id1&quot;&gt;1&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;I wasn’t around back when the original group was formed, and it was disbanded
-before I’d even heard of &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;Ada&lt;/span&gt;&lt;/code&gt;.  This project is genuinely
-multi-generational, which &lt;em&gt;feels&lt;/em&gt; nice.  All too often our work in software can
-feel ephemeral; squeaked on a whiteboard in the morning, tapped in to
-a computer in the afternoon and swept away by the janitors as night falls.&lt;/p&gt;
-&lt;div class=&quot;section&quot; id=&quot;hopes-and-dreams&quot;&gt;
-&lt;h2&gt;Hopes and dreams&lt;/h2&gt;
-&lt;p&gt;As the project &lt;em&gt;should&lt;/em&gt; have significant longevity I find myself pondering the
-future.  &lt;em&gt;If&lt;/em&gt; I could change things for the next 20 years, what should I do to
-make that experience better?  Should I do &lt;em&gt;nothing at all&lt;/em&gt; and just chug along
-reducing the anxiety that even small changes will evoke?&lt;/p&gt;
-&lt;p&gt;I also find myself pondering the present.  Could a truly radical change &lt;em&gt;today&lt;/em&gt;
-obviate the need for this project entirely before the next maintainer grabs the
-reins for their reign of anxiety?  Would that necessarily be a good thing?&lt;/p&gt;
-&lt;div class=&quot;sidebar&quot;&gt;
-&lt;p class=&quot;sidebar-title&quot;&gt;Common errors&lt;/p&gt;
-&lt;p&gt;I’ve always considered it odd that we can choose to attach a listing of
-common errors to a product and expect people to use it.  If we know it is
-common for users to make critical errors because of a design decision we
-need to make a new design, not a new bullet point on the list.&lt;/p&gt;
-&lt;p&gt;Even simple things like watching an &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;Ada&lt;/span&gt;&lt;/code&gt; beginner make the classic
-“atomic means atomic” mistake should be designed out, and not &lt;em&gt;solved&lt;/em&gt; with
-an addendum of “protected objects mean atomic” chicanery.&lt;/p&gt;
-&lt;/div&gt;
-&lt;p&gt;Many of the advantages that we associate with &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;Ada&lt;/span&gt;&lt;/code&gt; — such as its mighty type
-safety — no longer feel that advanced or remotely unique.  Even “hobby”
-languages such as &lt;a class=&quot;reference external&quot; href=&quot;https://nim-lang.org/&quot;&gt;nim&lt;/a&gt; implement many of the safety features we expect from
-&lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;Ada&lt;/span&gt;&lt;/code&gt; implementations&lt;a class=&quot;footnote-reference brackets&quot; href=&quot;#id5&quot; id=&quot;id2&quot;&gt;2&lt;/a&gt;; subrange types being a fine example where the
-&lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;nim&lt;/span&gt;&lt;/code&gt; designers have absorbed an &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;Ada&lt;/span&gt;&lt;/code&gt; feature.  And standard everyday
-languages now often have tooling that is capable of providing &lt;em&gt;many&lt;/em&gt; of the
-benefits of &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;Ada&lt;/span&gt;&lt;/code&gt;, and one should really only expect this to increase.&lt;/p&gt;
-&lt;p&gt;What really hammers home the point here is that a good number of the features
-one thinks about weren’t even available in &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;Ada&lt;/span&gt;&lt;/code&gt; when &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;sandfly&lt;/span&gt;&lt;/code&gt; began; fex
-contracts are from &lt;a class=&quot;reference external&quot; href=&quot;http://www.ada2012.org/&quot;&gt;Ada 2012&lt;/a&gt;.  Will languages leapfrog &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;Ada&lt;/span&gt;&lt;/code&gt; in its niche
-by borrowing and then sprint away by innovating as their uptake increases?&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class=&quot;section&quot; id=&quot;benefits-of-transpilation&quot;&gt;
-&lt;h2&gt;Benefits of transpilation&lt;/h2&gt;
-&lt;p&gt;The original &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;sandfly&lt;/span&gt;&lt;/code&gt; authors implemented a transpiler because it made
-various checks simpler to carry out.  According to the documentation, it was
-never intended to become a full blown language in its own right… which of
-course it has.&lt;/p&gt;
-&lt;p&gt;Maybe we should take the opportunity to stay on top of the changing language
-landscape thanks to the side effect of &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;sandfly&lt;/span&gt;&lt;/code&gt;’s implementation details.
-Given that we’re already transpiling should we consider alternative targets?
-&lt;a class=&quot;reference external&quot; href=&quot;http://www.ocaml.org/&quot;&gt;ocaml&lt;/a&gt; is the language that immediately jumps to mind, as it is syntactically
-close to &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;sandfly&lt;/span&gt;&lt;/code&gt; and it has an excellent type system.  And once you have
-&lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;ocaml&lt;/span&gt;&lt;/code&gt; it is a smaller step to &lt;a class=&quot;reference external&quot; href=&quot;http://fsharp.org/&quot;&gt;F#&lt;/a&gt; thanks to its legacy &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;ocaml&lt;/span&gt;&lt;/code&gt; mode.&lt;/p&gt;
-&lt;p&gt;The code base is amenable to multiple targets already.  A couple of years ago
-I implemented support for testing without relying on the support kernel
-supplied by our compiler vendor&lt;a class=&quot;footnote-reference brackets&quot; href=&quot;#id6&quot; id=&quot;id3&quot;&gt;3&lt;/a&gt;.  At its base &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;sandfly&lt;/span&gt;&lt;/code&gt; will optionally
-generate &lt;a class=&quot;reference external&quot; href=&quot;http://www.lua.org/&quot;&gt;lua&lt;/a&gt; bytecode that is loaded in to a tiny emulator which can be driven
-by other &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;lua&lt;/span&gt;&lt;/code&gt; scripts to test an implementation.  Its main purpose was to
-allow early experimentation without the expense and time of waiting for
-hardware re-fabrication.&lt;/p&gt;
-&lt;div class=&quot;figure align-default&quot; id=&quot;id7&quot;&gt;
-&lt;img alt=&quot;sandfly debug architecture&quot; src=&quot;../../_images/sandfly_use.png&quot; style=&quot;width: 279.5px; height: 358.0px;&quot; /&gt;
-&lt;p class=&quot;caption&quot;&gt;&lt;span class=&quot;caption-text&quot;&gt;As you can see from example usage, it’s source-to-source all the way down.
-If I’m writing &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;lua&lt;/span&gt;&lt;/code&gt; I’m using &lt;a class=&quot;reference external&quot; href=&quot;https://github.com/leafo/moonscript/&quot;&gt;moonscript&lt;/a&gt;, and so should you!&lt;/span&gt;&lt;/p&gt;
-&lt;/div&gt;
-&lt;p&gt;I’m not sure it would even be a great stretch to change the main target, there
-would likely be significant support for it in fact.  It has already been
-suggested that we should exclusively switch to &lt;a class=&quot;reference external&quot; href=&quot;https://en.m.wikipedia.org/wiki/SPARK_(programming_language)&quot;&gt;spark&lt;/a&gt; on a number of occasions,
-especially since the reformation in Spark 2014.  If we could figure out the
-safety certification story I’m sure there would be a lot of traction for &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;F#&lt;/span&gt;&lt;/code&gt;
-as default.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class=&quot;section&quot; id=&quot;final-thoughts&quot;&gt;
-&lt;h2&gt;Final thoughts&lt;/h2&gt;
-&lt;div class=&quot;sidebar&quot;&gt;
-&lt;p class=&quot;sidebar-title&quot;&gt;Open Sourcing &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;sandfly&lt;/span&gt;&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;There have been a few enquiries as to whether this work is Open Source, and
-sadly it isn’t.  However, if you work for one of the Atlas Consortium
-companies(or a significant partner of one) it is easy to arrange “source
-available” access.  I &lt;em&gt;know&lt;/em&gt; this isn’t the same thing, but it is the
-current situation.&lt;/p&gt;
-&lt;p&gt;The good news is that I’ve added an item to the issue tracker that includes
-making it Open Source, the bad news is that there is a lot of work needed
-— both by me and &lt;em&gt;many&lt;/em&gt; others — to make that happen.  I’ve kicked the
-initial process off by contacting legal for guidance, we’ll see what
-happens.&lt;/p&gt;
-&lt;/div&gt;
-&lt;p&gt;I’ve always really appreciated &lt;a class=&quot;reference external&quot; href=&quot;https://en.m.wikipedia.org/wiki/Vala_(programming_language)&quot;&gt;vala&lt;/a&gt;’s alternative syntax support; &lt;a class=&quot;reference external&quot; href=&quot;https://en.m.wikipedia.org/wiki/C_Sharp_(programming_language)&quot;&gt;C#&lt;/a&gt; by
-default, but with first class support for &lt;a class=&quot;reference external&quot; href=&quot;https://en.m.wikipedia.org/wiki/Genie_(programming_language)&quot;&gt;genie&lt;/a&gt;’s &lt;a class=&quot;reference external&quot; href=&quot;http://boo-lang.org/&quot;&gt;boo&lt;/a&gt;-inspired syntax.
-I find myself thinking how nice it would be to emulate that and have multiple
-frontends, &lt;em&gt;and&lt;/em&gt; the previously described backends.&lt;/p&gt;
-&lt;p&gt;In fact I find myself thinking about &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;vala&lt;/span&gt;&lt;/code&gt; a lot as I write this.  It never
-had the uptake I would have hoped for when I first read about it.  It has
-however had a &lt;em&gt;huge&lt;/em&gt; impact in the places where it has been used.  That surely
-makes it a great role model for &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;sandfly&lt;/span&gt;&lt;/code&gt; going forward.  It is better to be
-an elusive Aston Martin &lt;a class=&quot;reference external&quot; href=&quot;https://en.m.wikipedia.org/wiki/Aston_Martin_DB5&quot;&gt;DB-5&lt;/a&gt; than a common as muck &lt;a class=&quot;reference external&quot; href=&quot;https://en.m.wikipedia.org/wiki/Ford_Focus&quot;&gt;Ford Focus&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;So, I’m deep in a pre-reality dream state where I want to add heaps of amazing
-new features and functionality, coupled with a cold light of day feeling that
-it could be nice to kill the project by transforming it in to a gateway out of
-&lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;Ada&lt;/span&gt;&lt;/code&gt;.  It could be the best &lt;em&gt;or&lt;/em&gt; worst project in the history of the world!
-I’m genuinely excited.&lt;/p&gt;
-&lt;p class=&quot;rubric&quot;&gt;Footnotes&lt;/p&gt;
-&lt;dl class=&quot;footnote brackets&quot;&gt;
-&lt;dt class=&quot;label&quot; id=&quot;id4&quot;&gt;&lt;span class=&quot;brackets&quot;&gt;&lt;a class=&quot;fn-backref&quot; href=&quot;#id1&quot;&gt;1&lt;/a&gt;&lt;/span&gt;&lt;/dt&gt;
-&lt;dd&gt;&lt;p&gt;It should be easy to guess why this project is being handed on, given
-that we’re talking about a twenty-one year old endeavour.&lt;/p&gt;
-&lt;/dd&gt;
-&lt;dt class=&quot;label&quot; id=&quot;id5&quot;&gt;&lt;span class=&quot;brackets&quot;&gt;&lt;a class=&quot;fn-backref&quot; href=&quot;#id2&quot;&gt;2&lt;/a&gt;&lt;/span&gt;&lt;/dt&gt;
-&lt;dd&gt;&lt;p&gt;This isn’t meant to disparage &lt;a class=&quot;reference external&quot; href=&quot;https://nim-lang.org/&quot;&gt;nim&lt;/a&gt;, as it is really quite interesting.
-I mean it purely in the sense that we haven’t &lt;em&gt;yet&lt;/em&gt; seen large industry
-adoption.&lt;/p&gt;
-&lt;/dd&gt;
-&lt;dt class=&quot;label&quot; id=&quot;id6&quot;&gt;&lt;span class=&quot;brackets&quot;&gt;&lt;a class=&quot;fn-backref&quot; href=&quot;#id3&quot;&gt;3&lt;/a&gt;&lt;/span&gt;&lt;/dt&gt;
-&lt;dd&gt;&lt;p&gt;I’m of the &lt;em&gt;strong&lt;/em&gt; opinion that vendors who forbid you from naming,
-shaming and even benchmarking them should be avoided at &lt;em&gt;all costs&lt;/em&gt;.
-However, I’m not on the procurement board and didn’t get to make that
-decision.&lt;/p&gt;
-&lt;/dd&gt;
-&lt;/dl&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-</content>
-  </entry>
-  <entry xml:base="https://jnrowe.github.io/blog/tag/projects/atom.xml">
-    <title type="text">fossil experiments</title>
-    <id>https://jnrowe.github.io/articles/fossil.html</id>
-    <updated>2014-11-12T00:00:00Z</updated>
-    <published>2014-11-12T00:00:00Z</published>
-    <link href="https://jnrowe.github.io/articles/fossil.html" />
-    <author>
-      <name>James Rowe</name>
-    </author>
-    <content type="html">&lt;div class=&quot;section&quot; id=&quot;fossil-experiments&quot;&gt;
-
-&lt;p&gt;For a variety of reasons we can no longer use GitHub at work for any project
-which isn’t Open Source.  And since that decision was thrust upon us we’ve been
-playing with some alternatives for our workflow.  We’ll probably end up choosing
-one of the self hosted clones at some point, but it was decided early on that we
-should evaluate a variety of options.&lt;/p&gt;
-&lt;p&gt;I was tasked with testing out &lt;a class=&quot;reference external&quot; href=&quot;http://www.fossil-scm.org/&quot;&gt;fossil&lt;/a&gt; on a couple of small side projects, and
-these are my &lt;em&gt;absolutely&lt;/em&gt; biased personal findings.&lt;/p&gt;
-&lt;p&gt;Before I start I should add that while what I’m about to write probably sounds
-harsh, I do like &lt;strong class=&quot;command&quot;&gt;fossil&lt;/strong&gt; the concept.  I like the single &lt;a class=&quot;reference external&quot; href=&quot;http://sqlite.org/&quot;&gt;sqlite&lt;/a&gt;
-project repository, I like the small-enough-to-grok-in-an-afternoon code base
-and I like the idea of a totally reproducible project state including all
-metadata.&lt;/p&gt;
-&lt;div class=&quot;section&quot; id=&quot;testing-fossil&quot;&gt;
-&lt;h2&gt;Testing &lt;strong class=&quot;command&quot;&gt;fossil&lt;/strong&gt;&lt;/h2&gt;
-&lt;p&gt;The good news is that testing &lt;strong class=&quot;command&quot;&gt;fossil&lt;/strong&gt; is a piece of cake.  It
-supports both reading and writing &lt;strong class=&quot;command&quot;&gt;git&lt;/strong&gt;’s &lt;a class=&quot;reference external&quot; href=&quot;http://git-scm.com/docs/git-fast-import&quot;&gt;fast-import&lt;/a&gt; format.  If you
-want to test it out just dump an existing &lt;a class=&quot;reference external&quot; href=&quot;http://www.git-scm.com/&quot;&gt;git&lt;/a&gt; repository(or &lt;a class=&quot;reference external&quot; href=&quot;http://mercurial.selenic.com/wiki/FastImportExtension&quot;&gt;mercurial with an
-extension&lt;/a&gt;), and feed it &lt;strong class=&quot;command&quot;&gt;fossil import&lt;/strong&gt;.  If you later change your
-mind you can run &lt;strong class=&quot;command&quot;&gt;fossil export&lt;/strong&gt;.&lt;/p&gt;
-&lt;p&gt;Sadly supporting incremental two-way mirroring didn’t work out for us, but
-perhaps it will for simpler projects.  In the end I simply mirrored the
-&lt;strong class=&quot;command&quot;&gt;git&lt;/strong&gt; repositories to &lt;strong class=&quot;command&quot;&gt;fossil&lt;/strong&gt;, marked the &lt;strong class=&quot;command&quot;&gt;git&lt;/strong&gt;
-repositories as read-only and forced contributors to work with
-&lt;strong class=&quot;command&quot;&gt;fossil&lt;/strong&gt; from the outset.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class=&quot;section&quot; id=&quot;packaging&quot;&gt;
-&lt;h2&gt;Packaging&lt;/h2&gt;
-&lt;p&gt;The &lt;strong class=&quot;command&quot;&gt;fossil&lt;/strong&gt; project sells itself on being a single file binary
-install, and that probably works well for a subset of users.  We’re not that in
-that subset though, and &lt;strong class=&quot;command&quot;&gt;fossil&lt;/strong&gt; is more than a little annoying to
-wrangle in to our environment.&lt;/p&gt;
-&lt;p&gt;The tarball ships without any &lt;em&gt;directly&lt;/em&gt; usable documentation, so you end up
-with either no system documentation or a collection of docs sprinkled with wiki
-markup in &lt;code class=&quot;file docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;/usr/share/doc&lt;/span&gt;&lt;/code&gt;.&lt;/p&gt;
-&lt;p&gt;By default &lt;strong class=&quot;command&quot;&gt;fossil&lt;/strong&gt; builds in a manner which unfortunately breaks most
-packaging standards.  If you’re building packages you’ll likely need to write an
-awful lot of custom workarounds to get a compliant and usable package, see
-&lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;lst-pkgs/utils/dev/fossil&lt;/span&gt;&lt;/code&gt; build for the gory details of my hacks.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class=&quot;section&quot; id=&quot;uptake&quot;&gt;
-&lt;h2&gt;Uptake&lt;/h2&gt;
-&lt;p&gt;I don’t really want to hold this against &lt;strong class=&quot;command&quot;&gt;fossil&lt;/strong&gt;, but it &lt;em&gt;is&lt;/em&gt;
-important to note that for all intents and purposes no one is familiar with it.
-No upstream projects we actively track use it, there isn’t a single person who
-chooses to use it on our site(which is why I had to handle the packaging) and
-expecting new hires to have even heard of it is probably a stretch.&lt;/p&gt;
-&lt;p&gt;It wouldn’t be such an issue if the choice was a &lt;strong class=&quot;command&quot;&gt;git&lt;/strong&gt; vs &lt;a class=&quot;reference external&quot; href=&quot;http://mercurial.selenic.com/&quot;&gt;mercurial&lt;/a&gt;
-one, where the few differences are mostly cosmetic.  &lt;strong class=&quot;command&quot;&gt;fossil&lt;/strong&gt; is
-a completely different beast, and requires an enormous rethink in the way you
-handle version control.&lt;/p&gt;
-&lt;p&gt;Ten years ago when people were on the whole still familiar with the &lt;abbr title=&quot;Concurrent Versions System&quot;&gt;CVS&lt;/abbr&gt; and
-Subversion way of working that wouldn’t have been such an issue, but times have
-most definitely changed.&lt;/p&gt;
-&lt;p&gt;The vocabulary in the documentation is likely to be foreign to users of any
-version control system, and the workflow examples in the documentation are
-entirely foreign to how we have developed any project in at least the past
-decade.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class=&quot;section&quot; id=&quot;all-in-one-solution&quot;&gt;
-&lt;h2&gt;All-in-one solution&lt;/h2&gt;
-&lt;p&gt;One of the proclaimed benefits of using &lt;strong class=&quot;command&quot;&gt;fossil&lt;/strong&gt; is that it handles
-many aspects of a project’s &lt;abbr title=&quot;Application Lifecycle Management&quot;&gt;ALM&lt;/abbr&gt;; version control, issue tracking,
-documentation(via a wiki), etc.  However, and this is only my opinion, it feels
-like it does all of these in a suboptimal manner.&lt;/p&gt;
-&lt;div class=&quot;section&quot; id=&quot;version-control&quot;&gt;
-&lt;h3&gt;Version control&lt;/h3&gt;
-&lt;p&gt;The version control feels quite nice for the most part, definitely usable but
-a little annoying to work with if you’re used to a modern &lt;abbr title=&quot;Distributed Version Control System&quot;&gt;DVCS&lt;/abbr&gt; like we are.&lt;/p&gt;
-&lt;p&gt;That said it does feel like a &lt;em&gt;huge&lt;/em&gt; step backwards when working with branches,
-and you should set aside quite a lot of time for integration issues when you
-have &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;autosync&lt;/span&gt;&lt;/code&gt; disabled.  And I can’t imagine a scenario where &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;autosync&lt;/span&gt;&lt;/code&gt;
-could work for us, without rewriting our entire way of working or returning to
-&lt;abbr title=&quot;Concurrent Versions System&quot;&gt;CVS&lt;/abbr&gt;-style mega commits and a manual patch stack layered on top.&lt;/p&gt;
-&lt;p&gt;If you read &lt;strong class=&quot;command&quot;&gt;fossil&lt;/strong&gt;’s &lt;a class=&quot;reference external&quot; href=&quot;http://www.bugzilla.org&quot;&gt;Branching, Forking, Merging, and Tagging&lt;/a&gt;
-documentation it appears that this is a design feature for the creators.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class=&quot;section&quot; id=&quot;issue-tracker&quot;&gt;
-&lt;h3&gt;Issue tracker&lt;/h3&gt;
-&lt;p&gt;The issue tracker feels like someone has tried to improve on &lt;a class=&quot;reference external&quot; href=&quot;http://www.bugzilla.org&quot;&gt;Bugzilla&lt;/a&gt;, without
-taking a look at modern trackers.  It is definitely the weakest part of
-&lt;strong class=&quot;command&quot;&gt;fossil&lt;/strong&gt; in my opinion, using it is both a mental and eye-stabbing
-pain at the same time.&lt;/p&gt;
-&lt;p&gt;Luckily you can rework a lot of it by fiddling around with the administration
-settings exposed by &lt;strong class=&quot;command&quot;&gt;fossil ui&lt;/strong&gt;.&lt;/p&gt;
-&lt;p&gt;This also exposes one of the best features of &lt;strong class=&quot;command&quot;&gt;fossil&lt;/strong&gt;, you can create
-a custom &lt;abbr title=&quot;Structured Query Language&quot;&gt;SQL&lt;/abbr&gt; script that configures the project(issue tracking, pretty theme,
-etc) and just blast it in to the project’s database.  Or you can create
-a custom file that makes all your edits and pump it in with &lt;strong class=&quot;command&quot;&gt;fossil
-config import&lt;/strong&gt;.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class=&quot;section&quot; id=&quot;wiki&quot;&gt;
-&lt;h3&gt;Wiki&lt;/h3&gt;
-&lt;p&gt;The wiki system is actually really good for what it does, but it has very few of
-the features we use for our documentation.  I don’t want to hold that against it
-though, as it just a impedance mismatch.&lt;/p&gt;
-&lt;p&gt;The end result of the integrated components feels to me like you’ve chosen
-a usable, but weak, component for some of the most important parts of your
-project’s &lt;abbr title=&quot;Application Lifecycle Management&quot;&gt;ALM&lt;/abbr&gt;.  The bits work well together, but none of them seem like an
-option you’d choose on their own.&lt;/p&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class=&quot;section&quot; id=&quot;interface&quot;&gt;
-&lt;h2&gt;Interface&lt;/h2&gt;
-&lt;p&gt;The help output for new users is, in my opinion, really irritating.  The default
-command message tells you to run &lt;strong class=&quot;command&quot;&gt;fossil help&lt;/strong&gt; or &lt;strong class=&quot;command&quot;&gt;fossil
-help COMMAND&lt;/strong&gt;, without providing the names of any of the common commands.  The
-&lt;strong class=&quot;command&quot;&gt;fossil help&lt;/strong&gt; output emulates a &lt;strong class=&quot;command&quot;&gt;column -t&lt;/strong&gt; filter of the
-command names, listing commands with unique to &lt;strong class=&quot;command&quot;&gt;fossil&lt;/strong&gt; terminology
-and no short descriptions.  &lt;strong class=&quot;command&quot;&gt;fossil help --all&lt;/strong&gt; feels like it should
-be more useful, but just creates a larger table of commands with uncommon names
-and still no descriptions.&lt;/p&gt;
-&lt;p&gt;It makes very little sense to organise the help in this manner because as you
-get used to the naming and non-standard option style you will need the help
-less.  I’ve patched this for our packages, and if people like it I’ll try to
-push it upstream.&lt;/p&gt;
-&lt;div class=&quot;admonition note&quot;&gt;
-&lt;p class=&quot;admonition-title&quot;&gt;Note&lt;/p&gt;
-&lt;p&gt;It turns out I won’t be pushing the changes upstream.  They require
-a &lt;abbr title=&quot;Contributor License Agreement&quot;&gt;CLA&lt;/abbr&gt; that I can not sign in good faith, which is a shame.&lt;/p&gt;
-&lt;/div&gt;
-&lt;p&gt;The option handling &lt;em&gt;will&lt;/em&gt; trip you up endlessly.  Just the little things like
-being unable to chain options, and needing an endless stream of &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;C-p&lt;/span&gt; &lt;span class=&quot;pre&quot;&gt;M-5&lt;/span&gt; &lt;span class=&quot;pre&quot;&gt;M-b&lt;/span&gt;
-&lt;span class=&quot;pre&quot;&gt;&amp;lt;space&amp;gt;&lt;/span&gt;&lt;/code&gt; to add a space before a commit message for example.  Yes, I know some
-people don’t like standard &lt;strong class=&quot;command&quot;&gt;getopt&lt;/strong&gt; or GNU-style option parsing, but
-every other tool you use has chosen it.&lt;/p&gt;
-&lt;p&gt;Some of the interface decisions are actively bad, for example there appears to
-be no way to delegate password configuration to a trusted system service or even
-&lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;netrc&lt;/span&gt;&lt;/code&gt;.  Specifying passwords in &lt;abbr title=&quot;Uniform Resource Locator&quot;&gt;URL&lt;/abbr&gt;’s on the command line is a &lt;strong&gt;huge&lt;/strong&gt;
-anti-pattern, and I just hope you don’t have any multiseat systems if you’re
-using that method.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class=&quot;section&quot; id=&quot;speed&quot;&gt;
-&lt;h2&gt;Speed&lt;/h2&gt;
-&lt;p&gt;On the whole &lt;strong class=&quot;command&quot;&gt;fossil&lt;/strong&gt; is fast, not &lt;strong class=&quot;command&quot;&gt;git&lt;/strong&gt; fast but fast
-nonetheless.  Commits do take a disturbingly long time to complete for some
-reason, but most of the other commands are fast enough.&lt;/p&gt;
-&lt;p&gt;Mangling a repository is actually a lot faster with &lt;strong class=&quot;command&quot;&gt;fossil&lt;/strong&gt; than any
-other system I can think of, as you can just throw the power of &lt;abbr title=&quot;Structured Query Language&quot;&gt;SQL&lt;/abbr&gt; at it.
-You can find some &lt;a class=&quot;reference external&quot; href=&quot;http://www.sqlalchemy.org/&quot;&gt;sqlalchemy&lt;/a&gt; &lt;abbr title=&quot;Object relational mapping&quot;&gt;ORM&lt;/abbr&gt;
-definitions in &lt;code class=&quot;file docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;/usr/share/doc/fossil/orm&lt;/span&gt;&lt;/code&gt; in my packages.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class=&quot;section&quot; id=&quot;conclusion&quot;&gt;
-&lt;h2&gt;Conclusion&lt;/h2&gt;
-&lt;p&gt;I mentioned this in this first paragraph, but I don’t see us moving to
-&lt;strong class=&quot;command&quot;&gt;fossil&lt;/strong&gt;.  It is a nice system, but it just wouldn’t work for us as
-is.&lt;/p&gt;
-&lt;p&gt;Part of me is tempted to attempt to fix the problems, but then we’d be left with
-a system that is more obscure than &lt;strong class=&quot;command&quot;&gt;fossil&lt;/strong&gt;.  If you read the &lt;a class=&quot;reference external&quot; href=&quot;http://fossil-scm.org/xfer/doc/tip/www/concepts.wiki&quot;&gt;Fossil
-Concepts&lt;/a&gt; and &lt;a class=&quot;reference external&quot; href=&quot;http://www.fossil-scm.org/xfer/doc/tip/www/faq.wiki&quot;&gt;Frequently Asked Questions&lt;/a&gt; documents you’ll see that the most
-significant problems for us are actually features for upstream, and that is
-obviously fine but it does mean upstreaming changes would be impossible.&lt;/p&gt;
-&lt;div class=&quot;admonition note&quot;&gt;
-&lt;p class=&quot;admonition-title&quot;&gt;Note&lt;/p&gt;
-&lt;p&gt;As noted above, it turns out they require a &lt;abbr title=&quot;Contributor License Agreement&quot;&gt;CLA&lt;/abbr&gt; which means we couldn’t
-send changes upstream anyway.&lt;/p&gt;
-&lt;/div&gt;
-&lt;p&gt;That said I’m am planning on stealing some of the ideas that I really liked
-about &lt;strong class=&quot;command&quot;&gt;fossil&lt;/strong&gt; for my own use.  &lt;strong class=&quot;command&quot;&gt;fossil all&lt;/strong&gt;’s ability to run
-a command against all repositories configured in &lt;code class=&quot;file docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;~/.fossil&lt;/span&gt;&lt;/code&gt; for example.&lt;/p&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-</content>
-  </entry>
-  <entry xml:base="https://jnrowe.github.io/blog/tag/projects/atom.xml">
-    <title type="text">Side-projects</title>
+  <id>https://jnrowe.github.io/</id>
+  <title>JNRowe - Posts tagged projects</title>
+  <updated>2021-03-21T11:05:59.882132+00:00</updated>
+  <link href="https://jnrowe.github.io/"/>
+  <link href="https://jnrowe.github.io/blog/tag/projects/atom.xml"/>
+  <generator uri="https://ablog.readthedocs.org" version="0.10.12">ABlog</generator>
+  <subtitle>Ramblings of a tired mind</subtitle>
+  <entry>
     <id>https://jnrowe.github.io/thoughts/side_projects.html</id>
-    <updated>2013-12-16T00:00:00Z</updated>
-    <published>2013-12-16T00:00:00Z</published>
-    <link href="https://jnrowe.github.io/thoughts/side_projects.html" />
+    <title>Side-projects</title>
+    <updated>2013-12-16T00:00:00+00:00</updated>
     <author>
       <name>James Rowe</name>
     </author>
-    <content type="html">&lt;div class=&quot;section&quot; id=&quot;side-projects&quot;&gt;
+    <content type="html">&lt;div class="section" id="side-projects"&gt;
 
 &lt;p&gt;Chatting with my brother yesterday he expressed some disbelief when I mentioned
 &lt;em&gt;yet another&lt;/em&gt; friend who has a website related to some topic we were discussing:&lt;/p&gt;
@@ -350,51 +36,51 @@ logistics, and the conversation drifts from there.  When talking to the
 extended family that often seemed to head toward being about material
 possessions that work may afford him.  However, I’ve noticed in the past when
 I’m talking to people I’d call friends it often quickly digresses in to strange
-discussions about box packing, routing, &lt;a class=&quot;reference external&quot; href=&quot;http://en.wikipedia.org/wiki/Travelling_salesman_problem&quot;&gt;the curse of travelling salesmen&lt;/a&gt; or
-&lt;a class=&quot;reference external&quot; href=&quot;http://en.wikipedia.org/wiki/Bridges_of_Konigsberg&quot;&gt;bridges in some foreign land&lt;/a&gt;.  Because of the math and technology
+discussions about box packing, routing, &lt;a class="reference external" href="http://en.wikipedia.org/wiki/Travelling_salesman_problem"&gt;the curse of travelling salesmen&lt;/a&gt; or
+&lt;a class="reference external" href="http://en.wikipedia.org/wiki/Bridges_of_Konigsberg"&gt;bridges in some foreign land&lt;/a&gt;.  Because of the math and technology
 implications many of my friends have written tools to explore some of the
 practical and theoretical issues faced in logistics… often for fun.&lt;/p&gt;
-&lt;div class=&quot;section&quot; id=&quot;it-is-all-about-me&quot;&gt;
+&lt;div class="section" id="it-is-all-about-me"&gt;
 &lt;h2&gt;It is all about me&lt;/h2&gt;
-&lt;p&gt;I’m not working on any public facing websites right now&lt;a class=&quot;footnote-reference brackets&quot; href=&quot;#s1&quot; id=&quot;id1&quot;&gt;1&lt;/a&gt;, but I do play
+&lt;p&gt;I’m not working on any public facing websites right now&lt;a class="footnote-reference brackets" href="#s1" id="id1"&gt;1&lt;/a&gt;, but I do play
 with a few public facing projects from time to time that should head towards
 proving my point.  I’m picking a few semi-randomly to illustrate a little
 diversity.&lt;/p&gt;
-&lt;div class=&quot;admonition note&quot;&gt;
-&lt;p class=&quot;admonition-title&quot;&gt;Note&lt;/p&gt;
-&lt;p&gt;To save myself some researching effort I’ll only link to things from &lt;a class=&quot;reference external&quot; href=&quot;https://github.com/JNRowe/&quot;&gt;my
+&lt;div class="admonition note"&gt;
+&lt;p class="admonition-title"&gt;Note&lt;/p&gt;
+&lt;p&gt;To save myself some researching effort I’ll only link to things from &lt;a class="reference external" href="https://github.com/JNRowe/"&gt;my
 GitHub profile&lt;/a&gt; or links from my browser’s bookmarks, but that should be
 descriptive enough to get the point across.&lt;/p&gt;
 &lt;/div&gt;
-&lt;div class=&quot;section&quot; id=&quot;gentoo-packages&quot;&gt;
+&lt;div class="section" id="gentoo-packages"&gt;
 &lt;h3&gt;Gentoo packages&lt;/h3&gt;
 &lt;p&gt;Over the past decade I’ve spent a lot of time hacking on things related to
-&lt;a class=&quot;reference external&quot; href=&quot;http://gentoo.org/&quot;&gt;Gentoo&lt;/a&gt;.  Some of that for work projects and some of it for &lt;a class=&quot;reference external&quot; href=&quot;https://jnrowe-misc.readthedocs.io/&quot;&gt;personal
-projects&lt;/a&gt;.  I’ve also experienced my fair share of troubles, and have &lt;a class=&quot;reference external&quot; href=&quot;https://bugs.gentoo.org/buglist.cgi?email1=jnrowe%40gmail.com&amp;amp;emailassigned_to1=1&amp;amp;emailcc1=1&amp;amp;emaillongdesc1=1&amp;amp;emailreporter1=1&amp;amp;emailtype1=substring&amp;amp;query_format=advanced&quot;&gt;reported
+&lt;a class="reference external" href="http://gentoo.org/"&gt;Gentoo&lt;/a&gt;.  Some of that for work projects and some of it for &lt;a class="reference external" href="https://jnrowe-misc.readthedocs.io/"&gt;personal
+projects&lt;/a&gt;.  I’ve also experienced my fair share of troubles, and have &lt;a class="reference external" href="https://bugs.gentoo.org/buglist.cgi?email1=jnrowe%40gmail.com&amp;amp;emailassigned_to1=1&amp;amp;emailcc1=1&amp;amp;emaillongdesc1=1&amp;amp;emailreporter1=1&amp;amp;emailtype1=substring&amp;amp;query_format=advanced"&gt;reported
 a few bugs&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;At one time I even hoped to &lt;a class=&quot;reference external&quot; href=&quot;https://bugs.gentoo.org/show_bug.cgi?id=142090&quot;&gt;become a developer&lt;/a&gt;, but that didn’t work out for
+&lt;p&gt;At one time I even hoped to &lt;a class="reference external" href="https://bugs.gentoo.org/show_bug.cgi?id=142090"&gt;become a developer&lt;/a&gt;, but that didn’t work out for
 a bunch of reasons.&lt;/p&gt;
 &lt;/div&gt;
-&lt;div class=&quot;section&quot; id=&quot;github2&quot;&gt;
-&lt;h3&gt;&lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;github2&lt;/span&gt;&lt;/code&gt;&lt;/h3&gt;
-&lt;p&gt;For a year I &lt;a class=&quot;reference external&quot; href=&quot;https://github.com/ask/python-github2/graphs/contributors&quot;&gt;maintained&lt;/a&gt; a relatively popular &lt;a class=&quot;reference external&quot; href=&quot;https://github.com/ask/python-github2&quot;&gt;API wrapper&lt;/a&gt; to GitHub.  I did
+&lt;div class="section" id="github2"&gt;
+&lt;h3&gt;&lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;github2&lt;/span&gt;&lt;/code&gt;&lt;/h3&gt;
+&lt;p&gt;For a year I &lt;a class="reference external" href="https://github.com/ask/python-github2/graphs/contributors"&gt;maintained&lt;/a&gt; a relatively popular &lt;a class="reference external" href="https://github.com/ask/python-github2"&gt;API wrapper&lt;/a&gt; to GitHub.  I did
 this because I found it fun.  It provided no economic benefit to me, and I never
 expected it to.  I know a lot of people used it when building their own toy
 projects and websites, because many were kind enough to link to it.&lt;/p&gt;
 &lt;/div&gt;
-&lt;div class=&quot;section&quot; id=&quot;pyisbn&quot;&gt;
-&lt;h3&gt;&lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;pyisbn&lt;/span&gt;&lt;/code&gt;&lt;/h3&gt;
-&lt;p&gt;For seven years I’ve maintained a small library for &lt;a class=&quot;reference external&quot; href=&quot;https://github.com/JNRowe/pyisbn/&quot;&gt;validating ISBNs&lt;/a&gt;.
+&lt;div class="section" id="pyisbn"&gt;
+&lt;h3&gt;&lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;pyisbn&lt;/span&gt;&lt;/code&gt;&lt;/h3&gt;
+&lt;p&gt;For seven years I’ve maintained a small library for &lt;a class="reference external" href="https://github.com/JNRowe/pyisbn/"&gt;validating ISBNs&lt;/a&gt;.
 &lt;em&gt;Yes, that is absolutely as boring as it sounds&lt;/em&gt;.&lt;/p&gt;
 &lt;p&gt;It was never meant to be used by others, I just needed something to validate
 entries in my e-book database.  Other people started using it, many for their
 own weird side projects including a number of book retail websites.  It has
-amassed literally tens of thousands of downloads from &lt;abbr title=&quot;Python Package Index&quot;&gt;PyPI&lt;/abbr&gt;, but you really
-shouldn’t trust the dubious statistics from &lt;abbr title=&quot;Python Package Index&quot;&gt;PyPI&lt;/abbr&gt; ;)&lt;/p&gt;
+amassed literally tens of thousands of downloads from &lt;abbr title="Python Package Index"&gt;PyPI&lt;/abbr&gt;, but you really
+shouldn’t trust the dubious statistics from &lt;abbr title="Python Package Index"&gt;PyPI&lt;/abbr&gt; ;)&lt;/p&gt;
 &lt;/div&gt;
-&lt;div class=&quot;section&quot; id=&quot;rdial&quot;&gt;
-&lt;h3&gt;&lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;rdial&lt;/span&gt;&lt;/code&gt;&lt;/h3&gt;
-&lt;p&gt;&lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;rdial&lt;/span&gt;&lt;/code&gt; is a &lt;a class=&quot;reference external&quot; href=&quot;https://rdial.readthedocs.io/&quot;&gt;time tracking tool&lt;/a&gt;, and a perfect example for me.  I played
+&lt;div class="section" id="rdial"&gt;
+&lt;h3&gt;&lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;rdial&lt;/span&gt;&lt;/code&gt;&lt;/h3&gt;
+&lt;p&gt;&lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;rdial&lt;/span&gt;&lt;/code&gt; is a &lt;a class="reference external" href="https://rdial.readthedocs.io/"&gt;time tracking tool&lt;/a&gt;, and a perfect example for me.  I played
 with it for over a year before anyone else saw it, just because it scratched an
 itch I had.  I never imagined it would be useful to others.  Turns out it was,
 and there is now a small yet faithful band of users.&lt;/p&gt;
@@ -402,9 +88,9 @@ and there is now a small yet faithful band of users.&lt;/p&gt;
 A beer being second only to a patch in the table of project endorsements
 that I subscribe to.&lt;/p&gt;
 &lt;/div&gt;
-&lt;div class=&quot;section&quot; id=&quot;upoints-nee-earth-distance&quot;&gt;
-&lt;h3&gt;&lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;upoints&lt;/span&gt;&lt;/code&gt; née &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;earth_distance&lt;/span&gt;&lt;/code&gt;&lt;/h3&gt;
-&lt;p&gt;&lt;a class=&quot;reference external&quot; href=&quot;https://jnrowe.github.io/upoints/&quot;&gt;upoints&lt;/a&gt; is a strange one.  It started as a &lt;a class=&quot;reference external&quot; href=&quot;http://jnrowe.github.io/upoints/geolocation_and_pathcross.html&quot;&gt;stupid hack&lt;/a&gt; to figure out some
+&lt;div class="section" id="upoints-nee-earth-distance"&gt;
+&lt;h3&gt;&lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;upoints&lt;/span&gt;&lt;/code&gt; née &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;earth_distance&lt;/span&gt;&lt;/code&gt;&lt;/h3&gt;
+&lt;p&gt;&lt;a class="reference external" href="https://jnrowe.github.io/upoints/"&gt;upoints&lt;/a&gt; is a strange one.  It started as a &lt;a class="reference external" href="http://jnrowe.github.io/upoints/geolocation_and_pathcross.html"&gt;stupid hack&lt;/a&gt; to figure out some
 silly travel planning drama, it proceeded to take on a life of its own.  Over
 the years it attracted a fair amount of users, and I still receive email about
 it now.&lt;/p&gt;
@@ -413,10 +99,10 @@ eventually spawned opened some nice doors for me.  I didn’t know it would or
 could at the time, so it didn’t affect how I spent my time when playing with it.&lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;div class=&quot;section&quot; id=&quot;cut-from-the-pattern&quot;&gt;
+&lt;div class="section" id="cut-from-the-pattern"&gt;
 &lt;h2&gt;Cut from the pattern&lt;/h2&gt;
 &lt;p&gt;This isn’t specific to me, or even to the particularly nerdy among my
-co-workers.  If you &lt;a class=&quot;reference external&quot; href=&quot;https://github.com/explore&quot;&gt;dig around on GitHub&lt;/a&gt;, or even &lt;a class=&quot;reference external&quot; href=&quot;http://makezine.com/&quot;&gt;makezine&lt;/a&gt;, you’ll see
+co-workers.  If you &lt;a class="reference external" href="https://github.com/explore"&gt;dig around on GitHub&lt;/a&gt;, or even &lt;a class="reference external" href="http://makezine.com/"&gt;makezine&lt;/a&gt;, you’ll see
 people creating purely because they can.  This isn’t a new phenomenon either.
 If you were around pre-GitHub you’d see people making things on Sourceforge.  If
 you were around before Sourceforge, you’ll remember the good old days when life
@@ -425,15 +111,329 @@ was simpler and people held doors open for you.&lt;/p&gt;
 project/website related to some topic, but that is only because many of the
 people I know are spitting out new projects on what often appears to be a weekly
 basis.&lt;/p&gt;
-&lt;p class=&quot;rubric&quot;&gt;Footnotes&lt;/p&gt;
-&lt;dl class=&quot;footnote brackets&quot;&gt;
-&lt;dt class=&quot;label&quot; id=&quot;s1&quot;&gt;&lt;span class=&quot;brackets&quot;&gt;&lt;a class=&quot;fn-backref&quot; href=&quot;#id1&quot;&gt;1&lt;/a&gt;&lt;/span&gt;&lt;/dt&gt;
-&lt;dd&gt;&lt;p&gt;I really don’t count &lt;a class=&quot;reference external&quot; href=&quot;http://jnrowe.github.io/&quot;&gt;this site&lt;/a&gt;, as it
+&lt;p class="rubric"&gt;Footnotes&lt;/p&gt;
+&lt;dl class="footnote brackets"&gt;
+&lt;dt class="label" id="s1"&gt;&lt;span class="brackets"&gt;&lt;a class="fn-backref" href="#id1"&gt;1&lt;/a&gt;&lt;/span&gt;&lt;/dt&gt;
+&lt;dd&gt;&lt;p&gt;I really don’t count &lt;a class="reference external" href="http://jnrowe.github.io/"&gt;this site&lt;/a&gt;, as it
 is just a jumbled content dump with no real purpose.&lt;/p&gt;
 &lt;/dd&gt;
 &lt;/dl&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 </content>
+    <link href="https://jnrowe.github.io/thoughts/side_projects.html" rel="alternate"/>
+    <published>2013-12-16T00:00:00+00:00</published>
+  </entry>
+  <entry>
+    <id>https://jnrowe.github.io/articles/fossil.html</id>
+    <title>fossil experiments</title>
+    <updated>2014-11-12T00:00:00+00:00</updated>
+    <author>
+      <name>James Rowe</name>
+    </author>
+    <content type="html">&lt;div class="section" id="fossil-experiments"&gt;
+
+&lt;p&gt;For a variety of reasons we can no longer use GitHub at work for any project
+which isn’t Open Source.  And since that decision was thrust upon us we’ve been
+playing with some alternatives for our workflow.  We’ll probably end up choosing
+one of the self hosted clones at some point, but it was decided early on that we
+should evaluate a variety of options.&lt;/p&gt;
+&lt;p&gt;I was tasked with testing out &lt;a class="reference external" href="http://www.fossil-scm.org/"&gt;fossil&lt;/a&gt; on a couple of small side projects, and
+these are my &lt;em&gt;absolutely&lt;/em&gt; biased personal findings.&lt;/p&gt;
+&lt;p&gt;Before I start I should add that while what I’m about to write probably sounds
+harsh, I do like &lt;strong class="command"&gt;fossil&lt;/strong&gt; the concept.  I like the single &lt;a class="reference external" href="http://sqlite.org/"&gt;sqlite&lt;/a&gt;
+project repository, I like the small-enough-to-grok-in-an-afternoon code base
+and I like the idea of a totally reproducible project state including all
+metadata.&lt;/p&gt;
+&lt;div class="section" id="testing-fossil"&gt;
+&lt;h2&gt;Testing &lt;strong class="command"&gt;fossil&lt;/strong&gt;&lt;/h2&gt;
+&lt;p&gt;The good news is that testing &lt;strong class="command"&gt;fossil&lt;/strong&gt; is a piece of cake.  It
+supports both reading and writing &lt;strong class="command"&gt;git&lt;/strong&gt;’s &lt;a class="reference external" href="http://git-scm.com/docs/git-fast-import"&gt;fast-import&lt;/a&gt; format.  If you
+want to test it out just dump an existing &lt;a class="reference external" href="http://www.git-scm.com/"&gt;git&lt;/a&gt; repository(or &lt;a class="reference external" href="http://mercurial.selenic.com/wiki/FastImportExtension"&gt;mercurial with an
+extension&lt;/a&gt;), and feed it &lt;strong class="command"&gt;fossil import&lt;/strong&gt;.  If you later change your
+mind you can run &lt;strong class="command"&gt;fossil export&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;Sadly supporting incremental two-way mirroring didn’t work out for us, but
+perhaps it will for simpler projects.  In the end I simply mirrored the
+&lt;strong class="command"&gt;git&lt;/strong&gt; repositories to &lt;strong class="command"&gt;fossil&lt;/strong&gt;, marked the &lt;strong class="command"&gt;git&lt;/strong&gt;
+repositories as read-only and forced contributors to work with
+&lt;strong class="command"&gt;fossil&lt;/strong&gt; from the outset.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="packaging"&gt;
+&lt;h2&gt;Packaging&lt;/h2&gt;
+&lt;p&gt;The &lt;strong class="command"&gt;fossil&lt;/strong&gt; project sells itself on being a single file binary
+install, and that probably works well for a subset of users.  We’re not that in
+that subset though, and &lt;strong class="command"&gt;fossil&lt;/strong&gt; is more than a little annoying to
+wrangle in to our environment.&lt;/p&gt;
+&lt;p&gt;The tarball ships without any &lt;em&gt;directly&lt;/em&gt; usable documentation, so you end up
+with either no system documentation or a collection of docs sprinkled with wiki
+markup in &lt;code class="file docutils literal notranslate"&gt;&lt;span class="pre"&gt;/usr/share/doc&lt;/span&gt;&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;By default &lt;strong class="command"&gt;fossil&lt;/strong&gt; builds in a manner which unfortunately breaks most
+packaging standards.  If you’re building packages you’ll likely need to write an
+awful lot of custom workarounds to get a compliant and usable package, see
+&lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;lst-pkgs/utils/dev/fossil&lt;/span&gt;&lt;/code&gt; build for the gory details of my hacks.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="uptake"&gt;
+&lt;h2&gt;Uptake&lt;/h2&gt;
+&lt;p&gt;I don’t really want to hold this against &lt;strong class="command"&gt;fossil&lt;/strong&gt;, but it &lt;em&gt;is&lt;/em&gt;
+important to note that for all intents and purposes no one is familiar with it.
+No upstream projects we actively track use it, there isn’t a single person who
+chooses to use it on our site(which is why I had to handle the packaging) and
+expecting new hires to have even heard of it is probably a stretch.&lt;/p&gt;
+&lt;p&gt;It wouldn’t be such an issue if the choice was a &lt;strong class="command"&gt;git&lt;/strong&gt; vs &lt;a class="reference external" href="http://mercurial.selenic.com/"&gt;mercurial&lt;/a&gt;
+one, where the few differences are mostly cosmetic.  &lt;strong class="command"&gt;fossil&lt;/strong&gt; is
+a completely different beast, and requires an enormous rethink in the way you
+handle version control.&lt;/p&gt;
+&lt;p&gt;Ten years ago when people were on the whole still familiar with the &lt;abbr title="Concurrent Versions System"&gt;CVS&lt;/abbr&gt; and
+Subversion way of working that wouldn’t have been such an issue, but times have
+most definitely changed.&lt;/p&gt;
+&lt;p&gt;The vocabulary in the documentation is likely to be foreign to users of any
+version control system, and the workflow examples in the documentation are
+entirely foreign to how we have developed any project in at least the past
+decade.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="all-in-one-solution"&gt;
+&lt;h2&gt;All-in-one solution&lt;/h2&gt;
+&lt;p&gt;One of the proclaimed benefits of using &lt;strong class="command"&gt;fossil&lt;/strong&gt; is that it handles
+many aspects of a project’s &lt;abbr title="Application Lifecycle Management"&gt;ALM&lt;/abbr&gt;; version control, issue tracking,
+documentation(via a wiki), etc.  However, and this is only my opinion, it feels
+like it does all of these in a suboptimal manner.&lt;/p&gt;
+&lt;div class="section" id="version-control"&gt;
+&lt;h3&gt;Version control&lt;/h3&gt;
+&lt;p&gt;The version control feels quite nice for the most part, definitely usable but
+a little annoying to work with if you’re used to a modern &lt;abbr title="Distributed Version Control System"&gt;DVCS&lt;/abbr&gt; like we are.&lt;/p&gt;
+&lt;p&gt;That said it does feel like a &lt;em&gt;huge&lt;/em&gt; step backwards when working with branches,
+and you should set aside quite a lot of time for integration issues when you
+have &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;autosync&lt;/span&gt;&lt;/code&gt; disabled.  And I can’t imagine a scenario where &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;autosync&lt;/span&gt;&lt;/code&gt;
+could work for us, without rewriting our entire way of working or returning to
+&lt;abbr title="Concurrent Versions System"&gt;CVS&lt;/abbr&gt;-style mega commits and a manual patch stack layered on top.&lt;/p&gt;
+&lt;p&gt;If you read &lt;strong class="command"&gt;fossil&lt;/strong&gt;’s &lt;a class="reference external" href="http://www.bugzilla.org"&gt;Branching, Forking, Merging, and Tagging&lt;/a&gt;
+documentation it appears that this is a design feature for the creators.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="issue-tracker"&gt;
+&lt;h3&gt;Issue tracker&lt;/h3&gt;
+&lt;p&gt;The issue tracker feels like someone has tried to improve on &lt;a class="reference external" href="http://www.bugzilla.org"&gt;Bugzilla&lt;/a&gt;, without
+taking a look at modern trackers.  It is definitely the weakest part of
+&lt;strong class="command"&gt;fossil&lt;/strong&gt; in my opinion, using it is both a mental and eye-stabbing
+pain at the same time.&lt;/p&gt;
+&lt;p&gt;Luckily you can rework a lot of it by fiddling around with the administration
+settings exposed by &lt;strong class="command"&gt;fossil ui&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;This also exposes one of the best features of &lt;strong class="command"&gt;fossil&lt;/strong&gt;, you can create
+a custom &lt;abbr title="Structured Query Language"&gt;SQL&lt;/abbr&gt; script that configures the project(issue tracking, pretty theme,
+etc) and just blast it in to the project’s database.  Or you can create
+a custom file that makes all your edits and pump it in with &lt;strong class="command"&gt;fossil
+config import&lt;/strong&gt;.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="wiki"&gt;
+&lt;h3&gt;Wiki&lt;/h3&gt;
+&lt;p&gt;The wiki system is actually really good for what it does, but it has very few of
+the features we use for our documentation.  I don’t want to hold that against it
+though, as it just a impedance mismatch.&lt;/p&gt;
+&lt;p&gt;The end result of the integrated components feels to me like you’ve chosen
+a usable, but weak, component for some of the most important parts of your
+project’s &lt;abbr title="Application Lifecycle Management"&gt;ALM&lt;/abbr&gt;.  The bits work well together, but none of them seem like an
+option you’d choose on their own.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="section" id="interface"&gt;
+&lt;h2&gt;Interface&lt;/h2&gt;
+&lt;p&gt;The help output for new users is, in my opinion, really irritating.  The default
+command message tells you to run &lt;strong class="command"&gt;fossil help&lt;/strong&gt; or &lt;strong class="command"&gt;fossil
+help COMMAND&lt;/strong&gt;, without providing the names of any of the common commands.  The
+&lt;strong class="command"&gt;fossil help&lt;/strong&gt; output emulates a &lt;strong class="command"&gt;column -t&lt;/strong&gt; filter of the
+command names, listing commands with unique to &lt;strong class="command"&gt;fossil&lt;/strong&gt; terminology
+and no short descriptions.  &lt;strong class="command"&gt;fossil help --all&lt;/strong&gt; feels like it should
+be more useful, but just creates a larger table of commands with uncommon names
+and still no descriptions.&lt;/p&gt;
+&lt;p&gt;It makes very little sense to organise the help in this manner because as you
+get used to the naming and non-standard option style you will need the help
+less.  I’ve patched this for our packages, and if people like it I’ll try to
+push it upstream.&lt;/p&gt;
+&lt;div class="admonition note"&gt;
+&lt;p class="admonition-title"&gt;Note&lt;/p&gt;
+&lt;p&gt;It turns out I won’t be pushing the changes upstream.  They require
+a &lt;abbr title="Contributor License Agreement"&gt;CLA&lt;/abbr&gt; that I can not sign in good faith, which is a shame.&lt;/p&gt;
+&lt;/div&gt;
+&lt;p&gt;The option handling &lt;em&gt;will&lt;/em&gt; trip you up endlessly.  Just the little things like
+being unable to chain options, and needing an endless stream of &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;C-p&lt;/span&gt; &lt;span class="pre"&gt;M-5&lt;/span&gt; &lt;span class="pre"&gt;M-b&lt;/span&gt;
+&lt;span class="pre"&gt;&amp;lt;space&amp;gt;&lt;/span&gt;&lt;/code&gt; to add a space before a commit message for example.  Yes, I know some
+people don’t like standard &lt;strong class="command"&gt;getopt&lt;/strong&gt; or GNU-style option parsing, but
+every other tool you use has chosen it.&lt;/p&gt;
+&lt;p&gt;Some of the interface decisions are actively bad, for example there appears to
+be no way to delegate password configuration to a trusted system service or even
+&lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;netrc&lt;/span&gt;&lt;/code&gt;.  Specifying passwords in &lt;abbr title="Uniform Resource Locator"&gt;URL&lt;/abbr&gt;’s on the command line is a &lt;strong&gt;huge&lt;/strong&gt;
+anti-pattern, and I just hope you don’t have any multiseat systems if you’re
+using that method.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="speed"&gt;
+&lt;h2&gt;Speed&lt;/h2&gt;
+&lt;p&gt;On the whole &lt;strong class="command"&gt;fossil&lt;/strong&gt; is fast, not &lt;strong class="command"&gt;git&lt;/strong&gt; fast but fast
+nonetheless.  Commits do take a disturbingly long time to complete for some
+reason, but most of the other commands are fast enough.&lt;/p&gt;
+&lt;p&gt;Mangling a repository is actually a lot faster with &lt;strong class="command"&gt;fossil&lt;/strong&gt; than any
+other system I can think of, as you can just throw the power of &lt;abbr title="Structured Query Language"&gt;SQL&lt;/abbr&gt; at it.
+You can find some &lt;a class="reference external" href="http://www.sqlalchemy.org/"&gt;sqlalchemy&lt;/a&gt; &lt;abbr title="Object relational mapping"&gt;ORM&lt;/abbr&gt;
+definitions in &lt;code class="file docutils literal notranslate"&gt;&lt;span class="pre"&gt;/usr/share/doc/fossil/orm&lt;/span&gt;&lt;/code&gt; in my packages.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="conclusion"&gt;
+&lt;h2&gt;Conclusion&lt;/h2&gt;
+&lt;p&gt;I mentioned this in this first paragraph, but I don’t see us moving to
+&lt;strong class="command"&gt;fossil&lt;/strong&gt;.  It is a nice system, but it just wouldn’t work for us as
+is.&lt;/p&gt;
+&lt;p&gt;Part of me is tempted to attempt to fix the problems, but then we’d be left with
+a system that is more obscure than &lt;strong class="command"&gt;fossil&lt;/strong&gt;.  If you read the &lt;a class="reference external" href="http://fossil-scm.org/xfer/doc/tip/www/concepts.wiki"&gt;Fossil
+Concepts&lt;/a&gt; and &lt;a class="reference external" href="http://www.fossil-scm.org/xfer/doc/tip/www/faq.wiki"&gt;Frequently Asked Questions&lt;/a&gt; documents you’ll see that the most
+significant problems for us are actually features for upstream, and that is
+obviously fine but it does mean upstreaming changes would be impossible.&lt;/p&gt;
+&lt;div class="admonition note"&gt;
+&lt;p class="admonition-title"&gt;Note&lt;/p&gt;
+&lt;p&gt;As noted above, it turns out they require a &lt;abbr title="Contributor License Agreement"&gt;CLA&lt;/abbr&gt; which means we couldn’t
+send changes upstream anyway.&lt;/p&gt;
+&lt;/div&gt;
+&lt;p&gt;That said I’m am planning on stealing some of the ideas that I really liked
+about &lt;strong class="command"&gt;fossil&lt;/strong&gt; for my own use.  &lt;strong class="command"&gt;fossil all&lt;/strong&gt;’s ability to run
+a command against all repositories configured in &lt;code class="file docutils literal notranslate"&gt;&lt;span class="pre"&gt;~/.fossil&lt;/span&gt;&lt;/code&gt; for example.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</content>
+    <link href="https://jnrowe.github.io/articles/fossil.html" rel="alternate"/>
+    <published>2014-11-12T00:00:00+00:00</published>
+  </entry>
+  <entry>
+    <id>https://jnrowe.github.io/articles/new_love_giddiness.html</id>
+    <title>Giddy new project love</title>
+    <updated>2018-12-04T00:00:00+00:00</updated>
+    <author>
+      <name>James Rowe</name>
+    </author>
+    <content type="html">&lt;div class="section" id="giddy-new-project-love"&gt;
+
+&lt;p&gt;I’ve recently inherited a new tier-one project, which is great news!  Sadly, it
+is in real need of some Tender Loving Care™.  Was there ever an inherited
+project that wasn’t?&lt;/p&gt;
+&lt;p&gt;The project is our semi-custom transpiler for &lt;a class="reference external" href="https://en.m.wikipedia.org/wiki/Ada_(programming_language)"&gt;Ada&lt;/a&gt; affectionately called
+&lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;sandfly&lt;/span&gt;&lt;/code&gt;.  I say semi-custom as it was spun out from a consortium effort to
+“facilitate reliability and improve portability” of &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;Ada&lt;/span&gt;&lt;/code&gt; projects, which is
+a far loftier sounding goal than it need be.  In essence, it is the
+codification of rules and guidelines we’ve adhered to since a partner meeting
+in &lt;em&gt;1996&lt;/em&gt;, and that we find ourselves still following today&lt;a class="footnote-reference brackets" href="#id4" id="id1"&gt;1&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;I wasn’t around back when the original group was formed, and it was disbanded
+before I’d even heard of &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;Ada&lt;/span&gt;&lt;/code&gt;.  This project is genuinely
+multi-generational, which &lt;em&gt;feels&lt;/em&gt; nice.  All too often our work in software can
+feel ephemeral; squeaked on a whiteboard in the morning, tapped in to
+a computer in the afternoon and swept away by the janitors as night falls.&lt;/p&gt;
+&lt;div class="section" id="hopes-and-dreams"&gt;
+&lt;h2&gt;Hopes and dreams&lt;/h2&gt;
+&lt;p&gt;As the project &lt;em&gt;should&lt;/em&gt; have significant longevity I find myself pondering the
+future.  &lt;em&gt;If&lt;/em&gt; I could change things for the next 20 years, what should I do to
+make that experience better?  Should I do &lt;em&gt;nothing at all&lt;/em&gt; and just chug along
+reducing the anxiety that even small changes will evoke?&lt;/p&gt;
+&lt;p&gt;I also find myself pondering the present.  Could a truly radical change &lt;em&gt;today&lt;/em&gt;
+obviate the need for this project entirely before the next maintainer grabs the
+reins for their reign of anxiety?  Would that necessarily be a good thing?&lt;/p&gt;
+&lt;div class="sidebar"&gt;
+&lt;p class="sidebar-title"&gt;Common errors&lt;/p&gt;
+&lt;p&gt;I’ve always considered it odd that we can choose to attach a listing of
+common errors to a product and expect people to use it.  If we know it is
+common for users to make critical errors because of a design decision we
+need to make a new design, not a new bullet point on the list.&lt;/p&gt;
+&lt;p&gt;Even simple things like watching an &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;Ada&lt;/span&gt;&lt;/code&gt; beginner make the classic
+“atomic means atomic” mistake should be designed out, and not &lt;em&gt;solved&lt;/em&gt; with
+an addendum of “protected objects mean atomic” chicanery.&lt;/p&gt;
+&lt;/div&gt;
+&lt;p&gt;Many of the advantages that we associate with &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;Ada&lt;/span&gt;&lt;/code&gt; — such as its mighty type
+safety — no longer feel that advanced or remotely unique.  Even “hobby”
+languages such as &lt;a class="reference external" href="https://nim-lang.org/"&gt;nim&lt;/a&gt; implement many of the safety features we expect from
+&lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;Ada&lt;/span&gt;&lt;/code&gt; implementations&lt;a class="footnote-reference brackets" href="#id5" id="id2"&gt;2&lt;/a&gt;; subrange types being a fine example where the
+&lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;nim&lt;/span&gt;&lt;/code&gt; designers have absorbed an &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;Ada&lt;/span&gt;&lt;/code&gt; feature.  And standard everyday
+languages now often have tooling that is capable of providing &lt;em&gt;many&lt;/em&gt; of the
+benefits of &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;Ada&lt;/span&gt;&lt;/code&gt;, and one should really only expect this to increase.&lt;/p&gt;
+&lt;p&gt;What really hammers home the point here is that a good number of the features
+one thinks about weren’t even available in &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;Ada&lt;/span&gt;&lt;/code&gt; when &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;sandfly&lt;/span&gt;&lt;/code&gt; began; fex
+contracts are from &lt;a class="reference external" href="http://www.ada2012.org/"&gt;Ada 2012&lt;/a&gt;.  Will languages leapfrog &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;Ada&lt;/span&gt;&lt;/code&gt; in its niche
+by borrowing and then sprint away by innovating as their uptake increases?&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="benefits-of-transpilation"&gt;
+&lt;h2&gt;Benefits of transpilation&lt;/h2&gt;
+&lt;p&gt;The original &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;sandfly&lt;/span&gt;&lt;/code&gt; authors implemented a transpiler because it made
+various checks simpler to carry out.  According to the documentation, it was
+never intended to become a full blown language in its own right… which of
+course it has.&lt;/p&gt;
+&lt;p&gt;Maybe we should take the opportunity to stay on top of the changing language
+landscape thanks to the side effect of &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;sandfly&lt;/span&gt;&lt;/code&gt;’s implementation details.
+Given that we’re already transpiling should we consider alternative targets?
+&lt;a class="reference external" href="http://www.ocaml.org/"&gt;ocaml&lt;/a&gt; is the language that immediately jumps to mind, as it is syntactically
+close to &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;sandfly&lt;/span&gt;&lt;/code&gt; and it has an excellent type system.  And once you have
+&lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;ocaml&lt;/span&gt;&lt;/code&gt; it is a smaller step to &lt;a class="reference external" href="http://fsharp.org/"&gt;F#&lt;/a&gt; thanks to its legacy &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;ocaml&lt;/span&gt;&lt;/code&gt; mode.&lt;/p&gt;
+&lt;p&gt;The code base is amenable to multiple targets already.  A couple of years ago
+I implemented support for testing without relying on the support kernel
+supplied by our compiler vendor&lt;a class="footnote-reference brackets" href="#id6" id="id3"&gt;3&lt;/a&gt;.  At its base &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;sandfly&lt;/span&gt;&lt;/code&gt; will optionally
+generate &lt;a class="reference external" href="http://www.lua.org/"&gt;lua&lt;/a&gt; bytecode that is loaded in to a tiny emulator which can be driven
+by other &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;lua&lt;/span&gt;&lt;/code&gt; scripts to test an implementation.  Its main purpose was to
+allow early experimentation without the expense and time of waiting for
+hardware re-fabrication.&lt;/p&gt;
+&lt;div class="figure align-default" id="id7"&gt;
+&lt;img alt="sandfly debug architecture" src="../../_images/sandfly_use.png" style="width: 279.5px; height: 358.0px;" /&gt;
+&lt;p class="caption"&gt;&lt;span class="caption-text"&gt;As you can see from example usage, it’s source-to-source all the way down.
+If I’m writing &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;lua&lt;/span&gt;&lt;/code&gt; I’m using &lt;a class="reference external" href="https://github.com/leafo/moonscript/"&gt;moonscript&lt;/a&gt;, and so should you!&lt;/span&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;p&gt;I’m not sure it would even be a great stretch to change the main target, there
+would likely be significant support for it in fact.  It has already been
+suggested that we should exclusively switch to &lt;a class="reference external" href="https://en.m.wikipedia.org/wiki/SPARK_(programming_language)"&gt;spark&lt;/a&gt; on a number of occasions,
+especially since the reformation in Spark 2014.  If we could figure out the
+safety certification story I’m sure there would be a lot of traction for &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;F#&lt;/span&gt;&lt;/code&gt;
+as default.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="final-thoughts"&gt;
+&lt;h2&gt;Final thoughts&lt;/h2&gt;
+&lt;div class="sidebar"&gt;
+&lt;p class="sidebar-title"&gt;Open Sourcing &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;sandfly&lt;/span&gt;&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;There have been a few enquiries as to whether this work is Open Source, and
+sadly it isn’t.  However, if you work for one of the Atlas Consortium
+companies(or a significant partner of one) it is easy to arrange “source
+available” access.  I &lt;em&gt;know&lt;/em&gt; this isn’t the same thing, but it is the
+current situation.&lt;/p&gt;
+&lt;p&gt;The good news is that I’ve added an item to the issue tracker that includes
+making it Open Source, the bad news is that there is a lot of work needed
+— both by me and &lt;em&gt;many&lt;/em&gt; others — to make that happen.  I’ve kicked the
+initial process off by contacting legal for guidance, we’ll see what
+happens.&lt;/p&gt;
+&lt;/div&gt;
+&lt;p&gt;I’ve always really appreciated &lt;a class="reference external" href="https://en.m.wikipedia.org/wiki/Vala_(programming_language)"&gt;vala&lt;/a&gt;’s alternative syntax support; &lt;a class="reference external" href="https://en.m.wikipedia.org/wiki/C_Sharp_(programming_language)"&gt;C#&lt;/a&gt; by
+default, but with first class support for &lt;a class="reference external" href="https://en.m.wikipedia.org/wiki/Genie_(programming_language)"&gt;genie&lt;/a&gt;’s &lt;a class="reference external" href="http://boo-lang.org/"&gt;boo&lt;/a&gt;-inspired syntax.
+I find myself thinking how nice it would be to emulate that and have multiple
+frontends, &lt;em&gt;and&lt;/em&gt; the previously described backends.&lt;/p&gt;
+&lt;p&gt;In fact I find myself thinking about &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;vala&lt;/span&gt;&lt;/code&gt; a lot as I write this.  It never
+had the uptake I would have hoped for when I first read about it.  It has
+however had a &lt;em&gt;huge&lt;/em&gt; impact in the places where it has been used.  That surely
+makes it a great role model for &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;sandfly&lt;/span&gt;&lt;/code&gt; going forward.  It is better to be
+an elusive Aston Martin &lt;a class="reference external" href="https://en.m.wikipedia.org/wiki/Aston_Martin_DB5"&gt;DB-5&lt;/a&gt; than a common as muck &lt;a class="reference external" href="https://en.m.wikipedia.org/wiki/Ford_Focus"&gt;Ford Focus&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;So, I’m deep in a pre-reality dream state where I want to add heaps of amazing
+new features and functionality, coupled with a cold light of day feeling that
+it could be nice to kill the project by transforming it in to a gateway out of
+&lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;Ada&lt;/span&gt;&lt;/code&gt;.  It could be the best &lt;em&gt;or&lt;/em&gt; worst project in the history of the world!
+I’m genuinely excited.&lt;/p&gt;
+&lt;p class="rubric"&gt;Footnotes&lt;/p&gt;
+&lt;dl class="footnote brackets"&gt;
+&lt;dt class="label" id="id4"&gt;&lt;span class="brackets"&gt;&lt;a class="fn-backref" href="#id1"&gt;1&lt;/a&gt;&lt;/span&gt;&lt;/dt&gt;
+&lt;dd&gt;&lt;p&gt;It should be easy to guess why this project is being handed on, given
+that we’re talking about a twenty-one year old endeavour.&lt;/p&gt;
+&lt;/dd&gt;
+&lt;dt class="label" id="id5"&gt;&lt;span class="brackets"&gt;&lt;a class="fn-backref" href="#id2"&gt;2&lt;/a&gt;&lt;/span&gt;&lt;/dt&gt;
+&lt;dd&gt;&lt;p&gt;This isn’t meant to disparage &lt;a class="reference external" href="https://nim-lang.org/"&gt;nim&lt;/a&gt;, as it is really quite interesting.
+I mean it purely in the sense that we haven’t &lt;em&gt;yet&lt;/em&gt; seen large industry
+adoption.&lt;/p&gt;
+&lt;/dd&gt;
+&lt;dt class="label" id="id6"&gt;&lt;span class="brackets"&gt;&lt;a class="fn-backref" href="#id3"&gt;3&lt;/a&gt;&lt;/span&gt;&lt;/dt&gt;
+&lt;dd&gt;&lt;p&gt;I’m of the &lt;em&gt;strong&lt;/em&gt; opinion that vendors who forbid you from naming,
+shaming and even benchmarking them should be avoided at &lt;em&gt;all costs&lt;/em&gt;.
+However, I’m not on the procurement board and didn’t get to make that
+decision.&lt;/p&gt;
+&lt;/dd&gt;
+&lt;/dl&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</content>
+    <link href="https://jnrowe.github.io/articles/new_love_giddiness.html" rel="alternate"/>
+    <published>2018-12-04T00:00:00+00:00</published>
   </entry>
 </feed>

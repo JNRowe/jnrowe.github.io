@@ -1,685 +1,276 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version='1.0' encoding='UTF-8'?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <title type="text">JNRowe - Posts tagged vcs</title>
-  <id>https://jnrowe.github.io/blog/tag/vcs/atom.xml</id>
-  <updated>2014-11-12T00:00:00Z</updated>
-  <link href="https://jnrowe.github.io/" />
-  <link href="https://jnrowe.github.io/blog/tag/vcs/atom.xml" rel="self" />
-  <subtitle type="text">Ramblings of a tired mind</subtitle>
-  <generator uri="https://ablog.readthedocs.org" version="0.10.4">ABlog</generator>
-  <entry xml:base="https://jnrowe.github.io/blog/tag/vcs/atom.xml">
-    <title type="text">fossil experiments</title>
-    <id>https://jnrowe.github.io/articles/fossil.html</id>
-    <updated>2014-11-12T00:00:00Z</updated>
-    <published>2014-11-12T00:00:00Z</published>
-    <link href="https://jnrowe.github.io/articles/fossil.html" />
-    <author>
-      <name>James Rowe</name>
-    </author>
-    <content type="html">&lt;div class=&quot;section&quot; id=&quot;fossil-experiments&quot;&gt;
-
-&lt;p&gt;For a variety of reasons we can no longer use GitHub at work for any project
-which isn’t Open Source.  And since that decision was thrust upon us we’ve been
-playing with some alternatives for our workflow.  We’ll probably end up choosing
-one of the self hosted clones at some point, but it was decided early on that we
-should evaluate a variety of options.&lt;/p&gt;
-&lt;p&gt;I was tasked with testing out &lt;a class=&quot;reference external&quot; href=&quot;http://www.fossil-scm.org/&quot;&gt;fossil&lt;/a&gt; on a couple of small side projects, and
-these are my &lt;em&gt;absolutely&lt;/em&gt; biased personal findings.&lt;/p&gt;
-&lt;p&gt;Before I start I should add that while what I’m about to write probably sounds
-harsh, I do like &lt;strong class=&quot;command&quot;&gt;fossil&lt;/strong&gt; the concept.  I like the single &lt;a class=&quot;reference external&quot; href=&quot;http://sqlite.org/&quot;&gt;sqlite&lt;/a&gt;
-project repository, I like the small-enough-to-grok-in-an-afternoon code base
-and I like the idea of a totally reproducible project state including all
-metadata.&lt;/p&gt;
-&lt;div class=&quot;section&quot; id=&quot;testing-fossil&quot;&gt;
-&lt;h2&gt;Testing &lt;strong class=&quot;command&quot;&gt;fossil&lt;/strong&gt;&lt;/h2&gt;
-&lt;p&gt;The good news is that testing &lt;strong class=&quot;command&quot;&gt;fossil&lt;/strong&gt; is a piece of cake.  It
-supports both reading and writing &lt;strong class=&quot;command&quot;&gt;git&lt;/strong&gt;’s &lt;a class=&quot;reference external&quot; href=&quot;http://git-scm.com/docs/git-fast-import&quot;&gt;fast-import&lt;/a&gt; format.  If you
-want to test it out just dump an existing &lt;a class=&quot;reference external&quot; href=&quot;http://www.git-scm.com/&quot;&gt;git&lt;/a&gt; repository(or &lt;a class=&quot;reference external&quot; href=&quot;http://mercurial.selenic.com/wiki/FastImportExtension&quot;&gt;mercurial with an
-extension&lt;/a&gt;), and feed it &lt;strong class=&quot;command&quot;&gt;fossil import&lt;/strong&gt;.  If you later change your
-mind you can run &lt;strong class=&quot;command&quot;&gt;fossil export&lt;/strong&gt;.&lt;/p&gt;
-&lt;p&gt;Sadly supporting incremental two-way mirroring didn’t work out for us, but
-perhaps it will for simpler projects.  In the end I simply mirrored the
-&lt;strong class=&quot;command&quot;&gt;git&lt;/strong&gt; repositories to &lt;strong class=&quot;command&quot;&gt;fossil&lt;/strong&gt;, marked the &lt;strong class=&quot;command&quot;&gt;git&lt;/strong&gt;
-repositories as read-only and forced contributors to work with
-&lt;strong class=&quot;command&quot;&gt;fossil&lt;/strong&gt; from the outset.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class=&quot;section&quot; id=&quot;packaging&quot;&gt;
-&lt;h2&gt;Packaging&lt;/h2&gt;
-&lt;p&gt;The &lt;strong class=&quot;command&quot;&gt;fossil&lt;/strong&gt; project sells itself on being a single file binary
-install, and that probably works well for a subset of users.  We’re not that in
-that subset though, and &lt;strong class=&quot;command&quot;&gt;fossil&lt;/strong&gt; is more than a little annoying to
-wrangle in to our environment.&lt;/p&gt;
-&lt;p&gt;The tarball ships without any &lt;em&gt;directly&lt;/em&gt; usable documentation, so you end up
-with either no system documentation or a collection of docs sprinkled with wiki
-markup in &lt;code class=&quot;file docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;/usr/share/doc&lt;/span&gt;&lt;/code&gt;.&lt;/p&gt;
-&lt;p&gt;By default &lt;strong class=&quot;command&quot;&gt;fossil&lt;/strong&gt; builds in a manner which unfortunately breaks most
-packaging standards.  If you’re building packages you’ll likely need to write an
-awful lot of custom workarounds to get a compliant and usable package, see
-&lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;lst-pkgs/utils/dev/fossil&lt;/span&gt;&lt;/code&gt; build for the gory details of my hacks.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class=&quot;section&quot; id=&quot;uptake&quot;&gt;
-&lt;h2&gt;Uptake&lt;/h2&gt;
-&lt;p&gt;I don’t really want to hold this against &lt;strong class=&quot;command&quot;&gt;fossil&lt;/strong&gt;, but it &lt;em&gt;is&lt;/em&gt;
-important to note that for all intents and purposes no one is familiar with it.
-No upstream projects we actively track use it, there isn’t a single person who
-chooses to use it on our site(which is why I had to handle the packaging) and
-expecting new hires to have even heard of it is probably a stretch.&lt;/p&gt;
-&lt;p&gt;It wouldn’t be such an issue if the choice was a &lt;strong class=&quot;command&quot;&gt;git&lt;/strong&gt; vs &lt;a class=&quot;reference external&quot; href=&quot;http://mercurial.selenic.com/&quot;&gt;mercurial&lt;/a&gt;
-one, where the few differences are mostly cosmetic.  &lt;strong class=&quot;command&quot;&gt;fossil&lt;/strong&gt; is
-a completely different beast, and requires an enormous rethink in the way you
-handle version control.&lt;/p&gt;
-&lt;p&gt;Ten years ago when people were on the whole still familiar with the &lt;abbr title=&quot;Concurrent Versions System&quot;&gt;CVS&lt;/abbr&gt; and
-Subversion way of working that wouldn’t have been such an issue, but times have
-most definitely changed.&lt;/p&gt;
-&lt;p&gt;The vocabulary in the documentation is likely to be foreign to users of any
-version control system, and the workflow examples in the documentation are
-entirely foreign to how we have developed any project in at least the past
-decade.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class=&quot;section&quot; id=&quot;all-in-one-solution&quot;&gt;
-&lt;h2&gt;All-in-one solution&lt;/h2&gt;
-&lt;p&gt;One of the proclaimed benefits of using &lt;strong class=&quot;command&quot;&gt;fossil&lt;/strong&gt; is that it handles
-many aspects of a project’s &lt;abbr title=&quot;Application Lifecycle Management&quot;&gt;ALM&lt;/abbr&gt;; version control, issue tracking,
-documentation(via a wiki), etc.  However, and this is only my opinion, it feels
-like it does all of these in a suboptimal manner.&lt;/p&gt;
-&lt;div class=&quot;section&quot; id=&quot;version-control&quot;&gt;
-&lt;h3&gt;Version control&lt;/h3&gt;
-&lt;p&gt;The version control feels quite nice for the most part, definitely usable but
-a little annoying to work with if you’re used to a modern &lt;abbr title=&quot;Distributed Version Control System&quot;&gt;DVCS&lt;/abbr&gt; like we are.&lt;/p&gt;
-&lt;p&gt;That said it does feel like a &lt;em&gt;huge&lt;/em&gt; step backwards when working with branches,
-and you should set aside quite a lot of time for integration issues when you
-have &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;autosync&lt;/span&gt;&lt;/code&gt; disabled.  And I can’t imagine a scenario where &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;autosync&lt;/span&gt;&lt;/code&gt;
-could work for us, without rewriting our entire way of working or returning to
-&lt;abbr title=&quot;Concurrent Versions System&quot;&gt;CVS&lt;/abbr&gt;-style mega commits and a manual patch stack layered on top.&lt;/p&gt;
-&lt;p&gt;If you read &lt;strong class=&quot;command&quot;&gt;fossil&lt;/strong&gt;’s &lt;a class=&quot;reference external&quot; href=&quot;http://www.bugzilla.org&quot;&gt;Branching, Forking, Merging, and Tagging&lt;/a&gt;
-documentation it appears that this is a design feature for the creators.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class=&quot;section&quot; id=&quot;issue-tracker&quot;&gt;
-&lt;h3&gt;Issue tracker&lt;/h3&gt;
-&lt;p&gt;The issue tracker feels like someone has tried to improve on &lt;a class=&quot;reference external&quot; href=&quot;http://www.bugzilla.org&quot;&gt;Bugzilla&lt;/a&gt;, without
-taking a look at modern trackers.  It is definitely the weakest part of
-&lt;strong class=&quot;command&quot;&gt;fossil&lt;/strong&gt; in my opinion, using it is both a mental and eye-stabbing
-pain at the same time.&lt;/p&gt;
-&lt;p&gt;Luckily you can rework a lot of it by fiddling around with the administration
-settings exposed by &lt;strong class=&quot;command&quot;&gt;fossil ui&lt;/strong&gt;.&lt;/p&gt;
-&lt;p&gt;This also exposes one of the best features of &lt;strong class=&quot;command&quot;&gt;fossil&lt;/strong&gt;, you can create
-a custom &lt;abbr title=&quot;Structured Query Language&quot;&gt;SQL&lt;/abbr&gt; script that configures the project(issue tracking, pretty theme,
-etc) and just blast it in to the project’s database.  Or you can create
-a custom file that makes all your edits and pump it in with &lt;strong class=&quot;command&quot;&gt;fossil
-config import&lt;/strong&gt;.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class=&quot;section&quot; id=&quot;wiki&quot;&gt;
-&lt;h3&gt;Wiki&lt;/h3&gt;
-&lt;p&gt;The wiki system is actually really good for what it does, but it has very few of
-the features we use for our documentation.  I don’t want to hold that against it
-though, as it just a impedance mismatch.&lt;/p&gt;
-&lt;p&gt;The end result of the integrated components feels to me like you’ve chosen
-a usable, but weak, component for some of the most important parts of your
-project’s &lt;abbr title=&quot;Application Lifecycle Management&quot;&gt;ALM&lt;/abbr&gt;.  The bits work well together, but none of them seem like an
-option you’d choose on their own.&lt;/p&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class=&quot;section&quot; id=&quot;interface&quot;&gt;
-&lt;h2&gt;Interface&lt;/h2&gt;
-&lt;p&gt;The help output for new users is, in my opinion, really irritating.  The default
-command message tells you to run &lt;strong class=&quot;command&quot;&gt;fossil help&lt;/strong&gt; or &lt;strong class=&quot;command&quot;&gt;fossil
-help COMMAND&lt;/strong&gt;, without providing the names of any of the common commands.  The
-&lt;strong class=&quot;command&quot;&gt;fossil help&lt;/strong&gt; output emulates a &lt;strong class=&quot;command&quot;&gt;column -t&lt;/strong&gt; filter of the
-command names, listing commands with unique to &lt;strong class=&quot;command&quot;&gt;fossil&lt;/strong&gt; terminology
-and no short descriptions.  &lt;strong class=&quot;command&quot;&gt;fossil help --all&lt;/strong&gt; feels like it should
-be more useful, but just creates a larger table of commands with uncommon names
-and still no descriptions.&lt;/p&gt;
-&lt;p&gt;It makes very little sense to organise the help in this manner because as you
-get used to the naming and non-standard option style you will need the help
-less.  I’ve patched this for our packages, and if people like it I’ll try to
-push it upstream.&lt;/p&gt;
-&lt;div class=&quot;admonition note&quot;&gt;
-&lt;p class=&quot;admonition-title&quot;&gt;Note&lt;/p&gt;
-&lt;p&gt;It turns out I won’t be pushing the changes upstream.  They require
-a &lt;abbr title=&quot;Contributor License Agreement&quot;&gt;CLA&lt;/abbr&gt; that I can not sign in good faith, which is a shame.&lt;/p&gt;
-&lt;/div&gt;
-&lt;p&gt;The option handling &lt;em&gt;will&lt;/em&gt; trip you up endlessly.  Just the little things like
-being unable to chain options, and needing an endless stream of &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;C-p&lt;/span&gt; &lt;span class=&quot;pre&quot;&gt;M-5&lt;/span&gt; &lt;span class=&quot;pre&quot;&gt;M-b&lt;/span&gt;
-&lt;span class=&quot;pre&quot;&gt;&amp;lt;space&amp;gt;&lt;/span&gt;&lt;/code&gt; to add a space before a commit message for example.  Yes, I know some
-people don’t like standard &lt;strong class=&quot;command&quot;&gt;getopt&lt;/strong&gt; or GNU-style option parsing, but
-every other tool you use has chosen it.&lt;/p&gt;
-&lt;p&gt;Some of the interface decisions are actively bad, for example there appears to
-be no way to delegate password configuration to a trusted system service or even
-&lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;netrc&lt;/span&gt;&lt;/code&gt;.  Specifying passwords in &lt;abbr title=&quot;Uniform Resource Locator&quot;&gt;URL&lt;/abbr&gt;’s on the command line is a &lt;strong&gt;huge&lt;/strong&gt;
-anti-pattern, and I just hope you don’t have any multiseat systems if you’re
-using that method.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class=&quot;section&quot; id=&quot;speed&quot;&gt;
-&lt;h2&gt;Speed&lt;/h2&gt;
-&lt;p&gt;On the whole &lt;strong class=&quot;command&quot;&gt;fossil&lt;/strong&gt; is fast, not &lt;strong class=&quot;command&quot;&gt;git&lt;/strong&gt; fast but fast
-nonetheless.  Commits do take a disturbingly long time to complete for some
-reason, but most of the other commands are fast enough.&lt;/p&gt;
-&lt;p&gt;Mangling a repository is actually a lot faster with &lt;strong class=&quot;command&quot;&gt;fossil&lt;/strong&gt; than any
-other system I can think of, as you can just throw the power of &lt;abbr title=&quot;Structured Query Language&quot;&gt;SQL&lt;/abbr&gt; at it.
-You can find some &lt;a class=&quot;reference external&quot; href=&quot;http://www.sqlalchemy.org/&quot;&gt;sqlalchemy&lt;/a&gt; &lt;abbr title=&quot;Object relational mapping&quot;&gt;ORM&lt;/abbr&gt;
-definitions in &lt;code class=&quot;file docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;/usr/share/doc/fossil/orm&lt;/span&gt;&lt;/code&gt; in my packages.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class=&quot;section&quot; id=&quot;conclusion&quot;&gt;
-&lt;h2&gt;Conclusion&lt;/h2&gt;
-&lt;p&gt;I mentioned this in this first paragraph, but I don’t see us moving to
-&lt;strong class=&quot;command&quot;&gt;fossil&lt;/strong&gt;.  It is a nice system, but it just wouldn’t work for us as
-is.&lt;/p&gt;
-&lt;p&gt;Part of me is tempted to attempt to fix the problems, but then we’d be left with
-a system that is more obscure than &lt;strong class=&quot;command&quot;&gt;fossil&lt;/strong&gt;.  If you read the &lt;a class=&quot;reference external&quot; href=&quot;http://fossil-scm.org/xfer/doc/tip/www/concepts.wiki&quot;&gt;Fossil
-Concepts&lt;/a&gt; and &lt;a class=&quot;reference external&quot; href=&quot;http://www.fossil-scm.org/xfer/doc/tip/www/faq.wiki&quot;&gt;Frequently Asked Questions&lt;/a&gt; documents you’ll see that the most
-significant problems for us are actually features for upstream, and that is
-obviously fine but it does mean upstreaming changes would be impossible.&lt;/p&gt;
-&lt;div class=&quot;admonition note&quot;&gt;
-&lt;p class=&quot;admonition-title&quot;&gt;Note&lt;/p&gt;
-&lt;p&gt;As noted above, it turns out they require a &lt;abbr title=&quot;Contributor License Agreement&quot;&gt;CLA&lt;/abbr&gt; which means we couldn’t
-send changes upstream anyway.&lt;/p&gt;
-&lt;/div&gt;
-&lt;p&gt;That said I’m am planning on stealing some of the ideas that I really liked
-about &lt;strong class=&quot;command&quot;&gt;fossil&lt;/strong&gt; for my own use.  &lt;strong class=&quot;command&quot;&gt;fossil all&lt;/strong&gt;’s ability to run
-a command against all repositories configured in &lt;code class=&quot;file docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;~/.fossil&lt;/span&gt;&lt;/code&gt; for example.&lt;/p&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-</content>
-  </entry>
-  <entry xml:base="https://jnrowe.github.io/blog/tag/vcs/atom.xml">
-    <title type="text">Zsh and the VCS</title>
-    <id>https://jnrowe.github.io/articles/tips/Zsh_and_the_vcs.html</id>
-    <updated>2009-10-28T00:00:00Z</updated>
-    <published>2009-10-28T00:00:00Z</published>
-    <link href="https://jnrowe.github.io/articles/tips/Zsh_and_the_vcs.html" />
-    <author>
-      <name>James Rowe</name>
-    </author>
-    <content type="html">&lt;div class=&quot;section&quot; id=&quot;zsh-and-the-vcs&quot;&gt;
-
-&lt;img alt=&quot;Git prompt screenshot&quot; class=&quot;align-right&quot; src=&quot;../../_images/2009-10-28-git_prompt.png&quot; /&gt;
-&lt;p&gt;I’ve recently switched to &lt;a class=&quot;reference external&quot; href=&quot;http://www.zsh.org/&quot;&gt;Zsh&lt;/a&gt; as my login shell after
-9 years of using &lt;a class=&quot;reference external&quot; href=&quot;http://cnswww.cns.cwru.edu/~chet/bash/bashtop.html&quot;&gt;bash&lt;/a&gt;, and for no particularly good reason either as they’re
-both great interactive shells.  I guess all the &lt;em&gt;Kool Kids&lt;/em&gt; are doing it, and
-I’m just playing catchup.  The one side effect of that is I’m now scribbling
-tips about &lt;strong class=&quot;command&quot;&gt;zsh&lt;/strong&gt; too…&lt;/p&gt;
-&lt;p&gt;In a screenshot I posted in our bugtracker — that was considerably less staged
-than the example above — one of my more visual hunks of &lt;strong class=&quot;command&quot;&gt;zsh&lt;/strong&gt;
-configuration was visible, leading to the following question from Dan Wilson:&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;div&gt;&lt;p&gt;Okay, ‘fess time.  How do you get &lt;strong class=&quot;command&quot;&gt;git&lt;/strong&gt; branch names in the
-prompt?  How do you make the funky arrows show repo status?&lt;/p&gt;
-&lt;/div&gt;&lt;/blockquote&gt;
-&lt;p&gt;Firstly, I use &lt;a class=&quot;reference external&quot; href=&quot;http://github.com/robbyrussell/oh-my-zsh&quot;&gt;oh-my-zsh&lt;/a&gt; which is an excellent basis for &lt;strong class=&quot;command&quot;&gt;zsh&lt;/strong&gt;
-configuration files.  My prompt settings work within that framework, although
-they could be converted to work with &lt;em&gt;plain&lt;/em&gt; &lt;strong class=&quot;command&quot;&gt;zsh&lt;/strong&gt; if you have the
-inclination.&lt;/p&gt;
-&lt;p&gt;If you want to see my entire “theme” file you can &lt;a class=&quot;reference external&quot; href=&quot;http://github.com/JNRowe/oh-my-zsh&quot;&gt;clone my fork&lt;/a&gt; and look at
-&lt;a class=&quot;reference external&quot; href=&quot;http://github.com/JNRowe/oh-my-zsh/blob/master/themes/jnrowe.zsh-theme&quot;&gt;oh-my-zsh/themes/jnrowe.zsh-theme&lt;/a&gt;.&lt;/p&gt;
-&lt;div class=&quot;section&quot; id=&quot;branch-names&quot;&gt;
-&lt;h2&gt;Branch names&lt;/h2&gt;
-&lt;p&gt;&lt;strong class=&quot;command&quot;&gt;zsh&lt;/strong&gt; comes with some neat &lt;abbr title=&quot;Version Control System&quot;&gt;VCS&lt;/abbr&gt; integration, that is exceptionally
-&lt;a class=&quot;reference external&quot; href=&quot;http://zsh.sourceforge.net/Doc/Release/User-Contributions.html#SEC273&quot;&gt;documented&lt;/a&gt; in the manual.  I use that code to enable branch names in my
-prompt, I use it directly instead of the code in &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;oh-my-zsh&lt;/span&gt;&lt;/code&gt; that handles
-&lt;strong class=&quot;command&quot;&gt;git&lt;/strong&gt; status because it doesn’t do what I want [yet].  I use a format
-that matches the default(&lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;robbyrussell&lt;/span&gt;&lt;/code&gt;) theme in &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;oh-my-zsh&lt;/span&gt;&lt;/code&gt;.&lt;/p&gt;
-&lt;div class=&quot;highlight-zsh notranslate&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;autoload -Uz vcs_info
-
-&lt;span class=&quot;c1&quot;&gt;# See the documentation for the format string definition&lt;/span&gt;
-&lt;span class=&quot;c1&quot;&gt;# This generates a fancy coloured string with $vcs:($branch)&lt;/span&gt;
-zstyle &lt;span class=&quot;s1&quot;&gt;&amp;#39;:vcs_info:*&amp;#39;&lt;/span&gt; formats &lt;span class=&quot;s1&quot;&gt;&amp;#39;%F{2}%s%F{7}:%F{2}(%F{1}%b%F{2})%f &amp;#39;&lt;/span&gt;
-zstyle &lt;span class=&quot;s1&quot;&gt;&amp;#39;:vcs_info:*&amp;#39;&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;enable&lt;/span&gt; git
-&lt;/pre&gt;&lt;/div&gt;
-&lt;/div&gt;
-&lt;p&gt;Once we’ve configured &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;vcs_info&lt;/span&gt;&lt;/code&gt; we just need to include
-&lt;span class=&quot;target&quot; id=&quot;index-0&quot;&gt;&lt;/span&gt;&lt;code class=&quot;xref std std-envvar docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;${vcs_info_msg_0_}&lt;/span&gt;&lt;/code&gt; somewhere in our prompt to display the &lt;abbr title=&quot;Version Control System&quot;&gt;VCS&lt;/abbr&gt; and
-current branch name.&lt;/p&gt;
-&lt;p&gt;&lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;vcs_info&lt;/span&gt;&lt;/code&gt; works quite well, and supports many different systems(both common
-and uncommon).  As the code snippet shows I enable support for &lt;a class=&quot;reference external&quot; href=&quot;http://www.git-scm.com/&quot;&gt;git&lt;/a&gt; exclusively.
-I’ve used it with &lt;a class=&quot;reference external&quot; href=&quot;http://www.selenic.com/mercurial/&quot;&gt;mercurial&lt;/a&gt; too, and it works well.  &lt;a class=&quot;reference external&quot; href=&quot;http://darcs.net&quot;&gt;darcs&lt;/a&gt; also appears to
-work well, but it isn’t a system I use often enough to have tested it
-thoroughly.&lt;/p&gt;
-&lt;p&gt;I tested &lt;strong class=&quot;command&quot;&gt;bzr&lt;/strong&gt; support while writing this but it is totally unusable
-because of just how painfully slow &lt;strong class=&quot;command&quot;&gt;bzr&lt;/strong&gt; is.  On my system it adds
-close to one and half seconds to every prompt display, although that could be
-improved if I wasn’t using conservative &lt;abbr title=&quot;Central Processing Unit&quot;&gt;CPU&lt;/abbr&gt;
-scaling to save power.  As a comparison the &lt;strong class=&quot;command&quot;&gt;git&lt;/strong&gt; info takes less than
-a tenth of a second to calculate on the same system, and &lt;strong class=&quot;command&quot;&gt;mercurial&lt;/strong&gt;
-around three times that which is most definitely still usable.&lt;/p&gt;
-&lt;div class=&quot;admonition note&quot;&gt;
-&lt;p class=&quot;admonition-title&quot;&gt;Note&lt;/p&gt;
-&lt;p&gt;There is a &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;use-simple&lt;/span&gt;&lt;/code&gt; setting for the &lt;strong class=&quot;command&quot;&gt;bzr&lt;/strong&gt; support that may
-make the &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;vcs_info&lt;/span&gt;&lt;/code&gt; functionality faster for you, albeit not noticeably on
-my system.  It is also the only &lt;abbr title=&quot;Version Control System&quot;&gt;VCS&lt;/abbr&gt; that has such a hack, which is quite
-telling in itself.&lt;/p&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class=&quot;section&quot; id=&quot;repository-state&quot;&gt;
-&lt;h2&gt;Repository state&lt;/h2&gt;
-&lt;p&gt;The “funky arrows” Dan asks about are dependent on the state of the current
-working directory as can be seen in the screenshot at the top of this page.&lt;/p&gt;
-&lt;table class=&quot;docutils align-default&quot;&gt;
-&lt;colgroup&gt;
-&lt;col style=&quot;width: 20%&quot; /&gt;
-&lt;col style=&quot;width: 80%&quot; /&gt;
-&lt;/colgroup&gt;
-&lt;thead&gt;
-&lt;tr class=&quot;row-odd&quot;&gt;&lt;th class=&quot;head&quot;&gt;&lt;p&gt;Identifier&lt;/p&gt;&lt;/th&gt;
-&lt;th class=&quot;head&quot;&gt;&lt;p&gt;Description&lt;/p&gt;&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-&lt;tbody&gt;
-&lt;tr class=&quot;row-even&quot;&gt;&lt;td&gt;&lt;p&gt;white →&lt;/p&gt;&lt;/td&gt;
-&lt;td&gt;&lt;p&gt;Not a &lt;strong class=&quot;command&quot;&gt;git&lt;/strong&gt; repository&lt;/p&gt;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr class=&quot;row-odd&quot;&gt;&lt;td&gt;&lt;p&gt;green ▶&lt;/p&gt;&lt;/td&gt;
-&lt;td&gt;&lt;p&gt;Clean &lt;strong class=&quot;command&quot;&gt;git&lt;/strong&gt; repository&lt;/p&gt;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr class=&quot;row-even&quot;&gt;&lt;td&gt;&lt;p&gt;red ▶&lt;/p&gt;&lt;/td&gt;
-&lt;td&gt;&lt;p&gt;Staged changes in &lt;strong class=&quot;command&quot;&gt;git&lt;/strong&gt; repository&lt;/p&gt;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr class=&quot;row-odd&quot;&gt;&lt;td&gt;&lt;p&gt;yellow ▶&lt;/p&gt;&lt;/td&gt;
-&lt;td&gt;&lt;p&gt;Unstaged changes in &lt;strong class=&quot;command&quot;&gt;git&lt;/strong&gt; repository&lt;/p&gt;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-&lt;p&gt;Using these visual markers it is always obvious what state a directory is in,
-I’ve toyed with adding more but suspect the lack of complexity is what makes
-them so useful.&lt;/p&gt;
-&lt;p&gt;To enable them we need to add a &lt;a class=&quot;reference external&quot; href=&quot;http://zsh.sourceforge.net/Doc/Release/Functions.html#SEC45&quot;&gt;precmd hook&lt;/a&gt; to calculate the repository
-status:&lt;/p&gt;
-&lt;div class=&quot;highlight-zsh notranslate&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;autoload -U add-zsh-hook
-add-zsh-hook precmd prompt_jnrowe_precmd
-
-prompt_jnrowe_precmd &lt;span class=&quot;o&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-    vcs_info
-
-    &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt; -z &lt;span class=&quot;s2&quot;&gt;&amp;quot;&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;vcs_info_msg_0_&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-        &lt;span class=&quot;nv&quot;&gt;dir_status&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;%F{2}→%f&amp;quot;&lt;/span&gt;
-    &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;elif&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;[[&lt;/span&gt; -n &lt;span class=&quot;s2&quot;&gt;&amp;quot;&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;$(&lt;/span&gt;git diff --cached --name-status &lt;span class=&quot;m&quot;&gt;2&lt;/span&gt;&amp;gt;/dev/null &lt;span class=&quot;k&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;]]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-        &lt;span class=&quot;nv&quot;&gt;dir_status&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;%F{1}▶%f&amp;quot;&lt;/span&gt;
-    &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;elif&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;[[&lt;/span&gt; -n &lt;span class=&quot;s2&quot;&gt;&amp;quot;&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;$(&lt;/span&gt;git diff --name-status &lt;span class=&quot;m&quot;&gt;2&lt;/span&gt;&amp;gt;/dev/null &lt;span class=&quot;k&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;]]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-        &lt;span class=&quot;nv&quot;&gt;dir_status&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;%F{3}▶%f&amp;quot;&lt;/span&gt;
-    &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;else&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-        &lt;span class=&quot;nv&quot;&gt;dir_status&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;%F{2}▶%f&amp;quot;&lt;/span&gt;
-    &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-&lt;/div&gt;
-&lt;p&gt;With this added the we just need to include &lt;span class=&quot;target&quot; id=&quot;index-1&quot;&gt;&lt;/span&gt;&lt;code class=&quot;xref std std-envvar docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;$dir_status&lt;/span&gt;&lt;/code&gt; in our prompt
-and the status identifiers will be used.&lt;/p&gt;
-&lt;p&gt;If you are using a font which doesn’t display the characters correctly, either
-change the characters in the &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;dir_status&lt;/span&gt;&lt;/code&gt; values or switch to a &lt;a class=&quot;reference external&quot; href=&quot;http://www.is-vn.bg/hamster/&quot;&gt;better font&lt;/a&gt;
-that can display them.&lt;/p&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-</content>
-  </entry>
-  <entry xml:base="https://jnrowe.github.io/blog/tag/vcs/atom.xml">
-    <title type="text">Making a nice home</title>
-    <id>https://jnrowe.github.io/articles/tips/Making_a_nice_home.html</id>
-    <updated>2009-10-11T00:00:00Z</updated>
-    <published>2009-10-11T00:00:00Z</published>
-    <link href="https://jnrowe.github.io/articles/tips/Making_a_nice_home.html" />
-    <author>
-      <name>James Rowe</name>
-    </author>
-    <content type="html">&lt;div class=&quot;section&quot; id=&quot;making-a-nice-home&quot;&gt;
-
-&lt;p&gt;Back in &lt;span class=&quot;xref std std-ref&quot;&gt;Kick_me_birthday_reminders&lt;/span&gt; I said:&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;div&gt;&lt;p&gt;You could trigger a rebuild in your &lt;code class=&quot;file docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;~/.bashrc&lt;/span&gt;&lt;/code&gt; before you call
-&lt;strong class=&quot;command&quot;&gt;rem&lt;/strong&gt; to see the reminders, so they are always up to date at
-login. Or, you could be like me and have a post commit hook for &lt;a class=&quot;reference external&quot; href=&quot;http://www.git-scm.com/&quot;&gt;git&lt;/a&gt; to
-manage this… because you are keeping your home directory version controlled
-as a sanity measure I hope!&lt;/p&gt;
-&lt;/div&gt;&lt;/blockquote&gt;
-&lt;p&gt;Today, Stuart Grady asked me in a private mail:&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;div&gt;&lt;p&gt;Okay, at which point is the “Tip of the Day” thingy going to be about using
-hooks and &lt;a class=&quot;reference external&quot; href=&quot;http://www.gnu.org/software/make/make.html&quot;&gt;make&lt;/a&gt; in &lt;span class=&quot;target&quot; id=&quot;index-0&quot;&gt;&lt;/span&gt;&lt;code class=&quot;xref std std-envvar docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;$HOME&lt;/span&gt;&lt;/code&gt;?&lt;/p&gt;
-&lt;/div&gt;&lt;/blockquote&gt;
-&lt;p&gt;I’ll take the hint and look at &lt;strong class=&quot;command&quot;&gt;make&lt;/strong&gt;.  For the purposes of this post
-we’re going to pretend we haven’t read &lt;a class=&quot;reference external&quot; href=&quot;http://miller.emu.id.au/pmiller/books/rmch/&quot;&gt;recursive make considered harmful&lt;/a&gt; as
-I don’t heed its advice for the &lt;code class=&quot;file docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;Makefile&lt;/span&gt;&lt;/code&gt; I have in my home directory.
-That said, let’s have a look at what can be found in my current top-level
-&lt;code class=&quot;file docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;Makefile&lt;/span&gt;&lt;/code&gt;.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class=&quot;section&quot; id=&quot;permissions&quot;&gt;
-&lt;h1&gt;Permissions&lt;/h1&gt;
-&lt;p&gt;I keep my home directory version controlled with &lt;strong class=&quot;command&quot;&gt;git&lt;/strong&gt;, but
-&lt;strong class=&quot;command&quot;&gt;git&lt;/strong&gt; out of the box doesn’t maintain permissions on files(beyond the
-executable bit anyway).  There are plenty of ways around this including using
-external tools such as &lt;a class=&quot;reference external&quot; href=&quot;http://joey.kitenet.net/code/etckeeper/&quot;&gt;etckeeper&lt;/a&gt;, but I prefer the simple approach of setting
-the permissions when they’re needed:&lt;/p&gt;
-&lt;div class=&quot;highlight-make notranslate&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;PRIVATE_FILES&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;:=&lt;/span&gt; .abook/addressbook .gnupg/secring.gpg .mailfilter .msmtprc &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
-        .ssh/id_rsa
-&lt;span class=&quot;nv&quot;&gt;PRIVATE_DIRS&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;:=&lt;/span&gt; .gnupg
-
-&lt;span class=&quot;nf&quot;&gt;fix-perms&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;$(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;PRIVATE_FILES&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;$(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;PRIVATE_DIRS&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;)&lt;/span&gt;
-        &lt;span class=&quot;k&quot;&gt;$(&lt;/span&gt;info - Removing extra &lt;span class=&quot;nb&quot;&gt;read&lt;/span&gt; permissions from private files and directories&lt;span class=&quot;k&quot;&gt;)&lt;/span&gt;
-        chmod &lt;span class=&quot;m&quot;&gt;600&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;$(&lt;/span&gt;PRIVATE_FILES&lt;span class=&quot;k&quot;&gt;)&lt;/span&gt;
-        chmod &lt;span class=&quot;m&quot;&gt;700&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;$(&lt;/span&gt;PRIVATE_DIRS&lt;span class=&quot;k&quot;&gt;)&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-&lt;/div&gt;
-&lt;p&gt;If this rule is called after a &lt;strong class=&quot;command&quot;&gt;git pull&lt;/strong&gt; is issued then the files
-always have the correct permissions.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class=&quot;section&quot; id=&quot;vim-hacks&quot;&gt;
-&lt;h1&gt;vim hacks&lt;/h1&gt;
-&lt;p&gt;I also call &lt;strong class=&quot;command&quot;&gt;make&lt;/strong&gt; in some subdirectories, the most interesting one is
-probably for &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;.vim&lt;/span&gt;&lt;/code&gt;:&lt;/p&gt;
-&lt;div class=&quot;highlight-make notranslate&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;CTAGS&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;:=&lt;/span&gt; exuberant-ctags
-
-&lt;span class=&quot;nv&quot;&gt;TARGETS&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;:=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;$(&lt;/span&gt;patsubst /usr/lib/%, tags/%.ctags, &lt;span class=&quot;k&quot;&gt;$(&lt;/span&gt;wildcard /usr/lib/python*&lt;span class=&quot;k&quot;&gt;))&lt;/span&gt; &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
-    doc/tags
-
-&lt;span class=&quot;nf&quot;&gt;.PHONY&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;clean&lt;/span&gt;
-
-&lt;span class=&quot;nf&quot;&gt;all&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;$(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;TARGETS&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;)&lt;/span&gt;
-
-&lt;span class=&quot;nf&quot;&gt;$(TARGETS)&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;tags&lt;/span&gt;/%.&lt;span class=&quot;n&quot;&gt;ctags&lt;/span&gt;: /&lt;span class=&quot;n&quot;&gt;usr&lt;/span&gt;/&lt;span class=&quot;n&quot;&gt;lib&lt;/span&gt;/%
-    &lt;span class=&quot;k&quot;&gt;$(&lt;/span&gt;CTAGS&lt;span class=&quot;k&quot;&gt;)&lt;/span&gt; --exclude&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;test_* --exclude&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;tests.py --exclude&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;test.py &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
-        --exclude&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;*/test/* --exclude&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;*/tests/* --languages&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;python &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
-        -R -f &lt;span class=&quot;nv&quot;&gt;$@&lt;/span&gt; $&amp;lt;
-
-&lt;span class=&quot;nf&quot;&gt;doc/tags&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;$(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;filter-out&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;doc&lt;/span&gt;/&lt;span class=&quot;nv&quot;&gt;tags&lt;/span&gt;, &lt;span class=&quot;k&quot;&gt;$(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;wildcard&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;doc&lt;/span&gt;/*&lt;span class=&quot;k&quot;&gt;))&lt;/span&gt;
-    vim -X -u NONE -c &lt;span class=&quot;s1&quot;&gt;&amp;#39;helptags $(dir $@)&amp;#39;&lt;/span&gt; -c &lt;span class=&quot;s1&quot;&gt;&amp;#39;:q&amp;#39;&lt;/span&gt; &amp;lt;/dev/null &lt;span class=&quot;p&quot;&gt;&amp;amp;&lt;/span&gt;&amp;gt;/dev/null
-
-&lt;span class=&quot;nf&quot;&gt;clean&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;
-    rm -f &lt;span class=&quot;k&quot;&gt;$(&lt;/span&gt;TARGETS&lt;span class=&quot;k&quot;&gt;)&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-&lt;/div&gt;
-&lt;p&gt;The values in the &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;patsubst&lt;/span&gt;&lt;/code&gt; block of the &lt;strong class=&quot;makevar&quot;&gt;TARGETS&lt;/strong&gt; definition are
-a list of filenames to use for tag storage with &lt;a class=&quot;reference external&quot; href=&quot;http://ctags.sourceforge.net&quot;&gt;ctags&lt;/a&gt;.  The rule creates
-a different &lt;strong class=&quot;command&quot;&gt;ctags&lt;/strong&gt; file for each installed &lt;a class=&quot;reference external&quot; href=&quot;http://www.python.org&quot;&gt;python&lt;/a&gt; version.  In the
-rule to make the &lt;strong class=&quot;command&quot;&gt;ctags&lt;/strong&gt; files we specifically exclude test files as
-they aren’t often useful in &lt;a class=&quot;reference external&quot; href=&quot;http://vimdoc.sourceforge.net/htmldoc/version7.html#new-omni-completion&quot;&gt;omni-completion&lt;/a&gt;, and they significantly pollute
-the tags database for normal use.&lt;/p&gt;
-&lt;p&gt;The final entry in &lt;strong class=&quot;makevar&quot;&gt;TARGETS&lt;/strong&gt; simply updates the tag lists for &lt;a class=&quot;reference external&quot; href=&quot;http://vimdoc.sourceforge.net/htmldoc/various.html#:helptags&quot;&gt;help
-files&lt;/a&gt; installed in &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;~/.vim/doc&lt;/span&gt;&lt;/code&gt;.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class=&quot;section&quot; id=&quot;documentation&quot;&gt;
-&lt;h1&gt;Documentation&lt;/h1&gt;
-&lt;p&gt;The final subdirectory &lt;code class=&quot;file docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;Makefile&lt;/span&gt;&lt;/code&gt; we’re going to look at is actually
-called in a number of different directories to create &lt;abbr title=&quot;HyperText Markup Language&quot;&gt;HTML&lt;/abbr&gt; versions of
-&lt;a class=&quot;reference external&quot; href=&quot;http://docutils.sourceforge.net/rst.html&quot;&gt;reStructuredText&lt;/a&gt; files.&lt;/p&gt;
-&lt;div class=&quot;highlight-make notranslate&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;GENERATED&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;$(&lt;/span&gt;patsubst %.rst, %.html, &lt;span class=&quot;k&quot;&gt;$(&lt;/span&gt;wildcard *.rst&lt;span class=&quot;k&quot;&gt;))&lt;/span&gt;
-
-&lt;span class=&quot;nf&quot;&gt;all&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;$(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;GENERATED&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;)&lt;/span&gt;
-
-&lt;span class=&quot;nf&quot;&gt;$(GENERATED)&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; %.&lt;span class=&quot;n&quot;&gt;html&lt;/span&gt;: %.&lt;span class=&quot;n&quot;&gt;rst&lt;/span&gt;
-        rst2html.py $&amp;lt; &lt;span class=&quot;nv&quot;&gt;$@&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-&lt;/div&gt;
-&lt;p&gt;If we call the above &lt;code class=&quot;file docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;Makefile&lt;/span&gt;&lt;/code&gt; from our &lt;strong class=&quot;command&quot;&gt;git&lt;/strong&gt; hooks after any
-pull or merge we always have up to date processed versions of documents.  It is
-like having a personal web viewable wiki, but without having to use an awful
-markup language.&lt;/p&gt;
-&lt;/div&gt;
-</content>
-  </entry>
-  <entry xml:base="https://jnrowe.github.io/blog/tag/vcs/atom.xml">
-    <title type="text">Introduction to RCS</title>
+  <id>https://jnrowe.github.io/</id>
+  <title>JNRowe - Posts tagged vcs</title>
+  <updated>2021-03-21T11:06:01.242714+00:00</updated>
+  <link href="https://jnrowe.github.io/"/>
+  <link href="https://jnrowe.github.io/blog/tag/vcs/atom.xml"/>
+  <generator uri="https://ablog.readthedocs.org" version="0.10.12">ABlog</generator>
+  <subtitle>Ramblings of a tired mind</subtitle>
+  <entry>
     <id>https://jnrowe.github.io/articles/rcs.html</id>
-    <updated>2003-09-05T00:00:00Z</updated>
-    <published>2003-09-05T00:00:00Z</published>
-    <link href="https://jnrowe.github.io/articles/rcs.html" />
+    <title>Introduction to RCS</title>
+    <updated>2003-09-05T00:00:00+01:00</updated>
     <author>
       <name>James Rowe</name>
     </author>
-    <content type="html">&lt;div class=&quot;section&quot; id=&quot;introduction-to-rcs&quot;&gt;
+    <content type="html">&lt;div class="section" id="introduction-to-rcs"&gt;
 
-&lt;div class=&quot;admonition warning&quot;&gt;
-&lt;p class=&quot;admonition-title&quot;&gt;Warning&lt;/p&gt;
+&lt;div class="admonition warning"&gt;
+&lt;p class="admonition-title"&gt;Warning&lt;/p&gt;
 &lt;p&gt;I’ve resurrected this text from my old UKFSN site because a couple of
-people asked me to, but I wouldn’t recommend using &lt;abbr title=&quot;GNU Revision Control System&quot;&gt;RCS&lt;/abbr&gt; to anyone at this
-point.  It is mainly to help people who need to understand &lt;abbr title=&quot;GNU Revision Control System&quot;&gt;RCS&lt;/abbr&gt; because
+people asked me to, but I wouldn’t recommend using &lt;abbr title="GNU Revision Control System"&gt;RCS&lt;/abbr&gt; to anyone at this
+point.  It is mainly to help people who need to understand &lt;abbr title="GNU Revision Control System"&gt;RCS&lt;/abbr&gt; because
 they have no choice, for example Gentoo users who are stuck with
-&lt;strong class=&quot;command&quot;&gt;dispatch-conf&lt;/strong&gt; (or so my mails tell me).&lt;/p&gt;
+&lt;strong class="command"&gt;dispatch-conf&lt;/strong&gt; (or so my mails tell me).&lt;/p&gt;
 &lt;/div&gt;
-&lt;div class=&quot;section&quot; id=&quot;abstract&quot;&gt;
+&lt;div class="section" id="abstract"&gt;
 &lt;h2&gt;Abstract&lt;/h2&gt;
-&lt;p&gt;This introduction is aimed at people with no experience of a &lt;abbr title=&quot;Version Control System&quot;&gt;VCS&lt;/abbr&gt; at all, but
+&lt;p&gt;This introduction is aimed at people with no experience of a &lt;abbr title="Version Control System"&gt;VCS&lt;/abbr&gt; at all, but
 who do have a need for an easy to use and non-intrusive way to backup, store
 and annotate configuration files or 5000 file C source trees.  This text is by
-no means an in-depth &lt;abbr title=&quot;GNU Revision Control System&quot;&gt;RCS&lt;/abbr&gt; usage manual, it is a short and fast way to get
-working with &lt;abbr title=&quot;GNU Revision Control System&quot;&gt;RCS&lt;/abbr&gt;.&lt;/p&gt;
-&lt;p&gt;&lt;abbr title=&quot;GNU Revision Control System&quot;&gt;RCS&lt;/abbr&gt; is great for small projects or managing the wealth of configuration files
-in &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;/etc&lt;/span&gt;&lt;/code&gt;.  It provides a way to reduce the need for file backups(without
+no means an in-depth &lt;abbr title="GNU Revision Control System"&gt;RCS&lt;/abbr&gt; usage manual, it is a short and fast way to get
+working with &lt;abbr title="GNU Revision Control System"&gt;RCS&lt;/abbr&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;abbr title="GNU Revision Control System"&gt;RCS&lt;/abbr&gt; is great for small projects or managing the wealth of configuration files
+in &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;/etc&lt;/span&gt;&lt;/code&gt;.  It provides a way to reduce the need for file backups(without
 losing any backup quality or quantity), to annotate changes made to a file, to
 allow other people to work on a file and an easy method to package patch/diff
 files for distribution.&lt;/p&gt;
-&lt;p&gt;If you want more in-depth information about using &lt;abbr title=&quot;GNU Revision Control System&quot;&gt;RCS&lt;/abbr&gt;, or when you find you
-need more functionality from &lt;abbr title=&quot;GNU Revision Control System&quot;&gt;RCS&lt;/abbr&gt;, there is a HOW-TO at &lt;a class=&quot;reference external&quot; href=&quot;http://www.tldp.org&quot;&gt;The Linux
-Documentation Project&lt;/a&gt; (&lt;a class=&quot;reference external&quot; href=&quot;http://tldp.org/HOWTO/RCS.html&quot;&gt;direct link&lt;/a&gt;) and fantastic documentation is
-provided with the &lt;abbr title=&quot;GNU Revision Control System&quot;&gt;RCS&lt;/abbr&gt; package.&lt;/p&gt;
+&lt;p&gt;If you want more in-depth information about using &lt;abbr title="GNU Revision Control System"&gt;RCS&lt;/abbr&gt;, or when you find you
+need more functionality from &lt;abbr title="GNU Revision Control System"&gt;RCS&lt;/abbr&gt;, there is a HOW-TO at &lt;a class="reference external" href="http://www.tldp.org"&gt;The Linux
+Documentation Project&lt;/a&gt; (&lt;a class="reference external" href="http://tldp.org/HOWTO/RCS.html"&gt;direct link&lt;/a&gt;) and fantastic documentation is
+provided with the &lt;abbr title="GNU Revision Control System"&gt;RCS&lt;/abbr&gt; package.&lt;/p&gt;
 &lt;/div&gt;
-&lt;div class=&quot;section&quot; id=&quot;diving-in&quot;&gt;
+&lt;div class="section" id="diving-in"&gt;
 &lt;h2&gt;Diving in&lt;/h2&gt;
-&lt;p&gt;&lt;abbr title=&quot;GNU Revision Control System&quot;&gt;RCS&lt;/abbr&gt; is that simple to use that I will jump straight in to an example.&lt;/p&gt;
-&lt;div class=&quot;highlight-console notranslate&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&quot;gp&quot;&gt;$&lt;/span&gt; mkdir RCS
+&lt;p&gt;&lt;abbr title="GNU Revision Control System"&gt;RCS&lt;/abbr&gt; is that simple to use that I will jump straight in to an example.&lt;/p&gt;
+&lt;div class="highlight-console notranslate"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="gp"&gt;$&lt;/span&gt; mkdir RCS
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
-&lt;p&gt;The &lt;abbr title=&quot;GNU Revision Control System&quot;&gt;RCS&lt;/abbr&gt; directory holds the &lt;abbr title=&quot;GNU Revision Control System&quot;&gt;RCS&lt;/abbr&gt; control files, they contain all the data
-&lt;abbr title=&quot;GNU Revision Control System&quot;&gt;RCS&lt;/abbr&gt; needs to work.&lt;/p&gt;
-&lt;div class=&quot;highlight-console notranslate&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&quot;gp&quot;&gt;$&lt;/span&gt; cat &amp;gt;myscript.sh &amp;lt;&amp;lt;EOF
-&lt;span class=&quot;gp&quot;&gt;#&lt;/span&gt;! /bin/sh
-&lt;span class=&quot;gp&quot;&gt;#&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$Id&lt;/span&gt;$
-&lt;span class=&quot;go&quot;&gt;echo &amp;quot;Hello World!&amp;quot;&lt;/span&gt;
-&lt;span class=&quot;go&quot;&gt;exit 0&lt;/span&gt;
-&lt;span class=&quot;go&quot;&gt;EOF&lt;/span&gt;
+&lt;p&gt;The &lt;abbr title="GNU Revision Control System"&gt;RCS&lt;/abbr&gt; directory holds the &lt;abbr title="GNU Revision Control System"&gt;RCS&lt;/abbr&gt; control files, they contain all the data
+&lt;abbr title="GNU Revision Control System"&gt;RCS&lt;/abbr&gt; needs to work.&lt;/p&gt;
+&lt;div class="highlight-console notranslate"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="gp"&gt;$&lt;/span&gt; cat &amp;gt;myscript.sh &amp;lt;&amp;lt;EOF
+&lt;span class="gp"&gt;#&lt;/span&gt;! /bin/sh
+&lt;span class="gp"&gt;#&lt;/span&gt; &lt;span class="nv"&gt;$Id&lt;/span&gt;$
+&lt;span class="go"&gt;echo &amp;quot;Hello World!&amp;quot;&lt;/span&gt;
+&lt;span class="go"&gt;exit 0&lt;/span&gt;
+&lt;span class="go"&gt;EOF&lt;/span&gt;
 
-&lt;span class=&quot;gp&quot;&gt;$&lt;/span&gt; ci myscript.sh
-&lt;span class=&quot;go&quot;&gt;RCS/myscript.sh,v  &amp;lt;--  myscript.sh&lt;/span&gt;
-&lt;span class=&quot;go&quot;&gt;enter description, terminated with single &amp;#39;.&amp;#39; or end of file:&lt;/span&gt;
-&lt;span class=&quot;go&quot;&gt;NOTE: This is NOT the log message!&lt;/span&gt;
-&lt;span class=&quot;gp&quot;&gt;&amp;gt;&lt;/span&gt;&amp;gt; /bin/sh &lt;span class=&quot;s2&quot;&gt;&amp;quot;Hello World!&amp;quot;&lt;/span&gt; example
-&lt;span class=&quot;gp&quot;&gt;&amp;gt;&lt;/span&gt;&amp;gt; .
-&lt;span class=&quot;go&quot;&gt;initial revision: 1.1&lt;/span&gt;
-&lt;span class=&quot;go&quot;&gt;done&lt;/span&gt;
+&lt;span class="gp"&gt;$&lt;/span&gt; ci myscript.sh
+&lt;span class="go"&gt;RCS/myscript.sh,v  &amp;lt;--  myscript.sh&lt;/span&gt;
+&lt;span class="go"&gt;enter description, terminated with single &amp;#39;.&amp;#39; or end of file:&lt;/span&gt;
+&lt;span class="go"&gt;NOTE: This is NOT the log message!&lt;/span&gt;
+&lt;span class="gp"&gt;&amp;gt;&lt;/span&gt;&amp;gt; /bin/sh &lt;span class="s2"&gt;&amp;quot;Hello World!&amp;quot;&lt;/span&gt; example
+&lt;span class="gp"&gt;&amp;gt;&lt;/span&gt;&amp;gt; .
+&lt;span class="go"&gt;initial revision: 1.1&lt;/span&gt;
+&lt;span class="go"&gt;done&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
-&lt;p&gt;The command &lt;strong class=&quot;command&quot;&gt;ci&lt;/strong&gt; (check in) is where the magic of &lt;abbr title=&quot;GNU Revision Control System&quot;&gt;RCS&lt;/abbr&gt; takes place.
-We have decided we want to make a snapshot of our file, &lt;code class=&quot;file docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;myscript.sh&lt;/span&gt;&lt;/code&gt;,
-and use &lt;strong class=&quot;command&quot;&gt;ci&lt;/strong&gt; to add the file to revision control.&lt;/p&gt;
-&lt;div class=&quot;highlight-console notranslate&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&quot;gp&quot;&gt;$&lt;/span&gt; ls
-&lt;span class=&quot;go&quot;&gt;RCS&lt;/span&gt;
+&lt;p&gt;The command &lt;strong class="command"&gt;ci&lt;/strong&gt; (check in) is where the magic of &lt;abbr title="GNU Revision Control System"&gt;RCS&lt;/abbr&gt; takes place.
+We have decided we want to make a snapshot of our file, &lt;code class="file docutils literal notranslate"&gt;&lt;span class="pre"&gt;myscript.sh&lt;/span&gt;&lt;/code&gt;,
+and use &lt;strong class="command"&gt;ci&lt;/strong&gt; to add the file to revision control.&lt;/p&gt;
+&lt;div class="highlight-console notranslate"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="gp"&gt;$&lt;/span&gt; ls
+&lt;span class="go"&gt;RCS&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
 &lt;p&gt;The file we checked in appears to have disappeared, obviously it hasn’t but the
-default behaviour of &lt;abbr title=&quot;GNU Revision Control System&quot;&gt;RCS&lt;/abbr&gt; is to remove the file we check in.  You can choose
-to keep a working copy with &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;ci&lt;/span&gt; &lt;span class=&quot;pre&quot;&gt;-u&lt;/span&gt;&lt;/code&gt; or &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;ci&lt;/span&gt; &lt;span class=&quot;pre&quot;&gt;-l&lt;/span&gt;&lt;/code&gt; (covered below).&lt;/p&gt;
-&lt;div class=&quot;highlight-console notranslate&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&quot;gp&quot;&gt;$&lt;/span&gt; ls ./RCS/
-&lt;span class=&quot;go&quot;&gt;myscript.sh,v&lt;/span&gt;
+default behaviour of &lt;abbr title="GNU Revision Control System"&gt;RCS&lt;/abbr&gt; is to remove the file we check in.  You can choose
+to keep a working copy with &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;ci&lt;/span&gt; &lt;span class="pre"&gt;-u&lt;/span&gt;&lt;/code&gt; or &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;ci&lt;/span&gt; &lt;span class="pre"&gt;-l&lt;/span&gt;&lt;/code&gt; (covered below).&lt;/p&gt;
+&lt;div class="highlight-console notranslate"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="gp"&gt;$&lt;/span&gt; ls ./RCS/
+&lt;span class="go"&gt;myscript.sh,v&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
-&lt;p&gt;In the &lt;abbr title=&quot;GNU Revision Control System&quot;&gt;RCS&lt;/abbr&gt; directory a file now exists with the same name as our script plus
-a &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;,v&lt;/span&gt;&lt;/code&gt;.  This is the file &lt;abbr title=&quot;GNU Revision Control System&quot;&gt;RCS&lt;/abbr&gt; uses to store all of its data in.&lt;/p&gt;
-&lt;div class=&quot;highlight-console notranslate&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&quot;gp&quot;&gt;$&lt;/span&gt; co myscript.sh
-&lt;span class=&quot;go&quot;&gt;RCS/myscript.sh,v  --&amp;gt;  myscript.sh&lt;/span&gt;
-&lt;span class=&quot;go&quot;&gt;revision 1.1&lt;/span&gt;
-&lt;span class=&quot;go&quot;&gt;done&lt;/span&gt;
-&lt;span class=&quot;gp&quot;&gt;$&lt;/span&gt; ls -l ./
-&lt;span class=&quot;go&quot;&gt;drwxr-xr-x    2 james    james        1024 Nov  4 11:29 RCS&lt;/span&gt;
-&lt;span class=&quot;go&quot;&gt;-r--r--r--    1 james    james          95 Nov  4 11:29 myscript.sh&lt;/span&gt;
+&lt;p&gt;In the &lt;abbr title="GNU Revision Control System"&gt;RCS&lt;/abbr&gt; directory a file now exists with the same name as our script plus
+a &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;,v&lt;/span&gt;&lt;/code&gt;.  This is the file &lt;abbr title="GNU Revision Control System"&gt;RCS&lt;/abbr&gt; uses to store all of its data in.&lt;/p&gt;
+&lt;div class="highlight-console notranslate"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="gp"&gt;$&lt;/span&gt; co myscript.sh
+&lt;span class="go"&gt;RCS/myscript.sh,v  --&amp;gt;  myscript.sh&lt;/span&gt;
+&lt;span class="go"&gt;revision 1.1&lt;/span&gt;
+&lt;span class="go"&gt;done&lt;/span&gt;
+&lt;span class="gp"&gt;$&lt;/span&gt; ls -l ./
+&lt;span class="go"&gt;drwxr-xr-x    2 james    james        1024 Nov  4 11:29 RCS&lt;/span&gt;
+&lt;span class="go"&gt;-r--r--r--    1 james    james          95 Nov  4 11:29 myscript.sh&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
-&lt;p&gt;The command &lt;strong class=&quot;command&quot;&gt;co&lt;/strong&gt; (check out) pulls a current version(by default) from
-the &lt;abbr title=&quot;GNU Revision Control System&quot;&gt;RCS&lt;/abbr&gt; repository and places it in the current directory.  Default behaviour
+&lt;p&gt;The command &lt;strong class="command"&gt;co&lt;/strong&gt; (check out) pulls a current version(by default) from
+the &lt;abbr title="GNU Revision Control System"&gt;RCS&lt;/abbr&gt; repository and places it in the current directory.  Default behaviour
 is to check out a read-only version of the file.&lt;/p&gt;
-&lt;div class=&quot;highlight-console notranslate&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&quot;gp&quot;&gt;$&lt;/span&gt; co -l myscript.sh
-&lt;span class=&quot;go&quot;&gt;./RCS/myscript.sh,v  --&amp;gt;  ./myscript.sh&lt;/span&gt;
-&lt;span class=&quot;go&quot;&gt;revision 1.1 (locked)&lt;/span&gt;
-&lt;span class=&quot;go&quot;&gt;done&lt;/span&gt;
+&lt;div class="highlight-console notranslate"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="gp"&gt;$&lt;/span&gt; co -l myscript.sh
+&lt;span class="go"&gt;./RCS/myscript.sh,v  --&amp;gt;  ./myscript.sh&lt;/span&gt;
+&lt;span class="go"&gt;revision 1.1 (locked)&lt;/span&gt;
+&lt;span class="go"&gt;done&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
-&lt;p&gt;The &lt;a class=&quot;reference internal&quot; href=&quot;../../articles/rcs.html#cmdoption-co-l&quot;&gt;&lt;code class=&quot;xref std std-option docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;-l&lt;/span&gt;&lt;/code&gt;&lt;/a&gt; option to &lt;strong class=&quot;command&quot;&gt;co&lt;/strong&gt; (and also &lt;strong class=&quot;command&quot;&gt;ci&lt;/strong&gt; ) is
+&lt;p&gt;The &lt;a class="reference internal" href="../../articles/rcs.html#cmdoption-co-l"&gt;&lt;code class="xref std std-option docutils literal notranslate"&gt;&lt;span class="pre"&gt;-l&lt;/span&gt;&lt;/code&gt;&lt;/a&gt; option to &lt;strong class="command"&gt;co&lt;/strong&gt; (and also &lt;strong class="command"&gt;ci&lt;/strong&gt; ) is
 used to lock the file.  This file now becomes a working file, which is
 writable, and it also means other people can’t edit it until you have released
 it or checked it in again.&lt;/p&gt;
-&lt;p&gt;Blindly using the &lt;a class=&quot;reference internal&quot; href=&quot;../../articles/rcs.html#cmdoption-co-l&quot;&gt;&lt;code class=&quot;xref std std-option docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;-l&lt;/span&gt;&lt;/code&gt;&lt;/a&gt; option to &lt;strong class=&quot;command&quot;&gt;ci&lt;/strong&gt;/&lt;strong class=&quot;command&quot;&gt;co&lt;/strong&gt; is
+&lt;p&gt;Blindly using the &lt;a class="reference internal" href="../../articles/rcs.html#cmdoption-co-l"&gt;&lt;code class="xref std std-option docutils literal notranslate"&gt;&lt;span class="pre"&gt;-l&lt;/span&gt;&lt;/code&gt;&lt;/a&gt; option to &lt;strong class="command"&gt;ci&lt;/strong&gt;/&lt;strong class="command"&gt;co&lt;/strong&gt; is
 not advisable, you should get in to the habit now of only locking files you are
-working on.  &lt;abbr title=&quot;GNU Revision Control System&quot;&gt;RCS&lt;/abbr&gt; uses locking to block other users from checking in changes
-and will cause much grief if you use &lt;abbr title=&quot;GNU Revision Control System&quot;&gt;RCS&lt;/abbr&gt; on multi-user projects.  It is much
-better to use &lt;a class=&quot;reference internal&quot; href=&quot;../../articles/rcs.html#cmdoption-ci-u&quot;&gt;&lt;code class=&quot;xref std std-option docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;-u&lt;/span&gt;&lt;/code&gt;&lt;/a&gt; (or unlocked) when you &lt;strong class=&quot;command&quot;&gt;ci&lt;/strong&gt; in new
+working on.  &lt;abbr title="GNU Revision Control System"&gt;RCS&lt;/abbr&gt; uses locking to block other users from checking in changes
+and will cause much grief if you use &lt;abbr title="GNU Revision Control System"&gt;RCS&lt;/abbr&gt; on multi-user projects.  It is much
+better to use &lt;a class="reference internal" href="../../articles/rcs.html#cmdoption-ci-u"&gt;&lt;code class="xref std std-option docutils literal notranslate"&gt;&lt;span class="pre"&gt;-u&lt;/span&gt;&lt;/code&gt;&lt;/a&gt; (or unlocked) when you &lt;strong class="command"&gt;ci&lt;/strong&gt; in new
 files/changes this way you will have access to a read-only version of the file
 and it will allow other users to edit it.&lt;/p&gt;
-&lt;div class=&quot;highlight-console notranslate&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&quot;gp&quot;&gt;$&lt;/span&gt; cat myscript.sh
-&lt;span class=&quot;gp&quot;&gt;#&lt;/span&gt;! /bin/sh
-&lt;span class=&quot;gp&quot;&gt;#&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$Id&lt;/span&gt;: myscript.sh,v &lt;span class=&quot;m&quot;&gt;1&lt;/span&gt;.1 &lt;span class=&quot;m&quot;&gt;2002&lt;/span&gt;/11/04 &lt;span class=&quot;m&quot;&gt;11&lt;/span&gt;:29:48 james Exp james $
-&lt;span class=&quot;go&quot;&gt;echo &amp;quot;Hello World!&amp;quot;&lt;/span&gt;
-&lt;span class=&quot;go&quot;&gt;exit 0&lt;/span&gt;
+&lt;div class="highlight-console notranslate"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="gp"&gt;$&lt;/span&gt; cat myscript.sh
+&lt;span class="gp"&gt;#&lt;/span&gt;! /bin/sh
+&lt;span class="gp"&gt;#&lt;/span&gt; &lt;span class="nv"&gt;$Id&lt;/span&gt;: myscript.sh,v &lt;span class="m"&gt;1&lt;/span&gt;.1 &lt;span class="m"&gt;2002&lt;/span&gt;/11/04 &lt;span class="m"&gt;11&lt;/span&gt;:29:48 james Exp james $
+&lt;span class="go"&gt;echo &amp;quot;Hello World!&amp;quot;&lt;/span&gt;
+&lt;span class="go"&gt;exit 0&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
-&lt;p&gt;If you remember from the original file it contained &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;$Id$&lt;/span&gt;&lt;/code&gt; on a commented
-line, this &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;$Id$&lt;/span&gt;&lt;/code&gt; is a keyword used by &lt;abbr title=&quot;GNU Revision Control System&quot;&gt;RCS&lt;/abbr&gt; that is substituted with
-information about the current file.  In this example the tag &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;$Id$&lt;/span&gt;&lt;/code&gt; is
+&lt;p&gt;If you remember from the original file it contained &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;$Id$&lt;/span&gt;&lt;/code&gt; on a commented
+line, this &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;$Id$&lt;/span&gt;&lt;/code&gt; is a keyword used by &lt;abbr title="GNU Revision Control System"&gt;RCS&lt;/abbr&gt; that is substituted with
+information about the current file.  In this example the tag &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;$Id$&lt;/span&gt;&lt;/code&gt; is
 expanded to read the filename, the revision number, the date and time of the
 check in, the person who checked in the file, the state of the file and the
 owner of the lock(if any).&lt;/p&gt;
 &lt;p&gt;There are many keywords available, including:&lt;/p&gt;
-&lt;dl class=&quot;simple&quot;&gt;
-&lt;dt&gt;&lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;$Author$&lt;/span&gt;&lt;/code&gt;&lt;/dt&gt;&lt;dd&gt;&lt;p&gt;The name of the person who did the check in&lt;/p&gt;
+&lt;dl class="simple"&gt;
+&lt;dt&gt;&lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;$Author$&lt;/span&gt;&lt;/code&gt;&lt;/dt&gt;&lt;dd&gt;&lt;p&gt;The name of the person who did the check in&lt;/p&gt;
 &lt;/dd&gt;
-&lt;dt&gt;&lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;$Header$&lt;/span&gt;&lt;/code&gt;&lt;/dt&gt;&lt;dd&gt;&lt;p&gt;The same as &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;$Id$&lt;/span&gt;&lt;/code&gt; but including the path for the file&lt;/p&gt;
+&lt;dt&gt;&lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;$Header$&lt;/span&gt;&lt;/code&gt;&lt;/dt&gt;&lt;dd&gt;&lt;p&gt;The same as &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;$Id$&lt;/span&gt;&lt;/code&gt; but including the path for the file&lt;/p&gt;
 &lt;/dd&gt;
-&lt;dt&gt;&lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;$Log$&lt;/span&gt;&lt;/code&gt;&lt;/dt&gt;&lt;dd&gt;&lt;p&gt;A full changelog for file from the &lt;strong class=&quot;command&quot;&gt;ci&lt;/strong&gt; annotations&lt;/p&gt;
+&lt;dt&gt;&lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;$Log$&lt;/span&gt;&lt;/code&gt;&lt;/dt&gt;&lt;dd&gt;&lt;p&gt;A full changelog for file from the &lt;strong class="command"&gt;ci&lt;/strong&gt; annotations&lt;/p&gt;
 &lt;/dd&gt;
 &lt;/dl&gt;
-&lt;p&gt;Although using &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;$Log$&lt;/span&gt;&lt;/code&gt; seems like a good idea it does mean the size of the
+&lt;p&gt;Although using &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;$Log$&lt;/span&gt;&lt;/code&gt; seems like a good idea it does mean the size of the
 file is increased a huge amount.  All the changelog data is available with the
-&lt;strong class=&quot;command&quot;&gt;rlog&lt;/strong&gt; command at any time and without filling the source file.&lt;/p&gt;
-&lt;div class=&quot;highlight-console notranslate&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&quot;gp&quot;&gt;$&lt;/span&gt; sed -ie &lt;span class=&quot;s1&quot;&gt;&amp;#39;s/World/${USER}/&amp;#39;&lt;/span&gt; myscript.sh
-&lt;span class=&quot;gp&quot;&gt;$&lt;/span&gt; cat myscript.sh
-&lt;span class=&quot;gp&quot;&gt;#&lt;/span&gt;! /bin/sh
-&lt;span class=&quot;gp&quot;&gt;#&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$Id&lt;/span&gt;: myscript.sh,v &lt;span class=&quot;m&quot;&gt;1&lt;/span&gt;.1 &lt;span class=&quot;m&quot;&gt;2002&lt;/span&gt;/11/04 &lt;span class=&quot;m&quot;&gt;11&lt;/span&gt;:29:48 james Exp james $
-&lt;span class=&quot;go&quot;&gt;echo &amp;quot;Hello ${USER}!&amp;quot;&lt;/span&gt;
-&lt;span class=&quot;go&quot;&gt;exit 0&lt;/span&gt;
-&lt;span class=&quot;gp&quot;&gt;$&lt;/span&gt; sh ./myscript.sh
-&lt;span class=&quot;go&quot;&gt;Hello james!&lt;/span&gt;
+&lt;strong class="command"&gt;rlog&lt;/strong&gt; command at any time and without filling the source file.&lt;/p&gt;
+&lt;div class="highlight-console notranslate"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="gp"&gt;$&lt;/span&gt; sed -ie &lt;span class="s1"&gt;&amp;#39;s/World/${USER}/&amp;#39;&lt;/span&gt; myscript.sh
+&lt;span class="gp"&gt;$&lt;/span&gt; cat myscript.sh
+&lt;span class="gp"&gt;#&lt;/span&gt;! /bin/sh
+&lt;span class="gp"&gt;#&lt;/span&gt; &lt;span class="nv"&gt;$Id&lt;/span&gt;: myscript.sh,v &lt;span class="m"&gt;1&lt;/span&gt;.1 &lt;span class="m"&gt;2002&lt;/span&gt;/11/04 &lt;span class="m"&gt;11&lt;/span&gt;:29:48 james Exp james $
+&lt;span class="go"&gt;echo &amp;quot;Hello ${USER}!&amp;quot;&lt;/span&gt;
+&lt;span class="go"&gt;exit 0&lt;/span&gt;
+&lt;span class="gp"&gt;$&lt;/span&gt; sh ./myscript.sh
+&lt;span class="go"&gt;Hello james!&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
 &lt;p&gt;So we have decided to make some changes to the file, and then tested it works.&lt;/p&gt;
-&lt;div class=&quot;highlight-console notranslate&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&quot;gp&quot;&gt;$&lt;/span&gt; rcsdiff myscript.sh
-&lt;span class=&quot;go&quot;&gt;===================================================================&lt;/span&gt;
-&lt;span class=&quot;go&quot;&gt;RCS file: RCS/myscript.sh,v&lt;/span&gt;
-&lt;span class=&quot;go&quot;&gt;retrieving revision 1.1&lt;/span&gt;
-&lt;span class=&quot;go&quot;&gt;diff -r1.1 myscript.sh&lt;/span&gt;
-&lt;span class=&quot;go&quot;&gt;3c3&lt;/span&gt;
-&lt;span class=&quot;go&quot;&gt;&amp;lt; echo &amp;quot;Hello World!&amp;quot;&lt;/span&gt;
-&lt;span class=&quot;go&quot;&gt;---&lt;/span&gt;
-&lt;span class=&quot;gp&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;Hello &lt;/span&gt;&lt;span class=&quot;si&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;USER&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;!&amp;quot;&lt;/span&gt;
-&lt;span class=&quot;go&quot;&gt;TEST$  rcsdiff -u myscript.sh&lt;/span&gt;
-&lt;span class=&quot;go&quot;&gt;===================================================================&lt;/span&gt;
-&lt;span class=&quot;go&quot;&gt;RCS file: RCS/myscript.sh,v&lt;/span&gt;
-&lt;span class=&quot;go&quot;&gt;retrieving revision 1.1&lt;/span&gt;
-&lt;span class=&quot;go&quot;&gt;diff -u -r1.1 myscript.sh&lt;/span&gt;
-&lt;span class=&quot;go&quot;&gt;--- myscript.sh 2002/11/04 11:57:51     1.1&lt;/span&gt;
-&lt;span class=&quot;go&quot;&gt;+++ myscript.sh 2002/11/05 03:52:14&lt;/span&gt;
-&lt;span class=&quot;go&quot;&gt;@@ -1,4 +1,4 @@&lt;/span&gt;
-&lt;span class=&quot;gp&quot;&gt; #&lt;/span&gt;! /bin/sh
-&lt;span class=&quot;gp&quot;&gt; #&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$Id&lt;/span&gt;: myscript,v &lt;span class=&quot;m&quot;&gt;1&lt;/span&gt;.1 &lt;span class=&quot;m&quot;&gt;2002&lt;/span&gt;/11/04 &lt;span class=&quot;m&quot;&gt;11&lt;/span&gt;:29:48 james Exp james $
-&lt;span class=&quot;go&quot;&gt;-echo &amp;quot;Hello World!&amp;quot;&lt;/span&gt;
-&lt;span class=&quot;go&quot;&gt;+echo &amp;quot;Hello ${USER}!&amp;quot;&lt;/span&gt;
-&lt;span class=&quot;go&quot;&gt; exit 0&lt;/span&gt;
+&lt;div class="highlight-console notranslate"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="gp"&gt;$&lt;/span&gt; rcsdiff myscript.sh
+&lt;span class="go"&gt;===================================================================&lt;/span&gt;
+&lt;span class="go"&gt;RCS file: RCS/myscript.sh,v&lt;/span&gt;
+&lt;span class="go"&gt;retrieving revision 1.1&lt;/span&gt;
+&lt;span class="go"&gt;diff -r1.1 myscript.sh&lt;/span&gt;
+&lt;span class="go"&gt;3c3&lt;/span&gt;
+&lt;span class="go"&gt;&amp;lt; echo &amp;quot;Hello World!&amp;quot;&lt;/span&gt;
+&lt;span class="go"&gt;---&lt;/span&gt;
+&lt;span class="gp"&gt;&amp;gt;&lt;/span&gt; &lt;span class="nb"&gt;echo&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;Hello &lt;/span&gt;&lt;span class="si"&gt;${&lt;/span&gt;&lt;span class="nv"&gt;USER&lt;/span&gt;&lt;span class="si"&gt;}&lt;/span&gt;&lt;span class="s2"&gt;!&amp;quot;&lt;/span&gt;
+&lt;span class="go"&gt;TEST$  rcsdiff -u myscript.sh&lt;/span&gt;
+&lt;span class="go"&gt;===================================================================&lt;/span&gt;
+&lt;span class="go"&gt;RCS file: RCS/myscript.sh,v&lt;/span&gt;
+&lt;span class="go"&gt;retrieving revision 1.1&lt;/span&gt;
+&lt;span class="go"&gt;diff -u -r1.1 myscript.sh&lt;/span&gt;
+&lt;span class="go"&gt;--- myscript.sh 2002/11/04 11:57:51     1.1&lt;/span&gt;
+&lt;span class="go"&gt;+++ myscript.sh 2002/11/05 03:52:14&lt;/span&gt;
+&lt;span class="go"&gt;@@ -1,4 +1,4 @@&lt;/span&gt;
+&lt;span class="gp"&gt; #&lt;/span&gt;! /bin/sh
+&lt;span class="gp"&gt; #&lt;/span&gt; &lt;span class="nv"&gt;$Id&lt;/span&gt;: myscript,v &lt;span class="m"&gt;1&lt;/span&gt;.1 &lt;span class="m"&gt;2002&lt;/span&gt;/11/04 &lt;span class="m"&gt;11&lt;/span&gt;:29:48 james Exp james $
+&lt;span class="go"&gt;-echo &amp;quot;Hello World!&amp;quot;&lt;/span&gt;
+&lt;span class="go"&gt;+echo &amp;quot;Hello ${USER}!&amp;quot;&lt;/span&gt;
+&lt;span class="go"&gt; exit 0&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
-&lt;p&gt;The command &lt;strong class=&quot;command&quot;&gt;rcsdiff&lt;/strong&gt; supplies an easy way to check changes in a file.
-Using &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;rcsdiff&lt;/span&gt; &lt;span class=&quot;pre&quot;&gt;filename&lt;/span&gt;&lt;/code&gt; will output a generic context-free diff(and a small
-&lt;abbr title=&quot;GNU Revision Control System&quot;&gt;RCS&lt;/abbr&gt; header to &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;stderr&lt;/span&gt;&lt;/code&gt; ), or you can pass normal &lt;strong class=&quot;command&quot;&gt;diff&lt;/strong&gt; options to
-&lt;strong class=&quot;command&quot;&gt;rcsdiff&lt;/strong&gt;.  In the second &lt;strong class=&quot;command&quot;&gt;rcsdiff&lt;/strong&gt; command the
-&lt;strong class=&quot;command&quot;&gt;diff&lt;/strong&gt; option &lt;a class=&quot;reference external&quot; href=&quot;https://docs.python.org/3/using/cmdline.html#cmdoption-u&quot; title=&quot;(in Python v3.9)&quot;&gt;&lt;code class=&quot;xref std std-option docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;-u&lt;/span&gt;&lt;/code&gt;&lt;/a&gt; is given to tell &lt;strong class=&quot;command&quot;&gt;rcsdiff&lt;/strong&gt; it
+&lt;p&gt;The command &lt;strong class="command"&gt;rcsdiff&lt;/strong&gt; supplies an easy way to check changes in a file.
+Using &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;rcsdiff&lt;/span&gt; &lt;span class="pre"&gt;filename&lt;/span&gt;&lt;/code&gt; will output a generic context-free diff(and a small
+&lt;abbr title="GNU Revision Control System"&gt;RCS&lt;/abbr&gt; header to &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;stderr&lt;/span&gt;&lt;/code&gt; ), or you can pass normal &lt;strong class="command"&gt;diff&lt;/strong&gt; options to
+&lt;strong class="command"&gt;rcsdiff&lt;/strong&gt;.  In the second &lt;strong class="command"&gt;rcsdiff&lt;/strong&gt; command the
+&lt;strong class="command"&gt;diff&lt;/strong&gt; option &lt;a class="reference external" href="https://docs.python.org/3/using/cmdline.html#cmdoption-u" title="(in Python v3.9)"&gt;&lt;code class="xref std std-option docutils literal notranslate"&gt;&lt;span class="pre"&gt;-u&lt;/span&gt;&lt;/code&gt;&lt;/a&gt; is given to tell &lt;strong class="command"&gt;rcsdiff&lt;/strong&gt; it
 should output a unified context diff.&lt;/p&gt;
-&lt;div class=&quot;highlight-console notranslate&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&quot;gp&quot;&gt;$&lt;/span&gt; ci -u ./myscript.sh
-&lt;span class=&quot;go&quot;&gt;./RCS/myscript.sh,v  &amp;lt;--  ./myscript.sh&lt;/span&gt;
-&lt;span class=&quot;go&quot;&gt;new revision: 1.2; previous revision: 1.1&lt;/span&gt;
-&lt;span class=&quot;go&quot;&gt;enter log message, terminated with single &amp;#39;.&amp;#39; or end of file:&lt;/span&gt;
-&lt;span class=&quot;gp&quot;&gt;&amp;gt;&lt;/span&gt;&amp;gt; Changed World to &lt;span class=&quot;si&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;USER&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;}&lt;/span&gt; to give a more personal feeling
-&lt;span class=&quot;gp&quot;&gt;&amp;gt;&lt;/span&gt;&amp;gt; .
-&lt;span class=&quot;go&quot;&gt;done&lt;/span&gt;
+&lt;div class="highlight-console notranslate"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="gp"&gt;$&lt;/span&gt; ci -u ./myscript.sh
+&lt;span class="go"&gt;./RCS/myscript.sh,v  &amp;lt;--  ./myscript.sh&lt;/span&gt;
+&lt;span class="go"&gt;new revision: 1.2; previous revision: 1.1&lt;/span&gt;
+&lt;span class="go"&gt;enter log message, terminated with single &amp;#39;.&amp;#39; or end of file:&lt;/span&gt;
+&lt;span class="gp"&gt;&amp;gt;&lt;/span&gt;&amp;gt; Changed World to &lt;span class="si"&gt;${&lt;/span&gt;&lt;span class="nv"&gt;USER&lt;/span&gt;&lt;span class="si"&gt;}&lt;/span&gt; to give a more personal feeling
+&lt;span class="gp"&gt;&amp;gt;&lt;/span&gt;&amp;gt; .
+&lt;span class="go"&gt;done&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
 &lt;p&gt;So now we have seen the changes made to the file, and are happy with them, we
-check in our new revision.  &lt;abbr title=&quot;GNU Revision Control System&quot;&gt;RCS&lt;/abbr&gt; asks for a log entry, this will make our
+check in our new revision.  &lt;abbr title="GNU Revision Control System"&gt;RCS&lt;/abbr&gt; asks for a log entry, this will make our
 changelog output later.  You can cancel the check in using the normal
-&lt;kbd class=&quot;kbd docutils literal notranslate&quot;&gt;&lt;kbd class=&quot;kbd docutils literal notranslate&quot;&gt;C&lt;/kbd&gt;-&lt;kbd class=&quot;kbd docutils literal notranslate&quot;&gt;c&lt;/kbd&gt;&lt;/kbd&gt; (control C) method.&lt;/p&gt;
-&lt;div class=&quot;highlight-console notranslate&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&quot;gp&quot;&gt;$&lt;/span&gt; cat myscript.sh
-&lt;span class=&quot;gp&quot;&gt;#&lt;/span&gt;! /bin/sh
-&lt;span class=&quot;gp&quot;&gt;#&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$Id&lt;/span&gt;: myscript,v &lt;span class=&quot;m&quot;&gt;1&lt;/span&gt;.2 &lt;span class=&quot;m&quot;&gt;2002&lt;/span&gt;/11/04 &lt;span class=&quot;m&quot;&gt;11&lt;/span&gt;:34:21 james Exp james $
-&lt;span class=&quot;go&quot;&gt;echo &amp;quot;Hello ${USER}!&amp;quot;&lt;/span&gt;
-&lt;span class=&quot;go&quot;&gt;exit 0&lt;/span&gt;
+&lt;kbd class="kbd docutils literal notranslate"&gt;&lt;kbd class="kbd docutils literal notranslate"&gt;C&lt;/kbd&gt;-&lt;kbd class="kbd docutils literal notranslate"&gt;c&lt;/kbd&gt;&lt;/kbd&gt; (control C) method.&lt;/p&gt;
+&lt;div class="highlight-console notranslate"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="gp"&gt;$&lt;/span&gt; cat myscript.sh
+&lt;span class="gp"&gt;#&lt;/span&gt;! /bin/sh
+&lt;span class="gp"&gt;#&lt;/span&gt; &lt;span class="nv"&gt;$Id&lt;/span&gt;: myscript,v &lt;span class="m"&gt;1&lt;/span&gt;.2 &lt;span class="m"&gt;2002&lt;/span&gt;/11/04 &lt;span class="m"&gt;11&lt;/span&gt;:34:21 james Exp james $
+&lt;span class="go"&gt;echo &amp;quot;Hello ${USER}!&amp;quot;&lt;/span&gt;
+&lt;span class="go"&gt;exit 0&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
-&lt;p&gt;You can see above that when &lt;abbr title=&quot;GNU Revision Control System&quot;&gt;RCS&lt;/abbr&gt; checked in the new revision it also updated
-the &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;$Id$&lt;/span&gt;&lt;/code&gt; tag.&lt;/p&gt;
-&lt;div class=&quot;highlight-console notranslate&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&quot;gp&quot;&gt;$&lt;/span&gt; rlog ./myscript.sh
+&lt;p&gt;You can see above that when &lt;abbr title="GNU Revision Control System"&gt;RCS&lt;/abbr&gt; checked in the new revision it also updated
+the &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;$Id$&lt;/span&gt;&lt;/code&gt; tag.&lt;/p&gt;
+&lt;div class="highlight-console notranslate"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="gp"&gt;$&lt;/span&gt; rlog ./myscript.sh
 
-&lt;span class=&quot;go&quot;&gt;RCS file: ./RCS/myscript.sh,v&lt;/span&gt;
-&lt;span class=&quot;go&quot;&gt;Working file: ./myscript.sh&lt;/span&gt;
-&lt;span class=&quot;go&quot;&gt;head: 1.2&lt;/span&gt;
-&lt;span class=&quot;go&quot;&gt;branch:&lt;/span&gt;
-&lt;span class=&quot;go&quot;&gt;locks: strict&lt;/span&gt;
-&lt;span class=&quot;go&quot;&gt;access list:&lt;/span&gt;
-&lt;span class=&quot;go&quot;&gt;symbolic names:&lt;/span&gt;
-&lt;span class=&quot;go&quot;&gt;keyword substitution: kv&lt;/span&gt;
-&lt;span class=&quot;go&quot;&gt;total revisions: 2;     selected revisions: 2&lt;/span&gt;
-&lt;span class=&quot;go&quot;&gt;description:&lt;/span&gt;
-&lt;span class=&quot;go&quot;&gt;----------------------------&lt;/span&gt;
-&lt;span class=&quot;go&quot;&gt;revision 1.2&lt;/span&gt;
-&lt;span class=&quot;go&quot;&gt;date: 2002/11/05 04:01:13;  author: james;  state: Exp;  lines: +2 -2&lt;/span&gt;
-&lt;span class=&quot;go&quot;&gt;Changed World to ${USER} to give a more personal feeling&lt;/span&gt;
-&lt;span class=&quot;go&quot;&gt;----------------------------&lt;/span&gt;
-&lt;span class=&quot;go&quot;&gt;revision 1.1&lt;/span&gt;
-&lt;span class=&quot;go&quot;&gt;date: 2002/11/04 11:57:51;  author: james;  state: Exp;&lt;/span&gt;
-&lt;span class=&quot;go&quot;&gt;Initial revision&lt;/span&gt;
-&lt;span class=&quot;go&quot;&gt;=============================================================================&lt;/span&gt;
+&lt;span class="go"&gt;RCS file: ./RCS/myscript.sh,v&lt;/span&gt;
+&lt;span class="go"&gt;Working file: ./myscript.sh&lt;/span&gt;
+&lt;span class="go"&gt;head: 1.2&lt;/span&gt;
+&lt;span class="go"&gt;branch:&lt;/span&gt;
+&lt;span class="go"&gt;locks: strict&lt;/span&gt;
+&lt;span class="go"&gt;access list:&lt;/span&gt;
+&lt;span class="go"&gt;symbolic names:&lt;/span&gt;
+&lt;span class="go"&gt;keyword substitution: kv&lt;/span&gt;
+&lt;span class="go"&gt;total revisions: 2;     selected revisions: 2&lt;/span&gt;
+&lt;span class="go"&gt;description:&lt;/span&gt;
+&lt;span class="go"&gt;----------------------------&lt;/span&gt;
+&lt;span class="go"&gt;revision 1.2&lt;/span&gt;
+&lt;span class="go"&gt;date: 2002/11/05 04:01:13;  author: james;  state: Exp;  lines: +2 -2&lt;/span&gt;
+&lt;span class="go"&gt;Changed World to ${USER} to give a more personal feeling&lt;/span&gt;
+&lt;span class="go"&gt;----------------------------&lt;/span&gt;
+&lt;span class="go"&gt;revision 1.1&lt;/span&gt;
+&lt;span class="go"&gt;date: 2002/11/04 11:57:51;  author: james;  state: Exp;&lt;/span&gt;
+&lt;span class="go"&gt;Initial revision&lt;/span&gt;
+&lt;span class="go"&gt;=============================================================================&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
-&lt;p&gt;The command &lt;strong class=&quot;command&quot;&gt;rlog&lt;/strong&gt; provides quick access to revision history for
+&lt;p&gt;The command &lt;strong class="command"&gt;rlog&lt;/strong&gt; provides quick access to revision history for
 files, it accepts multiple files per command line(using normal shell
-wild-carding) and provides all the information &lt;abbr title=&quot;GNU Revision Control System&quot;&gt;RCS&lt;/abbr&gt; has on a file.  Should you
+wild-carding) and provides all the information &lt;abbr title="GNU Revision Control System"&gt;RCS&lt;/abbr&gt; has on a file.  Should you
 ever need to only know the changes that were made to the current revision you
-can use the &lt;a class=&quot;reference internal&quot; href=&quot;../../articles/rcs.html#cmdoption-rlog-r&quot;&gt;&lt;code class=&quot;xref std std-option docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;-r&lt;/span&gt;&lt;/code&gt;&lt;/a&gt; option as in &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;rlog&lt;/span&gt; &lt;span class=&quot;pre&quot;&gt;-r&lt;/span&gt; &lt;span class=&quot;pre&quot;&gt;filename&lt;/span&gt;&lt;/code&gt;.  You can
-also check changes between revisions of files using the command like &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;rlog&lt;/span&gt;
-&lt;span class=&quot;pre&quot;&gt;-r1.1,1.2&lt;/span&gt; &lt;span class=&quot;pre&quot;&gt;filename&lt;/span&gt;&lt;/code&gt;.&lt;/p&gt;
-&lt;p&gt;The &lt;a class=&quot;reference internal&quot; href=&quot;../../articles/rcs.html#cmdoption-r&quot;&gt;&lt;code class=&quot;xref std std-option docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;-r&lt;/span&gt;&lt;/code&gt;&lt;/a&gt; option of &lt;abbr title=&quot;GNU Revision Control System&quot;&gt;RCS&lt;/abbr&gt; is one of its most powerful, it is available
-in all the commands and shares the same semantics throughout.  If &lt;a class=&quot;reference internal&quot; href=&quot;../../articles/rcs.html#cmdoption-ci-r&quot;&gt;&lt;code class=&quot;xref std std-option docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;-r&lt;/span&gt;&lt;/code&gt;&lt;/a&gt; is used with &lt;strong class=&quot;command&quot;&gt;ci&lt;/strong&gt; it forces a bump, for example &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;ci&lt;/span&gt; &lt;span class=&quot;pre&quot;&gt;-r1.7&lt;/span&gt;
-&lt;span class=&quot;pre&quot;&gt;filename&lt;/span&gt;&lt;/code&gt; will force &lt;abbr title=&quot;GNU Revision Control System&quot;&gt;RCS&lt;/abbr&gt; to check in filename as revision 1.7.  Used with
-&lt;strong class=&quot;command&quot;&gt;co&lt;/strong&gt; you can pull any revision of the file from &lt;abbr title=&quot;GNU Revision Control System&quot;&gt;RCS&lt;/abbr&gt; history.  Used
-with &lt;strong class=&quot;command&quot;&gt;rcsdiff&lt;/strong&gt; you can create a diff between any revision under &lt;abbr title=&quot;GNU Revision Control System&quot;&gt;RCS&lt;/abbr&gt;,
-for example &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;rcsdiff&lt;/span&gt; &lt;span class=&quot;pre&quot;&gt;-r1.1,1.8&lt;/span&gt; &lt;span class=&quot;pre&quot;&gt;-u&lt;/span&gt; &lt;span class=&quot;pre&quot;&gt;filename&lt;/span&gt;&lt;/code&gt; will output a unified context
+can use the &lt;a class="reference internal" href="../../articles/rcs.html#cmdoption-rlog-r"&gt;&lt;code class="xref std std-option docutils literal notranslate"&gt;&lt;span class="pre"&gt;-r&lt;/span&gt;&lt;/code&gt;&lt;/a&gt; option as in &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;rlog&lt;/span&gt; &lt;span class="pre"&gt;-r&lt;/span&gt; &lt;span class="pre"&gt;filename&lt;/span&gt;&lt;/code&gt;.  You can
+also check changes between revisions of files using the command like &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;rlog&lt;/span&gt;
+&lt;span class="pre"&gt;-r1.1,1.2&lt;/span&gt; &lt;span class="pre"&gt;filename&lt;/span&gt;&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;The &lt;a class="reference internal" href="../../articles/rcs.html#cmdoption-r"&gt;&lt;code class="xref std std-option docutils literal notranslate"&gt;&lt;span class="pre"&gt;-r&lt;/span&gt;&lt;/code&gt;&lt;/a&gt; option of &lt;abbr title="GNU Revision Control System"&gt;RCS&lt;/abbr&gt; is one of its most powerful, it is available
+in all the commands and shares the same semantics throughout.  If &lt;a class="reference internal" href="../../articles/rcs.html#cmdoption-ci-r"&gt;&lt;code class="xref std std-option docutils literal notranslate"&gt;&lt;span class="pre"&gt;-r&lt;/span&gt;&lt;/code&gt;&lt;/a&gt; is used with &lt;strong class="command"&gt;ci&lt;/strong&gt; it forces a bump, for example &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;ci&lt;/span&gt; &lt;span class="pre"&gt;-r1.7&lt;/span&gt;
+&lt;span class="pre"&gt;filename&lt;/span&gt;&lt;/code&gt; will force &lt;abbr title="GNU Revision Control System"&gt;RCS&lt;/abbr&gt; to check in filename as revision 1.7.  Used with
+&lt;strong class="command"&gt;co&lt;/strong&gt; you can pull any revision of the file from &lt;abbr title="GNU Revision Control System"&gt;RCS&lt;/abbr&gt; history.  Used
+with &lt;strong class="command"&gt;rcsdiff&lt;/strong&gt; you can create a diff between any revision under &lt;abbr title="GNU Revision Control System"&gt;RCS&lt;/abbr&gt;,
+for example &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;rcsdiff&lt;/span&gt; &lt;span class="pre"&gt;-r1.1,1.8&lt;/span&gt; &lt;span class="pre"&gt;-u&lt;/span&gt; &lt;span class="pre"&gt;filename&lt;/span&gt;&lt;/code&gt; will output a unified context
 diff of the changes from revision
 1.1 to 1.8.&lt;/p&gt;
-&lt;p&gt;&lt;abbr title=&quot;GNU Revision Control System&quot;&gt;RCS&lt;/abbr&gt; really is that simple to use, it does have many more options that are not
-covered here(see the man pages) but the power of &lt;abbr title=&quot;GNU Revision Control System&quot;&gt;RCS&lt;/abbr&gt; is how simple it is to
+&lt;p&gt;&lt;abbr title="GNU Revision Control System"&gt;RCS&lt;/abbr&gt; really is that simple to use, it does have many more options that are not
+covered here(see the man pages) but the power of &lt;abbr title="GNU Revision Control System"&gt;RCS&lt;/abbr&gt; is how simple it is to
 use.  It takes almost no time to setup, and probably less time then you
 currently spend on arranging backups.  The command syntax is simple, and stable
 across the separate commands.  It provides an immensely powerful way to control
 configuration files, source code, even revisions of binary files and of course
 silly little shell Hello World examples.&lt;/p&gt;
 &lt;/div&gt;
-&lt;div class=&quot;section&quot; id=&quot;recap&quot;&gt;
+&lt;div class="section" id="recap"&gt;
 &lt;h2&gt;Recap&lt;/h2&gt;
-&lt;p&gt;To recap on &lt;abbr title=&quot;GNU Revision Control System&quot;&gt;RCS&lt;/abbr&gt; usage&lt;/p&gt;
-&lt;ul class=&quot;simple&quot;&gt;
-&lt;li&gt;&lt;p&gt;Make the &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;RCS&lt;/span&gt;&lt;/code&gt; directory.&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;Insert &lt;abbr title=&quot;GNU Revision Control System&quot;&gt;RCS&lt;/abbr&gt; tags, such as &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;$Id$&lt;/span&gt;&lt;/code&gt;, in to your original files to help you
+&lt;p&gt;To recap on &lt;abbr title="GNU Revision Control System"&gt;RCS&lt;/abbr&gt; usage&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;&lt;p&gt;Make the &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;RCS&lt;/span&gt;&lt;/code&gt; directory.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Insert &lt;abbr title="GNU Revision Control System"&gt;RCS&lt;/abbr&gt; tags, such as &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;$Id$&lt;/span&gt;&lt;/code&gt;, in to your original files to help you
 keep track.&lt;/p&gt;&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;Edit your files.&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;Use &lt;strong class=&quot;command&quot;&gt;ci&lt;/strong&gt; to commit your revisions to the &lt;abbr title=&quot;GNU Revision Control System&quot;&gt;RCS&lt;/abbr&gt; history and annotate
-changes made.  You can also use &lt;strong class=&quot;command&quot;&gt;rcsdiff&lt;/strong&gt; to see what changes you
+&lt;li&gt;&lt;p&gt;Use &lt;strong class="command"&gt;ci&lt;/strong&gt; to commit your revisions to the &lt;abbr title="GNU Revision Control System"&gt;RCS&lt;/abbr&gt; history and annotate
+changes made.  You can also use &lt;strong class="command"&gt;rcsdiff&lt;/strong&gt; to see what changes you
 have made, maybe to help you build your changelog information.&lt;/p&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
-&lt;div class=&quot;section&quot; id=&quot;advanced&quot;&gt;
+&lt;div class="section" id="advanced"&gt;
 &lt;h2&gt;Advanced&lt;/h2&gt;
-&lt;div class=&quot;figure align-default&quot;&gt;
-&lt;img alt=&quot;rcsi screenshot&quot; src=&quot;../../_images/rcsi.png&quot; style=&quot;width: 500px; height: 114px;&quot; /&gt;
+&lt;div class="figure align-default"&gt;
+&lt;img alt="rcsi screenshot" src="../../_images/rcsi.png" style="width: 500px; height: 114px;" /&gt;
 &lt;/div&gt;
-&lt;p&gt;There are many tools available that can help you to manage your &lt;abbr title=&quot;GNU Revision Control System&quot;&gt;RCS&lt;/abbr&gt; files,
-including the &lt;abbr title=&quot;GNU Revision Control System&quot;&gt;RCS&lt;/abbr&gt; status monitor &lt;a class=&quot;reference external&quot; href=&quot;http://www.colinbrough.pwp.blueyonder.co.uk/rcsi.README.html&quot;&gt;rcsi&lt;/a&gt; and &lt;a class=&quot;reference external&quot; href=&quot;http://blame.sourceforge.net/&quot;&gt;blame&lt;/a&gt; &lt;abbr title=&quot;GNU Revision Control System&quot;&gt;RCS&lt;/abbr&gt; file annotator.&lt;/p&gt;
-&lt;p&gt;&lt;strong class=&quot;command&quot;&gt;rcsi&lt;/strong&gt; will display information about the files within a directory.&lt;/p&gt;
-&lt;p&gt;The screenshot to the right shows &lt;strong class=&quot;command&quot;&gt;rcsi&lt;/strong&gt; in use on a sample partially
-&lt;abbr title=&quot;GNU Revision Control System&quot;&gt;RCS&lt;/abbr&gt; controlled directory.  All the information it contains should be fairly
+&lt;p&gt;There are many tools available that can help you to manage your &lt;abbr title="GNU Revision Control System"&gt;RCS&lt;/abbr&gt; files,
+including the &lt;abbr title="GNU Revision Control System"&gt;RCS&lt;/abbr&gt; status monitor &lt;a class="reference external" href="http://www.colinbrough.pwp.blueyonder.co.uk/rcsi.README.html"&gt;rcsi&lt;/a&gt; and &lt;a class="reference external" href="http://blame.sourceforge.net/"&gt;blame&lt;/a&gt; &lt;abbr title="GNU Revision Control System"&gt;RCS&lt;/abbr&gt; file annotator.&lt;/p&gt;
+&lt;p&gt;&lt;strong class="command"&gt;rcsi&lt;/strong&gt; will display information about the files within a directory.&lt;/p&gt;
+&lt;p&gt;The screenshot to the right shows &lt;strong class="command"&gt;rcsi&lt;/strong&gt; in use on a sample partially
+&lt;abbr title="GNU Revision Control System"&gt;RCS&lt;/abbr&gt; controlled directory.  All the information it contains should be fairly
 self explanatory, and even if it isn’t the package comes with a comprehensive
-man page and &lt;code class=&quot;file docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;README&lt;/span&gt;&lt;/code&gt;.&lt;/p&gt;
-&lt;div class=&quot;highlight-text notranslate&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;1.2          (root     21-Aug-05):             eval find . -xdev -depth ${exceptions}   -type d -empty -exec rmdir &amp;#39;{}&amp;#39; \\&amp;#39;;&amp;#39;
+man page and &lt;code class="file docutils literal notranslate"&gt;&lt;span class="pre"&gt;README&lt;/span&gt;&lt;/code&gt;.&lt;/p&gt;
+&lt;div class="highlight-text notranslate"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;1.2          (root     21-Aug-05):             eval find . -xdev -depth ${exceptions}   -type d -empty -exec rmdir &amp;#39;{}&amp;#39; \\&amp;#39;;&amp;#39;
 1.2          (root     21-Aug-05):             eend 0
 1.2          (root     21-Aug-05):         else
 1.1          (root     16-Jul-05):             ebegin &amp;quot;Cleaning /tmp directory&amp;quot;
@@ -690,65 +281,65 @@ man page and &lt;code class=&quot;file docutils literal notranslate&quot;&gt;&lt
 1.4          (root     21-Jan-06):                 mkdir -p /tmp/.{ICE,X11}-unix
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
-&lt;p&gt;The above excerpt is a sample of the output from &lt;a class=&quot;reference external&quot; href=&quot;http://blame.sourceforge.net/&quot;&gt;blame&lt;/a&gt; being run against
-a config file which is maintained using &lt;abbr title=&quot;GNU Revision Control System&quot;&gt;RCS&lt;/abbr&gt; by Gentoo’s
-&lt;strong class=&quot;command&quot;&gt;dispatch-conf&lt;/strong&gt; tool.  It allows you to simply see which revision
+&lt;p&gt;The above excerpt is a sample of the output from &lt;a class="reference external" href="http://blame.sourceforge.net/"&gt;blame&lt;/a&gt; being run against
+a config file which is maintained using &lt;abbr title="GNU Revision Control System"&gt;RCS&lt;/abbr&gt; by Gentoo’s
+&lt;strong class="command"&gt;dispatch-conf&lt;/strong&gt; tool.  It allows you to simply see which revision
 introduced a change to a specific line.  You can also choose to annotate
-specific &lt;abbr title=&quot;GNU Revision Control System&quot;&gt;RCS&lt;/abbr&gt; revisions using the &lt;a class=&quot;reference internal&quot; href=&quot;../../articles/rcs.html#cmdoption-blame-revision&quot;&gt;&lt;code class=&quot;xref std std-option docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;--revision&lt;/span&gt;&lt;/code&gt;&lt;/a&gt;
-option, or specific dates with &lt;a class=&quot;reference internal&quot; href=&quot;../../articles/rcs.html#cmdoption-blame-date&quot;&gt;&lt;code class=&quot;xref std std-option docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;--date&lt;/span&gt;&lt;/code&gt;&lt;/a&gt; option.  &lt;a class=&quot;reference external&quot; href=&quot;http://blame.sourceforge.net/&quot;&gt;blame&lt;/a&gt;
+specific &lt;abbr title="GNU Revision Control System"&gt;RCS&lt;/abbr&gt; revisions using the &lt;a class="reference internal" href="../../articles/rcs.html#cmdoption-blame-revision"&gt;&lt;code class="xref std std-option docutils literal notranslate"&gt;&lt;span class="pre"&gt;--revision&lt;/span&gt;&lt;/code&gt;&lt;/a&gt;
+option, or specific dates with &lt;a class="reference internal" href="../../articles/rcs.html#cmdoption-blame-date"&gt;&lt;code class="xref std std-option docutils literal notranslate"&gt;&lt;span class="pre"&gt;--date&lt;/span&gt;&lt;/code&gt;&lt;/a&gt; option.  &lt;a class="reference external" href="http://blame.sourceforge.net/"&gt;blame&lt;/a&gt;
 has also has a very comprehensive manual page included with it which you should
 read if you want to enjoy its full power.&lt;/p&gt;
-&lt;p&gt;There are many other tools available which use &lt;abbr title=&quot;GNU Revision Control System&quot;&gt;RCS&lt;/abbr&gt; as a backend, and as long
-as you can access the &lt;abbr title=&quot;GNU Revision Control System&quot;&gt;RCS&lt;/abbr&gt; data files blame can help to understand what is
+&lt;p&gt;There are many other tools available which use &lt;abbr title="GNU Revision Control System"&gt;RCS&lt;/abbr&gt; as a backend, and as long
+as you can access the &lt;abbr title="GNU Revision Control System"&gt;RCS&lt;/abbr&gt; data files blame can help to understand what is
 happening with them too.&lt;/p&gt;
-&lt;p&gt;If you know of any interesting &lt;abbr title=&quot;GNU Revision Control System&quot;&gt;RCS&lt;/abbr&gt; uses please drop me a mail, and I hope
+&lt;p&gt;If you know of any interesting &lt;abbr title="GNU Revision Control System"&gt;RCS&lt;/abbr&gt; uses please drop me a mail, and I hope
 this short text has been helpful to you.&lt;/p&gt;
-&lt;p class=&quot;rubric&quot;&gt;Footnotes&lt;/p&gt;
-&lt;p&gt;&lt;abbr title=&quot;GNU Revision Control System&quot;&gt;RCS&lt;/abbr&gt; options:&lt;/p&gt;
-&lt;dl class=&quot;std option&quot;&gt;
-&lt;dt id=&quot;cmdoption-r&quot;&gt;
-&lt;code class=&quot;sig-name descname&quot;&gt;-r&lt;/code&gt;&lt;code class=&quot;sig-prename descclassname&quot;&gt;&lt;/code&gt;&lt;/dt&gt;
-&lt;dd&gt;&lt;p&gt;Specify the revision to work with.  Common across all of &lt;abbr title=&quot;GNU Revision Control System&quot;&gt;RCS&lt;/abbr&gt;’s tools.&lt;/p&gt;
+&lt;p class="rubric"&gt;Footnotes&lt;/p&gt;
+&lt;p&gt;&lt;abbr title="GNU Revision Control System"&gt;RCS&lt;/abbr&gt; options:&lt;/p&gt;
+&lt;dl class="std option"&gt;
+&lt;dt id="cmdoption-r"&gt;
+&lt;code class="sig-name descname"&gt;-r&lt;/code&gt;&lt;code class="sig-prename descclassname"&gt;&lt;/code&gt;&lt;/dt&gt;
+&lt;dd&gt;&lt;p&gt;Specify the revision to work with.  Common across all of &lt;abbr title="GNU Revision Control System"&gt;RCS&lt;/abbr&gt;’s tools.&lt;/p&gt;
 &lt;/dd&gt;&lt;/dl&gt;
 
-&lt;p&gt;&lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;blame&lt;/span&gt;&lt;/code&gt; options:&lt;/p&gt;
-&lt;dl class=&quot;std option&quot;&gt;
-&lt;dt id=&quot;cmdoption-blame-date&quot;&gt;
-&lt;code class=&quot;sig-name descname&quot;&gt;--date&lt;/code&gt;&lt;code class=&quot;sig-prename descclassname&quot;&gt;&lt;/code&gt;&lt;/dt&gt;
+&lt;p&gt;&lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;blame&lt;/span&gt;&lt;/code&gt; options:&lt;/p&gt;
+&lt;dl class="std option"&gt;
+&lt;dt id="cmdoption-blame-date"&gt;
+&lt;code class="sig-name descname"&gt;--date&lt;/code&gt;&lt;code class="sig-prename descclassname"&gt;&lt;/code&gt;&lt;/dt&gt;
 &lt;dd&gt;&lt;p&gt;Annotate the revision that closest to, but not after, the given date.&lt;/p&gt;
 &lt;/dd&gt;&lt;/dl&gt;
 
-&lt;dl class=&quot;std option&quot;&gt;
-&lt;dt id=&quot;cmdoption-blame-revision&quot;&gt;
-&lt;code class=&quot;sig-name descname&quot;&gt;--revision&lt;/code&gt;&lt;code class=&quot;sig-prename descclassname&quot;&gt;&lt;/code&gt;&lt;/dt&gt;
+&lt;dl class="std option"&gt;
+&lt;dt id="cmdoption-blame-revision"&gt;
+&lt;code class="sig-name descname"&gt;--revision&lt;/code&gt;&lt;code class="sig-prename descclassname"&gt;&lt;/code&gt;&lt;/dt&gt;
 &lt;dd&gt;&lt;p&gt;Annotate the revision numerically closest to, but not exceeding, the given
 revision.&lt;/p&gt;
 &lt;/dd&gt;&lt;/dl&gt;
 
-&lt;p&gt;&lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;ci&lt;/span&gt;&lt;/code&gt; options:&lt;/p&gt;
-&lt;dl class=&quot;std option&quot;&gt;
-&lt;dt id=&quot;cmdoption-ci-r&quot;&gt;
-&lt;code class=&quot;sig-name descname&quot;&gt;-r&lt;/code&gt;&lt;code class=&quot;sig-prename descclassname&quot;&gt;&lt;/code&gt;&lt;/dt&gt;
+&lt;p&gt;&lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;ci&lt;/span&gt;&lt;/code&gt; options:&lt;/p&gt;
+&lt;dl class="std option"&gt;
+&lt;dt id="cmdoption-ci-r"&gt;
+&lt;code class="sig-name descname"&gt;-r&lt;/code&gt;&lt;code class="sig-prename descclassname"&gt;&lt;/code&gt;&lt;/dt&gt;
 &lt;dd&gt;&lt;p&gt;Perform checkin, and store with provided revision identifier.&lt;/p&gt;
 &lt;/dd&gt;&lt;/dl&gt;
 
-&lt;dl class=&quot;std option&quot;&gt;
-&lt;dt id=&quot;cmdoption-ci-u&quot;&gt;
-&lt;code class=&quot;sig-name descname&quot;&gt;-u&lt;/code&gt;&lt;code class=&quot;sig-prename descclassname&quot;&gt;&lt;/code&gt;&lt;/dt&gt;
+&lt;dl class="std option"&gt;
+&lt;dt id="cmdoption-ci-u"&gt;
+&lt;code class="sig-name descname"&gt;-u&lt;/code&gt;&lt;code class="sig-prename descclassname"&gt;&lt;/code&gt;&lt;/dt&gt;
 &lt;dd&gt;&lt;p&gt;Don’t lock the file on checkin.&lt;/p&gt;
 &lt;/dd&gt;&lt;/dl&gt;
 
-&lt;p&gt;&lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;co&lt;/span&gt;&lt;/code&gt; options:&lt;/p&gt;
-&lt;dl class=&quot;std option&quot;&gt;
-&lt;dt id=&quot;cmdoption-co-l&quot;&gt;
-&lt;code class=&quot;sig-name descname&quot;&gt;-l&lt;/code&gt;&lt;code class=&quot;sig-prename descclassname&quot;&gt;&lt;/code&gt;&lt;/dt&gt;
+&lt;p&gt;&lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;co&lt;/span&gt;&lt;/code&gt; options:&lt;/p&gt;
+&lt;dl class="std option"&gt;
+&lt;dt id="cmdoption-co-l"&gt;
+&lt;code class="sig-name descname"&gt;-l&lt;/code&gt;&lt;code class="sig-prename descclassname"&gt;&lt;/code&gt;&lt;/dt&gt;
 &lt;dd&gt;&lt;p&gt;Lock the file for editing on checkout.&lt;/p&gt;
 &lt;/dd&gt;&lt;/dl&gt;
 
-&lt;p&gt;&lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;rlog&lt;/span&gt;&lt;/code&gt; options:&lt;/p&gt;
-&lt;dl class=&quot;std option&quot;&gt;
-&lt;dt id=&quot;cmdoption-rlog-r&quot;&gt;
-&lt;code class=&quot;sig-name descname&quot;&gt;-r&lt;/code&gt;&lt;code class=&quot;sig-prename descclassname&quot;&gt;&lt;/code&gt;&lt;/dt&gt;
+&lt;p&gt;&lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;rlog&lt;/span&gt;&lt;/code&gt; options:&lt;/p&gt;
+&lt;dl class="std option"&gt;
+&lt;dt id="cmdoption-rlog-r"&gt;
+&lt;code class="sig-name descname"&gt;-r&lt;/code&gt;&lt;code class="sig-prename descclassname"&gt;&lt;/code&gt;&lt;/dt&gt;
 &lt;dd&gt;&lt;p&gt;Specify revisions to perform log against, can be a comma separated list of
 ranges.&lt;/p&gt;
 &lt;/dd&gt;&lt;/dl&gt;
@@ -756,5 +347,414 @@ ranges.&lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 </content>
+    <link href="https://jnrowe.github.io/articles/rcs.html" rel="alternate"/>
+    <published>2003-09-05T00:00:00+01:00</published>
+  </entry>
+  <entry>
+    <id>https://jnrowe.github.io/articles/tips/Making_a_nice_home.html</id>
+    <title>Making a nice home</title>
+    <updated>2009-10-11T00:00:00+01:00</updated>
+    <author>
+      <name>James Rowe</name>
+    </author>
+    <content type="html">&lt;div class="section" id="making-a-nice-home"&gt;
+
+&lt;p&gt;Back in &lt;span class="xref std std-ref"&gt;Kick_me_birthday_reminders&lt;/span&gt; I said:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;div&gt;&lt;p&gt;You could trigger a rebuild in your &lt;code class="file docutils literal notranslate"&gt;&lt;span class="pre"&gt;~/.bashrc&lt;/span&gt;&lt;/code&gt; before you call
+&lt;strong class="command"&gt;rem&lt;/strong&gt; to see the reminders, so they are always up to date at
+login. Or, you could be like me and have a post commit hook for &lt;a class="reference external" href="http://www.git-scm.com/"&gt;git&lt;/a&gt; to
+manage this… because you are keeping your home directory version controlled
+as a sanity measure I hope!&lt;/p&gt;
+&lt;/div&gt;&lt;/blockquote&gt;
+&lt;p&gt;Today, Stuart Grady asked me in a private mail:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;div&gt;&lt;p&gt;Okay, at which point is the “Tip of the Day” thingy going to be about using
+hooks and &lt;a class="reference external" href="http://www.gnu.org/software/make/make.html"&gt;make&lt;/a&gt; in &lt;span class="target" id="index-0"&gt;&lt;/span&gt;&lt;code class="xref std std-envvar docutils literal notranslate"&gt;&lt;span class="pre"&gt;$HOME&lt;/span&gt;&lt;/code&gt;?&lt;/p&gt;
+&lt;/div&gt;&lt;/blockquote&gt;
+&lt;p&gt;I’ll take the hint and look at &lt;strong class="command"&gt;make&lt;/strong&gt;.  For the purposes of this post
+we’re going to pretend we haven’t read &lt;a class="reference external" href="http://miller.emu.id.au/pmiller/books/rmch/"&gt;recursive make considered harmful&lt;/a&gt; as
+I don’t heed its advice for the &lt;code class="file docutils literal notranslate"&gt;&lt;span class="pre"&gt;Makefile&lt;/span&gt;&lt;/code&gt; I have in my home directory.
+That said, let’s have a look at what can be found in my current top-level
+&lt;code class="file docutils literal notranslate"&gt;&lt;span class="pre"&gt;Makefile&lt;/span&gt;&lt;/code&gt;.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="permissions"&gt;
+&lt;h1&gt;Permissions&lt;/h1&gt;
+&lt;p&gt;I keep my home directory version controlled with &lt;strong class="command"&gt;git&lt;/strong&gt;, but
+&lt;strong class="command"&gt;git&lt;/strong&gt; out of the box doesn’t maintain permissions on files(beyond the
+executable bit anyway).  There are plenty of ways around this including using
+external tools such as &lt;a class="reference external" href="http://joey.kitenet.net/code/etckeeper/"&gt;etckeeper&lt;/a&gt;, but I prefer the simple approach of setting
+the permissions when they’re needed:&lt;/p&gt;
+&lt;div class="highlight-make notranslate"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="nv"&gt;PRIVATE_FILES&lt;/span&gt; &lt;span class="o"&gt;:=&lt;/span&gt; .abook/addressbook .gnupg/secring.gpg .mailfilter .msmtprc &lt;span class="se"&gt;\&lt;/span&gt;
+        .ssh/id_rsa
+&lt;span class="nv"&gt;PRIVATE_DIRS&lt;/span&gt; &lt;span class="o"&gt;:=&lt;/span&gt; .gnupg
+
+&lt;span class="nf"&gt;fix-perms&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="k"&gt;$(&lt;/span&gt;&lt;span class="nv"&gt;PRIVATE_FILES&lt;/span&gt;&lt;span class="k"&gt;)&lt;/span&gt; &lt;span class="k"&gt;$(&lt;/span&gt;&lt;span class="nv"&gt;PRIVATE_DIRS&lt;/span&gt;&lt;span class="k"&gt;)&lt;/span&gt;
+        &lt;span class="k"&gt;$(&lt;/span&gt;info - Removing extra &lt;span class="nb"&gt;read&lt;/span&gt; permissions from private files and directories&lt;span class="k"&gt;)&lt;/span&gt;
+        chmod &lt;span class="m"&gt;600&lt;/span&gt; &lt;span class="k"&gt;$(&lt;/span&gt;PRIVATE_FILES&lt;span class="k"&gt;)&lt;/span&gt;
+        chmod &lt;span class="m"&gt;700&lt;/span&gt; &lt;span class="k"&gt;$(&lt;/span&gt;PRIVATE_DIRS&lt;span class="k"&gt;)&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;If this rule is called after a &lt;strong class="command"&gt;git pull&lt;/strong&gt; is issued then the files
+always have the correct permissions.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="vim-hacks"&gt;
+&lt;h1&gt;vim hacks&lt;/h1&gt;
+&lt;p&gt;I also call &lt;strong class="command"&gt;make&lt;/strong&gt; in some subdirectories, the most interesting one is
+probably for &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;.vim&lt;/span&gt;&lt;/code&gt;:&lt;/p&gt;
+&lt;div class="highlight-make notranslate"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="nv"&gt;CTAGS&lt;/span&gt; &lt;span class="o"&gt;:=&lt;/span&gt; exuberant-ctags
+
+&lt;span class="nv"&gt;TARGETS&lt;/span&gt; &lt;span class="o"&gt;:=&lt;/span&gt; &lt;span class="k"&gt;$(&lt;/span&gt;patsubst /usr/lib/%, tags/%.ctags, &lt;span class="k"&gt;$(&lt;/span&gt;wildcard /usr/lib/python*&lt;span class="k"&gt;))&lt;/span&gt; &lt;span class="se"&gt;\&lt;/span&gt;
+    doc/tags
+
+&lt;span class="nf"&gt;.PHONY&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="n"&gt;clean&lt;/span&gt;
+
+&lt;span class="nf"&gt;all&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="k"&gt;$(&lt;/span&gt;&lt;span class="nv"&gt;TARGETS&lt;/span&gt;&lt;span class="k"&gt;)&lt;/span&gt;
+
+&lt;span class="nf"&gt;$(TARGETS)&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="n"&gt;tags&lt;/span&gt;/%.&lt;span class="n"&gt;ctags&lt;/span&gt;: /&lt;span class="n"&gt;usr&lt;/span&gt;/&lt;span class="n"&gt;lib&lt;/span&gt;/%
+    &lt;span class="k"&gt;$(&lt;/span&gt;CTAGS&lt;span class="k"&gt;)&lt;/span&gt; --exclude&lt;span class="o"&gt;=&lt;/span&gt;test_* --exclude&lt;span class="o"&gt;=&lt;/span&gt;tests.py --exclude&lt;span class="o"&gt;=&lt;/span&gt;test.py &lt;span class="se"&gt;\&lt;/span&gt;
+        --exclude&lt;span class="o"&gt;=&lt;/span&gt;*/test/* --exclude&lt;span class="o"&gt;=&lt;/span&gt;*/tests/* --languages&lt;span class="o"&gt;=&lt;/span&gt;python &lt;span class="se"&gt;\&lt;/span&gt;
+        -R -f &lt;span class="nv"&gt;$@&lt;/span&gt; $&amp;lt;
+
+&lt;span class="nf"&gt;doc/tags&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="k"&gt;$(&lt;/span&gt;&lt;span class="nv"&gt;filter-out&lt;/span&gt; &lt;span class="nv"&gt;doc&lt;/span&gt;/&lt;span class="nv"&gt;tags&lt;/span&gt;, &lt;span class="k"&gt;$(&lt;/span&gt;&lt;span class="nv"&gt;wildcard&lt;/span&gt; &lt;span class="nv"&gt;doc&lt;/span&gt;/*&lt;span class="k"&gt;))&lt;/span&gt;
+    vim -X -u NONE -c &lt;span class="s1"&gt;&amp;#39;helptags $(dir $@)&amp;#39;&lt;/span&gt; -c &lt;span class="s1"&gt;&amp;#39;:q&amp;#39;&lt;/span&gt; &amp;lt;/dev/null &lt;span class="p"&gt;&amp;amp;&lt;/span&gt;&amp;gt;/dev/null
+
+&lt;span class="nf"&gt;clean&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;
+    rm -f &lt;span class="k"&gt;$(&lt;/span&gt;TARGETS&lt;span class="k"&gt;)&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;The values in the &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;patsubst&lt;/span&gt;&lt;/code&gt; block of the &lt;strong class="makevar"&gt;TARGETS&lt;/strong&gt; definition are
+a list of filenames to use for tag storage with &lt;a class="reference external" href="http://ctags.sourceforge.net"&gt;ctags&lt;/a&gt;.  The rule creates
+a different &lt;strong class="command"&gt;ctags&lt;/strong&gt; file for each installed &lt;a class="reference external" href="http://www.python.org"&gt;python&lt;/a&gt; version.  In the
+rule to make the &lt;strong class="command"&gt;ctags&lt;/strong&gt; files we specifically exclude test files as
+they aren’t often useful in &lt;a class="reference external" href="http://vimdoc.sourceforge.net/htmldoc/version7.html#new-omni-completion"&gt;omni-completion&lt;/a&gt;, and they significantly pollute
+the tags database for normal use.&lt;/p&gt;
+&lt;p&gt;The final entry in &lt;strong class="makevar"&gt;TARGETS&lt;/strong&gt; simply updates the tag lists for &lt;a class="reference external" href="http://vimdoc.sourceforge.net/htmldoc/various.html#:helptags"&gt;help
+files&lt;/a&gt; installed in &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;~/.vim/doc&lt;/span&gt;&lt;/code&gt;.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="documentation"&gt;
+&lt;h1&gt;Documentation&lt;/h1&gt;
+&lt;p&gt;The final subdirectory &lt;code class="file docutils literal notranslate"&gt;&lt;span class="pre"&gt;Makefile&lt;/span&gt;&lt;/code&gt; we’re going to look at is actually
+called in a number of different directories to create &lt;abbr title="HyperText Markup Language"&gt;HTML&lt;/abbr&gt; versions of
+&lt;a class="reference external" href="http://docutils.sourceforge.net/rst.html"&gt;reStructuredText&lt;/a&gt; files.&lt;/p&gt;
+&lt;div class="highlight-make notranslate"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="nv"&gt;GENERATED&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="k"&gt;$(&lt;/span&gt;patsubst %.rst, %.html, &lt;span class="k"&gt;$(&lt;/span&gt;wildcard *.rst&lt;span class="k"&gt;))&lt;/span&gt;
+
+&lt;span class="nf"&gt;all&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="k"&gt;$(&lt;/span&gt;&lt;span class="nv"&gt;GENERATED&lt;/span&gt;&lt;span class="k"&gt;)&lt;/span&gt;
+
+&lt;span class="nf"&gt;$(GENERATED)&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; %.&lt;span class="n"&gt;html&lt;/span&gt;: %.&lt;span class="n"&gt;rst&lt;/span&gt;
+        rst2html.py $&amp;lt; &lt;span class="nv"&gt;$@&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;If we call the above &lt;code class="file docutils literal notranslate"&gt;&lt;span class="pre"&gt;Makefile&lt;/span&gt;&lt;/code&gt; from our &lt;strong class="command"&gt;git&lt;/strong&gt; hooks after any
+pull or merge we always have up to date processed versions of documents.  It is
+like having a personal web viewable wiki, but without having to use an awful
+markup language.&lt;/p&gt;
+&lt;/div&gt;
+</content>
+    <link href="https://jnrowe.github.io/articles/tips/Making_a_nice_home.html" rel="alternate"/>
+    <published>2009-10-11T00:00:00+01:00</published>
+  </entry>
+  <entry>
+    <id>https://jnrowe.github.io/articles/tips/Zsh_and_the_vcs.html</id>
+    <title>Zsh and the VCS</title>
+    <updated>2009-10-28T00:00:00+00:00</updated>
+    <author>
+      <name>James Rowe</name>
+    </author>
+    <content type="html">&lt;div class="section" id="zsh-and-the-vcs"&gt;
+
+&lt;img alt="Git prompt screenshot" class="align-right" src="../../_images/2009-10-28-git_prompt.png" /&gt;
+&lt;p&gt;I’ve recently switched to &lt;a class="reference external" href="http://www.zsh.org/"&gt;Zsh&lt;/a&gt; as my login shell after
+9 years of using &lt;a class="reference external" href="http://cnswww.cns.cwru.edu/~chet/bash/bashtop.html"&gt;bash&lt;/a&gt;, and for no particularly good reason either as they’re
+both great interactive shells.  I guess all the &lt;em&gt;Kool Kids&lt;/em&gt; are doing it, and
+I’m just playing catchup.  The one side effect of that is I’m now scribbling
+tips about &lt;strong class="command"&gt;zsh&lt;/strong&gt; too…&lt;/p&gt;
+&lt;p&gt;In a screenshot I posted in our bugtracker — that was considerably less staged
+than the example above — one of my more visual hunks of &lt;strong class="command"&gt;zsh&lt;/strong&gt;
+configuration was visible, leading to the following question from Dan Wilson:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;div&gt;&lt;p&gt;Okay, ‘fess time.  How do you get &lt;strong class="command"&gt;git&lt;/strong&gt; branch names in the
+prompt?  How do you make the funky arrows show repo status?&lt;/p&gt;
+&lt;/div&gt;&lt;/blockquote&gt;
+&lt;p&gt;Firstly, I use &lt;a class="reference external" href="http://github.com/robbyrussell/oh-my-zsh"&gt;oh-my-zsh&lt;/a&gt; which is an excellent basis for &lt;strong class="command"&gt;zsh&lt;/strong&gt;
+configuration files.  My prompt settings work within that framework, although
+they could be converted to work with &lt;em&gt;plain&lt;/em&gt; &lt;strong class="command"&gt;zsh&lt;/strong&gt; if you have the
+inclination.&lt;/p&gt;
+&lt;p&gt;If you want to see my entire “theme” file you can &lt;a class="reference external" href="http://github.com/JNRowe/oh-my-zsh"&gt;clone my fork&lt;/a&gt; and look at
+&lt;a class="reference external" href="http://github.com/JNRowe/oh-my-zsh/blob/master/themes/jnrowe.zsh-theme"&gt;oh-my-zsh/themes/jnrowe.zsh-theme&lt;/a&gt;.&lt;/p&gt;
+&lt;div class="section" id="branch-names"&gt;
+&lt;h2&gt;Branch names&lt;/h2&gt;
+&lt;p&gt;&lt;strong class="command"&gt;zsh&lt;/strong&gt; comes with some neat &lt;abbr title="Version Control System"&gt;VCS&lt;/abbr&gt; integration, that is exceptionally
+&lt;a class="reference external" href="http://zsh.sourceforge.net/Doc/Release/User-Contributions.html#SEC273"&gt;documented&lt;/a&gt; in the manual.  I use that code to enable branch names in my
+prompt, I use it directly instead of the code in &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;oh-my-zsh&lt;/span&gt;&lt;/code&gt; that handles
+&lt;strong class="command"&gt;git&lt;/strong&gt; status because it doesn’t do what I want [yet].  I use a format
+that matches the default(&lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;robbyrussell&lt;/span&gt;&lt;/code&gt;) theme in &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;oh-my-zsh&lt;/span&gt;&lt;/code&gt;.&lt;/p&gt;
+&lt;div class="highlight-zsh notranslate"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;autoload -Uz vcs_info
+
+&lt;span class="c1"&gt;# See the documentation for the format string definition&lt;/span&gt;
+&lt;span class="c1"&gt;# This generates a fancy coloured string with $vcs:($branch)&lt;/span&gt;
+zstyle &lt;span class="s1"&gt;&amp;#39;:vcs_info:*&amp;#39;&lt;/span&gt; formats &lt;span class="s1"&gt;&amp;#39;%F{2}%s%F{7}:%F{2}(%F{1}%b%F{2})%f &amp;#39;&lt;/span&gt;
+zstyle &lt;span class="s1"&gt;&amp;#39;:vcs_info:*&amp;#39;&lt;/span&gt; &lt;span class="nb"&gt;enable&lt;/span&gt; git
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;Once we’ve configured &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;vcs_info&lt;/span&gt;&lt;/code&gt; we just need to include
+&lt;span class="target" id="index-0"&gt;&lt;/span&gt;&lt;code class="xref std std-envvar docutils literal notranslate"&gt;&lt;span class="pre"&gt;${vcs_info_msg_0_}&lt;/span&gt;&lt;/code&gt; somewhere in our prompt to display the &lt;abbr title="Version Control System"&gt;VCS&lt;/abbr&gt; and
+current branch name.&lt;/p&gt;
+&lt;p&gt;&lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;vcs_info&lt;/span&gt;&lt;/code&gt; works quite well, and supports many different systems(both common
+and uncommon).  As the code snippet shows I enable support for &lt;a class="reference external" href="http://www.git-scm.com/"&gt;git&lt;/a&gt; exclusively.
+I’ve used it with &lt;a class="reference external" href="http://www.selenic.com/mercurial/"&gt;mercurial&lt;/a&gt; too, and it works well.  &lt;a class="reference external" href="http://darcs.net"&gt;darcs&lt;/a&gt; also appears to
+work well, but it isn’t a system I use often enough to have tested it
+thoroughly.&lt;/p&gt;
+&lt;p&gt;I tested &lt;strong class="command"&gt;bzr&lt;/strong&gt; support while writing this but it is totally unusable
+because of just how painfully slow &lt;strong class="command"&gt;bzr&lt;/strong&gt; is.  On my system it adds
+close to one and half seconds to every prompt display, although that could be
+improved if I wasn’t using conservative &lt;abbr title="Central Processing Unit"&gt;CPU&lt;/abbr&gt;
+scaling to save power.  As a comparison the &lt;strong class="command"&gt;git&lt;/strong&gt; info takes less than
+a tenth of a second to calculate on the same system, and &lt;strong class="command"&gt;mercurial&lt;/strong&gt;
+around three times that which is most definitely still usable.&lt;/p&gt;
+&lt;div class="admonition note"&gt;
+&lt;p class="admonition-title"&gt;Note&lt;/p&gt;
+&lt;p&gt;There is a &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;use-simple&lt;/span&gt;&lt;/code&gt; setting for the &lt;strong class="command"&gt;bzr&lt;/strong&gt; support that may
+make the &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;vcs_info&lt;/span&gt;&lt;/code&gt; functionality faster for you, albeit not noticeably on
+my system.  It is also the only &lt;abbr title="Version Control System"&gt;VCS&lt;/abbr&gt; that has such a hack, which is quite
+telling in itself.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="section" id="repository-state"&gt;
+&lt;h2&gt;Repository state&lt;/h2&gt;
+&lt;p&gt;The “funky arrows” Dan asks about are dependent on the state of the current
+working directory as can be seen in the screenshot at the top of this page.&lt;/p&gt;
+&lt;table class="docutils align-default"&gt;
+&lt;colgroup&gt;
+&lt;col style="width: 20%" /&gt;
+&lt;col style="width: 80%" /&gt;
+&lt;/colgroup&gt;
+&lt;thead&gt;
+&lt;tr class="row-odd"&gt;&lt;th class="head"&gt;&lt;p&gt;Identifier&lt;/p&gt;&lt;/th&gt;
+&lt;th class="head"&gt;&lt;p&gt;Description&lt;/p&gt;&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr class="row-even"&gt;&lt;td&gt;&lt;p&gt;white →&lt;/p&gt;&lt;/td&gt;
+&lt;td&gt;&lt;p&gt;Not a &lt;strong class="command"&gt;git&lt;/strong&gt; repository&lt;/p&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class="row-odd"&gt;&lt;td&gt;&lt;p&gt;green ▶&lt;/p&gt;&lt;/td&gt;
+&lt;td&gt;&lt;p&gt;Clean &lt;strong class="command"&gt;git&lt;/strong&gt; repository&lt;/p&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class="row-even"&gt;&lt;td&gt;&lt;p&gt;red ▶&lt;/p&gt;&lt;/td&gt;
+&lt;td&gt;&lt;p&gt;Staged changes in &lt;strong class="command"&gt;git&lt;/strong&gt; repository&lt;/p&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class="row-odd"&gt;&lt;td&gt;&lt;p&gt;yellow ▶&lt;/p&gt;&lt;/td&gt;
+&lt;td&gt;&lt;p&gt;Unstaged changes in &lt;strong class="command"&gt;git&lt;/strong&gt; repository&lt;/p&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;Using these visual markers it is always obvious what state a directory is in,
+I’ve toyed with adding more but suspect the lack of complexity is what makes
+them so useful.&lt;/p&gt;
+&lt;p&gt;To enable them we need to add a &lt;a class="reference external" href="http://zsh.sourceforge.net/Doc/Release/Functions.html#SEC45"&gt;precmd hook&lt;/a&gt; to calculate the repository
+status:&lt;/p&gt;
+&lt;div class="highlight-zsh notranslate"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;autoload -U add-zsh-hook
+add-zsh-hook precmd prompt_jnrowe_precmd
+
+prompt_jnrowe_precmd &lt;span class="o"&gt;()&lt;/span&gt; &lt;span class="o"&gt;{&lt;/span&gt;
+    vcs_info
+
+    &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="o"&gt;[&lt;/span&gt; -z &lt;span class="s2"&gt;&amp;quot;&lt;/span&gt;&lt;span class="si"&gt;${&lt;/span&gt;&lt;span class="nv"&gt;vcs_info_msg_0_&lt;/span&gt;&lt;span class="si"&gt;}&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;&lt;/span&gt; &lt;span class="o"&gt;]&lt;/span&gt; &lt;span class="o"&gt;{&lt;/span&gt;
+        &lt;span class="nv"&gt;dir_status&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;%F{2}→%f&amp;quot;&lt;/span&gt;
+    &lt;span class="o"&gt;}&lt;/span&gt; &lt;span class="k"&gt;elif&lt;/span&gt; &lt;span class="o"&gt;[[&lt;/span&gt; -n &lt;span class="s2"&gt;&amp;quot;&lt;/span&gt;&lt;span class="k"&gt;$(&lt;/span&gt;git diff --cached --name-status &lt;span class="m"&gt;2&lt;/span&gt;&amp;gt;/dev/null &lt;span class="k"&gt;)&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;&lt;/span&gt; &lt;span class="o"&gt;]]&lt;/span&gt; &lt;span class="o"&gt;{&lt;/span&gt;
+        &lt;span class="nv"&gt;dir_status&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;%F{1}▶%f&amp;quot;&lt;/span&gt;
+    &lt;span class="o"&gt;}&lt;/span&gt; &lt;span class="k"&gt;elif&lt;/span&gt; &lt;span class="o"&gt;[[&lt;/span&gt; -n &lt;span class="s2"&gt;&amp;quot;&lt;/span&gt;&lt;span class="k"&gt;$(&lt;/span&gt;git diff --name-status &lt;span class="m"&gt;2&lt;/span&gt;&amp;gt;/dev/null &lt;span class="k"&gt;)&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;&lt;/span&gt; &lt;span class="o"&gt;]]&lt;/span&gt; &lt;span class="o"&gt;{&lt;/span&gt;
+        &lt;span class="nv"&gt;dir_status&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;%F{3}▶%f&amp;quot;&lt;/span&gt;
+    &lt;span class="o"&gt;}&lt;/span&gt; &lt;span class="k"&gt;else&lt;/span&gt; &lt;span class="o"&gt;{&lt;/span&gt;
+        &lt;span class="nv"&gt;dir_status&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;%F{2}▶%f&amp;quot;&lt;/span&gt;
+    &lt;span class="o"&gt;}&lt;/span&gt;
+&lt;span class="o"&gt;}&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;With this added the we just need to include &lt;span class="target" id="index-1"&gt;&lt;/span&gt;&lt;code class="xref std std-envvar docutils literal notranslate"&gt;&lt;span class="pre"&gt;$dir_status&lt;/span&gt;&lt;/code&gt; in our prompt
+and the status identifiers will be used.&lt;/p&gt;
+&lt;p&gt;If you are using a font which doesn’t display the characters correctly, either
+change the characters in the &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;dir_status&lt;/span&gt;&lt;/code&gt; values or switch to a &lt;a class="reference external" href="http://www.is-vn.bg/hamster/"&gt;better font&lt;/a&gt;
+that can display them.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</content>
+    <link href="https://jnrowe.github.io/articles/tips/Zsh_and_the_vcs.html" rel="alternate"/>
+    <published>2009-10-28T00:00:00+00:00</published>
+  </entry>
+  <entry>
+    <id>https://jnrowe.github.io/articles/fossil.html</id>
+    <title>fossil experiments</title>
+    <updated>2014-11-12T00:00:00+00:00</updated>
+    <author>
+      <name>James Rowe</name>
+    </author>
+    <content type="html">&lt;div class="section" id="fossil-experiments"&gt;
+
+&lt;p&gt;For a variety of reasons we can no longer use GitHub at work for any project
+which isn’t Open Source.  And since that decision was thrust upon us we’ve been
+playing with some alternatives for our workflow.  We’ll probably end up choosing
+one of the self hosted clones at some point, but it was decided early on that we
+should evaluate a variety of options.&lt;/p&gt;
+&lt;p&gt;I was tasked with testing out &lt;a class="reference external" href="http://www.fossil-scm.org/"&gt;fossil&lt;/a&gt; on a couple of small side projects, and
+these are my &lt;em&gt;absolutely&lt;/em&gt; biased personal findings.&lt;/p&gt;
+&lt;p&gt;Before I start I should add that while what I’m about to write probably sounds
+harsh, I do like &lt;strong class="command"&gt;fossil&lt;/strong&gt; the concept.  I like the single &lt;a class="reference external" href="http://sqlite.org/"&gt;sqlite&lt;/a&gt;
+project repository, I like the small-enough-to-grok-in-an-afternoon code base
+and I like the idea of a totally reproducible project state including all
+metadata.&lt;/p&gt;
+&lt;div class="section" id="testing-fossil"&gt;
+&lt;h2&gt;Testing &lt;strong class="command"&gt;fossil&lt;/strong&gt;&lt;/h2&gt;
+&lt;p&gt;The good news is that testing &lt;strong class="command"&gt;fossil&lt;/strong&gt; is a piece of cake.  It
+supports both reading and writing &lt;strong class="command"&gt;git&lt;/strong&gt;’s &lt;a class="reference external" href="http://git-scm.com/docs/git-fast-import"&gt;fast-import&lt;/a&gt; format.  If you
+want to test it out just dump an existing &lt;a class="reference external" href="http://www.git-scm.com/"&gt;git&lt;/a&gt; repository(or &lt;a class="reference external" href="http://mercurial.selenic.com/wiki/FastImportExtension"&gt;mercurial with an
+extension&lt;/a&gt;), and feed it &lt;strong class="command"&gt;fossil import&lt;/strong&gt;.  If you later change your
+mind you can run &lt;strong class="command"&gt;fossil export&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;Sadly supporting incremental two-way mirroring didn’t work out for us, but
+perhaps it will for simpler projects.  In the end I simply mirrored the
+&lt;strong class="command"&gt;git&lt;/strong&gt; repositories to &lt;strong class="command"&gt;fossil&lt;/strong&gt;, marked the &lt;strong class="command"&gt;git&lt;/strong&gt;
+repositories as read-only and forced contributors to work with
+&lt;strong class="command"&gt;fossil&lt;/strong&gt; from the outset.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="packaging"&gt;
+&lt;h2&gt;Packaging&lt;/h2&gt;
+&lt;p&gt;The &lt;strong class="command"&gt;fossil&lt;/strong&gt; project sells itself on being a single file binary
+install, and that probably works well for a subset of users.  We’re not that in
+that subset though, and &lt;strong class="command"&gt;fossil&lt;/strong&gt; is more than a little annoying to
+wrangle in to our environment.&lt;/p&gt;
+&lt;p&gt;The tarball ships without any &lt;em&gt;directly&lt;/em&gt; usable documentation, so you end up
+with either no system documentation or a collection of docs sprinkled with wiki
+markup in &lt;code class="file docutils literal notranslate"&gt;&lt;span class="pre"&gt;/usr/share/doc&lt;/span&gt;&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;By default &lt;strong class="command"&gt;fossil&lt;/strong&gt; builds in a manner which unfortunately breaks most
+packaging standards.  If you’re building packages you’ll likely need to write an
+awful lot of custom workarounds to get a compliant and usable package, see
+&lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;lst-pkgs/utils/dev/fossil&lt;/span&gt;&lt;/code&gt; build for the gory details of my hacks.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="uptake"&gt;
+&lt;h2&gt;Uptake&lt;/h2&gt;
+&lt;p&gt;I don’t really want to hold this against &lt;strong class="command"&gt;fossil&lt;/strong&gt;, but it &lt;em&gt;is&lt;/em&gt;
+important to note that for all intents and purposes no one is familiar with it.
+No upstream projects we actively track use it, there isn’t a single person who
+chooses to use it on our site(which is why I had to handle the packaging) and
+expecting new hires to have even heard of it is probably a stretch.&lt;/p&gt;
+&lt;p&gt;It wouldn’t be such an issue if the choice was a &lt;strong class="command"&gt;git&lt;/strong&gt; vs &lt;a class="reference external" href="http://mercurial.selenic.com/"&gt;mercurial&lt;/a&gt;
+one, where the few differences are mostly cosmetic.  &lt;strong class="command"&gt;fossil&lt;/strong&gt; is
+a completely different beast, and requires an enormous rethink in the way you
+handle version control.&lt;/p&gt;
+&lt;p&gt;Ten years ago when people were on the whole still familiar with the &lt;abbr title="Concurrent Versions System"&gt;CVS&lt;/abbr&gt; and
+Subversion way of working that wouldn’t have been such an issue, but times have
+most definitely changed.&lt;/p&gt;
+&lt;p&gt;The vocabulary in the documentation is likely to be foreign to users of any
+version control system, and the workflow examples in the documentation are
+entirely foreign to how we have developed any project in at least the past
+decade.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="all-in-one-solution"&gt;
+&lt;h2&gt;All-in-one solution&lt;/h2&gt;
+&lt;p&gt;One of the proclaimed benefits of using &lt;strong class="command"&gt;fossil&lt;/strong&gt; is that it handles
+many aspects of a project’s &lt;abbr title="Application Lifecycle Management"&gt;ALM&lt;/abbr&gt;; version control, issue tracking,
+documentation(via a wiki), etc.  However, and this is only my opinion, it feels
+like it does all of these in a suboptimal manner.&lt;/p&gt;
+&lt;div class="section" id="version-control"&gt;
+&lt;h3&gt;Version control&lt;/h3&gt;
+&lt;p&gt;The version control feels quite nice for the most part, definitely usable but
+a little annoying to work with if you’re used to a modern &lt;abbr title="Distributed Version Control System"&gt;DVCS&lt;/abbr&gt; like we are.&lt;/p&gt;
+&lt;p&gt;That said it does feel like a &lt;em&gt;huge&lt;/em&gt; step backwards when working with branches,
+and you should set aside quite a lot of time for integration issues when you
+have &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;autosync&lt;/span&gt;&lt;/code&gt; disabled.  And I can’t imagine a scenario where &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;autosync&lt;/span&gt;&lt;/code&gt;
+could work for us, without rewriting our entire way of working or returning to
+&lt;abbr title="Concurrent Versions System"&gt;CVS&lt;/abbr&gt;-style mega commits and a manual patch stack layered on top.&lt;/p&gt;
+&lt;p&gt;If you read &lt;strong class="command"&gt;fossil&lt;/strong&gt;’s &lt;a class="reference external" href="http://www.bugzilla.org"&gt;Branching, Forking, Merging, and Tagging&lt;/a&gt;
+documentation it appears that this is a design feature for the creators.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="issue-tracker"&gt;
+&lt;h3&gt;Issue tracker&lt;/h3&gt;
+&lt;p&gt;The issue tracker feels like someone has tried to improve on &lt;a class="reference external" href="http://www.bugzilla.org"&gt;Bugzilla&lt;/a&gt;, without
+taking a look at modern trackers.  It is definitely the weakest part of
+&lt;strong class="command"&gt;fossil&lt;/strong&gt; in my opinion, using it is both a mental and eye-stabbing
+pain at the same time.&lt;/p&gt;
+&lt;p&gt;Luckily you can rework a lot of it by fiddling around with the administration
+settings exposed by &lt;strong class="command"&gt;fossil ui&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;This also exposes one of the best features of &lt;strong class="command"&gt;fossil&lt;/strong&gt;, you can create
+a custom &lt;abbr title="Structured Query Language"&gt;SQL&lt;/abbr&gt; script that configures the project(issue tracking, pretty theme,
+etc) and just blast it in to the project’s database.  Or you can create
+a custom file that makes all your edits and pump it in with &lt;strong class="command"&gt;fossil
+config import&lt;/strong&gt;.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="wiki"&gt;
+&lt;h3&gt;Wiki&lt;/h3&gt;
+&lt;p&gt;The wiki system is actually really good for what it does, but it has very few of
+the features we use for our documentation.  I don’t want to hold that against it
+though, as it just a impedance mismatch.&lt;/p&gt;
+&lt;p&gt;The end result of the integrated components feels to me like you’ve chosen
+a usable, but weak, component for some of the most important parts of your
+project’s &lt;abbr title="Application Lifecycle Management"&gt;ALM&lt;/abbr&gt;.  The bits work well together, but none of them seem like an
+option you’d choose on their own.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="section" id="interface"&gt;
+&lt;h2&gt;Interface&lt;/h2&gt;
+&lt;p&gt;The help output for new users is, in my opinion, really irritating.  The default
+command message tells you to run &lt;strong class="command"&gt;fossil help&lt;/strong&gt; or &lt;strong class="command"&gt;fossil
+help COMMAND&lt;/strong&gt;, without providing the names of any of the common commands.  The
+&lt;strong class="command"&gt;fossil help&lt;/strong&gt; output emulates a &lt;strong class="command"&gt;column -t&lt;/strong&gt; filter of the
+command names, listing commands with unique to &lt;strong class="command"&gt;fossil&lt;/strong&gt; terminology
+and no short descriptions.  &lt;strong class="command"&gt;fossil help --all&lt;/strong&gt; feels like it should
+be more useful, but just creates a larger table of commands with uncommon names
+and still no descriptions.&lt;/p&gt;
+&lt;p&gt;It makes very little sense to organise the help in this manner because as you
+get used to the naming and non-standard option style you will need the help
+less.  I’ve patched this for our packages, and if people like it I’ll try to
+push it upstream.&lt;/p&gt;
+&lt;div class="admonition note"&gt;
+&lt;p class="admonition-title"&gt;Note&lt;/p&gt;
+&lt;p&gt;It turns out I won’t be pushing the changes upstream.  They require
+a &lt;abbr title="Contributor License Agreement"&gt;CLA&lt;/abbr&gt; that I can not sign in good faith, which is a shame.&lt;/p&gt;
+&lt;/div&gt;
+&lt;p&gt;The option handling &lt;em&gt;will&lt;/em&gt; trip you up endlessly.  Just the little things like
+being unable to chain options, and needing an endless stream of &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;C-p&lt;/span&gt; &lt;span class="pre"&gt;M-5&lt;/span&gt; &lt;span class="pre"&gt;M-b&lt;/span&gt;
+&lt;span class="pre"&gt;&amp;lt;space&amp;gt;&lt;/span&gt;&lt;/code&gt; to add a space before a commit message for example.  Yes, I know some
+people don’t like standard &lt;strong class="command"&gt;getopt&lt;/strong&gt; or GNU-style option parsing, but
+every other tool you use has chosen it.&lt;/p&gt;
+&lt;p&gt;Some of the interface decisions are actively bad, for example there appears to
+be no way to delegate password configuration to a trusted system service or even
+&lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;netrc&lt;/span&gt;&lt;/code&gt;.  Specifying passwords in &lt;abbr title="Uniform Resource Locator"&gt;URL&lt;/abbr&gt;’s on the command line is a &lt;strong&gt;huge&lt;/strong&gt;
+anti-pattern, and I just hope you don’t have any multiseat systems if you’re
+using that method.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="speed"&gt;
+&lt;h2&gt;Speed&lt;/h2&gt;
+&lt;p&gt;On the whole &lt;strong class="command"&gt;fossil&lt;/strong&gt; is fast, not &lt;strong class="command"&gt;git&lt;/strong&gt; fast but fast
+nonetheless.  Commits do take a disturbingly long time to complete for some
+reason, but most of the other commands are fast enough.&lt;/p&gt;
+&lt;p&gt;Mangling a repository is actually a lot faster with &lt;strong class="command"&gt;fossil&lt;/strong&gt; than any
+other system I can think of, as you can just throw the power of &lt;abbr title="Structured Query Language"&gt;SQL&lt;/abbr&gt; at it.
+You can find some &lt;a class="reference external" href="http://www.sqlalchemy.org/"&gt;sqlalchemy&lt;/a&gt; &lt;abbr title="Object relational mapping"&gt;ORM&lt;/abbr&gt;
+definitions in &lt;code class="file docutils literal notranslate"&gt;&lt;span class="pre"&gt;/usr/share/doc/fossil/orm&lt;/span&gt;&lt;/code&gt; in my packages.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="conclusion"&gt;
+&lt;h2&gt;Conclusion&lt;/h2&gt;
+&lt;p&gt;I mentioned this in this first paragraph, but I don’t see us moving to
+&lt;strong class="command"&gt;fossil&lt;/strong&gt;.  It is a nice system, but it just wouldn’t work for us as
+is.&lt;/p&gt;
+&lt;p&gt;Part of me is tempted to attempt to fix the problems, but then we’d be left with
+a system that is more obscure than &lt;strong class="command"&gt;fossil&lt;/strong&gt;.  If you read the &lt;a class="reference external" href="http://fossil-scm.org/xfer/doc/tip/www/concepts.wiki"&gt;Fossil
+Concepts&lt;/a&gt; and &lt;a class="reference external" href="http://www.fossil-scm.org/xfer/doc/tip/www/faq.wiki"&gt;Frequently Asked Questions&lt;/a&gt; documents you’ll see that the most
+significant problems for us are actually features for upstream, and that is
+obviously fine but it does mean upstreaming changes would be impossible.&lt;/p&gt;
+&lt;div class="admonition note"&gt;
+&lt;p class="admonition-title"&gt;Note&lt;/p&gt;
+&lt;p&gt;As noted above, it turns out they require a &lt;abbr title="Contributor License Agreement"&gt;CLA&lt;/abbr&gt; which means we couldn’t
+send changes upstream anyway.&lt;/p&gt;
+&lt;/div&gt;
+&lt;p&gt;That said I’m am planning on stealing some of the ideas that I really liked
+about &lt;strong class="command"&gt;fossil&lt;/strong&gt; for my own use.  &lt;strong class="command"&gt;fossil all&lt;/strong&gt;’s ability to run
+a command against all repositories configured in &lt;code class="file docutils literal notranslate"&gt;&lt;span class="pre"&gt;~/.fossil&lt;/span&gt;&lt;/code&gt; for example.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</content>
+    <link href="https://jnrowe.github.io/articles/fossil.html" rel="alternate"/>
+    <published>2014-11-12T00:00:00+00:00</published>
   </entry>
 </feed>

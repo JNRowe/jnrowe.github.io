@@ -1,148 +1,148 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version='1.0' encoding='UTF-8'?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <title type="text">JNRowe - Posts tagged bash</title>
-  <id>https://jnrowe.github.io/blog/tag/bash/atom.xml</id>
-  <updated>2009-09-30T00:00:00Z</updated>
-  <link href="https://jnrowe.github.io/" />
-  <link href="https://jnrowe.github.io/blog/tag/bash/atom.xml" rel="self" />
-  <subtitle type="text">Ramblings of a tired mind</subtitle>
-  <generator uri="https://ablog.readthedocs.org" version="0.10.4">ABlog</generator>
-  <entry xml:base="https://jnrowe.github.io/blog/tag/bash/atom.xml">
-    <title type="text">Beyond simple tab completion</title>
-    <id>https://jnrowe.github.io/articles/tips/Beyond_tab_completion.html</id>
-    <updated>2009-09-30T00:00:00Z</updated>
-    <published>2009-09-30T00:00:00Z</published>
-    <link href="https://jnrowe.github.io/articles/tips/Beyond_tab_completion.html" />
+  <id>https://jnrowe.github.io/</id>
+  <title>JNRowe - Posts tagged bash</title>
+  <updated>2021-03-21T11:05:57.801208+00:00</updated>
+  <link href="https://jnrowe.github.io/"/>
+  <link href="https://jnrowe.github.io/blog/tag/bash/atom.xml"/>
+  <generator uri="https://ablog.readthedocs.org" version="0.10.12">ABlog</generator>
+  <subtitle>Ramblings of a tired mind</subtitle>
+  <entry>
+    <id>https://jnrowe.github.io/articles/tips/Uber_pink_prompts.html</id>
+    <title>Uber pink prompts</title>
+    <updated>2009-09-25T00:00:00+01:00</updated>
     <author>
       <name>James Rowe</name>
     </author>
-    <content type="html">&lt;div class=&quot;section&quot; id=&quot;beyond-simple-tab-completion&quot;&gt;
+    <content type="html">&lt;div class="section" id="uber-pink-prompts"&gt;
+
+&lt;p&gt;cookiemon5ter asks in &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;#gentoo&lt;/span&gt;&lt;/code&gt; on Freenode:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;div&gt;&lt;p&gt;anyone know where to get a list of color codes for &lt;strong class="command"&gt;bash&lt;/strong&gt; or know
+the code for pink :p&lt;/p&gt;
+&lt;/div&gt;&lt;/blockquote&gt;
+&lt;p&gt;My first suggestion was to look at &lt;a class="reference external" href="http://kerneltrap.org/man/linux/man4/console_codes.4"&gt;console_codes(4)&lt;/a&gt; for the escapes, and note
+that pink isn’t defined.  As a workaround I suggested changing the console
+palette using &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;echo&lt;/span&gt; &lt;span class="pre"&gt;&amp;quot;\e]PDff1493&amp;quot;&lt;/span&gt;&lt;/code&gt; which will make the normal magenta escape
+in to a much deeper pink.  The syntax to change the console colour palette is
+&lt;code class="samp docutils literal notranslate"&gt;&lt;span class="pre"&gt;eP[&lt;/span&gt;&lt;em&gt;&lt;span class="pre"&gt;colour_number&lt;/span&gt;&lt;/em&gt;&lt;span class="pre"&gt;][&lt;/span&gt;&lt;em&gt;&lt;span class="pre"&gt;red&lt;/span&gt;&lt;/em&gt;&lt;span class="pre"&gt;][&lt;/span&gt;&lt;em&gt;&lt;span class="pre"&gt;green&lt;/span&gt;&lt;/em&gt;&lt;span class="pre"&gt;][&lt;/span&gt;&lt;em&gt;&lt;span class="pre"&gt;blue&lt;/span&gt;&lt;/em&gt;&lt;span class="pre"&gt;]&lt;/span&gt;&lt;/code&gt;, so deconstructing the
+above example we are setting colour code &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;D&lt;/span&gt;&lt;/code&gt; (or 13) to &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;#ff1493&lt;/span&gt;&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;However, the idea cookiemon5ter had wasn’t to change the palette but just to use
+a nice pink in the &lt;a class="reference external" href="http://cnswww.cns.cwru.edu/~chet/bash/bashtop.html"&gt;bash&lt;/a&gt; prompt under &lt;a class="reference external" href="http://materm.sourceforge.net/"&gt;mrxvt&lt;/a&gt;.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;div&gt;&lt;p&gt;i was just talking [about] editing the line in bashrc&lt;/p&gt;
+&lt;/div&gt;&lt;/blockquote&gt;
+&lt;p&gt;Using &lt;strong class="command"&gt;mrxvt&lt;/strong&gt;, or any other terminal that supports the &lt;a class="reference external" href="https://invisible-island.net/xterm/"&gt;xterm&lt;/a&gt;’s 256
+colour mode, we can actually pick a variety of pinks to use directly without
+having to redefine the palette.  The prompt with a more gaudy pink can be
+achieved with the following:&lt;/p&gt;
+&lt;div class="highlight-bash notranslate"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="nb"&gt;export&lt;/span&gt; &lt;span class="nv"&gt;PS1&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;\[\e[01;33m\]\u@\h\[\e[38;5;199m\] \w\$\[\e[00m\] &amp;#39;&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;The important change here is the use of &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;\e[38;5;199m&lt;/span&gt;&lt;/code&gt;, which tells mrxvt to
+select colour 199 from its extended 256 colour range.  Colours 196 through 201
+are varying levels of pink.  To see a quick table of the full colour range you
+can use the following little loop:&lt;/p&gt;
+&lt;div class="highlight-bash notranslate"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="k"&gt;for&lt;/span&gt; i in &lt;span class="o"&gt;{&lt;/span&gt;&lt;span class="m"&gt;0&lt;/span&gt;..15&lt;span class="o"&gt;}&lt;/span&gt;
+&lt;span class="k"&gt;do&lt;/span&gt;
+    &lt;span class="k"&gt;for&lt;/span&gt; j in &lt;span class="o"&gt;{&lt;/span&gt;&lt;span class="m"&gt;0&lt;/span&gt;..15&lt;span class="o"&gt;}&lt;/span&gt;
+    &lt;span class="k"&gt;do&lt;/span&gt;
+        &lt;span class="nv"&gt;col&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="k"&gt;$((&lt;/span&gt;i*16+j&lt;span class="k"&gt;))&lt;/span&gt;
+        &lt;span class="nb"&gt;printf&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;\e[38;5;%im %03i&amp;quot;&lt;/span&gt; &lt;span class="nv"&gt;$col&lt;/span&gt; &lt;span class="nv"&gt;$col&lt;/span&gt;
+    &lt;span class="k"&gt;done&lt;/span&gt;
+    &lt;span class="nb"&gt;printf&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;\n&amp;quot;&lt;/span&gt;
+&lt;span class="k"&gt;done&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;img alt="xterm's 256 colour palette" src="../../_images/2009-09-25-256_colours.png" /&gt;
+&lt;p&gt;There is one other important point to make here, you must set the prompt based
+on terminal type now as some terminals and the console won’t recognise the
+sequences correctly.  Test the terminal type by checking &lt;span class="target" id="index-0"&gt;&lt;/span&gt;&lt;code class="xref std std-envvar docutils literal notranslate"&gt;&lt;span class="pre"&gt;$TERM&lt;/span&gt;&lt;/code&gt; in
+your startup scripts, or if you’re convinced all your terminals are 256 colour
+capable you can simply check for &lt;span class="target" id="index-1"&gt;&lt;/span&gt;&lt;code class="xref std std-envvar docutils literal notranslate"&gt;&lt;span class="pre"&gt;$DISPLAY&lt;/span&gt;&lt;/code&gt; instead.&lt;/p&gt;
+&lt;p&gt;Changing the console palette and using 256 colour mode makes for two tips
+today!!&lt;/p&gt;
+&lt;/div&gt;
+</content>
+    <link href="https://jnrowe.github.io/articles/tips/Uber_pink_prompts.html" rel="alternate"/>
+    <published>2009-09-25T00:00:00+01:00</published>
+  </entry>
+  <entry>
+    <id>https://jnrowe.github.io/articles/tips/Beyond_tab_completion.html</id>
+    <title>Beyond simple tab completion</title>
+    <updated>2009-09-30T00:00:00+01:00</updated>
+    <author>
+      <name>James Rowe</name>
+    </author>
+    <content type="html">&lt;div class="section" id="beyond-simple-tab-completion"&gt;
 
 &lt;p&gt;Matt Taylor wrote on the EADS Linux list:&lt;/p&gt;
 &lt;blockquote&gt;
-&lt;div&gt;&lt;p&gt;&lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;wildmenu&lt;/span&gt;&lt;/code&gt; is to &lt;a class=&quot;reference external&quot; href=&quot;http://www.vim.org/&quot;&gt;vim&lt;/a&gt; as &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;$x&lt;/span&gt;&lt;/code&gt; is to &lt;a class=&quot;reference external&quot; href=&quot;http://cnswww.cns.cwru.edu/~chet/bash/bashtop.html&quot;&gt;bash&lt;/a&gt;.  Define &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;$x&lt;/span&gt;&lt;/code&gt; :)&lt;/p&gt;
+&lt;div&gt;&lt;p&gt;&lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;wildmenu&lt;/span&gt;&lt;/code&gt; is to &lt;a class="reference external" href="http://www.vim.org/"&gt;vim&lt;/a&gt; as &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;$x&lt;/span&gt;&lt;/code&gt; is to &lt;a class="reference external" href="http://cnswww.cns.cwru.edu/~chet/bash/bashtop.html"&gt;bash&lt;/a&gt;.  Define &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;$x&lt;/span&gt;&lt;/code&gt; :)&lt;/p&gt;
 &lt;/div&gt;&lt;/blockquote&gt;
-&lt;p&gt;The &lt;a class=&quot;reference external&quot; href=&quot;http://vimdoc.sourceforge.net/htmldoc/options.html#'wildmenu'&quot;&gt;wildmenu&lt;/a&gt; option in &lt;strong class=&quot;command&quot;&gt;vim&lt;/strong&gt; shows possible command line completions
+&lt;p&gt;The &lt;a class="reference external" href="http://vimdoc.sourceforge.net/htmldoc/options.html#'wildmenu'"&gt;wildmenu&lt;/a&gt; option in &lt;strong class="command"&gt;vim&lt;/strong&gt; shows possible command line completions
 above the command line, highlighting the currently selected completion option.
 A follow up email later and Matt says:&lt;/p&gt;
 &lt;blockquote&gt;
-&lt;div&gt;&lt;p&gt;Basically, I want &lt;strong class=&quot;command&quot;&gt;bash&lt;/strong&gt; to show me the completions and &lt;kbd class=&quot;kbd docutils literal notranslate&quot;&gt;Tab&lt;/kbd&gt;
-to slide through them in the same way &lt;strong class=&quot;command&quot;&gt;vim&lt;/strong&gt; does it.&lt;/p&gt;
+&lt;div&gt;&lt;p&gt;Basically, I want &lt;strong class="command"&gt;bash&lt;/strong&gt; to show me the completions and &lt;kbd class="kbd docutils literal notranslate"&gt;Tab&lt;/kbd&gt;
+to slide through them in the same way &lt;strong class="command"&gt;vim&lt;/strong&gt; does it.&lt;/p&gt;
 &lt;/div&gt;&lt;/blockquote&gt;
-&lt;p&gt;The feature is surprisingly easy to achieve with &lt;strong class=&quot;command&quot;&gt;bash&lt;/strong&gt;, and is
-actually a feature of &lt;a class=&quot;reference external&quot; href=&quot;http://cnswww.cns.cwru.edu/php/chet/readline/rltop.html&quot;&gt;readline&lt;/a&gt; making it available to all software that uses
-completion functionality from &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;readline&lt;/span&gt;&lt;/code&gt;.&lt;/p&gt;
-&lt;p&gt;The option we want is called &lt;a class=&quot;reference external&quot; href=&quot;http://cnswww.cns.cwru.edu/php/chet/readline/readline.html#IDX137&quot;&gt;menu-complete&lt;/a&gt;, but it not bound to a key by
-default.  You can enable &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;menu-complete&lt;/span&gt;&lt;/code&gt; in all &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;readline&lt;/span&gt;&lt;/code&gt;-using
-applications by editing your &lt;code class=&quot;file docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;~/.inputrc&lt;/span&gt;&lt;/code&gt; (or whatever &lt;span class=&quot;target&quot; id=&quot;index-0&quot;&gt;&lt;/span&gt;&lt;code class=&quot;xref std std-envvar docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;$INPUTRC&lt;/span&gt;&lt;/code&gt;
-points to if it is set) or just for &lt;strong class=&quot;command&quot;&gt;bash&lt;/strong&gt; if you do not wish to
+&lt;p&gt;The feature is surprisingly easy to achieve with &lt;strong class="command"&gt;bash&lt;/strong&gt;, and is
+actually a feature of &lt;a class="reference external" href="http://cnswww.cns.cwru.edu/php/chet/readline/rltop.html"&gt;readline&lt;/a&gt; making it available to all software that uses
+completion functionality from &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;readline&lt;/span&gt;&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;The option we want is called &lt;a class="reference external" href="http://cnswww.cns.cwru.edu/php/chet/readline/readline.html#IDX137"&gt;menu-complete&lt;/a&gt;, but it not bound to a key by
+default.  You can enable &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;menu-complete&lt;/span&gt;&lt;/code&gt; in all &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;readline&lt;/span&gt;&lt;/code&gt;-using
+applications by editing your &lt;code class="file docutils literal notranslate"&gt;&lt;span class="pre"&gt;~/.inputrc&lt;/span&gt;&lt;/code&gt; (or whatever &lt;span class="target" id="index-0"&gt;&lt;/span&gt;&lt;code class="xref std std-envvar docutils literal notranslate"&gt;&lt;span class="pre"&gt;$INPUTRC&lt;/span&gt;&lt;/code&gt;
+points to if it is set) or just for &lt;strong class="command"&gt;bash&lt;/strong&gt; if you do not wish to
 change the behaviour of other applications.&lt;/p&gt;
-&lt;p&gt;To change the behaviour by editing the &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;readline&lt;/span&gt;&lt;/code&gt; configuration file we would do
+&lt;p&gt;To change the behaviour by editing the &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;readline&lt;/span&gt;&lt;/code&gt; configuration file we would do
 this:&lt;/p&gt;
-&lt;div class=&quot;highlight-text notranslate&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&amp;quot;\C-a&amp;quot;: menu-complete
+&lt;div class="highlight-text notranslate"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&amp;quot;\C-a&amp;quot;: menu-complete
 # Alternative version, enables menu-complete only for bash
 $if Bash
     &amp;quot;\C-a&amp;quot;: menu-complete
 $endif
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
-&lt;p&gt;The above tells &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;readline&lt;/span&gt;&lt;/code&gt; we wish to bind &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;menu-complete&lt;/span&gt;&lt;/code&gt; to
-&lt;kbd class=&quot;kbd docutils literal notranslate&quot;&gt;&lt;kbd class=&quot;kbd docutils literal notranslate&quot;&gt;Control&lt;/kbd&gt;-&lt;kbd class=&quot;kbd docutils literal notranslate&quot;&gt;a&lt;/kbd&gt;&lt;/kbd&gt;, I find that key combination quite comfortable as
-&lt;kbd class=&quot;kbd docutils literal notranslate&quot;&gt;&lt;kbd class=&quot;kbd docutils literal notranslate&quot;&gt;Control&lt;/kbd&gt;-&lt;kbd class=&quot;kbd docutils literal notranslate&quot;&gt;a&lt;/kbd&gt;&lt;/kbd&gt; is easy to reach the my keyboard layout and is of little use
-in any of the apps I use on a regular basis(I’d feel differently if &lt;kbd class=&quot;kbd docutils literal notranslate&quot;&gt;Home&lt;/kbd&gt;
+&lt;p&gt;The above tells &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;readline&lt;/span&gt;&lt;/code&gt; we wish to bind &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;menu-complete&lt;/span&gt;&lt;/code&gt; to
+&lt;kbd class="kbd docutils literal notranslate"&gt;&lt;kbd class="kbd docutils literal notranslate"&gt;Control&lt;/kbd&gt;-&lt;kbd class="kbd docutils literal notranslate"&gt;a&lt;/kbd&gt;&lt;/kbd&gt;, I find that key combination quite comfortable as
+&lt;kbd class="kbd docutils literal notranslate"&gt;&lt;kbd class="kbd docutils literal notranslate"&gt;Control&lt;/kbd&gt;-&lt;kbd class="kbd docutils literal notranslate"&gt;a&lt;/kbd&gt;&lt;/kbd&gt; is easy to reach the my keyboard layout and is of little use
+in any of the apps I use on a regular basis(I’d feel differently if &lt;kbd class="kbd docutils literal notranslate"&gt;Home&lt;/kbd&gt;
 was inaccessible).  You must either re-read the configuration file or restart
-the &lt;strong class=&quot;command&quot;&gt;bash&lt;/strong&gt; session to enable this binding.&lt;/p&gt;
-&lt;p&gt;To enable the key binding in &lt;strong class=&quot;command&quot;&gt;bash&lt;/strong&gt; only we could also just edit the
-appropriate &lt;strong class=&quot;command&quot;&gt;bash&lt;/strong&gt; startup file:&lt;/p&gt;
-&lt;div class=&quot;highlight-bash notranslate&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;bind&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;&amp;quot;\C-a&amp;quot;: menu-complete&amp;#39;&lt;/span&gt;
+the &lt;strong class="command"&gt;bash&lt;/strong&gt; session to enable this binding.&lt;/p&gt;
+&lt;p&gt;To enable the key binding in &lt;strong class="command"&gt;bash&lt;/strong&gt; only we could also just edit the
+appropriate &lt;strong class="command"&gt;bash&lt;/strong&gt; startup file:&lt;/p&gt;
+&lt;div class="highlight-bash notranslate"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="nb"&gt;bind&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;&amp;quot;\C-a&amp;quot;: menu-complete&amp;#39;&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
-&lt;p&gt;You must source the startup file or restart &lt;strong class=&quot;command&quot;&gt;bash&lt;/strong&gt; to enable this
+&lt;p&gt;You must source the startup file or restart &lt;strong class="command"&gt;bash&lt;/strong&gt; to enable this
 binding, alternatively you can just test the command in your current
-&lt;strong class=&quot;command&quot;&gt;bash&lt;/strong&gt; setting until you’re happy with the key combination.&lt;/p&gt;
+&lt;strong class="command"&gt;bash&lt;/strong&gt; setting until you’re happy with the key combination.&lt;/p&gt;
 &lt;p&gt;In a follow up email on the list Matt asks if it is possible to make the
-completion context aware, in much the same the &lt;a class=&quot;reference external&quot; href=&quot;http://bash-completion.alioth.debian.org/&quot;&gt;bash-completion&lt;/a&gt; package does but
+completion context aware, in much the same the &lt;a class="reference external" href="http://bash-completion.alioth.debian.org/"&gt;bash-completion&lt;/a&gt; package does but
 without having to write new completion scripts.  There are some other quite
-useful completion modes available in &lt;strong class=&quot;command&quot;&gt;bash&lt;/strong&gt;, I’ll describe a few
+useful completion modes available in &lt;strong class="command"&gt;bash&lt;/strong&gt;, I’ll describe a few
 below.&lt;/p&gt;
-&lt;p&gt;&lt;kbd class=&quot;kbd docutils literal notranslate&quot;&gt;&lt;kbd class=&quot;kbd docutils literal notranslate&quot;&gt;M&lt;/kbd&gt;-&lt;kbd class=&quot;kbd docutils literal notranslate&quot;&gt;!&lt;/kbd&gt;&lt;/kbd&gt; tells &lt;strong class=&quot;command&quot;&gt;bash&lt;/strong&gt; to complete command names; be they actual
-on-disk commands, functions or aliases. &lt;kbd class=&quot;kbd docutils literal notranslate&quot;&gt;&lt;kbd class=&quot;kbd docutils literal notranslate&quot;&gt;M&lt;/kbd&gt;-&lt;kbd class=&quot;kbd docutils literal notranslate&quot;&gt;/&lt;/kbd&gt;&lt;/kbd&gt; completes only filenames,
-this can be very useful when &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;bash-completion&lt;/span&gt;&lt;/code&gt; is refusing to tab complete
-a filename for you.  &lt;kbd class=&quot;kbd docutils literal notranslate&quot;&gt;&lt;kbd class=&quot;kbd docutils literal notranslate&quot;&gt;C&lt;/kbd&gt;-&lt;kbd class=&quot;kbd docutils literal notranslate&quot;&gt;$&lt;/kbd&gt;&lt;/kbd&gt; implements variable name completion, this is
+&lt;p&gt;&lt;kbd class="kbd docutils literal notranslate"&gt;&lt;kbd class="kbd docutils literal notranslate"&gt;M&lt;/kbd&gt;-&lt;kbd class="kbd docutils literal notranslate"&gt;!&lt;/kbd&gt;&lt;/kbd&gt; tells &lt;strong class="command"&gt;bash&lt;/strong&gt; to complete command names; be they actual
+on-disk commands, functions or aliases. &lt;kbd class="kbd docutils literal notranslate"&gt;&lt;kbd class="kbd docutils literal notranslate"&gt;M&lt;/kbd&gt;-&lt;kbd class="kbd docutils literal notranslate"&gt;/&lt;/kbd&gt;&lt;/kbd&gt; completes only filenames,
+this can be very useful when &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;bash-completion&lt;/span&gt;&lt;/code&gt; is refusing to tab complete
+a filename for you.  &lt;kbd class="kbd docutils literal notranslate"&gt;&lt;kbd class="kbd docutils literal notranslate"&gt;C&lt;/kbd&gt;-&lt;kbd class="kbd docutils literal notranslate"&gt;$&lt;/kbd&gt;&lt;/kbd&gt; implements variable name completion, this is
 most useful when you’re looking to unset or re-set a variable.  Variable name
-completion isn’t actually necessary if you have &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;bash-completion&lt;/span&gt;&lt;/code&gt; installed
+completion isn’t actually necessary if you have &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;bash-completion&lt;/span&gt;&lt;/code&gt; installed
 as it is smart enough to handle this for you in most cases.&lt;/p&gt;
 &lt;p&gt;And finally, there is a one more incredibly useful completion mode in
-&lt;strong class=&quot;command&quot;&gt;bash&lt;/strong&gt; and that is &lt;kbd class=&quot;kbd docutils literal notranslate&quot;&gt;&lt;kbd class=&quot;kbd docutils literal notranslate&quot;&gt;M&lt;/kbd&gt;-&lt;kbd class=&quot;kbd docutils literal notranslate&quot;&gt;{&lt;/kbd&gt;&lt;/kbd&gt;, it adds all possible completions to the
-command line using the brace expansion syntax.  For example, if I type &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;ls&lt;/span&gt;
-&lt;span class=&quot;pre&quot;&gt;~/Git/Local/&amp;lt;M-{&amp;gt;&lt;/span&gt;&lt;/code&gt; it completes to
-&lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;/home/jay/Git/Local/{Makefile,countless,dot-configs,haskvim,jrutils}&lt;/span&gt;&lt;/code&gt;.
-Using &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;readline&lt;/span&gt;&lt;/code&gt; motion commands, especially word motions such as &lt;kbd class=&quot;kbd docutils literal notranslate&quot;&gt;&lt;kbd class=&quot;kbd docutils literal notranslate&quot;&gt;M&lt;/kbd&gt;-&lt;kbd class=&quot;kbd docutils literal notranslate&quot;&gt;f&lt;/kbd&gt;&lt;/kbd&gt;
-and &lt;kbd class=&quot;kbd docutils literal notranslate&quot;&gt;&lt;kbd class=&quot;kbd docutils literal notranslate&quot;&gt;M&lt;/kbd&gt;-&lt;kbd class=&quot;kbd docutils literal notranslate&quot;&gt;b&lt;/kbd&gt;&lt;/kbd&gt; to jump forward and backward one word, I can easily apply
+&lt;strong class="command"&gt;bash&lt;/strong&gt; and that is &lt;kbd class="kbd docutils literal notranslate"&gt;&lt;kbd class="kbd docutils literal notranslate"&gt;M&lt;/kbd&gt;-&lt;kbd class="kbd docutils literal notranslate"&gt;{&lt;/kbd&gt;&lt;/kbd&gt;, it adds all possible completions to the
+command line using the brace expansion syntax.  For example, if I type &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;ls&lt;/span&gt;
+&lt;span class="pre"&gt;~/Git/Local/&amp;lt;M-{&amp;gt;&lt;/span&gt;&lt;/code&gt; it completes to
+&lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;/home/jay/Git/Local/{Makefile,countless,dot-configs,haskvim,jrutils}&lt;/span&gt;&lt;/code&gt;.
+Using &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;readline&lt;/span&gt;&lt;/code&gt; motion commands, especially word motions such as &lt;kbd class="kbd docutils literal notranslate"&gt;&lt;kbd class="kbd docutils literal notranslate"&gt;M&lt;/kbd&gt;-&lt;kbd class="kbd docutils literal notranslate"&gt;f&lt;/kbd&gt;&lt;/kbd&gt;
+and &lt;kbd class="kbd docutils literal notranslate"&gt;&lt;kbd class="kbd docutils literal notranslate"&gt;M&lt;/kbd&gt;-&lt;kbd class="kbd docutils literal notranslate"&gt;b&lt;/kbd&gt;&lt;/kbd&gt; to jump forward and backward one word, I can easily apply
 a command to a certain set of files in a directory.  Just don’t try it on
-&lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;/usr/bin&lt;/span&gt;&lt;/code&gt; unless you want to see how &lt;strong class=&quot;command&quot;&gt;bash&lt;/strong&gt; handles massive command
+&lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;/usr/bin&lt;/span&gt;&lt;/code&gt; unless you want to see how &lt;strong class="command"&gt;bash&lt;/strong&gt; handles massive command
 lines!!&lt;/p&gt;
 &lt;/div&gt;
 </content>
-  </entry>
-  <entry xml:base="https://jnrowe.github.io/blog/tag/bash/atom.xml">
-    <title type="text">Uber pink prompts</title>
-    <id>https://jnrowe.github.io/articles/tips/Uber_pink_prompts.html</id>
-    <updated>2009-09-25T00:00:00Z</updated>
-    <published>2009-09-25T00:00:00Z</published>
-    <link href="https://jnrowe.github.io/articles/tips/Uber_pink_prompts.html" />
-    <author>
-      <name>James Rowe</name>
-    </author>
-    <content type="html">&lt;div class=&quot;section&quot; id=&quot;uber-pink-prompts&quot;&gt;
-
-&lt;p&gt;cookiemon5ter asks in &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;#gentoo&lt;/span&gt;&lt;/code&gt; on Freenode:&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;div&gt;&lt;p&gt;anyone know where to get a list of color codes for &lt;strong class=&quot;command&quot;&gt;bash&lt;/strong&gt; or know
-the code for pink :p&lt;/p&gt;
-&lt;/div&gt;&lt;/blockquote&gt;
-&lt;p&gt;My first suggestion was to look at &lt;a class=&quot;reference external&quot; href=&quot;http://kerneltrap.org/man/linux/man4/console_codes.4&quot;&gt;console_codes(4)&lt;/a&gt; for the escapes, and note
-that pink isn’t defined.  As a workaround I suggested changing the console
-palette using &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;pre&quot;&gt;&amp;quot;\e]PDff1493&amp;quot;&lt;/span&gt;&lt;/code&gt; which will make the normal magenta escape
-in to a much deeper pink.  The syntax to change the console colour palette is
-&lt;code class=&quot;samp docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;eP[&lt;/span&gt;&lt;em&gt;&lt;span class=&quot;pre&quot;&gt;colour_number&lt;/span&gt;&lt;/em&gt;&lt;span class=&quot;pre&quot;&gt;][&lt;/span&gt;&lt;em&gt;&lt;span class=&quot;pre&quot;&gt;red&lt;/span&gt;&lt;/em&gt;&lt;span class=&quot;pre&quot;&gt;][&lt;/span&gt;&lt;em&gt;&lt;span class=&quot;pre&quot;&gt;green&lt;/span&gt;&lt;/em&gt;&lt;span class=&quot;pre&quot;&gt;][&lt;/span&gt;&lt;em&gt;&lt;span class=&quot;pre&quot;&gt;blue&lt;/span&gt;&lt;/em&gt;&lt;span class=&quot;pre&quot;&gt;]&lt;/span&gt;&lt;/code&gt;, so deconstructing the
-above example we are setting colour code &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;D&lt;/span&gt;&lt;/code&gt; (or 13) to &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;#ff1493&lt;/span&gt;&lt;/code&gt;.&lt;/p&gt;
-&lt;p&gt;However, the idea cookiemon5ter had wasn’t to change the palette but just to use
-a nice pink in the &lt;a class=&quot;reference external&quot; href=&quot;http://cnswww.cns.cwru.edu/~chet/bash/bashtop.html&quot;&gt;bash&lt;/a&gt; prompt under &lt;a class=&quot;reference external&quot; href=&quot;http://materm.sourceforge.net/&quot;&gt;mrxvt&lt;/a&gt;.&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;div&gt;&lt;p&gt;i was just talking [about] editing the line in bashrc&lt;/p&gt;
-&lt;/div&gt;&lt;/blockquote&gt;
-&lt;p&gt;Using &lt;strong class=&quot;command&quot;&gt;mrxvt&lt;/strong&gt;, or any other terminal that supports the &lt;a class=&quot;reference external&quot; href=&quot;https://invisible-island.net/xterm/&quot;&gt;xterm&lt;/a&gt;’s 256
-colour mode, we can actually pick a variety of pinks to use directly without
-having to redefine the palette.  The prompt with a more gaudy pink can be
-achieved with the following:&lt;/p&gt;
-&lt;div class=&quot;highlight-bash notranslate&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;export&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;PS1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;\[\e[01;33m\]\u@\h\[\e[38;5;199m\] \w\$\[\e[00m\] &amp;#39;&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-&lt;/div&gt;
-&lt;p&gt;The important change here is the use of &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;\e[38;5;199m&lt;/span&gt;&lt;/code&gt;, which tells mrxvt to
-select colour 199 from its extended 256 colour range.  Colours 196 through 201
-are varying levels of pink.  To see a quick table of the full colour range you
-can use the following little loop:&lt;/p&gt;
-&lt;div class=&quot;highlight-bash notranslate&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; i in &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;0&lt;/span&gt;..15&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;do&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; j in &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;0&lt;/span&gt;..15&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;do&lt;/span&gt;
-        &lt;span class=&quot;nv&quot;&gt;col&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;$((&lt;/span&gt;i*16+j&lt;span class=&quot;k&quot;&gt;))&lt;/span&gt;
-        &lt;span class=&quot;nb&quot;&gt;printf&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;\e[38;5;%im %03i&amp;quot;&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$col&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$col&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;done&lt;/span&gt;
-    &lt;span class=&quot;nb&quot;&gt;printf&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;\n&amp;quot;&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;done&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-&lt;/div&gt;
-&lt;img alt=&quot;xterm's 256 colour palette&quot; src=&quot;../../_images/2009-09-25-256_colours.png&quot; /&gt;
-&lt;p&gt;There is one other important point to make here, you must set the prompt based
-on terminal type now as some terminals and the console won’t recognise the
-sequences correctly.  Test the terminal type by checking &lt;span class=&quot;target&quot; id=&quot;index-0&quot;&gt;&lt;/span&gt;&lt;code class=&quot;xref std std-envvar docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;$TERM&lt;/span&gt;&lt;/code&gt; in
-your startup scripts, or if you’re convinced all your terminals are 256 colour
-capable you can simply check for &lt;span class=&quot;target&quot; id=&quot;index-1&quot;&gt;&lt;/span&gt;&lt;code class=&quot;xref std std-envvar docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;$DISPLAY&lt;/span&gt;&lt;/code&gt; instead.&lt;/p&gt;
-&lt;p&gt;Changing the console palette and using 256 colour mode makes for two tips
-today!!&lt;/p&gt;
-&lt;/div&gt;
-</content>
+    <link href="https://jnrowe.github.io/articles/tips/Beyond_tab_completion.html" rel="alternate"/>
+    <published>2009-09-30T00:00:00+01:00</published>
   </entry>
 </feed>

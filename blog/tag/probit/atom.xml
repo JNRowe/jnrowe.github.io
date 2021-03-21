@@ -1,27 +1,25 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version='1.0' encoding='UTF-8'?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <title type="text">JNRowe - Posts tagged probit</title>
-  <id>https://jnrowe.github.io/blog/tag/probit/atom.xml</id>
-  <updated>2014-06-30T00:00:00Z</updated>
-  <link href="https://jnrowe.github.io/" />
-  <link href="https://jnrowe.github.io/blog/tag/probit/atom.xml" rel="self" />
-  <subtitle type="text">Ramblings of a tired mind</subtitle>
-  <generator uri="https://ablog.readthedocs.org" version="0.10.4">ABlog</generator>
-  <entry xml:base="https://jnrowe.github.io/blog/tag/probit/atom.xml">
-    <title type="text">Project postmortems</title>
+  <id>https://jnrowe.github.io/</id>
+  <title>JNRowe - Posts tagged probit</title>
+  <updated>2021-03-21T11:05:59.876207+00:00</updated>
+  <link href="https://jnrowe.github.io/"/>
+  <link href="https://jnrowe.github.io/blog/tag/probit/atom.xml"/>
+  <generator uri="https://ablog.readthedocs.org" version="0.10.12">ABlog</generator>
+  <subtitle>Ramblings of a tired mind</subtitle>
+  <entry>
     <id>https://jnrowe.github.io/articles/probits/index.html</id>
-    <updated>2014-06-30T00:00:00Z</updated>
-    <published>2014-06-30T00:00:00Z</published>
-    <link href="https://jnrowe.github.io/articles/probits/index.html" />
+    <title>Project postmortems</title>
+    <updated>2014-06-30T00:00:00+01:00</updated>
     <author>
       <name>James Rowe</name>
     </author>
-    <content type="html">&lt;div class=&quot;section&quot; id=&quot;project-postmortems&quot;&gt;
+    <content type="html">&lt;div class="section" id="project-postmortems"&gt;
 
 &lt;p&gt;One of my favourite things about the day job is the post-project analysis and
-postmortems, which we lovingly refer to as &lt;abbr title=&quot;Project Obituaries&quot;&gt;probits&lt;/abbr&gt;
+postmortems, which we lovingly refer to as &lt;abbr title="Project Obituaries"&gt;probits&lt;/abbr&gt;
 internally.&lt;/p&gt;
-&lt;div class=&quot;section&quot; id=&quot;background&quot;&gt;
+&lt;div class="section" id="background"&gt;
 &lt;h2&gt;Background&lt;/h2&gt;
 &lt;p&gt;I work in heavily structured and standalone project-oriented environment.  In
 a decade I can count the number of fluid projects on three fingers.  As I write
@@ -34,15 +32,17 @@ also allows us to take advantage of that by inspecting the project as a whole,
 spotting the successes and failures within.  Probits are the more informal
 dialogue that we pin to the front of each folder.&lt;/p&gt;
 &lt;/div&gt;
-&lt;div class=&quot;section&quot; id=&quot;what-youll-find&quot;&gt;
+&lt;div class="section" id="what-youll-find"&gt;
 &lt;h2&gt;What you’ll find&lt;/h2&gt;
 &lt;p&gt;I’ve recently decided I’d like to take a similar approach to some side projects
 that I work on, and also try to apply the methods to some more real-life
 situations.  This category, and the accompanying index, below are that attempt.&lt;/p&gt;
-&lt;div class=&quot;toctree-wrapper compound&quot;&gt;
+&lt;div class="toctree-wrapper compound"&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 </content>
+    <link href="https://jnrowe.github.io/articles/probits/index.html" rel="alternate"/>
+    <published>2014-06-30T00:00:00+01:00</published>
   </entry>
 </feed>

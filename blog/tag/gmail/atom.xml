@@ -1,126 +1,126 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version='1.0' encoding='UTF-8'?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <title type="text">JNRowe - Posts tagged gmail</title>
-  <id>https://jnrowe.github.io/blog/tag/gmail/atom.xml</id>
-  <updated>2009-10-08T00:00:00Z</updated>
-  <link href="https://jnrowe.github.io/" />
-  <link href="https://jnrowe.github.io/blog/tag/gmail/atom.xml" rel="self" />
-  <subtitle type="text">Ramblings of a tired mind</subtitle>
-  <generator uri="https://ablog.readthedocs.org" version="0.10.4">ABlog</generator>
-  <entry xml:base="https://jnrowe.github.io/blog/tag/gmail/atom.xml">
-    <title type="text">Importing gmail filters in mutt</title>
+  <id>https://jnrowe.github.io/</id>
+  <title>JNRowe - Posts tagged gmail</title>
+  <updated>2021-03-21T11:05:59.087856+00:00</updated>
+  <link href="https://jnrowe.github.io/"/>
+  <link href="https://jnrowe.github.io/blog/tag/gmail/atom.xml"/>
+  <generator uri="https://ablog.readthedocs.org" version="0.10.12">ABlog</generator>
+  <subtitle>Ramblings of a tired mind</subtitle>
+  <entry>
     <id>https://jnrowe.github.io/articles/tips/Importing_gmail_filters_in_mutt.html</id>
-    <updated>2009-10-08T00:00:00Z</updated>
-    <published>2009-10-08T00:00:00Z</published>
-    <link href="https://jnrowe.github.io/articles/tips/Importing_gmail_filters_in_mutt.html" />
+    <title>Importing gmail filters in mutt</title>
+    <updated>2009-10-08T00:00:00+01:00</updated>
     <author>
       <name>James Rowe</name>
     </author>
-    <content type="html">&lt;div class=&quot;section&quot; id=&quot;importing-gmail-filters-in-mutt&quot;&gt;
+    <content type="html">&lt;div class="section" id="importing-gmail-filters-in-mutt"&gt;
 
-&lt;p&gt;On our company’s Linux list Ryan Abbott is preparing to move to &lt;a class=&quot;reference external&quot; href=&quot;http://www.mutt.org/&quot;&gt;mutt&lt;/a&gt;:&lt;/p&gt;
+&lt;p&gt;On our company’s Linux list Ryan Abbott is preparing to move to &lt;a class="reference external" href="http://www.mutt.org/"&gt;mutt&lt;/a&gt;:&lt;/p&gt;
 &lt;blockquote&gt;
-&lt;div&gt;&lt;p&gt;I have some user filters setup in &lt;a class=&quot;reference external&quot; href=&quot;https://mail.google.com&quot;&gt;gmail&lt;/a&gt;, and I’m wondering if there some
+&lt;div&gt;&lt;p&gt;I have some user filters setup in &lt;a class="reference external" href="https://mail.google.com"&gt;gmail&lt;/a&gt;, and I’m wondering if there some
 way to make mutt use them?&lt;/p&gt;
 &lt;/div&gt;&lt;/blockquote&gt;
 &lt;p&gt;Ryan has some filters set up for “premium” users who should be tagged in
 a special way in the mail display so that they are much more noticeable.  Google
-do support &lt;a class=&quot;reference external&quot; href=&quot;http://gmailblog.blogspot.com/2009/03/new-in-labs-filter-importexport.html&quot;&gt;exporting filters&lt;/a&gt; now, and conveniently it is in well documented
-format based on &lt;a class=&quot;reference external&quot; href=&quot;http://www.atomenabled.org/&quot;&gt;Atom&lt;/a&gt;.  An example export, gleaned from Ryan but with personal
+do support &lt;a class="reference external" href="http://gmailblog.blogspot.com/2009/03/new-in-labs-filter-importexport.html"&gt;exporting filters&lt;/a&gt; now, and conveniently it is in well documented
+format based on &lt;a class="reference external" href="http://www.atomenabled.org/"&gt;Atom&lt;/a&gt;.  An example export, gleaned from Ryan but with personal
 data removed, follows:&lt;/p&gt;
-&lt;div class=&quot;highlight-xml notranslate&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&quot;cp&quot;&gt;&amp;lt;?xml version=&amp;#39;1.0&amp;#39; encoding=&amp;#39;UTF-8&amp;#39;?&amp;gt;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;feed&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;xmlns=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;#39;http://www.w3.org/2005/Atom&amp;#39;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;xmlns:apps=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;#39;http://schemas.google.com/apps/2006&amp;#39;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
-    &lt;span class=&quot;nt&quot;&gt;&amp;lt;title&amp;gt;&lt;/span&gt;Priority filter&lt;span class=&quot;nt&quot;&gt;&amp;lt;/title&amp;gt;&lt;/span&gt;
-    &lt;span class=&quot;nt&quot;&gt;&amp;lt;id&amp;gt;&lt;/span&gt;tag:mail.google.com,2008:filters:1255006471524,31130756565258&lt;span class=&quot;nt&quot;&gt;&amp;lt;/id&amp;gt;&lt;/span&gt;
-    &lt;span class=&quot;nt&quot;&gt;&amp;lt;updated&amp;gt;&lt;/span&gt;2009-10-02T12:04:00Z&lt;span class=&quot;nt&quot;&gt;&amp;lt;/updated&amp;gt;&lt;/span&gt;
-    &lt;span class=&quot;nt&quot;&gt;&amp;lt;author&amp;gt;&lt;/span&gt;
-        &lt;span class=&quot;nt&quot;&gt;&amp;lt;name&amp;gt;&lt;/span&gt;Ryan Abbott&lt;span class=&quot;nt&quot;&gt;&amp;lt;/name&amp;gt;&lt;/span&gt;
-        &lt;span class=&quot;nt&quot;&gt;&amp;lt;email&amp;gt;&lt;/span&gt;rabbott@example.com&lt;span class=&quot;nt&quot;&gt;&amp;lt;/email&amp;gt;&lt;/span&gt;
-        &lt;span class=&quot;nt&quot;&gt;&amp;lt;uri&amp;gt;&lt;/span&gt;http://rabbott.example.com&lt;span class=&quot;nt&quot;&gt;&amp;lt;/uri&amp;gt;&lt;/span&gt;
-    &lt;span class=&quot;nt&quot;&gt;&amp;lt;/author&amp;gt;&lt;/span&gt;
-    &lt;span class=&quot;nt&quot;&gt;&amp;lt;entry&amp;gt;&lt;/span&gt;
-        &lt;span class=&quot;nt&quot;&gt;&amp;lt;category&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;term=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;#39;filter&amp;#39;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&amp;lt;/category&amp;gt;&lt;/span&gt;
-        &lt;span class=&quot;nt&quot;&gt;&amp;lt;title&amp;gt;&lt;/span&gt;Joe Bloggs&lt;span class=&quot;nt&quot;&gt;&amp;lt;/title&amp;gt;&lt;/span&gt;
-        &lt;span class=&quot;nt&quot;&gt;&amp;lt;id&amp;gt;&lt;/span&gt;tag:mail.google.com,2008:filter:1255006471524&lt;span class=&quot;nt&quot;&gt;&amp;lt;/id&amp;gt;&lt;/span&gt;
-        &lt;span class=&quot;nt&quot;&gt;&amp;lt;updated&amp;gt;&lt;/span&gt;2009-10-01T09:23:11Z&lt;span class=&quot;nt&quot;&gt;&amp;lt;/updated&amp;gt;&lt;/span&gt;
-        &lt;span class=&quot;nt&quot;&gt;&amp;lt;content&amp;gt;&amp;lt;/content&amp;gt;&lt;/span&gt;
-        &lt;span class=&quot;nt&quot;&gt;&amp;lt;apps:property&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;name=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;#39;from&amp;#39;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;value=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;#39;joe@example.com&amp;#39;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;/&amp;gt;&lt;/span&gt;
-        &lt;span class=&quot;nt&quot;&gt;&amp;lt;apps:property&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;name=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;#39;label&amp;#39;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;value=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;#39;HiPri&amp;#39;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;/&amp;gt;&lt;/span&gt;
-    &lt;span class=&quot;nt&quot;&gt;&amp;lt;/entry&amp;gt;&lt;/span&gt;
-    &lt;span class=&quot;nt&quot;&gt;&amp;lt;entry&amp;gt;&lt;/span&gt;
-        &lt;span class=&quot;nt&quot;&gt;&amp;lt;category&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;term=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;#39;filter&amp;#39;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&amp;lt;/category&amp;gt;&lt;/span&gt;
-        &lt;span class=&quot;nt&quot;&gt;&amp;lt;title&amp;gt;&lt;/span&gt;John Doe&lt;span class=&quot;nt&quot;&gt;&amp;lt;/title&amp;gt;&lt;/span&gt;
-        &lt;span class=&quot;nt&quot;&gt;&amp;lt;id&amp;gt;&lt;/span&gt;tag:mail.google.com,2008:filter:31130756565258&lt;span class=&quot;nt&quot;&gt;&amp;lt;/id&amp;gt;&lt;/span&gt;
-        &lt;span class=&quot;nt&quot;&gt;&amp;lt;updated&amp;gt;&lt;/span&gt;2009-09-23T14:59:45Z&lt;span class=&quot;nt&quot;&gt;&amp;lt;/updated&amp;gt;&lt;/span&gt;
-        &lt;span class=&quot;nt&quot;&gt;&amp;lt;content&amp;gt;&amp;lt;/content&amp;gt;&lt;/span&gt;
-        &lt;span class=&quot;nt&quot;&gt;&amp;lt;apps:property&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;name=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;#39;from&amp;#39;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;value=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;#39;johndoe@example.com&amp;#39;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;/&amp;gt;&lt;/span&gt;
-        &lt;span class=&quot;nt&quot;&gt;&amp;lt;apps:property&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;name=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;#39;label&amp;#39;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;value=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;#39;HiPri&amp;#39;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;/&amp;gt;&lt;/span&gt;
-    &lt;span class=&quot;nt&quot;&gt;&amp;lt;/entry&amp;gt;&lt;/span&gt;
-&lt;span class=&quot;nt&quot;&gt;&amp;lt;/feed&amp;gt;&lt;/span&gt;
+&lt;div class="highlight-xml notranslate"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="cp"&gt;&amp;lt;?xml version=&amp;#39;1.0&amp;#39; encoding=&amp;#39;UTF-8&amp;#39;?&amp;gt;&lt;/span&gt;&lt;span class="nt"&gt;&amp;lt;feed&lt;/span&gt; &lt;span class="na"&gt;xmlns=&lt;/span&gt;&lt;span class="s"&gt;&amp;#39;http://www.w3.org/2005/Atom&amp;#39;&lt;/span&gt; &lt;span class="na"&gt;xmlns:apps=&lt;/span&gt;&lt;span class="s"&gt;&amp;#39;http://schemas.google.com/apps/2006&amp;#39;&lt;/span&gt;&lt;span class="nt"&gt;&amp;gt;&lt;/span&gt;
+    &lt;span class="nt"&gt;&amp;lt;title&amp;gt;&lt;/span&gt;Priority filter&lt;span class="nt"&gt;&amp;lt;/title&amp;gt;&lt;/span&gt;
+    &lt;span class="nt"&gt;&amp;lt;id&amp;gt;&lt;/span&gt;tag:mail.google.com,2008:filters:1255006471524,31130756565258&lt;span class="nt"&gt;&amp;lt;/id&amp;gt;&lt;/span&gt;
+    &lt;span class="nt"&gt;&amp;lt;updated&amp;gt;&lt;/span&gt;2009-10-02T12:04:00Z&lt;span class="nt"&gt;&amp;lt;/updated&amp;gt;&lt;/span&gt;
+    &lt;span class="nt"&gt;&amp;lt;author&amp;gt;&lt;/span&gt;
+        &lt;span class="nt"&gt;&amp;lt;name&amp;gt;&lt;/span&gt;Ryan Abbott&lt;span class="nt"&gt;&amp;lt;/name&amp;gt;&lt;/span&gt;
+        &lt;span class="nt"&gt;&amp;lt;email&amp;gt;&lt;/span&gt;rabbott@example.com&lt;span class="nt"&gt;&amp;lt;/email&amp;gt;&lt;/span&gt;
+        &lt;span class="nt"&gt;&amp;lt;uri&amp;gt;&lt;/span&gt;http://rabbott.example.com&lt;span class="nt"&gt;&amp;lt;/uri&amp;gt;&lt;/span&gt;
+    &lt;span class="nt"&gt;&amp;lt;/author&amp;gt;&lt;/span&gt;
+    &lt;span class="nt"&gt;&amp;lt;entry&amp;gt;&lt;/span&gt;
+        &lt;span class="nt"&gt;&amp;lt;category&lt;/span&gt; &lt;span class="na"&gt;term=&lt;/span&gt;&lt;span class="s"&gt;&amp;#39;filter&amp;#39;&lt;/span&gt;&lt;span class="nt"&gt;&amp;gt;&amp;lt;/category&amp;gt;&lt;/span&gt;
+        &lt;span class="nt"&gt;&amp;lt;title&amp;gt;&lt;/span&gt;Joe Bloggs&lt;span class="nt"&gt;&amp;lt;/title&amp;gt;&lt;/span&gt;
+        &lt;span class="nt"&gt;&amp;lt;id&amp;gt;&lt;/span&gt;tag:mail.google.com,2008:filter:1255006471524&lt;span class="nt"&gt;&amp;lt;/id&amp;gt;&lt;/span&gt;
+        &lt;span class="nt"&gt;&amp;lt;updated&amp;gt;&lt;/span&gt;2009-10-01T09:23:11Z&lt;span class="nt"&gt;&amp;lt;/updated&amp;gt;&lt;/span&gt;
+        &lt;span class="nt"&gt;&amp;lt;content&amp;gt;&amp;lt;/content&amp;gt;&lt;/span&gt;
+        &lt;span class="nt"&gt;&amp;lt;apps:property&lt;/span&gt; &lt;span class="na"&gt;name=&lt;/span&gt;&lt;span class="s"&gt;&amp;#39;from&amp;#39;&lt;/span&gt; &lt;span class="na"&gt;value=&lt;/span&gt;&lt;span class="s"&gt;&amp;#39;joe@example.com&amp;#39;&lt;/span&gt;&lt;span class="nt"&gt;/&amp;gt;&lt;/span&gt;
+        &lt;span class="nt"&gt;&amp;lt;apps:property&lt;/span&gt; &lt;span class="na"&gt;name=&lt;/span&gt;&lt;span class="s"&gt;&amp;#39;label&amp;#39;&lt;/span&gt; &lt;span class="na"&gt;value=&lt;/span&gt;&lt;span class="s"&gt;&amp;#39;HiPri&amp;#39;&lt;/span&gt;&lt;span class="nt"&gt;/&amp;gt;&lt;/span&gt;
+    &lt;span class="nt"&gt;&amp;lt;/entry&amp;gt;&lt;/span&gt;
+    &lt;span class="nt"&gt;&amp;lt;entry&amp;gt;&lt;/span&gt;
+        &lt;span class="nt"&gt;&amp;lt;category&lt;/span&gt; &lt;span class="na"&gt;term=&lt;/span&gt;&lt;span class="s"&gt;&amp;#39;filter&amp;#39;&lt;/span&gt;&lt;span class="nt"&gt;&amp;gt;&amp;lt;/category&amp;gt;&lt;/span&gt;
+        &lt;span class="nt"&gt;&amp;lt;title&amp;gt;&lt;/span&gt;John Doe&lt;span class="nt"&gt;&amp;lt;/title&amp;gt;&lt;/span&gt;
+        &lt;span class="nt"&gt;&amp;lt;id&amp;gt;&lt;/span&gt;tag:mail.google.com,2008:filter:31130756565258&lt;span class="nt"&gt;&amp;lt;/id&amp;gt;&lt;/span&gt;
+        &lt;span class="nt"&gt;&amp;lt;updated&amp;gt;&lt;/span&gt;2009-09-23T14:59:45Z&lt;span class="nt"&gt;&amp;lt;/updated&amp;gt;&lt;/span&gt;
+        &lt;span class="nt"&gt;&amp;lt;content&amp;gt;&amp;lt;/content&amp;gt;&lt;/span&gt;
+        &lt;span class="nt"&gt;&amp;lt;apps:property&lt;/span&gt; &lt;span class="na"&gt;name=&lt;/span&gt;&lt;span class="s"&gt;&amp;#39;from&amp;#39;&lt;/span&gt; &lt;span class="na"&gt;value=&lt;/span&gt;&lt;span class="s"&gt;&amp;#39;johndoe@example.com&amp;#39;&lt;/span&gt;&lt;span class="nt"&gt;/&amp;gt;&lt;/span&gt;
+        &lt;span class="nt"&gt;&amp;lt;apps:property&lt;/span&gt; &lt;span class="na"&gt;name=&lt;/span&gt;&lt;span class="s"&gt;&amp;#39;label&amp;#39;&lt;/span&gt; &lt;span class="na"&gt;value=&lt;/span&gt;&lt;span class="s"&gt;&amp;#39;HiPri&amp;#39;&lt;/span&gt;&lt;span class="nt"&gt;/&amp;gt;&lt;/span&gt;
+    &lt;span class="nt"&gt;&amp;lt;/entry&amp;gt;&lt;/span&gt;
+&lt;span class="nt"&gt;&amp;lt;/feed&amp;gt;&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
 &lt;p&gt;The exported filter is actually quite nice and we could just pull the email
-addresses out with &lt;a class=&quot;reference external&quot; href=&quot;http://sed.sourceforge.net/&quot;&gt;sed&lt;/a&gt;:&lt;/p&gt;
-&lt;div class=&quot;highlight-console notranslate&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&quot;gp&quot;&gt;$&lt;/span&gt; sed -n &lt;span class=&quot;s2&quot;&gt;&amp;quot;/name=&amp;#39;from&amp;#39;/s,^.*value=&amp;#39;\([^&amp;#39;]\+\)&amp;#39;.*&lt;/span&gt;$&lt;span class=&quot;s2&quot;&gt;,\1,p&amp;quot;&lt;/span&gt; filter.xml
-&lt;span class=&quot;go&quot;&gt;joe@example.com&lt;/span&gt;
-&lt;span class=&quot;go&quot;&gt;johndoe@example.com&lt;/span&gt;
+addresses out with &lt;a class="reference external" href="http://sed.sourceforge.net/"&gt;sed&lt;/a&gt;:&lt;/p&gt;
+&lt;div class="highlight-console notranslate"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="gp"&gt;$&lt;/span&gt; sed -n &lt;span class="s2"&gt;&amp;quot;/name=&amp;#39;from&amp;#39;/s,^.*value=&amp;#39;\([^&amp;#39;]\+\)&amp;#39;.*&lt;/span&gt;$&lt;span class="s2"&gt;,\1,p&amp;quot;&lt;/span&gt; filter.xml
+&lt;span class="go"&gt;joe@example.com&lt;/span&gt;
+&lt;span class="go"&gt;johndoe@example.com&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
-&lt;div class=&quot;admonition warning&quot;&gt;
-&lt;p class=&quot;admonition-title&quot;&gt;Warning&lt;/p&gt;
-&lt;p&gt;You shouldn’t parse &lt;abbr title=&quot;Extensible Markup Language&quot;&gt;XML&lt;/abbr&gt; with tools like &lt;strong class=&quot;command&quot;&gt;sed&lt;/strong&gt; or &lt;strong class=&quot;command&quot;&gt;awk&lt;/strong&gt;.
-There are plenty of &lt;abbr title=&quot;Extensible Markup Language&quot;&gt;XML&lt;/abbr&gt; processing tools available, and unlike
-&lt;strong class=&quot;command&quot;&gt;sed&lt;/strong&gt; they shouldn’t fail with files that contain namespaces or
-other &lt;abbr title=&quot;Extensible Markup Language&quot;&gt;XML&lt;/abbr&gt; features.  Now I’ve said that, carry on using &lt;strong class=&quot;command&quot;&gt;sed&lt;/strong&gt;
+&lt;div class="admonition warning"&gt;
+&lt;p class="admonition-title"&gt;Warning&lt;/p&gt;
+&lt;p&gt;You shouldn’t parse &lt;abbr title="Extensible Markup Language"&gt;XML&lt;/abbr&gt; with tools like &lt;strong class="command"&gt;sed&lt;/strong&gt; or &lt;strong class="command"&gt;awk&lt;/strong&gt;.
+There are plenty of &lt;abbr title="Extensible Markup Language"&gt;XML&lt;/abbr&gt; processing tools available, and unlike
+&lt;strong class="command"&gt;sed&lt;/strong&gt; they shouldn’t fail with files that contain namespaces or
+other &lt;abbr title="Extensible Markup Language"&gt;XML&lt;/abbr&gt; features.  Now I’ve said that, carry on using &lt;strong class="command"&gt;sed&lt;/strong&gt;
 like I often do ;)&lt;/p&gt;
 &lt;/div&gt;
 &lt;p&gt;Once we have some way of getting at the email addresses we just need to add the
-filters to &lt;strong class=&quot;command&quot;&gt;mutt&lt;/strong&gt;.  For those of us who use &lt;strong class=&quot;command&quot;&gt;mutt&lt;/strong&gt; the normal
-approach to prioritising in the gmail way is to use either &lt;a class=&quot;reference external&quot; href=&quot;http://www.mutt.org/doc/manual/manual-3.html#ss3.7&quot;&gt;colouring&lt;/a&gt; or
-&lt;a class=&quot;reference external&quot; href=&quot;http://www.mutt.org/doc/manual/manual-3.html#ss3.22&quot;&gt;scoring&lt;/a&gt;:&lt;/p&gt;
-&lt;div class=&quot;highlight-text notranslate&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;color index brightgreen default ~fjoe@example.com
+filters to &lt;strong class="command"&gt;mutt&lt;/strong&gt;.  For those of us who use &lt;strong class="command"&gt;mutt&lt;/strong&gt; the normal
+approach to prioritising in the gmail way is to use either &lt;a class="reference external" href="http://www.mutt.org/doc/manual/manual-3.html#ss3.7"&gt;colouring&lt;/a&gt; or
+&lt;a class="reference external" href="http://www.mutt.org/doc/manual/manual-3.html#ss3.22"&gt;scoring&lt;/a&gt;:&lt;/p&gt;
+&lt;div class="highlight-text notranslate"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;color index brightgreen default ~fjoe@example.com
 score ~fjohndoe@example.com +20
 set index_format=&amp;quot;%Z %2N %?H?%-16.12H&amp;amp;%D? %-16.16F  %s&amp;quot;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
-&lt;img alt=&quot;colouring and scoring in mutt&quot; src=&quot;../../_images/2009-10-08-mutt_screenshot.png&quot; /&gt;
-&lt;p&gt;The &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;color&lt;/span&gt;&lt;/code&gt; example sets all mail from the fictitious Joe Bloggs in the mail
+&lt;img alt="colouring and scoring in mutt" src="../../_images/2009-10-08-mutt_screenshot.png" /&gt;
+&lt;p&gt;The &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;color&lt;/span&gt;&lt;/code&gt; example sets all mail from the fictitious Joe Bloggs in the mail
 index to use a bright green foreground and the default background colour.  The
-&lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;score&lt;/span&gt;&lt;/code&gt; example adds another 20 points to mail from John Doe, we add it
+&lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;score&lt;/span&gt;&lt;/code&gt; example adds another 20 points to mail from John Doe, we add it
 instead of setting it directly is so that we can make use cumulative scoring.
-We must make sure we include &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;%N&lt;/span&gt;&lt;/code&gt; in our &lt;a class=&quot;reference external&quot; href=&quot;http://www.mutt.org/doc/manual/manual-6.html#index_format&quot;&gt;index_format&lt;/a&gt; setting to see the
-scores in the mail index, the above &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;index_format&lt;/span&gt;&lt;/code&gt; setting is the one
+We must make sure we include &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;%N&lt;/span&gt;&lt;/code&gt; in our &lt;a class="reference external" href="http://www.mutt.org/doc/manual/manual-6.html#index_format"&gt;index_format&lt;/a&gt; setting to see the
+scores in the mail index, the above &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;index_format&lt;/span&gt;&lt;/code&gt; setting is the one
 I currently use and it can be seen in the screenshot above.&lt;/p&gt;
 &lt;p&gt;I’m sure we’d prefer to automate the generation of the rules, and we can
-quickly generate a list for &lt;strong class=&quot;command&quot;&gt;mutt&lt;/strong&gt; using our favourite &lt;abbr title=&quot;Extensible Markup Language&quot;&gt;XML&lt;/abbr&gt;
-processing tool.  Today I’m using &lt;a class=&quot;reference external&quot; href=&quot;http://www.ruby-lang.org/&quot;&gt;ruby&lt;/a&gt;, because I know it is installed on
+quickly generate a list for &lt;strong class="command"&gt;mutt&lt;/strong&gt; using our favourite &lt;abbr title="Extensible Markup Language"&gt;XML&lt;/abbr&gt;
+processing tool.  Today I’m using &lt;a class="reference external" href="http://www.ruby-lang.org/"&gt;ruby&lt;/a&gt;, because I know it is installed on
 Ryan’s system.  We’re going to keep the identifier data from the Google export
-just in case we decide to export our rules from &lt;strong class=&quot;command&quot;&gt;mutt&lt;/strong&gt; at some point
+just in case we decide to export our rules from &lt;strong class="command"&gt;mutt&lt;/strong&gt; at some point
 in the future:&lt;/p&gt;
-&lt;div class=&quot;highlight-ruby notranslate&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;require&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;rexml/document&amp;#39;&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;doc&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;REXML&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;Document&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;File&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;new&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;ARGV&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;div class="highlight-ruby notranslate"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="nb"&gt;require&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;rexml/document&amp;#39;&lt;/span&gt;
+&lt;span class="n"&gt;doc&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="no"&gt;REXML&lt;/span&gt;&lt;span class="o"&gt;::&lt;/span&gt;&lt;span class="no"&gt;Document&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;new&lt;/span&gt; &lt;span class="no"&gt;File&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;new&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="no"&gt;ARGV&lt;/span&gt;&lt;span class="o"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="o"&gt;]&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 
-&lt;span class=&quot;n&quot;&gt;doc&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;elements&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;each&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;feed/entry&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;do&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;|&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;entry&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;|&lt;/span&gt;
-    &lt;span class=&quot;nb&quot;&gt;id&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;entry&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;elements&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;id&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;].&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;text&lt;/span&gt;
-    &lt;span class=&quot;nb&quot;&gt;name&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;entry&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;elements&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;title&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;].&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;text&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;addy&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;entry&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;elements&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;apps:property&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;].&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;attributes&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;value&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt;
-    &lt;span class=&quot;nb&quot;&gt;puts&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;# &lt;/span&gt;&lt;span class=&quot;si&quot;&gt;#{&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;, &lt;/span&gt;&lt;span class=&quot;si&quot;&gt;#{&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;id&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;&lt;/span&gt;
-    &lt;span class=&quot;nb&quot;&gt;puts&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;score ~f&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;#{&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;addy&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt; 20&amp;quot;&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+&lt;span class="n"&gt;doc&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;elements&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;each&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;feed/entry&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="k"&gt;do&lt;/span&gt; &lt;span class="o"&gt;|&lt;/span&gt;&lt;span class="n"&gt;entry&lt;/span&gt;&lt;span class="o"&gt;|&lt;/span&gt;
+    &lt;span class="nb"&gt;id&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;entry&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;elements&lt;/span&gt;&lt;span class="o"&gt;[&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;id&amp;quot;&lt;/span&gt;&lt;span class="o"&gt;].&lt;/span&gt;&lt;span class="n"&gt;text&lt;/span&gt;
+    &lt;span class="nb"&gt;name&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;entry&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;elements&lt;/span&gt;&lt;span class="o"&gt;[&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;title&amp;quot;&lt;/span&gt;&lt;span class="o"&gt;].&lt;/span&gt;&lt;span class="n"&gt;text&lt;/span&gt;
+    &lt;span class="n"&gt;addy&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;entry&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;elements&lt;/span&gt;&lt;span class="o"&gt;[&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;apps:property&amp;quot;&lt;/span&gt;&lt;span class="o"&gt;].&lt;/span&gt;&lt;span class="n"&gt;attributes&lt;/span&gt;&lt;span class="o"&gt;[&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;value&amp;quot;&lt;/span&gt;&lt;span class="o"&gt;]&lt;/span&gt;
+    &lt;span class="nb"&gt;puts&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;# &lt;/span&gt;&lt;span class="si"&gt;#{&lt;/span&gt;&lt;span class="nb"&gt;name&lt;/span&gt;&lt;span class="si"&gt;}&lt;/span&gt;&lt;span class="s2"&gt;, &lt;/span&gt;&lt;span class="si"&gt;#{&lt;/span&gt;&lt;span class="nb"&gt;id&lt;/span&gt;&lt;span class="si"&gt;}&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;&lt;/span&gt;
+    &lt;span class="nb"&gt;puts&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;score ~f&lt;/span&gt;&lt;span class="si"&gt;#{&lt;/span&gt;&lt;span class="n"&gt;addy&lt;/span&gt;&lt;span class="si"&gt;}&lt;/span&gt;&lt;span class="s2"&gt; 20&amp;quot;&lt;/span&gt;
+&lt;span class="k"&gt;end&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
 &lt;p&gt;Calling that script on the example data from above yields a small
-&lt;strong class=&quot;command&quot;&gt;mutt&lt;/strong&gt; configuration file that we can include in our mutt setup by
-adding &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;source&lt;/span&gt; &lt;span class=&quot;pre&quot;&gt;&amp;lt;file_location&amp;gt;&lt;/span&gt;&lt;/code&gt; to our &lt;code class=&quot;file docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;~/.muttrc&lt;/span&gt;&lt;/code&gt;.&lt;/p&gt;
-&lt;div class=&quot;highlight-text notranslate&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;# Joe Bloggs, tag:mail.google.com,2008:filter:1255006471524
+&lt;strong class="command"&gt;mutt&lt;/strong&gt; configuration file that we can include in our mutt setup by
+adding &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;source&lt;/span&gt; &lt;span class="pre"&gt;&amp;lt;file_location&amp;gt;&lt;/span&gt;&lt;/code&gt; to our &lt;code class="file docutils literal notranslate"&gt;&lt;span class="pre"&gt;~/.muttrc&lt;/span&gt;&lt;/code&gt;.&lt;/p&gt;
+&lt;div class="highlight-text notranslate"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;# Joe Bloggs, tag:mail.google.com,2008:filter:1255006471524
 score ~fjoe@example.com -20
 # John Doe, tag:mail.google.com,2008:filter:31130756565258
 score ~fjohndoe@example.com -20
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
-&lt;p&gt;A few years ago I posted some of tricks and tips I use for &lt;a class=&quot;reference external&quot; href=&quot;http://www.jnrowe.ukfsn.org/articles/configs/mutt.html&quot;&gt;configuring mutt&lt;/a&gt;,
+&lt;p&gt;A few years ago I posted some of tricks and tips I use for &lt;a class="reference external" href="http://www.jnrowe.ukfsn.org/articles/configs/mutt.html"&gt;configuring mutt&lt;/a&gt;,
 which include some neat ways to colour and score mail on a per-folder basis.  It
 may be worth taking a quick look at if you use folders to organise your mails.&lt;/p&gt;
 &lt;/div&gt;
 </content>
+    <link href="https://jnrowe.github.io/articles/tips/Importing_gmail_filters_in_mutt.html" rel="alternate"/>
+    <published>2009-10-08T00:00:00+01:00</published>
   </entry>
 </feed>

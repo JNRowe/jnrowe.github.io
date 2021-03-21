@@ -1,190 +1,188 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version='1.0' encoding='UTF-8'?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <title type="text">JNRowe - Posts tagged bts</title>
-  <id>https://jnrowe.github.io/blog/tag/bts/atom.xml</id>
-  <updated>2009-10-07T00:00:00Z</updated>
-  <link href="https://jnrowe.github.io/" />
-  <link href="https://jnrowe.github.io/blog/tag/bts/atom.xml" rel="self" />
-  <subtitle type="text">Ramblings of a tired mind</subtitle>
-  <generator uri="https://ablog.readthedocs.org" version="0.10.4">ABlog</generator>
-  <entry xml:base="https://jnrowe.github.io/blog/tag/bts/atom.xml">
-    <title type="text">BTS as a task manager</title>
+  <id>https://jnrowe.github.io/</id>
+  <title>JNRowe - Posts tagged bts</title>
+  <updated>2021-03-21T11:05:57.858117+00:00</updated>
+  <link href="https://jnrowe.github.io/"/>
+  <link href="https://jnrowe.github.io/blog/tag/bts/atom.xml"/>
+  <generator uri="https://ablog.readthedocs.org" version="0.10.12">ABlog</generator>
+  <subtitle>Ramblings of a tired mind</subtitle>
+  <entry>
     <id>https://jnrowe.github.io/articles/tips/BTS_as_a_task_manager.html</id>
-    <updated>2009-10-07T00:00:00Z</updated>
-    <published>2009-10-07T00:00:00Z</published>
-    <link href="https://jnrowe.github.io/articles/tips/BTS_as_a_task_manager.html" />
+    <title>BTS as a task manager</title>
+    <updated>2009-10-07T00:00:00+01:00</updated>
     <author>
       <name>James Rowe</name>
     </author>
-    <content type="html">&lt;div class=&quot;section&quot; id=&quot;bts-as-a-task-manager&quot;&gt;
+    <content type="html">&lt;div class="section" id="bts-as-a-task-manager"&gt;
 
 &lt;p&gt;Tom Marshall asks over the cooler:&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;div&gt;&lt;p&gt;What apps do you guys use to manage your todo list(s)?&lt;/p&gt;
 &lt;/div&gt;&lt;/blockquote&gt;
-&lt;p&gt;I think this may be an incredibly personal thing but I prefer to use a &lt;abbr title=&quot;Bug Tracking System&quot;&gt;BTS&lt;/abbr&gt;
+&lt;p&gt;I think this may be an incredibly personal thing but I prefer to use a &lt;abbr title="Bug Tracking System"&gt;BTS&lt;/abbr&gt;
 for local task management, the idea of just adding random lines of text to
 a file frankly baffles me.  I love the filtering, ordering and editing
-capabilities I get from using a &lt;abbr title=&quot;Bug Tracking System&quot;&gt;BTS&lt;/abbr&gt; for this.&lt;/p&gt;
+capabilities I get from using a &lt;abbr title="Bug Tracking System"&gt;BTS&lt;/abbr&gt; for this.&lt;/p&gt;
 &lt;p&gt;Now, I’m not suggesting installing something complex and convoluted like
-&lt;a class=&quot;reference external&quot; href=&quot;http://www.bugzilla.org&quot;&gt;Bugzilla&lt;/a&gt; just for keeping track of your shopping lists or remembering to
+&lt;a class="reference external" href="http://www.bugzilla.org"&gt;Bugzilla&lt;/a&gt; just for keeping track of your shopping lists or remembering to
 charge the spare battery for your phone.  There are quite a few lightweight
-systems available, &lt;a class=&quot;reference external&quot; href=&quot;http://ditz.rubyforge.org&quot;&gt;ditz&lt;/a&gt; and &lt;a class=&quot;reference external&quot; href=&quot;http://bugseverywhere.org/be/show/HomePage&quot;&gt;Bugs Everywhere&lt;/a&gt; being two examples.  There is
-also a &lt;strong class=&quot;command&quot;&gt;ditz&lt;/strong&gt; inspired project, written in &lt;a class=&quot;reference external&quot; href=&quot;http://www.python.org&quot;&gt;Python&lt;/a&gt;, called &lt;a class=&quot;reference external&quot; href=&quot;https://github.com/mw44118/pitz&quot;&gt;pitz&lt;/a&gt; that
-is in active development.  And &lt;a class=&quot;reference external&quot; href=&quot;http://www.fossil-scm.org/index.html/doc/tip/www/index.wiki&quot;&gt;fossil&lt;/a&gt; is pretty cool if you’re looking for
-a standalone wiki, &lt;abbr title=&quot;Bug Tracking System&quot;&gt;BTS&lt;/abbr&gt; and &lt;abbr title=&quot;Version Control System&quot;&gt;VCS&lt;/abbr&gt; in one.&lt;/p&gt;
-&lt;div class=&quot;admonition note&quot;&gt;
-&lt;p class=&quot;admonition-title&quot;&gt;Note&lt;/p&gt;
-&lt;p&gt;If you’re a &lt;a class=&quot;reference external&quot; href=&quot;http://www.gentoo.org/&quot;&gt;Gentoo&lt;/a&gt; user you can install &lt;strong class=&quot;command&quot;&gt;ditz&lt;/strong&gt; using the ebuild
-from my &lt;a class=&quot;reference external&quot; href=&quot;https://github.com/JNRowe/jnrowe-misc/&quot;&gt;overlay&lt;/a&gt;.&lt;/p&gt;
+systems available, &lt;a class="reference external" href="http://ditz.rubyforge.org"&gt;ditz&lt;/a&gt; and &lt;a class="reference external" href="http://bugseverywhere.org/be/show/HomePage"&gt;Bugs Everywhere&lt;/a&gt; being two examples.  There is
+also a &lt;strong class="command"&gt;ditz&lt;/strong&gt; inspired project, written in &lt;a class="reference external" href="http://www.python.org"&gt;Python&lt;/a&gt;, called &lt;a class="reference external" href="https://github.com/mw44118/pitz"&gt;pitz&lt;/a&gt; that
+is in active development.  And &lt;a class="reference external" href="http://www.fossil-scm.org/index.html/doc/tip/www/index.wiki"&gt;fossil&lt;/a&gt; is pretty cool if you’re looking for
+a standalone wiki, &lt;abbr title="Bug Tracking System"&gt;BTS&lt;/abbr&gt; and &lt;abbr title="Version Control System"&gt;VCS&lt;/abbr&gt; in one.&lt;/p&gt;
+&lt;div class="admonition note"&gt;
+&lt;p class="admonition-title"&gt;Note&lt;/p&gt;
+&lt;p&gt;If you’re a &lt;a class="reference external" href="http://www.gentoo.org/"&gt;Gentoo&lt;/a&gt; user you can install &lt;strong class="command"&gt;ditz&lt;/strong&gt; using the ebuild
+from my &lt;a class="reference external" href="https://github.com/JNRowe/jnrowe-misc/"&gt;overlay&lt;/a&gt;.&lt;/p&gt;
 &lt;/div&gt;
-&lt;p&gt;I’m currently in the process of switching away from &lt;abbr title=&quot;Bugs Everywhere&quot;&gt;be&lt;/abbr&gt;, but it can serve as an example quite well.  Unfortunately, there
+&lt;p&gt;I’m currently in the process of switching away from &lt;abbr title="Bugs Everywhere"&gt;be&lt;/abbr&gt;, but it can serve as an example quite well.  Unfortunately, there
 are no releases currently being made so you will need to install a recent
-version of &lt;strong class=&quot;command&quot;&gt;bzr&lt;/strong&gt; to download it.  Don’t worry though you aren’t
-restricted to &lt;strong class=&quot;command&quot;&gt;bzr&lt;/strong&gt; to use it.&lt;/p&gt;
-&lt;div class=&quot;admonition note&quot;&gt;
-&lt;p class=&quot;admonition-title&quot;&gt;Note&lt;/p&gt;
-&lt;p&gt;Colleagues from work can grab Dan’s &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;be&lt;/span&gt;&lt;/code&gt; branch directly from our package
-repository, it doesn’t require &lt;strong class=&quot;command&quot;&gt;bzr&lt;/strong&gt; and it fixes quite a few usage
+version of &lt;strong class="command"&gt;bzr&lt;/strong&gt; to download it.  Don’t worry though you aren’t
+restricted to &lt;strong class="command"&gt;bzr&lt;/strong&gt; to use it.&lt;/p&gt;
+&lt;div class="admonition note"&gt;
+&lt;p class="admonition-title"&gt;Note&lt;/p&gt;
+&lt;p&gt;Colleagues from work can grab Dan’s &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;be&lt;/span&gt;&lt;/code&gt; branch directly from our package
+repository, it doesn’t require &lt;strong class="command"&gt;bzr&lt;/strong&gt; and it fixes quite a few usage
 problems(it is also much faster).  Just remember that it has diverged
 massively from the upstream code, so you won’t be able to use it to work with
 bug databases created by the upstream project.&lt;/p&gt;
 &lt;/div&gt;
-&lt;p&gt;The following examples use an older version of &lt;strong class=&quot;command&quot;&gt;be&lt;/strong&gt; that you can
-download as a &lt;a class=&quot;reference external&quot; href=&quot;http://www.jnrowe.ukfsn.org/_static/be-0.0.193.tar.bz2&quot;&gt;tarball&lt;/a&gt; and doesn’t require &lt;strong class=&quot;command&quot;&gt;bzr&lt;/strong&gt;.&lt;/p&gt;
-&lt;div class=&quot;section&quot; id=&quot;setting-be-up&quot;&gt;
-&lt;h2&gt;Setting &lt;strong class=&quot;command&quot;&gt;be&lt;/strong&gt; up&lt;/h2&gt;
-&lt;p&gt;Before we use &lt;strong class=&quot;command&quot;&gt;be&lt;/strong&gt; we must prepare it.  In the example that follows
-we’re going to create a new directory under the control of &lt;a class=&quot;reference external&quot; href=&quot;http://www.git-scm.com/&quot;&gt;git&lt;/a&gt;, and tell
-&lt;strong class=&quot;command&quot;&gt;be&lt;/strong&gt; we wish to use it in there:&lt;/p&gt;
-&lt;div class=&quot;highlight-console notranslate&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&quot;gp&quot;&gt;$&lt;/span&gt; mkdir be_test&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;cd&lt;/span&gt; be_test
-&lt;span class=&quot;gp&quot;&gt;$&lt;/span&gt; git init
-&lt;span class=&quot;go&quot;&gt;Initialized empty Git repository in /home/jay/Desktop/be_test/.git/&lt;/span&gt;
-&lt;span class=&quot;gp&quot;&gt;$&lt;/span&gt; be set-root
-&lt;span class=&quot;go&quot;&gt;Using git for revision control.&lt;/span&gt;
-&lt;span class=&quot;go&quot;&gt;Directory initialized.&lt;/span&gt;
+&lt;p&gt;The following examples use an older version of &lt;strong class="command"&gt;be&lt;/strong&gt; that you can
+download as a &lt;a class="reference external" href="http://www.jnrowe.ukfsn.org/_static/be-0.0.193.tar.bz2"&gt;tarball&lt;/a&gt; and doesn’t require &lt;strong class="command"&gt;bzr&lt;/strong&gt;.&lt;/p&gt;
+&lt;div class="section" id="setting-be-up"&gt;
+&lt;h2&gt;Setting &lt;strong class="command"&gt;be&lt;/strong&gt; up&lt;/h2&gt;
+&lt;p&gt;Before we use &lt;strong class="command"&gt;be&lt;/strong&gt; we must prepare it.  In the example that follows
+we’re going to create a new directory under the control of &lt;a class="reference external" href="http://www.git-scm.com/"&gt;git&lt;/a&gt;, and tell
+&lt;strong class="command"&gt;be&lt;/strong&gt; we wish to use it in there:&lt;/p&gt;
+&lt;div class="highlight-console notranslate"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="gp"&gt;$&lt;/span&gt; mkdir be_test&lt;span class="p"&gt;;&lt;/span&gt; &lt;span class="nb"&gt;cd&lt;/span&gt; be_test
+&lt;span class="gp"&gt;$&lt;/span&gt; git init
+&lt;span class="go"&gt;Initialized empty Git repository in /home/jay/Desktop/be_test/.git/&lt;/span&gt;
+&lt;span class="gp"&gt;$&lt;/span&gt; be set-root
+&lt;span class="go"&gt;Using git for revision control.&lt;/span&gt;
+&lt;span class="go"&gt;Directory initialized.&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;div class=&quot;section&quot; id=&quot;filing-bugs&quot;&gt;
+&lt;div class="section" id="filing-bugs"&gt;
 &lt;h2&gt;Filing bugs&lt;/h2&gt;
 &lt;p&gt;We can easily file new bugs, in the next snippet we can see two bugs being
-filed.  Bugs are identified by a &lt;abbr title=&quot;Universally Unique IDentifier&quot;&gt;UUID&lt;/abbr&gt;,
+filed.  Bugs are identified by a &lt;abbr title="Universally Unique IDentifier"&gt;UUID&lt;/abbr&gt;,
 and to operate on bugs we only need to use a unique prefix of the identifier as
 can be seen below.&lt;/p&gt;
-&lt;div class=&quot;highlight-console notranslate&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&quot;gp&quot;&gt;$&lt;/span&gt; be new &lt;span class=&quot;s2&quot;&gt;&amp;quot;This is a test bug&amp;quot;&lt;/span&gt;
-&lt;span class=&quot;go&quot;&gt;Created bug with ID a09&lt;/span&gt;
-&lt;span class=&quot;gp&quot;&gt;$&lt;/span&gt; be assign a09
-&lt;span class=&quot;gp&quot;&gt;$&lt;/span&gt; git commit -m&lt;span class=&quot;s2&quot;&gt;&amp;quot;Commit bug a09.&amp;quot;&lt;/span&gt;
-&lt;span class=&quot;gp&quot;&gt;$&lt;/span&gt; be new &lt;span class=&quot;s2&quot;&gt;&amp;quot;This is a second bug&amp;quot;&lt;/span&gt;
-&lt;span class=&quot;go&quot;&gt;Created bug with ID ec4&lt;/span&gt;
-&lt;span class=&quot;gp&quot;&gt;$&lt;/span&gt; be severity ec4 serious
-&lt;span class=&quot;gp&quot;&gt;$&lt;/span&gt; be comment ec4 &lt;span class=&quot;s2&quot;&gt;&amp;quot;Comments are easy&amp;quot;&lt;/span&gt;
-&lt;span class=&quot;gp&quot;&gt;$&lt;/span&gt; git commit -m&lt;span class=&quot;s2&quot;&gt;&amp;quot;Commit bug ec4.&amp;quot;&lt;/span&gt;
+&lt;div class="highlight-console notranslate"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="gp"&gt;$&lt;/span&gt; be new &lt;span class="s2"&gt;&amp;quot;This is a test bug&amp;quot;&lt;/span&gt;
+&lt;span class="go"&gt;Created bug with ID a09&lt;/span&gt;
+&lt;span class="gp"&gt;$&lt;/span&gt; be assign a09
+&lt;span class="gp"&gt;$&lt;/span&gt; git commit -m&lt;span class="s2"&gt;&amp;quot;Commit bug a09.&amp;quot;&lt;/span&gt;
+&lt;span class="gp"&gt;$&lt;/span&gt; be new &lt;span class="s2"&gt;&amp;quot;This is a second bug&amp;quot;&lt;/span&gt;
+&lt;span class="go"&gt;Created bug with ID ec4&lt;/span&gt;
+&lt;span class="gp"&gt;$&lt;/span&gt; be severity ec4 serious
+&lt;span class="gp"&gt;$&lt;/span&gt; be comment ec4 &lt;span class="s2"&gt;&amp;quot;Comments are easy&amp;quot;&lt;/span&gt;
+&lt;span class="gp"&gt;$&lt;/span&gt; git commit -m&lt;span class="s2"&gt;&amp;quot;Commit bug ec4.&amp;quot;&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
-&lt;p&gt;We now have two bugs filed.  Bug &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;a09&lt;/span&gt;&lt;/code&gt; is self-assigned, while &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;ec4&lt;/span&gt;&lt;/code&gt; has yet
-to be assigned.  As we didn’t set a severity level for &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;a09&lt;/span&gt;&lt;/code&gt; it is set to the
-default of &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;minor&lt;/span&gt;&lt;/code&gt;.  A comment was also made on bug &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;ec4&lt;/span&gt;&lt;/code&gt;, and if we hadn’t
+&lt;p&gt;We now have two bugs filed.  Bug &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;a09&lt;/span&gt;&lt;/code&gt; is self-assigned, while &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;ec4&lt;/span&gt;&lt;/code&gt; has yet
+to be assigned.  As we didn’t set a severity level for &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;a09&lt;/span&gt;&lt;/code&gt; it is set to the
+default of &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;minor&lt;/span&gt;&lt;/code&gt;.  A comment was also made on bug &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;ec4&lt;/span&gt;&lt;/code&gt;, and if we hadn’t
 specified the comment on the command line it would open our default editor to
 add the comment.&lt;/p&gt;
 &lt;/div&gt;
-&lt;div class=&quot;section&quot; id=&quot;querying-bugs&quot;&gt;
+&lt;div class="section" id="querying-bugs"&gt;
 &lt;h2&gt;Querying bugs&lt;/h2&gt;
-&lt;div class=&quot;highlight-console notranslate&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&quot;gp&quot;&gt;$&lt;/span&gt; be list
-&lt;span class=&quot;go&quot;&gt;ec4:os: This is a second bug&lt;/span&gt;
-&lt;span class=&quot;go&quot;&gt;a09:om: This is a test bug&lt;/span&gt;
+&lt;div class="highlight-console notranslate"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="gp"&gt;$&lt;/span&gt; be list
+&lt;span class="go"&gt;ec4:os: This is a second bug&lt;/span&gt;
+&lt;span class="go"&gt;a09:om: This is a test bug&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
-&lt;p&gt;The &lt;strong class=&quot;command&quot;&gt;be list&lt;/strong&gt; output consists of three fields separated by colons and
+&lt;p&gt;The &lt;strong class="command"&gt;be list&lt;/strong&gt; output consists of three fields separated by colons and
 they are: bug identifier, status and title.  The first character of the  status
-field is an &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;o&lt;/span&gt;&lt;/code&gt; telling us the bugs are marked as open, and the second
-character is the severity indicator(where the &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;s&lt;/span&gt;&lt;/code&gt; for bug &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;ec4&lt;/span&gt;&lt;/code&gt; tells us it
+field is an &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;o&lt;/span&gt;&lt;/code&gt; telling us the bugs are marked as open, and the second
+character is the severity indicator(where the &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;s&lt;/span&gt;&lt;/code&gt; for bug &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;ec4&lt;/span&gt;&lt;/code&gt; tells us it
 is marked as serious).&lt;/p&gt;
-&lt;p&gt;You can also limit the bugs shown with &lt;strong class=&quot;command&quot;&gt;be list&lt;/strong&gt; by specifying
-severities with &lt;a class=&quot;reference external&quot; href=&quot;https://docs.python.org/3/using/cmdline.html#id4&quot; title=&quot;(in Python v3.9)&quot;&gt;&lt;code class=&quot;xref std std-option docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;-v&lt;/span&gt;&lt;/code&gt;&lt;/a&gt;.  Or bugs that are assigned to a certain user with
-&lt;code class=&quot;xref std std-option docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;-a&lt;/span&gt;&lt;/code&gt;, and you can use &lt;a class=&quot;reference external&quot; href=&quot;https://docs.python.org/3/using/cmdline.html#cmdoption-m&quot; title=&quot;(in Python v3.9)&quot;&gt;&lt;code class=&quot;xref std std-option docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;-m&lt;/span&gt;&lt;/code&gt;&lt;/a&gt; to list bugs assigned to yourself.&lt;/p&gt;
+&lt;p&gt;You can also limit the bugs shown with &lt;strong class="command"&gt;be list&lt;/strong&gt; by specifying
+severities with &lt;a class="reference external" href="https://docs.python.org/3/using/cmdline.html#id4" title="(in Python v3.9)"&gt;&lt;code class="xref std std-option docutils literal notranslate"&gt;&lt;span class="pre"&gt;-v&lt;/span&gt;&lt;/code&gt;&lt;/a&gt;.  Or bugs that are assigned to a certain user with
+&lt;code class="xref std std-option docutils literal notranslate"&gt;&lt;span class="pre"&gt;-a&lt;/span&gt;&lt;/code&gt;, and you can use &lt;a class="reference external" href="https://docs.python.org/3/using/cmdline.html#cmdoption-m" title="(in Python v3.9)"&gt;&lt;code class="xref std std-option docutils literal notranslate"&gt;&lt;span class="pre"&gt;-m&lt;/span&gt;&lt;/code&gt;&lt;/a&gt; to list bugs assigned to yourself.&lt;/p&gt;
 &lt;p&gt;When we wish to inspect individual bugs, to see there full status or comments,
-we use the &lt;strong class=&quot;command&quot;&gt;be show&lt;/strong&gt; command:&lt;/p&gt;
-&lt;div class=&quot;highlight-console notranslate&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&quot;gp&quot;&gt;$&lt;/span&gt; be show a09
-&lt;span class=&quot;go&quot;&gt;        ID : a0912cd6-1eae-490c-8e56-5f532242394b&lt;/span&gt;
-&lt;span class=&quot;go&quot;&gt;Short name : a09&lt;/span&gt;
-&lt;span class=&quot;go&quot;&gt;    Severity : minor&lt;/span&gt;
-&lt;span class=&quot;go&quot;&gt;    Status : open&lt;/span&gt;
-&lt;span class=&quot;go&quot;&gt;    Assigned : James Rowe &amp;lt;jnrowe@gmail.com&amp;gt;&lt;/span&gt;
-&lt;span class=&quot;go&quot;&gt;    Target :&lt;/span&gt;
-&lt;span class=&quot;go&quot;&gt;    Creator : James Rowe &amp;lt;jnrowe@gmail.com&amp;gt;&lt;/span&gt;
-&lt;span class=&quot;go&quot;&gt;    Created : Wed, 07 Oct 2009 14:11 (Wed, 07 Oct 2009 13:11:06 +0000)&lt;/span&gt;
-&lt;span class=&quot;go&quot;&gt;This is a test bug&lt;/span&gt;
+we use the &lt;strong class="command"&gt;be show&lt;/strong&gt; command:&lt;/p&gt;
+&lt;div class="highlight-console notranslate"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="gp"&gt;$&lt;/span&gt; be show a09
+&lt;span class="go"&gt;        ID : a0912cd6-1eae-490c-8e56-5f532242394b&lt;/span&gt;
+&lt;span class="go"&gt;Short name : a09&lt;/span&gt;
+&lt;span class="go"&gt;    Severity : minor&lt;/span&gt;
+&lt;span class="go"&gt;    Status : open&lt;/span&gt;
+&lt;span class="go"&gt;    Assigned : James Rowe &amp;lt;jnrowe@gmail.com&amp;gt;&lt;/span&gt;
+&lt;span class="go"&gt;    Target :&lt;/span&gt;
+&lt;span class="go"&gt;    Creator : James Rowe &amp;lt;jnrowe@gmail.com&amp;gt;&lt;/span&gt;
+&lt;span class="go"&gt;    Created : Wed, 07 Oct 2009 14:11 (Wed, 07 Oct 2009 13:11:06 +0000)&lt;/span&gt;
+&lt;span class="go"&gt;This is a test bug&lt;/span&gt;
 
-&lt;span class=&quot;gp&quot;&gt;$&lt;/span&gt; be show ec4
-&lt;span class=&quot;go&quot;&gt;        ID : ec4438ca-a330-4345-b073-43c768f7e9b7&lt;/span&gt;
-&lt;span class=&quot;go&quot;&gt;Short name : ec4&lt;/span&gt;
-&lt;span class=&quot;go&quot;&gt;    Severity : serious&lt;/span&gt;
-&lt;span class=&quot;go&quot;&gt;    Status : open&lt;/span&gt;
-&lt;span class=&quot;go&quot;&gt;    Assigned :&lt;/span&gt;
-&lt;span class=&quot;go&quot;&gt;    Target :&lt;/span&gt;
-&lt;span class=&quot;go&quot;&gt;    Creator : James Rowe &amp;lt;jnrowe@gmail.com&amp;gt;&lt;/span&gt;
-&lt;span class=&quot;go&quot;&gt;    Created : Wed, 07 Oct 2009 14:11 (Wed, 07 Oct 2009 13:11:17 +0000)&lt;/span&gt;
-&lt;span class=&quot;go&quot;&gt;This is a second bug&lt;/span&gt;
-&lt;span class=&quot;go&quot;&gt;--------- Comment ---------&lt;/span&gt;
-&lt;span class=&quot;go&quot;&gt;Name: ec4:1&lt;/span&gt;
-&lt;span class=&quot;go&quot;&gt;From: James Rowe &amp;lt;jnrowe@gmail.com&amp;gt;&lt;/span&gt;
-&lt;span class=&quot;go&quot;&gt;Date: Wed, 07 Oct 2009 13:11:53 +0000&lt;/span&gt;
+&lt;span class="gp"&gt;$&lt;/span&gt; be show ec4
+&lt;span class="go"&gt;        ID : ec4438ca-a330-4345-b073-43c768f7e9b7&lt;/span&gt;
+&lt;span class="go"&gt;Short name : ec4&lt;/span&gt;
+&lt;span class="go"&gt;    Severity : serious&lt;/span&gt;
+&lt;span class="go"&gt;    Status : open&lt;/span&gt;
+&lt;span class="go"&gt;    Assigned :&lt;/span&gt;
+&lt;span class="go"&gt;    Target :&lt;/span&gt;
+&lt;span class="go"&gt;    Creator : James Rowe &amp;lt;jnrowe@gmail.com&amp;gt;&lt;/span&gt;
+&lt;span class="go"&gt;    Created : Wed, 07 Oct 2009 14:11 (Wed, 07 Oct 2009 13:11:17 +0000)&lt;/span&gt;
+&lt;span class="go"&gt;This is a second bug&lt;/span&gt;
+&lt;span class="go"&gt;--------- Comment ---------&lt;/span&gt;
+&lt;span class="go"&gt;Name: ec4:1&lt;/span&gt;
+&lt;span class="go"&gt;From: James Rowe &amp;lt;jnrowe@gmail.com&amp;gt;&lt;/span&gt;
+&lt;span class="go"&gt;Date: Wed, 07 Oct 2009 13:11:53 +0000&lt;/span&gt;
 
-&lt;span class=&quot;go&quot;&gt;Comments are easy&lt;/span&gt;
+&lt;span class="go"&gt;Comments are easy&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;div class=&quot;section&quot; id=&quot;editing-bugs&quot;&gt;
+&lt;div class="section" id="editing-bugs"&gt;
 &lt;h2&gt;Editing bugs&lt;/h2&gt;
-&lt;p&gt;We can change the bug status with &lt;strong class=&quot;command&quot;&gt;be status&lt;/strong&gt;, see the output from
-&lt;strong class=&quot;command&quot;&gt;be help status&lt;/strong&gt; for available values.&lt;/p&gt;
+&lt;p&gt;We can change the bug status with &lt;strong class="command"&gt;be status&lt;/strong&gt;, see the output from
+&lt;strong class="command"&gt;be help status&lt;/strong&gt; for available values.&lt;/p&gt;
 &lt;p&gt;Once bugs are marked as fixed they no longer show up in the default
-&lt;strong class=&quot;command&quot;&gt;be list&lt;/strong&gt; output, but we can still view them with &lt;strong class=&quot;command&quot;&gt;be show&lt;/strong&gt;
-or by calling &lt;strong class=&quot;command&quot;&gt;be list&lt;/strong&gt; with filtering options.&lt;/p&gt;
-&lt;div class=&quot;highlight-console notranslate&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&quot;gp&quot;&gt;$&lt;/span&gt; be status ec4 fixed
-&lt;span class=&quot;gp&quot;&gt;$&lt;/span&gt; be list
-&lt;span class=&quot;go&quot;&gt;a09:om: This is a test bug&lt;/span&gt;
-&lt;span class=&quot;gp&quot;&gt;$&lt;/span&gt; be show ec4
-&lt;span class=&quot;go&quot;&gt;        ID : ec4438ca-a330-4345-b073-43c768f7e9b7&lt;/span&gt;
-&lt;span class=&quot;go&quot;&gt;Short name : ec4&lt;/span&gt;
-&lt;span class=&quot;go&quot;&gt;    Severity : serious&lt;/span&gt;
-&lt;span class=&quot;go&quot;&gt;    Status : fixed&lt;/span&gt;
-&lt;span class=&quot;go&quot;&gt;    Assigned :&lt;/span&gt;
-&lt;span class=&quot;go&quot;&gt;    Target :&lt;/span&gt;
-&lt;span class=&quot;go&quot;&gt;    Creator : James Rowe &amp;lt;jnrowe@gmail.com&amp;gt;&lt;/span&gt;
-&lt;span class=&quot;go&quot;&gt;    Created : Wed, 07 Oct 2009 14:11 (Wed, 07 Oct 2009 13:11:17 +0000)&lt;/span&gt;
-&lt;span class=&quot;go&quot;&gt;This is a second bug&lt;/span&gt;
-&lt;span class=&quot;go&quot;&gt;--------- Comment ---------&lt;/span&gt;
-&lt;span class=&quot;go&quot;&gt;Name: ec4:1&lt;/span&gt;
-&lt;span class=&quot;go&quot;&gt;From: James Rowe &amp;lt;jnrowe@gmail.com&amp;gt;&lt;/span&gt;
-&lt;span class=&quot;go&quot;&gt;Date: Wed, 07 Oct 2009 13:11:53 +0000&lt;/span&gt;
+&lt;strong class="command"&gt;be list&lt;/strong&gt; output, but we can still view them with &lt;strong class="command"&gt;be show&lt;/strong&gt;
+or by calling &lt;strong class="command"&gt;be list&lt;/strong&gt; with filtering options.&lt;/p&gt;
+&lt;div class="highlight-console notranslate"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="gp"&gt;$&lt;/span&gt; be status ec4 fixed
+&lt;span class="gp"&gt;$&lt;/span&gt; be list
+&lt;span class="go"&gt;a09:om: This is a test bug&lt;/span&gt;
+&lt;span class="gp"&gt;$&lt;/span&gt; be show ec4
+&lt;span class="go"&gt;        ID : ec4438ca-a330-4345-b073-43c768f7e9b7&lt;/span&gt;
+&lt;span class="go"&gt;Short name : ec4&lt;/span&gt;
+&lt;span class="go"&gt;    Severity : serious&lt;/span&gt;
+&lt;span class="go"&gt;    Status : fixed&lt;/span&gt;
+&lt;span class="go"&gt;    Assigned :&lt;/span&gt;
+&lt;span class="go"&gt;    Target :&lt;/span&gt;
+&lt;span class="go"&gt;    Creator : James Rowe &amp;lt;jnrowe@gmail.com&amp;gt;&lt;/span&gt;
+&lt;span class="go"&gt;    Created : Wed, 07 Oct 2009 14:11 (Wed, 07 Oct 2009 13:11:17 +0000)&lt;/span&gt;
+&lt;span class="go"&gt;This is a second bug&lt;/span&gt;
+&lt;span class="go"&gt;--------- Comment ---------&lt;/span&gt;
+&lt;span class="go"&gt;Name: ec4:1&lt;/span&gt;
+&lt;span class="go"&gt;From: James Rowe &amp;lt;jnrowe@gmail.com&amp;gt;&lt;/span&gt;
+&lt;span class="go"&gt;Date: Wed, 07 Oct 2009 13:11:53 +0000&lt;/span&gt;
 
-&lt;span class=&quot;go&quot;&gt;Comments are easy&lt;/span&gt;
+&lt;span class="go"&gt;Comments are easy&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;div class=&quot;section&quot; id=&quot;conclusions&quot;&gt;
+&lt;div class="section" id="conclusions"&gt;
 &lt;h2&gt;Conclusions&lt;/h2&gt;
-&lt;p&gt;That really is all it takes to use &lt;strong class=&quot;command&quot;&gt;be&lt;/strong&gt;, and that is why I find
-a &lt;abbr title=&quot;Bug Tracking System&quot;&gt;BTS&lt;/abbr&gt; to be a nice solution for managing all kinds of random tasks.  I have
+&lt;p&gt;That really is all it takes to use &lt;strong class="command"&gt;be&lt;/strong&gt;, and that is why I find
+a &lt;abbr title="Bug Tracking System"&gt;BTS&lt;/abbr&gt; to be a nice solution for managing all kinds of random tasks.  I have
 a Bugs Everywhere database in my home directory that over the past year has
 stored just over 600 bugs from shopping lists to actual bugs with my
 configurations files, and I’ve apparently managed to complete 95% of them!&lt;/p&gt;
 &lt;/div&gt;
-&lt;div class=&quot;section&quot; id=&quot;bonus-material&quot;&gt;
+&lt;div class="section" id="bonus-material"&gt;
 &lt;h2&gt;Bonus material&lt;/h2&gt;
-&lt;p&gt;One of the little tricks I like to do is override the &lt;strong class=&quot;command&quot;&gt;cd&lt;/strong&gt; command to
+&lt;p&gt;One of the little tricks I like to do is override the &lt;strong class="command"&gt;cd&lt;/strong&gt; command to
 automatically display the bug list when I enter a directory that contains a Bugs
 Everywhere database, and it is very simple to do:&lt;/p&gt;
-&lt;div class=&quot;highlight-bash notranslate&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;cd&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;nb&quot;&gt;local&lt;/span&gt; retval
-    &lt;span class=&quot;nb&quot;&gt;builtin&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;cd&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$@&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;&lt;/span&gt;
-    &lt;span class=&quot;nv&quot;&gt;retval&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$?&lt;/span&gt;
-    &lt;span class=&quot;o&quot;&gt;[[&lt;/span&gt; &lt;span class=&quot;si&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;retval&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;0&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;amp;&amp;amp;&lt;/span&gt; -d .be &lt;span class=&quot;o&quot;&gt;]]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;amp;&amp;amp;&lt;/span&gt; be list
-    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;si&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;retval&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;}&lt;/span&gt;
-&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+&lt;div class="highlight-bash notranslate"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;cd&lt;span class="o"&gt;()&lt;/span&gt; &lt;span class="o"&gt;{&lt;/span&gt;
+    &lt;span class="nb"&gt;local&lt;/span&gt; retval
+    &lt;span class="nb"&gt;builtin&lt;/span&gt; &lt;span class="nb"&gt;cd&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;&lt;/span&gt;&lt;span class="nv"&gt;$@&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;&lt;/span&gt;
+    &lt;span class="nv"&gt;retval&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="nv"&gt;$?&lt;/span&gt;
+    &lt;span class="o"&gt;[[&lt;/span&gt; &lt;span class="si"&gt;${&lt;/span&gt;&lt;span class="nv"&gt;retval&lt;/span&gt;&lt;span class="si"&gt;}&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="m"&gt;0&lt;/span&gt; &lt;span class="o"&gt;&amp;amp;&amp;amp;&lt;/span&gt; -d .be &lt;span class="o"&gt;]]&lt;/span&gt; &lt;span class="o"&gt;&amp;amp;&amp;amp;&lt;/span&gt; be list
+    &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="si"&gt;${&lt;/span&gt;&lt;span class="nv"&gt;retval&lt;/span&gt;&lt;span class="si"&gt;}&lt;/span&gt;
+&lt;span class="o"&gt;}&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
 &lt;p&gt;It could be improved to take settings to filter the bug list or all manner of
@@ -193,5 +191,7 @@ Feel free to post updates to the gist!&lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 </content>
+    <link href="https://jnrowe.github.io/articles/tips/BTS_as_a_task_manager.html" rel="alternate"/>
+    <published>2009-10-07T00:00:00+01:00</published>
   </entry>
 </feed>

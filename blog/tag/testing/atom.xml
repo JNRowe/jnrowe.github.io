@@ -1,28 +1,26 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version='1.0' encoding='UTF-8'?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <title type="text">JNRowe - Posts tagged testing</title>
-  <id>https://jnrowe.github.io/blog/tag/testing/atom.xml</id>
-  <updated>2011-06-13T00:00:00Z</updated>
-  <link href="https://jnrowe.github.io/" />
-  <link href="https://jnrowe.github.io/blog/tag/testing/atom.xml" rel="self" />
-  <subtitle type="text">Ramblings of a tired mind</subtitle>
-  <generator uri="https://ablog.readthedocs.org" version="0.10.4">ABlog</generator>
-  <entry xml:base="https://jnrowe.github.io/blog/tag/testing/atom.xml">
-    <title type="text">TDD distro development</title>
+  <id>https://jnrowe.github.io/</id>
+  <title>JNRowe - Posts tagged testing</title>
+  <updated>2021-03-21T11:06:00.995857+00:00</updated>
+  <link href="https://jnrowe.github.io/"/>
+  <link href="https://jnrowe.github.io/blog/tag/testing/atom.xml"/>
+  <generator uri="https://ablog.readthedocs.org" version="0.10.12">ABlog</generator>
+  <subtitle>Ramblings of a tired mind</subtitle>
+  <entry>
     <id>https://jnrowe.github.io/articles/tdd_distros.html</id>
-    <updated>2011-06-13T00:00:00Z</updated>
-    <published>2011-06-13T00:00:00Z</published>
-    <link href="https://jnrowe.github.io/articles/tdd_distros.html" />
+    <title>TDD distro development</title>
+    <updated>2011-06-13T00:00:00+01:00</updated>
     <author>
       <name>James Rowe</name>
     </author>
-    <content type="html">&lt;div class=&quot;section&quot; id=&quot;tdd-distro-development&quot;&gt;
+    <content type="html">&lt;div class="section" id="tdd-distro-development"&gt;
 
-&lt;p&gt;Using &lt;abbr title=&quot;Test Driven Development&quot;&gt;TDD&lt;/abbr&gt; for distribution development is a hot topic in some of the more
+&lt;p&gt;Using &lt;abbr title="Test Driven Development"&gt;TDD&lt;/abbr&gt; for distribution development is a hot topic in some of the more
 geeky circles I move in, and I’m very happy about this.  Anything that
 increases the robustness of my desktop computer, my phone or any other device
 I use is a great goal!&lt;/p&gt;
-&lt;div class=&quot;section&quot; id=&quot;why&quot;&gt;
+&lt;div class="section" id="why"&gt;
 &lt;h2&gt;Why?&lt;/h2&gt;
 &lt;p&gt;This answer should be obvious; more testing is good.  However, what about the
 current system needs improving?&lt;/p&gt;
@@ -37,7 +35,7 @@ previously fixed bugs.  This, by itself, is a reason to look at alternatives.
 Fixing the same bug more than once is an horrendous waste of developer
 resources.&lt;/p&gt;
 &lt;/div&gt;
-&lt;div class=&quot;section&quot; id=&quot;how&quot;&gt;
+&lt;div class="section" id="how"&gt;
 &lt;h2&gt;How?&lt;/h2&gt;
 &lt;p&gt;We, the fine folks of AST’s London office, already use a test-based
 stabilisation policy in the preparation of our distribution images.  Adding
@@ -47,32 +45,32 @@ enforcing for the past few years.&lt;/p&gt;
 the desktops we develop on and the laptops we play on.  The methods we use vary
 greatly, so I’m going to present the simple case of testing console applications
 only.  It is the practise that is important, not the process.&lt;/p&gt;
-&lt;p&gt;The easiest method we use is via &lt;a class=&quot;reference external&quot; href=&quot;https://pypi.python.org/pypi/shelldoctest&quot;&gt;shelldoctest&lt;/a&gt;, a module that implements
-a &lt;a class=&quot;reference external&quot; href=&quot;https://docs.python.org/3/library/doctest.html#module-doctest&quot; title=&quot;(in Python v3.9)&quot;&gt;&lt;code class=&quot;xref py py-mod docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;doctest&lt;/span&gt;&lt;/code&gt;&lt;/a&gt; interface for testing shell commands.  The package provides
+&lt;p&gt;The easiest method we use is via &lt;a class="reference external" href="https://pypi.python.org/pypi/shelldoctest"&gt;shelldoctest&lt;/a&gt;, a module that implements
+a &lt;a class="reference external" href="https://docs.python.org/3/library/doctest.html#module-doctest" title="(in Python v3.9)"&gt;&lt;code class="xref py py-mod docutils literal notranslate"&gt;&lt;span class="pre"&gt;doctest&lt;/span&gt;&lt;/code&gt;&lt;/a&gt; interface for testing shell commands.  The package provides
 a user-level script for running shell sessions in Python docstrings.  A simple
 example could be:&lt;/p&gt;
-&lt;div class=&quot;highlight-python notranslate&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&quot;sd&quot;&gt;&amp;quot;&amp;quot;&amp;quot;&lt;/span&gt;
-&lt;span class=&quot;sd&quot;&gt;$ echo test&lt;/span&gt;
-&lt;span class=&quot;sd&quot;&gt;test&lt;/span&gt;
-&lt;span class=&quot;sd&quot;&gt;$ echo fail&lt;/span&gt;
-&lt;span class=&quot;sd&quot;&gt;liaf&lt;/span&gt;
-&lt;span class=&quot;sd&quot;&gt;&amp;quot;&amp;quot;&amp;quot;&lt;/span&gt;
+&lt;div class="highlight-python notranslate"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="sd"&gt;&amp;quot;&amp;quot;&amp;quot;&lt;/span&gt;
+&lt;span class="sd"&gt;$ echo test&lt;/span&gt;
+&lt;span class="sd"&gt;test&lt;/span&gt;
+&lt;span class="sd"&gt;$ echo fail&lt;/span&gt;
+&lt;span class="sd"&gt;liaf&lt;/span&gt;
+&lt;span class="sd"&gt;&amp;quot;&amp;quot;&amp;quot;&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
-&lt;p&gt;Running the previous file with &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;shell-doctest&lt;/span&gt; &lt;span class=&quot;pre&quot;&gt;test&lt;/span&gt; &lt;span class=&quot;pre&quot;&gt;testdoc.py&lt;/span&gt;&lt;/code&gt; produces the
+&lt;p&gt;Running the previous file with &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;shell-doctest&lt;/span&gt; &lt;span class="pre"&gt;test&lt;/span&gt; &lt;span class="pre"&gt;testdoc.py&lt;/span&gt;&lt;/code&gt; produces the
 following output:&lt;/p&gt;
-&lt;div class=&quot;highlight-pycon notranslate&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&quot;go&quot;&gt;**********************************************************************&lt;/span&gt;
-&lt;span class=&quot;go&quot;&gt;File &amp;quot;testdoc.py&amp;quot;, line 4, in testdoc&lt;/span&gt;
-&lt;span class=&quot;go&quot;&gt;Failed example:&lt;/span&gt;
-&lt;span class=&quot;go&quot;&gt;    echo fail&lt;/span&gt;
-&lt;span class=&quot;go&quot;&gt;Expected:&lt;/span&gt;
-&lt;span class=&quot;go&quot;&gt;    liaf&lt;/span&gt;
-&lt;span class=&quot;go&quot;&gt;Got:&lt;/span&gt;
-&lt;span class=&quot;go&quot;&gt;    fail&lt;/span&gt;
-&lt;span class=&quot;go&quot;&gt;**********************************************************************&lt;/span&gt;
-&lt;span class=&quot;go&quot;&gt;1 items had failures:&lt;/span&gt;
-&lt;span class=&quot;go&quot;&gt;   1 of   2 in testdoc&lt;/span&gt;
-&lt;span class=&quot;go&quot;&gt;***Test Failed*** 1 failures.&lt;/span&gt;
+&lt;div class="highlight-pycon notranslate"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="go"&gt;**********************************************************************&lt;/span&gt;
+&lt;span class="go"&gt;File &amp;quot;testdoc.py&amp;quot;, line 4, in testdoc&lt;/span&gt;
+&lt;span class="go"&gt;Failed example:&lt;/span&gt;
+&lt;span class="go"&gt;    echo fail&lt;/span&gt;
+&lt;span class="go"&gt;Expected:&lt;/span&gt;
+&lt;span class="go"&gt;    liaf&lt;/span&gt;
+&lt;span class="go"&gt;Got:&lt;/span&gt;
+&lt;span class="go"&gt;    fail&lt;/span&gt;
+&lt;span class="go"&gt;**********************************************************************&lt;/span&gt;
+&lt;span class="go"&gt;1 items had failures:&lt;/span&gt;
+&lt;span class="go"&gt;   1 of   2 in testdoc&lt;/span&gt;
+&lt;span class="go"&gt;***Test Failed*** 1 failures.&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
 &lt;p&gt;Each time we bump a package, or add a completely new package, we also commit a
@@ -81,38 +79,38 @@ package.  This allows us to almost instantly ascertain whether a future package
 bump breaks functionality we require.&lt;/p&gt;
 &lt;p&gt;We also add a test &lt;em&gt;every single time&lt;/em&gt; we fix a packaging bug, to make sure it
 doesn’t come up again.  A good example can be gleaned from a bug that was fixed
-in our &lt;a class=&quot;reference external&quot; href=&quot;http://www.vim.org/scripts/script.php?script_id=1567&quot;&gt;rails&lt;/a&gt; vim package.  Given the way the &lt;a class=&quot;reference external&quot; href=&quot;http://www.vim.org/scripts/script.php?script_id=1567&quot;&gt;vim scripts site&lt;/a&gt; is organised
+in our &lt;a class="reference external" href="http://www.vim.org/scripts/script.php?script_id=1567"&gt;rails&lt;/a&gt; vim package.  Given the way the &lt;a class="reference external" href="http://www.vim.org/scripts/script.php?script_id=1567"&gt;vim scripts site&lt;/a&gt; is organised
 the files you want to download have awful download locations, so our ebuild for
-the &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;rails&lt;/span&gt;&lt;/code&gt; plugin contains the following snippet:&lt;/p&gt;
-&lt;div class=&quot;highlight-bash notranslate&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;DESCRIPTION&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;vim plugin: RoR - easy file navigation, enhanced syntax highlighting&amp;quot;&lt;/span&gt;
-&lt;span class=&quot;nv&quot;&gt;HOMEPAGE&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;http://www.vim.org/scripts/script.php?script_id=1567&amp;quot;&lt;/span&gt;
-&lt;span class=&quot;nv&quot;&gt;SRC_URI&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;http://www.vim.org/scripts/download_script.php?src_id=13800 -&amp;gt; &lt;/span&gt;&lt;span class=&quot;si&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;P&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;.zip&amp;quot;&lt;/span&gt;
+the &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;rails&lt;/span&gt;&lt;/code&gt; plugin contains the following snippet:&lt;/p&gt;
+&lt;div class="highlight-bash notranslate"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="nv"&gt;DESCRIPTION&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;vim plugin: RoR - easy file navigation, enhanced syntax highlighting&amp;quot;&lt;/span&gt;
+&lt;span class="nv"&gt;HOMEPAGE&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;http://www.vim.org/scripts/script.php?script_id=1567&amp;quot;&lt;/span&gt;
+&lt;span class="nv"&gt;SRC_URI&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;http://www.vim.org/scripts/download_script.php?src_id=13800 -&amp;gt; &lt;/span&gt;&lt;span class="si"&gt;${&lt;/span&gt;&lt;span class="nv"&gt;P&lt;/span&gt;&lt;span class="si"&gt;}&lt;/span&gt;&lt;span class="s2"&gt;.zip&amp;quot;&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
-&lt;p&gt;The &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;SRC_URI&lt;/span&gt;&lt;/code&gt; declaration says we need to fetch the file from
-&lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;http://www.vim.org/scripts/download_script.php?src_id=13800&lt;/span&gt;&lt;/code&gt; and name it
-locally as &lt;code class=&quot;file docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;rails-4.3.zip&lt;/span&gt;&lt;/code&gt;.  I’m sure you can guess what happened here,
+&lt;p&gt;The &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;SRC_URI&lt;/span&gt;&lt;/code&gt; declaration says we need to fetch the file from
+&lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;http://www.vim.org/scripts/download_script.php?src_id=13800&lt;/span&gt;&lt;/code&gt; and name it
+locally as &lt;code class="file docutils literal notranslate"&gt;&lt;span class="pre"&gt;rails-4.3.zip&lt;/span&gt;&lt;/code&gt;.  I’m sure you can guess what happened here,
 someone saved a copy of the file locally for testing and forgot to update the
-&lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;src_id&lt;/span&gt;&lt;/code&gt; parameter correctly&lt;a class=&quot;footnote-reference brackets&quot; href=&quot;#id2&quot; id=&quot;id1&quot;&gt;1&lt;/a&gt;.  The result was an apparently new build
+&lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;src_id&lt;/span&gt;&lt;/code&gt; parameter correctly&lt;a class="footnote-reference brackets" href="#id2" id="id1"&gt;1&lt;/a&gt;.  The result was an apparently new build
 that installed an older package release.&lt;/p&gt;
 &lt;p&gt;When a fix for this bug was committed a test similar to the following snippet
-was added to the &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;rails&lt;/span&gt;&lt;/code&gt; test suite:&lt;/p&gt;
-&lt;div class=&quot;highlight-python notranslate&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&quot;sd&quot;&gt;&amp;quot;&amp;quot;&amp;quot;&lt;/span&gt;
-&lt;span class=&quot;sd&quot;&gt;$ grep -l &amp;quot;autoloaded_rails = &amp;#39;${PV}&amp;#39;&amp;quot; /usr/share/vim/vimfiles/autoload/rails.vim&lt;/span&gt;
-&lt;span class=&quot;sd&quot;&gt;/usr/share/vim/vimfiles/autoload/rails.vim&lt;/span&gt;
-&lt;span class=&quot;sd&quot;&gt;&amp;quot;&amp;quot;&amp;quot;&lt;/span&gt;
+was added to the &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;rails&lt;/span&gt;&lt;/code&gt; test suite:&lt;/p&gt;
+&lt;div class="highlight-python notranslate"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="sd"&gt;&amp;quot;&amp;quot;&amp;quot;&lt;/span&gt;
+&lt;span class="sd"&gt;$ grep -l &amp;quot;autoloaded_rails = &amp;#39;${PV}&amp;#39;&amp;quot; /usr/share/vim/vimfiles/autoload/rails.vim&lt;/span&gt;
+&lt;span class="sd"&gt;/usr/share/vim/vimfiles/autoload/rails.vim&lt;/span&gt;
+&lt;span class="sd"&gt;&amp;quot;&amp;quot;&amp;quot;&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
 &lt;p&gt;All this does is check the reported version is correct, and it clearly only took
 a few seconds to write.  This is important, it shouldn’t cost a lot to write a
 test and this is especially true for the simplest task.&lt;/p&gt;
-&lt;p&gt;I use a similar technique for managing my public Gentoo overlay, &lt;a class=&quot;reference external&quot; href=&quot;https://github.com/JNRowe/jnrowe-misc&quot;&gt;jnrowe-misc&lt;/a&gt;.
-For example, the &lt;a class=&quot;reference external&quot; href=&quot;https://pypi.python.org/pypi/blockdiag&quot;&gt;blockdiag&lt;/a&gt; ebuild is accompanied by a series of tests
+&lt;p&gt;I use a similar technique for managing my public Gentoo overlay, &lt;a class="reference external" href="https://github.com/JNRowe/jnrowe-misc"&gt;jnrowe-misc&lt;/a&gt;.
+For example, the &lt;a class="reference external" href="https://pypi.python.org/pypi/blockdiag"&gt;blockdiag&lt;/a&gt; ebuild is accompanied by a series of tests
 that are run when bumping or stabilising the package, all of which are cribbed
-from my actual &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;blockdiag&lt;/span&gt;&lt;/code&gt; usage.  This massively reduces the time required
+from my actual &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;blockdiag&lt;/span&gt;&lt;/code&gt; usage.  This massively reduces the time required
 to evaluate a package at bump time.&lt;/p&gt;
 &lt;/div&gt;
-&lt;div class=&quot;section&quot; id=&quot;result&quot;&gt;
+&lt;div class="section" id="result"&gt;
 &lt;h2&gt;Result?&lt;/h2&gt;
 &lt;p&gt;The time it takes to stabilise, or bump, a package may be massively reduced
 while simultaneously increasing the robustness of the packages.  This is a huge
@@ -128,47 +126,49 @@ the test faster and means each test exercises functionality we actually require,
 but it also means we occasionally can’t submit the data upstream owing to
 licensing concerns.&lt;/p&gt;
 &lt;/div&gt;
-&lt;div class=&quot;section&quot; id=&quot;bonus&quot;&gt;
+&lt;div class="section" id="bonus"&gt;
 &lt;h2&gt;Bonus&lt;/h2&gt;
-&lt;p&gt;I’ve used the upstream supported &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;shelldoctest&lt;/span&gt;&lt;/code&gt; method for writing tests on
-this page, but you can also easily specify them in &lt;a class=&quot;reference external&quot; href=&quot;http://docutils.sourceforge.net/docs/user/rst/&quot;&gt;reST syntax&lt;/a&gt; files too.
+&lt;p&gt;I’ve used the upstream supported &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;shelldoctest&lt;/span&gt;&lt;/code&gt; method for writing tests on
+this page, but you can also easily specify them in &lt;a class="reference external" href="http://docutils.sourceforge.net/docs/user/rst/"&gt;reST syntax&lt;/a&gt; files too.
 Doing this encourages you to write nicely formatted documentation to accompany
 your tests.  You can also leverage your tests that are written in this way as
-documentation using the excellent &lt;a class=&quot;reference external&quot; href=&quot;http://sphinx-doc.org/&quot;&gt;Sphinx&lt;/a&gt; tool.&lt;/p&gt;
+documentation using the excellent &lt;a class="reference external" href="http://sphinx-doc.org/"&gt;Sphinx&lt;/a&gt; tool.&lt;/p&gt;
 &lt;p&gt;The following script shows an extremely basic, yet fully functional, example of
-how to combine the &lt;a class=&quot;reference external&quot; href=&quot;https://docs.python.org/3/library/doctest.html#module-doctest&quot; title=&quot;(in Python v3.9)&quot;&gt;&lt;code class=&quot;xref py py-mod docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;doctest&lt;/span&gt;&lt;/code&gt;&lt;/a&gt; module’s &lt;a class=&quot;reference external&quot; href=&quot;https://docs.python.org/3/library/doctest.html#doctest.testfile&quot; title=&quot;(in Python v3.9)&quot;&gt;&lt;code class=&quot;xref py py-func docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;testfile()&lt;/span&gt;&lt;/code&gt;&lt;/a&gt; function
-with &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;shelldoctest&lt;/span&gt;&lt;/code&gt;:&lt;/p&gt;
-&lt;div class=&quot;highlight-python notranslate&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&quot;ch&quot;&gt;#! /usr/bin/python -tt&lt;/span&gt;
-&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;doctest&lt;/span&gt;
-&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;sys&lt;/span&gt;
+how to combine the &lt;a class="reference external" href="https://docs.python.org/3/library/doctest.html#module-doctest" title="(in Python v3.9)"&gt;&lt;code class="xref py py-mod docutils literal notranslate"&gt;&lt;span class="pre"&gt;doctest&lt;/span&gt;&lt;/code&gt;&lt;/a&gt; module’s &lt;a class="reference external" href="https://docs.python.org/3/library/doctest.html#doctest.testfile" title="(in Python v3.9)"&gt;&lt;code class="xref py py-func docutils literal notranslate"&gt;&lt;span class="pre"&gt;testfile()&lt;/span&gt;&lt;/code&gt;&lt;/a&gt; function
+with &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;shelldoctest&lt;/span&gt;&lt;/code&gt;:&lt;/p&gt;
+&lt;div class="highlight-python notranslate"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="ch"&gt;#! /usr/bin/python -tt&lt;/span&gt;
+&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;doctest&lt;/span&gt;
+&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;sys&lt;/span&gt;
 
-&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;shelldoctest&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;as&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;sd&lt;/span&gt;
+&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;shelldoctest&lt;/span&gt; &lt;span class="k"&gt;as&lt;/span&gt; &lt;span class="nn"&gt;sd&lt;/span&gt;
 
-&lt;span class=&quot;n&quot;&gt;sys&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;exit&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;doctest&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;testfile&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;sys&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;argv&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;module_relative&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;kc&quot;&gt;False&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
-                          &lt;span class=&quot;n&quot;&gt;extraglobs&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;system_command&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;sd&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;system_command&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;},&lt;/span&gt;
-                          &lt;span class=&quot;n&quot;&gt;parser&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;sd&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ShellDocTestParser&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;())[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;])&lt;/span&gt;
+&lt;span class="n"&gt;sys&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;exit&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;doctest&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;testfile&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;sys&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;argv&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;],&lt;/span&gt; &lt;span class="n"&gt;module_relative&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="kc"&gt;False&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+                          &lt;span class="n"&gt;extraglobs&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;system_command&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="n"&gt;sd&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;system_command&lt;/span&gt;&lt;span class="p"&gt;},&lt;/span&gt;
+                          &lt;span class="n"&gt;parser&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;sd&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;ShellDocTestParser&lt;/span&gt;&lt;span class="p"&gt;())[&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;])&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
 &lt;p&gt;This script parses the first argument on the command line when it is run and
-executes any &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;shelldoctest&lt;/span&gt;&lt;/code&gt; blocks it finds.  It returns the count of failed
-tests as its exit code, helpfully allowing you to execute a command with &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;&amp;amp;&amp;amp;&lt;/span&gt;&lt;/code&gt;
+executes any &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;shelldoctest&lt;/span&gt;&lt;/code&gt; blocks it finds.  It returns the count of failed
+tests as its exit code, helpfully allowing you to execute a command with &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;&amp;amp;&amp;amp;&lt;/span&gt;&lt;/code&gt;
 if all the tests pass.&lt;/p&gt;
-&lt;p&gt;We operate this way at AST, the above &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;rails&lt;/span&gt;&lt;/code&gt; test would actually be part of
-a &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;reST&lt;/span&gt;&lt;/code&gt; formatted file as follows:&lt;/p&gt;
-&lt;div class=&quot;highlight-rst notranslate&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;Fix bug #xx, incorrect archive file&lt;span class=&quot;se&quot;&gt;::&lt;/span&gt;
+&lt;p&gt;We operate this way at AST, the above &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;rails&lt;/span&gt;&lt;/code&gt; test would actually be part of
+a &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;reST&lt;/span&gt;&lt;/code&gt; formatted file as follows:&lt;/p&gt;
+&lt;div class="highlight-rst notranslate"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;Fix bug #xx, incorrect archive file&lt;span class="se"&gt;::&lt;/span&gt;
 
-&lt;span class=&quot;s&quot;&gt;    $ grep -l &amp;quot;autoloaded_rails = &amp;#39;${PV}&amp;#39;&amp;quot; /usr/share/vim/vimfiles/autoload/rails.vim&lt;/span&gt;
-&lt;span class=&quot;s&quot;&gt;    /usr/share/vim/vimfiles/autoload/rails.vim&lt;/span&gt;
+&lt;span class="s"&gt;    $ grep -l &amp;quot;autoloaded_rails = &amp;#39;${PV}&amp;#39;&amp;quot; /usr/share/vim/vimfiles/autoload/rails.vim&lt;/span&gt;
+&lt;span class="s"&gt;    /usr/share/vim/vimfiles/autoload/rails.vim&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
-&lt;p class=&quot;rubric&quot;&gt;Footnotes&lt;/p&gt;
-&lt;dl class=&quot;footnote brackets&quot;&gt;
-&lt;dt class=&quot;label&quot; id=&quot;id2&quot;&gt;&lt;span class=&quot;brackets&quot;&gt;&lt;a class=&quot;fn-backref&quot; href=&quot;#id1&quot;&gt;1&lt;/a&gt;&lt;/span&gt;&lt;/dt&gt;
+&lt;p class="rubric"&gt;Footnotes&lt;/p&gt;
+&lt;dl class="footnote brackets"&gt;
+&lt;dt class="label" id="id2"&gt;&lt;span class="brackets"&gt;&lt;a class="fn-backref" href="#id1"&gt;1&lt;/a&gt;&lt;/span&gt;&lt;/dt&gt;
 &lt;dd&gt;&lt;p&gt;Okay, it was me.  I’ll confess.&lt;/p&gt;
 &lt;/dd&gt;
 &lt;/dl&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 </content>
+    <link href="https://jnrowe.github.io/articles/tdd_distros.html" rel="alternate"/>
+    <published>2011-06-13T00:00:00+01:00</published>
   </entry>
 </feed>

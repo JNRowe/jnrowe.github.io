@@ -1,231 +1,55 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version='1.0' encoding='UTF-8'?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <title type="text">JNRowe - Posts tagged awesome</title>
-  <id>https://jnrowe.github.io/blog/tag/awesome/atom.xml</id>
-  <updated>2009-10-13T00:00:00Z</updated>
-  <link href="https://jnrowe.github.io/" />
-  <link href="https://jnrowe.github.io/blog/tag/awesome/atom.xml" rel="self" />
-  <subtitle type="text">Ramblings of a tired mind</subtitle>
-  <generator uri="https://ablog.readthedocs.org" version="0.10.4">ABlog</generator>
-  <entry xml:base="https://jnrowe.github.io/blog/tag/awesome/atom.xml">
-    <title type="text">Visual vim mode identifier</title>
-    <id>https://jnrowe.github.io/articles/tips/Visual_vim_mode_identifier.html</id>
-    <updated>2009-10-13T00:00:00Z</updated>
-    <published>2009-10-13T00:00:00Z</published>
-    <link href="https://jnrowe.github.io/articles/tips/Visual_vim_mode_identifier.html" />
-    <author>
-      <name>James Rowe</name>
-    </author>
-    <content type="html">&lt;div class=&quot;section&quot; id=&quot;visual-vim-mode-identifier&quot;&gt;
-
-&lt;p&gt;Paul Kerry rants about his problems with &lt;a class=&quot;reference external&quot; href=&quot;http://www.vim.org/&quot;&gt;vim&lt;/a&gt; over the cooler today, and as
-a long time &lt;strong class=&quot;command&quot;&gt;vim&lt;/strong&gt; user I found it hard not to respond to some of the
-points.&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;div&gt;&lt;p&gt;All this mode switching makes it hard to know whether typing “Paul” is going
-to insert a huge block of code from the ether or insert, you know, “Paul” on
-the screen.&lt;/p&gt;
-&lt;/div&gt;&lt;/blockquote&gt;
-&lt;p&gt;The point Paul is making is that when he is in &lt;a class=&quot;reference external&quot; href=&quot;http://vimdoc.sourceforge.net/htmldoc/intro.html#vim-modes&quot;&gt;normal mode&lt;/a&gt;, typing the “P” of
-”Paul” can cause &lt;strong class=&quot;command&quot;&gt;vim&lt;/strong&gt; to insert a huge amount of text at the cursor.
-The text comes from the &lt;a class=&quot;reference external&quot; href=&quot;http://vimdoc.sourceforge.net/htmldoc/change.html#quote&quot;&gt;unnamed register&lt;/a&gt;, so it will be whatever potentially
-very large chunk of text he deleted or &lt;a class=&quot;reference external&quot; href=&quot;http://vimdoc.sourceforge.net/htmldoc/change.html#yank&quot;&gt;yanked&lt;/a&gt; last.&lt;/p&gt;
-&lt;img alt=&quot;mode identifier in vim&quot; class=&quot;align-right&quot; src=&quot;../../_images/2009-10-13-vim_screenshot.png&quot; /&gt;
-&lt;p&gt;If he had just added &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;set&lt;/span&gt; &lt;span class=&quot;pre&quot;&gt;showmode&lt;/span&gt;&lt;/code&gt; to his &lt;code class=&quot;file docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;~/.vimrc&lt;/span&gt;&lt;/code&gt; he would have
-a nice &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;--&lt;/span&gt; &lt;span class=&quot;pre&quot;&gt;INSERT&lt;/span&gt; &lt;span class=&quot;pre&quot;&gt;--&lt;/span&gt;&lt;/code&gt; reminder in the bottom of his terminal window when in
-insert mode, as can be seen in the screenshot on the right.&lt;/p&gt;
-&lt;p&gt;Another option that I use, combined with &lt;a class=&quot;reference external&quot; href=&quot;http://vimdoc.sourceforge.net/htmldoc/options.html#'showmode'&quot;&gt;showmode&lt;/a&gt;, is to change the cursor
-colour when switching to and from &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;insert&lt;/span&gt;&lt;/code&gt; mode.  This unfortunately doesn’t
-work on all terminal types, which means you have to test them individually and
-then set appropriate values for &lt;a class=&quot;reference external&quot; href=&quot;http://vimdoc.sourceforge.net/htmldoc/term.html#'t_SI'&quot;&gt;t_SI&lt;/a&gt; and &lt;a class=&quot;reference external&quot; href=&quot;http://vimdoc.sourceforge.net/htmldoc/term.html#'t_EI'&quot;&gt;t_EI&lt;/a&gt; on each terminal type.  An
-example for &lt;a class=&quot;reference external&quot; href=&quot;http://rxvt.sourceforge.net/&quot;&gt;rxvt&lt;/a&gt;-based terminals, including my favourite &lt;a class=&quot;reference external&quot; href=&quot;http://software.schmorp.de/&quot;&gt;rxvt-unicode&lt;/a&gt;, is
-below:&lt;/p&gt;
-&lt;div class=&quot;highlight-vim notranslate&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &amp;amp;&lt;span class=&quot;nb&quot;&gt;term&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=~&lt;/span&gt;? &lt;span class=&quot;s1&quot;&gt;&amp;#39;^rxvt&amp;#39;&lt;/span&gt; &amp;amp;&amp;amp; exists&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;&amp;amp;t_EI&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;let&lt;/span&gt; &amp;amp;&lt;span class=&quot;nb&quot;&gt;t_EI&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;\033]12;red\007&amp;quot;&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;let&lt;/span&gt; &amp;amp;&lt;span class=&quot;nb&quot;&gt;t_SI&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;\033]12;green\007&amp;quot;&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;endif&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-&lt;/div&gt;
-&lt;p&gt;I use a green cursor to indicate &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;insert&lt;/span&gt;&lt;/code&gt; mode, I tried a number of alternatives
-but found keeping the same cursor colour as my shell sessions was the most
-useful for me.  You can use any colour your terminal supports, including the
-extended 256 colour palette.  For more information on accessing the colours from
-the extended palette see the earlier &lt;span class=&quot;xref std std-doc&quot;&gt;Uber_pink_prompts&lt;/span&gt; tip.&lt;/p&gt;
-&lt;p&gt;You can also use the &lt;a class=&quot;reference external&quot; href=&quot;http://vimdoc.sourceforge.net/htmldoc/autocmd.html#InsertEnter&quot;&gt;InsertEnter&lt;/a&gt; and &lt;a class=&quot;reference external&quot; href=&quot;http://vimdoc.sourceforge.net/htmldoc/autocmd.html#InsertLeave&quot;&gt;InsertLeave&lt;/a&gt; events to call a function
-when changing mode.  There really is no limit to what kind of notifications you
-can use with this method.  Taking the idea too far we could use the &lt;a class=&quot;reference external&quot; href=&quot;https://awesomewm.org/&quot;&gt;awesome&lt;/a&gt;
-notifications from &lt;span class=&quot;xref std std-doc&quot;&gt;Simple_notifications_in_awesome&lt;/span&gt; to display popups
-when we change mode:&lt;/p&gt;
-&lt;div class=&quot;highlight-vim notranslate&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;au&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;InsertEnter&lt;/span&gt; * &lt;span class=&quot;p&quot;&gt;!&lt;/span&gt;echo &lt;span class=&quot;s2&quot;&gt;&amp;quot;notify.start(&amp;#39;Insert mode started&amp;#39;)&amp;quot;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;|&lt;/span&gt; awesome&lt;span class=&quot;p&quot;&gt;-&lt;/span&gt;client
-&lt;span class=&quot;k&quot;&gt;au&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;InsertLeave&lt;/span&gt; * &lt;span class=&quot;p&quot;&gt;!&lt;/span&gt;echo &lt;span class=&quot;s2&quot;&gt;&amp;quot;notify.stop(&amp;#39;Insert mode finished&amp;#39;)&amp;quot;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;|&lt;/span&gt; awesome&lt;span class=&quot;p&quot;&gt;-&lt;/span&gt;client
-&lt;/pre&gt;&lt;/div&gt;
-&lt;/div&gt;
-&lt;p&gt;Note that I didn’t say it was a good idea, just that it was possible!&lt;/p&gt;
-&lt;/div&gt;
-</content>
-  </entry>
-  <entry xml:base="https://jnrowe.github.io/blog/tag/awesome/atom.xml">
-    <title type="text">Simple notifications in awesome</title>
-    <id>https://jnrowe.github.io/articles/tips/Simple_notifications_in_awesome.html</id>
-    <updated>2009-10-04T00:00:00Z</updated>
-    <published>2009-10-04T00:00:00Z</published>
-    <link href="https://jnrowe.github.io/articles/tips/Simple_notifications_in_awesome.html" />
-    <author>
-      <name>James Rowe</name>
-    </author>
-    <content type="html">&lt;div class=&quot;section&quot; id=&quot;simple-notifications-in-awesome&quot;&gt;
-
-&lt;p&gt;On seeing my window notifications in &lt;a class=&quot;reference external&quot; href=&quot;https://awesomewm.org/&quot;&gt;awesome&lt;/a&gt; from a screencast for a new
-project at work Matt Cooper asks:&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;div&gt;&lt;p&gt;Is there a library that does those fancy notifications or do you have to
-hack it up yourself?&lt;/p&gt;
-&lt;/div&gt;&lt;/blockquote&gt;
-&lt;img alt=&quot;notifications in awesome&quot; class=&quot;align-right&quot; src=&quot;../../_images/2009-10-04-awesome_notifications.png&quot; /&gt;
-&lt;p&gt;There is a library to make notification popups in &lt;strong class=&quot;command&quot;&gt;awesome&lt;/strong&gt;, and it is
-called &lt;a class=&quot;reference external&quot; href=&quot;https://awesomewm.org/apidoc/libraries/naughty.html&quot;&gt;naughty&lt;/a&gt;.  With it notifications are as simple as calling
-&lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;naughty.notify&lt;/span&gt;&lt;/code&gt;, for example:&lt;/p&gt;
-&lt;div class=&quot;admonition note&quot;&gt;
-&lt;p class=&quot;admonition-title&quot;&gt;Note&lt;/p&gt;
-&lt;p&gt;I use &lt;a class=&quot;reference external&quot; href=&quot;https://github.com/leafo/moonscript/&quot;&gt;moonscript&lt;/a&gt; for all my &lt;a class=&quot;reference external&quot; href=&quot;http://www.lua.org/&quot;&gt;lua&lt;/a&gt; needs, as it provides a nicer syntax and
-fixes some of the warts(such as global-by-default).  The examples below are
-all written in &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;moonscript&lt;/span&gt;&lt;/code&gt;.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class=&quot;highlight-moon notranslate&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;require&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;naughty&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;&lt;/span&gt;
-
-&lt;span class=&quot;n&quot;&gt;naughty&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;notify&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;text:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;my little popup&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;position:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;bottom_left&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-&lt;/div&gt;
-&lt;p&gt;I do however define a few functions in my configuration file to simplify the
-normal notifications I use:&lt;/p&gt;
-&lt;div class=&quot;highlight-moon notranslate&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&quot;c1&quot;&gt;-- Generic info/warn/error notifications&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;debug_messages&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;false&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;notify&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;
-    &lt;span class=&quot;c1&quot;&gt;-- debug_notify: Display notification when debug_messages is true&lt;/span&gt;
-    &lt;span class=&quot;nv&quot;&gt;debug:&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;text&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;-&amp;gt;&lt;/span&gt;
-        &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;debug_messages&lt;/span&gt;
-            &lt;span class=&quot;n&quot;&gt;naughty&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;notify&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;text:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;lt;span color=&amp;#39;#ff00ff&amp;#39;&amp;gt;Debug&amp;lt;/span&amp;gt;: #{awful.util.escape text}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
-                &lt;span class=&quot;nv&quot;&gt;timeout:&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;width:&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;350&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
-
-    &lt;span class=&quot;nv&quot;&gt;_gnotify:&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ntype&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;text&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;-&amp;gt;&lt;/span&gt;
-        &lt;span class=&quot;n&quot;&gt;colour&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;switch&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ntype&lt;/span&gt;
-            &lt;span class=&quot;k&quot;&gt;when&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;info&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;&lt;/span&gt;
-                &lt;span class=&quot;s2&quot;&gt;&amp;quot;&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;#00ff00&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;&lt;/span&gt;
-            &lt;span class=&quot;k&quot;&gt;when&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;warn&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;&lt;/span&gt;
-                &lt;span class=&quot;s2&quot;&gt;&amp;quot;&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;#ffff00&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;&lt;/span&gt;
-            &lt;span class=&quot;k&quot;&gt;when&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;error&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;&lt;/span&gt;
-                &lt;span class=&quot;s2&quot;&gt;&amp;quot;&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;#ff0000&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;&lt;/span&gt;
-            &lt;span class=&quot;k&quot;&gt;else&lt;/span&gt;
-                &lt;span class=&quot;n&quot;&gt;beautiful&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;fg_normal&lt;/span&gt;
-        &lt;span class=&quot;n&quot;&gt;naughty&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;notify&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;text:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;lt;span color=&amp;#39;#{colour}&amp;#39;&amp;gt;●&amp;lt;/span&amp;gt; #{awful.util.escape text}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
-
-    &lt;span class=&quot;nv&quot;&gt;start:&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;text&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;-&amp;gt;&lt;/span&gt;
-        &lt;span class=&quot;n&quot;&gt;notify&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;_gnotify&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;info&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;text&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
-    &lt;span class=&quot;nv&quot;&gt;stop:&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;text&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;-&amp;gt;&lt;/span&gt;
-        &lt;span class=&quot;n&quot;&gt;notify&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;_gnotify&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;error&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;text&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
-    &lt;span class=&quot;nv&quot;&gt;warn:&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;text&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;-&amp;gt;&lt;/span&gt;
-        &lt;span class=&quot;n&quot;&gt;notify&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;_gnotify&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;warn&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;text&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class=&quot;admonition note&quot;&gt;
-&lt;p class=&quot;admonition-title&quot;&gt;Note&lt;/p&gt;
-&lt;p&gt;If you’re willing to install &lt;a class=&quot;reference external&quot; href=&quot;http://github.com/samsarin/lua-functional&quot;&gt;lua-functional&lt;/a&gt;, the above code snippet can be
-made much nicer by using its &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;partial&lt;/span&gt;&lt;/code&gt; application support to define the
-final functions.&lt;/p&gt;
-&lt;/div&gt;
-&lt;p&gt;This group of functions, all namespaced under &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;notify&lt;/span&gt;&lt;/code&gt;, provide simple wrappers
-for the everyday notifications I use.  &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;notify.debug&lt;/span&gt;&lt;/code&gt; is a nice way to be able
-to litter your configuration file with visible pointers as to what is going on,
-set &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;debug_messages&lt;/span&gt; &lt;span class=&quot;pre&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;pre&quot;&gt;true&lt;/span&gt;&lt;/code&gt; in your &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;rc.moon&lt;/span&gt;&lt;/code&gt; to enable all the debug
-information and switch it back to &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;false&lt;/span&gt;&lt;/code&gt; to stop it being displayed.&lt;/p&gt;
-&lt;p&gt;The &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;notify.{start,stop,warn}&lt;/span&gt;&lt;/code&gt; functions prepend the text you pass it with
-a coloured Unicode bullet.  awesome makes use of &lt;a class=&quot;reference external&quot; href=&quot;http://www.pango.org/&quot;&gt;pango&lt;/a&gt;
-meaning you can easily use pretty much any character you wish, or more
-specifically any character your font can display.  From time to time I’ve
-experimented with using &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;✔&lt;/span&gt;&lt;/code&gt; and &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;✘&lt;/span&gt;&lt;/code&gt;, but most of the fonts I prefer to use
-don’t display them correctly(if you’re seeing two boxes your fonts don’t
-either).&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class=&quot;section&quot; id=&quot;window-creation-notifications&quot;&gt;
-&lt;h1&gt;Window creation notifications&lt;/h1&gt;
-&lt;p&gt;One of the notifications I like to have is for when new windows are opened, this
-way I don’t miss windows opening on tags I’m not currently viewing.&lt;/p&gt;
-&lt;div class=&quot;highlight-moon notranslate&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;client&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;connect_signal&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;manage&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;using&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;nil&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;=&amp;gt;&lt;/span&gt;
-    &lt;span class=&quot;c1&quot;&gt;-- Display the window’s name, or just Application if it isn’t set&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;notify&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;start&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;#{@name or &amp;#39;Application&amp;#39;} started&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class=&quot;section&quot; id=&quot;network-notifications&quot;&gt;
-&lt;h1&gt;Network notifications&lt;/h1&gt;
-&lt;p&gt;I also have the following &lt;a class=&quot;reference external&quot; href=&quot;https://awesomewm.org/apidoc/libraries/gears.html&quot;&gt;gears&lt;/a&gt; timer set to toggle my network monitor between
-&lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;lo&lt;/span&gt;&lt;/code&gt; and &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;ppp0&lt;/span&gt;&lt;/code&gt; depending on whether my remote network interface is up.
-Having the little popups to show when the network has gone down or come up is
-quite nice, and definitely more noticeable than just changing the text in the
-&lt;a class=&quot;reference external&quot; href=&quot;https://awesomewm.org/apidoc/libraries/awful.wibox.html&quot;&gt;wibox&lt;/a&gt;.  The code below changes the interface name in the &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;wibox&lt;/span&gt;&lt;/code&gt;, and
-switches the network graph widget to use the appropriate input too.&lt;/p&gt;
-&lt;div class=&quot;highlight-moon notranslate&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;netiface&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;lo&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;gears&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;timer&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;-&amp;gt;&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;iface&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;state&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;netiface&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;lo&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;and&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;io.open&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;/var/lock/LCK..ttyUSB0&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;&lt;/span&gt;
-        &lt;span class=&quot;s2&quot;&gt;&amp;quot;&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;ppp0&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;up&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;elseif&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;netiface&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;ppp0&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;and&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;not&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;io.open&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;/var/lock/LCK..ttyUSB0&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;&lt;/span&gt;
-        &lt;span class=&quot;s2&quot;&gt;&amp;quot;&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;lo&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;down&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;&lt;/span&gt;
-
-    &lt;span class=&quot;n&quot;&gt;nettext_widget&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;text&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;&lt;/span&gt;&lt;span class=&quot;s&quot;&gt; #{iface}:&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;wicked&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;register&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;netbar_widget&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;net&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;${#{iface} up_b}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;upload&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;wicked&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;register&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;netbar_widget&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;net&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;${#{iface} down_b}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
-        &lt;span class=&quot;s2&quot;&gt;&amp;quot;&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;download&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;notify&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;start&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;PPP0 interface has come #{state}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-</content>
-  </entry>
-  <entry xml:base="https://jnrowe.github.io/blog/tag/awesome/atom.xml">
-    <title type="text">Fancy awesome theming</title>
+  <id>https://jnrowe.github.io/</id>
+  <title>JNRowe - Posts tagged awesome</title>
+  <updated>2021-03-21T11:05:57.731819+00:00</updated>
+  <link href="https://jnrowe.github.io/"/>
+  <link href="https://jnrowe.github.io/blog/tag/awesome/atom.xml"/>
+  <generator uri="https://ablog.readthedocs.org" version="0.10.12">ABlog</generator>
+  <subtitle>Ramblings of a tired mind</subtitle>
+  <entry>
     <id>https://jnrowe.github.io/articles/tips/Fancy_awesome_theming.html</id>
-    <updated>2009-09-28T00:00:00Z</updated>
-    <published>2009-09-28T00:00:00Z</published>
-    <link href="https://jnrowe.github.io/articles/tips/Fancy_awesome_theming.html" />
+    <title>Fancy awesome theming</title>
+    <updated>2009-09-28T00:00:00+01:00</updated>
     <author>
       <name>James Rowe</name>
     </author>
-    <content type="html">&lt;div class=&quot;section&quot; id=&quot;fancy-awesome-theming&quot;&gt;
+    <content type="html">&lt;div class="section" id="fancy-awesome-theming"&gt;
 
-&lt;a class=&quot;reference external image-reference&quot; href=&quot;/.images/2009-09-28-awesome_theming.png&quot;&gt;&lt;img alt=&quot;Awesome screenshot&quot; class=&quot;align-right&quot; src=&quot;../../_images/2009-09-28-awesome_theming-mini.png&quot; /&gt;&lt;/a&gt;
+&lt;a class="reference external image-reference" href="/.images/2009-09-28-awesome_theming.png"&gt;&lt;img alt="Awesome screenshot" class="align-right" src="../../_images/2009-09-28-awesome_theming-mini.png" /&gt;&lt;/a&gt;
 &lt;p&gt;People, mostly named Neil Blake, who shouldn’t look over my shoulder ask:&lt;/p&gt;
 &lt;blockquote&gt;
-&lt;div&gt;&lt;p&gt;How do you make &lt;a class=&quot;reference external&quot; href=&quot;https://awesomewm.org/&quot;&gt;awesome&lt;/a&gt; use &lt;em&gt;purdy&lt;/em&gt; pixmap backgrounds for the &lt;a class=&quot;reference external&quot; href=&quot;https://awesomewm.org/apidoc/libraries/awful.wibox.html&quot;&gt;wibox&lt;/a&gt;?&lt;/p&gt;
+&lt;div&gt;&lt;p&gt;How do you make &lt;a class="reference external" href="https://awesomewm.org/"&gt;awesome&lt;/a&gt; use &lt;em&gt;purdy&lt;/em&gt; pixmap backgrounds for the &lt;a class="reference external" href="https://awesomewm.org/apidoc/libraries/awful.wibox.html"&gt;wibox&lt;/a&gt;?&lt;/p&gt;
 &lt;/div&gt;&lt;/blockquote&gt;
 &lt;p&gt;Simple answer today; cheat.&lt;/p&gt;
 &lt;p&gt;As you can see in the screenshot on the right my wibox appears to be using the
-same fancy pixmap background as the &lt;a class=&quot;reference external&quot; href=&quot;http://www.gtk.org/&quot;&gt;GTK+&lt;/a&gt; theme I’m using.  What is actually
+same fancy pixmap background as the &lt;a class="reference external" href="http://www.gtk.org/"&gt;GTK+&lt;/a&gt; theme I’m using.  What is actually
 happening is that I’ve pasted a copy of the background pixmap from the expose
-theme on top of my wallpaper using &lt;a class=&quot;reference external&quot; href=&quot;http://www.imagemagick.org/index.php&quot;&gt;ImageMagick&lt;/a&gt;, which is easily achievable on
-a netbook without having to fire up the &lt;a class=&quot;reference external&quot; href=&quot;http://www.gimp.org/&quot;&gt;gimp&lt;/a&gt;.&lt;/p&gt;
-&lt;div class=&quot;highlight-sh notranslate&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;convert /home/jay/.themes/expose/gtk-2.0/bc.xpm -scale 1024x20! bc.png
+theme on top of my wallpaper using &lt;a class="reference external" href="http://www.imagemagick.org/index.php"&gt;ImageMagick&lt;/a&gt;, which is easily achievable on
+a netbook without having to fire up the &lt;a class="reference external" href="http://www.gimp.org/"&gt;gimp&lt;/a&gt;.&lt;/p&gt;
+&lt;div class="highlight-sh notranslate"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;convert /home/jay/.themes/expose/gtk-2.0/bc.xpm -scale 1024x20! bc.png
 composite  -gravity north bc.png backdrop.png backdrop_new.png
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
-&lt;p&gt;The initial &lt;strong class=&quot;command&quot;&gt;convert&lt;/strong&gt; command resizes &lt;code class=&quot;file docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;bc.xpm&lt;/span&gt;&lt;/code&gt; from the expose
+&lt;p&gt;The initial &lt;strong class="command"&gt;convert&lt;/strong&gt; command resizes &lt;code class="file docutils literal notranslate"&gt;&lt;span class="pre"&gt;bc.xpm&lt;/span&gt;&lt;/code&gt; from the expose
 theme to 1024x20 pixels, 1024 being the screen width and 20 being the height of
-my main wibox in awesome.  We must suffix the &lt;code class=&quot;xref std std-option docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;-scale&lt;/span&gt;&lt;/code&gt; option’s
-argument with &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;!&lt;/span&gt;&lt;/code&gt; to tell &lt;strong class=&quot;command&quot;&gt;convert&lt;/strong&gt; to ignore the image’s aspect
+my main wibox in awesome.  We must suffix the &lt;code class="xref std std-option docutils literal notranslate"&gt;&lt;span class="pre"&gt;-scale&lt;/span&gt;&lt;/code&gt; option’s
+argument with &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;!&lt;/span&gt;&lt;/code&gt; to tell &lt;strong class="command"&gt;convert&lt;/strong&gt; to ignore the image’s aspect
 ratio when resizing, without this the command will not produce an image at the
 size we expect.&lt;/p&gt;
-&lt;p&gt;The second command tells ImageMagick’s &lt;strong class=&quot;command&quot;&gt;composite&lt;/strong&gt; that we wish to
-paste our newly generated image on top &lt;code class=&quot;file docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;backdrop.png&lt;/span&gt;&lt;/code&gt;, we could specify
-any location we want with the &lt;code class=&quot;xref std std-option docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;-gravity&lt;/span&gt;&lt;/code&gt; option but I have my wibox on
-the top of the screen so &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;north&lt;/span&gt;&lt;/code&gt; is correct for me.&lt;/p&gt;
+&lt;p&gt;The second command tells ImageMagick’s &lt;strong class="command"&gt;composite&lt;/strong&gt; that we wish to
+paste our newly generated image on top &lt;code class="file docutils literal notranslate"&gt;&lt;span class="pre"&gt;backdrop.png&lt;/span&gt;&lt;/code&gt;, we could specify
+any location we want with the &lt;code class="xref std std-option docutils literal notranslate"&gt;&lt;span class="pre"&gt;-gravity&lt;/span&gt;&lt;/code&gt; option but I have my wibox on
+the top of the screen so &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;north&lt;/span&gt;&lt;/code&gt; is correct for me.&lt;/p&gt;
 &lt;p&gt;With that done we have an image with our normal wallpaper and wibox sized chunk
 with our theme’s background.  All we need to do now is tell awesome to make our
 wibox transparent and the final result is a wibox that appears to be using the
 theme’s background.&lt;/p&gt;
-&lt;div class=&quot;highlight-moon notranslate&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;mywibox&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;s&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;wibox&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;position:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;top&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;fg:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;beautiful&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;fg_normal&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;bg:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;#00000000&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;&lt;/span&gt;
+&lt;div class="highlight-moon notranslate"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;mywibox&lt;/span&gt;&lt;span class="kt"&gt;[&lt;/span&gt;&lt;span class="n"&gt;s&lt;/span&gt;&lt;span class="kt"&gt;]&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;wibox&lt;/span&gt; &lt;span class="nv"&gt;position:&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;&lt;/span&gt;&lt;span class="s"&gt;top&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="nv"&gt;fg:&lt;/span&gt; &lt;span class="n"&gt;beautiful&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;fg_normal&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="nv"&gt;bg:&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;&lt;/span&gt;&lt;span class="s"&gt;#00000000&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
 &lt;p&gt;Colours are specified in the de facto standard format of
-&lt;code class=&quot;samp docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;#[&lt;/span&gt;&lt;em&gt;&lt;span class=&quot;pre&quot;&gt;red&lt;/span&gt;&lt;/em&gt;&lt;span class=&quot;pre&quot;&gt;][&lt;/span&gt;&lt;em&gt;&lt;span class=&quot;pre&quot;&gt;green&lt;/span&gt;&lt;/em&gt;&lt;span class=&quot;pre&quot;&gt;][&lt;/span&gt;&lt;em&gt;&lt;span class=&quot;pre&quot;&gt;blue&lt;/span&gt;&lt;/em&gt;&lt;span class=&quot;pre&quot;&gt;][&lt;/span&gt;&lt;em&gt;&lt;span class=&quot;pre&quot;&gt;alpha&lt;/span&gt;&lt;/em&gt;&lt;span class=&quot;pre&quot;&gt;]&lt;/span&gt;&lt;/code&gt;, the &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;00&lt;/span&gt;&lt;/code&gt; value for alpha in the
+&lt;code class="samp docutils literal notranslate"&gt;&lt;span class="pre"&gt;#[&lt;/span&gt;&lt;em&gt;&lt;span class="pre"&gt;red&lt;/span&gt;&lt;/em&gt;&lt;span class="pre"&gt;][&lt;/span&gt;&lt;em&gt;&lt;span class="pre"&gt;green&lt;/span&gt;&lt;/em&gt;&lt;span class="pre"&gt;][&lt;/span&gt;&lt;em&gt;&lt;span class="pre"&gt;blue&lt;/span&gt;&lt;/em&gt;&lt;span class="pre"&gt;][&lt;/span&gt;&lt;em&gt;&lt;span class="pre"&gt;alpha&lt;/span&gt;&lt;/em&gt;&lt;span class="pre"&gt;]&lt;/span&gt;&lt;/code&gt;, the &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;00&lt;/span&gt;&lt;/code&gt; value for alpha in the
 above example means we want a fully transparent theme background.  You could
 include some colour values and varying levels of alpha transparency to tint the
 background image, however that could also be achieved with ImageMagick when
@@ -234,5 +58,181 @@ building the background image if it is desired.&lt;/p&gt;
 in full.&lt;/p&gt;
 &lt;/div&gt;
 </content>
+    <link href="https://jnrowe.github.io/articles/tips/Fancy_awesome_theming.html" rel="alternate"/>
+    <published>2009-09-28T00:00:00+01:00</published>
+  </entry>
+  <entry>
+    <id>https://jnrowe.github.io/articles/tips/Simple_notifications_in_awesome.html</id>
+    <title>Simple notifications in awesome</title>
+    <updated>2009-10-04T00:00:00+01:00</updated>
+    <author>
+      <name>James Rowe</name>
+    </author>
+    <content type="html">&lt;div class="section" id="simple-notifications-in-awesome"&gt;
+
+&lt;p&gt;On seeing my window notifications in &lt;a class="reference external" href="https://awesomewm.org/"&gt;awesome&lt;/a&gt; from a screencast for a new
+project at work Matt Cooper asks:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;div&gt;&lt;p&gt;Is there a library that does those fancy notifications or do you have to
+hack it up yourself?&lt;/p&gt;
+&lt;/div&gt;&lt;/blockquote&gt;
+&lt;img alt="notifications in awesome" class="align-right" src="../../_images/2009-10-04-awesome_notifications.png" /&gt;
+&lt;p&gt;There is a library to make notification popups in &lt;strong class="command"&gt;awesome&lt;/strong&gt;, and it is
+called &lt;a class="reference external" href="https://awesomewm.org/apidoc/libraries/naughty.html"&gt;naughty&lt;/a&gt;.  With it notifications are as simple as calling
+&lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;naughty.notify&lt;/span&gt;&lt;/code&gt;, for example:&lt;/p&gt;
+&lt;div class="admonition note"&gt;
+&lt;p class="admonition-title"&gt;Note&lt;/p&gt;
+&lt;p&gt;I use &lt;a class="reference external" href="https://github.com/leafo/moonscript/"&gt;moonscript&lt;/a&gt; for all my &lt;a class="reference external" href="http://www.lua.org/"&gt;lua&lt;/a&gt; needs, as it provides a nicer syntax and
+fixes some of the warts(such as global-by-default).  The examples below are
+all written in &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;moonscript&lt;/span&gt;&lt;/code&gt;.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="highlight-moon notranslate"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="nb"&gt;require&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;&lt;/span&gt;&lt;span class="s"&gt;naughty&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;&lt;/span&gt;
+
+&lt;span class="n"&gt;naughty&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;notify&lt;/span&gt; &lt;span class="nv"&gt;text:&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;&lt;/span&gt;&lt;span class="s"&gt;my little popup&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="nv"&gt;position:&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;&lt;/span&gt;&lt;span class="s"&gt;bottom_left&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;I do however define a few functions in my configuration file to simplify the
+normal notifications I use:&lt;/p&gt;
+&lt;div class="highlight-moon notranslate"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="c1"&gt;-- Generic info/warn/error notifications&lt;/span&gt;
+&lt;span class="n"&gt;debug_messages&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="kc"&gt;false&lt;/span&gt;
+&lt;span class="n"&gt;notify&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt;
+    &lt;span class="c1"&gt;-- debug_notify: Display notification when debug_messages is true&lt;/span&gt;
+    &lt;span class="nv"&gt;debug:&lt;/span&gt; &lt;span class="kt"&gt;(&lt;/span&gt;&lt;span class="n"&gt;text&lt;/span&gt;&lt;span class="kt"&gt;)&lt;/span&gt; &lt;span class="nf"&gt;-&amp;gt;&lt;/span&gt;
+        &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="n"&gt;debug_messages&lt;/span&gt;
+            &lt;span class="n"&gt;naughty&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;notify&lt;/span&gt; &lt;span class="nv"&gt;text:&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;&lt;/span&gt;&lt;span class="s"&gt;&amp;lt;span color=&amp;#39;#ff00ff&amp;#39;&amp;gt;Debug&amp;lt;/span&amp;gt;: #{awful.util.escape text}&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+                &lt;span class="nv"&gt;timeout:&lt;/span&gt; &lt;span class="mi"&gt;10&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="nv"&gt;width:&lt;/span&gt;&lt;span class="mi"&gt;350&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+
+    &lt;span class="nv"&gt;_gnotify:&lt;/span&gt; &lt;span class="kt"&gt;(&lt;/span&gt;&lt;span class="n"&gt;ntype&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;text&lt;/span&gt;&lt;span class="kt"&gt;)&lt;/span&gt; &lt;span class="nf"&gt;-&amp;gt;&lt;/span&gt;
+        &lt;span class="n"&gt;colour&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="k"&gt;switch&lt;/span&gt; &lt;span class="n"&gt;ntype&lt;/span&gt;
+            &lt;span class="k"&gt;when&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;&lt;/span&gt;&lt;span class="s"&gt;info&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;&lt;/span&gt;
+                &lt;span class="s2"&gt;&amp;quot;&lt;/span&gt;&lt;span class="s"&gt;#00ff00&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;&lt;/span&gt;
+            &lt;span class="k"&gt;when&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;&lt;/span&gt;&lt;span class="s"&gt;warn&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;&lt;/span&gt;
+                &lt;span class="s2"&gt;&amp;quot;&lt;/span&gt;&lt;span class="s"&gt;#ffff00&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;&lt;/span&gt;
+            &lt;span class="k"&gt;when&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;&lt;/span&gt;&lt;span class="s"&gt;error&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;&lt;/span&gt;
+                &lt;span class="s2"&gt;&amp;quot;&lt;/span&gt;&lt;span class="s"&gt;#ff0000&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;&lt;/span&gt;
+            &lt;span class="k"&gt;else&lt;/span&gt;
+                &lt;span class="n"&gt;beautiful&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;fg_normal&lt;/span&gt;
+        &lt;span class="n"&gt;naughty&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;notify&lt;/span&gt; &lt;span class="nv"&gt;text:&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;&lt;/span&gt;&lt;span class="s"&gt;&amp;lt;span color=&amp;#39;#{colour}&amp;#39;&amp;gt;●&amp;lt;/span&amp;gt; #{awful.util.escape text}&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+
+    &lt;span class="nv"&gt;start:&lt;/span&gt; &lt;span class="kt"&gt;(&lt;/span&gt;&lt;span class="n"&gt;text&lt;/span&gt;&lt;span class="kt"&gt;)&lt;/span&gt; &lt;span class="nf"&gt;-&amp;gt;&lt;/span&gt;
+        &lt;span class="n"&gt;notify&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;_gnotify&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;&lt;/span&gt;&lt;span class="s"&gt;info&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;text&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+    &lt;span class="nv"&gt;stop:&lt;/span&gt; &lt;span class="kt"&gt;(&lt;/span&gt;&lt;span class="n"&gt;text&lt;/span&gt;&lt;span class="kt"&gt;)&lt;/span&gt; &lt;span class="nf"&gt;-&amp;gt;&lt;/span&gt;
+        &lt;span class="n"&gt;notify&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;_gnotify&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;&lt;/span&gt;&lt;span class="s"&gt;error&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;text&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+    &lt;span class="nv"&gt;warn:&lt;/span&gt; &lt;span class="kt"&gt;(&lt;/span&gt;&lt;span class="n"&gt;text&lt;/span&gt;&lt;span class="kt"&gt;)&lt;/span&gt; &lt;span class="nf"&gt;-&amp;gt;&lt;/span&gt;
+        &lt;span class="n"&gt;notify&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;_gnotify&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;&lt;/span&gt;&lt;span class="s"&gt;warn&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;text&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="admonition note"&gt;
+&lt;p class="admonition-title"&gt;Note&lt;/p&gt;
+&lt;p&gt;If you’re willing to install &lt;a class="reference external" href="http://github.com/samsarin/lua-functional"&gt;lua-functional&lt;/a&gt;, the above code snippet can be
+made much nicer by using its &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;partial&lt;/span&gt;&lt;/code&gt; application support to define the
+final functions.&lt;/p&gt;
+&lt;/div&gt;
+&lt;p&gt;This group of functions, all namespaced under &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;notify&lt;/span&gt;&lt;/code&gt;, provide simple wrappers
+for the everyday notifications I use.  &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;notify.debug&lt;/span&gt;&lt;/code&gt; is a nice way to be able
+to litter your configuration file with visible pointers as to what is going on,
+set &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;debug_messages&lt;/span&gt; &lt;span class="pre"&gt;=&lt;/span&gt; &lt;span class="pre"&gt;true&lt;/span&gt;&lt;/code&gt; in your &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;rc.moon&lt;/span&gt;&lt;/code&gt; to enable all the debug
+information and switch it back to &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;false&lt;/span&gt;&lt;/code&gt; to stop it being displayed.&lt;/p&gt;
+&lt;p&gt;The &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;notify.{start,stop,warn}&lt;/span&gt;&lt;/code&gt; functions prepend the text you pass it with
+a coloured Unicode bullet.  awesome makes use of &lt;a class="reference external" href="http://www.pango.org/"&gt;pango&lt;/a&gt;
+meaning you can easily use pretty much any character you wish, or more
+specifically any character your font can display.  From time to time I’ve
+experimented with using &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;✔&lt;/span&gt;&lt;/code&gt; and &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;✘&lt;/span&gt;&lt;/code&gt;, but most of the fonts I prefer to use
+don’t display them correctly(if you’re seeing two boxes your fonts don’t
+either).&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="window-creation-notifications"&gt;
+&lt;h1&gt;Window creation notifications&lt;/h1&gt;
+&lt;p&gt;One of the notifications I like to have is for when new windows are opened, this
+way I don’t miss windows opening on tags I’m not currently viewing.&lt;/p&gt;
+&lt;div class="highlight-moon notranslate"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;client&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;connect_signal&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;&lt;/span&gt;&lt;span class="s"&gt;manage&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="kt"&gt;(&lt;/span&gt;&lt;span class="k"&gt;using&lt;/span&gt; &lt;span class="kc"&gt;nil&lt;/span&gt;&lt;span class="kt"&gt;)&lt;/span&gt; &lt;span class="nf"&gt;=&amp;gt;&lt;/span&gt;
+    &lt;span class="c1"&gt;-- Display the window’s name, or just Application if it isn’t set&lt;/span&gt;
+    &lt;span class="n"&gt;notify&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;start&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;&lt;/span&gt;&lt;span class="s"&gt;#{@name or &amp;#39;Application&amp;#39;} started&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="section" id="network-notifications"&gt;
+&lt;h1&gt;Network notifications&lt;/h1&gt;
+&lt;p&gt;I also have the following &lt;a class="reference external" href="https://awesomewm.org/apidoc/libraries/gears.html"&gt;gears&lt;/a&gt; timer set to toggle my network monitor between
+&lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;lo&lt;/span&gt;&lt;/code&gt; and &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;ppp0&lt;/span&gt;&lt;/code&gt; depending on whether my remote network interface is up.
+Having the little popups to show when the network has gone down or come up is
+quite nice, and definitely more noticeable than just changing the text in the
+&lt;a class="reference external" href="https://awesomewm.org/apidoc/libraries/awful.wibox.html"&gt;wibox&lt;/a&gt;.  The code below changes the interface name in the &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;wibox&lt;/span&gt;&lt;/code&gt;, and
+switches the network graph widget to use the appropriate input too.&lt;/p&gt;
+&lt;div class="highlight-moon notranslate"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;netiface&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;&lt;/span&gt;&lt;span class="s"&gt;lo&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;&lt;/span&gt;
+&lt;span class="n"&gt;gears&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;timer&lt;/span&gt; &lt;span class="mi"&gt;3&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="nf"&gt;-&amp;gt;&lt;/span&gt;
+    &lt;span class="n"&gt;iface&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;state&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="n"&gt;netiface&lt;/span&gt; &lt;span class="o"&gt;==&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;&lt;/span&gt;&lt;span class="s"&gt;lo&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;&lt;/span&gt; &lt;span class="k"&gt;and&lt;/span&gt; &lt;span class="nb"&gt;io.open&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;&lt;/span&gt;&lt;span class="s"&gt;/var/lock/LCK..ttyUSB0&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;&lt;/span&gt;
+        &lt;span class="s2"&gt;&amp;quot;&lt;/span&gt;&lt;span class="s"&gt;ppp0&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;&lt;/span&gt;&lt;span class="s"&gt;up&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;&lt;/span&gt;
+    &lt;span class="k"&gt;elseif&lt;/span&gt; &lt;span class="n"&gt;netiface&lt;/span&gt; &lt;span class="o"&gt;==&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;&lt;/span&gt;&lt;span class="s"&gt;ppp0&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;&lt;/span&gt; &lt;span class="k"&gt;and&lt;/span&gt; &lt;span class="k"&gt;not&lt;/span&gt; &lt;span class="nb"&gt;io.open&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;&lt;/span&gt;&lt;span class="s"&gt;/var/lock/LCK..ttyUSB0&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;&lt;/span&gt;
+        &lt;span class="s2"&gt;&amp;quot;&lt;/span&gt;&lt;span class="s"&gt;lo&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;&lt;/span&gt;&lt;span class="s"&gt;down&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;&lt;/span&gt;
+
+    &lt;span class="n"&gt;nettext_widget&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;text&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;&lt;/span&gt;&lt;span class="s"&gt; #{iface}:&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;&lt;/span&gt;
+    &lt;span class="n"&gt;wicked&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;register&lt;/span&gt; &lt;span class="n"&gt;netbar_widget&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;&lt;/span&gt;&lt;span class="s"&gt;net&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;&lt;/span&gt;&lt;span class="s"&gt;${#{iface} up_b}&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;3&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;&lt;/span&gt;&lt;span class="s"&gt;upload&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;&lt;/span&gt;
+    &lt;span class="n"&gt;wicked&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;register&lt;/span&gt; &lt;span class="n"&gt;netbar_widget&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;&lt;/span&gt;&lt;span class="s"&gt;net&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;&lt;/span&gt;&lt;span class="s"&gt;${#{iface} down_b}&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;3&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+        &lt;span class="s2"&gt;&amp;quot;&lt;/span&gt;&lt;span class="s"&gt;download&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;&lt;/span&gt;
+    &lt;span class="n"&gt;notify&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;start&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;&lt;/span&gt;&lt;span class="s"&gt;PPP0 interface has come #{state}&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</content>
+    <link href="https://jnrowe.github.io/articles/tips/Simple_notifications_in_awesome.html" rel="alternate"/>
+    <published>2009-10-04T00:00:00+01:00</published>
+  </entry>
+  <entry>
+    <id>https://jnrowe.github.io/articles/tips/Visual_vim_mode_identifier.html</id>
+    <title>Visual vim mode identifier</title>
+    <updated>2009-10-13T00:00:00+01:00</updated>
+    <author>
+      <name>James Rowe</name>
+    </author>
+    <content type="html">&lt;div class="section" id="visual-vim-mode-identifier"&gt;
+
+&lt;p&gt;Paul Kerry rants about his problems with &lt;a class="reference external" href="http://www.vim.org/"&gt;vim&lt;/a&gt; over the cooler today, and as
+a long time &lt;strong class="command"&gt;vim&lt;/strong&gt; user I found it hard not to respond to some of the
+points.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;div&gt;&lt;p&gt;All this mode switching makes it hard to know whether typing “Paul” is going
+to insert a huge block of code from the ether or insert, you know, “Paul” on
+the screen.&lt;/p&gt;
+&lt;/div&gt;&lt;/blockquote&gt;
+&lt;p&gt;The point Paul is making is that when he is in &lt;a class="reference external" href="http://vimdoc.sourceforge.net/htmldoc/intro.html#vim-modes"&gt;normal mode&lt;/a&gt;, typing the “P” of
+”Paul” can cause &lt;strong class="command"&gt;vim&lt;/strong&gt; to insert a huge amount of text at the cursor.
+The text comes from the &lt;a class="reference external" href="http://vimdoc.sourceforge.net/htmldoc/change.html#quote"&gt;unnamed register&lt;/a&gt;, so it will be whatever potentially
+very large chunk of text he deleted or &lt;a class="reference external" href="http://vimdoc.sourceforge.net/htmldoc/change.html#yank"&gt;yanked&lt;/a&gt; last.&lt;/p&gt;
+&lt;img alt="mode identifier in vim" class="align-right" src="../../_images/2009-10-13-vim_screenshot.png" /&gt;
+&lt;p&gt;If he had just added &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;set&lt;/span&gt; &lt;span class="pre"&gt;showmode&lt;/span&gt;&lt;/code&gt; to his &lt;code class="file docutils literal notranslate"&gt;&lt;span class="pre"&gt;~/.vimrc&lt;/span&gt;&lt;/code&gt; he would have
+a nice &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;--&lt;/span&gt; &lt;span class="pre"&gt;INSERT&lt;/span&gt; &lt;span class="pre"&gt;--&lt;/span&gt;&lt;/code&gt; reminder in the bottom of his terminal window when in
+insert mode, as can be seen in the screenshot on the right.&lt;/p&gt;
+&lt;p&gt;Another option that I use, combined with &lt;a class="reference external" href="http://vimdoc.sourceforge.net/htmldoc/options.html#'showmode'"&gt;showmode&lt;/a&gt;, is to change the cursor
+colour when switching to and from &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;insert&lt;/span&gt;&lt;/code&gt; mode.  This unfortunately doesn’t
+work on all terminal types, which means you have to test them individually and
+then set appropriate values for &lt;a class="reference external" href="http://vimdoc.sourceforge.net/htmldoc/term.html#'t_SI'"&gt;t_SI&lt;/a&gt; and &lt;a class="reference external" href="http://vimdoc.sourceforge.net/htmldoc/term.html#'t_EI'"&gt;t_EI&lt;/a&gt; on each terminal type.  An
+example for &lt;a class="reference external" href="http://rxvt.sourceforge.net/"&gt;rxvt&lt;/a&gt;-based terminals, including my favourite &lt;a class="reference external" href="http://software.schmorp.de/"&gt;rxvt-unicode&lt;/a&gt;, is
+below:&lt;/p&gt;
+&lt;div class="highlight-vim notranslate"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="k"&gt;if&lt;/span&gt; &amp;amp;&lt;span class="nb"&gt;term&lt;/span&gt; &lt;span class="p"&gt;=~&lt;/span&gt;? &lt;span class="s1"&gt;&amp;#39;^rxvt&amp;#39;&lt;/span&gt; &amp;amp;&amp;amp; exists&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;&amp;amp;t_EI&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+    &lt;span class="k"&gt;let&lt;/span&gt; &amp;amp;&lt;span class="nb"&gt;t_EI&lt;/span&gt;&lt;span class="p"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;\033]12;red\007&amp;quot;&lt;/span&gt;
+    &lt;span class="k"&gt;let&lt;/span&gt; &amp;amp;&lt;span class="nb"&gt;t_SI&lt;/span&gt;&lt;span class="p"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;\033]12;green\007&amp;quot;&lt;/span&gt;
+&lt;span class="k"&gt;endif&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;I use a green cursor to indicate &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;insert&lt;/span&gt;&lt;/code&gt; mode, I tried a number of alternatives
+but found keeping the same cursor colour as my shell sessions was the most
+useful for me.  You can use any colour your terminal supports, including the
+extended 256 colour palette.  For more information on accessing the colours from
+the extended palette see the earlier &lt;span class="xref std std-doc"&gt;Uber_pink_prompts&lt;/span&gt; tip.&lt;/p&gt;
+&lt;p&gt;You can also use the &lt;a class="reference external" href="http://vimdoc.sourceforge.net/htmldoc/autocmd.html#InsertEnter"&gt;InsertEnter&lt;/a&gt; and &lt;a class="reference external" href="http://vimdoc.sourceforge.net/htmldoc/autocmd.html#InsertLeave"&gt;InsertLeave&lt;/a&gt; events to call a function
+when changing mode.  There really is no limit to what kind of notifications you
+can use with this method.  Taking the idea too far we could use the &lt;a class="reference external" href="https://awesomewm.org/"&gt;awesome&lt;/a&gt;
+notifications from &lt;span class="xref std std-doc"&gt;Simple_notifications_in_awesome&lt;/span&gt; to display popups
+when we change mode:&lt;/p&gt;
+&lt;div class="highlight-vim notranslate"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="k"&gt;au&lt;/span&gt; &lt;span class="nb"&gt;InsertEnter&lt;/span&gt; * &lt;span class="p"&gt;!&lt;/span&gt;echo &lt;span class="s2"&gt;&amp;quot;notify.start(&amp;#39;Insert mode started&amp;#39;)&amp;quot;&lt;/span&gt; &lt;span class="p"&gt;|&lt;/span&gt; awesome&lt;span class="p"&gt;-&lt;/span&gt;client
+&lt;span class="k"&gt;au&lt;/span&gt; &lt;span class="nb"&gt;InsertLeave&lt;/span&gt; * &lt;span class="p"&gt;!&lt;/span&gt;echo &lt;span class="s2"&gt;&amp;quot;notify.stop(&amp;#39;Insert mode finished&amp;#39;)&amp;quot;&lt;/span&gt; &lt;span class="p"&gt;|&lt;/span&gt; awesome&lt;span class="p"&gt;-&lt;/span&gt;client
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;Note that I didn’t say it was a good idea, just that it was possible!&lt;/p&gt;
+&lt;/div&gt;
+</content>
+    <link href="https://jnrowe.github.io/articles/tips/Visual_vim_mode_identifier.html" rel="alternate"/>
+    <published>2009-10-13T00:00:00+01:00</published>
   </entry>
 </feed>

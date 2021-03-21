@@ -1,152 +1,36 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version='1.0' encoding='UTF-8'?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <title type="text">JNRowe - Posts tagged emacs</title>
-  <id>https://jnrowe.github.io/blog/tag/emacs/atom.xml</id>
-  <updated>2018-11-05T00:00:00Z</updated>
-  <link href="https://jnrowe.github.io/" />
-  <link href="https://jnrowe.github.io/blog/tag/emacs/atom.xml" rel="self" />
-  <subtitle type="text">Ramblings of a tired mind</subtitle>
-  <generator uri="https://ablog.readthedocs.org" version="0.10.4">ABlog</generator>
-  <entry xml:base="https://jnrowe.github.io/blog/tag/emacs/atom.xml">
-    <title type="text">Evil Emacs steals my heart</title>
-    <id>https://jnrowe.github.io/articles/evil_emacs_steals_my_heart.html</id>
-    <updated>2018-11-05T00:00:00Z</updated>
-    <published>2018-11-05T00:00:00Z</published>
-    <link href="https://jnrowe.github.io/articles/evil_emacs_steals_my_heart.html" />
-    <author>
-      <name>James Rowe</name>
-    </author>
-    <content type="html">&lt;div class=&quot;section&quot; id=&quot;evil-emacs-steals-my-heart&quot;&gt;
-
-&lt;p&gt;&lt;em&gt;Many&lt;/em&gt; of my co-workers use &lt;a class=&quot;reference external&quot; href=&quot;https://www.gnu.org/software/emacs/&quot;&gt;emacs&lt;/a&gt;, it is probably the most popular editor on
-our team and I understand why.&lt;/p&gt;
-&lt;img alt=&quot;Editor icons&quot; class=&quot;align-right&quot; src=&quot;../../_images/standoff.png&quot; /&gt;
-&lt;p&gt;I was an &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;emacs&lt;/span&gt;&lt;/code&gt; user — via &lt;a class=&quot;reference external&quot; href=&quot;ftp://ftp.cs.helsinki.fi/pub/Software/Local/uEmacs-PK/&quot;&gt;MicroEMACS&lt;/a&gt; and later &lt;a class=&quot;reference external&quot; href=&quot;https://www.gnu.org/software/emacs/&quot;&gt;GNU Emacs&lt;/a&gt; — for many
-years but at some point I switched to &lt;a class=&quot;reference external&quot; href=&quot;https://vim.sourceforge.io/&quot;&gt;vim&lt;/a&gt;.  I can’t even remember the exact
-catalyst for change, but I am pretty fickle so it may not have even been all
-that important.&lt;/p&gt;
-&lt;p&gt;Lately, I’ve found myself diving back in to &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;emacs&lt;/span&gt;&lt;/code&gt;.  In large part this is
-because of &lt;a class=&quot;reference external&quot; href=&quot;https://github.com/emacs-evil/evil&quot;&gt;evil&lt;/a&gt;; I can be &lt;em&gt;in&lt;/em&gt; &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;emacs&lt;/span&gt;&lt;/code&gt;, but &lt;em&gt;live&lt;/em&gt; &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;vim&lt;/span&gt;&lt;/code&gt;.&lt;/p&gt;
-&lt;div class=&quot;section&quot; id=&quot;evil-isnt-always-evil&quot;&gt;
-&lt;h2&gt;Evil isn’t always evil&lt;/h2&gt;
-&lt;p&gt;So, &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;evil-mode&lt;/span&gt;&lt;/code&gt; &lt;em&gt;is&lt;/em&gt; awesome.&lt;/p&gt;
-&lt;p&gt;The kindest thing I can think to say about it is this: You’ll be angry when it
-doesn’t work&lt;/p&gt;
-&lt;p&gt;This isn’t because it often breaks, quite the contrary.  It is simply because
-it feels largely seamless.  I’ll give an example that mimics a recent session
-to make my point.  For example, you’re hovering over a number you need to
-change:&lt;/p&gt;
-&lt;div class=&quot;highlight-c notranslate&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;magic_const&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;974&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-&lt;/div&gt;
-&lt;p&gt;In &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;vim&lt;/span&gt;&lt;/code&gt;, you can execute &lt;kbd class=&quot;kbd docutils literal notranslate&quot;&gt;&lt;kbd class=&quot;kbd docutils literal notranslate&quot;&gt;ciw&amp;lt;C&lt;/kbd&gt;-&lt;kbd class=&quot;kbd docutils literal notranslate&quot;&gt;r&amp;gt;=&amp;#64;&amp;quot;/2&amp;lt;CR&amp;gt;&lt;/kbd&gt;&lt;/kbd&gt; to cleave the number.  The
-command itself is saying:&lt;/p&gt;
-&lt;dl class=&quot;simple&quot;&gt;
-&lt;dt&gt;&lt;kbd class=&quot;kbd docutils literal notranslate&quot;&gt;ciw&lt;/kbd&gt;&lt;/dt&gt;&lt;dd&gt;&lt;p&gt;Change the word my cursor is on(&lt;kbd class=&quot;kbd docutils literal notranslate&quot;&gt;c&lt;/kbd&gt;hange &lt;kbd class=&quot;kbd docutils literal notranslate&quot;&gt;i&lt;/kbd&gt;nner &lt;kbd class=&quot;kbd docutils literal notranslate&quot;&gt;w&lt;/kbd&gt;ord)&lt;/p&gt;
-&lt;/dd&gt;
-&lt;dt&gt;&lt;kbd class=&quot;kbd docutils literal notranslate&quot;&gt;&lt;kbd class=&quot;kbd docutils literal notranslate&quot;&gt;&amp;lt;C&lt;/kbd&gt;-&lt;kbd class=&quot;kbd docutils literal notranslate&quot;&gt;r&amp;gt;=&lt;/kbd&gt;&lt;/kbd&gt;&lt;/dt&gt;&lt;dd&gt;&lt;p&gt;Insert the result of an expression(see &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;:h&lt;/span&gt; &lt;span class=&quot;pre&quot;&gt;i_CTRL-R_=&lt;/span&gt;&lt;/code&gt; for awesomeness)&lt;/p&gt;
-&lt;/dd&gt;
-&lt;dt&gt;&lt;kbd class=&quot;kbd docutils literal notranslate&quot;&gt;&amp;#64;&amp;quot;&lt;/kbd&gt;&lt;/dt&gt;&lt;dd&gt;&lt;p&gt;Use the text from last filled register, ie the text we just marked to be
-changed&lt;/p&gt;
-&lt;/dd&gt;
-&lt;dt&gt;&lt;kbd class=&quot;kbd docutils literal notranslate&quot;&gt;/2&lt;/kbd&gt;&lt;/dt&gt;&lt;dd&gt;&lt;p&gt;Half it&lt;/p&gt;
-&lt;/dd&gt;
-&lt;dt&gt;&lt;kbd class=&quot;kbd docutils literal notranslate&quot;&gt;&amp;lt;CR&amp;gt;&lt;/kbd&gt;&lt;/dt&gt;&lt;dd&gt;&lt;p&gt;Wow.&lt;/p&gt;
-&lt;/dd&gt;
-&lt;/dl&gt;
-&lt;div class=&quot;highlight-c notranslate&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;magic_const&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;487&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-&lt;/div&gt;
-&lt;p&gt;Whilst performing the same task thing in &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;evil-mode&lt;/span&gt;&lt;/code&gt; I receive an error.
-Emacs — quite rightly — expects you to write an &lt;a class=&quot;reference external&quot; href=&quot;https://en.m.wikipedia.org/wiki/Elisp&quot;&gt;elisp&lt;/a&gt; expression.  There is
-nothing wrong with this, but it is a sign of how good &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;evil-mode&lt;/span&gt;&lt;/code&gt; is.  It is
-literally &lt;em&gt;so&lt;/em&gt; good I forget I’m not using &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;vim&lt;/span&gt;&lt;/code&gt;.&lt;/p&gt;
-&lt;p&gt;Oftentimes a tool’s &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;vim&lt;/span&gt;&lt;/code&gt; emulation can be summed up as needing to press
-a key that kind of matches what something in &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;vim&lt;/span&gt;&lt;/code&gt; might be, assuming you
-didn’t really know what the key might be or when you’d use it.  Be that
-&lt;a class=&quot;reference external&quot; href=&quot;https://www.sublimetext.com&quot;&gt;sublimetext&lt;/a&gt;’s &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;vintage&lt;/span&gt;&lt;/code&gt; package that isn’t much more than normal and insert
-mode, or &lt;a class=&quot;reference external&quot; href=&quot;https://github.com/gentoo/elogv&quot;&gt;elogv&lt;/a&gt;’s bindings that mean you have to issue &lt;kbd class=&quot;kbd docutils literal notranslate&quot;&gt;dd&lt;/kbd&gt; to kill an
-entry.  Frankly, many of the emulation layers often feel like you’re just
-doubling the number of keys you have to press without any benefits&lt;a class=&quot;footnote-reference brackets&quot; href=&quot;#id4&quot; id=&quot;id1&quot;&gt;1&lt;/a&gt;.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class=&quot;section&quot; id=&quot;quirking-the-quirky&quot;&gt;
-&lt;h2&gt;Quirking the quirky&lt;/h2&gt;
-&lt;img alt=&quot;Emacs screenshot&quot; class=&quot;align-right&quot; src=&quot;../../_images/evil_emacs.png&quot; style=&quot;width: 407.5px; height: 270.0px;&quot; /&gt;
-&lt;p&gt;I’ll freely admit I’ve &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;vim&lt;/span&gt;&lt;/code&gt;ified my &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;emacs&lt;/span&gt;&lt;/code&gt;.  I use &lt;a class=&quot;reference external&quot; href=&quot;https://github.com/emacs-evil/evil&quot;&gt;evil&lt;/a&gt;, my mode line
-uses &lt;a class=&quot;reference external&quot; href=&quot;http://github.com/milkypostman/powerline/&quot;&gt;powerline&lt;/a&gt; to match &lt;a class=&quot;reference external&quot; href=&quot;https://github.com/vim-airline/vim-airline&quot;&gt;vim-airline&lt;/a&gt;.  I have &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;zap-up-to-char&lt;/span&gt;&lt;/code&gt; mapped so
-that I can mimic &lt;kbd class=&quot;kbd docutils literal notranslate&quot;&gt;dt&lt;/kbd&gt; when &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;evil-mode&lt;/span&gt;&lt;/code&gt; is disabled.&lt;/p&gt;
-&lt;p&gt;Screenshots for &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;emacs&lt;/span&gt;&lt;/code&gt; and &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;vim&lt;/span&gt;&lt;/code&gt; really aren’t all that useful, because it
-is the workflow that makes these tools powerful… but, above is my current
-&lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;emacs&lt;/span&gt;&lt;/code&gt; and below is my current &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;vim&lt;/span&gt;&lt;/code&gt;.&lt;/p&gt;
-&lt;img alt=&quot;vim screenshot&quot; class=&quot;align-left&quot; src=&quot;../../_images/delinquent_vim.png&quot; style=&quot;width: 422.0px; height: 263.5px;&quot; /&gt;
-&lt;p&gt;The big thing you’ll notice is the fonts.  In &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;emacs&lt;/span&gt;&lt;/code&gt; I’m using scaled text
-for headings in &lt;a class=&quot;reference external&quot; href=&quot;http://docutils.sourceforge.net/docs/user/rst/&quot;&gt;reST&lt;/a&gt; files.  I’m close to believing that headings,
-proportional fonts for comments and the occasional inline image are enough to
-switch to &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;emacs&lt;/span&gt;&lt;/code&gt;.&lt;/p&gt;
-&lt;img alt=&quot;Inline images in Emacs&quot; class=&quot;align-right&quot; src=&quot;../../_images/misfeasant_emacs.png&quot; style=&quot;width: 398.5px; height: 225.0px;&quot; /&gt;
-&lt;p&gt;In the third image you can see &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;emacs&lt;/span&gt;&lt;/code&gt; is &lt;em&gt;displaying&lt;/em&gt; the &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;emacs&lt;/span&gt;&lt;/code&gt;
-screenshot in the buffer for &lt;em&gt;this&lt;/em&gt; post.  This example may be quite pointless&lt;a class=&quot;footnote-reference brackets&quot; href=&quot;#id5&quot; id=&quot;id2&quot;&gt;2&lt;/a&gt;, but it can be nice to have &lt;a class=&quot;reference external&quot; href=&quot;https://www.graphviz.org/&quot;&gt;graphviz&lt;/a&gt; output class hierarchies in to
-a buffer or database schema popups(like below).&lt;/p&gt;
-&lt;img alt=&quot;Schema diagram&quot; class=&quot;align-left&quot; src=&quot;../../_images/immoral_model.png&quot; style=&quot;width: 174.5px; height: 141.5px;&quot; /&gt;
-&lt;/div&gt;
-&lt;div class=&quot;section&quot; id=&quot;walking-the-branches&quot;&gt;
-&lt;h2&gt;Walking the branches&lt;/h2&gt;
-&lt;p&gt;I’ve decided to really dig in this time, not just switch on a whim.  I’m using
-&lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;emacs&lt;/span&gt;&lt;/code&gt; and &lt;em&gt;only&lt;/em&gt; &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;emacs&lt;/span&gt;&lt;/code&gt; for a month, followed by &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;vim&lt;/span&gt;&lt;/code&gt; and &lt;em&gt;only&lt;/em&gt;
-&lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;vim&lt;/span&gt;&lt;/code&gt; for a month.  I’m busily writing a document of bugbears about both&lt;a class=&quot;footnote-reference brackets&quot; href=&quot;#id6&quot; id=&quot;id3&quot;&gt;3&lt;/a&gt;, and then figuring out which I want to fully invest in to.  I need to stop
-flip-flopping.&lt;/p&gt;
-&lt;p&gt;I will say that there isn’t much in it.  With a converging setup there are
-fewer and fewer differences to care about.  Things like the expression register
-usage above, or built-in versus external &lt;abbr title=&quot;HyperText Markup Language&quot;&gt;HTML&lt;/abbr&gt; preview for documents like
-this.&lt;/p&gt;
-&lt;p&gt;I’m actually wondering whether a &lt;a class=&quot;reference external&quot; href=&quot;https://neovim.io&quot;&gt;neovim&lt;/a&gt; client &lt;em&gt;in&lt;/em&gt; a &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;emacs&lt;/span&gt;&lt;/code&gt; frame would be
-the golden option.  If you know of such a thing or a better option, drop me
-a &lt;a class=&quot;reference external&quot; href=&quot;mailto:jnrowe&amp;#37;&amp;#52;&amp;#48;gmail&amp;#46;com&quot;&gt;mail&lt;/a&gt;!&lt;/p&gt;
-&lt;p class=&quot;rubric&quot;&gt;Footnotes&lt;/p&gt;
-&lt;dl class=&quot;footnote brackets&quot;&gt;
-&lt;dt class=&quot;label&quot; id=&quot;id4&quot;&gt;&lt;span class=&quot;brackets&quot;&gt;&lt;a class=&quot;fn-backref&quot; href=&quot;#id1&quot;&gt;1&lt;/a&gt;&lt;/span&gt;&lt;/dt&gt;
-&lt;dd&gt;&lt;p&gt;&lt;a class=&quot;reference external&quot; href=&quot;https://github.com/gentoo/elogv&quot;&gt;elogv&lt;/a&gt; for Gentoo is probably the worst example of this, as &lt;kbd class=&quot;kbd docutils literal notranslate&quot;&gt;d&lt;/kbd&gt;
-&lt;em&gt;almost&lt;/em&gt; works like &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;vim&lt;/span&gt;&lt;/code&gt; but nothing else does.&lt;/p&gt;
-&lt;/dd&gt;
-&lt;dt class=&quot;label&quot; id=&quot;id5&quot;&gt;&lt;span class=&quot;brackets&quot;&gt;&lt;a class=&quot;fn-backref&quot; href=&quot;#id2&quot;&gt;2&lt;/a&gt;&lt;/span&gt;&lt;/dt&gt;
-&lt;dd&gt;&lt;p&gt;Okay, completely pointless.&lt;/p&gt;
-&lt;/dd&gt;
-&lt;dt class=&quot;label&quot; id=&quot;id6&quot;&gt;&lt;span class=&quot;brackets&quot;&gt;&lt;a class=&quot;fn-backref&quot; href=&quot;#id3&quot;&gt;3&lt;/a&gt;&lt;/span&gt;&lt;/dt&gt;
-&lt;dd&gt;&lt;p&gt;&lt;a class=&quot;reference external&quot; href=&quot;https://www.orgmode.org/&quot;&gt;org-mode&lt;/a&gt; and &lt;a class=&quot;reference external&quot; href=&quot;https://github.com/jceb/vim-orgmode&quot;&gt;vim-orgmode&lt;/a&gt; allows me to keep this across editors.  There
-is very little point publishing it, as it can be summed up as “James
-pressed &lt;kbd class=&quot;kbd docutils literal notranslate&quot;&gt;&lt;kbd class=&quot;kbd docutils literal notranslate&quot;&gt;&amp;lt;C&lt;/kbd&gt;-&lt;kbd class=&quot;kbd docutils literal notranslate&quot;&gt;x&amp;gt;$something&lt;/kbd&gt;&lt;/kbd&gt; and was surprised.”&lt;/p&gt;
-&lt;/dd&gt;
-&lt;/dl&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-</content>
-  </entry>
-  <entry xml:base="https://jnrowe.github.io/blog/tag/emacs/atom.xml">
-    <title type="text">Proper keyboard shortcuts in GTK+</title>
+  <id>https://jnrowe.github.io/</id>
+  <title>JNRowe - Posts tagged emacs</title>
+  <updated>2021-03-21T11:05:58.778040+00:00</updated>
+  <link href="https://jnrowe.github.io/"/>
+  <link href="https://jnrowe.github.io/blog/tag/emacs/atom.xml"/>
+  <generator uri="https://ablog.readthedocs.org" version="0.10.12">ABlog</generator>
+  <subtitle>Ramblings of a tired mind</subtitle>
+  <entry>
     <id>https://jnrowe.github.io/articles/tips/emacs_gtk_shortcuts.html</id>
-    <updated>2007-03-05T00:00:00Z</updated>
-    <published>2007-03-05T00:00:00Z</published>
-    <link href="https://jnrowe.github.io/articles/tips/emacs_gtk_shortcuts.html" />
+    <title>Proper keyboard shortcuts in GTK+</title>
+    <updated>2007-03-05T00:00:00+00:00</updated>
     <author>
       <name>James Rowe</name>
     </author>
-    <content type="html">&lt;div class=&quot;section&quot; id=&quot;proper-keyboard-shortcuts-in-gtk&quot;&gt;
+    <content type="html">&lt;div class="section" id="proper-keyboard-shortcuts-in-gtk"&gt;
 
-&lt;p&gt;If you’re used to the old style &lt;a class=&quot;reference external&quot; href=&quot;http://www.gtk.org/&quot;&gt;GTK+&lt;/a&gt; keyboard shortcuts, and find yourself
+&lt;p&gt;If you’re used to the old style &lt;a class="reference external" href="http://www.gtk.org/"&gt;GTK+&lt;/a&gt; keyboard shortcuts, and find yourself
 continually closing windows when you’re trying to delete a word (like me) then
-add the following to your &lt;code class=&quot;file docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;~/.gtkrc-2.0&lt;/span&gt;&lt;/code&gt;:&lt;/p&gt;
-&lt;div class=&quot;highlight-text notranslate&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;gtk-key-theme-name = &amp;quot;Emacs&amp;quot;
+add the following to your &lt;code class="file docutils literal notranslate"&gt;&lt;span class="pre"&gt;~/.gtkrc-2.0&lt;/span&gt;&lt;/code&gt;:&lt;/p&gt;
+&lt;div class="highlight-text notranslate"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;gtk-key-theme-name = &amp;quot;Emacs&amp;quot;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
-&lt;div class=&quot;admonition note&quot;&gt;
-&lt;p class=&quot;admonition-title&quot;&gt;Note&lt;/p&gt;
+&lt;div class="admonition note"&gt;
+&lt;p class="admonition-title"&gt;Note&lt;/p&gt;
 &lt;p&gt;This is for people using GTK+ apps, not GNOME.  If you wish to change
 bindings in GNOME you should use the control centre.&lt;/p&gt;
 &lt;/div&gt;
 &lt;p&gt;Using the above you can return to the old default format, but if you only want
-to enable &lt;kbd class=&quot;kbd docutils literal notranslate&quot;&gt;&lt;kbd class=&quot;kbd docutils literal notranslate&quot;&gt;&amp;lt;C&lt;/kbd&gt;-&lt;kbd class=&quot;kbd docutils literal notranslate&quot;&gt;w&amp;gt;&lt;/kbd&gt;&lt;/kbd&gt; and keep the other Windows-style shortcuts you can just
+to enable &lt;kbd class="kbd docutils literal notranslate"&gt;&lt;kbd class="kbd docutils literal notranslate"&gt;&amp;lt;C&lt;/kbd&gt;-&lt;kbd class="kbd docutils literal notranslate"&gt;w&amp;gt;&lt;/kbd&gt;&lt;/kbd&gt; and keep the other Windows-style shortcuts you can just
 add:&lt;/p&gt;
-&lt;div class=&quot;highlight-text notranslate&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;binding &amp;quot;gtk-emacs-text-entry&amp;quot;
+&lt;div class="highlight-text notranslate"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;binding &amp;quot;gtk-emacs-text-entry&amp;quot;
 {
     bind &amp;quot;&amp;lt;ctrl&amp;gt;w&amp;quot; { &amp;quot;delete-from-cursor&amp;quot; (word-ends, -1) }
 }
@@ -154,21 +38,137 @@ class &amp;quot;GtkEntry&amp;quot; binding &amp;quot;gtk-emacs-text-entry&amp;qu
 class &amp;quot;GtkTextView&amp;quot; binding &amp;quot;gtk-emacs-text-entry&amp;quot;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
-&lt;p&gt;If you use &lt;a class=&quot;reference external&quot; href=&quot;http://plasmasturm.org/code/gtk-chtheme/&quot;&gt;gtk-chtheme&lt;/a&gt; or &lt;a class=&quot;reference external&quot; href=&quot;http://www.muhri.net/nav.php3?node=gts&quot;&gt;gtk-theme-switch&lt;/a&gt; you should add custom options to
-your &lt;code class=&quot;file docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;~/.gtkrc.mine&lt;/span&gt;&lt;/code&gt; so it isn’t overwritten when you change themes.  See
-the comments in your &lt;code class=&quot;file docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;~/.gtkrc-2.0&lt;/span&gt;&lt;/code&gt; if you use either of these theme
+&lt;p&gt;If you use &lt;a class="reference external" href="http://plasmasturm.org/code/gtk-chtheme/"&gt;gtk-chtheme&lt;/a&gt; or &lt;a class="reference external" href="http://www.muhri.net/nav.php3?node=gts"&gt;gtk-theme-switch&lt;/a&gt; you should add custom options to
+your &lt;code class="file docutils literal notranslate"&gt;&lt;span class="pre"&gt;~/.gtkrc.mine&lt;/span&gt;&lt;/code&gt; so it isn’t overwritten when you change themes.  See
+the comments in your &lt;code class="file docutils literal notranslate"&gt;&lt;span class="pre"&gt;~/.gtkrc-2.0&lt;/span&gt;&lt;/code&gt; if you use either of these theme
 switchers.&lt;/p&gt;
-&lt;div class=&quot;figure align-default&quot;&gt;
-&lt;img alt=&quot;XFce4 keyboard settings window&quot; src=&quot;../../_images/xfce4_keyboard.png&quot; /&gt;
+&lt;div class="figure align-default"&gt;
+&lt;img alt="XFce4 keyboard settings window" src="../../_images/xfce4_keyboard.png" /&gt;
 &lt;/div&gt;
-&lt;p&gt;If you’re an &lt;a class=&quot;reference external&quot; href=&quot;http://www.xfce.org/&quot;&gt;XFce&lt;/a&gt; user you can select the Emacs keyboard shortcuts using the
+&lt;p&gt;If you’re an &lt;a class="reference external" href="http://www.xfce.org/"&gt;XFce&lt;/a&gt; user you can select the Emacs keyboard shortcuts using the
 keyboard settings dialog.&lt;/p&gt;
 &lt;p&gt;If you can’t change the settings for some reason, then you can still use
 a shortcut to delete words.  The default setting, up to at least GTK+ v2.10.9,
-is the finger-stretching &lt;kbd class=&quot;kbd docutils literal notranslate&quot;&gt;&lt;kbd class=&quot;kbd docutils literal notranslate&quot;&gt;&amp;lt;C&lt;/kbd&gt;-&lt;kbd class=&quot;kbd docutils literal notranslate&quot;&gt;backspace&amp;gt;&lt;/kbd&gt;&lt;/kbd&gt;.&lt;/p&gt;
+is the finger-stretching &lt;kbd class="kbd docutils literal notranslate"&gt;&lt;kbd class="kbd docutils literal notranslate"&gt;&amp;lt;C&lt;/kbd&gt;-&lt;kbd class="kbd docutils literal notranslate"&gt;backspace&amp;gt;&lt;/kbd&gt;&lt;/kbd&gt;.&lt;/p&gt;
 &lt;p&gt;And finally, if you manage to convince upstream that the default behaviour
 should be the settings in the Emacs theme I’ll owe you a few beers!&lt;/p&gt;
 &lt;/div&gt;
 </content>
+    <link href="https://jnrowe.github.io/articles/tips/emacs_gtk_shortcuts.html" rel="alternate"/>
+    <published>2007-03-05T00:00:00+00:00</published>
+  </entry>
+  <entry>
+    <id>https://jnrowe.github.io/articles/evil_emacs_steals_my_heart.html</id>
+    <title>Evil Emacs steals my heart</title>
+    <updated>2018-11-05T00:00:00+00:00</updated>
+    <author>
+      <name>James Rowe</name>
+    </author>
+    <content type="html">&lt;div class="section" id="evil-emacs-steals-my-heart"&gt;
+
+&lt;p&gt;&lt;em&gt;Many&lt;/em&gt; of my co-workers use &lt;a class="reference external" href="https://www.gnu.org/software/emacs/"&gt;emacs&lt;/a&gt;, it is probably the most popular editor on
+our team and I understand why.&lt;/p&gt;
+&lt;img alt="Editor icons" class="align-right" src="../../_images/standoff.png" /&gt;
+&lt;p&gt;I was an &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;emacs&lt;/span&gt;&lt;/code&gt; user — via &lt;a class="reference external" href="ftp://ftp.cs.helsinki.fi/pub/Software/Local/uEmacs-PK/"&gt;MicroEMACS&lt;/a&gt; and later &lt;a class="reference external" href="https://www.gnu.org/software/emacs/"&gt;GNU Emacs&lt;/a&gt; — for many
+years but at some point I switched to &lt;a class="reference external" href="https://vim.sourceforge.io/"&gt;vim&lt;/a&gt;.  I can’t even remember the exact
+catalyst for change, but I am pretty fickle so it may not have even been all
+that important.&lt;/p&gt;
+&lt;p&gt;Lately, I’ve found myself diving back in to &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;emacs&lt;/span&gt;&lt;/code&gt;.  In large part this is
+because of &lt;a class="reference external" href="https://github.com/emacs-evil/evil"&gt;evil&lt;/a&gt;; I can be &lt;em&gt;in&lt;/em&gt; &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;emacs&lt;/span&gt;&lt;/code&gt;, but &lt;em&gt;live&lt;/em&gt; &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;vim&lt;/span&gt;&lt;/code&gt;.&lt;/p&gt;
+&lt;div class="section" id="evil-isnt-always-evil"&gt;
+&lt;h2&gt;Evil isn’t always evil&lt;/h2&gt;
+&lt;p&gt;So, &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;evil-mode&lt;/span&gt;&lt;/code&gt; &lt;em&gt;is&lt;/em&gt; awesome.&lt;/p&gt;
+&lt;p&gt;The kindest thing I can think to say about it is this: You’ll be angry when it
+doesn’t work&lt;/p&gt;
+&lt;p&gt;This isn’t because it often breaks, quite the contrary.  It is simply because
+it feels largely seamless.  I’ll give an example that mimics a recent session
+to make my point.  For example, you’re hovering over a number you need to
+change:&lt;/p&gt;
+&lt;div class="highlight-c notranslate"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kt"&gt;int&lt;/span&gt; &lt;span class="n"&gt;magic_const&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;974&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;In &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;vim&lt;/span&gt;&lt;/code&gt;, you can execute &lt;kbd class="kbd docutils literal notranslate"&gt;&lt;kbd class="kbd docutils literal notranslate"&gt;ciw&amp;lt;C&lt;/kbd&gt;-&lt;kbd class="kbd docutils literal notranslate"&gt;r&amp;gt;=&amp;#64;&amp;quot;/2&amp;lt;CR&amp;gt;&lt;/kbd&gt;&lt;/kbd&gt; to cleave the number.  The
+command itself is saying:&lt;/p&gt;
+&lt;dl class="simple"&gt;
+&lt;dt&gt;&lt;kbd class="kbd docutils literal notranslate"&gt;ciw&lt;/kbd&gt;&lt;/dt&gt;&lt;dd&gt;&lt;p&gt;Change the word my cursor is on(&lt;kbd class="kbd docutils literal notranslate"&gt;c&lt;/kbd&gt;hange &lt;kbd class="kbd docutils literal notranslate"&gt;i&lt;/kbd&gt;nner &lt;kbd class="kbd docutils literal notranslate"&gt;w&lt;/kbd&gt;ord)&lt;/p&gt;
+&lt;/dd&gt;
+&lt;dt&gt;&lt;kbd class="kbd docutils literal notranslate"&gt;&lt;kbd class="kbd docutils literal notranslate"&gt;&amp;lt;C&lt;/kbd&gt;-&lt;kbd class="kbd docutils literal notranslate"&gt;r&amp;gt;=&lt;/kbd&gt;&lt;/kbd&gt;&lt;/dt&gt;&lt;dd&gt;&lt;p&gt;Insert the result of an expression(see &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;:h&lt;/span&gt; &lt;span class="pre"&gt;i_CTRL-R_=&lt;/span&gt;&lt;/code&gt; for awesomeness)&lt;/p&gt;
+&lt;/dd&gt;
+&lt;dt&gt;&lt;kbd class="kbd docutils literal notranslate"&gt;&amp;#64;&amp;quot;&lt;/kbd&gt;&lt;/dt&gt;&lt;dd&gt;&lt;p&gt;Use the text from last filled register, ie the text we just marked to be
+changed&lt;/p&gt;
+&lt;/dd&gt;
+&lt;dt&gt;&lt;kbd class="kbd docutils literal notranslate"&gt;/2&lt;/kbd&gt;&lt;/dt&gt;&lt;dd&gt;&lt;p&gt;Half it&lt;/p&gt;
+&lt;/dd&gt;
+&lt;dt&gt;&lt;kbd class="kbd docutils literal notranslate"&gt;&amp;lt;CR&amp;gt;&lt;/kbd&gt;&lt;/dt&gt;&lt;dd&gt;&lt;p&gt;Wow.&lt;/p&gt;
+&lt;/dd&gt;
+&lt;/dl&gt;
+&lt;div class="highlight-c notranslate"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kt"&gt;int&lt;/span&gt; &lt;span class="n"&gt;magic_const&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;487&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;Whilst performing the same task thing in &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;evil-mode&lt;/span&gt;&lt;/code&gt; I receive an error.
+Emacs — quite rightly — expects you to write an &lt;a class="reference external" href="https://en.m.wikipedia.org/wiki/Elisp"&gt;elisp&lt;/a&gt; expression.  There is
+nothing wrong with this, but it is a sign of how good &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;evil-mode&lt;/span&gt;&lt;/code&gt; is.  It is
+literally &lt;em&gt;so&lt;/em&gt; good I forget I’m not using &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;vim&lt;/span&gt;&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;Oftentimes a tool’s &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;vim&lt;/span&gt;&lt;/code&gt; emulation can be summed up as needing to press
+a key that kind of matches what something in &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;vim&lt;/span&gt;&lt;/code&gt; might be, assuming you
+didn’t really know what the key might be or when you’d use it.  Be that
+&lt;a class="reference external" href="https://www.sublimetext.com"&gt;sublimetext&lt;/a&gt;’s &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;vintage&lt;/span&gt;&lt;/code&gt; package that isn’t much more than normal and insert
+mode, or &lt;a class="reference external" href="https://github.com/gentoo/elogv"&gt;elogv&lt;/a&gt;’s bindings that mean you have to issue &lt;kbd class="kbd docutils literal notranslate"&gt;dd&lt;/kbd&gt; to kill an
+entry.  Frankly, many of the emulation layers often feel like you’re just
+doubling the number of keys you have to press without any benefits&lt;a class="footnote-reference brackets" href="#id4" id="id1"&gt;1&lt;/a&gt;.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="quirking-the-quirky"&gt;
+&lt;h2&gt;Quirking the quirky&lt;/h2&gt;
+&lt;img alt="Emacs screenshot" class="align-right" src="../../_images/evil_emacs.png" style="width: 407.5px; height: 270.0px;" /&gt;
+&lt;p&gt;I’ll freely admit I’ve &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;vim&lt;/span&gt;&lt;/code&gt;ified my &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;emacs&lt;/span&gt;&lt;/code&gt;.  I use &lt;a class="reference external" href="https://github.com/emacs-evil/evil"&gt;evil&lt;/a&gt;, my mode line
+uses &lt;a class="reference external" href="http://github.com/milkypostman/powerline/"&gt;powerline&lt;/a&gt; to match &lt;a class="reference external" href="https://github.com/vim-airline/vim-airline"&gt;vim-airline&lt;/a&gt;.  I have &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;zap-up-to-char&lt;/span&gt;&lt;/code&gt; mapped so
+that I can mimic &lt;kbd class="kbd docutils literal notranslate"&gt;dt&lt;/kbd&gt; when &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;evil-mode&lt;/span&gt;&lt;/code&gt; is disabled.&lt;/p&gt;
+&lt;p&gt;Screenshots for &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;emacs&lt;/span&gt;&lt;/code&gt; and &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;vim&lt;/span&gt;&lt;/code&gt; really aren’t all that useful, because it
+is the workflow that makes these tools powerful… but, above is my current
+&lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;emacs&lt;/span&gt;&lt;/code&gt; and below is my current &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;vim&lt;/span&gt;&lt;/code&gt;.&lt;/p&gt;
+&lt;img alt="vim screenshot" class="align-left" src="../../_images/delinquent_vim.png" style="width: 422.0px; height: 263.5px;" /&gt;
+&lt;p&gt;The big thing you’ll notice is the fonts.  In &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;emacs&lt;/span&gt;&lt;/code&gt; I’m using scaled text
+for headings in &lt;a class="reference external" href="http://docutils.sourceforge.net/docs/user/rst/"&gt;reST&lt;/a&gt; files.  I’m close to believing that headings,
+proportional fonts for comments and the occasional inline image are enough to
+switch to &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;emacs&lt;/span&gt;&lt;/code&gt;.&lt;/p&gt;
+&lt;img alt="Inline images in Emacs" class="align-right" src="../../_images/misfeasant_emacs.png" style="width: 398.5px; height: 225.0px;" /&gt;
+&lt;p&gt;In the third image you can see &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;emacs&lt;/span&gt;&lt;/code&gt; is &lt;em&gt;displaying&lt;/em&gt; the &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;emacs&lt;/span&gt;&lt;/code&gt;
+screenshot in the buffer for &lt;em&gt;this&lt;/em&gt; post.  This example may be quite pointless&lt;a class="footnote-reference brackets" href="#id5" id="id2"&gt;2&lt;/a&gt;, but it can be nice to have &lt;a class="reference external" href="https://www.graphviz.org/"&gt;graphviz&lt;/a&gt; output class hierarchies in to
+a buffer or database schema popups(like below).&lt;/p&gt;
+&lt;img alt="Schema diagram" class="align-left" src="../../_images/immoral_model.png" style="width: 174.5px; height: 141.5px;" /&gt;
+&lt;/div&gt;
+&lt;div class="section" id="walking-the-branches"&gt;
+&lt;h2&gt;Walking the branches&lt;/h2&gt;
+&lt;p&gt;I’ve decided to really dig in this time, not just switch on a whim.  I’m using
+&lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;emacs&lt;/span&gt;&lt;/code&gt; and &lt;em&gt;only&lt;/em&gt; &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;emacs&lt;/span&gt;&lt;/code&gt; for a month, followed by &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;vim&lt;/span&gt;&lt;/code&gt; and &lt;em&gt;only&lt;/em&gt;
+&lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;vim&lt;/span&gt;&lt;/code&gt; for a month.  I’m busily writing a document of bugbears about both&lt;a class="footnote-reference brackets" href="#id6" id="id3"&gt;3&lt;/a&gt;, and then figuring out which I want to fully invest in to.  I need to stop
+flip-flopping.&lt;/p&gt;
+&lt;p&gt;I will say that there isn’t much in it.  With a converging setup there are
+fewer and fewer differences to care about.  Things like the expression register
+usage above, or built-in versus external &lt;abbr title="HyperText Markup Language"&gt;HTML&lt;/abbr&gt; preview for documents like
+this.&lt;/p&gt;
+&lt;p&gt;I’m actually wondering whether a &lt;a class="reference external" href="https://neovim.io"&gt;neovim&lt;/a&gt; client &lt;em&gt;in&lt;/em&gt; a &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;emacs&lt;/span&gt;&lt;/code&gt; frame would be
+the golden option.  If you know of such a thing or a better option, drop me
+a &lt;a class="reference external" href="mailto:jnrowe&amp;#37;&amp;#52;&amp;#48;gmail&amp;#46;com"&gt;mail&lt;/a&gt;!&lt;/p&gt;
+&lt;p class="rubric"&gt;Footnotes&lt;/p&gt;
+&lt;dl class="footnote brackets"&gt;
+&lt;dt class="label" id="id4"&gt;&lt;span class="brackets"&gt;&lt;a class="fn-backref" href="#id1"&gt;1&lt;/a&gt;&lt;/span&gt;&lt;/dt&gt;
+&lt;dd&gt;&lt;p&gt;&lt;a class="reference external" href="https://github.com/gentoo/elogv"&gt;elogv&lt;/a&gt; for Gentoo is probably the worst example of this, as &lt;kbd class="kbd docutils literal notranslate"&gt;d&lt;/kbd&gt;
+&lt;em&gt;almost&lt;/em&gt; works like &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;vim&lt;/span&gt;&lt;/code&gt; but nothing else does.&lt;/p&gt;
+&lt;/dd&gt;
+&lt;dt class="label" id="id5"&gt;&lt;span class="brackets"&gt;&lt;a class="fn-backref" href="#id2"&gt;2&lt;/a&gt;&lt;/span&gt;&lt;/dt&gt;
+&lt;dd&gt;&lt;p&gt;Okay, completely pointless.&lt;/p&gt;
+&lt;/dd&gt;
+&lt;dt class="label" id="id6"&gt;&lt;span class="brackets"&gt;&lt;a class="fn-backref" href="#id3"&gt;3&lt;/a&gt;&lt;/span&gt;&lt;/dt&gt;
+&lt;dd&gt;&lt;p&gt;&lt;a class="reference external" href="https://www.orgmode.org/"&gt;org-mode&lt;/a&gt; and &lt;a class="reference external" href="https://github.com/jceb/vim-orgmode"&gt;vim-orgmode&lt;/a&gt; allows me to keep this across editors.  There
+is very little point publishing it, as it can be summed up as “James
+pressed &lt;kbd class="kbd docutils literal notranslate"&gt;&lt;kbd class="kbd docutils literal notranslate"&gt;&amp;lt;C&lt;/kbd&gt;-&lt;kbd class="kbd docutils literal notranslate"&gt;x&amp;gt;$something&lt;/kbd&gt;&lt;/kbd&gt; and was surprised.”&lt;/p&gt;
+&lt;/dd&gt;
+&lt;/dl&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</content>
+    <link href="https://jnrowe.github.io/articles/evil_emacs_steals_my_heart.html" rel="alternate"/>
+    <published>2018-11-05T00:00:00+00:00</published>
   </entry>
 </feed>

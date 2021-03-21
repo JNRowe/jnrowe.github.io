@@ -1,956 +1,174 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version='1.0' encoding='UTF-8'?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <title type="text">JNRowe - Posted in 2014</title>
-  <id>https://jnrowe.github.io/blog/2014/atom.xml</id>
-  <updated>2014-11-12T00:00:00Z</updated>
-  <link href="https://jnrowe.github.io/" />
-  <link href="https://jnrowe.github.io/blog/2014/atom.xml" rel="self" />
-  <subtitle type="text">Ramblings of a tired mind</subtitle>
-  <generator uri="https://ablog.readthedocs.org" version="0.10.4">ABlog</generator>
-  <entry xml:base="https://jnrowe.github.io/blog/2014/atom.xml">
-    <title type="text">fossil experiments</title>
-    <id>https://jnrowe.github.io/articles/fossil.html</id>
-    <updated>2014-11-12T00:00:00Z</updated>
-    <published>2014-11-12T00:00:00Z</published>
-    <link href="https://jnrowe.github.io/articles/fossil.html" />
+  <id>https://jnrowe.github.io/</id>
+  <title>JNRowe - Posted in 2014</title>
+  <updated>2021-03-21T11:05:55.610066+00:00</updated>
+  <link href="https://jnrowe.github.io/"/>
+  <link href="https://jnrowe.github.io/blog/2014/atom.xml"/>
+  <generator uri="https://ablog.readthedocs.org" version="0.10.12">ABlog</generator>
+  <subtitle>Ramblings of a tired mind</subtitle>
+  <entry>
+    <id>https://jnrowe.github.io/thoughts/dopplr_effects.html</id>
+    <title>Dopplr defects</title>
+    <updated>2014-01-06T00:00:00+00:00</updated>
     <author>
       <name>James Rowe</name>
     </author>
-    <content type="html">&lt;div class=&quot;section&quot; id=&quot;fossil-experiments&quot;&gt;
+    <content type="html">&lt;div class="section" id="dopplr-defects"&gt;
 
-&lt;p&gt;For a variety of reasons we can no longer use GitHub at work for any project
-which isn’t Open Source.  And since that decision was thrust upon us we’ve been
-playing with some alternatives for our workflow.  We’ll probably end up choosing
-one of the self hosted clones at some point, but it was decided early on that we
-should evaluate a variety of options.&lt;/p&gt;
-&lt;p&gt;I was tasked with testing out &lt;a class=&quot;reference external&quot; href=&quot;http://www.fossil-scm.org/&quot;&gt;fossil&lt;/a&gt; on a couple of small side projects, and
-these are my &lt;em&gt;absolutely&lt;/em&gt; biased personal findings.&lt;/p&gt;
-&lt;p&gt;Before I start I should add that while what I’m about to write probably sounds
-harsh, I do like &lt;strong class=&quot;command&quot;&gt;fossil&lt;/strong&gt; the concept.  I like the single &lt;a class=&quot;reference external&quot; href=&quot;http://sqlite.org/&quot;&gt;sqlite&lt;/a&gt;
-project repository, I like the small-enough-to-grok-in-an-afternoon code base
-and I like the idea of a totally reproducible project state including all
-metadata.&lt;/p&gt;
-&lt;div class=&quot;section&quot; id=&quot;testing-fossil&quot;&gt;
-&lt;h2&gt;Testing &lt;strong class=&quot;command&quot;&gt;fossil&lt;/strong&gt;&lt;/h2&gt;
-&lt;p&gt;The good news is that testing &lt;strong class=&quot;command&quot;&gt;fossil&lt;/strong&gt; is a piece of cake.  It
-supports both reading and writing &lt;strong class=&quot;command&quot;&gt;git&lt;/strong&gt;’s &lt;a class=&quot;reference external&quot; href=&quot;http://git-scm.com/docs/git-fast-import&quot;&gt;fast-import&lt;/a&gt; format.  If you
-want to test it out just dump an existing &lt;a class=&quot;reference external&quot; href=&quot;http://www.git-scm.com/&quot;&gt;git&lt;/a&gt; repository(or &lt;a class=&quot;reference external&quot; href=&quot;http://mercurial.selenic.com/wiki/FastImportExtension&quot;&gt;mercurial with an
-extension&lt;/a&gt;), and feed it &lt;strong class=&quot;command&quot;&gt;fossil import&lt;/strong&gt;.  If you later change your
-mind you can run &lt;strong class=&quot;command&quot;&gt;fossil export&lt;/strong&gt;.&lt;/p&gt;
-&lt;p&gt;Sadly supporting incremental two-way mirroring didn’t work out for us, but
-perhaps it will for simpler projects.  In the end I simply mirrored the
-&lt;strong class=&quot;command&quot;&gt;git&lt;/strong&gt; repositories to &lt;strong class=&quot;command&quot;&gt;fossil&lt;/strong&gt;, marked the &lt;strong class=&quot;command&quot;&gt;git&lt;/strong&gt;
-repositories as read-only and forced contributors to work with
-&lt;strong class=&quot;command&quot;&gt;fossil&lt;/strong&gt; from the outset.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class=&quot;section&quot; id=&quot;packaging&quot;&gt;
-&lt;h2&gt;Packaging&lt;/h2&gt;
-&lt;p&gt;The &lt;strong class=&quot;command&quot;&gt;fossil&lt;/strong&gt; project sells itself on being a single file binary
-install, and that probably works well for a subset of users.  We’re not that in
-that subset though, and &lt;strong class=&quot;command&quot;&gt;fossil&lt;/strong&gt; is more than a little annoying to
-wrangle in to our environment.&lt;/p&gt;
-&lt;p&gt;The tarball ships without any &lt;em&gt;directly&lt;/em&gt; usable documentation, so you end up
-with either no system documentation or a collection of docs sprinkled with wiki
-markup in &lt;code class=&quot;file docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;/usr/share/doc&lt;/span&gt;&lt;/code&gt;.&lt;/p&gt;
-&lt;p&gt;By default &lt;strong class=&quot;command&quot;&gt;fossil&lt;/strong&gt; builds in a manner which unfortunately breaks most
-packaging standards.  If you’re building packages you’ll likely need to write an
-awful lot of custom workarounds to get a compliant and usable package, see
-&lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;lst-pkgs/utils/dev/fossil&lt;/span&gt;&lt;/code&gt; build for the gory details of my hacks.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class=&quot;section&quot; id=&quot;uptake&quot;&gt;
-&lt;h2&gt;Uptake&lt;/h2&gt;
-&lt;p&gt;I don’t really want to hold this against &lt;strong class=&quot;command&quot;&gt;fossil&lt;/strong&gt;, but it &lt;em&gt;is&lt;/em&gt;
-important to note that for all intents and purposes no one is familiar with it.
-No upstream projects we actively track use it, there isn’t a single person who
-chooses to use it on our site(which is why I had to handle the packaging) and
-expecting new hires to have even heard of it is probably a stretch.&lt;/p&gt;
-&lt;p&gt;It wouldn’t be such an issue if the choice was a &lt;strong class=&quot;command&quot;&gt;git&lt;/strong&gt; vs &lt;a class=&quot;reference external&quot; href=&quot;http://mercurial.selenic.com/&quot;&gt;mercurial&lt;/a&gt;
-one, where the few differences are mostly cosmetic.  &lt;strong class=&quot;command&quot;&gt;fossil&lt;/strong&gt; is
-a completely different beast, and requires an enormous rethink in the way you
-handle version control.&lt;/p&gt;
-&lt;p&gt;Ten years ago when people were on the whole still familiar with the &lt;abbr title=&quot;Concurrent Versions System&quot;&gt;CVS&lt;/abbr&gt; and
-Subversion way of working that wouldn’t have been such an issue, but times have
-most definitely changed.&lt;/p&gt;
-&lt;p&gt;The vocabulary in the documentation is likely to be foreign to users of any
-version control system, and the workflow examples in the documentation are
-entirely foreign to how we have developed any project in at least the past
-decade.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class=&quot;section&quot; id=&quot;all-in-one-solution&quot;&gt;
-&lt;h2&gt;All-in-one solution&lt;/h2&gt;
-&lt;p&gt;One of the proclaimed benefits of using &lt;strong class=&quot;command&quot;&gt;fossil&lt;/strong&gt; is that it handles
-many aspects of a project’s &lt;abbr title=&quot;Application Lifecycle Management&quot;&gt;ALM&lt;/abbr&gt;; version control, issue tracking,
-documentation(via a wiki), etc.  However, and this is only my opinion, it feels
-like it does all of these in a suboptimal manner.&lt;/p&gt;
-&lt;div class=&quot;section&quot; id=&quot;version-control&quot;&gt;
-&lt;h3&gt;Version control&lt;/h3&gt;
-&lt;p&gt;The version control feels quite nice for the most part, definitely usable but
-a little annoying to work with if you’re used to a modern &lt;abbr title=&quot;Distributed Version Control System&quot;&gt;DVCS&lt;/abbr&gt; like we are.&lt;/p&gt;
-&lt;p&gt;That said it does feel like a &lt;em&gt;huge&lt;/em&gt; step backwards when working with branches,
-and you should set aside quite a lot of time for integration issues when you
-have &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;autosync&lt;/span&gt;&lt;/code&gt; disabled.  And I can’t imagine a scenario where &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;autosync&lt;/span&gt;&lt;/code&gt;
-could work for us, without rewriting our entire way of working or returning to
-&lt;abbr title=&quot;Concurrent Versions System&quot;&gt;CVS&lt;/abbr&gt;-style mega commits and a manual patch stack layered on top.&lt;/p&gt;
-&lt;p&gt;If you read &lt;strong class=&quot;command&quot;&gt;fossil&lt;/strong&gt;’s &lt;a class=&quot;reference external&quot; href=&quot;http://www.bugzilla.org&quot;&gt;Branching, Forking, Merging, and Tagging&lt;/a&gt;
-documentation it appears that this is a design feature for the creators.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class=&quot;section&quot; id=&quot;issue-tracker&quot;&gt;
-&lt;h3&gt;Issue tracker&lt;/h3&gt;
-&lt;p&gt;The issue tracker feels like someone has tried to improve on &lt;a class=&quot;reference external&quot; href=&quot;http://www.bugzilla.org&quot;&gt;Bugzilla&lt;/a&gt;, without
-taking a look at modern trackers.  It is definitely the weakest part of
-&lt;strong class=&quot;command&quot;&gt;fossil&lt;/strong&gt; in my opinion, using it is both a mental and eye-stabbing
-pain at the same time.&lt;/p&gt;
-&lt;p&gt;Luckily you can rework a lot of it by fiddling around with the administration
-settings exposed by &lt;strong class=&quot;command&quot;&gt;fossil ui&lt;/strong&gt;.&lt;/p&gt;
-&lt;p&gt;This also exposes one of the best features of &lt;strong class=&quot;command&quot;&gt;fossil&lt;/strong&gt;, you can create
-a custom &lt;abbr title=&quot;Structured Query Language&quot;&gt;SQL&lt;/abbr&gt; script that configures the project(issue tracking, pretty theme,
-etc) and just blast it in to the project’s database.  Or you can create
-a custom file that makes all your edits and pump it in with &lt;strong class=&quot;command&quot;&gt;fossil
-config import&lt;/strong&gt;.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class=&quot;section&quot; id=&quot;wiki&quot;&gt;
-&lt;h3&gt;Wiki&lt;/h3&gt;
-&lt;p&gt;The wiki system is actually really good for what it does, but it has very few of
-the features we use for our documentation.  I don’t want to hold that against it
-though, as it just a impedance mismatch.&lt;/p&gt;
-&lt;p&gt;The end result of the integrated components feels to me like you’ve chosen
-a usable, but weak, component for some of the most important parts of your
-project’s &lt;abbr title=&quot;Application Lifecycle Management&quot;&gt;ALM&lt;/abbr&gt;.  The bits work well together, but none of them seem like an
-option you’d choose on their own.&lt;/p&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class=&quot;section&quot; id=&quot;interface&quot;&gt;
-&lt;h2&gt;Interface&lt;/h2&gt;
-&lt;p&gt;The help output for new users is, in my opinion, really irritating.  The default
-command message tells you to run &lt;strong class=&quot;command&quot;&gt;fossil help&lt;/strong&gt; or &lt;strong class=&quot;command&quot;&gt;fossil
-help COMMAND&lt;/strong&gt;, without providing the names of any of the common commands.  The
-&lt;strong class=&quot;command&quot;&gt;fossil help&lt;/strong&gt; output emulates a &lt;strong class=&quot;command&quot;&gt;column -t&lt;/strong&gt; filter of the
-command names, listing commands with unique to &lt;strong class=&quot;command&quot;&gt;fossil&lt;/strong&gt; terminology
-and no short descriptions.  &lt;strong class=&quot;command&quot;&gt;fossil help --all&lt;/strong&gt; feels like it should
-be more useful, but just creates a larger table of commands with uncommon names
-and still no descriptions.&lt;/p&gt;
-&lt;p&gt;It makes very little sense to organise the help in this manner because as you
-get used to the naming and non-standard option style you will need the help
-less.  I’ve patched this for our packages, and if people like it I’ll try to
-push it upstream.&lt;/p&gt;
-&lt;div class=&quot;admonition note&quot;&gt;
-&lt;p class=&quot;admonition-title&quot;&gt;Note&lt;/p&gt;
-&lt;p&gt;It turns out I won’t be pushing the changes upstream.  They require
-a &lt;abbr title=&quot;Contributor License Agreement&quot;&gt;CLA&lt;/abbr&gt; that I can not sign in good faith, which is a shame.&lt;/p&gt;
-&lt;/div&gt;
-&lt;p&gt;The option handling &lt;em&gt;will&lt;/em&gt; trip you up endlessly.  Just the little things like
-being unable to chain options, and needing an endless stream of &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;C-p&lt;/span&gt; &lt;span class=&quot;pre&quot;&gt;M-5&lt;/span&gt; &lt;span class=&quot;pre&quot;&gt;M-b&lt;/span&gt;
-&lt;span class=&quot;pre&quot;&gt;&amp;lt;space&amp;gt;&lt;/span&gt;&lt;/code&gt; to add a space before a commit message for example.  Yes, I know some
-people don’t like standard &lt;strong class=&quot;command&quot;&gt;getopt&lt;/strong&gt; or GNU-style option parsing, but
-every other tool you use has chosen it.&lt;/p&gt;
-&lt;p&gt;Some of the interface decisions are actively bad, for example there appears to
-be no way to delegate password configuration to a trusted system service or even
-&lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;netrc&lt;/span&gt;&lt;/code&gt;.  Specifying passwords in &lt;abbr title=&quot;Uniform Resource Locator&quot;&gt;URL&lt;/abbr&gt;’s on the command line is a &lt;strong&gt;huge&lt;/strong&gt;
-anti-pattern, and I just hope you don’t have any multiseat systems if you’re
-using that method.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class=&quot;section&quot; id=&quot;speed&quot;&gt;
-&lt;h2&gt;Speed&lt;/h2&gt;
-&lt;p&gt;On the whole &lt;strong class=&quot;command&quot;&gt;fossil&lt;/strong&gt; is fast, not &lt;strong class=&quot;command&quot;&gt;git&lt;/strong&gt; fast but fast
-nonetheless.  Commits do take a disturbingly long time to complete for some
-reason, but most of the other commands are fast enough.&lt;/p&gt;
-&lt;p&gt;Mangling a repository is actually a lot faster with &lt;strong class=&quot;command&quot;&gt;fossil&lt;/strong&gt; than any
-other system I can think of, as you can just throw the power of &lt;abbr title=&quot;Structured Query Language&quot;&gt;SQL&lt;/abbr&gt; at it.
-You can find some &lt;a class=&quot;reference external&quot; href=&quot;http://www.sqlalchemy.org/&quot;&gt;sqlalchemy&lt;/a&gt; &lt;abbr title=&quot;Object relational mapping&quot;&gt;ORM&lt;/abbr&gt;
-definitions in &lt;code class=&quot;file docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;/usr/share/doc/fossil/orm&lt;/span&gt;&lt;/code&gt; in my packages.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class=&quot;section&quot; id=&quot;conclusion&quot;&gt;
-&lt;h2&gt;Conclusion&lt;/h2&gt;
-&lt;p&gt;I mentioned this in this first paragraph, but I don’t see us moving to
-&lt;strong class=&quot;command&quot;&gt;fossil&lt;/strong&gt;.  It is a nice system, but it just wouldn’t work for us as
-is.&lt;/p&gt;
-&lt;p&gt;Part of me is tempted to attempt to fix the problems, but then we’d be left with
-a system that is more obscure than &lt;strong class=&quot;command&quot;&gt;fossil&lt;/strong&gt;.  If you read the &lt;a class=&quot;reference external&quot; href=&quot;http://fossil-scm.org/xfer/doc/tip/www/concepts.wiki&quot;&gt;Fossil
-Concepts&lt;/a&gt; and &lt;a class=&quot;reference external&quot; href=&quot;http://www.fossil-scm.org/xfer/doc/tip/www/faq.wiki&quot;&gt;Frequently Asked Questions&lt;/a&gt; documents you’ll see that the most
-significant problems for us are actually features for upstream, and that is
-obviously fine but it does mean upstreaming changes would be impossible.&lt;/p&gt;
-&lt;div class=&quot;admonition note&quot;&gt;
-&lt;p class=&quot;admonition-title&quot;&gt;Note&lt;/p&gt;
-&lt;p&gt;As noted above, it turns out they require a &lt;abbr title=&quot;Contributor License Agreement&quot;&gt;CLA&lt;/abbr&gt; which means we couldn’t
-send changes upstream anyway.&lt;/p&gt;
-&lt;/div&gt;
-&lt;p&gt;That said I’m am planning on stealing some of the ideas that I really liked
-about &lt;strong class=&quot;command&quot;&gt;fossil&lt;/strong&gt; for my own use.  &lt;strong class=&quot;command&quot;&gt;fossil all&lt;/strong&gt;’s ability to run
-a command against all repositories configured in &lt;code class=&quot;file docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;~/.fossil&lt;/span&gt;&lt;/code&gt; for example.&lt;/p&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-</content>
-  </entry>
-  <entry xml:base="https://jnrowe.github.io/blog/2014/atom.xml">
-    <title type="text">Cleanse thy soul</title>
-    <id>https://jnrowe.github.io/thoughts/disconnect.html</id>
-    <updated>2014-09-18T00:00:00Z</updated>
-    <published>2014-09-18T00:00:00Z</published>
-    <link href="https://jnrowe.github.io/thoughts/disconnect.html" />
-    <author>
-      <name>James Rowe</name>
-    </author>
-    <content type="html">&lt;div class=&quot;section&quot; id=&quot;cleanse-thy-soul&quot;&gt;
-
-&lt;p&gt;For the past few years I’ve taken to having routine breaks from certain
-timesinks to help me focus and also to denoise some of my thoughts.  The number
-one timesink in my world is without doubt the interwebs, and there are a few
-steps I’ve taken to weaken its stranglehold.&lt;/p&gt;
-&lt;p&gt;Perhaps the following will help you, or perhaps you’ll &lt;a class=&quot;reference external&quot; href=&quot;mailto:jnrowe&amp;#37;&amp;#52;&amp;#48;gmail&amp;#46;com&quot;&gt;email&lt;/a&gt; me to point out
-your ideas for me to try.&lt;/p&gt;
-&lt;div class=&quot;section&quot; id=&quot;cut-the-tether&quot;&gt;
-&lt;h2&gt;Cut the tether&lt;/h2&gt;
-&lt;p&gt;I track every thing that I &lt;em&gt;practically&lt;/em&gt; can, doing so can be very empowering.
-This is something which the buzzwordy types apparently refer to as The
-Quantified Self, and despite knowing that I continue to do so.&lt;/p&gt;
-&lt;p&gt;With a query of my network logs&lt;a class=&quot;footnote-reference brackets&quot; href=&quot;#s1&quot; id=&quot;id1&quot;&gt;1&lt;/a&gt; I can tell you that for the first nine
-months of this year I’ve been entirely without internet access for thirty-one
-percent of the time.  Last year the final amount was thirty-eight percent, and
-once our Winterval shutdown is included I’d expect this year to be about the
-same.&lt;/p&gt;
-&lt;p&gt;It isn’t just a case of being without internet access for a few hours or on
-certain days either, my longest &lt;em&gt;complete&lt;/em&gt; break this year was a straight
-thirteen days back in May.&lt;/p&gt;
-&lt;p&gt;The number one thing I’ve learnt is that a lot of the things I burnt time on
-were genuinely just burnt.  For example, news sites feel mostly pointless to
-me at this point.&lt;/p&gt;
-&lt;ul class=&quot;simple&quot;&gt;
-&lt;li&gt;&lt;p&gt;Popular news sources are invariably a PR copy’n’paste fest, which is &lt;em&gt;really&lt;/em&gt;
-noticeable when you come back from a break and catch up on various feeds in
-one huge chunk.&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;Sites with a slightly more tech bias like HackerNews and its ilk are just
-a complete time hole.  Often the really interesting tech stories will bubble
-up elsewhere in a curated fashion(such as &lt;a class=&quot;reference external&quot; href=&quot;http://chneukirchen.org/trivium/&quot;&gt;Trivium&lt;/a&gt;), and for example on HN the
-majority of posts and comments are just US politics or occasionally
-interesting insights from the SV bubble anyway.&lt;/p&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;I’ll still catch up from a couple of, in my opinion, trusted sources.  That is
-to say I’ll dip in to a few categories on &lt;abbr title=&quot;British Broadcasting Corporation&quot;&gt;BBC&lt;/abbr&gt; news and perhaps visit The Guardian’s site(although I do that
-considerably less over the past year according to my data).  I also like to
-avail myself of a little &lt;a class=&quot;reference external&quot; href=&quot;http://rt.com/&quot;&gt;Russia Today&lt;/a&gt; and &lt;a class=&quot;reference external&quot; href=&quot;http://www.aljazeera.net/&quot;&gt;Al Jazeera&lt;/a&gt; to keep the bias in
-check a touch.&lt;/p&gt;
-&lt;p&gt;With a simple &lt;a class=&quot;reference external&quot; href=&quot;https://pypi.python.org/pypi/rdial&quot;&gt;rdial&lt;/a&gt; report I can also tell you that on an average
-internet connected day I can spend an hour reading news, friend’s blogs, sports
-stories, &amp;amp;c.  A big chunk of that time is also combined with breakfast, so
-I choose to let it slide for the most part.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class=&quot;section&quot; id=&quot;tighten-the-noose&quot;&gt;
-&lt;h2&gt;Tighten the noose&lt;/h2&gt;
-&lt;p&gt;For the two-thirds of the year that I have internet access, I’ve started to
-severely restrict access.&lt;/p&gt;
-&lt;p&gt;It all started with a friend who — while wearing his tinfoil hat — preached
-about how we all need to consider blocking sites that use a &lt;abbr title=&quot;Content Delivery Network&quot;&gt;CDN&lt;/abbr&gt; in much the
-same way that many of us block web analytics companies.  We’re probably giving
-up more tracking data to the large &lt;abbr title=&quot;Content Delivery Network&quot;&gt;CDN&lt;/abbr&gt;s then we do to the simple analytics
-companies.&lt;/p&gt;
-&lt;p&gt;The thought popped in to my mind that a whitelist, instead of a blacklist, might
-actually be workable and since last November I’ve taken to doing just that.&lt;/p&gt;
-&lt;p&gt;The strangest result in my mind is just how short the list is.  My old advert
-and analytics blacklist had close to 1500 entries, and would obviously miss many
-”nasties” that I either hadn’t seen or that were simply new.&lt;/p&gt;
-&lt;p&gt;The whitelist, on the other hand, has only ever had 900 entries. Right now it
-has less than 150 thanks to the automated decay-based-on-visits purging of the
-entries it contains.&lt;/p&gt;
-&lt;p&gt;The whitelist approach also feeds in to my data tracking habit, as I can now
-tell from the decay tracking data when bursts of certain sites appear.  For
-example, StackOverflow(and &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;cdn.sstatic.net/stackoverflow/&lt;/span&gt;&lt;/code&gt; for styling) was
-on the whitelist for two weeks in June with six visits, which happens to
-coincide with a project that involved porting a tool to Windows.&lt;/p&gt;
-&lt;p&gt;The act of using a whitelist makes the point of procrastination noticeable and
-adds a cost to even starting it.  Every time I want to visit a new site&lt;a class=&quot;footnote-reference brackets&quot; href=&quot;#s2&quot; id=&quot;id2&quot;&gt;2&lt;/a&gt;,
-I have to highlight the &lt;abbr title=&quot;Uniform Resource Locator&quot;&gt;URL&lt;/abbr&gt; and rattle a key combo in &lt;a class=&quot;reference external&quot; href=&quot;https://awesomewm.org/&quot;&gt;awesome&lt;/a&gt; that updates
-the whitelist to enable access to it.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class=&quot;section&quot; id=&quot;on-the-knoll&quot;&gt;
-&lt;h2&gt;On the knoll&lt;/h2&gt;
-&lt;p&gt;I know the whole “go without the internet” thing is going to strike people as
-unworkable.  Questions abound about contact via email, missing bug reports,
-skipping meeting logs, depriving myself of invites to weddings I don’t wish to
-attend and so on.  I do realise it isn’t achievable for everyone, but with
-a little effort it should at the very least be achievable for one day a week.&lt;/p&gt;
-&lt;p&gt;The other advantage of doing so is the forced removal from services that
-actively destroy your privacy and the privacy of your friends and family, which
-is something that feels increasingly important in recent years.  For example,
-I no longer actively store my addressbook online&lt;a class=&quot;footnote-reference brackets&quot; href=&quot;#s3&quot; id=&quot;id3&quot;&gt;3&lt;/a&gt; nor do I use a service
-to help me process receipts any more.&lt;/p&gt;
-&lt;div class=&quot;sidebar&quot;&gt;
-&lt;p class=&quot;sidebar-title&quot;&gt;Admission of guilt&lt;/p&gt;
-&lt;p&gt;I have to admit that I haven’t quite dropped all the services I’d like to,
-here are a few:&lt;/p&gt;
-&lt;ul class=&quot;simple&quot;&gt;
-&lt;li&gt;&lt;p&gt;Strava - I’m still kind of using for the time being, although Keith’s
-replacement looks like it will fulfil my needs &lt;abbr title=&quot;Real Soon Now™&quot;&gt;RSN&lt;/abbr&gt;.&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;status.net - There are one or two people I don’t want to lose contact with
-who aren’t able to access our private server because of geo-filtering, and
-I don’t know how that can be fixed.&lt;/p&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/div&gt;
-&lt;p&gt;There are a myriad of benefits to dropping the reliance on &lt;abbr title=&quot;Software as a Service&quot;&gt;SaaS&lt;/abbr&gt; affairs.  The chance of any of them existing tomorrow is frankly
-not all that great: shuttering, buy-out closures, “pivoting”, &amp;amp;c.  You can
-also retain some level of control over your own data, knowing that for example
-it isn’t being sold or stored in regions with little to no data protection
-regulation.&lt;/p&gt;
-&lt;p&gt;In all honesty, I — no, &lt;em&gt;we&lt;/em&gt; — should have resisted the urge to use so called
-cloud services from the outset.  One doesn’t need to be a fully paid up member
-of the tinfoil hat brigade to know that it is just not acceptable to entrust
-your important data to external companies for the sake of a little convenience
-or a shiny interface.&lt;/p&gt;
-&lt;p&gt;Killing my internet access for chunks of time really pointed out how much I had
-come to rely on services far beyond my control, and the freedom one feels when
-you regain some of that is very comforting.&lt;/p&gt;
-&lt;p class=&quot;rubric&quot;&gt;Footnotes&lt;/p&gt;
-&lt;dl class=&quot;footnote brackets&quot;&gt;
-&lt;dt class=&quot;label&quot; id=&quot;s1&quot;&gt;&lt;span class=&quot;brackets&quot;&gt;&lt;a class=&quot;fn-backref&quot; href=&quot;#id1&quot;&gt;1&lt;/a&gt;&lt;/span&gt;&lt;/dt&gt;
-&lt;dd&gt;&lt;p&gt;The code I use is an unreleased project created by a friend, but
-&lt;a class=&quot;reference external&quot; href=&quot;http://humdi.net/vnstat/&quot;&gt;vnstat&lt;/a&gt; may work equally well for the same purpose.&lt;/p&gt;
-&lt;/dd&gt;
-&lt;dt class=&quot;label&quot; id=&quot;s2&quot;&gt;&lt;span class=&quot;brackets&quot;&gt;&lt;a class=&quot;fn-backref&quot; href=&quot;#id2&quot;&gt;2&lt;/a&gt;&lt;/span&gt;&lt;/dt&gt;
-&lt;dd&gt;&lt;p&gt;For the most part I whitelist based on hostname, but as in the
-StackOverflow styling example will whitelist specific paths on hosts on some
-occasions.&lt;/p&gt;
-&lt;/dd&gt;
-&lt;dt class=&quot;label&quot; id=&quot;s3&quot;&gt;&lt;span class=&quot;brackets&quot;&gt;&lt;a class=&quot;fn-backref&quot; href=&quot;#id3&quot;&gt;3&lt;/a&gt;&lt;/span&gt;&lt;/dt&gt;
-&lt;dd&gt;&lt;p&gt;I’m aware that Google has access to a small corner of my contacts graph
-via gmail, but I haven’t yet decided how I plan to resolve.  I’ve never used
-gmail for work or mail that I’d be uncomfortable reading in public, but it
-does act as a nice sieve for everything else right now.&lt;/p&gt;
-&lt;/dd&gt;
-&lt;/dl&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-</content>
-  </entry>
-  <entry xml:base="https://jnrowe.github.io/blog/2014/atom.xml">
-    <title type="text">Open Source and enjoyment</title>
-    <id>https://jnrowe.github.io/thoughts/burn_out.html</id>
-    <updated>2014-09-03T00:00:00Z</updated>
-    <published>2014-09-03T00:00:00Z</published>
-    <link href="https://jnrowe.github.io/thoughts/burn_out.html" />
-    <author>
-      <name>James Rowe</name>
-    </author>
-    <content type="html">&lt;div class=&quot;section&quot; id=&quot;open-source-and-enjoyment&quot;&gt;
-
-&lt;p&gt;A few years ago I burned out on Open Source projects, to the point that it was
-close to impacting other parts of my life.  I have only myself to blame as
-I didn’t manage to distance myself at all well.  Distancing yourself is not easy
-to do when your fun hobby for relaxation is the thing that is working against
-you.&lt;/p&gt;
-&lt;p&gt;There were a variety of incredibly minor issues that piled up Jenga-style.  Then
-to carry the weak analogy forward, it toppled over in a split second like Jenga
-in a rubber dingy on the rolling seas with a fumbling drunken friend wearing
-a blindfold.&lt;/p&gt;
-&lt;p&gt;I’ve decided to write down a few of the things that were happening, both as an
-act of catharsis and to help me spot the problems in future.  Perhaps it will
-help others who are experiencing the same thing but haven’t quite spotted the
-catalysts yet.&lt;/p&gt;
-&lt;div class=&quot;section&quot; id=&quot;dealing-with-needy-users&quot;&gt;
-&lt;h2&gt;Dealing with needy users&lt;/h2&gt;
-&lt;p&gt;Some users seem to feel a disproportionate amount of “you work for me”,
-seemingly more so than happens with actual paying customers on other projects
-which strikes me as strange.  They’ll bug you endlessly in emails, in the issue
-tracker, on &lt;abbr title=&quot;Internet Relay Chat&quot;&gt;IRC&lt;/abbr&gt; and in real life if you end up at the same conference.  You
-&lt;em&gt;need&lt;/em&gt; to stop this before it takes hold.  It helps if you can be polite, but
-if not just stop it anyway.  It is for &lt;em&gt;your&lt;/em&gt; welfare, so just do it.&lt;/p&gt;
-&lt;p&gt;I actually found myself burning the wrong people towards the peak of that
-imaginary Jenga tower.  You need to make a concerted effort to figure out which
-people are delivering the seemingly endless grief or perhaps just relentless
-&lt;a class=&quot;reference external&quot; href=&quot;http://en.m.wikipedia.org/wiki/bikeshedding&quot;&gt;bikeshedding&lt;/a&gt;, and stop them.  It is all too easy to accidentally become
-annoyed at well meaning useful contributors when you’ve been trawling through
-a heap of useless meta-discussion about a change nobody is making.&lt;/p&gt;
-&lt;p&gt;On one &lt;em&gt;library&lt;/em&gt; project I worked on there was a user who didn’t read the
-documentation, couldn’t use the language enough to write tests, yet still
-endlessly sucked up support time by opening awful issues and sending pointless
-emails wishing to discuss changes they might make.  I kind of hesitate to say
-awful issues, but - for example - if you can’t write a two line assertion in
-a language you’re not in the target audience for a library in the first place.&lt;/p&gt;
-&lt;p&gt;Those people aren’t even adding value in pointing out deficiencies in
-documentation, because they’re not a target user.  It would be like me writing
-to &lt;a class=&quot;reference external&quot; href=&quot;http://www.jcb.com/&quot;&gt;JCB&lt;/a&gt; telling them they must document why they use round knobs on the digger
-I saw someone else using.  So try spot it early, and put a stop to it.&lt;/p&gt;
-&lt;p&gt;I suspect a big part of the issue here is cost.  I’m sure if there was even
-a single penny cost to opening issues or sending a mail it would do wonders for
-communication in general.  I suspect that would remain true even if you
-reimbursed that penny immediately.&lt;/p&gt;
-&lt;div class=&quot;section&quot; id=&quot;the-simple-answer&quot;&gt;
-&lt;h3&gt;The simple answer&lt;/h3&gt;
-&lt;p&gt;I figured out how to work with this entirely by accident.  Politely offer
-answers that move them away from you.  It is by far the easiest solution.&lt;/p&gt;
-&lt;p&gt;In one instance I suggested alternative packages to an expensive user, with the
-hope they’d quietly move on.  Which is evil really, as what you’re really doing
-is dreaming that they’ll move on to bother a developer who isn’t you.&lt;/p&gt;
-&lt;p&gt;On another occasion I stole an idea from a friend and said “Sorry, I can’t
-figure out how to implement this.  Open a pull request, and I’ll merge it!” to
-another.  It worked well, because it stopped the direction-less discussion and
-was never going to be followed up with a patch later.&lt;/p&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class=&quot;section&quot; id=&quot;dealing-with-unreasonable-requests&quot;&gt;
-&lt;h2&gt;Dealing with unreasonable requests&lt;/h2&gt;
-&lt;p&gt;I used to get quite annoyed when I received an impolite or unreasonable request
-on an Open Source project, nowadays I tend to just respond with pre-canned
-answers for most of them.  If you can cut the time it takes to respond to them,
-you’ll obviously spend far less time thinking about them.&lt;/p&gt;
-&lt;p&gt;The typical one that springs to mind is a user complaining that you’ve not
-licensed your &lt;abbr title=&quot;GNU General Public License&quot;&gt;GPL&lt;/abbr&gt; code in a way which allows them to use it without
-contributing anything in return.  I choose reciprocating licences where I can,
-because frankly that may be the only value you provide &lt;em&gt;me&lt;/em&gt; as a user.  I get
-that some people need to use their Open Source projects as a way to improve
-their CV or build a presence, but for many of us it is just for fun and
-reciprocation.&lt;/p&gt;
-&lt;p&gt;Another example that I recall, but wish I didn’t, was a user &lt;em&gt;telling&lt;/em&gt; me to
-recompress a tarball on &lt;abbr title=&quot;Python Package Index&quot;&gt;PyPI&lt;/abbr&gt; because their infrastructure couldn’t support
-&lt;strong class=&quot;command&quot;&gt;bzip2&lt;/strong&gt;.  Seems reasonable enough, but it came wrapped in a tirade of
-abuse.  I ignored the abuse, uploaded another tarball and then received another
-abusive email in return the next day.  That was a long time ago, far before the
-burnout started to creep in so I just addressed the actual issue and moved on.&lt;/p&gt;
-&lt;div class=&quot;section&quot; id=&quot;the-answer&quot;&gt;
-&lt;h3&gt;The answer&lt;/h3&gt;
-&lt;p&gt;I had forgotten about that whole previous story until at &lt;a class=&quot;reference external&quot; href=&quot;https://europython.eu/&quot;&gt;Europython&lt;/a&gt; a friend
-was telling me about someone who was banned from a number of events, hell-banned
-on various mailing lists and on forced lockout on Stack Overflow for poisonous
-behaviour.  I started to tell my story as an example of strange abusive
-behaviour, and it turned out to be the same guy.&lt;/p&gt;
-&lt;p&gt;The point is these people can be everywhere so just don’t let them get to you.
-I realise that is both obvious and feels hard to do, but it is quite easy in the
-virtual world.  If you have the hell-ban option available just use
-it; perhaps there is an ignore option in your issue tracker, add a “send to
-trash” rule in your email filter.  Even in person it can be quite easy to do,
-just politely acknowledge their issue and move away instead of engaging them.&lt;/p&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class=&quot;section&quot; id=&quot;the-solutions&quot;&gt;
-&lt;h2&gt;The solutions&lt;/h2&gt;
-&lt;p&gt;I chose a solution I hate, for all intents and purposes I don’t release new Open
-Source projects any longer.  I still work on a lot of projects, and the code is
-normally available somewhere for strangers.  However, for the most part I’ve
-made a point of not hosting or releasing it in the common places.  This works
-for me, but it saddens me deeply.&lt;/p&gt;
-&lt;p&gt;I have a friend who does something interesting to combat the same problems I’ve
-mentioned here.  He hooks the issue tracker to only show issues reported by
-people in his second-degree &lt;a class=&quot;reference external&quot; href=&quot;http://www.foaf-project.org/&quot;&gt;FOAF&lt;/a&gt; circle or people whose user profile is an
-active Open Source contributor.  It works, and it cuts out most of the problem
-users, but it is nasty.  I feel it is worse than my “solution” because it still
-gives the impression of support to the users you won’t support, but also gives
-the impression of bad support through heaps of unanswered issues to the users
-who would receive good support.&lt;/p&gt;
+&lt;blockquote class="epigraph"&gt;
+&lt;div&gt;&lt;p&gt;Dopplr was a free social networking service, launched in 2007, that allowed
+users to create itineraries of their travel plans and spot correlations with
+their contacts’ travel plans in order to arrange meetings at any point on
+their journey.&lt;/p&gt;
+&lt;p class="attribution"&gt;—&lt;a class="reference external" href="http://en.m.wikipedia.org/wiki/Dopplr"&gt;dopplr&lt;/a&gt; wikipedia entry&lt;/p&gt;
+&lt;/div&gt;&lt;/blockquote&gt;
+&lt;p&gt;A couple of months ago &lt;a class="reference external" href="http://en.m.wikipedia.org/wiki/Dopplr"&gt;dopplr&lt;/a&gt; was shut down.  It was perhaps my most
+favouritistist of websites, but I didn’t use it.  In fact, I hadn’t visited in
+nearly three years and it contained no data I was interested in saving…  but
+I still counted it among my favourite sites.&lt;/p&gt;
+&lt;p&gt;dopplr had an elegant, yet jaw droppingly beautiful design; a marvel of
+simplicity and discoverability.  The functionality was great, who doesn’t like
+the idea of discovering happy collisions with old friends?  The implementation
+was cool, introducing me to OpenID.  I loved the site enough to read the
+&lt;a class="reference internal" href="#backstory"&gt;backstory&lt;/a&gt; when the shutdown news was being passed around, but I still didn’t
+want to use it again.  The cost for this functionality was just far too great
+for me.&lt;/p&gt;
+&lt;p&gt;I simply couldn’t stomach giving up the information that dopplr required to
+function.  It required an enormous amount of vigilance to police your own data
+on the way in, to make sure you weren’t sharing things you couldn’t or
+shouldn’t.  You could often glean things that people didn’t perhaps realise they
+were sharing.  A friend’s weekend to somewhere odd like Bedford wasn’t just
+a sign that you could meet up for lunch, it was probably also a sign that they
+were visiting Lockheed Martin&lt;a class="footnote-reference brackets" href="#s1" id="id1"&gt;1&lt;/a&gt;.&lt;/p&gt;
 &lt;blockquote&gt;
-&lt;div&gt;&lt;p&gt;The greatest trick the devil ever played was convincing users they had skin
-in the game.&lt;/p&gt;
+&lt;div&gt;&lt;p&gt;“Oh, Kevin is going to be near me next week!  Hmm, either he is on an
+exceptionally long pub crawl or he is about to sign a contract”&lt;/p&gt;
 &lt;/div&gt;&lt;/blockquote&gt;
-&lt;p&gt;I may be misappropriating a quote from a great film there, but it is important.
-A lot of the actively poisonous people who contact you aren’t providing any real
-value to you, and they’re probably never going to.  If you can remove them
-somehow you’re probably not losing anything, but you’ll be gaining a whole lot
-personally.&lt;/p&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-</content>
-  </entry>
-  <entry xml:base="https://jnrowe.github.io/blog/2014/atom.xml">
-    <title type="text">jnrowe-misc - The unsorted package overlay</title>
-    <id>https://jnrowe.github.io/articles/probits/jnrowe-misc.html</id>
-    <updated>2014-06-30T00:00:00Z</updated>
-    <published>2014-06-30T00:00:00Z</published>
-    <link href="https://jnrowe.github.io/articles/probits/jnrowe-misc.html" />
-    <author>
-      <name>James Rowe</name>
-    </author>
-    <content type="html">&lt;div class=&quot;section&quot; id=&quot;jnrowe-misc-the-unsorted-package-overlay&quot;&gt;
-
-&lt;blockquote&gt;
-&lt;div&gt;&lt;p&gt;A collection of &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;ebuild&lt;/span&gt;&lt;/code&gt; files with no overall theme.&lt;/p&gt;
-&lt;/div&gt;&lt;/blockquote&gt;
-&lt;p&gt;&lt;abbr title=&quot;Too Long; Didn’t Read&quot;&gt;TLDR&lt;/abbr&gt;; For what it was &lt;a class=&quot;reference external&quot; href=&quot;https://github.com/JNRowe/jnrowe-misc&quot;&gt;jnrowe-misc&lt;/a&gt; served its
-purpose well.&lt;/p&gt;
-&lt;div class=&quot;section&quot; id=&quot;an-island-unto-itself&quot;&gt;
-&lt;h2&gt;An island unto itself&lt;/h2&gt;
-&lt;p&gt;While it may come as a surprise to a few of the users(which would be most of
-them) the overlay available on GitHub wasn’t the deliverable at any point in
-time.  In fact, the often convoluted merge history in the repository probably
-hinted at that quite a bit.&lt;/p&gt;
-&lt;img alt=&quot;Tree view of ``jnrowe-misc`` history&quot; class=&quot;align-right&quot; src=&quot;../_images/jnrowe-misc.png&quot; style=&quot;width: 50%;&quot; /&gt;
-&lt;p&gt;&lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;jnrowe-misc&lt;/span&gt;&lt;/code&gt; was always the combination of a few independently managed
-repositories that I bundled up to make available for public consumption.
-Eventually it ended up being mostly Python stuff, but that was because the
-support burden of other packages was becoming more time consuming than I could
-justify.&lt;/p&gt;
-&lt;p&gt;The &lt;em&gt;real&lt;/em&gt; audience for the overlay, my co-workers, saw a different beast
-entirely.  It used our keyword types and rules, it came bundled &lt;span class=&quot;xref std std-doc&quot;&gt;with the
-tests&lt;/span&gt; I was unable to share and had a tighter schedule for
-maintenance.&lt;/p&gt;
-&lt;p&gt;Still, I received a fair number of emails and live comments from users so I’ll
-call that a success!&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class=&quot;section&quot; id=&quot;upstreamed&quot;&gt;
-&lt;h2&gt;Upstreamed&lt;/h2&gt;
-&lt;p&gt;Sadly, very little was ever taken upstream(even less if you count the parts that
-were credited).  This was entirely my fault.  I originally started exporting the
-overlay because I was fed up with the new package process upstream, and it seemed
-like the best way to deal with that for me.&lt;/p&gt;
-&lt;p&gt;I had hoped that some packages would be picked up, but didn’t actively push them
-after the first few.&lt;/p&gt;
-&lt;p&gt;The overlay should have never touched packages that were available upstream, but
-occasionally they overlapped when upstream added them.  The use of &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;::shadow&lt;/span&gt;&lt;/code&gt;
-to workaround problems when new packages were added upstream worked &lt;em&gt;really&lt;/em&gt;
-well, and saved the few remaining hairs on my balding head.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class=&quot;section&quot; id=&quot;legacy&quot;&gt;
-&lt;h2&gt;Legacy&lt;/h2&gt;
-&lt;p&gt;It looks like the majority of packages will continue to be maintained for the
-foreseeable future, but regrettably it looks like the result will not be
-available beyond a “open to all people who know where to look” organisation on
-GitHub.&lt;/p&gt;
-&lt;p&gt;I’d like to change the new maintainer’s mind, but in all honesty I understand
-their reasons.  I’ve stopped maintaining a lot of once public projects over the
-past couple of years, and it is as refreshing as it is saddening.&lt;/p&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-</content>
-  </entry>
-  <entry xml:base="https://jnrowe.github.io/blog/2014/atom.xml">
-    <title type="text">Project postmortems</title>
-    <id>https://jnrowe.github.io/articles/probits/index.html</id>
-    <updated>2014-06-30T00:00:00Z</updated>
-    <published>2014-06-30T00:00:00Z</published>
-    <link href="https://jnrowe.github.io/articles/probits/index.html" />
-    <author>
-      <name>James Rowe</name>
-    </author>
-    <content type="html">&lt;div class=&quot;section&quot; id=&quot;project-postmortems&quot;&gt;
-
-&lt;p&gt;One of my favourite things about the day job is the post-project analysis and
-postmortems, which we lovingly refer to as &lt;abbr title=&quot;Project Obituaries&quot;&gt;probits&lt;/abbr&gt;
-internally.&lt;/p&gt;
-&lt;div class=&quot;section&quot; id=&quot;background&quot;&gt;
-&lt;h2&gt;Background&lt;/h2&gt;
-&lt;p&gt;I work in heavily structured and standalone project-oriented environment.  In
-a decade I can count the number of fluid projects on three fingers.  As I write
-this in June 2014 my tier-one project started 21 months ago, and has a delivery
-date locked down to a week in 2015.  We’ll deliver on time or a touch early, our
-team is known for that.&lt;/p&gt;
-&lt;p&gt;One of the benefits of working on such strict projects with definite ship dates
-and locked schedules is that you always know when a project is complete.  This
-also allows us to take advantage of that by inspecting the project as a whole,
-spotting the successes and failures within.  Probits are the more informal
-dialogue that we pin to the front of each folder.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class=&quot;section&quot; id=&quot;what-youll-find&quot;&gt;
-&lt;h2&gt;What you’ll find&lt;/h2&gt;
-&lt;p&gt;I’ve recently decided I’d like to take a similar approach to some side projects
-that I work on, and also try to apply the methods to some more real-life
-situations.  This category, and the accompanying index, below are that attempt.&lt;/p&gt;
-&lt;div class=&quot;toctree-wrapper compound&quot;&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-</content>
-  </entry>
-  <entry xml:base="https://jnrowe.github.io/blog/2014/atom.xml">
-    <title type="text">Dropping Gentoo reflex</title>
-    <id>https://jnrowe.github.io/articles/dropping_gentoo_reflex.html</id>
-    <updated>2014-06-29T00:00:00Z</updated>
-    <published>2014-06-29T00:00:00Z</published>
-    <link href="https://jnrowe.github.io/articles/dropping_gentoo_reflex.html" />
-    <author>
-      <name>James Rowe</name>
-    </author>
-    <content type="html">&lt;div class=&quot;section&quot; id=&quot;dropping-gentoo-reflex&quot;&gt;
-
-&lt;p&gt;After hitting the publish button on &lt;a class=&quot;reference internal&quot; href=&quot;../articles/dropping_gentoo.html#dropping_gentoo&quot;&gt;&lt;span class=&quot;std std-ref&quot;&gt;Dropping Gentoo&lt;/span&gt;&lt;/a&gt; a few friends
-commented that I was either unnecessarily harsh about Gentoo or we wasted an
-enormous amount of time on it.  It definitely was the former, and I feel
-a touch ashamed for implying the latter.&lt;/p&gt;
-&lt;p&gt;I was writing my thoughts in the “project obituary” form that I’m used to, and
-that is entirely about spotting the downsides to make sure they don’t reoccur.
-And with that in mind I &lt;em&gt;was&lt;/em&gt; being incredibly unfair to Gentoo, both the
-project and by extension the people working on it.&lt;/p&gt;
-&lt;p&gt;There were many, many good points about Gentoo and I’ll nod towards a few now.&lt;/p&gt;
-&lt;div class=&quot;section&quot; id=&quot;speed&quot;&gt;
-&lt;h2&gt;Speed&lt;/h2&gt;
-&lt;p&gt;No, no.  Not the “Oh my god, my KDEs are so fast” that many people fairly
-associate with Gentoo users.  I’m talking about the basic package handling
-tasks.&lt;/p&gt;
-&lt;p&gt;There are very few other distributions that can match Gentoo when it comes to
-the speed of editing a package.  Or, for that matter, the speed of installation
-if you share binary packages.&lt;/p&gt;
-&lt;p&gt;Almost the first thing you notice when switching to Debian or Fedora as a heavy
-binary package user on Gentoo is just how slow package installation and removal
-is.  Binary package installation on Gentoo feels on par with a distribution
-like Slackware, and what passes for package management there is just choosing
-the right argument to &lt;strong class=&quot;command&quot;&gt;tar&lt;/strong&gt;’s &lt;a class=&quot;reference internal&quot; href=&quot;../articles/dropping_gentoo_reflex.html#cmdoption-tar-C&quot;&gt;&lt;code class=&quot;xref std std-option docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;-C&lt;/span&gt;&lt;/code&gt;&lt;/a&gt; option&lt;a class=&quot;footnote-reference brackets&quot; href=&quot;#id2&quot; id=&quot;id1&quot;&gt;*&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;Where Gentoo really excels though is in the speed of creating new packages or
-editing existing packages.&lt;/p&gt;
-&lt;p&gt;Lets take a look at an example.  Say, for example, that you just found out that
-&lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;flask-dashed&lt;/span&gt;&lt;/code&gt;’s  &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;ebuild&lt;/span&gt;&lt;/code&gt; mistakenly installs a &lt;code class=&quot;file docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;/usr/README&lt;/span&gt;&lt;/code&gt; file.
-We we can fix the problem with the following simple change and a call to
-&lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;repoman&lt;/span&gt; &lt;span class=&quot;pre&quot;&gt;manifest&lt;/span&gt;&lt;/code&gt;, the rest takes care of itself.&lt;/p&gt;
-&lt;div class=&quot;highlight-diff notranslate&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&quot;gh&quot;&gt;diff --git i/flask-dashed-0.1b_p2.ebuild w/flask-dashed-0.1b_p2.ebuild&lt;/span&gt;
-&lt;span class=&quot;gh&quot;&gt;index dd64877a387e..cf3e3cbf272b 100644&lt;/span&gt;
-&lt;span class=&quot;gd&quot;&gt;--- i/flask-dashed-0.1b_p2.ebuild&lt;/span&gt;
-&lt;span class=&quot;gi&quot;&gt;+++ w/flask-dashed-0.1b_p2.ebuild&lt;/span&gt;
-&lt;span class=&quot;gu&quot;&gt;@@ -29,5 +29,6 @@ S=&amp;quot;${WORKDIR}/${MY_P}&amp;quot;&lt;/span&gt;
-
- src_prepare() {
-        distutils-r1_src_prepare
-&lt;span class=&quot;gi&quot;&gt;+       sed -i /data_files/d setup.py || die &amp;quot;sed failed&amp;quot;&lt;/span&gt;
-        rm -rf &amp;quot;${S}/tests&amp;quot;
-}
-&lt;/pre&gt;&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class=&quot;admonition note&quot;&gt;
-&lt;p class=&quot;admonition-title&quot;&gt;Note&lt;/p&gt;
-&lt;p&gt;Of course, you should fix the package properly and send the fix upstream but
-this is just to prove a point.  Calling &lt;strong class=&quot;command&quot;&gt;die&lt;/strong&gt; with &lt;strong class=&quot;command&quot;&gt;sed&lt;/strong&gt;
-there isn’t recommended and is practically pointless, but it is the style
-upstream.&lt;/p&gt;
-&lt;/div&gt;
-&lt;p&gt;I have to mention a small downside here however, because very few people seem to
-test &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;portage&lt;/span&gt;&lt;/code&gt;’s binary package support you’ll occasionally have to do some
-leg work to fix problems.  This normally arises when you have an &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;eclass&lt;/span&gt;&lt;/code&gt;
-change that needs to ripple through, or when a library breaks compatibility and
-its &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;ebuild&lt;/span&gt;&lt;/code&gt; hasn’t been bumped properly.&lt;/p&gt;
-&lt;p&gt;Almost every time that happens you can fix it with a quick loop in your shell
-though.  A couple of such problems and solutions that I found in my shell
-history can be seen below.&lt;/p&gt;
-&lt;div class=&quot;highlight-zsh notranslate&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&quot;c1&quot;&gt;# When you were stuck with packages that used python-distutils-ng, and you&lt;/span&gt;
-&lt;span class=&quot;c1&quot;&gt;# needed to scrub packages because you changed Python version&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; p in &lt;span class=&quot;k&quot;&gt;$(&lt;/span&gt;portageq pkgdir&lt;span class=&quot;k&quot;&gt;)&lt;/span&gt;/*-*/*.tbz2&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;do&lt;/span&gt;
-    qtbz2 -xO &lt;span class=&quot;nv&quot;&gt;$p&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;|&lt;/span&gt; qxpak -xO - &lt;span class=&quot;si&quot;&gt;${${&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;p&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;##*/&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;/.tbz2&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;}&lt;/span&gt;.ebuild &lt;span class=&quot;p&quot;&gt;|&lt;/span&gt; grep -q &lt;span class=&quot;s1&quot;&gt;&amp;#39;SUPPORT_PYTHON_ABIS&amp;#39;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$p&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;done&lt;/span&gt;
-
-&lt;span class=&quot;c1&quot;&gt;# When you were using packages that used python’s “-r1” eclasses and all&lt;/span&gt;
-&lt;span class=&quot;c1&quot;&gt;# you could see is a flood of blockages in your update output&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; p in &lt;span class=&quot;k&quot;&gt;$(&lt;/span&gt;portageq pkgdir&lt;span class=&quot;k&quot;&gt;)&lt;/span&gt;/*-*/*.tbz2&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;do&lt;/span&gt;
-    qtbz2 -xO &lt;span class=&quot;nv&quot;&gt;$p&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;|&lt;/span&gt; qxpak -xO - RDEPEND &lt;span class=&quot;m&quot;&gt;2&lt;/span&gt;&amp;gt;/dev/null &lt;span class=&quot;p&quot;&gt;|&lt;/span&gt; grep -q &lt;span class=&quot;s2&quot;&gt;&amp;quot;dev-python/python-exec&amp;quot;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$p&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;done&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class=&quot;section&quot; id=&quot;documentation&quot;&gt;
-&lt;h2&gt;Documentation&lt;/h2&gt;
-&lt;p&gt;The excellent &lt;a class=&quot;reference external&quot; href=&quot;http://devmanual.gentoo.org/&quot;&gt;devmanual&lt;/a&gt; and the incredible &lt;a class=&quot;reference external&quot; href=&quot;http://wiki.gentoo.org/wiki/Project:PMS&quot;&gt;Package Manager Specification&lt;/a&gt;
-made life so much easier.  The devmanual was both short enough to be used as
-quick reference and complete enough that you could learn most of what you’d need
-to know from it.  The unfortunately named &lt;abbr title=&quot;Package Manager Specification&quot;&gt;PMS&lt;/abbr&gt; acted as the reference that
-finally allowed us to switch from away from &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;portage&lt;/span&gt;&lt;/code&gt; completely at the
-office.&lt;/p&gt;
-&lt;p&gt;The &lt;abbr title=&quot;Package Manager Specification&quot;&gt;PMS&lt;/abbr&gt; documented much of the nastiness that &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;portage&lt;/span&gt;&lt;/code&gt; suffers from, and
-made life in general a whole lot nicer when you were chasing bugs deep down the
-rabbit hole.  And, let us be honest here it also stopped a little of the
-fluidity that plagued &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;portage&lt;/span&gt;&lt;/code&gt; too.&lt;/p&gt;
-&lt;p&gt;Some people argue that it acts as unnecessary stop motion but those people must
-be forgetting what happened when behaviour changed randomly between &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;portage&lt;/span&gt;&lt;/code&gt;
-versions.  &lt;abbr title=&quot;Package Manager Specification&quot;&gt;PMS&lt;/abbr&gt;, and the EAPI process, also brought some much needed design
-and stability to newer features.&lt;/p&gt;
-&lt;p&gt;All Gentoo users owe Ciaran McCreesh a few beers for all the hard work he put in
-to those documents, especially in the early days.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class=&quot;section&quot; id=&quot;the-personal-touch&quot;&gt;
-&lt;h2&gt;The personal touch&lt;/h2&gt;
-&lt;p&gt;On a personal note I’ve met some awesome people over the years as a result of
-using Gentoo.  Many of them at the old Gentoo UK conferences, which were always
-fun.  More recently at LoFu’s annual summit which seems to have taken Gentoo
-UK’s place with practically everyone you saw at Gentoo UK(minus the students),
-and oddly about the same Gentoo to non-Gentoo ratio of talks too.&lt;/p&gt;
-&lt;p&gt;Two excellent people on our current team were recruited following the Gentoo UK
-conference at &lt;abbr title=&quot;University College London&quot;&gt;UCL&lt;/abbr&gt;, and we met a spectacular
-contract hire at the one prior to that as well.&lt;/p&gt;
-&lt;p&gt;I’ve even been lucky enough to have a few doors held open for me via people I’ve
-met at Gentoo-themed or Gentoo-heavy events, and I suspect I’d be writing this
-from a less happy place without them.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class=&quot;section&quot; id=&quot;wrapping-up&quot;&gt;
-&lt;h2&gt;Wrapping up&lt;/h2&gt;
-&lt;p&gt;It is true that you really can not always see the forest for trees.&lt;/p&gt;
-&lt;p&gt;Had recent events not clouded my vision I would have commented on the train
-wreck that is &lt;code class=&quot;file docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;webapp.eclass&lt;/span&gt;&lt;/code&gt; and &lt;code class=&quot;file docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;app-admin/webapp-config&lt;/span&gt;&lt;/code&gt; in
-&lt;span class=&quot;xref std std-doc&quot;&gt;dropping_gentoo&lt;/span&gt;.  It sucked tonnes and tonnes of time away until we
-eventually just trashed any package that interacted with it and moved on.&lt;/p&gt;
-&lt;p&gt;That was so long ago that I had forgotten about it until a co-worker asked me
-why I hadn’t mentioned it.  I suspect most of the other negative comments I made
-will feel equally inconsequential when compared to the benefits Gentoo gave us
-as time moves on.&lt;/p&gt;
-&lt;p&gt;Instead of making this rant even longer, I’ll take the time to reflect on the
-fun memories.&lt;/p&gt;
-&lt;p class=&quot;rubric&quot;&gt;Footnotes&lt;/p&gt;
-&lt;dl class=&quot;footnote brackets&quot;&gt;
-&lt;dt class=&quot;label&quot; id=&quot;id2&quot;&gt;&lt;span class=&quot;brackets&quot;&gt;&lt;a class=&quot;fn-backref&quot; href=&quot;#id1&quot;&gt;*&lt;/a&gt;&lt;/span&gt;&lt;/dt&gt;
-&lt;dd&gt;&lt;p&gt;To be fair &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;.tbz2&lt;/span&gt;&lt;/code&gt; files on Gentoo are just tarballs with a binary
-&lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;xpak&lt;/span&gt;&lt;/code&gt; appended.  Those extra bits beyond “just a tar -C” are what
-makes dependency handling work among other things.&lt;/p&gt;
+&lt;p&gt;I know that dopplr was cool though, it was powerful and it did squeeze a lot
+more serendipity out of the world(I forget their actual tagline).  I couldn’t
+imagine a better present for 2014 than to find a replacement that I could
+actually use, but sadly I can’t even picture how it should work.&lt;/p&gt;
+&lt;p class="rubric"&gt;Footnotes&lt;/p&gt;
+&lt;dl class="footnote brackets"&gt;
+&lt;dt class="label" id="s1"&gt;&lt;span class="brackets"&gt;&lt;a class="fn-backref" href="#id1"&gt;1&lt;/a&gt;&lt;/span&gt;&lt;/dt&gt;
+&lt;dd&gt;&lt;p&gt;Your personal examples may vary&lt;/p&gt;
 &lt;/dd&gt;
 &lt;/dl&gt;
-&lt;dl class=&quot;std option&quot;&gt;
-&lt;dt id=&quot;cmdoption-tar-C&quot;&gt;
-&lt;code class=&quot;sig-name descname&quot;&gt;-C&lt;/code&gt;&lt;code class=&quot;sig-prename descclassname&quot;&gt;&lt;/code&gt;&lt;/dt&gt;
-&lt;dd&gt;&lt;p&gt;This option tells &lt;strong class=&quot;command&quot;&gt;tar&lt;/strong&gt; to change directory before performing its
-duty.  For example using &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;-C&lt;/span&gt; &lt;span class=&quot;pre&quot;&gt;/&lt;/span&gt;&lt;/code&gt; will switch to &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;/&lt;/span&gt;&lt;/code&gt;, and can be used to
-unpack a tarball directly over the root filesystem.&lt;/p&gt;
-&lt;/dd&gt;&lt;/dl&gt;
-
-&lt;/div&gt;
-&lt;/div&gt;
+&lt;span class="target" id="backstory"&gt;&lt;/span&gt;&lt;/div&gt;
 </content>
+    <link href="https://jnrowe.github.io/thoughts/dopplr_effects.html" rel="alternate"/>
+    <published>2014-01-06T00:00:00+00:00</published>
   </entry>
-  <entry xml:base="https://jnrowe.github.io/blog/2014/atom.xml">
-    <title type="text">Dropping Gentoo</title>
-    <id>https://jnrowe.github.io/articles/dropping_gentoo.html</id>
-    <updated>2014-06-18T00:00:00Z</updated>
-    <published>2014-06-18T00:00:00Z</published>
-    <link href="https://jnrowe.github.io/articles/dropping_gentoo.html" />
+  <entry>
+    <id>https://jnrowe.github.io/thoughts/important_balance.html</id>
+    <title>Murdering morality with ferocious fire</title>
+    <updated>2014-01-25T00:00:00+00:00</updated>
     <author>
       <name>James Rowe</name>
     </author>
-    <content type="html">&lt;div class=&quot;section&quot; id=&quot;dropping-gentoo&quot;&gt;
+    <content type="html">&lt;div class="section" id="murdering-morality-with-ferocious-fire"&gt;
 
-&lt;p&gt;We’ve been using &lt;a class=&quot;reference external&quot; href=&quot;http://gentoo.org&quot;&gt;Gentoo&lt;/a&gt; for shipped products since June 2005, and as
-a development platform since September 2004.  A long time, an incredibly long
-time in fact.&lt;/p&gt;
-&lt;p&gt;Today our final Gentoo using product shipped, with a single scheduled update
-promised in Q3-2015.  It is kind of sad day, but we all knew that day was coming
-and it takes only a little inside knowledge to know why.&lt;/p&gt;
-&lt;div class=&quot;admonition note&quot;&gt;
-&lt;p class=&quot;admonition-title&quot;&gt;Note&lt;/p&gt;
-&lt;p&gt;A couple of people have rightly pointed out that I was a little harsh in
-this document, so I’ve pushed a &lt;span class=&quot;xref std std-doc&quot;&gt;followup&lt;/span&gt;.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class=&quot;section&quot; id=&quot;landscapes-have-changed&quot;&gt;
-&lt;h2&gt;Landscapes have changed&lt;/h2&gt;
-&lt;p&gt;Back when we started using Gentoo it was clearly the best choice for what we
-needed; a easily coercible base on which to construct our Linux devices.  There
-actually weren’t a lot of viable choices back then.&lt;/p&gt;
-&lt;p&gt;&lt;a class=&quot;reference external&quot; href=&quot;http://debian.org&quot;&gt;Debian&lt;/a&gt;, which many of us loved, felt like the only mainstream distribution we
-could have used.  Unfortunately, it wasn’t available for the arches we needed.
-It also didn’t package many of things we used at that point, but to be fair
-there were &lt;abbr title=&quot;Intent to Package&quot;&gt;ITPs&lt;/abbr&gt; (were they called that back then?)
-already floating about for most of them.&lt;/p&gt;
-&lt;p&gt;The “from source” options available then would, for all intents and purposes,
-have meant taking on the support costs of the entire stack which nobody wanted
-to commit to.  As it turns out that burden slowly crept up on us over the next
-ten years anyway.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class=&quot;section&quot; id=&quot;take-a-left-in-100-metres&quot;&gt;
-&lt;h2&gt;Take a left in 100 metres&lt;/h2&gt;
-&lt;p&gt;Over the years we regrettably diverged heavily from upstream, almost to the
-point that saying we use Gentoo almost feels like a lie.&lt;/p&gt;
-&lt;p&gt;Before our first product shipped we had already switched to maintaining the
-essential toolchain packages like GCC and glibc ourselves.  I can’t recall the
-specific reasons as I didn’t work on them, but I recall agreeing with them.&lt;/p&gt;
-&lt;p&gt;At some point we started using a custom package manager, initially just a new
-drop-in resolver and eventually a completely independent package manager.
-&lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;portage&lt;/span&gt;&lt;/code&gt; was ferociously buggy in places and also appeared to be moribund, so
-it seemed like the correct choice.  We never supported the full range of
-features that Gentoo’s &lt;a class=&quot;reference external&quot; href=&quot;http://wiki.gentoo.org/wiki/Project:PMS&quot;&gt;PMS&lt;/a&gt; now defines, but it made the support surface a lot
-nicer.&lt;/p&gt;
-&lt;p&gt;There was a point where we seriously considered moving to a &lt;a class=&quot;reference external&quot; href=&quot;http://en.wikipedia.org/wiki/Conary_(package_manager)&quot;&gt;Conary&lt;/a&gt;-based
-infrastructure.  It did loads of the cool things we wanted to do and it mostly
-fitted our workflow with its “Gentoo done right” feel.  Sadly, it has
-a &lt;abbr title=&quot;Contributor License Agreement&quot;&gt;CLA&lt;/abbr&gt; which none of us could sign that practically guaranteed we would
-eventually be in the same place we were with Gentoo.  May have been
-a fortuitous roadblock in the end, as Conary never gained the traction it
-once promised(perhaps in part because of that &lt;abbr title=&quot;Contributor License Agreement&quot;&gt;CLA&lt;/abbr&gt;?).&lt;/p&gt;
-&lt;p&gt;Had we waited another five months, there would have been another open source
-package manager for Gentoo we could have easily switched to and hacked on.
-There is perhaps a pattern here…&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class=&quot;section&quot; id=&quot;upstreaming-changes&quot;&gt;
-&lt;h2&gt;Upstreaming changes&lt;/h2&gt;
-&lt;p&gt;Of course, running a non-standard package manager and a thick layer of custom
-packages at the bottom of the stack made contributing changes back upstream very
-time consuming.  Many of us tried, but eventually most stopped.&lt;/p&gt;
-&lt;p&gt;Anyone who was running Gentoo in the mid-00’s will recall the giant wedge that
-got in the way of reporting bugs, and sadly by the time it disappeared many of
-us had lost interest.&lt;/p&gt;
-&lt;p&gt;If you had ran the gauntlet and lucked out with a bug in front of a developer,
-there was a new barrier that many were irked by: lack of attribution.  It never
-bothered me, but the number of developers who wouldn’t even reference a bug
-report in the ChangeLog was huge.  That taught me a valuable personal lesson,
-I always attribute a commit to the reporter even when I’ve significantly mangled
-a patch to make it acceptable.&lt;/p&gt;
-&lt;p&gt;For a time, to ease the annoyance we used to play a game where we reported real
-bugs with patches, but using silly data for &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;emerge&lt;/span&gt; &lt;span class=&quot;pre&quot;&gt;--info&lt;/span&gt;&lt;/code&gt;.  It was
-definitely fun while it lasted, but it didn’t solve the pain points.  Not
-wanting to be associated with the bugs made people use pseudonyms, which also
-removed the expectation of attribution too.&lt;/p&gt;
-&lt;p&gt;I kept trying to report trivial and cosmetic bugs - ones which didn’t require
-a huge upfront investment - for some time, but they’d go unchanged for weeks or
-months so I stopped doing that too&lt;/p&gt;
-&lt;p&gt;Looking around now there is an automatically generated list of bugs with patches
-which we’ve fixed but haven’t upstreamed, and a few random entries from it look
-like this:&lt;/p&gt;
-&lt;div class=&quot;highlight-console notranslate&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&quot;gp&quot;&gt;$&lt;/span&gt; wc -l ~/gentoo/to_push/jay.rst
-&lt;span class=&quot;go&quot;&gt;1157 /home/jay/gentoo/to_push/jay.rst&lt;/span&gt;
-&lt;span class=&quot;gp&quot;&gt;$&lt;/span&gt; wc -l ~/gentoo/to_push/mattias.rst
-&lt;span class=&quot;go&quot;&gt;2104 /home/jay/gentoo/to_push/mattias.rst&lt;/span&gt;
-&lt;span class=&quot;gp&quot;&gt;$&lt;/span&gt; wc -l ~/gentoo/to_push/chrisp.rst
-&lt;span class=&quot;go&quot;&gt;873 /home/jay/gentoo/to_push/chrisp.rst&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-&lt;/div&gt;
-&lt;p&gt;That genuinely upsets me greatly.  The amount of potential duplicated effort
-they represent is enormous, and I don’t even want to attempt to put a figure on
-it.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class=&quot;section&quot; id=&quot;supporting-upstream&quot;&gt;
-&lt;h2&gt;Supporting upstream&lt;/h2&gt;
-&lt;p&gt;We’re entirely to blame.  We always planned on supporting upstream in whichever
-way we could.  That fell down for instances beyond sending patches too.&lt;/p&gt;
-&lt;p&gt;The story that comes to mind is from a chance encounter at LinuxWorld back in
-2005.  We had managed to gather a whole heap of really cool hardware to donate
-to projects who were exhibiting on the day we attended, and it felt nice handing
-out toys as a little “thank you” to the projects we depended on.&lt;/p&gt;
-&lt;p&gt;It wasn’t all roses though.  My manager went off to offer some ARM-based devices
-to the Gentoo guys who were there, but was met with “tremendous rudeness” from
-the person manning their desk at the time.  In hindsight people could have
-predicted a similar outcome, and it was just an unlucky moment for him to walk
-up.  That soured his enthusiasm no end, and it was the last time we managed to
-score bags of toys to randomly give away to developers on any project.&lt;/p&gt;
-&lt;p&gt;If you were one of the people who received a Nokia tablet or ZipIt in the Hand
-&amp;amp; Flower that evening, you now know the reason and perhaps you can even guess
-who to thank.&lt;/p&gt;
-&lt;p&gt;A year or so later I watched a similar scenario play out at the Gentoo UK
-conference with a potential sponsor and the same developer.  Evening beers were
-met with other people telling stories about that same person, which was a shame
-as it probably cost them a few good cash and infrastructure sponsors that day
-alone.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class=&quot;section&quot; id=&quot;support-costs&quot;&gt;
-&lt;h2&gt;Support costs&lt;/h2&gt;
-&lt;p&gt;Over time we’ve come to support most of the tree that people refer to as
-&lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;gentoo-x86&lt;/span&gt;&lt;/code&gt; ourselves.  The toolchain changes we needed at the time
-necessitated supporting a few packages further up the stack.  Our desire to trim
-the tree of a few categories that were problematic, meant replacing a variety of
-packages with then unavailable dependencies.&lt;/p&gt;
-&lt;p&gt;And there were many other examples too…&lt;/p&gt;
-&lt;div class=&quot;section&quot; id=&quot;matchbox&quot;&gt;
-&lt;h3&gt;matchbox&lt;/h3&gt;
-&lt;p&gt;We packaged &lt;a class=&quot;reference internal&quot; href=&quot;#matchbox&quot;&gt;matchbox&lt;/a&gt; and its associated packages a long, long time before they
-hit the official tree.  It was the first real pain point we had with packages
-appearing in the tree after we had already been using them.&lt;/p&gt;
-&lt;p&gt;When they did eventually hit the tree we had to carry workarounds for years.  At
-some point we stopped trying and just scrubbed the ebuilds that got in the way.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class=&quot;section&quot; id=&quot;python&quot;&gt;
-&lt;h3&gt;Python&lt;/h3&gt;
-&lt;p&gt;The state of the Python packaging a few years ago made us take the jump to
-replace or remove anything that packaged a Python module.  Initially very time
-consuming, but it saved an enormous amount of grief.&lt;/p&gt;
-&lt;p&gt;I suspect we could move closer to upstream at this point, but the point is now
-moot.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class=&quot;section&quot; id=&quot;systemd&quot;&gt;
-&lt;h3&gt;systemd&lt;/h3&gt;
-&lt;p&gt;We switched to &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;systemd&lt;/span&gt;&lt;/code&gt; before the package was in upstream’s tree, and we
-have had to keep supporting it to this day because of insurmountable packaging
-differences.&lt;/p&gt;
-&lt;p&gt;In a few places that means taking on packages with a reverse dependency too,
-where differences create issues.  And it clearly means taking on any package
-that depends on &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;openrc&lt;/span&gt;&lt;/code&gt; or Gentoo’s &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;baselayout&lt;/span&gt;&lt;/code&gt; package.  Those packages
-are becoming fewer and fewer by the day though, so that would have become
-a non-issue.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class=&quot;section&quot; id=&quot;x-org&quot;&gt;
-&lt;h3&gt;X.org&lt;/h3&gt;
-&lt;p&gt;We had been packaging x.org’s packages to work around some implementation
-differences with upstream since the dawn of modular X.  Mostly just to do with
-how dependencies were specified to start with, but they’re no longer even
-remotely similar.&lt;/p&gt;
-&lt;p&gt;Luckily there isn’t a great deal of churn in the packages we care about for the
-most part, so it never caused a huge time sink.&lt;/p&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class=&quot;section&quot; id=&quot;the-end-is-nigh&quot;&gt;
-&lt;h2&gt;The end is nigh&lt;/h2&gt;
-&lt;p&gt;At some point it began to feel like we were maintaining our own distribution
-from end-to-end, and that wasn’t fun.  It also wasn’t what any of us needed to
-do, and the time it was taking measurably ate in to &lt;em&gt;real&lt;/em&gt; project time.&lt;/p&gt;
-&lt;p&gt;The decision to start weaning ourselves off of Gentoo was made back in the
-summer of last year, and it has finally started to come in to effect.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class=&quot;section&quot; id=&quot;the-times-they-are-a-changing&quot;&gt;
-&lt;h2&gt;The Times They Are a-Changing&lt;/h2&gt;
-&lt;p&gt;There are plenty of good alternatives out there now for building systems that
-need to run on a variety of architectures.  Some binary, some source-based and
-a few hybrid approaches.&lt;/p&gt;
-&lt;p&gt;The project I’m working on right now is using Debian &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;testing&lt;/span&gt;&lt;/code&gt;, and it appears
-to be working out fine.  Some things still annoy me, like the time it takes to
-patch and recreate a package.  It is a trivial thing with Gentoo, but requires
-far too much work with Debian.  Perhaps we’ll improve the workflow enough as we
-develop more experience.&lt;/p&gt;
-&lt;p&gt;We’ve also hit a good moment to use Debian because a whole heap of work has gone
-in to making Debian easier to bootstrap, and it definitely shows.  When I find
-out who has done all the magic to make that happen I’ll scribble down a note to
-owe them some beers.&lt;/p&gt;
-&lt;p&gt;We’re also lucky in that we employ two Debian developers, one is practically
-a funded full-time Debian developer.  They’re incredibly knowledgeable and it
-makes working with Debian a lot easier, so thanks guys!&lt;/p&gt;
-&lt;p&gt;All told, things look good.  We’re still playing with some alternatives and as
-yet no concrete decisions have been made, but I feel like we’re on the right
-track for the next ten years.&lt;/p&gt;
-&lt;p&gt;So long Gentoo, and thanks for all fish!&lt;/p&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-</content>
-  </entry>
-  <entry xml:base="https://jnrowe.github.io/blog/2014/atom.xml">
-    <title type="text">Delayed flashover</title>
-    <id>https://jnrowe.github.io/thoughts/delayed_flashover.html</id>
-    <updated>2014-04-09T00:00:00Z</updated>
-    <published>2014-04-09T00:00:00Z</published>
-    <link href="https://jnrowe.github.io/thoughts/delayed_flashover.html" />
-    <author>
-      <name>James Rowe</name>
-    </author>
-    <content type="html">&lt;div class=&quot;section&quot; id=&quot;delayed-flashover&quot;&gt;
-
-&lt;p&gt;This weekend a very good friend of mine is taking part in the London Marathon,
-and we’re all looking forward to the no-doubt incredible time she’ll finish in.&lt;/p&gt;
-&lt;blockquote class=&quot;epigraph&quot;&gt;
-&lt;div&gt;&lt;p&gt;“Fun run” is the excuse losers give &lt;em&gt;before&lt;/em&gt; a race&lt;/p&gt;
+&lt;blockquote class="epigraph"&gt;
+&lt;div&gt;&lt;p&gt;Morality is herd instinct in the individual.&lt;/p&gt;
+&lt;p class="attribution"&gt;—Friedrich Nietzsche&lt;/p&gt;
 &lt;/div&gt;&lt;/blockquote&gt;
-&lt;p&gt;Normally, I wouldn’t bother writing anything about such an event but this is
-different.  It is different because she is practically a hero to me.&lt;/p&gt;
-&lt;p&gt;I’m talking about Rach.&lt;/p&gt;
-&lt;p&gt;Last summer she gave birth to a bouncing baby girl&lt;a class=&quot;footnote-reference brackets&quot; href=&quot;#s1&quot; id=&quot;id1&quot;&gt;1&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;Seven months later she is going to complete a marathon.  I would say “planning
-to complete”, but I know better at this point.&lt;/p&gt;
-&lt;p&gt;This is made all the more impressive because a decade ago we thought we’d lose
-her following a serious accident.  As time went on and things improved the
-realisation that we’d have a wheelchair-bound-for-life friend kicked in.  And
-slowly it became clear that we’d have a crutch-bound-for-life friend.  And
-eventually it became quite obvious we’d have a soul-filling running machine to
-envy once again.&lt;/p&gt;
-&lt;p&gt;Now she has been lucky, very lucky.  But we make our own luck too, and she is an
-awesome luck making machine.  To poorly misuse a Pasteur quote that I already
-tend to overuse, “luck favours the prepared mind.”&lt;/p&gt;
-&lt;p&gt;If I have one tip for the Dear Reader this week it is this: Keep your
-sponsorship options in check, she’ll destroy the target time.  Go Rach!&lt;/p&gt;
-&lt;div class=&quot;admonition note&quot;&gt;
-&lt;p class=&quot;admonition-title&quot;&gt;Note&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Update&lt;/strong&gt;: Sub-four finish, ‘nuff said.&lt;/p&gt;
-&lt;/div&gt;
-&lt;p class=&quot;rubric&quot;&gt;Footnotes&lt;/p&gt;
-&lt;dl class=&quot;footnote brackets&quot;&gt;
-&lt;dt class=&quot;label&quot; id=&quot;s1&quot;&gt;&lt;span class=&quot;brackets&quot;&gt;&lt;a class=&quot;fn-backref&quot; href=&quot;#id1&quot;&gt;1&lt;/a&gt;&lt;/span&gt;&lt;/dt&gt;
-&lt;dd&gt;&lt;p&gt;a term which always make me think I should call child services&lt;a class=&quot;footnote-reference brackets&quot; href=&quot;#s2&quot; id=&quot;id2&quot;&gt;2&lt;/a&gt;&lt;/p&gt;
-&lt;/dd&gt;
-&lt;dt class=&quot;label&quot; id=&quot;s2&quot;&gt;&lt;span class=&quot;brackets&quot;&gt;&lt;a class=&quot;fn-backref&quot; href=&quot;#id2&quot;&gt;2&lt;/a&gt;&lt;/span&gt;&lt;/dt&gt;
-&lt;dd&gt;&lt;p&gt;a term which makes me think they bring fizzy drinks and sugary cakes&lt;/p&gt;
+&lt;p&gt;When I look back at my life’s work thus far I often find myself asking the
+question “was it worth it?”&lt;/p&gt;
+&lt;p&gt;That question isn’t meant in some kind of crazed suicidal manner, I just mean
+specifically the projects I’ve worked on and the things I do.  Are they just?
+Should I be doing this?&lt;/p&gt;
+&lt;p&gt;I truly hope it doesn’t come as a surprise to people who know me, but I consider
+myself to be a person of strong moral values&lt;a class="footnote-reference brackets" href="#s1" id="id1"&gt;1&lt;/a&gt;.  I probably shouldn’t admit
+this publicly, but over the years I have turned down several projects I didn’t
+feel ethically comfortable working on.  And it has &lt;em&gt;demonstrably&lt;/em&gt; held my career
+progression back.  I mostly fine with that.  No, I really am.&lt;/p&gt;
+&lt;p&gt;The simple fact is that I’m due for a HR review, overdue actually, and these
+questions have started to come to the fore again.  I’ll lay in bed thinking
+about them, I’ll sit here typing about them, I’ll judge other people to gauge
+the validity of my position and I’ll bore people who’ll listen with my
+dilemmas.&lt;/p&gt;
+&lt;p&gt;One shouldn’t really use the word “dilemma” here, these issues are practically
+the definition of “First World Problems”.  Part of me is disgusted to waste so
+much time on frankly trivial introspection, but for better or worse it is
+a &lt;em&gt;huge&lt;/em&gt; part of my self-identity.&lt;/p&gt;
+&lt;p&gt;I feel that — to some extent — I’m living a weak, self-imposed and
+inconsequential version of &lt;a class="reference external" href="http://en.m.wikipedia.org/wiki/Pascal's_wager"&gt;Pascal’s Gambit&lt;/a&gt;.  I know full well that the works
+I’ve rejected have been seen to completion by others.  I’ve not scuppered them,
+nor have I even attempted to.  Not having me work on them has perhaps even made
+them far more effective at whatever aspect I took exception to.  I’m making
+moral decisions with no weight beyond my own mind, no ripple beyond my own
+insignificant life puddle and no wake beyond this now excessively long essay.&lt;/p&gt;
+&lt;p&gt;However, in the face of these realisations I still find myself unable to
+consider the decisions wrong.  I’d still choose to reject them now, and
+I suspect that will remain true in the future.  I like that these decisions are
+defensible to &lt;em&gt;me&lt;/em&gt;, that they &lt;em&gt;must&lt;/em&gt; be defensible to me.  I love that the thing
+that keeps me awake at night is not the thought of the possibly nefarious
+effects of my works, but rather the exceedingly minor issue of not having
+a glistening and well-spec’d M6 in the garage.&lt;/p&gt;
+&lt;p&gt;Now, let me sleep.&lt;/p&gt;
+&lt;p class="rubric"&gt;Footnotes&lt;/p&gt;
+&lt;dl class="footnote brackets"&gt;
+&lt;dt class="label" id="s1"&gt;&lt;span class="brackets"&gt;&lt;a class="fn-backref" href="#id1"&gt;1&lt;/a&gt;&lt;/span&gt;&lt;/dt&gt;
+&lt;dd&gt;&lt;p&gt;For those values to be strong doesn’t necessarily mean they have to
+line up with your definition of “strong moral values” ;)&lt;/p&gt;
 &lt;/dd&gt;
 &lt;/dl&gt;
 &lt;/div&gt;
 </content>
+    <link href="https://jnrowe.github.io/thoughts/important_balance.html" rel="alternate"/>
+    <published>2014-01-25T00:00:00+00:00</published>
   </entry>
-  <entry xml:base="https://jnrowe.github.io/blog/2014/atom.xml">
-    <title type="text">Hitting life’s reset button</title>
+  <entry>
+    <id>https://jnrowe.github.io/thoughts/the_returned.html</id>
+    <title>Return to rambling</title>
+    <updated>2014-01-27T00:00:00+00:00</updated>
+    <author>
+      <name>James Rowe</name>
+    </author>
+    <content type="html">&lt;div class="section" id="return-to-rambling"&gt;
+
+&lt;p&gt;I kept a public journal from about 2003 until 2009, with a new entry about every
+three days.  I enjoyed the act of writing it greatly, and often looked forward
+to the period of contemplation it would create.  However, eventually I found
+I had to kill it, but not because of waning enthusiasm as is so often the case.&lt;/p&gt;
+&lt;p&gt;I had simply become incredibly frustrated and entirely fed up with having to
+censor myself; “unprofessional” thoughts, fear of discussing hot political
+issues, &amp;amp;c.  I realised, towards the end, that I would spend about the same
+amount of time editing a post as I would writing it.  Sometimes I would spend an
+hour on a short post and finally delete it entirely.  &lt;em&gt;All&lt;/em&gt; the love was gone,
+&lt;em&gt;all&lt;/em&gt; of it.&lt;/p&gt;
+&lt;div class="section" id="unleash-the-shout-hole"&gt;
+&lt;h2&gt;Unleash the shout-hole&lt;/h2&gt;
+&lt;p&gt;So why return?  Simple, I’ve reached a stage in my life where I don’t have to be
+quite so concerned with outbound appearances for the sake of professional life,
+and I should feel free to express myself how I wish in my personal life.&lt;/p&gt;
+&lt;p&gt;Don’t get me wrong, I’m not about to start writing about whatever noisy issue
+I can find just because I can.  I’m not, nor have I ever wished to be, a tabloid
+journalist.&lt;/p&gt;
+&lt;p&gt;The purpose of this resurrection and the previous incarnations has always been
+as an outlet for some of my views.  It is a side-effect should it be read by
+others.  However, some of my fondest memories of writing have been the
+conversations that have arisen from folks who’ve contacted me about an entry.
+I’ve engaged with some extremely interesting people this way, some of whom
+I remain in touch with to this day.&lt;/p&gt;
+&lt;p&gt;I &lt;em&gt;always&lt;/em&gt; have an open invitation to thank me, correct me, shame me or berate
+me for the opinions I express or information I spread.  And that invitation is
+absolutely extended to this site and the new content I post.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</content>
+    <link href="https://jnrowe.github.io/thoughts/the_returned.html" rel="alternate"/>
+    <published>2014-01-27T00:00:00+00:00</published>
+  </entry>
+  <entry>
     <id>https://jnrowe.github.io/thoughts/reset_in_ten.html</id>
-    <updated>2014-02-24T00:00:00Z</updated>
-    <published>2014-02-24T00:00:00Z</published>
-    <link href="https://jnrowe.github.io/thoughts/reset_in_ten.html" />
+    <title>Hitting life’s reset button</title>
+    <updated>2014-02-24T00:00:00+00:00</updated>
     <author>
       <name>James Rowe</name>
     </author>
-    <content type="html">&lt;div class=&quot;section&quot; id=&quot;hitting-lifes-reset-button&quot;&gt;
+    <content type="html">&lt;div class="section" id="hitting-lifes-reset-button"&gt;
 
 &lt;p&gt;Seven months ago while enjoying a little Saturday afternoon cricket picnic,
 a friend posed the question:&lt;/p&gt;
@@ -988,165 +206,947 @@ I kind of enjoying reviewing it in a cringe ridden way.&lt;/p&gt;
 &lt;p&gt;I’d really like to thank Catherine for offering the mirror, it has been
 intriguing in a terrifying and horrific kind of way.  Unfortunately, I can’t.
 It is too late, and there is another lesson for me to learn.&lt;/p&gt;
-&lt;hr class=&quot;docutils&quot; /&gt;
+&lt;hr class="docutils" /&gt;
 &lt;p&gt;For what it’s worth, that girl still works at the ‘Express and I’ve done
 nothing useful about it.  Internet, this is the foolish truth I proffer you
 today.  The others well, they’ll hopefully remain hidden away from view.&lt;/p&gt;
 &lt;/div&gt;
 </content>
+    <link href="https://jnrowe.github.io/thoughts/reset_in_ten.html" rel="alternate"/>
+    <published>2014-02-24T00:00:00+00:00</published>
   </entry>
-  <entry xml:base="https://jnrowe.github.io/blog/2014/atom.xml">
-    <title type="text">Return to rambling</title>
-    <id>https://jnrowe.github.io/thoughts/the_returned.html</id>
-    <updated>2014-01-27T00:00:00Z</updated>
-    <published>2014-01-27T00:00:00Z</published>
-    <link href="https://jnrowe.github.io/thoughts/the_returned.html" />
+  <entry>
+    <id>https://jnrowe.github.io/thoughts/delayed_flashover.html</id>
+    <title>Delayed flashover</title>
+    <updated>2014-04-09T00:00:00+01:00</updated>
     <author>
       <name>James Rowe</name>
     </author>
-    <content type="html">&lt;div class=&quot;section&quot; id=&quot;return-to-rambling&quot;&gt;
+    <content type="html">&lt;div class="section" id="delayed-flashover"&gt;
 
-&lt;p&gt;I kept a public journal from about 2003 until 2009, with a new entry about every
-three days.  I enjoyed the act of writing it greatly, and often looked forward
-to the period of contemplation it would create.  However, eventually I found
-I had to kill it, but not because of waning enthusiasm as is so often the case.&lt;/p&gt;
-&lt;p&gt;I had simply become incredibly frustrated and entirely fed up with having to
-censor myself; “unprofessional” thoughts, fear of discussing hot political
-issues, &amp;amp;c.  I realised, towards the end, that I would spend about the same
-amount of time editing a post as I would writing it.  Sometimes I would spend an
-hour on a short post and finally delete it entirely.  &lt;em&gt;All&lt;/em&gt; the love was gone,
-&lt;em&gt;all&lt;/em&gt; of it.&lt;/p&gt;
-&lt;div class=&quot;section&quot; id=&quot;unleash-the-shout-hole&quot;&gt;
-&lt;h2&gt;Unleash the shout-hole&lt;/h2&gt;
-&lt;p&gt;So why return?  Simple, I’ve reached a stage in my life where I don’t have to be
-quite so concerned with outbound appearances for the sake of professional life,
-and I should feel free to express myself how I wish in my personal life.&lt;/p&gt;
-&lt;p&gt;Don’t get me wrong, I’m not about to start writing about whatever noisy issue
-I can find just because I can.  I’m not, nor have I ever wished to be, a tabloid
-journalist.&lt;/p&gt;
-&lt;p&gt;The purpose of this resurrection and the previous incarnations has always been
-as an outlet for some of my views.  It is a side-effect should it be read by
-others.  However, some of my fondest memories of writing have been the
-conversations that have arisen from folks who’ve contacted me about an entry.
-I’ve engaged with some extremely interesting people this way, some of whom
-I remain in touch with to this day.&lt;/p&gt;
-&lt;p&gt;I &lt;em&gt;always&lt;/em&gt; have an open invitation to thank me, correct me, shame me or berate
-me for the opinions I express or information I spread.  And that invitation is
-absolutely extended to this site and the new content I post.&lt;/p&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-</content>
-  </entry>
-  <entry xml:base="https://jnrowe.github.io/blog/2014/atom.xml">
-    <title type="text">Murdering morality with ferocious fire</title>
-    <id>https://jnrowe.github.io/thoughts/important_balance.html</id>
-    <updated>2014-01-25T00:00:00Z</updated>
-    <published>2014-01-25T00:00:00Z</published>
-    <link href="https://jnrowe.github.io/thoughts/important_balance.html" />
-    <author>
-      <name>James Rowe</name>
-    </author>
-    <content type="html">&lt;div class=&quot;section&quot; id=&quot;murdering-morality-with-ferocious-fire&quot;&gt;
-
-&lt;blockquote class=&quot;epigraph&quot;&gt;
-&lt;div&gt;&lt;p&gt;Morality is herd instinct in the individual.&lt;/p&gt;
-&lt;p class=&quot;attribution&quot;&gt;—Friedrich Nietzsche&lt;/p&gt;
+&lt;p&gt;This weekend a very good friend of mine is taking part in the London Marathon,
+and we’re all looking forward to the no-doubt incredible time she’ll finish in.&lt;/p&gt;
+&lt;blockquote class="epigraph"&gt;
+&lt;div&gt;&lt;p&gt;“Fun run” is the excuse losers give &lt;em&gt;before&lt;/em&gt; a race&lt;/p&gt;
 &lt;/div&gt;&lt;/blockquote&gt;
-&lt;p&gt;When I look back at my life’s work thus far I often find myself asking the
-question “was it worth it?”&lt;/p&gt;
-&lt;p&gt;That question isn’t meant in some kind of crazed suicidal manner, I just mean
-specifically the projects I’ve worked on and the things I do.  Are they just?
-Should I be doing this?&lt;/p&gt;
-&lt;p&gt;I truly hope it doesn’t come as a surprise to people who know me, but I consider
-myself to be a person of strong moral values&lt;a class=&quot;footnote-reference brackets&quot; href=&quot;#s1&quot; id=&quot;id1&quot;&gt;1&lt;/a&gt;.  I probably shouldn’t admit
-this publicly, but over the years I have turned down several projects I didn’t
-feel ethically comfortable working on.  And it has &lt;em&gt;demonstrably&lt;/em&gt; held my career
-progression back.  I mostly fine with that.  No, I really am.&lt;/p&gt;
-&lt;p&gt;The simple fact is that I’m due for a HR review, overdue actually, and these
-questions have started to come to the fore again.  I’ll lay in bed thinking
-about them, I’ll sit here typing about them, I’ll judge other people to gauge
-the validity of my position and I’ll bore people who’ll listen with my
-dilemmas.&lt;/p&gt;
-&lt;p&gt;One shouldn’t really use the word “dilemma” here, these issues are practically
-the definition of “First World Problems”.  Part of me is disgusted to waste so
-much time on frankly trivial introspection, but for better or worse it is
-a &lt;em&gt;huge&lt;/em&gt; part of my self-identity.&lt;/p&gt;
-&lt;p&gt;I feel that — to some extent — I’m living a weak, self-imposed and
-inconsequential version of &lt;a class=&quot;reference external&quot; href=&quot;http://en.m.wikipedia.org/wiki/Pascal's_wager&quot;&gt;Pascal’s Gambit&lt;/a&gt;.  I know full well that the works
-I’ve rejected have been seen to completion by others.  I’ve not scuppered them,
-nor have I even attempted to.  Not having me work on them has perhaps even made
-them far more effective at whatever aspect I took exception to.  I’m making
-moral decisions with no weight beyond my own mind, no ripple beyond my own
-insignificant life puddle and no wake beyond this now excessively long essay.&lt;/p&gt;
-&lt;p&gt;However, in the face of these realisations I still find myself unable to
-consider the decisions wrong.  I’d still choose to reject them now, and
-I suspect that will remain true in the future.  I like that these decisions are
-defensible to &lt;em&gt;me&lt;/em&gt;, that they &lt;em&gt;must&lt;/em&gt; be defensible to me.  I love that the thing
-that keeps me awake at night is not the thought of the possibly nefarious
-effects of my works, but rather the exceedingly minor issue of not having
-a glistening and well-spec’d M6 in the garage.&lt;/p&gt;
-&lt;p&gt;Now, let me sleep.&lt;/p&gt;
-&lt;p class=&quot;rubric&quot;&gt;Footnotes&lt;/p&gt;
-&lt;dl class=&quot;footnote brackets&quot;&gt;
-&lt;dt class=&quot;label&quot; id=&quot;s1&quot;&gt;&lt;span class=&quot;brackets&quot;&gt;&lt;a class=&quot;fn-backref&quot; href=&quot;#id1&quot;&gt;1&lt;/a&gt;&lt;/span&gt;&lt;/dt&gt;
-&lt;dd&gt;&lt;p&gt;For those values to be strong doesn’t necessarily mean they have to
-line up with your definition of “strong moral values” ;)&lt;/p&gt;
+&lt;p&gt;Normally, I wouldn’t bother writing anything about such an event but this is
+different.  It is different because she is practically a hero to me.&lt;/p&gt;
+&lt;p&gt;I’m talking about Rach.&lt;/p&gt;
+&lt;p&gt;Last summer she gave birth to a bouncing baby girl&lt;a class="footnote-reference brackets" href="#s1" id="id1"&gt;1&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Seven months later she is going to complete a marathon.  I would say “planning
+to complete”, but I know better at this point.&lt;/p&gt;
+&lt;p&gt;This is made all the more impressive because a decade ago we thought we’d lose
+her following a serious accident.  As time went on and things improved the
+realisation that we’d have a wheelchair-bound-for-life friend kicked in.  And
+slowly it became clear that we’d have a crutch-bound-for-life friend.  And
+eventually it became quite obvious we’d have a soul-filling running machine to
+envy once again.&lt;/p&gt;
+&lt;p&gt;Now she has been lucky, very lucky.  But we make our own luck too, and she is an
+awesome luck making machine.  To poorly misuse a Pasteur quote that I already
+tend to overuse, “luck favours the prepared mind.”&lt;/p&gt;
+&lt;p&gt;If I have one tip for the Dear Reader this week it is this: Keep your
+sponsorship options in check, she’ll destroy the target time.  Go Rach!&lt;/p&gt;
+&lt;div class="admonition note"&gt;
+&lt;p class="admonition-title"&gt;Note&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Update&lt;/strong&gt;: Sub-four finish, ‘nuff said.&lt;/p&gt;
+&lt;/div&gt;
+&lt;p class="rubric"&gt;Footnotes&lt;/p&gt;
+&lt;dl class="footnote brackets"&gt;
+&lt;dt class="label" id="s1"&gt;&lt;span class="brackets"&gt;&lt;a class="fn-backref" href="#id1"&gt;1&lt;/a&gt;&lt;/span&gt;&lt;/dt&gt;
+&lt;dd&gt;&lt;p&gt;a term which always make me think I should call child services&lt;a class="footnote-reference brackets" href="#s2" id="id2"&gt;2&lt;/a&gt;&lt;/p&gt;
+&lt;/dd&gt;
+&lt;dt class="label" id="s2"&gt;&lt;span class="brackets"&gt;&lt;a class="fn-backref" href="#id2"&gt;2&lt;/a&gt;&lt;/span&gt;&lt;/dt&gt;
+&lt;dd&gt;&lt;p&gt;a term which makes me think they bring fizzy drinks and sugary cakes&lt;/p&gt;
 &lt;/dd&gt;
 &lt;/dl&gt;
 &lt;/div&gt;
 </content>
+    <link href="https://jnrowe.github.io/thoughts/delayed_flashover.html" rel="alternate"/>
+    <published>2014-04-09T00:00:00+01:00</published>
   </entry>
-  <entry xml:base="https://jnrowe.github.io/blog/2014/atom.xml">
-    <title type="text">Dopplr defects</title>
-    <id>https://jnrowe.github.io/thoughts/dopplr_effects.html</id>
-    <updated>2014-01-06T00:00:00Z</updated>
-    <published>2014-01-06T00:00:00Z</published>
-    <link href="https://jnrowe.github.io/thoughts/dopplr_effects.html" />
+  <entry>
+    <id>https://jnrowe.github.io/articles/dropping_gentoo.html</id>
+    <title>Dropping Gentoo</title>
+    <updated>2014-06-18T00:00:00+01:00</updated>
     <author>
       <name>James Rowe</name>
     </author>
-    <content type="html">&lt;div class=&quot;section&quot; id=&quot;dopplr-defects&quot;&gt;
+    <content type="html">&lt;div class="section" id="dropping-gentoo"&gt;
 
-&lt;blockquote class=&quot;epigraph&quot;&gt;
-&lt;div&gt;&lt;p&gt;Dopplr was a free social networking service, launched in 2007, that allowed
-users to create itineraries of their travel plans and spot correlations with
-their contacts’ travel plans in order to arrange meetings at any point on
-their journey.&lt;/p&gt;
-&lt;p class=&quot;attribution&quot;&gt;—&lt;a class=&quot;reference external&quot; href=&quot;http://en.m.wikipedia.org/wiki/Dopplr&quot;&gt;dopplr&lt;/a&gt; wikipedia entry&lt;/p&gt;
-&lt;/div&gt;&lt;/blockquote&gt;
-&lt;p&gt;A couple of months ago &lt;a class=&quot;reference external&quot; href=&quot;http://en.m.wikipedia.org/wiki/Dopplr&quot;&gt;dopplr&lt;/a&gt; was shut down.  It was perhaps my most
-favouritistist of websites, but I didn’t use it.  In fact, I hadn’t visited in
-nearly three years and it contained no data I was interested in saving…  but
-I still counted it among my favourite sites.&lt;/p&gt;
-&lt;p&gt;dopplr had an elegant, yet jaw droppingly beautiful design; a marvel of
-simplicity and discoverability.  The functionality was great, who doesn’t like
-the idea of discovering happy collisions with old friends?  The implementation
-was cool, introducing me to OpenID.  I loved the site enough to read the
-&lt;a class=&quot;reference internal&quot; href=&quot;#backstory&quot;&gt;backstory&lt;/a&gt; when the shutdown news was being passed around, but I still didn’t
-want to use it again.  The cost for this functionality was just far too great
-for me.&lt;/p&gt;
-&lt;p&gt;I simply couldn’t stomach giving up the information that dopplr required to
-function.  It required an enormous amount of vigilance to police your own data
-on the way in, to make sure you weren’t sharing things you couldn’t or
-shouldn’t.  You could often glean things that people didn’t perhaps realise they
-were sharing.  A friend’s weekend to somewhere odd like Bedford wasn’t just
-a sign that you could meet up for lunch, it was probably also a sign that they
-were visiting Lockheed Martin&lt;a class=&quot;footnote-reference brackets&quot; href=&quot;#s1&quot; id=&quot;id1&quot;&gt;1&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;We’ve been using &lt;a class="reference external" href="http://gentoo.org"&gt;Gentoo&lt;/a&gt; for shipped products since June 2005, and as
+a development platform since September 2004.  A long time, an incredibly long
+time in fact.&lt;/p&gt;
+&lt;p&gt;Today our final Gentoo using product shipped, with a single scheduled update
+promised in Q3-2015.  It is kind of sad day, but we all knew that day was coming
+and it takes only a little inside knowledge to know why.&lt;/p&gt;
+&lt;div class="admonition note"&gt;
+&lt;p class="admonition-title"&gt;Note&lt;/p&gt;
+&lt;p&gt;A couple of people have rightly pointed out that I was a little harsh in
+this document, so I’ve pushed a &lt;span class="xref std std-doc"&gt;followup&lt;/span&gt;.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="landscapes-have-changed"&gt;
+&lt;h2&gt;Landscapes have changed&lt;/h2&gt;
+&lt;p&gt;Back when we started using Gentoo it was clearly the best choice for what we
+needed; a easily coercible base on which to construct our Linux devices.  There
+actually weren’t a lot of viable choices back then.&lt;/p&gt;
+&lt;p&gt;&lt;a class="reference external" href="http://debian.org"&gt;Debian&lt;/a&gt;, which many of us loved, felt like the only mainstream distribution we
+could have used.  Unfortunately, it wasn’t available for the arches we needed.
+It also didn’t package many of things we used at that point, but to be fair
+there were &lt;abbr title="Intent to Package"&gt;ITPs&lt;/abbr&gt; (were they called that back then?)
+already floating about for most of them.&lt;/p&gt;
+&lt;p&gt;The “from source” options available then would, for all intents and purposes,
+have meant taking on the support costs of the entire stack which nobody wanted
+to commit to.  As it turns out that burden slowly crept up on us over the next
+ten years anyway.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="take-a-left-in-100-metres"&gt;
+&lt;h2&gt;Take a left in 100 metres&lt;/h2&gt;
+&lt;p&gt;Over the years we regrettably diverged heavily from upstream, almost to the
+point that saying we use Gentoo almost feels like a lie.&lt;/p&gt;
+&lt;p&gt;Before our first product shipped we had already switched to maintaining the
+essential toolchain packages like GCC and glibc ourselves.  I can’t recall the
+specific reasons as I didn’t work on them, but I recall agreeing with them.&lt;/p&gt;
+&lt;p&gt;At some point we started using a custom package manager, initially just a new
+drop-in resolver and eventually a completely independent package manager.
+&lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;portage&lt;/span&gt;&lt;/code&gt; was ferociously buggy in places and also appeared to be moribund, so
+it seemed like the correct choice.  We never supported the full range of
+features that Gentoo’s &lt;a class="reference external" href="http://wiki.gentoo.org/wiki/Project:PMS"&gt;PMS&lt;/a&gt; now defines, but it made the support surface a lot
+nicer.&lt;/p&gt;
+&lt;p&gt;There was a point where we seriously considered moving to a &lt;a class="reference external" href="http://en.wikipedia.org/wiki/Conary_(package_manager)"&gt;Conary&lt;/a&gt;-based
+infrastructure.  It did loads of the cool things we wanted to do and it mostly
+fitted our workflow with its “Gentoo done right” feel.  Sadly, it has
+a &lt;abbr title="Contributor License Agreement"&gt;CLA&lt;/abbr&gt; which none of us could sign that practically guaranteed we would
+eventually be in the same place we were with Gentoo.  May have been
+a fortuitous roadblock in the end, as Conary never gained the traction it
+once promised(perhaps in part because of that &lt;abbr title="Contributor License Agreement"&gt;CLA&lt;/abbr&gt;?).&lt;/p&gt;
+&lt;p&gt;Had we waited another five months, there would have been another open source
+package manager for Gentoo we could have easily switched to and hacked on.
+There is perhaps a pattern here…&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="upstreaming-changes"&gt;
+&lt;h2&gt;Upstreaming changes&lt;/h2&gt;
+&lt;p&gt;Of course, running a non-standard package manager and a thick layer of custom
+packages at the bottom of the stack made contributing changes back upstream very
+time consuming.  Many of us tried, but eventually most stopped.&lt;/p&gt;
+&lt;p&gt;Anyone who was running Gentoo in the mid-00’s will recall the giant wedge that
+got in the way of reporting bugs, and sadly by the time it disappeared many of
+us had lost interest.&lt;/p&gt;
+&lt;p&gt;If you had ran the gauntlet and lucked out with a bug in front of a developer,
+there was a new barrier that many were irked by: lack of attribution.  It never
+bothered me, but the number of developers who wouldn’t even reference a bug
+report in the ChangeLog was huge.  That taught me a valuable personal lesson,
+I always attribute a commit to the reporter even when I’ve significantly mangled
+a patch to make it acceptable.&lt;/p&gt;
+&lt;p&gt;For a time, to ease the annoyance we used to play a game where we reported real
+bugs with patches, but using silly data for &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;emerge&lt;/span&gt; &lt;span class="pre"&gt;--info&lt;/span&gt;&lt;/code&gt;.  It was
+definitely fun while it lasted, but it didn’t solve the pain points.  Not
+wanting to be associated with the bugs made people use pseudonyms, which also
+removed the expectation of attribution too.&lt;/p&gt;
+&lt;p&gt;I kept trying to report trivial and cosmetic bugs - ones which didn’t require
+a huge upfront investment - for some time, but they’d go unchanged for weeks or
+months so I stopped doing that too&lt;/p&gt;
+&lt;p&gt;Looking around now there is an automatically generated list of bugs with patches
+which we’ve fixed but haven’t upstreamed, and a few random entries from it look
+like this:&lt;/p&gt;
+&lt;div class="highlight-console notranslate"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="gp"&gt;$&lt;/span&gt; wc -l ~/gentoo/to_push/jay.rst
+&lt;span class="go"&gt;1157 /home/jay/gentoo/to_push/jay.rst&lt;/span&gt;
+&lt;span class="gp"&gt;$&lt;/span&gt; wc -l ~/gentoo/to_push/mattias.rst
+&lt;span class="go"&gt;2104 /home/jay/gentoo/to_push/mattias.rst&lt;/span&gt;
+&lt;span class="gp"&gt;$&lt;/span&gt; wc -l ~/gentoo/to_push/chrisp.rst
+&lt;span class="go"&gt;873 /home/jay/gentoo/to_push/chrisp.rst&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;That genuinely upsets me greatly.  The amount of potential duplicated effort
+they represent is enormous, and I don’t even want to attempt to put a figure on
+it.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="supporting-upstream"&gt;
+&lt;h2&gt;Supporting upstream&lt;/h2&gt;
+&lt;p&gt;We’re entirely to blame.  We always planned on supporting upstream in whichever
+way we could.  That fell down for instances beyond sending patches too.&lt;/p&gt;
+&lt;p&gt;The story that comes to mind is from a chance encounter at LinuxWorld back in
+2005.  We had managed to gather a whole heap of really cool hardware to donate
+to projects who were exhibiting on the day we attended, and it felt nice handing
+out toys as a little “thank you” to the projects we depended on.&lt;/p&gt;
+&lt;p&gt;It wasn’t all roses though.  My manager went off to offer some ARM-based devices
+to the Gentoo guys who were there, but was met with “tremendous rudeness” from
+the person manning their desk at the time.  In hindsight people could have
+predicted a similar outcome, and it was just an unlucky moment for him to walk
+up.  That soured his enthusiasm no end, and it was the last time we managed to
+score bags of toys to randomly give away to developers on any project.&lt;/p&gt;
+&lt;p&gt;If you were one of the people who received a Nokia tablet or ZipIt in the Hand
+&amp;amp; Flower that evening, you now know the reason and perhaps you can even guess
+who to thank.&lt;/p&gt;
+&lt;p&gt;A year or so later I watched a similar scenario play out at the Gentoo UK
+conference with a potential sponsor and the same developer.  Evening beers were
+met with other people telling stories about that same person, which was a shame
+as it probably cost them a few good cash and infrastructure sponsors that day
+alone.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="support-costs"&gt;
+&lt;h2&gt;Support costs&lt;/h2&gt;
+&lt;p&gt;Over time we’ve come to support most of the tree that people refer to as
+&lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;gentoo-x86&lt;/span&gt;&lt;/code&gt; ourselves.  The toolchain changes we needed at the time
+necessitated supporting a few packages further up the stack.  Our desire to trim
+the tree of a few categories that were problematic, meant replacing a variety of
+packages with then unavailable dependencies.&lt;/p&gt;
+&lt;p&gt;And there were many other examples too…&lt;/p&gt;
+&lt;div class="section" id="matchbox"&gt;
+&lt;h3&gt;matchbox&lt;/h3&gt;
+&lt;p&gt;We packaged &lt;a class="reference internal" href="#matchbox"&gt;matchbox&lt;/a&gt; and its associated packages a long, long time before they
+hit the official tree.  It was the first real pain point we had with packages
+appearing in the tree after we had already been using them.&lt;/p&gt;
+&lt;p&gt;When they did eventually hit the tree we had to carry workarounds for years.  At
+some point we stopped trying and just scrubbed the ebuilds that got in the way.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="python"&gt;
+&lt;h3&gt;Python&lt;/h3&gt;
+&lt;p&gt;The state of the Python packaging a few years ago made us take the jump to
+replace or remove anything that packaged a Python module.  Initially very time
+consuming, but it saved an enormous amount of grief.&lt;/p&gt;
+&lt;p&gt;I suspect we could move closer to upstream at this point, but the point is now
+moot.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="systemd"&gt;
+&lt;h3&gt;systemd&lt;/h3&gt;
+&lt;p&gt;We switched to &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;systemd&lt;/span&gt;&lt;/code&gt; before the package was in upstream’s tree, and we
+have had to keep supporting it to this day because of insurmountable packaging
+differences.&lt;/p&gt;
+&lt;p&gt;In a few places that means taking on packages with a reverse dependency too,
+where differences create issues.  And it clearly means taking on any package
+that depends on &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;openrc&lt;/span&gt;&lt;/code&gt; or Gentoo’s &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;baselayout&lt;/span&gt;&lt;/code&gt; package.  Those packages
+are becoming fewer and fewer by the day though, so that would have become
+a non-issue.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="x-org"&gt;
+&lt;h3&gt;X.org&lt;/h3&gt;
+&lt;p&gt;We had been packaging x.org’s packages to work around some implementation
+differences with upstream since the dawn of modular X.  Mostly just to do with
+how dependencies were specified to start with, but they’re no longer even
+remotely similar.&lt;/p&gt;
+&lt;p&gt;Luckily there isn’t a great deal of churn in the packages we care about for the
+most part, so it never caused a huge time sink.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="section" id="the-end-is-nigh"&gt;
+&lt;h2&gt;The end is nigh&lt;/h2&gt;
+&lt;p&gt;At some point it began to feel like we were maintaining our own distribution
+from end-to-end, and that wasn’t fun.  It also wasn’t what any of us needed to
+do, and the time it was taking measurably ate in to &lt;em&gt;real&lt;/em&gt; project time.&lt;/p&gt;
+&lt;p&gt;The decision to start weaning ourselves off of Gentoo was made back in the
+summer of last year, and it has finally started to come in to effect.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="the-times-they-are-a-changing"&gt;
+&lt;h2&gt;The Times They Are a-Changing&lt;/h2&gt;
+&lt;p&gt;There are plenty of good alternatives out there now for building systems that
+need to run on a variety of architectures.  Some binary, some source-based and
+a few hybrid approaches.&lt;/p&gt;
+&lt;p&gt;The project I’m working on right now is using Debian &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;testing&lt;/span&gt;&lt;/code&gt;, and it appears
+to be working out fine.  Some things still annoy me, like the time it takes to
+patch and recreate a package.  It is a trivial thing with Gentoo, but requires
+far too much work with Debian.  Perhaps we’ll improve the workflow enough as we
+develop more experience.&lt;/p&gt;
+&lt;p&gt;We’ve also hit a good moment to use Debian because a whole heap of work has gone
+in to making Debian easier to bootstrap, and it definitely shows.  When I find
+out who has done all the magic to make that happen I’ll scribble down a note to
+owe them some beers.&lt;/p&gt;
+&lt;p&gt;We’re also lucky in that we employ two Debian developers, one is practically
+a funded full-time Debian developer.  They’re incredibly knowledgeable and it
+makes working with Debian a lot easier, so thanks guys!&lt;/p&gt;
+&lt;p&gt;All told, things look good.  We’re still playing with some alternatives and as
+yet no concrete decisions have been made, but I feel like we’re on the right
+track for the next ten years.&lt;/p&gt;
+&lt;p&gt;So long Gentoo, and thanks for all fish!&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</content>
+    <link href="https://jnrowe.github.io/articles/dropping_gentoo.html" rel="alternate"/>
+    <published>2014-06-18T00:00:00+01:00</published>
+  </entry>
+  <entry>
+    <id>https://jnrowe.github.io/articles/dropping_gentoo_reflex.html</id>
+    <title>Dropping Gentoo reflex</title>
+    <updated>2014-06-29T00:00:00+01:00</updated>
+    <author>
+      <name>James Rowe</name>
+    </author>
+    <content type="html">&lt;div class="section" id="dropping-gentoo-reflex"&gt;
+
+&lt;p&gt;After hitting the publish button on &lt;a class="reference internal" href="../articles/dropping_gentoo.html#dropping_gentoo"&gt;&lt;span class="std std-ref"&gt;Dropping Gentoo&lt;/span&gt;&lt;/a&gt; a few friends
+commented that I was either unnecessarily harsh about Gentoo or we wasted an
+enormous amount of time on it.  It definitely was the former, and I feel
+a touch ashamed for implying the latter.&lt;/p&gt;
+&lt;p&gt;I was writing my thoughts in the “project obituary” form that I’m used to, and
+that is entirely about spotting the downsides to make sure they don’t reoccur.
+And with that in mind I &lt;em&gt;was&lt;/em&gt; being incredibly unfair to Gentoo, both the
+project and by extension the people working on it.&lt;/p&gt;
+&lt;p&gt;There were many, many good points about Gentoo and I’ll nod towards a few now.&lt;/p&gt;
+&lt;div class="section" id="speed"&gt;
+&lt;h2&gt;Speed&lt;/h2&gt;
+&lt;p&gt;No, no.  Not the “Oh my god, my KDEs are so fast” that many people fairly
+associate with Gentoo users.  I’m talking about the basic package handling
+tasks.&lt;/p&gt;
+&lt;p&gt;There are very few other distributions that can match Gentoo when it comes to
+the speed of editing a package.  Or, for that matter, the speed of installation
+if you share binary packages.&lt;/p&gt;
+&lt;p&gt;Almost the first thing you notice when switching to Debian or Fedora as a heavy
+binary package user on Gentoo is just how slow package installation and removal
+is.  Binary package installation on Gentoo feels on par with a distribution
+like Slackware, and what passes for package management there is just choosing
+the right argument to &lt;strong class="command"&gt;tar&lt;/strong&gt;’s &lt;a class="reference internal" href="../articles/dropping_gentoo_reflex.html#cmdoption-tar-C"&gt;&lt;code class="xref std std-option docutils literal notranslate"&gt;&lt;span class="pre"&gt;-C&lt;/span&gt;&lt;/code&gt;&lt;/a&gt; option&lt;a class="footnote-reference brackets" href="#id2" id="id1"&gt;*&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Where Gentoo really excels though is in the speed of creating new packages or
+editing existing packages.&lt;/p&gt;
+&lt;p&gt;Lets take a look at an example.  Say, for example, that you just found out that
+&lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;flask-dashed&lt;/span&gt;&lt;/code&gt;’s  &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;ebuild&lt;/span&gt;&lt;/code&gt; mistakenly installs a &lt;code class="file docutils literal notranslate"&gt;&lt;span class="pre"&gt;/usr/README&lt;/span&gt;&lt;/code&gt; file.
+We we can fix the problem with the following simple change and a call to
+&lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;repoman&lt;/span&gt; &lt;span class="pre"&gt;manifest&lt;/span&gt;&lt;/code&gt;, the rest takes care of itself.&lt;/p&gt;
+&lt;div class="highlight-diff notranslate"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="gh"&gt;diff --git i/flask-dashed-0.1b_p2.ebuild w/flask-dashed-0.1b_p2.ebuild&lt;/span&gt;
+&lt;span class="gh"&gt;index dd64877a387e..cf3e3cbf272b 100644&lt;/span&gt;
+&lt;span class="gd"&gt;--- i/flask-dashed-0.1b_p2.ebuild&lt;/span&gt;
+&lt;span class="gi"&gt;+++ w/flask-dashed-0.1b_p2.ebuild&lt;/span&gt;
+&lt;span class="gu"&gt;@@ -29,5 +29,6 @@ S=&amp;quot;${WORKDIR}/${MY_P}&amp;quot;&lt;/span&gt;
+
+ src_prepare() {
+        distutils-r1_src_prepare
+&lt;span class="gi"&gt;+       sed -i /data_files/d setup.py || die &amp;quot;sed failed&amp;quot;&lt;/span&gt;
+        rm -rf &amp;quot;${S}/tests&amp;quot;
+}
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="admonition note"&gt;
+&lt;p class="admonition-title"&gt;Note&lt;/p&gt;
+&lt;p&gt;Of course, you should fix the package properly and send the fix upstream but
+this is just to prove a point.  Calling &lt;strong class="command"&gt;die&lt;/strong&gt; with &lt;strong class="command"&gt;sed&lt;/strong&gt;
+there isn’t recommended and is practically pointless, but it is the style
+upstream.&lt;/p&gt;
+&lt;/div&gt;
+&lt;p&gt;I have to mention a small downside here however, because very few people seem to
+test &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;portage&lt;/span&gt;&lt;/code&gt;’s binary package support you’ll occasionally have to do some
+leg work to fix problems.  This normally arises when you have an &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;eclass&lt;/span&gt;&lt;/code&gt;
+change that needs to ripple through, or when a library breaks compatibility and
+its &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;ebuild&lt;/span&gt;&lt;/code&gt; hasn’t been bumped properly.&lt;/p&gt;
+&lt;p&gt;Almost every time that happens you can fix it with a quick loop in your shell
+though.  A couple of such problems and solutions that I found in my shell
+history can be seen below.&lt;/p&gt;
+&lt;div class="highlight-zsh notranslate"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="c1"&gt;# When you were stuck with packages that used python-distutils-ng, and you&lt;/span&gt;
+&lt;span class="c1"&gt;# needed to scrub packages because you changed Python version&lt;/span&gt;
+&lt;span class="k"&gt;for&lt;/span&gt; p in &lt;span class="k"&gt;$(&lt;/span&gt;portageq pkgdir&lt;span class="k"&gt;)&lt;/span&gt;/*-*/*.tbz2&lt;span class="p"&gt;;&lt;/span&gt; &lt;span class="k"&gt;do&lt;/span&gt;
+    qtbz2 -xO &lt;span class="nv"&gt;$p&lt;/span&gt; &lt;span class="p"&gt;|&lt;/span&gt; qxpak -xO - &lt;span class="si"&gt;${${&lt;/span&gt;&lt;span class="nv"&gt;p&lt;/span&gt;&lt;span class="p"&gt;##*/&lt;/span&gt;&lt;span class="si"&gt;}&lt;/span&gt;&lt;span class="p"&gt;/.tbz2&lt;/span&gt;&lt;span class="si"&gt;}&lt;/span&gt;.ebuild &lt;span class="p"&gt;|&lt;/span&gt; grep -q &lt;span class="s1"&gt;&amp;#39;SUPPORT_PYTHON_ABIS&amp;#39;&lt;/span&gt; &lt;span class="o"&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span class="nb"&gt;echo&lt;/span&gt; &lt;span class="nv"&gt;$p&lt;/span&gt;
+&lt;span class="k"&gt;done&lt;/span&gt;
+
+&lt;span class="c1"&gt;# When you were using packages that used python’s “-r1” eclasses and all&lt;/span&gt;
+&lt;span class="c1"&gt;# you could see is a flood of blockages in your update output&lt;/span&gt;
+&lt;span class="k"&gt;for&lt;/span&gt; p in &lt;span class="k"&gt;$(&lt;/span&gt;portageq pkgdir&lt;span class="k"&gt;)&lt;/span&gt;/*-*/*.tbz2&lt;span class="p"&gt;;&lt;/span&gt; &lt;span class="k"&gt;do&lt;/span&gt;
+    qtbz2 -xO &lt;span class="nv"&gt;$p&lt;/span&gt; &lt;span class="p"&gt;|&lt;/span&gt; qxpak -xO - RDEPEND &lt;span class="m"&gt;2&lt;/span&gt;&amp;gt;/dev/null &lt;span class="p"&gt;|&lt;/span&gt; grep -q &lt;span class="s2"&gt;&amp;quot;dev-python/python-exec&amp;quot;&lt;/span&gt; &lt;span class="o"&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span class="nb"&gt;echo&lt;/span&gt; &lt;span class="nv"&gt;$p&lt;/span&gt;
+&lt;span class="k"&gt;done&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="section" id="documentation"&gt;
+&lt;h2&gt;Documentation&lt;/h2&gt;
+&lt;p&gt;The excellent &lt;a class="reference external" href="http://devmanual.gentoo.org/"&gt;devmanual&lt;/a&gt; and the incredible &lt;a class="reference external" href="http://wiki.gentoo.org/wiki/Project:PMS"&gt;Package Manager Specification&lt;/a&gt;
+made life so much easier.  The devmanual was both short enough to be used as
+quick reference and complete enough that you could learn most of what you’d need
+to know from it.  The unfortunately named &lt;abbr title="Package Manager Specification"&gt;PMS&lt;/abbr&gt; acted as the reference that
+finally allowed us to switch from away from &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;portage&lt;/span&gt;&lt;/code&gt; completely at the
+office.&lt;/p&gt;
+&lt;p&gt;The &lt;abbr title="Package Manager Specification"&gt;PMS&lt;/abbr&gt; documented much of the nastiness that &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;portage&lt;/span&gt;&lt;/code&gt; suffers from, and
+made life in general a whole lot nicer when you were chasing bugs deep down the
+rabbit hole.  And, let us be honest here it also stopped a little of the
+fluidity that plagued &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;portage&lt;/span&gt;&lt;/code&gt; too.&lt;/p&gt;
+&lt;p&gt;Some people argue that it acts as unnecessary stop motion but those people must
+be forgetting what happened when behaviour changed randomly between &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;portage&lt;/span&gt;&lt;/code&gt;
+versions.  &lt;abbr title="Package Manager Specification"&gt;PMS&lt;/abbr&gt;, and the EAPI process, also brought some much needed design
+and stability to newer features.&lt;/p&gt;
+&lt;p&gt;All Gentoo users owe Ciaran McCreesh a few beers for all the hard work he put in
+to those documents, especially in the early days.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="the-personal-touch"&gt;
+&lt;h2&gt;The personal touch&lt;/h2&gt;
+&lt;p&gt;On a personal note I’ve met some awesome people over the years as a result of
+using Gentoo.  Many of them at the old Gentoo UK conferences, which were always
+fun.  More recently at LoFu’s annual summit which seems to have taken Gentoo
+UK’s place with practically everyone you saw at Gentoo UK(minus the students),
+and oddly about the same Gentoo to non-Gentoo ratio of talks too.&lt;/p&gt;
+&lt;p&gt;Two excellent people on our current team were recruited following the Gentoo UK
+conference at &lt;abbr title="University College London"&gt;UCL&lt;/abbr&gt;, and we met a spectacular
+contract hire at the one prior to that as well.&lt;/p&gt;
+&lt;p&gt;I’ve even been lucky enough to have a few doors held open for me via people I’ve
+met at Gentoo-themed or Gentoo-heavy events, and I suspect I’d be writing this
+from a less happy place without them.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="wrapping-up"&gt;
+&lt;h2&gt;Wrapping up&lt;/h2&gt;
+&lt;p&gt;It is true that you really can not always see the forest for trees.&lt;/p&gt;
+&lt;p&gt;Had recent events not clouded my vision I would have commented on the train
+wreck that is &lt;code class="file docutils literal notranslate"&gt;&lt;span class="pre"&gt;webapp.eclass&lt;/span&gt;&lt;/code&gt; and &lt;code class="file docutils literal notranslate"&gt;&lt;span class="pre"&gt;app-admin/webapp-config&lt;/span&gt;&lt;/code&gt; in
+&lt;span class="xref std std-doc"&gt;dropping_gentoo&lt;/span&gt;.  It sucked tonnes and tonnes of time away until we
+eventually just trashed any package that interacted with it and moved on.&lt;/p&gt;
+&lt;p&gt;That was so long ago that I had forgotten about it until a co-worker asked me
+why I hadn’t mentioned it.  I suspect most of the other negative comments I made
+will feel equally inconsequential when compared to the benefits Gentoo gave us
+as time moves on.&lt;/p&gt;
+&lt;p&gt;Instead of making this rant even longer, I’ll take the time to reflect on the
+fun memories.&lt;/p&gt;
+&lt;p class="rubric"&gt;Footnotes&lt;/p&gt;
+&lt;dl class="footnote brackets"&gt;
+&lt;dt class="label" id="id2"&gt;&lt;span class="brackets"&gt;&lt;a class="fn-backref" href="#id1"&gt;*&lt;/a&gt;&lt;/span&gt;&lt;/dt&gt;
+&lt;dd&gt;&lt;p&gt;To be fair &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;.tbz2&lt;/span&gt;&lt;/code&gt; files on Gentoo are just tarballs with a binary
+&lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;xpak&lt;/span&gt;&lt;/code&gt; appended.  Those extra bits beyond “just a tar -C” are what
+makes dependency handling work among other things.&lt;/p&gt;
+&lt;/dd&gt;
+&lt;/dl&gt;
+&lt;dl class="std option"&gt;
+&lt;dt id="cmdoption-tar-C"&gt;
+&lt;code class="sig-name descname"&gt;-C&lt;/code&gt;&lt;code class="sig-prename descclassname"&gt;&lt;/code&gt;&lt;/dt&gt;
+&lt;dd&gt;&lt;p&gt;This option tells &lt;strong class="command"&gt;tar&lt;/strong&gt; to change directory before performing its
+duty.  For example using &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;-C&lt;/span&gt; &lt;span class="pre"&gt;/&lt;/span&gt;&lt;/code&gt; will switch to &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;/&lt;/span&gt;&lt;/code&gt;, and can be used to
+unpack a tarball directly over the root filesystem.&lt;/p&gt;
+&lt;/dd&gt;&lt;/dl&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;
+</content>
+    <link href="https://jnrowe.github.io/articles/dropping_gentoo_reflex.html" rel="alternate"/>
+    <published>2014-06-29T00:00:00+01:00</published>
+  </entry>
+  <entry>
+    <id>https://jnrowe.github.io/articles/probits/index.html</id>
+    <title>Project postmortems</title>
+    <updated>2014-06-30T00:00:00+01:00</updated>
+    <author>
+      <name>James Rowe</name>
+    </author>
+    <content type="html">&lt;div class="section" id="project-postmortems"&gt;
+
+&lt;p&gt;One of my favourite things about the day job is the post-project analysis and
+postmortems, which we lovingly refer to as &lt;abbr title="Project Obituaries"&gt;probits&lt;/abbr&gt;
+internally.&lt;/p&gt;
+&lt;div class="section" id="background"&gt;
+&lt;h2&gt;Background&lt;/h2&gt;
+&lt;p&gt;I work in heavily structured and standalone project-oriented environment.  In
+a decade I can count the number of fluid projects on three fingers.  As I write
+this in June 2014 my tier-one project started 21 months ago, and has a delivery
+date locked down to a week in 2015.  We’ll deliver on time or a touch early, our
+team is known for that.&lt;/p&gt;
+&lt;p&gt;One of the benefits of working on such strict projects with definite ship dates
+and locked schedules is that you always know when a project is complete.  This
+also allows us to take advantage of that by inspecting the project as a whole,
+spotting the successes and failures within.  Probits are the more informal
+dialogue that we pin to the front of each folder.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="what-youll-find"&gt;
+&lt;h2&gt;What you’ll find&lt;/h2&gt;
+&lt;p&gt;I’ve recently decided I’d like to take a similar approach to some side projects
+that I work on, and also try to apply the methods to some more real-life
+situations.  This category, and the accompanying index, below are that attempt.&lt;/p&gt;
+&lt;div class="toctree-wrapper compound"&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</content>
+    <link href="https://jnrowe.github.io/articles/probits/index.html" rel="alternate"/>
+    <published>2014-06-30T00:00:00+01:00</published>
+  </entry>
+  <entry>
+    <id>https://jnrowe.github.io/articles/probits/jnrowe-misc.html</id>
+    <title>jnrowe-misc - The unsorted package overlay</title>
+    <updated>2014-06-30T00:00:00+01:00</updated>
+    <author>
+      <name>James Rowe</name>
+    </author>
+    <content type="html">&lt;div class="section" id="jnrowe-misc-the-unsorted-package-overlay"&gt;
+
 &lt;blockquote&gt;
-&lt;div&gt;&lt;p&gt;“Oh, Kevin is going to be near me next week!  Hmm, either he is on an
-exceptionally long pub crawl or he is about to sign a contract”&lt;/p&gt;
+&lt;div&gt;&lt;p&gt;A collection of &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;ebuild&lt;/span&gt;&lt;/code&gt; files with no overall theme.&lt;/p&gt;
 &lt;/div&gt;&lt;/blockquote&gt;
-&lt;p&gt;I know that dopplr was cool though, it was powerful and it did squeeze a lot
-more serendipity out of the world(I forget their actual tagline).  I couldn’t
-imagine a better present for 2014 than to find a replacement that I could
-actually use, but sadly I can’t even picture how it should work.&lt;/p&gt;
-&lt;p class=&quot;rubric&quot;&gt;Footnotes&lt;/p&gt;
-&lt;dl class=&quot;footnote brackets&quot;&gt;
-&lt;dt class=&quot;label&quot; id=&quot;s1&quot;&gt;&lt;span class=&quot;brackets&quot;&gt;&lt;a class=&quot;fn-backref&quot; href=&quot;#id1&quot;&gt;1&lt;/a&gt;&lt;/span&gt;&lt;/dt&gt;
-&lt;dd&gt;&lt;p&gt;Your personal examples may vary&lt;/p&gt;
+&lt;p&gt;&lt;abbr title="Too Long; Didn’t Read"&gt;TLDR&lt;/abbr&gt;; For what it was &lt;a class="reference external" href="https://github.com/JNRowe/jnrowe-misc"&gt;jnrowe-misc&lt;/a&gt; served its
+purpose well.&lt;/p&gt;
+&lt;div class="section" id="an-island-unto-itself"&gt;
+&lt;h2&gt;An island unto itself&lt;/h2&gt;
+&lt;p&gt;While it may come as a surprise to a few of the users(which would be most of
+them) the overlay available on GitHub wasn’t the deliverable at any point in
+time.  In fact, the often convoluted merge history in the repository probably
+hinted at that quite a bit.&lt;/p&gt;
+&lt;img alt="Tree view of ``jnrowe-misc`` history" class="align-right" src="../_images/jnrowe-misc.png" style="width: 50%;" /&gt;
+&lt;p&gt;&lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;jnrowe-misc&lt;/span&gt;&lt;/code&gt; was always the combination of a few independently managed
+repositories that I bundled up to make available for public consumption.
+Eventually it ended up being mostly Python stuff, but that was because the
+support burden of other packages was becoming more time consuming than I could
+justify.&lt;/p&gt;
+&lt;p&gt;The &lt;em&gt;real&lt;/em&gt; audience for the overlay, my co-workers, saw a different beast
+entirely.  It used our keyword types and rules, it came bundled &lt;span class="xref std std-doc"&gt;with the
+tests&lt;/span&gt; I was unable to share and had a tighter schedule for
+maintenance.&lt;/p&gt;
+&lt;p&gt;Still, I received a fair number of emails and live comments from users so I’ll
+call that a success!&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="upstreamed"&gt;
+&lt;h2&gt;Upstreamed&lt;/h2&gt;
+&lt;p&gt;Sadly, very little was ever taken upstream(even less if you count the parts that
+were credited).  This was entirely my fault.  I originally started exporting the
+overlay because I was fed up with the new package process upstream, and it seemed
+like the best way to deal with that for me.&lt;/p&gt;
+&lt;p&gt;I had hoped that some packages would be picked up, but didn’t actively push them
+after the first few.&lt;/p&gt;
+&lt;p&gt;The overlay should have never touched packages that were available upstream, but
+occasionally they overlapped when upstream added them.  The use of &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;::shadow&lt;/span&gt;&lt;/code&gt;
+to workaround problems when new packages were added upstream worked &lt;em&gt;really&lt;/em&gt;
+well, and saved the few remaining hairs on my balding head.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="legacy"&gt;
+&lt;h2&gt;Legacy&lt;/h2&gt;
+&lt;p&gt;It looks like the majority of packages will continue to be maintained for the
+foreseeable future, but regrettably it looks like the result will not be
+available beyond a “open to all people who know where to look” organisation on
+GitHub.&lt;/p&gt;
+&lt;p&gt;I’d like to change the new maintainer’s mind, but in all honesty I understand
+their reasons.  I’ve stopped maintaining a lot of once public projects over the
+past couple of years, and it is as refreshing as it is saddening.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</content>
+    <link href="https://jnrowe.github.io/articles/probits/jnrowe-misc.html" rel="alternate"/>
+    <published>2014-06-30T00:00:00+01:00</published>
+  </entry>
+  <entry>
+    <id>https://jnrowe.github.io/thoughts/burn_out.html</id>
+    <title>Open Source and enjoyment</title>
+    <updated>2014-09-03T00:00:00+01:00</updated>
+    <author>
+      <name>James Rowe</name>
+    </author>
+    <content type="html">&lt;div class="section" id="open-source-and-enjoyment"&gt;
+
+&lt;p&gt;A few years ago I burned out on Open Source projects, to the point that it was
+close to impacting other parts of my life.  I have only myself to blame as
+I didn’t manage to distance myself at all well.  Distancing yourself is not easy
+to do when your fun hobby for relaxation is the thing that is working against
+you.&lt;/p&gt;
+&lt;p&gt;There were a variety of incredibly minor issues that piled up Jenga-style.  Then
+to carry the weak analogy forward, it toppled over in a split second like Jenga
+in a rubber dingy on the rolling seas with a fumbling drunken friend wearing
+a blindfold.&lt;/p&gt;
+&lt;p&gt;I’ve decided to write down a few of the things that were happening, both as an
+act of catharsis and to help me spot the problems in future.  Perhaps it will
+help others who are experiencing the same thing but haven’t quite spotted the
+catalysts yet.&lt;/p&gt;
+&lt;div class="section" id="dealing-with-needy-users"&gt;
+&lt;h2&gt;Dealing with needy users&lt;/h2&gt;
+&lt;p&gt;Some users seem to feel a disproportionate amount of “you work for me”,
+seemingly more so than happens with actual paying customers on other projects
+which strikes me as strange.  They’ll bug you endlessly in emails, in the issue
+tracker, on &lt;abbr title="Internet Relay Chat"&gt;IRC&lt;/abbr&gt; and in real life if you end up at the same conference.  You
+&lt;em&gt;need&lt;/em&gt; to stop this before it takes hold.  It helps if you can be polite, but
+if not just stop it anyway.  It is for &lt;em&gt;your&lt;/em&gt; welfare, so just do it.&lt;/p&gt;
+&lt;p&gt;I actually found myself burning the wrong people towards the peak of that
+imaginary Jenga tower.  You need to make a concerted effort to figure out which
+people are delivering the seemingly endless grief or perhaps just relentless
+&lt;a class="reference external" href="http://en.m.wikipedia.org/wiki/bikeshedding"&gt;bikeshedding&lt;/a&gt;, and stop them.  It is all too easy to accidentally become
+annoyed at well meaning useful contributors when you’ve been trawling through
+a heap of useless meta-discussion about a change nobody is making.&lt;/p&gt;
+&lt;p&gt;On one &lt;em&gt;library&lt;/em&gt; project I worked on there was a user who didn’t read the
+documentation, couldn’t use the language enough to write tests, yet still
+endlessly sucked up support time by opening awful issues and sending pointless
+emails wishing to discuss changes they might make.  I kind of hesitate to say
+awful issues, but - for example - if you can’t write a two line assertion in
+a language you’re not in the target audience for a library in the first place.&lt;/p&gt;
+&lt;p&gt;Those people aren’t even adding value in pointing out deficiencies in
+documentation, because they’re not a target user.  It would be like me writing
+to &lt;a class="reference external" href="http://www.jcb.com/"&gt;JCB&lt;/a&gt; telling them they must document why they use round knobs on the digger
+I saw someone else using.  So try spot it early, and put a stop to it.&lt;/p&gt;
+&lt;p&gt;I suspect a big part of the issue here is cost.  I’m sure if there was even
+a single penny cost to opening issues or sending a mail it would do wonders for
+communication in general.  I suspect that would remain true even if you
+reimbursed that penny immediately.&lt;/p&gt;
+&lt;div class="section" id="the-simple-answer"&gt;
+&lt;h3&gt;The simple answer&lt;/h3&gt;
+&lt;p&gt;I figured out how to work with this entirely by accident.  Politely offer
+answers that move them away from you.  It is by far the easiest solution.&lt;/p&gt;
+&lt;p&gt;In one instance I suggested alternative packages to an expensive user, with the
+hope they’d quietly move on.  Which is evil really, as what you’re really doing
+is dreaming that they’ll move on to bother a developer who isn’t you.&lt;/p&gt;
+&lt;p&gt;On another occasion I stole an idea from a friend and said “Sorry, I can’t
+figure out how to implement this.  Open a pull request, and I’ll merge it!” to
+another.  It worked well, because it stopped the direction-less discussion and
+was never going to be followed up with a patch later.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="section" id="dealing-with-unreasonable-requests"&gt;
+&lt;h2&gt;Dealing with unreasonable requests&lt;/h2&gt;
+&lt;p&gt;I used to get quite annoyed when I received an impolite or unreasonable request
+on an Open Source project, nowadays I tend to just respond with pre-canned
+answers for most of them.  If you can cut the time it takes to respond to them,
+you’ll obviously spend far less time thinking about them.&lt;/p&gt;
+&lt;p&gt;The typical one that springs to mind is a user complaining that you’ve not
+licensed your &lt;abbr title="GNU General Public License"&gt;GPL&lt;/abbr&gt; code in a way which allows them to use it without
+contributing anything in return.  I choose reciprocating licences where I can,
+because frankly that may be the only value you provide &lt;em&gt;me&lt;/em&gt; as a user.  I get
+that some people need to use their Open Source projects as a way to improve
+their CV or build a presence, but for many of us it is just for fun and
+reciprocation.&lt;/p&gt;
+&lt;p&gt;Another example that I recall, but wish I didn’t, was a user &lt;em&gt;telling&lt;/em&gt; me to
+recompress a tarball on &lt;abbr title="Python Package Index"&gt;PyPI&lt;/abbr&gt; because their infrastructure couldn’t support
+&lt;strong class="command"&gt;bzip2&lt;/strong&gt;.  Seems reasonable enough, but it came wrapped in a tirade of
+abuse.  I ignored the abuse, uploaded another tarball and then received another
+abusive email in return the next day.  That was a long time ago, far before the
+burnout started to creep in so I just addressed the actual issue and moved on.&lt;/p&gt;
+&lt;div class="section" id="the-answer"&gt;
+&lt;h3&gt;The answer&lt;/h3&gt;
+&lt;p&gt;I had forgotten about that whole previous story until at &lt;a class="reference external" href="https://europython.eu/"&gt;Europython&lt;/a&gt; a friend
+was telling me about someone who was banned from a number of events, hell-banned
+on various mailing lists and on forced lockout on Stack Overflow for poisonous
+behaviour.  I started to tell my story as an example of strange abusive
+behaviour, and it turned out to be the same guy.&lt;/p&gt;
+&lt;p&gt;The point is these people can be everywhere so just don’t let them get to you.
+I realise that is both obvious and feels hard to do, but it is quite easy in the
+virtual world.  If you have the hell-ban option available just use
+it; perhaps there is an ignore option in your issue tracker, add a “send to
+trash” rule in your email filter.  Even in person it can be quite easy to do,
+just politely acknowledge their issue and move away instead of engaging them.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="section" id="the-solutions"&gt;
+&lt;h2&gt;The solutions&lt;/h2&gt;
+&lt;p&gt;I chose a solution I hate, for all intents and purposes I don’t release new Open
+Source projects any longer.  I still work on a lot of projects, and the code is
+normally available somewhere for strangers.  However, for the most part I’ve
+made a point of not hosting or releasing it in the common places.  This works
+for me, but it saddens me deeply.&lt;/p&gt;
+&lt;p&gt;I have a friend who does something interesting to combat the same problems I’ve
+mentioned here.  He hooks the issue tracker to only show issues reported by
+people in his second-degree &lt;a class="reference external" href="http://www.foaf-project.org/"&gt;FOAF&lt;/a&gt; circle or people whose user profile is an
+active Open Source contributor.  It works, and it cuts out most of the problem
+users, but it is nasty.  I feel it is worse than my “solution” because it still
+gives the impression of support to the users you won’t support, but also gives
+the impression of bad support through heaps of unanswered issues to the users
+who would receive good support.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;div&gt;&lt;p&gt;The greatest trick the devil ever played was convincing users they had skin
+in the game.&lt;/p&gt;
+&lt;/div&gt;&lt;/blockquote&gt;
+&lt;p&gt;I may be misappropriating a quote from a great film there, but it is important.
+A lot of the actively poisonous people who contact you aren’t providing any real
+value to you, and they’re probably never going to.  If you can remove them
+somehow you’re probably not losing anything, but you’ll be gaining a whole lot
+personally.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</content>
+    <link href="https://jnrowe.github.io/thoughts/burn_out.html" rel="alternate"/>
+    <published>2014-09-03T00:00:00+01:00</published>
+  </entry>
+  <entry>
+    <id>https://jnrowe.github.io/thoughts/disconnect.html</id>
+    <title>Cleanse thy soul</title>
+    <updated>2014-09-18T00:00:00+01:00</updated>
+    <author>
+      <name>James Rowe</name>
+    </author>
+    <content type="html">&lt;div class="section" id="cleanse-thy-soul"&gt;
+
+&lt;p&gt;For the past few years I’ve taken to having routine breaks from certain
+timesinks to help me focus and also to denoise some of my thoughts.  The number
+one timesink in my world is without doubt the interwebs, and there are a few
+steps I’ve taken to weaken its stranglehold.&lt;/p&gt;
+&lt;p&gt;Perhaps the following will help you, or perhaps you’ll &lt;a class="reference external" href="mailto:jnrowe&amp;#37;&amp;#52;&amp;#48;gmail&amp;#46;com"&gt;email&lt;/a&gt; me to point out
+your ideas for me to try.&lt;/p&gt;
+&lt;div class="section" id="cut-the-tether"&gt;
+&lt;h2&gt;Cut the tether&lt;/h2&gt;
+&lt;p&gt;I track every thing that I &lt;em&gt;practically&lt;/em&gt; can, doing so can be very empowering.
+This is something which the buzzwordy types apparently refer to as The
+Quantified Self, and despite knowing that I continue to do so.&lt;/p&gt;
+&lt;p&gt;With a query of my network logs&lt;a class="footnote-reference brackets" href="#s1" id="id1"&gt;1&lt;/a&gt; I can tell you that for the first nine
+months of this year I’ve been entirely without internet access for thirty-one
+percent of the time.  Last year the final amount was thirty-eight percent, and
+once our Winterval shutdown is included I’d expect this year to be about the
+same.&lt;/p&gt;
+&lt;p&gt;It isn’t just a case of being without internet access for a few hours or on
+certain days either, my longest &lt;em&gt;complete&lt;/em&gt; break this year was a straight
+thirteen days back in May.&lt;/p&gt;
+&lt;p&gt;The number one thing I’ve learnt is that a lot of the things I burnt time on
+were genuinely just burnt.  For example, news sites feel mostly pointless to
+me at this point.&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;&lt;p&gt;Popular news sources are invariably a PR copy’n’paste fest, which is &lt;em&gt;really&lt;/em&gt;
+noticeable when you come back from a break and catch up on various feeds in
+one huge chunk.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Sites with a slightly more tech bias like HackerNews and its ilk are just
+a complete time hole.  Often the really interesting tech stories will bubble
+up elsewhere in a curated fashion(such as &lt;a class="reference external" href="http://chneukirchen.org/trivium/"&gt;Trivium&lt;/a&gt;), and for example on HN the
+majority of posts and comments are just US politics or occasionally
+interesting insights from the SV bubble anyway.&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;I’ll still catch up from a couple of, in my opinion, trusted sources.  That is
+to say I’ll dip in to a few categories on &lt;abbr title="British Broadcasting Corporation"&gt;BBC&lt;/abbr&gt; news and perhaps visit The Guardian’s site(although I do that
+considerably less over the past year according to my data).  I also like to
+avail myself of a little &lt;a class="reference external" href="http://rt.com/"&gt;Russia Today&lt;/a&gt; and &lt;a class="reference external" href="http://www.aljazeera.net/"&gt;Al Jazeera&lt;/a&gt; to keep the bias in
+check a touch.&lt;/p&gt;
+&lt;p&gt;With a simple &lt;a class="reference external" href="https://pypi.python.org/pypi/rdial"&gt;rdial&lt;/a&gt; report I can also tell you that on an average
+internet connected day I can spend an hour reading news, friend’s blogs, sports
+stories, &amp;amp;c.  A big chunk of that time is also combined with breakfast, so
+I choose to let it slide for the most part.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="tighten-the-noose"&gt;
+&lt;h2&gt;Tighten the noose&lt;/h2&gt;
+&lt;p&gt;For the two-thirds of the year that I have internet access, I’ve started to
+severely restrict access.&lt;/p&gt;
+&lt;p&gt;It all started with a friend who — while wearing his tinfoil hat — preached
+about how we all need to consider blocking sites that use a &lt;abbr title="Content Delivery Network"&gt;CDN&lt;/abbr&gt; in much the
+same way that many of us block web analytics companies.  We’re probably giving
+up more tracking data to the large &lt;abbr title="Content Delivery Network"&gt;CDN&lt;/abbr&gt;s then we do to the simple analytics
+companies.&lt;/p&gt;
+&lt;p&gt;The thought popped in to my mind that a whitelist, instead of a blacklist, might
+actually be workable and since last November I’ve taken to doing just that.&lt;/p&gt;
+&lt;p&gt;The strangest result in my mind is just how short the list is.  My old advert
+and analytics blacklist had close to 1500 entries, and would obviously miss many
+”nasties” that I either hadn’t seen or that were simply new.&lt;/p&gt;
+&lt;p&gt;The whitelist, on the other hand, has only ever had 900 entries. Right now it
+has less than 150 thanks to the automated decay-based-on-visits purging of the
+entries it contains.&lt;/p&gt;
+&lt;p&gt;The whitelist approach also feeds in to my data tracking habit, as I can now
+tell from the decay tracking data when bursts of certain sites appear.  For
+example, StackOverflow(and &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;cdn.sstatic.net/stackoverflow/&lt;/span&gt;&lt;/code&gt; for styling) was
+on the whitelist for two weeks in June with six visits, which happens to
+coincide with a project that involved porting a tool to Windows.&lt;/p&gt;
+&lt;p&gt;The act of using a whitelist makes the point of procrastination noticeable and
+adds a cost to even starting it.  Every time I want to visit a new site&lt;a class="footnote-reference brackets" href="#s2" id="id2"&gt;2&lt;/a&gt;,
+I have to highlight the &lt;abbr title="Uniform Resource Locator"&gt;URL&lt;/abbr&gt; and rattle a key combo in &lt;a class="reference external" href="https://awesomewm.org/"&gt;awesome&lt;/a&gt; that updates
+the whitelist to enable access to it.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="on-the-knoll"&gt;
+&lt;h2&gt;On the knoll&lt;/h2&gt;
+&lt;p&gt;I know the whole “go without the internet” thing is going to strike people as
+unworkable.  Questions abound about contact via email, missing bug reports,
+skipping meeting logs, depriving myself of invites to weddings I don’t wish to
+attend and so on.  I do realise it isn’t achievable for everyone, but with
+a little effort it should at the very least be achievable for one day a week.&lt;/p&gt;
+&lt;p&gt;The other advantage of doing so is the forced removal from services that
+actively destroy your privacy and the privacy of your friends and family, which
+is something that feels increasingly important in recent years.  For example,
+I no longer actively store my addressbook online&lt;a class="footnote-reference brackets" href="#s3" id="id3"&gt;3&lt;/a&gt; nor do I use a service
+to help me process receipts any more.&lt;/p&gt;
+&lt;div class="sidebar"&gt;
+&lt;p class="sidebar-title"&gt;Admission of guilt&lt;/p&gt;
+&lt;p&gt;I have to admit that I haven’t quite dropped all the services I’d like to,
+here are a few:&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;&lt;p&gt;Strava - I’m still kind of using for the time being, although Keith’s
+replacement looks like it will fulfil my needs &lt;abbr title="Real Soon Now™"&gt;RSN&lt;/abbr&gt;.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;status.net - There are one or two people I don’t want to lose contact with
+who aren’t able to access our private server because of geo-filtering, and
+I don’t know how that can be fixed.&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;p&gt;There are a myriad of benefits to dropping the reliance on &lt;abbr title="Software as a Service"&gt;SaaS&lt;/abbr&gt; affairs.  The chance of any of them existing tomorrow is frankly
+not all that great: shuttering, buy-out closures, “pivoting”, &amp;amp;c.  You can
+also retain some level of control over your own data, knowing that for example
+it isn’t being sold or stored in regions with little to no data protection
+regulation.&lt;/p&gt;
+&lt;p&gt;In all honesty, I — no, &lt;em&gt;we&lt;/em&gt; — should have resisted the urge to use so called
+cloud services from the outset.  One doesn’t need to be a fully paid up member
+of the tinfoil hat brigade to know that it is just not acceptable to entrust
+your important data to external companies for the sake of a little convenience
+or a shiny interface.&lt;/p&gt;
+&lt;p&gt;Killing my internet access for chunks of time really pointed out how much I had
+come to rely on services far beyond my control, and the freedom one feels when
+you regain some of that is very comforting.&lt;/p&gt;
+&lt;p class="rubric"&gt;Footnotes&lt;/p&gt;
+&lt;dl class="footnote brackets"&gt;
+&lt;dt class="label" id="s1"&gt;&lt;span class="brackets"&gt;&lt;a class="fn-backref" href="#id1"&gt;1&lt;/a&gt;&lt;/span&gt;&lt;/dt&gt;
+&lt;dd&gt;&lt;p&gt;The code I use is an unreleased project created by a friend, but
+&lt;a class="reference external" href="http://humdi.net/vnstat/"&gt;vnstat&lt;/a&gt; may work equally well for the same purpose.&lt;/p&gt;
+&lt;/dd&gt;
+&lt;dt class="label" id="s2"&gt;&lt;span class="brackets"&gt;&lt;a class="fn-backref" href="#id2"&gt;2&lt;/a&gt;&lt;/span&gt;&lt;/dt&gt;
+&lt;dd&gt;&lt;p&gt;For the most part I whitelist based on hostname, but as in the
+StackOverflow styling example will whitelist specific paths on hosts on some
+occasions.&lt;/p&gt;
+&lt;/dd&gt;
+&lt;dt class="label" id="s3"&gt;&lt;span class="brackets"&gt;&lt;a class="fn-backref" href="#id3"&gt;3&lt;/a&gt;&lt;/span&gt;&lt;/dt&gt;
+&lt;dd&gt;&lt;p&gt;I’m aware that Google has access to a small corner of my contacts graph
+via gmail, but I haven’t yet decided how I plan to resolve.  I’ve never used
+gmail for work or mail that I’d be uncomfortable reading in public, but it
+does act as a nice sieve for everything else right now.&lt;/p&gt;
 &lt;/dd&gt;
 &lt;/dl&gt;
-&lt;span class=&quot;target&quot; id=&quot;backstory&quot;&gt;&lt;/span&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
 </content>
+    <link href="https://jnrowe.github.io/thoughts/disconnect.html" rel="alternate"/>
+    <published>2014-09-18T00:00:00+01:00</published>
+  </entry>
+  <entry>
+    <id>https://jnrowe.github.io/articles/fossil.html</id>
+    <title>fossil experiments</title>
+    <updated>2014-11-12T00:00:00+00:00</updated>
+    <author>
+      <name>James Rowe</name>
+    </author>
+    <content type="html">&lt;div class="section" id="fossil-experiments"&gt;
+
+&lt;p&gt;For a variety of reasons we can no longer use GitHub at work for any project
+which isn’t Open Source.  And since that decision was thrust upon us we’ve been
+playing with some alternatives for our workflow.  We’ll probably end up choosing
+one of the self hosted clones at some point, but it was decided early on that we
+should evaluate a variety of options.&lt;/p&gt;
+&lt;p&gt;I was tasked with testing out &lt;a class="reference external" href="http://www.fossil-scm.org/"&gt;fossil&lt;/a&gt; on a couple of small side projects, and
+these are my &lt;em&gt;absolutely&lt;/em&gt; biased personal findings.&lt;/p&gt;
+&lt;p&gt;Before I start I should add that while what I’m about to write probably sounds
+harsh, I do like &lt;strong class="command"&gt;fossil&lt;/strong&gt; the concept.  I like the single &lt;a class="reference external" href="http://sqlite.org/"&gt;sqlite&lt;/a&gt;
+project repository, I like the small-enough-to-grok-in-an-afternoon code base
+and I like the idea of a totally reproducible project state including all
+metadata.&lt;/p&gt;
+&lt;div class="section" id="testing-fossil"&gt;
+&lt;h2&gt;Testing &lt;strong class="command"&gt;fossil&lt;/strong&gt;&lt;/h2&gt;
+&lt;p&gt;The good news is that testing &lt;strong class="command"&gt;fossil&lt;/strong&gt; is a piece of cake.  It
+supports both reading and writing &lt;strong class="command"&gt;git&lt;/strong&gt;’s &lt;a class="reference external" href="http://git-scm.com/docs/git-fast-import"&gt;fast-import&lt;/a&gt; format.  If you
+want to test it out just dump an existing &lt;a class="reference external" href="http://www.git-scm.com/"&gt;git&lt;/a&gt; repository(or &lt;a class="reference external" href="http://mercurial.selenic.com/wiki/FastImportExtension"&gt;mercurial with an
+extension&lt;/a&gt;), and feed it &lt;strong class="command"&gt;fossil import&lt;/strong&gt;.  If you later change your
+mind you can run &lt;strong class="command"&gt;fossil export&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;Sadly supporting incremental two-way mirroring didn’t work out for us, but
+perhaps it will for simpler projects.  In the end I simply mirrored the
+&lt;strong class="command"&gt;git&lt;/strong&gt; repositories to &lt;strong class="command"&gt;fossil&lt;/strong&gt;, marked the &lt;strong class="command"&gt;git&lt;/strong&gt;
+repositories as read-only and forced contributors to work with
+&lt;strong class="command"&gt;fossil&lt;/strong&gt; from the outset.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="packaging"&gt;
+&lt;h2&gt;Packaging&lt;/h2&gt;
+&lt;p&gt;The &lt;strong class="command"&gt;fossil&lt;/strong&gt; project sells itself on being a single file binary
+install, and that probably works well for a subset of users.  We’re not that in
+that subset though, and &lt;strong class="command"&gt;fossil&lt;/strong&gt; is more than a little annoying to
+wrangle in to our environment.&lt;/p&gt;
+&lt;p&gt;The tarball ships without any &lt;em&gt;directly&lt;/em&gt; usable documentation, so you end up
+with either no system documentation or a collection of docs sprinkled with wiki
+markup in &lt;code class="file docutils literal notranslate"&gt;&lt;span class="pre"&gt;/usr/share/doc&lt;/span&gt;&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;By default &lt;strong class="command"&gt;fossil&lt;/strong&gt; builds in a manner which unfortunately breaks most
+packaging standards.  If you’re building packages you’ll likely need to write an
+awful lot of custom workarounds to get a compliant and usable package, see
+&lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;lst-pkgs/utils/dev/fossil&lt;/span&gt;&lt;/code&gt; build for the gory details of my hacks.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="uptake"&gt;
+&lt;h2&gt;Uptake&lt;/h2&gt;
+&lt;p&gt;I don’t really want to hold this against &lt;strong class="command"&gt;fossil&lt;/strong&gt;, but it &lt;em&gt;is&lt;/em&gt;
+important to note that for all intents and purposes no one is familiar with it.
+No upstream projects we actively track use it, there isn’t a single person who
+chooses to use it on our site(which is why I had to handle the packaging) and
+expecting new hires to have even heard of it is probably a stretch.&lt;/p&gt;
+&lt;p&gt;It wouldn’t be such an issue if the choice was a &lt;strong class="command"&gt;git&lt;/strong&gt; vs &lt;a class="reference external" href="http://mercurial.selenic.com/"&gt;mercurial&lt;/a&gt;
+one, where the few differences are mostly cosmetic.  &lt;strong class="command"&gt;fossil&lt;/strong&gt; is
+a completely different beast, and requires an enormous rethink in the way you
+handle version control.&lt;/p&gt;
+&lt;p&gt;Ten years ago when people were on the whole still familiar with the &lt;abbr title="Concurrent Versions System"&gt;CVS&lt;/abbr&gt; and
+Subversion way of working that wouldn’t have been such an issue, but times have
+most definitely changed.&lt;/p&gt;
+&lt;p&gt;The vocabulary in the documentation is likely to be foreign to users of any
+version control system, and the workflow examples in the documentation are
+entirely foreign to how we have developed any project in at least the past
+decade.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="all-in-one-solution"&gt;
+&lt;h2&gt;All-in-one solution&lt;/h2&gt;
+&lt;p&gt;One of the proclaimed benefits of using &lt;strong class="command"&gt;fossil&lt;/strong&gt; is that it handles
+many aspects of a project’s &lt;abbr title="Application Lifecycle Management"&gt;ALM&lt;/abbr&gt;; version control, issue tracking,
+documentation(via a wiki), etc.  However, and this is only my opinion, it feels
+like it does all of these in a suboptimal manner.&lt;/p&gt;
+&lt;div class="section" id="version-control"&gt;
+&lt;h3&gt;Version control&lt;/h3&gt;
+&lt;p&gt;The version control feels quite nice for the most part, definitely usable but
+a little annoying to work with if you’re used to a modern &lt;abbr title="Distributed Version Control System"&gt;DVCS&lt;/abbr&gt; like we are.&lt;/p&gt;
+&lt;p&gt;That said it does feel like a &lt;em&gt;huge&lt;/em&gt; step backwards when working with branches,
+and you should set aside quite a lot of time for integration issues when you
+have &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;autosync&lt;/span&gt;&lt;/code&gt; disabled.  And I can’t imagine a scenario where &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;autosync&lt;/span&gt;&lt;/code&gt;
+could work for us, without rewriting our entire way of working or returning to
+&lt;abbr title="Concurrent Versions System"&gt;CVS&lt;/abbr&gt;-style mega commits and a manual patch stack layered on top.&lt;/p&gt;
+&lt;p&gt;If you read &lt;strong class="command"&gt;fossil&lt;/strong&gt;’s &lt;a class="reference external" href="http://www.bugzilla.org"&gt;Branching, Forking, Merging, and Tagging&lt;/a&gt;
+documentation it appears that this is a design feature for the creators.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="issue-tracker"&gt;
+&lt;h3&gt;Issue tracker&lt;/h3&gt;
+&lt;p&gt;The issue tracker feels like someone has tried to improve on &lt;a class="reference external" href="http://www.bugzilla.org"&gt;Bugzilla&lt;/a&gt;, without
+taking a look at modern trackers.  It is definitely the weakest part of
+&lt;strong class="command"&gt;fossil&lt;/strong&gt; in my opinion, using it is both a mental and eye-stabbing
+pain at the same time.&lt;/p&gt;
+&lt;p&gt;Luckily you can rework a lot of it by fiddling around with the administration
+settings exposed by &lt;strong class="command"&gt;fossil ui&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;This also exposes one of the best features of &lt;strong class="command"&gt;fossil&lt;/strong&gt;, you can create
+a custom &lt;abbr title="Structured Query Language"&gt;SQL&lt;/abbr&gt; script that configures the project(issue tracking, pretty theme,
+etc) and just blast it in to the project’s database.  Or you can create
+a custom file that makes all your edits and pump it in with &lt;strong class="command"&gt;fossil
+config import&lt;/strong&gt;.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="wiki"&gt;
+&lt;h3&gt;Wiki&lt;/h3&gt;
+&lt;p&gt;The wiki system is actually really good for what it does, but it has very few of
+the features we use for our documentation.  I don’t want to hold that against it
+though, as it just a impedance mismatch.&lt;/p&gt;
+&lt;p&gt;The end result of the integrated components feels to me like you’ve chosen
+a usable, but weak, component for some of the most important parts of your
+project’s &lt;abbr title="Application Lifecycle Management"&gt;ALM&lt;/abbr&gt;.  The bits work well together, but none of them seem like an
+option you’d choose on their own.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="section" id="interface"&gt;
+&lt;h2&gt;Interface&lt;/h2&gt;
+&lt;p&gt;The help output for new users is, in my opinion, really irritating.  The default
+command message tells you to run &lt;strong class="command"&gt;fossil help&lt;/strong&gt; or &lt;strong class="command"&gt;fossil
+help COMMAND&lt;/strong&gt;, without providing the names of any of the common commands.  The
+&lt;strong class="command"&gt;fossil help&lt;/strong&gt; output emulates a &lt;strong class="command"&gt;column -t&lt;/strong&gt; filter of the
+command names, listing commands with unique to &lt;strong class="command"&gt;fossil&lt;/strong&gt; terminology
+and no short descriptions.  &lt;strong class="command"&gt;fossil help --all&lt;/strong&gt; feels like it should
+be more useful, but just creates a larger table of commands with uncommon names
+and still no descriptions.&lt;/p&gt;
+&lt;p&gt;It makes very little sense to organise the help in this manner because as you
+get used to the naming and non-standard option style you will need the help
+less.  I’ve patched this for our packages, and if people like it I’ll try to
+push it upstream.&lt;/p&gt;
+&lt;div class="admonition note"&gt;
+&lt;p class="admonition-title"&gt;Note&lt;/p&gt;
+&lt;p&gt;It turns out I won’t be pushing the changes upstream.  They require
+a &lt;abbr title="Contributor License Agreement"&gt;CLA&lt;/abbr&gt; that I can not sign in good faith, which is a shame.&lt;/p&gt;
+&lt;/div&gt;
+&lt;p&gt;The option handling &lt;em&gt;will&lt;/em&gt; trip you up endlessly.  Just the little things like
+being unable to chain options, and needing an endless stream of &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;C-p&lt;/span&gt; &lt;span class="pre"&gt;M-5&lt;/span&gt; &lt;span class="pre"&gt;M-b&lt;/span&gt;
+&lt;span class="pre"&gt;&amp;lt;space&amp;gt;&lt;/span&gt;&lt;/code&gt; to add a space before a commit message for example.  Yes, I know some
+people don’t like standard &lt;strong class="command"&gt;getopt&lt;/strong&gt; or GNU-style option parsing, but
+every other tool you use has chosen it.&lt;/p&gt;
+&lt;p&gt;Some of the interface decisions are actively bad, for example there appears to
+be no way to delegate password configuration to a trusted system service or even
+&lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;netrc&lt;/span&gt;&lt;/code&gt;.  Specifying passwords in &lt;abbr title="Uniform Resource Locator"&gt;URL&lt;/abbr&gt;’s on the command line is a &lt;strong&gt;huge&lt;/strong&gt;
+anti-pattern, and I just hope you don’t have any multiseat systems if you’re
+using that method.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="speed"&gt;
+&lt;h2&gt;Speed&lt;/h2&gt;
+&lt;p&gt;On the whole &lt;strong class="command"&gt;fossil&lt;/strong&gt; is fast, not &lt;strong class="command"&gt;git&lt;/strong&gt; fast but fast
+nonetheless.  Commits do take a disturbingly long time to complete for some
+reason, but most of the other commands are fast enough.&lt;/p&gt;
+&lt;p&gt;Mangling a repository is actually a lot faster with &lt;strong class="command"&gt;fossil&lt;/strong&gt; than any
+other system I can think of, as you can just throw the power of &lt;abbr title="Structured Query Language"&gt;SQL&lt;/abbr&gt; at it.
+You can find some &lt;a class="reference external" href="http://www.sqlalchemy.org/"&gt;sqlalchemy&lt;/a&gt; &lt;abbr title="Object relational mapping"&gt;ORM&lt;/abbr&gt;
+definitions in &lt;code class="file docutils literal notranslate"&gt;&lt;span class="pre"&gt;/usr/share/doc/fossil/orm&lt;/span&gt;&lt;/code&gt; in my packages.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="conclusion"&gt;
+&lt;h2&gt;Conclusion&lt;/h2&gt;
+&lt;p&gt;I mentioned this in this first paragraph, but I don’t see us moving to
+&lt;strong class="command"&gt;fossil&lt;/strong&gt;.  It is a nice system, but it just wouldn’t work for us as
+is.&lt;/p&gt;
+&lt;p&gt;Part of me is tempted to attempt to fix the problems, but then we’d be left with
+a system that is more obscure than &lt;strong class="command"&gt;fossil&lt;/strong&gt;.  If you read the &lt;a class="reference external" href="http://fossil-scm.org/xfer/doc/tip/www/concepts.wiki"&gt;Fossil
+Concepts&lt;/a&gt; and &lt;a class="reference external" href="http://www.fossil-scm.org/xfer/doc/tip/www/faq.wiki"&gt;Frequently Asked Questions&lt;/a&gt; documents you’ll see that the most
+significant problems for us are actually features for upstream, and that is
+obviously fine but it does mean upstreaming changes would be impossible.&lt;/p&gt;
+&lt;div class="admonition note"&gt;
+&lt;p class="admonition-title"&gt;Note&lt;/p&gt;
+&lt;p&gt;As noted above, it turns out they require a &lt;abbr title="Contributor License Agreement"&gt;CLA&lt;/abbr&gt; which means we couldn’t
+send changes upstream anyway.&lt;/p&gt;
+&lt;/div&gt;
+&lt;p&gt;That said I’m am planning on stealing some of the ideas that I really liked
+about &lt;strong class="command"&gt;fossil&lt;/strong&gt; for my own use.  &lt;strong class="command"&gt;fossil all&lt;/strong&gt;’s ability to run
+a command against all repositories configured in &lt;code class="file docutils literal notranslate"&gt;&lt;span class="pre"&gt;~/.fossil&lt;/span&gt;&lt;/code&gt; for example.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</content>
+    <link href="https://jnrowe.github.io/articles/fossil.html" rel="alternate"/>
+    <published>2014-11-12T00:00:00+00:00</published>
   </entry>
 </feed>

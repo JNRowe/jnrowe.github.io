@@ -1,352 +1,210 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version='1.0' encoding='UTF-8'?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <title type="text">JNRowe - Posts tagged linux</title>
-  <id>https://jnrowe.github.io/blog/tag/linux/atom.xml</id>
-  <updated>2018-11-13T00:00:00Z</updated>
-  <link href="https://jnrowe.github.io/" />
-  <link href="https://jnrowe.github.io/blog/tag/linux/atom.xml" rel="self" />
-  <subtitle type="text">Ramblings of a tired mind</subtitle>
-  <generator uri="https://ablog.readthedocs.org" version="0.10.4">ABlog</generator>
-  <entry xml:base="https://jnrowe.github.io/blog/tag/linux/atom.xml">
-    <title type="text">Visualising the progress of time</title>
-    <id>https://jnrowe.github.io/articles/march_toward_death.html</id>
-    <updated>2018-11-13T00:00:00Z</updated>
-    <published>2018-11-13T00:00:00Z</published>
-    <link href="https://jnrowe.github.io/articles/march_toward_death.html" />
+  <id>https://jnrowe.github.io/</id>
+  <title>JNRowe - Posts tagged linux</title>
+  <updated>2021-03-21T11:05:59.314609+00:00</updated>
+  <link href="https://jnrowe.github.io/"/>
+  <link href="https://jnrowe.github.io/blog/tag/linux/atom.xml"/>
+  <generator uri="https://ablog.readthedocs.org" version="0.10.12">ABlog</generator>
+  <subtitle>Ramblings of a tired mind</subtitle>
+  <entry>
+    <id>https://jnrowe.github.io/articles/tips/Three_mobile_broadband_in_linux.html</id>
+    <title>Three mobile broadband in Linux</title>
+    <updated>2009-10-14T00:00:00+01:00</updated>
     <author>
       <name>James Rowe</name>
     </author>
-    <content type="html">&lt;div class=&quot;section&quot; id=&quot;visualising-the-progress-of-time&quot;&gt;
+    <content type="html">&lt;div class="section" id="three-mobile-broadband-in-linux"&gt;
 
-&lt;a class=&quot;reference external image-reference&quot; href=&quot;https://www.progressbarosx.com/&quot;&gt;&lt;img alt=&quot;Screenshot of Progress Bar OSX in action&quot; src=&quot;../../_images/time_progress.jpg&quot; /&gt;&lt;/a&gt;
-&lt;p&gt;A co-worker was demoing a user session today, and pointed out a neat tool for
-MacOS that displays the “continual march toward death”.  That tool was
-&lt;a class=&quot;reference external&quot; href=&quot;https://www.progressbarosx.com/&quot;&gt;Progress Bar OSX&lt;/a&gt;, and it is pretty cool.  Sadly it is only available for
-MacOS, so we’ll need to make something similar.&lt;/p&gt;
-&lt;div class=&quot;h-review&quot;&gt;
-    &lt;p&gt;
-        &lt;span class=&quot;p-name&quot;&gt;
-            &lt;em&gt;All&lt;/em&gt; popup problems on
-            &lt;span class=&quot;p-category&quot;&gt;Linux&lt;/span&gt;
-            should be solved with
-            &lt;a href=&quot;https://github.com/robm/dzen&quot; class&quot;p-item h-item&quot;&gt;
-                dzen
-            &lt;/a&gt;
-        &lt;/span&gt;, it is
-        &lt;data class=&quot;p-rating&quot; value=&quot;5&quot;&gt;awesome&lt;/data&gt;.
-        &lt;span class=&quot;e-content&quot;&gt;
-            You know this because it comes equipped with the option to
-            produce
-            &lt;abbr title=&quot;Knight Industries Two Thousand&quot;&gt;KITT&lt;/abbr&gt;
-            &lt;a href=&quot;https://en.m.wikipedia.org/wiki/KITT&quot;&gt;
-                Anamorphic Equalizer&lt;/a&gt;
-            emulation.
-        &lt;/span&gt;
-    &lt;/p&gt;
-&lt;/div&gt;&lt;div class=&quot;figure align-default&quot; id=&quot;id3&quot;&gt;
-&lt;a class=&quot;reference external image-reference&quot; href=&quot;../_static/kitt.gif&quot;&gt;&lt;img alt=&quot;Multi-band scanner in action&quot; src=&quot;../../_images/kitt06.png&quot; /&gt;&lt;/a&gt;
-&lt;p class=&quot;caption&quot;&gt;&lt;span class=&quot;caption-text&quot;&gt;Click the image for an animated GIF, I’ll spare you the flashing lights in
-case you wish to read on.&lt;/span&gt;&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class=&quot;section&quot; id=&quot;step-one&quot;&gt;
-&lt;h2&gt;Step one&lt;/h2&gt;
-&lt;p&gt;First we’ll want to display the year:&lt;/p&gt;
-&lt;div class=&quot;highlight-sh notranslate&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;gdbar -w &lt;span class=&quot;m&quot;&gt;1500&lt;/span&gt; -h &lt;span class=&quot;m&quot;&gt;20&lt;/span&gt; &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
-   &lt;span class=&quot;o&quot;&gt;&amp;lt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;$(($(&lt;/span&gt;date +%j&lt;span class=&quot;k&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;/&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;$(&lt;/span&gt;date -d&lt;span class=&quot;s1&quot;&gt;&amp;#39;Dec 31&amp;#39;&lt;/span&gt; +%j&lt;span class=&quot;k&quot;&gt;)&lt;/span&gt;.0 &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;100&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;))&lt;/span&gt; &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
-   &lt;span class=&quot;p&quot;&gt;|&lt;/span&gt; dzen2 -p &lt;span class=&quot;m&quot;&gt;5&lt;/span&gt;
+&lt;p&gt;Steve Lowry is picking up his &lt;a class="reference external" href="http://three.co.uk"&gt;Three&lt;/a&gt; modem this afternoon and asks on our
+internal Linux list if it supports Linux.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;div&gt;&lt;p&gt;I’ve ordered the Huawei E220 as it was free.  Is it likely to work with
+Linux?  And, if so what should I be looking for to set it up?&lt;/p&gt;
+&lt;/div&gt;&lt;/blockquote&gt;
+&lt;p&gt;I’ve had a Huawei &lt;abbr title="Universal Serial Bus"&gt;USB&lt;/abbr&gt; modem for about six months now and it works fine in
+Linux, although it is probably a slightly different model.  The box and case
+for mine claims it is a E160G, whereas &lt;strong class="command"&gt;lsusb&lt;/strong&gt; from &lt;a class="reference external" href="http://linux-usb.sourceforge.net/"&gt;usbutils&lt;/a&gt; claims
+it is a E220.  The manufacturers of these types of products routinely change
+the components and models without updating the product codes, so you’ll have to
+wait until you plug it in to see what model it actually is.&lt;/p&gt;
+&lt;p&gt;As for how to make it work?  Simply use a distribution that comes with
+&lt;a class="reference external" href="http://www.gnome.org/projects/NetworkManager/"&gt;NetworkManager&lt;/a&gt; and NetworkManager’s &lt;a class="reference external" href="http://live.gnome.org/NetworkManager/MobileBroadband/ServiceProviders"&gt;mobile broadband provider database&lt;/a&gt;.
+When I tested it on a friend’s install with that setup last month it worked out
+of the box, all you had to do was plug it in and select the network.&lt;/p&gt;
+&lt;div class="section" id="the-route-to-fail"&gt;
+&lt;h2&gt;The route to fail&lt;/h2&gt;
+&lt;p&gt;If, like me, you’d prefer not to install NetworkManager you can manually
+configure the device using &lt;a class="reference external" href="http://www.samba.org/ppp"&gt;pppd&lt;/a&gt;, and life is even easier now than it was when
+I did it as there is plenty more information available(including this I guess).&lt;/p&gt;
+&lt;div class="section" id="finding-the-apn"&gt;
+&lt;h3&gt;Finding the &lt;abbr title="Access Point Name"&gt;APN&lt;/abbr&gt;&lt;/h3&gt;
+&lt;p&gt;The first thing you need is your provider’s &lt;abbr title="Access Point Name"&gt;APN&lt;/abbr&gt;, and the easiest place to
+find it is from the &lt;a class="reference external" href="http://live.gnome.org/NetworkManager/MobileBroadband/ServiceProviders"&gt;NetworkManager database&lt;/a&gt;.  If yours is not there you’ll
+have to dig further.  When I originally got my device that database was
+practically empty, so I had to resort to other means to find the &lt;abbr title="Access Point Name"&gt;APN&lt;/abbr&gt;.&lt;/p&gt;
+&lt;p&gt;We can extract the &lt;abbr title="Access Point Name"&gt;APN&lt;/abbr&gt; from the Windows driver that came with the device.
+The driver can be found on the device itself because it also acts a small
+&lt;abbr title="Small Computer Systems Interface"&gt;SCSI&lt;/abbr&gt; device with a filesystem.  It
+is actually pretty clever, assuming it works as advertised, as it can
+self-install its own driver when plugged in.&lt;/p&gt;
+&lt;p&gt;If we find the device name with &lt;strong class="command"&gt;dmesg&lt;/strong&gt; we can mount it, and pull the
+&lt;abbr title="Access Point Name"&gt;APN&lt;/abbr&gt; from the Windows driver:&lt;/p&gt;
+&lt;div class="highlight-bash notranslate"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;mkdir e220_drivers&lt;span class="p"&gt;;&lt;/span&gt; &lt;span class="nb"&gt;cd&lt;/span&gt; e220_drivers
+mount -t vfat /dev/sr2 /mnt/huawei
+&lt;span class="k"&gt;for&lt;/span&gt; file in /mnt/huawei/**/*.cab&lt;span class="p"&gt;;&lt;/span&gt; &lt;span class="k"&gt;do&lt;/span&gt; unpack &lt;span class="nv"&gt;$file&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt; &lt;span class="k"&gt;done&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
-&lt;p&gt;which results in:&lt;/p&gt;
-&lt;img alt=&quot;Screenshot of simple day of year bar on 2018-11-13&quot; src=&quot;../../_images/day_bar.png&quot; /&gt;
-&lt;p&gt;The logic should be simple enough to follow(if you’re familiar with
-&lt;strong class=&quot;command&quot;&gt;date&lt;/strong&gt;’s &lt;a class=&quot;reference internal&quot; href=&quot;../../articles/march_toward_death.html#cmdoption-date-arg-j&quot;&gt;&lt;code class=&quot;xref std std-option docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;%j&lt;/span&gt; &lt;span class=&quot;pre&quot;&gt;formatter&lt;/span&gt;&lt;/code&gt;&lt;/a&gt;):&lt;/p&gt;
-&lt;ul class=&quot;simple&quot;&gt;
-&lt;li&gt;&lt;p&gt;&lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;current&lt;/span&gt; &lt;span class=&quot;pre&quot;&gt;day&lt;/span&gt; &lt;span class=&quot;pre&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;pre&quot;&gt;year&lt;/span&gt;&lt;/code&gt; / &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;number&lt;/span&gt; &lt;span class=&quot;pre&quot;&gt;of&lt;/span&gt; &lt;span class=&quot;pre&quot;&gt;days&lt;/span&gt; &lt;span class=&quot;pre&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;pre&quot;&gt;year&lt;/span&gt;&lt;/code&gt;&lt;a class=&quot;footnote-reference brackets&quot; href=&quot;#id2&quot; id=&quot;id1&quot;&gt;1&lt;/a&gt; * &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;100&lt;/span&gt;&lt;/code&gt; for
-position in year as percentage&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;Generate the &lt;strong class=&quot;command&quot;&gt;dzen2&lt;/strong&gt; markup for a bar of &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;1500&lt;/span&gt;&lt;/code&gt; pixels wide and
-&lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;20&lt;/span&gt;&lt;/code&gt; pixels high&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;Display it for &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;5&lt;/span&gt;&lt;/code&gt; seconds&lt;/p&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;div class=&quot;admonition warning&quot;&gt;
-&lt;p class=&quot;admonition-title&quot;&gt;Warning&lt;/p&gt;
-&lt;p&gt;Be sure to notice that we force &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;number&lt;/span&gt; &lt;span class=&quot;pre&quot;&gt;of&lt;/span&gt; &lt;span class=&quot;pre&quot;&gt;days&lt;/span&gt; &lt;span class=&quot;pre&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;pre&quot;&gt;year&lt;/span&gt;&lt;/code&gt; to be a float
-with the addition of &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;.0&lt;/span&gt;&lt;/code&gt;.  Without it the result would be rounded toward
-zero, ie zero on every day but December 31ˢᵗ.&lt;/p&gt;
+&lt;p&gt;The &lt;strong class="command"&gt;unpack&lt;/strong&gt; tool from above is just a wrapper around common
+archivers, and the tool you actually need to extract the &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;cab&lt;/span&gt;&lt;/code&gt; files is
+&lt;a class="reference external" href="http://synce.sourceforge.net/synce/unshield.php"&gt;unshield&lt;/a&gt;.  Contrary to my first idea &lt;a class="reference external" href="http://www.cabextract.org.uk/"&gt;cabextract&lt;/a&gt; doesn’t work, as these files
+are actually made by &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;installshield&lt;/span&gt;&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;With the &lt;abbr title="Access Point Name"&gt;APN&lt;/abbr&gt; in hand all we need to do now is configure our system.&lt;/p&gt;
 &lt;/div&gt;
-&lt;p&gt;We can repeat the same process for day ratio; using &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;date&lt;/span&gt; &lt;span class=&quot;pre&quot;&gt;-d&lt;/span&gt; &lt;span class=&quot;pre&quot;&gt;&amp;quot;00:00&amp;quot;&lt;/span&gt; &lt;span class=&quot;pre&quot;&gt;+%s&lt;/span&gt;&lt;/code&gt; to
-calculate number of seconds passed from the 86400 we’ll see today.  And then
-simply using &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;date&lt;/span&gt; &lt;span class=&quot;pre&quot;&gt;+%m&lt;/span&gt;&lt;/code&gt; to get today’s month as a number.&lt;/p&gt;
+&lt;div class="section" id="kernel"&gt;
+&lt;h3&gt;Kernel&lt;/h3&gt;
+&lt;p&gt;If you’re using a vendor supplied kernel the options we need are hopefully
+already enabled.  If they’re not, or you build your own kernels, there are few
+changes we need to make to the kernel configuration.&lt;/p&gt;
+&lt;p&gt;The dongle itself needs &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;CONFIG_USB_SERIAL_OPTION&lt;/span&gt;&lt;/code&gt; enabled, which is labelled
+as &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;USB&lt;/span&gt; &lt;span class="pre"&gt;driver&lt;/span&gt; &lt;span class="pre"&gt;for&lt;/span&gt; &lt;span class="pre"&gt;GSM&lt;/span&gt; &lt;span class="pre"&gt;and&lt;/span&gt; &lt;span class="pre"&gt;CDMA&lt;/span&gt; &lt;span class="pre"&gt;modems&lt;/span&gt;&lt;/code&gt; in the kernel’s &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;menuconfig&lt;/span&gt;&lt;/code&gt;.  It
+can be found hidden away under the “USB Serial Converters” section in 2.6.31.&lt;/p&gt;
+&lt;p&gt;We also need &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;CONFIG_PPP&lt;/span&gt;&lt;/code&gt; and &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;CONFIG_PPP_ASYNC&lt;/span&gt;&lt;/code&gt; support, which can be
+found in the “Network devices” section of the config.  Unlike the old-style
+dialup you may be used to use there is no point enabling the &lt;abbr title="Point-to-Point Protocol"&gt;PPP&lt;/abbr&gt; compression options as they are not supported by
+mobile providers in general, partly because the data is already compressed.&lt;/p&gt;
+&lt;p&gt;Then just rebuild the kernel, and check that the dongle shows up in
+&lt;strong class="command"&gt;dmesg&lt;/strong&gt; output when it is plugged in.  If it does we’re ready for the
+next step.&lt;/p&gt;
 &lt;/div&gt;
-&lt;div class=&quot;section&quot; id=&quot;step-two&quot;&gt;
-&lt;h2&gt;Step two&lt;/h2&gt;
-&lt;p&gt;We can definitely up our game here.  Why not use colours?  We’ll switch to
-&lt;a class=&quot;reference external&quot; href=&quot;https://www.python.org/&quot;&gt;Python&lt;/a&gt; now, as the gigantic standard library allows us to be lazy.&lt;/p&gt;
-&lt;div class=&quot;highlight-default notranslate&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;pcnt_colour&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;percent&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;h&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;percent&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;100&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;#&amp;#39;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;&amp;#39;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;join&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;sa&quot;&gt;f&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;min&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;int&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;n&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;256&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;255&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;02x&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;&lt;/span&gt;
-                         &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;n&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;colorsys&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;hls_to_rgb&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;h&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
+&lt;div class="section" id="etc-chatscripts-three"&gt;
+&lt;h3&gt;/etc/chatscripts/three&lt;/h3&gt;
+&lt;p&gt;We need a &lt;strong class="command"&gt;pppd&lt;/strong&gt; chatscript for the connection, the format and
+settings of this file can be found in the &lt;em class="manpage"&gt;chat(8)&lt;/em&gt; manpage.  My
+chatscript is below:&lt;/p&gt;
+&lt;div class="highlight-text notranslate"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;TIMEOUT 3
+ECHO ON
+ABORT &amp;#39;BUSY&amp;#39;
+ABORT &amp;#39;DELAYED&amp;#39;
+ABORT &amp;#39;ERROR&amp;#39;
+ABORT &amp;#39;NO ANSWER&amp;#39;
+ABORT &amp;#39;NO CARRIER&amp;#39;
+ABORT &amp;#39;NO DIALTONE&amp;#39;
+ABORT &amp;#39;VOICE&amp;#39;
+&amp;#39;&amp;#39; \rAT
+OK &amp;#39;AT+CGDCONT=1,&amp;quot;IP&amp;quot;,&amp;quot;3internet&amp;quot;&amp;#39;
+OK ATD*99#
+CONNECT &amp;quot;&amp;quot;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
-&lt;p&gt;The function above converts a percentage value in to a hex triplet across
-a green to red gradient, we use &lt;a class=&quot;reference external&quot; href=&quot;https://docs.python.org/3/library/colorsys.html#colorsys.hls_to_rgb&quot; title=&quot;(in Python v3.9)&quot;&gt;&lt;code class=&quot;xref py py-func docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;hls_to_rgb()&lt;/span&gt;&lt;/code&gt;&lt;/a&gt; here as the &lt;a class=&quot;reference external&quot; href=&quot;https://en.m.wikipedia.org/wiki/HLS_color_space&quot;&gt;HLS
-colour space&lt;/a&gt; is more amenable to generating smooth gradients.&lt;/p&gt;
-&lt;p&gt;Now that we’re using &lt;a class=&quot;reference external&quot; href=&quot;https://www.python.org/&quot;&gt;Python&lt;/a&gt; we may as well take advantage of its
-&lt;a class=&quot;reference external&quot; href=&quot;https://docs.python.org/3/library/calendar.html#module-calendar&quot; title=&quot;(in Python v3.9)&quot;&gt;&lt;code class=&quot;xref py py-mod docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;calendar&lt;/span&gt;&lt;/code&gt;&lt;/a&gt; module:&lt;/p&gt;
-&lt;div class=&quot;highlight-default notranslate&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;month_days&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;date&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;calendar&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;monthrange&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;date&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;year&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;date&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;month&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
+&lt;p&gt;Exchange &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;3internet&lt;/span&gt;&lt;/code&gt; for your &lt;abbr title="Access Point Name"&gt;APN&lt;/abbr&gt; in the example above, if it differs.&lt;/p&gt;
+&lt;p&gt;It is also possible, yet unlikely, that you’ll have to call a different number
+to &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;*99#&lt;/span&gt;&lt;/code&gt;.  If this was the case you would have found that out from extracting
+the data from the drivers or looking your network up in the NetworkManager
+database.&lt;/p&gt;
+&lt;p&gt;Notice the very short value for timeout, I’ve come to that value empirically.
+If the connection isn’t up after 3 seconds it is not coming up, and you’re just
+wasting time before you retry.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="etc-ppp-peers-three"&gt;
+&lt;h3&gt;/etc/ppp/peers/three&lt;/h3&gt;
+&lt;p&gt;We also need a peer script, and the format of that file is described in the
+&lt;em class="manpage"&gt;pppd(8)&lt;/em&gt; manpage.  Mine can be used as an example:&lt;/p&gt;
+&lt;div class="highlight-text notranslate"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;debug
+noauth
+connect &amp;quot;/usr/sbin/chat -v -f /etc/chatscripts/three&amp;quot;
+noipdefault
+usepeerdns
+/dev/ttyUSB0
+defaultroute
+persist
+crtscts
+lcp-echo-failure 0
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
-&lt;p&gt;The &lt;a class=&quot;reference external&quot; href=&quot;https://docs.python.org/3/library/calendar.html#calendar.monthrange&quot; title=&quot;(in Python v3.9)&quot;&gt;&lt;code class=&quot;xref py py-func docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;monthrange()&lt;/span&gt;&lt;/code&gt;&lt;/a&gt; function returns a tuple where the second item
-is the number of days in the current month.&lt;/p&gt;
-&lt;div class=&quot;highlight-default notranslate&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;days_in_year&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;date&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;calendar&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;isleap&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;date&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;year&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
-        &lt;span class=&quot;n&quot;&gt;days&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;366&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;else&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
-        &lt;span class=&quot;n&quot;&gt;days&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;365&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;days&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;You may have to change your device settings if the dongle doesn’t show up as
+&lt;code class="file docutils literal notranslate"&gt;&lt;span class="pre"&gt;/dev/ttyUSB0&lt;/span&gt;&lt;/code&gt;, but other than that the file should be correct.&lt;/p&gt;
+&lt;p&gt;Note that we don’t set a speed in our peer file, and this may appear unusual to
+you if you’ve configured &lt;strong class="command"&gt;pppd&lt;/strong&gt; manually in the past.  The reason is
+that interface speed for &lt;abbr title="Universal Serial Bus"&gt;USB&lt;/abbr&gt; modems is set by the kernel, and adding a value
+here is pointless.&lt;/p&gt;
 &lt;/div&gt;
-&lt;p&gt;&lt;a class=&quot;reference external&quot; href=&quot;https://docs.python.org/3/library/calendar.html#calendar.isleap&quot; title=&quot;(in Python v3.9)&quot;&gt;&lt;code class=&quot;xref py py-func docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;isleap()&lt;/span&gt;&lt;/code&gt;&lt;/a&gt; allows us to offload figuring out whether 2700 is
-a leap year once senility begins to set in.&lt;/p&gt;
-&lt;div class=&quot;highlight-default notranslate&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;show_progress&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;title&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;percent&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;width&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;subprocess&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;run&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;([&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;gdbar&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;-l&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;title&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;-w&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;str&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;width&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;-fg&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
-                    &lt;span class=&quot;n&quot;&gt;pcnt_colour&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;percent&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)],&lt;/span&gt;
-                   &lt;span class=&quot;nb&quot;&gt;input&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;str&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;percent&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;encode&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;())&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
+&lt;div class="section" id="passwords"&gt;
+&lt;h3&gt;passwords&lt;/h3&gt;
+&lt;p&gt;We don’t need to add an entry to &lt;code class="file docutils literal notranslate"&gt;&lt;span class="pre"&gt;chap-secrets&lt;/span&gt;&lt;/code&gt; or &lt;code class="file docutils literal notranslate"&gt;&lt;span class="pre"&gt;pap-secrets&lt;/span&gt;&lt;/code&gt; as
+authentication isn’t required, but if you’re following along having chosen to
+use a configuration tool such as &lt;a class="reference external" href="http://http.us.debian.org/debian/pool/main/p/pppconfig/"&gt;pppconfig&lt;/a&gt; just enter any values you wish as
+they’re silently ignored.&lt;/p&gt;
+&lt;p&gt;I’m told the same applies to &lt;a class="reference external" href="http://alumnit.ca/wiki/?WvDial"&gt;wvdial&lt;/a&gt;, so if it complains about requiring
+a password just add an empty or random string to stop the errors.&lt;/p&gt;
 &lt;/div&gt;
-&lt;p&gt;We’ll also create a utility function to generate the &lt;strong class=&quot;command&quot;&gt;dzen2&lt;/strong&gt; markup
-required to output our little blocks of data.&lt;/p&gt;
-&lt;p&gt;Putting it altogether we can display our pretty little blocks with something
-like the following:&lt;/p&gt;
-&lt;div class=&quot;highlight-shell notranslate&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;./time_progress.py -w &lt;span class=&quot;m&quot;&gt;1500&lt;/span&gt; &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
-    &lt;span class=&quot;p&quot;&gt;|&lt;/span&gt; dzen2 -l &lt;span class=&quot;m&quot;&gt;3&lt;/span&gt; -p &lt;span class=&quot;m&quot;&gt;3&lt;/span&gt; -fn monospace-15 -e &lt;span class=&quot;s1&quot;&gt;&amp;#39;onstart=uncollapse&amp;#39;&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
+&lt;div class="section" id="testing-the-connection"&gt;
+&lt;h3&gt;Testing the connection&lt;/h3&gt;
+&lt;p&gt;To test the connection all we need to do is issue &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;pon&lt;/span&gt; &lt;span class="pre"&gt;three&lt;/span&gt;&lt;/code&gt;, or use the
+graphical tool in your distro if you wish.  The first time you do this you
+should watch the output of your syslog to look for errors, the errors can be
+found in syslog because we supplied &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;debug&lt;/span&gt;&lt;/code&gt; in our peer script.&lt;/p&gt;
+&lt;p&gt;On my system the log can be comfortably viewed with &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;tail&lt;/span&gt; &lt;span class="pre"&gt;-f&lt;/span&gt;
+&lt;span class="pre"&gt;/var/log/ppp/current&lt;/span&gt;&lt;/code&gt;, but it is system dependent and if you don’t use &lt;a class="reference external" href="http://metalog.sourceforge.net/"&gt;metalog&lt;/a&gt;
+it will definitely be somewhere else in &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;/var/log&lt;/span&gt;&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;If the connection worked fine that is all there is to it, now just enable the
+connection at system startup or configure &lt;a class="reference external" href="http://www.kernel.org/pub/linux/utils/kernel/hotplug/udev.html"&gt;udev&lt;/a&gt; to connect when the device is
+inserted if it will not always be connected.&lt;/p&gt;
+&lt;div class="admonition note"&gt;
+&lt;p class="admonition-title"&gt;Note&lt;/p&gt;
+&lt;p&gt;These devices can take anywhere between ten and thirty seconds to “settle”
+once plugged in. So, don’t block on this service if you add it to the system
+startup scripts as it can significantly slow down the system boot time.  On
+my dongle you can visually check how long the device takes to settle by
+watching the &lt;abbr title="Light Emitting Diode"&gt;LED&lt;/abbr&gt; on the case, when it changes
+from green it has found a network signal and is ready to use.&lt;/p&gt;
 &lt;/div&gt;
-&lt;p&gt;This creates the markup and makes &lt;strong class=&quot;command&quot;&gt;dzen2&lt;/strong&gt; display the output for
-3 seconds.&lt;/p&gt;
-&lt;img alt=&quot;Screenshot of colourful progress in time&quot; src=&quot;../../_images/progress_bar.png&quot; /&gt;
-&lt;p&gt;The &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;onstart=uncollapse&lt;/span&gt;&lt;/code&gt; attribute tell &lt;strong class=&quot;command&quot;&gt;dzen2&lt;/strong&gt; that we want to see
-the full output on startup, without it we’d see just the title bar until we
-moved our pointer over the header.&lt;/p&gt;
+&lt;p&gt;If the connection didn’t work correctly look at the debugging output in syslog
+and check the &lt;strong class="command"&gt;pppd&lt;/strong&gt; manual page to look up the error codes.&lt;/p&gt;
+&lt;p&gt;Happy, erm… mobility.&lt;/p&gt;
 &lt;/div&gt;
-&lt;div class=&quot;section&quot; id=&quot;step-four&quot;&gt;
-&lt;h2&gt;Step four&lt;/h2&gt;
-&lt;p&gt;You can find the script I used &lt;a class=&quot;reference download internal&quot; download=&quot;&quot; href=&quot;../../_downloads/8bb0952b2cf5d96d60e8d4457de4c840/time_progress.py&quot;&gt;&lt;code class=&quot;xref download docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;here&lt;/span&gt;&lt;/code&gt;&lt;/a&gt;.  It isn’t
-pretty, but it will do.  If I come to depend on it I’m sure that I’ll make
-something better.&lt;/p&gt;
-&lt;p&gt;I think it is important to note that if you’ve got this far and you’re thinking
-about doing this yourself you should consider buying the &lt;a class=&quot;reference external&quot; href=&quot;https://www.progressbarosx.com/&quot;&gt;Progress Bar OSX&lt;/a&gt;
-app.  This document wouldn’t exist without it and rewarding creators is
-important, even when they ignore your chosen platform ;)&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class=&quot;section&quot; id=&quot;step&quot;&gt;
-&lt;h2&gt;Step ∞&lt;/h2&gt;
-&lt;p&gt;As always with any code that touches dates &lt;a class=&quot;reference external&quot; href=&quot;https://en.m.wikipedia.org/wiki/Here_be_dragons&quot;&gt;“Here be dragons”&lt;/a&gt;.  For example,
-I’ll leave it as an exercise for the reader how to handle calculations for days
-with &lt;abbr title=&quot;Daylight Saving Time&quot;&gt;DST&lt;/abbr&gt; transitions.&lt;/p&gt;
-&lt;p class=&quot;rubric&quot;&gt;Footnotes&lt;/p&gt;
-&lt;dl class=&quot;footnote brackets&quot;&gt;
-&lt;dt class=&quot;label&quot; id=&quot;id2&quot;&gt;&lt;span class=&quot;brackets&quot;&gt;&lt;a class=&quot;fn-backref&quot; href=&quot;#id1&quot;&gt;1&lt;/a&gt;&lt;/span&gt;&lt;/dt&gt;
-&lt;dd&gt;&lt;p&gt;Calculating the day of year for December 31ˢᵗ allows one to work in leap
-years.&lt;/p&gt;
-&lt;/dd&gt;
-&lt;/dl&gt;
-&lt;dl class=&quot;std option&quot;&gt;
-&lt;dt id=&quot;cmdoption-date-arg-j&quot;&gt;
-&lt;code class=&quot;sig-name descname&quot;&gt;%j&lt;/code&gt;&lt;code class=&quot;sig-prename descclassname&quot;&gt;&lt;/code&gt;&lt;/dt&gt;
-&lt;dd&gt;&lt;p&gt;Displays the day number of the given year, see &lt;em class=&quot;manpage&quot;&gt;strftime(3)&lt;/em&gt; if
-this is new to you.&lt;/p&gt;
-&lt;/dd&gt;&lt;/dl&gt;
-
 &lt;/div&gt;
 &lt;/div&gt;
 </content>
+    <link href="https://jnrowe.github.io/articles/tips/Three_mobile_broadband_in_linux.html" rel="alternate"/>
+    <published>2009-10-14T00:00:00+01:00</published>
   </entry>
-  <entry xml:base="https://jnrowe.github.io/blog/tag/linux/atom.xml">
-    <title type="text">Dropping Gentoo reflex</title>
-    <id>https://jnrowe.github.io/articles/dropping_gentoo_reflex.html</id>
-    <updated>2014-06-29T00:00:00Z</updated>
-    <published>2014-06-29T00:00:00Z</published>
-    <link href="https://jnrowe.github.io/articles/dropping_gentoo_reflex.html" />
-    <author>
-      <name>James Rowe</name>
-    </author>
-    <content type="html">&lt;div class=&quot;section&quot; id=&quot;dropping-gentoo-reflex&quot;&gt;
-
-&lt;p&gt;After hitting the publish button on &lt;a class=&quot;reference internal&quot; href=&quot;../../articles/dropping_gentoo.html#dropping_gentoo&quot;&gt;&lt;span class=&quot;std std-ref&quot;&gt;Dropping Gentoo&lt;/span&gt;&lt;/a&gt; a few friends
-commented that I was either unnecessarily harsh about Gentoo or we wasted an
-enormous amount of time on it.  It definitely was the former, and I feel
-a touch ashamed for implying the latter.&lt;/p&gt;
-&lt;p&gt;I was writing my thoughts in the “project obituary” form that I’m used to, and
-that is entirely about spotting the downsides to make sure they don’t reoccur.
-And with that in mind I &lt;em&gt;was&lt;/em&gt; being incredibly unfair to Gentoo, both the
-project and by extension the people working on it.&lt;/p&gt;
-&lt;p&gt;There were many, many good points about Gentoo and I’ll nod towards a few now.&lt;/p&gt;
-&lt;div class=&quot;section&quot; id=&quot;speed&quot;&gt;
-&lt;h2&gt;Speed&lt;/h2&gt;
-&lt;p&gt;No, no.  Not the “Oh my god, my KDEs are so fast” that many people fairly
-associate with Gentoo users.  I’m talking about the basic package handling
-tasks.&lt;/p&gt;
-&lt;p&gt;There are very few other distributions that can match Gentoo when it comes to
-the speed of editing a package.  Or, for that matter, the speed of installation
-if you share binary packages.&lt;/p&gt;
-&lt;p&gt;Almost the first thing you notice when switching to Debian or Fedora as a heavy
-binary package user on Gentoo is just how slow package installation and removal
-is.  Binary package installation on Gentoo feels on par with a distribution
-like Slackware, and what passes for package management there is just choosing
-the right argument to &lt;strong class=&quot;command&quot;&gt;tar&lt;/strong&gt;’s &lt;a class=&quot;reference internal&quot; href=&quot;../../articles/dropping_gentoo_reflex.html#cmdoption-tar-C&quot;&gt;&lt;code class=&quot;xref std std-option docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;-C&lt;/span&gt;&lt;/code&gt;&lt;/a&gt; option&lt;a class=&quot;footnote-reference brackets&quot; href=&quot;#id2&quot; id=&quot;id1&quot;&gt;*&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;Where Gentoo really excels though is in the speed of creating new packages or
-editing existing packages.&lt;/p&gt;
-&lt;p&gt;Lets take a look at an example.  Say, for example, that you just found out that
-&lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;flask-dashed&lt;/span&gt;&lt;/code&gt;’s  &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;ebuild&lt;/span&gt;&lt;/code&gt; mistakenly installs a &lt;code class=&quot;file docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;/usr/README&lt;/span&gt;&lt;/code&gt; file.
-We we can fix the problem with the following simple change and a call to
-&lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;repoman&lt;/span&gt; &lt;span class=&quot;pre&quot;&gt;manifest&lt;/span&gt;&lt;/code&gt;, the rest takes care of itself.&lt;/p&gt;
-&lt;div class=&quot;highlight-diff notranslate&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&quot;gh&quot;&gt;diff --git i/flask-dashed-0.1b_p2.ebuild w/flask-dashed-0.1b_p2.ebuild&lt;/span&gt;
-&lt;span class=&quot;gh&quot;&gt;index dd64877a387e..cf3e3cbf272b 100644&lt;/span&gt;
-&lt;span class=&quot;gd&quot;&gt;--- i/flask-dashed-0.1b_p2.ebuild&lt;/span&gt;
-&lt;span class=&quot;gi&quot;&gt;+++ w/flask-dashed-0.1b_p2.ebuild&lt;/span&gt;
-&lt;span class=&quot;gu&quot;&gt;@@ -29,5 +29,6 @@ S=&amp;quot;${WORKDIR}/${MY_P}&amp;quot;&lt;/span&gt;
-
- src_prepare() {
-        distutils-r1_src_prepare
-&lt;span class=&quot;gi&quot;&gt;+       sed -i /data_files/d setup.py || die &amp;quot;sed failed&amp;quot;&lt;/span&gt;
-        rm -rf &amp;quot;${S}/tests&amp;quot;
-}
-&lt;/pre&gt;&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class=&quot;admonition note&quot;&gt;
-&lt;p class=&quot;admonition-title&quot;&gt;Note&lt;/p&gt;
-&lt;p&gt;Of course, you should fix the package properly and send the fix upstream but
-this is just to prove a point.  Calling &lt;strong class=&quot;command&quot;&gt;die&lt;/strong&gt; with &lt;strong class=&quot;command&quot;&gt;sed&lt;/strong&gt;
-there isn’t recommended and is practically pointless, but it is the style
-upstream.&lt;/p&gt;
-&lt;/div&gt;
-&lt;p&gt;I have to mention a small downside here however, because very few people seem to
-test &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;portage&lt;/span&gt;&lt;/code&gt;’s binary package support you’ll occasionally have to do some
-leg work to fix problems.  This normally arises when you have an &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;eclass&lt;/span&gt;&lt;/code&gt;
-change that needs to ripple through, or when a library breaks compatibility and
-its &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;ebuild&lt;/span&gt;&lt;/code&gt; hasn’t been bumped properly.&lt;/p&gt;
-&lt;p&gt;Almost every time that happens you can fix it with a quick loop in your shell
-though.  A couple of such problems and solutions that I found in my shell
-history can be seen below.&lt;/p&gt;
-&lt;div class=&quot;highlight-zsh notranslate&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&quot;c1&quot;&gt;# When you were stuck with packages that used python-distutils-ng, and you&lt;/span&gt;
-&lt;span class=&quot;c1&quot;&gt;# needed to scrub packages because you changed Python version&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; p in &lt;span class=&quot;k&quot;&gt;$(&lt;/span&gt;portageq pkgdir&lt;span class=&quot;k&quot;&gt;)&lt;/span&gt;/*-*/*.tbz2&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;do&lt;/span&gt;
-    qtbz2 -xO &lt;span class=&quot;nv&quot;&gt;$p&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;|&lt;/span&gt; qxpak -xO - &lt;span class=&quot;si&quot;&gt;${${&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;p&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;##*/&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;/.tbz2&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;}&lt;/span&gt;.ebuild &lt;span class=&quot;p&quot;&gt;|&lt;/span&gt; grep -q &lt;span class=&quot;s1&quot;&gt;&amp;#39;SUPPORT_PYTHON_ABIS&amp;#39;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$p&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;done&lt;/span&gt;
-
-&lt;span class=&quot;c1&quot;&gt;# When you were using packages that used python’s “-r1” eclasses and all&lt;/span&gt;
-&lt;span class=&quot;c1&quot;&gt;# you could see is a flood of blockages in your update output&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; p in &lt;span class=&quot;k&quot;&gt;$(&lt;/span&gt;portageq pkgdir&lt;span class=&quot;k&quot;&gt;)&lt;/span&gt;/*-*/*.tbz2&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;do&lt;/span&gt;
-    qtbz2 -xO &lt;span class=&quot;nv&quot;&gt;$p&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;|&lt;/span&gt; qxpak -xO - RDEPEND &lt;span class=&quot;m&quot;&gt;2&lt;/span&gt;&amp;gt;/dev/null &lt;span class=&quot;p&quot;&gt;|&lt;/span&gt; grep -q &lt;span class=&quot;s2&quot;&gt;&amp;quot;dev-python/python-exec&amp;quot;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$p&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;done&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class=&quot;section&quot; id=&quot;documentation&quot;&gt;
-&lt;h2&gt;Documentation&lt;/h2&gt;
-&lt;p&gt;The excellent &lt;a class=&quot;reference external&quot; href=&quot;http://devmanual.gentoo.org/&quot;&gt;devmanual&lt;/a&gt; and the incredible &lt;a class=&quot;reference external&quot; href=&quot;http://wiki.gentoo.org/wiki/Project:PMS&quot;&gt;Package Manager Specification&lt;/a&gt;
-made life so much easier.  The devmanual was both short enough to be used as
-quick reference and complete enough that you could learn most of what you’d need
-to know from it.  The unfortunately named &lt;abbr title=&quot;Package Manager Specification&quot;&gt;PMS&lt;/abbr&gt; acted as the reference that
-finally allowed us to switch from away from &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;portage&lt;/span&gt;&lt;/code&gt; completely at the
-office.&lt;/p&gt;
-&lt;p&gt;The &lt;abbr title=&quot;Package Manager Specification&quot;&gt;PMS&lt;/abbr&gt; documented much of the nastiness that &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;portage&lt;/span&gt;&lt;/code&gt; suffers from, and
-made life in general a whole lot nicer when you were chasing bugs deep down the
-rabbit hole.  And, let us be honest here it also stopped a little of the
-fluidity that plagued &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;portage&lt;/span&gt;&lt;/code&gt; too.&lt;/p&gt;
-&lt;p&gt;Some people argue that it acts as unnecessary stop motion but those people must
-be forgetting what happened when behaviour changed randomly between &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;portage&lt;/span&gt;&lt;/code&gt;
-versions.  &lt;abbr title=&quot;Package Manager Specification&quot;&gt;PMS&lt;/abbr&gt;, and the EAPI process, also brought some much needed design
-and stability to newer features.&lt;/p&gt;
-&lt;p&gt;All Gentoo users owe Ciaran McCreesh a few beers for all the hard work he put in
-to those documents, especially in the early days.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class=&quot;section&quot; id=&quot;the-personal-touch&quot;&gt;
-&lt;h2&gt;The personal touch&lt;/h2&gt;
-&lt;p&gt;On a personal note I’ve met some awesome people over the years as a result of
-using Gentoo.  Many of them at the old Gentoo UK conferences, which were always
-fun.  More recently at LoFu’s annual summit which seems to have taken Gentoo
-UK’s place with practically everyone you saw at Gentoo UK(minus the students),
-and oddly about the same Gentoo to non-Gentoo ratio of talks too.&lt;/p&gt;
-&lt;p&gt;Two excellent people on our current team were recruited following the Gentoo UK
-conference at &lt;abbr title=&quot;University College London&quot;&gt;UCL&lt;/abbr&gt;, and we met a spectacular
-contract hire at the one prior to that as well.&lt;/p&gt;
-&lt;p&gt;I’ve even been lucky enough to have a few doors held open for me via people I’ve
-met at Gentoo-themed or Gentoo-heavy events, and I suspect I’d be writing this
-from a less happy place without them.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class=&quot;section&quot; id=&quot;wrapping-up&quot;&gt;
-&lt;h2&gt;Wrapping up&lt;/h2&gt;
-&lt;p&gt;It is true that you really can not always see the forest for trees.&lt;/p&gt;
-&lt;p&gt;Had recent events not clouded my vision I would have commented on the train
-wreck that is &lt;code class=&quot;file docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;webapp.eclass&lt;/span&gt;&lt;/code&gt; and &lt;code class=&quot;file docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;app-admin/webapp-config&lt;/span&gt;&lt;/code&gt; in
-&lt;span class=&quot;xref std std-doc&quot;&gt;dropping_gentoo&lt;/span&gt;.  It sucked tonnes and tonnes of time away until we
-eventually just trashed any package that interacted with it and moved on.&lt;/p&gt;
-&lt;p&gt;That was so long ago that I had forgotten about it until a co-worker asked me
-why I hadn’t mentioned it.  I suspect most of the other negative comments I made
-will feel equally inconsequential when compared to the benefits Gentoo gave us
-as time moves on.&lt;/p&gt;
-&lt;p&gt;Instead of making this rant even longer, I’ll take the time to reflect on the
-fun memories.&lt;/p&gt;
-&lt;p class=&quot;rubric&quot;&gt;Footnotes&lt;/p&gt;
-&lt;dl class=&quot;footnote brackets&quot;&gt;
-&lt;dt class=&quot;label&quot; id=&quot;id2&quot;&gt;&lt;span class=&quot;brackets&quot;&gt;&lt;a class=&quot;fn-backref&quot; href=&quot;#id1&quot;&gt;*&lt;/a&gt;&lt;/span&gt;&lt;/dt&gt;
-&lt;dd&gt;&lt;p&gt;To be fair &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;.tbz2&lt;/span&gt;&lt;/code&gt; files on Gentoo are just tarballs with a binary
-&lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;xpak&lt;/span&gt;&lt;/code&gt; appended.  Those extra bits beyond “just a tar -C” are what
-makes dependency handling work among other things.&lt;/p&gt;
-&lt;/dd&gt;
-&lt;/dl&gt;
-&lt;dl class=&quot;std option&quot;&gt;
-&lt;dt id=&quot;cmdoption-tar-C&quot;&gt;
-&lt;code class=&quot;sig-name descname&quot;&gt;-C&lt;/code&gt;&lt;code class=&quot;sig-prename descclassname&quot;&gt;&lt;/code&gt;&lt;/dt&gt;
-&lt;dd&gt;&lt;p&gt;This option tells &lt;strong class=&quot;command&quot;&gt;tar&lt;/strong&gt; to change directory before performing its
-duty.  For example using &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;-C&lt;/span&gt; &lt;span class=&quot;pre&quot;&gt;/&lt;/span&gt;&lt;/code&gt; will switch to &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;/&lt;/span&gt;&lt;/code&gt;, and can be used to
-unpack a tarball directly over the root filesystem.&lt;/p&gt;
-&lt;/dd&gt;&lt;/dl&gt;
-
-&lt;/div&gt;
-&lt;/div&gt;
-</content>
-  </entry>
-  <entry xml:base="https://jnrowe.github.io/blog/tag/linux/atom.xml">
-    <title type="text">Dropping Gentoo</title>
+  <entry>
     <id>https://jnrowe.github.io/articles/dropping_gentoo.html</id>
-    <updated>2014-06-18T00:00:00Z</updated>
-    <published>2014-06-18T00:00:00Z</published>
-    <link href="https://jnrowe.github.io/articles/dropping_gentoo.html" />
+    <title>Dropping Gentoo</title>
+    <updated>2014-06-18T00:00:00+01:00</updated>
     <author>
       <name>James Rowe</name>
     </author>
-    <content type="html">&lt;div class=&quot;section&quot; id=&quot;dropping-gentoo&quot;&gt;
+    <content type="html">&lt;div class="section" id="dropping-gentoo"&gt;
 
-&lt;p&gt;We’ve been using &lt;a class=&quot;reference external&quot; href=&quot;http://gentoo.org&quot;&gt;Gentoo&lt;/a&gt; for shipped products since June 2005, and as
+&lt;p&gt;We’ve been using &lt;a class="reference external" href="http://gentoo.org"&gt;Gentoo&lt;/a&gt; for shipped products since June 2005, and as
 a development platform since September 2004.  A long time, an incredibly long
 time in fact.&lt;/p&gt;
 &lt;p&gt;Today our final Gentoo using product shipped, with a single scheduled update
 promised in Q3-2015.  It is kind of sad day, but we all knew that day was coming
 and it takes only a little inside knowledge to know why.&lt;/p&gt;
-&lt;div class=&quot;admonition note&quot;&gt;
-&lt;p class=&quot;admonition-title&quot;&gt;Note&lt;/p&gt;
+&lt;div class="admonition note"&gt;
+&lt;p class="admonition-title"&gt;Note&lt;/p&gt;
 &lt;p&gt;A couple of people have rightly pointed out that I was a little harsh in
-this document, so I’ve pushed a &lt;span class=&quot;xref std std-doc&quot;&gt;followup&lt;/span&gt;.&lt;/p&gt;
+this document, so I’ve pushed a &lt;span class="xref std std-doc"&gt;followup&lt;/span&gt;.&lt;/p&gt;
 &lt;/div&gt;
-&lt;div class=&quot;section&quot; id=&quot;landscapes-have-changed&quot;&gt;
+&lt;div class="section" id="landscapes-have-changed"&gt;
 &lt;h2&gt;Landscapes have changed&lt;/h2&gt;
 &lt;p&gt;Back when we started using Gentoo it was clearly the best choice for what we
 needed; a easily coercible base on which to construct our Linux devices.  There
 actually weren’t a lot of viable choices back then.&lt;/p&gt;
-&lt;p&gt;&lt;a class=&quot;reference external&quot; href=&quot;http://debian.org&quot;&gt;Debian&lt;/a&gt;, which many of us loved, felt like the only mainstream distribution we
+&lt;p&gt;&lt;a class="reference external" href="http://debian.org"&gt;Debian&lt;/a&gt;, which many of us loved, felt like the only mainstream distribution we
 could have used.  Unfortunately, it wasn’t available for the arches we needed.
 It also didn’t package many of things we used at that point, but to be fair
-there were &lt;abbr title=&quot;Intent to Package&quot;&gt;ITPs&lt;/abbr&gt; (were they called that back then?)
+there were &lt;abbr title="Intent to Package"&gt;ITPs&lt;/abbr&gt; (were they called that back then?)
 already floating about for most of them.&lt;/p&gt;
 &lt;p&gt;The “from source” options available then would, for all intents and purposes,
 have meant taking on the support costs of the entire stack which nobody wanted
 to commit to.  As it turns out that burden slowly crept up on us over the next
 ten years anyway.&lt;/p&gt;
 &lt;/div&gt;
-&lt;div class=&quot;section&quot; id=&quot;take-a-left-in-100-metres&quot;&gt;
+&lt;div class="section" id="take-a-left-in-100-metres"&gt;
 &lt;h2&gt;Take a left in 100 metres&lt;/h2&gt;
 &lt;p&gt;Over the years we regrettably diverged heavily from upstream, almost to the
 point that saying we use Gentoo almost feels like a lie.&lt;/p&gt;
@@ -355,22 +213,22 @@ essential toolchain packages like GCC and glibc ourselves.  I can’t recall the
 specific reasons as I didn’t work on them, but I recall agreeing with them.&lt;/p&gt;
 &lt;p&gt;At some point we started using a custom package manager, initially just a new
 drop-in resolver and eventually a completely independent package manager.
-&lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;portage&lt;/span&gt;&lt;/code&gt; was ferociously buggy in places and also appeared to be moribund, so
+&lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;portage&lt;/span&gt;&lt;/code&gt; was ferociously buggy in places and also appeared to be moribund, so
 it seemed like the correct choice.  We never supported the full range of
-features that Gentoo’s &lt;a class=&quot;reference external&quot; href=&quot;http://wiki.gentoo.org/wiki/Project:PMS&quot;&gt;PMS&lt;/a&gt; now defines, but it made the support surface a lot
+features that Gentoo’s &lt;a class="reference external" href="http://wiki.gentoo.org/wiki/Project:PMS"&gt;PMS&lt;/a&gt; now defines, but it made the support surface a lot
 nicer.&lt;/p&gt;
-&lt;p&gt;There was a point where we seriously considered moving to a &lt;a class=&quot;reference external&quot; href=&quot;http://en.wikipedia.org/wiki/Conary_(package_manager)&quot;&gt;Conary&lt;/a&gt;-based
+&lt;p&gt;There was a point where we seriously considered moving to a &lt;a class="reference external" href="http://en.wikipedia.org/wiki/Conary_(package_manager)"&gt;Conary&lt;/a&gt;-based
 infrastructure.  It did loads of the cool things we wanted to do and it mostly
 fitted our workflow with its “Gentoo done right” feel.  Sadly, it has
-a &lt;abbr title=&quot;Contributor License Agreement&quot;&gt;CLA&lt;/abbr&gt; which none of us could sign that practically guaranteed we would
+a &lt;abbr title="Contributor License Agreement"&gt;CLA&lt;/abbr&gt; which none of us could sign that practically guaranteed we would
 eventually be in the same place we were with Gentoo.  May have been
 a fortuitous roadblock in the end, as Conary never gained the traction it
-once promised(perhaps in part because of that &lt;abbr title=&quot;Contributor License Agreement&quot;&gt;CLA&lt;/abbr&gt;?).&lt;/p&gt;
+once promised(perhaps in part because of that &lt;abbr title="Contributor License Agreement"&gt;CLA&lt;/abbr&gt;?).&lt;/p&gt;
 &lt;p&gt;Had we waited another five months, there would have been another open source
 package manager for Gentoo we could have easily switched to and hacked on.
 There is perhaps a pattern here…&lt;/p&gt;
 &lt;/div&gt;
-&lt;div class=&quot;section&quot; id=&quot;upstreaming-changes&quot;&gt;
+&lt;div class="section" id="upstreaming-changes"&gt;
 &lt;h2&gt;Upstreaming changes&lt;/h2&gt;
 &lt;p&gt;Of course, running a non-standard package manager and a thick layer of custom
 packages at the bottom of the stack made contributing changes back upstream very
@@ -385,7 +243,7 @@ report in the ChangeLog was huge.  That taught me a valuable personal lesson,
 I always attribute a commit to the reporter even when I’ve significantly mangled
 a patch to make it acceptable.&lt;/p&gt;
 &lt;p&gt;For a time, to ease the annoyance we used to play a game where we reported real
-bugs with patches, but using silly data for &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;emerge&lt;/span&gt; &lt;span class=&quot;pre&quot;&gt;--info&lt;/span&gt;&lt;/code&gt;.  It was
+bugs with patches, but using silly data for &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;emerge&lt;/span&gt; &lt;span class="pre"&gt;--info&lt;/span&gt;&lt;/code&gt;.  It was
 definitely fun while it lasted, but it didn’t solve the pain points.  Not
 wanting to be associated with the bugs made people use pseudonyms, which also
 removed the expectation of attribution too.&lt;/p&gt;
@@ -395,19 +253,19 @@ months so I stopped doing that too&lt;/p&gt;
 &lt;p&gt;Looking around now there is an automatically generated list of bugs with patches
 which we’ve fixed but haven’t upstreamed, and a few random entries from it look
 like this:&lt;/p&gt;
-&lt;div class=&quot;highlight-console notranslate&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&quot;gp&quot;&gt;$&lt;/span&gt; wc -l ~/gentoo/to_push/jay.rst
-&lt;span class=&quot;go&quot;&gt;1157 /home/jay/gentoo/to_push/jay.rst&lt;/span&gt;
-&lt;span class=&quot;gp&quot;&gt;$&lt;/span&gt; wc -l ~/gentoo/to_push/mattias.rst
-&lt;span class=&quot;go&quot;&gt;2104 /home/jay/gentoo/to_push/mattias.rst&lt;/span&gt;
-&lt;span class=&quot;gp&quot;&gt;$&lt;/span&gt; wc -l ~/gentoo/to_push/chrisp.rst
-&lt;span class=&quot;go&quot;&gt;873 /home/jay/gentoo/to_push/chrisp.rst&lt;/span&gt;
+&lt;div class="highlight-console notranslate"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="gp"&gt;$&lt;/span&gt; wc -l ~/gentoo/to_push/jay.rst
+&lt;span class="go"&gt;1157 /home/jay/gentoo/to_push/jay.rst&lt;/span&gt;
+&lt;span class="gp"&gt;$&lt;/span&gt; wc -l ~/gentoo/to_push/mattias.rst
+&lt;span class="go"&gt;2104 /home/jay/gentoo/to_push/mattias.rst&lt;/span&gt;
+&lt;span class="gp"&gt;$&lt;/span&gt; wc -l ~/gentoo/to_push/chrisp.rst
+&lt;span class="go"&gt;873 /home/jay/gentoo/to_push/chrisp.rst&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
 &lt;p&gt;That genuinely upsets me greatly.  The amount of potential duplicated effort
 they represent is enormous, and I don’t even want to attempt to put a figure on
 it.&lt;/p&gt;
 &lt;/div&gt;
-&lt;div class=&quot;section&quot; id=&quot;supporting-upstream&quot;&gt;
+&lt;div class="section" id="supporting-upstream"&gt;
 &lt;h2&gt;Supporting upstream&lt;/h2&gt;
 &lt;p&gt;We’re entirely to blame.  We always planned on supporting upstream in whichever
 way we could.  That fell down for instances beyond sending patches too.&lt;/p&gt;
@@ -430,23 +288,23 @@ met with other people telling stories about that same person, which was a shame
 as it probably cost them a few good cash and infrastructure sponsors that day
 alone.&lt;/p&gt;
 &lt;/div&gt;
-&lt;div class=&quot;section&quot; id=&quot;support-costs&quot;&gt;
+&lt;div class="section" id="support-costs"&gt;
 &lt;h2&gt;Support costs&lt;/h2&gt;
 &lt;p&gt;Over time we’ve come to support most of the tree that people refer to as
-&lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;gentoo-x86&lt;/span&gt;&lt;/code&gt; ourselves.  The toolchain changes we needed at the time
+&lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;gentoo-x86&lt;/span&gt;&lt;/code&gt; ourselves.  The toolchain changes we needed at the time
 necessitated supporting a few packages further up the stack.  Our desire to trim
 the tree of a few categories that were problematic, meant replacing a variety of
 packages with then unavailable dependencies.&lt;/p&gt;
 &lt;p&gt;And there were many other examples too…&lt;/p&gt;
-&lt;div class=&quot;section&quot; id=&quot;matchbox&quot;&gt;
+&lt;div class="section" id="matchbox"&gt;
 &lt;h3&gt;matchbox&lt;/h3&gt;
-&lt;p&gt;We packaged &lt;a class=&quot;reference internal&quot; href=&quot;#matchbox&quot;&gt;matchbox&lt;/a&gt; and its associated packages a long, long time before they
+&lt;p&gt;We packaged &lt;a class="reference internal" href="#matchbox"&gt;matchbox&lt;/a&gt; and its associated packages a long, long time before they
 hit the official tree.  It was the first real pain point we had with packages
 appearing in the tree after we had already been using them.&lt;/p&gt;
 &lt;p&gt;When they did eventually hit the tree we had to carry workarounds for years.  At
 some point we stopped trying and just scrubbed the ebuilds that got in the way.&lt;/p&gt;
 &lt;/div&gt;
-&lt;div class=&quot;section&quot; id=&quot;python&quot;&gt;
+&lt;div class="section" id="python"&gt;
 &lt;h3&gt;Python&lt;/h3&gt;
 &lt;p&gt;The state of the Python packaging a few years ago made us take the jump to
 replace or remove anything that packaged a Python module.  Initially very time
@@ -454,18 +312,18 @@ consuming, but it saved an enormous amount of grief.&lt;/p&gt;
 &lt;p&gt;I suspect we could move closer to upstream at this point, but the point is now
 moot.&lt;/p&gt;
 &lt;/div&gt;
-&lt;div class=&quot;section&quot; id=&quot;systemd&quot;&gt;
+&lt;div class="section" id="systemd"&gt;
 &lt;h3&gt;systemd&lt;/h3&gt;
-&lt;p&gt;We switched to &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;systemd&lt;/span&gt;&lt;/code&gt; before the package was in upstream’s tree, and we
+&lt;p&gt;We switched to &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;systemd&lt;/span&gt;&lt;/code&gt; before the package was in upstream’s tree, and we
 have had to keep supporting it to this day because of insurmountable packaging
 differences.&lt;/p&gt;
 &lt;p&gt;In a few places that means taking on packages with a reverse dependency too,
 where differences create issues.  And it clearly means taking on any package
-that depends on &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;openrc&lt;/span&gt;&lt;/code&gt; or Gentoo’s &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;baselayout&lt;/span&gt;&lt;/code&gt; package.  Those packages
+that depends on &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;openrc&lt;/span&gt;&lt;/code&gt; or Gentoo’s &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;baselayout&lt;/span&gt;&lt;/code&gt; package.  Those packages
 are becoming fewer and fewer by the day though, so that would have become
 a non-issue.&lt;/p&gt;
 &lt;/div&gt;
-&lt;div class=&quot;section&quot; id=&quot;x-org&quot;&gt;
+&lt;div class="section" id="x-org"&gt;
 &lt;h3&gt;X.org&lt;/h3&gt;
 &lt;p&gt;We had been packaging x.org’s packages to work around some implementation
 differences with upstream since the dawn of modular X.  Mostly just to do with
@@ -475,7 +333,7 @@ remotely similar.&lt;/p&gt;
 most part, so it never caused a huge time sink.&lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;div class=&quot;section&quot; id=&quot;the-end-is-nigh&quot;&gt;
+&lt;div class="section" id="the-end-is-nigh"&gt;
 &lt;h2&gt;The end is nigh&lt;/h2&gt;
 &lt;p&gt;At some point it began to feel like we were maintaining our own distribution
 from end-to-end, and that wasn’t fun.  It also wasn’t what any of us needed to
@@ -483,12 +341,12 @@ do, and the time it was taking measurably ate in to &lt;em&gt;real&lt;/em&gt; pr
 &lt;p&gt;The decision to start weaning ourselves off of Gentoo was made back in the
 summer of last year, and it has finally started to come in to effect.&lt;/p&gt;
 &lt;/div&gt;
-&lt;div class=&quot;section&quot; id=&quot;the-times-they-are-a-changing&quot;&gt;
+&lt;div class="section" id="the-times-they-are-a-changing"&gt;
 &lt;h2&gt;The Times They Are a-Changing&lt;/h2&gt;
 &lt;p&gt;There are plenty of good alternatives out there now for building systems that
 need to run on a variety of architectures.  Some binary, some source-based and
 a few hybrid approaches.&lt;/p&gt;
-&lt;p&gt;The project I’m working on right now is using Debian &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;testing&lt;/span&gt;&lt;/code&gt;, and it appears
+&lt;p&gt;The project I’m working on right now is using Debian &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;testing&lt;/span&gt;&lt;/code&gt;, and it appears
 to be working out fine.  Some things still annoy me, like the time it takes to
 patch and recreate a package.  It is a trivial thing with Gentoo, but requires
 far too much work with Debian.  Perhaps we’ll improve the workflow enough as we
@@ -507,167 +365,309 @@ track for the next ten years.&lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 </content>
+    <link href="https://jnrowe.github.io/articles/dropping_gentoo.html" rel="alternate"/>
+    <published>2014-06-18T00:00:00+01:00</published>
   </entry>
-  <entry xml:base="https://jnrowe.github.io/blog/tag/linux/atom.xml">
-    <title type="text">Three mobile broadband in Linux</title>
-    <id>https://jnrowe.github.io/articles/tips/Three_mobile_broadband_in_linux.html</id>
-    <updated>2009-10-14T00:00:00Z</updated>
-    <published>2009-10-14T00:00:00Z</published>
-    <link href="https://jnrowe.github.io/articles/tips/Three_mobile_broadband_in_linux.html" />
+  <entry>
+    <id>https://jnrowe.github.io/articles/dropping_gentoo_reflex.html</id>
+    <title>Dropping Gentoo reflex</title>
+    <updated>2014-06-29T00:00:00+01:00</updated>
     <author>
       <name>James Rowe</name>
     </author>
-    <content type="html">&lt;div class=&quot;section&quot; id=&quot;three-mobile-broadband-in-linux&quot;&gt;
+    <content type="html">&lt;div class="section" id="dropping-gentoo-reflex"&gt;
 
-&lt;p&gt;Steve Lowry is picking up his &lt;a class=&quot;reference external&quot; href=&quot;http://three.co.uk&quot;&gt;Three&lt;/a&gt; modem this afternoon and asks on our
-internal Linux list if it supports Linux.&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;div&gt;&lt;p&gt;I’ve ordered the Huawei E220 as it was free.  Is it likely to work with
-Linux?  And, if so what should I be looking for to set it up?&lt;/p&gt;
-&lt;/div&gt;&lt;/blockquote&gt;
-&lt;p&gt;I’ve had a Huawei &lt;abbr title=&quot;Universal Serial Bus&quot;&gt;USB&lt;/abbr&gt; modem for about six months now and it works fine in
-Linux, although it is probably a slightly different model.  The box and case
-for mine claims it is a E160G, whereas &lt;strong class=&quot;command&quot;&gt;lsusb&lt;/strong&gt; from &lt;a class=&quot;reference external&quot; href=&quot;http://linux-usb.sourceforge.net/&quot;&gt;usbutils&lt;/a&gt; claims
-it is a E220.  The manufacturers of these types of products routinely change
-the components and models without updating the product codes, so you’ll have to
-wait until you plug it in to see what model it actually is.&lt;/p&gt;
-&lt;p&gt;As for how to make it work?  Simply use a distribution that comes with
-&lt;a class=&quot;reference external&quot; href=&quot;http://www.gnome.org/projects/NetworkManager/&quot;&gt;NetworkManager&lt;/a&gt; and NetworkManager’s &lt;a class=&quot;reference external&quot; href=&quot;http://live.gnome.org/NetworkManager/MobileBroadband/ServiceProviders&quot;&gt;mobile broadband provider database&lt;/a&gt;.
-When I tested it on a friend’s install with that setup last month it worked out
-of the box, all you had to do was plug it in and select the network.&lt;/p&gt;
-&lt;div class=&quot;section&quot; id=&quot;the-route-to-fail&quot;&gt;
-&lt;h2&gt;The route to fail&lt;/h2&gt;
-&lt;p&gt;If, like me, you’d prefer not to install NetworkManager you can manually
-configure the device using &lt;a class=&quot;reference external&quot; href=&quot;http://www.samba.org/ppp&quot;&gt;pppd&lt;/a&gt;, and life is even easier now than it was when
-I did it as there is plenty more information available(including this I guess).&lt;/p&gt;
-&lt;div class=&quot;section&quot; id=&quot;finding-the-apn&quot;&gt;
-&lt;h3&gt;Finding the &lt;abbr title=&quot;Access Point Name&quot;&gt;APN&lt;/abbr&gt;&lt;/h3&gt;
-&lt;p&gt;The first thing you need is your provider’s &lt;abbr title=&quot;Access Point Name&quot;&gt;APN&lt;/abbr&gt;, and the easiest place to
-find it is from the &lt;a class=&quot;reference external&quot; href=&quot;http://live.gnome.org/NetworkManager/MobileBroadband/ServiceProviders&quot;&gt;NetworkManager database&lt;/a&gt;.  If yours is not there you’ll
-have to dig further.  When I originally got my device that database was
-practically empty, so I had to resort to other means to find the &lt;abbr title=&quot;Access Point Name&quot;&gt;APN&lt;/abbr&gt;.&lt;/p&gt;
-&lt;p&gt;We can extract the &lt;abbr title=&quot;Access Point Name&quot;&gt;APN&lt;/abbr&gt; from the Windows driver that came with the device.
-The driver can be found on the device itself because it also acts a small
-&lt;abbr title=&quot;Small Computer Systems Interface&quot;&gt;SCSI&lt;/abbr&gt; device with a filesystem.  It
-is actually pretty clever, assuming it works as advertised, as it can
-self-install its own driver when plugged in.&lt;/p&gt;
-&lt;p&gt;If we find the device name with &lt;strong class=&quot;command&quot;&gt;dmesg&lt;/strong&gt; we can mount it, and pull the
-&lt;abbr title=&quot;Access Point Name&quot;&gt;APN&lt;/abbr&gt; from the Windows driver:&lt;/p&gt;
-&lt;div class=&quot;highlight-bash notranslate&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;mkdir e220_drivers&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;cd&lt;/span&gt; e220_drivers
-mount -t vfat /dev/sr2 /mnt/huawei
-&lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; file in /mnt/huawei/**/*.cab&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;do&lt;/span&gt; unpack &lt;span class=&quot;nv&quot;&gt;$file&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;done&lt;/span&gt;
+&lt;p&gt;After hitting the publish button on &lt;a class="reference internal" href="../../articles/dropping_gentoo.html#dropping_gentoo"&gt;&lt;span class="std std-ref"&gt;Dropping Gentoo&lt;/span&gt;&lt;/a&gt; a few friends
+commented that I was either unnecessarily harsh about Gentoo or we wasted an
+enormous amount of time on it.  It definitely was the former, and I feel
+a touch ashamed for implying the latter.&lt;/p&gt;
+&lt;p&gt;I was writing my thoughts in the “project obituary” form that I’m used to, and
+that is entirely about spotting the downsides to make sure they don’t reoccur.
+And with that in mind I &lt;em&gt;was&lt;/em&gt; being incredibly unfair to Gentoo, both the
+project and by extension the people working on it.&lt;/p&gt;
+&lt;p&gt;There were many, many good points about Gentoo and I’ll nod towards a few now.&lt;/p&gt;
+&lt;div class="section" id="speed"&gt;
+&lt;h2&gt;Speed&lt;/h2&gt;
+&lt;p&gt;No, no.  Not the “Oh my god, my KDEs are so fast” that many people fairly
+associate with Gentoo users.  I’m talking about the basic package handling
+tasks.&lt;/p&gt;
+&lt;p&gt;There are very few other distributions that can match Gentoo when it comes to
+the speed of editing a package.  Or, for that matter, the speed of installation
+if you share binary packages.&lt;/p&gt;
+&lt;p&gt;Almost the first thing you notice when switching to Debian or Fedora as a heavy
+binary package user on Gentoo is just how slow package installation and removal
+is.  Binary package installation on Gentoo feels on par with a distribution
+like Slackware, and what passes for package management there is just choosing
+the right argument to &lt;strong class="command"&gt;tar&lt;/strong&gt;’s &lt;a class="reference internal" href="../../articles/dropping_gentoo_reflex.html#cmdoption-tar-C"&gt;&lt;code class="xref std std-option docutils literal notranslate"&gt;&lt;span class="pre"&gt;-C&lt;/span&gt;&lt;/code&gt;&lt;/a&gt; option&lt;a class="footnote-reference brackets" href="#id2" id="id1"&gt;*&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Where Gentoo really excels though is in the speed of creating new packages or
+editing existing packages.&lt;/p&gt;
+&lt;p&gt;Lets take a look at an example.  Say, for example, that you just found out that
+&lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;flask-dashed&lt;/span&gt;&lt;/code&gt;’s  &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;ebuild&lt;/span&gt;&lt;/code&gt; mistakenly installs a &lt;code class="file docutils literal notranslate"&gt;&lt;span class="pre"&gt;/usr/README&lt;/span&gt;&lt;/code&gt; file.
+We we can fix the problem with the following simple change and a call to
+&lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;repoman&lt;/span&gt; &lt;span class="pre"&gt;manifest&lt;/span&gt;&lt;/code&gt;, the rest takes care of itself.&lt;/p&gt;
+&lt;div class="highlight-diff notranslate"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="gh"&gt;diff --git i/flask-dashed-0.1b_p2.ebuild w/flask-dashed-0.1b_p2.ebuild&lt;/span&gt;
+&lt;span class="gh"&gt;index dd64877a387e..cf3e3cbf272b 100644&lt;/span&gt;
+&lt;span class="gd"&gt;--- i/flask-dashed-0.1b_p2.ebuild&lt;/span&gt;
+&lt;span class="gi"&gt;+++ w/flask-dashed-0.1b_p2.ebuild&lt;/span&gt;
+&lt;span class="gu"&gt;@@ -29,5 +29,6 @@ S=&amp;quot;${WORKDIR}/${MY_P}&amp;quot;&lt;/span&gt;
+
+ src_prepare() {
+        distutils-r1_src_prepare
+&lt;span class="gi"&gt;+       sed -i /data_files/d setup.py || die &amp;quot;sed failed&amp;quot;&lt;/span&gt;
+        rm -rf &amp;quot;${S}/tests&amp;quot;
+}
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
-&lt;p&gt;The &lt;strong class=&quot;command&quot;&gt;unpack&lt;/strong&gt; tool from above is just a wrapper around common
-archivers, and the tool you actually need to extract the &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;cab&lt;/span&gt;&lt;/code&gt; files is
-&lt;a class=&quot;reference external&quot; href=&quot;http://synce.sourceforge.net/synce/unshield.php&quot;&gt;unshield&lt;/a&gt;.  Contrary to my first idea &lt;a class=&quot;reference external&quot; href=&quot;http://www.cabextract.org.uk/&quot;&gt;cabextract&lt;/a&gt; doesn’t work, as these files
-are actually made by &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;installshield&lt;/span&gt;&lt;/code&gt;.&lt;/p&gt;
-&lt;p&gt;With the &lt;abbr title=&quot;Access Point Name&quot;&gt;APN&lt;/abbr&gt; in hand all we need to do now is configure our system.&lt;/p&gt;
+&lt;div class="admonition note"&gt;
+&lt;p class="admonition-title"&gt;Note&lt;/p&gt;
+&lt;p&gt;Of course, you should fix the package properly and send the fix upstream but
+this is just to prove a point.  Calling &lt;strong class="command"&gt;die&lt;/strong&gt; with &lt;strong class="command"&gt;sed&lt;/strong&gt;
+there isn’t recommended and is practically pointless, but it is the style
+upstream.&lt;/p&gt;
 &lt;/div&gt;
-&lt;div class=&quot;section&quot; id=&quot;kernel&quot;&gt;
-&lt;h3&gt;Kernel&lt;/h3&gt;
-&lt;p&gt;If you’re using a vendor supplied kernel the options we need are hopefully
-already enabled.  If they’re not, or you build your own kernels, there are few
-changes we need to make to the kernel configuration.&lt;/p&gt;
-&lt;p&gt;The dongle itself needs &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;CONFIG_USB_SERIAL_OPTION&lt;/span&gt;&lt;/code&gt; enabled, which is labelled
-as &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;USB&lt;/span&gt; &lt;span class=&quot;pre&quot;&gt;driver&lt;/span&gt; &lt;span class=&quot;pre&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;pre&quot;&gt;GSM&lt;/span&gt; &lt;span class=&quot;pre&quot;&gt;and&lt;/span&gt; &lt;span class=&quot;pre&quot;&gt;CDMA&lt;/span&gt; &lt;span class=&quot;pre&quot;&gt;modems&lt;/span&gt;&lt;/code&gt; in the kernel’s &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;menuconfig&lt;/span&gt;&lt;/code&gt;.  It
-can be found hidden away under the “USB Serial Converters” section in 2.6.31.&lt;/p&gt;
-&lt;p&gt;We also need &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;CONFIG_PPP&lt;/span&gt;&lt;/code&gt; and &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;CONFIG_PPP_ASYNC&lt;/span&gt;&lt;/code&gt; support, which can be
-found in the “Network devices” section of the config.  Unlike the old-style
-dialup you may be used to use there is no point enabling the &lt;abbr title=&quot;Point-to-Point Protocol&quot;&gt;PPP&lt;/abbr&gt; compression options as they are not supported by
-mobile providers in general, partly because the data is already compressed.&lt;/p&gt;
-&lt;p&gt;Then just rebuild the kernel, and check that the dongle shows up in
-&lt;strong class=&quot;command&quot;&gt;dmesg&lt;/strong&gt; output when it is plugged in.  If it does we’re ready for the
-next step.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class=&quot;section&quot; id=&quot;etc-chatscripts-three&quot;&gt;
-&lt;h3&gt;/etc/chatscripts/three&lt;/h3&gt;
-&lt;p&gt;We need a &lt;strong class=&quot;command&quot;&gt;pppd&lt;/strong&gt; chatscript for the connection, the format and
-settings of this file can be found in the &lt;em class=&quot;manpage&quot;&gt;chat(8)&lt;/em&gt; manpage.  My
-chatscript is below:&lt;/p&gt;
-&lt;div class=&quot;highlight-text notranslate&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;TIMEOUT 3
-ECHO ON
-ABORT &amp;#39;BUSY&amp;#39;
-ABORT &amp;#39;DELAYED&amp;#39;
-ABORT &amp;#39;ERROR&amp;#39;
-ABORT &amp;#39;NO ANSWER&amp;#39;
-ABORT &amp;#39;NO CARRIER&amp;#39;
-ABORT &amp;#39;NO DIALTONE&amp;#39;
-ABORT &amp;#39;VOICE&amp;#39;
-&amp;#39;&amp;#39; \rAT
-OK &amp;#39;AT+CGDCONT=1,&amp;quot;IP&amp;quot;,&amp;quot;3internet&amp;quot;&amp;#39;
-OK ATD*99#
-CONNECT &amp;quot;&amp;quot;
+&lt;p&gt;I have to mention a small downside here however, because very few people seem to
+test &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;portage&lt;/span&gt;&lt;/code&gt;’s binary package support you’ll occasionally have to do some
+leg work to fix problems.  This normally arises when you have an &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;eclass&lt;/span&gt;&lt;/code&gt;
+change that needs to ripple through, or when a library breaks compatibility and
+its &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;ebuild&lt;/span&gt;&lt;/code&gt; hasn’t been bumped properly.&lt;/p&gt;
+&lt;p&gt;Almost every time that happens you can fix it with a quick loop in your shell
+though.  A couple of such problems and solutions that I found in my shell
+history can be seen below.&lt;/p&gt;
+&lt;div class="highlight-zsh notranslate"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="c1"&gt;# When you were stuck with packages that used python-distutils-ng, and you&lt;/span&gt;
+&lt;span class="c1"&gt;# needed to scrub packages because you changed Python version&lt;/span&gt;
+&lt;span class="k"&gt;for&lt;/span&gt; p in &lt;span class="k"&gt;$(&lt;/span&gt;portageq pkgdir&lt;span class="k"&gt;)&lt;/span&gt;/*-*/*.tbz2&lt;span class="p"&gt;;&lt;/span&gt; &lt;span class="k"&gt;do&lt;/span&gt;
+    qtbz2 -xO &lt;span class="nv"&gt;$p&lt;/span&gt; &lt;span class="p"&gt;|&lt;/span&gt; qxpak -xO - &lt;span class="si"&gt;${${&lt;/span&gt;&lt;span class="nv"&gt;p&lt;/span&gt;&lt;span class="p"&gt;##*/&lt;/span&gt;&lt;span class="si"&gt;}&lt;/span&gt;&lt;span class="p"&gt;/.tbz2&lt;/span&gt;&lt;span class="si"&gt;}&lt;/span&gt;.ebuild &lt;span class="p"&gt;|&lt;/span&gt; grep -q &lt;span class="s1"&gt;&amp;#39;SUPPORT_PYTHON_ABIS&amp;#39;&lt;/span&gt; &lt;span class="o"&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span class="nb"&gt;echo&lt;/span&gt; &lt;span class="nv"&gt;$p&lt;/span&gt;
+&lt;span class="k"&gt;done&lt;/span&gt;
+
+&lt;span class="c1"&gt;# When you were using packages that used python’s “-r1” eclasses and all&lt;/span&gt;
+&lt;span class="c1"&gt;# you could see is a flood of blockages in your update output&lt;/span&gt;
+&lt;span class="k"&gt;for&lt;/span&gt; p in &lt;span class="k"&gt;$(&lt;/span&gt;portageq pkgdir&lt;span class="k"&gt;)&lt;/span&gt;/*-*/*.tbz2&lt;span class="p"&gt;;&lt;/span&gt; &lt;span class="k"&gt;do&lt;/span&gt;
+    qtbz2 -xO &lt;span class="nv"&gt;$p&lt;/span&gt; &lt;span class="p"&gt;|&lt;/span&gt; qxpak -xO - RDEPEND &lt;span class="m"&gt;2&lt;/span&gt;&amp;gt;/dev/null &lt;span class="p"&gt;|&lt;/span&gt; grep -q &lt;span class="s2"&gt;&amp;quot;dev-python/python-exec&amp;quot;&lt;/span&gt; &lt;span class="o"&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span class="nb"&gt;echo&lt;/span&gt; &lt;span class="nv"&gt;$p&lt;/span&gt;
+&lt;span class="k"&gt;done&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
-&lt;p&gt;Exchange &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;3internet&lt;/span&gt;&lt;/code&gt; for your &lt;abbr title=&quot;Access Point Name&quot;&gt;APN&lt;/abbr&gt; in the example above, if it differs.&lt;/p&gt;
-&lt;p&gt;It is also possible, yet unlikely, that you’ll have to call a different number
-to &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;*99#&lt;/span&gt;&lt;/code&gt;.  If this was the case you would have found that out from extracting
-the data from the drivers or looking your network up in the NetworkManager
-database.&lt;/p&gt;
-&lt;p&gt;Notice the very short value for timeout, I’ve come to that value empirically.
-If the connection isn’t up after 3 seconds it is not coming up, and you’re just
-wasting time before you retry.&lt;/p&gt;
 &lt;/div&gt;
-&lt;div class=&quot;section&quot; id=&quot;etc-ppp-peers-three&quot;&gt;
-&lt;h3&gt;/etc/ppp/peers/three&lt;/h3&gt;
-&lt;p&gt;We also need a peer script, and the format of that file is described in the
-&lt;em class=&quot;manpage&quot;&gt;pppd(8)&lt;/em&gt; manpage.  Mine can be used as an example:&lt;/p&gt;
-&lt;div class=&quot;highlight-text notranslate&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;debug
-noauth
-connect &amp;quot;/usr/sbin/chat -v -f /etc/chatscripts/three&amp;quot;
-noipdefault
-usepeerdns
-/dev/ttyUSB0
-defaultroute
-persist
-crtscts
-lcp-echo-failure 0
-&lt;/pre&gt;&lt;/div&gt;
+&lt;div class="section" id="documentation"&gt;
+&lt;h2&gt;Documentation&lt;/h2&gt;
+&lt;p&gt;The excellent &lt;a class="reference external" href="http://devmanual.gentoo.org/"&gt;devmanual&lt;/a&gt; and the incredible &lt;a class="reference external" href="http://wiki.gentoo.org/wiki/Project:PMS"&gt;Package Manager Specification&lt;/a&gt;
+made life so much easier.  The devmanual was both short enough to be used as
+quick reference and complete enough that you could learn most of what you’d need
+to know from it.  The unfortunately named &lt;abbr title="Package Manager Specification"&gt;PMS&lt;/abbr&gt; acted as the reference that
+finally allowed us to switch from away from &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;portage&lt;/span&gt;&lt;/code&gt; completely at the
+office.&lt;/p&gt;
+&lt;p&gt;The &lt;abbr title="Package Manager Specification"&gt;PMS&lt;/abbr&gt; documented much of the nastiness that &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;portage&lt;/span&gt;&lt;/code&gt; suffers from, and
+made life in general a whole lot nicer when you were chasing bugs deep down the
+rabbit hole.  And, let us be honest here it also stopped a little of the
+fluidity that plagued &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;portage&lt;/span&gt;&lt;/code&gt; too.&lt;/p&gt;
+&lt;p&gt;Some people argue that it acts as unnecessary stop motion but those people must
+be forgetting what happened when behaviour changed randomly between &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;portage&lt;/span&gt;&lt;/code&gt;
+versions.  &lt;abbr title="Package Manager Specification"&gt;PMS&lt;/abbr&gt;, and the EAPI process, also brought some much needed design
+and stability to newer features.&lt;/p&gt;
+&lt;p&gt;All Gentoo users owe Ciaran McCreesh a few beers for all the hard work he put in
+to those documents, especially in the early days.&lt;/p&gt;
 &lt;/div&gt;
-&lt;p&gt;You may have to change your device settings if the dongle doesn’t show up as
-&lt;code class=&quot;file docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;/dev/ttyUSB0&lt;/span&gt;&lt;/code&gt;, but other than that the file should be correct.&lt;/p&gt;
-&lt;p&gt;Note that we don’t set a speed in our peer file, and this may appear unusual to
-you if you’ve configured &lt;strong class=&quot;command&quot;&gt;pppd&lt;/strong&gt; manually in the past.  The reason is
-that interface speed for &lt;abbr title=&quot;Universal Serial Bus&quot;&gt;USB&lt;/abbr&gt; modems is set by the kernel, and adding a value
-here is pointless.&lt;/p&gt;
+&lt;div class="section" id="the-personal-touch"&gt;
+&lt;h2&gt;The personal touch&lt;/h2&gt;
+&lt;p&gt;On a personal note I’ve met some awesome people over the years as a result of
+using Gentoo.  Many of them at the old Gentoo UK conferences, which were always
+fun.  More recently at LoFu’s annual summit which seems to have taken Gentoo
+UK’s place with practically everyone you saw at Gentoo UK(minus the students),
+and oddly about the same Gentoo to non-Gentoo ratio of talks too.&lt;/p&gt;
+&lt;p&gt;Two excellent people on our current team were recruited following the Gentoo UK
+conference at &lt;abbr title="University College London"&gt;UCL&lt;/abbr&gt;, and we met a spectacular
+contract hire at the one prior to that as well.&lt;/p&gt;
+&lt;p&gt;I’ve even been lucky enough to have a few doors held open for me via people I’ve
+met at Gentoo-themed or Gentoo-heavy events, and I suspect I’d be writing this
+from a less happy place without them.&lt;/p&gt;
 &lt;/div&gt;
-&lt;div class=&quot;section&quot; id=&quot;passwords&quot;&gt;
-&lt;h3&gt;passwords&lt;/h3&gt;
-&lt;p&gt;We don’t need to add an entry to &lt;code class=&quot;file docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;chap-secrets&lt;/span&gt;&lt;/code&gt; or &lt;code class=&quot;file docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;pap-secrets&lt;/span&gt;&lt;/code&gt; as
-authentication isn’t required, but if you’re following along having chosen to
-use a configuration tool such as &lt;a class=&quot;reference external&quot; href=&quot;http://http.us.debian.org/debian/pool/main/p/pppconfig/&quot;&gt;pppconfig&lt;/a&gt; just enter any values you wish as
-they’re silently ignored.&lt;/p&gt;
-&lt;p&gt;I’m told the same applies to &lt;a class=&quot;reference external&quot; href=&quot;http://alumnit.ca/wiki/?WvDial&quot;&gt;wvdial&lt;/a&gt;, so if it complains about requiring
-a password just add an empty or random string to stop the errors.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class=&quot;section&quot; id=&quot;testing-the-connection&quot;&gt;
-&lt;h3&gt;Testing the connection&lt;/h3&gt;
-&lt;p&gt;To test the connection all we need to do is issue &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;pon&lt;/span&gt; &lt;span class=&quot;pre&quot;&gt;three&lt;/span&gt;&lt;/code&gt;, or use the
-graphical tool in your distro if you wish.  The first time you do this you
-should watch the output of your syslog to look for errors, the errors can be
-found in syslog because we supplied &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;debug&lt;/span&gt;&lt;/code&gt; in our peer script.&lt;/p&gt;
-&lt;p&gt;On my system the log can be comfortably viewed with &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;tail&lt;/span&gt; &lt;span class=&quot;pre&quot;&gt;-f&lt;/span&gt;
-&lt;span class=&quot;pre&quot;&gt;/var/log/ppp/current&lt;/span&gt;&lt;/code&gt;, but it is system dependent and if you don’t use &lt;a class=&quot;reference external&quot; href=&quot;http://metalog.sourceforge.net/&quot;&gt;metalog&lt;/a&gt;
-it will definitely be somewhere else in &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;/var/log&lt;/span&gt;&lt;/code&gt;.&lt;/p&gt;
-&lt;p&gt;If the connection worked fine that is all there is to it, now just enable the
-connection at system startup or configure &lt;a class=&quot;reference external&quot; href=&quot;http://www.kernel.org/pub/linux/utils/kernel/hotplug/udev.html&quot;&gt;udev&lt;/a&gt; to connect when the device is
-inserted if it will not always be connected.&lt;/p&gt;
-&lt;div class=&quot;admonition note&quot;&gt;
-&lt;p class=&quot;admonition-title&quot;&gt;Note&lt;/p&gt;
-&lt;p&gt;These devices can take anywhere between ten and thirty seconds to “settle”
-once plugged in. So, don’t block on this service if you add it to the system
-startup scripts as it can significantly slow down the system boot time.  On
-my dongle you can visually check how long the device takes to settle by
-watching the &lt;abbr title=&quot;Light Emitting Diode&quot;&gt;LED&lt;/abbr&gt; on the case, when it changes
-from green it has found a network signal and is ready to use.&lt;/p&gt;
-&lt;/div&gt;
-&lt;p&gt;If the connection didn’t work correctly look at the debugging output in syslog
-and check the &lt;strong class=&quot;command&quot;&gt;pppd&lt;/strong&gt; manual page to look up the error codes.&lt;/p&gt;
-&lt;p&gt;Happy, erm… mobility.&lt;/p&gt;
-&lt;/div&gt;
+&lt;div class="section" id="wrapping-up"&gt;
+&lt;h2&gt;Wrapping up&lt;/h2&gt;
+&lt;p&gt;It is true that you really can not always see the forest for trees.&lt;/p&gt;
+&lt;p&gt;Had recent events not clouded my vision I would have commented on the train
+wreck that is &lt;code class="file docutils literal notranslate"&gt;&lt;span class="pre"&gt;webapp.eclass&lt;/span&gt;&lt;/code&gt; and &lt;code class="file docutils literal notranslate"&gt;&lt;span class="pre"&gt;app-admin/webapp-config&lt;/span&gt;&lt;/code&gt; in
+&lt;span class="xref std std-doc"&gt;dropping_gentoo&lt;/span&gt;.  It sucked tonnes and tonnes of time away until we
+eventually just trashed any package that interacted with it and moved on.&lt;/p&gt;
+&lt;p&gt;That was so long ago that I had forgotten about it until a co-worker asked me
+why I hadn’t mentioned it.  I suspect most of the other negative comments I made
+will feel equally inconsequential when compared to the benefits Gentoo gave us
+as time moves on.&lt;/p&gt;
+&lt;p&gt;Instead of making this rant even longer, I’ll take the time to reflect on the
+fun memories.&lt;/p&gt;
+&lt;p class="rubric"&gt;Footnotes&lt;/p&gt;
+&lt;dl class="footnote brackets"&gt;
+&lt;dt class="label" id="id2"&gt;&lt;span class="brackets"&gt;&lt;a class="fn-backref" href="#id1"&gt;*&lt;/a&gt;&lt;/span&gt;&lt;/dt&gt;
+&lt;dd&gt;&lt;p&gt;To be fair &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;.tbz2&lt;/span&gt;&lt;/code&gt; files on Gentoo are just tarballs with a binary
+&lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;xpak&lt;/span&gt;&lt;/code&gt; appended.  Those extra bits beyond “just a tar -C” are what
+makes dependency handling work among other things.&lt;/p&gt;
+&lt;/dd&gt;
+&lt;/dl&gt;
+&lt;dl class="std option"&gt;
+&lt;dt id="cmdoption-tar-C"&gt;
+&lt;code class="sig-name descname"&gt;-C&lt;/code&gt;&lt;code class="sig-prename descclassname"&gt;&lt;/code&gt;&lt;/dt&gt;
+&lt;dd&gt;&lt;p&gt;This option tells &lt;strong class="command"&gt;tar&lt;/strong&gt; to change directory before performing its
+duty.  For example using &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;-C&lt;/span&gt; &lt;span class="pre"&gt;/&lt;/span&gt;&lt;/code&gt; will switch to &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;/&lt;/span&gt;&lt;/code&gt;, and can be used to
+unpack a tarball directly over the root filesystem.&lt;/p&gt;
+&lt;/dd&gt;&lt;/dl&gt;
+
 &lt;/div&gt;
 &lt;/div&gt;
 </content>
+    <link href="https://jnrowe.github.io/articles/dropping_gentoo_reflex.html" rel="alternate"/>
+    <published>2014-06-29T00:00:00+01:00</published>
+  </entry>
+  <entry>
+    <id>https://jnrowe.github.io/articles/march_toward_death.html</id>
+    <title>Visualising the progress of time</title>
+    <updated>2018-11-13T00:00:00+00:00</updated>
+    <author>
+      <name>James Rowe</name>
+    </author>
+    <content type="html">&lt;div class="section" id="visualising-the-progress-of-time"&gt;
+
+&lt;a class="reference external image-reference" href="https://www.progressbarosx.com/"&gt;&lt;img alt="Screenshot of Progress Bar OSX in action" src="../../_images/time_progress.jpg" /&gt;&lt;/a&gt;
+&lt;p&gt;A co-worker was demoing a user session today, and pointed out a neat tool for
+MacOS that displays the “continual march toward death”.  That tool was
+&lt;a class="reference external" href="https://www.progressbarosx.com/"&gt;Progress Bar OSX&lt;/a&gt;, and it is pretty cool.  Sadly it is only available for
+MacOS, so we’ll need to make something similar.&lt;/p&gt;
+&lt;div class="h-review"&gt;
+    &lt;p&gt;
+        &lt;span class="p-name"&gt;
+            &lt;em&gt;All&lt;/em&gt; popup problems on
+            &lt;span class="p-category"&gt;Linux&lt;/span&gt;
+            should be solved with
+            &lt;a href="https://github.com/robm/dzen" class"p-item h-item"&gt;
+                dzen
+            &lt;/a&gt;
+        &lt;/span&gt;, it is
+        &lt;data class="p-rating" value="5"&gt;awesome&lt;/data&gt;.
+        &lt;span class="e-content"&gt;
+            You know this because it comes equipped with the option to
+            produce
+            &lt;abbr title="Knight Industries Two Thousand"&gt;KITT&lt;/abbr&gt;
+            &lt;a href="https://en.m.wikipedia.org/wiki/KITT"&gt;
+                Anamorphic Equalizer&lt;/a&gt;
+            emulation.
+        &lt;/span&gt;
+    &lt;/p&gt;
+&lt;/div&gt;&lt;div class="figure align-default" id="id3"&gt;
+&lt;a class="reference external image-reference" href="../_static/kitt.gif"&gt;&lt;img alt="Multi-band scanner in action" src="../../_images/kitt06.png" /&gt;&lt;/a&gt;
+&lt;p class="caption"&gt;&lt;span class="caption-text"&gt;Click the image for an animated GIF, I’ll spare you the flashing lights in
+case you wish to read on.&lt;/span&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="step-one"&gt;
+&lt;h2&gt;Step one&lt;/h2&gt;
+&lt;p&gt;First we’ll want to display the year:&lt;/p&gt;
+&lt;div class="highlight-sh notranslate"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;gdbar -w &lt;span class="m"&gt;1500&lt;/span&gt; -h &lt;span class="m"&gt;20&lt;/span&gt; &lt;span class="se"&gt;\&lt;/span&gt;
+   &lt;span class="o"&gt;&amp;lt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span class="k"&gt;$(($(&lt;/span&gt;date +%j&lt;span class="k"&gt;)&lt;/span&gt; &lt;span class="o"&gt;/&lt;/span&gt; &lt;span class="k"&gt;$(&lt;/span&gt;date -d&lt;span class="s1"&gt;&amp;#39;Dec 31&amp;#39;&lt;/span&gt; +%j&lt;span class="k"&gt;)&lt;/span&gt;.0 &lt;span class="o"&gt;*&lt;/span&gt; &lt;span class="m"&gt;100&lt;/span&gt;&lt;span class="k"&gt;))&lt;/span&gt; &lt;span class="se"&gt;\&lt;/span&gt;
+   &lt;span class="p"&gt;|&lt;/span&gt; dzen2 -p &lt;span class="m"&gt;5&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;which results in:&lt;/p&gt;
+&lt;img alt="Screenshot of simple day of year bar on 2018-11-13" src="../../_images/day_bar.png" /&gt;
+&lt;p&gt;The logic should be simple enough to follow(if you’re familiar with
+&lt;strong class="command"&gt;date&lt;/strong&gt;’s &lt;a class="reference internal" href="../../articles/march_toward_death.html#cmdoption-date-arg-j"&gt;&lt;code class="xref std std-option docutils literal notranslate"&gt;&lt;span class="pre"&gt;%j&lt;/span&gt; &lt;span class="pre"&gt;formatter&lt;/span&gt;&lt;/code&gt;&lt;/a&gt;):&lt;/p&gt;
+&lt;ul class="simple"&gt;
+&lt;li&gt;&lt;p&gt;&lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;current&lt;/span&gt; &lt;span class="pre"&gt;day&lt;/span&gt; &lt;span class="pre"&gt;in&lt;/span&gt; &lt;span class="pre"&gt;year&lt;/span&gt;&lt;/code&gt; / &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;number&lt;/span&gt; &lt;span class="pre"&gt;of&lt;/span&gt; &lt;span class="pre"&gt;days&lt;/span&gt; &lt;span class="pre"&gt;in&lt;/span&gt; &lt;span class="pre"&gt;year&lt;/span&gt;&lt;/code&gt;&lt;a class="footnote-reference brackets" href="#id2" id="id1"&gt;1&lt;/a&gt; * &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;100&lt;/span&gt;&lt;/code&gt; for
+position in year as percentage&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Generate the &lt;strong class="command"&gt;dzen2&lt;/strong&gt; markup for a bar of &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;1500&lt;/span&gt;&lt;/code&gt; pixels wide and
+&lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;20&lt;/span&gt;&lt;/code&gt; pixels high&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Display it for &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;5&lt;/span&gt;&lt;/code&gt; seconds&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class="admonition warning"&gt;
+&lt;p class="admonition-title"&gt;Warning&lt;/p&gt;
+&lt;p&gt;Be sure to notice that we force &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;number&lt;/span&gt; &lt;span class="pre"&gt;of&lt;/span&gt; &lt;span class="pre"&gt;days&lt;/span&gt; &lt;span class="pre"&gt;in&lt;/span&gt; &lt;span class="pre"&gt;year&lt;/span&gt;&lt;/code&gt; to be a float
+with the addition of &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;.0&lt;/span&gt;&lt;/code&gt;.  Without it the result would be rounded toward
+zero, ie zero on every day but December 31ˢᵗ.&lt;/p&gt;
+&lt;/div&gt;
+&lt;p&gt;We can repeat the same process for day ratio; using &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;date&lt;/span&gt; &lt;span class="pre"&gt;-d&lt;/span&gt; &lt;span class="pre"&gt;&amp;quot;00:00&amp;quot;&lt;/span&gt; &lt;span class="pre"&gt;+%s&lt;/span&gt;&lt;/code&gt; to
+calculate number of seconds passed from the 86400 we’ll see today.  And then
+simply using &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;date&lt;/span&gt; &lt;span class="pre"&gt;+%m&lt;/span&gt;&lt;/code&gt; to get today’s month as a number.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="step-two"&gt;
+&lt;h2&gt;Step two&lt;/h2&gt;
+&lt;p&gt;We can definitely up our game here.  Why not use colours?  We’ll switch to
+&lt;a class="reference external" href="https://www.python.org/"&gt;Python&lt;/a&gt; now, as the gigantic standard library allows us to be lazy.&lt;/p&gt;
+&lt;div class="highlight-default notranslate"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;pcnt_colour&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;percent&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+    &lt;span class="n"&gt;h&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="mi"&gt;3&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="mi"&gt;3&lt;/span&gt; &lt;span class="o"&gt;*&lt;/span&gt; &lt;span class="n"&gt;percent&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="mi"&gt;100&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+    &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;#&amp;#39;&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;&amp;#39;&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;join&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="sa"&gt;f&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;&lt;/span&gt;&lt;span class="si"&gt;{&lt;/span&gt;&lt;span class="nb"&gt;min&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nb"&gt;int&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;n&lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="mi"&gt;256&lt;/span&gt;&lt;span class="p"&gt;),&lt;/span&gt; &lt;span class="mi"&gt;255&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="si"&gt;:&lt;/span&gt;&lt;span class="s1"&gt;02x&lt;/span&gt;&lt;span class="si"&gt;}&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;&lt;/span&gt;
+                         &lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;n&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="n"&gt;colorsys&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;hls_to_rgb&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;h&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="mi"&gt;5&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;The function above converts a percentage value in to a hex triplet across
+a green to red gradient, we use &lt;a class="reference external" href="https://docs.python.org/3/library/colorsys.html#colorsys.hls_to_rgb" title="(in Python v3.9)"&gt;&lt;code class="xref py py-func docutils literal notranslate"&gt;&lt;span class="pre"&gt;hls_to_rgb()&lt;/span&gt;&lt;/code&gt;&lt;/a&gt; here as the &lt;a class="reference external" href="https://en.m.wikipedia.org/wiki/HLS_color_space"&gt;HLS
+colour space&lt;/a&gt; is more amenable to generating smooth gradients.&lt;/p&gt;
+&lt;p&gt;Now that we’re using &lt;a class="reference external" href="https://www.python.org/"&gt;Python&lt;/a&gt; we may as well take advantage of its
+&lt;a class="reference external" href="https://docs.python.org/3/library/calendar.html#module-calendar" title="(in Python v3.9)"&gt;&lt;code class="xref py py-mod docutils literal notranslate"&gt;&lt;span class="pre"&gt;calendar&lt;/span&gt;&lt;/code&gt;&lt;/a&gt; module:&lt;/p&gt;
+&lt;div class="highlight-default notranslate"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;month_days&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;date&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+    &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="n"&gt;calendar&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;monthrange&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;date&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;year&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;date&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;month&lt;/span&gt;&lt;span class="p"&gt;)[&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;The &lt;a class="reference external" href="https://docs.python.org/3/library/calendar.html#calendar.monthrange" title="(in Python v3.9)"&gt;&lt;code class="xref py py-func docutils literal notranslate"&gt;&lt;span class="pre"&gt;monthrange()&lt;/span&gt;&lt;/code&gt;&lt;/a&gt; function returns a tuple where the second item
+is the number of days in the current month.&lt;/p&gt;
+&lt;div class="highlight-default notranslate"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;days_in_year&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;date&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+    &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="n"&gt;calendar&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;isleap&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;date&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;year&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+        &lt;span class="n"&gt;days&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;366&lt;/span&gt;
+    &lt;span class="k"&gt;else&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+        &lt;span class="n"&gt;days&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;365&lt;/span&gt;
+    &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="n"&gt;days&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;&lt;a class="reference external" href="https://docs.python.org/3/library/calendar.html#calendar.isleap" title="(in Python v3.9)"&gt;&lt;code class="xref py py-func docutils literal notranslate"&gt;&lt;span class="pre"&gt;isleap()&lt;/span&gt;&lt;/code&gt;&lt;/a&gt; allows us to offload figuring out whether 2700 is
+a leap year once senility begins to set in.&lt;/p&gt;
+&lt;div class="highlight-default notranslate"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;show_progress&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;title&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;percent&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;width&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+    &lt;span class="n"&gt;subprocess&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;run&lt;/span&gt;&lt;span class="p"&gt;([&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;gdbar&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;-l&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;title&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;-w&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="nb"&gt;str&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;width&lt;/span&gt;&lt;span class="p"&gt;),&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;-fg&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+                    &lt;span class="n"&gt;pcnt_colour&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;percent&lt;/span&gt;&lt;span class="p"&gt;)],&lt;/span&gt;
+                   &lt;span class="nb"&gt;input&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="nb"&gt;str&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;percent&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;encode&lt;/span&gt;&lt;span class="p"&gt;())&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;We’ll also create a utility function to generate the &lt;strong class="command"&gt;dzen2&lt;/strong&gt; markup
+required to output our little blocks of data.&lt;/p&gt;
+&lt;p&gt;Putting it altogether we can display our pretty little blocks with something
+like the following:&lt;/p&gt;
+&lt;div class="highlight-shell notranslate"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;./time_progress.py -w &lt;span class="m"&gt;1500&lt;/span&gt; &lt;span class="se"&gt;\&lt;/span&gt;
+    &lt;span class="p"&gt;|&lt;/span&gt; dzen2 -l &lt;span class="m"&gt;3&lt;/span&gt; -p &lt;span class="m"&gt;3&lt;/span&gt; -fn monospace-15 -e &lt;span class="s1"&gt;&amp;#39;onstart=uncollapse&amp;#39;&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;This creates the markup and makes &lt;strong class="command"&gt;dzen2&lt;/strong&gt; display the output for
+3 seconds.&lt;/p&gt;
+&lt;img alt="Screenshot of colourful progress in time" src="../../_images/progress_bar.png" /&gt;
+&lt;p&gt;The &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;onstart=uncollapse&lt;/span&gt;&lt;/code&gt; attribute tell &lt;strong class="command"&gt;dzen2&lt;/strong&gt; that we want to see
+the full output on startup, without it we’d see just the title bar until we
+moved our pointer over the header.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="step-four"&gt;
+&lt;h2&gt;Step four&lt;/h2&gt;
+&lt;p&gt;You can find the script I used &lt;a class="reference download internal" download="" href="../../_downloads/8bb0952b2cf5d96d60e8d4457de4c840/time_progress.py"&gt;&lt;code class="xref download docutils literal notranslate"&gt;&lt;span class="pre"&gt;here&lt;/span&gt;&lt;/code&gt;&lt;/a&gt;.  It isn’t
+pretty, but it will do.  If I come to depend on it I’m sure that I’ll make
+something better.&lt;/p&gt;
+&lt;p&gt;I think it is important to note that if you’ve got this far and you’re thinking
+about doing this yourself you should consider buying the &lt;a class="reference external" href="https://www.progressbarosx.com/"&gt;Progress Bar OSX&lt;/a&gt;
+app.  This document wouldn’t exist without it and rewarding creators is
+important, even when they ignore your chosen platform ;)&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="step"&gt;
+&lt;h2&gt;Step ∞&lt;/h2&gt;
+&lt;p&gt;As always with any code that touches dates &lt;a class="reference external" href="https://en.m.wikipedia.org/wiki/Here_be_dragons"&gt;“Here be dragons”&lt;/a&gt;.  For example,
+I’ll leave it as an exercise for the reader how to handle calculations for days
+with &lt;abbr title="Daylight Saving Time"&gt;DST&lt;/abbr&gt; transitions.&lt;/p&gt;
+&lt;p class="rubric"&gt;Footnotes&lt;/p&gt;
+&lt;dl class="footnote brackets"&gt;
+&lt;dt class="label" id="id2"&gt;&lt;span class="brackets"&gt;&lt;a class="fn-backref" href="#id1"&gt;1&lt;/a&gt;&lt;/span&gt;&lt;/dt&gt;
+&lt;dd&gt;&lt;p&gt;Calculating the day of year for December 31ˢᵗ allows one to work in leap
+years.&lt;/p&gt;
+&lt;/dd&gt;
+&lt;/dl&gt;
+&lt;dl class="std option"&gt;
+&lt;dt id="cmdoption-date-arg-j"&gt;
+&lt;code class="sig-name descname"&gt;%j&lt;/code&gt;&lt;code class="sig-prename descclassname"&gt;&lt;/code&gt;&lt;/dt&gt;
+&lt;dd&gt;&lt;p&gt;Displays the day number of the given year, see &lt;em class="manpage"&gt;strftime(3)&lt;/em&gt; if
+this is new to you.&lt;/p&gt;
+&lt;/dd&gt;&lt;/dl&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;
+</content>
+    <link href="https://jnrowe.github.io/articles/march_toward_death.html" rel="alternate"/>
+    <published>2018-11-13T00:00:00+00:00</published>
   </entry>
 </feed>

@@ -1,258 +1,180 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version='1.0' encoding='UTF-8'?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <title type="text">JNRowe - Posts tagged gentoo</title>
-  <id>https://jnrowe.github.io/blog/tag/gentoo/atom.xml</id>
-  <updated>2014-06-30T00:00:00Z</updated>
-  <link href="https://jnrowe.github.io/" />
-  <link href="https://jnrowe.github.io/blog/tag/gentoo/atom.xml" rel="self" />
-  <subtitle type="text">Ramblings of a tired mind</subtitle>
-  <generator uri="https://ablog.readthedocs.org" version="0.10.4">ABlog</generator>
-  <entry xml:base="https://jnrowe.github.io/blog/tag/gentoo/atom.xml">
-    <title type="text">jnrowe-misc - The unsorted package overlay</title>
-    <id>https://jnrowe.github.io/articles/probits/jnrowe-misc.html</id>
-    <updated>2014-06-30T00:00:00Z</updated>
-    <published>2014-06-30T00:00:00Z</published>
-    <link href="https://jnrowe.github.io/articles/probits/jnrowe-misc.html" />
+  <id>https://jnrowe.github.io/</id>
+  <title>JNRowe - Posts tagged gentoo</title>
+  <updated>2021-03-21T11:05:58.946523+00:00</updated>
+  <link href="https://jnrowe.github.io/"/>
+  <link href="https://jnrowe.github.io/blog/tag/gentoo/atom.xml"/>
+  <generator uri="https://ablog.readthedocs.org" version="0.10.12">ABlog</generator>
+  <subtitle>Ramblings of a tired mind</subtitle>
+  <entry>
+    <id>https://jnrowe.github.io/articles/tips/Gentoo_one_liners.html</id>
+    <title>Gentoo one liners</title>
+    <updated>2009-10-09T00:00:00+01:00</updated>
     <author>
       <name>James Rowe</name>
     </author>
-    <content type="html">&lt;div class=&quot;section&quot; id=&quot;jnrowe-misc-the-unsorted-package-overlay&quot;&gt;
+    <content type="html">&lt;div class="section" id="gentoo-one-liners"&gt;
 
+&lt;p&gt;On our Linux list at work the topic of &lt;a class="reference external" href="http://www.gentoo.org/"&gt;Gentoo&lt;/a&gt; usage arose again today.
+Originally, the topic was about interesting one liners used to maintain a Gentoo
+system.  I found myself posting extended replies to some of the questions and
+I’m reposting a few of those here.&lt;/p&gt;
 &lt;blockquote&gt;
-&lt;div&gt;&lt;p&gt;A collection of &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;ebuild&lt;/span&gt;&lt;/code&gt; files with no overall theme.&lt;/p&gt;
+&lt;div&gt;&lt;p&gt;How do I get &lt;em&gt;just the list&lt;/em&gt; of packages that are installed but not in
+&lt;code class="file docutils literal notranslate"&gt;&lt;span class="pre"&gt;world&lt;/span&gt;&lt;/code&gt;?&lt;/p&gt;
 &lt;/div&gt;&lt;/blockquote&gt;
-&lt;p&gt;&lt;abbr title=&quot;Too Long; Didn’t Read&quot;&gt;TLDR&lt;/abbr&gt;; For what it was &lt;a class=&quot;reference external&quot; href=&quot;https://github.com/JNRowe/jnrowe-misc&quot;&gt;jnrowe-misc&lt;/a&gt; served its
-purpose well.&lt;/p&gt;
-&lt;div class=&quot;section&quot; id=&quot;an-island-unto-itself&quot;&gt;
-&lt;h2&gt;An island unto itself&lt;/h2&gt;
-&lt;p&gt;While it may come as a surprise to a few of the users(which would be most of
-them) the overlay available on GitHub wasn’t the deliverable at any point in
-time.  In fact, the often convoluted merge history in the repository probably
-hinted at that quite a bit.&lt;/p&gt;
-&lt;img alt=&quot;Tree view of ``jnrowe-misc`` history&quot; class=&quot;align-right&quot; src=&quot;../../_images/jnrowe-misc.png&quot; style=&quot;width: 50%;&quot; /&gt;
-&lt;p&gt;&lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;jnrowe-misc&lt;/span&gt;&lt;/code&gt; was always the combination of a few independently managed
-repositories that I bundled up to make available for public consumption.
-Eventually it ended up being mostly Python stuff, but that was because the
-support burden of other packages was becoming more time consuming than I could
-justify.&lt;/p&gt;
-&lt;p&gt;The &lt;em&gt;real&lt;/em&gt; audience for the overlay, my co-workers, saw a different beast
-entirely.  It used our keyword types and rules, it came bundled &lt;span class=&quot;xref std std-doc&quot;&gt;with the
-tests&lt;/span&gt; I was unable to share and had a tighter schedule for
-maintenance.&lt;/p&gt;
-&lt;p&gt;Still, I received a fair number of emails and live comments from users so I’ll
-call that a success!&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class=&quot;section&quot; id=&quot;upstreamed&quot;&gt;
-&lt;h2&gt;Upstreamed&lt;/h2&gt;
-&lt;p&gt;Sadly, very little was ever taken upstream(even less if you count the parts that
-were credited).  This was entirely my fault.  I originally started exporting the
-overlay because I was fed up with the new package process upstream, and it seemed
-like the best way to deal with that for me.&lt;/p&gt;
-&lt;p&gt;I had hoped that some packages would be picked up, but didn’t actively push them
-after the first few.&lt;/p&gt;
-&lt;p&gt;The overlay should have never touched packages that were available upstream, but
-occasionally they overlapped when upstream added them.  The use of &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;::shadow&lt;/span&gt;&lt;/code&gt;
-to workaround problems when new packages were added upstream worked &lt;em&gt;really&lt;/em&gt;
-well, and saved the few remaining hairs on my balding head.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class=&quot;section&quot; id=&quot;legacy&quot;&gt;
-&lt;h2&gt;Legacy&lt;/h2&gt;
-&lt;p&gt;It looks like the majority of packages will continue to be maintained for the
-foreseeable future, but regrettably it looks like the result will not be
-available beyond a “open to all people who know where to look” organisation on
-GitHub.&lt;/p&gt;
-&lt;p&gt;I’d like to change the new maintainer’s mind, but in all honesty I understand
-their reasons.  I’ve stopped maintaining a lot of once public projects over the
-past couple of years, and it is as refreshing as it is saddening.&lt;/p&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-</content>
-  </entry>
-  <entry xml:base="https://jnrowe.github.io/blog/tag/gentoo/atom.xml">
-    <title type="text">Dropping Gentoo reflex</title>
-    <id>https://jnrowe.github.io/articles/dropping_gentoo_reflex.html</id>
-    <updated>2014-06-29T00:00:00Z</updated>
-    <published>2014-06-29T00:00:00Z</published>
-    <link href="https://jnrowe.github.io/articles/dropping_gentoo_reflex.html" />
-    <author>
-      <name>James Rowe</name>
-    </author>
-    <content type="html">&lt;div class=&quot;section&quot; id=&quot;dropping-gentoo-reflex&quot;&gt;
+&lt;p&gt;The constraint here is packages that were installed with &lt;code class="xref std std-option docutils literal notranslate"&gt;&lt;span class="pre"&gt;--oneshot&lt;/span&gt;&lt;/code&gt;,
+or manually removed from &lt;code class="file docutils literal notranslate"&gt;&lt;span class="pre"&gt;/var/lib/portage/world&lt;/span&gt;&lt;/code&gt;, which means that they
+will no longer be updated automatically.  I often use this for packages I’m
+just playing with, and it appears lots of others do the same.  While the output
+of &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;emerge&lt;/span&gt; &lt;span class="pre"&gt;--pretend&lt;/span&gt; &lt;span class="pre"&gt;--depclean&lt;/span&gt;&lt;/code&gt; is all that is really needed, the question
+is how to get a list of just the packages.&lt;/p&gt;
+&lt;div class="highlight-console notranslate"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="gp"&gt;$&lt;/span&gt; emerge --pretend --depclean
+&lt;span class="go"&gt;&amp;lt;snipped heaps of output&amp;gt;&lt;/span&gt;
+&lt;span class="go"&gt;gnome-base/orbit&lt;/span&gt;
+&lt;span class="go"&gt;    selected: 2.14.17&lt;/span&gt;
+&lt;span class="go"&gt;protected: none&lt;/span&gt;
+&lt;span class="go"&gt;    omitted: none&lt;/span&gt;
 
-&lt;p&gt;After hitting the publish button on &lt;a class=&quot;reference internal&quot; href=&quot;../../articles/dropping_gentoo.html#dropping_gentoo&quot;&gt;&lt;span class=&quot;std std-ref&quot;&gt;Dropping Gentoo&lt;/span&gt;&lt;/a&gt; a few friends
-commented that I was either unnecessarily harsh about Gentoo or we wasted an
-enormous amount of time on it.  It definitely was the former, and I feel
-a touch ashamed for implying the latter.&lt;/p&gt;
-&lt;p&gt;I was writing my thoughts in the “project obituary” form that I’m used to, and
-that is entirely about spotting the downsides to make sure they don’t reoccur.
-And with that in mind I &lt;em&gt;was&lt;/em&gt; being incredibly unfair to Gentoo, both the
-project and by extension the people working on it.&lt;/p&gt;
-&lt;p&gt;There were many, many good points about Gentoo and I’ll nod towards a few now.&lt;/p&gt;
-&lt;div class=&quot;section&quot; id=&quot;speed&quot;&gt;
-&lt;h2&gt;Speed&lt;/h2&gt;
-&lt;p&gt;No, no.  Not the “Oh my god, my KDEs are so fast” that many people fairly
-associate with Gentoo users.  I’m talking about the basic package handling
-tasks.&lt;/p&gt;
-&lt;p&gt;There are very few other distributions that can match Gentoo when it comes to
-the speed of editing a package.  Or, for that matter, the speed of installation
-if you share binary packages.&lt;/p&gt;
-&lt;p&gt;Almost the first thing you notice when switching to Debian or Fedora as a heavy
-binary package user on Gentoo is just how slow package installation and removal
-is.  Binary package installation on Gentoo feels on par with a distribution
-like Slackware, and what passes for package management there is just choosing
-the right argument to &lt;strong class=&quot;command&quot;&gt;tar&lt;/strong&gt;’s &lt;a class=&quot;reference internal&quot; href=&quot;../../articles/dropping_gentoo_reflex.html#cmdoption-tar-C&quot;&gt;&lt;code class=&quot;xref std std-option docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;-C&lt;/span&gt;&lt;/code&gt;&lt;/a&gt; option&lt;a class=&quot;footnote-reference brackets&quot; href=&quot;#id2&quot; id=&quot;id1&quot;&gt;*&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;Where Gentoo really excels though is in the speed of creating new packages or
-editing existing packages.&lt;/p&gt;
-&lt;p&gt;Lets take a look at an example.  Say, for example, that you just found out that
-&lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;flask-dashed&lt;/span&gt;&lt;/code&gt;’s  &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;ebuild&lt;/span&gt;&lt;/code&gt; mistakenly installs a &lt;code class=&quot;file docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;/usr/README&lt;/span&gt;&lt;/code&gt; file.
-We we can fix the problem with the following simple change and a call to
-&lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;repoman&lt;/span&gt; &lt;span class=&quot;pre&quot;&gt;manifest&lt;/span&gt;&lt;/code&gt;, the rest takes care of itself.&lt;/p&gt;
-&lt;div class=&quot;highlight-diff notranslate&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&quot;gh&quot;&gt;diff --git i/flask-dashed-0.1b_p2.ebuild w/flask-dashed-0.1b_p2.ebuild&lt;/span&gt;
-&lt;span class=&quot;gh&quot;&gt;index dd64877a387e..cf3e3cbf272b 100644&lt;/span&gt;
-&lt;span class=&quot;gd&quot;&gt;--- i/flask-dashed-0.1b_p2.ebuild&lt;/span&gt;
-&lt;span class=&quot;gi&quot;&gt;+++ w/flask-dashed-0.1b_p2.ebuild&lt;/span&gt;
-&lt;span class=&quot;gu&quot;&gt;@@ -29,5 +29,6 @@ S=&amp;quot;${WORKDIR}/${MY_P}&amp;quot;&lt;/span&gt;
+&lt;span class="go"&gt;app-text/iso-codes&lt;/span&gt;
+&lt;span class="go"&gt;    selected: 3.8&lt;/span&gt;
+&lt;span class="go"&gt;protected: none&lt;/span&gt;
+&lt;span class="go"&gt;    omitted: none&lt;/span&gt;
 
- src_prepare() {
-        distutils-r1_src_prepare
-&lt;span class=&quot;gi&quot;&gt;+       sed -i /data_files/d setup.py || die &amp;quot;sed failed&amp;quot;&lt;/span&gt;
-        rm -rf &amp;quot;${S}/tests&amp;quot;
+&lt;span class="go"&gt;dev-libs/dbus-glib&lt;/span&gt;
+&lt;span class="go"&gt;    selected: 0.76&lt;/span&gt;
+&lt;span class="go"&gt;protected: none&lt;/span&gt;
+&lt;span class="go"&gt;    omitted: none&lt;/span&gt;
+
+&lt;span class="go"&gt;sys-apps/dbus&lt;/span&gt;
+&lt;span class="go"&gt;    selected: 1.2.3-r1&lt;/span&gt;
+&lt;span class="go"&gt;protected: none&lt;/span&gt;
+&lt;span class="go"&gt;    omitted: none&lt;/span&gt;
+
+&lt;span class="gp"&gt;&amp;gt;&lt;/span&gt;&amp;gt;&amp;gt; &lt;span class="s1"&gt;&amp;#39;Selected&amp;#39;&lt;/span&gt; packages are slated &lt;span class="k"&gt;for&lt;/span&gt; removal.
+&lt;span class="gp"&gt;&amp;gt;&lt;/span&gt;&amp;gt;&amp;gt; &lt;span class="s1"&gt;&amp;#39;Protected&amp;#39;&lt;/span&gt; and &lt;span class="s1"&gt;&amp;#39;omitted&amp;#39;&lt;/span&gt; packages will not be removed.
+
+&lt;span class="go"&gt;Packages installed:   477&lt;/span&gt;
+&lt;span class="go"&gt;Packages in world:    86&lt;/span&gt;
+&lt;span class="go"&gt;Packages in system:   50&lt;/span&gt;
+&lt;span class="go"&gt;Required packages:    348&lt;/span&gt;
+&lt;span class="go"&gt;Number to remove:     129&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;The output we want can be easily matched with &lt;abbr title="Regular Expression"&gt;RegEx&lt;/abbr&gt;, and the &lt;a class="reference external" href="http://cnswww.cns.cwru.edu/~chet/bash/bashtop.html"&gt;bash&lt;/a&gt;
+&lt;strong class="command"&gt;alias&lt;/strong&gt; below will list just the packages by piping the output through
+&lt;a class="reference external" href="http://sed.sourceforge.net/"&gt;sed&lt;/a&gt;.  We can even use the one liner as input to a larger function if we only
+want to see top-level packages; that is packages that aren’t listed as
+dependencies of other packages:&lt;/p&gt;
+&lt;div class="highlight-default notranslate"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;alias pkgclean=&amp;quot;emerge ----pretend --depclean | sed -n &amp;#39;/^ [a-z]/s,^ ,,p&amp;#39; | sort&amp;quot;
+
+toppkgclean() {
+    local depfiles=$(find /var/db/pkg/ -name RDEPEND -o -name PDEPEND)
+    local cleanlist=$(pkgclean)
+    for package in ${cleanlist}
+    do
+        LC_ALL=C grep -q ${package} ${depfiles} || echo ${package}
+    done
 }
+
+Is it possible to use :command:`bash` completion to complete package names
+for use in :file:`package.keywords`?
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
-&lt;div class=&quot;admonition note&quot;&gt;
-&lt;p class=&quot;admonition-title&quot;&gt;Note&lt;/p&gt;
-&lt;p&gt;Of course, you should fix the package properly and send the fix upstream but
-this is just to prove a point.  Calling &lt;strong class=&quot;command&quot;&gt;die&lt;/strong&gt; with &lt;strong class=&quot;command&quot;&gt;sed&lt;/strong&gt;
-there isn’t recommended and is practically pointless, but it is the style
-upstream.&lt;/p&gt;
-&lt;/div&gt;
-&lt;p&gt;I have to mention a small downside here however, because very few people seem to
-test &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;portage&lt;/span&gt;&lt;/code&gt;’s binary package support you’ll occasionally have to do some
-leg work to fix problems.  This normally arises when you have an &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;eclass&lt;/span&gt;&lt;/code&gt;
-change that needs to ripple through, or when a library breaks compatibility and
-its &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;ebuild&lt;/span&gt;&lt;/code&gt; hasn’t been bumped properly.&lt;/p&gt;
-&lt;p&gt;Almost every time that happens you can fix it with a quick loop in your shell
-though.  A couple of such problems and solutions that I found in my shell
-history can be seen below.&lt;/p&gt;
-&lt;div class=&quot;highlight-zsh notranslate&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&quot;c1&quot;&gt;# When you were stuck with packages that used python-distutils-ng, and you&lt;/span&gt;
-&lt;span class=&quot;c1&quot;&gt;# needed to scrub packages because you changed Python version&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; p in &lt;span class=&quot;k&quot;&gt;$(&lt;/span&gt;portageq pkgdir&lt;span class=&quot;k&quot;&gt;)&lt;/span&gt;/*-*/*.tbz2&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;do&lt;/span&gt;
-    qtbz2 -xO &lt;span class=&quot;nv&quot;&gt;$p&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;|&lt;/span&gt; qxpak -xO - &lt;span class=&quot;si&quot;&gt;${${&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;p&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;##*/&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;/.tbz2&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;}&lt;/span&gt;.ebuild &lt;span class=&quot;p&quot;&gt;|&lt;/span&gt; grep -q &lt;span class=&quot;s1&quot;&gt;&amp;#39;SUPPORT_PYTHON_ABIS&amp;#39;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$p&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;done&lt;/span&gt;
-
-&lt;span class=&quot;c1&quot;&gt;# When you were using packages that used python’s “-r1” eclasses and all&lt;/span&gt;
-&lt;span class=&quot;c1&quot;&gt;# you could see is a flood of blockages in your update output&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; p in &lt;span class=&quot;k&quot;&gt;$(&lt;/span&gt;portageq pkgdir&lt;span class=&quot;k&quot;&gt;)&lt;/span&gt;/*-*/*.tbz2&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;do&lt;/span&gt;
-    qtbz2 -xO &lt;span class=&quot;nv&quot;&gt;$p&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;|&lt;/span&gt; qxpak -xO - RDEPEND &lt;span class=&quot;m&quot;&gt;2&lt;/span&gt;&amp;gt;/dev/null &lt;span class=&quot;p&quot;&gt;|&lt;/span&gt; grep -q &lt;span class=&quot;s2&quot;&gt;&amp;quot;dev-python/python-exec&amp;quot;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$p&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;done&lt;/span&gt;
+&lt;p&gt;I actually wrote the following little function in reply to a user asking
+a similar question in &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;#gentoo&lt;/span&gt;&lt;/code&gt; on Freenode a couple of months ago:&lt;/p&gt;
+&lt;div class="highlight-bash notranslate"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;arch_unmask&lt;span class="o"&gt;()&lt;/span&gt; &lt;span class="o"&gt;{&lt;/span&gt;
+    &lt;span class="nb"&gt;local&lt;/span&gt; s &lt;span class="k"&gt;done&lt;/span&gt;
+    &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="o"&gt;[[&lt;/span&gt; -z &lt;span class="nv"&gt;$1&lt;/span&gt; &lt;span class="o"&gt;]]&lt;/span&gt;
+    &lt;span class="k"&gt;then&lt;/span&gt;
+        &lt;span class="nb"&gt;echo&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;&lt;/span&gt;&lt;span class="si"&gt;${&lt;/span&gt;&lt;span class="nv"&gt;FUNCNAME&lt;/span&gt;&lt;span class="si"&gt;}&lt;/span&gt;&lt;span class="s2"&gt; &amp;lt;category/package&amp;gt; [arch]&amp;quot;&lt;/span&gt;
+        &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="m"&gt;1&lt;/span&gt;
+    &lt;span class="k"&gt;fi&lt;/span&gt;
+    &lt;span class="k"&gt;for&lt;/span&gt; s in &lt;span class="k"&gt;$(&lt;/span&gt;portageq envvar PORTDIR PORTDIR_OVERLAY&lt;span class="k"&gt;)&lt;/span&gt;
+    &lt;span class="k"&gt;do&lt;/span&gt;
+        &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="o"&gt;[[&lt;/span&gt; -d &lt;span class="nv"&gt;$s&lt;/span&gt;/&lt;span class="nv"&gt;$1&lt;/span&gt; &lt;span class="o"&gt;]]&lt;/span&gt;
+        &lt;span class="k"&gt;then&lt;/span&gt;
+            &lt;span class="nb"&gt;echo&lt;/span&gt; &lt;span class="nv"&gt;$1&lt;/span&gt; &lt;span class="nv"&gt;$2&lt;/span&gt; &amp;gt;&amp;gt;/etc/portage/package.keywords/testing
+            &lt;span class="k"&gt;done&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="m"&gt;1&lt;/span&gt;
+            &lt;span class="nb"&gt;break&lt;/span&gt;
+        &lt;span class="k"&gt;fi&lt;/span&gt;
+    &lt;span class="k"&gt;done&lt;/span&gt;
+    &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="o"&gt;[[&lt;/span&gt; -z &lt;span class="s2"&gt;&amp;quot;&lt;/span&gt;&lt;span class="si"&gt;${&lt;/span&gt;&lt;span class="nv"&gt;done&lt;/span&gt;&lt;span class="si"&gt;}&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;&lt;/span&gt; &lt;span class="o"&gt;]]&lt;/span&gt;
+    &lt;span class="k"&gt;then&lt;/span&gt;
+        &lt;span class="nb"&gt;echo&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;Doesn&amp;#39;t exist ‘&lt;/span&gt;&lt;span class="nv"&gt;$1&lt;/span&gt;&lt;span class="s2"&gt;’&amp;quot;&lt;/span&gt;
+        &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="m"&gt;1&lt;/span&gt;
+    &lt;span class="k"&gt;fi&lt;/span&gt;
+&lt;span class="o"&gt;}&lt;/span&gt;
+&lt;span class="nb"&gt;complete&lt;/span&gt; -F _emerge arch_unmask
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
+&lt;div class="admonition note"&gt;
+&lt;p class="admonition-title"&gt;Note&lt;/p&gt;
+&lt;p&gt;If you’re using our Gentoo boxes at the office the function will be much
+faster if you replace the call to &lt;strong class="command"&gt;portageq&lt;/strong&gt; by
+&lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;/var/lib/repos/*&lt;/span&gt;&lt;/code&gt;, as our package trees are always installed there.  The
+&lt;strong class="command"&gt;portageq&lt;/strong&gt; call is mainly there for users who use &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;/usr/portage&lt;/span&gt;&lt;/code&gt;
+and &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;/usr/local/portage&lt;/span&gt;&lt;/code&gt;, or other such monstrosities.&lt;/p&gt;
 &lt;/div&gt;
-&lt;div class=&quot;section&quot; id=&quot;documentation&quot;&gt;
-&lt;h2&gt;Documentation&lt;/h2&gt;
-&lt;p&gt;The excellent &lt;a class=&quot;reference external&quot; href=&quot;http://devmanual.gentoo.org/&quot;&gt;devmanual&lt;/a&gt; and the incredible &lt;a class=&quot;reference external&quot; href=&quot;http://wiki.gentoo.org/wiki/Project:PMS&quot;&gt;Package Manager Specification&lt;/a&gt;
-made life so much easier.  The devmanual was both short enough to be used as
-quick reference and complete enough that you could learn most of what you’d need
-to know from it.  The unfortunately named &lt;abbr title=&quot;Package Manager Specification&quot;&gt;PMS&lt;/abbr&gt; acted as the reference that
-finally allowed us to switch from away from &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;portage&lt;/span&gt;&lt;/code&gt; completely at the
-office.&lt;/p&gt;
-&lt;p&gt;The &lt;abbr title=&quot;Package Manager Specification&quot;&gt;PMS&lt;/abbr&gt; documented much of the nastiness that &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;portage&lt;/span&gt;&lt;/code&gt; suffers from, and
-made life in general a whole lot nicer when you were chasing bugs deep down the
-rabbit hole.  And, let us be honest here it also stopped a little of the
-fluidity that plagued &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;portage&lt;/span&gt;&lt;/code&gt; too.&lt;/p&gt;
-&lt;p&gt;Some people argue that it acts as unnecessary stop motion but those people must
-be forgetting what happened when behaviour changed randomly between &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;portage&lt;/span&gt;&lt;/code&gt;
-versions.  &lt;abbr title=&quot;Package Manager Specification&quot;&gt;PMS&lt;/abbr&gt;, and the EAPI process, also brought some much needed design
-and stability to newer features.&lt;/p&gt;
-&lt;p&gt;All Gentoo users owe Ciaran McCreesh a few beers for all the hard work he put in
-to those documents, especially in the early days.&lt;/p&gt;
+&lt;p&gt;The final question I looked at was:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;div&gt;&lt;p&gt;Is there an easy way to clean all the old modules from &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;/lib/modules&lt;/span&gt;&lt;/code&gt;?&lt;/p&gt;
+&lt;/div&gt;&lt;/blockquote&gt;
+&lt;p&gt;Assuming you are trying to remove all modules that don’t belong to the current
+kernel this is very easy using &lt;strong class="command"&gt;bash&lt;/strong&gt;’s &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;extglob&lt;/span&gt;&lt;/code&gt; support.  It may
+need to be enabled in your session, you can test whether it is enabled with
+&lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;shopt&lt;/span&gt; &lt;span class="pre"&gt;extglob&lt;/span&gt;&lt;/code&gt;.&lt;/p&gt;
+&lt;div class="highlight-console notranslate"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="gp"&gt;$&lt;/span&gt; &lt;span class="nb"&gt;echo&lt;/span&gt; /lib/modules/*
+&lt;span class="go"&gt;/lib/modules/2.6.31.1 /lib/modules/2.6.31.2-jr2 /lib/modules/2.6.31.3-mk1&lt;/span&gt;
+&lt;span class="gp"&gt;$&lt;/span&gt; &lt;span class="nb"&gt;echo&lt;/span&gt; /lib/modules/!&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="k"&gt;$(&lt;/span&gt;uname -r&lt;span class="k"&gt;)&lt;/span&gt;&lt;span class="o"&gt;)&lt;/span&gt;
+&lt;span class="go"&gt;/lib/modules/2.6.31.1 /lib/modules/2.6.31.2-jr2&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
-&lt;div class=&quot;section&quot; id=&quot;the-personal-touch&quot;&gt;
-&lt;h2&gt;The personal touch&lt;/h2&gt;
-&lt;p&gt;On a personal note I’ve met some awesome people over the years as a result of
-using Gentoo.  Many of them at the old Gentoo UK conferences, which were always
-fun.  More recently at LoFu’s annual summit which seems to have taken Gentoo
-UK’s place with practically everyone you saw at Gentoo UK(minus the students),
-and oddly about the same Gentoo to non-Gentoo ratio of talks too.&lt;/p&gt;
-&lt;p&gt;Two excellent people on our current team were recruited following the Gentoo UK
-conference at &lt;abbr title=&quot;University College London&quot;&gt;UCL&lt;/abbr&gt;, and we met a spectacular
-contract hire at the one prior to that as well.&lt;/p&gt;
-&lt;p&gt;I’ve even been lucky enough to have a few doors held open for me via people I’ve
-met at Gentoo-themed or Gentoo-heavy events, and I suspect I’d be writing this
-from a less happy place without them.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class=&quot;section&quot; id=&quot;wrapping-up&quot;&gt;
-&lt;h2&gt;Wrapping up&lt;/h2&gt;
-&lt;p&gt;It is true that you really can not always see the forest for trees.&lt;/p&gt;
-&lt;p&gt;Had recent events not clouded my vision I would have commented on the train
-wreck that is &lt;code class=&quot;file docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;webapp.eclass&lt;/span&gt;&lt;/code&gt; and &lt;code class=&quot;file docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;app-admin/webapp-config&lt;/span&gt;&lt;/code&gt; in
-&lt;span class=&quot;xref std std-doc&quot;&gt;dropping_gentoo&lt;/span&gt;.  It sucked tonnes and tonnes of time away until we
-eventually just trashed any package that interacted with it and moved on.&lt;/p&gt;
-&lt;p&gt;That was so long ago that I had forgotten about it until a co-worker asked me
-why I hadn’t mentioned it.  I suspect most of the other negative comments I made
-will feel equally inconsequential when compared to the benefits Gentoo gave us
-as time moves on.&lt;/p&gt;
-&lt;p&gt;Instead of making this rant even longer, I’ll take the time to reflect on the
-fun memories.&lt;/p&gt;
-&lt;p class=&quot;rubric&quot;&gt;Footnotes&lt;/p&gt;
-&lt;dl class=&quot;footnote brackets&quot;&gt;
-&lt;dt class=&quot;label&quot; id=&quot;id2&quot;&gt;&lt;span class=&quot;brackets&quot;&gt;&lt;a class=&quot;fn-backref&quot; href=&quot;#id1&quot;&gt;*&lt;/a&gt;&lt;/span&gt;&lt;/dt&gt;
-&lt;dd&gt;&lt;p&gt;To be fair &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;.tbz2&lt;/span&gt;&lt;/code&gt; files on Gentoo are just tarballs with a binary
-&lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;xpak&lt;/span&gt;&lt;/code&gt; appended.  Those extra bits beyond “just a tar -C” are what
-makes dependency handling work among other things.&lt;/p&gt;
-&lt;/dd&gt;
-&lt;/dl&gt;
-&lt;dl class=&quot;std option&quot;&gt;
-&lt;dt id=&quot;cmdoption-tar-C&quot;&gt;
-&lt;code class=&quot;sig-name descname&quot;&gt;-C&lt;/code&gt;&lt;code class=&quot;sig-prename descclassname&quot;&gt;&lt;/code&gt;&lt;/dt&gt;
-&lt;dd&gt;&lt;p&gt;This option tells &lt;strong class=&quot;command&quot;&gt;tar&lt;/strong&gt; to change directory before performing its
-duty.  For example using &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;-C&lt;/span&gt; &lt;span class=&quot;pre&quot;&gt;/&lt;/span&gt;&lt;/code&gt; will switch to &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;/&lt;/span&gt;&lt;/code&gt;, and can be used to
-unpack a tarball directly over the root filesystem.&lt;/p&gt;
-&lt;/dd&gt;&lt;/dl&gt;
-
-&lt;/div&gt;
+&lt;p&gt;The &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;!($(uname&lt;/span&gt; &lt;span class="pre"&gt;-r))&lt;/span&gt;&lt;/code&gt; syntax tells bash to match all but &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;2.6.31.3-mk1&lt;/span&gt;&lt;/code&gt; (the
+output of &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;uname&lt;/span&gt; &lt;span class="pre"&gt;-r&lt;/span&gt;&lt;/code&gt; on my system), there are plenty of other uses for
+&lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;extglob&lt;/span&gt;&lt;/code&gt; and the &lt;a class="reference external" href="http://www.gnu.org/software/bash/manual/html_node/Pattern-Matching.html#Pattern-Matching"&gt;documentation&lt;/a&gt; has examples.&lt;/p&gt;
 &lt;/div&gt;
 </content>
+    <link href="https://jnrowe.github.io/articles/tips/Gentoo_one_liners.html" rel="alternate"/>
+    <published>2009-10-09T00:00:00+01:00</published>
   </entry>
-  <entry xml:base="https://jnrowe.github.io/blog/tag/gentoo/atom.xml">
-    <title type="text">Dropping Gentoo</title>
+  <entry>
     <id>https://jnrowe.github.io/articles/dropping_gentoo.html</id>
-    <updated>2014-06-18T00:00:00Z</updated>
-    <published>2014-06-18T00:00:00Z</published>
-    <link href="https://jnrowe.github.io/articles/dropping_gentoo.html" />
+    <title>Dropping Gentoo</title>
+    <updated>2014-06-18T00:00:00+01:00</updated>
     <author>
       <name>James Rowe</name>
     </author>
-    <content type="html">&lt;div class=&quot;section&quot; id=&quot;dropping-gentoo&quot;&gt;
+    <content type="html">&lt;div class="section" id="dropping-gentoo"&gt;
 
-&lt;p&gt;We’ve been using &lt;a class=&quot;reference external&quot; href=&quot;http://gentoo.org&quot;&gt;Gentoo&lt;/a&gt; for shipped products since June 2005, and as
+&lt;p&gt;We’ve been using &lt;a class="reference external" href="http://gentoo.org"&gt;Gentoo&lt;/a&gt; for shipped products since June 2005, and as
 a development platform since September 2004.  A long time, an incredibly long
 time in fact.&lt;/p&gt;
 &lt;p&gt;Today our final Gentoo using product shipped, with a single scheduled update
 promised in Q3-2015.  It is kind of sad day, but we all knew that day was coming
 and it takes only a little inside knowledge to know why.&lt;/p&gt;
-&lt;div class=&quot;admonition note&quot;&gt;
-&lt;p class=&quot;admonition-title&quot;&gt;Note&lt;/p&gt;
+&lt;div class="admonition note"&gt;
+&lt;p class="admonition-title"&gt;Note&lt;/p&gt;
 &lt;p&gt;A couple of people have rightly pointed out that I was a little harsh in
-this document, so I’ve pushed a &lt;span class=&quot;xref std std-doc&quot;&gt;followup&lt;/span&gt;.&lt;/p&gt;
+this document, so I’ve pushed a &lt;span class="xref std std-doc"&gt;followup&lt;/span&gt;.&lt;/p&gt;
 &lt;/div&gt;
-&lt;div class=&quot;section&quot; id=&quot;landscapes-have-changed&quot;&gt;
+&lt;div class="section" id="landscapes-have-changed"&gt;
 &lt;h2&gt;Landscapes have changed&lt;/h2&gt;
 &lt;p&gt;Back when we started using Gentoo it was clearly the best choice for what we
 needed; a easily coercible base on which to construct our Linux devices.  There
 actually weren’t a lot of viable choices back then.&lt;/p&gt;
-&lt;p&gt;&lt;a class=&quot;reference external&quot; href=&quot;http://debian.org&quot;&gt;Debian&lt;/a&gt;, which many of us loved, felt like the only mainstream distribution we
+&lt;p&gt;&lt;a class="reference external" href="http://debian.org"&gt;Debian&lt;/a&gt;, which many of us loved, felt like the only mainstream distribution we
 could have used.  Unfortunately, it wasn’t available for the arches we needed.
 It also didn’t package many of things we used at that point, but to be fair
-there were &lt;abbr title=&quot;Intent to Package&quot;&gt;ITPs&lt;/abbr&gt; (were they called that back then?)
+there were &lt;abbr title="Intent to Package"&gt;ITPs&lt;/abbr&gt; (were they called that back then?)
 already floating about for most of them.&lt;/p&gt;
 &lt;p&gt;The “from source” options available then would, for all intents and purposes,
 have meant taking on the support costs of the entire stack which nobody wanted
 to commit to.  As it turns out that burden slowly crept up on us over the next
 ten years anyway.&lt;/p&gt;
 &lt;/div&gt;
-&lt;div class=&quot;section&quot; id=&quot;take-a-left-in-100-metres&quot;&gt;
+&lt;div class="section" id="take-a-left-in-100-metres"&gt;
 &lt;h2&gt;Take a left in 100 metres&lt;/h2&gt;
 &lt;p&gt;Over the years we regrettably diverged heavily from upstream, almost to the
 point that saying we use Gentoo almost feels like a lie.&lt;/p&gt;
@@ -261,22 +183,22 @@ essential toolchain packages like GCC and glibc ourselves.  I can’t recall the
 specific reasons as I didn’t work on them, but I recall agreeing with them.&lt;/p&gt;
 &lt;p&gt;At some point we started using a custom package manager, initially just a new
 drop-in resolver and eventually a completely independent package manager.
-&lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;portage&lt;/span&gt;&lt;/code&gt; was ferociously buggy in places and also appeared to be moribund, so
+&lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;portage&lt;/span&gt;&lt;/code&gt; was ferociously buggy in places and also appeared to be moribund, so
 it seemed like the correct choice.  We never supported the full range of
-features that Gentoo’s &lt;a class=&quot;reference external&quot; href=&quot;http://wiki.gentoo.org/wiki/Project:PMS&quot;&gt;PMS&lt;/a&gt; now defines, but it made the support surface a lot
+features that Gentoo’s &lt;a class="reference external" href="http://wiki.gentoo.org/wiki/Project:PMS"&gt;PMS&lt;/a&gt; now defines, but it made the support surface a lot
 nicer.&lt;/p&gt;
-&lt;p&gt;There was a point where we seriously considered moving to a &lt;a class=&quot;reference external&quot; href=&quot;http://en.wikipedia.org/wiki/Conary_(package_manager)&quot;&gt;Conary&lt;/a&gt;-based
+&lt;p&gt;There was a point where we seriously considered moving to a &lt;a class="reference external" href="http://en.wikipedia.org/wiki/Conary_(package_manager)"&gt;Conary&lt;/a&gt;-based
 infrastructure.  It did loads of the cool things we wanted to do and it mostly
 fitted our workflow with its “Gentoo done right” feel.  Sadly, it has
-a &lt;abbr title=&quot;Contributor License Agreement&quot;&gt;CLA&lt;/abbr&gt; which none of us could sign that practically guaranteed we would
+a &lt;abbr title="Contributor License Agreement"&gt;CLA&lt;/abbr&gt; which none of us could sign that practically guaranteed we would
 eventually be in the same place we were with Gentoo.  May have been
 a fortuitous roadblock in the end, as Conary never gained the traction it
-once promised(perhaps in part because of that &lt;abbr title=&quot;Contributor License Agreement&quot;&gt;CLA&lt;/abbr&gt;?).&lt;/p&gt;
+once promised(perhaps in part because of that &lt;abbr title="Contributor License Agreement"&gt;CLA&lt;/abbr&gt;?).&lt;/p&gt;
 &lt;p&gt;Had we waited another five months, there would have been another open source
 package manager for Gentoo we could have easily switched to and hacked on.
 There is perhaps a pattern here…&lt;/p&gt;
 &lt;/div&gt;
-&lt;div class=&quot;section&quot; id=&quot;upstreaming-changes&quot;&gt;
+&lt;div class="section" id="upstreaming-changes"&gt;
 &lt;h2&gt;Upstreaming changes&lt;/h2&gt;
 &lt;p&gt;Of course, running a non-standard package manager and a thick layer of custom
 packages at the bottom of the stack made contributing changes back upstream very
@@ -291,7 +213,7 @@ report in the ChangeLog was huge.  That taught me a valuable personal lesson,
 I always attribute a commit to the reporter even when I’ve significantly mangled
 a patch to make it acceptable.&lt;/p&gt;
 &lt;p&gt;For a time, to ease the annoyance we used to play a game where we reported real
-bugs with patches, but using silly data for &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;emerge&lt;/span&gt; &lt;span class=&quot;pre&quot;&gt;--info&lt;/span&gt;&lt;/code&gt;.  It was
+bugs with patches, but using silly data for &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;emerge&lt;/span&gt; &lt;span class="pre"&gt;--info&lt;/span&gt;&lt;/code&gt;.  It was
 definitely fun while it lasted, but it didn’t solve the pain points.  Not
 wanting to be associated with the bugs made people use pseudonyms, which also
 removed the expectation of attribution too.&lt;/p&gt;
@@ -301,19 +223,19 @@ months so I stopped doing that too&lt;/p&gt;
 &lt;p&gt;Looking around now there is an automatically generated list of bugs with patches
 which we’ve fixed but haven’t upstreamed, and a few random entries from it look
 like this:&lt;/p&gt;
-&lt;div class=&quot;highlight-console notranslate&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&quot;gp&quot;&gt;$&lt;/span&gt; wc -l ~/gentoo/to_push/jay.rst
-&lt;span class=&quot;go&quot;&gt;1157 /home/jay/gentoo/to_push/jay.rst&lt;/span&gt;
-&lt;span class=&quot;gp&quot;&gt;$&lt;/span&gt; wc -l ~/gentoo/to_push/mattias.rst
-&lt;span class=&quot;go&quot;&gt;2104 /home/jay/gentoo/to_push/mattias.rst&lt;/span&gt;
-&lt;span class=&quot;gp&quot;&gt;$&lt;/span&gt; wc -l ~/gentoo/to_push/chrisp.rst
-&lt;span class=&quot;go&quot;&gt;873 /home/jay/gentoo/to_push/chrisp.rst&lt;/span&gt;
+&lt;div class="highlight-console notranslate"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="gp"&gt;$&lt;/span&gt; wc -l ~/gentoo/to_push/jay.rst
+&lt;span class="go"&gt;1157 /home/jay/gentoo/to_push/jay.rst&lt;/span&gt;
+&lt;span class="gp"&gt;$&lt;/span&gt; wc -l ~/gentoo/to_push/mattias.rst
+&lt;span class="go"&gt;2104 /home/jay/gentoo/to_push/mattias.rst&lt;/span&gt;
+&lt;span class="gp"&gt;$&lt;/span&gt; wc -l ~/gentoo/to_push/chrisp.rst
+&lt;span class="go"&gt;873 /home/jay/gentoo/to_push/chrisp.rst&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
 &lt;p&gt;That genuinely upsets me greatly.  The amount of potential duplicated effort
 they represent is enormous, and I don’t even want to attempt to put a figure on
 it.&lt;/p&gt;
 &lt;/div&gt;
-&lt;div class=&quot;section&quot; id=&quot;supporting-upstream&quot;&gt;
+&lt;div class="section" id="supporting-upstream"&gt;
 &lt;h2&gt;Supporting upstream&lt;/h2&gt;
 &lt;p&gt;We’re entirely to blame.  We always planned on supporting upstream in whichever
 way we could.  That fell down for instances beyond sending patches too.&lt;/p&gt;
@@ -336,23 +258,23 @@ met with other people telling stories about that same person, which was a shame
 as it probably cost them a few good cash and infrastructure sponsors that day
 alone.&lt;/p&gt;
 &lt;/div&gt;
-&lt;div class=&quot;section&quot; id=&quot;support-costs&quot;&gt;
+&lt;div class="section" id="support-costs"&gt;
 &lt;h2&gt;Support costs&lt;/h2&gt;
 &lt;p&gt;Over time we’ve come to support most of the tree that people refer to as
-&lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;gentoo-x86&lt;/span&gt;&lt;/code&gt; ourselves.  The toolchain changes we needed at the time
+&lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;gentoo-x86&lt;/span&gt;&lt;/code&gt; ourselves.  The toolchain changes we needed at the time
 necessitated supporting a few packages further up the stack.  Our desire to trim
 the tree of a few categories that were problematic, meant replacing a variety of
 packages with then unavailable dependencies.&lt;/p&gt;
 &lt;p&gt;And there were many other examples too…&lt;/p&gt;
-&lt;div class=&quot;section&quot; id=&quot;matchbox&quot;&gt;
+&lt;div class="section" id="matchbox"&gt;
 &lt;h3&gt;matchbox&lt;/h3&gt;
-&lt;p&gt;We packaged &lt;a class=&quot;reference internal&quot; href=&quot;#matchbox&quot;&gt;matchbox&lt;/a&gt; and its associated packages a long, long time before they
+&lt;p&gt;We packaged &lt;a class="reference internal" href="#matchbox"&gt;matchbox&lt;/a&gt; and its associated packages a long, long time before they
 hit the official tree.  It was the first real pain point we had with packages
 appearing in the tree after we had already been using them.&lt;/p&gt;
 &lt;p&gt;When they did eventually hit the tree we had to carry workarounds for years.  At
 some point we stopped trying and just scrubbed the ebuilds that got in the way.&lt;/p&gt;
 &lt;/div&gt;
-&lt;div class=&quot;section&quot; id=&quot;python&quot;&gt;
+&lt;div class="section" id="python"&gt;
 &lt;h3&gt;Python&lt;/h3&gt;
 &lt;p&gt;The state of the Python packaging a few years ago made us take the jump to
 replace or remove anything that packaged a Python module.  Initially very time
@@ -360,18 +282,18 @@ consuming, but it saved an enormous amount of grief.&lt;/p&gt;
 &lt;p&gt;I suspect we could move closer to upstream at this point, but the point is now
 moot.&lt;/p&gt;
 &lt;/div&gt;
-&lt;div class=&quot;section&quot; id=&quot;systemd&quot;&gt;
+&lt;div class="section" id="systemd"&gt;
 &lt;h3&gt;systemd&lt;/h3&gt;
-&lt;p&gt;We switched to &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;systemd&lt;/span&gt;&lt;/code&gt; before the package was in upstream’s tree, and we
+&lt;p&gt;We switched to &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;systemd&lt;/span&gt;&lt;/code&gt; before the package was in upstream’s tree, and we
 have had to keep supporting it to this day because of insurmountable packaging
 differences.&lt;/p&gt;
 &lt;p&gt;In a few places that means taking on packages with a reverse dependency too,
 where differences create issues.  And it clearly means taking on any package
-that depends on &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;openrc&lt;/span&gt;&lt;/code&gt; or Gentoo’s &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;baselayout&lt;/span&gt;&lt;/code&gt; package.  Those packages
+that depends on &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;openrc&lt;/span&gt;&lt;/code&gt; or Gentoo’s &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;baselayout&lt;/span&gt;&lt;/code&gt; package.  Those packages
 are becoming fewer and fewer by the day though, so that would have become
 a non-issue.&lt;/p&gt;
 &lt;/div&gt;
-&lt;div class=&quot;section&quot; id=&quot;x-org&quot;&gt;
+&lt;div class="section" id="x-org"&gt;
 &lt;h3&gt;X.org&lt;/h3&gt;
 &lt;p&gt;We had been packaging x.org’s packages to work around some implementation
 differences with upstream since the dawn of modular X.  Mostly just to do with
@@ -381,7 +303,7 @@ remotely similar.&lt;/p&gt;
 most part, so it never caused a huge time sink.&lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;div class=&quot;section&quot; id=&quot;the-end-is-nigh&quot;&gt;
+&lt;div class="section" id="the-end-is-nigh"&gt;
 &lt;h2&gt;The end is nigh&lt;/h2&gt;
 &lt;p&gt;At some point it began to feel like we were maintaining our own distribution
 from end-to-end, and that wasn’t fun.  It also wasn’t what any of us needed to
@@ -389,12 +311,12 @@ do, and the time it was taking measurably ate in to &lt;em&gt;real&lt;/em&gt; pr
 &lt;p&gt;The decision to start weaning ourselves off of Gentoo was made back in the
 summer of last year, and it has finally started to come in to effect.&lt;/p&gt;
 &lt;/div&gt;
-&lt;div class=&quot;section&quot; id=&quot;the-times-they-are-a-changing&quot;&gt;
+&lt;div class="section" id="the-times-they-are-a-changing"&gt;
 &lt;h2&gt;The Times They Are a-Changing&lt;/h2&gt;
 &lt;p&gt;There are plenty of good alternatives out there now for building systems that
 need to run on a variety of architectures.  Some binary, some source-based and
 a few hybrid approaches.&lt;/p&gt;
-&lt;p&gt;The project I’m working on right now is using Debian &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;testing&lt;/span&gt;&lt;/code&gt;, and it appears
+&lt;p&gt;The project I’m working on right now is using Debian &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;testing&lt;/span&gt;&lt;/code&gt;, and it appears
 to be working out fine.  Some things still annoy me, like the time it takes to
 patch and recreate a package.  It is a trivial thing with Gentoo, but requires
 far too much work with Debian.  Perhaps we’ll improve the workflow enough as we
@@ -413,137 +335,215 @@ track for the next ten years.&lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 </content>
+    <link href="https://jnrowe.github.io/articles/dropping_gentoo.html" rel="alternate"/>
+    <published>2014-06-18T00:00:00+01:00</published>
   </entry>
-  <entry xml:base="https://jnrowe.github.io/blog/tag/gentoo/atom.xml">
-    <title type="text">Gentoo one liners</title>
-    <id>https://jnrowe.github.io/articles/tips/Gentoo_one_liners.html</id>
-    <updated>2009-10-09T00:00:00Z</updated>
-    <published>2009-10-09T00:00:00Z</published>
-    <link href="https://jnrowe.github.io/articles/tips/Gentoo_one_liners.html" />
+  <entry>
+    <id>https://jnrowe.github.io/articles/dropping_gentoo_reflex.html</id>
+    <title>Dropping Gentoo reflex</title>
+    <updated>2014-06-29T00:00:00+01:00</updated>
     <author>
       <name>James Rowe</name>
     </author>
-    <content type="html">&lt;div class=&quot;section&quot; id=&quot;gentoo-one-liners&quot;&gt;
+    <content type="html">&lt;div class="section" id="dropping-gentoo-reflex"&gt;
 
-&lt;p&gt;On our Linux list at work the topic of &lt;a class=&quot;reference external&quot; href=&quot;http://www.gentoo.org/&quot;&gt;Gentoo&lt;/a&gt; usage arose again today.
-Originally, the topic was about interesting one liners used to maintain a Gentoo
-system.  I found myself posting extended replies to some of the questions and
-I’m reposting a few of those here.&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;div&gt;&lt;p&gt;How do I get &lt;em&gt;just the list&lt;/em&gt; of packages that are installed but not in
-&lt;code class=&quot;file docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;world&lt;/span&gt;&lt;/code&gt;?&lt;/p&gt;
-&lt;/div&gt;&lt;/blockquote&gt;
-&lt;p&gt;The constraint here is packages that were installed with &lt;code class=&quot;xref std std-option docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;--oneshot&lt;/span&gt;&lt;/code&gt;,
-or manually removed from &lt;code class=&quot;file docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;/var/lib/portage/world&lt;/span&gt;&lt;/code&gt;, which means that they
-will no longer be updated automatically.  I often use this for packages I’m
-just playing with, and it appears lots of others do the same.  While the output
-of &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;emerge&lt;/span&gt; &lt;span class=&quot;pre&quot;&gt;--pretend&lt;/span&gt; &lt;span class=&quot;pre&quot;&gt;--depclean&lt;/span&gt;&lt;/code&gt; is all that is really needed, the question
-is how to get a list of just the packages.&lt;/p&gt;
-&lt;div class=&quot;highlight-console notranslate&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&quot;gp&quot;&gt;$&lt;/span&gt; emerge --pretend --depclean
-&lt;span class=&quot;go&quot;&gt;&amp;lt;snipped heaps of output&amp;gt;&lt;/span&gt;
-&lt;span class=&quot;go&quot;&gt;gnome-base/orbit&lt;/span&gt;
-&lt;span class=&quot;go&quot;&gt;    selected: 2.14.17&lt;/span&gt;
-&lt;span class=&quot;go&quot;&gt;protected: none&lt;/span&gt;
-&lt;span class=&quot;go&quot;&gt;    omitted: none&lt;/span&gt;
+&lt;p&gt;After hitting the publish button on &lt;a class="reference internal" href="../../articles/dropping_gentoo.html#dropping_gentoo"&gt;&lt;span class="std std-ref"&gt;Dropping Gentoo&lt;/span&gt;&lt;/a&gt; a few friends
+commented that I was either unnecessarily harsh about Gentoo or we wasted an
+enormous amount of time on it.  It definitely was the former, and I feel
+a touch ashamed for implying the latter.&lt;/p&gt;
+&lt;p&gt;I was writing my thoughts in the “project obituary” form that I’m used to, and
+that is entirely about spotting the downsides to make sure they don’t reoccur.
+And with that in mind I &lt;em&gt;was&lt;/em&gt; being incredibly unfair to Gentoo, both the
+project and by extension the people working on it.&lt;/p&gt;
+&lt;p&gt;There were many, many good points about Gentoo and I’ll nod towards a few now.&lt;/p&gt;
+&lt;div class="section" id="speed"&gt;
+&lt;h2&gt;Speed&lt;/h2&gt;
+&lt;p&gt;No, no.  Not the “Oh my god, my KDEs are so fast” that many people fairly
+associate with Gentoo users.  I’m talking about the basic package handling
+tasks.&lt;/p&gt;
+&lt;p&gt;There are very few other distributions that can match Gentoo when it comes to
+the speed of editing a package.  Or, for that matter, the speed of installation
+if you share binary packages.&lt;/p&gt;
+&lt;p&gt;Almost the first thing you notice when switching to Debian or Fedora as a heavy
+binary package user on Gentoo is just how slow package installation and removal
+is.  Binary package installation on Gentoo feels on par with a distribution
+like Slackware, and what passes for package management there is just choosing
+the right argument to &lt;strong class="command"&gt;tar&lt;/strong&gt;’s &lt;a class="reference internal" href="../../articles/dropping_gentoo_reflex.html#cmdoption-tar-C"&gt;&lt;code class="xref std std-option docutils literal notranslate"&gt;&lt;span class="pre"&gt;-C&lt;/span&gt;&lt;/code&gt;&lt;/a&gt; option&lt;a class="footnote-reference brackets" href="#id2" id="id1"&gt;*&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Where Gentoo really excels though is in the speed of creating new packages or
+editing existing packages.&lt;/p&gt;
+&lt;p&gt;Lets take a look at an example.  Say, for example, that you just found out that
+&lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;flask-dashed&lt;/span&gt;&lt;/code&gt;’s  &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;ebuild&lt;/span&gt;&lt;/code&gt; mistakenly installs a &lt;code class="file docutils literal notranslate"&gt;&lt;span class="pre"&gt;/usr/README&lt;/span&gt;&lt;/code&gt; file.
+We we can fix the problem with the following simple change and a call to
+&lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;repoman&lt;/span&gt; &lt;span class="pre"&gt;manifest&lt;/span&gt;&lt;/code&gt;, the rest takes care of itself.&lt;/p&gt;
+&lt;div class="highlight-diff notranslate"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="gh"&gt;diff --git i/flask-dashed-0.1b_p2.ebuild w/flask-dashed-0.1b_p2.ebuild&lt;/span&gt;
+&lt;span class="gh"&gt;index dd64877a387e..cf3e3cbf272b 100644&lt;/span&gt;
+&lt;span class="gd"&gt;--- i/flask-dashed-0.1b_p2.ebuild&lt;/span&gt;
+&lt;span class="gi"&gt;+++ w/flask-dashed-0.1b_p2.ebuild&lt;/span&gt;
+&lt;span class="gu"&gt;@@ -29,5 +29,6 @@ S=&amp;quot;${WORKDIR}/${MY_P}&amp;quot;&lt;/span&gt;
 
-&lt;span class=&quot;go&quot;&gt;app-text/iso-codes&lt;/span&gt;
-&lt;span class=&quot;go&quot;&gt;    selected: 3.8&lt;/span&gt;
-&lt;span class=&quot;go&quot;&gt;protected: none&lt;/span&gt;
-&lt;span class=&quot;go&quot;&gt;    omitted: none&lt;/span&gt;
-
-&lt;span class=&quot;go&quot;&gt;dev-libs/dbus-glib&lt;/span&gt;
-&lt;span class=&quot;go&quot;&gt;    selected: 0.76&lt;/span&gt;
-&lt;span class=&quot;go&quot;&gt;protected: none&lt;/span&gt;
-&lt;span class=&quot;go&quot;&gt;    omitted: none&lt;/span&gt;
-
-&lt;span class=&quot;go&quot;&gt;sys-apps/dbus&lt;/span&gt;
-&lt;span class=&quot;go&quot;&gt;    selected: 1.2.3-r1&lt;/span&gt;
-&lt;span class=&quot;go&quot;&gt;protected: none&lt;/span&gt;
-&lt;span class=&quot;go&quot;&gt;    omitted: none&lt;/span&gt;
-
-&lt;span class=&quot;gp&quot;&gt;&amp;gt;&lt;/span&gt;&amp;gt;&amp;gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;Selected&amp;#39;&lt;/span&gt; packages are slated &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; removal.
-&lt;span class=&quot;gp&quot;&gt;&amp;gt;&lt;/span&gt;&amp;gt;&amp;gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;Protected&amp;#39;&lt;/span&gt; and &lt;span class=&quot;s1&quot;&gt;&amp;#39;omitted&amp;#39;&lt;/span&gt; packages will not be removed.
-
-&lt;span class=&quot;go&quot;&gt;Packages installed:   477&lt;/span&gt;
-&lt;span class=&quot;go&quot;&gt;Packages in world:    86&lt;/span&gt;
-&lt;span class=&quot;go&quot;&gt;Packages in system:   50&lt;/span&gt;
-&lt;span class=&quot;go&quot;&gt;Required packages:    348&lt;/span&gt;
-&lt;span class=&quot;go&quot;&gt;Number to remove:     129&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-&lt;/div&gt;
-&lt;p&gt;The output we want can be easily matched with &lt;abbr title=&quot;Regular Expression&quot;&gt;RegEx&lt;/abbr&gt;, and the &lt;a class=&quot;reference external&quot; href=&quot;http://cnswww.cns.cwru.edu/~chet/bash/bashtop.html&quot;&gt;bash&lt;/a&gt;
-&lt;strong class=&quot;command&quot;&gt;alias&lt;/strong&gt; below will list just the packages by piping the output through
-&lt;a class=&quot;reference external&quot; href=&quot;http://sed.sourceforge.net/&quot;&gt;sed&lt;/a&gt;.  We can even use the one liner as input to a larger function if we only
-want to see top-level packages; that is packages that aren’t listed as
-dependencies of other packages:&lt;/p&gt;
-&lt;div class=&quot;highlight-default notranslate&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;alias pkgclean=&amp;quot;emerge ----pretend --depclean | sed -n &amp;#39;/^ [a-z]/s,^ ,,p&amp;#39; | sort&amp;quot;
-
-toppkgclean() {
-    local depfiles=$(find /var/db/pkg/ -name RDEPEND -o -name PDEPEND)
-    local cleanlist=$(pkgclean)
-    for package in ${cleanlist}
-    do
-        LC_ALL=C grep -q ${package} ${depfiles} || echo ${package}
-    done
+ src_prepare() {
+        distutils-r1_src_prepare
+&lt;span class="gi"&gt;+       sed -i /data_files/d setup.py || die &amp;quot;sed failed&amp;quot;&lt;/span&gt;
+        rm -rf &amp;quot;${S}/tests&amp;quot;
 }
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="admonition note"&gt;
+&lt;p class="admonition-title"&gt;Note&lt;/p&gt;
+&lt;p&gt;Of course, you should fix the package properly and send the fix upstream but
+this is just to prove a point.  Calling &lt;strong class="command"&gt;die&lt;/strong&gt; with &lt;strong class="command"&gt;sed&lt;/strong&gt;
+there isn’t recommended and is practically pointless, but it is the style
+upstream.&lt;/p&gt;
+&lt;/div&gt;
+&lt;p&gt;I have to mention a small downside here however, because very few people seem to
+test &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;portage&lt;/span&gt;&lt;/code&gt;’s binary package support you’ll occasionally have to do some
+leg work to fix problems.  This normally arises when you have an &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;eclass&lt;/span&gt;&lt;/code&gt;
+change that needs to ripple through, or when a library breaks compatibility and
+its &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;ebuild&lt;/span&gt;&lt;/code&gt; hasn’t been bumped properly.&lt;/p&gt;
+&lt;p&gt;Almost every time that happens you can fix it with a quick loop in your shell
+though.  A couple of such problems and solutions that I found in my shell
+history can be seen below.&lt;/p&gt;
+&lt;div class="highlight-zsh notranslate"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="c1"&gt;# When you were stuck with packages that used python-distutils-ng, and you&lt;/span&gt;
+&lt;span class="c1"&gt;# needed to scrub packages because you changed Python version&lt;/span&gt;
+&lt;span class="k"&gt;for&lt;/span&gt; p in &lt;span class="k"&gt;$(&lt;/span&gt;portageq pkgdir&lt;span class="k"&gt;)&lt;/span&gt;/*-*/*.tbz2&lt;span class="p"&gt;;&lt;/span&gt; &lt;span class="k"&gt;do&lt;/span&gt;
+    qtbz2 -xO &lt;span class="nv"&gt;$p&lt;/span&gt; &lt;span class="p"&gt;|&lt;/span&gt; qxpak -xO - &lt;span class="si"&gt;${${&lt;/span&gt;&lt;span class="nv"&gt;p&lt;/span&gt;&lt;span class="p"&gt;##*/&lt;/span&gt;&lt;span class="si"&gt;}&lt;/span&gt;&lt;span class="p"&gt;/.tbz2&lt;/span&gt;&lt;span class="si"&gt;}&lt;/span&gt;.ebuild &lt;span class="p"&gt;|&lt;/span&gt; grep -q &lt;span class="s1"&gt;&amp;#39;SUPPORT_PYTHON_ABIS&amp;#39;&lt;/span&gt; &lt;span class="o"&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span class="nb"&gt;echo&lt;/span&gt; &lt;span class="nv"&gt;$p&lt;/span&gt;
+&lt;span class="k"&gt;done&lt;/span&gt;
 
-Is it possible to use :command:`bash` completion to complete package names
-for use in :file:`package.keywords`?
+&lt;span class="c1"&gt;# When you were using packages that used python’s “-r1” eclasses and all&lt;/span&gt;
+&lt;span class="c1"&gt;# you could see is a flood of blockages in your update output&lt;/span&gt;
+&lt;span class="k"&gt;for&lt;/span&gt; p in &lt;span class="k"&gt;$(&lt;/span&gt;portageq pkgdir&lt;span class="k"&gt;)&lt;/span&gt;/*-*/*.tbz2&lt;span class="p"&gt;;&lt;/span&gt; &lt;span class="k"&gt;do&lt;/span&gt;
+    qtbz2 -xO &lt;span class="nv"&gt;$p&lt;/span&gt; &lt;span class="p"&gt;|&lt;/span&gt; qxpak -xO - RDEPEND &lt;span class="m"&gt;2&lt;/span&gt;&amp;gt;/dev/null &lt;span class="p"&gt;|&lt;/span&gt; grep -q &lt;span class="s2"&gt;&amp;quot;dev-python/python-exec&amp;quot;&lt;/span&gt; &lt;span class="o"&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span class="nb"&gt;echo&lt;/span&gt; &lt;span class="nv"&gt;$p&lt;/span&gt;
+&lt;span class="k"&gt;done&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
-&lt;p&gt;I actually wrote the following little function in reply to a user asking
-a similar question in &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;#gentoo&lt;/span&gt;&lt;/code&gt; on Freenode a couple of months ago:&lt;/p&gt;
-&lt;div class=&quot;highlight-bash notranslate&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;arch_unmask&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;nb&quot;&gt;local&lt;/span&gt; s &lt;span class=&quot;k&quot;&gt;done&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;[[&lt;/span&gt; -z &lt;span class=&quot;nv&quot;&gt;$1&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;]]&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;then&lt;/span&gt;
-        &lt;span class=&quot;nb&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;FUNCNAME&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt; &amp;lt;category/package&amp;gt; [arch]&amp;quot;&lt;/span&gt;
-        &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;1&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;fi&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; s in &lt;span class=&quot;k&quot;&gt;$(&lt;/span&gt;portageq envvar PORTDIR PORTDIR_OVERLAY&lt;span class=&quot;k&quot;&gt;)&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;do&lt;/span&gt;
-        &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;[[&lt;/span&gt; -d &lt;span class=&quot;nv&quot;&gt;$s&lt;/span&gt;/&lt;span class=&quot;nv&quot;&gt;$1&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;]]&lt;/span&gt;
-        &lt;span class=&quot;k&quot;&gt;then&lt;/span&gt;
-            &lt;span class=&quot;nb&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$1&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$2&lt;/span&gt; &amp;gt;&amp;gt;/etc/portage/package.keywords/testing
-            &lt;span class=&quot;k&quot;&gt;done&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;1&lt;/span&gt;
-            &lt;span class=&quot;nb&quot;&gt;break&lt;/span&gt;
-        &lt;span class=&quot;k&quot;&gt;fi&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;done&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;[[&lt;/span&gt; -z &lt;span class=&quot;s2&quot;&gt;&amp;quot;&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;done&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;]]&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;then&lt;/span&gt;
-        &lt;span class=&quot;nb&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;Doesn&amp;#39;t exist ‘&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$1&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;’&amp;quot;&lt;/span&gt;
-        &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;1&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;fi&lt;/span&gt;
-&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-&lt;span class=&quot;nb&quot;&gt;complete&lt;/span&gt; -F _emerge arch_unmask
-&lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
-&lt;div class=&quot;admonition note&quot;&gt;
-&lt;p class=&quot;admonition-title&quot;&gt;Note&lt;/p&gt;
-&lt;p&gt;If you’re using our Gentoo boxes at the office the function will be much
-faster if you replace the call to &lt;strong class=&quot;command&quot;&gt;portageq&lt;/strong&gt; by
-&lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;/var/lib/repos/*&lt;/span&gt;&lt;/code&gt;, as our package trees are always installed there.  The
-&lt;strong class=&quot;command&quot;&gt;portageq&lt;/strong&gt; call is mainly there for users who use &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;/usr/portage&lt;/span&gt;&lt;/code&gt;
-and &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;/usr/local/portage&lt;/span&gt;&lt;/code&gt;, or other such monstrosities.&lt;/p&gt;
+&lt;div class="section" id="documentation"&gt;
+&lt;h2&gt;Documentation&lt;/h2&gt;
+&lt;p&gt;The excellent &lt;a class="reference external" href="http://devmanual.gentoo.org/"&gt;devmanual&lt;/a&gt; and the incredible &lt;a class="reference external" href="http://wiki.gentoo.org/wiki/Project:PMS"&gt;Package Manager Specification&lt;/a&gt;
+made life so much easier.  The devmanual was both short enough to be used as
+quick reference and complete enough that you could learn most of what you’d need
+to know from it.  The unfortunately named &lt;abbr title="Package Manager Specification"&gt;PMS&lt;/abbr&gt; acted as the reference that
+finally allowed us to switch from away from &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;portage&lt;/span&gt;&lt;/code&gt; completely at the
+office.&lt;/p&gt;
+&lt;p&gt;The &lt;abbr title="Package Manager Specification"&gt;PMS&lt;/abbr&gt; documented much of the nastiness that &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;portage&lt;/span&gt;&lt;/code&gt; suffers from, and
+made life in general a whole lot nicer when you were chasing bugs deep down the
+rabbit hole.  And, let us be honest here it also stopped a little of the
+fluidity that plagued &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;portage&lt;/span&gt;&lt;/code&gt; too.&lt;/p&gt;
+&lt;p&gt;Some people argue that it acts as unnecessary stop motion but those people must
+be forgetting what happened when behaviour changed randomly between &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;portage&lt;/span&gt;&lt;/code&gt;
+versions.  &lt;abbr title="Package Manager Specification"&gt;PMS&lt;/abbr&gt;, and the EAPI process, also brought some much needed design
+and stability to newer features.&lt;/p&gt;
+&lt;p&gt;All Gentoo users owe Ciaran McCreesh a few beers for all the hard work he put in
+to those documents, especially in the early days.&lt;/p&gt;
 &lt;/div&gt;
-&lt;p&gt;The final question I looked at was:&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;div&gt;&lt;p&gt;Is there an easy way to clean all the old modules from &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;/lib/modules&lt;/span&gt;&lt;/code&gt;?&lt;/p&gt;
-&lt;/div&gt;&lt;/blockquote&gt;
-&lt;p&gt;Assuming you are trying to remove all modules that don’t belong to the current
-kernel this is very easy using &lt;strong class=&quot;command&quot;&gt;bash&lt;/strong&gt;’s &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;extglob&lt;/span&gt;&lt;/code&gt; support.  It may
-need to be enabled in your session, you can test whether it is enabled with
-&lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;shopt&lt;/span&gt; &lt;span class=&quot;pre&quot;&gt;extglob&lt;/span&gt;&lt;/code&gt;.&lt;/p&gt;
-&lt;div class=&quot;highlight-console notranslate&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class=&quot;gp&quot;&gt;$&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;echo&lt;/span&gt; /lib/modules/*
-&lt;span class=&quot;go&quot;&gt;/lib/modules/2.6.31.1 /lib/modules/2.6.31.2-jr2 /lib/modules/2.6.31.3-mk1&lt;/span&gt;
-&lt;span class=&quot;gp&quot;&gt;$&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;echo&lt;/span&gt; /lib/modules/!&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;$(&lt;/span&gt;uname -r&lt;span class=&quot;k&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;go&quot;&gt;/lib/modules/2.6.31.1 /lib/modules/2.6.31.2-jr2&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
+&lt;div class="section" id="the-personal-touch"&gt;
+&lt;h2&gt;The personal touch&lt;/h2&gt;
+&lt;p&gt;On a personal note I’ve met some awesome people over the years as a result of
+using Gentoo.  Many of them at the old Gentoo UK conferences, which were always
+fun.  More recently at LoFu’s annual summit which seems to have taken Gentoo
+UK’s place with practically everyone you saw at Gentoo UK(minus the students),
+and oddly about the same Gentoo to non-Gentoo ratio of talks too.&lt;/p&gt;
+&lt;p&gt;Two excellent people on our current team were recruited following the Gentoo UK
+conference at &lt;abbr title="University College London"&gt;UCL&lt;/abbr&gt;, and we met a spectacular
+contract hire at the one prior to that as well.&lt;/p&gt;
+&lt;p&gt;I’ve even been lucky enough to have a few doors held open for me via people I’ve
+met at Gentoo-themed or Gentoo-heavy events, and I suspect I’d be writing this
+from a less happy place without them.&lt;/p&gt;
 &lt;/div&gt;
-&lt;p&gt;The &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;!($(uname&lt;/span&gt; &lt;span class=&quot;pre&quot;&gt;-r))&lt;/span&gt;&lt;/code&gt; syntax tells bash to match all but &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;2.6.31.3-mk1&lt;/span&gt;&lt;/code&gt; (the
-output of &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;uname&lt;/span&gt; &lt;span class=&quot;pre&quot;&gt;-r&lt;/span&gt;&lt;/code&gt; on my system), there are plenty of other uses for
-&lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;extglob&lt;/span&gt;&lt;/code&gt; and the &lt;a class=&quot;reference external&quot; href=&quot;http://www.gnu.org/software/bash/manual/html_node/Pattern-Matching.html#Pattern-Matching&quot;&gt;documentation&lt;/a&gt; has examples.&lt;/p&gt;
+&lt;div class="section" id="wrapping-up"&gt;
+&lt;h2&gt;Wrapping up&lt;/h2&gt;
+&lt;p&gt;It is true that you really can not always see the forest for trees.&lt;/p&gt;
+&lt;p&gt;Had recent events not clouded my vision I would have commented on the train
+wreck that is &lt;code class="file docutils literal notranslate"&gt;&lt;span class="pre"&gt;webapp.eclass&lt;/span&gt;&lt;/code&gt; and &lt;code class="file docutils literal notranslate"&gt;&lt;span class="pre"&gt;app-admin/webapp-config&lt;/span&gt;&lt;/code&gt; in
+&lt;span class="xref std std-doc"&gt;dropping_gentoo&lt;/span&gt;.  It sucked tonnes and tonnes of time away until we
+eventually just trashed any package that interacted with it and moved on.&lt;/p&gt;
+&lt;p&gt;That was so long ago that I had forgotten about it until a co-worker asked me
+why I hadn’t mentioned it.  I suspect most of the other negative comments I made
+will feel equally inconsequential when compared to the benefits Gentoo gave us
+as time moves on.&lt;/p&gt;
+&lt;p&gt;Instead of making this rant even longer, I’ll take the time to reflect on the
+fun memories.&lt;/p&gt;
+&lt;p class="rubric"&gt;Footnotes&lt;/p&gt;
+&lt;dl class="footnote brackets"&gt;
+&lt;dt class="label" id="id2"&gt;&lt;span class="brackets"&gt;&lt;a class="fn-backref" href="#id1"&gt;*&lt;/a&gt;&lt;/span&gt;&lt;/dt&gt;
+&lt;dd&gt;&lt;p&gt;To be fair &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;.tbz2&lt;/span&gt;&lt;/code&gt; files on Gentoo are just tarballs with a binary
+&lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;xpak&lt;/span&gt;&lt;/code&gt; appended.  Those extra bits beyond “just a tar -C” are what
+makes dependency handling work among other things.&lt;/p&gt;
+&lt;/dd&gt;
+&lt;/dl&gt;
+&lt;dl class="std option"&gt;
+&lt;dt id="cmdoption-tar-C"&gt;
+&lt;code class="sig-name descname"&gt;-C&lt;/code&gt;&lt;code class="sig-prename descclassname"&gt;&lt;/code&gt;&lt;/dt&gt;
+&lt;dd&gt;&lt;p&gt;This option tells &lt;strong class="command"&gt;tar&lt;/strong&gt; to change directory before performing its
+duty.  For example using &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;-C&lt;/span&gt; &lt;span class="pre"&gt;/&lt;/span&gt;&lt;/code&gt; will switch to &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;/&lt;/span&gt;&lt;/code&gt;, and can be used to
+unpack a tarball directly over the root filesystem.&lt;/p&gt;
+&lt;/dd&gt;&lt;/dl&gt;
+
+&lt;/div&gt;
 &lt;/div&gt;
 </content>
+    <link href="https://jnrowe.github.io/articles/dropping_gentoo_reflex.html" rel="alternate"/>
+    <published>2014-06-29T00:00:00+01:00</published>
+  </entry>
+  <entry>
+    <id>https://jnrowe.github.io/articles/probits/jnrowe-misc.html</id>
+    <title>jnrowe-misc - The unsorted package overlay</title>
+    <updated>2014-06-30T00:00:00+01:00</updated>
+    <author>
+      <name>James Rowe</name>
+    </author>
+    <content type="html">&lt;div class="section" id="jnrowe-misc-the-unsorted-package-overlay"&gt;
+
+&lt;blockquote&gt;
+&lt;div&gt;&lt;p&gt;A collection of &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;ebuild&lt;/span&gt;&lt;/code&gt; files with no overall theme.&lt;/p&gt;
+&lt;/div&gt;&lt;/blockquote&gt;
+&lt;p&gt;&lt;abbr title="Too Long; Didn’t Read"&gt;TLDR&lt;/abbr&gt;; For what it was &lt;a class="reference external" href="https://github.com/JNRowe/jnrowe-misc"&gt;jnrowe-misc&lt;/a&gt; served its
+purpose well.&lt;/p&gt;
+&lt;div class="section" id="an-island-unto-itself"&gt;
+&lt;h2&gt;An island unto itself&lt;/h2&gt;
+&lt;p&gt;While it may come as a surprise to a few of the users(which would be most of
+them) the overlay available on GitHub wasn’t the deliverable at any point in
+time.  In fact, the often convoluted merge history in the repository probably
+hinted at that quite a bit.&lt;/p&gt;
+&lt;img alt="Tree view of ``jnrowe-misc`` history" class="align-right" src="../../_images/jnrowe-misc.png" style="width: 50%;" /&gt;
+&lt;p&gt;&lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;jnrowe-misc&lt;/span&gt;&lt;/code&gt; was always the combination of a few independently managed
+repositories that I bundled up to make available for public consumption.
+Eventually it ended up being mostly Python stuff, but that was because the
+support burden of other packages was becoming more time consuming than I could
+justify.&lt;/p&gt;
+&lt;p&gt;The &lt;em&gt;real&lt;/em&gt; audience for the overlay, my co-workers, saw a different beast
+entirely.  It used our keyword types and rules, it came bundled &lt;span class="xref std std-doc"&gt;with the
+tests&lt;/span&gt; I was unable to share and had a tighter schedule for
+maintenance.&lt;/p&gt;
+&lt;p&gt;Still, I received a fair number of emails and live comments from users so I’ll
+call that a success!&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="upstreamed"&gt;
+&lt;h2&gt;Upstreamed&lt;/h2&gt;
+&lt;p&gt;Sadly, very little was ever taken upstream(even less if you count the parts that
+were credited).  This was entirely my fault.  I originally started exporting the
+overlay because I was fed up with the new package process upstream, and it seemed
+like the best way to deal with that for me.&lt;/p&gt;
+&lt;p&gt;I had hoped that some packages would be picked up, but didn’t actively push them
+after the first few.&lt;/p&gt;
+&lt;p&gt;The overlay should have never touched packages that were available upstream, but
+occasionally they overlapped when upstream added them.  The use of &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;::shadow&lt;/span&gt;&lt;/code&gt;
+to workaround problems when new packages were added upstream worked &lt;em&gt;really&lt;/em&gt;
+well, and saved the few remaining hairs on my balding head.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="legacy"&gt;
+&lt;h2&gt;Legacy&lt;/h2&gt;
+&lt;p&gt;It looks like the majority of packages will continue to be maintained for the
+foreseeable future, but regrettably it looks like the result will not be
+available beyond a “open to all people who know where to look” organisation on
+GitHub.&lt;/p&gt;
+&lt;p&gt;I’d like to change the new maintainer’s mind, but in all honesty I understand
+their reasons.  I’ve stopped maintaining a lot of once public projects over the
+past couple of years, and it is as refreshing as it is saddening.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</content>
+    <link href="https://jnrowe.github.io/articles/probits/jnrowe-misc.html" rel="alternate"/>
+    <published>2014-06-30T00:00:00+01:00</published>
   </entry>
 </feed>

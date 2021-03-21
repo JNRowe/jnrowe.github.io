@@ -1,85 +1,85 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version='1.0' encoding='UTF-8'?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <title type="text">JNRowe - Posts tagged tiling</title>
-  <id>https://jnrowe.github.io/blog/tag/tiling/atom.xml</id>
-  <updated>2018-10-08T00:00:00Z</updated>
-  <link href="https://jnrowe.github.io/" />
-  <link href="https://jnrowe.github.io/blog/tag/tiling/atom.xml" rel="self" />
-  <subtitle type="text">Ramblings of a tired mind</subtitle>
-  <generator uri="https://ablog.readthedocs.org" version="0.10.4">ABlog</generator>
-  <entry xml:base="https://jnrowe.github.io/blog/tag/tiling/atom.xml">
-    <title type="text">Tiling vs tabbing</title>
+  <id>https://jnrowe.github.io/</id>
+  <title>JNRowe - Posts tagged tiling</title>
+  <updated>2021-03-21T11:06:01.047502+00:00</updated>
+  <link href="https://jnrowe.github.io/"/>
+  <link href="https://jnrowe.github.io/blog/tag/tiling/atom.xml"/>
+  <generator uri="https://ablog.readthedocs.org" version="0.10.12">ABlog</generator>
+  <subtitle>Ramblings of a tired mind</subtitle>
+  <entry>
     <id>https://jnrowe.github.io/articles/tiling_vs_tabbing.html</id>
-    <updated>2018-10-08T00:00:00Z</updated>
-    <published>2018-10-08T00:00:00Z</published>
-    <link href="https://jnrowe.github.io/articles/tiling_vs_tabbing.html" />
+    <title>Tiling vs tabbing</title>
+    <updated>2018-10-08T00:00:00+01:00</updated>
     <author>
       <name>James Rowe</name>
     </author>
-    <content type="html">&lt;div class=&quot;section&quot; id=&quot;tiling-vs-tabbing&quot;&gt;
+    <content type="html">&lt;div class="section" id="tiling-vs-tabbing"&gt;
 
-&lt;p&gt;A fairly large chunk of my developer friends fawn over &lt;a class=&quot;reference external&quot; href=&quot;https://tmux.github.io/&quot;&gt;tmux&lt;/a&gt; and &lt;a class=&quot;reference external&quot; href=&quot;https://tools.suckless.org/tabbed&quot;&gt;tabbed&lt;/a&gt;.
+&lt;p&gt;A fairly large chunk of my developer friends fawn over &lt;a class="reference external" href="https://tmux.github.io/"&gt;tmux&lt;/a&gt; and &lt;a class="reference external" href="https://tools.suckless.org/tabbed"&gt;tabbed&lt;/a&gt;.
 These tools can give &lt;em&gt;the effect&lt;/em&gt; of a multiple window interface to your
-terminal sessions, or apply a tabbed interface to any &lt;a class=&quot;reference external&quot; href=&quot;https://standards.freedesktop.org/xembed-spec/xembed-spec-latest.html&quot;&gt;xembed&lt;/a&gt; supporting
+terminal sessions, or apply a tabbed interface to any &lt;a class="reference external" href="https://standards.freedesktop.org/xembed-spec/xembed-spec-latest.html"&gt;xembed&lt;/a&gt; supporting
 application respectively.  I’ll freely admit they’re pretty awesome at what
-they do&lt;a class=&quot;footnote-reference brackets&quot; href=&quot;#id5&quot; id=&quot;id1&quot;&gt;1&lt;/a&gt;.&lt;/p&gt;
+they do&lt;a class="footnote-reference brackets" href="#id5" id="id1"&gt;1&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;That said, I’ve never been a fan of them or the plethora of tools like them.
 They feel, to me, like they’re attacking the problem from entirely the wrong
 side.  Instead of configuring individual applications to behave in a tabbed and
 custom way, why not just rely on that behaviour globally?  Allow me to
 illustrate with the following examples.&lt;/p&gt;
-&lt;img alt=&quot;Example of awesomewm’s tile.right layout&quot; src=&quot;../../_images/2018-10-08-tiling.jpg&quot; /&gt;
+&lt;img alt="Example of awesomewm’s tile.right layout" src="../../_images/2018-10-08-tiling.jpg" /&gt;
 &lt;p&gt;If I want two terminals next to each other I’ll just switch to a layout that
-supports that(in &lt;a class=&quot;reference external&quot; href=&quot;https://awesomewm.org/&quot;&gt;awesomewm&lt;/a&gt; I’d probably choose &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;tile.right&lt;/span&gt;&lt;/code&gt;) .  If I want
+supports that(in &lt;a class="reference external" href="https://awesomewm.org/"&gt;awesomewm&lt;/a&gt; I’d probably choose &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;tile.right&lt;/span&gt;&lt;/code&gt;) .  If I want
 various image viewer windows open and a nice tabbed interface to access them,
-I’ll just tag them all and enable a layout that supports that(such as &lt;a class=&quot;reference external&quot; href=&quot;https://dwm.suckless.org/&quot;&gt;dwm&lt;/a&gt;’s
-monocle&lt;a class=&quot;footnote-reference brackets&quot; href=&quot;#id6&quot; id=&quot;id2&quot;&gt;2&lt;/a&gt;).  If I want to vertically split a terminal window and then
-horizontally split that to include a &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;vim&lt;/span&gt;&lt;/code&gt; instance, I can just tag those
-three windows and enable a layout that supports it&lt;a class=&quot;footnote-reference brackets&quot; href=&quot;#id7&quot; id=&quot;id3&quot;&gt;3&lt;/a&gt;.  I think the basic
+I’ll just tag them all and enable a layout that supports that(such as &lt;a class="reference external" href="https://dwm.suckless.org/"&gt;dwm&lt;/a&gt;’s
+monocle&lt;a class="footnote-reference brackets" href="#id6" id="id2"&gt;2&lt;/a&gt;).  If I want to vertically split a terminal window and then
+horizontally split that to include a &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;vim&lt;/span&gt;&lt;/code&gt; instance, I can just tag those
+three windows and enable a layout that supports it&lt;a class="footnote-reference brackets" href="#id7" id="id3"&gt;3&lt;/a&gt;.  I think the basic
 message should be clear by now.&lt;/p&gt;
-&lt;div class=&quot;sidebar&quot;&gt;
-&lt;p class=&quot;sidebar-title&quot;&gt;Window manager choice&lt;/p&gt;
-&lt;p&gt;I’ve used both &lt;a class=&quot;reference external&quot; href=&quot;https://awesomewm.org/&quot;&gt;awesomewm&lt;/a&gt; and &lt;a class=&quot;reference external&quot; href=&quot;https://dwm.suckless.org/&quot;&gt;dwm&lt;/a&gt; as examples here because I use both
+&lt;div class="sidebar"&gt;
+&lt;p class="sidebar-title"&gt;Window manager choice&lt;/p&gt;
+&lt;p&gt;I’ve used both &lt;a class="reference external" href="https://awesomewm.org/"&gt;awesomewm&lt;/a&gt; and &lt;a class="reference external" href="https://dwm.suckless.org/"&gt;dwm&lt;/a&gt; as examples here because I use both
 depending on what machine I’m in front of.&lt;/p&gt;
 &lt;p&gt;However, you can achieve the same effect with any number of tiling window
-managers, or with tools like &lt;a class=&quot;reference external&quot; href=&quot;https://launchpad.net/winwrangler&quot;&gt;winwrangler&lt;/a&gt;&lt;a class=&quot;footnote-reference brackets&quot; href=&quot;#id8&quot; id=&quot;id4&quot;&gt;4&lt;/a&gt; if your favourite window
+managers, or with tools like &lt;a class="reference external" href="https://launchpad.net/winwrangler"&gt;winwrangler&lt;/a&gt;&lt;a class="footnote-reference brackets" href="#id8" id="id4"&gt;4&lt;/a&gt; if your favourite window
 manager has weaker layout management.&lt;/p&gt;
 &lt;/div&gt;
-&lt;p&gt;You can go further too.  Say you want &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;vim&lt;/span&gt;&lt;/code&gt; and a browser window side by side
-while reading documentation but need that &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;vim&lt;/span&gt;&lt;/code&gt; instance next to a terminal
-for running tests, then you can simply apply two tags to the &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;vim&lt;/span&gt;&lt;/code&gt; instance
+&lt;p&gt;You can go further too.  Say you want &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;vim&lt;/span&gt;&lt;/code&gt; and a browser window side by side
+while reading documentation but need that &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;vim&lt;/span&gt;&lt;/code&gt; instance next to a terminal
+for running tests, then you can simply apply two tags to the &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;vim&lt;/span&gt;&lt;/code&gt; instance
 and switch between both layouts with a rattle of the keyboard.  The exact same
 interface you’d use for any other layout change too, not one that is specific
-to &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;tmux&lt;/span&gt;&lt;/code&gt; or &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;tabbed&lt;/span&gt;&lt;/code&gt;.&lt;/p&gt;
+to &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;tmux&lt;/span&gt;&lt;/code&gt; or &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;tabbed&lt;/span&gt;&lt;/code&gt;.&lt;/p&gt;
 &lt;p&gt;It seems strange to me that given the option to perform tasks like this at the
 window manager level people would &lt;em&gt;choose&lt;/em&gt; to insert an extra layer in the
 middle that does less.  By using actual windows you sidestep the problems with
-mouse selection in pseudo-windows in &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;tmux&lt;/span&gt;&lt;/code&gt;, and you can change your mind
-about your preference for tabs or tiling mid-session unlike with &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;tabbed&lt;/span&gt;&lt;/code&gt;.&lt;/p&gt;
-&lt;p&gt;You can also abuse other excellent things like &lt;a class=&quot;reference external&quot; href=&quot;http://www.semicomplete.com/projects/xdotool/&quot;&gt;xdotool&lt;/a&gt; to fiddle with your
+mouse selection in pseudo-windows in &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;tmux&lt;/span&gt;&lt;/code&gt;, and you can change your mind
+about your preference for tabs or tiling mid-session unlike with &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;tabbed&lt;/span&gt;&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;You can also abuse other excellent things like &lt;a class="reference external" href="http://www.semicomplete.com/projects/xdotool/"&gt;xdotool&lt;/a&gt; to fiddle with your
 layout or interact with specific clients instead of needing to do application
-specific things depending on whether you’re in a &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;tmux&lt;/span&gt;&lt;/code&gt; session or not.&lt;/p&gt;
-&lt;p class=&quot;rubric&quot;&gt;Footnotes&lt;/p&gt;
-&lt;dl class=&quot;footnote brackets&quot;&gt;
-&lt;dt class=&quot;label&quot; id=&quot;id5&quot;&gt;&lt;span class=&quot;brackets&quot;&gt;&lt;a class=&quot;fn-backref&quot; href=&quot;#id1&quot;&gt;1&lt;/a&gt;&lt;/span&gt;&lt;/dt&gt;
-&lt;dd&gt;&lt;p&gt;I’m especially impressed with &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;tabbed&lt;/span&gt;&lt;/code&gt;, as it feels somehow obvious
+specific things depending on whether you’re in a &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;tmux&lt;/span&gt;&lt;/code&gt; session or not.&lt;/p&gt;
+&lt;p class="rubric"&gt;Footnotes&lt;/p&gt;
+&lt;dl class="footnote brackets"&gt;
+&lt;dt class="label" id="id5"&gt;&lt;span class="brackets"&gt;&lt;a class="fn-backref" href="#id1"&gt;1&lt;/a&gt;&lt;/span&gt;&lt;/dt&gt;
+&lt;dd&gt;&lt;p&gt;I’m especially impressed with &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;tabbed&lt;/span&gt;&lt;/code&gt;, as it feels somehow obvious
 yet magical.  A rare combination in my eyes.&lt;/p&gt;
 &lt;/dd&gt;
-&lt;dt class=&quot;label&quot; id=&quot;id6&quot;&gt;&lt;span class=&quot;brackets&quot;&gt;&lt;a class=&quot;fn-backref&quot; href=&quot;#id2&quot;&gt;2&lt;/a&gt;&lt;/span&gt;&lt;/dt&gt;
-&lt;dd&gt;&lt;p&gt;You’ll probably want a patch such as &lt;a class=&quot;reference external&quot; href=&quot;http://dwm.suckless.org/patches/fancybar/&quot;&gt;fancybar&lt;/a&gt; if you want to emulate
-the appearance of having a tab bar in &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;dwm&lt;/span&gt;&lt;/code&gt;.&lt;/p&gt;
+&lt;dt class="label" id="id6"&gt;&lt;span class="brackets"&gt;&lt;a class="fn-backref" href="#id2"&gt;2&lt;/a&gt;&lt;/span&gt;&lt;/dt&gt;
+&lt;dd&gt;&lt;p&gt;You’ll probably want a patch such as &lt;a class="reference external" href="http://dwm.suckless.org/patches/fancybar/"&gt;fancybar&lt;/a&gt; if you want to emulate
+the appearance of having a tab bar in &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;dwm&lt;/span&gt;&lt;/code&gt;.&lt;/p&gt;
 &lt;/dd&gt;
-&lt;dt class=&quot;label&quot; id=&quot;id7&quot;&gt;&lt;span class=&quot;brackets&quot;&gt;&lt;a class=&quot;fn-backref&quot; href=&quot;#id3&quot;&gt;3&lt;/a&gt;&lt;/span&gt;&lt;/dt&gt;
-&lt;dd&gt;&lt;p&gt;And using the window manager’s functionality means that &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;vim&lt;/span&gt;&lt;/code&gt; session
-can be a &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;gvim&lt;/span&gt;&lt;/code&gt; instance with nice colourful PNGs for &lt;a class=&quot;reference external&quot; href=&quot;http://vimdoc.sourceforge.net/htmldoc/sign.html&quot;&gt;signs&lt;/a&gt; instead
+&lt;dt class="label" id="id7"&gt;&lt;span class="brackets"&gt;&lt;a class="fn-backref" href="#id3"&gt;3&lt;/a&gt;&lt;/span&gt;&lt;/dt&gt;
+&lt;dd&gt;&lt;p&gt;And using the window manager’s functionality means that &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;vim&lt;/span&gt;&lt;/code&gt; session
+can be a &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;gvim&lt;/span&gt;&lt;/code&gt; instance with nice colourful PNGs for &lt;a class="reference external" href="http://vimdoc.sourceforge.net/htmldoc/sign.html"&gt;signs&lt;/a&gt; instead
 of just characters too.&lt;/p&gt;
 &lt;/dd&gt;
-&lt;dt class=&quot;label&quot; id=&quot;id8&quot;&gt;&lt;span class=&quot;brackets&quot;&gt;&lt;a class=&quot;fn-backref&quot; href=&quot;#id4&quot;&gt;4&lt;/a&gt;&lt;/span&gt;&lt;/dt&gt;
+&lt;dt class="label" id="id8"&gt;&lt;span class="brackets"&gt;&lt;a class="fn-backref" href="#id4"&gt;4&lt;/a&gt;&lt;/span&gt;&lt;/dt&gt;
 &lt;dd&gt;&lt;p&gt;You can find a quick patch to remove the daemon support and along with
-it the &lt;code class=&quot;docutils literal notranslate&quot;&gt;&lt;span class=&quot;pre&quot;&gt;gtkhotkey&lt;/span&gt;&lt;/code&gt; dependency &lt;a class=&quot;reference external&quot; href=&quot;https://github.com/JNRowe/jnrowe-misc/commit/a9249166b917110ecb69714ca08d8ff28870a9c7&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;
+it the &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;gtkhotkey&lt;/span&gt;&lt;/code&gt; dependency &lt;a class="reference external" href="https://github.com/JNRowe/jnrowe-misc/commit/a9249166b917110ecb69714ca08d8ff28870a9c7"&gt;here&lt;/a&gt;.&lt;/p&gt;
 &lt;/dd&gt;
 &lt;/dl&gt;
 &lt;/div&gt;
 </content>
+    <link href="https://jnrowe.github.io/articles/tiling_vs_tabbing.html" rel="alternate"/>
+    <published>2018-10-08T00:00:00+01:00</published>
   </entry>
 </feed>
