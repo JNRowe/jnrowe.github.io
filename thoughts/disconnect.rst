@@ -66,27 +66,27 @@ same way that many of us block web analytics companies.  We’re probably giving
 up more tracking data to the large |CDN|\ s then we do to the simple analytics
 companies.
 
-The thought popped in to my mind that a whitelist, instead of a blacklist, might
+The thought popped in to my mind that a allowlist, instead of a denylist, might
 actually be workable and since last November I’ve taken to doing just that.
 
 The strangest result in my mind is just how short the list is.  My old advert
-and analytics blacklist had close to 1500 entries, and would obviously miss many
+and analytics denylist had close to 1500 entries, and would obviously miss many
 ”nasties” that I either hadn’t seen or that were simply new.
 
-The whitelist, on the other hand, has only ever had 900 entries. Right now it
+The allowlist, on the other hand, has only ever had 900 entries. Right now it
 has less than 150 thanks to the automated decay-based-on-visits purging of the
 entries it contains.
 
-The whitelist approach also feeds in to my data tracking habit, as I can now
+The allowlist approach also feeds in to my data tracking habit, as I can now
 tell from the decay tracking data when bursts of certain sites appear.  For
 example, StackOverflow(and ``cdn.sstatic.net/stackoverflow/`` for styling) was
-on the whitelist for two weeks in June with six visits, which happens to
+on the allowlist for two weeks in June with six visits, which happens to
 coincide with a project that involved porting a tool to Windows.
 
-The act of using a whitelist makes the point of procrastination noticeable and
+The act of using a allowlist makes the point of procrastination noticeable and
 adds a cost to even starting it.  Every time I want to visit a new site [#s2]_,
 I have to highlight the |URL| and rattle a key combo in awesome_ that updates
-the whitelist to enable access to it.
+the allowlist to enable access to it.
 
 On the knoll
 ------------
@@ -136,8 +136,8 @@ you regain some of that is very comforting.
 
 .. [#s1] The code I use is an unreleased project created by a friend, but
    vnstat_ may work equally well for the same purpose.
-.. [#s2] For the most part I whitelist based on hostname, but as in the
-   StackOverflow styling example will whitelist specific paths on hosts on some
+.. [#s2] For the most part I allowlist based on hostname, but as in the
+   StackOverflow styling example will allowlist specific paths on hosts on some
    occasions.
 .. [#s3] I’m aware that Google has access to a small corner of my contacts graph
    via gmail, but I haven’t yet decided how I plan to resolve.  I’ve never used

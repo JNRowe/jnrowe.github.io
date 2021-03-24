@@ -44,6 +44,7 @@ Zsh
 abook
 aced
 addressbook
+allowlist
 analytics
 app
 apps
@@ -70,6 +71,7 @@ cookiemon
 copy'n'paste
 deconstructing
 denoise
+denylist
 devmanual
 dialog
 dialogs
@@ -185,7 +187,6 @@ urxvt
 ve
 vs
 watercooler
-whitelist
 wibox
 wiki
 workflow
