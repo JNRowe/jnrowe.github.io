@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <id>https://jnrowe.github.io/</id>
   <title>JNRowe - Posted in 2019</title>
-  <updated>2021-03-21T11:05:54.401658+00:00</updated>
+  <updated>2021-03-24T17:32:28.385432+00:00</updated>
   <link href="https://jnrowe.github.io/"/>
   <link href="https://jnrowe.github.io/blog/2019/atom.xml"/>
-  <generator uri="https://ablog.readthedocs.org" version="0.10.12">ABlog</generator>
+  <generator uri="https://ablog.readthedocs.org/" version="0.10.14">ABlog</generator>
   <subtitle>Ramblings of a tired mind</subtitle>
   <entry>
     <id>https://jnrowe.github.io/articles/gps_rollover_2019.html</id>
@@ -167,6 +167,13 @@ skies may fall; having a good testing infrastructure is a must.&lt;/p&gt;
 &lt;/div&gt;
 </content>
     <link href="https://jnrowe.github.io/articles/gps_rollover_2019.html" rel="alternate"/>
+    <summary>Tomorrow we’re going to experience the simultaneously cataclysmic and mundane
+consequences of a  GPS  rollover event.   Many  things will break,  many  will
+continue to work and  many  will just take a step closer to breaking… the fun
+of date handling never ends.</summary>
+    <category term="gps" label="gps"/>
+    <category term="time" label="time"/>
+    <category term="bugs" label="bugs"/>
     <published>2019-04-05T00:00:00+01:00</published>
   </entry>
   <entry>
@@ -290,6 +297,10 @@ complex &lt;abbr title="Structured Query Language"&gt;SQL&lt;/abbr&gt; embedded 
 &lt;/div&gt;
 </content>
     <link href="https://jnrowe.github.io/thoughts/i_have_a_secret.html" rel="alternate"/>
+    <summary>A terrible secret haunts me, at times daily… I have virtually  no   SQL  skills.</summary>
+    <category term="databases" label="databases"/>
+    <category term="learning" label="learning"/>
+    <category term="sql" label="sql"/>
     <published>2019-05-24T00:00:00+01:00</published>
   </entry>
   <entry>
@@ -777,6 +788,11 @@ Simple, &lt;abbr title="Advent of Code"&gt;AoC&lt;/abbr&gt; always has a puzzle 
 &lt;/div&gt;
 </content>
     <link href="https://jnrowe.github.io/articles/advent_of_code_2019.html" rel="alternate"/>
+    <summary>With a touch of sadness, I’ve given up on  AoC  for this year.  I’m writing this
+as a journal entry, more for myself than others.  You’ve been warned!</summary>
+    <category term="adventofcode" label="adventofcode"/>
+    <category term="coding" label="coding"/>
+    <category term="puzzles" label="puzzles"/>
     <published>2019-12-11T00:00:00+00:00</published>
   </entry>
 </feed>

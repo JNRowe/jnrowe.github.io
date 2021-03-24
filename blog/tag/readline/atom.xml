@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <id>https://jnrowe.github.io/</id>
   <title>JNRowe - Posts tagged readline</title>
-  <updated>2021-03-21T11:06:00.508572+00:00</updated>
+  <updated>2021-03-24T17:32:33.835019+00:00</updated>
   <link href="https://jnrowe.github.io/"/>
   <link href="https://jnrowe.github.io/blog/tag/readline/atom.xml"/>
-  <generator uri="https://ablog.readthedocs.org" version="0.10.12">ABlog</generator>
+  <generator uri="https://ablog.readthedocs.org/" version="0.10.14">ABlog</generator>
   <subtitle>Ramblings of a tired mind</subtitle>
   <entry>
     <id>https://jnrowe.github.io/articles/tips/Beyond_tab_completion.html</id>
@@ -45,8 +45,8 @@ $endif
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
 &lt;p&gt;The above tells &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;readline&lt;/span&gt;&lt;/code&gt; we wish to bind &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;menu-complete&lt;/span&gt;&lt;/code&gt; to
-&lt;kbd class="kbd docutils literal notranslate"&gt;&lt;kbd class="kbd docutils literal notranslate"&gt;Control&lt;/kbd&gt;-&lt;kbd class="kbd docutils literal notranslate"&gt;a&lt;/kbd&gt;&lt;/kbd&gt;, I find that key combination quite comfortable as
-&lt;kbd class="kbd docutils literal notranslate"&gt;&lt;kbd class="kbd docutils literal notranslate"&gt;Control&lt;/kbd&gt;-&lt;kbd class="kbd docutils literal notranslate"&gt;a&lt;/kbd&gt;&lt;/kbd&gt; is easy to reach the my keyboard layout and is of little use
+&lt;kbd class="kbd compound docutils literal notranslate"&gt;&lt;kbd class="kbd docutils literal notranslate"&gt;Control&lt;/kbd&gt;-&lt;kbd class="kbd docutils literal notranslate"&gt;a&lt;/kbd&gt;&lt;/kbd&gt;, I find that key combination quite comfortable as
+&lt;kbd class="kbd compound docutils literal notranslate"&gt;&lt;kbd class="kbd docutils literal notranslate"&gt;Control&lt;/kbd&gt;-&lt;kbd class="kbd docutils literal notranslate"&gt;a&lt;/kbd&gt;&lt;/kbd&gt; is easy to reach the my keyboard layout and is of little use
 in any of the apps I use on a regular basis(I’d feel differently if &lt;kbd class="kbd docutils literal notranslate"&gt;Home&lt;/kbd&gt;
 was inaccessible).  You must either re-read the configuration file or restart
 the &lt;strong class="command"&gt;bash&lt;/strong&gt; session to enable this binding.&lt;/p&gt;
@@ -63,26 +63,29 @@ completion context aware, in much the same the &lt;a class="reference external" 
 without having to write new completion scripts.  There are some other quite
 useful completion modes available in &lt;strong class="command"&gt;bash&lt;/strong&gt;, I’ll describe a few
 below.&lt;/p&gt;
-&lt;p&gt;&lt;kbd class="kbd docutils literal notranslate"&gt;&lt;kbd class="kbd docutils literal notranslate"&gt;M&lt;/kbd&gt;-&lt;kbd class="kbd docutils literal notranslate"&gt;!&lt;/kbd&gt;&lt;/kbd&gt; tells &lt;strong class="command"&gt;bash&lt;/strong&gt; to complete command names; be they actual
-on-disk commands, functions or aliases. &lt;kbd class="kbd docutils literal notranslate"&gt;&lt;kbd class="kbd docutils literal notranslate"&gt;M&lt;/kbd&gt;-&lt;kbd class="kbd docutils literal notranslate"&gt;/&lt;/kbd&gt;&lt;/kbd&gt; completes only filenames,
+&lt;p&gt;&lt;kbd class="kbd compound docutils literal notranslate"&gt;&lt;kbd class="kbd docutils literal notranslate"&gt;M&lt;/kbd&gt;-&lt;kbd class="kbd docutils literal notranslate"&gt;!&lt;/kbd&gt;&lt;/kbd&gt; tells &lt;strong class="command"&gt;bash&lt;/strong&gt; to complete command names; be they actual
+on-disk commands, functions or aliases. &lt;kbd class="kbd compound docutils literal notranslate"&gt;&lt;kbd class="kbd docutils literal notranslate"&gt;M&lt;/kbd&gt;-&lt;kbd class="kbd docutils literal notranslate"&gt;/&lt;/kbd&gt;&lt;/kbd&gt; completes only filenames,
 this can be very useful when &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;bash-completion&lt;/span&gt;&lt;/code&gt; is refusing to tab complete
-a filename for you.  &lt;kbd class="kbd docutils literal notranslate"&gt;&lt;kbd class="kbd docutils literal notranslate"&gt;C&lt;/kbd&gt;-&lt;kbd class="kbd docutils literal notranslate"&gt;$&lt;/kbd&gt;&lt;/kbd&gt; implements variable name completion, this is
+a filename for you.  &lt;kbd class="kbd compound docutils literal notranslate"&gt;&lt;kbd class="kbd docutils literal notranslate"&gt;C&lt;/kbd&gt;-&lt;kbd class="kbd docutils literal notranslate"&gt;$&lt;/kbd&gt;&lt;/kbd&gt; implements variable name completion, this is
 most useful when you’re looking to unset or re-set a variable.  Variable name
 completion isn’t actually necessary if you have &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;bash-completion&lt;/span&gt;&lt;/code&gt; installed
 as it is smart enough to handle this for you in most cases.&lt;/p&gt;
 &lt;p&gt;And finally, there is a one more incredibly useful completion mode in
-&lt;strong class="command"&gt;bash&lt;/strong&gt; and that is &lt;kbd class="kbd docutils literal notranslate"&gt;&lt;kbd class="kbd docutils literal notranslate"&gt;M&lt;/kbd&gt;-&lt;kbd class="kbd docutils literal notranslate"&gt;{&lt;/kbd&gt;&lt;/kbd&gt;, it adds all possible completions to the
+&lt;strong class="command"&gt;bash&lt;/strong&gt; and that is &lt;kbd class="kbd compound docutils literal notranslate"&gt;&lt;kbd class="kbd docutils literal notranslate"&gt;M&lt;/kbd&gt;-&lt;kbd class="kbd docutils literal notranslate"&gt;{&lt;/kbd&gt;&lt;/kbd&gt;, it adds all possible completions to the
 command line using the brace expansion syntax.  For example, if I type &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;ls&lt;/span&gt;
 &lt;span class="pre"&gt;~/Git/Local/&amp;lt;M-{&amp;gt;&lt;/span&gt;&lt;/code&gt; it completes to
 &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;/home/jay/Git/Local/{Makefile,countless,dot-configs,haskvim,jrutils}&lt;/span&gt;&lt;/code&gt;.
-Using &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;readline&lt;/span&gt;&lt;/code&gt; motion commands, especially word motions such as &lt;kbd class="kbd docutils literal notranslate"&gt;&lt;kbd class="kbd docutils literal notranslate"&gt;M&lt;/kbd&gt;-&lt;kbd class="kbd docutils literal notranslate"&gt;f&lt;/kbd&gt;&lt;/kbd&gt;
-and &lt;kbd class="kbd docutils literal notranslate"&gt;&lt;kbd class="kbd docutils literal notranslate"&gt;M&lt;/kbd&gt;-&lt;kbd class="kbd docutils literal notranslate"&gt;b&lt;/kbd&gt;&lt;/kbd&gt; to jump forward and backward one word, I can easily apply
+Using &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;readline&lt;/span&gt;&lt;/code&gt; motion commands, especially word motions such as &lt;kbd class="kbd compound docutils literal notranslate"&gt;&lt;kbd class="kbd docutils literal notranslate"&gt;M&lt;/kbd&gt;-&lt;kbd class="kbd docutils literal notranslate"&gt;f&lt;/kbd&gt;&lt;/kbd&gt;
+and &lt;kbd class="kbd compound docutils literal notranslate"&gt;&lt;kbd class="kbd docutils literal notranslate"&gt;M&lt;/kbd&gt;-&lt;kbd class="kbd docutils literal notranslate"&gt;b&lt;/kbd&gt;&lt;/kbd&gt; to jump forward and backward one word, I can easily apply
 a command to a certain set of files in a directory.  Just don’t try it on
 &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;/usr/bin&lt;/span&gt;&lt;/code&gt; unless you want to see how &lt;strong class="command"&gt;bash&lt;/strong&gt; handles massive command
 lines!!&lt;/p&gt;
 &lt;/div&gt;
 </content>
     <link href="https://jnrowe.github.io/articles/tips/Beyond_tab_completion.html" rel="alternate"/>
+    <summary>Matt Taylor wrote on the EADS Linux list:</summary>
+    <category term="bash" label="bash"/>
+    <category term="readline" label="readline"/>
     <published>2009-09-30T00:00:00+01:00</published>
   </entry>
   <entry>
@@ -233,6 +236,11 @@ search to look for times when I’ve mentioned it.&lt;/p&gt;
 &lt;/div&gt;
 </content>
     <link href="https://jnrowe.github.io/articles/tips/readline_rename_imv.html" rel="alternate"/>
+    <summary>Over at HN in a  stolen topic :</summary>
+    <category term="readline" label="readline"/>
+    <category term="imv" label="imv"/>
+    <category term="qmv" label="qmv"/>
+    <category term="renameutils" label="renameutils"/>
     <published>2018-10-26T00:00:00+01:00</published>
   </entry>
 </feed>

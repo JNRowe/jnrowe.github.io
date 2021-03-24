@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <id>https://jnrowe.github.io/</id>
   <title>JNRowe - Posts tagged python</title>
-  <updated>2021-03-21T11:06:00.437324+00:00</updated>
+  <updated>2021-03-24T17:32:33.757574+00:00</updated>
   <link href="https://jnrowe.github.io/"/>
   <link href="https://jnrowe.github.io/blog/tag/python/atom.xml"/>
-  <generator uri="https://ablog.readthedocs.org" version="0.10.12">ABlog</generator>
+  <generator uri="https://ablog.readthedocs.org/" version="0.10.14">ABlog</generator>
   <subtitle>Ramblings of a tired mind</subtitle>
   <entry>
     <id>https://jnrowe.github.io/articles/tips/Debugging_python_regexps.html</id>
@@ -144,6 +144,9 @@ a &lt;abbr title="Regular Expression"&gt;RegEx&lt;/abbr&gt;.&lt;/p&gt;
 &lt;/div&gt;
 </content>
     <link href="https://jnrowe.github.io/articles/tips/Debugging_python_regexps.html" rel="alternate"/>
+    <summary>Rob Sampson is learning  Python  and struggling to get to grips with its
+ RegEx  handling.  He asks on one of our internal lists at the office:</summary>
+    <category term="python" label="python"/>
     <published>2009-10-29T00:00:00+00:00</published>
   </entry>
 </feed>

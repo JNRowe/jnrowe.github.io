@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <id>https://jnrowe.github.io/</id>
   <title>JNRowe - Posts tagged politics</title>
-  <updated>2021-03-21T11:05:59.835148+00:00</updated>
+  <updated>2021-03-24T17:32:32.888021+00:00</updated>
   <link href="https://jnrowe.github.io/"/>
   <link href="https://jnrowe.github.io/blog/tag/politics/atom.xml"/>
-  <generator uri="https://ablog.readthedocs.org" version="0.10.12">ABlog</generator>
+  <generator uri="https://ablog.readthedocs.org/" version="0.10.14">ABlog</generator>
   <subtitle>Ramblings of a tired mind</subtitle>
   <entry>
     <id>https://jnrowe.github.io/thoughts/metro_city.html</id>
@@ -107,6 +107,10 @@ yourself and society at large a serious injustice.&lt;/p&gt;
 &lt;/div&gt;
 </content>
     <link href="https://jnrowe.github.io/thoughts/metro_city.html" rel="alternate"/>
+    <summary>The whole thing makes me wonder whether a modern reintroduction of the
+ skimmington ride  for social media is long overdue.</summary>
+    <category term="politics" label="politics"/>
+    <category term="noise" label="noise"/>
     <published>2017-09-03T00:00:00+01:00</published>
   </entry>
   <entry>
@@ -204,6 +208,10 @@ other people with the necessary skills have been moved to Germany.&lt;/p&gt;
 &lt;/div&gt;
 </content>
     <link href="https://jnrowe.github.io/thoughts/brexit_through_the_gift_shop.html" rel="alternate"/>
+    <summary>This is a public letter to my co-workers, which probably shouldn’t be
+public.</summary>
+    <category term="work" label="work"/>
+    <category term="politics" label="politics"/>
     <published>2018-06-08T00:00:00+01:00</published>
   </entry>
 </feed>

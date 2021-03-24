@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <id>https://jnrowe.github.io/</id>
   <title>JNRowe - Posted in 2018</title>
-  <updated>2021-03-21T11:05:54.576048+00:00</updated>
+  <updated>2021-03-24T17:32:28.554074+00:00</updated>
   <link href="https://jnrowe.github.io/"/>
   <link href="https://jnrowe.github.io/blog/2018/atom.xml"/>
-  <generator uri="https://ablog.readthedocs.org" version="0.10.12">ABlog</generator>
+  <generator uri="https://ablog.readthedocs.org/" version="0.10.14">ABlog</generator>
   <subtitle>Ramblings of a tired mind</subtitle>
   <entry>
     <id>https://jnrowe.github.io/thoughts/brexit_through_the_gift_shop.html</id>
@@ -102,6 +102,10 @@ other people with the necessary skills have been moved to Germany.&lt;/p&gt;
 &lt;/div&gt;
 </content>
     <link href="https://jnrowe.github.io/thoughts/brexit_through_the_gift_shop.html" rel="alternate"/>
+    <summary>This is a public letter to my co-workers, which probably shouldn’t be
+public.</summary>
+    <category term="work" label="work"/>
+    <category term="politics" label="politics"/>
     <published>2018-06-08T00:00:00+01:00</published>
   </entry>
   <entry>
@@ -253,6 +257,8 @@ have a switch statement.&lt;/p&gt;
 &lt;/div&gt;
 </content>
     <link href="https://jnrowe.github.io/articles/tips/vim_day_night_colourscheme.html" rel="alternate"/>
+    <summary>The fabulous Miss Biddulph asks via our EADS Linux list:</summary>
+    <category term="vim" label="vim"/>
     <published>2018-09-15T00:00:00+01:00</published>
   </entry>
   <entry>
@@ -328,6 +334,14 @@ it the &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;
 &lt;/div&gt;
 </content>
     <link href="https://jnrowe.github.io/articles/tiling_vs_tabbing.html" rel="alternate"/>
+    <summary>A fairly large chunk of my developer friends fawn over  tmux  and  tabbed .
+These tools can give  the effect  of a multiple window interface to your
+terminal sessions, or apply a tabbed interface to any  xembed  supporting
+application respectively.  I’ll freely admit they’re pretty awesome at what
+they do 1 .</summary>
+    <category term="desktop" label="desktop"/>
+    <category term="tiling" label="tiling"/>
+    <category term="tabbed" label="tabbed"/>
     <published>2018-10-08T00:00:00+01:00</published>
   </entry>
   <entry>
@@ -583,6 +597,12 @@ engineering problems.&lt;/p&gt;
 &lt;/div&gt;
 </content>
     <link href="https://jnrowe.github.io/articles/advent_of_code.html" rel="alternate"/>
+    <summary>A very evil friend pointed me to  Advent of Code  last December, and I burnt
+a fair chunk of time on it.  I mean… yeah, it  was  hugely fun but be warned it
+is enormously addictive 1 .</summary>
+    <category term="adventofcode" label="adventofcode"/>
+    <category term="coding" label="coding"/>
+    <category term="puzzles" label="puzzles"/>
     <published>2018-10-19T00:00:00+01:00</published>
   </entry>
   <entry>
@@ -733,6 +753,11 @@ search to look for times when I’ve mentioned it.&lt;/p&gt;
 &lt;/div&gt;
 </content>
     <link href="https://jnrowe.github.io/articles/tips/readline_rename_imv.html" rel="alternate"/>
+    <summary>Over at HN in a  stolen topic :</summary>
+    <category term="readline" label="readline"/>
+    <category term="imv" label="imv"/>
+    <category term="qmv" label="qmv"/>
+    <category term="renameutils" label="renameutils"/>
     <published>2018-10-26T00:00:00+01:00</published>
   </entry>
   <entry>
@@ -765,12 +790,12 @@ change:&lt;/p&gt;
 &lt;div class="highlight-c notranslate"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kt"&gt;int&lt;/span&gt; &lt;span class="n"&gt;magic_const&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;974&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
-&lt;p&gt;In &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;vim&lt;/span&gt;&lt;/code&gt;, you can execute &lt;kbd class="kbd docutils literal notranslate"&gt;&lt;kbd class="kbd docutils literal notranslate"&gt;ciw&amp;lt;C&lt;/kbd&gt;-&lt;kbd class="kbd docutils literal notranslate"&gt;r&amp;gt;=&amp;#64;&amp;quot;/2&amp;lt;CR&amp;gt;&lt;/kbd&gt;&lt;/kbd&gt; to cleave the number.  The
+&lt;p&gt;In &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;vim&lt;/span&gt;&lt;/code&gt;, you can execute &lt;kbd class="kbd compound docutils literal notranslate"&gt;&lt;kbd class="kbd docutils literal notranslate"&gt;ciw&amp;lt;C&lt;/kbd&gt;-&lt;kbd class="kbd docutils literal notranslate"&gt;r&amp;gt;=&amp;#64;&amp;quot;/2&amp;lt;CR&amp;gt;&lt;/kbd&gt;&lt;/kbd&gt; to cleave the number.  The
 command itself is saying:&lt;/p&gt;
 &lt;dl class="simple"&gt;
 &lt;dt&gt;&lt;kbd class="kbd docutils literal notranslate"&gt;ciw&lt;/kbd&gt;&lt;/dt&gt;&lt;dd&gt;&lt;p&gt;Change the word my cursor is on(&lt;kbd class="kbd docutils literal notranslate"&gt;c&lt;/kbd&gt;hange &lt;kbd class="kbd docutils literal notranslate"&gt;i&lt;/kbd&gt;nner &lt;kbd class="kbd docutils literal notranslate"&gt;w&lt;/kbd&gt;ord)&lt;/p&gt;
 &lt;/dd&gt;
-&lt;dt&gt;&lt;kbd class="kbd docutils literal notranslate"&gt;&lt;kbd class="kbd docutils literal notranslate"&gt;&amp;lt;C&lt;/kbd&gt;-&lt;kbd class="kbd docutils literal notranslate"&gt;r&amp;gt;=&lt;/kbd&gt;&lt;/kbd&gt;&lt;/dt&gt;&lt;dd&gt;&lt;p&gt;Insert the result of an expression(see &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;:h&lt;/span&gt; &lt;span class="pre"&gt;i_CTRL-R_=&lt;/span&gt;&lt;/code&gt; for awesomeness)&lt;/p&gt;
+&lt;dt&gt;&lt;kbd class="kbd compound docutils literal notranslate"&gt;&lt;kbd class="kbd docutils literal notranslate"&gt;&amp;lt;C&lt;/kbd&gt;-&lt;kbd class="kbd docutils literal notranslate"&gt;r&amp;gt;=&lt;/kbd&gt;&lt;/kbd&gt;&lt;/dt&gt;&lt;dd&gt;&lt;p&gt;Insert the result of an expression(see &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;:h&lt;/span&gt; &lt;span class="pre"&gt;i_CTRL-R_=&lt;/span&gt;&lt;/code&gt; for awesomeness)&lt;/p&gt;
 &lt;/dd&gt;
 &lt;dt&gt;&lt;kbd class="kbd docutils literal notranslate"&gt;&amp;#64;&amp;quot;&lt;/kbd&gt;&lt;/dt&gt;&lt;dd&gt;&lt;p&gt;Use the text from last filled register, ie the text we just marked to be
 changed&lt;/p&gt;
@@ -840,13 +865,18 @@ a &lt;a class="reference external" href="mailto:jnrowe&amp;#37;&amp;#52;&amp;#48
 &lt;dt class="label" id="id6"&gt;&lt;span class="brackets"&gt;&lt;a class="fn-backref" href="#id3"&gt;3&lt;/a&gt;&lt;/span&gt;&lt;/dt&gt;
 &lt;dd&gt;&lt;p&gt;&lt;a class="reference external" href="https://www.orgmode.org/"&gt;org-mode&lt;/a&gt; and &lt;a class="reference external" href="https://github.com/jceb/vim-orgmode"&gt;vim-orgmode&lt;/a&gt; allows me to keep this across editors.  There
 is very little point publishing it, as it can be summed up as “James
-pressed &lt;kbd class="kbd docutils literal notranslate"&gt;&lt;kbd class="kbd docutils literal notranslate"&gt;&amp;lt;C&lt;/kbd&gt;-&lt;kbd class="kbd docutils literal notranslate"&gt;x&amp;gt;$something&lt;/kbd&gt;&lt;/kbd&gt; and was surprised.”&lt;/p&gt;
+pressed &lt;kbd class="kbd compound docutils literal notranslate"&gt;&lt;kbd class="kbd docutils literal notranslate"&gt;&amp;lt;C&lt;/kbd&gt;-&lt;kbd class="kbd docutils literal notranslate"&gt;x&amp;gt;$something&lt;/kbd&gt;&lt;/kbd&gt; and was surprised.”&lt;/p&gt;
 &lt;/dd&gt;
 &lt;/dl&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 </content>
     <link href="https://jnrowe.github.io/articles/evil_emacs_steals_my_heart.html" rel="alternate"/>
+    <summary>Many  of my co-workers use  emacs , it is probably the most popular editor on
+our team and I understand why.</summary>
+    <category term="emacs" label="emacs"/>
+    <category term="vim" label="vim"/>
+    <category term="evil" label="evil"/>
     <published>2018-11-05T00:00:00+00:00</published>
   </entry>
   <entry>
@@ -993,7 +1023,7 @@ years.&lt;/p&gt;
 &lt;/dl&gt;
 &lt;dl class="std option"&gt;
 &lt;dt id="cmdoption-date-arg-j"&gt;
-&lt;code class="sig-name descname"&gt;%j&lt;/code&gt;&lt;code class="sig-prename descclassname"&gt;&lt;/code&gt;&lt;/dt&gt;
+&lt;code class="sig-name descname"&gt;&lt;span class="pre"&gt;%j&lt;/span&gt;&lt;/code&gt;&lt;code class="sig-prename descclassname"&gt;&lt;/code&gt;&lt;/dt&gt;
 &lt;dd&gt;&lt;p&gt;Displays the day number of the given year, see &lt;em class="manpage"&gt;strftime(3)&lt;/em&gt; if
 this is new to you.&lt;/p&gt;
 &lt;/dd&gt;&lt;/dl&gt;
@@ -1002,6 +1032,12 @@ this is new to you.&lt;/p&gt;
 &lt;/div&gt;
 </content>
     <link href="https://jnrowe.github.io/articles/march_toward_death.html" rel="alternate"/>
+    <summary>A co-worker was demoing a user session today, and pointed out a neat tool for
+MacOS that displays the “continual march toward death”.  That tool was
+ Progress Bar OSX , and it is pretty cool.  Sadly it is only available for
+MacOS, so we’ll need to make something similar.</summary>
+    <category term="linux" label="linux"/>
+    <category term="dzen" label="dzen"/>
     <published>2018-11-13T00:00:00+00:00</published>
   </entry>
   <entry>
@@ -1376,6 +1412,13 @@ required interface.&lt;/p&gt;
 &lt;/div&gt;
 </content>
     <link href="https://jnrowe.github.io/articles/redo_ninja_make.html" rel="alternate"/>
+    <summary>This is a  massive  brain dump, which I plan to rewrite in to a series at
+some point.  However, until that imaginary date arrives…</summary>
+    <category term="tools" label="tools"/>
+    <category term="build" label="build"/>
+    <category term="make" label="make"/>
+    <category term="ninja" label="ninja"/>
+    <category term="redo" label="redo"/>
     <published>2018-11-23T00:00:00+00:00</published>
   </entry>
   <entry>
@@ -1514,6 +1557,12 @@ decision.&lt;/p&gt;
 &lt;/div&gt;
 </content>
     <link href="https://jnrowe.github.io/articles/new_love_giddiness.html" rel="alternate"/>
+    <summary>I’ve recently inherited a new tier-one project, which is great news!  Sadly, it
+is in real need of some Tender Loving Care™.  Was there ever an inherited
+project that wasn’t?</summary>
+    <category term="tools" label="tools"/>
+    <category term="projects" label="projects"/>
+    <category term="languages" label="languages"/>
     <published>2018-12-04T00:00:00+00:00</published>
   </entry>
   <entry>
@@ -2043,6 +2092,12 @@ concepts are often known by various common names.&lt;/p&gt;
 &lt;/div&gt;
 </content>
     <link href="https://jnrowe.github.io/articles/advent_of_code_2018.html" rel="alternate"/>
+    <summary>I’ve given up on  AoC  for this year, so we’ll have a ten day early
+retrospective.  I’m writing this as a journal entry, more for myself than
+others.  You’ve been warned!</summary>
+    <category term="adventofcode" label="adventofcode"/>
+    <category term="coding" label="coding"/>
+    <category term="puzzles" label="puzzles"/>
     <published>2018-12-15T00:00:00+00:00</published>
   </entry>
   <entry>
@@ -2119,6 +2174,10 @@ offering help there anyway.&lt;/p&gt;
 &lt;/div&gt;
 </content>
     <link href="https://jnrowe.github.io/office_hours.html" rel="alternate"/>
+    <summary>A few co-workers have started offering office hours, seemingly spurred on by
+a post by  Robert Heaton .  I’m going to try this a little closer to Robert’s
+original idea, and make  this  offer to strangers too 1 .</summary>
+    <category term="personal" label="personal"/>
     <published>2018-12-23T00:00:00+00:00</published>
   </entry>
 </feed>

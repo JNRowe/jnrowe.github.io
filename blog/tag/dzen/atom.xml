@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <id>https://jnrowe.github.io/</id>
   <title>JNRowe - Posts tagged dzen</title>
-  <updated>2021-03-21T11:05:58.743949+00:00</updated>
+  <updated>2021-03-24T17:32:31.794531+00:00</updated>
   <link href="https://jnrowe.github.io/"/>
   <link href="https://jnrowe.github.io/blog/tag/dzen/atom.xml"/>
-  <generator uri="https://ablog.readthedocs.org" version="0.10.12">ABlog</generator>
+  <generator uri="https://ablog.readthedocs.org/" version="0.10.14">ABlog</generator>
   <subtitle>Ramblings of a tired mind</subtitle>
   <entry>
     <id>https://jnrowe.github.io/articles/march_toward_death.html</id>
@@ -151,7 +151,7 @@ years.&lt;/p&gt;
 &lt;/dl&gt;
 &lt;dl class="std option"&gt;
 &lt;dt id="cmdoption-date-arg-j"&gt;
-&lt;code class="sig-name descname"&gt;%j&lt;/code&gt;&lt;code class="sig-prename descclassname"&gt;&lt;/code&gt;&lt;/dt&gt;
+&lt;code class="sig-name descname"&gt;&lt;span class="pre"&gt;%j&lt;/span&gt;&lt;/code&gt;&lt;code class="sig-prename descclassname"&gt;&lt;/code&gt;&lt;/dt&gt;
 &lt;dd&gt;&lt;p&gt;Displays the day number of the given year, see &lt;em class="manpage"&gt;strftime(3)&lt;/em&gt; if
 this is new to you.&lt;/p&gt;
 &lt;/dd&gt;&lt;/dl&gt;
@@ -160,6 +160,12 @@ this is new to you.&lt;/p&gt;
 &lt;/div&gt;
 </content>
     <link href="https://jnrowe.github.io/articles/march_toward_death.html" rel="alternate"/>
+    <summary>A co-worker was demoing a user session today, and pointed out a neat tool for
+MacOS that displays the “continual march toward death”.  That tool was
+ Progress Bar OSX , and it is pretty cool.  Sadly it is only available for
+MacOS, so we’ll need to make something similar.</summary>
+    <category term="linux" label="linux"/>
+    <category term="dzen" label="dzen"/>
     <published>2018-11-13T00:00:00+00:00</published>
   </entry>
 </feed>

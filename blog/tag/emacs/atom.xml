@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <id>https://jnrowe.github.io/</id>
   <title>JNRowe - Posts tagged emacs</title>
-  <updated>2021-03-21T11:05:58.778040+00:00</updated>
+  <updated>2021-03-24T17:32:31.829665+00:00</updated>
   <link href="https://jnrowe.github.io/"/>
   <link href="https://jnrowe.github.io/blog/tag/emacs/atom.xml"/>
-  <generator uri="https://ablog.readthedocs.org" version="0.10.12">ABlog</generator>
+  <generator uri="https://ablog.readthedocs.org/" version="0.10.14">ABlog</generator>
   <subtitle>Ramblings of a tired mind</subtitle>
   <entry>
     <id>https://jnrowe.github.io/articles/tips/emacs_gtk_shortcuts.html</id>
@@ -28,7 +28,7 @@ add the following to your &lt;code class="file docutils literal notranslate"&gt;
 bindings in GNOME you should use the control centre.&lt;/p&gt;
 &lt;/div&gt;
 &lt;p&gt;Using the above you can return to the old default format, but if you only want
-to enable &lt;kbd class="kbd docutils literal notranslate"&gt;&lt;kbd class="kbd docutils literal notranslate"&gt;&amp;lt;C&lt;/kbd&gt;-&lt;kbd class="kbd docutils literal notranslate"&gt;w&amp;gt;&lt;/kbd&gt;&lt;/kbd&gt; and keep the other Windows-style shortcuts you can just
+to enable &lt;kbd class="kbd compound docutils literal notranslate"&gt;&lt;kbd class="kbd docutils literal notranslate"&gt;&amp;lt;C&lt;/kbd&gt;-&lt;kbd class="kbd docutils literal notranslate"&gt;w&amp;gt;&lt;/kbd&gt;&lt;/kbd&gt; and keep the other Windows-style shortcuts you can just
 add:&lt;/p&gt;
 &lt;div class="highlight-text notranslate"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;binding &amp;quot;gtk-emacs-text-entry&amp;quot;
 {
@@ -49,12 +49,19 @@ switchers.&lt;/p&gt;
 keyboard settings dialog.&lt;/p&gt;
 &lt;p&gt;If you can’t change the settings for some reason, then you can still use
 a shortcut to delete words.  The default setting, up to at least GTK+ v2.10.9,
-is the finger-stretching &lt;kbd class="kbd docutils literal notranslate"&gt;&lt;kbd class="kbd docutils literal notranslate"&gt;&amp;lt;C&lt;/kbd&gt;-&lt;kbd class="kbd docutils literal notranslate"&gt;backspace&amp;gt;&lt;/kbd&gt;&lt;/kbd&gt;.&lt;/p&gt;
+is the finger-stretching &lt;kbd class="kbd compound docutils literal notranslate"&gt;&lt;kbd class="kbd docutils literal notranslate"&gt;&amp;lt;C&lt;/kbd&gt;-&lt;kbd class="kbd docutils literal notranslate"&gt;backspace&amp;gt;&lt;/kbd&gt;&lt;/kbd&gt;.&lt;/p&gt;
 &lt;p&gt;And finally, if you manage to convince upstream that the default behaviour
 should be the settings in the Emacs theme I’ll owe you a few beers!&lt;/p&gt;
 &lt;/div&gt;
 </content>
     <link href="https://jnrowe.github.io/articles/tips/emacs_gtk_shortcuts.html" rel="alternate"/>
+    <summary>If you’re used to the old style  GTK+  keyboard shortcuts, and find yourself
+continually closing windows when you’re trying to delete a word (like me) then
+add the following to your  ~/.gtkrc-2.0 :</summary>
+    <category term="software" label="software"/>
+    <category term="configs" label="configs"/>
+    <category term="GTK+" label="GTK+"/>
+    <category term="emacs" label="emacs"/>
     <published>2007-03-05T00:00:00+00:00</published>
   </entry>
   <entry>
@@ -87,12 +94,12 @@ change:&lt;/p&gt;
 &lt;div class="highlight-c notranslate"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kt"&gt;int&lt;/span&gt; &lt;span class="n"&gt;magic_const&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;974&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
-&lt;p&gt;In &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;vim&lt;/span&gt;&lt;/code&gt;, you can execute &lt;kbd class="kbd docutils literal notranslate"&gt;&lt;kbd class="kbd docutils literal notranslate"&gt;ciw&amp;lt;C&lt;/kbd&gt;-&lt;kbd class="kbd docutils literal notranslate"&gt;r&amp;gt;=&amp;#64;&amp;quot;/2&amp;lt;CR&amp;gt;&lt;/kbd&gt;&lt;/kbd&gt; to cleave the number.  The
+&lt;p&gt;In &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;vim&lt;/span&gt;&lt;/code&gt;, you can execute &lt;kbd class="kbd compound docutils literal notranslate"&gt;&lt;kbd class="kbd docutils literal notranslate"&gt;ciw&amp;lt;C&lt;/kbd&gt;-&lt;kbd class="kbd docutils literal notranslate"&gt;r&amp;gt;=&amp;#64;&amp;quot;/2&amp;lt;CR&amp;gt;&lt;/kbd&gt;&lt;/kbd&gt; to cleave the number.  The
 command itself is saying:&lt;/p&gt;
 &lt;dl class="simple"&gt;
 &lt;dt&gt;&lt;kbd class="kbd docutils literal notranslate"&gt;ciw&lt;/kbd&gt;&lt;/dt&gt;&lt;dd&gt;&lt;p&gt;Change the word my cursor is on(&lt;kbd class="kbd docutils literal notranslate"&gt;c&lt;/kbd&gt;hange &lt;kbd class="kbd docutils literal notranslate"&gt;i&lt;/kbd&gt;nner &lt;kbd class="kbd docutils literal notranslate"&gt;w&lt;/kbd&gt;ord)&lt;/p&gt;
 &lt;/dd&gt;
-&lt;dt&gt;&lt;kbd class="kbd docutils literal notranslate"&gt;&lt;kbd class="kbd docutils literal notranslate"&gt;&amp;lt;C&lt;/kbd&gt;-&lt;kbd class="kbd docutils literal notranslate"&gt;r&amp;gt;=&lt;/kbd&gt;&lt;/kbd&gt;&lt;/dt&gt;&lt;dd&gt;&lt;p&gt;Insert the result of an expression(see &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;:h&lt;/span&gt; &lt;span class="pre"&gt;i_CTRL-R_=&lt;/span&gt;&lt;/code&gt; for awesomeness)&lt;/p&gt;
+&lt;dt&gt;&lt;kbd class="kbd compound docutils literal notranslate"&gt;&lt;kbd class="kbd docutils literal notranslate"&gt;&amp;lt;C&lt;/kbd&gt;-&lt;kbd class="kbd docutils literal notranslate"&gt;r&amp;gt;=&lt;/kbd&gt;&lt;/kbd&gt;&lt;/dt&gt;&lt;dd&gt;&lt;p&gt;Insert the result of an expression(see &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;:h&lt;/span&gt; &lt;span class="pre"&gt;i_CTRL-R_=&lt;/span&gt;&lt;/code&gt; for awesomeness)&lt;/p&gt;
 &lt;/dd&gt;
 &lt;dt&gt;&lt;kbd class="kbd docutils literal notranslate"&gt;&amp;#64;&amp;quot;&lt;/kbd&gt;&lt;/dt&gt;&lt;dd&gt;&lt;p&gt;Use the text from last filled register, ie the text we just marked to be
 changed&lt;/p&gt;
@@ -162,13 +169,18 @@ a &lt;a class="reference external" href="mailto:jnrowe&amp;#37;&amp;#52;&amp;#48
 &lt;dt class="label" id="id6"&gt;&lt;span class="brackets"&gt;&lt;a class="fn-backref" href="#id3"&gt;3&lt;/a&gt;&lt;/span&gt;&lt;/dt&gt;
 &lt;dd&gt;&lt;p&gt;&lt;a class="reference external" href="https://www.orgmode.org/"&gt;org-mode&lt;/a&gt; and &lt;a class="reference external" href="https://github.com/jceb/vim-orgmode"&gt;vim-orgmode&lt;/a&gt; allows me to keep this across editors.  There
 is very little point publishing it, as it can be summed up as “James
-pressed &lt;kbd class="kbd docutils literal notranslate"&gt;&lt;kbd class="kbd docutils literal notranslate"&gt;&amp;lt;C&lt;/kbd&gt;-&lt;kbd class="kbd docutils literal notranslate"&gt;x&amp;gt;$something&lt;/kbd&gt;&lt;/kbd&gt; and was surprised.”&lt;/p&gt;
+pressed &lt;kbd class="kbd compound docutils literal notranslate"&gt;&lt;kbd class="kbd docutils literal notranslate"&gt;&amp;lt;C&lt;/kbd&gt;-&lt;kbd class="kbd docutils literal notranslate"&gt;x&amp;gt;$something&lt;/kbd&gt;&lt;/kbd&gt; and was surprised.”&lt;/p&gt;
 &lt;/dd&gt;
 &lt;/dl&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 </content>
     <link href="https://jnrowe.github.io/articles/evil_emacs_steals_my_heart.html" rel="alternate"/>
+    <summary>Many  of my co-workers use  emacs , it is probably the most popular editor on
+our team and I understand why.</summary>
+    <category term="emacs" label="emacs"/>
+    <category term="vim" label="vim"/>
+    <category term="evil" label="evil"/>
     <published>2018-11-05T00:00:00+00:00</published>
   </entry>
 </feed>

@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <id>https://jnrowe.github.io/</id>
   <title>JNRowe - Posts tagged linux</title>
-  <updated>2021-03-21T11:05:59.314609+00:00</updated>
+  <updated>2021-03-24T17:32:32.378602+00:00</updated>
   <link href="https://jnrowe.github.io/"/>
   <link href="https://jnrowe.github.io/blog/tag/linux/atom.xml"/>
-  <generator uri="https://ablog.readthedocs.org" version="0.10.12">ABlog</generator>
+  <generator uri="https://ablog.readthedocs.org/" version="0.10.14">ABlog</generator>
   <subtitle>Ramblings of a tired mind</subtitle>
   <entry>
     <id>https://jnrowe.github.io/articles/tips/Three_mobile_broadband_in_linux.html</id>
@@ -167,6 +167,10 @@ and check the &lt;strong class="command"&gt;pppd&lt;/strong&gt; manual page to l
 &lt;/div&gt;
 </content>
     <link href="https://jnrowe.github.io/articles/tips/Three_mobile_broadband_in_linux.html" rel="alternate"/>
+    <summary>Steve Lowry is picking up his  Three  modem this afternoon and asks on our
+internal Linux list if it supports Linux.</summary>
+    <category term="linux" label="linux"/>
+    <category term="three" label="three"/>
     <published>2009-10-14T00:00:00+01:00</published>
   </entry>
   <entry>
@@ -366,6 +370,12 @@ track for the next ten years.&lt;/p&gt;
 &lt;/div&gt;
 </content>
     <link href="https://jnrowe.github.io/articles/dropping_gentoo.html" rel="alternate"/>
+    <summary>We’ve been using  Gentoo  for shipped products since June 2005, and as
+a development platform since September 2004.  A long time, an incredibly long
+time in fact.</summary>
+    <category term="gentoo" label="gentoo"/>
+    <category term="work" label="work"/>
+    <category term="linux" label="linux"/>
     <published>2014-06-18T00:00:00+01:00</published>
   </entry>
   <entry>
@@ -503,7 +513,7 @@ makes dependency handling work among other things.&lt;/p&gt;
 &lt;/dl&gt;
 &lt;dl class="std option"&gt;
 &lt;dt id="cmdoption-tar-C"&gt;
-&lt;code class="sig-name descname"&gt;-C&lt;/code&gt;&lt;code class="sig-prename descclassname"&gt;&lt;/code&gt;&lt;/dt&gt;
+&lt;span id="cmdoption-tar-c"&gt;&lt;/span&gt;&lt;code class="sig-name descname"&gt;&lt;span class="pre"&gt;-C&lt;/span&gt;&lt;/code&gt;&lt;code class="sig-prename descclassname"&gt;&lt;/code&gt;&lt;/dt&gt;
 &lt;dd&gt;&lt;p&gt;This option tells &lt;strong class="command"&gt;tar&lt;/strong&gt; to change directory before performing its
 duty.  For example using &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;-C&lt;/span&gt; &lt;span class="pre"&gt;/&lt;/span&gt;&lt;/code&gt; will switch to &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;/&lt;/span&gt;&lt;/code&gt;, and can be used to
 unpack a tarball directly over the root filesystem.&lt;/p&gt;
@@ -513,6 +523,13 @@ unpack a tarball directly over the root filesystem.&lt;/p&gt;
 &lt;/div&gt;
 </content>
     <link href="https://jnrowe.github.io/articles/dropping_gentoo_reflex.html" rel="alternate"/>
+    <summary>After hitting the publish button on  dropping_gentoo  a few friends
+commented that I was either unnecessarily harsh about Gentoo or we wasted an
+enormous amount of time on it.  It definitely was the former, and I feel
+a touch ashamed for implying the latter.</summary>
+    <category term="gentoo" label="gentoo"/>
+    <category term="work" label="work"/>
+    <category term="linux" label="linux"/>
     <published>2014-06-29T00:00:00+01:00</published>
   </entry>
   <entry>
@@ -659,7 +676,7 @@ years.&lt;/p&gt;
 &lt;/dl&gt;
 &lt;dl class="std option"&gt;
 &lt;dt id="cmdoption-date-arg-j"&gt;
-&lt;code class="sig-name descname"&gt;%j&lt;/code&gt;&lt;code class="sig-prename descclassname"&gt;&lt;/code&gt;&lt;/dt&gt;
+&lt;code class="sig-name descname"&gt;&lt;span class="pre"&gt;%j&lt;/span&gt;&lt;/code&gt;&lt;code class="sig-prename descclassname"&gt;&lt;/code&gt;&lt;/dt&gt;
 &lt;dd&gt;&lt;p&gt;Displays the day number of the given year, see &lt;em class="manpage"&gt;strftime(3)&lt;/em&gt; if
 this is new to you.&lt;/p&gt;
 &lt;/dd&gt;&lt;/dl&gt;
@@ -668,6 +685,12 @@ this is new to you.&lt;/p&gt;
 &lt;/div&gt;
 </content>
     <link href="https://jnrowe.github.io/articles/march_toward_death.html" rel="alternate"/>
+    <summary>A co-worker was demoing a user session today, and pointed out a neat tool for
+MacOS that displays the “continual march toward death”.  That tool was
+ Progress Bar OSX , and it is pretty cool.  Sadly it is only available for
+MacOS, so we’ll need to make something similar.</summary>
+    <category term="linux" label="linux"/>
+    <category term="dzen" label="dzen"/>
     <published>2018-11-13T00:00:00+00:00</published>
   </entry>
 </feed>

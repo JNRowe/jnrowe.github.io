@@ -4,16 +4,15 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Introduction to RCS &#8212; JNRowe</title>
-    <link rel="stylesheet" href="../_static/alabaster.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/alabaster.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../_static/custom.css" />
     <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
     <script src="../_static/doctools.js"></script>
-    <script src="../_static/language_data.js"></script>
     <link rel="canonical" href="https://jnrowe.github.io/articles/rcs.html" />
     <link rel="shortcut icon" href="../_static/icon.ico"/>
     <link rel="index" title="Index" href="../genindex.html" />
@@ -250,7 +249,7 @@ should output a unified context diff.</p>
 <p>So now we have seen the changes made to the file, and are happy with them, we
 check in our new revision.  <abbr title="GNU Revision Control System">RCS</abbr> asks for a log entry, this will make our
 changelog output later.  You can cancel the check in using the normal
-<kbd class="kbd docutils literal notranslate"><kbd class="kbd docutils literal notranslate">C</kbd>-<kbd class="kbd docutils literal notranslate">c</kbd></kbd> (control C) method.</p>
+<kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">C</kbd>-<kbd class="kbd docutils literal notranslate">c</kbd></kbd> (control C) method.</p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> cat myscript.sh
 <span class="gp">#</span>! /bin/sh
 <span class="gp">#</span> <span class="nv">$Id</span>: myscript,v <span class="m">1</span>.2 <span class="m">2002</span>/11/04 <span class="m">11</span>:34:21 james Exp james $
@@ -359,20 +358,20 @@ this short text has been helpful to you.</p>
 <p><abbr title="GNU Revision Control System">RCS</abbr> options:</p>
 <dl class="std option">
 <dt id="cmdoption-r">
-<code class="sig-name descname">-r</code><code class="sig-prename descclassname"></code><a class="headerlink" href="#cmdoption-r" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">-r</span></code><code class="sig-prename descclassname"></code><a class="headerlink" href="#cmdoption-r" title="Permalink to this definition">¶</a></dt>
 <dd><p>Specify the revision to work with.  Common across all of <abbr title="GNU Revision Control System">RCS</abbr>’s tools.</p>
 </dd></dl>
 
 <p><code class="docutils literal notranslate"><span class="pre">blame</span></code> options:</p>
 <dl class="std option">
 <dt id="cmdoption-blame-date">
-<code class="sig-name descname">--date</code><code class="sig-prename descclassname"></code><a class="headerlink" href="#cmdoption-blame-date" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">--date</span></code><code class="sig-prename descclassname"></code><a class="headerlink" href="#cmdoption-blame-date" title="Permalink to this definition">¶</a></dt>
 <dd><p>Annotate the revision that closest to, but not after, the given date.</p>
 </dd></dl>
 
 <dl class="std option">
 <dt id="cmdoption-blame-revision">
-<code class="sig-name descname">--revision</code><code class="sig-prename descclassname"></code><a class="headerlink" href="#cmdoption-blame-revision" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">--revision</span></code><code class="sig-prename descclassname"></code><a class="headerlink" href="#cmdoption-blame-revision" title="Permalink to this definition">¶</a></dt>
 <dd><p>Annotate the revision numerically closest to, but not exceeding, the given
 revision.</p>
 </dd></dl>
@@ -380,27 +379,27 @@ revision.</p>
 <p><code class="docutils literal notranslate"><span class="pre">ci</span></code> options:</p>
 <dl class="std option">
 <dt id="cmdoption-ci-r">
-<code class="sig-name descname">-r</code><code class="sig-prename descclassname"></code><a class="headerlink" href="#cmdoption-ci-r" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">-r</span></code><code class="sig-prename descclassname"></code><a class="headerlink" href="#cmdoption-ci-r" title="Permalink to this definition">¶</a></dt>
 <dd><p>Perform checkin, and store with provided revision identifier.</p>
 </dd></dl>
 
 <dl class="std option">
 <dt id="cmdoption-ci-u">
-<code class="sig-name descname">-u</code><code class="sig-prename descclassname"></code><a class="headerlink" href="#cmdoption-ci-u" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">-u</span></code><code class="sig-prename descclassname"></code><a class="headerlink" href="#cmdoption-ci-u" title="Permalink to this definition">¶</a></dt>
 <dd><p>Don’t lock the file on checkin.</p>
 </dd></dl>
 
 <p><code class="docutils literal notranslate"><span class="pre">co</span></code> options:</p>
 <dl class="std option">
 <dt id="cmdoption-co-l">
-<code class="sig-name descname">-l</code><code class="sig-prename descclassname"></code><a class="headerlink" href="#cmdoption-co-l" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">-l</span></code><code class="sig-prename descclassname"></code><a class="headerlink" href="#cmdoption-co-l" title="Permalink to this definition">¶</a></dt>
 <dd><p>Lock the file for editing on checkout.</p>
 </dd></dl>
 
 <p><code class="docutils literal notranslate"><span class="pre">rlog</span></code> options:</p>
 <dl class="std option">
 <dt id="cmdoption-rlog-r">
-<code class="sig-name descname">-r</code><code class="sig-prename descclassname"></code><a class="headerlink" href="#cmdoption-rlog-r" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">-r</span></code><code class="sig-prename descclassname"></code><a class="headerlink" href="#cmdoption-rlog-r" title="Permalink to this definition">¶</a></dt>
 <dd><p>Specify revisions to perform log against, can be a comma separated list of
 ranges.</p>
 </dd></dl>
@@ -970,7 +969,7 @@ ranges.</p>
       </a> license.
       
       |
-      Powered by <a href="http://sphinx-doc.org/">Sphinx 3.1.2</a>
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 3.5.3</a>
       &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
       
     </div>

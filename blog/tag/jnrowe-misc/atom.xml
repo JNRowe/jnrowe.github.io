@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <id>https://jnrowe.github.io/</id>
   <title>JNRowe - Posts tagged jnrowe-misc</title>
-  <updated>2021-03-21T11:05:59.207152+00:00</updated>
+  <updated>2021-03-24T17:32:32.258675+00:00</updated>
   <link href="https://jnrowe.github.io/"/>
   <link href="https://jnrowe.github.io/blog/tag/jnrowe-misc/atom.xml"/>
-  <generator uri="https://ablog.readthedocs.org" version="0.10.12">ABlog</generator>
+  <generator uri="https://ablog.readthedocs.org/" version="0.10.14">ABlog</generator>
   <subtitle>Ramblings of a tired mind</subtitle>
   <entry>
     <id>https://jnrowe.github.io/articles/probits/jnrowe-misc.html</id>
@@ -66,6 +66,9 @@ past couple of years, and it is as refreshing as it is saddening.&lt;/p&gt;
 &lt;/div&gt;
 </content>
     <link href="https://jnrowe.github.io/articles/probits/jnrowe-misc.html" rel="alternate"/>
+    <summary>A collection of  ebuild  files with no overall theme.</summary>
+    <category term="jnrowe-misc" label="jnrowe-misc"/>
+    <category term="gentoo" label="gentoo"/>
     <published>2014-06-30T00:00:00+01:00</published>
   </entry>
 </feed>

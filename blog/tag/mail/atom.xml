@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <id>https://jnrowe.github.io/</id>
   <title>JNRowe - Posts tagged mail</title>
-  <updated>2021-03-21T11:05:59.428026+00:00</updated>
+  <updated>2021-03-24T17:32:32.497937+00:00</updated>
   <link href="https://jnrowe.github.io/"/>
   <link href="https://jnrowe.github.io/blog/tag/mail/atom.xml"/>
-  <generator uri="https://ablog.readthedocs.org" version="0.10.12">ABlog</generator>
+  <generator uri="https://ablog.readthedocs.org/" version="0.10.14">ABlog</generator>
   <subtitle>Ramblings of a tired mind</subtitle>
   <entry>
     <id>https://jnrowe.github.io/articles/tips/Bugzilla_real_names.html</id>
@@ -115,6 +115,9 @@ easier to filter and process it in your favourite mail client.&lt;/p&gt;
 &lt;/div&gt;
 </content>
     <link href="https://jnrowe.github.io/articles/tips/Bugzilla_real_names.html" rel="alternate"/>
+    <summary>John Bateman rants on the EADS Linux list:</summary>
+    <category term="bugzilla" label="bugzilla"/>
+    <category term="mail" label="mail"/>
     <published>2009-09-27T00:00:00+01:00</published>
   </entry>
   <entry>
@@ -187,6 +190,13 @@ too, see &lt;span class="xref std std-doc"&gt;Kick_me_birthday_reminders&lt;/spa
 &lt;/div&gt;
 </content>
     <link href="https://jnrowe.github.io/articles/tips/Populating_sup_contacts_from_abook.html" rel="alternate"/>
+    <summary>A colleague from work, Adam Robertson, is switching to  Sup  from  mutt  and
+wondering how to easily convert his contacts from  abook .  Given that it is my
+constant pimping of  sup  that has convinced him to switch I feel
+obliged to help with the conversion.</summary>
+    <category term="abook" label="abook"/>
+    <category term="mail" label="mail"/>
+    <category term="sup" label="sup"/>
     <published>2010-03-23T00:00:00+00:00</published>
   </entry>
 </feed>

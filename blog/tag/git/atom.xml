@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <id>https://jnrowe.github.io/</id>
   <title>JNRowe - Posts tagged git</title>
-  <updated>2021-03-21T11:05:59.043438+00:00</updated>
+  <updated>2021-03-24T17:32:32.095295+00:00</updated>
   <link href="https://jnrowe.github.io/"/>
   <link href="https://jnrowe.github.io/blog/tag/git/atom.xml"/>
-  <generator uri="https://ablog.readthedocs.org" version="0.10.12">ABlog</generator>
+  <generator uri="https://ablog.readthedocs.org/" version="0.10.14">ABlog</generator>
   <subtitle>Ramblings of a tired mind</subtitle>
   <entry>
     <id>https://jnrowe.github.io/articles/tips/Context_aware_diffs_with_git.html</id>
@@ -73,6 +73,8 @@ brackets aren’t included in the header.&lt;/p&gt;
 &lt;/div&gt;
 </content>
     <link href="https://jnrowe.github.io/articles/tips/Context_aware_diffs_with_git.html" rel="alternate"/>
+    <summary>Earlier this week Luke Cox asked in response to a patch I sent:</summary>
+    <category term="git" label="git"/>
     <published>2009-09-29T00:00:00+01:00</published>
   </entry>
   <entry>
@@ -202,6 +204,14 @@ that can display them.&lt;/p&gt;
 &lt;/div&gt;
 </content>
     <link href="https://jnrowe.github.io/articles/tips/Zsh_and_the_vcs.html" rel="alternate"/>
+    <summary>I’ve recently switched to  Zsh  as my login shell after
+9 years of using  bash , and for no particularly good reason either as they’re
+both great interactive shells.  I guess all the  Kool Kids  are doing it, and
+I’m just playing catchup.  The one side effect of that is I’m now scribbling
+tips about  zsh  too…</summary>
+    <category term="git" label="git"/>
+    <category term="vcs" label="vcs"/>
+    <category term="zsh" label="zsh"/>
     <published>2009-10-28T00:00:00+00:00</published>
   </entry>
 </feed>

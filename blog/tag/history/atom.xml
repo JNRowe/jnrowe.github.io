@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <id>https://jnrowe.github.io/</id>
   <title>JNRowe - Posts tagged history</title>
-  <updated>2021-03-21T11:05:59.141991+00:00</updated>
+  <updated>2021-03-24T17:32:32.191011+00:00</updated>
   <link href="https://jnrowe.github.io/"/>
   <link href="https://jnrowe.github.io/blog/tag/history/atom.xml"/>
-  <generator uri="https://ablog.readthedocs.org" version="0.10.12">ABlog</generator>
+  <generator uri="https://ablog.readthedocs.org/" version="0.10.14">ABlog</generator>
   <subtitle>Ramblings of a tired mind</subtitle>
   <entry>
     <id>https://jnrowe.github.io/thoughts/dopplr_effects.html</id>
@@ -58,6 +58,12 @@ actually use, but sadly I can’t even picture how it should work.&lt;/p&gt;
 &lt;span class="target" id="backstory"&gt;&lt;/span&gt;&lt;/div&gt;
 </content>
     <link href="https://jnrowe.github.io/thoughts/dopplr_effects.html" rel="alternate"/>
+    <summary>Dopplr was a free social networking service, launched in 2007, that allowed
+users to create itineraries of their travel plans and spot correlations with
+their contacts’ travel plans in order to arrange meetings at any point on
+their journey.</summary>
+    <category term="history" label="history"/>
+    <category term="privacy" label="privacy"/>
     <published>2014-01-06T00:00:00+00:00</published>
   </entry>
 </feed>

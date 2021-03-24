@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <id>https://jnrowe.github.io/</id>
   <title>JNRowe - Posts tagged feed</title>
-  <updated>2021-03-21T11:05:58.866415+00:00</updated>
+  <updated>2021-03-24T17:32:31.921575+00:00</updated>
   <link href="https://jnrowe.github.io/"/>
   <link href="https://jnrowe.github.io/blog/tag/feed/atom.xml"/>
-  <generator uri="https://ablog.readthedocs.org" version="0.10.12">ABlog</generator>
+  <generator uri="https://ablog.readthedocs.org/" version="0.10.14">ABlog</generator>
   <subtitle>Ramblings of a tired mind</subtitle>
   <entry>
     <id>https://jnrowe.github.io/articles/mangling_planets.html</id>
@@ -216,6 +216,14 @@ read of the &lt;a class="reference external" href="http://developer.yahoo.com/yq
 &lt;/div&gt;
 </content>
     <link href="https://jnrowe.github.io/articles/mangling_planets.html" rel="alternate"/>
+    <summary>Over lunch today a few people were talking about  planet  feeds, and the topics
+mostly revolved around why they don’t read them.  I was quite surprised how
+many people miss out on the often marvellous insights in to the projects we use
+everyday, but I think I understand the reasoning.</summary>
+    <category term="atom" label="atom"/>
+    <category term="feed" label="feed"/>
+    <category term="pipes" label="pipes"/>
+    <category term="yahoo" label="yahoo"/>
     <published>2010-09-17T00:00:00+01:00</published>
   </entry>
 </feed>

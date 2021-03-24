@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <id>https://jnrowe.github.io/</id>
   <title>JNRowe - Posts tagged gentoo</title>
-  <updated>2021-03-21T11:05:58.946523+00:00</updated>
+  <updated>2021-03-24T17:32:31.999767+00:00</updated>
   <link href="https://jnrowe.github.io/"/>
   <link href="https://jnrowe.github.io/blog/tag/gentoo/atom.xml"/>
-  <generator uri="https://ablog.readthedocs.org" version="0.10.12">ABlog</generator>
+  <generator uri="https://ablog.readthedocs.org/" version="0.10.14">ABlog</generator>
   <subtitle>Ramblings of a tired mind</subtitle>
   <entry>
     <id>https://jnrowe.github.io/articles/tips/Gentoo_one_liners.html</id>
@@ -137,6 +137,11 @@ output of &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&
 &lt;/div&gt;
 </content>
     <link href="https://jnrowe.github.io/articles/tips/Gentoo_one_liners.html" rel="alternate"/>
+    <summary>On our Linux list at work the topic of  Gentoo  usage arose again today.
+Originally, the topic was about interesting one liners used to maintain a Gentoo
+system.  I found myself posting extended replies to some of the questions and
+I’m reposting a few of those here.</summary>
+    <category term="gentoo" label="gentoo"/>
     <published>2009-10-09T00:00:00+01:00</published>
   </entry>
   <entry>
@@ -336,6 +341,12 @@ track for the next ten years.&lt;/p&gt;
 &lt;/div&gt;
 </content>
     <link href="https://jnrowe.github.io/articles/dropping_gentoo.html" rel="alternate"/>
+    <summary>We’ve been using  Gentoo  for shipped products since June 2005, and as
+a development platform since September 2004.  A long time, an incredibly long
+time in fact.</summary>
+    <category term="gentoo" label="gentoo"/>
+    <category term="work" label="work"/>
+    <category term="linux" label="linux"/>
     <published>2014-06-18T00:00:00+01:00</published>
   </entry>
   <entry>
@@ -473,7 +484,7 @@ makes dependency handling work among other things.&lt;/p&gt;
 &lt;/dl&gt;
 &lt;dl class="std option"&gt;
 &lt;dt id="cmdoption-tar-C"&gt;
-&lt;code class="sig-name descname"&gt;-C&lt;/code&gt;&lt;code class="sig-prename descclassname"&gt;&lt;/code&gt;&lt;/dt&gt;
+&lt;span id="cmdoption-tar-c"&gt;&lt;/span&gt;&lt;code class="sig-name descname"&gt;&lt;span class="pre"&gt;-C&lt;/span&gt;&lt;/code&gt;&lt;code class="sig-prename descclassname"&gt;&lt;/code&gt;&lt;/dt&gt;
 &lt;dd&gt;&lt;p&gt;This option tells &lt;strong class="command"&gt;tar&lt;/strong&gt; to change directory before performing its
 duty.  For example using &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;-C&lt;/span&gt; &lt;span class="pre"&gt;/&lt;/span&gt;&lt;/code&gt; will switch to &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;/&lt;/span&gt;&lt;/code&gt;, and can be used to
 unpack a tarball directly over the root filesystem.&lt;/p&gt;
@@ -483,6 +494,13 @@ unpack a tarball directly over the root filesystem.&lt;/p&gt;
 &lt;/div&gt;
 </content>
     <link href="https://jnrowe.github.io/articles/dropping_gentoo_reflex.html" rel="alternate"/>
+    <summary>After hitting the publish button on  dropping_gentoo  a few friends
+commented that I was either unnecessarily harsh about Gentoo or we wasted an
+enormous amount of time on it.  It definitely was the former, and I feel
+a touch ashamed for implying the latter.</summary>
+    <category term="gentoo" label="gentoo"/>
+    <category term="work" label="work"/>
+    <category term="linux" label="linux"/>
     <published>2014-06-29T00:00:00+01:00</published>
   </entry>
   <entry>
@@ -544,6 +562,9 @@ past couple of years, and it is as refreshing as it is saddening.&lt;/p&gt;
 &lt;/div&gt;
 </content>
     <link href="https://jnrowe.github.io/articles/probits/jnrowe-misc.html" rel="alternate"/>
+    <summary>A collection of  ebuild  files with no overall theme.</summary>
+    <category term="jnrowe-misc" label="jnrowe-misc"/>
+    <category term="gentoo" label="gentoo"/>
     <published>2014-06-30T00:00:00+01:00</published>
   </entry>
 </feed>

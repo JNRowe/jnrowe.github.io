@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <id>https://jnrowe.github.io/</id>
   <title>JNRowe - Posts tagged fossil</title>
-  <updated>2021-03-21T11:05:58.914086+00:00</updated>
+  <updated>2021-03-24T17:32:31.971823+00:00</updated>
   <link href="https://jnrowe.github.io/"/>
   <link href="https://jnrowe.github.io/blog/tag/fossil/atom.xml"/>
-  <generator uri="https://ablog.readthedocs.org" version="0.10.12">ABlog</generator>
+  <generator uri="https://ablog.readthedocs.org/" version="0.10.14">ABlog</generator>
   <subtitle>Ramblings of a tired mind</subtitle>
   <entry>
     <id>https://jnrowe.github.io/articles/fossil.html</id>
@@ -179,6 +179,15 @@ a command against all repositories configured in &lt;code class="file docutils l
 &lt;/div&gt;
 </content>
     <link href="https://jnrowe.github.io/articles/fossil.html" rel="alternate"/>
+    <summary>For a variety of reasons we can no longer use GitHub at work for any project
+which isn’t Open Source.  And since that decision was thrust upon us we’ve been
+playing with some alternatives for our workflow.  We’ll probably end up choosing
+one of the self hosted clones at some point, but it was decided early on that we
+should evaluate a variety of options.</summary>
+    <category term="fossil" label="fossil"/>
+    <category term="vcs" label="vcs"/>
+    <category term="projects" label="projects"/>
+    <category term="development" label="development"/>
     <published>2014-11-12T00:00:00+00:00</published>
   </entry>
 </feed>

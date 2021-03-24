@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <id>https://jnrowe.github.io/</id>
   <title>JNRowe - Posted in 2013</title>
-  <updated>2021-03-21T11:05:56.073637+00:00</updated>
+  <updated>2021-03-24T17:32:29.208939+00:00</updated>
   <link href="https://jnrowe.github.io/"/>
   <link href="https://jnrowe.github.io/blog/2013/atom.xml"/>
-  <generator uri="https://ablog.readthedocs.org" version="0.10.12">ABlog</generator>
+  <generator uri="https://ablog.readthedocs.org/" version="0.10.14">ABlog</generator>
   <subtitle>Ramblings of a tired mind</subtitle>
   <entry>
     <id>https://jnrowe.github.io/thoughts/side_projects.html</id>
@@ -122,6 +122,10 @@ is just a jumbled content dump with no real purpose.&lt;/p&gt;
 &lt;/div&gt;
 </content>
     <link href="https://jnrowe.github.io/thoughts/side_projects.html" rel="alternate"/>
+    <summary>Chatting with my brother yesterday he expressed some disbelief when I mentioned
+ yet another  friend who has a website related to some topic we were discussing:</summary>
+    <category term="hobbies" label="hobbies"/>
+    <category term="projects" label="projects"/>
     <published>2013-12-16T00:00:00+00:00</published>
   </entry>
   <entry>
@@ -229,6 +233,10 @@ know about it.  If that isn’t the case, just keep it to yourself.&lt;/p&gt;
 &lt;/div&gt;
 </content>
     <link href="https://jnrowe.github.io/thoughts/nice_stories.html" rel="alternate"/>
+    <summary>I’m fed up of hearing bad stories, I really am.  Often it feels like every
+person I know simply revels in the misfortune or missteps of others, and it is
+beginning to truly annoy me.</summary>
+    <category term="life" label="life"/>
     <published>2013-12-23T00:00:00+00:00</published>
   </entry>
 </feed>

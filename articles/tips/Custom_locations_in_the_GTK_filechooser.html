@@ -4,16 +4,15 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Custom keybindings in the GTK+ file dialogs &#8212; JNRowe</title>
-    <link rel="stylesheet" href="../../_static/alabaster.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/alabaster.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../../_static/custom.css" />
     <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
     <script src="../../_static/jquery.js"></script>
     <script src="../../_static/underscore.js"></script>
     <script src="../../_static/doctools.js"></script>
-    <script src="../../_static/language_data.js"></script>
     <link rel="canonical" href="https://jnrowe.github.io/articles/tips/Custom_locations_in_the_GTK_filechooser.html" />
     <link rel="shortcut icon" href="../../_static/icon.ico"/>
     <link rel="index" title="Index" href="../../genindex.html" />
@@ -113,7 +112,7 @@ settings are basic theme related options.  <code class="docutils literal notrans
 <code class="docutils literal notranslate"><span class="pre">gtk-icon-theme-name</span></code> set the style and icon groups for GTK+ apps
 respectively.  <code class="docutils literal notranslate"><span class="pre">gtk-key-theme-name</span></code> sets the default keybindings for GTK+
 apps.  By setting it to <code class="docutils literal notranslate"><span class="pre">Emacs</span></code> we have access to the “normal” keybindings we
-expect if we use <a class="reference external" href="http://cnswww.cns.cwru.edu/~chet/bash/bashtop.html">bash</a> or other common Linux tools, such as <kbd class="kbd docutils literal notranslate"><kbd class="kbd docutils literal notranslate">C</kbd>-<kbd class="kbd docutils literal notranslate">w</kbd></kbd> to
+expect if we use <a class="reference external" href="http://cnswww.cns.cwru.edu/~chet/bash/bashtop.html">bash</a> or other common Linux tools, such as <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">C</kbd>-<kbd class="kbd docutils literal notranslate">w</kbd></kbd> to
 delete the word under the cursor.  You can read more about
 <code class="docutils literal notranslate"><span class="pre">gtk-key-theme-name</span></code> in <a class="reference internal" href="emacs_gtk_shortcuts.html"><span class="doc">Proper keyboard shortcuts in GTK+</span></a>.</p>
 <p>All of the settings above are configurable with a <abbr title="Graphical User Interface">GUI</abbr> if you use GNOME or <a class="reference external" href="http://www.xfce.org/">Xfce</a>, but for those of who don’t use those
@@ -134,22 +133,22 @@ it already has a set of useful keybindings including:</p>
 </tr>
 </thead>
 <tbody>
-<tr class="row-even"><td><p><kbd class="kbd docutils literal notranslate"><kbd class="kbd docutils literal notranslate">M</kbd>-<kbd class="kbd docutils literal notranslate">&lt;Home&gt;</kbd></kbd></p></td>
+<tr class="row-even"><td><p><kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">M</kbd>-<kbd class="kbd docutils literal notranslate">&lt;Home&gt;</kbd></kbd></p></td>
 <td><p>Jump to your home directory</p></td>
 </tr>
-<tr class="row-odd"><td><p><kbd class="kbd docutils literal notranslate"><kbd class="kbd docutils literal notranslate">M</kbd>-<kbd class="kbd docutils literal notranslate">D</kbd></kbd></p></td>
+<tr class="row-odd"><td><p><kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">M</kbd>-<kbd class="kbd docutils literal notranslate">D</kbd></kbd></p></td>
 <td><p>Jump to your <code class="docutils literal notranslate"><span class="pre">~/Desktop</span></code> directory</p></td>
 </tr>
-<tr class="row-even"><td><p><kbd class="kbd docutils literal notranslate"><kbd class="kbd docutils literal notranslate">M</kbd>-<kbd class="kbd docutils literal notranslate">&lt;Up&gt;</kbd></kbd></p></td>
+<tr class="row-even"><td><p><kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">M</kbd>-<kbd class="kbd docutils literal notranslate">&lt;Up&gt;</kbd></kbd></p></td>
 <td><p>Go to current directory’s parent</p></td>
 </tr>
-<tr class="row-odd"><td><p><kbd class="kbd docutils literal notranslate"><kbd class="kbd docutils literal notranslate">C</kbd>-<kbd class="kbd docutils literal notranslate">L</kbd></kbd></p></td>
+<tr class="row-odd"><td><p><kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">C</kbd>-<kbd class="kbd docutils literal notranslate">L</kbd></kbd></p></td>
 <td><p>Display the text location entry box</p></td>
 </tr>
 </tbody>
 </table>
 <p>We could actually use the file chooser’s bookmark feature, and access the
-bookmarks with <kbd class="kbd docutils literal notranslate"><kbd class="kbd docutils literal notranslate">M</kbd>-<kbd class="kbd docutils literal notranslate">1</kbd></kbd> through <kbd class="kbd docutils literal notranslate"><kbd class="kbd docutils literal notranslate">M</kbd>-<kbd class="kbd docutils literal notranslate">9</kbd></kbd> and <kbd class="kbd docutils literal notranslate"><kbd class="kbd docutils literal notranslate">M</kbd>-<kbd class="kbd docutils literal notranslate">0</kbd></kbd> for bookmark number
+bookmarks with <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">M</kbd>-<kbd class="kbd docutils literal notranslate">1</kbd></kbd> through <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">M</kbd>-<kbd class="kbd docutils literal notranslate">9</kbd></kbd> and <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">M</kbd>-<kbd class="kbd docutils literal notranslate">0</kbd></kbd> for bookmark number
 ten from the dialog.  However, I find it more practical to be able to use
 mnemonic names for favourite locations.  You could even use both if you have an
 excellent memory and a lot of favourite locations!</p>
@@ -157,7 +156,7 @@ excellent memory and a lot of favourite locations!</p>
 self-explanatory, just don’t forget to link your bindings to the correct class
 or they will not work.</p>
 <p>You can also change the default bindings by specifying them in the
-configuration file, for example to use <kbd class="kbd docutils literal notranslate"><kbd class="kbd docutils literal notranslate">M</kbd>-<kbd class="kbd docutils literal notranslate">&lt;left&gt;</kbd></kbd> and <kbd class="kbd docutils literal notranslate"><kbd class="kbd docutils literal notranslate">M</kbd>-<kbd class="kbd docutils literal notranslate">&lt;right&gt;</kbd></kbd> to
+configuration file, for example to use <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">M</kbd>-<kbd class="kbd docutils literal notranslate">&lt;left&gt;</kbd></kbd> and <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">M</kbd>-<kbd class="kbd docutils literal notranslate">&lt;right&gt;</kbd></kbd> to
 skip backward and forward along the directory path:</p>
 <div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">bind</span> <span class="s">&quot;&lt;Alt&gt;Left&quot;</span> <span class="p">{</span>
     <span class="s">&quot;up-folder&quot;</span> <span class="p">()</span>
@@ -743,7 +742,7 @@ share, for this you can use the <code class="docutils literal notranslate"><span
       </a> license.
       
       |
-      Powered by <a href="http://sphinx-doc.org/">Sphinx 3.1.2</a>
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 3.5.3</a>
       &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
       
     </div>

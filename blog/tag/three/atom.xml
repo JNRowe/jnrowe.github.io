@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <id>https://jnrowe.github.io/</id>
   <title>JNRowe - Posts tagged three</title>
-  <updated>2021-03-21T11:06:01.021919+00:00</updated>
+  <updated>2021-03-24T17:32:34.290344+00:00</updated>
   <link href="https://jnrowe.github.io/"/>
   <link href="https://jnrowe.github.io/blog/tag/three/atom.xml"/>
-  <generator uri="https://ablog.readthedocs.org" version="0.10.12">ABlog</generator>
+  <generator uri="https://ablog.readthedocs.org/" version="0.10.14">ABlog</generator>
   <subtitle>Ramblings of a tired mind</subtitle>
   <entry>
     <id>https://jnrowe.github.io/articles/tips/Three_mobile_broadband_in_linux.html</id>
@@ -167,6 +167,10 @@ and check the &lt;strong class="command"&gt;pppd&lt;/strong&gt; manual page to l
 &lt;/div&gt;
 </content>
     <link href="https://jnrowe.github.io/articles/tips/Three_mobile_broadband_in_linux.html" rel="alternate"/>
+    <summary>Steve Lowry is picking up his  Three  modem this afternoon and asks on our
+internal Linux list if it supports Linux.</summary>
+    <category term="linux" label="linux"/>
+    <category term="three" label="three"/>
     <published>2009-10-14T00:00:00+01:00</published>
   </entry>
 </feed>

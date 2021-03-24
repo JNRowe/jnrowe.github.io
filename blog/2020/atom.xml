@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <id>https://jnrowe.github.io/</id>
   <title>JNRowe - Posted in 2020</title>
-  <updated>2021-03-21T11:05:54.198712+00:00</updated>
+  <updated>2021-03-24T17:32:28.225687+00:00</updated>
   <link href="https://jnrowe.github.io/"/>
   <link href="https://jnrowe.github.io/blog/2020/atom.xml"/>
-  <generator uri="https://ablog.readthedocs.org" version="0.10.12">ABlog</generator>
+  <generator uri="https://ablog.readthedocs.org/" version="0.10.14">ABlog</generator>
   <subtitle>Ramblings of a tired mind</subtitle>
   <entry>
     <id>https://jnrowe.github.io/articles/advent_of_code_2020.html</id>
@@ -626,6 +626,10 @@ they’re not challenging enough.&lt;/p&gt;
 &lt;/div&gt;
 </content>
     <link href="https://jnrowe.github.io/articles/advent_of_code_2020.html" rel="alternate"/>
+    <summary>I’m done.</summary>
+    <category term="adventofcode" label="adventofcode"/>
+    <category term="coding" label="coding"/>
+    <category term="puzzles" label="puzzles"/>
     <published>2020-12-16T00:00:00+00:00</published>
   </entry>
 </feed>

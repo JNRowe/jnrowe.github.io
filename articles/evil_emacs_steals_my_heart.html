@@ -4,16 +4,15 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Evil Emacs steals my heart &#8212; JNRowe</title>
-    <link rel="stylesheet" href="../_static/alabaster.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/alabaster.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../_static/custom.css" />
     <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
     <script src="../_static/doctools.js"></script>
-    <script src="../_static/language_data.js"></script>
     <link rel="canonical" href="https://jnrowe.github.io/articles/evil_emacs_steals_my_heart.html" />
     <link rel="shortcut icon" href="../_static/icon.ico"/>
     <link rel="index" title="Index" href="../genindex.html" />
@@ -98,12 +97,12 @@ change:</p>
 <div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="kt">int</span> <span class="n">magic_const</span> <span class="o">=</span> <span class="mi">974</span><span class="p">;</span>
 </pre></div>
 </div>
-<p>In <code class="docutils literal notranslate"><span class="pre">vim</span></code>, you can execute <kbd class="kbd docutils literal notranslate"><kbd class="kbd docutils literal notranslate">ciw&lt;C</kbd>-<kbd class="kbd docutils literal notranslate">r&gt;=&#64;&quot;/2&lt;CR&gt;</kbd></kbd> to cleave the number.  The
+<p>In <code class="docutils literal notranslate"><span class="pre">vim</span></code>, you can execute <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">ciw&lt;C</kbd>-<kbd class="kbd docutils literal notranslate">r&gt;=&#64;&quot;/2&lt;CR&gt;</kbd></kbd> to cleave the number.  The
 command itself is saying:</p>
 <dl class="simple">
 <dt><kbd class="kbd docutils literal notranslate">ciw</kbd></dt><dd><p>Change the word my cursor is on(<kbd class="kbd docutils literal notranslate">c</kbd>hange <kbd class="kbd docutils literal notranslate">i</kbd>nner <kbd class="kbd docutils literal notranslate">w</kbd>ord)</p>
 </dd>
-<dt><kbd class="kbd docutils literal notranslate"><kbd class="kbd docutils literal notranslate">&lt;C</kbd>-<kbd class="kbd docutils literal notranslate">r&gt;=</kbd></kbd></dt><dd><p>Insert the result of an expression(see <code class="docutils literal notranslate"><span class="pre">:h</span> <span class="pre">i_CTRL-R_=</span></code> for awesomeness)</p>
+<dt><kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">&lt;C</kbd>-<kbd class="kbd docutils literal notranslate">r&gt;=</kbd></kbd></dt><dd><p>Insert the result of an expression(see <code class="docutils literal notranslate"><span class="pre">:h</span> <span class="pre">i_CTRL-R_=</span></code> for awesomeness)</p>
 </dd>
 <dt><kbd class="kbd docutils literal notranslate">&#64;&quot;</kbd></dt><dd><p>Use the text from last filled register, ie the text we just marked to be
 changed</p>
@@ -173,7 +172,7 @@ a <a class="reference external" href="mailto:jnrowe&#37;&#52;&#48;gmail&#46;com"
 <dt class="label" id="id6"><span class="brackets"><a class="fn-backref" href="#id3">3</a></span></dt>
 <dd><p><a class="reference external" href="https://www.orgmode.org/">org-mode</a> and <a class="reference external" href="https://github.com/jceb/vim-orgmode">vim-orgmode</a> allows me to keep this across editors.  There
 is very little point publishing it, as it can be summed up as “James
-pressed <kbd class="kbd docutils literal notranslate"><kbd class="kbd docutils literal notranslate">&lt;C</kbd>-<kbd class="kbd docutils literal notranslate">x&gt;$something</kbd></kbd> and was surprised.”</p>
+pressed <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">&lt;C</kbd>-<kbd class="kbd docutils literal notranslate">x&gt;$something</kbd></kbd> and was surprised.”</p>
 </dd>
 </dl>
 </div>
@@ -748,7 +747,7 @@ pressed <kbd class="kbd docutils literal notranslate"><kbd class="kbd docutils l
       </a> license.
       
       |
-      Powered by <a href="http://sphinx-doc.org/">Sphinx 3.1.2</a>
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 3.5.3</a>
       &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
       
     </div>

@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <id>https://jnrowe.github.io/</id>
   <title>JNRowe - Posts tagged vim</title>
-  <updated>2021-03-21T11:06:01.705315+00:00</updated>
+  <updated>2021-03-24T17:32:34.673288+00:00</updated>
   <link href="https://jnrowe.github.io/"/>
   <link href="https://jnrowe.github.io/blog/tag/vim/atom.xml"/>
-  <generator uri="https://ablog.readthedocs.org" version="0.10.12">ABlog</generator>
+  <generator uri="https://ablog.readthedocs.org/" version="0.10.14">ABlog</generator>
   <subtitle>Ramblings of a tired mind</subtitle>
   <entry>
     <id>https://jnrowe.github.io/articles/tips/Compiling_in_vim.html</id>
@@ -43,6 +43,8 @@ extension stripped.  We specifically only change the behaviour if no
 &lt;/div&gt;
 </content>
     <link href="https://jnrowe.github.io/articles/tips/Compiling_in_vim.html" rel="alternate"/>
+    <summary>The fabulous Miss Biddulph asks via the EADS Linux list:</summary>
+    <category term="vim" label="vim"/>
     <published>2009-09-24T00:00:00+01:00</published>
   </entry>
   <entry>
@@ -110,6 +112,9 @@ map &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;M&lt;span class="p"&gt;-&lt;/span
 &lt;/div&gt;
 </content>
     <link href="https://jnrowe.github.io/articles/tips/Toggling_settings_in_vim.html" rel="alternate"/>
+    <summary>As you can never have enough keybinding tips and  vim  helps to prove that, the
+tip for today answers Joshua’s question from  ##purplism</summary>
+    <category term="vim" label="vim"/>
     <published>2009-10-02T00:00:00+01:00</published>
   </entry>
   <entry>
@@ -167,6 +172,11 @@ when we change mode:&lt;/p&gt;
 &lt;/div&gt;
 </content>
     <link href="https://jnrowe.github.io/articles/tips/Visual_vim_mode_identifier.html" rel="alternate"/>
+    <summary>Paul Kerry rants about his problems with  vim  over the cooler today, and as
+a long time  vim  user I found it hard not to respond to some of the
+points.</summary>
+    <category term="awesome" label="awesome"/>
+    <category term="vim" label="vim"/>
     <published>2009-10-13T00:00:00+01:00</published>
   </entry>
   <entry>
@@ -318,6 +328,8 @@ have a switch statement.&lt;/p&gt;
 &lt;/div&gt;
 </content>
     <link href="https://jnrowe.github.io/articles/tips/vim_day_night_colourscheme.html" rel="alternate"/>
+    <summary>The fabulous Miss Biddulph asks via our EADS Linux list:</summary>
+    <category term="vim" label="vim"/>
     <published>2018-09-15T00:00:00+01:00</published>
   </entry>
   <entry>
@@ -350,12 +362,12 @@ change:&lt;/p&gt;
 &lt;div class="highlight-c notranslate"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kt"&gt;int&lt;/span&gt; &lt;span class="n"&gt;magic_const&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;974&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
-&lt;p&gt;In &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;vim&lt;/span&gt;&lt;/code&gt;, you can execute &lt;kbd class="kbd docutils literal notranslate"&gt;&lt;kbd class="kbd docutils literal notranslate"&gt;ciw&amp;lt;C&lt;/kbd&gt;-&lt;kbd class="kbd docutils literal notranslate"&gt;r&amp;gt;=&amp;#64;&amp;quot;/2&amp;lt;CR&amp;gt;&lt;/kbd&gt;&lt;/kbd&gt; to cleave the number.  The
+&lt;p&gt;In &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;vim&lt;/span&gt;&lt;/code&gt;, you can execute &lt;kbd class="kbd compound docutils literal notranslate"&gt;&lt;kbd class="kbd docutils literal notranslate"&gt;ciw&amp;lt;C&lt;/kbd&gt;-&lt;kbd class="kbd docutils literal notranslate"&gt;r&amp;gt;=&amp;#64;&amp;quot;/2&amp;lt;CR&amp;gt;&lt;/kbd&gt;&lt;/kbd&gt; to cleave the number.  The
 command itself is saying:&lt;/p&gt;
 &lt;dl class="simple"&gt;
 &lt;dt&gt;&lt;kbd class="kbd docutils literal notranslate"&gt;ciw&lt;/kbd&gt;&lt;/dt&gt;&lt;dd&gt;&lt;p&gt;Change the word my cursor is on(&lt;kbd class="kbd docutils literal notranslate"&gt;c&lt;/kbd&gt;hange &lt;kbd class="kbd docutils literal notranslate"&gt;i&lt;/kbd&gt;nner &lt;kbd class="kbd docutils literal notranslate"&gt;w&lt;/kbd&gt;ord)&lt;/p&gt;
 &lt;/dd&gt;
-&lt;dt&gt;&lt;kbd class="kbd docutils literal notranslate"&gt;&lt;kbd class="kbd docutils literal notranslate"&gt;&amp;lt;C&lt;/kbd&gt;-&lt;kbd class="kbd docutils literal notranslate"&gt;r&amp;gt;=&lt;/kbd&gt;&lt;/kbd&gt;&lt;/dt&gt;&lt;dd&gt;&lt;p&gt;Insert the result of an expression(see &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;:h&lt;/span&gt; &lt;span class="pre"&gt;i_CTRL-R_=&lt;/span&gt;&lt;/code&gt; for awesomeness)&lt;/p&gt;
+&lt;dt&gt;&lt;kbd class="kbd compound docutils literal notranslate"&gt;&lt;kbd class="kbd docutils literal notranslate"&gt;&amp;lt;C&lt;/kbd&gt;-&lt;kbd class="kbd docutils literal notranslate"&gt;r&amp;gt;=&lt;/kbd&gt;&lt;/kbd&gt;&lt;/dt&gt;&lt;dd&gt;&lt;p&gt;Insert the result of an expression(see &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;:h&lt;/span&gt; &lt;span class="pre"&gt;i_CTRL-R_=&lt;/span&gt;&lt;/code&gt; for awesomeness)&lt;/p&gt;
 &lt;/dd&gt;
 &lt;dt&gt;&lt;kbd class="kbd docutils literal notranslate"&gt;&amp;#64;&amp;quot;&lt;/kbd&gt;&lt;/dt&gt;&lt;dd&gt;&lt;p&gt;Use the text from last filled register, ie the text we just marked to be
 changed&lt;/p&gt;
@@ -425,13 +437,18 @@ a &lt;a class="reference external" href="mailto:jnrowe&amp;#37;&amp;#52;&amp;#48
 &lt;dt class="label" id="id6"&gt;&lt;span class="brackets"&gt;&lt;a class="fn-backref" href="#id3"&gt;3&lt;/a&gt;&lt;/span&gt;&lt;/dt&gt;
 &lt;dd&gt;&lt;p&gt;&lt;a class="reference external" href="https://www.orgmode.org/"&gt;org-mode&lt;/a&gt; and &lt;a class="reference external" href="https://github.com/jceb/vim-orgmode"&gt;vim-orgmode&lt;/a&gt; allows me to keep this across editors.  There
 is very little point publishing it, as it can be summed up as “James
-pressed &lt;kbd class="kbd docutils literal notranslate"&gt;&lt;kbd class="kbd docutils literal notranslate"&gt;&amp;lt;C&lt;/kbd&gt;-&lt;kbd class="kbd docutils literal notranslate"&gt;x&amp;gt;$something&lt;/kbd&gt;&lt;/kbd&gt; and was surprised.”&lt;/p&gt;
+pressed &lt;kbd class="kbd compound docutils literal notranslate"&gt;&lt;kbd class="kbd docutils literal notranslate"&gt;&amp;lt;C&lt;/kbd&gt;-&lt;kbd class="kbd docutils literal notranslate"&gt;x&amp;gt;$something&lt;/kbd&gt;&lt;/kbd&gt; and was surprised.”&lt;/p&gt;
 &lt;/dd&gt;
 &lt;/dl&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 </content>
     <link href="https://jnrowe.github.io/articles/evil_emacs_steals_my_heart.html" rel="alternate"/>
+    <summary>Many  of my co-workers use  emacs , it is probably the most popular editor on
+our team and I understand why.</summary>
+    <category term="emacs" label="emacs"/>
+    <category term="vim" label="vim"/>
+    <category term="evil" label="evil"/>
     <published>2018-11-05T00:00:00+00:00</published>
   </entry>
 </feed>

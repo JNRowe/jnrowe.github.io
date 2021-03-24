@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <id>https://jnrowe.github.io/</id>
   <title>JNRowe - Posts tagged net</title>
-  <updated>2021-03-21T11:05:59.650562+00:00</updated>
+  <updated>2021-03-24T17:32:32.703547+00:00</updated>
   <link href="https://jnrowe.github.io/"/>
   <link href="https://jnrowe.github.io/blog/tag/net/atom.xml"/>
-  <generator uri="https://ablog.readthedocs.org" version="0.10.12">ABlog</generator>
+  <generator uri="https://ablog.readthedocs.org/" version="0.10.14">ABlog</generator>
   <subtitle>Ramblings of a tired mind</subtitle>
   <entry>
     <id>https://jnrowe.github.io/thoughts/disconnect.html</id>
@@ -67,23 +67,23 @@ about how we all need to consider blocking sites that use a &lt;abbr title="Cont
 same way that many of us block web analytics companies.  We’re probably giving
 up more tracking data to the large &lt;abbr title="Content Delivery Network"&gt;CDN&lt;/abbr&gt;s then we do to the simple analytics
 companies.&lt;/p&gt;
-&lt;p&gt;The thought popped in to my mind that a whitelist, instead of a blacklist, might
+&lt;p&gt;The thought popped in to my mind that a allowlist, instead of a denylist, might
 actually be workable and since last November I’ve taken to doing just that.&lt;/p&gt;
 &lt;p&gt;The strangest result in my mind is just how short the list is.  My old advert
-and analytics blacklist had close to 1500 entries, and would obviously miss many
+and analytics denylist had close to 1500 entries, and would obviously miss many
 ”nasties” that I either hadn’t seen or that were simply new.&lt;/p&gt;
-&lt;p&gt;The whitelist, on the other hand, has only ever had 900 entries. Right now it
+&lt;p&gt;The allowlist, on the other hand, has only ever had 900 entries. Right now it
 has less than 150 thanks to the automated decay-based-on-visits purging of the
 entries it contains.&lt;/p&gt;
-&lt;p&gt;The whitelist approach also feeds in to my data tracking habit, as I can now
+&lt;p&gt;The allowlist approach also feeds in to my data tracking habit, as I can now
 tell from the decay tracking data when bursts of certain sites appear.  For
 example, StackOverflow(and &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;cdn.sstatic.net/stackoverflow/&lt;/span&gt;&lt;/code&gt; for styling) was
-on the whitelist for two weeks in June with six visits, which happens to
+on the allowlist for two weeks in June with six visits, which happens to
 coincide with a project that involved porting a tool to Windows.&lt;/p&gt;
-&lt;p&gt;The act of using a whitelist makes the point of procrastination noticeable and
+&lt;p&gt;The act of using a allowlist makes the point of procrastination noticeable and
 adds a cost to even starting it.  Every time I want to visit a new site&lt;a class="footnote-reference brackets" href="#s2" id="id2"&gt;2&lt;/a&gt;,
 I have to highlight the &lt;abbr title="Uniform Resource Locator"&gt;URL&lt;/abbr&gt; and rattle a key combo in &lt;a class="reference external" href="https://awesomewm.org/"&gt;awesome&lt;/a&gt; that updates
-the whitelist to enable access to it.&lt;/p&gt;
+the allowlist to enable access to it.&lt;/p&gt;
 &lt;/div&gt;
 &lt;div class="section" id="on-the-knoll"&gt;
 &lt;h2&gt;On the knoll&lt;/h2&gt;
@@ -129,8 +129,8 @@ you regain some of that is very comforting.&lt;/p&gt;
 &lt;a class="reference external" href="http://humdi.net/vnstat/"&gt;vnstat&lt;/a&gt; may work equally well for the same purpose.&lt;/p&gt;
 &lt;/dd&gt;
 &lt;dt class="label" id="s2"&gt;&lt;span class="brackets"&gt;&lt;a class="fn-backref" href="#id2"&gt;2&lt;/a&gt;&lt;/span&gt;&lt;/dt&gt;
-&lt;dd&gt;&lt;p&gt;For the most part I whitelist based on hostname, but as in the
-StackOverflow styling example will whitelist specific paths on hosts on some
+&lt;dd&gt;&lt;p&gt;For the most part I allowlist based on hostname, but as in the
+StackOverflow styling example will allowlist specific paths on hosts on some
 occasions.&lt;/p&gt;
 &lt;/dd&gt;
 &lt;dt class="label" id="s3"&gt;&lt;span class="brackets"&gt;&lt;a class="fn-backref" href="#id3"&gt;3&lt;/a&gt;&lt;/span&gt;&lt;/dt&gt;
@@ -144,6 +144,13 @@ does act as a nice sieve for everything else right now.&lt;/p&gt;
 &lt;/div&gt;
 </content>
     <link href="https://jnrowe.github.io/thoughts/disconnect.html" rel="alternate"/>
+    <summary>For the past few years I’ve taken to having routine breaks from certain
+timesinks to help me focus and also to denoise some of my thoughts.  The number
+one timesink in my world is without doubt the interwebs, and there are a few
+steps I’ve taken to weaken its stranglehold.</summary>
+    <category term="focus" label="focus"/>
+    <category term="denoise" label="denoise"/>
+    <category term="net" label="net"/>
     <published>2014-09-18T00:00:00+01:00</published>
   </entry>
 </feed>

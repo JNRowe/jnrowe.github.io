@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <id>https://jnrowe.github.io/</id>
   <title>JNRowe - Posts tagged learning</title>
-  <updated>2021-03-21T11:05:59.243102+00:00</updated>
+  <updated>2021-03-24T17:32:32.296777+00:00</updated>
   <link href="https://jnrowe.github.io/"/>
   <link href="https://jnrowe.github.io/blog/tag/learning/atom.xml"/>
-  <generator uri="https://ablog.readthedocs.org" version="0.10.12">ABlog</generator>
+  <generator uri="https://ablog.readthedocs.org/" version="0.10.14">ABlog</generator>
   <subtitle>Ramblings of a tired mind</subtitle>
   <entry>
     <id>https://jnrowe.github.io/thoughts/i_have_a_secret.html</id>
@@ -128,6 +128,10 @@ complex &lt;abbr title="Structured Query Language"&gt;SQL&lt;/abbr&gt; embedded 
 &lt;/div&gt;
 </content>
     <link href="https://jnrowe.github.io/thoughts/i_have_a_secret.html" rel="alternate"/>
+    <summary>A terrible secret haunts me, at times daily… I have virtually  no   SQL  skills.</summary>
+    <category term="databases" label="databases"/>
+    <category term="learning" label="learning"/>
+    <category term="sql" label="sql"/>
     <published>2019-05-24T00:00:00+01:00</published>
   </entry>
 </feed>

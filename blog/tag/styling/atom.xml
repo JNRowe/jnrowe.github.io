@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <id>https://jnrowe.github.io/</id>
   <title>JNRowe - Posts tagged styling</title>
-  <updated>2021-03-21T11:06:00.857965+00:00</updated>
+  <updated>2021-03-24T17:32:34.122875+00:00</updated>
   <link href="https://jnrowe.github.io/"/>
   <link href="https://jnrowe.github.io/blog/tag/styling/atom.xml"/>
-  <generator uri="https://ablog.readthedocs.org" version="0.10.12">ABlog</generator>
+  <generator uri="https://ablog.readthedocs.org/" version="0.10.14">ABlog</generator>
   <subtitle>Ramblings of a tired mind</subtitle>
   <entry>
     <id>https://jnrowe.github.io/articles/tips/Theming_mutt.html</id>
@@ -34,6 +34,9 @@ now as simple as adding the following to your &lt;code class="file docutils lite
 &lt;/div&gt;
 </content>
     <link href="https://jnrowe.github.io/articles/tips/Theming_mutt.html" rel="alternate"/>
+    <summary>Jeff, a work colleague, asks via  IRC :</summary>
+    <category term="mutt" label="mutt"/>
+    <category term="styling" label="styling"/>
     <published>2009-09-23T00:00:00+01:00</published>
   </entry>
   <entry>
@@ -94,6 +97,9 @@ today!!&lt;/p&gt;
 &lt;/div&gt;
 </content>
     <link href="https://jnrowe.github.io/articles/tips/Uber_pink_prompts.html" rel="alternate"/>
+    <summary>cookiemon5ter asks in  #gentoo  on Freenode:</summary>
+    <category term="bash" label="bash"/>
+    <category term="styling" label="styling"/>
     <published>2009-09-25T00:00:00+01:00</published>
   </entry>
   <entry>
@@ -148,6 +154,9 @@ in full.&lt;/p&gt;
 &lt;/div&gt;
 </content>
     <link href="https://jnrowe.github.io/articles/tips/Fancy_awesome_theming.html" rel="alternate"/>
+    <summary>People, mostly named Neil Blake, who shouldn’t look over my shoulder ask:</summary>
+    <category term="awesome" label="awesome"/>
+    <category term="styling" label="styling"/>
     <published>2009-09-28T00:00:00+01:00</published>
   </entry>
   <entry>
@@ -196,6 +205,9 @@ the console too then add the next little snippet to your shell’s startup file:
 &lt;/div&gt;
 </content>
     <link href="https://jnrowe.github.io/articles/tips/Disabling_cursor_blinking_in_GTK.html" rel="alternate"/>
+    <summary>Darren Roberts asks via the EADS Linux list:</summary>
+    <category term="GTK+" label="GTK+"/>
+    <category term="styling" label="styling"/>
     <published>2009-10-03T00:00:00+01:00</published>
   </entry>
   <entry>
@@ -305,6 +317,9 @@ of loops for defining colour tables.&lt;/p&gt;
 &lt;/div&gt;
 </content>
     <link href="https://jnrowe.github.io/articles/tips/Sharing_Xresources_between_systems.html" rel="alternate"/>
+    <summary>In amongst the rants in our watercooler channel at work comes this question:</summary>
+    <category term="X11" label="X11"/>
+    <category term="styling" label="styling"/>
     <published>2009-10-05T00:00:00+01:00</published>
   </entry>
 </feed>

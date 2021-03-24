@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <id>https://jnrowe.github.io/</id>
   <title>JNRowe - Posted in 2010</title>
-  <updated>2021-03-21T11:05:56.127338+00:00</updated>
+  <updated>2021-03-24T17:32:29.272398+00:00</updated>
   <link href="https://jnrowe.github.io/"/>
   <link href="https://jnrowe.github.io/blog/2010/atom.xml"/>
-  <generator uri="https://ablog.readthedocs.org" version="0.10.12">ABlog</generator>
+  <generator uri="https://ablog.readthedocs.org/" version="0.10.14">ABlog</generator>
   <subtitle>Ramblings of a tired mind</subtitle>
   <entry>
     <id>https://jnrowe.github.io/articles/tips/Populating_sup_contacts_from_abook.html</id>
@@ -77,6 +77,13 @@ too, see &lt;span class="xref std std-doc"&gt;Kick_me_birthday_reminders&lt;/spa
 &lt;/div&gt;
 </content>
     <link href="https://jnrowe.github.io/articles/tips/Populating_sup_contacts_from_abook.html" rel="alternate"/>
+    <summary>A colleague from work, Adam Robertson, is switching to  Sup  from  mutt  and
+wondering how to easily convert his contacts from  abook .  Given that it is my
+constant pimping of  sup  that has convinced him to switch I feel
+obliged to help with the conversion.</summary>
+    <category term="abook" label="abook"/>
+    <category term="mail" label="mail"/>
+    <category term="sup" label="sup"/>
     <published>2010-03-23T00:00:00+00:00</published>
   </entry>
   <entry>
@@ -288,6 +295,14 @@ read of the &lt;a class="reference external" href="http://developer.yahoo.com/yq
 &lt;/div&gt;
 </content>
     <link href="https://jnrowe.github.io/articles/mangling_planets.html" rel="alternate"/>
+    <summary>Over lunch today a few people were talking about  planet  feeds, and the topics
+mostly revolved around why they don’t read them.  I was quite surprised how
+many people miss out on the often marvellous insights in to the projects we use
+everyday, but I think I understand the reasoning.</summary>
+    <category term="atom" label="atom"/>
+    <category term="feed" label="feed"/>
+    <category term="pipes" label="pipes"/>
+    <category term="yahoo" label="yahoo"/>
     <published>2010-09-17T00:00:00+01:00</published>
   </entry>
 </feed>

@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <id>https://jnrowe.github.io/</id>
   <title>JNRowe - Posts tagged adventofcode</title>
-  <updated>2021-03-21T11:05:56.895956+00:00</updated>
+  <updated>2021-03-24T17:32:30.307795+00:00</updated>
   <link href="https://jnrowe.github.io/"/>
   <link href="https://jnrowe.github.io/blog/tag/adventofcode/atom.xml"/>
-  <generator uri="https://ablog.readthedocs.org" version="0.10.12">ABlog</generator>
+  <generator uri="https://ablog.readthedocs.org/" version="0.10.14">ABlog</generator>
   <subtitle>Ramblings of a tired mind</subtitle>
   <entry>
     <id>https://jnrowe.github.io/articles/advent_of_code.html</id>
@@ -260,6 +260,12 @@ engineering problems.&lt;/p&gt;
 &lt;/div&gt;
 </content>
     <link href="https://jnrowe.github.io/articles/advent_of_code.html" rel="alternate"/>
+    <summary>A very evil friend pointed me to  Advent of Code  last December, and I burnt
+a fair chunk of time on it.  I mean… yeah, it  was  hugely fun but be warned it
+is enormously addictive 1 .</summary>
+    <category term="adventofcode" label="adventofcode"/>
+    <category term="coding" label="coding"/>
+    <category term="puzzles" label="puzzles"/>
     <published>2018-10-19T00:00:00+01:00</published>
   </entry>
   <entry>
@@ -789,6 +795,12 @@ concepts are often known by various common names.&lt;/p&gt;
 &lt;/div&gt;
 </content>
     <link href="https://jnrowe.github.io/articles/advent_of_code_2018.html" rel="alternate"/>
+    <summary>I’ve given up on  AoC  for this year, so we’ll have a ten day early
+retrospective.  I’m writing this as a journal entry, more for myself than
+others.  You’ve been warned!</summary>
+    <category term="adventofcode" label="adventofcode"/>
+    <category term="coding" label="coding"/>
+    <category term="puzzles" label="puzzles"/>
     <published>2018-12-15T00:00:00+00:00</published>
   </entry>
   <entry>
@@ -1276,6 +1288,11 @@ Simple, &lt;abbr title="Advent of Code"&gt;AoC&lt;/abbr&gt; always has a puzzle 
 &lt;/div&gt;
 </content>
     <link href="https://jnrowe.github.io/articles/advent_of_code_2019.html" rel="alternate"/>
+    <summary>With a touch of sadness, I’ve given up on  AoC  for this year.  I’m writing this
+as a journal entry, more for myself than others.  You’ve been warned!</summary>
+    <category term="adventofcode" label="adventofcode"/>
+    <category term="coding" label="coding"/>
+    <category term="puzzles" label="puzzles"/>
     <published>2019-12-11T00:00:00+00:00</published>
   </entry>
   <entry>
@@ -1897,6 +1914,10 @@ they’re not challenging enough.&lt;/p&gt;
 &lt;/div&gt;
 </content>
     <link href="https://jnrowe.github.io/articles/advent_of_code_2020.html" rel="alternate"/>
+    <summary>I’m done.</summary>
+    <category term="adventofcode" label="adventofcode"/>
+    <category term="coding" label="coding"/>
+    <category term="puzzles" label="puzzles"/>
     <published>2020-12-16T00:00:00+00:00</published>
   </entry>
 </feed>

@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <id>https://jnrowe.github.io/</id>
   <title>JNRowe - Posts tagged bts</title>
-  <updated>2021-03-21T11:05:57.858117+00:00</updated>
+  <updated>2021-03-24T17:32:30.915393+00:00</updated>
   <link href="https://jnrowe.github.io/"/>
   <link href="https://jnrowe.github.io/blog/tag/bts/atom.xml"/>
-  <generator uri="https://ablog.readthedocs.org" version="0.10.12">ABlog</generator>
+  <generator uri="https://ablog.readthedocs.org/" version="0.10.14">ABlog</generator>
   <subtitle>Ramblings of a tired mind</subtitle>
   <entry>
     <id>https://jnrowe.github.io/articles/tips/BTS_as_a_task_manager.html</id>
@@ -192,6 +192,9 @@ Feel free to post updates to the gist!&lt;/p&gt;
 &lt;/div&gt;
 </content>
     <link href="https://jnrowe.github.io/articles/tips/BTS_as_a_task_manager.html" rel="alternate"/>
+    <summary>Tom Marshall asks over the cooler:</summary>
+    <category term="bts" label="bts"/>
+    <category term="devel" label="devel"/>
     <published>2009-10-07T00:00:00+01:00</published>
   </entry>
 </feed>

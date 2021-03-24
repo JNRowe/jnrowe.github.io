@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <id>https://jnrowe.github.io/</id>
   <title>JNRowe - Posts tagged life</title>
-  <updated>2021-03-21T11:05:59.269173+00:00</updated>
+  <updated>2021-03-24T17:32:32.319253+00:00</updated>
   <link href="https://jnrowe.github.io/"/>
   <link href="https://jnrowe.github.io/blog/tag/life/atom.xml"/>
-  <generator uri="https://ablog.readthedocs.org" version="0.10.12">ABlog</generator>
+  <generator uri="https://ablog.readthedocs.org/" version="0.10.14">ABlog</generator>
   <subtitle>Ramblings of a tired mind</subtitle>
   <entry>
     <id>https://jnrowe.github.io/thoughts/nice_stories.html</id>
@@ -112,6 +112,10 @@ know about it.  If that isn’t the case, just keep it to yourself.&lt;/p&gt;
 &lt;/div&gt;
 </content>
     <link href="https://jnrowe.github.io/thoughts/nice_stories.html" rel="alternate"/>
+    <summary>I’m fed up of hearing bad stories, I really am.  Often it feels like every
+person I know simply revels in the misfortune or missteps of others, and it is
+beginning to truly annoy me.</summary>
+    <category term="life" label="life"/>
     <published>2013-12-23T00:00:00+00:00</published>
   </entry>
   <entry>
@@ -171,6 +175,8 @@ line up with your definition of “strong moral values” ;)&lt;/p&gt;
 &lt;/div&gt;
 </content>
     <link href="https://jnrowe.github.io/thoughts/important_balance.html" rel="alternate"/>
+    <summary>Morality is herd instinct in the individual.</summary>
+    <category term="life" label="life"/>
     <published>2014-01-25T00:00:00+00:00</published>
   </entry>
   <entry>
@@ -225,6 +231,9 @@ today.  The others well, they’ll hopefully remain hidden away from view.&lt;/p
 &lt;/div&gt;
 </content>
     <link href="https://jnrowe.github.io/thoughts/reset_in_ten.html" rel="alternate"/>
+    <summary>Seven months ago while enjoying a little Saturday afternoon cricket picnic,
+a friend posed the question:</summary>
+    <category term="life" label="life"/>
     <published>2014-02-24T00:00:00+00:00</published>
   </entry>
   <entry>
@@ -274,6 +283,9 @@ sponsorship options in check, she’ll destroy the target time.  Go Rach!&lt;/p&
 &lt;/div&gt;
 </content>
     <link href="https://jnrowe.github.io/thoughts/delayed_flashover.html" rel="alternate"/>
+    <summary>This weekend a very good friend of mine is taking part in the London Marathon,
+and we’re all looking forward to the no-doubt incredible time she’ll finish in.</summary>
+    <category term="life" label="life"/>
     <published>2014-04-09T00:00:00+01:00</published>
   </entry>
   <entry>
@@ -401,6 +413,14 @@ personally.&lt;/p&gt;
 &lt;/div&gt;
 </content>
     <link href="https://jnrowe.github.io/thoughts/burn_out.html" rel="alternate"/>
+    <summary>A few years ago I burned out on Open Source projects, to the point that it was
+close to impacting other parts of my life.  I have only myself to blame as
+I didn’t manage to distance myself at all well.  Distancing yourself is not easy
+to do when your fun hobby for relaxation is the thing that is working against
+you.</summary>
+    <category term="oss" label="oss"/>
+    <category term="burnout" label="burnout"/>
+    <category term="life" label="life"/>
     <published>2014-09-03T00:00:00+01:00</published>
   </entry>
 </feed>

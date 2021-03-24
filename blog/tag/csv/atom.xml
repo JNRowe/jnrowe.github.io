@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <id>https://jnrowe.github.io/</id>
   <title>JNRowe - Posts tagged csv</title>
-  <updated>2021-03-21T11:05:58.555834+00:00</updated>
+  <updated>2021-03-24T17:32:31.594828+00:00</updated>
   <link href="https://jnrowe.github.io/"/>
   <link href="https://jnrowe.github.io/blog/tag/csv/atom.xml"/>
-  <generator uri="https://ablog.readthedocs.org" version="0.10.12">ABlog</generator>
+  <generator uri="https://ablog.readthedocs.org/" version="0.10.14">ABlog</generator>
   <subtitle>Ramblings of a tired mind</subtitle>
   <entry>
     <id>https://jnrowe.github.io/articles/tips/Formatting_csv_files_in_the_shell.html</id>
@@ -93,6 +93,9 @@ computer that we wish to format and calculate totals for could be:&lt;/p&gt;
 &lt;/div&gt;
 </content>
     <link href="https://jnrowe.github.io/articles/tips/Formatting_csv_files_in_the_shell.html" rel="alternate"/>
+    <summary>kemi asks in  #bash :</summary>
+    <category term="csv" label="csv"/>
+    <category term="unix" label="unix"/>
     <published>2009-10-10T00:00:00+01:00</published>
   </entry>
 </feed>

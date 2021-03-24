@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <id>https://jnrowe.github.io/</id>
   <title>JNRowe - Posted in 2014</title>
-  <updated>2021-03-21T11:05:55.610066+00:00</updated>
+  <updated>2021-03-24T17:32:29.033108+00:00</updated>
   <link href="https://jnrowe.github.io/"/>
   <link href="https://jnrowe.github.io/blog/2014/atom.xml"/>
-  <generator uri="https://ablog.readthedocs.org" version="0.10.12">ABlog</generator>
+  <generator uri="https://ablog.readthedocs.org/" version="0.10.14">ABlog</generator>
   <subtitle>Ramblings of a tired mind</subtitle>
   <entry>
     <id>https://jnrowe.github.io/thoughts/dopplr_effects.html</id>
@@ -58,6 +58,12 @@ actually use, but sadly I can’t even picture how it should work.&lt;/p&gt;
 &lt;span class="target" id="backstory"&gt;&lt;/span&gt;&lt;/div&gt;
 </content>
     <link href="https://jnrowe.github.io/thoughts/dopplr_effects.html" rel="alternate"/>
+    <summary>Dopplr was a free social networking service, launched in 2007, that allowed
+users to create itineraries of their travel plans and spot correlations with
+their contacts’ travel plans in order to arrange meetings at any point on
+their journey.</summary>
+    <category term="history" label="history"/>
+    <category term="privacy" label="privacy"/>
     <published>2014-01-06T00:00:00+00:00</published>
   </entry>
   <entry>
@@ -117,6 +123,8 @@ line up with your definition of “strong moral values” ;)&lt;/p&gt;
 &lt;/div&gt;
 </content>
     <link href="https://jnrowe.github.io/thoughts/important_balance.html" rel="alternate"/>
+    <summary>Morality is herd instinct in the individual.</summary>
+    <category term="life" label="life"/>
     <published>2014-01-25T00:00:00+00:00</published>
   </entry>
   <entry>
@@ -159,6 +167,12 @@ absolutely extended to this site and the new content I post.&lt;/p&gt;
 &lt;/div&gt;
 </content>
     <link href="https://jnrowe.github.io/thoughts/the_returned.html" rel="alternate"/>
+    <summary>I kept a public journal from about 2003 until 2009, with a new entry about every
+three days.  I enjoyed the act of writing it greatly, and often looked forward
+to the period of contemplation it would create.  However, eventually I found
+I had to kill it, but not because of waning enthusiasm as is so often the case.</summary>
+    <category term="blog" label="blog"/>
+    <category term="site" label="site"/>
     <published>2014-01-27T00:00:00+00:00</published>
   </entry>
   <entry>
@@ -213,6 +227,9 @@ today.  The others well, they’ll hopefully remain hidden away from view.&lt;/p
 &lt;/div&gt;
 </content>
     <link href="https://jnrowe.github.io/thoughts/reset_in_ten.html" rel="alternate"/>
+    <summary>Seven months ago while enjoying a little Saturday afternoon cricket picnic,
+a friend posed the question:</summary>
+    <category term="life" label="life"/>
     <published>2014-02-24T00:00:00+00:00</published>
   </entry>
   <entry>
@@ -262,6 +279,9 @@ sponsorship options in check, she’ll destroy the target time.  Go Rach!&lt;/p&
 &lt;/div&gt;
 </content>
     <link href="https://jnrowe.github.io/thoughts/delayed_flashover.html" rel="alternate"/>
+    <summary>This weekend a very good friend of mine is taking part in the London Marathon,
+and we’re all looking forward to the no-doubt incredible time she’ll finish in.</summary>
+    <category term="life" label="life"/>
     <published>2014-04-09T00:00:00+01:00</published>
   </entry>
   <entry>
@@ -461,6 +481,12 @@ track for the next ten years.&lt;/p&gt;
 &lt;/div&gt;
 </content>
     <link href="https://jnrowe.github.io/articles/dropping_gentoo.html" rel="alternate"/>
+    <summary>We’ve been using  Gentoo  for shipped products since June 2005, and as
+a development platform since September 2004.  A long time, an incredibly long
+time in fact.</summary>
+    <category term="gentoo" label="gentoo"/>
+    <category term="work" label="work"/>
+    <category term="linux" label="linux"/>
     <published>2014-06-18T00:00:00+01:00</published>
   </entry>
   <entry>
@@ -598,7 +624,7 @@ makes dependency handling work among other things.&lt;/p&gt;
 &lt;/dl&gt;
 &lt;dl class="std option"&gt;
 &lt;dt id="cmdoption-tar-C"&gt;
-&lt;code class="sig-name descname"&gt;-C&lt;/code&gt;&lt;code class="sig-prename descclassname"&gt;&lt;/code&gt;&lt;/dt&gt;
+&lt;span id="cmdoption-tar-c"&gt;&lt;/span&gt;&lt;code class="sig-name descname"&gt;&lt;span class="pre"&gt;-C&lt;/span&gt;&lt;/code&gt;&lt;code class="sig-prename descclassname"&gt;&lt;/code&gt;&lt;/dt&gt;
 &lt;dd&gt;&lt;p&gt;This option tells &lt;strong class="command"&gt;tar&lt;/strong&gt; to change directory before performing its
 duty.  For example using &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;-C&lt;/span&gt; &lt;span class="pre"&gt;/&lt;/span&gt;&lt;/code&gt; will switch to &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;/&lt;/span&gt;&lt;/code&gt;, and can be used to
 unpack a tarball directly over the root filesystem.&lt;/p&gt;
@@ -608,6 +634,13 @@ unpack a tarball directly over the root filesystem.&lt;/p&gt;
 &lt;/div&gt;
 </content>
     <link href="https://jnrowe.github.io/articles/dropping_gentoo_reflex.html" rel="alternate"/>
+    <summary>After hitting the publish button on  dropping_gentoo  a few friends
+commented that I was either unnecessarily harsh about Gentoo or we wasted an
+enormous amount of time on it.  It definitely was the former, and I feel
+a touch ashamed for implying the latter.</summary>
+    <category term="gentoo" label="gentoo"/>
+    <category term="work" label="work"/>
+    <category term="linux" label="linux"/>
     <published>2014-06-29T00:00:00+01:00</published>
   </entry>
   <entry>
@@ -646,6 +679,10 @@ situations.  This category, and the accompanying index, below are that attempt.&
 &lt;/div&gt;
 </content>
     <link href="https://jnrowe.github.io/articles/probits/index.html" rel="alternate"/>
+    <summary>One of my favourite things about the day job is the post-project analysis and
+postmortems, which we lovingly refer to as  probits 
+internally.</summary>
+    <category term="probit" label="probit"/>
     <published>2014-06-30T00:00:00+01:00</published>
   </entry>
   <entry>
@@ -707,6 +744,9 @@ past couple of years, and it is as refreshing as it is saddening.&lt;/p&gt;
 &lt;/div&gt;
 </content>
     <link href="https://jnrowe.github.io/articles/probits/jnrowe-misc.html" rel="alternate"/>
+    <summary>A collection of  ebuild  files with no overall theme.</summary>
+    <category term="jnrowe-misc" label="jnrowe-misc"/>
+    <category term="gentoo" label="gentoo"/>
     <published>2014-06-30T00:00:00+01:00</published>
   </entry>
   <entry>
@@ -834,6 +874,14 @@ personally.&lt;/p&gt;
 &lt;/div&gt;
 </content>
     <link href="https://jnrowe.github.io/thoughts/burn_out.html" rel="alternate"/>
+    <summary>A few years ago I burned out on Open Source projects, to the point that it was
+close to impacting other parts of my life.  I have only myself to blame as
+I didn’t manage to distance myself at all well.  Distancing yourself is not easy
+to do when your fun hobby for relaxation is the thing that is working against
+you.</summary>
+    <category term="oss" label="oss"/>
+    <category term="burnout" label="burnout"/>
+    <category term="life" label="life"/>
     <published>2014-09-03T00:00:00+01:00</published>
   </entry>
   <entry>
@@ -896,23 +944,23 @@ about how we all need to consider blocking sites that use a &lt;abbr title="Cont
 same way that many of us block web analytics companies.  We’re probably giving
 up more tracking data to the large &lt;abbr title="Content Delivery Network"&gt;CDN&lt;/abbr&gt;s then we do to the simple analytics
 companies.&lt;/p&gt;
-&lt;p&gt;The thought popped in to my mind that a whitelist, instead of a blacklist, might
+&lt;p&gt;The thought popped in to my mind that a allowlist, instead of a denylist, might
 actually be workable and since last November I’ve taken to doing just that.&lt;/p&gt;
 &lt;p&gt;The strangest result in my mind is just how short the list is.  My old advert
-and analytics blacklist had close to 1500 entries, and would obviously miss many
+and analytics denylist had close to 1500 entries, and would obviously miss many
 ”nasties” that I either hadn’t seen or that were simply new.&lt;/p&gt;
-&lt;p&gt;The whitelist, on the other hand, has only ever had 900 entries. Right now it
+&lt;p&gt;The allowlist, on the other hand, has only ever had 900 entries. Right now it
 has less than 150 thanks to the automated decay-based-on-visits purging of the
 entries it contains.&lt;/p&gt;
-&lt;p&gt;The whitelist approach also feeds in to my data tracking habit, as I can now
+&lt;p&gt;The allowlist approach also feeds in to my data tracking habit, as I can now
 tell from the decay tracking data when bursts of certain sites appear.  For
 example, StackOverflow(and &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;cdn.sstatic.net/stackoverflow/&lt;/span&gt;&lt;/code&gt; for styling) was
-on the whitelist for two weeks in June with six visits, which happens to
+on the allowlist for two weeks in June with six visits, which happens to
 coincide with a project that involved porting a tool to Windows.&lt;/p&gt;
-&lt;p&gt;The act of using a whitelist makes the point of procrastination noticeable and
+&lt;p&gt;The act of using a allowlist makes the point of procrastination noticeable and
 adds a cost to even starting it.  Every time I want to visit a new site&lt;a class="footnote-reference brackets" href="#s2" id="id2"&gt;2&lt;/a&gt;,
 I have to highlight the &lt;abbr title="Uniform Resource Locator"&gt;URL&lt;/abbr&gt; and rattle a key combo in &lt;a class="reference external" href="https://awesomewm.org/"&gt;awesome&lt;/a&gt; that updates
-the whitelist to enable access to it.&lt;/p&gt;
+the allowlist to enable access to it.&lt;/p&gt;
 &lt;/div&gt;
 &lt;div class="section" id="on-the-knoll"&gt;
 &lt;h2&gt;On the knoll&lt;/h2&gt;
@@ -958,8 +1006,8 @@ you regain some of that is very comforting.&lt;/p&gt;
 &lt;a class="reference external" href="http://humdi.net/vnstat/"&gt;vnstat&lt;/a&gt; may work equally well for the same purpose.&lt;/p&gt;
 &lt;/dd&gt;
 &lt;dt class="label" id="s2"&gt;&lt;span class="brackets"&gt;&lt;a class="fn-backref" href="#id2"&gt;2&lt;/a&gt;&lt;/span&gt;&lt;/dt&gt;
-&lt;dd&gt;&lt;p&gt;For the most part I whitelist based on hostname, but as in the
-StackOverflow styling example will whitelist specific paths on hosts on some
+&lt;dd&gt;&lt;p&gt;For the most part I allowlist based on hostname, but as in the
+StackOverflow styling example will allowlist specific paths on hosts on some
 occasions.&lt;/p&gt;
 &lt;/dd&gt;
 &lt;dt class="label" id="s3"&gt;&lt;span class="brackets"&gt;&lt;a class="fn-backref" href="#id3"&gt;3&lt;/a&gt;&lt;/span&gt;&lt;/dt&gt;
@@ -973,6 +1021,13 @@ does act as a nice sieve for everything else right now.&lt;/p&gt;
 &lt;/div&gt;
 </content>
     <link href="https://jnrowe.github.io/thoughts/disconnect.html" rel="alternate"/>
+    <summary>For the past few years I’ve taken to having routine breaks from certain
+timesinks to help me focus and also to denoise some of my thoughts.  The number
+one timesink in my world is without doubt the interwebs, and there are a few
+steps I’ve taken to weaken its stranglehold.</summary>
+    <category term="focus" label="focus"/>
+    <category term="denoise" label="denoise"/>
+    <category term="net" label="net"/>
     <published>2014-09-18T00:00:00+01:00</published>
   </entry>
   <entry>
@@ -1147,6 +1202,15 @@ a command against all repositories configured in &lt;code class="file docutils l
 &lt;/div&gt;
 </content>
     <link href="https://jnrowe.github.io/articles/fossil.html" rel="alternate"/>
+    <summary>For a variety of reasons we can no longer use GitHub at work for any project
+which isn’t Open Source.  And since that decision was thrust upon us we’ve been
+playing with some alternatives for our workflow.  We’ll probably end up choosing
+one of the self hosted clones at some point, but it was decided early on that we
+should evaluate a variety of options.</summary>
+    <category term="fossil" label="fossil"/>
+    <category term="vcs" label="vcs"/>
+    <category term="projects" label="projects"/>
+    <category term="development" label="development"/>
     <published>2014-11-12T00:00:00+00:00</published>
   </entry>
 </feed>

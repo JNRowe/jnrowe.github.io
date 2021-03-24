@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <id>https://jnrowe.github.io/</id>
   <title>JNRowe - Posts tagged awesome</title>
-  <updated>2021-03-21T11:05:57.731819+00:00</updated>
+  <updated>2021-03-24T17:32:30.789743+00:00</updated>
   <link href="https://jnrowe.github.io/"/>
   <link href="https://jnrowe.github.io/blog/tag/awesome/atom.xml"/>
-  <generator uri="https://ablog.readthedocs.org" version="0.10.12">ABlog</generator>
+  <generator uri="https://ablog.readthedocs.org/" version="0.10.14">ABlog</generator>
   <subtitle>Ramblings of a tired mind</subtitle>
   <entry>
     <id>https://jnrowe.github.io/articles/tips/Fancy_awesome_theming.html</id>
@@ -59,6 +59,9 @@ in full.&lt;/p&gt;
 &lt;/div&gt;
 </content>
     <link href="https://jnrowe.github.io/articles/tips/Fancy_awesome_theming.html" rel="alternate"/>
+    <summary>People, mostly named Neil Blake, who shouldn’t look over my shoulder ask:</summary>
+    <category term="awesome" label="awesome"/>
+    <category term="styling" label="styling"/>
     <published>2009-09-28T00:00:00+01:00</published>
   </entry>
   <entry>
@@ -176,6 +179,9 @@ switches the network graph widget to use the appropriate input too.&lt;/p&gt;
 &lt;/div&gt;
 </content>
     <link href="https://jnrowe.github.io/articles/tips/Simple_notifications_in_awesome.html" rel="alternate"/>
+    <summary>On seeing my window notifications in  awesome  from a screencast for a new
+project at work Matt Cooper asks:</summary>
+    <category term="awesome" label="awesome"/>
     <published>2009-10-04T00:00:00+01:00</published>
   </entry>
   <entry>
@@ -233,6 +239,11 @@ when we change mode:&lt;/p&gt;
 &lt;/div&gt;
 </content>
     <link href="https://jnrowe.github.io/articles/tips/Visual_vim_mode_identifier.html" rel="alternate"/>
+    <summary>Paul Kerry rants about his problems with  vim  over the cooler today, and as
+a long time  vim  user I found it hard not to respond to some of the
+points.</summary>
+    <category term="awesome" label="awesome"/>
+    <category term="vim" label="vim"/>
     <published>2009-10-13T00:00:00+01:00</published>
   </entry>
 </feed>

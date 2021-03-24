@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <id>https://jnrowe.github.io/</id>
   <title>JNRowe - Posts tagged web</title>
-  <updated>2021-03-21T11:06:01.822726+00:00</updated>
+  <updated>2021-03-24T17:32:34.790673+00:00</updated>
   <link href="https://jnrowe.github.io/"/>
   <link href="https://jnrowe.github.io/blog/tag/web/atom.xml"/>
-  <generator uri="https://ablog.readthedocs.org" version="0.10.12">ABlog</generator>
+  <generator uri="https://ablog.readthedocs.org/" version="0.10.14">ABlog</generator>
   <subtitle>Ramblings of a tired mind</subtitle>
   <entry>
     <id>https://jnrowe.github.io/articles/tips/Instant_web_server.html</id>
@@ -111,6 +111,10 @@ of code.&lt;/p&gt;
 &lt;/div&gt;
 </content>
     <link href="https://jnrowe.github.io/articles/tips/Instant_web_server.html" rel="alternate"/>
+    <summary>Among the topics on our Linux list at work today was a question from Luke
+Fletcher that I was expecting to unleash a flurry of emotional responses:</summary>
+    <category term="devel" label="devel"/>
+    <category term="web" label="web"/>
     <published>2009-10-12T00:00:00+01:00</published>
   </entry>
 </feed>

@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <id>https://jnrowe.github.io/</id>
   <title>JNRowe - Posts tagged testing</title>
-  <updated>2021-03-21T11:06:00.995857+00:00</updated>
+  <updated>2021-03-24T17:32:34.262626+00:00</updated>
   <link href="https://jnrowe.github.io/"/>
   <link href="https://jnrowe.github.io/blog/tag/testing/atom.xml"/>
-  <generator uri="https://ablog.readthedocs.org" version="0.10.12">ABlog</generator>
+  <generator uri="https://ablog.readthedocs.org/" version="0.10.14">ABlog</generator>
   <subtitle>Ramblings of a tired mind</subtitle>
   <entry>
     <id>https://jnrowe.github.io/articles/tdd_distros.html</id>
@@ -169,6 +169,12 @@ a &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;reST&
 &lt;/div&gt;
 </content>
     <link href="https://jnrowe.github.io/articles/tdd_distros.html" rel="alternate"/>
+    <summary>Using  TDD  for distribution development is a hot topic in some of the more
+geeky circles I move in, and I’m very happy about this.  Anything that
+increases the robustness of my desktop computer, my phone or any other device
+I use is a great goal!</summary>
+    <category term="devel" label="devel"/>
+    <category term="testing" label="testing"/>
     <published>2011-06-13T00:00:00+01:00</published>
   </entry>
 </feed>
