@@ -51,7 +51,7 @@ rst_epilog = """
 
 default_role = 'any'
 
-needs_sphinx = '2.4'
+needs_sphinx = '3.5'
 
 nitpicky = True
 # }}}
