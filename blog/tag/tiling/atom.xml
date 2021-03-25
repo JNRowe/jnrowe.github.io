@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <id>https://jnrowe.github.io/</id>
   <title>JNRowe - Posts tagged tiling</title>
-  <updated>2021-03-24T17:38:08.825718+00:00</updated>
+  <updated>2021-03-25T08:38:16.590731+00:00</updated>
   <link href="https://jnrowe.github.io/"/>
   <link href="https://jnrowe.github.io/blog/tag/tiling/atom.xml"/>
   <generator uri="https://ablog.readthedocs.org/" version="0.10.14">ABlog</generator>
@@ -80,11 +80,6 @@ it the &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;
 &lt;/div&gt;
 </content>
     <link href="https://jnrowe.github.io/articles/tiling_vs_tabbing.html" rel="alternate"/>
-    <summary>A fairly large chunk of my developer friends fawn over  tmux  and  tabbed .
-These tools can give  the effect  of a multiple window interface to your
-terminal sessions, or apply a tabbed interface to any  xembed  supporting
-application respectively.  I’ll freely admit they’re pretty awesome at what
-they do 1 .</summary>
     <category term="desktop" label="desktop"/>
     <category term="tiling" label="tiling"/>
     <category term="tabbed" label="tabbed"/>

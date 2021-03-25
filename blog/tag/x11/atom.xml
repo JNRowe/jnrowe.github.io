@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <id>https://jnrowe.github.io/</id>
   <title>JNRowe - Posts tagged X11</title>
-  <updated>2021-03-24T17:38:03.954478+00:00</updated>
+  <updated>2021-03-25T08:38:10.602177+00:00</updated>
   <link href="https://jnrowe.github.io/"/>
   <link href="https://jnrowe.github.io/blog/tag/x11/atom.xml"/>
   <generator uri="https://ablog.readthedocs.org/" version="0.10.14">ABlog</generator>
@@ -114,7 +114,6 @@ of loops for defining colour tables.&lt;/p&gt;
 &lt;/div&gt;
 </content>
     <link href="https://jnrowe.github.io/articles/tips/Sharing_Xresources_between_systems.html" rel="alternate"/>
-    <summary>In amongst the rants in our watercooler channel at work comes this question:</summary>
     <category term="X11" label="X11"/>
     <category term="styling" label="styling"/>
     <published>2009-10-05T00:00:00+01:00</published>
@@ -192,7 +191,6 @@ terminate signals.&lt;/p&gt;
 &lt;/div&gt;
 </content>
     <link href="https://jnrowe.github.io/articles/tips/Finding_a_windows_owner.html" rel="alternate"/>
-    <summary>Rach Holmes asks on our Linux list:</summary>
     <category term="X11" label="X11"/>
     <published>2009-10-06T00:00:00+01:00</published>
   </entry>

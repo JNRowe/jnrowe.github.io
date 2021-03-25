@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <id>https://jnrowe.github.io/</id>
   <title>JNRowe - Posts tagged probit</title>
-  <updated>2021-03-24T17:38:07.238175+00:00</updated>
+  <updated>2021-03-25T08:38:15.275027+00:00</updated>
   <link href="https://jnrowe.github.io/"/>
   <link href="https://jnrowe.github.io/blog/tag/probit/atom.xml"/>
   <generator uri="https://ablog.readthedocs.org/" version="0.10.14">ABlog</generator>
@@ -43,9 +43,6 @@ situations.  This category, and the accompanying index, below are that attempt.&
 &lt;/div&gt;
 </content>
     <link href="https://jnrowe.github.io/articles/probits/index.html" rel="alternate"/>
-    <summary>One of my favourite things about the day job is the post-project analysis and
-postmortems, which we lovingly refer to as  probits 
-internally.</summary>
     <category term="probit" label="probit"/>
     <published>2014-06-30T00:00:00+01:00</published>
   </entry>

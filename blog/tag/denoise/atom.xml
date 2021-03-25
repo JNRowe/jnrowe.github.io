@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <id>https://jnrowe.github.io/</id>
   <title>JNRowe - Posts tagged denoise</title>
-  <updated>2021-03-24T17:38:05.873347+00:00</updated>
+  <updated>2021-03-25T08:38:13.173701+00:00</updated>
   <link href="https://jnrowe.github.io/"/>
   <link href="https://jnrowe.github.io/blog/tag/denoise/atom.xml"/>
   <generator uri="https://ablog.readthedocs.org/" version="0.10.14">ABlog</generator>
@@ -144,10 +144,6 @@ does act as a nice sieve for everything else right now.&lt;/p&gt;
 &lt;/div&gt;
 </content>
     <link href="https://jnrowe.github.io/thoughts/disconnect.html" rel="alternate"/>
-    <summary>For the past few years I’ve taken to having routine breaks from certain
-timesinks to help me focus and also to denoise some of my thoughts.  The number
-one timesink in my world is without doubt the interwebs, and there are a few
-steps I’ve taken to weaken its stranglehold.</summary>
     <category term="focus" label="focus"/>
     <category term="denoise" label="denoise"/>
     <category term="net" label="net"/>

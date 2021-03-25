@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <id>https://jnrowe.github.io/</id>
   <title>JNRowe - Posts tagged bash</title>
-  <updated>2021-03-24T17:38:04.779218+00:00</updated>
+  <updated>2021-03-25T08:38:11.848072+00:00</updated>
   <link href="https://jnrowe.github.io/"/>
   <link href="https://jnrowe.github.io/blog/tag/bash/atom.xml"/>
   <generator uri="https://ablog.readthedocs.org/" version="0.10.14">ABlog</generator>
@@ -65,7 +65,6 @@ today!!&lt;/p&gt;
 &lt;/div&gt;
 </content>
     <link href="https://jnrowe.github.io/articles/tips/Uber_pink_prompts.html" rel="alternate"/>
-    <summary>cookiemon5ter asks in  #gentoo  on Freenode:</summary>
     <category term="bash" label="bash"/>
     <category term="styling" label="styling"/>
     <published>2009-09-25T00:00:00+01:00</published>
@@ -146,7 +145,6 @@ lines!!&lt;/p&gt;
 &lt;/div&gt;
 </content>
     <link href="https://jnrowe.github.io/articles/tips/Beyond_tab_completion.html" rel="alternate"/>
-    <summary>Matt Taylor wrote on the EADS Linux list:</summary>
     <category term="bash" label="bash"/>
     <category term="readline" label="readline"/>
     <published>2009-09-30T00:00:00+01:00</published>

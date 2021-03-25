@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <id>https://jnrowe.github.io/</id>
   <title>JNRowe - Posts tagged gps</title>
-  <updated>2021-03-24T17:38:06.426881+00:00</updated>
+  <updated>2021-03-25T08:38:13.785069+00:00</updated>
   <link href="https://jnrowe.github.io/"/>
   <link href="https://jnrowe.github.io/blog/tag/gps/atom.xml"/>
   <generator uri="https://ablog.readthedocs.org/" version="0.10.14">ABlog</generator>
@@ -167,10 +167,6 @@ skies may fall; having a good testing infrastructure is a must.&lt;/p&gt;
 &lt;/div&gt;
 </content>
     <link href="https://jnrowe.github.io/articles/gps_rollover_2019.html" rel="alternate"/>
-    <summary>Tomorrow we’re going to experience the simultaneously cataclysmic and mundane
-consequences of a  GPS  rollover event.   Many  things will break,  many  will
-continue to work and  many  will just take a step closer to breaking… the fun
-of date handling never ends.</summary>
     <category term="gps" label="gps"/>
     <category term="time" label="time"/>
     <category term="bugs" label="bugs"/>

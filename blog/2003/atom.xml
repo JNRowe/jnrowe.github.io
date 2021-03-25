@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <id>https://jnrowe.github.io/</id>
   <title>JNRowe - Posted in 2003</title>
-  <updated>2021-03-24T17:38:03.817239+00:00</updated>
+  <updated>2021-03-25T08:38:10.326455+00:00</updated>
   <link href="https://jnrowe.github.io/"/>
   <link href="https://jnrowe.github.io/blog/2003/atom.xml"/>
   <generator uri="https://ablog.readthedocs.org/" version="0.10.14">ABlog</generator>
@@ -348,11 +348,6 @@ ranges.&lt;/p&gt;
 &lt;/div&gt;
 </content>
     <link href="https://jnrowe.github.io/articles/rcs.html" rel="alternate"/>
-    <summary>I’ve resurrected this text from my old UKFSN site because a couple of
-people asked me to, but I wouldn’t recommend using  RCS  to anyone at this
-point.  It is mainly to help people who need to understand  RCS  because
-they have no choice, for example Gentoo users who are stuck with
- dispatch-conf  (or so my mails tell me).</summary>
     <category term="vcs" label="vcs"/>
     <published>2003-09-05T00:00:00+01:00</published>
   </entry>

@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <id>https://jnrowe.github.io/</id>
   <title>JNRowe - Posts tagged vcs</title>
-  <updated>2021-03-24T17:38:09.034163+00:00</updated>
+  <updated>2021-03-25T08:38:16.850469+00:00</updated>
   <link href="https://jnrowe.github.io/"/>
   <link href="https://jnrowe.github.io/blog/tag/vcs/atom.xml"/>
   <generator uri="https://ablog.readthedocs.org/" version="0.10.14">ABlog</generator>
@@ -348,11 +348,6 @@ ranges.&lt;/p&gt;
 &lt;/div&gt;
 </content>
     <link href="https://jnrowe.github.io/articles/rcs.html" rel="alternate"/>
-    <summary>I’ve resurrected this text from my old UKFSN site because a couple of
-people asked me to, but I wouldn’t recommend using  RCS  to anyone at this
-point.  It is mainly to help people who need to understand  RCS  because
-they have no choice, for example Gentoo users who are stuck with
- dispatch-conf  (or so my mails tell me).</summary>
     <category term="vcs" label="vcs"/>
     <published>2003-09-05T00:00:00+01:00</published>
   </entry>
@@ -458,7 +453,6 @@ markup language.&lt;/p&gt;
 &lt;/div&gt;
 </content>
     <link href="https://jnrowe.github.io/articles/tips/Making_a_nice_home.html" rel="alternate"/>
-    <summary>Back in  Kick_me_birthday_reminders  I said:</summary>
     <category term="unix" label="unix"/>
     <category term="vcs" label="vcs"/>
     <published>2009-10-11T00:00:00+01:00</published>
@@ -590,11 +584,6 @@ that can display them.&lt;/p&gt;
 &lt;/div&gt;
 </content>
     <link href="https://jnrowe.github.io/articles/tips/Zsh_and_the_vcs.html" rel="alternate"/>
-    <summary>I’ve recently switched to  Zsh  as my login shell after
-9 years of using  bash , and for no particularly good reason either as they’re
-both great interactive shells.  I guess all the  Kool Kids  are doing it, and
-I’m just playing catchup.  The one side effect of that is I’m now scribbling
-tips about  zsh  too…</summary>
     <category term="git" label="git"/>
     <category term="vcs" label="vcs"/>
     <category term="zsh" label="zsh"/>
@@ -772,11 +761,6 @@ a command against all repositories configured in &lt;code class="file docutils l
 &lt;/div&gt;
 </content>
     <link href="https://jnrowe.github.io/articles/fossil.html" rel="alternate"/>
-    <summary>For a variety of reasons we can no longer use GitHub at work for any project
-which isn’t Open Source.  And since that decision was thrust upon us we’ve been
-playing with some alternatives for our workflow.  We’ll probably end up choosing
-one of the self hosted clones at some point, but it was decided early on that we
-should evaluate a variety of options.</summary>
     <category term="fossil" label="fossil"/>
     <category term="vcs" label="vcs"/>
     <category term="projects" label="projects"/>

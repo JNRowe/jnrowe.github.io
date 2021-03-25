@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <id>https://jnrowe.github.io/</id>
   <title>JNRowe - Posted in 2009</title>
-  <updated>2021-03-24T17:38:03.356166+00:00</updated>
+  <updated>2021-03-25T08:38:09.715986+00:00</updated>
   <link href="https://jnrowe.github.io/"/>
   <link href="https://jnrowe.github.io/blog/2009/atom.xml"/>
   <generator uri="https://ablog.readthedocs.org/" version="0.10.14">ABlog</generator>
@@ -72,8 +72,6 @@ map &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;M&lt;span class="p"&gt;-&lt;/span
 &lt;/div&gt;
 </content>
     <link href="https://jnrowe.github.io/articles/tips/Toggling_settings_in_vim.html" rel="alternate"/>
-    <summary>As you can never have enough keybinding tips and  vim  helps to prove that, the
-tip for today answers Joshua’s question from  ##purplism</summary>
     <category term="vim" label="vim"/>
     <published>2009-10-02T00:00:00+01:00</published>
   </entry>
@@ -123,7 +121,6 @@ the console too then add the next little snippet to your shell’s startup file:
 &lt;/div&gt;
 </content>
     <link href="https://jnrowe.github.io/articles/tips/Disabling_cursor_blinking_in_GTK.html" rel="alternate"/>
-    <summary>Darren Roberts asks via the EADS Linux list:</summary>
     <category term="GTK+" label="GTK+"/>
     <category term="styling" label="styling"/>
     <published>2009-10-03T00:00:00+01:00</published>
@@ -243,8 +240,6 @@ switches the network graph widget to use the appropriate input too.&lt;/p&gt;
 &lt;/div&gt;
 </content>
     <link href="https://jnrowe.github.io/articles/tips/Simple_notifications_in_awesome.html" rel="alternate"/>
-    <summary>On seeing my window notifications in  awesome  from a screencast for a new
-project at work Matt Cooper asks:</summary>
     <category term="awesome" label="awesome"/>
     <published>2009-10-04T00:00:00+01:00</published>
   </entry>
@@ -355,7 +350,6 @@ of loops for defining colour tables.&lt;/p&gt;
 &lt;/div&gt;
 </content>
     <link href="https://jnrowe.github.io/articles/tips/Sharing_Xresources_between_systems.html" rel="alternate"/>
-    <summary>In amongst the rants in our watercooler channel at work comes this question:</summary>
     <category term="X11" label="X11"/>
     <category term="styling" label="styling"/>
     <published>2009-10-05T00:00:00+01:00</published>
@@ -433,7 +427,6 @@ terminate signals.&lt;/p&gt;
 &lt;/div&gt;
 </content>
     <link href="https://jnrowe.github.io/articles/tips/Finding_a_windows_owner.html" rel="alternate"/>
-    <summary>Rach Holmes asks on our Linux list:</summary>
     <category term="X11" label="X11"/>
     <published>2009-10-06T00:00:00+01:00</published>
   </entry>
@@ -622,7 +615,6 @@ Feel free to post updates to the gist!&lt;/p&gt;
 &lt;/div&gt;
 </content>
     <link href="https://jnrowe.github.io/articles/tips/BTS_as_a_task_manager.html" rel="alternate"/>
-    <summary>Tom Marshall asks over the cooler:</summary>
     <category term="bts" label="bts"/>
     <category term="devel" label="devel"/>
     <published>2009-10-07T00:00:00+01:00</published>
@@ -741,7 +733,6 @@ may be worth taking a quick look at if you use folders to organise your mails.&l
 &lt;/div&gt;
 </content>
     <link href="https://jnrowe.github.io/articles/tips/Importing_gmail_filters_in_mutt.html" rel="alternate"/>
-    <summary>On our company’s Linux list Ryan Abbott is preparing to move to  mutt :</summary>
     <category term="gmail" label="gmail"/>
     <category term="mutt" label="mutt"/>
     <published>2009-10-08T00:00:00+01:00</published>
@@ -876,10 +867,6 @@ output of &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&
 &lt;/div&gt;
 </content>
     <link href="https://jnrowe.github.io/articles/tips/Gentoo_one_liners.html" rel="alternate"/>
-    <summary>On our Linux list at work the topic of  Gentoo  usage arose again today.
-Originally, the topic was about interesting one liners used to maintain a Gentoo
-system.  I found myself posting extended replies to some of the questions and
-I’m reposting a few of those here.</summary>
     <category term="gentoo" label="gentoo"/>
     <published>2009-10-09T00:00:00+01:00</published>
   </entry>
@@ -969,7 +956,6 @@ computer that we wish to format and calculate totals for could be:&lt;/p&gt;
 &lt;/div&gt;
 </content>
     <link href="https://jnrowe.github.io/articles/tips/Formatting_csv_files_in_the_shell.html" rel="alternate"/>
-    <summary>kemi asks in  #bash :</summary>
     <category term="csv" label="csv"/>
     <category term="unix" label="unix"/>
     <published>2009-10-10T00:00:00+01:00</published>
@@ -1076,7 +1062,6 @@ markup language.&lt;/p&gt;
 &lt;/div&gt;
 </content>
     <link href="https://jnrowe.github.io/articles/tips/Making_a_nice_home.html" rel="alternate"/>
-    <summary>Back in  Kick_me_birthday_reminders  I said:</summary>
     <category term="unix" label="unix"/>
     <category term="vcs" label="vcs"/>
     <published>2009-10-11T00:00:00+01:00</published>
@@ -1185,8 +1170,6 @@ of code.&lt;/p&gt;
 &lt;/div&gt;
 </content>
     <link href="https://jnrowe.github.io/articles/tips/Instant_web_server.html" rel="alternate"/>
-    <summary>Among the topics on our Linux list at work today was a question from Luke
-Fletcher that I was expecting to unleash a flurry of emotional responses:</summary>
     <category term="devel" label="devel"/>
     <category term="web" label="web"/>
     <published>2009-10-12T00:00:00+01:00</published>
@@ -1246,9 +1229,6 @@ when we change mode:&lt;/p&gt;
 &lt;/div&gt;
 </content>
     <link href="https://jnrowe.github.io/articles/tips/Visual_vim_mode_identifier.html" rel="alternate"/>
-    <summary>Paul Kerry rants about his problems with  vim  over the cooler today, and as
-a long time  vim  user I found it hard not to respond to some of the
-points.</summary>
     <category term="awesome" label="awesome"/>
     <category term="vim" label="vim"/>
     <published>2009-10-13T00:00:00+01:00</published>
@@ -1413,8 +1393,6 @@ and check the &lt;strong class="command"&gt;pppd&lt;/strong&gt; manual page to l
 &lt;/div&gt;
 </content>
     <link href="https://jnrowe.github.io/articles/tips/Three_mobile_broadband_in_linux.html" rel="alternate"/>
-    <summary>Steve Lowry is picking up his  Three  modem this afternoon and asks on our
-internal Linux list if it supports Linux.</summary>
     <category term="linux" label="linux"/>
     <category term="three" label="three"/>
     <published>2009-10-14T00:00:00+01:00</published>
@@ -1546,11 +1524,6 @@ that can display them.&lt;/p&gt;
 &lt;/div&gt;
 </content>
     <link href="https://jnrowe.github.io/articles/tips/Zsh_and_the_vcs.html" rel="alternate"/>
-    <summary>I’ve recently switched to  Zsh  as my login shell after
-9 years of using  bash , and for no particularly good reason either as they’re
-both great interactive shells.  I guess all the  Kool Kids  are doing it, and
-I’m just playing catchup.  The one side effect of that is I’m now scribbling
-tips about  zsh  too…</summary>
     <category term="git" label="git"/>
     <category term="vcs" label="vcs"/>
     <category term="zsh" label="zsh"/>
@@ -1693,8 +1666,6 @@ a &lt;abbr title="Regular Expression"&gt;RegEx&lt;/abbr&gt;.&lt;/p&gt;
 &lt;/div&gt;
 </content>
     <link href="https://jnrowe.github.io/articles/tips/Debugging_python_regexps.html" rel="alternate"/>
-    <summary>Rob Sampson is learning  Python  and struggling to get to grips with its
- RegEx  handling.  He asks on one of our internal lists at the office:</summary>
     <category term="python" label="python"/>
     <published>2009-10-29T00:00:00+00:00</published>
   </entry>

@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <id>https://jnrowe.github.io/</id>
   <title>JNRowe - Posts tagged dzen</title>
-  <updated>2021-03-24T17:38:06.036804+00:00</updated>
+  <updated>2021-03-25T08:38:13.371098+00:00</updated>
   <link href="https://jnrowe.github.io/"/>
   <link href="https://jnrowe.github.io/blog/tag/dzen/atom.xml"/>
   <generator uri="https://ablog.readthedocs.org/" version="0.10.14">ABlog</generator>
@@ -160,10 +160,6 @@ this is new to you.&lt;/p&gt;
 &lt;/div&gt;
 </content>
     <link href="https://jnrowe.github.io/articles/march_toward_death.html" rel="alternate"/>
-    <summary>A co-worker was demoing a user session today, and pointed out a neat tool for
-MacOS that displays the “continual march toward death”.  That tool was
- Progress Bar OSX , and it is pretty cool.  Sadly it is only available for
-MacOS, so we’ll need to make something similar.</summary>
     <category term="linux" label="linux"/>
     <category term="dzen" label="dzen"/>
     <published>2018-11-13T00:00:00+00:00</published>

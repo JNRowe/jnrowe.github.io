@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <id>https://jnrowe.github.io/</id>
   <title>JNRowe - Posts tagged languages</title>
-  <updated>2021-03-24T17:38:06.529347+00:00</updated>
+  <updated>2021-03-25T08:38:13.951260+00:00</updated>
   <link href="https://jnrowe.github.io/"/>
   <link href="https://jnrowe.github.io/blog/tag/languages/atom.xml"/>
   <generator uri="https://ablog.readthedocs.org/" version="0.10.14">ABlog</generator>
@@ -143,9 +143,6 @@ decision.&lt;/p&gt;
 &lt;/div&gt;
 </content>
     <link href="https://jnrowe.github.io/articles/new_love_giddiness.html" rel="alternate"/>
-    <summary>I’ve recently inherited a new tier-one project, which is great news!  Sadly, it
-is in real need of some Tender Loving Care™.  Was there ever an inherited
-project that wasn’t?</summary>
     <category term="tools" label="tools"/>
     <category term="projects" label="projects"/>
     <category term="languages" label="languages"/>

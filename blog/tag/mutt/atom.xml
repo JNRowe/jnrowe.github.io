@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <id>https://jnrowe.github.io/</id>
   <title>JNRowe - Posts tagged mutt</title>
-  <updated>2021-03-24T17:38:06.906488+00:00</updated>
+  <updated>2021-03-25T08:38:14.542565+00:00</updated>
   <link href="https://jnrowe.github.io/"/>
   <link href="https://jnrowe.github.io/blog/tag/mutt/atom.xml"/>
   <generator uri="https://ablog.readthedocs.org/" version="0.10.14">ABlog</generator>
@@ -153,10 +153,6 @@ Happy &lt;strong class="command"&gt;mutt&lt;/strong&gt;’ing.&lt;/p&gt;
 &lt;/div&gt;
 </content>
     <link href="https://jnrowe.github.io/articles/mutt_config_snippets.html" rel="alternate"/>
-    <summary>mutt  is my favourite  MUA , one of the few tools
-I truly believe I couldn’t manage without.  It is also one of those tools,
-along with  vim , which can end up sucking away all your free time to configure
-it just how you want.</summary>
     <category term="software" label="software"/>
     <category term="configs" label="configs"/>
     <category term="mutt" label="mutt"/>
@@ -189,7 +185,6 @@ now as simple as adding the following to your &lt;code class="file docutils lite
 &lt;/div&gt;
 </content>
     <link href="https://jnrowe.github.io/articles/tips/Theming_mutt.html" rel="alternate"/>
-    <summary>Jeff, a work colleague, asks via  IRC :</summary>
     <category term="mutt" label="mutt"/>
     <category term="styling" label="styling"/>
     <published>2009-09-23T00:00:00+01:00</published>
@@ -308,7 +303,6 @@ may be worth taking a quick look at if you use folders to organise your mails.&l
 &lt;/div&gt;
 </content>
     <link href="https://jnrowe.github.io/articles/tips/Importing_gmail_filters_in_mutt.html" rel="alternate"/>
-    <summary>On our company’s Linux list Ryan Abbott is preparing to move to  mutt :</summary>
     <category term="gmail" label="gmail"/>
     <category term="mutt" label="mutt"/>
     <published>2009-10-08T00:00:00+01:00</published>

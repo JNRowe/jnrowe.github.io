@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <id>https://jnrowe.github.io/</id>
   <title>JNRowe - Posts tagged emacs</title>
-  <updated>2021-03-24T17:38:06.072781+00:00</updated>
+  <updated>2021-03-25T08:38:13.407729+00:00</updated>
   <link href="https://jnrowe.github.io/"/>
   <link href="https://jnrowe.github.io/blog/tag/emacs/atom.xml"/>
   <generator uri="https://ablog.readthedocs.org/" version="0.10.14">ABlog</generator>
@@ -55,9 +55,6 @@ should be the settings in the Emacs theme I’ll owe you a few beers!&lt;/p&gt;
 &lt;/div&gt;
 </content>
     <link href="https://jnrowe.github.io/articles/tips/emacs_gtk_shortcuts.html" rel="alternate"/>
-    <summary>If you’re used to the old style  GTK+  keyboard shortcuts, and find yourself
-continually closing windows when you’re trying to delete a word (like me) then
-add the following to your  ~/.gtkrc-2.0 :</summary>
     <category term="software" label="software"/>
     <category term="configs" label="configs"/>
     <category term="GTK+" label="GTK+"/>
@@ -176,8 +173,6 @@ pressed &lt;kbd class="kbd compound docutils literal notranslate"&gt;&lt;kbd cla
 &lt;/div&gt;
 </content>
     <link href="https://jnrowe.github.io/articles/evil_emacs_steals_my_heart.html" rel="alternate"/>
-    <summary>Many  of my co-workers use  emacs , it is probably the most popular editor on
-our team and I understand why.</summary>
     <category term="emacs" label="emacs"/>
     <category term="vim" label="vim"/>
     <category term="evil" label="evil"/>

@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <id>https://jnrowe.github.io/</id>
   <title>JNRowe - Posts tagged work</title>
-  <updated>2021-03-24T17:38:09.348715+00:00</updated>
+  <updated>2021-03-25T08:38:17.165267+00:00</updated>
   <link href="https://jnrowe.github.io/"/>
   <link href="https://jnrowe.github.io/blog/tag/work/atom.xml"/>
   <generator uri="https://ablog.readthedocs.org/" version="0.10.14">ABlog</generator>
@@ -204,9 +204,6 @@ track for the next ten years.&lt;/p&gt;
 &lt;/div&gt;
 </content>
     <link href="https://jnrowe.github.io/articles/dropping_gentoo.html" rel="alternate"/>
-    <summary>We’ve been using  Gentoo  for shipped products since June 2005, and as
-a development platform since September 2004.  A long time, an incredibly long
-time in fact.</summary>
     <category term="gentoo" label="gentoo"/>
     <category term="work" label="work"/>
     <category term="linux" label="linux"/>
@@ -357,10 +354,6 @@ unpack a tarball directly over the root filesystem.&lt;/p&gt;
 &lt;/div&gt;
 </content>
     <link href="https://jnrowe.github.io/articles/dropping_gentoo_reflex.html" rel="alternate"/>
-    <summary>After hitting the publish button on  dropping_gentoo  a few friends
-commented that I was either unnecessarily harsh about Gentoo or we wasted an
-enormous amount of time on it.  It definitely was the former, and I feel
-a touch ashamed for implying the latter.</summary>
     <category term="gentoo" label="gentoo"/>
     <category term="work" label="work"/>
     <category term="linux" label="linux"/>
@@ -461,8 +454,6 @@ other people with the necessary skills have been moved to Germany.&lt;/p&gt;
 &lt;/div&gt;
 </content>
     <link href="https://jnrowe.github.io/thoughts/brexit_through_the_gift_shop.html" rel="alternate"/>
-    <summary>This is a public letter to my co-workers, which probably shouldn’t be
-public.</summary>
     <category term="work" label="work"/>
     <category term="politics" label="politics"/>
     <published>2018-06-08T00:00:00+01:00</published>

@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <id>https://jnrowe.github.io/</id>
   <title>JNRowe - Posts tagged sup</title>
-  <updated>2021-03-24T17:38:08.710942+00:00</updated>
+  <updated>2021-03-25T08:38:16.448940+00:00</updated>
   <link href="https://jnrowe.github.io/"/>
   <link href="https://jnrowe.github.io/blog/tag/sup/atom.xml"/>
   <generator uri="https://ablog.readthedocs.org/" version="0.10.14">ABlog</generator>
@@ -77,10 +77,6 @@ too, see &lt;span class="xref std std-doc"&gt;Kick_me_birthday_reminders&lt;/spa
 &lt;/div&gt;
 </content>
     <link href="https://jnrowe.github.io/articles/tips/Populating_sup_contacts_from_abook.html" rel="alternate"/>
-    <summary>A colleague from work, Adam Robertson, is switching to  Sup  from  mutt  and
-wondering how to easily convert his contacts from  abook .  Given that it is my
-constant pimping of  sup  that has convinced him to switch I feel
-obliged to help with the conversion.</summary>
     <category term="abook" label="abook"/>
     <category term="mail" label="mail"/>
     <category term="sup" label="sup"/>

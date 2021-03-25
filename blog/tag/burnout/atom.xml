@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <id>https://jnrowe.github.io/</id>
   <title>JNRowe - Posts tagged burnout</title>
-  <updated>2021-03-24T17:38:05.049667+00:00</updated>
+  <updated>2021-03-25T08:38:12.529656+00:00</updated>
   <link href="https://jnrowe.github.io/"/>
   <link href="https://jnrowe.github.io/blog/tag/burnout/atom.xml"/>
   <generator uri="https://ablog.readthedocs.org/" version="0.10.14">ABlog</generator>
@@ -132,11 +132,6 @@ personally.&lt;/p&gt;
 &lt;/div&gt;
 </content>
     <link href="https://jnrowe.github.io/thoughts/burn_out.html" rel="alternate"/>
-    <summary>A few years ago I burned out on Open Source projects, to the point that it was
-close to impacting other parts of my life.  I have only myself to blame as
-I didn’t manage to distance myself at all well.  Distancing yourself is not easy
-to do when your fun hobby for relaxation is the thing that is working against
-you.</summary>
     <category term="oss" label="oss"/>
     <category term="burnout" label="burnout"/>
     <category term="life" label="life"/>

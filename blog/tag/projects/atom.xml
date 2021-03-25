@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <id>https://jnrowe.github.io/</id>
   <title>JNRowe - Posts tagged projects</title>
-  <updated>2021-03-24T17:38:07.263016+00:00</updated>
+  <updated>2021-03-25T08:38:15.283345+00:00</updated>
   <link href="https://jnrowe.github.io/"/>
   <link href="https://jnrowe.github.io/blog/tag/projects/atom.xml"/>
   <generator uri="https://ablog.readthedocs.org/" version="0.10.14">ABlog</generator>
@@ -122,8 +122,6 @@ is just a jumbled content dump with no real purpose.&lt;/p&gt;
 &lt;/div&gt;
 </content>
     <link href="https://jnrowe.github.io/thoughts/side_projects.html" rel="alternate"/>
-    <summary>Chatting with my brother yesterday he expressed some disbelief when I mentioned
- yet another  friend who has a website related to some topic we were discussing:</summary>
     <category term="hobbies" label="hobbies"/>
     <category term="projects" label="projects"/>
     <published>2013-12-16T00:00:00+00:00</published>
@@ -300,11 +298,6 @@ a command against all repositories configured in &lt;code class="file docutils l
 &lt;/div&gt;
 </content>
     <link href="https://jnrowe.github.io/articles/fossil.html" rel="alternate"/>
-    <summary>For a variety of reasons we can no longer use GitHub at work for any project
-which isn’t Open Source.  And since that decision was thrust upon us we’ve been
-playing with some alternatives for our workflow.  We’ll probably end up choosing
-one of the self hosted clones at some point, but it was decided early on that we
-should evaluate a variety of options.</summary>
     <category term="fossil" label="fossil"/>
     <category term="vcs" label="vcs"/>
     <category term="projects" label="projects"/>
@@ -447,9 +440,6 @@ decision.&lt;/p&gt;
 &lt;/div&gt;
 </content>
     <link href="https://jnrowe.github.io/articles/new_love_giddiness.html" rel="alternate"/>
-    <summary>I’ve recently inherited a new tier-one project, which is great news!  Sadly, it
-is in real need of some Tender Loving Care™.  Was there ever an inherited
-project that wasn’t?</summary>
     <category term="tools" label="tools"/>
     <category term="projects" label="projects"/>
     <category term="languages" label="languages"/>

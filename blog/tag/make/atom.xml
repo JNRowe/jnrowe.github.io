@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <id>https://jnrowe.github.io/</id>
   <title>JNRowe - Posts tagged make</title>
-  <updated>2021-03-24T17:38:06.820699+00:00</updated>
+  <updated>2021-03-25T08:38:14.444428+00:00</updated>
   <link href="https://jnrowe.github.io/"/>
   <link href="https://jnrowe.github.io/blog/tag/make/atom.xml"/>
   <generator uri="https://ablog.readthedocs.org/" version="0.10.14">ABlog</generator>
@@ -379,8 +379,6 @@ required interface.&lt;/p&gt;
 &lt;/div&gt;
 </content>
     <link href="https://jnrowe.github.io/articles/redo_ninja_make.html" rel="alternate"/>
-    <summary>This is a  massive  brain dump, which I plan to rewrite in to a series at
-some point.  However, until that imaginary date arrives…</summary>
     <category term="tools" label="tools"/>
     <category term="build" label="build"/>
     <category term="make" label="make"/>

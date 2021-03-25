@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <id>https://jnrowe.github.io/</id>
   <title>JNRowe - Posts tagged GTK+</title>
-  <updated>2021-03-24T17:38:03.889041+00:00</updated>
+  <updated>2021-03-25T08:38:10.463118+00:00</updated>
   <link href="https://jnrowe.github.io/"/>
   <link href="https://jnrowe.github.io/blog/tag/gtk/atom.xml"/>
   <generator uri="https://ablog.readthedocs.org/" version="0.10.14">ABlog</generator>
@@ -55,9 +55,6 @@ should be the settings in the Emacs theme I’ll owe you a few beers!&lt;/p&gt;
 &lt;/div&gt;
 </content>
     <link href="https://jnrowe.github.io/articles/tips/emacs_gtk_shortcuts.html" rel="alternate"/>
-    <summary>If you’re used to the old style  GTK+  keyboard shortcuts, and find yourself
-continually closing windows when you’re trying to delete a word (like me) then
-add the following to your  ~/.gtkrc-2.0 :</summary>
     <category term="software" label="software"/>
     <category term="configs" label="configs"/>
     <category term="GTK+" label="GTK+"/>
@@ -173,8 +170,6 @@ share, for this you can use the &lt;code class="docutils literal notranslate"&gt
 &lt;/div&gt;
 </content>
     <link href="https://jnrowe.github.io/articles/tips/Custom_locations_in_the_GTK_filechooser.html" rel="alternate"/>
-    <summary>In  Fancy_awesome_theming  I included a screenshot that, by accident more
-than design, spawned today’s tip.</summary>
     <category term="GTK+" label="GTK+"/>
     <published>2009-10-01T00:00:00+01:00</published>
   </entry>
@@ -224,7 +219,6 @@ the console too then add the next little snippet to your shell’s startup file:
 &lt;/div&gt;
 </content>
     <link href="https://jnrowe.github.io/articles/tips/Disabling_cursor_blinking_in_GTK.html" rel="alternate"/>
-    <summary>Darren Roberts asks via the EADS Linux list:</summary>
     <category term="GTK+" label="GTK+"/>
     <category term="styling" label="styling"/>
     <published>2009-10-03T00:00:00+01:00</published>

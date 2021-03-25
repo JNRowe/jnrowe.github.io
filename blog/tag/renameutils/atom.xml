@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <id>https://jnrowe.github.io/</id>
   <title>JNRowe - Posts tagged renameutils</title>
-  <updated>2021-03-24T17:38:08.501250+00:00</updated>
+  <updated>2021-03-25T08:38:16.167682+00:00</updated>
   <link href="https://jnrowe.github.io/"/>
   <link href="https://jnrowe.github.io/blog/tag/renameutils/atom.xml"/>
   <generator uri="https://ablog.readthedocs.org/" version="0.10.14">ABlog</generator>
@@ -155,7 +155,6 @@ search to look for times when I’ve mentioned it.&lt;/p&gt;
 &lt;/div&gt;
 </content>
     <link href="https://jnrowe.github.io/articles/tips/readline_rename_imv.html" rel="alternate"/>
-    <summary>Over at HN in a  stolen topic :</summary>
     <category term="readline" label="readline"/>
     <category term="imv" label="imv"/>
     <category term="qmv" label="qmv"/>

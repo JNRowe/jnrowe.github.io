@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <id>https://jnrowe.github.io/</id>
   <title>JNRowe - Posts tagged site</title>
-  <updated>2021-03-24T17:38:08.534325+00:00</updated>
+  <updated>2021-03-25T08:38:16.201237+00:00</updated>
   <link href="https://jnrowe.github.io/"/>
   <link href="https://jnrowe.github.io/blog/tag/site/atom.xml"/>
   <generator uri="https://ablog.readthedocs.org/" version="0.10.14">ABlog</generator>
@@ -47,10 +47,6 @@ absolutely extended to this site and the new content I post.&lt;/p&gt;
 &lt;/div&gt;
 </content>
     <link href="https://jnrowe.github.io/thoughts/the_returned.html" rel="alternate"/>
-    <summary>I kept a public journal from about 2003 until 2009, with a new entry about every
-three days.  I enjoyed the act of writing it greatly, and often looked forward
-to the period of contemplation it would create.  However, eventually I found
-I had to kill it, but not because of waning enthusiasm as is so often the case.</summary>
     <category term="blog" label="blog"/>
     <category term="site" label="site"/>
     <published>2014-01-27T00:00:00+00:00</published>

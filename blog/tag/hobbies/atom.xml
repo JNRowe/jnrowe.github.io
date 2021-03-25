@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <id>https://jnrowe.github.io/</id>
   <title>JNRowe - Posts tagged hobbies</title>
-  <updated>2021-03-24T17:38:06.458542+00:00</updated>
+  <updated>2021-03-25T08:38:13.816919+00:00</updated>
   <link href="https://jnrowe.github.io/"/>
   <link href="https://jnrowe.github.io/blog/tag/hobbies/atom.xml"/>
   <generator uri="https://ablog.readthedocs.org/" version="0.10.14">ABlog</generator>
@@ -122,8 +122,6 @@ is just a jumbled content dump with no real purpose.&lt;/p&gt;
 &lt;/div&gt;
 </content>
     <link href="https://jnrowe.github.io/thoughts/side_projects.html" rel="alternate"/>
-    <summary>Chatting with my brother yesterday he expressed some disbelief when I mentioned
- yet another  friend who has a website related to some topic we were discussing:</summary>
     <category term="hobbies" label="hobbies"/>
     <category term="projects" label="projects"/>
     <published>2013-12-16T00:00:00+00:00</published>

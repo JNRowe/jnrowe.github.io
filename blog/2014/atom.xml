@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <id>https://jnrowe.github.io/</id>
   <title>JNRowe - Posted in 2014</title>
-  <updated>2021-03-24T17:38:02.641229+00:00</updated>
+  <updated>2021-03-25T08:38:09.290264+00:00</updated>
   <link href="https://jnrowe.github.io/"/>
   <link href="https://jnrowe.github.io/blog/2014/atom.xml"/>
   <generator uri="https://ablog.readthedocs.org/" version="0.10.14">ABlog</generator>
@@ -58,10 +58,6 @@ actually use, but sadly I can’t even picture how it should work.&lt;/p&gt;
 &lt;span class="target" id="backstory"&gt;&lt;/span&gt;&lt;/div&gt;
 </content>
     <link href="https://jnrowe.github.io/thoughts/dopplr_effects.html" rel="alternate"/>
-    <summary>Dopplr was a free social networking service, launched in 2007, that allowed
-users to create itineraries of their travel plans and spot correlations with
-their contacts’ travel plans in order to arrange meetings at any point on
-their journey.</summary>
     <category term="history" label="history"/>
     <category term="privacy" label="privacy"/>
     <published>2014-01-06T00:00:00+00:00</published>
@@ -123,7 +119,6 @@ line up with your definition of “strong moral values” ;)&lt;/p&gt;
 &lt;/div&gt;
 </content>
     <link href="https://jnrowe.github.io/thoughts/important_balance.html" rel="alternate"/>
-    <summary>Morality is herd instinct in the individual.</summary>
     <category term="life" label="life"/>
     <published>2014-01-25T00:00:00+00:00</published>
   </entry>
@@ -167,10 +162,6 @@ absolutely extended to this site and the new content I post.&lt;/p&gt;
 &lt;/div&gt;
 </content>
     <link href="https://jnrowe.github.io/thoughts/the_returned.html" rel="alternate"/>
-    <summary>I kept a public journal from about 2003 until 2009, with a new entry about every
-three days.  I enjoyed the act of writing it greatly, and often looked forward
-to the period of contemplation it would create.  However, eventually I found
-I had to kill it, but not because of waning enthusiasm as is so often the case.</summary>
     <category term="blog" label="blog"/>
     <category term="site" label="site"/>
     <published>2014-01-27T00:00:00+00:00</published>
@@ -227,8 +218,6 @@ today.  The others well, they’ll hopefully remain hidden away from view.&lt;/p
 &lt;/div&gt;
 </content>
     <link href="https://jnrowe.github.io/thoughts/reset_in_ten.html" rel="alternate"/>
-    <summary>Seven months ago while enjoying a little Saturday afternoon cricket picnic,
-a friend posed the question:</summary>
     <category term="life" label="life"/>
     <published>2014-02-24T00:00:00+00:00</published>
   </entry>
@@ -279,8 +268,6 @@ sponsorship options in check, she’ll destroy the target time.  Go Rach!&lt;/p&
 &lt;/div&gt;
 </content>
     <link href="https://jnrowe.github.io/thoughts/delayed_flashover.html" rel="alternate"/>
-    <summary>This weekend a very good friend of mine is taking part in the London Marathon,
-and we’re all looking forward to the no-doubt incredible time she’ll finish in.</summary>
     <category term="life" label="life"/>
     <published>2014-04-09T00:00:00+01:00</published>
   </entry>
@@ -481,9 +468,6 @@ track for the next ten years.&lt;/p&gt;
 &lt;/div&gt;
 </content>
     <link href="https://jnrowe.github.io/articles/dropping_gentoo.html" rel="alternate"/>
-    <summary>We’ve been using  Gentoo  for shipped products since June 2005, and as
-a development platform since September 2004.  A long time, an incredibly long
-time in fact.</summary>
     <category term="gentoo" label="gentoo"/>
     <category term="work" label="work"/>
     <category term="linux" label="linux"/>
@@ -634,10 +618,6 @@ unpack a tarball directly over the root filesystem.&lt;/p&gt;
 &lt;/div&gt;
 </content>
     <link href="https://jnrowe.github.io/articles/dropping_gentoo_reflex.html" rel="alternate"/>
-    <summary>After hitting the publish button on  dropping_gentoo  a few friends
-commented that I was either unnecessarily harsh about Gentoo or we wasted an
-enormous amount of time on it.  It definitely was the former, and I feel
-a touch ashamed for implying the latter.</summary>
     <category term="gentoo" label="gentoo"/>
     <category term="work" label="work"/>
     <category term="linux" label="linux"/>
@@ -679,9 +659,6 @@ situations.  This category, and the accompanying index, below are that attempt.&
 &lt;/div&gt;
 </content>
     <link href="https://jnrowe.github.io/articles/probits/index.html" rel="alternate"/>
-    <summary>One of my favourite things about the day job is the post-project analysis and
-postmortems, which we lovingly refer to as  probits 
-internally.</summary>
     <category term="probit" label="probit"/>
     <published>2014-06-30T00:00:00+01:00</published>
   </entry>
@@ -744,7 +721,6 @@ past couple of years, and it is as refreshing as it is saddening.&lt;/p&gt;
 &lt;/div&gt;
 </content>
     <link href="https://jnrowe.github.io/articles/probits/jnrowe-misc.html" rel="alternate"/>
-    <summary>A collection of  ebuild  files with no overall theme.</summary>
     <category term="jnrowe-misc" label="jnrowe-misc"/>
     <category term="gentoo" label="gentoo"/>
     <published>2014-06-30T00:00:00+01:00</published>
@@ -874,11 +850,6 @@ personally.&lt;/p&gt;
 &lt;/div&gt;
 </content>
     <link href="https://jnrowe.github.io/thoughts/burn_out.html" rel="alternate"/>
-    <summary>A few years ago I burned out on Open Source projects, to the point that it was
-close to impacting other parts of my life.  I have only myself to blame as
-I didn’t manage to distance myself at all well.  Distancing yourself is not easy
-to do when your fun hobby for relaxation is the thing that is working against
-you.</summary>
     <category term="oss" label="oss"/>
     <category term="burnout" label="burnout"/>
     <category term="life" label="life"/>
@@ -1021,10 +992,6 @@ does act as a nice sieve for everything else right now.&lt;/p&gt;
 &lt;/div&gt;
 </content>
     <link href="https://jnrowe.github.io/thoughts/disconnect.html" rel="alternate"/>
-    <summary>For the past few years I’ve taken to having routine breaks from certain
-timesinks to help me focus and also to denoise some of my thoughts.  The number
-one timesink in my world is without doubt the interwebs, and there are a few
-steps I’ve taken to weaken its stranglehold.</summary>
     <category term="focus" label="focus"/>
     <category term="denoise" label="denoise"/>
     <category term="net" label="net"/>
@@ -1202,11 +1169,6 @@ a command against all repositories configured in &lt;code class="file docutils l
 &lt;/div&gt;
 </content>
     <link href="https://jnrowe.github.io/articles/fossil.html" rel="alternate"/>
-    <summary>For a variety of reasons we can no longer use GitHub at work for any project
-which isn’t Open Source.  And since that decision was thrust upon us we’ve been
-playing with some alternatives for our workflow.  We’ll probably end up choosing
-one of the self hosted clones at some point, but it was decided early on that we
-should evaluate a variety of options.</summary>
     <category term="fossil" label="fossil"/>
     <category term="vcs" label="vcs"/>
     <category term="projects" label="projects"/>

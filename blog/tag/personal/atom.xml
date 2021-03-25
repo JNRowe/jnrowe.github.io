@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <id>https://jnrowe.github.io/</id>
   <title>JNRowe - Posts tagged personal</title>
-  <updated>2021-03-24T17:38:07.152436+00:00</updated>
+  <updated>2021-03-25T08:38:14.822473+00:00</updated>
   <link href="https://jnrowe.github.io/"/>
   <link href="https://jnrowe.github.io/blog/tag/personal/atom.xml"/>
   <generator uri="https://ablog.readthedocs.org/" version="0.10.14">ABlog</generator>
@@ -81,9 +81,6 @@ offering help there anyway.&lt;/p&gt;
 &lt;/div&gt;
 </content>
     <link href="https://jnrowe.github.io/office_hours.html" rel="alternate"/>
-    <summary>A few co-workers have started offering office hours, seemingly spurred on by
-a post by  Robert Heaton .  I’m going to try this a little closer to Robert’s
-original idea, and make  this  offer to strangers too 1 .</summary>
     <category term="personal" label="personal"/>
     <published>2018-12-23T00:00:00+00:00</published>
   </entry>

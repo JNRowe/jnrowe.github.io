@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <id>https://jnrowe.github.io/</id>
   <title>JNRowe - Posts tagged puzzles</title>
-  <updated>2021-03-24T17:38:07.332621+00:00</updated>
+  <updated>2021-03-25T08:38:15.360627+00:00</updated>
   <link href="https://jnrowe.github.io/"/>
   <link href="https://jnrowe.github.io/blog/tag/puzzles/atom.xml"/>
   <generator uri="https://ablog.readthedocs.org/" version="0.10.14">ABlog</generator>
@@ -260,9 +260,6 @@ engineering problems.&lt;/p&gt;
 &lt;/div&gt;
 </content>
     <link href="https://jnrowe.github.io/articles/advent_of_code.html" rel="alternate"/>
-    <summary>A very evil friend pointed me to  Advent of Code  last December, and I burnt
-a fair chunk of time on it.  I mean… yeah, it  was  hugely fun but be warned it
-is enormously addictive 1 .</summary>
     <category term="adventofcode" label="adventofcode"/>
     <category term="coding" label="coding"/>
     <category term="puzzles" label="puzzles"/>
@@ -795,9 +792,6 @@ concepts are often known by various common names.&lt;/p&gt;
 &lt;/div&gt;
 </content>
     <link href="https://jnrowe.github.io/articles/advent_of_code_2018.html" rel="alternate"/>
-    <summary>I’ve given up on  AoC  for this year, so we’ll have a ten day early
-retrospective.  I’m writing this as a journal entry, more for myself than
-others.  You’ve been warned!</summary>
     <category term="adventofcode" label="adventofcode"/>
     <category term="coding" label="coding"/>
     <category term="puzzles" label="puzzles"/>
@@ -1288,8 +1282,6 @@ Simple, &lt;abbr title="Advent of Code"&gt;AoC&lt;/abbr&gt; always has a puzzle 
 &lt;/div&gt;
 </content>
     <link href="https://jnrowe.github.io/articles/advent_of_code_2019.html" rel="alternate"/>
-    <summary>With a touch of sadness, I’ve given up on  AoC  for this year.  I’m writing this
-as a journal entry, more for myself than others.  You’ve been warned!</summary>
     <category term="adventofcode" label="adventofcode"/>
     <category term="coding" label="coding"/>
     <category term="puzzles" label="puzzles"/>
@@ -1914,7 +1906,6 @@ they’re not challenging enough.&lt;/p&gt;
 &lt;/div&gt;
 </content>
     <link href="https://jnrowe.github.io/articles/advent_of_code_2020.html" rel="alternate"/>
-    <summary>I’m done.</summary>
     <category term="adventofcode" label="adventofcode"/>
     <category term="coding" label="coding"/>
     <category term="puzzles" label="puzzles"/>

@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <id>https://jnrowe.github.io/</id>
   <title>JNRowe - Posts tagged vim</title>
-  <updated>2021-03-24T17:38:09.196890+00:00</updated>
+  <updated>2021-03-25T08:38:17.013654+00:00</updated>
   <link href="https://jnrowe.github.io/"/>
   <link href="https://jnrowe.github.io/blog/tag/vim/atom.xml"/>
   <generator uri="https://ablog.readthedocs.org/" version="0.10.14">ABlog</generator>
@@ -43,7 +43,6 @@ extension stripped.  We specifically only change the behaviour if no
 &lt;/div&gt;
 </content>
     <link href="https://jnrowe.github.io/articles/tips/Compiling_in_vim.html" rel="alternate"/>
-    <summary>The fabulous Miss Biddulph asks via the EADS Linux list:</summary>
     <category term="vim" label="vim"/>
     <published>2009-09-24T00:00:00+01:00</published>
   </entry>
@@ -112,8 +111,6 @@ map &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;M&lt;span class="p"&gt;-&lt;/span
 &lt;/div&gt;
 </content>
     <link href="https://jnrowe.github.io/articles/tips/Toggling_settings_in_vim.html" rel="alternate"/>
-    <summary>As you can never have enough keybinding tips and  vim  helps to prove that, the
-tip for today answers Joshua’s question from  ##purplism</summary>
     <category term="vim" label="vim"/>
     <published>2009-10-02T00:00:00+01:00</published>
   </entry>
@@ -172,9 +169,6 @@ when we change mode:&lt;/p&gt;
 &lt;/div&gt;
 </content>
     <link href="https://jnrowe.github.io/articles/tips/Visual_vim_mode_identifier.html" rel="alternate"/>
-    <summary>Paul Kerry rants about his problems with  vim  over the cooler today, and as
-a long time  vim  user I found it hard not to respond to some of the
-points.</summary>
     <category term="awesome" label="awesome"/>
     <category term="vim" label="vim"/>
     <published>2009-10-13T00:00:00+01:00</published>
@@ -328,7 +322,6 @@ have a switch statement.&lt;/p&gt;
 &lt;/div&gt;
 </content>
     <link href="https://jnrowe.github.io/articles/tips/vim_day_night_colourscheme.html" rel="alternate"/>
-    <summary>The fabulous Miss Biddulph asks via our EADS Linux list:</summary>
     <category term="vim" label="vim"/>
     <published>2018-09-15T00:00:00+01:00</published>
   </entry>
@@ -444,8 +437,6 @@ pressed &lt;kbd class="kbd compound docutils literal notranslate"&gt;&lt;kbd cla
 &lt;/div&gt;
 </content>
     <link href="https://jnrowe.github.io/articles/evil_emacs_steals_my_heart.html" rel="alternate"/>
-    <summary>Many  of my co-workers use  emacs , it is probably the most popular editor on
-our team and I understand why.</summary>
     <category term="emacs" label="emacs"/>
     <category term="vim" label="vim"/>
     <category term="evil" label="evil"/>
