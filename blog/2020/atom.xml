@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <id>https://jnrowe.github.io/</id>
   <title>JNRowe - Posted in 2020</title>
-  <updated>2021-03-25T08:38:07.387431+00:00</updated>
+  <updated>2021-03-29T21:43:19.209924+00:00</updated>
   <link href="https://jnrowe.github.io/"/>
-  <link href="https://jnrowe.github.io/blog/2020/atom.xml"/>
-  <generator uri="https://ablog.readthedocs.org/" version="0.10.14">ABlog</generator>
+  <link href="https://jnrowe.github.io/blog/2020/atom.xml" rel="self"/>
+  <generator uri="https://ablog.readthedocs.org/" version="0.10.17">ABlog</generator>
   <subtitle>Ramblings of a tired mind</subtitle>
   <entry>
     <id>https://jnrowe.github.io/articles/advent_of_code_2020.html</id>
