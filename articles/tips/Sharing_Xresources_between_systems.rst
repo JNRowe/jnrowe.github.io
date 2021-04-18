@@ -103,7 +103,7 @@ You can also choose a different preprocessor if :command:`cpp` isn’t up to you
 needs by specifying a :command:`-cpp` option to :command:`xrdb`.  The only
 caveat is that must accept :option:`-D` for defines, :option:`-U` for symbol
 cancelling and :option:`-I` for include paths.  An example that does fit these
-restrictions is m4_, and it might be a good choice if you wish to do mode
+restrictions is m4_, and it might be a good choice if you wish to do more
 advanced things in your configuration file such as fancy filtering or the use
 of loops for defining colour tables.
 
