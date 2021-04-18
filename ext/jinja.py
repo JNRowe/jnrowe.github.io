@@ -3,8 +3,9 @@ import os
 
 def add_tests(app):
     try:
-        app.builder.templates.environment.tests['index'] = \
+        app.builder.templates.environment.tests['index'] = (
             lambda s: os.path.basename(s) == 'index'
+        )
     except AttributeError:
         # Ignore builders
         pass

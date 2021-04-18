@@ -13,12 +13,25 @@ import alabaster
 sys.path.extend([os.path.curdir, os.path.pardir])
 
 # General configuration {{{
-extensions = \
-    ['sphinx.ext.%s' % ext
-     for ext in ['duration', 'extlinks', 'githubpages', 'intersphinx', ]] + \
-    ['sphinxcontrib.%s' % ext for ext in []] + \
-    ['ext.%s' % ext for ext in ['jinja', ]] + \
-    ['ablog', 'alabaster']
+extensions = (
+    [
+        'sphinx.ext.%s' % ext
+        for ext in [
+            'duration',
+            'extlinks',
+            'githubpages',
+            'intersphinx',
+        ]
+    ]
+    + ['sphinxcontrib.%s' % ext for ext in []]
+    + [
+        'ext.%s' % ext
+        for ext in [
+            'jinja',
+        ]
+    ]
+    + ['ablog', 'alabaster']
+)
 
 # Only activate spelling if it is installed.  It is not required in the
 # general case and we don’t have the granularity to describe this in a clean
@@ -78,21 +91,30 @@ html_theme_options = {
     'logo': 'logo.png',
     'show_related': True,
 }
-html_theme_path = [alabaster.get_path(), ]
-html_css_files = ['custom.css', ]
+html_theme_path = [
+    alabaster.get_path(),
+]
+html_css_files = [
+    'custom.css',
+]
 
 html_title = 'JNRowe'
 
 html_baseurl = 'https://jnrowe.github.io/'
 html_context = {'feed_link': True}
 html_favicon = '.static/icon.ico'
-html_static_path = ['.static', ]
-html_extra_path = ['.extras', ]
+html_static_path = [
+    '.static',
+]
+html_extra_path = [
+    '.extras',
+]
 
 with suppress(CalledProcessError):
-    proc = run(['git', 'log', "--pretty=format:'%ad [%h]'", '--date=short',
-                '-n1'],
-               stdout=PIPE)
+    proc = run(
+        ['git', 'log', "--pretty=format:'%ad [%h]'", '--date=short', '-n1'],
+        stdout=PIPE,
+    )
     html_last_updated_fmt = proc.stdout.decode()
 
 html_copy_source = False
@@ -102,7 +124,7 @@ html_copy_source = False
 extlinks = {
     'gist': ('http://gist.github.com/%s', 'gist #'),
     'pypi': ('https://pypi.python.org/pypi/%s', ''),
-    'µnote': ('https://jnrowe.github.io/mnotes/#%s', '')
+    'µnote': ('https://jnrowe.github.io/mnotes/#%s', ''),
 }
 # }}}
 
@@ -119,9 +141,16 @@ post_date_format = '%F'
 post_redirect_refresh = 1
 
 html_sidebars = {
-    '**': ['about.html', 'postcard.html', 'navigation.html',
-           'recentposts.html', 'tagcloud.html', 'categories.html',
-           'archives.html', 'searchbox.html'],
+    '**': [
+        'about.html',
+        'postcard.html',
+        'navigation.html',
+        'recentposts.html',
+        'tagcloud.html',
+        'categories.html',
+        'archives.html',
+        'searchbox.html',
+    ],
 }
 
 blog_feed_archives = True
@@ -132,8 +161,10 @@ blog_feed_length = 15
 
 # intersphinx extension settings {{{
 intersphinx_mapping = {
-    'python': ('https://docs.python.org/3/',
-               os.getenv('SPHINX_PYTHON_OBJECTS')),
+    'python': (
+        'https://docs.python.org/3/',
+        os.getenv('SPHINX_PYTHON_OBJECTS'),
+    ),
 }
 # }}}
 
