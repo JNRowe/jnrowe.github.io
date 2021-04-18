@@ -10,9 +10,10 @@ import click
 
 
 def pcnt_colour(percent):
-    h = 1/3 - (1/3 * percent/100)
-    return '#' + ''.join(f'{min(int(n*256), 255):02x}'
-                         for n in colorsys.hls_to_rgb(h, .5, 1))
+    h = 1 / 3 - (1 / 3 * percent / 100)
+    return '#' + ''.join(
+        f'{min(int(n*256), 255):02x}' for n in colorsys.hls_to_rgb(h, 0.5, 1)
+    )
 
 
 def month_days(date):
@@ -28,9 +29,10 @@ def days_in_year(date):
 
 
 def show_progress(title, percent, width):
-    subprocess.run(['gdbar', '-l', title, '-w', str(width), '-fg',
-                    pcnt_colour(percent)],
-                   input=str(percent).encode())
+    subprocess.run(
+        ['gdbar', '-l', title, '-w', str(width), '-fg', pcnt_colour(percent)],
+        input=str(percent).encode(),
+    )
 
 
 @click.command()
@@ -46,10 +48,12 @@ def main(short, width):
 
     year_pcnt = int(f'{now: %j}') / days_in_year(now) * 100
 
-    print('Progress: '
-          f'D^fg({pcnt_colour(day_pcnt)}){day_pcnt:.0f}^fg()% '
-          f'M^fg({pcnt_colour(month_pcnt)}){month_pcnt:.0f}^fg()% '
-          f'Y^fg({pcnt_colour(year_pcnt)}){year_pcnt:.0f}^fg()%')
+    print(
+        'Progress: '
+        f'D^fg({pcnt_colour(day_pcnt)}){day_pcnt:.0f}^fg()% '
+        f'M^fg({pcnt_colour(month_pcnt)}){month_pcnt:.0f}^fg()% '
+        f'Y^fg({pcnt_colour(year_pcnt)}){year_pcnt:.0f}^fg()%'
+    )
     if not short:
         sys.stdout.flush()
         show_progress('day   ', day_pcnt, width)

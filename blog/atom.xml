@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <id>https://jnrowe.github.io/</id>
   <title>JNRowe</title>
-  <updated>2021-03-29T21:43:17.476225+00:00</updated>
+  <updated>2021-04-18T11:22:00.966555+00:00</updated>
   <link href="https://jnrowe.github.io/"/>
   <link href="https://jnrowe.github.io/blog/atom.xml" rel="self"/>
   <generator uri="https://ablog.readthedocs.org/" version="0.10.17">ABlog</generator>
@@ -2956,7 +2956,7 @@ creator&lt;/a&gt; so that we can smile and shout at it next year.&lt;/p&gt;
 until I lose interest, give up, and then complete the puzzles through the
 Winterval break.&lt;/p&gt;
 &lt;p&gt;The tipping point for me this year was &lt;a class="reference external" href="https://adventofcode.com/2020/day/16"&gt;day 16&lt;/a&gt;, the text was just
-impenetrable to me.  It literally took me four as long to parse the
+impenetrable to me.  It literally took me four times as long to parse the
 description as it did to code the solution.&lt;/p&gt;
 &lt;p&gt;I have 32 stars for completing both parts of every day so far this year, but
 I’m taking a break until I have a bit more downtime.&lt;/p&gt;
@@ -3287,7 +3287,7 @@ here.  Should we be making a generic virtual machine straight away to speed up
 the following days?&lt;/p&gt;
 &lt;p&gt;There is actually very little of interest in today’s solution, the only oddity
 at all was that I added a branch for the &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;nop&lt;/span&gt;&lt;/code&gt; for some reason.  It is
-a &lt;a class="reference external" href="https://en.m.wikipedia.org/wiki/NOP_(code)"&gt;no-operation&lt;/a&gt; how could it possibly need a handler?&lt;/p&gt;
+a &lt;a class="reference external" href="https://en.m.wikipedia.org/wiki/NOP_(code)"&gt;no-operation&lt;/a&gt;, how could it possibly need a handler?&lt;/p&gt;
 &lt;p&gt;The issue I did have trouble with was the runtime being far too long.  My
 initial effort in the &lt;abbr title="Read–Eval–Print Loop"&gt;REPL&lt;/abbr&gt; took 17 seconds, and that felt &lt;em&gt;very&lt;/em&gt; wrong.  On
 closer inspection I was stupidly re-parsing the input on each loop for part
