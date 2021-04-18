@@ -24,7 +24,7 @@ until I lose interest, give up, and then complete the puzzles through the
 Winterval break.
 
 The tipping point for me this year was `day 16`_, the text was just
-impenetrable to me.  It literally took me four as long to parse the
+impenetrable to me.  It literally took me four times as long to parse the
 description as it did to code the solution.
 
 I have 32 stars for completing both parts of every day so far this year, but
@@ -370,7 +370,7 @@ the following days?
 
 There is actually very little of interest in today’s solution, the only oddity
 at all was that I added a branch for the ``nop`` for some reason.  It is
-a no-operation_ how could it possibly need a handler?
+a no-operation_, how could it possibly need a handler?
 
 The issue I did have trouble with was the runtime being far too long.  My
 initial effort in the |REPL| took 17 seconds, and that felt *very* wrong.  On
