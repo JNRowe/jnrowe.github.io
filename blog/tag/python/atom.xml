@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <id>https://jnrowe.github.io/</id>
   <title>JNRowe - Posts tagged python</title>
-  <updated>2021-04-18T11:22:11.156916+00:00</updated>
+  <updated>2021-04-29T22:38:03.361003+00:00</updated>
   <link href="https://jnrowe.github.io/"/>
   <link href="https://jnrowe.github.io/blog/tag/python/atom.xml" rel="self"/>
-  <generator uri="https://ablog.readthedocs.org/" version="0.10.17">ABlog</generator>
+  <generator uri="https://ablog.readthedocs.org/" version="0.10.18">ABlog</generator>
   <subtitle>Ramblings of a tired mind</subtitle>
   <entry>
     <id>https://jnrowe.github.io/articles/tips/Debugging_python_regexps.html</id>
@@ -14,7 +14,7 @@
     <author>
       <name>James Rowe</name>
     </author>
-    <content type="html">&lt;div class="section" id="debugging-python-regex"&gt;
+    <content type="html">&lt;section id="debugging-python-regex"&gt;
 
 &lt;p&gt;Rob Sampson is learning &lt;a class="reference external" href="http://www.python.org/"&gt;Python&lt;/a&gt; and struggling to get to grips with its
 &lt;abbr title="Regular Expression"&gt;RegEx&lt;/abbr&gt; handling.  He asks on one of our internal lists at the office:&lt;/p&gt;
@@ -28,7 +28,7 @@ Any clues about where to look?&lt;/p&gt;
 &lt;li&gt;&lt;p&gt;Failure to use &lt;a class="reference external" href="http://docs.python.org/tutorial/introduction.html#strings"&gt;raw strings&lt;/a&gt; when including backslashes in the &lt;abbr title="Regular Expression"&gt;RegEx&lt;/abbr&gt;&lt;/p&gt;&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;Choosing to use a &lt;abbr title="Regular Expression"&gt;RegEx&lt;/abbr&gt; when a better tool for the job exists&lt;/p&gt;&lt;/li&gt;
 &lt;/ol&gt;
-&lt;div class="section" id="using-raw-strings"&gt;
+&lt;section id="using-raw-strings"&gt;
 &lt;h2&gt;Using raw strings&lt;/h2&gt;
 &lt;p&gt;In Rob’s code he had failed to take in to account the backslash escaping
 problem.  A simplified example of what he was trying to do would be:&lt;/p&gt;
@@ -94,8 +94,8 @@ flags are just named constants(&lt;code class="docutils literal notranslate"&gt;
 &lt;span class="go"&gt;[&amp;#39;123\\match&amp;#39;]&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="section" id="better-tools"&gt;
+&lt;/section&gt;
+&lt;section id="better-tools"&gt;
 &lt;h2&gt;Better tools&lt;/h2&gt;
 &lt;p&gt;Often, a &lt;abbr title="Regular Expression"&gt;RegEx&lt;/abbr&gt; is the hammer of choice for far too many tasks for far too
 many people(myself included).  There are often much better choices, some of
@@ -140,10 +140,12 @@ stricter.&lt;/p&gt;
 &lt;a class="reference external" href="http://pypi.python.org/pypi"&gt;pypi&lt;/a&gt;.  Often, the work has already been done for you and may well be much
 better than the hurried version you were about to cobble together with
 a &lt;abbr title="Regular Expression"&gt;RegEx&lt;/abbr&gt;.&lt;/p&gt;
-&lt;/div&gt;
-&lt;/div&gt;
+&lt;/section&gt;
+&lt;/section&gt;
 </content>
     <link href="https://jnrowe.github.io/articles/tips/Debugging_python_regexps.html" rel="alternate"/>
+    <summary>Rob Sampson is learning Python and struggling to get to grips with its
+RegEx handling.  He asks on one of our internal lists at the office:</summary>
     <category term="python" label="python"/>
     <published>2009-10-29T00:00:00+00:00</published>
   </entry>

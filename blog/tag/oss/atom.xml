@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <id>https://jnrowe.github.io/</id>
   <title>JNRowe - Posts tagged oss</title>
-  <updated>2021-04-18T11:22:10.070904+00:00</updated>
+  <updated>2021-04-29T22:38:02.695792+00:00</updated>
   <link href="https://jnrowe.github.io/"/>
   <link href="https://jnrowe.github.io/blog/tag/oss/atom.xml" rel="self"/>
-  <generator uri="https://ablog.readthedocs.org/" version="0.10.17">ABlog</generator>
+  <generator uri="https://ablog.readthedocs.org/" version="0.10.18">ABlog</generator>
   <subtitle>Ramblings of a tired mind</subtitle>
   <entry>
     <id>https://jnrowe.github.io/thoughts/burn_out.html</id>
@@ -14,7 +14,7 @@
     <author>
       <name>James Rowe</name>
     </author>
-    <content type="html">&lt;div class="section" id="open-source-and-enjoyment"&gt;
+    <content type="html">&lt;section id="open-source-and-enjoyment"&gt;
 
 &lt;p&gt;A few years ago I burned out on Open Source projects, to the point that it was
 close to impacting other parts of my life.  I have only myself to blame as
@@ -29,7 +29,7 @@ a blindfold.&lt;/p&gt;
 act of catharsis and to help me spot the problems in future.  Perhaps it will
 help others who are experiencing the same thing but haven’t quite spotted the
 catalysts yet.&lt;/p&gt;
-&lt;div class="section" id="dealing-with-needy-users"&gt;
+&lt;section id="dealing-with-needy-users"&gt;
 &lt;h2&gt;Dealing with needy users&lt;/h2&gt;
 &lt;p&gt;Some users seem to feel a disproportionate amount of “you work for me”,
 seemingly more so than happens with actual paying customers on other projects
@@ -57,7 +57,7 @@ I saw someone else using.  So try spot it early, and put a stop to it.&lt;/p&gt;
 a single penny cost to opening issues or sending a mail it would do wonders for
 communication in general.  I suspect that would remain true even if you
 reimbursed that penny immediately.&lt;/p&gt;
-&lt;div class="section" id="the-simple-answer"&gt;
+&lt;section id="the-simple-answer"&gt;
 &lt;h3&gt;The simple answer&lt;/h3&gt;
 &lt;p&gt;I figured out how to work with this entirely by accident.  Politely offer
 answers that move them away from you.  It is by far the easiest solution.&lt;/p&gt;
@@ -68,9 +68,9 @@ is dreaming that they’ll move on to bother a developer who isn’t you.&lt;/p&
 figure out how to implement this.  Open a pull request, and I’ll merge it!” to
 another.  It worked well, because it stopped the direction-less discussion and
 was never going to be followed up with a patch later.&lt;/p&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="section" id="dealing-with-unreasonable-requests"&gt;
+&lt;/section&gt;
+&lt;/section&gt;
+&lt;section id="dealing-with-unreasonable-requests"&gt;
 &lt;h2&gt;Dealing with unreasonable requests&lt;/h2&gt;
 &lt;p&gt;I used to get quite annoyed when I received an impolite or unreasonable request
 on an Open Source project, nowadays I tend to just respond with pre-canned
@@ -89,7 +89,7 @@ recompress a tarball on &lt;abbr title="Python Package Index"&gt;PyPI&lt;/abbr&g
 abuse.  I ignored the abuse, uploaded another tarball and then received another
 abusive email in return the next day.  That was a long time ago, far before the
 burnout started to creep in so I just addressed the actual issue and moved on.&lt;/p&gt;
-&lt;div class="section" id="the-answer"&gt;
+&lt;section id="the-answer"&gt;
 &lt;h3&gt;The answer&lt;/h3&gt;
 &lt;p&gt;I had forgotten about that whole previous story until at &lt;a class="reference external" href="https://europython.eu/"&gt;Europython&lt;/a&gt; a friend
 was telling me about someone who was banned from a number of events, hell-banned
@@ -102,9 +102,9 @@ virtual world.  If you have the hell-ban option available just use
 it; perhaps there is an ignore option in your issue tracker, add a “send to
 trash” rule in your email filter.  Even in person it can be quite easy to do,
 just politely acknowledge their issue and move away instead of engaging them.&lt;/p&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="section" id="the-solutions"&gt;
+&lt;/section&gt;
+&lt;/section&gt;
+&lt;section id="the-solutions"&gt;
 &lt;h2&gt;The solutions&lt;/h2&gt;
 &lt;p&gt;I chose a solution I hate, for all intents and purposes I don’t release new Open
 Source projects any longer.  I still work on a lot of projects, and the code is
@@ -128,10 +128,15 @@ A lot of the actively poisonous people who contact you aren’t providing any re
 value to you, and they’re probably never going to.  If you can remove them
 somehow you’re probably not losing anything, but you’ll be gaining a whole lot
 personally.&lt;/p&gt;
-&lt;/div&gt;
-&lt;/div&gt;
+&lt;/section&gt;
+&lt;/section&gt;
 </content>
     <link href="https://jnrowe.github.io/thoughts/burn_out.html" rel="alternate"/>
+    <summary>A few years ago I burned out on Open Source projects, to the point that it was
+close to impacting other parts of my life.  I have only myself to blame as
+I didn’t manage to distance myself at all well.  Distancing yourself is not easy
+to do when your fun hobby for relaxation is the thing that is working against
+you.</summary>
     <category term="oss" label="oss"/>
     <category term="burnout" label="burnout"/>
     <category term="life" label="life"/>

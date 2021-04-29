@@ -4,7 +4,8 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17: http://docutils.sourceforge.net/" />
+
     <title>BTS as a task manager &#8212; JNRowe</title>
     <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/alabaster.css" type="text/css" />
@@ -74,7 +75,7 @@
       5 minutes
     </p>
   
-  <div class="section" id="bts-as-a-task-manager">
+  <section id="bts-as-a-task-manager">
 <h1><abbr title="Bug Tracking System">BTS</abbr> as a task manager<a class="headerlink" href="#bts-as-a-task-manager" title="Permalink to this headline">¶</a></h1>
 <p>Tom Marshall asks over the cooler:</p>
 <blockquote>
@@ -110,7 +111,7 @@ bug databases created by the upstream project.</p>
 </div>
 <p>The following examples use an older version of <strong class="command">be</strong> that you can
 download as a <a class="reference external" href="http://www.jnrowe.ukfsn.org/_static/be-0.0.193.tar.bz2">tarball</a> and doesn’t require <strong class="command">bzr</strong>.</p>
-<div class="section" id="setting-be-up">
+<section id="setting-be-up">
 <h2>Setting <strong class="command">be</strong> up<a class="headerlink" href="#setting-be-up" title="Permalink to this headline">¶</a></h2>
 <p>Before we use <strong class="command">be</strong> we must prepare it.  In the example that follows
 we’re going to create a new directory under the control of <a class="reference external" href="http://www.git-scm.com/">git</a>, and tell
@@ -123,8 +124,8 @@ we’re going to create a new directory under the control of <a class="reference
 <span class="go">Directory initialized.</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="filing-bugs">
+</section>
+<section id="filing-bugs">
 <h2>Filing bugs<a class="headerlink" href="#filing-bugs" title="Permalink to this headline">¶</a></h2>
 <p>We can easily file new bugs, in the next snippet we can see two bugs being
 filed.  Bugs are identified by a <abbr title="Universally Unique IDentifier">UUID</abbr>,
@@ -146,8 +147,8 @@ to be assigned.  As we didn’t set a severity level for <code class="docutils l
 default of <code class="docutils literal notranslate"><span class="pre">minor</span></code>.  A comment was also made on bug <code class="docutils literal notranslate"><span class="pre">ec4</span></code>, and if we hadn’t
 specified the comment on the command line it would open our default editor to
 add the comment.</p>
-</div>
-<div class="section" id="querying-bugs">
+</section>
+<section id="querying-bugs">
 <h2>Querying bugs<a class="headerlink" href="#querying-bugs" title="Permalink to this headline">¶</a></h2>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> be list
 <span class="go">ec4:os: This is a second bug</span>
@@ -193,8 +194,8 @@ we use the <strong class="command">be show</strong> command:</p>
 <span class="go">Comments are easy</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="editing-bugs">
+</section>
+<section id="editing-bugs">
 <h2>Editing bugs<a class="headerlink" href="#editing-bugs" title="Permalink to this headline">¶</a></h2>
 <p>We can change the bug status with <strong class="command">be status</strong>, see the output from
 <strong class="command">be help status</strong> for available values.</p>
@@ -222,16 +223,16 @@ or by calling <strong class="command">be list</strong> with filtering options.</
 <span class="go">Comments are easy</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="conclusions">
+</section>
+<section id="conclusions">
 <h2>Conclusions<a class="headerlink" href="#conclusions" title="Permalink to this headline">¶</a></h2>
 <p>That really is all it takes to use <strong class="command">be</strong>, and that is why I find
 a <abbr title="Bug Tracking System">BTS</abbr> to be a nice solution for managing all kinds of random tasks.  I have
 a Bugs Everywhere database in my home directory that over the past year has
 stored just over 600 bugs from shopping lists to actual bugs with my
 configurations files, and I’ve apparently managed to complete 95% of them!</p>
-</div>
-<div class="section" id="bonus-material">
+</section>
+<section id="bonus-material">
 <h2>Bonus material<a class="headerlink" href="#bonus-material" title="Permalink to this headline">¶</a></h2>
 <p>One of the little tricks I like to do is override the <strong class="command">cd</strong> command to
 automatically display the bug list when I enter a directory that contains a Bugs
@@ -248,8 +249,8 @@ Everywhere database, and it is very simple to do:</p>
 <p>It could be improved to take settings to filter the bug list or all manner of
 other cool things, but that is why it has a “See gist #x” label next to it.
 Feel free to post updates to the gist!</p>
-</div>
-</div>
+</section>
+</section>
 
     <hr>
 

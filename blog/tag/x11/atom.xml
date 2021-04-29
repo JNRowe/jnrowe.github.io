@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <id>https://jnrowe.github.io/</id>
   <title>JNRowe - Posts tagged X11</title>
-  <updated>2021-04-18T11:22:04.862282+00:00</updated>
+  <updated>2021-04-29T22:37:59.590010+00:00</updated>
   <link href="https://jnrowe.github.io/"/>
   <link href="https://jnrowe.github.io/blog/tag/x11/atom.xml" rel="self"/>
-  <generator uri="https://ablog.readthedocs.org/" version="0.10.17">ABlog</generator>
+  <generator uri="https://ablog.readthedocs.org/" version="0.10.18">ABlog</generator>
   <subtitle>Ramblings of a tired mind</subtitle>
   <entry>
     <id>https://jnrowe.github.io/articles/tips/Sharing_Xresources_between_systems.html</id>
@@ -14,7 +14,7 @@
     <author>
       <name>James Rowe</name>
     </author>
-    <content type="html">&lt;div class="section" id="sharing-xresources-between-systems"&gt;
+    <content type="html">&lt;section id="sharing-xresources-between-systems"&gt;
 
 &lt;p&gt;In amongst the rants in our watercooler channel at work comes this question:&lt;/p&gt;
 &lt;blockquote&gt;
@@ -26,7 +26,7 @@ directory in a &lt;a class="reference external" href="http://www.git-scm.com/"&g
 use different options on different machines and doesn’t relish the idea of
 having to pull and rebase branches just to keep files in sync.  Of course, he
 doesn’t have to do that and that is the point of this tip.&lt;/p&gt;
-&lt;div class="section" id="basic-conditionals"&gt;
+&lt;section id="basic-conditionals"&gt;
 &lt;h2&gt;Basic conditionals&lt;/h2&gt;
 &lt;p&gt;With great foresight the authors of &lt;a class="reference external" href="http://www.xfree86.org/current/xrdb.1.html"&gt;xrdb&lt;/a&gt; decided that our &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;Xresources&lt;/span&gt;&lt;/code&gt; file
 should be preprocessed before it is used, the default preprocessor is
@@ -54,8 +54,8 @@ programs.  Or we can define different options at runtime by specifying values
 to &lt;strong class="command"&gt;xrdb&lt;/strong&gt;, such as &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;xrdb&lt;/span&gt; &lt;span class="pre"&gt;-DFIXED_FONT=xft:Monospace:pixelsize=10&lt;/span&gt;&lt;/code&gt;.
 And don’t worry, &lt;strong class="command"&gt;cpp&lt;/strong&gt; is smart enough to cope with the use &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;=&lt;/span&gt;&lt;/code&gt; in
 our definition.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="section" id="per-system-conditionals"&gt;
+&lt;/section&gt;
+&lt;section id="per-system-conditionals"&gt;
 &lt;h2&gt;Per system conditionals&lt;/h2&gt;
 &lt;p&gt;On one system I use &lt;a class="reference external" href="http://www.levien.com/type/myfonts/inconsolata.html"&gt;Inconsolata&lt;/a&gt; is not installed, so the configuration above
 wouldn’t work on it.  &lt;strong class="command"&gt;xrdb&lt;/strong&gt; gives us a way around the problem though,
@@ -78,8 +78,8 @@ it defines a set of symbols we can use including one to test the system’s
 client name.  Using these it is easy to configure systems where the server
 and clients are on different machines.&lt;/p&gt;
 &lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="section" id="conditionals-for-server-options"&gt;
+&lt;/section&gt;
+&lt;section id="conditionals-for-server-options"&gt;
 &lt;h2&gt;Conditionals for server options&lt;/h2&gt;
 &lt;p&gt;You can also change configured settings based on the extensions loaded in to the
 server, for example to disable the screensaver in &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;muxi&lt;/span&gt;&lt;/code&gt; if the &lt;abbr title="Display Power Management Signalling"&gt;DPMS&lt;/abbr&gt; extension is supported we’d test for
@@ -89,8 +89,8 @@ server, for example to disable the screensaver in &lt;code class="docutils liter
 &lt;span class="cp"&gt;#endif&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="section" id="testing-your-resource-files"&gt;
+&lt;/section&gt;
+&lt;section id="testing-your-resource-files"&gt;
 &lt;h2&gt;Testing your resource files&lt;/h2&gt;
 &lt;p&gt;When you’re testing your own &lt;code class="file docutils literal notranslate"&gt;&lt;span class="pre"&gt;~/.Xresources&lt;/span&gt;&lt;/code&gt; file you can use the
 &lt;code class="xref std std-option docutils literal notranslate"&gt;&lt;span class="pre"&gt;-n&lt;/span&gt;&lt;/code&gt; option with &lt;strong class="command"&gt;xrdb&lt;/strong&gt;, it tells &lt;strong class="command"&gt;xrdb&lt;/strong&gt; to dump the
@@ -100,8 +100,8 @@ without having to open and close applications constantly.  You can also define
 and cancel symbol definitions with the &lt;code class="xref std std-option docutils literal notranslate"&gt;&lt;span class="pre"&gt;-D&lt;/span&gt;&lt;/code&gt; and &lt;code class="xref std std-option docutils literal notranslate"&gt;&lt;span class="pre"&gt;-U&lt;/span&gt;&lt;/code&gt; options
 for &lt;strong class="command"&gt;xrdb&lt;/strong&gt;, this allows you to test your modifications that rely on
 symbols that are normally exported by &lt;strong class="command"&gt;xrdb&lt;/strong&gt;.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="section" id="using-a-more-featureful-preprocessor"&gt;
+&lt;/section&gt;
+&lt;section id="using-a-more-featureful-preprocessor"&gt;
 &lt;h2&gt;Using a more featureful preprocessor&lt;/h2&gt;
 &lt;p&gt;You can also choose a different preprocessor if &lt;strong class="command"&gt;cpp&lt;/strong&gt; isn’t up to your
 needs by specifying a &lt;strong class="command"&gt;-cpp&lt;/strong&gt; option to &lt;strong class="command"&gt;xrdb&lt;/strong&gt;.  The only
@@ -110,10 +110,11 @@ cancelling and &lt;a class="reference external" href="https://docs.python.org/3/
 restrictions is &lt;a class="reference external" href="http://www.gnu.org/software/m4/m4.html"&gt;m4&lt;/a&gt;, and it might be a good choice if you wish to do more
 advanced things in your configuration file such as fancy filtering or the use
 of loops for defining colour tables.&lt;/p&gt;
-&lt;/div&gt;
-&lt;/div&gt;
+&lt;/section&gt;
+&lt;/section&gt;
 </content>
     <link href="https://jnrowe.github.io/articles/tips/Sharing_Xresources_between_systems.html" rel="alternate"/>
+    <summary>In amongst the rants in our watercooler channel at work comes this question:</summary>
     <category term="X11" label="X11"/>
     <category term="styling" label="styling"/>
     <published>2009-10-05T00:00:00+01:00</published>
@@ -125,7 +126,7 @@ of loops for defining colour tables.&lt;/p&gt;
     <author>
       <name>James Rowe</name>
     </author>
-    <content type="html">&lt;div class="section" id="finding-a-windows-owner"&gt;
+    <content type="html">&lt;section id="finding-a-windows-owner"&gt;
 
 &lt;p&gt;Rach Holmes asks on our Linux list:&lt;/p&gt;
 &lt;blockquote&gt;
@@ -133,7 +134,7 @@ of loops for defining colour tables.&lt;/p&gt;
 &lt;/div&gt;&lt;/blockquote&gt;
 &lt;p&gt;Jack McIntyre made a couple of outstanding correct guesses, but predictably Rach
 still wanted to know a generic solution and I offer this tip in response.&lt;/p&gt;
-&lt;div class="section" id="the-easy-way"&gt;
+&lt;section id="the-easy-way"&gt;
 &lt;h2&gt;The easy way&lt;/h2&gt;
 &lt;p&gt;Many windows define a &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;WM_COMMAND&lt;/span&gt;&lt;/code&gt; property that is set to the command name of
 the application, if that exists all we have to do is read it:&lt;/p&gt;
@@ -144,8 +145,8 @@ the application, if that exists all we have to do is read it:&lt;/p&gt;
 &lt;p&gt;However, not all applications set this property.  Examples of applications that
 don’t set this property include &lt;a class="reference external" href="http://www.mozilla.com/firefox"&gt;firefox&lt;/a&gt; and &lt;a class="reference external" href="http://www.gimp.org/"&gt;gimp&lt;/a&gt;.  In fact, many of the modern
 applications you find on desktop systems don’t set this property at all.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="section" id="the-other-way"&gt;
+&lt;/section&gt;
+&lt;section id="the-other-way"&gt;
 &lt;h2&gt;The other way&lt;/h2&gt;
 &lt;p&gt;&lt;a class="reference external" href="http://standards.freedesktop.org/wm-spec/wm-spec-1.3.html"&gt;EWMH&lt;/a&gt;, the Extended Window Manager Hints standard, defines a property called
 &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;_NET_WM_PID&lt;/span&gt;&lt;/code&gt; that, if defined, is the process id of the application that
@@ -172,8 +173,8 @@ output.&lt;/p&gt;
 &lt;p&gt;The &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;cmdline&lt;/span&gt;&lt;/code&gt; value for the process from &lt;a class="reference external" href="http://blogs.sun.com/eschrock/entry/the_power_of_proc"&gt;procfs&lt;/a&gt; is finally read.  The
 &lt;strong class="command"&gt;tr&lt;/strong&gt; command is needed because options are separated by null
 terminators.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="section" id="the-problems"&gt;
+&lt;/section&gt;
+&lt;section id="the-problems"&gt;
 &lt;h2&gt;The problems&lt;/h2&gt;
 &lt;p&gt;Back to the original question and Rach was looking for a way to stop the window
 from showing up, the immediate response to the annoying window problem is to
@@ -187,10 +188,11 @@ it happens with all applications that operate in this way.  Sending
 a &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;SIGTERM&lt;/span&gt;&lt;/code&gt; to every terminal opened by &lt;strong class="command"&gt;urxvtd&lt;/strong&gt; probably isn’t what
 we would want to do, so you should always think very carefully before sending
 terminate signals.&lt;/p&gt;
-&lt;/div&gt;
-&lt;/div&gt;
+&lt;/section&gt;
+&lt;/section&gt;
 </content>
     <link href="https://jnrowe.github.io/articles/tips/Finding_a_windows_owner.html" rel="alternate"/>
+    <summary>Rach Holmes asks on our Linux list:</summary>
     <category term="X11" label="X11"/>
     <published>2009-10-06T00:00:00+01:00</published>
   </entry>

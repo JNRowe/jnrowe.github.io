@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <id>https://jnrowe.github.io/</id>
   <title>JNRowe - Posts tagged testing</title>
-  <updated>2021-04-18T11:22:11.658028+00:00</updated>
+  <updated>2021-04-29T22:38:04.487947+00:00</updated>
   <link href="https://jnrowe.github.io/"/>
   <link href="https://jnrowe.github.io/blog/tag/testing/atom.xml" rel="self"/>
-  <generator uri="https://ablog.readthedocs.org/" version="0.10.17">ABlog</generator>
+  <generator uri="https://ablog.readthedocs.org/" version="0.10.18">ABlog</generator>
   <subtitle>Ramblings of a tired mind</subtitle>
   <entry>
     <id>https://jnrowe.github.io/articles/tdd_distros.html</id>
@@ -14,13 +14,13 @@
     <author>
       <name>James Rowe</name>
     </author>
-    <content type="html">&lt;div class="section" id="tdd-distro-development"&gt;
+    <content type="html">&lt;section id="tdd-distro-development"&gt;
 
 &lt;p&gt;Using &lt;abbr title="Test Driven Development"&gt;TDD&lt;/abbr&gt; for distribution development is a hot topic in some of the more
 geeky circles I move in, and I’m very happy about this.  Anything that
 increases the robustness of my desktop computer, my phone or any other device
 I use is a great goal!&lt;/p&gt;
-&lt;div class="section" id="why"&gt;
+&lt;section id="why"&gt;
 &lt;h2&gt;Why?&lt;/h2&gt;
 &lt;p&gt;This answer should be obvious; more testing is good.  However, what about the
 current system needs improving?&lt;/p&gt;
@@ -34,8 +34,8 @@ often discovered before a package is stabilised.&lt;/p&gt;
 previously fixed bugs.  This, by itself, is a reason to look at alternatives.
 Fixing the same bug more than once is an horrendous waste of developer
 resources.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="section" id="how"&gt;
+&lt;/section&gt;
+&lt;section id="how"&gt;
 &lt;h2&gt;How?&lt;/h2&gt;
 &lt;p&gt;We, the fine folks of AST’s London office, already use a test-based
 stabilisation policy in the preparation of our distribution images.  Adding
@@ -109,8 +109,8 @@ For example, the &lt;a class="reference external" href="https://pypi.python.org/
 that are run when bumping or stabilising the package, all of which are cribbed
 from my actual &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;blockdiag&lt;/span&gt;&lt;/code&gt; usage.  This massively reduces the time required
 to evaluate a package at bump time.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="section" id="result"&gt;
+&lt;/section&gt;
+&lt;section id="result"&gt;
 &lt;h2&gt;Result?&lt;/h2&gt;
 &lt;p&gt;The time it takes to stabilise, or bump, a package may be massively reduced
 while simultaneously increasing the robustness of the packages.  This is a huge
@@ -125,8 +125,8 @@ existing content as input for tests.  The use of existing input makes writing
 the test faster and means each test exercises functionality we actually require,
 but it also means we occasionally can’t submit the data upstream owing to
 licensing concerns.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="section" id="bonus"&gt;
+&lt;/section&gt;
+&lt;section id="bonus"&gt;
 &lt;h2&gt;Bonus&lt;/h2&gt;
 &lt;p&gt;I’ve used the upstream supported &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;shelldoctest&lt;/span&gt;&lt;/code&gt; method for writing tests on
 this page, but you can also easily specify them in &lt;a class="reference external" href="http://docutils.sourceforge.net/docs/user/rst/"&gt;reST syntax&lt;/a&gt; files too.
@@ -165,10 +165,14 @@ a &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;reST&
 &lt;dd&gt;&lt;p&gt;Okay, it was me.  I’ll confess.&lt;/p&gt;
 &lt;/dd&gt;
 &lt;/dl&gt;
-&lt;/div&gt;
-&lt;/div&gt;
+&lt;/section&gt;
+&lt;/section&gt;
 </content>
     <link href="https://jnrowe.github.io/articles/tdd_distros.html" rel="alternate"/>
+    <summary>Using TDD for distribution development is a hot topic in some of the more
+geeky circles I move in, and I’m very happy about this.  Anything that
+increases the robustness of my desktop computer, my phone or any other device
+I use is a great goal!</summary>
     <category term="devel" label="devel"/>
     <category term="testing" label="testing"/>
     <published>2011-06-13T00:00:00+01:00</published>

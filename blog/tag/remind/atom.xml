@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <id>https://jnrowe.github.io/</id>
   <title>JNRowe - Posts tagged remind</title>
-  <updated>2021-04-18T11:22:11.375315+00:00</updated>
+  <updated>2021-04-29T22:38:04.046460+00:00</updated>
   <link href="https://jnrowe.github.io/"/>
   <link href="https://jnrowe.github.io/blog/tag/remind/atom.xml" rel="self"/>
-  <generator uri="https://ablog.readthedocs.org/" version="0.10.17">ABlog</generator>
+  <generator uri="https://ablog.readthedocs.org/" version="0.10.18">ABlog</generator>
   <subtitle>Ramblings of a tired mind</subtitle>
   <entry>
     <id>https://jnrowe.github.io/articles/tips/Kick_me_birthday_reminders.html</id>
@@ -14,7 +14,7 @@
     <author>
       <name>James Rowe</name>
     </author>
-    <content type="html">&lt;div class="section" id="kick-me-birthday-reminders"&gt;
+    <content type="html">&lt;section id="kick-me-birthday-reminders"&gt;
 
 &lt;p&gt;Tony Collins asks on the EADS Linux list:&lt;/p&gt;
 &lt;blockquote&gt;
@@ -91,9 +91,10 @@ file by editing &lt;code class="file docutils literal notranslate"&gt;&lt;span c
 Or, you could be like me and have a post commit hook for &lt;a class="reference external" href="http://www.git-scm.com/"&gt;git&lt;/a&gt; to manage this…
 because you are keeping your home directory version controlled as a sanity
 measure I hope!&lt;/p&gt;
-&lt;/div&gt;
+&lt;/section&gt;
 </content>
     <link href="https://jnrowe.github.io/articles/tips/Kick_me_birthday_reminders.html" rel="alternate"/>
+    <summary>Tony Collins asks on the EADS Linux list:</summary>
     <category term="abook" label="abook"/>
     <category term="remind" label="remind"/>
     <published>2009-09-26T00:00:00+01:00</published>

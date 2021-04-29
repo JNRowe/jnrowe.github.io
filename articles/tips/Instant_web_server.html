@@ -4,7 +4,8 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17: http://docutils.sourceforge.net/" />
+
     <title>Instant web server &#8212; JNRowe</title>
     <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/alabaster.css" type="text/css" />
@@ -74,7 +75,7 @@
       3 minutes
     </p>
   
-  <div class="section" id="instant-web-server">
+  <section id="instant-web-server">
 <h1>Instant web server<a class="headerlink" href="#instant-web-server" title="Permalink to this headline">¶</a></h1>
 <p>Among the topics on our Linux list at work today was a question from Luke
 Fletcher that I was expecting to unleash a flurry of emotional responses:</p>
@@ -91,7 +92,7 @@ the question at hand, but surprisingly little dissent over the choices.</p>
 </div></blockquote>
 <p>I agree with Matt’s answer but I want to point a couple of possibly non-obvious
 web servers that they, and you, are likely to have installed already.</p>
-<div class="section" id="busybox-applet">
+<section id="busybox-applet">
 <h2>Busybox applet<a class="headerlink" href="#busybox-applet" title="Permalink to this headline">¶</a></h2>
 <p>All our Linux systems at the office include <a class="reference external" href="http://www.busybox.net/">busybox</a>, and in the configuration
 we use the <a class="reference external" href="http://www.busybox.net/downloads/BusyBox.html#httpd">httpd</a> applet is built.  It is very lightweight, and incredibly
@@ -113,8 +114,8 @@ server:</p>
 </div>
 <p><code class="docutils literal notranslate"><span class="pre">http_serve_location</span></code> is set elsewhere in my configuration file, so that I can
 keep per-machine settings separate.</p>
-</div>
-<div class="section" id="python-built-in">
+</section>
+<section id="python-built-in">
 <h2>Python built-in<a class="headerlink" href="#python-built-in" title="Permalink to this headline">¶</a></h2>
 <p><a class="reference external" href="http://www.python.org/">Python</a> comes with its own basic web server, and it is very easy to use:</p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> python2.6 -m SimpleHTTPServer <span class="m">8080</span>
@@ -136,8 +137,8 @@ keep per-machine settings separate.</p>
 <p>I’ve specified the port 8080 to both calls in the snippet above, by default the
 server port would be 8000.  If port 8000 is acceptable for you then you can save
 yourself five keystrokes.</p>
-</div>
-<div class="section" id="ruby-built-in">
+</section>
+<section id="ruby-built-in">
 <h2>Ruby built-in<a class="headerlink" href="#ruby-built-in" title="Permalink to this headline">¶</a></h2>
 <p><a class="reference external" href="http://www.ruby-lang.org/">ruby</a> also comes with its own web server, one that you’re probably already
 familiar with if you’re a <a class="reference external" href="http://www.rubyonrails.org/">rails</a> user, called <a class="reference external" href="http://www.webrick.org/">webrick</a>.  We need a little script
@@ -159,16 +160,16 @@ to use <code class="docutils literal notranslate"><span class="pre">webrick</spa
 </div>
 <p>This script will serve files from whatever directory is specified as its first
 argument.</p>
-</div>
-<div class="section" id="bonus">
+</section>
+<section id="bonus">
 <h2>Bonus<a class="headerlink" href="#bonus" title="Permalink to this headline">¶</a></h2>
 <p>Python also comes with a <abbr title="Common Gateway Interface">CGI</abbr>-capable version
 called <code class="docutils literal notranslate"><span class="pre">CGIHTTPServer</span></code> and a <abbr title="Extensible Markup Language">XML</abbr>-<abbr title="Remote Procedure Call">RPC</abbr> server
 called — this shouldn’t come as a surprise — <code class="docutils literal notranslate"><span class="pre">SimpleXMLRPCServer</span></code>.  They’re
 very useful for testing out ideas and concepts without having to set down lots
 of code.</p>
-</div>
-</div>
+</section>
+</section>
 
     <hr>
 

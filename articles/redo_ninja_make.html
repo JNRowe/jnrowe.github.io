@@ -4,7 +4,8 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17: http://docutils.sourceforge.net/" />
+
     <title>while $sun; do make hay; done &#8212; JNRowe</title>
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <link rel="stylesheet" href="../_static/alabaster.css" type="text/css" />
@@ -74,7 +75,7 @@
       12 minutes
     </p>
   
-  <div class="section" id="while-sun-do-make-hay-done">
+  <section id="while-sun-do-make-hay-done">
 <h1>while $sun; do <strong class="command">make</strong> hay; done<a class="headerlink" href="#while-sun-do-make-hay-done" title="Permalink to this headline">¶</a></h1>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
@@ -89,7 +90,7 @@ software world have lucked ourselves in to.</p>
 written <code class="file docutils literal notranslate"><span class="pre">Makefile</span></code>s, which is just plain ridiculous.  Nobody should be
 hand writing that much build infrastructure, even if it started with good
 intentions and a scant 120 lines.</p>
-<div class="section" id="which-make">
+<section id="which-make">
 <h2>Which <strong class="command">make</strong>?<a class="headerlink" href="#which-make" title="Permalink to this headline">¶</a></h2>
 <p>A hardly insignificant number of those 10,000 lines are to workaround
 incompatibilities in various tools that advertise themselves as <strong class="command">make</strong>.
@@ -126,8 +127,8 @@ support isn’t enabled in the packages for some reason, and the devs that use
 systems which refuse to ship a recent enough versions of <a class="reference external" href="https://www.gnu.org/software/make/make.html">GNU make</a> to avoid
 the GPLv3<a class="footnote-reference brackets" href="#id9" id="id2">2</a> don’t have it either.</p>
 <p>There has to be a better way…</p>
-</div>
-<div class="section" id="redo">
+</section>
+<section id="redo">
 <h2><strong class="command">redo</strong><a class="headerlink" href="#redo" title="Permalink to this headline">¶</a></h2>
 <p><abbr title="Daniel J. Bernstein">djb</abbr>’s <strong class="command">redo</strong> is a <em>huge</em> step in the right
 direction<a class="footnote-reference brackets" href="#id10" id="id3">3</a>, but its various implementations are plagued by many of the
@@ -187,8 +188,8 @@ controls than simply rebuilding <em>everything</em> by depending on your
 I even gave a talk on it at <abbr title="London Functional">LoFu</abbr> ‘16, and I know
 some people switched after hearing that as I’ve been fielding informal support
 requests ever since ;)</p>
-</div>
-<div class="section" id="gup">
+</section>
+<section id="gup">
 <h2><strong class="command">gup</strong><a class="headerlink" href="#gup" title="Permalink to this headline">¶</a></h2>
 <p>I want to give <a class="reference external" href="https://github.com/timbertson/gup/">Tim Cuthbertson’s gup</a> an honourable mention here.  <strong class="command">gup</strong> is
 an improved <strong class="command">redo</strong> implementation, but is wholly incompatible with it.  It is
@@ -224,15 +225,15 @@ considering using <strong class="command">redo</strong>.</p>
 other projects that he maintains and it has been a good experience each time.
 I’m sure you’ll get the same great service if you were to find a problem in
 <strong class="command">gup</strong>!</p>
-</div>
-<div class="section" id="ninja">
+</section>
+<section id="ninja">
 <h2><strong class="command">ninja</strong><a class="headerlink" href="#ninja" title="Permalink to this headline">¶</a></h2>
 <p>Enter the <a class="reference external" href="https://ninja-build.org/">ninja</a>.  I’ve switched many projects to
 <strong class="command">ninja</strong>, but not because it is my new favourite tool.  I’ve switched entirely
 because it <em>feels</em> like it has the momentum to supplant <strong class="command">make</strong>.  Given the
 choice I’d honestly rather see a <strong class="command">redo</strong> implementation such as <strong class="command">gup</strong> succeed,
 but <strong class="command">ninja</strong> is a great alternative.</p>
-<div class="sidebar">
+<aside class="sidebar">
 <p class="sidebar-title">Implementations</p>
 <p>In a <em>massive</em> change from the previous sections I can mention a tool with
 alternatives where compatibility is <strong>100%</strong>.  <a class="reference external" href="https://github.com/michaelforney/samurai/">samurai</a> is an alternative
@@ -241,7 +242,7 @@ incompatible feature changes.  <a class="reference external" href="http://shakeb
 support for processing <code class="file docutils literal notranslate"><span class="pre">build.ninja</span></code> baked in, and has some
 interesting functionality for inspecting your builds that <strong class="command">ninja</strong> itself
 doesn’t provide.</p>
-</div>
+</aside>
 <p>I’ll make a confession here, my home directory now requires <strong class="command">ninja</strong>.  Yes, my
 config files have made the progression from <strong class="command">make</strong> to <strong class="command">redo</strong> to <strong class="command">gup</strong> and now
 to <strong class="command">ninja</strong>.</p>
@@ -251,12 +252,14 @@ to <strong class="command">ninja</strong>.</p>
 <span class="go">423</span>
 </pre></div>
 </div>
-<div class="figure align-default" id="id15">
+<figure class="align-default" id="id15">
 <a class="reference internal image-reference" href="../_images/homeninja.png"><img alt="Digraph of home directory’s top level build" src="../_images/homeninja.png" style="width: 390.25px; height: 186.25px;" /></a>
-<p class="caption"><span class="caption-text">A chunk of the <abbr title="Directed Acyclic Graph">DAG</abbr> for my home directory under <strong class="command">ninja</strong>.  The full image is
+<figcaption>
+<p><span class="caption-text">A chunk of the <abbr title="Directed Acyclic Graph">DAG</abbr> for my home directory under <strong class="command">ninja</strong>.  The full image is
 both <em>chock full</em> of private data and 9 <abbr title="MegaBytes">MB</abbr>(29000 pixels
 tall), so I’ll save all of us from that.</span><a class="headerlink" href="#id15" title="Permalink to this image">¶</a></p>
-</div>
+</figcaption>
+</figure>
 <p>We’ve already seen a benefit of <strong class="command">ninja</strong> here, it can immediately display
 a <abbr title="Directed Acyclic Graph">DAG</abbr> to help in debugging by giving the option <code class="docutils literal notranslate"><span class="pre">-t</span> <span class="pre">graph</span></code>.  While both
 <strong class="command">gup</strong> and <strong class="command">redo</strong> can be easily tamed to produce a simple <a class="reference external" href="https://www.graphviz.org/">graphviz</a> image as
@@ -306,7 +309,7 @@ work is below:</p>
 to work with more complex builds.  You might even find you can get away with
 a tiny bit of scripting around <a class="reference external" href="https://pypi.python.org/pypi/ninja_syntax">ninja_syntax</a>, but the manual work will
 quickly build up with that approach.</p>
-<div class="section" id="meson">
+<section id="meson">
 <h3><strong class="command">meson</strong><a class="headerlink" href="#meson" title="Permalink to this headline">¶</a></h3>
 <p>The <a class="reference external" href="http://mesonbuild.com/">meson build system</a> is probably the frontrunner today.</p>
 <p>In a move that feels like it is simply meant to <a class="reference external" href="http://suckless.org/philosophy/">annoy the people behind
@@ -360,8 +363,8 @@ module when the project grew, and eventually changed to <strong class="command">
 edits when the project was eventually greenlit.  It was a really clean
 process, and one I’d follow again.</p>
 </div>
-</div>
-<div class="section" id="googles-kati">
+</section>
+<section id="googles-kati">
 <h3>Google’s kati<a class="headerlink" href="#googles-kati" title="Permalink to this headline">¶</a></h3>
 <p><a class="reference external" href="https://github.com/google/kati/">kati</a> is a nice first step if you’re currently using <strong class="command">make</strong> and want to try out
 <strong class="command">ninja</strong>.  It will generate a <code class="file docutils literal notranslate"><span class="pre">build.ninja</span></code> from your <code class="file docutils literal notranslate"><span class="pre">Makefile</span></code>,
@@ -380,9 +383,9 @@ I’m aware of it.  I’m ignoring it because of its inscrutable syntax, its
 multi-pass pre-build steps, and its love for running the <strong class="command">cmake</strong>
 binary thousands of times in each build.</p>
 </div>
-</div>
-</div>
-<div class="section" id="conclusions">
+</section>
+</section>
+<section id="conclusions">
 <h2>Conclusions<a class="headerlink" href="#conclusions" title="Permalink to this headline">¶</a></h2>
 <p>There are a lot of options available if you’re feeling growing pains with
 <strong class="command">make</strong>, or are just looking to tighten up builds.  I’ve covered a few here, but
@@ -435,8 +438,8 @@ starting point as it is not too complex, and implements a good subset of
 required interface.</p>
 </dd>
 </dl>
-</div>
-</div>
+</section>
+</section>
 
     <hr>
 

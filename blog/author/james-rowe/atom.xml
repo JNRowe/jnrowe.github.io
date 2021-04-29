@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <id>https://jnrowe.github.io/</id>
   <title>JNRowe - Posts by James Rowe</title>
-  <updated>2021-04-18T11:22:02.236006+00:00</updated>
+  <updated>2021-04-29T22:37:57.026492+00:00</updated>
   <link href="https://jnrowe.github.io/"/>
   <link href="https://jnrowe.github.io/blog/author/james-rowe/atom.xml" rel="self"/>
-  <generator uri="https://ablog.readthedocs.org/" version="0.10.17">ABlog</generator>
+  <generator uri="https://ablog.readthedocs.org/" version="0.10.18">ABlog</generator>
   <subtitle>Ramblings of a tired mind</subtitle>
   <entry>
     <id>https://jnrowe.github.io/thoughts/brexit_through_the_gift_shop.html</id>
@@ -14,7 +14,7 @@
     <author>
       <name>James Rowe</name>
     </author>
-    <content type="html">&lt;div class="section" id="brexit-through-the-gift-shop"&gt;
+    <content type="html">&lt;section id="brexit-through-the-gift-shop"&gt;
 
 &lt;div class="admonition note"&gt;
 &lt;p class="admonition-title"&gt;Note&lt;/p&gt;
@@ -30,7 +30,7 @@ could have a paradise in a few years.&lt;/p&gt;
 &lt;p&gt;On Monday morning, a friend and co-worker stood up and rage quit.  And I really
 do mean rage quit, it even included a short stand up quarrel in the car park.
 Obviously, nobody has spoke about &lt;em&gt;anything&lt;/em&gt; else since…&lt;/p&gt;
-&lt;div class="section" id="background"&gt;
+&lt;section id="background"&gt;
 &lt;h2&gt;Background&lt;/h2&gt;
 &lt;p&gt;We used to work in an environment where we could &lt;span class="xref std std-doc"&gt;reject projects&lt;/span&gt; on moral grounds with ease.  In fact, &lt;abbr title="Institutional Review Board"&gt;IRBs&lt;/abbr&gt; exist for that exact reason.  Times were good,
 projects were plentiful, and it was just the way things were.&lt;/p&gt;
@@ -48,8 +48,8 @@ on the more valued workers to object-in-unity to immoral works.  And there are
 a fair few who have only just discovered they were never holding the chips, and
 being let go is a real possibility(we’re &lt;em&gt;way&lt;/em&gt; beyond the pool of voluntary
 redundancies at this point).&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="section" id="collective-bargaining"&gt;
+&lt;/section&gt;
+&lt;section id="collective-bargaining"&gt;
 &lt;h2&gt;Collective bargaining&lt;/h2&gt;
 &lt;p&gt;So, object-in-unity is pretty much dead.  And it has really surprised me quite
 how fractious some of the arguments now are.  Given that people are basically
@@ -64,8 +64,8 @@ peripheral workers has gone too.&lt;/p&gt;
 just found out — independently wealthy through the sale of a &lt;span class="xref std std-doc"&gt;side project&lt;/span&gt; about five years ago.  Seemingly, a minority of people believe
 it would be okay if someone’s morals put them in the poor house, but less
 so if they have a cushion to soften the blow.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="section" id="whats-coming-next"&gt;
+&lt;/section&gt;
+&lt;section id="whats-coming-next"&gt;
 &lt;h2&gt;Whats coming next?&lt;/h2&gt;
 &lt;blockquote class="epigraph"&gt;
 &lt;div&gt;&lt;p&gt;Lisa is a sellout! Lisa is a sellout! Lisa, what’s a sellout?&lt;/p&gt;
@@ -98,10 +98,12 @@ what can to get through it as best we know how.&lt;/p&gt;
 other people with the necessary skills have been moved to Germany.&lt;/p&gt;
 &lt;/dd&gt;
 &lt;/dl&gt;
-&lt;/div&gt;
-&lt;/div&gt;
+&lt;/section&gt;
+&lt;/section&gt;
 </content>
     <link href="https://jnrowe.github.io/thoughts/brexit_through_the_gift_shop.html" rel="alternate"/>
+    <summary>This is a public letter to my co-workers, which probably shouldn’t be
+public.</summary>
     <category term="work" label="work"/>
     <category term="politics" label="politics"/>
     <published>2018-06-08T00:00:00+01:00</published>
@@ -113,7 +115,7 @@ other people with the necessary skills have been moved to Germany.&lt;/p&gt;
     <author>
       <name>James Rowe</name>
     </author>
-    <content type="html">&lt;div class="section" id="vim-with-day-night-colourschemes"&gt;
+    <content type="html">&lt;section id="vim-with-day-night-colourschemes"&gt;
 
 &lt;p&gt;The fabulous Miss Biddulph asks via our EADS Linux list:&lt;/p&gt;
 &lt;blockquote&gt;
@@ -124,7 +126,7 @@ different colourschemes depending on time?&lt;/p&gt;
 &lt;p&gt;So, like most things this can either be &lt;em&gt;really&lt;/em&gt; simple or horribly convoluted
 depending on where you wish to draw the usability line.  Because Laura is
 asking, we’ll scratch the surface of a few odd ways to do this.&lt;/p&gt;
-&lt;div class="section" id="the-simple-solution"&gt;
+&lt;section id="the-simple-solution"&gt;
 &lt;h2&gt;The simple solution&lt;/h2&gt;
 &lt;p&gt;In many ways this is related to my &lt;a class="reference external" href="https://github.com/JNRowe/awesome-timed-wallpaper/"&gt;awesome-timed-wallpaper&lt;/a&gt; hack, and to start
 with I’m going to proceed in a similar way.&lt;/p&gt;
@@ -156,12 +158,12 @@ notice eye strain&lt;/p&gt;&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;…&lt;/p&gt;&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;Create a &lt;a class="reference external" href="https://www.freedesktop.org/wiki/Software/systemd"&gt;systemd&lt;/a&gt; user timer that triggers at a given time ;)&lt;/p&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;/div&gt;
-&lt;div class="section" id="the-ridiculous-solution"&gt;
+&lt;/section&gt;
+&lt;section id="the-ridiculous-solution"&gt;
 &lt;h2&gt;The ridiculous solution&lt;/h2&gt;
 &lt;p&gt;We’ll need to figure out the actual daylight state.  There are an enormous
 number of options available.&lt;/p&gt;
-&lt;div class="section" id="with-python"&gt;
+&lt;section id="with-python"&gt;
 &lt;h3&gt;With Python&lt;/h3&gt;
 &lt;p&gt;My &lt;a class="reference external" href="https://pypi.org/project/upoints/"&gt;upoints&lt;/a&gt; package can calculate sunrise and sunset:&lt;/p&gt;
 &lt;div class="highlight-python notranslate"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="gp"&gt;&amp;gt;&amp;gt;&amp;gt; &lt;/span&gt;&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;upoints.point&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;Point&lt;/span&gt;
@@ -172,8 +174,8 @@ number of options available.&lt;/p&gt;
 &lt;span class="go"&gt;(datetime.time(4, 58), datetime.time(18, 49))&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="section" id="with-redshift"&gt;
+&lt;/section&gt;
+&lt;section id="with-redshift"&gt;
 &lt;h3&gt;With &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;redshift&lt;/span&gt;&lt;/code&gt;&lt;/h3&gt;
 &lt;p&gt;If you already use &lt;a class="reference external" href="http://jonls.dk/redshift/"&gt;redshift&lt;/a&gt; — and you should — getting the current state is
 quite easy.  Below is example output, and a quick &lt;a class="reference external" href="http://sed.sourceforge.net/"&gt;sed&lt;/a&gt;-based method to parse the
@@ -203,8 +205,8 @@ page for how to configure hooks.&lt;/p&gt;
 &lt;span class="o"&gt;}&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="section" id="camera-input"&gt;
+&lt;/section&gt;
+&lt;section id="camera-input"&gt;
 &lt;h3&gt;Camera input&lt;/h3&gt;
 &lt;p&gt;Assuming you have access to either a very good or &lt;em&gt;very&lt;/em&gt; bad webcam you could
 even script support that takes in to account cloud cover, or occultation caused
@@ -234,9 +236,9 @@ balancing data used from the image tags, and use that to infer the light level.
 &lt;a class="reference external" href="http://www.exiv2.org/"&gt;exiv2&lt;/a&gt; is great option to extract that data when available, and also supports
 &lt;a class="reference external" href="https://wiki.gnome.org/Projects/GObjectIntrospection"&gt;gobject introspection&lt;/a&gt; making it possible to use it with &lt;a class="reference external" href="https://github.com/pavouk/lgi"&gt;lgi&lt;/a&gt; in &lt;a class="reference external" href="https://awesomewm.org/"&gt;awesomewm&lt;/a&gt;
 for desktop colours too!&lt;/p&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="section" id="thoughts"&gt;
+&lt;/section&gt;
+&lt;/section&gt;
+&lt;section id="thoughts"&gt;
 &lt;h2&gt;Thoughts&lt;/h2&gt;
 &lt;p&gt;That is definitely enough of that rabbit hole for me right now… I’m really
 looking forward to seeing people code golf some other solutions, be they useful
@@ -251,10 +253,13 @@ have a switch statement.&lt;/p&gt;
 &lt;dd&gt;&lt;p&gt;No &lt;abbr title="HyperText Markup Language"&gt;HTML&lt;/abbr&gt; link, as vimdoc is still on vim 7.3&lt;/p&gt;
 &lt;/dd&gt;
 &lt;/dl&gt;
-&lt;/div&gt;
-&lt;/div&gt;
+&lt;/section&gt;
+&lt;/section&gt;
 </content>
     <link href="https://jnrowe.github.io/articles/tips/vim_day_night_colourscheme.html" rel="alternate"/>
+    <summary>The fabulous Miss Biddulph asks via our EADS Linux list:I lurve taqua in vim during the day, but now the days are getting shorter
+it is beginning to destroy me.  Is there a way to make vim use
+different colourschemes depending on time?</summary>
     <category term="vim" label="vim"/>
     <published>2018-09-15T00:00:00+01:00</published>
   </entry>
@@ -265,7 +270,7 @@ have a switch statement.&lt;/p&gt;
     <author>
       <name>James Rowe</name>
     </author>
-    <content type="html">&lt;div class="section" id="tiling-vs-tabbing"&gt;
+    <content type="html">&lt;section id="tiling-vs-tabbing"&gt;
 
 &lt;p&gt;A fairly large chunk of my developer friends fawn over &lt;a class="reference external" href="https://tmux.github.io/"&gt;tmux&lt;/a&gt; and &lt;a class="reference external" href="https://tools.suckless.org/tabbed"&gt;tabbed&lt;/a&gt;.
 These tools can give &lt;em&gt;the effect&lt;/em&gt; of a multiple window interface to your
@@ -286,14 +291,14 @@ monocle&lt;a class="footnote-reference brackets" href="#id6" id="id2"&gt;2&lt;/a
 horizontally split that to include a &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;vim&lt;/span&gt;&lt;/code&gt; instance, I can just tag those
 three windows and enable a layout that supports it&lt;a class="footnote-reference brackets" href="#id7" id="id3"&gt;3&lt;/a&gt;.  I think the basic
 message should be clear by now.&lt;/p&gt;
-&lt;div class="sidebar"&gt;
+&lt;aside class="sidebar"&gt;
 &lt;p class="sidebar-title"&gt;Window manager choice&lt;/p&gt;
 &lt;p&gt;I’ve used both &lt;a class="reference external" href="https://awesomewm.org/"&gt;awesomewm&lt;/a&gt; and &lt;a class="reference external" href="https://dwm.suckless.org/"&gt;dwm&lt;/a&gt; as examples here because I use both
 depending on what machine I’m in front of.&lt;/p&gt;
 &lt;p&gt;However, you can achieve the same effect with any number of tiling window
 managers, or with tools like &lt;a class="reference external" href="https://launchpad.net/winwrangler"&gt;winwrangler&lt;/a&gt;&lt;a class="footnote-reference brackets" href="#id8" id="id4"&gt;4&lt;/a&gt; if your favourite window
 manager has weaker layout management.&lt;/p&gt;
-&lt;/div&gt;
+&lt;/aside&gt;
 &lt;p&gt;You can go further too.  Say you want &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;vim&lt;/span&gt;&lt;/code&gt; and a browser window side by side
 while reading documentation but need that &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;vim&lt;/span&gt;&lt;/code&gt; instance next to a terminal
 for running tests, then you can simply apply two tags to the &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;vim&lt;/span&gt;&lt;/code&gt; instance
@@ -328,9 +333,14 @@ of just characters too.&lt;/p&gt;
 it the &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;gtkhotkey&lt;/span&gt;&lt;/code&gt; dependency &lt;a class="reference external" href="https://github.com/JNRowe/jnrowe-misc/commit/a9249166b917110ecb69714ca08d8ff28870a9c7"&gt;here&lt;/a&gt;.&lt;/p&gt;
 &lt;/dd&gt;
 &lt;/dl&gt;
-&lt;/div&gt;
+&lt;/section&gt;
 </content>
     <link href="https://jnrowe.github.io/articles/tiling_vs_tabbing.html" rel="alternate"/>
+    <summary>A fairly large chunk of my developer friends fawn over tmux and tabbed.
+These tools can give the effect of a multiple window interface to your
+terminal sessions, or apply a tabbed interface to any xembed supporting
+application respectively.  I’ll freely admit they’re pretty awesome at what
+they do1.Example of awesomewm’s tile.right layout</summary>
     <category term="desktop" label="desktop"/>
     <category term="tiling" label="tiling"/>
     <category term="tabbed" label="tabbed"/>
@@ -343,7 +353,7 @@ it the &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;
     <author>
       <name>James Rowe</name>
     </author>
-    <content type="html">&lt;div class="section" id="advent-of-code-2017"&gt;
+    <content type="html">&lt;section id="advent-of-code-2017"&gt;
 
 &lt;p&gt;A very evil friend pointed me to &lt;a class="reference external" href="http://adventofcode.com/"&gt;Advent of Code&lt;/a&gt; last December, and I burnt
 a fair chunk of time on it.  I mean… yeah, it &lt;em&gt;was&lt;/em&gt; hugely fun but be warned it
@@ -356,13 +366,13 @@ take this being 10 months late as a knock against &lt;abbr title="Advent of Code
 thinking we’re on the cusp of a one month countdown to it beginning
 again(hopefully).&lt;/p&gt;
 &lt;/div&gt;
-&lt;div class="section" id="why"&gt;
+&lt;section id="why"&gt;
 &lt;h2&gt;Why?&lt;/h2&gt;
 &lt;p&gt;This answer should be obvious; puzzles are fun, competitive ones where you
 prove yourself against co-workers and &lt;em&gt;total&lt;/em&gt; strangers even more so.  If that
 isn’t enough reason to have a go, then I simply don’t want to know you.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="section" id="lessons"&gt;
+&lt;/section&gt;
+&lt;section id="lessons"&gt;
 &lt;h2&gt;Lessons&lt;/h2&gt;
 &lt;p&gt;It is huge fun, but if you want to get on the leaderboards you &lt;em&gt;must&lt;/em&gt; be up
 when the puzzle is released.  Sadly, in the UK that means waking up for
@@ -375,8 +385,8 @@ study up on &lt;a class="reference external" href="https://docs.python.org/3/lib
 event on Christmas Day, in fact I took a break and finally mashed through the
 final week on the evening of the 28th.  Infinite time, unemployment or being
 smarter would be a great help here.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="section" id="approach"&gt;
+&lt;/section&gt;
+&lt;section id="approach"&gt;
 &lt;h2&gt;Approach&lt;/h2&gt;
 &lt;p&gt;With the exception of one day — where the answer just jumped out at me — I used
 exactly the same approach.  Whack out &lt;em&gt;a&lt;/em&gt; solution for the given samples that
@@ -463,12 +473,13 @@ for part one and part two of the puzzles.  Occasionally needing to refine my
 part one solution for an edge case that part two exposed.  I’ll spare you the
 blow-by-blow of the other 24 days, as frankly the code is the least interesting
 part of the puzzles in my opinion.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="section" id="implementation"&gt;
+&lt;/section&gt;
+&lt;section id="implementation"&gt;
 &lt;h2&gt;Implementation&lt;/h2&gt;
-&lt;div class="figure align-default" id="id9"&gt;
+&lt;figure class="align-default" id="id9"&gt;
 &lt;img alt="Languages used for tasks" src="../../_images/2018-10-19-aoc_calendar.png" style="width: 273.5px; height: 181.0px;" /&gt;
-&lt;p class="caption"&gt;&lt;span class="caption-text"&gt;Language frequency for &lt;abbr title="Advent of Code"&gt;AoC&lt;/abbr&gt; puzzles&lt;/span&gt;&lt;/p&gt;
+&lt;figcaption&gt;
+&lt;p&gt;&lt;span class="caption-text"&gt;Language frequency for &lt;abbr title="Advent of Code"&gt;AoC&lt;/abbr&gt; puzzles&lt;/span&gt;&lt;/p&gt;
 &lt;div class="legend"&gt;
 &lt;table class="docutils align-default"&gt;
 &lt;colgroup&gt;
@@ -502,14 +513,15 @@ part of the puzzles in my opinion.&lt;/p&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;
+&lt;/figcaption&gt;
+&lt;/figure&gt;
 &lt;p&gt;I used &lt;a class="reference external" href="https://www.python.org/"&gt;Python&lt;/a&gt; for over half the days, &lt;a class="reference external" href="http://pypy.org/"&gt;PyPY&lt;/a&gt; for a few where my immediate
 thought was to reach for brute forcing a solution with a naïve algorithm, &lt;a class="reference external" href="http://www.lua.org/"&gt;lua&lt;/a&gt;
 via &lt;a class="reference external" href="https://github.com/dpapavas/luaprompt"&gt;luaprompt&lt;/a&gt; on one day where it was clear all I really needed was
 a calculator, and &lt;a class="reference external" href="https://nim-lang.org/"&gt;nim&lt;/a&gt; on five days where I was using my Winterval break to
 learn &lt;a class="reference external" href="https://nim-lang.org/"&gt;nim&lt;/a&gt;.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="section" id="results"&gt;
+&lt;/section&gt;
+&lt;section id="results"&gt;
 &lt;h2&gt;Results&lt;/h2&gt;
 &lt;p&gt;I only made it on to the leaderboard once, and I was excited.&lt;/p&gt;
 &lt;blockquote&gt;
@@ -523,8 +535,8 @@ to feel better.&lt;/p&gt;
 &lt;p&gt;All told, I spent nine hours on &lt;abbr title="Advent of Code"&gt;AoC&lt;/abbr&gt; and those hours were spread pretty evenly
 between the “live” 2017 puzzles and the previous years.  I’m up for calling it
 personal development, and I’m hoping it returns this year!&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="section" id="tips"&gt;
+&lt;/section&gt;
+&lt;section id="tips"&gt;
 &lt;h2&gt;Tips&lt;/h2&gt;
 &lt;p&gt;Honestly, I’m going to push against the grain on this.  All my co-workers who
 have commented on this have said &lt;abbr title="Advent of Code"&gt;AoC&lt;/abbr&gt; is a great way to learn a new language,
@@ -553,8 +565,8 @@ editor’s &lt;a class="reference external" href="https://github.com/SirVer/ulti
 &lt;p&gt;And finally, keep your old solutions around either in files or in your &lt;abbr title="Read–Eval–Print Loop"&gt;REPL&lt;/abbr&gt;’s
 history as you might end up revisiting them, as was the case with &lt;a class="reference external" href="https://adventofcode.com/2017/day/14"&gt;day 14&lt;/a&gt; for
 example.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="section" id="hopes-for-2018"&gt;
+&lt;/section&gt;
+&lt;section id="hopes-for-2018"&gt;
 &lt;h2&gt;Hopes for 2018?&lt;/h2&gt;
 &lt;p&gt;Number one?  That it returns.  It was a great deal of fun.  It spawned a fair
 amount of interesting water cooler chat too.&lt;/p&gt;
@@ -585,10 +597,13 @@ now and learn to use &lt;a class="reference external" href="https://www.graphviz
 engineering problems.&lt;/p&gt;
 &lt;/dd&gt;
 &lt;/dl&gt;
-&lt;/div&gt;
-&lt;/div&gt;
+&lt;/section&gt;
+&lt;/section&gt;
 </content>
     <link href="https://jnrowe.github.io/articles/advent_of_code.html" rel="alternate"/>
+    <summary>A very evil friend pointed me to Advent of Code last December, and I burnt
+a fair chunk of time on it.  I mean… yeah, it was hugely fun but be warned it
+is enormously addictive1.Ta-da! Calendar complete</summary>
     <category term="adventofcode" label="adventofcode"/>
     <category term="coding" label="coding"/>
     <category term="puzzles" label="puzzles"/>
@@ -601,7 +616,7 @@ engineering problems.&lt;/p&gt;
     <author>
       <name>James Rowe</name>
     </author>
-    <content type="html">&lt;div class="section" id="file-renaming-for-the-lazy"&gt;
+    <content type="html">&lt;section id="file-renaming-for-the-lazy"&gt;
 
 &lt;p&gt;Over at HN in a &lt;a class="reference external" href="https://news.ycombinator.com/item?id=18290344"&gt;stolen topic&lt;/a&gt;:&lt;/p&gt;
 &lt;blockquote&gt;
@@ -614,7 +629,7 @@ offers that.&lt;/p&gt;
 &lt;/div&gt;&lt;/blockquote&gt;
 &lt;p&gt;There a few interesting replies there, but I want to flesh out my replies
 a little after the fact.&lt;/p&gt;
-&lt;div class="section" id="the-new-tool-solution"&gt;
+&lt;section id="the-new-tool-solution"&gt;
 &lt;h2&gt;The new tool solution&lt;/h2&gt;
 &lt;p&gt;My initial reply was&lt;a class="footnote-reference brackets" href="#id3" id="id1"&gt;1&lt;/a&gt;:&lt;/p&gt;
 &lt;blockquote&gt;
@@ -660,13 +675,15 @@ for me.&lt;/p&gt;
 of the application guard as above, you can even override bindings that you
 won’t find yourself using in &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;imv&lt;/span&gt;&lt;/code&gt; without breaking your shell or other
 tools.&lt;/p&gt;
-&lt;div class="figure align-default" id="id5"&gt;
+&lt;figure class="align-default" id="id5"&gt;
 &lt;a class="reference external image-reference" href="https://xkcd.com/1806/"&gt;&lt;img alt="Borrow Your Laptop" src="../../_images/borrow_your_laptop.png" style="width: 167.0px; height: 246.5px;" /&gt;&lt;/a&gt;
-&lt;p class="caption"&gt;&lt;span class="caption-text"&gt;As always, &lt;a class="reference external" href="https://xkcd.com/"&gt;xkcd&lt;/a&gt; has a pre-canned explanation for why you shouldn’t listen
+&lt;figcaption&gt;
+&lt;p&gt;&lt;span class="caption-text"&gt;As always, &lt;a class="reference external" href="https://xkcd.com/"&gt;xkcd&lt;/a&gt; has a pre-canned explanation for why you shouldn’t listen
 to me.  Image: &lt;a class="reference external" href="http://creativecommons.org/licenses/by-nc/2.5/"&gt;CC by-nc&lt;/a&gt;.&lt;/span&gt;&lt;/p&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="section" id="the-old-tool-solution"&gt;
+&lt;/figcaption&gt;
+&lt;/figure&gt;
+&lt;/section&gt;
+&lt;section id="the-old-tool-solution"&gt;
 &lt;h2&gt;The old tool solution&lt;/h2&gt;
 &lt;p&gt;My other comment there was:&lt;/p&gt;
 &lt;blockquote&gt;
@@ -721,8 +738,8 @@ modifiers, then be sure to take a look at &lt;code class="docutils literal notra
 makes heavy use of &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;zsh&lt;/span&gt;&lt;/code&gt;’s advanced features.  You may find it suits your
 way of working better than &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;qmv&lt;/span&gt;&lt;/code&gt; for example.&lt;/p&gt;
 &lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="section" id="thoughts"&gt;
+&lt;/section&gt;
+&lt;section id="thoughts"&gt;
 &lt;h2&gt;Thoughts&lt;/h2&gt;
 &lt;p&gt;Small tools that do incredible things are &lt;em&gt;everywhere&lt;/em&gt;, I clearly love
 &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;renameutils&lt;/span&gt;&lt;/code&gt; but I’d also like to hear about those things you enjoy too.
@@ -738,10 +755,13 @@ about them.&lt;/p&gt;
 search to look for times when I’ve mentioned it.&lt;/p&gt;
 &lt;/dd&gt;
 &lt;/dl&gt;
-&lt;/div&gt;
-&lt;/div&gt;
+&lt;/section&gt;
+&lt;/section&gt;
 </content>
     <link href="https://jnrowe.github.io/articles/tips/readline_rename_imv.html" rel="alternate"/>
+    <summary>Over at HN in a stolen topic:however, i miss one feature for which i’d use a filemanager: in-place file
+renaming. in most cases when i want to rename a file, i want to change
+a small part of it, and i don’t want to have to retype the whole filename.Borrow Your Laptop</summary>
     <category term="readline" label="readline"/>
     <category term="imv" label="imv"/>
     <category term="qmv" label="qmv"/>
@@ -755,7 +775,7 @@ search to look for times when I’ve mentioned it.&lt;/p&gt;
     <author>
       <name>James Rowe</name>
     </author>
-    <content type="html">&lt;div class="section" id="evil-emacs-steals-my-heart"&gt;
+    <content type="html">&lt;section id="evil-emacs-steals-my-heart"&gt;
 
 &lt;p&gt;&lt;em&gt;Many&lt;/em&gt; of my co-workers use &lt;a class="reference external" href="https://www.gnu.org/software/emacs/"&gt;emacs&lt;/a&gt;, it is probably the most popular editor on
 our team and I understand why.&lt;/p&gt;
@@ -766,7 +786,7 @@ catalyst for change, but I am pretty fickle so it may not have even been all
 that important.&lt;/p&gt;
 &lt;p&gt;Lately, I’ve found myself diving back in to &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;emacs&lt;/span&gt;&lt;/code&gt;.  In large part this is
 because of &lt;a class="reference external" href="https://github.com/emacs-evil/evil"&gt;evil&lt;/a&gt;; I can be &lt;em&gt;in&lt;/em&gt; &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;emacs&lt;/span&gt;&lt;/code&gt;, but &lt;em&gt;live&lt;/em&gt; &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;vim&lt;/span&gt;&lt;/code&gt;.&lt;/p&gt;
-&lt;div class="section" id="evil-isnt-always-evil"&gt;
+&lt;section id="evil-isnt-always-evil"&gt;
 &lt;h2&gt;Evil isn’t always evil&lt;/h2&gt;
 &lt;p&gt;So, &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;evil-mode&lt;/span&gt;&lt;/code&gt; &lt;em&gt;is&lt;/em&gt; awesome.&lt;/p&gt;
 &lt;p&gt;The kindest thing I can think to say about it is this: You’ll be angry when it
@@ -807,8 +827,8 @@ didn’t really know what the key might be or when you’d use it.  Be that
 mode, or &lt;a class="reference external" href="https://github.com/gentoo/elogv"&gt;elogv&lt;/a&gt;’s bindings that mean you have to issue &lt;kbd class="kbd docutils literal notranslate"&gt;dd&lt;/kbd&gt; to kill an
 entry.  Frankly, many of the emulation layers often feel like you’re just
 doubling the number of keys you have to press without any benefits&lt;a class="footnote-reference brackets" href="#id4" id="id1"&gt;1&lt;/a&gt;.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="section" id="quirking-the-quirky"&gt;
+&lt;/section&gt;
+&lt;section id="quirking-the-quirky"&gt;
 &lt;h2&gt;Quirking the quirky&lt;/h2&gt;
 &lt;img alt="Emacs screenshot" class="align-right" src="../../_images/evil_emacs.png" style="width: 407.5px; height: 270.0px;" /&gt;
 &lt;p&gt;I’ll freely admit I’ve &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;vim&lt;/span&gt;&lt;/code&gt;ified my &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;emacs&lt;/span&gt;&lt;/code&gt;.  I use &lt;a class="reference external" href="https://github.com/emacs-evil/evil"&gt;evil&lt;/a&gt;, my mode line
@@ -827,8 +847,8 @@ switch to &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&
 screenshot in the buffer for &lt;em&gt;this&lt;/em&gt; post.  This example may be quite pointless&lt;a class="footnote-reference brackets" href="#id5" id="id2"&gt;2&lt;/a&gt;, but it can be nice to have &lt;a class="reference external" href="https://www.graphviz.org/"&gt;graphviz&lt;/a&gt; output class hierarchies in to
 a buffer or database schema popups(like below).&lt;/p&gt;
 &lt;img alt="Schema diagram" class="align-left" src="../../_images/immoral_model.png" style="width: 174.5px; height: 141.5px;" /&gt;
-&lt;/div&gt;
-&lt;div class="section" id="walking-the-branches"&gt;
+&lt;/section&gt;
+&lt;section id="walking-the-branches"&gt;
 &lt;h2&gt;Walking the branches&lt;/h2&gt;
 &lt;p&gt;I’ve decided to really dig in this time, not just switch on a whim.  I’m using
 &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;emacs&lt;/span&gt;&lt;/code&gt; and &lt;em&gt;only&lt;/em&gt; &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;emacs&lt;/span&gt;&lt;/code&gt; for a month, followed by &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;vim&lt;/span&gt;&lt;/code&gt; and &lt;em&gt;only&lt;/em&gt;
@@ -856,10 +876,12 @@ is very little point publishing it, as it can be summed up as “James
 pressed &lt;kbd class="kbd compound docutils literal notranslate"&gt;&lt;kbd class="kbd docutils literal notranslate"&gt;&amp;lt;C&lt;/kbd&gt;-&lt;kbd class="kbd docutils literal notranslate"&gt;x&amp;gt;$something&lt;/kbd&gt;&lt;/kbd&gt; and was surprised.”&lt;/p&gt;
 &lt;/dd&gt;
 &lt;/dl&gt;
-&lt;/div&gt;
-&lt;/div&gt;
+&lt;/section&gt;
+&lt;/section&gt;
 </content>
     <link href="https://jnrowe.github.io/articles/evil_emacs_steals_my_heart.html" rel="alternate"/>
+    <summary>Many of my co-workers use emacs, it is probably the most popular editor on
+our team and I understand why.Emacs screenshot</summary>
     <category term="emacs" label="emacs"/>
     <category term="vim" label="vim"/>
     <category term="evil" label="evil"/>
@@ -872,7 +894,7 @@ pressed &lt;kbd class="kbd compound docutils literal notranslate"&gt;&lt;kbd cla
     <author>
       <name>James Rowe</name>
     </author>
-    <content type="html">&lt;div class="section" id="visualising-the-progress-of-time"&gt;
+    <content type="html">&lt;section id="visualising-the-progress-of-time"&gt;
 
 &lt;a class="reference external image-reference" href="https://www.progressbarosx.com/"&gt;&lt;img alt="Screenshot of Progress Bar OSX in action" src="../../_images/time_progress.jpg" /&gt;&lt;/a&gt;
 &lt;p&gt;A co-worker was demoing a user session today, and pointed out a neat tool for
@@ -899,12 +921,14 @@ MacOS, so we’ll need to make something similar.&lt;/p&gt;
             emulation.
         &lt;/span&gt;
     &lt;/p&gt;
-&lt;/div&gt;&lt;div class="figure align-default" id="id3"&gt;
+&lt;/div&gt;&lt;figure class="align-default" id="id3"&gt;
 &lt;a class="reference external image-reference" href="../_static/kitt.gif"&gt;&lt;img alt="Multi-band scanner in action" src="../../_images/kitt06.png" /&gt;&lt;/a&gt;
-&lt;p class="caption"&gt;&lt;span class="caption-text"&gt;Click the image for an animated GIF, I’ll spare you the flashing lights in
+&lt;figcaption&gt;
+&lt;p&gt;&lt;span class="caption-text"&gt;Click the image for an animated GIF, I’ll spare you the flashing lights in
 case you wish to read on.&lt;/span&gt;&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="section" id="step-one"&gt;
+&lt;/figcaption&gt;
+&lt;/figure&gt;
+&lt;section id="step-one"&gt;
 &lt;h2&gt;Step one&lt;/h2&gt;
 &lt;p&gt;First we’ll want to display the year:&lt;/p&gt;
 &lt;div class="highlight-sh notranslate"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;gdbar -w &lt;span class="m"&gt;1500&lt;/span&gt; -h &lt;span class="m"&gt;20&lt;/span&gt; &lt;span class="se"&gt;\&lt;/span&gt;
@@ -932,8 +956,8 @@ zero, ie zero on every day but December 31ˢᵗ.&lt;/p&gt;
 &lt;p&gt;We can repeat the same process for day ratio; using &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;date&lt;/span&gt; &lt;span class="pre"&gt;-d&lt;/span&gt; &lt;span class="pre"&gt;&amp;quot;00:00&amp;quot;&lt;/span&gt; &lt;span class="pre"&gt;+%s&lt;/span&gt;&lt;/code&gt; to
 calculate number of seconds passed from the 86400 we’ll see today.  And then
 simply using &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;date&lt;/span&gt; &lt;span class="pre"&gt;+%m&lt;/span&gt;&lt;/code&gt; to get today’s month as a number.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="section" id="step-two"&gt;
+&lt;/section&gt;
+&lt;section id="step-two"&gt;
 &lt;h2&gt;Step two&lt;/h2&gt;
 &lt;p&gt;We can definitely up our game here.  Why not use colours?  We’ll switch to
 &lt;a class="reference external" href="https://www.python.org/"&gt;Python&lt;/a&gt; now, as the gigantic standard library allows us to be lazy.&lt;/p&gt;
@@ -984,8 +1008,8 @@ like the following:&lt;/p&gt;
 &lt;p&gt;The &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;onstart=uncollapse&lt;/span&gt;&lt;/code&gt; attribute tell &lt;strong class="command"&gt;dzen2&lt;/strong&gt; that we want to see
 the full output on startup, without it we’d see just the title bar until we
 moved our pointer over the header.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="section" id="step-four"&gt;
+&lt;/section&gt;
+&lt;section id="step-four"&gt;
 &lt;h2&gt;Step four&lt;/h2&gt;
 &lt;p&gt;You can find the script I used &lt;a class="reference download internal" download="" href="../../_downloads/8bb0952b2cf5d96d60e8d4457de4c840/time_progress.py"&gt;&lt;code class="xref download docutils literal notranslate"&gt;&lt;span class="pre"&gt;here&lt;/span&gt;&lt;/code&gt;&lt;/a&gt;.  It isn’t
 pretty, but it will do.  If I come to depend on it I’m sure that I’ll make
@@ -994,8 +1018,8 @@ something better.&lt;/p&gt;
 about doing this yourself you should consider buying the &lt;a class="reference external" href="https://www.progressbarosx.com/"&gt;Progress Bar OSX&lt;/a&gt;
 app.  This document wouldn’t exist without it and rewarding creators is
 important, even when they ignore your chosen platform ;)&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="section" id="step"&gt;
+&lt;/section&gt;
+&lt;section id="step"&gt;
 &lt;h2&gt;Step ∞&lt;/h2&gt;
 &lt;p&gt;As always with any code that touches dates &lt;a class="reference external" href="https://en.m.wikipedia.org/wiki/Here_be_dragons"&gt;“Here be dragons”&lt;/a&gt;.  For example,
 I’ll leave it as an exercise for the reader how to handle calculations for days
@@ -1014,10 +1038,14 @@ years.&lt;/p&gt;
 this is new to you.&lt;/p&gt;
 &lt;/dd&gt;&lt;/dl&gt;
 
-&lt;/div&gt;
-&lt;/div&gt;
+&lt;/section&gt;
+&lt;/section&gt;
 </content>
     <link href="https://jnrowe.github.io/articles/march_toward_death.html" rel="alternate"/>
+    <summary>A co-worker was demoing a user session today, and pointed out a neat tool for
+MacOS that displays the “continual march toward death”.  That tool was
+Progress Bar OSX, and it is pretty cool.  Sadly it is only available for
+MacOS, so we’ll need to make something similar.Screenshot of colourful progress in time</summary>
     <category term="linux" label="linux"/>
     <category term="dzen" label="dzen"/>
     <published>2018-11-13T00:00:00+00:00</published>
@@ -1029,7 +1057,7 @@ this is new to you.&lt;/p&gt;
     <author>
       <name>James Rowe</name>
     </author>
-    <content type="html">&lt;div class="section" id="while-sun-do-make-hay-done"&gt;
+    <content type="html">&lt;section id="while-sun-do-make-hay-done"&gt;
 
 &lt;div class="admonition warning"&gt;
 &lt;p class="admonition-title"&gt;Warning&lt;/p&gt;
@@ -1044,7 +1072,7 @@ software world have lucked ourselves in to.&lt;/p&gt;
 written &lt;code class="file docutils literal notranslate"&gt;&lt;span class="pre"&gt;Makefile&lt;/span&gt;&lt;/code&gt;s, which is just plain ridiculous.  Nobody should be
 hand writing that much build infrastructure, even if it started with good
 intentions and a scant 120 lines.&lt;/p&gt;
-&lt;div class="section" id="which-make"&gt;
+&lt;section id="which-make"&gt;
 &lt;h2&gt;Which &lt;strong class="command"&gt;make&lt;/strong&gt;?&lt;/h2&gt;
 &lt;p&gt;A hardly insignificant number of those 10,000 lines are to workaround
 incompatibilities in various tools that advertise themselves as &lt;strong class="command"&gt;make&lt;/strong&gt;.
@@ -1081,8 +1109,8 @@ support isn’t enabled in the packages for some reason, and the devs that use
 systems which refuse to ship a recent enough versions of &lt;a class="reference external" href="https://www.gnu.org/software/make/make.html"&gt;GNU make&lt;/a&gt; to avoid
 the GPLv3&lt;a class="footnote-reference brackets" href="#id9" id="id2"&gt;2&lt;/a&gt; don’t have it either.&lt;/p&gt;
 &lt;p&gt;There has to be a better way…&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="section" id="redo"&gt;
+&lt;/section&gt;
+&lt;section id="redo"&gt;
 &lt;h2&gt;&lt;strong class="command"&gt;redo&lt;/strong&gt;&lt;/h2&gt;
 &lt;p&gt;&lt;abbr title="Daniel J. Bernstein"&gt;djb&lt;/abbr&gt;’s &lt;strong class="command"&gt;redo&lt;/strong&gt; is a &lt;em&gt;huge&lt;/em&gt; step in the right
 direction&lt;a class="footnote-reference brackets" href="#id10" id="id3"&gt;3&lt;/a&gt;, but its various implementations are plagued by many of the
@@ -1142,8 +1170,8 @@ controls than simply rebuilding &lt;em&gt;everything&lt;/em&gt; by depending on 
 I even gave a talk on it at &lt;abbr title="London Functional"&gt;LoFu&lt;/abbr&gt; ‘16, and I know
 some people switched after hearing that as I’ve been fielding informal support
 requests ever since ;)&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="section" id="gup"&gt;
+&lt;/section&gt;
+&lt;section id="gup"&gt;
 &lt;h2&gt;&lt;strong class="command"&gt;gup&lt;/strong&gt;&lt;/h2&gt;
 &lt;p&gt;I want to give &lt;a class="reference external" href="https://github.com/timbertson/gup/"&gt;Tim Cuthbertson’s gup&lt;/a&gt; an honourable mention here.  &lt;strong class="command"&gt;gup&lt;/strong&gt; is
 an improved &lt;strong class="command"&gt;redo&lt;/strong&gt; implementation, but is wholly incompatible with it.  It is
@@ -1179,15 +1207,15 @@ considering using &lt;strong class="command"&gt;redo&lt;/strong&gt;.&lt;/p&gt;
 other projects that he maintains and it has been a good experience each time.
 I’m sure you’ll get the same great service if you were to find a problem in
 &lt;strong class="command"&gt;gup&lt;/strong&gt;!&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="section" id="ninja"&gt;
+&lt;/section&gt;
+&lt;section id="ninja"&gt;
 &lt;h2&gt;&lt;strong class="command"&gt;ninja&lt;/strong&gt;&lt;/h2&gt;
 &lt;p&gt;Enter the &lt;a class="reference external" href="https://ninja-build.org/"&gt;ninja&lt;/a&gt;.  I’ve switched many projects to
 &lt;strong class="command"&gt;ninja&lt;/strong&gt;, but not because it is my new favourite tool.  I’ve switched entirely
 because it &lt;em&gt;feels&lt;/em&gt; like it has the momentum to supplant &lt;strong class="command"&gt;make&lt;/strong&gt;.  Given the
 choice I’d honestly rather see a &lt;strong class="command"&gt;redo&lt;/strong&gt; implementation such as &lt;strong class="command"&gt;gup&lt;/strong&gt; succeed,
 but &lt;strong class="command"&gt;ninja&lt;/strong&gt; is a great alternative.&lt;/p&gt;
-&lt;div class="sidebar"&gt;
+&lt;aside class="sidebar"&gt;
 &lt;p class="sidebar-title"&gt;Implementations&lt;/p&gt;
 &lt;p&gt;In a &lt;em&gt;massive&lt;/em&gt; change from the previous sections I can mention a tool with
 alternatives where compatibility is &lt;strong&gt;100%&lt;/strong&gt;.  &lt;a class="reference external" href="https://github.com/michaelforney/samurai/"&gt;samurai&lt;/a&gt; is an alternative
@@ -1196,7 +1224,7 @@ incompatible feature changes.  &lt;a class="reference external" href="http://sha
 support for processing &lt;code class="file docutils literal notranslate"&gt;&lt;span class="pre"&gt;build.ninja&lt;/span&gt;&lt;/code&gt; baked in, and has some
 interesting functionality for inspecting your builds that &lt;strong class="command"&gt;ninja&lt;/strong&gt; itself
 doesn’t provide.&lt;/p&gt;
-&lt;/div&gt;
+&lt;/aside&gt;
 &lt;p&gt;I’ll make a confession here, my home directory now requires &lt;strong class="command"&gt;ninja&lt;/strong&gt;.  Yes, my
 config files have made the progression from &lt;strong class="command"&gt;make&lt;/strong&gt; to &lt;strong class="command"&gt;redo&lt;/strong&gt; to &lt;strong class="command"&gt;gup&lt;/strong&gt; and now
 to &lt;strong class="command"&gt;ninja&lt;/strong&gt;.&lt;/p&gt;
@@ -1206,12 +1234,14 @@ to &lt;strong class="command"&gt;ninja&lt;/strong&gt;.&lt;/p&gt;
 &lt;span class="go"&gt;423&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
-&lt;div class="figure align-default" id="id15"&gt;
+&lt;figure class="align-default" id="id15"&gt;
 &lt;img alt="Digraph of home directory’s top level build" src="../../_images/homeninja.png" style="width: 390.25px; height: 186.25px;" /&gt;
-&lt;p class="caption"&gt;&lt;span class="caption-text"&gt;A chunk of the &lt;abbr title="Directed Acyclic Graph"&gt;DAG&lt;/abbr&gt; for my home directory under &lt;strong class="command"&gt;ninja&lt;/strong&gt;.  The full image is
+&lt;figcaption&gt;
+&lt;p&gt;&lt;span class="caption-text"&gt;A chunk of the &lt;abbr title="Directed Acyclic Graph"&gt;DAG&lt;/abbr&gt; for my home directory under &lt;strong class="command"&gt;ninja&lt;/strong&gt;.  The full image is
 both &lt;em&gt;chock full&lt;/em&gt; of private data and 9 &lt;abbr title="MegaBytes"&gt;MB&lt;/abbr&gt;(29000 pixels
 tall), so I’ll save all of us from that.&lt;/span&gt;&lt;/p&gt;
-&lt;/div&gt;
+&lt;/figcaption&gt;
+&lt;/figure&gt;
 &lt;p&gt;We’ve already seen a benefit of &lt;strong class="command"&gt;ninja&lt;/strong&gt; here, it can immediately display
 a &lt;abbr title="Directed Acyclic Graph"&gt;DAG&lt;/abbr&gt; to help in debugging by giving the option &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;-t&lt;/span&gt; &lt;span class="pre"&gt;graph&lt;/span&gt;&lt;/code&gt;.  While both
 &lt;strong class="command"&gt;gup&lt;/strong&gt; and &lt;strong class="command"&gt;redo&lt;/strong&gt; can be easily tamed to produce a simple &lt;a class="reference external" href="https://www.graphviz.org/"&gt;graphviz&lt;/a&gt; image as
@@ -1261,7 +1291,7 @@ work is below:&lt;/p&gt;
 to work with more complex builds.  You might even find you can get away with
 a tiny bit of scripting around &lt;a class="reference external" href="https://pypi.python.org/pypi/ninja_syntax"&gt;ninja_syntax&lt;/a&gt;, but the manual work will
 quickly build up with that approach.&lt;/p&gt;
-&lt;div class="section" id="meson"&gt;
+&lt;section id="meson"&gt;
 &lt;h3&gt;&lt;strong class="command"&gt;meson&lt;/strong&gt;&lt;/h3&gt;
 &lt;p&gt;The &lt;a class="reference external" href="http://mesonbuild.com/"&gt;meson build system&lt;/a&gt; is probably the frontrunner today.&lt;/p&gt;
 &lt;p&gt;In a move that feels like it is simply meant to &lt;a class="reference external" href="http://suckless.org/philosophy/"&gt;annoy the people behind
@@ -1315,8 +1345,8 @@ module when the project grew, and eventually changed to &lt;strong class="comman
 edits when the project was eventually greenlit.  It was a really clean
 process, and one I’d follow again.&lt;/p&gt;
 &lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="section" id="googles-kati"&gt;
+&lt;/section&gt;
+&lt;section id="googles-kati"&gt;
 &lt;h3&gt;Google’s kati&lt;/h3&gt;
 &lt;p&gt;&lt;a class="reference external" href="https://github.com/google/kati/"&gt;kati&lt;/a&gt; is a nice first step if you’re currently using &lt;strong class="command"&gt;make&lt;/strong&gt; and want to try out
 &lt;strong class="command"&gt;ninja&lt;/strong&gt;.  It will generate a &lt;code class="file docutils literal notranslate"&gt;&lt;span class="pre"&gt;build.ninja&lt;/span&gt;&lt;/code&gt; from your &lt;code class="file docutils literal notranslate"&gt;&lt;span class="pre"&gt;Makefile&lt;/span&gt;&lt;/code&gt;,
@@ -1335,9 +1365,9 @@ I’m aware of it.  I’m ignoring it because of its inscrutable syntax, its
 multi-pass pre-build steps, and its love for running the &lt;strong class="command"&gt;cmake&lt;/strong&gt;
 binary thousands of times in each build.&lt;/p&gt;
 &lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="section" id="conclusions"&gt;
+&lt;/section&gt;
+&lt;/section&gt;
+&lt;section id="conclusions"&gt;
 &lt;h2&gt;Conclusions&lt;/h2&gt;
 &lt;p&gt;There are a lot of options available if you’re feeling growing pains with
 &lt;strong class="command"&gt;make&lt;/strong&gt;, or are just looking to tighten up builds.  I’ve covered a few here, but
@@ -1390,10 +1420,12 @@ starting point as it is not too complex, and implements a good subset of
 required interface.&lt;/p&gt;
 &lt;/dd&gt;
 &lt;/dl&gt;
-&lt;/div&gt;
-&lt;/div&gt;
+&lt;/section&gt;
+&lt;/section&gt;
 </content>
     <link href="https://jnrowe.github.io/articles/redo_ninja_make.html" rel="alternate"/>
+    <summary>This is a massive brain dump, which I plan to rewrite in to a series at
+some point.  However, until that imaginary date arrives…Digraph of home directory’s top level build</summary>
     <category term="tools" label="tools"/>
     <category term="build" label="build"/>
     <category term="make" label="make"/>
@@ -1408,7 +1440,7 @@ required interface.&lt;/p&gt;
     <author>
       <name>James Rowe</name>
     </author>
-    <content type="html">&lt;div class="section" id="giddy-new-project-love"&gt;
+    <content type="html">&lt;section id="giddy-new-project-love"&gt;
 
 &lt;p&gt;I’ve recently inherited a new tier-one project, which is great news!  Sadly, it
 is in real need of some Tender Loving Care™.  Was there ever an inherited
@@ -1424,7 +1456,7 @@ before I’d even heard of &lt;code class="docutils literal notranslate"&gt;&lt;
 multi-generational, which &lt;em&gt;feels&lt;/em&gt; nice.  All too often our work in software can
 feel ephemeral; squeaked on a whiteboard in the morning, tapped in to
 a computer in the afternoon and swept away by the janitors as night falls.&lt;/p&gt;
-&lt;div class="section" id="hopes-and-dreams"&gt;
+&lt;section id="hopes-and-dreams"&gt;
 &lt;h2&gt;Hopes and dreams&lt;/h2&gt;
 &lt;p&gt;As the project &lt;em&gt;should&lt;/em&gt; have significant longevity I find myself pondering the
 future.  &lt;em&gt;If&lt;/em&gt; I could change things for the next 20 years, what should I do to
@@ -1433,7 +1465,7 @@ reducing the anxiety that even small changes will evoke?&lt;/p&gt;
 &lt;p&gt;I also find myself pondering the present.  Could a truly radical change &lt;em&gt;today&lt;/em&gt;
 obviate the need for this project entirely before the next maintainer grabs the
 reins for their reign of anxiety?  Would that necessarily be a good thing?&lt;/p&gt;
-&lt;div class="sidebar"&gt;
+&lt;aside class="sidebar"&gt;
 &lt;p class="sidebar-title"&gt;Common errors&lt;/p&gt;
 &lt;p&gt;I’ve always considered it odd that we can choose to attach a listing of
 common errors to a product and expect people to use it.  If we know it is
@@ -1442,7 +1474,7 @@ need to make a new design, not a new bullet point on the list.&lt;/p&gt;
 &lt;p&gt;Even simple things like watching an &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;Ada&lt;/span&gt;&lt;/code&gt; beginner make the classic
 “atomic means atomic” mistake should be designed out, and not &lt;em&gt;solved&lt;/em&gt; with
 an addendum of “protected objects mean atomic” chicanery.&lt;/p&gt;
-&lt;/div&gt;
+&lt;/aside&gt;
 &lt;p&gt;Many of the advantages that we associate with &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;Ada&lt;/span&gt;&lt;/code&gt; — such as its mighty type
 safety — no longer feel that advanced or remotely unique.  Even “hobby”
 languages such as &lt;a class="reference external" href="https://nim-lang.org/"&gt;nim&lt;/a&gt; implement many of the safety features we expect from
@@ -1454,8 +1486,8 @@ benefits of &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre
 one thinks about weren’t even available in &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;Ada&lt;/span&gt;&lt;/code&gt; when &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;sandfly&lt;/span&gt;&lt;/code&gt; began; fex
 contracts are from &lt;a class="reference external" href="http://www.ada2012.org/"&gt;Ada 2012&lt;/a&gt;.  Will languages leapfrog &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;Ada&lt;/span&gt;&lt;/code&gt; in its niche
 by borrowing and then sprint away by innovating as their uptake increases?&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="section" id="benefits-of-transpilation"&gt;
+&lt;/section&gt;
+&lt;section id="benefits-of-transpilation"&gt;
 &lt;h2&gt;Benefits of transpilation&lt;/h2&gt;
 &lt;p&gt;The original &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;sandfly&lt;/span&gt;&lt;/code&gt; authors implemented a transpiler because it made
 various checks simpler to carry out.  According to the documentation, it was
@@ -1474,21 +1506,23 @@ generate &lt;a class="reference external" href="http://www.lua.org/"&gt;lua&lt;/
 by other &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;lua&lt;/span&gt;&lt;/code&gt; scripts to test an implementation.  Its main purpose was to
 allow early experimentation without the expense and time of waiting for
 hardware re-fabrication.&lt;/p&gt;
-&lt;div class="figure align-default" id="id7"&gt;
+&lt;figure class="align-default" id="id7"&gt;
 &lt;img alt="sandfly debug architecture" src="../../_images/sandfly_use.png" style="width: 279.5px; height: 358.0px;" /&gt;
-&lt;p class="caption"&gt;&lt;span class="caption-text"&gt;As you can see from example usage, it’s source-to-source all the way down.
+&lt;figcaption&gt;
+&lt;p&gt;&lt;span class="caption-text"&gt;As you can see from example usage, it’s source-to-source all the way down.
 If I’m writing &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;lua&lt;/span&gt;&lt;/code&gt; I’m using &lt;a class="reference external" href="https://github.com/leafo/moonscript/"&gt;moonscript&lt;/a&gt;, and so should you!&lt;/span&gt;&lt;/p&gt;
-&lt;/div&gt;
+&lt;/figcaption&gt;
+&lt;/figure&gt;
 &lt;p&gt;I’m not sure it would even be a great stretch to change the main target, there
 would likely be significant support for it in fact.  It has already been
 suggested that we should exclusively switch to &lt;a class="reference external" href="https://en.m.wikipedia.org/wiki/SPARK_(programming_language)"&gt;spark&lt;/a&gt; on a number of occasions,
 especially since the reformation in Spark 2014.  If we could figure out the
 safety certification story I’m sure there would be a lot of traction for &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;F#&lt;/span&gt;&lt;/code&gt;
 as default.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="section" id="final-thoughts"&gt;
+&lt;/section&gt;
+&lt;section id="final-thoughts"&gt;
 &lt;h2&gt;Final thoughts&lt;/h2&gt;
-&lt;div class="sidebar"&gt;
+&lt;aside class="sidebar"&gt;
 &lt;p class="sidebar-title"&gt;Open Sourcing &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;sandfly&lt;/span&gt;&lt;/code&gt;&lt;/p&gt;
 &lt;p&gt;There have been a few enquiries as to whether this work is Open Source, and
 sadly it isn’t.  However, if you work for one of the Atlas Consortium
@@ -1500,7 +1534,7 @@ making it Open Source, the bad news is that there is a lot of work needed
 — both by me and &lt;em&gt;many&lt;/em&gt; others — to make that happen.  I’ve kicked the
 initial process off by contacting legal for guidance, we’ll see what
 happens.&lt;/p&gt;
-&lt;/div&gt;
+&lt;/aside&gt;
 &lt;p&gt;I’ve always really appreciated &lt;a class="reference external" href="https://en.m.wikipedia.org/wiki/Vala_(programming_language)"&gt;vala&lt;/a&gt;’s alternative syntax support; &lt;a class="reference external" href="https://en.m.wikipedia.org/wiki/C_Sharp_(programming_language)"&gt;C#&lt;/a&gt; by
 default, but with first class support for &lt;a class="reference external" href="https://en.m.wikipedia.org/wiki/Genie_(programming_language)"&gt;genie&lt;/a&gt;’s &lt;a class="reference external" href="http://boo-lang.org/"&gt;boo&lt;/a&gt;-inspired syntax.
 I find myself thinking how nice it would be to emulate that and have multiple
@@ -1533,10 +1567,13 @@ However, I’m not on the procurement board and didn’t get to make that
 decision.&lt;/p&gt;
 &lt;/dd&gt;
 &lt;/dl&gt;
-&lt;/div&gt;
-&lt;/div&gt;
+&lt;/section&gt;
+&lt;/section&gt;
 </content>
     <link href="https://jnrowe.github.io/articles/new_love_giddiness.html" rel="alternate"/>
+    <summary>I’ve recently inherited a new tier-one project, which is great news!  Sadly, it
+is in real need of some Tender Loving Care™.  Was there ever an inherited
+project that wasn’t?sandfly debug architecture</summary>
     <category term="tools" label="tools"/>
     <category term="projects" label="projects"/>
     <category term="languages" label="languages"/>
@@ -1549,7 +1586,7 @@ decision.&lt;/p&gt;
     <author>
       <name>James Rowe</name>
     </author>
-    <content type="html">&lt;div class="section" id="advent-of-code-2018"&gt;
+    <content type="html">&lt;section id="advent-of-code-2018"&gt;
 
 &lt;p&gt;I’ve given up on &lt;abbr title="Advent of Code"&gt;AoC&lt;/abbr&gt; for this year, so we’ll have a ten day early
 retrospective.  I’m writing this as a journal entry, more for myself than
@@ -1560,15 +1597,15 @@ others.  You’ve been warned!&lt;/p&gt;
 it.  If you’re enjoying it, &lt;em&gt;or&lt;/em&gt; currently screaming at it, &lt;a class="reference external" href="https://adventofcode.com/2018/support"&gt;tip the
 creator&lt;/a&gt; so that we can smile and shout at it next year.&lt;/p&gt;
 &lt;/div&gt;
-&lt;div class="section" id="why-quit"&gt;
+&lt;section id="why-quit"&gt;
 &lt;h2&gt;Why quit?&lt;/h2&gt;
 &lt;p&gt;First up, I’m struggling with motivation a bit this year.  Added to that I’ve
 floundered purely on the descriptions for the past couple of days, but I’m
 pretty sure that it is largely my problem too.&lt;/p&gt;
 &lt;p&gt;I have 28 stars for completing both parts of every day so far this year, but
 I haven’t been enjoying it enough to warrant continuing.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="section" id="day-1"&gt;
+&lt;/section&gt;
+&lt;section id="day-1"&gt;
 &lt;h2&gt;Day 1&lt;/h2&gt;
 &lt;ul class="simple"&gt;
 &lt;li&gt;&lt;p&gt;&lt;a class="reference external" href="https://adventofcode.com/2018/day/1"&gt;Chronal Calibration&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
@@ -1684,8 +1721,8 @@ improve readability by allowing you to “code the intent”.&lt;/p&gt;
 &lt;/div&gt;
 &lt;p&gt;According to &lt;a class="reference external" href="https://pypi.python.org/pypi/rdial"&gt;rdial&lt;/a&gt; I could have been on the leaderboard for both parts
 if I’d woken up at five to work on it :/&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="section" id="day-2"&gt;
+&lt;/section&gt;
+&lt;section id="day-2"&gt;
 &lt;h2&gt;Day 2&lt;/h2&gt;
 &lt;ul class="simple"&gt;
 &lt;li&gt;&lt;p&gt;&lt;a class="reference external" href="https://adventofcode.com/2018/day/2"&gt;Inventory Management System&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
@@ -1726,8 +1763,8 @@ example, we could loop over our inputs with something like the following:&lt;/p&
 above is testing against the set of all inputs which includes the current
 word and thus always has one perfect match.&lt;/p&gt;
 &lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="section" id="day-3"&gt;
+&lt;/section&gt;
+&lt;section id="day-3"&gt;
 &lt;h2&gt;Day 3&lt;/h2&gt;
 &lt;ul class="simple"&gt;
 &lt;li&gt;&lt;p&gt;&lt;a class="reference external" href="https://adventofcode.com/2018/day/3"&gt;No Matter How You Slice It&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
@@ -1824,8 +1861,8 @@ add to your knowledge.  In this specific instance it actually impairs the
 run-time versus cPython using a &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;List[List[int]]&lt;/span&gt;&lt;/code&gt;, but the slowdown is
 very small and the array slicing syntax more than makes up for that.&lt;/p&gt;
 &lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="section" id="day-4"&gt;
+&lt;/section&gt;
+&lt;section id="day-4"&gt;
 &lt;h2&gt;Day 4&lt;/h2&gt;
 &lt;ul class="simple"&gt;
 &lt;li&gt;&lt;p&gt;&lt;a class="reference external" href="https://adventofcode.com/2018/day/4"&gt;Repose Record&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
@@ -1876,8 +1913,8 @@ could rewrite it in reverse order using &lt;a class="reference external" href="h
 However, for a quick &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;ptpython&lt;/span&gt;&lt;/code&gt; session I was happy &lt;em&gt;enough&lt;/em&gt; with that.&lt;/p&gt;
 &lt;p&gt;The second part is simply just grabbing at the data with a different selector,
 and contains no new functionality.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="section" id="day-5"&gt;
+&lt;/section&gt;
+&lt;section id="day-5"&gt;
 &lt;h2&gt;Day 5&lt;/h2&gt;
 &lt;ul class="simple"&gt;
 &lt;li&gt;&lt;p&gt;&lt;a class="reference external" href="https://adventofcode.com/2018/day/5"&gt;Alchemical Reduction&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
@@ -1974,8 +2011,8 @@ iterator.&lt;/p&gt;
 faster to mash the keyboard in order than type out the alphabet.  I have to
 admit I &lt;em&gt;really&lt;/em&gt; loved seeing that, and it wouldn’t have occurred to me.&lt;/p&gt;
 &lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="section" id="day-6"&gt;
+&lt;/section&gt;
+&lt;section id="day-6"&gt;
 &lt;h2&gt;Day 6&lt;/h2&gt;
 &lt;ul class="simple"&gt;
 &lt;li&gt;&lt;p&gt;&lt;a class="reference external" href="https://adventofcode.com/2018/day/6"&gt;Chronal Coordinates&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
@@ -1989,8 +2026,8 @@ time on it.  Given it is just &lt;a class="reference external" href="https://en.
 anything new to see anyhow; I will note that &lt;a class="reference external" href="https://pypi.python.org/pypi/scipy"&gt;scipy&lt;/a&gt; contains
 &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;scipy.spatial.distance&lt;/span&gt;&lt;/code&gt; which supports taxicab geometry with the
 &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;cityblock&lt;/span&gt;&lt;/code&gt; parameter though&lt;a class="footnote-reference brackets" href="#id6" id="id3"&gt;3&lt;/a&gt;.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="section" id="day-7"&gt;
+&lt;/section&gt;
+&lt;section id="day-7"&gt;
 &lt;h2&gt;Day 7&lt;/h2&gt;
 &lt;ul class="simple"&gt;
 &lt;li&gt;&lt;p&gt;&lt;a class="reference external" href="https://adventofcode.com/2018/day/7"&gt;The Sum of Its Parts&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
@@ -2005,8 +2042,8 @@ I really didn’t feel like I had.  That felt like cheating, and so did using
 &lt;a class="reference external" href="https://pypi.python.org/pypi/scipy"&gt;scipy&lt;/a&gt; the day before.  As I said at the start, I’ve been lacking
 motivation a little anyway and I’m not assigning &lt;em&gt;any&lt;/em&gt; blame toward &lt;abbr title="Advent of Code"&gt;AoC&lt;/abbr&gt;
 creators for this.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="section" id="day-8-14"&gt;
+&lt;/section&gt;
+&lt;section id="day-8-14"&gt;
 &lt;h2&gt;Day 8..14&lt;/h2&gt;
 &lt;p&gt;I’ve largely just been going through the motions for the past few days, and if
 it hadn’t been for wishing to peacock some co-workers I’d probably have retired
@@ -2014,8 +2051,8 @@ earlier ;)&lt;/p&gt;
 &lt;p&gt;And that is the main reason I’m quitting, I don’t even like my own solutions
 enough to write about them.  A combination of just doing the minimum required
 to get &lt;em&gt;an&lt;/em&gt; answer and not being interested enough to go back for refactoring.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="section" id="tips"&gt;
+&lt;/section&gt;
+&lt;section id="tips"&gt;
 &lt;h2&gt;Tips&lt;/h2&gt;
 &lt;p&gt;I’m mostly repeating my tips from &lt;span class="xref std std-doc"&gt;last year&lt;/span&gt;.&lt;/p&gt;
 &lt;p&gt;Don’t use this as an excuse to learn a new language.  The puzzles aren’t really
@@ -2032,8 +2069,8 @@ languages, be &lt;em&gt;all over&lt;/em&gt; your chosen weapon’s standard libr
 editor’s &lt;a class="reference external" href="https://github.com/SirVer/ultisnips/"&gt;snippets&lt;/a&gt; well.  &lt;strong&gt;Every&lt;/strong&gt;. &lt;strong&gt;Second&lt;/strong&gt;. &lt;strong&gt;Counts&lt;/strong&gt;.&lt;/p&gt;
 &lt;p&gt;And finally, keep your old solutions around either in files or in your &lt;abbr title="Read–Eval–Print Loop"&gt;REPL&lt;/abbr&gt;’s
 history as you’ll probably end up revisiting them.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="section" id="hopes-for-2019"&gt;
+&lt;/section&gt;
+&lt;section id="hopes-for-2019"&gt;
 &lt;h2&gt;Hopes for 2019?&lt;/h2&gt;
 &lt;p&gt;Moving up a place from number two last year: That the options to pay for it are
 better next year.  Each year I have to find a friend to make a donation in my
@@ -2042,8 +2079,8 @@ and limiting payments to PayPal and Coinbase &lt;em&gt;must&lt;/em&gt; be puttin
 a donation entirely.&lt;/p&gt;
 &lt;p&gt;Number two?  That it returns.  When it is fun it is &lt;em&gt;really&lt;/em&gt; fun, and I just
 hope I’m in a better place personally next time.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="section" id="whats-next"&gt;
+&lt;/section&gt;
+&lt;section id="whats-next"&gt;
 &lt;h2&gt;What’s next?&lt;/h2&gt;
 &lt;p&gt;Let us be honest here.  Winterval is almost upon us and I’ll probably end up
 diving back in to complete the remaining days ;)&lt;/p&gt;
@@ -2065,10 +2102,13 @@ about how annoying it can be to discuss these things when even simple
 concepts are often known by various common names.&lt;/p&gt;
 &lt;/dd&gt;
 &lt;/dl&gt;
-&lt;/div&gt;
-&lt;/div&gt;
+&lt;/section&gt;
+&lt;/section&gt;
 </content>
     <link href="https://jnrowe.github.io/articles/advent_of_code_2018.html" rel="alternate"/>
+    <summary>I’ve given up on AoC for this year, so we’ll have a ten day early
+retrospective.  I’m writing this as a journal entry, more for myself than
+others.  You’ve been warned!|AOC| example runner output</summary>
     <category term="adventofcode" label="adventofcode"/>
     <category term="coding" label="coding"/>
     <category term="puzzles" label="puzzles"/>
@@ -2081,14 +2121,14 @@ concepts are often known by various common names.&lt;/p&gt;
     <author>
       <name>James Rowe</name>
     </author>
-    <content type="html">&lt;div class="section" id="office-hours"&gt;
+    <content type="html">&lt;section id="office-hours"&gt;
 
 &lt;p&gt;A few co-workers have started offering office hours, seemingly spurred on by
 a post by &lt;a class="reference external" href="https://robertheaton.com/2018/10/22/slash-office-hours/"&gt;Robert Heaton&lt;/a&gt;.  I’m going to try this a little closer to Robert’s
 original idea, and make &lt;em&gt;this&lt;/em&gt; offer to strangers too&lt;a class="footnote-reference brackets" href="#id2" id="id1"&gt;1&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;If you want to chat, I want to help.&lt;/p&gt;
 &lt;img alt="Appointment icon [from Adwaita icons]" class="align-left" src="../../_images/appointment-new.png" /&gt;
-&lt;div class="section" id="what-topics"&gt;
+&lt;section id="what-topics"&gt;
 &lt;h2&gt;What topics?&lt;/h2&gt;
 &lt;p&gt;You choose, that is the point.  That said, here are some thoughts…&lt;/p&gt;
 &lt;p&gt;My career thus far has mainly been focused on navigation systems, both
@@ -2100,8 +2140,8 @@ someone who has both passed &lt;em&gt;and&lt;/em&gt; failed get in touch.&lt;/p&
 advice, then by all means get in touch.&lt;/p&gt;
 &lt;p&gt;You just need a little &lt;a class="reference external" href="https://en.m.wikipedia.org/wiki/Rubber_duck_debugging"&gt;rubber duck&lt;/a&gt; time, let us make it happen!&lt;/p&gt;
 &lt;p&gt;Basically, get in touch and we’ll see what happens!&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="section" id="what-do-you-need-to-know"&gt;
+&lt;/section&gt;
+&lt;section id="what-do-you-need-to-know"&gt;
 &lt;h2&gt;What do you need to know?&lt;/h2&gt;
 &lt;p&gt;Be aware that if this works out I’ll likely write my own &lt;a class="reference external" href="https://robertheaton.com/2018/10/02/lessons-from-my-first-20-office-hours/"&gt;retrospective&lt;/a&gt;, so
 don’t expect total privacy.  I’m also a fan of &lt;span class="xref std std-doc"&gt;writing tips&lt;/span&gt;, so I might take any questions and run with them!&lt;/p&gt;
@@ -2116,14 +2156,14 @@ accommodate you even if you’re far away.&lt;/p&gt;
 Castilian speaker, and I’m told by my French co-workers that I’m fluent in
 French docker… so you will need to be able to communicate in one of those or
 wish to &lt;em&gt;teach me&lt;/em&gt; another.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="section" id="how"&gt;
+&lt;/section&gt;
+&lt;section id="how"&gt;
 &lt;h2&gt;How?&lt;/h2&gt;
 &lt;p&gt;The easiest way to make this happen is to drop me a &lt;a class="reference external" href="mailto:jnrowe&amp;#37;&amp;#52;&amp;#48;gmail&amp;#46;com"&gt;mail&lt;/a&gt;.  If the idea gets
 any traction I’ll look at better ways of scheduling, but until then mail should
 be fine.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="section" id="updates-2019-01-15"&gt;
+&lt;/section&gt;
+&lt;section id="updates-2019-01-15"&gt;
 &lt;h2&gt;Updates - 2019-01-15&lt;/h2&gt;
 &lt;p&gt;So, I’ve just completed my second appointment, and it seems to be working out
 okay.  Both have been fun(at least for me), and I’m planning on continuing this
@@ -2144,10 +2184,13 @@ semi-private mastodon instance, but I’d like to think I was implicitly
 offering help there anyway.&lt;/p&gt;
 &lt;/dd&gt;
 &lt;/dl&gt;
-&lt;/div&gt;
-&lt;/div&gt;
+&lt;/section&gt;
+&lt;/section&gt;
 </content>
     <link href="https://jnrowe.github.io/office_hours.html" rel="alternate"/>
+    <summary>A few co-workers have started offering office hours, seemingly spurred on by
+a post by Robert Heaton.  I’m going to try this a little closer to Robert’s
+original idea, and make this offer to strangers too1.Appointment icon [from Adwaita icons]</summary>
     <category term="personal" label="personal"/>
     <published>2018-12-23T00:00:00+00:00</published>
   </entry>
@@ -2158,7 +2201,7 @@ offering help there anyway.&lt;/p&gt;
     <author>
       <name>James Rowe</name>
     </author>
-    <content type="html">&lt;div class="section" id="gps-rollover-2019"&gt;
+    <content type="html">&lt;section id="gps-rollover-2019"&gt;
 
 &lt;p&gt;Tomorrow we’re going to experience the simultaneously cataclysmic and mundane
 consequences of a &lt;abbr title="Global Positioning System"&gt;GPS&lt;/abbr&gt; rollover event.  &lt;em&gt;Many&lt;/em&gt; things will break, &lt;em&gt;many&lt;/em&gt; will
@@ -2171,13 +2214,13 @@ of date handling never ends.&lt;/p&gt;
 hardware I’m involved in building then contact your support channel, they
 are there to help.&lt;/p&gt;
 &lt;/div&gt;
-&lt;div class="section" id="what-is-the-issue"&gt;
+&lt;section id="what-is-the-issue"&gt;
 &lt;h2&gt;What is the issue?&lt;/h2&gt;
 &lt;p&gt;Since 1981 &lt;abbr title="Global Positioning System"&gt;GPS&lt;/abbr&gt; signals have included a week number, which is provided as
 a 10-bit field and as such can only store 1024 values(around 19.5 years).
 Every time we hit that limit the week number rolls back to zero, and things may
 fail to work correctly following that.&lt;/p&gt;
-&lt;div class="sidebar"&gt;
+&lt;aside class="sidebar"&gt;
 &lt;p class="sidebar-title"&gt;Prior to ‘81&lt;/p&gt;
 &lt;p&gt;As a side note very early &lt;abbr title="Global Positioning System"&gt;GPS&lt;/abbr&gt; transmissions didn’t even include week
 numbers in the signal.  Time was represented simply as a value &lt;em&gt;within&lt;/em&gt;
@@ -2188,17 +2231,17 @@ issues that are caused by this.&lt;/p&gt;
 upgrades to the &lt;abbr title="Global Positioning System"&gt;GPS&lt;/abbr&gt; signal over the approaching fifty years of its
 development.  Coupled with the out of band enhancements such as &lt;abbr title="Wide Area Augmentation System"&gt;WAAS&lt;/abbr&gt;, the accuracy and uses of &lt;abbr title="Global Positioning System"&gt;GPS&lt;/abbr&gt;-based
 systems have increased a tremendous amount.&lt;/p&gt;
-&lt;/div&gt;
+&lt;/aside&gt;
 &lt;p&gt;This is the second operational rollover event, the first happened in August
 1999.  We — that is developers of &lt;abbr title="Global Navigation Satellite System"&gt;GNSS&lt;/abbr&gt;-using systems — &lt;em&gt;are&lt;/em&gt; prepared for
 this, but the level of preparedness is unfortunately not uniform or indicative
 of how well we’re handling this.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="section" id="mitigations"&gt;
+&lt;/section&gt;
+&lt;section id="mitigations"&gt;
 &lt;h2&gt;Mitigations&lt;/h2&gt;
 &lt;p&gt;As this problem is quite well understood there has been an awful lot of effort
 put in to working around it, some quite simple and some quite interesting.&lt;/p&gt;
-&lt;div class="section" id="stored-offset"&gt;
+&lt;section id="stored-offset"&gt;
 &lt;h3&gt;Stored offset&lt;/h3&gt;
 &lt;p&gt;The gold standard is systems that could afford the addition of &lt;abbr title="Non-Volatile Random Access Memory"&gt;NVRAM&lt;/abbr&gt;.  If we have a storage medium then the
 previous known week number is often used as a check against rollover.  If we
@@ -2207,8 +2250,8 @@ changeover at &lt;em&gt;some&lt;/em&gt; point than you &lt;em&gt;shouldn’t&lt;
 a rollover.&lt;/p&gt;
 &lt;p&gt;The obvious drawback being if a system is dormant for twenty years, but that
 isn’t likely to be a real problem.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="section" id="week-number-offset"&gt;
+&lt;/section&gt;
+&lt;section id="week-number-offset"&gt;
 &lt;h3&gt;Week number offset&lt;/h3&gt;
 &lt;p&gt;One of the most common mechanisms for dealing with rollover has been to bind it
 to the firmware running on the device.  You simply assume the week number is
@@ -2227,8 +2270,8 @@ problems at various stages of their lives.  In the above example our system
 &lt;em&gt;should&lt;/em&gt; work through the epoch change in 2019, but will likely fail in August
 2029 without intervention as we’ll trip over &lt;em&gt;our&lt;/em&gt; workaround with our own
 rollover bug causing it to reset to 2010.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="section" id="gnss-voting-comparisons"&gt;
+&lt;/section&gt;
+&lt;section id="gnss-voting-comparisons"&gt;
 &lt;h3&gt;&lt;abbr title="Global Navigation Satellite System"&gt;GNSS&lt;/abbr&gt; voting comparisons&lt;/h3&gt;
 &lt;p&gt;Many modern receivers support multiple signals; &lt;abbr title="Global Positioning System"&gt;GPS&lt;/abbr&gt;, GLONASS, Beidou, &amp;amp;c.
 Given this we can use consensus building to validate information.  If one of
@@ -2240,8 +2283,8 @@ simply exclude it.&lt;/p&gt;
 low quality &lt;abbr title="Real Time Clock"&gt;RTC&lt;/abbr&gt;, these can also be used as a hint
 towards consensus building too.&lt;/p&gt;
 &lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="section" id="leap-second-heuristic"&gt;
+&lt;/section&gt;
+&lt;section id="leap-second-heuristic"&gt;
 &lt;h3&gt;Leap second heuristic&lt;/h3&gt;
 &lt;p&gt;&lt;abbr title="Global Positioning System"&gt;GPS&lt;/abbr&gt; time is not corrected for leap seconds and as such increasingly drifts
 from &lt;abbr title="Coordinated Universal Time"&gt;UTC&lt;/abbr&gt; over the years.  However, the current offset from &lt;abbr title="Coordinated Universal Time"&gt;UTC&lt;/abbr&gt; is
@@ -2260,9 +2303,9 @@ available immediately following a cold boot of a device.  Depending on
 circumstances the 12 minute wait to acquire the almanac data may not be an
 issue.&lt;/p&gt;
 &lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="section" id="what-should-i-do"&gt;
+&lt;/section&gt;
+&lt;/section&gt;
+&lt;section id="what-should-i-do"&gt;
 &lt;h2&gt;What should I do?&lt;/h2&gt;
 &lt;p&gt;First check with your system’s supplier, they &lt;em&gt;should&lt;/em&gt; have information on what
 mitigations they have in place and what effects you should see now or at other
@@ -2280,8 +2323,8 @@ anything beyond report “spoofing detected” if it receives unexpected
 signals, with the exception of a &lt;abbr title="Trust On First Use"&gt;TOFU&lt;/abbr&gt; event
 following a deep reset.&lt;/p&gt;
 &lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="section" id="should-i-set-an-alarm-for-november-2038"&gt;
+&lt;/section&gt;
+&lt;section id="should-i-set-an-alarm-for-november-2038"&gt;
 &lt;h2&gt;Should I set an alarm for November 2038?&lt;/h2&gt;
 &lt;p&gt;Yes and no.&lt;/p&gt;
 &lt;p&gt;The next rollover will occur in 2038, but new message types that use a 13-bit
@@ -2307,10 +2350,14 @@ co-workers(forgive me!) in this.  People make mistakes, systems fail and
 skies may fall; having a good testing infrastructure is a must.&lt;/p&gt;
 &lt;/dd&gt;
 &lt;/dl&gt;
-&lt;/div&gt;
-&lt;/div&gt;
+&lt;/section&gt;
+&lt;/section&gt;
 </content>
     <link href="https://jnrowe.github.io/articles/gps_rollover_2019.html" rel="alternate"/>
+    <summary>Tomorrow we’re going to experience the simultaneously cataclysmic and mundane
+consequences of a GPS rollover event.  Many things will break, many will
+continue to work and many will just take a step closer to breaking… the fun
+of date handling never ends.Pick a year, win a prize</summary>
     <category term="gps" label="gps"/>
     <category term="time" label="time"/>
     <category term="bugs" label="bugs"/>
@@ -2323,7 +2370,7 @@ skies may fall; having a good testing infrastructure is a must.&lt;/p&gt;
     <author>
       <name>James Rowe</name>
     </author>
-    <content type="html">&lt;div class="section" id="i-have-a-secret"&gt;
+    <content type="html">&lt;section id="i-have-a-secret"&gt;
 
 &lt;p&gt;A terrible secret haunts me, at times daily… I have virtually &lt;em&gt;no&lt;/em&gt; &lt;a class="reference external" href="https://en.m.wikipedia.org/wiki/SQL"&gt;SQL&lt;/a&gt; skills.&lt;/p&gt;
 &lt;p&gt;Somehow I’m nearly twenty years in to my career and I possess so little &lt;abbr title="Structured Query Language"&gt;SQL&lt;/abbr&gt;
@@ -2343,7 +2390,7 @@ their data storage, or that query remote &lt;a class="reference external" href="
 I know &lt;em&gt;what&lt;/em&gt; an &lt;a class="reference external" href="https://en.m.wikipedia.org/wiki/N+1_Select_Problem"&gt;n+1 problem&lt;/a&gt; is, but I’ll still create them through lack of
 forethought from time to time.  It is just that my knowledge stops right about
 there.&lt;/p&gt;
-&lt;div class="section" id="orm-usage"&gt;
+&lt;section id="orm-usage"&gt;
 &lt;h2&gt;&lt;abbr title="Object Relational Mapping"&gt;ORM&lt;/abbr&gt; usage&lt;/h2&gt;
 &lt;p&gt;The number one thing that has kept me away from a deeper understanding of &lt;abbr title="Structured Query Language"&gt;SQL&lt;/abbr&gt;
 is &lt;abbr title="Object Relational Mapping"&gt;ORM&lt;/abbr&gt;s.  Let us be honest, most of the time we interact with &lt;abbr title="Structured Query Language"&gt;SQL&lt;/abbr&gt; fronted
@@ -2386,8 +2433,8 @@ a single language can do &lt;em&gt;everything&lt;/em&gt; within our database and
 fit the bill.  It is just that people have coalesced around &lt;abbr title="Structured Query Language"&gt;SQL&lt;/abbr&gt; as &lt;em&gt;the only&lt;/em&gt;
 interface to relational databases over the decades, and as such we end up using
 two distinct languages far more often that we perhaps ought.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="section" id="editing"&gt;
+&lt;/section&gt;
+&lt;section id="editing"&gt;
 &lt;h2&gt;Editing&lt;/h2&gt;
 &lt;p&gt;When working with &lt;abbr title="Structured Query Language"&gt;SQL&lt;/abbr&gt; without an &lt;abbr title="Object Relational Mapping"&gt;ORM&lt;/abbr&gt; things change &lt;em&gt;greatly&lt;/em&gt;.  You find
 yourself having to consciously flip back and forward between mental models of
@@ -2403,8 +2450,8 @@ don’t really help such usage.  Everything is fine in &lt;a class="reference ex
 one can apply syntax highlighting and linting to specific regions of a file&lt;a class="footnote-reference brackets" href="#id4" id="id2"&gt;2&lt;/a&gt;.  For other editors, and most &lt;abbr title="Integrated Development Environment"&gt;IDEs&lt;/abbr&gt;, you’re often left floundering in a heap of unstructured literal
 strings peppered all over the place.&lt;/p&gt;
 &lt;img alt="Multi-language highlighting in vim" src="../../_images/vim_py_sql.png" /&gt;
-&lt;/div&gt;
-&lt;div class="section" id="wait-am-i-talking-myself-out-of-learning"&gt;
+&lt;/section&gt;
+&lt;section id="wait-am-i-talking-myself-out-of-learning"&gt;
 &lt;h2&gt;Wait, am I talking myself out of learning?&lt;/h2&gt;
 &lt;p&gt;I know this has sounded like a sweetheart letter aimed at
 &lt;a class="reference external" href="http://www.sqlalchemy.org/"&gt;sqlalchemy&lt;/a&gt;/&lt;a class="reference external" href="http://www.rubyonrails.org/"&gt;activerecord&lt;/a&gt;/&lt;a class="reference external" href="http://www.codesynthesis.com/products/odb"&gt;odb&lt;/a&gt;, but it isn’t meant that way.  Okay, it kinda of
@@ -2413,8 +2460,8 @@ is.  However, I want to know more.&lt;/p&gt;
 understanding of what is causing slowdowns with complex queries, or having to
 reach for a manual to remember little things like how to manage collation
 rules.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="section" id="acceptance"&gt;
+&lt;/section&gt;
+&lt;section id="acceptance"&gt;
 &lt;h2&gt;Acceptance&lt;/h2&gt;
 &lt;p&gt;Now that I’ve accepted this fact enough to scribble this note I’m going to do
 something to fix it.&lt;/p&gt;
@@ -2433,10 +2480,11 @@ excellent &lt;a class="reference external" href="https://github.com/chrisbra/Nrr
 complex &lt;abbr title="Structured Query Language"&gt;SQL&lt;/abbr&gt; embedded in another language’s files.&lt;/p&gt;
 &lt;/dd&gt;
 &lt;/dl&gt;
-&lt;/div&gt;
-&lt;/div&gt;
+&lt;/section&gt;
+&lt;/section&gt;
 </content>
     <link href="https://jnrowe.github.io/thoughts/i_have_a_secret.html" rel="alternate"/>
+    <summary>A terrible secret haunts me, at times daily… I have virtually no SQL skills.Sad reality of SQL knowledge</summary>
     <category term="databases" label="databases"/>
     <category term="learning" label="learning"/>
     <category term="sql" label="sql"/>
@@ -2449,7 +2497,7 @@ complex &lt;abbr title="Structured Query Language"&gt;SQL&lt;/abbr&gt; embedded 
     <author>
       <name>James Rowe</name>
     </author>
-    <content type="html">&lt;div class="section" id="advent-of-code-2019"&gt;
+    <content type="html">&lt;section id="advent-of-code-2019"&gt;
 
 &lt;p&gt;With a touch of sadness, I’ve given up on &lt;abbr title="Advent of Code"&gt;AoC&lt;/abbr&gt; for this year.  I’m writing this
 as a journal entry, more for myself than others.  You’ve been warned!&lt;/p&gt;
@@ -2459,7 +2507,7 @@ as a journal entry, more for myself than others.  You’ve been warned!&lt;/p&gt
 it.  If you’re enjoying it, &lt;em&gt;or&lt;/em&gt; currently screaming at it, &lt;a class="reference external" href="https://adventofcode.com/2019/support"&gt;tip the
 creator&lt;/a&gt; so that we can smile and shout at it next year.&lt;/p&gt;
 &lt;/div&gt;
-&lt;div class="section" id="why-quit"&gt;
+&lt;section id="why-quit"&gt;
 &lt;h2&gt;Why quit?&lt;/h2&gt;
 &lt;p&gt;The puzzles aren’t my cup of tea this year, but I’m not complaining.  Our
 leader board for the office has twice as many people as last year, so clearly it
@@ -2470,8 +2518,8 @@ the type of puzzles I’ve completed, and if I wanted more of that I could knock
 some real items off my to–do list.&lt;/p&gt;
 &lt;p&gt;I have 22 stars for completing both parts of every day so far this year, but
 I’m taking a break until I have a bit more downtime.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="section" id="day-1"&gt;
+&lt;/section&gt;
+&lt;section id="day-1"&gt;
 &lt;h2&gt;Day 1&lt;/h2&gt;
 &lt;ul class="simple"&gt;
 &lt;li&gt;&lt;p&gt;&lt;a class="reference external" href="https://adventofcode.com/2019/day/1"&gt;The Tyranny of the Rocket Equation&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
@@ -2525,8 +2573,8 @@ simply dividing &lt;code class="docutils literal notranslate"&gt;&lt;span class=
 idiocy with a bug that foolish, but luckily I’m too stoopid to find it.  I’m
 admitting this in the open to remind myself to think a little more in the
 following days.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="section" id="day-2"&gt;
+&lt;/section&gt;
+&lt;section id="day-2"&gt;
 &lt;span id="day-two-label"&gt;&lt;/span&gt;&lt;h2&gt;Day 2&lt;/h2&gt;
 &lt;ul class="simple"&gt;
 &lt;li&gt;&lt;p&gt;&lt;a class="reference external" href="https://adventofcode.com/2018/day/2"&gt;Inventory Management System&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
@@ -2572,8 +2620,8 @@ Computers are fast enough that even noodling about optimisation for this is
 a wasteful trade off.  Instead, I spent a few minutes making my test runner
 output colours on failures for the greater good.&lt;/p&gt;
 &lt;img alt="|AOC| example runner failure" src="../../_images/2019-12-11-advent_of_code.png" /&gt;
-&lt;/div&gt;
-&lt;div class="section" id="day-3"&gt;
+&lt;/section&gt;
+&lt;section id="day-3"&gt;
 &lt;h2&gt;Day 3&lt;/h2&gt;
 &lt;ul class="simple"&gt;
 &lt;li&gt;&lt;p&gt;&lt;a class="reference external" href="https://adventofcode.com/2019/day/3"&gt;Crossed Wires&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
@@ -2599,8 +2647,8 @@ a little.&lt;/p&gt;
 functionality that Python gives us.  Instead of needing to write our own matcher
 to find the overlapping wires, we can simply call &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;wire1.keys()&lt;/span&gt; &lt;span class="pre"&gt;&amp;amp;&lt;/span&gt; &lt;span class="pre"&gt;wire2&lt;/span&gt;&lt;/code&gt; and
 Python gives us the intersection points directly.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="section" id="day-4"&gt;
+&lt;/section&gt;
+&lt;section id="day-4"&gt;
 &lt;h2&gt;Day 4&lt;/h2&gt;
 &lt;ul class="simple"&gt;
 &lt;li&gt;&lt;p&gt;&lt;a class="reference external" href="https://adventofcode.com/2019/day/4"&gt;Secure Container&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
@@ -2658,8 +2706,8 @@ match by using a positive look behind to effectually make the match available
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
 &lt;p&gt;We wouldn’t want to do that though, as it makes kittens weep.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="section" id="day-5"&gt;
+&lt;/section&gt;
+&lt;section id="day-5"&gt;
 &lt;span id="day-five-label"&gt;&lt;/span&gt;&lt;h2&gt;Day 5&lt;/h2&gt;
 &lt;ul class="simple"&gt;
 &lt;li&gt;&lt;p&gt;&lt;a class="reference external" href="https://adventofcode.com/2019/day/5"&gt;Sunny with a Chance of Asteroids&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
@@ -2687,8 +2735,8 @@ with human-readable and &lt;abbr title="JavaScript Object Notation"&gt;JSON&lt;/
 MovieOS memory display while running, tacking on &lt;a class="reference external" href="http://blockdiag.com/"&gt;seqdiag&lt;/a&gt; output for bug
 inspection was glossy, and optimising it in ridiculous ways with branch
 prediction to take some advantage of all my &lt;abbr title="Central Processing Unit"&gt;CPU&lt;/abbr&gt; cores was a lot of fun.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="section" id="day-6"&gt;
+&lt;/section&gt;
+&lt;section id="day-6"&gt;
 &lt;h2&gt;Day 6&lt;/h2&gt;
 &lt;ul class="simple"&gt;
 &lt;li&gt;&lt;p&gt;&lt;a class="reference external" href="https://adventofcode.com/2019/day/6"&gt;Universal Orbit Map&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
@@ -2730,8 +2778,8 @@ wanted to read about &lt;strong class="command"&gt;ccomps&lt;/strong&gt;, &lt;st
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="section" id="day-7"&gt;
+&lt;/section&gt;
+&lt;section id="day-7"&gt;
 &lt;h2&gt;Day 7&lt;/h2&gt;
 &lt;ul class="simple"&gt;
 &lt;li&gt;&lt;p&gt;&lt;a class="reference external" href="https://adventofcode.com/2019/day/7"&gt;Amplification Circuit&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
@@ -2780,8 +2828,8 @@ contains nothing new or interesting.  If you’re doing something similar
 I strongly suggest getting to know the &lt;a class="reference external" href="http://zsh.sourceforge.net/Doc/Release/Shell-Builtin-Commands.html#Shell-Builtin-Commands"&gt;fc builtin&lt;/a&gt;, which allows you to edit
 your shell session in a real editor instead of needing to manually switch
 between your editor and terminal when composing more complex shell blocks.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="section" id="day-8"&gt;
+&lt;/section&gt;
+&lt;section id="day-8"&gt;
 &lt;h2&gt;Day 8&lt;/h2&gt;
 &lt;ul class="simple"&gt;
 &lt;li&gt;&lt;p&gt;&lt;a class="reference external" href="https://adventofcode.com/2019/day/8"&gt;Space Image Format&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
@@ -2824,16 +2872,18 @@ to write basically zero code:&lt;/p&gt;
 &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;if&lt;/span&gt;&lt;/code&gt; statement for readability when I moved it to a file.&lt;/p&gt;
 &lt;p&gt;As I wrote less than ten lines to submit my answers, I decided to make a little
 more work for myself.  I give you images of images…&lt;/p&gt;
-&lt;div class="figure align-default" id="id7"&gt;
+&lt;figure class="align-default" id="id7"&gt;
 &lt;a class="reference external image-reference" href="../_static/2019-12-11-space_image.mp4"&gt;&lt;img alt="Frames from the image decoding" src="../../_images/2019-12-11-space_image.png" style="width: 319.44px; height: 221.76000000000002px;" /&gt;&lt;/a&gt;
-&lt;p class="caption"&gt;&lt;span class="caption-text"&gt;Click the image for an animation, if you want to see the image decoding.&lt;/span&gt;&lt;/p&gt;
-&lt;/div&gt;
+&lt;figcaption&gt;
+&lt;p&gt;&lt;span class="caption-text"&gt;Click the image for an animation, if you want to see the image decoding.&lt;/span&gt;&lt;/p&gt;
+&lt;/figcaption&gt;
+&lt;/figure&gt;
 &lt;p&gt;A more interesting question might be: without reversing the frames how quickly
 can we apply &lt;abbr title="Optical Character Recognition"&gt;OCR&lt;/abbr&gt; to guess the incomplete
 text?  Had the input data been larger it might have been an interesting approach
 to solving this puzzle.  Install &lt;a class="reference external" href="https://github.com/tesseract-ocr/"&gt;tesseract&lt;/a&gt;, figure it out and drop me a &lt;a class="reference external" href="mailto:jnrowe&amp;#37;&amp;#52;&amp;#48;gmail&amp;#46;com"&gt;mail&lt;/a&gt;.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="section" id="day-9"&gt;
+&lt;/section&gt;
+&lt;section id="day-9"&gt;
 &lt;h2&gt;Day 9&lt;/h2&gt;
 &lt;ul class="simple"&gt;
 &lt;li&gt;&lt;p&gt;&lt;a class="reference external" href="https://adventofcode.com/2019/day/9"&gt;Sensor Boost&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
@@ -2841,8 +2891,8 @@ to solving this puzzle.  Install &lt;a class="reference external" href="https://
 &lt;p&gt;Hrmmph.  The puzzle text took me longer to read than the extra opcode and mode
 took to add to my interpreter.  There was nothing new or noteworthy in the
 implementation either, just another state variable and &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;switch&lt;/span&gt;&lt;/code&gt; arm.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="section" id="day-10"&gt;
+&lt;/section&gt;
+&lt;section id="day-10"&gt;
 &lt;h2&gt;Day 10&lt;/h2&gt;
 &lt;ul class="simple"&gt;
 &lt;li&gt;&lt;p&gt;&lt;a class="reference external" href="https://adventofcode.com/2019/day/10"&gt;Monitoring Station&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
@@ -2867,8 +2917,8 @@ advantage of &lt;a class="reference external" href="https://numpy.org/doc/1.16/r
 over.&lt;/p&gt;
 &lt;p&gt;The other thing I learnt is my co-worker Karl is &lt;em&gt;amazing&lt;/em&gt;, his solution
 included a &lt;a class="reference external" href="http://www.pygame.org/"&gt;pygame&lt;/a&gt;-based radar sweep display of the asteroid field.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="section" id="day-11"&gt;
+&lt;/section&gt;
+&lt;section id="day-11"&gt;
 &lt;h2&gt;Day 11&lt;/h2&gt;
 &lt;p&gt;I’ve kind of lost interest today.  This puzzle was largely just tying your
 &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;IntCode&lt;/span&gt;&lt;/code&gt; interpreter in to a &lt;a class="reference external" href="https://en.m.wikipedia.org/wiki/Logo_(programming_language)"&gt;Logo&lt;/a&gt;-esque walker from various other puzzles,
@@ -2876,8 +2926,8 @@ it felt more like busywork than an actual challenge.&lt;/p&gt;
 &lt;p&gt;I’m pretty sure I’ll come back to &lt;abbr title="Advent of Code"&gt;AoC&lt;/abbr&gt; 2019 during my Winterval break, but that
 is it for now.&lt;/p&gt;
 &lt;img alt="Calendar showing current count of 22 stars" src="../../_images/2019-12-11-aoc_calendar.png" /&gt;
-&lt;/div&gt;
-&lt;div class="section" id="tips"&gt;
+&lt;/section&gt;
+&lt;section id="tips"&gt;
 &lt;h2&gt;Tips&lt;/h2&gt;
 &lt;p&gt;I’m mostly repeating my tips from &lt;span class="xref std std-doc"&gt;last year&lt;/span&gt; and the
 &lt;span class="xref std std-doc"&gt;year before&lt;/span&gt;.&lt;/p&gt;
@@ -2896,8 +2946,8 @@ editor’s &lt;a class="reference external" href="https://github.com/SirVer/ulti
 &lt;p&gt;And finally, keep your old solutions around either in files or in your &lt;abbr title="Read–Eval–Print Loop"&gt;REPL&lt;/abbr&gt;’s
 history as you’ll probably end up revisiting them, if not this year then maybe
 in the next.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="section" id="hopes-for-2020"&gt;
+&lt;/section&gt;
+&lt;section id="hopes-for-2020"&gt;
 &lt;h2&gt;Hopes for 2020?&lt;/h2&gt;
 &lt;p&gt;Repeating number one from last year: That the options to pay for it are better
 next year.  Each year I have to find a friend to make a donation in my place as
@@ -2923,10 +2973,12 @@ a &lt;a class="reference external" href="mailto:jnrowe&amp;#37;&amp;#52;&amp;#48
 Simple, &lt;abbr title="Advent of Code"&gt;AoC&lt;/abbr&gt; always has a puzzle or two which benefit from using them.&lt;/p&gt;
 &lt;/dd&gt;
 &lt;/dl&gt;
-&lt;/div&gt;
-&lt;/div&gt;
+&lt;/section&gt;
+&lt;/section&gt;
 </content>
     <link href="https://jnrowe.github.io/articles/advent_of_code_2019.html" rel="alternate"/>
+    <summary>With a touch of sadness, I’ve given up on AoC for this year.  I’m writing this
+as a journal entry, more for myself than others.  You’ve been warned!|AOC| example runner failure</summary>
     <category term="adventofcode" label="adventofcode"/>
     <category term="coding" label="coding"/>
     <category term="puzzles" label="puzzles"/>
@@ -2939,7 +2991,7 @@ Simple, &lt;abbr title="Advent of Code"&gt;AoC&lt;/abbr&gt; always has a puzzle 
     <author>
       <name>James Rowe</name>
     </author>
-    <content type="html">&lt;div class="section" id="advent-of-code-2020"&gt;
+    <content type="html">&lt;section id="advent-of-code-2020"&gt;
 
 &lt;p&gt;I’m done.&lt;/p&gt;
 &lt;p&gt;I’ve given up on &lt;abbr title="Advent of Code"&gt;AoC&lt;/abbr&gt; for this year.  I’m writing this as a journal entry,
@@ -2950,7 +3002,7 @@ more for myself than others.  You’ve been warned!&lt;/p&gt;
 it.  If you’re enjoying it, &lt;em&gt;or&lt;/em&gt; currently screaming at it, &lt;a class="reference external" href="https://adventofcode.com/2020/support"&gt;tip the
 creator&lt;/a&gt; so that we can smile and shout at it next year.&lt;/p&gt;
 &lt;/div&gt;
-&lt;div class="section" id="why-quit"&gt;
+&lt;section id="why-quit"&gt;
 &lt;h2&gt;Why quit?&lt;/h2&gt;
 &lt;p&gt;I’m in the habit of quitting early now.  Each year I spank through the puzzles
 until I lose interest, give up, and then complete the puzzles through the
@@ -2960,8 +3012,8 @@ impenetrable to me.  It literally took me four times as long to parse the
 description as it did to code the solution.&lt;/p&gt;
 &lt;p&gt;I have 32 stars for completing both parts of every day so far this year, but
 I’m taking a break until I have a bit more downtime.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="section" id="day-1"&gt;
+&lt;/section&gt;
+&lt;section id="day-1"&gt;
 &lt;h2&gt;Day 1&lt;/h2&gt;
 &lt;ul class="simple"&gt;
 &lt;li&gt;&lt;p&gt;&lt;a class="reference external" href="https://adventofcode.com/2020/day/1"&gt;Report Repair&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
@@ -3004,8 +3056,8 @@ we just need to change the &lt;code class="docutils literal notranslate"&gt;&lt;
 &lt;/div&gt;
 &lt;p&gt;However, it is unclear to me whether that is actually clearer in the general
 case, or simply the eye I have given my current daytime project.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="section" id="day-2"&gt;
+&lt;/section&gt;
+&lt;section id="day-2"&gt;
 &lt;h2&gt;Day 2&lt;/h2&gt;
 &lt;ul class="simple"&gt;
 &lt;li&gt;&lt;p&gt;&lt;a class="reference external" href="https://adventofcode.com/2020/day/2"&gt;Password Philosophy&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
@@ -3060,8 +3112,8 @@ the more manual &lt;code class="docutils literal notranslate"&gt;&lt;span class=
 symbolically&lt;/a&gt;.  &lt;em&gt;And yes&lt;/em&gt;, the “&lt;strong&gt;exactly one of these positions&lt;/strong&gt;” text
 really is in &lt;strong&gt;bold&lt;/strong&gt; on that page.&lt;/p&gt;
 &lt;img alt="vim showing bug is day 2’s solution" src="../../_images/2020-12-02-symbolic.png" /&gt;
-&lt;/div&gt;
-&lt;div class="section" id="day-3"&gt;
+&lt;/section&gt;
+&lt;section id="day-3"&gt;
 &lt;h2&gt;Day 3&lt;/h2&gt;
 &lt;ul class="simple"&gt;
 &lt;li&gt;&lt;p&gt;&lt;a class="reference external" href="https://adventofcode.com/2020/day/3"&gt;Toboggan Trajectory&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
@@ -3121,8 +3173,8 @@ step values.  I had seen that coming, and was already prepared in my
     &lt;span class="p"&gt;)&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="section" id="day-4"&gt;
+&lt;/section&gt;
+&lt;section id="day-4"&gt;
 &lt;h2&gt;Day 4&lt;/h2&gt;
 &lt;ul class="simple"&gt;
 &lt;li&gt;&lt;p&gt;&lt;a class="reference external" href="https://adventofcode.com/2020/day/4"&gt;Passport Processing&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
@@ -3164,8 +3216,8 @@ implementation.  Even the birth year would have been a heap of lines:&lt;/p&gt;
             &lt;span class="k"&gt;raise&lt;/span&gt; &lt;span class="ne"&gt;ValueError&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="sa"&gt;f&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;Invalid birth year &lt;/span&gt;&lt;span class="si"&gt;{&lt;/span&gt;&lt;span class="n"&gt;value&lt;/span&gt;&lt;span class="si"&gt;!r}&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="section" id="day-5"&gt;
+&lt;/section&gt;
+&lt;section id="day-5"&gt;
 &lt;h2&gt;Day 5&lt;/h2&gt;
 &lt;ul class="simple"&gt;
 &lt;li&gt;&lt;p&gt;&lt;a class="reference external" href="https://adventofcode.com/2020/day/5"&gt;Binary Boarding&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
@@ -3196,8 +3248,8 @@ pretend the characters are binary representations of the value:&lt;/p&gt;
 &lt;span class="nb"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;seat&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="section" id="day-6"&gt;
+&lt;/section&gt;
+&lt;section id="day-6"&gt;
 &lt;h2&gt;Day 6&lt;/h2&gt;
 &lt;ul class="simple"&gt;
 &lt;li&gt;&lt;p&gt;&lt;a class="reference external" href="https://adventofcode.com/2020/day/6"&gt;Custom Customs&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
@@ -3232,8 +3284,8 @@ a shared repository, but it is how I &lt;abbr title="Read–Eval–Print Loop"&g
 &lt;p&gt;If you’ve made it this far, I wonder if &lt;em&gt;you&lt;/em&gt; can guess what language my
 current daytime project is written in.  There is a small prize in it for the
 first person to correctly guess based on the solutions to these puzzles.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="section" id="day-7"&gt;
+&lt;/section&gt;
+&lt;section id="day-7"&gt;
 &lt;h2&gt;Day 7&lt;/h2&gt;
 &lt;ul class="simple"&gt;
 &lt;li&gt;&lt;p&gt;&lt;a class="reference external" href="https://adventofcode.com/2020/day/7"&gt;Handy Haversacks&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
@@ -3276,8 +3328,8 @@ this route on the day.&lt;/p&gt;
 &lt;p&gt;I had assumed the input would have been crazy enough to break Python’s default
 recursion limit, but it looks like we were nowhere near it.  Things aren’t
 getting evil… yet.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="section" id="day-8"&gt;
+&lt;/section&gt;
+&lt;section id="day-8"&gt;
 &lt;h2&gt;Day 8&lt;/h2&gt;
 &lt;ul class="simple"&gt;
 &lt;li&gt;&lt;p&gt;&lt;a class="reference external" href="https://adventofcode.com/2020/day/8"&gt;Handheld Halting&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
@@ -3326,8 +3378,8 @@ to regular string splitting like so:&lt;/p&gt;
 messed up the parsing in a rush to score on the local leaderboard.  However,
 once you start poking around there is a multitude of rabbit holes to climb in
 to if you want to extract some speed.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="section" id="day-9"&gt;
+&lt;/section&gt;
+&lt;section id="day-9"&gt;
 &lt;h2&gt;Day 9&lt;/h2&gt;
 &lt;ul class="simple"&gt;
 &lt;li&gt;&lt;p&gt;&lt;a class="reference external" href="https://adventofcode.com/2020/day/9"&gt;Encoding Error&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
@@ -3386,8 +3438,8 @@ distance with an early exit:&lt;/p&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
 &lt;p&gt;But… Don’t. Do. It.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="section" id="day-10"&gt;
+&lt;/section&gt;
+&lt;section id="day-10"&gt;
 &lt;h2&gt;Day 10&lt;/h2&gt;
 &lt;ul class="simple"&gt;
 &lt;li&gt;&lt;p&gt;&lt;a class="reference external" href="https://adventofcode.com/2020/day/10"&gt;Adapter Array&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
@@ -3415,8 +3467,8 @@ distance with an early exit:&lt;/p&gt;
 &lt;/div&gt;
 &lt;p&gt;As you can probably tell I wasn’t particularly happy with this day.  I’ve
 wondered if I was just lucky with my input, but it doesn’t appear so.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="section" id="day-11"&gt;
+&lt;/section&gt;
+&lt;section id="day-11"&gt;
 &lt;h2&gt;Day 11&lt;/h2&gt;
 &lt;ul class="simple"&gt;
 &lt;li&gt;&lt;p&gt;&lt;a class="reference external" href="https://adventofcode.com/2020/day/11"&gt;Seating System&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
@@ -3443,8 +3495,8 @@ filter for a given value.  In my case it just looks for the first
 non-&lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;None&lt;/span&gt;&lt;/code&gt;, and then it just a matter of changing the four to a five in our
 seat toggling branch.&lt;/p&gt;
 &lt;p&gt;&lt;a class="reference external" href="https://pypi.python.org/pypi/numpy"&gt;numpy&lt;/a&gt; &lt;em&gt;is&lt;/em&gt; cheating, but not using it is needless busywork.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="section" id="day-12"&gt;
+&lt;/section&gt;
+&lt;section id="day-12"&gt;
 &lt;h2&gt;Day 12&lt;/h2&gt;
 &lt;ul class="simple"&gt;
 &lt;li&gt;&lt;p&gt;&lt;a class="reference external" href="https://adventofcode.com/2020/day/12"&gt;Rain Risk&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
@@ -3475,8 +3527,8 @@ I was about to break out the trigonometry here, but luckily I did quick
 point class here, or reach for complex numbers to store the &lt;strong&gt;x&lt;/strong&gt; and
 &lt;strong&gt;y&lt;/strong&gt; coordinates.&lt;/p&gt;
 &lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="section" id="day-13"&gt;
+&lt;/section&gt;
+&lt;section id="day-13"&gt;
 &lt;h2&gt;Day 13&lt;/h2&gt;
 &lt;ul class="simple"&gt;
 &lt;li&gt;&lt;p&gt;&lt;a class="reference external" href="https://adventofcode.com/2020/day/13"&gt;Shuttle Search&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
@@ -3493,8 +3545,8 @@ brush up on &lt;a class="reference external" href="https://docs.python.org/3/lib
 to &lt;a class="reference external" href="https://github.com/ggreer/the_silver_searcher"&gt;ag&lt;/a&gt; or &lt;strong class="program"&gt;grep&lt;/strong&gt; previous competition’s answers is a literal super
 power.  And, doing so is far easier if you’re not staring at reams of
 &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;i&lt;/span&gt;&lt;/code&gt;/&lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;x&lt;/span&gt;&lt;/code&gt;/&lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;n&lt;/span&gt;&lt;/code&gt; usage.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="section" id="day-14"&gt;
+&lt;/section&gt;
+&lt;section id="day-14"&gt;
 &lt;h2&gt;Day 14&lt;/h2&gt;
 &lt;ul class="simple"&gt;
 &lt;li&gt;&lt;p&gt;&lt;a class="reference external" href="https://adventofcode.com/2020/day/14"&gt;Docking Data&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
@@ -3516,8 +3568,8 @@ I need a break from this as much I wanted a break from working on the
 puzzles themselves, and the two week point seems like as good a time as any
 for a break.&lt;/p&gt;
 &lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="section" id="tips"&gt;
+&lt;/section&gt;
+&lt;section id="tips"&gt;
 &lt;h2&gt;Tips&lt;/h2&gt;
 &lt;p&gt;I’m mostly repeating my tips from &lt;span class="xref std std-doc"&gt;last year&lt;/span&gt;, the
 &lt;span class="xref std std-doc"&gt;year before&lt;/span&gt;, and the &lt;span class="xref std std-doc"&gt;year before that&lt;/span&gt;.&lt;/p&gt;
@@ -3536,8 +3588,8 @@ editor’s &lt;a class="reference external" href="https://github.com/SirVer/ulti
 &lt;p&gt;And finally, keep your old solutions around either in files or in your &lt;abbr title="Read–Eval–Print Loop"&gt;REPL&lt;/abbr&gt;’s
 history as you’ll probably end up revisiting them, if not this year then maybe
 in the next.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="section" id="hopes-for-2021"&gt;
+&lt;/section&gt;
+&lt;section id="hopes-for-2021"&gt;
 &lt;h2&gt;Hopes for 2021?&lt;/h2&gt;
 &lt;p&gt;Repeating number one from every year so far: That the options to pay for it are
 better next year.  Each year I have to find a friend to make a donation in my
@@ -3547,10 +3599,11 @@ a donation entirely.&lt;/p&gt;
 &lt;p&gt;Number two?  That it returns.  I know I’ve moaned a couple of times in this
 document, but that is the joy of puzzles.  If they’re not annoying you then
 they’re not challenging enough.&lt;/p&gt;
-&lt;/div&gt;
-&lt;/div&gt;
+&lt;/section&gt;
+&lt;/section&gt;
 </content>
     <link href="https://jnrowe.github.io/articles/advent_of_code_2020.html" rel="alternate"/>
+    <summary>I’m done.vim showing bug is day 2’s solution</summary>
     <category term="adventofcode" label="adventofcode"/>
     <category term="coding" label="coding"/>
     <category term="puzzles" label="puzzles"/>

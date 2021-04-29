@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <id>https://jnrowe.github.io/</id>
   <title>JNRowe - Posts tagged styling</title>
-  <updated>2021-04-18T11:22:11.519047+00:00</updated>
+  <updated>2021-04-29T22:38:04.274299+00:00</updated>
   <link href="https://jnrowe.github.io/"/>
   <link href="https://jnrowe.github.io/blog/tag/styling/atom.xml" rel="self"/>
-  <generator uri="https://ablog.readthedocs.org/" version="0.10.17">ABlog</generator>
+  <generator uri="https://ablog.readthedocs.org/" version="0.10.18">ABlog</generator>
   <subtitle>Ramblings of a tired mind</subtitle>
   <entry>
     <id>https://jnrowe.github.io/articles/tips/Theming_mutt.html</id>
@@ -14,7 +14,7 @@
     <author>
       <name>James Rowe</name>
     </author>
-    <content type="html">&lt;div class="section" id="theming-mutt"&gt;
+    <content type="html">&lt;section id="theming-mutt"&gt;
 
 &lt;p&gt;Jeff, a work colleague, asks via &lt;abbr title="Internet Relay Chat"&gt;IRC&lt;/abbr&gt;:&lt;/p&gt;
 &lt;blockquote&gt;
@@ -31,9 +31,10 @@ now as simple as adding the following to your &lt;code class="file docutils lite
 &lt;span class="nb"&gt;source&lt;/span&gt; ~/.mutt/colour_&lt;span class="nv"&gt;$TERM&lt;/span&gt;.rc
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
-&lt;/div&gt;
+&lt;/section&gt;
 </content>
     <link href="https://jnrowe.github.io/articles/tips/Theming_mutt.html" rel="alternate"/>
+    <summary>Jeff, a work colleague, asks via IRC:</summary>
     <category term="mutt" label="mutt"/>
     <category term="styling" label="styling"/>
     <published>2009-09-23T00:00:00+01:00</published>
@@ -45,7 +46,7 @@ now as simple as adding the following to your &lt;code class="file docutils lite
     <author>
       <name>James Rowe</name>
     </author>
-    <content type="html">&lt;div class="section" id="uber-pink-prompts"&gt;
+    <content type="html">&lt;section id="uber-pink-prompts"&gt;
 
 &lt;p&gt;cookiemon5ter asks in &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;#gentoo&lt;/span&gt;&lt;/code&gt; on Freenode:&lt;/p&gt;
 &lt;blockquote&gt;
@@ -93,9 +94,10 @@ your startup scripts, or if you’re convinced all your terminals are 256 colour
 capable you can simply check for &lt;span class="target" id="index-1"&gt;&lt;/span&gt;&lt;code class="xref std std-envvar docutils literal notranslate"&gt;&lt;span class="pre"&gt;$DISPLAY&lt;/span&gt;&lt;/code&gt; instead.&lt;/p&gt;
 &lt;p&gt;Changing the console palette and using 256 colour mode makes for two tips
 today!!&lt;/p&gt;
-&lt;/div&gt;
+&lt;/section&gt;
 </content>
     <link href="https://jnrowe.github.io/articles/tips/Uber_pink_prompts.html" rel="alternate"/>
+    <summary>cookiemon5ter asks in #gentoo on Freenode:</summary>
     <category term="bash" label="bash"/>
     <category term="styling" label="styling"/>
     <published>2009-09-25T00:00:00+01:00</published>
@@ -107,7 +109,7 @@ today!!&lt;/p&gt;
     <author>
       <name>James Rowe</name>
     </author>
-    <content type="html">&lt;div class="section" id="fancy-awesome-theming"&gt;
+    <content type="html">&lt;section id="fancy-awesome-theming"&gt;
 
 &lt;a class="reference external image-reference" href="/.images/2009-09-28-awesome_theming.png"&gt;&lt;img alt="Awesome screenshot" class="align-right" src="../../_images/2009-09-28-awesome_theming-mini.png" /&gt;&lt;/a&gt;
 &lt;p&gt;People, mostly named Neil Blake, who shouldn’t look over my shoulder ask:&lt;/p&gt;
@@ -149,9 +151,10 @@ background image, however that could also be achieved with ImageMagick when
 building the background image if it is desired.&lt;/p&gt;
 &lt;p&gt;Click on the thumbnail image above to see the full desktop image and the effect
 in full.&lt;/p&gt;
-&lt;/div&gt;
+&lt;/section&gt;
 </content>
     <link href="https://jnrowe.github.io/articles/tips/Fancy_awesome_theming.html" rel="alternate"/>
+    <summary>People, mostly named Neil Blake, who shouldn’t look over my shoulder ask:</summary>
     <category term="awesome" label="awesome"/>
     <category term="styling" label="styling"/>
     <published>2009-09-28T00:00:00+01:00</published>
@@ -163,7 +166,7 @@ in full.&lt;/p&gt;
     <author>
       <name>James Rowe</name>
     </author>
-    <content type="html">&lt;div class="section" id="disabling-cursor-blinking-in-gtk"&gt;
+    <content type="html">&lt;section id="disabling-cursor-blinking-in-gtk"&gt;
 
 &lt;p&gt;Darren Roberts asks via the EADS Linux list:&lt;/p&gt;
 &lt;blockquote&gt;
@@ -191,17 +194,18 @@ value for &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&
 blink frequency.&lt;/p&gt;
 &lt;p&gt;If you wish to only change the settings in pidgin you can edit
 &lt;code class="file docutils literal notranslate"&gt;&lt;span class="pre"&gt;~/.purple/gtkrc-2.0&lt;/span&gt;&lt;/code&gt; instead of your main &lt;code class="file docutils literal notranslate"&gt;&lt;span class="pre"&gt;~/.gtkrc-2.0&lt;/span&gt;&lt;/code&gt;.&lt;/p&gt;
-&lt;div class="section" id="bonus-related-tip"&gt;
+&lt;section id="bonus-related-tip"&gt;
 &lt;h2&gt;Bonus related tip&lt;/h2&gt;
 &lt;p&gt;If you’re really driven mad by the blinking cursor, and wish to disable it in
 the console too then add the next little snippet to your shell’s startup file:&lt;/p&gt;
 &lt;div class="highlight-bash notranslate"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="nb"&gt;echo&lt;/span&gt; -e &lt;span class="s1"&gt;&amp;#39;\033[?48c&amp;#39;&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
+&lt;/section&gt;
+&lt;/section&gt;
 </content>
     <link href="https://jnrowe.github.io/articles/tips/Disabling_cursor_blinking_in_GTK.html" rel="alternate"/>
+    <summary>Darren Roberts asks via the EADS Linux list:</summary>
     <category term="GTK+" label="GTK+"/>
     <category term="styling" label="styling"/>
     <published>2009-10-03T00:00:00+01:00</published>
@@ -213,7 +217,7 @@ the console too then add the next little snippet to your shell’s startup file:
     <author>
       <name>James Rowe</name>
     </author>
-    <content type="html">&lt;div class="section" id="sharing-xresources-between-systems"&gt;
+    <content type="html">&lt;section id="sharing-xresources-between-systems"&gt;
 
 &lt;p&gt;In amongst the rants in our watercooler channel at work comes this question:&lt;/p&gt;
 &lt;blockquote&gt;
@@ -225,7 +229,7 @@ directory in a &lt;a class="reference external" href="http://www.git-scm.com/"&g
 use different options on different machines and doesn’t relish the idea of
 having to pull and rebase branches just to keep files in sync.  Of course, he
 doesn’t have to do that and that is the point of this tip.&lt;/p&gt;
-&lt;div class="section" id="basic-conditionals"&gt;
+&lt;section id="basic-conditionals"&gt;
 &lt;h2&gt;Basic conditionals&lt;/h2&gt;
 &lt;p&gt;With great foresight the authors of &lt;a class="reference external" href="http://www.xfree86.org/current/xrdb.1.html"&gt;xrdb&lt;/a&gt; decided that our &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;Xresources&lt;/span&gt;&lt;/code&gt; file
 should be preprocessed before it is used, the default preprocessor is
@@ -253,8 +257,8 @@ programs.  Or we can define different options at runtime by specifying values
 to &lt;strong class="command"&gt;xrdb&lt;/strong&gt;, such as &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;xrdb&lt;/span&gt; &lt;span class="pre"&gt;-DFIXED_FONT=xft:Monospace:pixelsize=10&lt;/span&gt;&lt;/code&gt;.
 And don’t worry, &lt;strong class="command"&gt;cpp&lt;/strong&gt; is smart enough to cope with the use &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;=&lt;/span&gt;&lt;/code&gt; in
 our definition.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="section" id="per-system-conditionals"&gt;
+&lt;/section&gt;
+&lt;section id="per-system-conditionals"&gt;
 &lt;h2&gt;Per system conditionals&lt;/h2&gt;
 &lt;p&gt;On one system I use &lt;a class="reference external" href="http://www.levien.com/type/myfonts/inconsolata.html"&gt;Inconsolata&lt;/a&gt; is not installed, so the configuration above
 wouldn’t work on it.  &lt;strong class="command"&gt;xrdb&lt;/strong&gt; gives us a way around the problem though,
@@ -277,8 +281,8 @@ it defines a set of symbols we can use including one to test the system’s
 client name.  Using these it is easy to configure systems where the server
 and clients are on different machines.&lt;/p&gt;
 &lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="section" id="conditionals-for-server-options"&gt;
+&lt;/section&gt;
+&lt;section id="conditionals-for-server-options"&gt;
 &lt;h2&gt;Conditionals for server options&lt;/h2&gt;
 &lt;p&gt;You can also change configured settings based on the extensions loaded in to the
 server, for example to disable the screensaver in &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;muxi&lt;/span&gt;&lt;/code&gt; if the &lt;abbr title="Display Power Management Signalling"&gt;DPMS&lt;/abbr&gt; extension is supported we’d test for
@@ -288,8 +292,8 @@ server, for example to disable the screensaver in &lt;code class="docutils liter
 &lt;span class="cp"&gt;#endif&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="section" id="testing-your-resource-files"&gt;
+&lt;/section&gt;
+&lt;section id="testing-your-resource-files"&gt;
 &lt;h2&gt;Testing your resource files&lt;/h2&gt;
 &lt;p&gt;When you’re testing your own &lt;code class="file docutils literal notranslate"&gt;&lt;span class="pre"&gt;~/.Xresources&lt;/span&gt;&lt;/code&gt; file you can use the
 &lt;code class="xref std std-option docutils literal notranslate"&gt;&lt;span class="pre"&gt;-n&lt;/span&gt;&lt;/code&gt; option with &lt;strong class="command"&gt;xrdb&lt;/strong&gt;, it tells &lt;strong class="command"&gt;xrdb&lt;/strong&gt; to dump the
@@ -299,8 +303,8 @@ without having to open and close applications constantly.  You can also define
 and cancel symbol definitions with the &lt;code class="xref std std-option docutils literal notranslate"&gt;&lt;span class="pre"&gt;-D&lt;/span&gt;&lt;/code&gt; and &lt;code class="xref std std-option docutils literal notranslate"&gt;&lt;span class="pre"&gt;-U&lt;/span&gt;&lt;/code&gt; options
 for &lt;strong class="command"&gt;xrdb&lt;/strong&gt;, this allows you to test your modifications that rely on
 symbols that are normally exported by &lt;strong class="command"&gt;xrdb&lt;/strong&gt;.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="section" id="using-a-more-featureful-preprocessor"&gt;
+&lt;/section&gt;
+&lt;section id="using-a-more-featureful-preprocessor"&gt;
 &lt;h2&gt;Using a more featureful preprocessor&lt;/h2&gt;
 &lt;p&gt;You can also choose a different preprocessor if &lt;strong class="command"&gt;cpp&lt;/strong&gt; isn’t up to your
 needs by specifying a &lt;strong class="command"&gt;-cpp&lt;/strong&gt; option to &lt;strong class="command"&gt;xrdb&lt;/strong&gt;.  The only
@@ -309,10 +313,11 @@ cancelling and &lt;a class="reference external" href="https://docs.python.org/3/
 restrictions is &lt;a class="reference external" href="http://www.gnu.org/software/m4/m4.html"&gt;m4&lt;/a&gt;, and it might be a good choice if you wish to do more
 advanced things in your configuration file such as fancy filtering or the use
 of loops for defining colour tables.&lt;/p&gt;
-&lt;/div&gt;
-&lt;/div&gt;
+&lt;/section&gt;
+&lt;/section&gt;
 </content>
     <link href="https://jnrowe.github.io/articles/tips/Sharing_Xresources_between_systems.html" rel="alternate"/>
+    <summary>In amongst the rants in our watercooler channel at work comes this question:</summary>
     <category term="X11" label="X11"/>
     <category term="styling" label="styling"/>
     <published>2009-10-05T00:00:00+01:00</published>

@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <id>https://jnrowe.github.io/</id>
   <title>JNRowe - Posted in 2017</title>
-  <updated>2021-04-18T11:22:03.930387+00:00</updated>
+  <updated>2021-04-29T22:37:58.655429+00:00</updated>
   <link href="https://jnrowe.github.io/"/>
   <link href="https://jnrowe.github.io/blog/2017/atom.xml" rel="self"/>
-  <generator uri="https://ablog.readthedocs.org/" version="0.10.17">ABlog</generator>
+  <generator uri="https://ablog.readthedocs.org/" version="0.10.18">ABlog</generator>
   <subtitle>Ramblings of a tired mind</subtitle>
   <entry>
     <id>https://jnrowe.github.io/thoughts/metro_city.html</id>
@@ -14,7 +14,7 @@
     <author>
       <name>James Rowe</name>
     </author>
-    <content type="html">&lt;div class="section" id="burning-down-the-streets"&gt;
+    <content type="html">&lt;section id="burning-down-the-streets"&gt;
 
 &lt;blockquote class="epigraph"&gt;
 &lt;div&gt;&lt;p&gt;The whole thing makes me wonder whether a modern reintroduction of the
@@ -28,7 +28,7 @@ I jumped at the chance.&lt;/p&gt;
 patterns that emerge.  We quickly hit upon the idea that some poison was so
 obvious that &lt;em&gt;even&lt;/em&gt; the Twitter folks would acknowledge and reject it, and
 piggybacking off of that would trim down the work considerably.&lt;/p&gt;
-&lt;div class="section" id="mining-the-abyss"&gt;
+&lt;section id="mining-the-abyss"&gt;
 &lt;h2&gt;Mining the abyss&lt;/h2&gt;
 &lt;p&gt;My task was simple: ingest a massive lump of &lt;abbr title="JavaScript Object Notation"&gt;JSON&lt;/abbr&gt;, process it &lt;em&gt;somehow&lt;/em&gt; and spit out results that could be used in an
 artsy manner that I would likely not understand.&lt;/p&gt;
@@ -58,8 +58,8 @@ levels, and showed a real city with its real occupants.  The intent was to
 allow people to experience a location they knew but with its foetid underbelly
 exposed.&lt;/p&gt;
 &lt;a class="reference external image-reference" href="https://en.m.wikipedia.org/wiki/Final_Fight"&gt;&lt;img alt="Final Fight One on the GBA" class="align-right" src="../_images/final_fight_one.png" style="width: 237.60000000000002px; height: 158.4px;" /&gt;&lt;/a&gt;
-&lt;/div&gt;
-&lt;div class="section" id="what-happened-next"&gt;
+&lt;/section&gt;
+&lt;section id="what-happened-next"&gt;
 &lt;h2&gt;What happened next?&lt;/h2&gt;
 &lt;p&gt;What happened next saddened and surprised me in equal quantities; visitors to
 the site doxxed a heap of the displayed retweeters almost immediately.  So much
@@ -73,7 +73,7 @@ I would not want to be linked to them through work or social circles.&lt;/p&gt;
 &lt;p&gt;However, the end result was really neat even on the smaller canvas it has to
 live on.  Seeing that level of vitriolic rage is not fun, but realising that
 much of it is vented in to nowhere does soften it a little.&lt;/p&gt;
-&lt;div class="sidebar"&gt;
+&lt;aside class="sidebar"&gt;
 &lt;p class="sidebar-title"&gt;Alternative mappings&lt;/p&gt;
 &lt;p&gt;Having seen the tweets of someone I know pop up, and digging around a little
 to see how hateful those tweets were it became clear there was an equally
@@ -81,9 +81,9 @@ toxic topic that could be mapped in a similar manner.&lt;/p&gt;
 &lt;p&gt;Following the game theme, perhaps a &lt;a class="reference external" href="https://en.m.wikipedia.org/wiki/Prince_of_Persia:_The_Sands_of_Time"&gt;Prince of Persia: The Sands of Time&lt;/a&gt;
 affair that shows the changing hopes, dreams and promises of the anechoic
 brexit promoters from early 2016 up to today.&lt;/p&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="section" id="fall-out"&gt;
+&lt;/aside&gt;
+&lt;/section&gt;
+&lt;section id="fall-out"&gt;
 &lt;h2&gt;Fall out&lt;/h2&gt;
 &lt;p&gt;One of the things that surprised me most was that initially I had primed the
 data by looking at users who followed users that have been suspended or banned.
@@ -103,10 +103,12 @@ approval to people’s views when you continue to follow them, even if you’re 
 actively engaging with them.  The simple act of not confronting them is
 normalising the behaviour.  If you’re not calling them out on it, you’re doing
 yourself and society at large a serious injustice.&lt;/p&gt;
-&lt;/div&gt;
-&lt;/div&gt;
+&lt;/section&gt;
+&lt;/section&gt;
 </content>
     <link href="https://jnrowe.github.io/thoughts/metro_city.html" rel="alternate"/>
+    <summary>The whole thing makes me wonder whether a modern reintroduction of the
+skimmington ride for social media is long overdue.</summary>
     <category term="politics" label="politics"/>
     <category term="noise" label="noise"/>
     <published>2017-09-03T00:00:00+01:00</published>

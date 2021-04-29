@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <id>https://jnrowe.github.io/</id>
   <title>JNRowe - Posts tagged personal</title>
-  <updated>2021-04-18T11:22:10.084902+00:00</updated>
+  <updated>2021-04-29T22:38:02.709948+00:00</updated>
   <link href="https://jnrowe.github.io/"/>
   <link href="https://jnrowe.github.io/blog/tag/personal/atom.xml" rel="self"/>
-  <generator uri="https://ablog.readthedocs.org/" version="0.10.17">ABlog</generator>
+  <generator uri="https://ablog.readthedocs.org/" version="0.10.18">ABlog</generator>
   <subtitle>Ramblings of a tired mind</subtitle>
   <entry>
     <id>https://jnrowe.github.io/office_hours.html</id>
@@ -14,14 +14,14 @@
     <author>
       <name>James Rowe</name>
     </author>
-    <content type="html">&lt;div class="section" id="office-hours"&gt;
+    <content type="html">&lt;section id="office-hours"&gt;
 
 &lt;p&gt;A few co-workers have started offering office hours, seemingly spurred on by
 a post by &lt;a class="reference external" href="https://robertheaton.com/2018/10/22/slash-office-hours/"&gt;Robert Heaton&lt;/a&gt;.  I’m going to try this a little closer to Robert’s
 original idea, and make &lt;em&gt;this&lt;/em&gt; offer to strangers too&lt;a class="footnote-reference brackets" href="#id2" id="id1"&gt;1&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;If you want to chat, I want to help.&lt;/p&gt;
 &lt;img alt="Appointment icon [from Adwaita icons]" class="align-left" src="../../_images/appointment-new.png" /&gt;
-&lt;div class="section" id="what-topics"&gt;
+&lt;section id="what-topics"&gt;
 &lt;h2&gt;What topics?&lt;/h2&gt;
 &lt;p&gt;You choose, that is the point.  That said, here are some thoughts…&lt;/p&gt;
 &lt;p&gt;My career thus far has mainly been focused on navigation systems, both
@@ -33,8 +33,8 @@ someone who has both passed &lt;em&gt;and&lt;/em&gt; failed get in touch.&lt;/p&
 advice, then by all means get in touch.&lt;/p&gt;
 &lt;p&gt;You just need a little &lt;a class="reference external" href="https://en.m.wikipedia.org/wiki/Rubber_duck_debugging"&gt;rubber duck&lt;/a&gt; time, let us make it happen!&lt;/p&gt;
 &lt;p&gt;Basically, get in touch and we’ll see what happens!&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="section" id="what-do-you-need-to-know"&gt;
+&lt;/section&gt;
+&lt;section id="what-do-you-need-to-know"&gt;
 &lt;h2&gt;What do you need to know?&lt;/h2&gt;
 &lt;p&gt;Be aware that if this works out I’ll likely write my own &lt;a class="reference external" href="https://robertheaton.com/2018/10/02/lessons-from-my-first-20-office-hours/"&gt;retrospective&lt;/a&gt;, so
 don’t expect total privacy.  I’m also a fan of &lt;span class="xref std std-doc"&gt;writing tips&lt;/span&gt;, so I might take any questions and run with them!&lt;/p&gt;
@@ -49,14 +49,14 @@ accommodate you even if you’re far away.&lt;/p&gt;
 Castilian speaker, and I’m told by my French co-workers that I’m fluent in
 French docker… so you will need to be able to communicate in one of those or
 wish to &lt;em&gt;teach me&lt;/em&gt; another.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="section" id="how"&gt;
+&lt;/section&gt;
+&lt;section id="how"&gt;
 &lt;h2&gt;How?&lt;/h2&gt;
 &lt;p&gt;The easiest way to make this happen is to drop me a &lt;a class="reference external" href="mailto:jnrowe&amp;#37;&amp;#52;&amp;#48;gmail&amp;#46;com"&gt;mail&lt;/a&gt;.  If the idea gets
 any traction I’ll look at better ways of scheduling, but until then mail should
 be fine.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="section" id="updates-2019-01-15"&gt;
+&lt;/section&gt;
+&lt;section id="updates-2019-01-15"&gt;
 &lt;h2&gt;Updates - 2019-01-15&lt;/h2&gt;
 &lt;p&gt;So, I’ve just completed my second appointment, and it seems to be working out
 okay.  Both have been fun(at least for me), and I’m planning on continuing this
@@ -77,10 +77,13 @@ semi-private mastodon instance, but I’d like to think I was implicitly
 offering help there anyway.&lt;/p&gt;
 &lt;/dd&gt;
 &lt;/dl&gt;
-&lt;/div&gt;
-&lt;/div&gt;
+&lt;/section&gt;
+&lt;/section&gt;
 </content>
     <link href="https://jnrowe.github.io/office_hours.html" rel="alternate"/>
+    <summary>A few co-workers have started offering office hours, seemingly spurred on by
+a post by Robert Heaton.  I’m going to try this a little closer to Robert’s
+original idea, and make this offer to strangers too1.Appointment icon [from Adwaita icons]</summary>
     <category term="personal" label="personal"/>
     <published>2018-12-23T00:00:00+00:00</published>
   </entry>

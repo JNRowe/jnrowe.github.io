@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <id>https://jnrowe.github.io/</id>
   <title>JNRowe - Posts tagged zsh</title>
-  <updated>2021-04-18T11:22:12.323268+00:00</updated>
+  <updated>2021-04-29T22:38:05.256210+00:00</updated>
   <link href="https://jnrowe.github.io/"/>
   <link href="https://jnrowe.github.io/blog/tag/zsh/atom.xml" rel="self"/>
-  <generator uri="https://ablog.readthedocs.org/" version="0.10.17">ABlog</generator>
+  <generator uri="https://ablog.readthedocs.org/" version="0.10.18">ABlog</generator>
   <subtitle>Ramblings of a tired mind</subtitle>
   <entry>
     <id>https://jnrowe.github.io/articles/tips/Zsh_and_the_vcs.html</id>
@@ -14,7 +14,7 @@
     <author>
       <name>James Rowe</name>
     </author>
-    <content type="html">&lt;div class="section" id="zsh-and-the-vcs"&gt;
+    <content type="html">&lt;section id="zsh-and-the-vcs"&gt;
 
 &lt;img alt="Git prompt screenshot" class="align-right" src="../../_images/2009-10-28-git_prompt.png" /&gt;
 &lt;p&gt;I’ve recently switched to &lt;a class="reference external" href="http://www.zsh.org/"&gt;Zsh&lt;/a&gt; as my login shell after
@@ -35,7 +35,7 @@ they could be converted to work with &lt;em&gt;plain&lt;/em&gt; &lt;strong class
 inclination.&lt;/p&gt;
 &lt;p&gt;If you want to see my entire “theme” file you can &lt;a class="reference external" href="http://github.com/JNRowe/oh-my-zsh"&gt;clone my fork&lt;/a&gt; and look at
 &lt;a class="reference external" href="http://github.com/JNRowe/oh-my-zsh/blob/master/themes/jnrowe.zsh-theme"&gt;oh-my-zsh/themes/jnrowe.zsh-theme&lt;/a&gt;.&lt;/p&gt;
-&lt;div class="section" id="branch-names"&gt;
+&lt;section id="branch-names"&gt;
 &lt;h2&gt;Branch names&lt;/h2&gt;
 &lt;p&gt;&lt;strong class="command"&gt;zsh&lt;/strong&gt; comes with some neat &lt;abbr title="Version Control System"&gt;VCS&lt;/abbr&gt; integration, that is exceptionally
 &lt;a class="reference external" href="http://zsh.sourceforge.net/Doc/Release/User-Contributions.html#SEC273"&gt;documented&lt;/a&gt; in the manual.  I use that code to enable branch names in my
@@ -72,8 +72,8 @@ make the &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&g
 my system.  It is also the only &lt;abbr title="Version Control System"&gt;VCS&lt;/abbr&gt; that has such a hack, which is quite
 telling in itself.&lt;/p&gt;
 &lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="section" id="repository-state"&gt;
+&lt;/section&gt;
+&lt;section id="repository-state"&gt;
 &lt;h2&gt;Repository state&lt;/h2&gt;
 &lt;p&gt;The “funky arrows” Dan asks about are dependent on the state of the current
 working directory as can be seen in the screenshot at the top of this page.&lt;/p&gt;
@@ -130,10 +130,15 @@ and the status identifiers will be used.&lt;/p&gt;
 &lt;p&gt;If you are using a font which doesn’t display the characters correctly, either
 change the characters in the &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;dir_status&lt;/span&gt;&lt;/code&gt; values or switch to a &lt;a class="reference external" href="http://www.is-vn.bg/hamster/"&gt;better font&lt;/a&gt;
 that can display them.&lt;/p&gt;
-&lt;/div&gt;
-&lt;/div&gt;
+&lt;/section&gt;
+&lt;/section&gt;
 </content>
     <link href="https://jnrowe.github.io/articles/tips/Zsh_and_the_vcs.html" rel="alternate"/>
+    <summary>I’ve recently switched to Zsh as my login shell after
+9 years of using bash, and for no particularly good reason either as they’re
+both great interactive shells.  I guess all the Kool Kids are doing it, and
+I’m just playing catchup.  The one side effect of that is I’m now scribbling
+tips about zsh too…</summary>
     <category term="git" label="git"/>
     <category term="vcs" label="vcs"/>
     <category term="zsh" label="zsh"/>

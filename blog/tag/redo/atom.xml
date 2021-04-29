@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <id>https://jnrowe.github.io/</id>
   <title>JNRowe - Posts tagged redo</title>
-  <updated>2021-04-18T11:22:11.292541+00:00</updated>
+  <updated>2021-04-29T22:38:03.506590+00:00</updated>
   <link href="https://jnrowe.github.io/"/>
   <link href="https://jnrowe.github.io/blog/tag/redo/atom.xml" rel="self"/>
-  <generator uri="https://ablog.readthedocs.org/" version="0.10.17">ABlog</generator>
+  <generator uri="https://ablog.readthedocs.org/" version="0.10.18">ABlog</generator>
   <subtitle>Ramblings of a tired mind</subtitle>
   <entry>
     <id>https://jnrowe.github.io/articles/redo_ninja_make.html</id>
@@ -14,7 +14,7 @@
     <author>
       <name>James Rowe</name>
     </author>
-    <content type="html">&lt;div class="section" id="while-sun-do-make-hay-done"&gt;
+    <content type="html">&lt;section id="while-sun-do-make-hay-done"&gt;
 
 &lt;div class="admonition warning"&gt;
 &lt;p class="admonition-title"&gt;Warning&lt;/p&gt;
@@ -29,7 +29,7 @@ software world have lucked ourselves in to.&lt;/p&gt;
 written &lt;code class="file docutils literal notranslate"&gt;&lt;span class="pre"&gt;Makefile&lt;/span&gt;&lt;/code&gt;s, which is just plain ridiculous.  Nobody should be
 hand writing that much build infrastructure, even if it started with good
 intentions and a scant 120 lines.&lt;/p&gt;
-&lt;div class="section" id="which-make"&gt;
+&lt;section id="which-make"&gt;
 &lt;h2&gt;Which &lt;strong class="command"&gt;make&lt;/strong&gt;?&lt;/h2&gt;
 &lt;p&gt;A hardly insignificant number of those 10,000 lines are to workaround
 incompatibilities in various tools that advertise themselves as &lt;strong class="command"&gt;make&lt;/strong&gt;.
@@ -66,8 +66,8 @@ support isn’t enabled in the packages for some reason, and the devs that use
 systems which refuse to ship a recent enough versions of &lt;a class="reference external" href="https://www.gnu.org/software/make/make.html"&gt;GNU make&lt;/a&gt; to avoid
 the GPLv3&lt;a class="footnote-reference brackets" href="#id9" id="id2"&gt;2&lt;/a&gt; don’t have it either.&lt;/p&gt;
 &lt;p&gt;There has to be a better way…&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="section" id="redo"&gt;
+&lt;/section&gt;
+&lt;section id="redo"&gt;
 &lt;h2&gt;&lt;strong class="command"&gt;redo&lt;/strong&gt;&lt;/h2&gt;
 &lt;p&gt;&lt;abbr title="Daniel J. Bernstein"&gt;djb&lt;/abbr&gt;’s &lt;strong class="command"&gt;redo&lt;/strong&gt; is a &lt;em&gt;huge&lt;/em&gt; step in the right
 direction&lt;a class="footnote-reference brackets" href="#id10" id="id3"&gt;3&lt;/a&gt;, but its various implementations are plagued by many of the
@@ -127,8 +127,8 @@ controls than simply rebuilding &lt;em&gt;everything&lt;/em&gt; by depending on 
 I even gave a talk on it at &lt;abbr title="London Functional"&gt;LoFu&lt;/abbr&gt; ‘16, and I know
 some people switched after hearing that as I’ve been fielding informal support
 requests ever since ;)&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="section" id="gup"&gt;
+&lt;/section&gt;
+&lt;section id="gup"&gt;
 &lt;h2&gt;&lt;strong class="command"&gt;gup&lt;/strong&gt;&lt;/h2&gt;
 &lt;p&gt;I want to give &lt;a class="reference external" href="https://github.com/timbertson/gup/"&gt;Tim Cuthbertson’s gup&lt;/a&gt; an honourable mention here.  &lt;strong class="command"&gt;gup&lt;/strong&gt; is
 an improved &lt;strong class="command"&gt;redo&lt;/strong&gt; implementation, but is wholly incompatible with it.  It is
@@ -164,15 +164,15 @@ considering using &lt;strong class="command"&gt;redo&lt;/strong&gt;.&lt;/p&gt;
 other projects that he maintains and it has been a good experience each time.
 I’m sure you’ll get the same great service if you were to find a problem in
 &lt;strong class="command"&gt;gup&lt;/strong&gt;!&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="section" id="ninja"&gt;
+&lt;/section&gt;
+&lt;section id="ninja"&gt;
 &lt;h2&gt;&lt;strong class="command"&gt;ninja&lt;/strong&gt;&lt;/h2&gt;
 &lt;p&gt;Enter the &lt;a class="reference external" href="https://ninja-build.org/"&gt;ninja&lt;/a&gt;.  I’ve switched many projects to
 &lt;strong class="command"&gt;ninja&lt;/strong&gt;, but not because it is my new favourite tool.  I’ve switched entirely
 because it &lt;em&gt;feels&lt;/em&gt; like it has the momentum to supplant &lt;strong class="command"&gt;make&lt;/strong&gt;.  Given the
 choice I’d honestly rather see a &lt;strong class="command"&gt;redo&lt;/strong&gt; implementation such as &lt;strong class="command"&gt;gup&lt;/strong&gt; succeed,
 but &lt;strong class="command"&gt;ninja&lt;/strong&gt; is a great alternative.&lt;/p&gt;
-&lt;div class="sidebar"&gt;
+&lt;aside class="sidebar"&gt;
 &lt;p class="sidebar-title"&gt;Implementations&lt;/p&gt;
 &lt;p&gt;In a &lt;em&gt;massive&lt;/em&gt; change from the previous sections I can mention a tool with
 alternatives where compatibility is &lt;strong&gt;100%&lt;/strong&gt;.  &lt;a class="reference external" href="https://github.com/michaelforney/samurai/"&gt;samurai&lt;/a&gt; is an alternative
@@ -181,7 +181,7 @@ incompatible feature changes.  &lt;a class="reference external" href="http://sha
 support for processing &lt;code class="file docutils literal notranslate"&gt;&lt;span class="pre"&gt;build.ninja&lt;/span&gt;&lt;/code&gt; baked in, and has some
 interesting functionality for inspecting your builds that &lt;strong class="command"&gt;ninja&lt;/strong&gt; itself
 doesn’t provide.&lt;/p&gt;
-&lt;/div&gt;
+&lt;/aside&gt;
 &lt;p&gt;I’ll make a confession here, my home directory now requires &lt;strong class="command"&gt;ninja&lt;/strong&gt;.  Yes, my
 config files have made the progression from &lt;strong class="command"&gt;make&lt;/strong&gt; to &lt;strong class="command"&gt;redo&lt;/strong&gt; to &lt;strong class="command"&gt;gup&lt;/strong&gt; and now
 to &lt;strong class="command"&gt;ninja&lt;/strong&gt;.&lt;/p&gt;
@@ -191,12 +191,14 @@ to &lt;strong class="command"&gt;ninja&lt;/strong&gt;.&lt;/p&gt;
 &lt;span class="go"&gt;423&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
-&lt;div class="figure align-default" id="id15"&gt;
+&lt;figure class="align-default" id="id15"&gt;
 &lt;img alt="Digraph of home directory’s top level build" src="../../_images/homeninja.png" style="width: 390.25px; height: 186.25px;" /&gt;
-&lt;p class="caption"&gt;&lt;span class="caption-text"&gt;A chunk of the &lt;abbr title="Directed Acyclic Graph"&gt;DAG&lt;/abbr&gt; for my home directory under &lt;strong class="command"&gt;ninja&lt;/strong&gt;.  The full image is
+&lt;figcaption&gt;
+&lt;p&gt;&lt;span class="caption-text"&gt;A chunk of the &lt;abbr title="Directed Acyclic Graph"&gt;DAG&lt;/abbr&gt; for my home directory under &lt;strong class="command"&gt;ninja&lt;/strong&gt;.  The full image is
 both &lt;em&gt;chock full&lt;/em&gt; of private data and 9 &lt;abbr title="MegaBytes"&gt;MB&lt;/abbr&gt;(29000 pixels
 tall), so I’ll save all of us from that.&lt;/span&gt;&lt;/p&gt;
-&lt;/div&gt;
+&lt;/figcaption&gt;
+&lt;/figure&gt;
 &lt;p&gt;We’ve already seen a benefit of &lt;strong class="command"&gt;ninja&lt;/strong&gt; here, it can immediately display
 a &lt;abbr title="Directed Acyclic Graph"&gt;DAG&lt;/abbr&gt; to help in debugging by giving the option &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;-t&lt;/span&gt; &lt;span class="pre"&gt;graph&lt;/span&gt;&lt;/code&gt;.  While both
 &lt;strong class="command"&gt;gup&lt;/strong&gt; and &lt;strong class="command"&gt;redo&lt;/strong&gt; can be easily tamed to produce a simple &lt;a class="reference external" href="https://www.graphviz.org/"&gt;graphviz&lt;/a&gt; image as
@@ -246,7 +248,7 @@ work is below:&lt;/p&gt;
 to work with more complex builds.  You might even find you can get away with
 a tiny bit of scripting around &lt;a class="reference external" href="https://pypi.python.org/pypi/ninja_syntax"&gt;ninja_syntax&lt;/a&gt;, but the manual work will
 quickly build up with that approach.&lt;/p&gt;
-&lt;div class="section" id="meson"&gt;
+&lt;section id="meson"&gt;
 &lt;h3&gt;&lt;strong class="command"&gt;meson&lt;/strong&gt;&lt;/h3&gt;
 &lt;p&gt;The &lt;a class="reference external" href="http://mesonbuild.com/"&gt;meson build system&lt;/a&gt; is probably the frontrunner today.&lt;/p&gt;
 &lt;p&gt;In a move that feels like it is simply meant to &lt;a class="reference external" href="http://suckless.org/philosophy/"&gt;annoy the people behind
@@ -300,8 +302,8 @@ module when the project grew, and eventually changed to &lt;strong class="comman
 edits when the project was eventually greenlit.  It was a really clean
 process, and one I’d follow again.&lt;/p&gt;
 &lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="section" id="googles-kati"&gt;
+&lt;/section&gt;
+&lt;section id="googles-kati"&gt;
 &lt;h3&gt;Google’s kati&lt;/h3&gt;
 &lt;p&gt;&lt;a class="reference external" href="https://github.com/google/kati/"&gt;kati&lt;/a&gt; is a nice first step if you’re currently using &lt;strong class="command"&gt;make&lt;/strong&gt; and want to try out
 &lt;strong class="command"&gt;ninja&lt;/strong&gt;.  It will generate a &lt;code class="file docutils literal notranslate"&gt;&lt;span class="pre"&gt;build.ninja&lt;/span&gt;&lt;/code&gt; from your &lt;code class="file docutils literal notranslate"&gt;&lt;span class="pre"&gt;Makefile&lt;/span&gt;&lt;/code&gt;,
@@ -320,9 +322,9 @@ I’m aware of it.  I’m ignoring it because of its inscrutable syntax, its
 multi-pass pre-build steps, and its love for running the &lt;strong class="command"&gt;cmake&lt;/strong&gt;
 binary thousands of times in each build.&lt;/p&gt;
 &lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="section" id="conclusions"&gt;
+&lt;/section&gt;
+&lt;/section&gt;
+&lt;section id="conclusions"&gt;
 &lt;h2&gt;Conclusions&lt;/h2&gt;
 &lt;p&gt;There are a lot of options available if you’re feeling growing pains with
 &lt;strong class="command"&gt;make&lt;/strong&gt;, or are just looking to tighten up builds.  I’ve covered a few here, but
@@ -375,10 +377,12 @@ starting point as it is not too complex, and implements a good subset of
 required interface.&lt;/p&gt;
 &lt;/dd&gt;
 &lt;/dl&gt;
-&lt;/div&gt;
-&lt;/div&gt;
+&lt;/section&gt;
+&lt;/section&gt;
 </content>
     <link href="https://jnrowe.github.io/articles/redo_ninja_make.html" rel="alternate"/>
+    <summary>This is a massive brain dump, which I plan to rewrite in to a series at
+some point.  However, until that imaginary date arrives…Digraph of home directory’s top level build</summary>
     <category term="tools" label="tools"/>
     <category term="build" label="build"/>
     <category term="make" label="make"/>

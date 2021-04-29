@@ -4,7 +4,8 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17: http://docutils.sourceforge.net/" />
+
     <title>Debugging Python RegEx &#8212; JNRowe</title>
     <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/alabaster.css" type="text/css" />
@@ -74,7 +75,7 @@
       5 minutes
     </p>
   
-  <div class="section" id="debugging-python-regex">
+  <section id="debugging-python-regex">
 <h1>Debugging Python <abbr title="Regular Expression">RegEx</abbr><a class="headerlink" href="#debugging-python-regex" title="Permalink to this headline">¶</a></h1>
 <p>Rob Sampson is learning <a class="reference external" href="http://www.python.org/">Python</a> and struggling to get to grips with its
 <abbr title="Regular Expression">RegEx</abbr> handling.  He asks on one of our internal lists at the office:</p>
@@ -88,7 +89,7 @@ Any clues about where to look?</p>
 <li><p>Failure to use <a class="reference external" href="http://docs.python.org/tutorial/introduction.html#strings">raw strings</a> when including backslashes in the <abbr title="Regular Expression">RegEx</abbr></p></li>
 <li><p>Choosing to use a <abbr title="Regular Expression">RegEx</abbr> when a better tool for the job exists</p></li>
 </ol>
-<div class="section" id="using-raw-strings">
+<section id="using-raw-strings">
 <h2>Using raw strings<a class="headerlink" href="#using-raw-strings" title="Permalink to this headline">¶</a></h2>
 <p>In Rob’s code he had failed to take in to account the backslash escaping
 problem.  A simplified example of what he was trying to do would be:</p>
@@ -154,8 +155,8 @@ flags are just named constants(<code class="docutils literal notranslate"><span 
 <span class="go">[&#39;123\\match&#39;]</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="better-tools">
+</section>
+<section id="better-tools">
 <h2>Better tools<a class="headerlink" href="#better-tools" title="Permalink to this headline">¶</a></h2>
 <p>Often, a <abbr title="Regular Expression">RegEx</abbr> is the hammer of choice for far too many tasks for far too
 many people(myself included).  There are often much better choices, some of
@@ -200,8 +201,8 @@ stricter.</p>
 <a class="reference external" href="http://pypi.python.org/pypi">pypi</a>.  Often, the work has already been done for you and may well be much
 better than the hurried version you were about to cobble together with
 a <abbr title="Regular Expression">RegEx</abbr>.</p>
-</div>
-</div>
+</section>
+</section>
 
     <hr>
 

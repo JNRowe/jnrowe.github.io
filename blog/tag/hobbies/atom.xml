@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <id>https://jnrowe.github.io/</id>
   <title>JNRowe - Posts tagged hobbies</title>
-  <updated>2021-04-18T11:22:09.427820+00:00</updated>
+  <updated>2021-04-29T22:38:02.060375+00:00</updated>
   <link href="https://jnrowe.github.io/"/>
   <link href="https://jnrowe.github.io/blog/tag/hobbies/atom.xml" rel="self"/>
-  <generator uri="https://ablog.readthedocs.org/" version="0.10.17">ABlog</generator>
+  <generator uri="https://ablog.readthedocs.org/" version="0.10.18">ABlog</generator>
   <subtitle>Ramblings of a tired mind</subtitle>
   <entry>
     <id>https://jnrowe.github.io/thoughts/side_projects.html</id>
@@ -14,7 +14,7 @@
     <author>
       <name>James Rowe</name>
     </author>
-    <content type="html">&lt;div class="section" id="side-projects"&gt;
+    <content type="html">&lt;section id="side-projects"&gt;
 
 &lt;p&gt;Chatting with my brother yesterday he expressed some disbelief when I mentioned
 &lt;em&gt;yet another&lt;/em&gt; friend who has a website related to some topic we were discussing:&lt;/p&gt;
@@ -40,7 +40,7 @@ discussions about box packing, routing, &lt;a class="reference external" href="h
 &lt;a class="reference external" href="http://en.wikipedia.org/wiki/Bridges_of_Konigsberg"&gt;bridges in some foreign land&lt;/a&gt;.  Because of the math and technology
 implications many of my friends have written tools to explore some of the
 practical and theoretical issues faced in logistics… often for fun.&lt;/p&gt;
-&lt;div class="section" id="it-is-all-about-me"&gt;
+&lt;section id="it-is-all-about-me"&gt;
 &lt;h2&gt;It is all about me&lt;/h2&gt;
 &lt;p&gt;I’m not working on any public facing websites right now&lt;a class="footnote-reference brackets" href="#s1" id="id1"&gt;1&lt;/a&gt;, but I do play
 with a few public facing projects from time to time that should head towards
@@ -52,7 +52,7 @@ diversity.&lt;/p&gt;
 GitHub profile&lt;/a&gt; or links from my browser’s bookmarks, but that should be
 descriptive enough to get the point across.&lt;/p&gt;
 &lt;/div&gt;
-&lt;div class="section" id="gentoo-packages"&gt;
+&lt;section id="gentoo-packages"&gt;
 &lt;h3&gt;Gentoo packages&lt;/h3&gt;
 &lt;p&gt;Over the past decade I’ve spent a lot of time hacking on things related to
 &lt;a class="reference external" href="http://gentoo.org/"&gt;Gentoo&lt;/a&gt;.  Some of that for work projects and some of it for &lt;a class="reference external" href="https://jnrowe-misc.readthedocs.io/"&gt;personal
@@ -60,15 +60,15 @@ projects&lt;/a&gt;.  I’ve also experienced my fair share of troubles, and have
 a few bugs&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;At one time I even hoped to &lt;a class="reference external" href="https://bugs.gentoo.org/show_bug.cgi?id=142090"&gt;become a developer&lt;/a&gt;, but that didn’t work out for
 a bunch of reasons.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="section" id="github2"&gt;
+&lt;/section&gt;
+&lt;section id="github2"&gt;
 &lt;h3&gt;&lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;github2&lt;/span&gt;&lt;/code&gt;&lt;/h3&gt;
 &lt;p&gt;For a year I &lt;a class="reference external" href="https://github.com/ask/python-github2/graphs/contributors"&gt;maintained&lt;/a&gt; a relatively popular &lt;a class="reference external" href="https://github.com/ask/python-github2"&gt;API wrapper&lt;/a&gt; to GitHub.  I did
 this because I found it fun.  It provided no economic benefit to me, and I never
 expected it to.  I know a lot of people used it when building their own toy
 projects and websites, because many were kind enough to link to it.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="section" id="pyisbn"&gt;
+&lt;/section&gt;
+&lt;section id="pyisbn"&gt;
 &lt;h3&gt;&lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;pyisbn&lt;/span&gt;&lt;/code&gt;&lt;/h3&gt;
 &lt;p&gt;For seven years I’ve maintained a small library for &lt;a class="reference external" href="https://github.com/JNRowe/pyisbn/"&gt;validating ISBNs&lt;/a&gt;.
 &lt;em&gt;Yes, that is absolutely as boring as it sounds&lt;/em&gt;.&lt;/p&gt;
@@ -77,8 +77,8 @@ entries in my e-book database.  Other people started using it, many for their
 own weird side projects including a number of book retail websites.  It has
 amassed literally tens of thousands of downloads from &lt;abbr title="Python Package Index"&gt;PyPI&lt;/abbr&gt;, but you really
 shouldn’t trust the dubious statistics from &lt;abbr title="Python Package Index"&gt;PyPI&lt;/abbr&gt; ;)&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="section" id="rdial"&gt;
+&lt;/section&gt;
+&lt;section id="rdial"&gt;
 &lt;h3&gt;&lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;rdial&lt;/span&gt;&lt;/code&gt;&lt;/h3&gt;
 &lt;p&gt;&lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;rdial&lt;/span&gt;&lt;/code&gt; is a &lt;a class="reference external" href="https://rdial.readthedocs.io/"&gt;time tracking tool&lt;/a&gt;, and a perfect example for me.  I played
 with it for over a year before anyone else saw it, just because it scratched an
@@ -87,8 +87,8 @@ and there is now a small yet faithful band of users.&lt;/p&gt;
 &lt;p&gt;I even received the great honour of a few summer evening beers for releasing it.
 A beer being second only to a patch in the table of project endorsements
 that I subscribe to.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="section" id="upoints-nee-earth-distance"&gt;
+&lt;/section&gt;
+&lt;section id="upoints-nee-earth-distance"&gt;
 &lt;h3&gt;&lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;upoints&lt;/span&gt;&lt;/code&gt; née &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;earth_distance&lt;/span&gt;&lt;/code&gt;&lt;/h3&gt;
 &lt;p&gt;&lt;a class="reference external" href="https://jnrowe.github.io/upoints/"&gt;upoints&lt;/a&gt; is a strange one.  It started as a &lt;a class="reference external" href="http://jnrowe.github.io/upoints/geolocation_and_pathcross.html"&gt;stupid hack&lt;/a&gt; to figure out some
 silly travel planning drama, it proceeded to take on a life of its own.  Over
@@ -97,9 +97,9 @@ it now.&lt;/p&gt;
 &lt;p&gt;It did have some tangible benefit though, the sadly now defunct website it
 eventually spawned opened some nice doors for me.  I didn’t know it would or
 could at the time, so it didn’t affect how I spent my time when playing with it.&lt;/p&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="section" id="cut-from-the-pattern"&gt;
+&lt;/section&gt;
+&lt;/section&gt;
+&lt;section id="cut-from-the-pattern"&gt;
 &lt;h2&gt;Cut from the pattern&lt;/h2&gt;
 &lt;p&gt;This isn’t specific to me, or even to the particularly nerdy among my
 co-workers.  If you &lt;a class="reference external" href="https://github.com/explore"&gt;dig around on GitHub&lt;/a&gt;, or even &lt;a class="reference external" href="http://makezine.com/"&gt;makezine&lt;/a&gt;, you’ll see
@@ -118,10 +118,12 @@ basis.&lt;/p&gt;
 is just a jumbled content dump with no real purpose.&lt;/p&gt;
 &lt;/dd&gt;
 &lt;/dl&gt;
-&lt;/div&gt;
-&lt;/div&gt;
+&lt;/section&gt;
+&lt;/section&gt;
 </content>
     <link href="https://jnrowe.github.io/thoughts/side_projects.html" rel="alternate"/>
+    <summary>Chatting with my brother yesterday he expressed some disbelief when I mentioned
+yet another friend who has a website related to some topic we were discussing:</summary>
     <category term="hobbies" label="hobbies"/>
     <category term="projects" label="projects"/>
     <published>2013-12-16T00:00:00+00:00</published>

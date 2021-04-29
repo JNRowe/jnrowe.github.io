@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <id>https://jnrowe.github.io/</id>
   <title>JNRowe - Posts tagged desktop</title>
-  <updated>2021-04-18T11:22:08.008303+00:00</updated>
+  <updated>2021-04-29T22:38:01.510138+00:00</updated>
   <link href="https://jnrowe.github.io/"/>
   <link href="https://jnrowe.github.io/blog/tag/desktop/atom.xml" rel="self"/>
-  <generator uri="https://ablog.readthedocs.org/" version="0.10.17">ABlog</generator>
+  <generator uri="https://ablog.readthedocs.org/" version="0.10.18">ABlog</generator>
   <subtitle>Ramblings of a tired mind</subtitle>
   <entry>
     <id>https://jnrowe.github.io/articles/tiling_vs_tabbing.html</id>
@@ -14,7 +14,7 @@
     <author>
       <name>James Rowe</name>
     </author>
-    <content type="html">&lt;div class="section" id="tiling-vs-tabbing"&gt;
+    <content type="html">&lt;section id="tiling-vs-tabbing"&gt;
 
 &lt;p&gt;A fairly large chunk of my developer friends fawn over &lt;a class="reference external" href="https://tmux.github.io/"&gt;tmux&lt;/a&gt; and &lt;a class="reference external" href="https://tools.suckless.org/tabbed"&gt;tabbed&lt;/a&gt;.
 These tools can give &lt;em&gt;the effect&lt;/em&gt; of a multiple window interface to your
@@ -35,14 +35,14 @@ monocle&lt;a class="footnote-reference brackets" href="#id6" id="id2"&gt;2&lt;/a
 horizontally split that to include a &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;vim&lt;/span&gt;&lt;/code&gt; instance, I can just tag those
 three windows and enable a layout that supports it&lt;a class="footnote-reference brackets" href="#id7" id="id3"&gt;3&lt;/a&gt;.  I think the basic
 message should be clear by now.&lt;/p&gt;
-&lt;div class="sidebar"&gt;
+&lt;aside class="sidebar"&gt;
 &lt;p class="sidebar-title"&gt;Window manager choice&lt;/p&gt;
 &lt;p&gt;I’ve used both &lt;a class="reference external" href="https://awesomewm.org/"&gt;awesomewm&lt;/a&gt; and &lt;a class="reference external" href="https://dwm.suckless.org/"&gt;dwm&lt;/a&gt; as examples here because I use both
 depending on what machine I’m in front of.&lt;/p&gt;
 &lt;p&gt;However, you can achieve the same effect with any number of tiling window
 managers, or with tools like &lt;a class="reference external" href="https://launchpad.net/winwrangler"&gt;winwrangler&lt;/a&gt;&lt;a class="footnote-reference brackets" href="#id8" id="id4"&gt;4&lt;/a&gt; if your favourite window
 manager has weaker layout management.&lt;/p&gt;
-&lt;/div&gt;
+&lt;/aside&gt;
 &lt;p&gt;You can go further too.  Say you want &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;vim&lt;/span&gt;&lt;/code&gt; and a browser window side by side
 while reading documentation but need that &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;vim&lt;/span&gt;&lt;/code&gt; instance next to a terminal
 for running tests, then you can simply apply two tags to the &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;vim&lt;/span&gt;&lt;/code&gt; instance
@@ -77,9 +77,14 @@ of just characters too.&lt;/p&gt;
 it the &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;gtkhotkey&lt;/span&gt;&lt;/code&gt; dependency &lt;a class="reference external" href="https://github.com/JNRowe/jnrowe-misc/commit/a9249166b917110ecb69714ca08d8ff28870a9c7"&gt;here&lt;/a&gt;.&lt;/p&gt;
 &lt;/dd&gt;
 &lt;/dl&gt;
-&lt;/div&gt;
+&lt;/section&gt;
 </content>
     <link href="https://jnrowe.github.io/articles/tiling_vs_tabbing.html" rel="alternate"/>
+    <summary>A fairly large chunk of my developer friends fawn over tmux and tabbed.
+These tools can give the effect of a multiple window interface to your
+terminal sessions, or apply a tabbed interface to any xembed supporting
+application respectively.  I’ll freely admit they’re pretty awesome at what
+they do1.Example of awesomewm’s tile.right layout</summary>
     <category term="desktop" label="desktop"/>
     <category term="tiling" label="tiling"/>
     <category term="tabbed" label="tabbed"/>

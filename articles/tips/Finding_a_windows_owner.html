@@ -4,7 +4,8 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17: http://docutils.sourceforge.net/" />
+
     <title>Finding a window’s owner &#8212; JNRowe</title>
     <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/alabaster.css" type="text/css" />
@@ -74,7 +75,7 @@
       2 minutes
     </p>
   
-  <div class="section" id="finding-a-windows-owner">
+  <section id="finding-a-windows-owner">
 <h1>Finding a window’s owner<a class="headerlink" href="#finding-a-windows-owner" title="Permalink to this headline">¶</a></h1>
 <p>Rach Holmes asks on our Linux list:</p>
 <blockquote>
@@ -82,7 +83,7 @@
 </div></blockquote>
 <p>Jack McIntyre made a couple of outstanding correct guesses, but predictably Rach
 still wanted to know a generic solution and I offer this tip in response.</p>
-<div class="section" id="the-easy-way">
+<section id="the-easy-way">
 <h2>The easy way<a class="headerlink" href="#the-easy-way" title="Permalink to this headline">¶</a></h2>
 <p>Many windows define a <code class="docutils literal notranslate"><span class="pre">WM_COMMAND</span></code> property that is set to the command name of
 the application, if that exists all we have to do is read it:</p>
@@ -93,8 +94,8 @@ the application, if that exists all we have to do is read it:</p>
 <p>However, not all applications set this property.  Examples of applications that
 don’t set this property include <a class="reference external" href="http://www.mozilla.com/firefox">firefox</a> and <a class="reference external" href="http://www.gimp.org/">gimp</a>.  In fact, many of the modern
 applications you find on desktop systems don’t set this property at all.</p>
-</div>
-<div class="section" id="the-other-way">
+</section>
+<section id="the-other-way">
 <h2>The other way<a class="headerlink" href="#the-other-way" title="Permalink to this headline">¶</a></h2>
 <p><a class="reference external" href="http://standards.freedesktop.org/wm-spec/wm-spec-1.3.html">EWMH</a>, the Extended Window Manager Hints standard, defines a property called
 <code class="docutils literal notranslate"><span class="pre">_NET_WM_PID</span></code> that, if defined, is the process id of the application that
@@ -121,8 +122,8 @@ output.</p>
 <p>The <code class="docutils literal notranslate"><span class="pre">cmdline</span></code> value for the process from <a class="reference external" href="http://blogs.sun.com/eschrock/entry/the_power_of_proc">procfs</a> is finally read.  The
 <strong class="command">tr</strong> command is needed because options are separated by null
 terminators.</p>
-</div>
-<div class="section" id="the-problems">
+</section>
+<section id="the-problems">
 <h2>The problems<a class="headerlink" href="#the-problems" title="Permalink to this headline">¶</a></h2>
 <p>Back to the original question and Rach was looking for a way to stop the window
 from showing up, the immediate response to the annoying window problem is to
@@ -136,8 +137,8 @@ it happens with all applications that operate in this way.  Sending
 a <code class="docutils literal notranslate"><span class="pre">SIGTERM</span></code> to every terminal opened by <strong class="command">urxvtd</strong> probably isn’t what
 we would want to do, so you should always think very carefully before sending
 terminate signals.</p>
-</div>
-</div>
+</section>
+</section>
 
     <hr>
 

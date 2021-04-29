@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <id>https://jnrowe.github.io/</id>
   <title>JNRowe - Posts tagged web</title>
-  <updated>2021-04-18T11:22:12.202860+00:00</updated>
+  <updated>2021-04-29T22:38:05.131152+00:00</updated>
   <link href="https://jnrowe.github.io/"/>
   <link href="https://jnrowe.github.io/blog/tag/web/atom.xml" rel="self"/>
-  <generator uri="https://ablog.readthedocs.org/" version="0.10.17">ABlog</generator>
+  <generator uri="https://ablog.readthedocs.org/" version="0.10.18">ABlog</generator>
   <subtitle>Ramblings of a tired mind</subtitle>
   <entry>
     <id>https://jnrowe.github.io/articles/tips/Instant_web_server.html</id>
@@ -14,7 +14,7 @@
     <author>
       <name>James Rowe</name>
     </author>
-    <content type="html">&lt;div class="section" id="instant-web-server"&gt;
+    <content type="html">&lt;section id="instant-web-server"&gt;
 
 &lt;p&gt;Among the topics on our Linux list at work today was a question from Luke
 Fletcher that I was expecting to unleash a flurry of emotional responses:&lt;/p&gt;
@@ -31,7 +31,7 @@ the question at hand, but surprisingly little dissent over the choices.&lt;/p&gt
 &lt;/div&gt;&lt;/blockquote&gt;
 &lt;p&gt;I agree with Matt’s answer but I want to point a couple of possibly non-obvious
 web servers that they, and you, are likely to have installed already.&lt;/p&gt;
-&lt;div class="section" id="busybox-applet"&gt;
+&lt;section id="busybox-applet"&gt;
 &lt;h2&gt;Busybox applet&lt;/h2&gt;
 &lt;p&gt;All our Linux systems at the office include &lt;a class="reference external" href="http://www.busybox.net/"&gt;busybox&lt;/a&gt;, and in the configuration
 we use the &lt;a class="reference external" href="http://www.busybox.net/downloads/BusyBox.html#httpd"&gt;httpd&lt;/a&gt; applet is built.  It is very lightweight, and incredibly
@@ -53,8 +53,8 @@ server:&lt;/p&gt;
 &lt;/div&gt;
 &lt;p&gt;&lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;http_serve_location&lt;/span&gt;&lt;/code&gt; is set elsewhere in my configuration file, so that I can
 keep per-machine settings separate.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="section" id="python-built-in"&gt;
+&lt;/section&gt;
+&lt;section id="python-built-in"&gt;
 &lt;h2&gt;Python built-in&lt;/h2&gt;
 &lt;p&gt;&lt;a class="reference external" href="http://www.python.org/"&gt;Python&lt;/a&gt; comes with its own basic web server, and it is very easy to use:&lt;/p&gt;
 &lt;div class="highlight-console notranslate"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="gp"&gt;$&lt;/span&gt; python2.6 -m SimpleHTTPServer &lt;span class="m"&gt;8080&lt;/span&gt;
@@ -76,8 +76,8 @@ keep per-machine settings separate.&lt;/p&gt;
 &lt;p&gt;I’ve specified the port 8080 to both calls in the snippet above, by default the
 server port would be 8000.  If port 8000 is acceptable for you then you can save
 yourself five keystrokes.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="section" id="ruby-built-in"&gt;
+&lt;/section&gt;
+&lt;section id="ruby-built-in"&gt;
 &lt;h2&gt;Ruby built-in&lt;/h2&gt;
 &lt;p&gt;&lt;a class="reference external" href="http://www.ruby-lang.org/"&gt;ruby&lt;/a&gt; also comes with its own web server, one that you’re probably already
 familiar with if you’re a &lt;a class="reference external" href="http://www.rubyonrails.org/"&gt;rails&lt;/a&gt; user, called &lt;a class="reference external" href="http://www.webrick.org/"&gt;webrick&lt;/a&gt;.  We need a little script
@@ -99,18 +99,20 @@ to use &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;
 &lt;/div&gt;
 &lt;p&gt;This script will serve files from whatever directory is specified as its first
 argument.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="section" id="bonus"&gt;
+&lt;/section&gt;
+&lt;section id="bonus"&gt;
 &lt;h2&gt;Bonus&lt;/h2&gt;
 &lt;p&gt;Python also comes with a &lt;abbr title="Common Gateway Interface"&gt;CGI&lt;/abbr&gt;-capable version
 called &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;CGIHTTPServer&lt;/span&gt;&lt;/code&gt; and a &lt;abbr title="Extensible Markup Language"&gt;XML&lt;/abbr&gt;-&lt;abbr title="Remote Procedure Call"&gt;RPC&lt;/abbr&gt; server
 called — this shouldn’t come as a surprise — &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;SimpleXMLRPCServer&lt;/span&gt;&lt;/code&gt;.  They’re
 very useful for testing out ideas and concepts without having to set down lots
 of code.&lt;/p&gt;
-&lt;/div&gt;
-&lt;/div&gt;
+&lt;/section&gt;
+&lt;/section&gt;
 </content>
     <link href="https://jnrowe.github.io/articles/tips/Instant_web_server.html" rel="alternate"/>
+    <summary>Among the topics on our Linux list at work today was a question from Luke
+Fletcher that I was expecting to unleash a flurry of emotional responses:</summary>
     <category term="devel" label="devel"/>
     <category term="web" label="web"/>
     <published>2009-10-12T00:00:00+01:00</published>

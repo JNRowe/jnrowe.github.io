@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <id>https://jnrowe.github.io/</id>
   <title>JNRowe - Posts tagged jnrowe-misc</title>
-  <updated>2021-04-18T11:22:09.488605+00:00</updated>
+  <updated>2021-04-29T22:38:02.112397+00:00</updated>
   <link href="https://jnrowe.github.io/"/>
   <link href="https://jnrowe.github.io/blog/tag/jnrowe-misc/atom.xml" rel="self"/>
-  <generator uri="https://ablog.readthedocs.org/" version="0.10.17">ABlog</generator>
+  <generator uri="https://ablog.readthedocs.org/" version="0.10.18">ABlog</generator>
   <subtitle>Ramblings of a tired mind</subtitle>
   <entry>
     <id>https://jnrowe.github.io/articles/probits/jnrowe-misc.html</id>
@@ -14,14 +14,14 @@
     <author>
       <name>James Rowe</name>
     </author>
-    <content type="html">&lt;div class="section" id="jnrowe-misc-the-unsorted-package-overlay"&gt;
+    <content type="html">&lt;section id="jnrowe-misc-the-unsorted-package-overlay"&gt;
 
 &lt;blockquote&gt;
 &lt;div&gt;&lt;p&gt;A collection of &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;ebuild&lt;/span&gt;&lt;/code&gt; files with no overall theme.&lt;/p&gt;
 &lt;/div&gt;&lt;/blockquote&gt;
 &lt;p&gt;&lt;abbr title="Too Long; Didn’t Read"&gt;TLDR&lt;/abbr&gt;; For what it was &lt;a class="reference external" href="https://github.com/JNRowe/jnrowe-misc"&gt;jnrowe-misc&lt;/a&gt; served its
 purpose well.&lt;/p&gt;
-&lt;div class="section" id="an-island-unto-itself"&gt;
+&lt;section id="an-island-unto-itself"&gt;
 &lt;h2&gt;An island unto itself&lt;/h2&gt;
 &lt;p&gt;While it may come as a surprise to a few of the users(which would be most of
 them) the overlay available on GitHub wasn’t the deliverable at any point in
@@ -39,8 +39,8 @@ tests&lt;/span&gt; I was unable to share and had a tighter schedule for
 maintenance.&lt;/p&gt;
 &lt;p&gt;Still, I received a fair number of emails and live comments from users so I’ll
 call that a success!&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="section" id="upstreamed"&gt;
+&lt;/section&gt;
+&lt;section id="upstreamed"&gt;
 &lt;h2&gt;Upstreamed&lt;/h2&gt;
 &lt;p&gt;Sadly, very little was ever taken upstream(even less if you count the parts that
 were credited).  This was entirely my fault.  I originally started exporting the
@@ -52,8 +52,8 @@ after the first few.&lt;/p&gt;
 occasionally they overlapped when upstream added them.  The use of &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;::shadow&lt;/span&gt;&lt;/code&gt;
 to workaround problems when new packages were added upstream worked &lt;em&gt;really&lt;/em&gt;
 well, and saved the few remaining hairs on my balding head.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="section" id="legacy"&gt;
+&lt;/section&gt;
+&lt;section id="legacy"&gt;
 &lt;h2&gt;Legacy&lt;/h2&gt;
 &lt;p&gt;It looks like the majority of packages will continue to be maintained for the
 foreseeable future, but regrettably it looks like the result will not be
@@ -62,10 +62,11 @@ GitHub.&lt;/p&gt;
 &lt;p&gt;I’d like to change the new maintainer’s mind, but in all honesty I understand
 their reasons.  I’ve stopped maintaining a lot of once public projects over the
 past couple of years, and it is as refreshing as it is saddening.&lt;/p&gt;
-&lt;/div&gt;
-&lt;/div&gt;
+&lt;/section&gt;
+&lt;/section&gt;
 </content>
     <link href="https://jnrowe.github.io/articles/probits/jnrowe-misc.html" rel="alternate"/>
+    <summary>A collection of ebuild files with no overall theme.</summary>
     <category term="jnrowe-misc" label="jnrowe-misc"/>
     <category term="gentoo" label="gentoo"/>
     <published>2014-06-30T00:00:00+01:00</published>

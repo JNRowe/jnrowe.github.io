@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <id>https://jnrowe.github.io/</id>
   <title>JNRowe - Posted in 2009</title>
-  <updated>2021-04-18T11:22:04.276514+00:00</updated>
+  <updated>2021-04-29T22:37:59.020360+00:00</updated>
   <link href="https://jnrowe.github.io/"/>
   <link href="https://jnrowe.github.io/blog/2009/atom.xml" rel="self"/>
-  <generator uri="https://ablog.readthedocs.org/" version="0.10.17">ABlog</generator>
+  <generator uri="https://ablog.readthedocs.org/" version="0.10.18">ABlog</generator>
   <subtitle>Ramblings of a tired mind</subtitle>
   <entry>
     <id>https://jnrowe.github.io/articles/tips/Toggling_settings_in_vim.html</id>
@@ -14,7 +14,7 @@
     <author>
       <name>James Rowe</name>
     </author>
-    <content type="html">&lt;div class="section" id="toggling-settings-in-vim"&gt;
+    <content type="html">&lt;section id="toggling-settings-in-vim"&gt;
 
 &lt;p&gt;As you can never have enough keybinding tips and &lt;a class="reference external" href="http://www.vim.org"&gt;vim&lt;/a&gt; helps to prove that, the
 tip for today answers Joshua’s question from &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;##purplism&lt;/span&gt;&lt;/code&gt;&lt;/p&gt;
@@ -69,9 +69,11 @@ state in a variable we can test that instead.  The final — totally contrived
 map &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;M&lt;span class="p"&gt;-&lt;/span&gt;F12&lt;span class="p"&gt;&amp;gt;&lt;/span&gt; :&lt;span class="k"&gt;call&lt;/span&gt; EditorvsNotepad&lt;span class="p"&gt;()&amp;lt;&lt;/span&gt;CR&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
-&lt;/div&gt;
+&lt;/section&gt;
 </content>
     <link href="https://jnrowe.github.io/articles/tips/Toggling_settings_in_vim.html" rel="alternate"/>
+    <summary>As you can never have enough keybinding tips and vim helps to prove that, the
+tip for today answers Joshua’s question from ##purplism</summary>
     <category term="vim" label="vim"/>
     <published>2009-10-02T00:00:00+01:00</published>
   </entry>
@@ -82,7 +84,7 @@ map &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;M&lt;span class="p"&gt;-&lt;/span
     <author>
       <name>James Rowe</name>
     </author>
-    <content type="html">&lt;div class="section" id="disabling-cursor-blinking-in-gtk"&gt;
+    <content type="html">&lt;section id="disabling-cursor-blinking-in-gtk"&gt;
 
 &lt;p&gt;Darren Roberts asks via the EADS Linux list:&lt;/p&gt;
 &lt;blockquote&gt;
@@ -110,17 +112,18 @@ value for &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&
 blink frequency.&lt;/p&gt;
 &lt;p&gt;If you wish to only change the settings in pidgin you can edit
 &lt;code class="file docutils literal notranslate"&gt;&lt;span class="pre"&gt;~/.purple/gtkrc-2.0&lt;/span&gt;&lt;/code&gt; instead of your main &lt;code class="file docutils literal notranslate"&gt;&lt;span class="pre"&gt;~/.gtkrc-2.0&lt;/span&gt;&lt;/code&gt;.&lt;/p&gt;
-&lt;div class="section" id="bonus-related-tip"&gt;
+&lt;section id="bonus-related-tip"&gt;
 &lt;h2&gt;Bonus related tip&lt;/h2&gt;
 &lt;p&gt;If you’re really driven mad by the blinking cursor, and wish to disable it in
 the console too then add the next little snippet to your shell’s startup file:&lt;/p&gt;
 &lt;div class="highlight-bash notranslate"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="nb"&gt;echo&lt;/span&gt; -e &lt;span class="s1"&gt;&amp;#39;\033[?48c&amp;#39;&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
+&lt;/section&gt;
+&lt;/section&gt;
 </content>
     <link href="https://jnrowe.github.io/articles/tips/Disabling_cursor_blinking_in_GTK.html" rel="alternate"/>
+    <summary>Darren Roberts asks via the EADS Linux list:</summary>
     <category term="GTK+" label="GTK+"/>
     <category term="styling" label="styling"/>
     <published>2009-10-03T00:00:00+01:00</published>
@@ -132,7 +135,7 @@ the console too then add the next little snippet to your shell’s startup file:
     <author>
       <name>James Rowe</name>
     </author>
-    <content type="html">&lt;div class="section" id="simple-notifications-in-awesome"&gt;
+    <content type="html">&lt;section id="simple-notifications-in-awesome"&gt;
 
 &lt;p&gt;On seeing my window notifications in &lt;a class="reference external" href="https://awesomewm.org/"&gt;awesome&lt;/a&gt; from a screencast for a new
 project at work Matt Cooper asks:&lt;/p&gt;
@@ -204,8 +207,8 @@ specifically any character your font can display.  From time to time I’ve
 experimented with using &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;✔&lt;/span&gt;&lt;/code&gt; and &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;✘&lt;/span&gt;&lt;/code&gt;, but most of the fonts I prefer to use
 don’t display them correctly(if you’re seeing two boxes your fonts don’t
 either).&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="section" id="window-creation-notifications"&gt;
+&lt;/section&gt;
+&lt;section id="window-creation-notifications"&gt;
 &lt;h1&gt;Window creation notifications&lt;/h1&gt;
 &lt;p&gt;One of the notifications I like to have is for when new windows are opened, this
 way I don’t miss windows opening on tags I’m not currently viewing.&lt;/p&gt;
@@ -214,8 +217,8 @@ way I don’t miss windows opening on tags I’m not currently viewing.&lt;/p&gt
     &lt;span class="n"&gt;notify&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;start&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;&lt;/span&gt;&lt;span class="s"&gt;#{@name or &amp;#39;Application&amp;#39;} started&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="section" id="network-notifications"&gt;
+&lt;/section&gt;
+&lt;section id="network-notifications"&gt;
 &lt;h1&gt;Network notifications&lt;/h1&gt;
 &lt;p&gt;I also have the following &lt;a class="reference external" href="https://awesomewm.org/apidoc/libraries/gears.html"&gt;gears&lt;/a&gt; timer set to toggle my network monitor between
 &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;lo&lt;/span&gt;&lt;/code&gt; and &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;ppp0&lt;/span&gt;&lt;/code&gt; depending on whether my remote network interface is up.
@@ -237,9 +240,11 @@ switches the network graph widget to use the appropriate input too.&lt;/p&gt;
     &lt;span class="n"&gt;notify&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;start&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;&lt;/span&gt;&lt;span class="s"&gt;PPP0 interface has come #{state}&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
-&lt;/div&gt;
+&lt;/section&gt;
 </content>
     <link href="https://jnrowe.github.io/articles/tips/Simple_notifications_in_awesome.html" rel="alternate"/>
+    <summary>On seeing my window notifications in awesome from a screencast for a new
+project at work Matt Cooper asks:</summary>
     <category term="awesome" label="awesome"/>
     <published>2009-10-04T00:00:00+01:00</published>
   </entry>
@@ -250,7 +255,7 @@ switches the network graph widget to use the appropriate input too.&lt;/p&gt;
     <author>
       <name>James Rowe</name>
     </author>
-    <content type="html">&lt;div class="section" id="sharing-xresources-between-systems"&gt;
+    <content type="html">&lt;section id="sharing-xresources-between-systems"&gt;
 
 &lt;p&gt;In amongst the rants in our watercooler channel at work comes this question:&lt;/p&gt;
 &lt;blockquote&gt;
@@ -262,7 +267,7 @@ directory in a &lt;a class="reference external" href="http://www.git-scm.com/"&g
 use different options on different machines and doesn’t relish the idea of
 having to pull and rebase branches just to keep files in sync.  Of course, he
 doesn’t have to do that and that is the point of this tip.&lt;/p&gt;
-&lt;div class="section" id="basic-conditionals"&gt;
+&lt;section id="basic-conditionals"&gt;
 &lt;h2&gt;Basic conditionals&lt;/h2&gt;
 &lt;p&gt;With great foresight the authors of &lt;a class="reference external" href="http://www.xfree86.org/current/xrdb.1.html"&gt;xrdb&lt;/a&gt; decided that our &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;Xresources&lt;/span&gt;&lt;/code&gt; file
 should be preprocessed before it is used, the default preprocessor is
@@ -290,8 +295,8 @@ programs.  Or we can define different options at runtime by specifying values
 to &lt;strong class="command"&gt;xrdb&lt;/strong&gt;, such as &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;xrdb&lt;/span&gt; &lt;span class="pre"&gt;-DFIXED_FONT=xft:Monospace:pixelsize=10&lt;/span&gt;&lt;/code&gt;.
 And don’t worry, &lt;strong class="command"&gt;cpp&lt;/strong&gt; is smart enough to cope with the use &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;=&lt;/span&gt;&lt;/code&gt; in
 our definition.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="section" id="per-system-conditionals"&gt;
+&lt;/section&gt;
+&lt;section id="per-system-conditionals"&gt;
 &lt;h2&gt;Per system conditionals&lt;/h2&gt;
 &lt;p&gt;On one system I use &lt;a class="reference external" href="http://www.levien.com/type/myfonts/inconsolata.html"&gt;Inconsolata&lt;/a&gt; is not installed, so the configuration above
 wouldn’t work on it.  &lt;strong class="command"&gt;xrdb&lt;/strong&gt; gives us a way around the problem though,
@@ -314,8 +319,8 @@ it defines a set of symbols we can use including one to test the system’s
 client name.  Using these it is easy to configure systems where the server
 and clients are on different machines.&lt;/p&gt;
 &lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="section" id="conditionals-for-server-options"&gt;
+&lt;/section&gt;
+&lt;section id="conditionals-for-server-options"&gt;
 &lt;h2&gt;Conditionals for server options&lt;/h2&gt;
 &lt;p&gt;You can also change configured settings based on the extensions loaded in to the
 server, for example to disable the screensaver in &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;muxi&lt;/span&gt;&lt;/code&gt; if the &lt;abbr title="Display Power Management Signalling"&gt;DPMS&lt;/abbr&gt; extension is supported we’d test for
@@ -325,8 +330,8 @@ server, for example to disable the screensaver in &lt;code class="docutils liter
 &lt;span class="cp"&gt;#endif&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="section" id="testing-your-resource-files"&gt;
+&lt;/section&gt;
+&lt;section id="testing-your-resource-files"&gt;
 &lt;h2&gt;Testing your resource files&lt;/h2&gt;
 &lt;p&gt;When you’re testing your own &lt;code class="file docutils literal notranslate"&gt;&lt;span class="pre"&gt;~/.Xresources&lt;/span&gt;&lt;/code&gt; file you can use the
 &lt;code class="xref std std-option docutils literal notranslate"&gt;&lt;span class="pre"&gt;-n&lt;/span&gt;&lt;/code&gt; option with &lt;strong class="command"&gt;xrdb&lt;/strong&gt;, it tells &lt;strong class="command"&gt;xrdb&lt;/strong&gt; to dump the
@@ -336,8 +341,8 @@ without having to open and close applications constantly.  You can also define
 and cancel symbol definitions with the &lt;code class="xref std std-option docutils literal notranslate"&gt;&lt;span class="pre"&gt;-D&lt;/span&gt;&lt;/code&gt; and &lt;code class="xref std std-option docutils literal notranslate"&gt;&lt;span class="pre"&gt;-U&lt;/span&gt;&lt;/code&gt; options
 for &lt;strong class="command"&gt;xrdb&lt;/strong&gt;, this allows you to test your modifications that rely on
 symbols that are normally exported by &lt;strong class="command"&gt;xrdb&lt;/strong&gt;.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="section" id="using-a-more-featureful-preprocessor"&gt;
+&lt;/section&gt;
+&lt;section id="using-a-more-featureful-preprocessor"&gt;
 &lt;h2&gt;Using a more featureful preprocessor&lt;/h2&gt;
 &lt;p&gt;You can also choose a different preprocessor if &lt;strong class="command"&gt;cpp&lt;/strong&gt; isn’t up to your
 needs by specifying a &lt;strong class="command"&gt;-cpp&lt;/strong&gt; option to &lt;strong class="command"&gt;xrdb&lt;/strong&gt;.  The only
@@ -346,10 +351,11 @@ cancelling and &lt;a class="reference external" href="https://docs.python.org/3/
 restrictions is &lt;a class="reference external" href="http://www.gnu.org/software/m4/m4.html"&gt;m4&lt;/a&gt;, and it might be a good choice if you wish to do more
 advanced things in your configuration file such as fancy filtering or the use
 of loops for defining colour tables.&lt;/p&gt;
-&lt;/div&gt;
-&lt;/div&gt;
+&lt;/section&gt;
+&lt;/section&gt;
 </content>
     <link href="https://jnrowe.github.io/articles/tips/Sharing_Xresources_between_systems.html" rel="alternate"/>
+    <summary>In amongst the rants in our watercooler channel at work comes this question:</summary>
     <category term="X11" label="X11"/>
     <category term="styling" label="styling"/>
     <published>2009-10-05T00:00:00+01:00</published>
@@ -361,7 +367,7 @@ of loops for defining colour tables.&lt;/p&gt;
     <author>
       <name>James Rowe</name>
     </author>
-    <content type="html">&lt;div class="section" id="finding-a-windows-owner"&gt;
+    <content type="html">&lt;section id="finding-a-windows-owner"&gt;
 
 &lt;p&gt;Rach Holmes asks on our Linux list:&lt;/p&gt;
 &lt;blockquote&gt;
@@ -369,7 +375,7 @@ of loops for defining colour tables.&lt;/p&gt;
 &lt;/div&gt;&lt;/blockquote&gt;
 &lt;p&gt;Jack McIntyre made a couple of outstanding correct guesses, but predictably Rach
 still wanted to know a generic solution and I offer this tip in response.&lt;/p&gt;
-&lt;div class="section" id="the-easy-way"&gt;
+&lt;section id="the-easy-way"&gt;
 &lt;h2&gt;The easy way&lt;/h2&gt;
 &lt;p&gt;Many windows define a &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;WM_COMMAND&lt;/span&gt;&lt;/code&gt; property that is set to the command name of
 the application, if that exists all we have to do is read it:&lt;/p&gt;
@@ -380,8 +386,8 @@ the application, if that exists all we have to do is read it:&lt;/p&gt;
 &lt;p&gt;However, not all applications set this property.  Examples of applications that
 don’t set this property include &lt;a class="reference external" href="http://www.mozilla.com/firefox"&gt;firefox&lt;/a&gt; and &lt;a class="reference external" href="http://www.gimp.org/"&gt;gimp&lt;/a&gt;.  In fact, many of the modern
 applications you find on desktop systems don’t set this property at all.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="section" id="the-other-way"&gt;
+&lt;/section&gt;
+&lt;section id="the-other-way"&gt;
 &lt;h2&gt;The other way&lt;/h2&gt;
 &lt;p&gt;&lt;a class="reference external" href="http://standards.freedesktop.org/wm-spec/wm-spec-1.3.html"&gt;EWMH&lt;/a&gt;, the Extended Window Manager Hints standard, defines a property called
 &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;_NET_WM_PID&lt;/span&gt;&lt;/code&gt; that, if defined, is the process id of the application that
@@ -408,8 +414,8 @@ output.&lt;/p&gt;
 &lt;p&gt;The &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;cmdline&lt;/span&gt;&lt;/code&gt; value for the process from &lt;a class="reference external" href="http://blogs.sun.com/eschrock/entry/the_power_of_proc"&gt;procfs&lt;/a&gt; is finally read.  The
 &lt;strong class="command"&gt;tr&lt;/strong&gt; command is needed because options are separated by null
 terminators.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="section" id="the-problems"&gt;
+&lt;/section&gt;
+&lt;section id="the-problems"&gt;
 &lt;h2&gt;The problems&lt;/h2&gt;
 &lt;p&gt;Back to the original question and Rach was looking for a way to stop the window
 from showing up, the immediate response to the annoying window problem is to
@@ -423,10 +429,11 @@ it happens with all applications that operate in this way.  Sending
 a &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;SIGTERM&lt;/span&gt;&lt;/code&gt; to every terminal opened by &lt;strong class="command"&gt;urxvtd&lt;/strong&gt; probably isn’t what
 we would want to do, so you should always think very carefully before sending
 terminate signals.&lt;/p&gt;
-&lt;/div&gt;
-&lt;/div&gt;
+&lt;/section&gt;
+&lt;/section&gt;
 </content>
     <link href="https://jnrowe.github.io/articles/tips/Finding_a_windows_owner.html" rel="alternate"/>
+    <summary>Rach Holmes asks on our Linux list:</summary>
     <category term="X11" label="X11"/>
     <published>2009-10-06T00:00:00+01:00</published>
   </entry>
@@ -437,7 +444,7 @@ terminate signals.&lt;/p&gt;
     <author>
       <name>James Rowe</name>
     </author>
-    <content type="html">&lt;div class="section" id="bts-as-a-task-manager"&gt;
+    <content type="html">&lt;section id="bts-as-a-task-manager"&gt;
 
 &lt;p&gt;Tom Marshall asks over the cooler:&lt;/p&gt;
 &lt;blockquote&gt;
@@ -473,7 +480,7 @@ bug databases created by the upstream project.&lt;/p&gt;
 &lt;/div&gt;
 &lt;p&gt;The following examples use an older version of &lt;strong class="command"&gt;be&lt;/strong&gt; that you can
 download as a &lt;a class="reference external" href="http://www.jnrowe.ukfsn.org/_static/be-0.0.193.tar.bz2"&gt;tarball&lt;/a&gt; and doesn’t require &lt;strong class="command"&gt;bzr&lt;/strong&gt;.&lt;/p&gt;
-&lt;div class="section" id="setting-be-up"&gt;
+&lt;section id="setting-be-up"&gt;
 &lt;h2&gt;Setting &lt;strong class="command"&gt;be&lt;/strong&gt; up&lt;/h2&gt;
 &lt;p&gt;Before we use &lt;strong class="command"&gt;be&lt;/strong&gt; we must prepare it.  In the example that follows
 we’re going to create a new directory under the control of &lt;a class="reference external" href="http://www.git-scm.com/"&gt;git&lt;/a&gt;, and tell
@@ -486,8 +493,8 @@ we’re going to create a new directory under the control of &lt;a class="refere
 &lt;span class="go"&gt;Directory initialized.&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="section" id="filing-bugs"&gt;
+&lt;/section&gt;
+&lt;section id="filing-bugs"&gt;
 &lt;h2&gt;Filing bugs&lt;/h2&gt;
 &lt;p&gt;We can easily file new bugs, in the next snippet we can see two bugs being
 filed.  Bugs are identified by a &lt;abbr title="Universally Unique IDentifier"&gt;UUID&lt;/abbr&gt;,
@@ -509,8 +516,8 @@ to be assigned.  As we didn’t set a severity level for &lt;code class="docutil
 default of &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;minor&lt;/span&gt;&lt;/code&gt;.  A comment was also made on bug &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;ec4&lt;/span&gt;&lt;/code&gt;, and if we hadn’t
 specified the comment on the command line it would open our default editor to
 add the comment.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="section" id="querying-bugs"&gt;
+&lt;/section&gt;
+&lt;section id="querying-bugs"&gt;
 &lt;h2&gt;Querying bugs&lt;/h2&gt;
 &lt;div class="highlight-console notranslate"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="gp"&gt;$&lt;/span&gt; be list
 &lt;span class="go"&gt;ec4:os: This is a second bug&lt;/span&gt;
@@ -556,8 +563,8 @@ we use the &lt;strong class="command"&gt;be show&lt;/strong&gt; command:&lt;/p&g
 &lt;span class="go"&gt;Comments are easy&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="section" id="editing-bugs"&gt;
+&lt;/section&gt;
+&lt;section id="editing-bugs"&gt;
 &lt;h2&gt;Editing bugs&lt;/h2&gt;
 &lt;p&gt;We can change the bug status with &lt;strong class="command"&gt;be status&lt;/strong&gt;, see the output from
 &lt;strong class="command"&gt;be help status&lt;/strong&gt; for available values.&lt;/p&gt;
@@ -585,16 +592,16 @@ or by calling &lt;strong class="command"&gt;be list&lt;/strong&gt; with filterin
 &lt;span class="go"&gt;Comments are easy&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="section" id="conclusions"&gt;
+&lt;/section&gt;
+&lt;section id="conclusions"&gt;
 &lt;h2&gt;Conclusions&lt;/h2&gt;
 &lt;p&gt;That really is all it takes to use &lt;strong class="command"&gt;be&lt;/strong&gt;, and that is why I find
 a &lt;abbr title="Bug Tracking System"&gt;BTS&lt;/abbr&gt; to be a nice solution for managing all kinds of random tasks.  I have
 a Bugs Everywhere database in my home directory that over the past year has
 stored just over 600 bugs from shopping lists to actual bugs with my
 configurations files, and I’ve apparently managed to complete 95% of them!&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="section" id="bonus-material"&gt;
+&lt;/section&gt;
+&lt;section id="bonus-material"&gt;
 &lt;h2&gt;Bonus material&lt;/h2&gt;
 &lt;p&gt;One of the little tricks I like to do is override the &lt;strong class="command"&gt;cd&lt;/strong&gt; command to
 automatically display the bug list when I enter a directory that contains a Bugs
@@ -611,10 +618,11 @@ Everywhere database, and it is very simple to do:&lt;/p&gt;
 &lt;p&gt;It could be improved to take settings to filter the bug list or all manner of
 other cool things, but that is why it has a “See gist #x” label next to it.
 Feel free to post updates to the gist!&lt;/p&gt;
-&lt;/div&gt;
-&lt;/div&gt;
+&lt;/section&gt;
+&lt;/section&gt;
 </content>
     <link href="https://jnrowe.github.io/articles/tips/BTS_as_a_task_manager.html" rel="alternate"/>
+    <summary>Tom Marshall asks over the cooler:</summary>
     <category term="bts" label="bts"/>
     <category term="devel" label="devel"/>
     <published>2009-10-07T00:00:00+01:00</published>
@@ -626,7 +634,7 @@ Feel free to post updates to the gist!&lt;/p&gt;
     <author>
       <name>James Rowe</name>
     </author>
-    <content type="html">&lt;div class="section" id="importing-gmail-filters-in-mutt"&gt;
+    <content type="html">&lt;section id="importing-gmail-filters-in-mutt"&gt;
 
 &lt;p&gt;On our company’s Linux list Ryan Abbott is preparing to move to &lt;a class="reference external" href="http://www.mutt.org/"&gt;mutt&lt;/a&gt;:&lt;/p&gt;
 &lt;blockquote&gt;
@@ -730,9 +738,10 @@ score ~fjohndoe@example.com -20
 &lt;p&gt;A few years ago I posted some of tricks and tips I use for &lt;a class="reference external" href="http://www.jnrowe.ukfsn.org/articles/configs/mutt.html"&gt;configuring mutt&lt;/a&gt;,
 which include some neat ways to colour and score mail on a per-folder basis.  It
 may be worth taking a quick look at if you use folders to organise your mails.&lt;/p&gt;
-&lt;/div&gt;
+&lt;/section&gt;
 </content>
     <link href="https://jnrowe.github.io/articles/tips/Importing_gmail_filters_in_mutt.html" rel="alternate"/>
+    <summary>On our company’s Linux list Ryan Abbott is preparing to move to mutt:</summary>
     <category term="gmail" label="gmail"/>
     <category term="mutt" label="mutt"/>
     <published>2009-10-08T00:00:00+01:00</published>
@@ -744,7 +753,7 @@ may be worth taking a quick look at if you use folders to organise your mails.&l
     <author>
       <name>James Rowe</name>
     </author>
-    <content type="html">&lt;div class="section" id="gentoo-one-liners"&gt;
+    <content type="html">&lt;section id="gentoo-one-liners"&gt;
 
 &lt;p&gt;On our Linux list at work the topic of &lt;a class="reference external" href="http://www.gentoo.org/"&gt;Gentoo&lt;/a&gt; usage arose again today.
 Originally, the topic was about interesting one liners used to maintain a Gentoo
@@ -864,9 +873,13 @@ need to be enabled in your session, you can test whether it is enabled with
 &lt;p&gt;The &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;!($(uname&lt;/span&gt; &lt;span class="pre"&gt;-r))&lt;/span&gt;&lt;/code&gt; syntax tells bash to match all but &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;2.6.31.3-mk1&lt;/span&gt;&lt;/code&gt; (the
 output of &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;uname&lt;/span&gt; &lt;span class="pre"&gt;-r&lt;/span&gt;&lt;/code&gt; on my system), there are plenty of other uses for
 &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;extglob&lt;/span&gt;&lt;/code&gt; and the &lt;a class="reference external" href="http://www.gnu.org/software/bash/manual/html_node/Pattern-Matching.html#Pattern-Matching"&gt;documentation&lt;/a&gt; has examples.&lt;/p&gt;
-&lt;/div&gt;
+&lt;/section&gt;
 </content>
     <link href="https://jnrowe.github.io/articles/tips/Gentoo_one_liners.html" rel="alternate"/>
+    <summary>On our Linux list at work the topic of Gentoo usage arose again today.
+Originally, the topic was about interesting one liners used to maintain a Gentoo
+system.  I found myself posting extended replies to some of the questions and
+I’m reposting a few of those here.</summary>
     <category term="gentoo" label="gentoo"/>
     <published>2009-10-09T00:00:00+01:00</published>
   </entry>
@@ -877,7 +890,7 @@ output of &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&
     <author>
       <name>James Rowe</name>
     </author>
-    <content type="html">&lt;div class="section" id="formatting-csv-files-in-the-shell"&gt;
+    <content type="html">&lt;section id="formatting-csv-files-in-the-shell"&gt;
 
 &lt;p&gt;kemi asks in &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;#bash&lt;/span&gt;&lt;/code&gt;:&lt;/p&gt;
 &lt;blockquote&gt;
@@ -953,9 +966,10 @@ computer that we wish to format and calculate totals for could be:&lt;/p&gt;
 &lt;span class="go"&gt;Total sent: 13121144, Total received: 295452635&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
-&lt;/div&gt;
+&lt;/section&gt;
 </content>
     <link href="https://jnrowe.github.io/articles/tips/Formatting_csv_files_in_the_shell.html" rel="alternate"/>
+    <summary>kemi asks in #bash:</summary>
     <category term="csv" label="csv"/>
     <category term="unix" label="unix"/>
     <published>2009-10-10T00:00:00+01:00</published>
@@ -967,7 +981,7 @@ computer that we wish to format and calculate totals for could be:&lt;/p&gt;
     <author>
       <name>James Rowe</name>
     </author>
-    <content type="html">&lt;div class="section" id="making-a-nice-home"&gt;
+    <content type="html">&lt;section id="making-a-nice-home"&gt;
 
 &lt;p&gt;Back in &lt;span class="xref std std-ref"&gt;Kick_me_birthday_reminders&lt;/span&gt; I said:&lt;/p&gt;
 &lt;blockquote&gt;
@@ -987,8 +1001,8 @@ we’re going to pretend we haven’t read &lt;a class="reference external" href
 I don’t heed its advice for the &lt;code class="file docutils literal notranslate"&gt;&lt;span class="pre"&gt;Makefile&lt;/span&gt;&lt;/code&gt; I have in my home directory.
 That said, let’s have a look at what can be found in my current top-level
 &lt;code class="file docutils literal notranslate"&gt;&lt;span class="pre"&gt;Makefile&lt;/span&gt;&lt;/code&gt;.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="section" id="permissions"&gt;
+&lt;/section&gt;
+&lt;section id="permissions"&gt;
 &lt;h1&gt;Permissions&lt;/h1&gt;
 &lt;p&gt;I keep my home directory version controlled with &lt;strong class="command"&gt;git&lt;/strong&gt;, but
 &lt;strong class="command"&gt;git&lt;/strong&gt; out of the box doesn’t maintain permissions on files(beyond the
@@ -1007,8 +1021,8 @@ the permissions when they’re needed:&lt;/p&gt;
 &lt;/div&gt;
 &lt;p&gt;If this rule is called after a &lt;strong class="command"&gt;git pull&lt;/strong&gt; is issued then the files
 always have the correct permissions.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="section" id="vim-hacks"&gt;
+&lt;/section&gt;
+&lt;section id="vim-hacks"&gt;
 &lt;h1&gt;vim hacks&lt;/h1&gt;
 &lt;p&gt;I also call &lt;strong class="command"&gt;make&lt;/strong&gt; in some subdirectories, the most interesting one is
 probably for &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;.vim&lt;/span&gt;&lt;/code&gt;:&lt;/p&gt;
@@ -1041,8 +1055,8 @@ they aren’t often useful in &lt;a class="reference external" href="http://vimd
 the tags database for normal use.&lt;/p&gt;
 &lt;p&gt;The final entry in &lt;strong class="makevar"&gt;TARGETS&lt;/strong&gt; simply updates the tag lists for &lt;a class="reference external" href="http://vimdoc.sourceforge.net/htmldoc/various.html#:helptags"&gt;help
 files&lt;/a&gt; installed in &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;~/.vim/doc&lt;/span&gt;&lt;/code&gt;.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="section" id="documentation"&gt;
+&lt;/section&gt;
+&lt;section id="documentation"&gt;
 &lt;h1&gt;Documentation&lt;/h1&gt;
 &lt;p&gt;The final subdirectory &lt;code class="file docutils literal notranslate"&gt;&lt;span class="pre"&gt;Makefile&lt;/span&gt;&lt;/code&gt; we’re going to look at is actually
 called in a number of different directories to create &lt;abbr title="HyperText Markup Language"&gt;HTML&lt;/abbr&gt; versions of
@@ -1059,9 +1073,10 @@ called in a number of different directories to create &lt;abbr title="HyperText 
 pull or merge we always have up to date processed versions of documents.  It is
 like having a personal web viewable wiki, but without having to use an awful
 markup language.&lt;/p&gt;
-&lt;/div&gt;
+&lt;/section&gt;
 </content>
     <link href="https://jnrowe.github.io/articles/tips/Making_a_nice_home.html" rel="alternate"/>
+    <summary>Back in Kick_me_birthday_reminders I said:</summary>
     <category term="unix" label="unix"/>
     <category term="vcs" label="vcs"/>
     <published>2009-10-11T00:00:00+01:00</published>
@@ -1073,7 +1088,7 @@ markup language.&lt;/p&gt;
     <author>
       <name>James Rowe</name>
     </author>
-    <content type="html">&lt;div class="section" id="instant-web-server"&gt;
+    <content type="html">&lt;section id="instant-web-server"&gt;
 
 &lt;p&gt;Among the topics on our Linux list at work today was a question from Luke
 Fletcher that I was expecting to unleash a flurry of emotional responses:&lt;/p&gt;
@@ -1090,7 +1105,7 @@ the question at hand, but surprisingly little dissent over the choices.&lt;/p&gt
 &lt;/div&gt;&lt;/blockquote&gt;
 &lt;p&gt;I agree with Matt’s answer but I want to point a couple of possibly non-obvious
 web servers that they, and you, are likely to have installed already.&lt;/p&gt;
-&lt;div class="section" id="busybox-applet"&gt;
+&lt;section id="busybox-applet"&gt;
 &lt;h2&gt;Busybox applet&lt;/h2&gt;
 &lt;p&gt;All our Linux systems at the office include &lt;a class="reference external" href="http://www.busybox.net/"&gt;busybox&lt;/a&gt;, and in the configuration
 we use the &lt;a class="reference external" href="http://www.busybox.net/downloads/BusyBox.html#httpd"&gt;httpd&lt;/a&gt; applet is built.  It is very lightweight, and incredibly
@@ -1112,8 +1127,8 @@ server:&lt;/p&gt;
 &lt;/div&gt;
 &lt;p&gt;&lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;http_serve_location&lt;/span&gt;&lt;/code&gt; is set elsewhere in my configuration file, so that I can
 keep per-machine settings separate.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="section" id="python-built-in"&gt;
+&lt;/section&gt;
+&lt;section id="python-built-in"&gt;
 &lt;h2&gt;Python built-in&lt;/h2&gt;
 &lt;p&gt;&lt;a class="reference external" href="http://www.python.org/"&gt;Python&lt;/a&gt; comes with its own basic web server, and it is very easy to use:&lt;/p&gt;
 &lt;div class="highlight-console notranslate"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="gp"&gt;$&lt;/span&gt; python2.6 -m SimpleHTTPServer &lt;span class="m"&gt;8080&lt;/span&gt;
@@ -1135,8 +1150,8 @@ keep per-machine settings separate.&lt;/p&gt;
 &lt;p&gt;I’ve specified the port 8080 to both calls in the snippet above, by default the
 server port would be 8000.  If port 8000 is acceptable for you then you can save
 yourself five keystrokes.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="section" id="ruby-built-in"&gt;
+&lt;/section&gt;
+&lt;section id="ruby-built-in"&gt;
 &lt;h2&gt;Ruby built-in&lt;/h2&gt;
 &lt;p&gt;&lt;a class="reference external" href="http://www.ruby-lang.org/"&gt;ruby&lt;/a&gt; also comes with its own web server, one that you’re probably already
 familiar with if you’re a &lt;a class="reference external" href="http://www.rubyonrails.org/"&gt;rails&lt;/a&gt; user, called &lt;a class="reference external" href="http://www.webrick.org/"&gt;webrick&lt;/a&gt;.  We need a little script
@@ -1158,18 +1173,20 @@ to use &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;
 &lt;/div&gt;
 &lt;p&gt;This script will serve files from whatever directory is specified as its first
 argument.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="section" id="bonus"&gt;
+&lt;/section&gt;
+&lt;section id="bonus"&gt;
 &lt;h2&gt;Bonus&lt;/h2&gt;
 &lt;p&gt;Python also comes with a &lt;abbr title="Common Gateway Interface"&gt;CGI&lt;/abbr&gt;-capable version
 called &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;CGIHTTPServer&lt;/span&gt;&lt;/code&gt; and a &lt;abbr title="Extensible Markup Language"&gt;XML&lt;/abbr&gt;-&lt;abbr title="Remote Procedure Call"&gt;RPC&lt;/abbr&gt; server
 called — this shouldn’t come as a surprise — &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;SimpleXMLRPCServer&lt;/span&gt;&lt;/code&gt;.  They’re
 very useful for testing out ideas and concepts without having to set down lots
 of code.&lt;/p&gt;
-&lt;/div&gt;
-&lt;/div&gt;
+&lt;/section&gt;
+&lt;/section&gt;
 </content>
     <link href="https://jnrowe.github.io/articles/tips/Instant_web_server.html" rel="alternate"/>
+    <summary>Among the topics on our Linux list at work today was a question from Luke
+Fletcher that I was expecting to unleash a flurry of emotional responses:</summary>
     <category term="devel" label="devel"/>
     <category term="web" label="web"/>
     <published>2009-10-12T00:00:00+01:00</published>
@@ -1181,7 +1198,7 @@ of code.&lt;/p&gt;
     <author>
       <name>James Rowe</name>
     </author>
-    <content type="html">&lt;div class="section" id="visual-vim-mode-identifier"&gt;
+    <content type="html">&lt;section id="visual-vim-mode-identifier"&gt;
 
 &lt;p&gt;Paul Kerry rants about his problems with &lt;a class="reference external" href="http://www.vim.org/"&gt;vim&lt;/a&gt; over the cooler today, and as
 a long time &lt;strong class="command"&gt;vim&lt;/strong&gt; user I found it hard not to respond to some of the
@@ -1226,9 +1243,12 @@ when we change mode:&lt;/p&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
 &lt;p&gt;Note that I didn’t say it was a good idea, just that it was possible!&lt;/p&gt;
-&lt;/div&gt;
+&lt;/section&gt;
 </content>
     <link href="https://jnrowe.github.io/articles/tips/Visual_vim_mode_identifier.html" rel="alternate"/>
+    <summary>Paul Kerry rants about his problems with vim over the cooler today, and as
+a long time vim user I found it hard not to respond to some of the
+points.</summary>
     <category term="awesome" label="awesome"/>
     <category term="vim" label="vim"/>
     <published>2009-10-13T00:00:00+01:00</published>
@@ -1240,7 +1260,7 @@ when we change mode:&lt;/p&gt;
     <author>
       <name>James Rowe</name>
     </author>
-    <content type="html">&lt;div class="section" id="three-mobile-broadband-in-linux"&gt;
+    <content type="html">&lt;section id="three-mobile-broadband-in-linux"&gt;
 
 &lt;p&gt;Steve Lowry is picking up his &lt;a class="reference external" href="http://three.co.uk"&gt;Three&lt;/a&gt; modem this afternoon and asks on our
 internal Linux list if it supports Linux.&lt;/p&gt;
@@ -1258,12 +1278,12 @@ wait until you plug it in to see what model it actually is.&lt;/p&gt;
 &lt;a class="reference external" href="http://www.gnome.org/projects/NetworkManager/"&gt;NetworkManager&lt;/a&gt; and NetworkManager’s &lt;a class="reference external" href="http://live.gnome.org/NetworkManager/MobileBroadband/ServiceProviders"&gt;mobile broadband provider database&lt;/a&gt;.
 When I tested it on a friend’s install with that setup last month it worked out
 of the box, all you had to do was plug it in and select the network.&lt;/p&gt;
-&lt;div class="section" id="the-route-to-fail"&gt;
+&lt;section id="the-route-to-fail"&gt;
 &lt;h2&gt;The route to fail&lt;/h2&gt;
 &lt;p&gt;If, like me, you’d prefer not to install NetworkManager you can manually
 configure the device using &lt;a class="reference external" href="http://www.samba.org/ppp"&gt;pppd&lt;/a&gt;, and life is even easier now than it was when
 I did it as there is plenty more information available(including this I guess).&lt;/p&gt;
-&lt;div class="section" id="finding-the-apn"&gt;
+&lt;section id="finding-the-apn"&gt;
 &lt;h3&gt;Finding the &lt;abbr title="Access Point Name"&gt;APN&lt;/abbr&gt;&lt;/h3&gt;
 &lt;p&gt;The first thing you need is your provider’s &lt;abbr title="Access Point Name"&gt;APN&lt;/abbr&gt;, and the easiest place to
 find it is from the &lt;a class="reference external" href="http://live.gnome.org/NetworkManager/MobileBroadband/ServiceProviders"&gt;NetworkManager database&lt;/a&gt;.  If yours is not there you’ll
@@ -1286,8 +1306,8 @@ archivers, and the tool you actually need to extract the &lt;code class="docutil
 &lt;a class="reference external" href="http://synce.sourceforge.net/synce/unshield.php"&gt;unshield&lt;/a&gt;.  Contrary to my first idea &lt;a class="reference external" href="http://www.cabextract.org.uk/"&gt;cabextract&lt;/a&gt; doesn’t work, as these files
 are actually made by &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;installshield&lt;/span&gt;&lt;/code&gt;.&lt;/p&gt;
 &lt;p&gt;With the &lt;abbr title="Access Point Name"&gt;APN&lt;/abbr&gt; in hand all we need to do now is configure our system.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="section" id="kernel"&gt;
+&lt;/section&gt;
+&lt;section id="kernel"&gt;
 &lt;h3&gt;Kernel&lt;/h3&gt;
 &lt;p&gt;If you’re using a vendor supplied kernel the options we need are hopefully
 already enabled.  If they’re not, or you build your own kernels, there are few
@@ -1302,8 +1322,8 @@ mobile providers in general, partly because the data is already compressed.&lt;/
 &lt;p&gt;Then just rebuild the kernel, and check that the dongle shows up in
 &lt;strong class="command"&gt;dmesg&lt;/strong&gt; output when it is plugged in.  If it does we’re ready for the
 next step.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="section" id="etc-chatscripts-three"&gt;
+&lt;/section&gt;
+&lt;section id="etc-chatscripts-three"&gt;
 &lt;h3&gt;/etc/chatscripts/three&lt;/h3&gt;
 &lt;p&gt;We need a &lt;strong class="command"&gt;pppd&lt;/strong&gt; chatscript for the connection, the format and
 settings of this file can be found in the &lt;em class="manpage"&gt;chat(8)&lt;/em&gt; manpage.  My
@@ -1331,8 +1351,8 @@ database.&lt;/p&gt;
 &lt;p&gt;Notice the very short value for timeout, I’ve come to that value empirically.
 If the connection isn’t up after 3 seconds it is not coming up, and you’re just
 wasting time before you retry.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="section" id="etc-ppp-peers-three"&gt;
+&lt;/section&gt;
+&lt;section id="etc-ppp-peers-three"&gt;
 &lt;h3&gt;/etc/ppp/peers/three&lt;/h3&gt;
 &lt;p&gt;We also need a peer script, and the format of that file is described in the
 &lt;em class="manpage"&gt;pppd(8)&lt;/em&gt; manpage.  Mine can be used as an example:&lt;/p&gt;
@@ -1354,8 +1374,8 @@ lcp-echo-failure 0
 you if you’ve configured &lt;strong class="command"&gt;pppd&lt;/strong&gt; manually in the past.  The reason is
 that interface speed for &lt;abbr title="Universal Serial Bus"&gt;USB&lt;/abbr&gt; modems is set by the kernel, and adding a value
 here is pointless.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="section" id="passwords"&gt;
+&lt;/section&gt;
+&lt;section id="passwords"&gt;
 &lt;h3&gt;passwords&lt;/h3&gt;
 &lt;p&gt;We don’t need to add an entry to &lt;code class="file docutils literal notranslate"&gt;&lt;span class="pre"&gt;chap-secrets&lt;/span&gt;&lt;/code&gt; or &lt;code class="file docutils literal notranslate"&gt;&lt;span class="pre"&gt;pap-secrets&lt;/span&gt;&lt;/code&gt; as
 authentication isn’t required, but if you’re following along having chosen to
@@ -1363,8 +1383,8 @@ use a configuration tool such as &lt;a class="reference external" href="http://h
 they’re silently ignored.&lt;/p&gt;
 &lt;p&gt;I’m told the same applies to &lt;a class="reference external" href="http://alumnit.ca/wiki/?WvDial"&gt;wvdial&lt;/a&gt;, so if it complains about requiring
 a password just add an empty or random string to stop the errors.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="section" id="testing-the-connection"&gt;
+&lt;/section&gt;
+&lt;section id="testing-the-connection"&gt;
 &lt;h3&gt;Testing the connection&lt;/h3&gt;
 &lt;p&gt;To test the connection all we need to do is issue &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;pon&lt;/span&gt; &lt;span class="pre"&gt;three&lt;/span&gt;&lt;/code&gt;, or use the
 graphical tool in your distro if you wish.  The first time you do this you
@@ -1388,11 +1408,13 @@ from green it has found a network signal and is ready to use.&lt;/p&gt;
 &lt;p&gt;If the connection didn’t work correctly look at the debugging output in syslog
 and check the &lt;strong class="command"&gt;pppd&lt;/strong&gt; manual page to look up the error codes.&lt;/p&gt;
 &lt;p&gt;Happy, erm… mobility.&lt;/p&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
+&lt;/section&gt;
+&lt;/section&gt;
+&lt;/section&gt;
 </content>
     <link href="https://jnrowe.github.io/articles/tips/Three_mobile_broadband_in_linux.html" rel="alternate"/>
+    <summary>Steve Lowry is picking up his Three modem this afternoon and asks on our
+internal Linux list if it supports Linux.</summary>
     <category term="linux" label="linux"/>
     <category term="three" label="three"/>
     <published>2009-10-14T00:00:00+01:00</published>
@@ -1404,7 +1426,7 @@ and check the &lt;strong class="command"&gt;pppd&lt;/strong&gt; manual page to l
     <author>
       <name>James Rowe</name>
     </author>
-    <content type="html">&lt;div class="section" id="zsh-and-the-vcs"&gt;
+    <content type="html">&lt;section id="zsh-and-the-vcs"&gt;
 
 &lt;img alt="Git prompt screenshot" class="align-right" src="../_images/2009-10-28-git_prompt.png" /&gt;
 &lt;p&gt;I’ve recently switched to &lt;a class="reference external" href="http://www.zsh.org/"&gt;Zsh&lt;/a&gt; as my login shell after
@@ -1425,7 +1447,7 @@ they could be converted to work with &lt;em&gt;plain&lt;/em&gt; &lt;strong class
 inclination.&lt;/p&gt;
 &lt;p&gt;If you want to see my entire “theme” file you can &lt;a class="reference external" href="http://github.com/JNRowe/oh-my-zsh"&gt;clone my fork&lt;/a&gt; and look at
 &lt;a class="reference external" href="http://github.com/JNRowe/oh-my-zsh/blob/master/themes/jnrowe.zsh-theme"&gt;oh-my-zsh/themes/jnrowe.zsh-theme&lt;/a&gt;.&lt;/p&gt;
-&lt;div class="section" id="branch-names"&gt;
+&lt;section id="branch-names"&gt;
 &lt;h2&gt;Branch names&lt;/h2&gt;
 &lt;p&gt;&lt;strong class="command"&gt;zsh&lt;/strong&gt; comes with some neat &lt;abbr title="Version Control System"&gt;VCS&lt;/abbr&gt; integration, that is exceptionally
 &lt;a class="reference external" href="http://zsh.sourceforge.net/Doc/Release/User-Contributions.html#SEC273"&gt;documented&lt;/a&gt; in the manual.  I use that code to enable branch names in my
@@ -1462,8 +1484,8 @@ make the &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&g
 my system.  It is also the only &lt;abbr title="Version Control System"&gt;VCS&lt;/abbr&gt; that has such a hack, which is quite
 telling in itself.&lt;/p&gt;
 &lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="section" id="repository-state"&gt;
+&lt;/section&gt;
+&lt;section id="repository-state"&gt;
 &lt;h2&gt;Repository state&lt;/h2&gt;
 &lt;p&gt;The “funky arrows” Dan asks about are dependent on the state of the current
 working directory as can be seen in the screenshot at the top of this page.&lt;/p&gt;
@@ -1520,10 +1542,15 @@ and the status identifiers will be used.&lt;/p&gt;
 &lt;p&gt;If you are using a font which doesn’t display the characters correctly, either
 change the characters in the &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;dir_status&lt;/span&gt;&lt;/code&gt; values or switch to a &lt;a class="reference external" href="http://www.is-vn.bg/hamster/"&gt;better font&lt;/a&gt;
 that can display them.&lt;/p&gt;
-&lt;/div&gt;
-&lt;/div&gt;
+&lt;/section&gt;
+&lt;/section&gt;
 </content>
     <link href="https://jnrowe.github.io/articles/tips/Zsh_and_the_vcs.html" rel="alternate"/>
+    <summary>I’ve recently switched to Zsh as my login shell after
+9 years of using bash, and for no particularly good reason either as they’re
+both great interactive shells.  I guess all the Kool Kids are doing it, and
+I’m just playing catchup.  The one side effect of that is I’m now scribbling
+tips about zsh too…</summary>
     <category term="git" label="git"/>
     <category term="vcs" label="vcs"/>
     <category term="zsh" label="zsh"/>
@@ -1536,7 +1563,7 @@ that can display them.&lt;/p&gt;
     <author>
       <name>James Rowe</name>
     </author>
-    <content type="html">&lt;div class="section" id="debugging-python-regex"&gt;
+    <content type="html">&lt;section id="debugging-python-regex"&gt;
 
 &lt;p&gt;Rob Sampson is learning &lt;a class="reference external" href="http://www.python.org/"&gt;Python&lt;/a&gt; and struggling to get to grips with its
 &lt;abbr title="Regular Expression"&gt;RegEx&lt;/abbr&gt; handling.  He asks on one of our internal lists at the office:&lt;/p&gt;
@@ -1550,7 +1577,7 @@ Any clues about where to look?&lt;/p&gt;
 &lt;li&gt;&lt;p&gt;Failure to use &lt;a class="reference external" href="http://docs.python.org/tutorial/introduction.html#strings"&gt;raw strings&lt;/a&gt; when including backslashes in the &lt;abbr title="Regular Expression"&gt;RegEx&lt;/abbr&gt;&lt;/p&gt;&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;Choosing to use a &lt;abbr title="Regular Expression"&gt;RegEx&lt;/abbr&gt; when a better tool for the job exists&lt;/p&gt;&lt;/li&gt;
 &lt;/ol&gt;
-&lt;div class="section" id="using-raw-strings"&gt;
+&lt;section id="using-raw-strings"&gt;
 &lt;h2&gt;Using raw strings&lt;/h2&gt;
 &lt;p&gt;In Rob’s code he had failed to take in to account the backslash escaping
 problem.  A simplified example of what he was trying to do would be:&lt;/p&gt;
@@ -1616,8 +1643,8 @@ flags are just named constants(&lt;code class="docutils literal notranslate"&gt;
 &lt;span class="go"&gt;[&amp;#39;123\\match&amp;#39;]&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="section" id="better-tools"&gt;
+&lt;/section&gt;
+&lt;section id="better-tools"&gt;
 &lt;h2&gt;Better tools&lt;/h2&gt;
 &lt;p&gt;Often, a &lt;abbr title="Regular Expression"&gt;RegEx&lt;/abbr&gt; is the hammer of choice for far too many tasks for far too
 many people(myself included).  There are often much better choices, some of
@@ -1662,10 +1689,12 @@ stricter.&lt;/p&gt;
 &lt;a class="reference external" href="http://pypi.python.org/pypi"&gt;pypi&lt;/a&gt;.  Often, the work has already been done for you and may well be much
 better than the hurried version you were about to cobble together with
 a &lt;abbr title="Regular Expression"&gt;RegEx&lt;/abbr&gt;.&lt;/p&gt;
-&lt;/div&gt;
-&lt;/div&gt;
+&lt;/section&gt;
+&lt;/section&gt;
 </content>
     <link href="https://jnrowe.github.io/articles/tips/Debugging_python_regexps.html" rel="alternate"/>
+    <summary>Rob Sampson is learning Python and struggling to get to grips with its
+RegEx handling.  He asks on one of our internal lists at the office:</summary>
     <category term="python" label="python"/>
     <published>2009-10-29T00:00:00+00:00</published>
   </entry>

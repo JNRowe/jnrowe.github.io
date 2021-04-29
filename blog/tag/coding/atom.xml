@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <id>https://jnrowe.github.io/</id>
   <title>JNRowe - Posts tagged coding</title>
-  <updated>2021-04-18T11:22:06.450675+00:00</updated>
+  <updated>2021-04-29T22:38:00.936614+00:00</updated>
   <link href="https://jnrowe.github.io/"/>
   <link href="https://jnrowe.github.io/blog/tag/coding/atom.xml" rel="self"/>
-  <generator uri="https://ablog.readthedocs.org/" version="0.10.17">ABlog</generator>
+  <generator uri="https://ablog.readthedocs.org/" version="0.10.18">ABlog</generator>
   <subtitle>Ramblings of a tired mind</subtitle>
   <entry>
     <id>https://jnrowe.github.io/articles/advent_of_code.html</id>
@@ -14,7 +14,7 @@
     <author>
       <name>James Rowe</name>
     </author>
-    <content type="html">&lt;div class="section" id="advent-of-code-2017"&gt;
+    <content type="html">&lt;section id="advent-of-code-2017"&gt;
 
 &lt;p&gt;A very evil friend pointed me to &lt;a class="reference external" href="http://adventofcode.com/"&gt;Advent of Code&lt;/a&gt; last December, and I burnt
 a fair chunk of time on it.  I mean… yeah, it &lt;em&gt;was&lt;/em&gt; hugely fun but be warned it
@@ -27,13 +27,13 @@ take this being 10 months late as a knock against &lt;abbr title="Advent of Code
 thinking we’re on the cusp of a one month countdown to it beginning
 again(hopefully).&lt;/p&gt;
 &lt;/div&gt;
-&lt;div class="section" id="why"&gt;
+&lt;section id="why"&gt;
 &lt;h2&gt;Why?&lt;/h2&gt;
 &lt;p&gt;This answer should be obvious; puzzles are fun, competitive ones where you
 prove yourself against co-workers and &lt;em&gt;total&lt;/em&gt; strangers even more so.  If that
 isn’t enough reason to have a go, then I simply don’t want to know you.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="section" id="lessons"&gt;
+&lt;/section&gt;
+&lt;section id="lessons"&gt;
 &lt;h2&gt;Lessons&lt;/h2&gt;
 &lt;p&gt;It is huge fun, but if you want to get on the leaderboards you &lt;em&gt;must&lt;/em&gt; be up
 when the puzzle is released.  Sadly, in the UK that means waking up for
@@ -46,8 +46,8 @@ study up on &lt;a class="reference external" href="https://docs.python.org/3/lib
 event on Christmas Day, in fact I took a break and finally mashed through the
 final week on the evening of the 28th.  Infinite time, unemployment or being
 smarter would be a great help here.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="section" id="approach"&gt;
+&lt;/section&gt;
+&lt;section id="approach"&gt;
 &lt;h2&gt;Approach&lt;/h2&gt;
 &lt;p&gt;With the exception of one day — where the answer just jumped out at me — I used
 exactly the same approach.  Whack out &lt;em&gt;a&lt;/em&gt; solution for the given samples that
@@ -134,12 +134,13 @@ for part one and part two of the puzzles.  Occasionally needing to refine my
 part one solution for an edge case that part two exposed.  I’ll spare you the
 blow-by-blow of the other 24 days, as frankly the code is the least interesting
 part of the puzzles in my opinion.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="section" id="implementation"&gt;
+&lt;/section&gt;
+&lt;section id="implementation"&gt;
 &lt;h2&gt;Implementation&lt;/h2&gt;
-&lt;div class="figure align-default" id="id9"&gt;
+&lt;figure class="align-default" id="id9"&gt;
 &lt;img alt="Languages used for tasks" src="../../_images/2018-10-19-aoc_calendar.png" style="width: 273.5px; height: 181.0px;" /&gt;
-&lt;p class="caption"&gt;&lt;span class="caption-text"&gt;Language frequency for &lt;abbr title="Advent of Code"&gt;AoC&lt;/abbr&gt; puzzles&lt;/span&gt;&lt;/p&gt;
+&lt;figcaption&gt;
+&lt;p&gt;&lt;span class="caption-text"&gt;Language frequency for &lt;abbr title="Advent of Code"&gt;AoC&lt;/abbr&gt; puzzles&lt;/span&gt;&lt;/p&gt;
 &lt;div class="legend"&gt;
 &lt;table class="docutils align-default"&gt;
 &lt;colgroup&gt;
@@ -173,14 +174,15 @@ part of the puzzles in my opinion.&lt;/p&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;
+&lt;/figcaption&gt;
+&lt;/figure&gt;
 &lt;p&gt;I used &lt;a class="reference external" href="https://www.python.org/"&gt;Python&lt;/a&gt; for over half the days, &lt;a class="reference external" href="http://pypy.org/"&gt;PyPY&lt;/a&gt; for a few where my immediate
 thought was to reach for brute forcing a solution with a naïve algorithm, &lt;a class="reference external" href="http://www.lua.org/"&gt;lua&lt;/a&gt;
 via &lt;a class="reference external" href="https://github.com/dpapavas/luaprompt"&gt;luaprompt&lt;/a&gt; on one day where it was clear all I really needed was
 a calculator, and &lt;a class="reference external" href="https://nim-lang.org/"&gt;nim&lt;/a&gt; on five days where I was using my Winterval break to
 learn &lt;a class="reference external" href="https://nim-lang.org/"&gt;nim&lt;/a&gt;.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="section" id="results"&gt;
+&lt;/section&gt;
+&lt;section id="results"&gt;
 &lt;h2&gt;Results&lt;/h2&gt;
 &lt;p&gt;I only made it on to the leaderboard once, and I was excited.&lt;/p&gt;
 &lt;blockquote&gt;
@@ -194,8 +196,8 @@ to feel better.&lt;/p&gt;
 &lt;p&gt;All told, I spent nine hours on &lt;abbr title="Advent of Code"&gt;AoC&lt;/abbr&gt; and those hours were spread pretty evenly
 between the “live” 2017 puzzles and the previous years.  I’m up for calling it
 personal development, and I’m hoping it returns this year!&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="section" id="tips"&gt;
+&lt;/section&gt;
+&lt;section id="tips"&gt;
 &lt;h2&gt;Tips&lt;/h2&gt;
 &lt;p&gt;Honestly, I’m going to push against the grain on this.  All my co-workers who
 have commented on this have said &lt;abbr title="Advent of Code"&gt;AoC&lt;/abbr&gt; is a great way to learn a new language,
@@ -224,8 +226,8 @@ editor’s &lt;a class="reference external" href="https://github.com/SirVer/ulti
 &lt;p&gt;And finally, keep your old solutions around either in files or in your &lt;abbr title="Read–Eval–Print Loop"&gt;REPL&lt;/abbr&gt;’s
 history as you might end up revisiting them, as was the case with &lt;a class="reference external" href="https://adventofcode.com/2017/day/14"&gt;day 14&lt;/a&gt; for
 example.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="section" id="hopes-for-2018"&gt;
+&lt;/section&gt;
+&lt;section id="hopes-for-2018"&gt;
 &lt;h2&gt;Hopes for 2018?&lt;/h2&gt;
 &lt;p&gt;Number one?  That it returns.  It was a great deal of fun.  It spawned a fair
 amount of interesting water cooler chat too.&lt;/p&gt;
@@ -256,10 +258,13 @@ now and learn to use &lt;a class="reference external" href="https://www.graphviz
 engineering problems.&lt;/p&gt;
 &lt;/dd&gt;
 &lt;/dl&gt;
-&lt;/div&gt;
-&lt;/div&gt;
+&lt;/section&gt;
+&lt;/section&gt;
 </content>
     <link href="https://jnrowe.github.io/articles/advent_of_code.html" rel="alternate"/>
+    <summary>A very evil friend pointed me to Advent of Code last December, and I burnt
+a fair chunk of time on it.  I mean… yeah, it was hugely fun but be warned it
+is enormously addictive1.Ta-da! Calendar complete</summary>
     <category term="adventofcode" label="adventofcode"/>
     <category term="coding" label="coding"/>
     <category term="puzzles" label="puzzles"/>
@@ -272,7 +277,7 @@ engineering problems.&lt;/p&gt;
     <author>
       <name>James Rowe</name>
     </author>
-    <content type="html">&lt;div class="section" id="advent-of-code-2018"&gt;
+    <content type="html">&lt;section id="advent-of-code-2018"&gt;
 
 &lt;p&gt;I’ve given up on &lt;abbr title="Advent of Code"&gt;AoC&lt;/abbr&gt; for this year, so we’ll have a ten day early
 retrospective.  I’m writing this as a journal entry, more for myself than
@@ -283,15 +288,15 @@ others.  You’ve been warned!&lt;/p&gt;
 it.  If you’re enjoying it, &lt;em&gt;or&lt;/em&gt; currently screaming at it, &lt;a class="reference external" href="https://adventofcode.com/2018/support"&gt;tip the
 creator&lt;/a&gt; so that we can smile and shout at it next year.&lt;/p&gt;
 &lt;/div&gt;
-&lt;div class="section" id="why-quit"&gt;
+&lt;section id="why-quit"&gt;
 &lt;h2&gt;Why quit?&lt;/h2&gt;
 &lt;p&gt;First up, I’m struggling with motivation a bit this year.  Added to that I’ve
 floundered purely on the descriptions for the past couple of days, but I’m
 pretty sure that it is largely my problem too.&lt;/p&gt;
 &lt;p&gt;I have 28 stars for completing both parts of every day so far this year, but
 I haven’t been enjoying it enough to warrant continuing.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="section" id="day-1"&gt;
+&lt;/section&gt;
+&lt;section id="day-1"&gt;
 &lt;h2&gt;Day 1&lt;/h2&gt;
 &lt;ul class="simple"&gt;
 &lt;li&gt;&lt;p&gt;&lt;a class="reference external" href="https://adventofcode.com/2018/day/1"&gt;Chronal Calibration&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
@@ -407,8 +412,8 @@ improve readability by allowing you to “code the intent”.&lt;/p&gt;
 &lt;/div&gt;
 &lt;p&gt;According to &lt;a class="reference external" href="https://pypi.python.org/pypi/rdial"&gt;rdial&lt;/a&gt; I could have been on the leaderboard for both parts
 if I’d woken up at five to work on it :/&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="section" id="day-2"&gt;
+&lt;/section&gt;
+&lt;section id="day-2"&gt;
 &lt;h2&gt;Day 2&lt;/h2&gt;
 &lt;ul class="simple"&gt;
 &lt;li&gt;&lt;p&gt;&lt;a class="reference external" href="https://adventofcode.com/2018/day/2"&gt;Inventory Management System&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
@@ -449,8 +454,8 @@ example, we could loop over our inputs with something like the following:&lt;/p&
 above is testing against the set of all inputs which includes the current
 word and thus always has one perfect match.&lt;/p&gt;
 &lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="section" id="day-3"&gt;
+&lt;/section&gt;
+&lt;section id="day-3"&gt;
 &lt;h2&gt;Day 3&lt;/h2&gt;
 &lt;ul class="simple"&gt;
 &lt;li&gt;&lt;p&gt;&lt;a class="reference external" href="https://adventofcode.com/2018/day/3"&gt;No Matter How You Slice It&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
@@ -547,8 +552,8 @@ add to your knowledge.  In this specific instance it actually impairs the
 run-time versus cPython using a &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;List[List[int]]&lt;/span&gt;&lt;/code&gt;, but the slowdown is
 very small and the array slicing syntax more than makes up for that.&lt;/p&gt;
 &lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="section" id="day-4"&gt;
+&lt;/section&gt;
+&lt;section id="day-4"&gt;
 &lt;h2&gt;Day 4&lt;/h2&gt;
 &lt;ul class="simple"&gt;
 &lt;li&gt;&lt;p&gt;&lt;a class="reference external" href="https://adventofcode.com/2018/day/4"&gt;Repose Record&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
@@ -599,8 +604,8 @@ could rewrite it in reverse order using &lt;a class="reference external" href="h
 However, for a quick &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;ptpython&lt;/span&gt;&lt;/code&gt; session I was happy &lt;em&gt;enough&lt;/em&gt; with that.&lt;/p&gt;
 &lt;p&gt;The second part is simply just grabbing at the data with a different selector,
 and contains no new functionality.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="section" id="day-5"&gt;
+&lt;/section&gt;
+&lt;section id="day-5"&gt;
 &lt;h2&gt;Day 5&lt;/h2&gt;
 &lt;ul class="simple"&gt;
 &lt;li&gt;&lt;p&gt;&lt;a class="reference external" href="https://adventofcode.com/2018/day/5"&gt;Alchemical Reduction&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
@@ -697,8 +702,8 @@ iterator.&lt;/p&gt;
 faster to mash the keyboard in order than type out the alphabet.  I have to
 admit I &lt;em&gt;really&lt;/em&gt; loved seeing that, and it wouldn’t have occurred to me.&lt;/p&gt;
 &lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="section" id="day-6"&gt;
+&lt;/section&gt;
+&lt;section id="day-6"&gt;
 &lt;h2&gt;Day 6&lt;/h2&gt;
 &lt;ul class="simple"&gt;
 &lt;li&gt;&lt;p&gt;&lt;a class="reference external" href="https://adventofcode.com/2018/day/6"&gt;Chronal Coordinates&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
@@ -712,8 +717,8 @@ time on it.  Given it is just &lt;a class="reference external" href="https://en.
 anything new to see anyhow; I will note that &lt;a class="reference external" href="https://pypi.python.org/pypi/scipy"&gt;scipy&lt;/a&gt; contains
 &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;scipy.spatial.distance&lt;/span&gt;&lt;/code&gt; which supports taxicab geometry with the
 &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;cityblock&lt;/span&gt;&lt;/code&gt; parameter though&lt;a class="footnote-reference brackets" href="#id6" id="id3"&gt;3&lt;/a&gt;.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="section" id="day-7"&gt;
+&lt;/section&gt;
+&lt;section id="day-7"&gt;
 &lt;h2&gt;Day 7&lt;/h2&gt;
 &lt;ul class="simple"&gt;
 &lt;li&gt;&lt;p&gt;&lt;a class="reference external" href="https://adventofcode.com/2018/day/7"&gt;The Sum of Its Parts&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
@@ -728,8 +733,8 @@ I really didn’t feel like I had.  That felt like cheating, and so did using
 &lt;a class="reference external" href="https://pypi.python.org/pypi/scipy"&gt;scipy&lt;/a&gt; the day before.  As I said at the start, I’ve been lacking
 motivation a little anyway and I’m not assigning &lt;em&gt;any&lt;/em&gt; blame toward &lt;abbr title="Advent of Code"&gt;AoC&lt;/abbr&gt;
 creators for this.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="section" id="day-8-14"&gt;
+&lt;/section&gt;
+&lt;section id="day-8-14"&gt;
 &lt;h2&gt;Day 8..14&lt;/h2&gt;
 &lt;p&gt;I’ve largely just been going through the motions for the past few days, and if
 it hadn’t been for wishing to peacock some co-workers I’d probably have retired
@@ -737,8 +742,8 @@ earlier ;)&lt;/p&gt;
 &lt;p&gt;And that is the main reason I’m quitting, I don’t even like my own solutions
 enough to write about them.  A combination of just doing the minimum required
 to get &lt;em&gt;an&lt;/em&gt; answer and not being interested enough to go back for refactoring.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="section" id="tips"&gt;
+&lt;/section&gt;
+&lt;section id="tips"&gt;
 &lt;h2&gt;Tips&lt;/h2&gt;
 &lt;p&gt;I’m mostly repeating my tips from &lt;span class="xref std std-doc"&gt;last year&lt;/span&gt;.&lt;/p&gt;
 &lt;p&gt;Don’t use this as an excuse to learn a new language.  The puzzles aren’t really
@@ -755,8 +760,8 @@ languages, be &lt;em&gt;all over&lt;/em&gt; your chosen weapon’s standard libr
 editor’s &lt;a class="reference external" href="https://github.com/SirVer/ultisnips/"&gt;snippets&lt;/a&gt; well.  &lt;strong&gt;Every&lt;/strong&gt;. &lt;strong&gt;Second&lt;/strong&gt;. &lt;strong&gt;Counts&lt;/strong&gt;.&lt;/p&gt;
 &lt;p&gt;And finally, keep your old solutions around either in files or in your &lt;abbr title="Read–Eval–Print Loop"&gt;REPL&lt;/abbr&gt;’s
 history as you’ll probably end up revisiting them.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="section" id="hopes-for-2019"&gt;
+&lt;/section&gt;
+&lt;section id="hopes-for-2019"&gt;
 &lt;h2&gt;Hopes for 2019?&lt;/h2&gt;
 &lt;p&gt;Moving up a place from number two last year: That the options to pay for it are
 better next year.  Each year I have to find a friend to make a donation in my
@@ -765,8 +770,8 @@ and limiting payments to PayPal and Coinbase &lt;em&gt;must&lt;/em&gt; be puttin
 a donation entirely.&lt;/p&gt;
 &lt;p&gt;Number two?  That it returns.  When it is fun it is &lt;em&gt;really&lt;/em&gt; fun, and I just
 hope I’m in a better place personally next time.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="section" id="whats-next"&gt;
+&lt;/section&gt;
+&lt;section id="whats-next"&gt;
 &lt;h2&gt;What’s next?&lt;/h2&gt;
 &lt;p&gt;Let us be honest here.  Winterval is almost upon us and I’ll probably end up
 diving back in to complete the remaining days ;)&lt;/p&gt;
@@ -788,10 +793,13 @@ about how annoying it can be to discuss these things when even simple
 concepts are often known by various common names.&lt;/p&gt;
 &lt;/dd&gt;
 &lt;/dl&gt;
-&lt;/div&gt;
-&lt;/div&gt;
+&lt;/section&gt;
+&lt;/section&gt;
 </content>
     <link href="https://jnrowe.github.io/articles/advent_of_code_2018.html" rel="alternate"/>
+    <summary>I’ve given up on AoC for this year, so we’ll have a ten day early
+retrospective.  I’m writing this as a journal entry, more for myself than
+others.  You’ve been warned!|AOC| example runner output</summary>
     <category term="adventofcode" label="adventofcode"/>
     <category term="coding" label="coding"/>
     <category term="puzzles" label="puzzles"/>
@@ -804,7 +812,7 @@ concepts are often known by various common names.&lt;/p&gt;
     <author>
       <name>James Rowe</name>
     </author>
-    <content type="html">&lt;div class="section" id="advent-of-code-2019"&gt;
+    <content type="html">&lt;section id="advent-of-code-2019"&gt;
 
 &lt;p&gt;With a touch of sadness, I’ve given up on &lt;abbr title="Advent of Code"&gt;AoC&lt;/abbr&gt; for this year.  I’m writing this
 as a journal entry, more for myself than others.  You’ve been warned!&lt;/p&gt;
@@ -814,7 +822,7 @@ as a journal entry, more for myself than others.  You’ve been warned!&lt;/p&gt
 it.  If you’re enjoying it, &lt;em&gt;or&lt;/em&gt; currently screaming at it, &lt;a class="reference external" href="https://adventofcode.com/2019/support"&gt;tip the
 creator&lt;/a&gt; so that we can smile and shout at it next year.&lt;/p&gt;
 &lt;/div&gt;
-&lt;div class="section" id="why-quit"&gt;
+&lt;section id="why-quit"&gt;
 &lt;h2&gt;Why quit?&lt;/h2&gt;
 &lt;p&gt;The puzzles aren’t my cup of tea this year, but I’m not complaining.  Our
 leader board for the office has twice as many people as last year, so clearly it
@@ -825,8 +833,8 @@ the type of puzzles I’ve completed, and if I wanted more of that I could knock
 some real items off my to–do list.&lt;/p&gt;
 &lt;p&gt;I have 22 stars for completing both parts of every day so far this year, but
 I’m taking a break until I have a bit more downtime.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="section" id="day-1"&gt;
+&lt;/section&gt;
+&lt;section id="day-1"&gt;
 &lt;h2&gt;Day 1&lt;/h2&gt;
 &lt;ul class="simple"&gt;
 &lt;li&gt;&lt;p&gt;&lt;a class="reference external" href="https://adventofcode.com/2019/day/1"&gt;The Tyranny of the Rocket Equation&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
@@ -880,8 +888,8 @@ simply dividing &lt;code class="docutils literal notranslate"&gt;&lt;span class=
 idiocy with a bug that foolish, but luckily I’m too stoopid to find it.  I’m
 admitting this in the open to remind myself to think a little more in the
 following days.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="section" id="day-2"&gt;
+&lt;/section&gt;
+&lt;section id="day-2"&gt;
 &lt;span id="day-two-label"&gt;&lt;/span&gt;&lt;h2&gt;Day 2&lt;/h2&gt;
 &lt;ul class="simple"&gt;
 &lt;li&gt;&lt;p&gt;&lt;a class="reference external" href="https://adventofcode.com/2018/day/2"&gt;Inventory Management System&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
@@ -927,8 +935,8 @@ Computers are fast enough that even noodling about optimisation for this is
 a wasteful trade off.  Instead, I spent a few minutes making my test runner
 output colours on failures for the greater good.&lt;/p&gt;
 &lt;img alt="|AOC| example runner failure" src="../../_images/2019-12-11-advent_of_code.png" /&gt;
-&lt;/div&gt;
-&lt;div class="section" id="day-3"&gt;
+&lt;/section&gt;
+&lt;section id="day-3"&gt;
 &lt;h2&gt;Day 3&lt;/h2&gt;
 &lt;ul class="simple"&gt;
 &lt;li&gt;&lt;p&gt;&lt;a class="reference external" href="https://adventofcode.com/2019/day/3"&gt;Crossed Wires&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
@@ -954,8 +962,8 @@ a little.&lt;/p&gt;
 functionality that Python gives us.  Instead of needing to write our own matcher
 to find the overlapping wires, we can simply call &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;wire1.keys()&lt;/span&gt; &lt;span class="pre"&gt;&amp;amp;&lt;/span&gt; &lt;span class="pre"&gt;wire2&lt;/span&gt;&lt;/code&gt; and
 Python gives us the intersection points directly.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="section" id="day-4"&gt;
+&lt;/section&gt;
+&lt;section id="day-4"&gt;
 &lt;h2&gt;Day 4&lt;/h2&gt;
 &lt;ul class="simple"&gt;
 &lt;li&gt;&lt;p&gt;&lt;a class="reference external" href="https://adventofcode.com/2019/day/4"&gt;Secure Container&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
@@ -1013,8 +1021,8 @@ match by using a positive look behind to effectually make the match available
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
 &lt;p&gt;We wouldn’t want to do that though, as it makes kittens weep.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="section" id="day-5"&gt;
+&lt;/section&gt;
+&lt;section id="day-5"&gt;
 &lt;span id="day-five-label"&gt;&lt;/span&gt;&lt;h2&gt;Day 5&lt;/h2&gt;
 &lt;ul class="simple"&gt;
 &lt;li&gt;&lt;p&gt;&lt;a class="reference external" href="https://adventofcode.com/2019/day/5"&gt;Sunny with a Chance of Asteroids&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
@@ -1042,8 +1050,8 @@ with human-readable and &lt;abbr title="JavaScript Object Notation"&gt;JSON&lt;/
 MovieOS memory display while running, tacking on &lt;a class="reference external" href="http://blockdiag.com/"&gt;seqdiag&lt;/a&gt; output for bug
 inspection was glossy, and optimising it in ridiculous ways with branch
 prediction to take some advantage of all my &lt;abbr title="Central Processing Unit"&gt;CPU&lt;/abbr&gt; cores was a lot of fun.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="section" id="day-6"&gt;
+&lt;/section&gt;
+&lt;section id="day-6"&gt;
 &lt;h2&gt;Day 6&lt;/h2&gt;
 &lt;ul class="simple"&gt;
 &lt;li&gt;&lt;p&gt;&lt;a class="reference external" href="https://adventofcode.com/2019/day/6"&gt;Universal Orbit Map&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
@@ -1085,8 +1093,8 @@ wanted to read about &lt;strong class="command"&gt;ccomps&lt;/strong&gt;, &lt;st
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="section" id="day-7"&gt;
+&lt;/section&gt;
+&lt;section id="day-7"&gt;
 &lt;h2&gt;Day 7&lt;/h2&gt;
 &lt;ul class="simple"&gt;
 &lt;li&gt;&lt;p&gt;&lt;a class="reference external" href="https://adventofcode.com/2019/day/7"&gt;Amplification Circuit&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
@@ -1135,8 +1143,8 @@ contains nothing new or interesting.  If you’re doing something similar
 I strongly suggest getting to know the &lt;a class="reference external" href="http://zsh.sourceforge.net/Doc/Release/Shell-Builtin-Commands.html#Shell-Builtin-Commands"&gt;fc builtin&lt;/a&gt;, which allows you to edit
 your shell session in a real editor instead of needing to manually switch
 between your editor and terminal when composing more complex shell blocks.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="section" id="day-8"&gt;
+&lt;/section&gt;
+&lt;section id="day-8"&gt;
 &lt;h2&gt;Day 8&lt;/h2&gt;
 &lt;ul class="simple"&gt;
 &lt;li&gt;&lt;p&gt;&lt;a class="reference external" href="https://adventofcode.com/2019/day/8"&gt;Space Image Format&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
@@ -1179,16 +1187,18 @@ to write basically zero code:&lt;/p&gt;
 &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;if&lt;/span&gt;&lt;/code&gt; statement for readability when I moved it to a file.&lt;/p&gt;
 &lt;p&gt;As I wrote less than ten lines to submit my answers, I decided to make a little
 more work for myself.  I give you images of images…&lt;/p&gt;
-&lt;div class="figure align-default" id="id7"&gt;
+&lt;figure class="align-default" id="id7"&gt;
 &lt;a class="reference external image-reference" href="../_static/2019-12-11-space_image.mp4"&gt;&lt;img alt="Frames from the image decoding" src="../../_images/2019-12-11-space_image.png" style="width: 319.44px; height: 221.76000000000002px;" /&gt;&lt;/a&gt;
-&lt;p class="caption"&gt;&lt;span class="caption-text"&gt;Click the image for an animation, if you want to see the image decoding.&lt;/span&gt;&lt;/p&gt;
-&lt;/div&gt;
+&lt;figcaption&gt;
+&lt;p&gt;&lt;span class="caption-text"&gt;Click the image for an animation, if you want to see the image decoding.&lt;/span&gt;&lt;/p&gt;
+&lt;/figcaption&gt;
+&lt;/figure&gt;
 &lt;p&gt;A more interesting question might be: without reversing the frames how quickly
 can we apply &lt;abbr title="Optical Character Recognition"&gt;OCR&lt;/abbr&gt; to guess the incomplete
 text?  Had the input data been larger it might have been an interesting approach
 to solving this puzzle.  Install &lt;a class="reference external" href="https://github.com/tesseract-ocr/"&gt;tesseract&lt;/a&gt;, figure it out and drop me a &lt;a class="reference external" href="mailto:jnrowe&amp;#37;&amp;#52;&amp;#48;gmail&amp;#46;com"&gt;mail&lt;/a&gt;.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="section" id="day-9"&gt;
+&lt;/section&gt;
+&lt;section id="day-9"&gt;
 &lt;h2&gt;Day 9&lt;/h2&gt;
 &lt;ul class="simple"&gt;
 &lt;li&gt;&lt;p&gt;&lt;a class="reference external" href="https://adventofcode.com/2019/day/9"&gt;Sensor Boost&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
@@ -1196,8 +1206,8 @@ to solving this puzzle.  Install &lt;a class="reference external" href="https://
 &lt;p&gt;Hrmmph.  The puzzle text took me longer to read than the extra opcode and mode
 took to add to my interpreter.  There was nothing new or noteworthy in the
 implementation either, just another state variable and &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;switch&lt;/span&gt;&lt;/code&gt; arm.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="section" id="day-10"&gt;
+&lt;/section&gt;
+&lt;section id="day-10"&gt;
 &lt;h2&gt;Day 10&lt;/h2&gt;
 &lt;ul class="simple"&gt;
 &lt;li&gt;&lt;p&gt;&lt;a class="reference external" href="https://adventofcode.com/2019/day/10"&gt;Monitoring Station&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
@@ -1222,8 +1232,8 @@ advantage of &lt;a class="reference external" href="https://numpy.org/doc/1.16/r
 over.&lt;/p&gt;
 &lt;p&gt;The other thing I learnt is my co-worker Karl is &lt;em&gt;amazing&lt;/em&gt;, his solution
 included a &lt;a class="reference external" href="http://www.pygame.org/"&gt;pygame&lt;/a&gt;-based radar sweep display of the asteroid field.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="section" id="day-11"&gt;
+&lt;/section&gt;
+&lt;section id="day-11"&gt;
 &lt;h2&gt;Day 11&lt;/h2&gt;
 &lt;p&gt;I’ve kind of lost interest today.  This puzzle was largely just tying your
 &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;IntCode&lt;/span&gt;&lt;/code&gt; interpreter in to a &lt;a class="reference external" href="https://en.m.wikipedia.org/wiki/Logo_(programming_language)"&gt;Logo&lt;/a&gt;-esque walker from various other puzzles,
@@ -1231,8 +1241,8 @@ it felt more like busywork than an actual challenge.&lt;/p&gt;
 &lt;p&gt;I’m pretty sure I’ll come back to &lt;abbr title="Advent of Code"&gt;AoC&lt;/abbr&gt; 2019 during my Winterval break, but that
 is it for now.&lt;/p&gt;
 &lt;img alt="Calendar showing current count of 22 stars" src="../../_images/2019-12-11-aoc_calendar.png" /&gt;
-&lt;/div&gt;
-&lt;div class="section" id="tips"&gt;
+&lt;/section&gt;
+&lt;section id="tips"&gt;
 &lt;h2&gt;Tips&lt;/h2&gt;
 &lt;p&gt;I’m mostly repeating my tips from &lt;span class="xref std std-doc"&gt;last year&lt;/span&gt; and the
 &lt;span class="xref std std-doc"&gt;year before&lt;/span&gt;.&lt;/p&gt;
@@ -1251,8 +1261,8 @@ editor’s &lt;a class="reference external" href="https://github.com/SirVer/ulti
 &lt;p&gt;And finally, keep your old solutions around either in files or in your &lt;abbr title="Read–Eval–Print Loop"&gt;REPL&lt;/abbr&gt;’s
 history as you’ll probably end up revisiting them, if not this year then maybe
 in the next.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="section" id="hopes-for-2020"&gt;
+&lt;/section&gt;
+&lt;section id="hopes-for-2020"&gt;
 &lt;h2&gt;Hopes for 2020?&lt;/h2&gt;
 &lt;p&gt;Repeating number one from last year: That the options to pay for it are better
 next year.  Each year I have to find a friend to make a donation in my place as
@@ -1278,10 +1288,12 @@ a &lt;a class="reference external" href="mailto:jnrowe&amp;#37;&amp;#52;&amp;#48
 Simple, &lt;abbr title="Advent of Code"&gt;AoC&lt;/abbr&gt; always has a puzzle or two which benefit from using them.&lt;/p&gt;
 &lt;/dd&gt;
 &lt;/dl&gt;
-&lt;/div&gt;
-&lt;/div&gt;
+&lt;/section&gt;
+&lt;/section&gt;
 </content>
     <link href="https://jnrowe.github.io/articles/advent_of_code_2019.html" rel="alternate"/>
+    <summary>With a touch of sadness, I’ve given up on AoC for this year.  I’m writing this
+as a journal entry, more for myself than others.  You’ve been warned!|AOC| example runner failure</summary>
     <category term="adventofcode" label="adventofcode"/>
     <category term="coding" label="coding"/>
     <category term="puzzles" label="puzzles"/>
@@ -1294,7 +1306,7 @@ Simple, &lt;abbr title="Advent of Code"&gt;AoC&lt;/abbr&gt; always has a puzzle 
     <author>
       <name>James Rowe</name>
     </author>
-    <content type="html">&lt;div class="section" id="advent-of-code-2020"&gt;
+    <content type="html">&lt;section id="advent-of-code-2020"&gt;
 
 &lt;p&gt;I’m done.&lt;/p&gt;
 &lt;p&gt;I’ve given up on &lt;abbr title="Advent of Code"&gt;AoC&lt;/abbr&gt; for this year.  I’m writing this as a journal entry,
@@ -1305,7 +1317,7 @@ more for myself than others.  You’ve been warned!&lt;/p&gt;
 it.  If you’re enjoying it, &lt;em&gt;or&lt;/em&gt; currently screaming at it, &lt;a class="reference external" href="https://adventofcode.com/2020/support"&gt;tip the
 creator&lt;/a&gt; so that we can smile and shout at it next year.&lt;/p&gt;
 &lt;/div&gt;
-&lt;div class="section" id="why-quit"&gt;
+&lt;section id="why-quit"&gt;
 &lt;h2&gt;Why quit?&lt;/h2&gt;
 &lt;p&gt;I’m in the habit of quitting early now.  Each year I spank through the puzzles
 until I lose interest, give up, and then complete the puzzles through the
@@ -1315,8 +1327,8 @@ impenetrable to me.  It literally took me four times as long to parse the
 description as it did to code the solution.&lt;/p&gt;
 &lt;p&gt;I have 32 stars for completing both parts of every day so far this year, but
 I’m taking a break until I have a bit more downtime.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="section" id="day-1"&gt;
+&lt;/section&gt;
+&lt;section id="day-1"&gt;
 &lt;h2&gt;Day 1&lt;/h2&gt;
 &lt;ul class="simple"&gt;
 &lt;li&gt;&lt;p&gt;&lt;a class="reference external" href="https://adventofcode.com/2020/day/1"&gt;Report Repair&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
@@ -1359,8 +1371,8 @@ we just need to change the &lt;code class="docutils literal notranslate"&gt;&lt;
 &lt;/div&gt;
 &lt;p&gt;However, it is unclear to me whether that is actually clearer in the general
 case, or simply the eye I have given my current daytime project.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="section" id="day-2"&gt;
+&lt;/section&gt;
+&lt;section id="day-2"&gt;
 &lt;h2&gt;Day 2&lt;/h2&gt;
 &lt;ul class="simple"&gt;
 &lt;li&gt;&lt;p&gt;&lt;a class="reference external" href="https://adventofcode.com/2020/day/2"&gt;Password Philosophy&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
@@ -1415,8 +1427,8 @@ the more manual &lt;code class="docutils literal notranslate"&gt;&lt;span class=
 symbolically&lt;/a&gt;.  &lt;em&gt;And yes&lt;/em&gt;, the “&lt;strong&gt;exactly one of these positions&lt;/strong&gt;” text
 really is in &lt;strong&gt;bold&lt;/strong&gt; on that page.&lt;/p&gt;
 &lt;img alt="vim showing bug is day 2’s solution" src="../../_images/2020-12-02-symbolic.png" /&gt;
-&lt;/div&gt;
-&lt;div class="section" id="day-3"&gt;
+&lt;/section&gt;
+&lt;section id="day-3"&gt;
 &lt;h2&gt;Day 3&lt;/h2&gt;
 &lt;ul class="simple"&gt;
 &lt;li&gt;&lt;p&gt;&lt;a class="reference external" href="https://adventofcode.com/2020/day/3"&gt;Toboggan Trajectory&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
@@ -1476,8 +1488,8 @@ step values.  I had seen that coming, and was already prepared in my
     &lt;span class="p"&gt;)&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="section" id="day-4"&gt;
+&lt;/section&gt;
+&lt;section id="day-4"&gt;
 &lt;h2&gt;Day 4&lt;/h2&gt;
 &lt;ul class="simple"&gt;
 &lt;li&gt;&lt;p&gt;&lt;a class="reference external" href="https://adventofcode.com/2020/day/4"&gt;Passport Processing&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
@@ -1519,8 +1531,8 @@ implementation.  Even the birth year would have been a heap of lines:&lt;/p&gt;
             &lt;span class="k"&gt;raise&lt;/span&gt; &lt;span class="ne"&gt;ValueError&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="sa"&gt;f&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;Invalid birth year &lt;/span&gt;&lt;span class="si"&gt;{&lt;/span&gt;&lt;span class="n"&gt;value&lt;/span&gt;&lt;span class="si"&gt;!r}&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="section" id="day-5"&gt;
+&lt;/section&gt;
+&lt;section id="day-5"&gt;
 &lt;h2&gt;Day 5&lt;/h2&gt;
 &lt;ul class="simple"&gt;
 &lt;li&gt;&lt;p&gt;&lt;a class="reference external" href="https://adventofcode.com/2020/day/5"&gt;Binary Boarding&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
@@ -1551,8 +1563,8 @@ pretend the characters are binary representations of the value:&lt;/p&gt;
 &lt;span class="nb"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;seat&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="section" id="day-6"&gt;
+&lt;/section&gt;
+&lt;section id="day-6"&gt;
 &lt;h2&gt;Day 6&lt;/h2&gt;
 &lt;ul class="simple"&gt;
 &lt;li&gt;&lt;p&gt;&lt;a class="reference external" href="https://adventofcode.com/2020/day/6"&gt;Custom Customs&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
@@ -1587,8 +1599,8 @@ a shared repository, but it is how I &lt;abbr title="Read–Eval–Print Loop"&g
 &lt;p&gt;If you’ve made it this far, I wonder if &lt;em&gt;you&lt;/em&gt; can guess what language my
 current daytime project is written in.  There is a small prize in it for the
 first person to correctly guess based on the solutions to these puzzles.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="section" id="day-7"&gt;
+&lt;/section&gt;
+&lt;section id="day-7"&gt;
 &lt;h2&gt;Day 7&lt;/h2&gt;
 &lt;ul class="simple"&gt;
 &lt;li&gt;&lt;p&gt;&lt;a class="reference external" href="https://adventofcode.com/2020/day/7"&gt;Handy Haversacks&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
@@ -1631,8 +1643,8 @@ this route on the day.&lt;/p&gt;
 &lt;p&gt;I had assumed the input would have been crazy enough to break Python’s default
 recursion limit, but it looks like we were nowhere near it.  Things aren’t
 getting evil… yet.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="section" id="day-8"&gt;
+&lt;/section&gt;
+&lt;section id="day-8"&gt;
 &lt;h2&gt;Day 8&lt;/h2&gt;
 &lt;ul class="simple"&gt;
 &lt;li&gt;&lt;p&gt;&lt;a class="reference external" href="https://adventofcode.com/2020/day/8"&gt;Handheld Halting&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
@@ -1681,8 +1693,8 @@ to regular string splitting like so:&lt;/p&gt;
 messed up the parsing in a rush to score on the local leaderboard.  However,
 once you start poking around there is a multitude of rabbit holes to climb in
 to if you want to extract some speed.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="section" id="day-9"&gt;
+&lt;/section&gt;
+&lt;section id="day-9"&gt;
 &lt;h2&gt;Day 9&lt;/h2&gt;
 &lt;ul class="simple"&gt;
 &lt;li&gt;&lt;p&gt;&lt;a class="reference external" href="https://adventofcode.com/2020/day/9"&gt;Encoding Error&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
@@ -1741,8 +1753,8 @@ distance with an early exit:&lt;/p&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
 &lt;p&gt;But… Don’t. Do. It.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="section" id="day-10"&gt;
+&lt;/section&gt;
+&lt;section id="day-10"&gt;
 &lt;h2&gt;Day 10&lt;/h2&gt;
 &lt;ul class="simple"&gt;
 &lt;li&gt;&lt;p&gt;&lt;a class="reference external" href="https://adventofcode.com/2020/day/10"&gt;Adapter Array&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
@@ -1770,8 +1782,8 @@ distance with an early exit:&lt;/p&gt;
 &lt;/div&gt;
 &lt;p&gt;As you can probably tell I wasn’t particularly happy with this day.  I’ve
 wondered if I was just lucky with my input, but it doesn’t appear so.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="section" id="day-11"&gt;
+&lt;/section&gt;
+&lt;section id="day-11"&gt;
 &lt;h2&gt;Day 11&lt;/h2&gt;
 &lt;ul class="simple"&gt;
 &lt;li&gt;&lt;p&gt;&lt;a class="reference external" href="https://adventofcode.com/2020/day/11"&gt;Seating System&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
@@ -1798,8 +1810,8 @@ filter for a given value.  In my case it just looks for the first
 non-&lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;None&lt;/span&gt;&lt;/code&gt;, and then it just a matter of changing the four to a five in our
 seat toggling branch.&lt;/p&gt;
 &lt;p&gt;&lt;a class="reference external" href="https://pypi.python.org/pypi/numpy"&gt;numpy&lt;/a&gt; &lt;em&gt;is&lt;/em&gt; cheating, but not using it is needless busywork.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="section" id="day-12"&gt;
+&lt;/section&gt;
+&lt;section id="day-12"&gt;
 &lt;h2&gt;Day 12&lt;/h2&gt;
 &lt;ul class="simple"&gt;
 &lt;li&gt;&lt;p&gt;&lt;a class="reference external" href="https://adventofcode.com/2020/day/12"&gt;Rain Risk&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
@@ -1830,8 +1842,8 @@ I was about to break out the trigonometry here, but luckily I did quick
 point class here, or reach for complex numbers to store the &lt;strong&gt;x&lt;/strong&gt; and
 &lt;strong&gt;y&lt;/strong&gt; coordinates.&lt;/p&gt;
 &lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="section" id="day-13"&gt;
+&lt;/section&gt;
+&lt;section id="day-13"&gt;
 &lt;h2&gt;Day 13&lt;/h2&gt;
 &lt;ul class="simple"&gt;
 &lt;li&gt;&lt;p&gt;&lt;a class="reference external" href="https://adventofcode.com/2020/day/13"&gt;Shuttle Search&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
@@ -1848,8 +1860,8 @@ brush up on &lt;a class="reference external" href="https://docs.python.org/3/lib
 to &lt;a class="reference external" href="https://github.com/ggreer/the_silver_searcher"&gt;ag&lt;/a&gt; or &lt;strong class="program"&gt;grep&lt;/strong&gt; previous competition’s answers is a literal super
 power.  And, doing so is far easier if you’re not staring at reams of
 &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;i&lt;/span&gt;&lt;/code&gt;/&lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;x&lt;/span&gt;&lt;/code&gt;/&lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;n&lt;/span&gt;&lt;/code&gt; usage.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="section" id="day-14"&gt;
+&lt;/section&gt;
+&lt;section id="day-14"&gt;
 &lt;h2&gt;Day 14&lt;/h2&gt;
 &lt;ul class="simple"&gt;
 &lt;li&gt;&lt;p&gt;&lt;a class="reference external" href="https://adventofcode.com/2020/day/14"&gt;Docking Data&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
@@ -1871,8 +1883,8 @@ I need a break from this as much I wanted a break from working on the
 puzzles themselves, and the two week point seems like as good a time as any
 for a break.&lt;/p&gt;
 &lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="section" id="tips"&gt;
+&lt;/section&gt;
+&lt;section id="tips"&gt;
 &lt;h2&gt;Tips&lt;/h2&gt;
 &lt;p&gt;I’m mostly repeating my tips from &lt;span class="xref std std-doc"&gt;last year&lt;/span&gt;, the
 &lt;span class="xref std std-doc"&gt;year before&lt;/span&gt;, and the &lt;span class="xref std std-doc"&gt;year before that&lt;/span&gt;.&lt;/p&gt;
@@ -1891,8 +1903,8 @@ editor’s &lt;a class="reference external" href="https://github.com/SirVer/ulti
 &lt;p&gt;And finally, keep your old solutions around either in files or in your &lt;abbr title="Read–Eval–Print Loop"&gt;REPL&lt;/abbr&gt;’s
 history as you’ll probably end up revisiting them, if not this year then maybe
 in the next.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="section" id="hopes-for-2021"&gt;
+&lt;/section&gt;
+&lt;section id="hopes-for-2021"&gt;
 &lt;h2&gt;Hopes for 2021?&lt;/h2&gt;
 &lt;p&gt;Repeating number one from every year so far: That the options to pay for it are
 better next year.  Each year I have to find a friend to make a donation in my
@@ -1902,10 +1914,11 @@ a donation entirely.&lt;/p&gt;
 &lt;p&gt;Number two?  That it returns.  I know I’ve moaned a couple of times in this
 document, but that is the joy of puzzles.  If they’re not annoying you then
 they’re not challenging enough.&lt;/p&gt;
-&lt;/div&gt;
-&lt;/div&gt;
+&lt;/section&gt;
+&lt;/section&gt;
 </content>
     <link href="https://jnrowe.github.io/articles/advent_of_code_2020.html" rel="alternate"/>
+    <summary>I’m done.vim showing bug is day 2’s solution</summary>
     <category term="adventofcode" label="adventofcode"/>
     <category term="coding" label="coding"/>
     <category term="puzzles" label="puzzles"/>

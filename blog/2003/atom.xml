@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <id>https://jnrowe.github.io/</id>
   <title>JNRowe - Posted in 2003</title>
-  <updated>2021-04-18T11:22:04.722762+00:00</updated>
+  <updated>2021-04-29T22:37:59.449619+00:00</updated>
   <link href="https://jnrowe.github.io/"/>
   <link href="https://jnrowe.github.io/blog/2003/atom.xml" rel="self"/>
-  <generator uri="https://ablog.readthedocs.org/" version="0.10.17">ABlog</generator>
+  <generator uri="https://ablog.readthedocs.org/" version="0.10.18">ABlog</generator>
   <subtitle>Ramblings of a tired mind</subtitle>
   <entry>
     <id>https://jnrowe.github.io/articles/rcs.html</id>
@@ -14,7 +14,7 @@
     <author>
       <name>James Rowe</name>
     </author>
-    <content type="html">&lt;div class="section" id="introduction-to-rcs"&gt;
+    <content type="html">&lt;section id="introduction-to-rcs"&gt;
 
 &lt;div class="admonition warning"&gt;
 &lt;p class="admonition-title"&gt;Warning&lt;/p&gt;
@@ -24,7 +24,7 @@ point.  It is mainly to help people who need to understand &lt;abbr title="GNU R
 they have no choice, for example Gentoo users who are stuck with
 &lt;strong class="command"&gt;dispatch-conf&lt;/strong&gt; (or so my mails tell me).&lt;/p&gt;
 &lt;/div&gt;
-&lt;div class="section" id="abstract"&gt;
+&lt;section id="abstract"&gt;
 &lt;h2&gt;Abstract&lt;/h2&gt;
 &lt;p&gt;This introduction is aimed at people with no experience of a &lt;abbr title="Version Control System"&gt;VCS&lt;/abbr&gt; at all, but
 who do have a need for an easy to use and non-intrusive way to backup, store
@@ -40,8 +40,8 @@ files for distribution.&lt;/p&gt;
 need more functionality from &lt;abbr title="GNU Revision Control System"&gt;RCS&lt;/abbr&gt;, there is a HOW-TO at &lt;a class="reference external" href="http://www.tldp.org"&gt;The Linux
 Documentation Project&lt;/a&gt; (&lt;a class="reference external" href="http://tldp.org/HOWTO/RCS.html"&gt;direct link&lt;/a&gt;) and fantastic documentation is
 provided with the &lt;abbr title="GNU Revision Control System"&gt;RCS&lt;/abbr&gt; package.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="section" id="diving-in"&gt;
+&lt;/section&gt;
+&lt;section id="diving-in"&gt;
 &lt;h2&gt;Diving in&lt;/h2&gt;
 &lt;p&gt;&lt;abbr title="GNU Revision Control System"&gt;RCS&lt;/abbr&gt; is that simple to use that I will jump straight in to an example.&lt;/p&gt;
 &lt;div class="highlight-console notranslate"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="gp"&gt;$&lt;/span&gt; mkdir RCS
@@ -244,8 +244,8 @@ currently spend on arranging backups.  The command syntax is simple, and stable
 across the separate commands.  It provides an immensely powerful way to control
 configuration files, source code, even revisions of binary files and of course
 silly little shell Hello World examples.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="section" id="recap"&gt;
+&lt;/section&gt;
+&lt;section id="recap"&gt;
 &lt;h2&gt;Recap&lt;/h2&gt;
 &lt;p&gt;To recap on &lt;abbr title="GNU Revision Control System"&gt;RCS&lt;/abbr&gt; usage&lt;/p&gt;
 &lt;ul class="simple"&gt;
@@ -257,12 +257,12 @@ keep track.&lt;/p&gt;&lt;/li&gt;
 changes made.  You can also use &lt;strong class="command"&gt;rcsdiff&lt;/strong&gt; to see what changes you
 have made, maybe to help you build your changelog information.&lt;/p&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;/div&gt;
-&lt;div class="section" id="advanced"&gt;
+&lt;/section&gt;
+&lt;section id="advanced"&gt;
 &lt;h2&gt;Advanced&lt;/h2&gt;
-&lt;div class="figure align-default"&gt;
+&lt;figure class="align-default"&gt;
 &lt;img alt="rcsi screenshot" src="../_images/rcsi.png" style="width: 500px; height: 114px;" /&gt;
-&lt;/div&gt;
+&lt;/figure&gt;
 &lt;p&gt;There are many tools available that can help you to manage your &lt;abbr title="GNU Revision Control System"&gt;RCS&lt;/abbr&gt; files,
 including the &lt;abbr title="GNU Revision Control System"&gt;RCS&lt;/abbr&gt; status monitor &lt;a class="reference external" href="http://www.colinbrough.pwp.blueyonder.co.uk/rcsi.README.html"&gt;rcsi&lt;/a&gt; and &lt;a class="reference external" href="http://blame.sourceforge.net/"&gt;blame&lt;/a&gt; &lt;abbr title="GNU Revision Control System"&gt;RCS&lt;/abbr&gt; file annotator.&lt;/p&gt;
 &lt;p&gt;&lt;strong class="command"&gt;rcsi&lt;/strong&gt; will display information about the files within a directory.&lt;/p&gt;
@@ -344,10 +344,15 @@ revision.&lt;/p&gt;
 ranges.&lt;/p&gt;
 &lt;/dd&gt;&lt;/dl&gt;
 
-&lt;/div&gt;
-&lt;/div&gt;
+&lt;/section&gt;
+&lt;/section&gt;
 </content>
     <link href="https://jnrowe.github.io/articles/rcs.html" rel="alternate"/>
+    <summary>I’ve resurrected this text from my old UKFSN site because a couple of
+people asked me to, but I wouldn’t recommend using RCS to anyone at this
+point.  It is mainly to help people who need to understand RCS because
+they have no choice, for example Gentoo users who are stuck with
+dispatch-conf (or so my mails tell me).</summary>
     <category term="vcs" label="vcs"/>
     <published>2003-09-05T00:00:00+01:00</published>
   </entry>

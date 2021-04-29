@@ -4,7 +4,8 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17: http://docutils.sourceforge.net/" />
+
     <title>Visualising the progress of time &#8212; JNRowe</title>
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <link rel="stylesheet" href="../_static/alabaster.css" type="text/css" />
@@ -74,7 +75,7 @@
       5 minutes
     </p>
   
-  <div class="section" id="visualising-the-progress-of-time">
+  <section id="visualising-the-progress-of-time">
 <h1>Visualising the progress of time<a class="headerlink" href="#visualising-the-progress-of-time" title="Permalink to this headline">¶</a></h1>
 <a class="reference external image-reference" href="https://www.progressbarosx.com/"><img alt="Screenshot of Progress Bar OSX in action" src="../_images/time_progress.jpg" /></a>
 <p>A co-worker was demoing a user session today, and pointed out a neat tool for
@@ -101,12 +102,14 @@ MacOS, so we’ll need to make something similar.</p>
             emulation.
         </span>
     </p>
-</div><div class="figure align-default" id="id3">
+</div><figure class="align-default" id="id3">
 <a class="reference external image-reference" href="../_static/kitt.gif"><img alt="Multi-band scanner in action" src="../_images/kitt06.png" /></a>
-<p class="caption"><span class="caption-text">Click the image for an animated GIF, I’ll spare you the flashing lights in
+<figcaption>
+<p><span class="caption-text">Click the image for an animated GIF, I’ll spare you the flashing lights in
 case you wish to read on.</span><a class="headerlink" href="#id3" title="Permalink to this image">¶</a></p>
-</div>
-<div class="section" id="step-one">
+</figcaption>
+</figure>
+<section id="step-one">
 <h2>Step one<a class="headerlink" href="#step-one" title="Permalink to this headline">¶</a></h2>
 <p>First we’ll want to display the year:</p>
 <div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>gdbar -w <span class="m">1500</span> -h <span class="m">20</span> <span class="se">\</span>
@@ -134,8 +137,8 @@ zero, ie zero on every day but December 31ˢᵗ.</p>
 <p>We can repeat the same process for day ratio; using <code class="docutils literal notranslate"><span class="pre">date</span> <span class="pre">-d</span> <span class="pre">&quot;00:00&quot;</span> <span class="pre">+%s</span></code> to
 calculate number of seconds passed from the 86400 we’ll see today.  And then
 simply using <code class="docutils literal notranslate"><span class="pre">date</span> <span class="pre">+%m</span></code> to get today’s month as a number.</p>
-</div>
-<div class="section" id="step-two">
+</section>
+<section id="step-two">
 <h2>Step two<a class="headerlink" href="#step-two" title="Permalink to this headline">¶</a></h2>
 <p>We can definitely up our game here.  Why not use colours?  We’ll switch to
 <a class="reference external" href="https://www.python.org/">Python</a> now, as the gigantic standard library allows us to be lazy.</p>
@@ -186,8 +189,8 @@ like the following:</p>
 <p>The <code class="docutils literal notranslate"><span class="pre">onstart=uncollapse</span></code> attribute tell <strong class="command">dzen2</strong> that we want to see
 the full output on startup, without it we’d see just the title bar until we
 moved our pointer over the header.</p>
-</div>
-<div class="section" id="step-four">
+</section>
+<section id="step-four">
 <h2>Step four<a class="headerlink" href="#step-four" title="Permalink to this headline">¶</a></h2>
 <p>You can find the script I used <a class="reference download internal" download="" href="../_downloads/8bb0952b2cf5d96d60e8d4457de4c840/time_progress.py"><code class="xref download docutils literal notranslate"><span class="pre">here</span></code></a>.  It isn’t
 pretty, but it will do.  If I come to depend on it I’m sure that I’ll make
@@ -196,8 +199,8 @@ something better.</p>
 about doing this yourself you should consider buying the <a class="reference external" href="https://www.progressbarosx.com/">Progress Bar OSX</a>
 app.  This document wouldn’t exist without it and rewarding creators is
 important, even when they ignore your chosen platform ;)</p>
-</div>
-<div class="section" id="step">
+</section>
+<section id="step">
 <h2>Step ∞<a class="headerlink" href="#step" title="Permalink to this headline">¶</a></h2>
 <p>As always with any code that touches dates <a class="reference external" href="https://en.m.wikipedia.org/wiki/Here_be_dragons">“Here be dragons”</a>.  For example,
 I’ll leave it as an exercise for the reader how to handle calculations for days
@@ -216,8 +219,8 @@ years.</p>
 this is new to you.</p>
 </dd></dl>
 
-</div>
-</div>
+</section>
+</section>
 
     <hr>
 

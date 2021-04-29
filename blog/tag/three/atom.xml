@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <id>https://jnrowe.github.io/</id>
   <title>JNRowe - Posts tagged three</title>
-  <updated>2021-04-18T11:22:11.685648+00:00</updated>
+  <updated>2021-04-29T22:38:04.544985+00:00</updated>
   <link href="https://jnrowe.github.io/"/>
   <link href="https://jnrowe.github.io/blog/tag/three/atom.xml" rel="self"/>
-  <generator uri="https://ablog.readthedocs.org/" version="0.10.17">ABlog</generator>
+  <generator uri="https://ablog.readthedocs.org/" version="0.10.18">ABlog</generator>
   <subtitle>Ramblings of a tired mind</subtitle>
   <entry>
     <id>https://jnrowe.github.io/articles/tips/Three_mobile_broadband_in_linux.html</id>
@@ -14,7 +14,7 @@
     <author>
       <name>James Rowe</name>
     </author>
-    <content type="html">&lt;div class="section" id="three-mobile-broadband-in-linux"&gt;
+    <content type="html">&lt;section id="three-mobile-broadband-in-linux"&gt;
 
 &lt;p&gt;Steve Lowry is picking up his &lt;a class="reference external" href="http://three.co.uk"&gt;Three&lt;/a&gt; modem this afternoon and asks on our
 internal Linux list if it supports Linux.&lt;/p&gt;
@@ -32,12 +32,12 @@ wait until you plug it in to see what model it actually is.&lt;/p&gt;
 &lt;a class="reference external" href="http://www.gnome.org/projects/NetworkManager/"&gt;NetworkManager&lt;/a&gt; and NetworkManager’s &lt;a class="reference external" href="http://live.gnome.org/NetworkManager/MobileBroadband/ServiceProviders"&gt;mobile broadband provider database&lt;/a&gt;.
 When I tested it on a friend’s install with that setup last month it worked out
 of the box, all you had to do was plug it in and select the network.&lt;/p&gt;
-&lt;div class="section" id="the-route-to-fail"&gt;
+&lt;section id="the-route-to-fail"&gt;
 &lt;h2&gt;The route to fail&lt;/h2&gt;
 &lt;p&gt;If, like me, you’d prefer not to install NetworkManager you can manually
 configure the device using &lt;a class="reference external" href="http://www.samba.org/ppp"&gt;pppd&lt;/a&gt;, and life is even easier now than it was when
 I did it as there is plenty more information available(including this I guess).&lt;/p&gt;
-&lt;div class="section" id="finding-the-apn"&gt;
+&lt;section id="finding-the-apn"&gt;
 &lt;h3&gt;Finding the &lt;abbr title="Access Point Name"&gt;APN&lt;/abbr&gt;&lt;/h3&gt;
 &lt;p&gt;The first thing you need is your provider’s &lt;abbr title="Access Point Name"&gt;APN&lt;/abbr&gt;, and the easiest place to
 find it is from the &lt;a class="reference external" href="http://live.gnome.org/NetworkManager/MobileBroadband/ServiceProviders"&gt;NetworkManager database&lt;/a&gt;.  If yours is not there you’ll
@@ -60,8 +60,8 @@ archivers, and the tool you actually need to extract the &lt;code class="docutil
 &lt;a class="reference external" href="http://synce.sourceforge.net/synce/unshield.php"&gt;unshield&lt;/a&gt;.  Contrary to my first idea &lt;a class="reference external" href="http://www.cabextract.org.uk/"&gt;cabextract&lt;/a&gt; doesn’t work, as these files
 are actually made by &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;installshield&lt;/span&gt;&lt;/code&gt;.&lt;/p&gt;
 &lt;p&gt;With the &lt;abbr title="Access Point Name"&gt;APN&lt;/abbr&gt; in hand all we need to do now is configure our system.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="section" id="kernel"&gt;
+&lt;/section&gt;
+&lt;section id="kernel"&gt;
 &lt;h3&gt;Kernel&lt;/h3&gt;
 &lt;p&gt;If you’re using a vendor supplied kernel the options we need are hopefully
 already enabled.  If they’re not, or you build your own kernels, there are few
@@ -76,8 +76,8 @@ mobile providers in general, partly because the data is already compressed.&lt;/
 &lt;p&gt;Then just rebuild the kernel, and check that the dongle shows up in
 &lt;strong class="command"&gt;dmesg&lt;/strong&gt; output when it is plugged in.  If it does we’re ready for the
 next step.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="section" id="etc-chatscripts-three"&gt;
+&lt;/section&gt;
+&lt;section id="etc-chatscripts-three"&gt;
 &lt;h3&gt;/etc/chatscripts/three&lt;/h3&gt;
 &lt;p&gt;We need a &lt;strong class="command"&gt;pppd&lt;/strong&gt; chatscript for the connection, the format and
 settings of this file can be found in the &lt;em class="manpage"&gt;chat(8)&lt;/em&gt; manpage.  My
@@ -105,8 +105,8 @@ database.&lt;/p&gt;
 &lt;p&gt;Notice the very short value for timeout, I’ve come to that value empirically.
 If the connection isn’t up after 3 seconds it is not coming up, and you’re just
 wasting time before you retry.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="section" id="etc-ppp-peers-three"&gt;
+&lt;/section&gt;
+&lt;section id="etc-ppp-peers-three"&gt;
 &lt;h3&gt;/etc/ppp/peers/three&lt;/h3&gt;
 &lt;p&gt;We also need a peer script, and the format of that file is described in the
 &lt;em class="manpage"&gt;pppd(8)&lt;/em&gt; manpage.  Mine can be used as an example:&lt;/p&gt;
@@ -128,8 +128,8 @@ lcp-echo-failure 0
 you if you’ve configured &lt;strong class="command"&gt;pppd&lt;/strong&gt; manually in the past.  The reason is
 that interface speed for &lt;abbr title="Universal Serial Bus"&gt;USB&lt;/abbr&gt; modems is set by the kernel, and adding a value
 here is pointless.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="section" id="passwords"&gt;
+&lt;/section&gt;
+&lt;section id="passwords"&gt;
 &lt;h3&gt;passwords&lt;/h3&gt;
 &lt;p&gt;We don’t need to add an entry to &lt;code class="file docutils literal notranslate"&gt;&lt;span class="pre"&gt;chap-secrets&lt;/span&gt;&lt;/code&gt; or &lt;code class="file docutils literal notranslate"&gt;&lt;span class="pre"&gt;pap-secrets&lt;/span&gt;&lt;/code&gt; as
 authentication isn’t required, but if you’re following along having chosen to
@@ -137,8 +137,8 @@ use a configuration tool such as &lt;a class="reference external" href="http://h
 they’re silently ignored.&lt;/p&gt;
 &lt;p&gt;I’m told the same applies to &lt;a class="reference external" href="http://alumnit.ca/wiki/?WvDial"&gt;wvdial&lt;/a&gt;, so if it complains about requiring
 a password just add an empty or random string to stop the errors.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="section" id="testing-the-connection"&gt;
+&lt;/section&gt;
+&lt;section id="testing-the-connection"&gt;
 &lt;h3&gt;Testing the connection&lt;/h3&gt;
 &lt;p&gt;To test the connection all we need to do is issue &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;pon&lt;/span&gt; &lt;span class="pre"&gt;three&lt;/span&gt;&lt;/code&gt;, or use the
 graphical tool in your distro if you wish.  The first time you do this you
@@ -162,11 +162,13 @@ from green it has found a network signal and is ready to use.&lt;/p&gt;
 &lt;p&gt;If the connection didn’t work correctly look at the debugging output in syslog
 and check the &lt;strong class="command"&gt;pppd&lt;/strong&gt; manual page to look up the error codes.&lt;/p&gt;
 &lt;p&gt;Happy, erm… mobility.&lt;/p&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
+&lt;/section&gt;
+&lt;/section&gt;
+&lt;/section&gt;
 </content>
     <link href="https://jnrowe.github.io/articles/tips/Three_mobile_broadband_in_linux.html" rel="alternate"/>
+    <summary>Steve Lowry is picking up his Three modem this afternoon and asks on our
+internal Linux list if it supports Linux.</summary>
     <category term="linux" label="linux"/>
     <category term="three" label="three"/>
     <published>2009-10-14T00:00:00+01:00</published>

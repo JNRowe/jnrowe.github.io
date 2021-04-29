@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <id>https://jnrowe.github.io/</id>
   <title>JNRowe - Posts tagged work</title>
-  <updated>2021-04-18T11:22:12.225550+00:00</updated>
+  <updated>2021-04-29T22:38:05.153778+00:00</updated>
   <link href="https://jnrowe.github.io/"/>
   <link href="https://jnrowe.github.io/blog/tag/work/atom.xml" rel="self"/>
-  <generator uri="https://ablog.readthedocs.org/" version="0.10.17">ABlog</generator>
+  <generator uri="https://ablog.readthedocs.org/" version="0.10.18">ABlog</generator>
   <subtitle>Ramblings of a tired mind</subtitle>
   <entry>
     <id>https://jnrowe.github.io/articles/dropping_gentoo.html</id>
@@ -14,7 +14,7 @@
     <author>
       <name>James Rowe</name>
     </author>
-    <content type="html">&lt;div class="section" id="dropping-gentoo"&gt;
+    <content type="html">&lt;section id="dropping-gentoo"&gt;
 
 &lt;p&gt;We’ve been using &lt;a class="reference external" href="http://gentoo.org"&gt;Gentoo&lt;/a&gt; for shipped products since June 2005, and as
 a development platform since September 2004.  A long time, an incredibly long
@@ -27,7 +27,7 @@ and it takes only a little inside knowledge to know why.&lt;/p&gt;
 &lt;p&gt;A couple of people have rightly pointed out that I was a little harsh in
 this document, so I’ve pushed a &lt;span class="xref std std-doc"&gt;followup&lt;/span&gt;.&lt;/p&gt;
 &lt;/div&gt;
-&lt;div class="section" id="landscapes-have-changed"&gt;
+&lt;section id="landscapes-have-changed"&gt;
 &lt;h2&gt;Landscapes have changed&lt;/h2&gt;
 &lt;p&gt;Back when we started using Gentoo it was clearly the best choice for what we
 needed; a easily coercible base on which to construct our Linux devices.  There
@@ -41,8 +41,8 @@ already floating about for most of them.&lt;/p&gt;
 have meant taking on the support costs of the entire stack which nobody wanted
 to commit to.  As it turns out that burden slowly crept up on us over the next
 ten years anyway.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="section" id="take-a-left-in-100-metres"&gt;
+&lt;/section&gt;
+&lt;section id="take-a-left-in-100-metres"&gt;
 &lt;h2&gt;Take a left in 100 metres&lt;/h2&gt;
 &lt;p&gt;Over the years we regrettably diverged heavily from upstream, almost to the
 point that saying we use Gentoo almost feels like a lie.&lt;/p&gt;
@@ -65,8 +65,8 @@ once promised(perhaps in part because of that &lt;abbr title="Contributor Licens
 &lt;p&gt;Had we waited another five months, there would have been another open source
 package manager for Gentoo we could have easily switched to and hacked on.
 There is perhaps a pattern here…&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="section" id="upstreaming-changes"&gt;
+&lt;/section&gt;
+&lt;section id="upstreaming-changes"&gt;
 &lt;h2&gt;Upstreaming changes&lt;/h2&gt;
 &lt;p&gt;Of course, running a non-standard package manager and a thick layer of custom
 packages at the bottom of the stack made contributing changes back upstream very
@@ -102,8 +102,8 @@ like this:&lt;/p&gt;
 &lt;p&gt;That genuinely upsets me greatly.  The amount of potential duplicated effort
 they represent is enormous, and I don’t even want to attempt to put a figure on
 it.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="section" id="supporting-upstream"&gt;
+&lt;/section&gt;
+&lt;section id="supporting-upstream"&gt;
 &lt;h2&gt;Supporting upstream&lt;/h2&gt;
 &lt;p&gt;We’re entirely to blame.  We always planned on supporting upstream in whichever
 way we could.  That fell down for instances beyond sending patches too.&lt;/p&gt;
@@ -125,8 +125,8 @@ conference with a potential sponsor and the same developer.  Evening beers were
 met with other people telling stories about that same person, which was a shame
 as it probably cost them a few good cash and infrastructure sponsors that day
 alone.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="section" id="support-costs"&gt;
+&lt;/section&gt;
+&lt;section id="support-costs"&gt;
 &lt;h2&gt;Support costs&lt;/h2&gt;
 &lt;p&gt;Over time we’ve come to support most of the tree that people refer to as
 &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;gentoo-x86&lt;/span&gt;&lt;/code&gt; ourselves.  The toolchain changes we needed at the time
@@ -134,23 +134,23 @@ necessitated supporting a few packages further up the stack.  Our desire to trim
 the tree of a few categories that were problematic, meant replacing a variety of
 packages with then unavailable dependencies.&lt;/p&gt;
 &lt;p&gt;And there were many other examples too…&lt;/p&gt;
-&lt;div class="section" id="matchbox"&gt;
+&lt;section id="matchbox"&gt;
 &lt;h3&gt;matchbox&lt;/h3&gt;
 &lt;p&gt;We packaged &lt;a class="reference internal" href="#matchbox"&gt;matchbox&lt;/a&gt; and its associated packages a long, long time before they
 hit the official tree.  It was the first real pain point we had with packages
 appearing in the tree after we had already been using them.&lt;/p&gt;
 &lt;p&gt;When they did eventually hit the tree we had to carry workarounds for years.  At
 some point we stopped trying and just scrubbed the ebuilds that got in the way.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="section" id="python"&gt;
+&lt;/section&gt;
+&lt;section id="python"&gt;
 &lt;h3&gt;Python&lt;/h3&gt;
 &lt;p&gt;The state of the Python packaging a few years ago made us take the jump to
 replace or remove anything that packaged a Python module.  Initially very time
 consuming, but it saved an enormous amount of grief.&lt;/p&gt;
 &lt;p&gt;I suspect we could move closer to upstream at this point, but the point is now
 moot.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="section" id="systemd"&gt;
+&lt;/section&gt;
+&lt;section id="systemd"&gt;
 &lt;h3&gt;systemd&lt;/h3&gt;
 &lt;p&gt;We switched to &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;systemd&lt;/span&gt;&lt;/code&gt; before the package was in upstream’s tree, and we
 have had to keep supporting it to this day because of insurmountable packaging
@@ -160,8 +160,8 @@ where differences create issues.  And it clearly means taking on any package
 that depends on &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;openrc&lt;/span&gt;&lt;/code&gt; or Gentoo’s &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;baselayout&lt;/span&gt;&lt;/code&gt; package.  Those packages
 are becoming fewer and fewer by the day though, so that would have become
 a non-issue.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="section" id="x-org"&gt;
+&lt;/section&gt;
+&lt;section id="x-org"&gt;
 &lt;h3&gt;X.org&lt;/h3&gt;
 &lt;p&gt;We had been packaging x.org’s packages to work around some implementation
 differences with upstream since the dawn of modular X.  Mostly just to do with
@@ -169,17 +169,17 @@ how dependencies were specified to start with, but they’re no longer even
 remotely similar.&lt;/p&gt;
 &lt;p&gt;Luckily there isn’t a great deal of churn in the packages we care about for the
 most part, so it never caused a huge time sink.&lt;/p&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="section" id="the-end-is-nigh"&gt;
+&lt;/section&gt;
+&lt;/section&gt;
+&lt;section id="the-end-is-nigh"&gt;
 &lt;h2&gt;The end is nigh&lt;/h2&gt;
 &lt;p&gt;At some point it began to feel like we were maintaining our own distribution
 from end-to-end, and that wasn’t fun.  It also wasn’t what any of us needed to
 do, and the time it was taking measurably ate in to &lt;em&gt;real&lt;/em&gt; project time.&lt;/p&gt;
 &lt;p&gt;The decision to start weaning ourselves off of Gentoo was made back in the
 summer of last year, and it has finally started to come in to effect.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="section" id="the-times-they-are-a-changing"&gt;
+&lt;/section&gt;
+&lt;section id="the-times-they-are-a-changing"&gt;
 &lt;h2&gt;The Times They Are a-Changing&lt;/h2&gt;
 &lt;p&gt;There are plenty of good alternatives out there now for building systems that
 need to run on a variety of architectures.  Some binary, some source-based and
@@ -200,10 +200,13 @@ makes working with Debian a lot easier, so thanks guys!&lt;/p&gt;
 yet no concrete decisions have been made, but I feel like we’re on the right
 track for the next ten years.&lt;/p&gt;
 &lt;p&gt;So long Gentoo, and thanks for all fish!&lt;/p&gt;
-&lt;/div&gt;
-&lt;/div&gt;
+&lt;/section&gt;
+&lt;/section&gt;
 </content>
     <link href="https://jnrowe.github.io/articles/dropping_gentoo.html" rel="alternate"/>
+    <summary>We’ve been using Gentoo for shipped products since June 2005, and as
+a development platform since September 2004.  A long time, an incredibly long
+time in fact.</summary>
     <category term="gentoo" label="gentoo"/>
     <category term="work" label="work"/>
     <category term="linux" label="linux"/>
@@ -216,7 +219,7 @@ track for the next ten years.&lt;/p&gt;
     <author>
       <name>James Rowe</name>
     </author>
-    <content type="html">&lt;div class="section" id="dropping-gentoo-reflex"&gt;
+    <content type="html">&lt;section id="dropping-gentoo-reflex"&gt;
 
 &lt;p&gt;After hitting the publish button on &lt;a class="reference internal" href="../../articles/dropping_gentoo.html#dropping_gentoo"&gt;&lt;span class="std std-ref"&gt;Dropping Gentoo&lt;/span&gt;&lt;/a&gt; a few friends
 commented that I was either unnecessarily harsh about Gentoo or we wasted an
@@ -227,7 +230,7 @@ that is entirely about spotting the downsides to make sure they don’t reoccur.
 And with that in mind I &lt;em&gt;was&lt;/em&gt; being incredibly unfair to Gentoo, both the
 project and by extension the people working on it.&lt;/p&gt;
 &lt;p&gt;There were many, many good points about Gentoo and I’ll nod towards a few now.&lt;/p&gt;
-&lt;div class="section" id="speed"&gt;
+&lt;section id="speed"&gt;
 &lt;h2&gt;Speed&lt;/h2&gt;
 &lt;p&gt;No, no.  Not the “Oh my god, my KDEs are so fast” that many people fairly
 associate with Gentoo users.  I’m talking about the basic package handling
@@ -287,8 +290,8 @@ history can be seen below.&lt;/p&gt;
 &lt;span class="k"&gt;done&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="section" id="documentation"&gt;
+&lt;/section&gt;
+&lt;section id="documentation"&gt;
 &lt;h2&gt;Documentation&lt;/h2&gt;
 &lt;p&gt;The excellent &lt;a class="reference external" href="http://devmanual.gentoo.org/"&gt;devmanual&lt;/a&gt; and the incredible &lt;a class="reference external" href="http://wiki.gentoo.org/wiki/Project:PMS"&gt;Package Manager Specification&lt;/a&gt;
 made life so much easier.  The devmanual was both short enough to be used as
@@ -306,8 +309,8 @@ versions.  &lt;abbr title="Package Manager Specification"&gt;PMS&lt;/abbr&gt;, a
 and stability to newer features.&lt;/p&gt;
 &lt;p&gt;All Gentoo users owe Ciaran McCreesh a few beers for all the hard work he put in
 to those documents, especially in the early days.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="section" id="the-personal-touch"&gt;
+&lt;/section&gt;
+&lt;section id="the-personal-touch"&gt;
 &lt;h2&gt;The personal touch&lt;/h2&gt;
 &lt;p&gt;On a personal note I’ve met some awesome people over the years as a result of
 using Gentoo.  Many of them at the old Gentoo UK conferences, which were always
@@ -320,8 +323,8 @@ contract hire at the one prior to that as well.&lt;/p&gt;
 &lt;p&gt;I’ve even been lucky enough to have a few doors held open for me via people I’ve
 met at Gentoo-themed or Gentoo-heavy events, and I suspect I’d be writing this
 from a less happy place without them.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="section" id="wrapping-up"&gt;
+&lt;/section&gt;
+&lt;section id="wrapping-up"&gt;
 &lt;h2&gt;Wrapping up&lt;/h2&gt;
 &lt;p&gt;It is true that you really can not always see the forest for trees.&lt;/p&gt;
 &lt;p&gt;Had recent events not clouded my vision I would have commented on the train
@@ -350,10 +353,14 @@ duty.  For example using &lt;code class="docutils literal notranslate"&gt;&lt;sp
 unpack a tarball directly over the root filesystem.&lt;/p&gt;
 &lt;/dd&gt;&lt;/dl&gt;
 
-&lt;/div&gt;
-&lt;/div&gt;
+&lt;/section&gt;
+&lt;/section&gt;
 </content>
     <link href="https://jnrowe.github.io/articles/dropping_gentoo_reflex.html" rel="alternate"/>
+    <summary>After hitting the publish button on dropping_gentoo a few friends
+commented that I was either unnecessarily harsh about Gentoo or we wasted an
+enormous amount of time on it.  It definitely was the former, and I feel
+a touch ashamed for implying the latter.</summary>
     <category term="gentoo" label="gentoo"/>
     <category term="work" label="work"/>
     <category term="linux" label="linux"/>
@@ -366,7 +373,7 @@ unpack a tarball directly over the root filesystem.&lt;/p&gt;
     <author>
       <name>James Rowe</name>
     </author>
-    <content type="html">&lt;div class="section" id="brexit-through-the-gift-shop"&gt;
+    <content type="html">&lt;section id="brexit-through-the-gift-shop"&gt;
 
 &lt;div class="admonition note"&gt;
 &lt;p class="admonition-title"&gt;Note&lt;/p&gt;
@@ -382,7 +389,7 @@ could have a paradise in a few years.&lt;/p&gt;
 &lt;p&gt;On Monday morning, a friend and co-worker stood up and rage quit.  And I really
 do mean rage quit, it even included a short stand up quarrel in the car park.
 Obviously, nobody has spoke about &lt;em&gt;anything&lt;/em&gt; else since…&lt;/p&gt;
-&lt;div class="section" id="background"&gt;
+&lt;section id="background"&gt;
 &lt;h2&gt;Background&lt;/h2&gt;
 &lt;p&gt;We used to work in an environment where we could &lt;span class="xref std std-doc"&gt;reject projects&lt;/span&gt; on moral grounds with ease.  In fact, &lt;abbr title="Institutional Review Board"&gt;IRBs&lt;/abbr&gt; exist for that exact reason.  Times were good,
 projects were plentiful, and it was just the way things were.&lt;/p&gt;
@@ -400,8 +407,8 @@ on the more valued workers to object-in-unity to immoral works.  And there are
 a fair few who have only just discovered they were never holding the chips, and
 being let go is a real possibility(we’re &lt;em&gt;way&lt;/em&gt; beyond the pool of voluntary
 redundancies at this point).&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="section" id="collective-bargaining"&gt;
+&lt;/section&gt;
+&lt;section id="collective-bargaining"&gt;
 &lt;h2&gt;Collective bargaining&lt;/h2&gt;
 &lt;p&gt;So, object-in-unity is pretty much dead.  And it has really surprised me quite
 how fractious some of the arguments now are.  Given that people are basically
@@ -416,8 +423,8 @@ peripheral workers has gone too.&lt;/p&gt;
 just found out — independently wealthy through the sale of a &lt;span class="xref std std-doc"&gt;side project&lt;/span&gt; about five years ago.  Seemingly, a minority of people believe
 it would be okay if someone’s morals put them in the poor house, but less
 so if they have a cushion to soften the blow.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="section" id="whats-coming-next"&gt;
+&lt;/section&gt;
+&lt;section id="whats-coming-next"&gt;
 &lt;h2&gt;Whats coming next?&lt;/h2&gt;
 &lt;blockquote class="epigraph"&gt;
 &lt;div&gt;&lt;p&gt;Lisa is a sellout! Lisa is a sellout! Lisa, what’s a sellout?&lt;/p&gt;
@@ -450,10 +457,12 @@ what can to get through it as best we know how.&lt;/p&gt;
 other people with the necessary skills have been moved to Germany.&lt;/p&gt;
 &lt;/dd&gt;
 &lt;/dl&gt;
-&lt;/div&gt;
-&lt;/div&gt;
+&lt;/section&gt;
+&lt;/section&gt;
 </content>
     <link href="https://jnrowe.github.io/thoughts/brexit_through_the_gift_shop.html" rel="alternate"/>
+    <summary>This is a public letter to my co-workers, which probably shouldn’t be
+public.</summary>
     <category term="work" label="work"/>
     <category term="politics" label="politics"/>
     <published>2018-06-08T00:00:00+01:00</published>

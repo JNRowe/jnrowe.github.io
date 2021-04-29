@@ -4,7 +4,8 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17: http://docutils.sourceforge.net/" />
+
     <title>Vim with day/night colourschemes &#8212; JNRowe</title>
     <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/alabaster.css" type="text/css" />
@@ -74,7 +75,7 @@
       4 minutes
     </p>
   
-  <div class="section" id="vim-with-day-night-colourschemes">
+  <section id="vim-with-day-night-colourschemes">
 <h1>Vim with day/night colourschemes<a class="headerlink" href="#vim-with-day-night-colourschemes" title="Permalink to this headline">¶</a></h1>
 <p>The fabulous Miss Biddulph asks via our EADS Linux list:</p>
 <blockquote>
@@ -85,7 +86,7 @@ different colourschemes depending on time?</p>
 <p>So, like most things this can either be <em>really</em> simple or horribly convoluted
 depending on where you wish to draw the usability line.  Because Laura is
 asking, we’ll scratch the surface of a few odd ways to do this.</p>
-<div class="section" id="the-simple-solution">
+<section id="the-simple-solution">
 <h2>The simple solution<a class="headerlink" href="#the-simple-solution" title="Permalink to this headline">¶</a></h2>
 <p>In many ways this is related to my <a class="reference external" href="https://github.com/JNRowe/awesome-timed-wallpaper/">awesome-timed-wallpaper</a> hack, and to start
 with I’m going to proceed in a similar way.</p>
@@ -117,12 +118,12 @@ notice eye strain</p></li>
 <li><p>…</p></li>
 <li><p>Create a <a class="reference external" href="https://www.freedesktop.org/wiki/Software/systemd">systemd</a> user timer that triggers at a given time ;)</p></li>
 </ul>
-</div>
-<div class="section" id="the-ridiculous-solution">
+</section>
+<section id="the-ridiculous-solution">
 <h2>The ridiculous solution<a class="headerlink" href="#the-ridiculous-solution" title="Permalink to this headline">¶</a></h2>
 <p>We’ll need to figure out the actual daylight state.  There are an enormous
 number of options available.</p>
-<div class="section" id="with-python">
+<section id="with-python">
 <h3>With Python<a class="headerlink" href="#with-python" title="Permalink to this headline">¶</a></h3>
 <p>My <a class="reference external" href="https://pypi.org/project/upoints/">upoints</a> package can calculate sunrise and sunset:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">upoints.point</span> <span class="kn">import</span> <span class="n">Point</span>
@@ -133,8 +134,8 @@ number of options available.</p>
 <span class="go">(datetime.time(4, 58), datetime.time(18, 49))</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="with-redshift">
+</section>
+<section id="with-redshift">
 <h3>With <code class="docutils literal notranslate"><span class="pre">redshift</span></code><a class="headerlink" href="#with-redshift" title="Permalink to this headline">¶</a></h3>
 <p>If you already use <a class="reference external" href="http://jonls.dk/redshift/">redshift</a> — and you should — getting the current state is
 quite easy.  Below is example output, and a quick <a class="reference external" href="http://sed.sourceforge.net/">sed</a>-based method to parse the
@@ -164,8 +165,8 @@ page for how to configure hooks.</p>
 <span class="o">}</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="camera-input">
+</section>
+<section id="camera-input">
 <h3>Camera input<a class="headerlink" href="#camera-input" title="Permalink to this headline">¶</a></h3>
 <p>Assuming you have access to either a very good or <em>very</em> bad webcam you could
 even script support that takes in to account cloud cover, or occultation caused
@@ -195,9 +196,9 @@ balancing data used from the image tags, and use that to infer the light level.
 <a class="reference external" href="http://www.exiv2.org/">exiv2</a> is great option to extract that data when available, and also supports
 <a class="reference external" href="https://wiki.gnome.org/Projects/GObjectIntrospection">gobject introspection</a> making it possible to use it with <a class="reference external" href="https://github.com/pavouk/lgi">lgi</a> in <a class="reference external" href="https://awesomewm.org/">awesomewm</a>
 for desktop colours too!</p>
-</div>
-</div>
-<div class="section" id="thoughts">
+</section>
+</section>
+<section id="thoughts">
 <h2>Thoughts<a class="headerlink" href="#thoughts" title="Permalink to this headline">¶</a></h2>
 <p>That is definitely enough of that rabbit hole for me right now… I’m really
 looking forward to seeing people code golf some other solutions, be they useful
@@ -212,8 +213,8 @@ have a switch statement.</p>
 <dd><p>No <abbr title="HyperText Markup Language">HTML</abbr> link, as vimdoc is still on vim 7.3</p>
 </dd>
 </dl>
-</div>
-</div>
+</section>
+</section>
 
     <hr>
 

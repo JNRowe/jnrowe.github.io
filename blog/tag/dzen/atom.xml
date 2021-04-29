@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <id>https://jnrowe.github.io/</id>
   <title>JNRowe - Posts tagged dzen</title>
-  <updated>2021-04-18T11:22:08.443330+00:00</updated>
+  <updated>2021-04-29T22:38:01.648868+00:00</updated>
   <link href="https://jnrowe.github.io/"/>
   <link href="https://jnrowe.github.io/blog/tag/dzen/atom.xml" rel="self"/>
-  <generator uri="https://ablog.readthedocs.org/" version="0.10.17">ABlog</generator>
+  <generator uri="https://ablog.readthedocs.org/" version="0.10.18">ABlog</generator>
   <subtitle>Ramblings of a tired mind</subtitle>
   <entry>
     <id>https://jnrowe.github.io/articles/march_toward_death.html</id>
@@ -14,7 +14,7 @@
     <author>
       <name>James Rowe</name>
     </author>
-    <content type="html">&lt;div class="section" id="visualising-the-progress-of-time"&gt;
+    <content type="html">&lt;section id="visualising-the-progress-of-time"&gt;
 
 &lt;a class="reference external image-reference" href="https://www.progressbarosx.com/"&gt;&lt;img alt="Screenshot of Progress Bar OSX in action" src="../../_images/time_progress.jpg" /&gt;&lt;/a&gt;
 &lt;p&gt;A co-worker was demoing a user session today, and pointed out a neat tool for
@@ -41,12 +41,14 @@ MacOS, so we’ll need to make something similar.&lt;/p&gt;
             emulation.
         &lt;/span&gt;
     &lt;/p&gt;
-&lt;/div&gt;&lt;div class="figure align-default" id="id3"&gt;
+&lt;/div&gt;&lt;figure class="align-default" id="id3"&gt;
 &lt;a class="reference external image-reference" href="../_static/kitt.gif"&gt;&lt;img alt="Multi-band scanner in action" src="../../_images/kitt06.png" /&gt;&lt;/a&gt;
-&lt;p class="caption"&gt;&lt;span class="caption-text"&gt;Click the image for an animated GIF, I’ll spare you the flashing lights in
+&lt;figcaption&gt;
+&lt;p&gt;&lt;span class="caption-text"&gt;Click the image for an animated GIF, I’ll spare you the flashing lights in
 case you wish to read on.&lt;/span&gt;&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="section" id="step-one"&gt;
+&lt;/figcaption&gt;
+&lt;/figure&gt;
+&lt;section id="step-one"&gt;
 &lt;h2&gt;Step one&lt;/h2&gt;
 &lt;p&gt;First we’ll want to display the year:&lt;/p&gt;
 &lt;div class="highlight-sh notranslate"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;gdbar -w &lt;span class="m"&gt;1500&lt;/span&gt; -h &lt;span class="m"&gt;20&lt;/span&gt; &lt;span class="se"&gt;\&lt;/span&gt;
@@ -74,8 +76,8 @@ zero, ie zero on every day but December 31ˢᵗ.&lt;/p&gt;
 &lt;p&gt;We can repeat the same process for day ratio; using &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;date&lt;/span&gt; &lt;span class="pre"&gt;-d&lt;/span&gt; &lt;span class="pre"&gt;&amp;quot;00:00&amp;quot;&lt;/span&gt; &lt;span class="pre"&gt;+%s&lt;/span&gt;&lt;/code&gt; to
 calculate number of seconds passed from the 86400 we’ll see today.  And then
 simply using &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;date&lt;/span&gt; &lt;span class="pre"&gt;+%m&lt;/span&gt;&lt;/code&gt; to get today’s month as a number.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="section" id="step-two"&gt;
+&lt;/section&gt;
+&lt;section id="step-two"&gt;
 &lt;h2&gt;Step two&lt;/h2&gt;
 &lt;p&gt;We can definitely up our game here.  Why not use colours?  We’ll switch to
 &lt;a class="reference external" href="https://www.python.org/"&gt;Python&lt;/a&gt; now, as the gigantic standard library allows us to be lazy.&lt;/p&gt;
@@ -126,8 +128,8 @@ like the following:&lt;/p&gt;
 &lt;p&gt;The &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;onstart=uncollapse&lt;/span&gt;&lt;/code&gt; attribute tell &lt;strong class="command"&gt;dzen2&lt;/strong&gt; that we want to see
 the full output on startup, without it we’d see just the title bar until we
 moved our pointer over the header.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="section" id="step-four"&gt;
+&lt;/section&gt;
+&lt;section id="step-four"&gt;
 &lt;h2&gt;Step four&lt;/h2&gt;
 &lt;p&gt;You can find the script I used &lt;a class="reference download internal" download="" href="../../_downloads/8bb0952b2cf5d96d60e8d4457de4c840/time_progress.py"&gt;&lt;code class="xref download docutils literal notranslate"&gt;&lt;span class="pre"&gt;here&lt;/span&gt;&lt;/code&gt;&lt;/a&gt;.  It isn’t
 pretty, but it will do.  If I come to depend on it I’m sure that I’ll make
@@ -136,8 +138,8 @@ something better.&lt;/p&gt;
 about doing this yourself you should consider buying the &lt;a class="reference external" href="https://www.progressbarosx.com/"&gt;Progress Bar OSX&lt;/a&gt;
 app.  This document wouldn’t exist without it and rewarding creators is
 important, even when they ignore your chosen platform ;)&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="section" id="step"&gt;
+&lt;/section&gt;
+&lt;section id="step"&gt;
 &lt;h2&gt;Step ∞&lt;/h2&gt;
 &lt;p&gt;As always with any code that touches dates &lt;a class="reference external" href="https://en.m.wikipedia.org/wiki/Here_be_dragons"&gt;“Here be dragons”&lt;/a&gt;.  For example,
 I’ll leave it as an exercise for the reader how to handle calculations for days
@@ -156,10 +158,14 @@ years.&lt;/p&gt;
 this is new to you.&lt;/p&gt;
 &lt;/dd&gt;&lt;/dl&gt;
 
-&lt;/div&gt;
-&lt;/div&gt;
+&lt;/section&gt;
+&lt;/section&gt;
 </content>
     <link href="https://jnrowe.github.io/articles/march_toward_death.html" rel="alternate"/>
+    <summary>A co-worker was demoing a user session today, and pointed out a neat tool for
+MacOS that displays the “continual march toward death”.  That tool was
+Progress Bar OSX, and it is pretty cool.  Sadly it is only available for
+MacOS, so we’ll need to make something similar.Screenshot of colourful progress in time</summary>
     <category term="linux" label="linux"/>
     <category term="dzen" label="dzen"/>
     <published>2018-11-13T00:00:00+00:00</published>

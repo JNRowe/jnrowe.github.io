@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <id>https://jnrowe.github.io/</id>
   <title>JNRowe - Posts tagged databases</title>
-  <updated>2021-04-18T11:22:07.877093+00:00</updated>
+  <updated>2021-04-29T22:38:01.469277+00:00</updated>
   <link href="https://jnrowe.github.io/"/>
   <link href="https://jnrowe.github.io/blog/tag/databases/atom.xml" rel="self"/>
-  <generator uri="https://ablog.readthedocs.org/" version="0.10.17">ABlog</generator>
+  <generator uri="https://ablog.readthedocs.org/" version="0.10.18">ABlog</generator>
   <subtitle>Ramblings of a tired mind</subtitle>
   <entry>
     <id>https://jnrowe.github.io/thoughts/i_have_a_secret.html</id>
@@ -14,7 +14,7 @@
     <author>
       <name>James Rowe</name>
     </author>
-    <content type="html">&lt;div class="section" id="i-have-a-secret"&gt;
+    <content type="html">&lt;section id="i-have-a-secret"&gt;
 
 &lt;p&gt;A terrible secret haunts me, at times daily… I have virtually &lt;em&gt;no&lt;/em&gt; &lt;a class="reference external" href="https://en.m.wikipedia.org/wiki/SQL"&gt;SQL&lt;/a&gt; skills.&lt;/p&gt;
 &lt;p&gt;Somehow I’m nearly twenty years in to my career and I possess so little &lt;abbr title="Structured Query Language"&gt;SQL&lt;/abbr&gt;
@@ -34,7 +34,7 @@ their data storage, or that query remote &lt;a class="reference external" href="
 I know &lt;em&gt;what&lt;/em&gt; an &lt;a class="reference external" href="https://en.m.wikipedia.org/wiki/N+1_Select_Problem"&gt;n+1 problem&lt;/a&gt; is, but I’ll still create them through lack of
 forethought from time to time.  It is just that my knowledge stops right about
 there.&lt;/p&gt;
-&lt;div class="section" id="orm-usage"&gt;
+&lt;section id="orm-usage"&gt;
 &lt;h2&gt;&lt;abbr title="Object Relational Mapping"&gt;ORM&lt;/abbr&gt; usage&lt;/h2&gt;
 &lt;p&gt;The number one thing that has kept me away from a deeper understanding of &lt;abbr title="Structured Query Language"&gt;SQL&lt;/abbr&gt;
 is &lt;abbr title="Object Relational Mapping"&gt;ORM&lt;/abbr&gt;s.  Let us be honest, most of the time we interact with &lt;abbr title="Structured Query Language"&gt;SQL&lt;/abbr&gt; fronted
@@ -77,8 +77,8 @@ a single language can do &lt;em&gt;everything&lt;/em&gt; within our database and
 fit the bill.  It is just that people have coalesced around &lt;abbr title="Structured Query Language"&gt;SQL&lt;/abbr&gt; as &lt;em&gt;the only&lt;/em&gt;
 interface to relational databases over the decades, and as such we end up using
 two distinct languages far more often that we perhaps ought.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="section" id="editing"&gt;
+&lt;/section&gt;
+&lt;section id="editing"&gt;
 &lt;h2&gt;Editing&lt;/h2&gt;
 &lt;p&gt;When working with &lt;abbr title="Structured Query Language"&gt;SQL&lt;/abbr&gt; without an &lt;abbr title="Object Relational Mapping"&gt;ORM&lt;/abbr&gt; things change &lt;em&gt;greatly&lt;/em&gt;.  You find
 yourself having to consciously flip back and forward between mental models of
@@ -94,8 +94,8 @@ don’t really help such usage.  Everything is fine in &lt;a class="reference ex
 one can apply syntax highlighting and linting to specific regions of a file&lt;a class="footnote-reference brackets" href="#id4" id="id2"&gt;2&lt;/a&gt;.  For other editors, and most &lt;abbr title="Integrated Development Environment"&gt;IDEs&lt;/abbr&gt;, you’re often left floundering in a heap of unstructured literal
 strings peppered all over the place.&lt;/p&gt;
 &lt;img alt="Multi-language highlighting in vim" src="../../_images/vim_py_sql.png" /&gt;
-&lt;/div&gt;
-&lt;div class="section" id="wait-am-i-talking-myself-out-of-learning"&gt;
+&lt;/section&gt;
+&lt;section id="wait-am-i-talking-myself-out-of-learning"&gt;
 &lt;h2&gt;Wait, am I talking myself out of learning?&lt;/h2&gt;
 &lt;p&gt;I know this has sounded like a sweetheart letter aimed at
 &lt;a class="reference external" href="http://www.sqlalchemy.org/"&gt;sqlalchemy&lt;/a&gt;/&lt;a class="reference external" href="http://www.rubyonrails.org/"&gt;activerecord&lt;/a&gt;/&lt;a class="reference external" href="http://www.codesynthesis.com/products/odb"&gt;odb&lt;/a&gt;, but it isn’t meant that way.  Okay, it kinda of
@@ -104,8 +104,8 @@ is.  However, I want to know more.&lt;/p&gt;
 understanding of what is causing slowdowns with complex queries, or having to
 reach for a manual to remember little things like how to manage collation
 rules.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="section" id="acceptance"&gt;
+&lt;/section&gt;
+&lt;section id="acceptance"&gt;
 &lt;h2&gt;Acceptance&lt;/h2&gt;
 &lt;p&gt;Now that I’ve accepted this fact enough to scribble this note I’m going to do
 something to fix it.&lt;/p&gt;
@@ -124,10 +124,11 @@ excellent &lt;a class="reference external" href="https://github.com/chrisbra/Nrr
 complex &lt;abbr title="Structured Query Language"&gt;SQL&lt;/abbr&gt; embedded in another language’s files.&lt;/p&gt;
 &lt;/dd&gt;
 &lt;/dl&gt;
-&lt;/div&gt;
-&lt;/div&gt;
+&lt;/section&gt;
+&lt;/section&gt;
 </content>
     <link href="https://jnrowe.github.io/thoughts/i_have_a_secret.html" rel="alternate"/>
+    <summary>A terrible secret haunts me, at times daily… I have virtually no SQL skills.Sad reality of SQL knowledge</summary>
     <category term="databases" label="databases"/>
     <category term="learning" label="learning"/>
     <category term="sql" label="sql"/>

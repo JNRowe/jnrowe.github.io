@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <id>https://jnrowe.github.io/</id>
   <title>JNRowe - Posts tagged configs</title>
-  <updated>2021-04-18T11:22:07.686713+00:00</updated>
+  <updated>2021-04-29T22:38:01.402539+00:00</updated>
   <link href="https://jnrowe.github.io/"/>
   <link href="https://jnrowe.github.io/blog/tag/configs/atom.xml" rel="self"/>
-  <generator uri="https://ablog.readthedocs.org/" version="0.10.17">ABlog</generator>
+  <generator uri="https://ablog.readthedocs.org/" version="0.10.18">ABlog</generator>
   <subtitle>Ramblings of a tired mind</subtitle>
   <entry>
     <id>https://jnrowe.github.io/articles/tips/emacs_gtk_shortcuts.html</id>
@@ -14,7 +14,7 @@
     <author>
       <name>James Rowe</name>
     </author>
-    <content type="html">&lt;div class="section" id="proper-keyboard-shortcuts-in-gtk"&gt;
+    <content type="html">&lt;section id="proper-keyboard-shortcuts-in-gtk"&gt;
 
 &lt;p&gt;If you’re used to the old style &lt;a class="reference external" href="http://www.gtk.org/"&gt;GTK+&lt;/a&gt; keyboard shortcuts, and find yourself
 continually closing windows when you’re trying to delete a word (like me) then
@@ -42,9 +42,9 @@ class &amp;quot;GtkTextView&amp;quot; binding &amp;quot;gtk-emacs-text-entry&amp
 your &lt;code class="file docutils literal notranslate"&gt;&lt;span class="pre"&gt;~/.gtkrc.mine&lt;/span&gt;&lt;/code&gt; so it isn’t overwritten when you change themes.  See
 the comments in your &lt;code class="file docutils literal notranslate"&gt;&lt;span class="pre"&gt;~/.gtkrc-2.0&lt;/span&gt;&lt;/code&gt; if you use either of these theme
 switchers.&lt;/p&gt;
-&lt;div class="figure align-default"&gt;
+&lt;figure class="align-default"&gt;
 &lt;img alt="XFce4 keyboard settings window" src="../../_images/xfce4_keyboard.png" /&gt;
-&lt;/div&gt;
+&lt;/figure&gt;
 &lt;p&gt;If you’re an &lt;a class="reference external" href="http://www.xfce.org/"&gt;XFce&lt;/a&gt; user you can select the Emacs keyboard shortcuts using the
 keyboard settings dialog.&lt;/p&gt;
 &lt;p&gt;If you can’t change the settings for some reason, then you can still use
@@ -52,9 +52,12 @@ a shortcut to delete words.  The default setting, up to at least GTK+ v2.10.9,
 is the finger-stretching &lt;kbd class="kbd compound docutils literal notranslate"&gt;&lt;kbd class="kbd docutils literal notranslate"&gt;&amp;lt;C&lt;/kbd&gt;-&lt;kbd class="kbd docutils literal notranslate"&gt;backspace&amp;gt;&lt;/kbd&gt;&lt;/kbd&gt;.&lt;/p&gt;
 &lt;p&gt;And finally, if you manage to convince upstream that the default behaviour
 should be the settings in the Emacs theme I’ll owe you a few beers!&lt;/p&gt;
-&lt;/div&gt;
+&lt;/section&gt;
 </content>
     <link href="https://jnrowe.github.io/articles/tips/emacs_gtk_shortcuts.html" rel="alternate"/>
+    <summary>If you’re used to the old style GTK+ keyboard shortcuts, and find yourself
+continually closing windows when you’re trying to delete a word (like me) then
+add the following to your ~/.gtkrc-2.0:</summary>
     <category term="software" label="software"/>
     <category term="configs" label="configs"/>
     <category term="GTK+" label="GTK+"/>
@@ -68,7 +71,7 @@ should be the settings in the Emacs theme I’ll owe you a few beers!&lt;/p&gt;
     <author>
       <name>James Rowe</name>
     </author>
-    <content type="html">&lt;div class="section" id="mutt-configuration-snippets"&gt;
+    <content type="html">&lt;section id="mutt-configuration-snippets"&gt;
 
 &lt;p&gt;&lt;a class="reference external" href="http://www.mutt.org/"&gt;mutt&lt;/a&gt; is my favourite &lt;abbr title="Mail User Agent"&gt;MUA&lt;/abbr&gt;, one of the few tools
 I truly believe I couldn’t manage without.  It is also one of those tools,
@@ -142,9 +145,9 @@ reason we display exactly 12 characters of the spam value is so that the
 columns line up correctly regardless of whether we display a date or a spam
 value.  An example can be seen on the right featuring a few snippets from a ham
 mailbox and my spam mailbox:&lt;/p&gt;
-&lt;div class="figure align-default"&gt;
+&lt;figure class="align-default"&gt;
 &lt;img alt="Spam field alignment in :command:`mutt`" src="../../_images/mutt_spam.png" /&gt;
-&lt;/div&gt;
+&lt;/figure&gt;
 &lt;p&gt;The final, and perhaps most interesting, file is &lt;code class="file docutils literal notranslate"&gt;&lt;span class="pre"&gt;score.rc&lt;/span&gt;&lt;/code&gt; where
 I define all my manual scoring and some per-mail colouring policies.&lt;/p&gt;
 &lt;p&gt;The first thing we need to understand is that &lt;strong class="command"&gt;mutt&lt;/strong&gt; accumulates
@@ -204,9 +207,13 @@ a dull grey by matching on &lt;code class="docutils literal notranslate"&gt;&lt;
 in-depth documentation included in the package.  If your distribution doesn’t
 include it you can always head along to the &lt;a class="reference external" href="http://www.mutt.org/"&gt;mutt&lt;/a&gt; website and read it there.
 Happy &lt;strong class="command"&gt;mutt&lt;/strong&gt;’ing.&lt;/p&gt;
-&lt;/div&gt;
+&lt;/section&gt;
 </content>
     <link href="https://jnrowe.github.io/articles/mutt_config_snippets.html" rel="alternate"/>
+    <summary>mutt is my favourite MUA, one of the few tools
+I truly believe I couldn’t manage without.  It is also one of those tools,
+along with vim, which can end up sucking away all your free time to configure
+it just how you want.</summary>
     <category term="software" label="software"/>
     <category term="configs" label="configs"/>
     <category term="mutt" label="mutt"/>

@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <id>https://jnrowe.github.io/</id>
   <title>JNRowe - Posts tagged sup</title>
-  <updated>2021-04-18T11:22:11.617285+00:00</updated>
+  <updated>2021-04-29T22:38:04.407343+00:00</updated>
   <link href="https://jnrowe.github.io/"/>
   <link href="https://jnrowe.github.io/blog/tag/sup/atom.xml" rel="self"/>
-  <generator uri="https://ablog.readthedocs.org/" version="0.10.17">ABlog</generator>
+  <generator uri="https://ablog.readthedocs.org/" version="0.10.18">ABlog</generator>
   <subtitle>Ramblings of a tired mind</subtitle>
   <entry>
     <id>https://jnrowe.github.io/articles/tips/Populating_sup_contacts_from_abook.html</id>
@@ -14,7 +14,7 @@
     <author>
       <name>James Rowe</name>
     </author>
-    <content type="html">&lt;div class="section" id="populating-sup-contacts-from-abook"&gt;
+    <content type="html">&lt;section id="populating-sup-contacts-from-abook"&gt;
 
 &lt;p&gt;A colleague from work, Adam Robertson, is switching to &lt;a class="reference external" href="http://sup.rubyforge.org/"&gt;Sup&lt;/a&gt; from &lt;a class="reference external" href="http://www.mutt.org/"&gt;mutt&lt;/a&gt; and
 wondering how to easily convert his contacts from &lt;a class="reference external" href="http://abook.sourceforge.net/"&gt;abook&lt;/a&gt;.  Given that it is my
@@ -74,9 +74,13 @@ the addressbook has been updated we can use &lt;a class="reference external" hre
 simple access to our contacts from within &lt;strong class="command"&gt;sup&lt;/strong&gt;.  This is incredibly
 useful as it means we can continue to use &lt;strong class="command"&gt;abook&lt;/strong&gt; for other things
 too, see &lt;span class="xref std std-doc"&gt;Kick_me_birthday_reminders&lt;/span&gt;.&lt;/p&gt;
-&lt;/div&gt;
+&lt;/section&gt;
 </content>
     <link href="https://jnrowe.github.io/articles/tips/Populating_sup_contacts_from_abook.html" rel="alternate"/>
+    <summary>A colleague from work, Adam Robertson, is switching to Sup from mutt and
+wondering how to easily convert his contacts from abook.  Given that it is my
+constant pimping of sup that has convinced him to switch I feel
+obliged to help with the conversion.</summary>
     <category term="abook" label="abook"/>
     <category term="mail" label="mail"/>
     <category term="sup" label="sup"/>

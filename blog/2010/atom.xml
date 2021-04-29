@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <id>https://jnrowe.github.io/</id>
   <title>JNRowe - Posted in 2010</title>
-  <updated>2021-04-18T11:22:04.214869+00:00</updated>
+  <updated>2021-04-29T22:37:58.965959+00:00</updated>
   <link href="https://jnrowe.github.io/"/>
   <link href="https://jnrowe.github.io/blog/2010/atom.xml" rel="self"/>
-  <generator uri="https://ablog.readthedocs.org/" version="0.10.17">ABlog</generator>
+  <generator uri="https://ablog.readthedocs.org/" version="0.10.18">ABlog</generator>
   <subtitle>Ramblings of a tired mind</subtitle>
   <entry>
     <id>https://jnrowe.github.io/articles/tips/Populating_sup_contacts_from_abook.html</id>
@@ -14,7 +14,7 @@
     <author>
       <name>James Rowe</name>
     </author>
-    <content type="html">&lt;div class="section" id="populating-sup-contacts-from-abook"&gt;
+    <content type="html">&lt;section id="populating-sup-contacts-from-abook"&gt;
 
 &lt;p&gt;A colleague from work, Adam Robertson, is switching to &lt;a class="reference external" href="http://sup.rubyforge.org/"&gt;Sup&lt;/a&gt; from &lt;a class="reference external" href="http://www.mutt.org/"&gt;mutt&lt;/a&gt; and
 wondering how to easily convert his contacts from &lt;a class="reference external" href="http://abook.sourceforge.net/"&gt;abook&lt;/a&gt;.  Given that it is my
@@ -74,9 +74,13 @@ the addressbook has been updated we can use &lt;a class="reference external" hre
 simple access to our contacts from within &lt;strong class="command"&gt;sup&lt;/strong&gt;.  This is incredibly
 useful as it means we can continue to use &lt;strong class="command"&gt;abook&lt;/strong&gt; for other things
 too, see &lt;span class="xref std std-doc"&gt;Kick_me_birthday_reminders&lt;/span&gt;.&lt;/p&gt;
-&lt;/div&gt;
+&lt;/section&gt;
 </content>
     <link href="https://jnrowe.github.io/articles/tips/Populating_sup_contacts_from_abook.html" rel="alternate"/>
+    <summary>A colleague from work, Adam Robertson, is switching to Sup from mutt and
+wondering how to easily convert his contacts from abook.  Given that it is my
+constant pimping of sup that has convinced him to switch I feel
+obliged to help with the conversion.</summary>
     <category term="abook" label="abook"/>
     <category term="mail" label="mail"/>
     <category term="sup" label="sup"/>
@@ -89,7 +93,7 @@ too, see &lt;span class="xref std std-doc"&gt;Kick_me_birthday_reminders&lt;/spa
     <author>
       <name>James Rowe</name>
     </author>
-    <content type="html">&lt;div class="section" id="mangling-planets"&gt;
+    <content type="html">&lt;section id="mangling-planets"&gt;
 
 &lt;p&gt;Over lunch today a few people were talking about &lt;a class="reference external" href="http://www.planetplanet.org/"&gt;planet&lt;/a&gt; feeds, and the topics
 mostly revolved around why they don’t read them.  I was quite surprised how
@@ -109,7 +113,7 @@ a better idea&lt;/a&gt; to me.&lt;/p&gt;
 alternatives options.  If you know of any interesting tools to do similar
 tasks &lt;a class="reference internal" href="../contact.html"&gt;&lt;span class="doc"&gt;get in touch&lt;/span&gt;&lt;/a&gt;.&lt;/p&gt;
 &lt;/div&gt;
-&lt;div class="section" id="the-feeds"&gt;
+&lt;section id="the-feeds"&gt;
 &lt;h2&gt;The feeds&lt;/h2&gt;
 &lt;p&gt;I subscribe to &lt;a class="reference external" href="http://planet.debian.net/"&gt;Planet Debian&lt;/a&gt;, &lt;a class="reference external" href="http://planet.freedesktop.org/"&gt;Planet Freedesktop.org&lt;/a&gt;, &lt;a class="reference external" href="http://planet.gnome.org/"&gt;Planet GNOME&lt;/a&gt;,
 &lt;a class="reference external" href="http://planet.gentoo.org/"&gt;Planet Gentoo&lt;/a&gt;, &lt;a class="reference external" href="http://planet.haskell.org/"&gt;Planet Haskell&lt;/a&gt; and &lt;a class="reference external" href="http://planet.python.org/"&gt;Planet Python&lt;/a&gt;.  These planets
@@ -156,8 +160,8 @@ amount of time, much more than a train commute or whatever other dead time
 there is to fill.  My answer is quite simple, I don’t read it all.&lt;/p&gt;
 &lt;p&gt;We’ll examine just the planets, but what I’m going to say mostly applies to the
 other content too.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="section" id="the-task"&gt;
+&lt;/section&gt;
+&lt;section id="the-task"&gt;
 &lt;h2&gt;The task&lt;/h2&gt;
 &lt;p&gt;Not all the entries are new, some are duplicates(this is especially between
 Debian and GNOME planets).  Some are uninteresting to me, talk of technologies
@@ -169,8 +173,8 @@ Pipes&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;Yahoo! Pipes is a clever little web-based tool for mangling data hosted on the
 internet, be it single pages or feeds or even &lt;abbr title="Comma Separated Values"&gt;CSV&lt;/abbr&gt; data files.  The interface is a friendly Javascript drag-and-drop
 affair, just select the tools you wish to use and literally connect the dots.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="section" id="fetching-feeds"&gt;
+&lt;/section&gt;
+&lt;section id="fetching-feeds"&gt;
 &lt;h2&gt;Fetching feeds&lt;/h2&gt;
 &lt;img alt="Fetch feeds" src="../_images/2010-09-17-feed_fetch.png" /&gt;
 &lt;p&gt;Fetching the planet feeds is simple, just select the &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;Fetch&lt;/span&gt; &lt;span class="pre"&gt;feed&lt;/span&gt;&lt;/code&gt; item in the
@@ -182,8 +186,8 @@ formats better than you may expect for such a poorly specified format.&lt;/p&gt;
 &lt;span class="pre"&gt;output&lt;/span&gt;&lt;/code&gt; and you’ll have a single, yet humongous, feed that contains the
 content from the all individual feeds.  The way to think of &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;Fetch&lt;/span&gt; &lt;span class="pre"&gt;feed&lt;/span&gt;&lt;/code&gt; is
 as a &lt;em class="manpage"&gt;cat(1)&lt;/em&gt; for feeds.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="section" id="uniquify"&gt;
+&lt;/section&gt;
+&lt;section id="uniquify"&gt;
 &lt;h2&gt;Uniquify&lt;/h2&gt;
 &lt;p&gt;To remove duplicates we add a &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;Unique&lt;/span&gt;&lt;/code&gt; object from the &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;Operators&lt;/span&gt;&lt;/code&gt; menu to
 the diagram, and choose the element we wish to use for testing equality.  We’re
@@ -201,8 +205,8 @@ which can be very useful for feeds that don’t update very often.&lt;/p&gt;
 &lt;p&gt;If we were to compare &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;Unique&lt;/span&gt;&lt;/code&gt; to a command line tool it would be
 &lt;em class="manpage"&gt;uniq&lt;/em&gt;, with a variety of &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;--check-chars&lt;/span&gt;&lt;/code&gt; and &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;--skip-fields&lt;/span&gt;&lt;/code&gt;
 options to define our filter.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="section" id="filter-it"&gt;
+&lt;/section&gt;
+&lt;section id="filter-it"&gt;
 &lt;h2&gt;Filter it&lt;/h2&gt;
 &lt;img alt="Filter entries" src="../_images/2010-09-17-feed_filter.png" /&gt;
 &lt;p&gt;At this point we want to filter entries that are of no interest to us, for
@@ -249,8 +253,8 @@ some great work on their respective projects, but their blogs include
 information I’m not particularly interested in seeing.  I don’t believe it
 has harmed the examples too much, but if something isn’t clear just ask!&lt;/p&gt;
 &lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="section" id="output"&gt;
+&lt;/section&gt;
+&lt;section id="output"&gt;
 &lt;h2&gt;Output&lt;/h2&gt;
 &lt;p&gt;I’m a neat freak, so I always re-sort the output before finally delivering it.
 I sort it based on publication date, so that it is easier to scan the output by
@@ -268,8 +272,8 @@ vary considerably based on the activity in the feeds.&lt;/p&gt;
 output data in various formats.  The &lt;a class="reference external" href="http://www.json.org/"&gt;JSON&lt;/a&gt; output, for example, makes it very
 easy to post-process the data locally using &lt;a class="reference external" href="http://flori.github.com/json/"&gt;Ruby&lt;/a&gt; or &lt;a class="reference external" href="http://docs.python.org/library/json.html"&gt;Python&lt;/a&gt;.  Some of the
 reasons you may wish to do that are best left for another day.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="section" id="sidenotes"&gt;
+&lt;/section&gt;
+&lt;section id="sidenotes"&gt;
 &lt;h2&gt;Sidenotes&lt;/h2&gt;
 &lt;ul class="simple"&gt;
 &lt;li&gt;&lt;p&gt;Every time I play with Yahoo! Pipes I wonder why people(including myself)
@@ -287,10 +291,14 @@ make scraping and mangling data as simple as forming some structured queries.
 If you do any scraping or processing of external data be sure to have a quick
 read of the &lt;a class="reference external" href="http://developer.yahoo.com/yql/guide/two-minute-tutorial.html"&gt;the two-minute tutorial&lt;/a&gt;.&lt;/p&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;/div&gt;
-&lt;/div&gt;
+&lt;/section&gt;
+&lt;/section&gt;
 </content>
     <link href="https://jnrowe.github.io/articles/mangling_planets.html" rel="alternate"/>
+    <summary>Over lunch today a few people were talking about planet feeds, and the topics
+mostly revolved around why they don’t read them.  I was quite surprised how
+many people miss out on the often marvellous insights in to the projects we use
+everyday, but I think I understand the reasoning.Fetch feeds</summary>
     <category term="atom" label="atom"/>
     <category term="feed" label="feed"/>
     <category term="pipes" label="pipes"/>

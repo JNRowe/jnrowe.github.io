@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <id>https://jnrowe.github.io/</id>
   <title>JNRowe - Posts tagged mutt</title>
-  <updated>2021-04-18T11:22:09.879567+00:00</updated>
+  <updated>2021-04-29T22:38:02.506038+00:00</updated>
   <link href="https://jnrowe.github.io/"/>
   <link href="https://jnrowe.github.io/blog/tag/mutt/atom.xml" rel="self"/>
-  <generator uri="https://ablog.readthedocs.org/" version="0.10.17">ABlog</generator>
+  <generator uri="https://ablog.readthedocs.org/" version="0.10.18">ABlog</generator>
   <subtitle>Ramblings of a tired mind</subtitle>
   <entry>
     <id>https://jnrowe.github.io/articles/mutt_config_snippets.html</id>
@@ -14,7 +14,7 @@
     <author>
       <name>James Rowe</name>
     </author>
-    <content type="html">&lt;div class="section" id="mutt-configuration-snippets"&gt;
+    <content type="html">&lt;section id="mutt-configuration-snippets"&gt;
 
 &lt;p&gt;&lt;a class="reference external" href="http://www.mutt.org/"&gt;mutt&lt;/a&gt; is my favourite &lt;abbr title="Mail User Agent"&gt;MUA&lt;/abbr&gt;, one of the few tools
 I truly believe I couldn’t manage without.  It is also one of those tools,
@@ -88,9 +88,9 @@ reason we display exactly 12 characters of the spam value is so that the
 columns line up correctly regardless of whether we display a date or a spam
 value.  An example can be seen on the right featuring a few snippets from a ham
 mailbox and my spam mailbox:&lt;/p&gt;
-&lt;div class="figure align-default"&gt;
+&lt;figure class="align-default"&gt;
 &lt;img alt="Spam field alignment in :command:`mutt`" src="../../_images/mutt_spam.png" /&gt;
-&lt;/div&gt;
+&lt;/figure&gt;
 &lt;p&gt;The final, and perhaps most interesting, file is &lt;code class="file docutils literal notranslate"&gt;&lt;span class="pre"&gt;score.rc&lt;/span&gt;&lt;/code&gt; where
 I define all my manual scoring and some per-mail colouring policies.&lt;/p&gt;
 &lt;p&gt;The first thing we need to understand is that &lt;strong class="command"&gt;mutt&lt;/strong&gt; accumulates
@@ -150,9 +150,13 @@ a dull grey by matching on &lt;code class="docutils literal notranslate"&gt;&lt;
 in-depth documentation included in the package.  If your distribution doesn’t
 include it you can always head along to the &lt;a class="reference external" href="http://www.mutt.org/"&gt;mutt&lt;/a&gt; website and read it there.
 Happy &lt;strong class="command"&gt;mutt&lt;/strong&gt;’ing.&lt;/p&gt;
-&lt;/div&gt;
+&lt;/section&gt;
 </content>
     <link href="https://jnrowe.github.io/articles/mutt_config_snippets.html" rel="alternate"/>
+    <summary>mutt is my favourite MUA, one of the few tools
+I truly believe I couldn’t manage without.  It is also one of those tools,
+along with vim, which can end up sucking away all your free time to configure
+it just how you want.</summary>
     <category term="software" label="software"/>
     <category term="configs" label="configs"/>
     <category term="mutt" label="mutt"/>
@@ -165,7 +169,7 @@ Happy &lt;strong class="command"&gt;mutt&lt;/strong&gt;’ing.&lt;/p&gt;
     <author>
       <name>James Rowe</name>
     </author>
-    <content type="html">&lt;div class="section" id="theming-mutt"&gt;
+    <content type="html">&lt;section id="theming-mutt"&gt;
 
 &lt;p&gt;Jeff, a work colleague, asks via &lt;abbr title="Internet Relay Chat"&gt;IRC&lt;/abbr&gt;:&lt;/p&gt;
 &lt;blockquote&gt;
@@ -182,9 +186,10 @@ now as simple as adding the following to your &lt;code class="file docutils lite
 &lt;span class="nb"&gt;source&lt;/span&gt; ~/.mutt/colour_&lt;span class="nv"&gt;$TERM&lt;/span&gt;.rc
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
-&lt;/div&gt;
+&lt;/section&gt;
 </content>
     <link href="https://jnrowe.github.io/articles/tips/Theming_mutt.html" rel="alternate"/>
+    <summary>Jeff, a work colleague, asks via IRC:</summary>
     <category term="mutt" label="mutt"/>
     <category term="styling" label="styling"/>
     <published>2009-09-23T00:00:00+01:00</published>
@@ -196,7 +201,7 @@ now as simple as adding the following to your &lt;code class="file docutils lite
     <author>
       <name>James Rowe</name>
     </author>
-    <content type="html">&lt;div class="section" id="importing-gmail-filters-in-mutt"&gt;
+    <content type="html">&lt;section id="importing-gmail-filters-in-mutt"&gt;
 
 &lt;p&gt;On our company’s Linux list Ryan Abbott is preparing to move to &lt;a class="reference external" href="http://www.mutt.org/"&gt;mutt&lt;/a&gt;:&lt;/p&gt;
 &lt;blockquote&gt;
@@ -300,9 +305,10 @@ score ~fjohndoe@example.com -20
 &lt;p&gt;A few years ago I posted some of tricks and tips I use for &lt;a class="reference external" href="http://www.jnrowe.ukfsn.org/articles/configs/mutt.html"&gt;configuring mutt&lt;/a&gt;,
 which include some neat ways to colour and score mail on a per-folder basis.  It
 may be worth taking a quick look at if you use folders to organise your mails.&lt;/p&gt;
-&lt;/div&gt;
+&lt;/section&gt;
 </content>
     <link href="https://jnrowe.github.io/articles/tips/Importing_gmail_filters_in_mutt.html" rel="alternate"/>
+    <summary>On our company’s Linux list Ryan Abbott is preparing to move to mutt:</summary>
     <category term="gmail" label="gmail"/>
     <category term="mutt" label="mutt"/>
     <published>2009-10-08T00:00:00+01:00</published>

@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <id>https://jnrowe.github.io/</id>
   <title>JNRowe - Posts tagged devel</title>
-  <updated>2021-04-18T11:22:08.076876+00:00</updated>
+  <updated>2021-04-29T22:38:01.527063+00:00</updated>
   <link href="https://jnrowe.github.io/"/>
   <link href="https://jnrowe.github.io/blog/tag/devel/atom.xml" rel="self"/>
-  <generator uri="https://ablog.readthedocs.org/" version="0.10.17">ABlog</generator>
+  <generator uri="https://ablog.readthedocs.org/" version="0.10.18">ABlog</generator>
   <subtitle>Ramblings of a tired mind</subtitle>
   <entry>
     <id>https://jnrowe.github.io/articles/tips/BTS_as_a_task_manager.html</id>
@@ -14,7 +14,7 @@
     <author>
       <name>James Rowe</name>
     </author>
-    <content type="html">&lt;div class="section" id="bts-as-a-task-manager"&gt;
+    <content type="html">&lt;section id="bts-as-a-task-manager"&gt;
 
 &lt;p&gt;Tom Marshall asks over the cooler:&lt;/p&gt;
 &lt;blockquote&gt;
@@ -50,7 +50,7 @@ bug databases created by the upstream project.&lt;/p&gt;
 &lt;/div&gt;
 &lt;p&gt;The following examples use an older version of &lt;strong class="command"&gt;be&lt;/strong&gt; that you can
 download as a &lt;a class="reference external" href="http://www.jnrowe.ukfsn.org/_static/be-0.0.193.tar.bz2"&gt;tarball&lt;/a&gt; and doesn’t require &lt;strong class="command"&gt;bzr&lt;/strong&gt;.&lt;/p&gt;
-&lt;div class="section" id="setting-be-up"&gt;
+&lt;section id="setting-be-up"&gt;
 &lt;h2&gt;Setting &lt;strong class="command"&gt;be&lt;/strong&gt; up&lt;/h2&gt;
 &lt;p&gt;Before we use &lt;strong class="command"&gt;be&lt;/strong&gt; we must prepare it.  In the example that follows
 we’re going to create a new directory under the control of &lt;a class="reference external" href="http://www.git-scm.com/"&gt;git&lt;/a&gt;, and tell
@@ -63,8 +63,8 @@ we’re going to create a new directory under the control of &lt;a class="refere
 &lt;span class="go"&gt;Directory initialized.&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="section" id="filing-bugs"&gt;
+&lt;/section&gt;
+&lt;section id="filing-bugs"&gt;
 &lt;h2&gt;Filing bugs&lt;/h2&gt;
 &lt;p&gt;We can easily file new bugs, in the next snippet we can see two bugs being
 filed.  Bugs are identified by a &lt;abbr title="Universally Unique IDentifier"&gt;UUID&lt;/abbr&gt;,
@@ -86,8 +86,8 @@ to be assigned.  As we didn’t set a severity level for &lt;code class="docutil
 default of &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;minor&lt;/span&gt;&lt;/code&gt;.  A comment was also made on bug &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;ec4&lt;/span&gt;&lt;/code&gt;, and if we hadn’t
 specified the comment on the command line it would open our default editor to
 add the comment.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="section" id="querying-bugs"&gt;
+&lt;/section&gt;
+&lt;section id="querying-bugs"&gt;
 &lt;h2&gt;Querying bugs&lt;/h2&gt;
 &lt;div class="highlight-console notranslate"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="gp"&gt;$&lt;/span&gt; be list
 &lt;span class="go"&gt;ec4:os: This is a second bug&lt;/span&gt;
@@ -133,8 +133,8 @@ we use the &lt;strong class="command"&gt;be show&lt;/strong&gt; command:&lt;/p&g
 &lt;span class="go"&gt;Comments are easy&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="section" id="editing-bugs"&gt;
+&lt;/section&gt;
+&lt;section id="editing-bugs"&gt;
 &lt;h2&gt;Editing bugs&lt;/h2&gt;
 &lt;p&gt;We can change the bug status with &lt;strong class="command"&gt;be status&lt;/strong&gt;, see the output from
 &lt;strong class="command"&gt;be help status&lt;/strong&gt; for available values.&lt;/p&gt;
@@ -162,16 +162,16 @@ or by calling &lt;strong class="command"&gt;be list&lt;/strong&gt; with filterin
 &lt;span class="go"&gt;Comments are easy&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="section" id="conclusions"&gt;
+&lt;/section&gt;
+&lt;section id="conclusions"&gt;
 &lt;h2&gt;Conclusions&lt;/h2&gt;
 &lt;p&gt;That really is all it takes to use &lt;strong class="command"&gt;be&lt;/strong&gt;, and that is why I find
 a &lt;abbr title="Bug Tracking System"&gt;BTS&lt;/abbr&gt; to be a nice solution for managing all kinds of random tasks.  I have
 a Bugs Everywhere database in my home directory that over the past year has
 stored just over 600 bugs from shopping lists to actual bugs with my
 configurations files, and I’ve apparently managed to complete 95% of them!&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="section" id="bonus-material"&gt;
+&lt;/section&gt;
+&lt;section id="bonus-material"&gt;
 &lt;h2&gt;Bonus material&lt;/h2&gt;
 &lt;p&gt;One of the little tricks I like to do is override the &lt;strong class="command"&gt;cd&lt;/strong&gt; command to
 automatically display the bug list when I enter a directory that contains a Bugs
@@ -188,10 +188,11 @@ Everywhere database, and it is very simple to do:&lt;/p&gt;
 &lt;p&gt;It could be improved to take settings to filter the bug list or all manner of
 other cool things, but that is why it has a “See gist #x” label next to it.
 Feel free to post updates to the gist!&lt;/p&gt;
-&lt;/div&gt;
-&lt;/div&gt;
+&lt;/section&gt;
+&lt;/section&gt;
 </content>
     <link href="https://jnrowe.github.io/articles/tips/BTS_as_a_task_manager.html" rel="alternate"/>
+    <summary>Tom Marshall asks over the cooler:</summary>
     <category term="bts" label="bts"/>
     <category term="devel" label="devel"/>
     <published>2009-10-07T00:00:00+01:00</published>
@@ -203,7 +204,7 @@ Feel free to post updates to the gist!&lt;/p&gt;
     <author>
       <name>James Rowe</name>
     </author>
-    <content type="html">&lt;div class="section" id="instant-web-server"&gt;
+    <content type="html">&lt;section id="instant-web-server"&gt;
 
 &lt;p&gt;Among the topics on our Linux list at work today was a question from Luke
 Fletcher that I was expecting to unleash a flurry of emotional responses:&lt;/p&gt;
@@ -220,7 +221,7 @@ the question at hand, but surprisingly little dissent over the choices.&lt;/p&gt
 &lt;/div&gt;&lt;/blockquote&gt;
 &lt;p&gt;I agree with Matt’s answer but I want to point a couple of possibly non-obvious
 web servers that they, and you, are likely to have installed already.&lt;/p&gt;
-&lt;div class="section" id="busybox-applet"&gt;
+&lt;section id="busybox-applet"&gt;
 &lt;h2&gt;Busybox applet&lt;/h2&gt;
 &lt;p&gt;All our Linux systems at the office include &lt;a class="reference external" href="http://www.busybox.net/"&gt;busybox&lt;/a&gt;, and in the configuration
 we use the &lt;a class="reference external" href="http://www.busybox.net/downloads/BusyBox.html#httpd"&gt;httpd&lt;/a&gt; applet is built.  It is very lightweight, and incredibly
@@ -242,8 +243,8 @@ server:&lt;/p&gt;
 &lt;/div&gt;
 &lt;p&gt;&lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;http_serve_location&lt;/span&gt;&lt;/code&gt; is set elsewhere in my configuration file, so that I can
 keep per-machine settings separate.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="section" id="python-built-in"&gt;
+&lt;/section&gt;
+&lt;section id="python-built-in"&gt;
 &lt;h2&gt;Python built-in&lt;/h2&gt;
 &lt;p&gt;&lt;a class="reference external" href="http://www.python.org/"&gt;Python&lt;/a&gt; comes with its own basic web server, and it is very easy to use:&lt;/p&gt;
 &lt;div class="highlight-console notranslate"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="gp"&gt;$&lt;/span&gt; python2.6 -m SimpleHTTPServer &lt;span class="m"&gt;8080&lt;/span&gt;
@@ -265,8 +266,8 @@ keep per-machine settings separate.&lt;/p&gt;
 &lt;p&gt;I’ve specified the port 8080 to both calls in the snippet above, by default the
 server port would be 8000.  If port 8000 is acceptable for you then you can save
 yourself five keystrokes.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="section" id="ruby-built-in"&gt;
+&lt;/section&gt;
+&lt;section id="ruby-built-in"&gt;
 &lt;h2&gt;Ruby built-in&lt;/h2&gt;
 &lt;p&gt;&lt;a class="reference external" href="http://www.ruby-lang.org/"&gt;ruby&lt;/a&gt; also comes with its own web server, one that you’re probably already
 familiar with if you’re a &lt;a class="reference external" href="http://www.rubyonrails.org/"&gt;rails&lt;/a&gt; user, called &lt;a class="reference external" href="http://www.webrick.org/"&gt;webrick&lt;/a&gt;.  We need a little script
@@ -288,18 +289,20 @@ to use &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;
 &lt;/div&gt;
 &lt;p&gt;This script will serve files from whatever directory is specified as its first
 argument.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="section" id="bonus"&gt;
+&lt;/section&gt;
+&lt;section id="bonus"&gt;
 &lt;h2&gt;Bonus&lt;/h2&gt;
 &lt;p&gt;Python also comes with a &lt;abbr title="Common Gateway Interface"&gt;CGI&lt;/abbr&gt;-capable version
 called &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;CGIHTTPServer&lt;/span&gt;&lt;/code&gt; and a &lt;abbr title="Extensible Markup Language"&gt;XML&lt;/abbr&gt;-&lt;abbr title="Remote Procedure Call"&gt;RPC&lt;/abbr&gt; server
 called — this shouldn’t come as a surprise — &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;SimpleXMLRPCServer&lt;/span&gt;&lt;/code&gt;.  They’re
 very useful for testing out ideas and concepts without having to set down lots
 of code.&lt;/p&gt;
-&lt;/div&gt;
-&lt;/div&gt;
+&lt;/section&gt;
+&lt;/section&gt;
 </content>
     <link href="https://jnrowe.github.io/articles/tips/Instant_web_server.html" rel="alternate"/>
+    <summary>Among the topics on our Linux list at work today was a question from Luke
+Fletcher that I was expecting to unleash a flurry of emotional responses:</summary>
     <category term="devel" label="devel"/>
     <category term="web" label="web"/>
     <published>2009-10-12T00:00:00+01:00</published>
@@ -311,13 +314,13 @@ of code.&lt;/p&gt;
     <author>
       <name>James Rowe</name>
     </author>
-    <content type="html">&lt;div class="section" id="tdd-distro-development"&gt;
+    <content type="html">&lt;section id="tdd-distro-development"&gt;
 
 &lt;p&gt;Using &lt;abbr title="Test Driven Development"&gt;TDD&lt;/abbr&gt; for distribution development is a hot topic in some of the more
 geeky circles I move in, and I’m very happy about this.  Anything that
 increases the robustness of my desktop computer, my phone or any other device
 I use is a great goal!&lt;/p&gt;
-&lt;div class="section" id="why"&gt;
+&lt;section id="why"&gt;
 &lt;h2&gt;Why?&lt;/h2&gt;
 &lt;p&gt;This answer should be obvious; more testing is good.  However, what about the
 current system needs improving?&lt;/p&gt;
@@ -331,8 +334,8 @@ often discovered before a package is stabilised.&lt;/p&gt;
 previously fixed bugs.  This, by itself, is a reason to look at alternatives.
 Fixing the same bug more than once is an horrendous waste of developer
 resources.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="section" id="how"&gt;
+&lt;/section&gt;
+&lt;section id="how"&gt;
 &lt;h2&gt;How?&lt;/h2&gt;
 &lt;p&gt;We, the fine folks of AST’s London office, already use a test-based
 stabilisation policy in the preparation of our distribution images.  Adding
@@ -406,8 +409,8 @@ For example, the &lt;a class="reference external" href="https://pypi.python.org/
 that are run when bumping or stabilising the package, all of which are cribbed
 from my actual &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;blockdiag&lt;/span&gt;&lt;/code&gt; usage.  This massively reduces the time required
 to evaluate a package at bump time.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="section" id="result"&gt;
+&lt;/section&gt;
+&lt;section id="result"&gt;
 &lt;h2&gt;Result?&lt;/h2&gt;
 &lt;p&gt;The time it takes to stabilise, or bump, a package may be massively reduced
 while simultaneously increasing the robustness of the packages.  This is a huge
@@ -422,8 +425,8 @@ existing content as input for tests.  The use of existing input makes writing
 the test faster and means each test exercises functionality we actually require,
 but it also means we occasionally can’t submit the data upstream owing to
 licensing concerns.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="section" id="bonus"&gt;
+&lt;/section&gt;
+&lt;section id="bonus"&gt;
 &lt;h2&gt;Bonus&lt;/h2&gt;
 &lt;p&gt;I’ve used the upstream supported &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;shelldoctest&lt;/span&gt;&lt;/code&gt; method for writing tests on
 this page, but you can also easily specify them in &lt;a class="reference external" href="http://docutils.sourceforge.net/docs/user/rst/"&gt;reST syntax&lt;/a&gt; files too.
@@ -462,10 +465,14 @@ a &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;reST&
 &lt;dd&gt;&lt;p&gt;Okay, it was me.  I’ll confess.&lt;/p&gt;
 &lt;/dd&gt;
 &lt;/dl&gt;
-&lt;/div&gt;
-&lt;/div&gt;
+&lt;/section&gt;
+&lt;/section&gt;
 </content>
     <link href="https://jnrowe.github.io/articles/tdd_distros.html" rel="alternate"/>
+    <summary>Using TDD for distribution development is a hot topic in some of the more
+geeky circles I move in, and I’m very happy about this.  Anything that
+increases the robustness of my desktop computer, my phone or any other device
+I use is a great goal!</summary>
     <category term="devel" label="devel"/>
     <category term="testing" label="testing"/>
     <published>2011-06-13T00:00:00+01:00</published>

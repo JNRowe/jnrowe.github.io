@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <id>https://jnrowe.github.io/</id>
   <title>JNRowe - Posts tagged vim</title>
-  <updated>2021-04-18T11:22:12.078706+00:00</updated>
+  <updated>2021-04-29T22:38:05.018585+00:00</updated>
   <link href="https://jnrowe.github.io/"/>
   <link href="https://jnrowe.github.io/blog/tag/vim/atom.xml" rel="self"/>
-  <generator uri="https://ablog.readthedocs.org/" version="0.10.17">ABlog</generator>
+  <generator uri="https://ablog.readthedocs.org/" version="0.10.18">ABlog</generator>
   <subtitle>Ramblings of a tired mind</subtitle>
   <entry>
     <id>https://jnrowe.github.io/articles/tips/Compiling_in_vim.html</id>
@@ -14,7 +14,7 @@
     <author>
       <name>James Rowe</name>
     </author>
-    <content type="html">&lt;div class="section" id="compiling-c-source-in-vim"&gt;
+    <content type="html">&lt;section id="compiling-c-source-in-vim"&gt;
 
 &lt;p&gt;The fabulous Miss Biddulph asks via the EADS Linux list:&lt;/p&gt;
 &lt;blockquote&gt;
@@ -40,9 +40,10 @@ value of &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&g
 extension stripped.  We specifically only change the behaviour if no
 &lt;code class="file docutils literal notranslate"&gt;&lt;span class="pre"&gt;Makefile&lt;/span&gt;&lt;/code&gt; exists so that we don’t interfere with the normal usage of the
 &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;:make&lt;/span&gt;&lt;/code&gt; command.&lt;/p&gt;
-&lt;/div&gt;
+&lt;/section&gt;
 </content>
     <link href="https://jnrowe.github.io/articles/tips/Compiling_in_vim.html" rel="alternate"/>
+    <summary>The fabulous Miss Biddulph asks via the EADS Linux list:</summary>
     <category term="vim" label="vim"/>
     <published>2009-09-24T00:00:00+01:00</published>
   </entry>
@@ -53,7 +54,7 @@ extension stripped.  We specifically only change the behaviour if no
     <author>
       <name>James Rowe</name>
     </author>
-    <content type="html">&lt;div class="section" id="toggling-settings-in-vim"&gt;
+    <content type="html">&lt;section id="toggling-settings-in-vim"&gt;
 
 &lt;p&gt;As you can never have enough keybinding tips and &lt;a class="reference external" href="http://www.vim.org"&gt;vim&lt;/a&gt; helps to prove that, the
 tip for today answers Joshua’s question from &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;##purplism&lt;/span&gt;&lt;/code&gt;&lt;/p&gt;
@@ -108,9 +109,11 @@ state in a variable we can test that instead.  The final — totally contrived
 map &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;M&lt;span class="p"&gt;-&lt;/span&gt;F12&lt;span class="p"&gt;&amp;gt;&lt;/span&gt; :&lt;span class="k"&gt;call&lt;/span&gt; EditorvsNotepad&lt;span class="p"&gt;()&amp;lt;&lt;/span&gt;CR&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
-&lt;/div&gt;
+&lt;/section&gt;
 </content>
     <link href="https://jnrowe.github.io/articles/tips/Toggling_settings_in_vim.html" rel="alternate"/>
+    <summary>As you can never have enough keybinding tips and vim helps to prove that, the
+tip for today answers Joshua’s question from ##purplism</summary>
     <category term="vim" label="vim"/>
     <published>2009-10-02T00:00:00+01:00</published>
   </entry>
@@ -121,7 +124,7 @@ map &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;M&lt;span class="p"&gt;-&lt;/span
     <author>
       <name>James Rowe</name>
     </author>
-    <content type="html">&lt;div class="section" id="visual-vim-mode-identifier"&gt;
+    <content type="html">&lt;section id="visual-vim-mode-identifier"&gt;
 
 &lt;p&gt;Paul Kerry rants about his problems with &lt;a class="reference external" href="http://www.vim.org/"&gt;vim&lt;/a&gt; over the cooler today, and as
 a long time &lt;strong class="command"&gt;vim&lt;/strong&gt; user I found it hard not to respond to some of the
@@ -166,9 +169,12 @@ when we change mode:&lt;/p&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
 &lt;p&gt;Note that I didn’t say it was a good idea, just that it was possible!&lt;/p&gt;
-&lt;/div&gt;
+&lt;/section&gt;
 </content>
     <link href="https://jnrowe.github.io/articles/tips/Visual_vim_mode_identifier.html" rel="alternate"/>
+    <summary>Paul Kerry rants about his problems with vim over the cooler today, and as
+a long time vim user I found it hard not to respond to some of the
+points.</summary>
     <category term="awesome" label="awesome"/>
     <category term="vim" label="vim"/>
     <published>2009-10-13T00:00:00+01:00</published>
@@ -180,7 +186,7 @@ when we change mode:&lt;/p&gt;
     <author>
       <name>James Rowe</name>
     </author>
-    <content type="html">&lt;div class="section" id="vim-with-day-night-colourschemes"&gt;
+    <content type="html">&lt;section id="vim-with-day-night-colourschemes"&gt;
 
 &lt;p&gt;The fabulous Miss Biddulph asks via our EADS Linux list:&lt;/p&gt;
 &lt;blockquote&gt;
@@ -191,7 +197,7 @@ different colourschemes depending on time?&lt;/p&gt;
 &lt;p&gt;So, like most things this can either be &lt;em&gt;really&lt;/em&gt; simple or horribly convoluted
 depending on where you wish to draw the usability line.  Because Laura is
 asking, we’ll scratch the surface of a few odd ways to do this.&lt;/p&gt;
-&lt;div class="section" id="the-simple-solution"&gt;
+&lt;section id="the-simple-solution"&gt;
 &lt;h2&gt;The simple solution&lt;/h2&gt;
 &lt;p&gt;In many ways this is related to my &lt;a class="reference external" href="https://github.com/JNRowe/awesome-timed-wallpaper/"&gt;awesome-timed-wallpaper&lt;/a&gt; hack, and to start
 with I’m going to proceed in a similar way.&lt;/p&gt;
@@ -223,12 +229,12 @@ notice eye strain&lt;/p&gt;&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;…&lt;/p&gt;&lt;/li&gt;
 &lt;li&gt;&lt;p&gt;Create a &lt;a class="reference external" href="https://www.freedesktop.org/wiki/Software/systemd"&gt;systemd&lt;/a&gt; user timer that triggers at a given time ;)&lt;/p&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;/div&gt;
-&lt;div class="section" id="the-ridiculous-solution"&gt;
+&lt;/section&gt;
+&lt;section id="the-ridiculous-solution"&gt;
 &lt;h2&gt;The ridiculous solution&lt;/h2&gt;
 &lt;p&gt;We’ll need to figure out the actual daylight state.  There are an enormous
 number of options available.&lt;/p&gt;
-&lt;div class="section" id="with-python"&gt;
+&lt;section id="with-python"&gt;
 &lt;h3&gt;With Python&lt;/h3&gt;
 &lt;p&gt;My &lt;a class="reference external" href="https://pypi.org/project/upoints/"&gt;upoints&lt;/a&gt; package can calculate sunrise and sunset:&lt;/p&gt;
 &lt;div class="highlight-python notranslate"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="gp"&gt;&amp;gt;&amp;gt;&amp;gt; &lt;/span&gt;&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;upoints.point&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;Point&lt;/span&gt;
@@ -239,8 +245,8 @@ number of options available.&lt;/p&gt;
 &lt;span class="go"&gt;(datetime.time(4, 58), datetime.time(18, 49))&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="section" id="with-redshift"&gt;
+&lt;/section&gt;
+&lt;section id="with-redshift"&gt;
 &lt;h3&gt;With &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;redshift&lt;/span&gt;&lt;/code&gt;&lt;/h3&gt;
 &lt;p&gt;If you already use &lt;a class="reference external" href="http://jonls.dk/redshift/"&gt;redshift&lt;/a&gt; — and you should — getting the current state is
 quite easy.  Below is example output, and a quick &lt;a class="reference external" href="http://sed.sourceforge.net/"&gt;sed&lt;/a&gt;-based method to parse the
@@ -270,8 +276,8 @@ page for how to configure hooks.&lt;/p&gt;
 &lt;span class="o"&gt;}&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="section" id="camera-input"&gt;
+&lt;/section&gt;
+&lt;section id="camera-input"&gt;
 &lt;h3&gt;Camera input&lt;/h3&gt;
 &lt;p&gt;Assuming you have access to either a very good or &lt;em&gt;very&lt;/em&gt; bad webcam you could
 even script support that takes in to account cloud cover, or occultation caused
@@ -301,9 +307,9 @@ balancing data used from the image tags, and use that to infer the light level.
 &lt;a class="reference external" href="http://www.exiv2.org/"&gt;exiv2&lt;/a&gt; is great option to extract that data when available, and also supports
 &lt;a class="reference external" href="https://wiki.gnome.org/Projects/GObjectIntrospection"&gt;gobject introspection&lt;/a&gt; making it possible to use it with &lt;a class="reference external" href="https://github.com/pavouk/lgi"&gt;lgi&lt;/a&gt; in &lt;a class="reference external" href="https://awesomewm.org/"&gt;awesomewm&lt;/a&gt;
 for desktop colours too!&lt;/p&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="section" id="thoughts"&gt;
+&lt;/section&gt;
+&lt;/section&gt;
+&lt;section id="thoughts"&gt;
 &lt;h2&gt;Thoughts&lt;/h2&gt;
 &lt;p&gt;That is definitely enough of that rabbit hole for me right now… I’m really
 looking forward to seeing people code golf some other solutions, be they useful
@@ -318,10 +324,13 @@ have a switch statement.&lt;/p&gt;
 &lt;dd&gt;&lt;p&gt;No &lt;abbr title="HyperText Markup Language"&gt;HTML&lt;/abbr&gt; link, as vimdoc is still on vim 7.3&lt;/p&gt;
 &lt;/dd&gt;
 &lt;/dl&gt;
-&lt;/div&gt;
-&lt;/div&gt;
+&lt;/section&gt;
+&lt;/section&gt;
 </content>
     <link href="https://jnrowe.github.io/articles/tips/vim_day_night_colourscheme.html" rel="alternate"/>
+    <summary>The fabulous Miss Biddulph asks via our EADS Linux list:I lurve taqua in vim during the day, but now the days are getting shorter
+it is beginning to destroy me.  Is there a way to make vim use
+different colourschemes depending on time?</summary>
     <category term="vim" label="vim"/>
     <published>2018-09-15T00:00:00+01:00</published>
   </entry>
@@ -332,7 +341,7 @@ have a switch statement.&lt;/p&gt;
     <author>
       <name>James Rowe</name>
     </author>
-    <content type="html">&lt;div class="section" id="evil-emacs-steals-my-heart"&gt;
+    <content type="html">&lt;section id="evil-emacs-steals-my-heart"&gt;
 
 &lt;p&gt;&lt;em&gt;Many&lt;/em&gt; of my co-workers use &lt;a class="reference external" href="https://www.gnu.org/software/emacs/"&gt;emacs&lt;/a&gt;, it is probably the most popular editor on
 our team and I understand why.&lt;/p&gt;
@@ -343,7 +352,7 @@ catalyst for change, but I am pretty fickle so it may not have even been all
 that important.&lt;/p&gt;
 &lt;p&gt;Lately, I’ve found myself diving back in to &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;emacs&lt;/span&gt;&lt;/code&gt;.  In large part this is
 because of &lt;a class="reference external" href="https://github.com/emacs-evil/evil"&gt;evil&lt;/a&gt;; I can be &lt;em&gt;in&lt;/em&gt; &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;emacs&lt;/span&gt;&lt;/code&gt;, but &lt;em&gt;live&lt;/em&gt; &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;vim&lt;/span&gt;&lt;/code&gt;.&lt;/p&gt;
-&lt;div class="section" id="evil-isnt-always-evil"&gt;
+&lt;section id="evil-isnt-always-evil"&gt;
 &lt;h2&gt;Evil isn’t always evil&lt;/h2&gt;
 &lt;p&gt;So, &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;evil-mode&lt;/span&gt;&lt;/code&gt; &lt;em&gt;is&lt;/em&gt; awesome.&lt;/p&gt;
 &lt;p&gt;The kindest thing I can think to say about it is this: You’ll be angry when it
@@ -384,8 +393,8 @@ didn’t really know what the key might be or when you’d use it.  Be that
 mode, or &lt;a class="reference external" href="https://github.com/gentoo/elogv"&gt;elogv&lt;/a&gt;’s bindings that mean you have to issue &lt;kbd class="kbd docutils literal notranslate"&gt;dd&lt;/kbd&gt; to kill an
 entry.  Frankly, many of the emulation layers often feel like you’re just
 doubling the number of keys you have to press without any benefits&lt;a class="footnote-reference brackets" href="#id4" id="id1"&gt;1&lt;/a&gt;.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="section" id="quirking-the-quirky"&gt;
+&lt;/section&gt;
+&lt;section id="quirking-the-quirky"&gt;
 &lt;h2&gt;Quirking the quirky&lt;/h2&gt;
 &lt;img alt="Emacs screenshot" class="align-right" src="../../_images/evil_emacs.png" style="width: 407.5px; height: 270.0px;" /&gt;
 &lt;p&gt;I’ll freely admit I’ve &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;vim&lt;/span&gt;&lt;/code&gt;ified my &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;emacs&lt;/span&gt;&lt;/code&gt;.  I use &lt;a class="reference external" href="https://github.com/emacs-evil/evil"&gt;evil&lt;/a&gt;, my mode line
@@ -404,8 +413,8 @@ switch to &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&
 screenshot in the buffer for &lt;em&gt;this&lt;/em&gt; post.  This example may be quite pointless&lt;a class="footnote-reference brackets" href="#id5" id="id2"&gt;2&lt;/a&gt;, but it can be nice to have &lt;a class="reference external" href="https://www.graphviz.org/"&gt;graphviz&lt;/a&gt; output class hierarchies in to
 a buffer or database schema popups(like below).&lt;/p&gt;
 &lt;img alt="Schema diagram" class="align-left" src="../../_images/immoral_model.png" style="width: 174.5px; height: 141.5px;" /&gt;
-&lt;/div&gt;
-&lt;div class="section" id="walking-the-branches"&gt;
+&lt;/section&gt;
+&lt;section id="walking-the-branches"&gt;
 &lt;h2&gt;Walking the branches&lt;/h2&gt;
 &lt;p&gt;I’ve decided to really dig in this time, not just switch on a whim.  I’m using
 &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;emacs&lt;/span&gt;&lt;/code&gt; and &lt;em&gt;only&lt;/em&gt; &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;emacs&lt;/span&gt;&lt;/code&gt; for a month, followed by &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;vim&lt;/span&gt;&lt;/code&gt; and &lt;em&gt;only&lt;/em&gt;
@@ -433,10 +442,12 @@ is very little point publishing it, as it can be summed up as “James
 pressed &lt;kbd class="kbd compound docutils literal notranslate"&gt;&lt;kbd class="kbd docutils literal notranslate"&gt;&amp;lt;C&lt;/kbd&gt;-&lt;kbd class="kbd docutils literal notranslate"&gt;x&amp;gt;$something&lt;/kbd&gt;&lt;/kbd&gt; and was surprised.”&lt;/p&gt;
 &lt;/dd&gt;
 &lt;/dl&gt;
-&lt;/div&gt;
-&lt;/div&gt;
+&lt;/section&gt;
+&lt;/section&gt;
 </content>
     <link href="https://jnrowe.github.io/articles/evil_emacs_steals_my_heart.html" rel="alternate"/>
+    <summary>Many of my co-workers use emacs, it is probably the most popular editor on
+our team and I understand why.Emacs screenshot</summary>
     <category term="emacs" label="emacs"/>
     <category term="vim" label="vim"/>
     <category term="evil" label="evil"/>

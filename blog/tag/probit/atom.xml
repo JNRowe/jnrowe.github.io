@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <id>https://jnrowe.github.io/</id>
   <title>JNRowe - Posts tagged probit</title>
-  <updated>2021-04-18T11:22:10.180396+00:00</updated>
+  <updated>2021-04-29T22:38:02.800446+00:00</updated>
   <link href="https://jnrowe.github.io/"/>
   <link href="https://jnrowe.github.io/blog/tag/probit/atom.xml" rel="self"/>
-  <generator uri="https://ablog.readthedocs.org/" version="0.10.17">ABlog</generator>
+  <generator uri="https://ablog.readthedocs.org/" version="0.10.18">ABlog</generator>
   <subtitle>Ramblings of a tired mind</subtitle>
   <entry>
     <id>https://jnrowe.github.io/articles/probits/index.html</id>
@@ -14,12 +14,12 @@
     <author>
       <name>James Rowe</name>
     </author>
-    <content type="html">&lt;div class="section" id="project-postmortems"&gt;
+    <content type="html">&lt;section id="project-postmortems"&gt;
 
 &lt;p&gt;One of my favourite things about the day job is the post-project analysis and
 postmortems, which we lovingly refer to as &lt;abbr title="Project Obituaries"&gt;probits&lt;/abbr&gt;
 internally.&lt;/p&gt;
-&lt;div class="section" id="background"&gt;
+&lt;section id="background"&gt;
 &lt;h2&gt;Background&lt;/h2&gt;
 &lt;p&gt;I work in heavily structured and standalone project-oriented environment.  In
 a decade I can count the number of fluid projects on three fingers.  As I write
@@ -31,18 +31,21 @@ and locked schedules is that you always know when a project is complete.  This
 also allows us to take advantage of that by inspecting the project as a whole,
 spotting the successes and failures within.  Probits are the more informal
 dialogue that we pin to the front of each folder.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="section" id="what-youll-find"&gt;
+&lt;/section&gt;
+&lt;section id="what-youll-find"&gt;
 &lt;h2&gt;What you’ll find&lt;/h2&gt;
 &lt;p&gt;I’ve recently decided I’d like to take a similar approach to some side projects
 that I work on, and also try to apply the methods to some more real-life
 situations.  This category, and the accompanying index, below are that attempt.&lt;/p&gt;
 &lt;div class="toctree-wrapper compound"&gt;
 &lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
+&lt;/section&gt;
+&lt;/section&gt;
 </content>
     <link href="https://jnrowe.github.io/articles/probits/index.html" rel="alternate"/>
+    <summary>One of my favourite things about the day job is the post-project analysis and
+postmortems, which we lovingly refer to as probits
+internally.</summary>
     <category term="probit" label="probit"/>
     <published>2014-06-30T00:00:00+01:00</published>
   </entry>

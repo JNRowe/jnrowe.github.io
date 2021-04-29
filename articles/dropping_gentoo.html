@@ -4,7 +4,8 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17: http://docutils.sourceforge.net/" />
+
     <title>Dropping Gentoo &#8212; JNRowe</title>
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <link rel="stylesheet" href="../_static/alabaster.css" type="text/css" />
@@ -74,7 +75,7 @@
       5 minutes
     </p>
   
-  <div class="section" id="dropping-gentoo">
+  <section id="dropping-gentoo">
 <h1>Dropping Gentoo<a class="headerlink" href="#dropping-gentoo" title="Permalink to this headline">¶</a></h1>
 <p>We’ve been using <a class="reference external" href="http://gentoo.org">Gentoo</a> for shipped products since June 2005, and as
 a development platform since September 2004.  A long time, an incredibly long
@@ -87,7 +88,7 @@ and it takes only a little inside knowledge to know why.</p>
 <p>A couple of people have rightly pointed out that I was a little harsh in
 this document, so I’ve pushed a <a class="reference internal" href="dropping_gentoo_reflex.html"><span class="doc">followup</span></a>.</p>
 </div>
-<div class="section" id="landscapes-have-changed">
+<section id="landscapes-have-changed">
 <h2>Landscapes have changed<a class="headerlink" href="#landscapes-have-changed" title="Permalink to this headline">¶</a></h2>
 <p>Back when we started using Gentoo it was clearly the best choice for what we
 needed; a easily coercible base on which to construct our Linux devices.  There
@@ -101,8 +102,8 @@ already floating about for most of them.</p>
 have meant taking on the support costs of the entire stack which nobody wanted
 to commit to.  As it turns out that burden slowly crept up on us over the next
 ten years anyway.</p>
-</div>
-<div class="section" id="take-a-left-in-100-metres">
+</section>
+<section id="take-a-left-in-100-metres">
 <h2>Take a left in 100 metres<a class="headerlink" href="#take-a-left-in-100-metres" title="Permalink to this headline">¶</a></h2>
 <p>Over the years we regrettably diverged heavily from upstream, almost to the
 point that saying we use Gentoo almost feels like a lie.</p>
@@ -125,8 +126,8 @@ once promised(perhaps in part because of that <abbr title="Contributor License A
 <p>Had we waited another five months, there would have been another open source
 package manager for Gentoo we could have easily switched to and hacked on.
 There is perhaps a pattern here…</p>
-</div>
-<div class="section" id="upstreaming-changes">
+</section>
+<section id="upstreaming-changes">
 <h2>Upstreaming changes<a class="headerlink" href="#upstreaming-changes" title="Permalink to this headline">¶</a></h2>
 <p>Of course, running a non-standard package manager and a thick layer of custom
 packages at the bottom of the stack made contributing changes back upstream very
@@ -162,8 +163,8 @@ like this:</p>
 <p>That genuinely upsets me greatly.  The amount of potential duplicated effort
 they represent is enormous, and I don’t even want to attempt to put a figure on
 it.</p>
-</div>
-<div class="section" id="supporting-upstream">
+</section>
+<section id="supporting-upstream">
 <h2>Supporting upstream<a class="headerlink" href="#supporting-upstream" title="Permalink to this headline">¶</a></h2>
 <p>We’re entirely to blame.  We always planned on supporting upstream in whichever
 way we could.  That fell down for instances beyond sending patches too.</p>
@@ -185,8 +186,8 @@ conference with a potential sponsor and the same developer.  Evening beers were
 met with other people telling stories about that same person, which was a shame
 as it probably cost them a few good cash and infrastructure sponsors that day
 alone.</p>
-</div>
-<div class="section" id="support-costs">
+</section>
+<section id="support-costs">
 <h2>Support costs<a class="headerlink" href="#support-costs" title="Permalink to this headline">¶</a></h2>
 <p>Over time we’ve come to support most of the tree that people refer to as
 <code class="docutils literal notranslate"><span class="pre">gentoo-x86</span></code> ourselves.  The toolchain changes we needed at the time
@@ -194,23 +195,23 @@ necessitated supporting a few packages further up the stack.  Our desire to trim
 the tree of a few categories that were problematic, meant replacing a variety of
 packages with then unavailable dependencies.</p>
 <p>And there were many other examples too…</p>
-<div class="section" id="matchbox">
+<section id="matchbox">
 <h3>matchbox<a class="headerlink" href="#matchbox" title="Permalink to this headline">¶</a></h3>
 <p>We packaged <a class="reference internal" href="#matchbox">matchbox</a> and its associated packages a long, long time before they
 hit the official tree.  It was the first real pain point we had with packages
 appearing in the tree after we had already been using them.</p>
 <p>When they did eventually hit the tree we had to carry workarounds for years.  At
 some point we stopped trying and just scrubbed the ebuilds that got in the way.</p>
-</div>
-<div class="section" id="python">
+</section>
+<section id="python">
 <h3>Python<a class="headerlink" href="#python" title="Permalink to this headline">¶</a></h3>
 <p>The state of the Python packaging a few years ago made us take the jump to
 replace or remove anything that packaged a Python module.  Initially very time
 consuming, but it saved an enormous amount of grief.</p>
 <p>I suspect we could move closer to upstream at this point, but the point is now
 moot.</p>
-</div>
-<div class="section" id="systemd">
+</section>
+<section id="systemd">
 <h3>systemd<a class="headerlink" href="#systemd" title="Permalink to this headline">¶</a></h3>
 <p>We switched to <code class="docutils literal notranslate"><span class="pre">systemd</span></code> before the package was in upstream’s tree, and we
 have had to keep supporting it to this day because of insurmountable packaging
@@ -220,8 +221,8 @@ where differences create issues.  And it clearly means taking on any package
 that depends on <code class="docutils literal notranslate"><span class="pre">openrc</span></code> or Gentoo’s <code class="docutils literal notranslate"><span class="pre">baselayout</span></code> package.  Those packages
 are becoming fewer and fewer by the day though, so that would have become
 a non-issue.</p>
-</div>
-<div class="section" id="x-org">
+</section>
+<section id="x-org">
 <h3>X.org<a class="headerlink" href="#x-org" title="Permalink to this headline">¶</a></h3>
 <p>We had been packaging x.org’s packages to work around some implementation
 differences with upstream since the dawn of modular X.  Mostly just to do with
@@ -229,17 +230,17 @@ how dependencies were specified to start with, but they’re no longer even
 remotely similar.</p>
 <p>Luckily there isn’t a great deal of churn in the packages we care about for the
 most part, so it never caused a huge time sink.</p>
-</div>
-</div>
-<div class="section" id="the-end-is-nigh">
+</section>
+</section>
+<section id="the-end-is-nigh">
 <h2>The end is nigh<a class="headerlink" href="#the-end-is-nigh" title="Permalink to this headline">¶</a></h2>
 <p>At some point it began to feel like we were maintaining our own distribution
 from end-to-end, and that wasn’t fun.  It also wasn’t what any of us needed to
 do, and the time it was taking measurably ate in to <em>real</em> project time.</p>
 <p>The decision to start weaning ourselves off of Gentoo was made back in the
 summer of last year, and it has finally started to come in to effect.</p>
-</div>
-<div class="section" id="the-times-they-are-a-changing">
+</section>
+<section id="the-times-they-are-a-changing">
 <h2>The Times They Are a-Changing<a class="headerlink" href="#the-times-they-are-a-changing" title="Permalink to this headline">¶</a></h2>
 <p>There are plenty of good alternatives out there now for building systems that
 need to run on a variety of architectures.  Some binary, some source-based and
@@ -260,8 +261,8 @@ makes working with Debian a lot easier, so thanks guys!</p>
 yet no concrete decisions have been made, but I feel like we’re on the right
 track for the next ten years.</p>
 <p>So long Gentoo, and thanks for all fish!</p>
-</div>
-</div>
+</section>
+</section>
 
     <hr>
 

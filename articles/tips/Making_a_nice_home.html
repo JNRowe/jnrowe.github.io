@@ -4,7 +4,8 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17: http://docutils.sourceforge.net/" />
+
     <title>Making a nice home &#8212; JNRowe</title>
     <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/alabaster.css" type="text/css" />
@@ -74,7 +75,7 @@
       3 minutes
     </p>
   
-  <div class="section" id="making-a-nice-home">
+  <section id="making-a-nice-home">
 <h1>Making a nice home<a class="headerlink" href="#making-a-nice-home" title="Permalink to this headline">¶</a></h1>
 <p>Back in <span class="xref std std-ref">Kick_me_birthday_reminders</span> I said:</p>
 <blockquote>
@@ -94,8 +95,8 @@ we’re going to pretend we haven’t read <a class="reference external" href="h
 I don’t heed its advice for the <code class="file docutils literal notranslate"><span class="pre">Makefile</span></code> I have in my home directory.
 That said, let’s have a look at what can be found in my current top-level
 <code class="file docutils literal notranslate"><span class="pre">Makefile</span></code>.</p>
-</div>
-<div class="section" id="permissions">
+</section>
+<section id="permissions">
 <h1>Permissions<a class="headerlink" href="#permissions" title="Permalink to this headline">¶</a></h1>
 <p>I keep my home directory version controlled with <strong class="command">git</strong>, but
 <strong class="command">git</strong> out of the box doesn’t maintain permissions on files(beyond the
@@ -114,8 +115,8 @@ the permissions when they’re needed:</p>
 </div>
 <p>If this rule is called after a <strong class="command">git pull</strong> is issued then the files
 always have the correct permissions.</p>
-</div>
-<div class="section" id="vim-hacks">
+</section>
+<section id="vim-hacks">
 <h1>vim hacks<a class="headerlink" href="#vim-hacks" title="Permalink to this headline">¶</a></h1>
 <p>I also call <strong class="command">make</strong> in some subdirectories, the most interesting one is
 probably for <code class="docutils literal notranslate"><span class="pre">.vim</span></code>:</p>
@@ -148,8 +149,8 @@ they aren’t often useful in <a class="reference external" href="http://vimdoc.
 the tags database for normal use.</p>
 <p>The final entry in <strong class="makevar">TARGETS</strong> simply updates the tag lists for <a class="reference external" href="http://vimdoc.sourceforge.net/htmldoc/various.html#:helptags">help
 files</a> installed in <code class="docutils literal notranslate"><span class="pre">~/.vim/doc</span></code>.</p>
-</div>
-<div class="section" id="documentation">
+</section>
+<section id="documentation">
 <h1>Documentation<a class="headerlink" href="#documentation" title="Permalink to this headline">¶</a></h1>
 <p>The final subdirectory <code class="file docutils literal notranslate"><span class="pre">Makefile</span></code> we’re going to look at is actually
 called in a number of different directories to create <abbr title="HyperText Markup Language">HTML</abbr> versions of
@@ -166,7 +167,7 @@ called in a number of different directories to create <abbr title="HyperText Mar
 pull or merge we always have up to date processed versions of documents.  It is
 like having a personal web viewable wiki, but without having to use an awful
 markup language.</p>
-</div>
+</section>
 
     <hr>
 

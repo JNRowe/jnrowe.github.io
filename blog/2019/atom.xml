@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <id>https://jnrowe.github.io/</id>
   <title>JNRowe - Posted in 2019</title>
-  <updated>2021-04-18T11:22:03.250772+00:00</updated>
+  <updated>2021-04-29T22:37:58.010307+00:00</updated>
   <link href="https://jnrowe.github.io/"/>
   <link href="https://jnrowe.github.io/blog/2019/atom.xml" rel="self"/>
-  <generator uri="https://ablog.readthedocs.org/" version="0.10.17">ABlog</generator>
+  <generator uri="https://ablog.readthedocs.org/" version="0.10.18">ABlog</generator>
   <subtitle>Ramblings of a tired mind</subtitle>
   <entry>
     <id>https://jnrowe.github.io/articles/gps_rollover_2019.html</id>
@@ -14,7 +14,7 @@
     <author>
       <name>James Rowe</name>
     </author>
-    <content type="html">&lt;div class="section" id="gps-rollover-2019"&gt;
+    <content type="html">&lt;section id="gps-rollover-2019"&gt;
 
 &lt;p&gt;Tomorrow we’re going to experience the simultaneously cataclysmic and mundane
 consequences of a &lt;abbr title="Global Positioning System"&gt;GPS&lt;/abbr&gt; rollover event.  &lt;em&gt;Many&lt;/em&gt; things will break, &lt;em&gt;many&lt;/em&gt; will
@@ -27,13 +27,13 @@ of date handling never ends.&lt;/p&gt;
 hardware I’m involved in building then contact your support channel, they
 are there to help.&lt;/p&gt;
 &lt;/div&gt;
-&lt;div class="section" id="what-is-the-issue"&gt;
+&lt;section id="what-is-the-issue"&gt;
 &lt;h2&gt;What is the issue?&lt;/h2&gt;
 &lt;p&gt;Since 1981 &lt;abbr title="Global Positioning System"&gt;GPS&lt;/abbr&gt; signals have included a week number, which is provided as
 a 10-bit field and as such can only store 1024 values(around 19.5 years).
 Every time we hit that limit the week number rolls back to zero, and things may
 fail to work correctly following that.&lt;/p&gt;
-&lt;div class="sidebar"&gt;
+&lt;aside class="sidebar"&gt;
 &lt;p class="sidebar-title"&gt;Prior to ‘81&lt;/p&gt;
 &lt;p&gt;As a side note very early &lt;abbr title="Global Positioning System"&gt;GPS&lt;/abbr&gt; transmissions didn’t even include week
 numbers in the signal.  Time was represented simply as a value &lt;em&gt;within&lt;/em&gt;
@@ -44,17 +44,17 @@ issues that are caused by this.&lt;/p&gt;
 upgrades to the &lt;abbr title="Global Positioning System"&gt;GPS&lt;/abbr&gt; signal over the approaching fifty years of its
 development.  Coupled with the out of band enhancements such as &lt;abbr title="Wide Area Augmentation System"&gt;WAAS&lt;/abbr&gt;, the accuracy and uses of &lt;abbr title="Global Positioning System"&gt;GPS&lt;/abbr&gt;-based
 systems have increased a tremendous amount.&lt;/p&gt;
-&lt;/div&gt;
+&lt;/aside&gt;
 &lt;p&gt;This is the second operational rollover event, the first happened in August
 1999.  We — that is developers of &lt;abbr title="Global Navigation Satellite System"&gt;GNSS&lt;/abbr&gt;-using systems — &lt;em&gt;are&lt;/em&gt; prepared for
 this, but the level of preparedness is unfortunately not uniform or indicative
 of how well we’re handling this.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="section" id="mitigations"&gt;
+&lt;/section&gt;
+&lt;section id="mitigations"&gt;
 &lt;h2&gt;Mitigations&lt;/h2&gt;
 &lt;p&gt;As this problem is quite well understood there has been an awful lot of effort
 put in to working around it, some quite simple and some quite interesting.&lt;/p&gt;
-&lt;div class="section" id="stored-offset"&gt;
+&lt;section id="stored-offset"&gt;
 &lt;h3&gt;Stored offset&lt;/h3&gt;
 &lt;p&gt;The gold standard is systems that could afford the addition of &lt;abbr title="Non-Volatile Random Access Memory"&gt;NVRAM&lt;/abbr&gt;.  If we have a storage medium then the
 previous known week number is often used as a check against rollover.  If we
@@ -63,8 +63,8 @@ changeover at &lt;em&gt;some&lt;/em&gt; point than you &lt;em&gt;shouldn’t&lt;
 a rollover.&lt;/p&gt;
 &lt;p&gt;The obvious drawback being if a system is dormant for twenty years, but that
 isn’t likely to be a real problem.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="section" id="week-number-offset"&gt;
+&lt;/section&gt;
+&lt;section id="week-number-offset"&gt;
 &lt;h3&gt;Week number offset&lt;/h3&gt;
 &lt;p&gt;One of the most common mechanisms for dealing with rollover has been to bind it
 to the firmware running on the device.  You simply assume the week number is
@@ -83,8 +83,8 @@ problems at various stages of their lives.  In the above example our system
 &lt;em&gt;should&lt;/em&gt; work through the epoch change in 2019, but will likely fail in August
 2029 without intervention as we’ll trip over &lt;em&gt;our&lt;/em&gt; workaround with our own
 rollover bug causing it to reset to 2010.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="section" id="gnss-voting-comparisons"&gt;
+&lt;/section&gt;
+&lt;section id="gnss-voting-comparisons"&gt;
 &lt;h3&gt;&lt;abbr title="Global Navigation Satellite System"&gt;GNSS&lt;/abbr&gt; voting comparisons&lt;/h3&gt;
 &lt;p&gt;Many modern receivers support multiple signals; &lt;abbr title="Global Positioning System"&gt;GPS&lt;/abbr&gt;, GLONASS, Beidou, &amp;amp;c.
 Given this we can use consensus building to validate information.  If one of
@@ -96,8 +96,8 @@ simply exclude it.&lt;/p&gt;
 low quality &lt;abbr title="Real Time Clock"&gt;RTC&lt;/abbr&gt;, these can also be used as a hint
 towards consensus building too.&lt;/p&gt;
 &lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="section" id="leap-second-heuristic"&gt;
+&lt;/section&gt;
+&lt;section id="leap-second-heuristic"&gt;
 &lt;h3&gt;Leap second heuristic&lt;/h3&gt;
 &lt;p&gt;&lt;abbr title="Global Positioning System"&gt;GPS&lt;/abbr&gt; time is not corrected for leap seconds and as such increasingly drifts
 from &lt;abbr title="Coordinated Universal Time"&gt;UTC&lt;/abbr&gt; over the years.  However, the current offset from &lt;abbr title="Coordinated Universal Time"&gt;UTC&lt;/abbr&gt; is
@@ -116,9 +116,9 @@ available immediately following a cold boot of a device.  Depending on
 circumstances the 12 minute wait to acquire the almanac data may not be an
 issue.&lt;/p&gt;
 &lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="section" id="what-should-i-do"&gt;
+&lt;/section&gt;
+&lt;/section&gt;
+&lt;section id="what-should-i-do"&gt;
 &lt;h2&gt;What should I do?&lt;/h2&gt;
 &lt;p&gt;First check with your system’s supplier, they &lt;em&gt;should&lt;/em&gt; have information on what
 mitigations they have in place and what effects you should see now or at other
@@ -136,8 +136,8 @@ anything beyond report “spoofing detected” if it receives unexpected
 signals, with the exception of a &lt;abbr title="Trust On First Use"&gt;TOFU&lt;/abbr&gt; event
 following a deep reset.&lt;/p&gt;
 &lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="section" id="should-i-set-an-alarm-for-november-2038"&gt;
+&lt;/section&gt;
+&lt;section id="should-i-set-an-alarm-for-november-2038"&gt;
 &lt;h2&gt;Should I set an alarm for November 2038?&lt;/h2&gt;
 &lt;p&gt;Yes and no.&lt;/p&gt;
 &lt;p&gt;The next rollover will occur in 2038, but new message types that use a 13-bit
@@ -163,10 +163,14 @@ co-workers(forgive me!) in this.  People make mistakes, systems fail and
 skies may fall; having a good testing infrastructure is a must.&lt;/p&gt;
 &lt;/dd&gt;
 &lt;/dl&gt;
-&lt;/div&gt;
-&lt;/div&gt;
+&lt;/section&gt;
+&lt;/section&gt;
 </content>
     <link href="https://jnrowe.github.io/articles/gps_rollover_2019.html" rel="alternate"/>
+    <summary>Tomorrow we’re going to experience the simultaneously cataclysmic and mundane
+consequences of a GPS rollover event.  Many things will break, many will
+continue to work and many will just take a step closer to breaking… the fun
+of date handling never ends.Pick a year, win a prize</summary>
     <category term="gps" label="gps"/>
     <category term="time" label="time"/>
     <category term="bugs" label="bugs"/>
@@ -179,7 +183,7 @@ skies may fall; having a good testing infrastructure is a must.&lt;/p&gt;
     <author>
       <name>James Rowe</name>
     </author>
-    <content type="html">&lt;div class="section" id="i-have-a-secret"&gt;
+    <content type="html">&lt;section id="i-have-a-secret"&gt;
 
 &lt;p&gt;A terrible secret haunts me, at times daily… I have virtually &lt;em&gt;no&lt;/em&gt; &lt;a class="reference external" href="https://en.m.wikipedia.org/wiki/SQL"&gt;SQL&lt;/a&gt; skills.&lt;/p&gt;
 &lt;p&gt;Somehow I’m nearly twenty years in to my career and I possess so little &lt;abbr title="Structured Query Language"&gt;SQL&lt;/abbr&gt;
@@ -199,7 +203,7 @@ their data storage, or that query remote &lt;a class="reference external" href="
 I know &lt;em&gt;what&lt;/em&gt; an &lt;a class="reference external" href="https://en.m.wikipedia.org/wiki/N+1_Select_Problem"&gt;n+1 problem&lt;/a&gt; is, but I’ll still create them through lack of
 forethought from time to time.  It is just that my knowledge stops right about
 there.&lt;/p&gt;
-&lt;div class="section" id="orm-usage"&gt;
+&lt;section id="orm-usage"&gt;
 &lt;h2&gt;&lt;abbr title="Object Relational Mapping"&gt;ORM&lt;/abbr&gt; usage&lt;/h2&gt;
 &lt;p&gt;The number one thing that has kept me away from a deeper understanding of &lt;abbr title="Structured Query Language"&gt;SQL&lt;/abbr&gt;
 is &lt;abbr title="Object Relational Mapping"&gt;ORM&lt;/abbr&gt;s.  Let us be honest, most of the time we interact with &lt;abbr title="Structured Query Language"&gt;SQL&lt;/abbr&gt; fronted
@@ -242,8 +246,8 @@ a single language can do &lt;em&gt;everything&lt;/em&gt; within our database and
 fit the bill.  It is just that people have coalesced around &lt;abbr title="Structured Query Language"&gt;SQL&lt;/abbr&gt; as &lt;em&gt;the only&lt;/em&gt;
 interface to relational databases over the decades, and as such we end up using
 two distinct languages far more often that we perhaps ought.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="section" id="editing"&gt;
+&lt;/section&gt;
+&lt;section id="editing"&gt;
 &lt;h2&gt;Editing&lt;/h2&gt;
 &lt;p&gt;When working with &lt;abbr title="Structured Query Language"&gt;SQL&lt;/abbr&gt; without an &lt;abbr title="Object Relational Mapping"&gt;ORM&lt;/abbr&gt; things change &lt;em&gt;greatly&lt;/em&gt;.  You find
 yourself having to consciously flip back and forward between mental models of
@@ -259,8 +263,8 @@ don’t really help such usage.  Everything is fine in &lt;a class="reference ex
 one can apply syntax highlighting and linting to specific regions of a file&lt;a class="footnote-reference brackets" href="#id4" id="id2"&gt;2&lt;/a&gt;.  For other editors, and most &lt;abbr title="Integrated Development Environment"&gt;IDEs&lt;/abbr&gt;, you’re often left floundering in a heap of unstructured literal
 strings peppered all over the place.&lt;/p&gt;
 &lt;img alt="Multi-language highlighting in vim" src="../_images/vim_py_sql.png" /&gt;
-&lt;/div&gt;
-&lt;div class="section" id="wait-am-i-talking-myself-out-of-learning"&gt;
+&lt;/section&gt;
+&lt;section id="wait-am-i-talking-myself-out-of-learning"&gt;
 &lt;h2&gt;Wait, am I talking myself out of learning?&lt;/h2&gt;
 &lt;p&gt;I know this has sounded like a sweetheart letter aimed at
 &lt;a class="reference external" href="http://www.sqlalchemy.org/"&gt;sqlalchemy&lt;/a&gt;/&lt;a class="reference external" href="http://www.rubyonrails.org/"&gt;activerecord&lt;/a&gt;/&lt;a class="reference external" href="http://www.codesynthesis.com/products/odb"&gt;odb&lt;/a&gt;, but it isn’t meant that way.  Okay, it kinda of
@@ -269,8 +273,8 @@ is.  However, I want to know more.&lt;/p&gt;
 understanding of what is causing slowdowns with complex queries, or having to
 reach for a manual to remember little things like how to manage collation
 rules.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="section" id="acceptance"&gt;
+&lt;/section&gt;
+&lt;section id="acceptance"&gt;
 &lt;h2&gt;Acceptance&lt;/h2&gt;
 &lt;p&gt;Now that I’ve accepted this fact enough to scribble this note I’m going to do
 something to fix it.&lt;/p&gt;
@@ -289,10 +293,11 @@ excellent &lt;a class="reference external" href="https://github.com/chrisbra/Nrr
 complex &lt;abbr title="Structured Query Language"&gt;SQL&lt;/abbr&gt; embedded in another language’s files.&lt;/p&gt;
 &lt;/dd&gt;
 &lt;/dl&gt;
-&lt;/div&gt;
-&lt;/div&gt;
+&lt;/section&gt;
+&lt;/section&gt;
 </content>
     <link href="https://jnrowe.github.io/thoughts/i_have_a_secret.html" rel="alternate"/>
+    <summary>A terrible secret haunts me, at times daily… I have virtually no SQL skills.Sad reality of SQL knowledge</summary>
     <category term="databases" label="databases"/>
     <category term="learning" label="learning"/>
     <category term="sql" label="sql"/>
@@ -305,7 +310,7 @@ complex &lt;abbr title="Structured Query Language"&gt;SQL&lt;/abbr&gt; embedded 
     <author>
       <name>James Rowe</name>
     </author>
-    <content type="html">&lt;div class="section" id="advent-of-code-2019"&gt;
+    <content type="html">&lt;section id="advent-of-code-2019"&gt;
 
 &lt;p&gt;With a touch of sadness, I’ve given up on &lt;abbr title="Advent of Code"&gt;AoC&lt;/abbr&gt; for this year.  I’m writing this
 as a journal entry, more for myself than others.  You’ve been warned!&lt;/p&gt;
@@ -315,7 +320,7 @@ as a journal entry, more for myself than others.  You’ve been warned!&lt;/p&gt
 it.  If you’re enjoying it, &lt;em&gt;or&lt;/em&gt; currently screaming at it, &lt;a class="reference external" href="https://adventofcode.com/2019/support"&gt;tip the
 creator&lt;/a&gt; so that we can smile and shout at it next year.&lt;/p&gt;
 &lt;/div&gt;
-&lt;div class="section" id="why-quit"&gt;
+&lt;section id="why-quit"&gt;
 &lt;h2&gt;Why quit?&lt;/h2&gt;
 &lt;p&gt;The puzzles aren’t my cup of tea this year, but I’m not complaining.  Our
 leader board for the office has twice as many people as last year, so clearly it
@@ -326,8 +331,8 @@ the type of puzzles I’ve completed, and if I wanted more of that I could knock
 some real items off my to–do list.&lt;/p&gt;
 &lt;p&gt;I have 22 stars for completing both parts of every day so far this year, but
 I’m taking a break until I have a bit more downtime.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="section" id="day-1"&gt;
+&lt;/section&gt;
+&lt;section id="day-1"&gt;
 &lt;h2&gt;Day 1&lt;/h2&gt;
 &lt;ul class="simple"&gt;
 &lt;li&gt;&lt;p&gt;&lt;a class="reference external" href="https://adventofcode.com/2019/day/1"&gt;The Tyranny of the Rocket Equation&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
@@ -381,8 +386,8 @@ simply dividing &lt;code class="docutils literal notranslate"&gt;&lt;span class=
 idiocy with a bug that foolish, but luckily I’m too stoopid to find it.  I’m
 admitting this in the open to remind myself to think a little more in the
 following days.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="section" id="day-2"&gt;
+&lt;/section&gt;
+&lt;section id="day-2"&gt;
 &lt;span id="day-two-label"&gt;&lt;/span&gt;&lt;h2&gt;Day 2&lt;/h2&gt;
 &lt;ul class="simple"&gt;
 &lt;li&gt;&lt;p&gt;&lt;a class="reference external" href="https://adventofcode.com/2018/day/2"&gt;Inventory Management System&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
@@ -428,8 +433,8 @@ Computers are fast enough that even noodling about optimisation for this is
 a wasteful trade off.  Instead, I spent a few minutes making my test runner
 output colours on failures for the greater good.&lt;/p&gt;
 &lt;img alt="|AOC| example runner failure" src="../_images/2019-12-11-advent_of_code.png" /&gt;
-&lt;/div&gt;
-&lt;div class="section" id="day-3"&gt;
+&lt;/section&gt;
+&lt;section id="day-3"&gt;
 &lt;h2&gt;Day 3&lt;/h2&gt;
 &lt;ul class="simple"&gt;
 &lt;li&gt;&lt;p&gt;&lt;a class="reference external" href="https://adventofcode.com/2019/day/3"&gt;Crossed Wires&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
@@ -455,8 +460,8 @@ a little.&lt;/p&gt;
 functionality that Python gives us.  Instead of needing to write our own matcher
 to find the overlapping wires, we can simply call &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;wire1.keys()&lt;/span&gt; &lt;span class="pre"&gt;&amp;amp;&lt;/span&gt; &lt;span class="pre"&gt;wire2&lt;/span&gt;&lt;/code&gt; and
 Python gives us the intersection points directly.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="section" id="day-4"&gt;
+&lt;/section&gt;
+&lt;section id="day-4"&gt;
 &lt;h2&gt;Day 4&lt;/h2&gt;
 &lt;ul class="simple"&gt;
 &lt;li&gt;&lt;p&gt;&lt;a class="reference external" href="https://adventofcode.com/2019/day/4"&gt;Secure Container&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
@@ -514,8 +519,8 @@ match by using a positive look behind to effectually make the match available
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
 &lt;p&gt;We wouldn’t want to do that though, as it makes kittens weep.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="section" id="day-5"&gt;
+&lt;/section&gt;
+&lt;section id="day-5"&gt;
 &lt;span id="day-five-label"&gt;&lt;/span&gt;&lt;h2&gt;Day 5&lt;/h2&gt;
 &lt;ul class="simple"&gt;
 &lt;li&gt;&lt;p&gt;&lt;a class="reference external" href="https://adventofcode.com/2019/day/5"&gt;Sunny with a Chance of Asteroids&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
@@ -543,8 +548,8 @@ with human-readable and &lt;abbr title="JavaScript Object Notation"&gt;JSON&lt;/
 MovieOS memory display while running, tacking on &lt;a class="reference external" href="http://blockdiag.com/"&gt;seqdiag&lt;/a&gt; output for bug
 inspection was glossy, and optimising it in ridiculous ways with branch
 prediction to take some advantage of all my &lt;abbr title="Central Processing Unit"&gt;CPU&lt;/abbr&gt; cores was a lot of fun.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="section" id="day-6"&gt;
+&lt;/section&gt;
+&lt;section id="day-6"&gt;
 &lt;h2&gt;Day 6&lt;/h2&gt;
 &lt;ul class="simple"&gt;
 &lt;li&gt;&lt;p&gt;&lt;a class="reference external" href="https://adventofcode.com/2019/day/6"&gt;Universal Orbit Map&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
@@ -586,8 +591,8 @@ wanted to read about &lt;strong class="command"&gt;ccomps&lt;/strong&gt;, &lt;st
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="section" id="day-7"&gt;
+&lt;/section&gt;
+&lt;section id="day-7"&gt;
 &lt;h2&gt;Day 7&lt;/h2&gt;
 &lt;ul class="simple"&gt;
 &lt;li&gt;&lt;p&gt;&lt;a class="reference external" href="https://adventofcode.com/2019/day/7"&gt;Amplification Circuit&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
@@ -636,8 +641,8 @@ contains nothing new or interesting.  If you’re doing something similar
 I strongly suggest getting to know the &lt;a class="reference external" href="http://zsh.sourceforge.net/Doc/Release/Shell-Builtin-Commands.html#Shell-Builtin-Commands"&gt;fc builtin&lt;/a&gt;, which allows you to edit
 your shell session in a real editor instead of needing to manually switch
 between your editor and terminal when composing more complex shell blocks.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="section" id="day-8"&gt;
+&lt;/section&gt;
+&lt;section id="day-8"&gt;
 &lt;h2&gt;Day 8&lt;/h2&gt;
 &lt;ul class="simple"&gt;
 &lt;li&gt;&lt;p&gt;&lt;a class="reference external" href="https://adventofcode.com/2019/day/8"&gt;Space Image Format&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
@@ -680,16 +685,18 @@ to write basically zero code:&lt;/p&gt;
 &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;if&lt;/span&gt;&lt;/code&gt; statement for readability when I moved it to a file.&lt;/p&gt;
 &lt;p&gt;As I wrote less than ten lines to submit my answers, I decided to make a little
 more work for myself.  I give you images of images…&lt;/p&gt;
-&lt;div class="figure align-default" id="id7"&gt;
+&lt;figure class="align-default" id="id7"&gt;
 &lt;a class="reference external image-reference" href="../_static/2019-12-11-space_image.mp4"&gt;&lt;img alt="Frames from the image decoding" src="../_images/2019-12-11-space_image.png" style="width: 319.44px; height: 221.76000000000002px;" /&gt;&lt;/a&gt;
-&lt;p class="caption"&gt;&lt;span class="caption-text"&gt;Click the image for an animation, if you want to see the image decoding.&lt;/span&gt;&lt;/p&gt;
-&lt;/div&gt;
+&lt;figcaption&gt;
+&lt;p&gt;&lt;span class="caption-text"&gt;Click the image for an animation, if you want to see the image decoding.&lt;/span&gt;&lt;/p&gt;
+&lt;/figcaption&gt;
+&lt;/figure&gt;
 &lt;p&gt;A more interesting question might be: without reversing the frames how quickly
 can we apply &lt;abbr title="Optical Character Recognition"&gt;OCR&lt;/abbr&gt; to guess the incomplete
 text?  Had the input data been larger it might have been an interesting approach
 to solving this puzzle.  Install &lt;a class="reference external" href="https://github.com/tesseract-ocr/"&gt;tesseract&lt;/a&gt;, figure it out and drop me a &lt;a class="reference external" href="mailto:jnrowe&amp;#37;&amp;#52;&amp;#48;gmail&amp;#46;com"&gt;mail&lt;/a&gt;.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="section" id="day-9"&gt;
+&lt;/section&gt;
+&lt;section id="day-9"&gt;
 &lt;h2&gt;Day 9&lt;/h2&gt;
 &lt;ul class="simple"&gt;
 &lt;li&gt;&lt;p&gt;&lt;a class="reference external" href="https://adventofcode.com/2019/day/9"&gt;Sensor Boost&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
@@ -697,8 +704,8 @@ to solving this puzzle.  Install &lt;a class="reference external" href="https://
 &lt;p&gt;Hrmmph.  The puzzle text took me longer to read than the extra opcode and mode
 took to add to my interpreter.  There was nothing new or noteworthy in the
 implementation either, just another state variable and &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;switch&lt;/span&gt;&lt;/code&gt; arm.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="section" id="day-10"&gt;
+&lt;/section&gt;
+&lt;section id="day-10"&gt;
 &lt;h2&gt;Day 10&lt;/h2&gt;
 &lt;ul class="simple"&gt;
 &lt;li&gt;&lt;p&gt;&lt;a class="reference external" href="https://adventofcode.com/2019/day/10"&gt;Monitoring Station&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
@@ -723,8 +730,8 @@ advantage of &lt;a class="reference external" href="https://numpy.org/doc/1.16/r
 over.&lt;/p&gt;
 &lt;p&gt;The other thing I learnt is my co-worker Karl is &lt;em&gt;amazing&lt;/em&gt;, his solution
 included a &lt;a class="reference external" href="http://www.pygame.org/"&gt;pygame&lt;/a&gt;-based radar sweep display of the asteroid field.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="section" id="day-11"&gt;
+&lt;/section&gt;
+&lt;section id="day-11"&gt;
 &lt;h2&gt;Day 11&lt;/h2&gt;
 &lt;p&gt;I’ve kind of lost interest today.  This puzzle was largely just tying your
 &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;IntCode&lt;/span&gt;&lt;/code&gt; interpreter in to a &lt;a class="reference external" href="https://en.m.wikipedia.org/wiki/Logo_(programming_language)"&gt;Logo&lt;/a&gt;-esque walker from various other puzzles,
@@ -732,8 +739,8 @@ it felt more like busywork than an actual challenge.&lt;/p&gt;
 &lt;p&gt;I’m pretty sure I’ll come back to &lt;abbr title="Advent of Code"&gt;AoC&lt;/abbr&gt; 2019 during my Winterval break, but that
 is it for now.&lt;/p&gt;
 &lt;img alt="Calendar showing current count of 22 stars" src="../_images/2019-12-11-aoc_calendar.png" /&gt;
-&lt;/div&gt;
-&lt;div class="section" id="tips"&gt;
+&lt;/section&gt;
+&lt;section id="tips"&gt;
 &lt;h2&gt;Tips&lt;/h2&gt;
 &lt;p&gt;I’m mostly repeating my tips from &lt;span class="xref std std-doc"&gt;last year&lt;/span&gt; and the
 &lt;span class="xref std std-doc"&gt;year before&lt;/span&gt;.&lt;/p&gt;
@@ -752,8 +759,8 @@ editor’s &lt;a class="reference external" href="https://github.com/SirVer/ulti
 &lt;p&gt;And finally, keep your old solutions around either in files or in your &lt;abbr title="Read–Eval–Print Loop"&gt;REPL&lt;/abbr&gt;’s
 history as you’ll probably end up revisiting them, if not this year then maybe
 in the next.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="section" id="hopes-for-2020"&gt;
+&lt;/section&gt;
+&lt;section id="hopes-for-2020"&gt;
 &lt;h2&gt;Hopes for 2020?&lt;/h2&gt;
 &lt;p&gt;Repeating number one from last year: That the options to pay for it are better
 next year.  Each year I have to find a friend to make a donation in my place as
@@ -779,10 +786,12 @@ a &lt;a class="reference external" href="mailto:jnrowe&amp;#37;&amp;#52;&amp;#48
 Simple, &lt;abbr title="Advent of Code"&gt;AoC&lt;/abbr&gt; always has a puzzle or two which benefit from using them.&lt;/p&gt;
 &lt;/dd&gt;
 &lt;/dl&gt;
-&lt;/div&gt;
-&lt;/div&gt;
+&lt;/section&gt;
+&lt;/section&gt;
 </content>
     <link href="https://jnrowe.github.io/articles/advent_of_code_2019.html" rel="alternate"/>
+    <summary>With a touch of sadness, I’ve given up on AoC for this year.  I’m writing this
+as a journal entry, more for myself than others.  You’ve been warned!|AOC| example runner failure</summary>
     <category term="adventofcode" label="adventofcode"/>
     <category term="coding" label="coding"/>
     <category term="puzzles" label="puzzles"/>

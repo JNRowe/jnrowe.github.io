@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <id>https://jnrowe.github.io/</id>
   <title>JNRowe - Posts tagged gmail</title>
-  <updated>2021-04-18T11:22:09.300684+00:00</updated>
+  <updated>2021-04-29T22:38:01.982535+00:00</updated>
   <link href="https://jnrowe.github.io/"/>
   <link href="https://jnrowe.github.io/blog/tag/gmail/atom.xml" rel="self"/>
-  <generator uri="https://ablog.readthedocs.org/" version="0.10.17">ABlog</generator>
+  <generator uri="https://ablog.readthedocs.org/" version="0.10.18">ABlog</generator>
   <subtitle>Ramblings of a tired mind</subtitle>
   <entry>
     <id>https://jnrowe.github.io/articles/tips/Importing_gmail_filters_in_mutt.html</id>
@@ -14,7 +14,7 @@
     <author>
       <name>James Rowe</name>
     </author>
-    <content type="html">&lt;div class="section" id="importing-gmail-filters-in-mutt"&gt;
+    <content type="html">&lt;section id="importing-gmail-filters-in-mutt"&gt;
 
 &lt;p&gt;On our company’s Linux list Ryan Abbott is preparing to move to &lt;a class="reference external" href="http://www.mutt.org/"&gt;mutt&lt;/a&gt;:&lt;/p&gt;
 &lt;blockquote&gt;
@@ -118,9 +118,10 @@ score ~fjohndoe@example.com -20
 &lt;p&gt;A few years ago I posted some of tricks and tips I use for &lt;a class="reference external" href="http://www.jnrowe.ukfsn.org/articles/configs/mutt.html"&gt;configuring mutt&lt;/a&gt;,
 which include some neat ways to colour and score mail on a per-folder basis.  It
 may be worth taking a quick look at if you use folders to organise your mails.&lt;/p&gt;
-&lt;/div&gt;
+&lt;/section&gt;
 </content>
     <link href="https://jnrowe.github.io/articles/tips/Importing_gmail_filters_in_mutt.html" rel="alternate"/>
+    <summary>On our company’s Linux list Ryan Abbott is preparing to move to mutt:</summary>
     <category term="gmail" label="gmail"/>
     <category term="mutt" label="mutt"/>
     <published>2009-10-08T00:00:00+01:00</published>

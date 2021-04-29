@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <id>https://jnrowe.github.io/</id>
   <title>JNRowe - Posts tagged awesome</title>
-  <updated>2021-04-18T11:22:05.811796+00:00</updated>
+  <updated>2021-04-29T22:38:00.615796+00:00</updated>
   <link href="https://jnrowe.github.io/"/>
   <link href="https://jnrowe.github.io/blog/tag/awesome/atom.xml" rel="self"/>
-  <generator uri="https://ablog.readthedocs.org/" version="0.10.17">ABlog</generator>
+  <generator uri="https://ablog.readthedocs.org/" version="0.10.18">ABlog</generator>
   <subtitle>Ramblings of a tired mind</subtitle>
   <entry>
     <id>https://jnrowe.github.io/articles/tips/Fancy_awesome_theming.html</id>
@@ -14,7 +14,7 @@
     <author>
       <name>James Rowe</name>
     </author>
-    <content type="html">&lt;div class="section" id="fancy-awesome-theming"&gt;
+    <content type="html">&lt;section id="fancy-awesome-theming"&gt;
 
 &lt;a class="reference external image-reference" href="/.images/2009-09-28-awesome_theming.png"&gt;&lt;img alt="Awesome screenshot" class="align-right" src="../../_images/2009-09-28-awesome_theming-mini.png" /&gt;&lt;/a&gt;
 &lt;p&gt;People, mostly named Neil Blake, who shouldn’t look over my shoulder ask:&lt;/p&gt;
@@ -56,9 +56,10 @@ background image, however that could also be achieved with ImageMagick when
 building the background image if it is desired.&lt;/p&gt;
 &lt;p&gt;Click on the thumbnail image above to see the full desktop image and the effect
 in full.&lt;/p&gt;
-&lt;/div&gt;
+&lt;/section&gt;
 </content>
     <link href="https://jnrowe.github.io/articles/tips/Fancy_awesome_theming.html" rel="alternate"/>
+    <summary>People, mostly named Neil Blake, who shouldn’t look over my shoulder ask:</summary>
     <category term="awesome" label="awesome"/>
     <category term="styling" label="styling"/>
     <published>2009-09-28T00:00:00+01:00</published>
@@ -70,7 +71,7 @@ in full.&lt;/p&gt;
     <author>
       <name>James Rowe</name>
     </author>
-    <content type="html">&lt;div class="section" id="simple-notifications-in-awesome"&gt;
+    <content type="html">&lt;section id="simple-notifications-in-awesome"&gt;
 
 &lt;p&gt;On seeing my window notifications in &lt;a class="reference external" href="https://awesomewm.org/"&gt;awesome&lt;/a&gt; from a screencast for a new
 project at work Matt Cooper asks:&lt;/p&gt;
@@ -142,8 +143,8 @@ specifically any character your font can display.  From time to time I’ve
 experimented with using &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;✔&lt;/span&gt;&lt;/code&gt; and &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;✘&lt;/span&gt;&lt;/code&gt;, but most of the fonts I prefer to use
 don’t display them correctly(if you’re seeing two boxes your fonts don’t
 either).&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="section" id="window-creation-notifications"&gt;
+&lt;/section&gt;
+&lt;section id="window-creation-notifications"&gt;
 &lt;h1&gt;Window creation notifications&lt;/h1&gt;
 &lt;p&gt;One of the notifications I like to have is for when new windows are opened, this
 way I don’t miss windows opening on tags I’m not currently viewing.&lt;/p&gt;
@@ -152,8 +153,8 @@ way I don’t miss windows opening on tags I’m not currently viewing.&lt;/p&gt
     &lt;span class="n"&gt;notify&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;start&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;&lt;/span&gt;&lt;span class="s"&gt;#{@name or &amp;#39;Application&amp;#39;} started&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="section" id="network-notifications"&gt;
+&lt;/section&gt;
+&lt;section id="network-notifications"&gt;
 &lt;h1&gt;Network notifications&lt;/h1&gt;
 &lt;p&gt;I also have the following &lt;a class="reference external" href="https://awesomewm.org/apidoc/libraries/gears.html"&gt;gears&lt;/a&gt; timer set to toggle my network monitor between
 &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;lo&lt;/span&gt;&lt;/code&gt; and &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;ppp0&lt;/span&gt;&lt;/code&gt; depending on whether my remote network interface is up.
@@ -175,9 +176,11 @@ switches the network graph widget to use the appropriate input too.&lt;/p&gt;
     &lt;span class="n"&gt;notify&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;start&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;&lt;/span&gt;&lt;span class="s"&gt;PPP0 interface has come #{state}&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
-&lt;/div&gt;
+&lt;/section&gt;
 </content>
     <link href="https://jnrowe.github.io/articles/tips/Simple_notifications_in_awesome.html" rel="alternate"/>
+    <summary>On seeing my window notifications in awesome from a screencast for a new
+project at work Matt Cooper asks:</summary>
     <category term="awesome" label="awesome"/>
     <published>2009-10-04T00:00:00+01:00</published>
   </entry>
@@ -188,7 +191,7 @@ switches the network graph widget to use the appropriate input too.&lt;/p&gt;
     <author>
       <name>James Rowe</name>
     </author>
-    <content type="html">&lt;div class="section" id="visual-vim-mode-identifier"&gt;
+    <content type="html">&lt;section id="visual-vim-mode-identifier"&gt;
 
 &lt;p&gt;Paul Kerry rants about his problems with &lt;a class="reference external" href="http://www.vim.org/"&gt;vim&lt;/a&gt; over the cooler today, and as
 a long time &lt;strong class="command"&gt;vim&lt;/strong&gt; user I found it hard not to respond to some of the
@@ -233,9 +236,12 @@ when we change mode:&lt;/p&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
 &lt;p&gt;Note that I didn’t say it was a good idea, just that it was possible!&lt;/p&gt;
-&lt;/div&gt;
+&lt;/section&gt;
 </content>
     <link href="https://jnrowe.github.io/articles/tips/Visual_vim_mode_identifier.html" rel="alternate"/>
+    <summary>Paul Kerry rants about his problems with vim over the cooler today, and as
+a long time vim user I found it hard not to respond to some of the
+points.</summary>
     <category term="awesome" label="awesome"/>
     <category term="vim" label="vim"/>
     <published>2009-10-13T00:00:00+01:00</published>

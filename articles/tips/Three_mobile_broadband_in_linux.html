@@ -4,7 +4,8 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17: http://docutils.sourceforge.net/" />
+
     <title>Three mobile broadband in Linux &#8212; JNRowe</title>
     <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/alabaster.css" type="text/css" />
@@ -74,7 +75,7 @@
       5 minutes
     </p>
   
-  <div class="section" id="three-mobile-broadband-in-linux">
+  <section id="three-mobile-broadband-in-linux">
 <h1>Three mobile broadband in Linux<a class="headerlink" href="#three-mobile-broadband-in-linux" title="Permalink to this headline">¶</a></h1>
 <p>Steve Lowry is picking up his <a class="reference external" href="http://three.co.uk">Three</a> modem this afternoon and asks on our
 internal Linux list if it supports Linux.</p>
@@ -92,12 +93,12 @@ wait until you plug it in to see what model it actually is.</p>
 <a class="reference external" href="http://www.gnome.org/projects/NetworkManager/">NetworkManager</a> and NetworkManager’s <a class="reference external" href="http://live.gnome.org/NetworkManager/MobileBroadband/ServiceProviders">mobile broadband provider database</a>.
 When I tested it on a friend’s install with that setup last month it worked out
 of the box, all you had to do was plug it in and select the network.</p>
-<div class="section" id="the-route-to-fail">
+<section id="the-route-to-fail">
 <h2>The route to fail<a class="headerlink" href="#the-route-to-fail" title="Permalink to this headline">¶</a></h2>
 <p>If, like me, you’d prefer not to install NetworkManager you can manually
 configure the device using <a class="reference external" href="http://www.samba.org/ppp">pppd</a>, and life is even easier now than it was when
 I did it as there is plenty more information available(including this I guess).</p>
-<div class="section" id="finding-the-apn">
+<section id="finding-the-apn">
 <h3>Finding the <abbr title="Access Point Name">APN</abbr><a class="headerlink" href="#finding-the-apn" title="Permalink to this headline">¶</a></h3>
 <p>The first thing you need is your provider’s <abbr title="Access Point Name">APN</abbr>, and the easiest place to
 find it is from the <a class="reference external" href="http://live.gnome.org/NetworkManager/MobileBroadband/ServiceProviders">NetworkManager database</a>.  If yours is not there you’ll
@@ -120,8 +121,8 @@ archivers, and the tool you actually need to extract the <code class="docutils l
 <a class="reference external" href="http://synce.sourceforge.net/synce/unshield.php">unshield</a>.  Contrary to my first idea <a class="reference external" href="http://www.cabextract.org.uk/">cabextract</a> doesn’t work, as these files
 are actually made by <code class="docutils literal notranslate"><span class="pre">installshield</span></code>.</p>
 <p>With the <abbr title="Access Point Name">APN</abbr> in hand all we need to do now is configure our system.</p>
-</div>
-<div class="section" id="kernel">
+</section>
+<section id="kernel">
 <h3>Kernel<a class="headerlink" href="#kernel" title="Permalink to this headline">¶</a></h3>
 <p>If you’re using a vendor supplied kernel the options we need are hopefully
 already enabled.  If they’re not, or you build your own kernels, there are few
@@ -136,8 +137,8 @@ mobile providers in general, partly because the data is already compressed.</p>
 <p>Then just rebuild the kernel, and check that the dongle shows up in
 <strong class="command">dmesg</strong> output when it is plugged in.  If it does we’re ready for the
 next step.</p>
-</div>
-<div class="section" id="etc-chatscripts-three">
+</section>
+<section id="etc-chatscripts-three">
 <h3>/etc/chatscripts/three<a class="headerlink" href="#etc-chatscripts-three" title="Permalink to this headline">¶</a></h3>
 <p>We need a <strong class="command">pppd</strong> chatscript for the connection, the format and
 settings of this file can be found in the <em class="manpage">chat(8)</em> manpage.  My
@@ -165,8 +166,8 @@ database.</p>
 <p>Notice the very short value for timeout, I’ve come to that value empirically.
 If the connection isn’t up after 3 seconds it is not coming up, and you’re just
 wasting time before you retry.</p>
-</div>
-<div class="section" id="etc-ppp-peers-three">
+</section>
+<section id="etc-ppp-peers-three">
 <h3>/etc/ppp/peers/three<a class="headerlink" href="#etc-ppp-peers-three" title="Permalink to this headline">¶</a></h3>
 <p>We also need a peer script, and the format of that file is described in the
 <em class="manpage">pppd(8)</em> manpage.  Mine can be used as an example:</p>
@@ -188,8 +189,8 @@ lcp-echo-failure 0
 you if you’ve configured <strong class="command">pppd</strong> manually in the past.  The reason is
 that interface speed for <abbr title="Universal Serial Bus">USB</abbr> modems is set by the kernel, and adding a value
 here is pointless.</p>
-</div>
-<div class="section" id="passwords">
+</section>
+<section id="passwords">
 <h3>passwords<a class="headerlink" href="#passwords" title="Permalink to this headline">¶</a></h3>
 <p>We don’t need to add an entry to <code class="file docutils literal notranslate"><span class="pre">chap-secrets</span></code> or <code class="file docutils literal notranslate"><span class="pre">pap-secrets</span></code> as
 authentication isn’t required, but if you’re following along having chosen to
@@ -197,8 +198,8 @@ use a configuration tool such as <a class="reference external" href="http://http
 they’re silently ignored.</p>
 <p>I’m told the same applies to <a class="reference external" href="http://alumnit.ca/wiki/?WvDial">wvdial</a>, so if it complains about requiring
 a password just add an empty or random string to stop the errors.</p>
-</div>
-<div class="section" id="testing-the-connection">
+</section>
+<section id="testing-the-connection">
 <h3>Testing the connection<a class="headerlink" href="#testing-the-connection" title="Permalink to this headline">¶</a></h3>
 <p>To test the connection all we need to do is issue <code class="docutils literal notranslate"><span class="pre">pon</span> <span class="pre">three</span></code>, or use the
 graphical tool in your distro if you wish.  The first time you do this you
@@ -222,9 +223,9 @@ from green it has found a network signal and is ready to use.</p>
 <p>If the connection didn’t work correctly look at the debugging output in syslog
 and check the <strong class="command">pppd</strong> manual page to look up the error codes.</p>
 <p>Happy, erm… mobility.</p>
-</div>
-</div>
-</div>
+</section>
+</section>
+</section>
 
     <hr>
 

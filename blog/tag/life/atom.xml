@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <id>https://jnrowe.github.io/</id>
   <title>JNRowe - Posts tagged life</title>
-  <updated>2021-04-18T11:22:09.554309+00:00</updated>
+  <updated>2021-04-29T22:38:02.186640+00:00</updated>
   <link href="https://jnrowe.github.io/"/>
   <link href="https://jnrowe.github.io/blog/tag/life/atom.xml" rel="self"/>
-  <generator uri="https://ablog.readthedocs.org/" version="0.10.17">ABlog</generator>
+  <generator uri="https://ablog.readthedocs.org/" version="0.10.18">ABlog</generator>
   <subtitle>Ramblings of a tired mind</subtitle>
   <entry>
     <id>https://jnrowe.github.io/thoughts/nice_stories.html</id>
@@ -14,7 +14,7 @@
     <author>
       <name>James Rowe</name>
     </author>
-    <content type="html">&lt;div class="section" id="tell-me-a-nice-story-please"&gt;
+    <content type="html">&lt;section id="tell-me-a-nice-story-please"&gt;
 
 &lt;p&gt;I’m fed up of hearing bad stories, I really am.  Often it feels like every
 person I know simply revels in the misfortune or missteps of others, and it is
@@ -27,13 +27,13 @@ That said I don’t believe the reason matters, it is wrong and it needs to stop
 stature of a dwarf by cutting off the leg of a giant&lt;/p&gt;
 &lt;p class="attribution"&gt;—Benjamin Franklin Fairless&lt;/p&gt;
 &lt;/div&gt;&lt;/blockquote&gt;
-&lt;div class="section" id="in-examples"&gt;
+&lt;section id="in-examples"&gt;
 &lt;h2&gt;In examples&lt;/h2&gt;
 &lt;p&gt;Hmm, this is hard.  How does one express examples without explicitly re-telling
 the nasty stories?&lt;/p&gt;
 &lt;p&gt;The stories you are about to hear are true.  The scenes have been munged to
 protect the innocent.&lt;/p&gt;
-&lt;div class="section" id="exhibit-a"&gt;
+&lt;section id="exhibit-a"&gt;
 &lt;h3&gt;Exhibit A&lt;/h3&gt;
 &lt;p&gt;About five years ago I found out that an old school friend had made a serious,
 yet possibly singular, morally irresponsible mistake.  This is a man who was
@@ -49,8 +49,8 @@ post about it on social-network-du-jour, drop it in to unrelated conversations
 and literally stop you in the street to tell you.&lt;/p&gt;
 &lt;p&gt;&lt;em&gt;Why couldn’t I have heard a fantastic story about an old friend’s success when
 trying to feed my shocking biscuit habit at Sainsbury’s?&lt;/em&gt;&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="section" id="exhibit-b"&gt;
+&lt;/section&gt;
+&lt;section id="exhibit-b"&gt;
 &lt;h3&gt;Exhibit B&lt;/h3&gt;
 &lt;p&gt;In the mid-naughties a conference friend sold his web service for an apparently
 healthy chunk of change.  I remember bumping in to the founding team at a boring
@@ -71,9 +71,9 @@ the moment the founders left.  Friends who had found success, regaled us with
 their stories and kindly paid for our semi-liquid lunch were suddenly being
 beaten down for their apparent success.&lt;/p&gt;
 &lt;p&gt;&lt;em&gt;Why can’t people just find some happiness in the happiness of others?&lt;/em&gt;&lt;/p&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="section" id="what-to-do"&gt;
+&lt;/section&gt;
+&lt;/section&gt;
+&lt;section id="what-to-do"&gt;
 &lt;h2&gt;What to do&lt;/h2&gt;
 &lt;p&gt;I’m not perfect, well not quite anyway ;)&lt;/p&gt;
 &lt;p&gt;If I wasn’t so terribly, terribly ill today I’d be preparing to head to our
@@ -81,15 +81,15 @@ Winterval shutdown party.  You’d no doubt find I like to have a little gossip
 and moan about things I shouldn’t, and I might even commit a couple of the faux
 pas I’ve mentioned above.  Yes, that upsets me. It really does, but I’m trying
 to change.&lt;/p&gt;
-&lt;div class="section" id="a-pledge"&gt;
+&lt;section id="a-pledge"&gt;
 &lt;h3&gt;A pledge&lt;/h3&gt;
 &lt;p&gt;If you catch me using the failure of others for entertainment or to make
 a point, feel free to berate me for it.  It might even be time to start offering
 fantastic prizes&lt;a class="footnote-reference brackets" href="#s1" id="id1"&gt;1&lt;/a&gt; to people who catch me doing so, as it is probably the only
 way I’ll really learn.&lt;/p&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="section" id="what-i-want-to-hear"&gt;
+&lt;/section&gt;
+&lt;/section&gt;
+&lt;section id="what-i-want-to-hear"&gt;
 &lt;h2&gt;What I want to hear&lt;/h2&gt;
 &lt;p&gt;Simply tell me about that friend who is getting married, don’t tell the story
 by mentioning that it is their third marriage.  I also don’t need to hear about
@@ -108,10 +108,13 @@ know about it.  If that isn’t the case, just keep it to yourself.&lt;/p&gt;
 &lt;dd&gt;&lt;p&gt;Okay, probably just a coffee or a beer&lt;/p&gt;
 &lt;/dd&gt;
 &lt;/dl&gt;
-&lt;/div&gt;
-&lt;/div&gt;
+&lt;/section&gt;
+&lt;/section&gt;
 </content>
     <link href="https://jnrowe.github.io/thoughts/nice_stories.html" rel="alternate"/>
+    <summary>I’m fed up of hearing bad stories, I really am.  Often it feels like every
+person I know simply revels in the misfortune or missteps of others, and it is
+beginning to truly annoy me.</summary>
     <category term="life" label="life"/>
     <published>2013-12-23T00:00:00+00:00</published>
   </entry>
@@ -122,7 +125,7 @@ know about it.  If that isn’t the case, just keep it to yourself.&lt;/p&gt;
     <author>
       <name>James Rowe</name>
     </author>
-    <content type="html">&lt;div class="section" id="murdering-morality-with-ferocious-fire"&gt;
+    <content type="html">&lt;section id="murdering-morality-with-ferocious-fire"&gt;
 
 &lt;blockquote class="epigraph"&gt;
 &lt;div&gt;&lt;p&gt;Morality is herd instinct in the individual.&lt;/p&gt;
@@ -169,9 +172,10 @@ a glistening and well-spec’d M6 in the garage.&lt;/p&gt;
 line up with your definition of “strong moral values” ;)&lt;/p&gt;
 &lt;/dd&gt;
 &lt;/dl&gt;
-&lt;/div&gt;
+&lt;/section&gt;
 </content>
     <link href="https://jnrowe.github.io/thoughts/important_balance.html" rel="alternate"/>
+    <summary>Morality is herd instinct in the individual.</summary>
     <category term="life" label="life"/>
     <published>2014-01-25T00:00:00+00:00</published>
   </entry>
@@ -182,7 +186,7 @@ line up with your definition of “strong moral values” ;)&lt;/p&gt;
     <author>
       <name>James Rowe</name>
     </author>
-    <content type="html">&lt;div class="section" id="hitting-lifes-reset-button"&gt;
+    <content type="html">&lt;section id="hitting-lifes-reset-button"&gt;
 
 &lt;p&gt;Seven months ago while enjoying a little Saturday afternoon cricket picnic,
 a friend posed the question:&lt;/p&gt;
@@ -224,9 +228,11 @@ It is too late, and there is another lesson for me to learn.&lt;/p&gt;
 &lt;p&gt;For what it’s worth, that girl still works at the ‘Express and I’ve done
 nothing useful about it.  Internet, this is the foolish truth I proffer you
 today.  The others well, they’ll hopefully remain hidden away from view.&lt;/p&gt;
-&lt;/div&gt;
+&lt;/section&gt;
 </content>
     <link href="https://jnrowe.github.io/thoughts/reset_in_ten.html" rel="alternate"/>
+    <summary>Seven months ago while enjoying a little Saturday afternoon cricket picnic,
+a friend posed the question:</summary>
     <category term="life" label="life"/>
     <published>2014-02-24T00:00:00+00:00</published>
   </entry>
@@ -237,7 +243,7 @@ today.  The others well, they’ll hopefully remain hidden away from view.&lt;/p
     <author>
       <name>James Rowe</name>
     </author>
-    <content type="html">&lt;div class="section" id="delayed-flashover"&gt;
+    <content type="html">&lt;section id="delayed-flashover"&gt;
 
 &lt;p&gt;This weekend a very good friend of mine is taking part in the London Marathon,
 and we’re all looking forward to the no-doubt incredible time she’ll finish in.&lt;/p&gt;
@@ -274,9 +280,11 @@ sponsorship options in check, she’ll destroy the target time.  Go Rach!&lt;/p&
 &lt;dd&gt;&lt;p&gt;a term which makes me think they bring fizzy drinks and sugary cakes&lt;/p&gt;
 &lt;/dd&gt;
 &lt;/dl&gt;
-&lt;/div&gt;
+&lt;/section&gt;
 </content>
     <link href="https://jnrowe.github.io/thoughts/delayed_flashover.html" rel="alternate"/>
+    <summary>This weekend a very good friend of mine is taking part in the London Marathon,
+and we’re all looking forward to the no-doubt incredible time she’ll finish in.</summary>
     <category term="life" label="life"/>
     <published>2014-04-09T00:00:00+01:00</published>
   </entry>
@@ -287,7 +295,7 @@ sponsorship options in check, she’ll destroy the target time.  Go Rach!&lt;/p&
     <author>
       <name>James Rowe</name>
     </author>
-    <content type="html">&lt;div class="section" id="open-source-and-enjoyment"&gt;
+    <content type="html">&lt;section id="open-source-and-enjoyment"&gt;
 
 &lt;p&gt;A few years ago I burned out on Open Source projects, to the point that it was
 close to impacting other parts of my life.  I have only myself to blame as
@@ -302,7 +310,7 @@ a blindfold.&lt;/p&gt;
 act of catharsis and to help me spot the problems in future.  Perhaps it will
 help others who are experiencing the same thing but haven’t quite spotted the
 catalysts yet.&lt;/p&gt;
-&lt;div class="section" id="dealing-with-needy-users"&gt;
+&lt;section id="dealing-with-needy-users"&gt;
 &lt;h2&gt;Dealing with needy users&lt;/h2&gt;
 &lt;p&gt;Some users seem to feel a disproportionate amount of “you work for me”,
 seemingly more so than happens with actual paying customers on other projects
@@ -330,7 +338,7 @@ I saw someone else using.  So try spot it early, and put a stop to it.&lt;/p&gt;
 a single penny cost to opening issues or sending a mail it would do wonders for
 communication in general.  I suspect that would remain true even if you
 reimbursed that penny immediately.&lt;/p&gt;
-&lt;div class="section" id="the-simple-answer"&gt;
+&lt;section id="the-simple-answer"&gt;
 &lt;h3&gt;The simple answer&lt;/h3&gt;
 &lt;p&gt;I figured out how to work with this entirely by accident.  Politely offer
 answers that move them away from you.  It is by far the easiest solution.&lt;/p&gt;
@@ -341,9 +349,9 @@ is dreaming that they’ll move on to bother a developer who isn’t you.&lt;/p&
 figure out how to implement this.  Open a pull request, and I’ll merge it!” to
 another.  It worked well, because it stopped the direction-less discussion and
 was never going to be followed up with a patch later.&lt;/p&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="section" id="dealing-with-unreasonable-requests"&gt;
+&lt;/section&gt;
+&lt;/section&gt;
+&lt;section id="dealing-with-unreasonable-requests"&gt;
 &lt;h2&gt;Dealing with unreasonable requests&lt;/h2&gt;
 &lt;p&gt;I used to get quite annoyed when I received an impolite or unreasonable request
 on an Open Source project, nowadays I tend to just respond with pre-canned
@@ -362,7 +370,7 @@ recompress a tarball on &lt;abbr title="Python Package Index"&gt;PyPI&lt;/abbr&g
 abuse.  I ignored the abuse, uploaded another tarball and then received another
 abusive email in return the next day.  That was a long time ago, far before the
 burnout started to creep in so I just addressed the actual issue and moved on.&lt;/p&gt;
-&lt;div class="section" id="the-answer"&gt;
+&lt;section id="the-answer"&gt;
 &lt;h3&gt;The answer&lt;/h3&gt;
 &lt;p&gt;I had forgotten about that whole previous story until at &lt;a class="reference external" href="https://europython.eu/"&gt;Europython&lt;/a&gt; a friend
 was telling me about someone who was banned from a number of events, hell-banned
@@ -375,9 +383,9 @@ virtual world.  If you have the hell-ban option available just use
 it; perhaps there is an ignore option in your issue tracker, add a “send to
 trash” rule in your email filter.  Even in person it can be quite easy to do,
 just politely acknowledge their issue and move away instead of engaging them.&lt;/p&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="section" id="the-solutions"&gt;
+&lt;/section&gt;
+&lt;/section&gt;
+&lt;section id="the-solutions"&gt;
 &lt;h2&gt;The solutions&lt;/h2&gt;
 &lt;p&gt;I chose a solution I hate, for all intents and purposes I don’t release new Open
 Source projects any longer.  I still work on a lot of projects, and the code is
@@ -401,10 +409,15 @@ A lot of the actively poisonous people who contact you aren’t providing any re
 value to you, and they’re probably never going to.  If you can remove them
 somehow you’re probably not losing anything, but you’ll be gaining a whole lot
 personally.&lt;/p&gt;
-&lt;/div&gt;
-&lt;/div&gt;
+&lt;/section&gt;
+&lt;/section&gt;
 </content>
     <link href="https://jnrowe.github.io/thoughts/burn_out.html" rel="alternate"/>
+    <summary>A few years ago I burned out on Open Source projects, to the point that it was
+close to impacting other parts of my life.  I have only myself to blame as
+I didn’t manage to distance myself at all well.  Distancing yourself is not easy
+to do when your fun hobby for relaxation is the thing that is working against
+you.</summary>
     <category term="oss" label="oss"/>
     <category term="burnout" label="burnout"/>
     <category term="life" label="life"/>

@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <id>https://jnrowe.github.io/</id>
   <title>JNRowe - Posts tagged imv</title>
-  <updated>2021-04-18T11:22:09.446607+00:00</updated>
+  <updated>2021-04-29T22:38:02.078287+00:00</updated>
   <link href="https://jnrowe.github.io/"/>
   <link href="https://jnrowe.github.io/blog/tag/imv/atom.xml" rel="self"/>
-  <generator uri="https://ablog.readthedocs.org/" version="0.10.17">ABlog</generator>
+  <generator uri="https://ablog.readthedocs.org/" version="0.10.18">ABlog</generator>
   <subtitle>Ramblings of a tired mind</subtitle>
   <entry>
     <id>https://jnrowe.github.io/articles/tips/readline_rename_imv.html</id>
@@ -14,7 +14,7 @@
     <author>
       <name>James Rowe</name>
     </author>
-    <content type="html">&lt;div class="section" id="file-renaming-for-the-lazy"&gt;
+    <content type="html">&lt;section id="file-renaming-for-the-lazy"&gt;
 
 &lt;p&gt;Over at HN in a &lt;a class="reference external" href="https://news.ycombinator.com/item?id=18290344"&gt;stolen topic&lt;/a&gt;:&lt;/p&gt;
 &lt;blockquote&gt;
@@ -27,7 +27,7 @@ offers that.&lt;/p&gt;
 &lt;/div&gt;&lt;/blockquote&gt;
 &lt;p&gt;There a few interesting replies there, but I want to flesh out my replies
 a little after the fact.&lt;/p&gt;
-&lt;div class="section" id="the-new-tool-solution"&gt;
+&lt;section id="the-new-tool-solution"&gt;
 &lt;h2&gt;The new tool solution&lt;/h2&gt;
 &lt;p&gt;My initial reply was&lt;a class="footnote-reference brackets" href="#id3" id="id1"&gt;1&lt;/a&gt;:&lt;/p&gt;
 &lt;blockquote&gt;
@@ -73,13 +73,15 @@ for me.&lt;/p&gt;
 of the application guard as above, you can even override bindings that you
 won’t find yourself using in &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;imv&lt;/span&gt;&lt;/code&gt; without breaking your shell or other
 tools.&lt;/p&gt;
-&lt;div class="figure align-default" id="id5"&gt;
+&lt;figure class="align-default" id="id5"&gt;
 &lt;a class="reference external image-reference" href="https://xkcd.com/1806/"&gt;&lt;img alt="Borrow Your Laptop" src="../../_images/borrow_your_laptop.png" style="width: 167.0px; height: 246.5px;" /&gt;&lt;/a&gt;
-&lt;p class="caption"&gt;&lt;span class="caption-text"&gt;As always, &lt;a class="reference external" href="https://xkcd.com/"&gt;xkcd&lt;/a&gt; has a pre-canned explanation for why you shouldn’t listen
+&lt;figcaption&gt;
+&lt;p&gt;&lt;span class="caption-text"&gt;As always, &lt;a class="reference external" href="https://xkcd.com/"&gt;xkcd&lt;/a&gt; has a pre-canned explanation for why you shouldn’t listen
 to me.  Image: &lt;a class="reference external" href="http://creativecommons.org/licenses/by-nc/2.5/"&gt;CC by-nc&lt;/a&gt;.&lt;/span&gt;&lt;/p&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="section" id="the-old-tool-solution"&gt;
+&lt;/figcaption&gt;
+&lt;/figure&gt;
+&lt;/section&gt;
+&lt;section id="the-old-tool-solution"&gt;
 &lt;h2&gt;The old tool solution&lt;/h2&gt;
 &lt;p&gt;My other comment there was:&lt;/p&gt;
 &lt;blockquote&gt;
@@ -134,8 +136,8 @@ modifiers, then be sure to take a look at &lt;code class="docutils literal notra
 makes heavy use of &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;zsh&lt;/span&gt;&lt;/code&gt;’s advanced features.  You may find it suits your
 way of working better than &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;qmv&lt;/span&gt;&lt;/code&gt; for example.&lt;/p&gt;
 &lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="section" id="thoughts"&gt;
+&lt;/section&gt;
+&lt;section id="thoughts"&gt;
 &lt;h2&gt;Thoughts&lt;/h2&gt;
 &lt;p&gt;Small tools that do incredible things are &lt;em&gt;everywhere&lt;/em&gt;, I clearly love
 &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;renameutils&lt;/span&gt;&lt;/code&gt; but I’d also like to hear about those things you enjoy too.
@@ -151,10 +153,13 @@ about them.&lt;/p&gt;
 search to look for times when I’ve mentioned it.&lt;/p&gt;
 &lt;/dd&gt;
 &lt;/dl&gt;
-&lt;/div&gt;
-&lt;/div&gt;
+&lt;/section&gt;
+&lt;/section&gt;
 </content>
     <link href="https://jnrowe.github.io/articles/tips/readline_rename_imv.html" rel="alternate"/>
+    <summary>Over at HN in a stolen topic:however, i miss one feature for which i’d use a filemanager: in-place file
+renaming. in most cases when i want to rename a file, i want to change
+a small part of it, and i don’t want to have to retype the whole filename.Borrow Your Laptop</summary>
     <category term="readline" label="readline"/>
     <category term="imv" label="imv"/>
     <category term="qmv" label="qmv"/>

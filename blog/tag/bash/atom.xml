@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <id>https://jnrowe.github.io/</id>
   <title>JNRowe - Posts tagged bash</title>
-  <updated>2021-04-18T11:22:05.923056+00:00</updated>
+  <updated>2021-04-29T22:38:00.687234+00:00</updated>
   <link href="https://jnrowe.github.io/"/>
   <link href="https://jnrowe.github.io/blog/tag/bash/atom.xml" rel="self"/>
-  <generator uri="https://ablog.readthedocs.org/" version="0.10.17">ABlog</generator>
+  <generator uri="https://ablog.readthedocs.org/" version="0.10.18">ABlog</generator>
   <subtitle>Ramblings of a tired mind</subtitle>
   <entry>
     <id>https://jnrowe.github.io/articles/tips/Uber_pink_prompts.html</id>
@@ -14,7 +14,7 @@
     <author>
       <name>James Rowe</name>
     </author>
-    <content type="html">&lt;div class="section" id="uber-pink-prompts"&gt;
+    <content type="html">&lt;section id="uber-pink-prompts"&gt;
 
 &lt;p&gt;cookiemon5ter asks in &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;#gentoo&lt;/span&gt;&lt;/code&gt; on Freenode:&lt;/p&gt;
 &lt;blockquote&gt;
@@ -62,9 +62,10 @@ your startup scripts, or if you’re convinced all your terminals are 256 colour
 capable you can simply check for &lt;span class="target" id="index-1"&gt;&lt;/span&gt;&lt;code class="xref std std-envvar docutils literal notranslate"&gt;&lt;span class="pre"&gt;$DISPLAY&lt;/span&gt;&lt;/code&gt; instead.&lt;/p&gt;
 &lt;p&gt;Changing the console palette and using 256 colour mode makes for two tips
 today!!&lt;/p&gt;
-&lt;/div&gt;
+&lt;/section&gt;
 </content>
     <link href="https://jnrowe.github.io/articles/tips/Uber_pink_prompts.html" rel="alternate"/>
+    <summary>cookiemon5ter asks in #gentoo on Freenode:</summary>
     <category term="bash" label="bash"/>
     <category term="styling" label="styling"/>
     <published>2009-09-25T00:00:00+01:00</published>
@@ -76,7 +77,7 @@ today!!&lt;/p&gt;
     <author>
       <name>James Rowe</name>
     </author>
-    <content type="html">&lt;div class="section" id="beyond-simple-tab-completion"&gt;
+    <content type="html">&lt;section id="beyond-simple-tab-completion"&gt;
 
 &lt;p&gt;Matt Taylor wrote on the EADS Linux list:&lt;/p&gt;
 &lt;blockquote&gt;
@@ -142,9 +143,10 @@ and &lt;kbd class="kbd compound docutils literal notranslate"&gt;&lt;kbd class="
 a command to a certain set of files in a directory.  Just don’t try it on
 &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;/usr/bin&lt;/span&gt;&lt;/code&gt; unless you want to see how &lt;strong class="command"&gt;bash&lt;/strong&gt; handles massive command
 lines!!&lt;/p&gt;
-&lt;/div&gt;
+&lt;/section&gt;
 </content>
     <link href="https://jnrowe.github.io/articles/tips/Beyond_tab_completion.html" rel="alternate"/>
+    <summary>Matt Taylor wrote on the EADS Linux list:</summary>
     <category term="bash" label="bash"/>
     <category term="readline" label="readline"/>
     <published>2009-09-30T00:00:00+01:00</published>

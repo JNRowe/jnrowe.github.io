@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <id>https://jnrowe.github.io/</id>
   <title>JNRowe - Posts tagged politics</title>
-  <updated>2021-04-18T11:22:10.143918+00:00</updated>
+  <updated>2021-04-29T22:38:02.755960+00:00</updated>
   <link href="https://jnrowe.github.io/"/>
   <link href="https://jnrowe.github.io/blog/tag/politics/atom.xml" rel="self"/>
-  <generator uri="https://ablog.readthedocs.org/" version="0.10.17">ABlog</generator>
+  <generator uri="https://ablog.readthedocs.org/" version="0.10.18">ABlog</generator>
   <subtitle>Ramblings of a tired mind</subtitle>
   <entry>
     <id>https://jnrowe.github.io/thoughts/metro_city.html</id>
@@ -14,7 +14,7 @@
     <author>
       <name>James Rowe</name>
     </author>
-    <content type="html">&lt;div class="section" id="burning-down-the-streets"&gt;
+    <content type="html">&lt;section id="burning-down-the-streets"&gt;
 
 &lt;blockquote class="epigraph"&gt;
 &lt;div&gt;&lt;p&gt;The whole thing makes me wonder whether a modern reintroduction of the
@@ -28,7 +28,7 @@ I jumped at the chance.&lt;/p&gt;
 patterns that emerge.  We quickly hit upon the idea that some poison was so
 obvious that &lt;em&gt;even&lt;/em&gt; the Twitter folks would acknowledge and reject it, and
 piggybacking off of that would trim down the work considerably.&lt;/p&gt;
-&lt;div class="section" id="mining-the-abyss"&gt;
+&lt;section id="mining-the-abyss"&gt;
 &lt;h2&gt;Mining the abyss&lt;/h2&gt;
 &lt;p&gt;My task was simple: ingest a massive lump of &lt;abbr title="JavaScript Object Notation"&gt;JSON&lt;/abbr&gt;, process it &lt;em&gt;somehow&lt;/em&gt; and spit out results that could be used in an
 artsy manner that I would likely not understand.&lt;/p&gt;
@@ -58,8 +58,8 @@ levels, and showed a real city with its real occupants.  The intent was to
 allow people to experience a location they knew but with its foetid underbelly
 exposed.&lt;/p&gt;
 &lt;a class="reference external image-reference" href="https://en.m.wikipedia.org/wiki/Final_Fight"&gt;&lt;img alt="Final Fight One on the GBA" class="align-right" src="../../_images/final_fight_one.png" style="width: 237.60000000000002px; height: 158.4px;" /&gt;&lt;/a&gt;
-&lt;/div&gt;
-&lt;div class="section" id="what-happened-next"&gt;
+&lt;/section&gt;
+&lt;section id="what-happened-next"&gt;
 &lt;h2&gt;What happened next?&lt;/h2&gt;
 &lt;p&gt;What happened next saddened and surprised me in equal quantities; visitors to
 the site doxxed a heap of the displayed retweeters almost immediately.  So much
@@ -73,7 +73,7 @@ I would not want to be linked to them through work or social circles.&lt;/p&gt;
 &lt;p&gt;However, the end result was really neat even on the smaller canvas it has to
 live on.  Seeing that level of vitriolic rage is not fun, but realising that
 much of it is vented in to nowhere does soften it a little.&lt;/p&gt;
-&lt;div class="sidebar"&gt;
+&lt;aside class="sidebar"&gt;
 &lt;p class="sidebar-title"&gt;Alternative mappings&lt;/p&gt;
 &lt;p&gt;Having seen the tweets of someone I know pop up, and digging around a little
 to see how hateful those tweets were it became clear there was an equally
@@ -81,9 +81,9 @@ toxic topic that could be mapped in a similar manner.&lt;/p&gt;
 &lt;p&gt;Following the game theme, perhaps a &lt;a class="reference external" href="https://en.m.wikipedia.org/wiki/Prince_of_Persia:_The_Sands_of_Time"&gt;Prince of Persia: The Sands of Time&lt;/a&gt;
 affair that shows the changing hopes, dreams and promises of the anechoic
 brexit promoters from early 2016 up to today.&lt;/p&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="section" id="fall-out"&gt;
+&lt;/aside&gt;
+&lt;/section&gt;
+&lt;section id="fall-out"&gt;
 &lt;h2&gt;Fall out&lt;/h2&gt;
 &lt;p&gt;One of the things that surprised me most was that initially I had primed the
 data by looking at users who followed users that have been suspended or banned.
@@ -103,10 +103,12 @@ approval to people’s views when you continue to follow them, even if you’re 
 actively engaging with them.  The simple act of not confronting them is
 normalising the behaviour.  If you’re not calling them out on it, you’re doing
 yourself and society at large a serious injustice.&lt;/p&gt;
-&lt;/div&gt;
-&lt;/div&gt;
+&lt;/section&gt;
+&lt;/section&gt;
 </content>
     <link href="https://jnrowe.github.io/thoughts/metro_city.html" rel="alternate"/>
+    <summary>The whole thing makes me wonder whether a modern reintroduction of the
+skimmington ride for social media is long overdue.</summary>
     <category term="politics" label="politics"/>
     <category term="noise" label="noise"/>
     <published>2017-09-03T00:00:00+01:00</published>
@@ -118,7 +120,7 @@ yourself and society at large a serious injustice.&lt;/p&gt;
     <author>
       <name>James Rowe</name>
     </author>
-    <content type="html">&lt;div class="section" id="brexit-through-the-gift-shop"&gt;
+    <content type="html">&lt;section id="brexit-through-the-gift-shop"&gt;
 
 &lt;div class="admonition note"&gt;
 &lt;p class="admonition-title"&gt;Note&lt;/p&gt;
@@ -134,7 +136,7 @@ could have a paradise in a few years.&lt;/p&gt;
 &lt;p&gt;On Monday morning, a friend and co-worker stood up and rage quit.  And I really
 do mean rage quit, it even included a short stand up quarrel in the car park.
 Obviously, nobody has spoke about &lt;em&gt;anything&lt;/em&gt; else since…&lt;/p&gt;
-&lt;div class="section" id="background"&gt;
+&lt;section id="background"&gt;
 &lt;h2&gt;Background&lt;/h2&gt;
 &lt;p&gt;We used to work in an environment where we could &lt;span class="xref std std-doc"&gt;reject projects&lt;/span&gt; on moral grounds with ease.  In fact, &lt;abbr title="Institutional Review Board"&gt;IRBs&lt;/abbr&gt; exist for that exact reason.  Times were good,
 projects were plentiful, and it was just the way things were.&lt;/p&gt;
@@ -152,8 +154,8 @@ on the more valued workers to object-in-unity to immoral works.  And there are
 a fair few who have only just discovered they were never holding the chips, and
 being let go is a real possibility(we’re &lt;em&gt;way&lt;/em&gt; beyond the pool of voluntary
 redundancies at this point).&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="section" id="collective-bargaining"&gt;
+&lt;/section&gt;
+&lt;section id="collective-bargaining"&gt;
 &lt;h2&gt;Collective bargaining&lt;/h2&gt;
 &lt;p&gt;So, object-in-unity is pretty much dead.  And it has really surprised me quite
 how fractious some of the arguments now are.  Given that people are basically
@@ -168,8 +170,8 @@ peripheral workers has gone too.&lt;/p&gt;
 just found out — independently wealthy through the sale of a &lt;span class="xref std std-doc"&gt;side project&lt;/span&gt; about five years ago.  Seemingly, a minority of people believe
 it would be okay if someone’s morals put them in the poor house, but less
 so if they have a cushion to soften the blow.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="section" id="whats-coming-next"&gt;
+&lt;/section&gt;
+&lt;section id="whats-coming-next"&gt;
 &lt;h2&gt;Whats coming next?&lt;/h2&gt;
 &lt;blockquote class="epigraph"&gt;
 &lt;div&gt;&lt;p&gt;Lisa is a sellout! Lisa is a sellout! Lisa, what’s a sellout?&lt;/p&gt;
@@ -202,10 +204,12 @@ what can to get through it as best we know how.&lt;/p&gt;
 other people with the necessary skills have been moved to Germany.&lt;/p&gt;
 &lt;/dd&gt;
 &lt;/dl&gt;
-&lt;/div&gt;
-&lt;/div&gt;
+&lt;/section&gt;
+&lt;/section&gt;
 </content>
     <link href="https://jnrowe.github.io/thoughts/brexit_through_the_gift_shop.html" rel="alternate"/>
+    <summary>This is a public letter to my co-workers, which probably shouldn’t be
+public.</summary>
     <category term="work" label="work"/>
     <category term="politics" label="politics"/>
     <published>2018-06-08T00:00:00+01:00</published>

@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <id>https://jnrowe.github.io/</id>
   <title>JNRowe - Posts tagged csv</title>
-  <updated>2021-04-18T11:22:07.819716+00:00</updated>
+  <updated>2021-04-29T22:38:01.452553+00:00</updated>
   <link href="https://jnrowe.github.io/"/>
   <link href="https://jnrowe.github.io/blog/tag/csv/atom.xml" rel="self"/>
-  <generator uri="https://ablog.readthedocs.org/" version="0.10.17">ABlog</generator>
+  <generator uri="https://ablog.readthedocs.org/" version="0.10.18">ABlog</generator>
   <subtitle>Ramblings of a tired mind</subtitle>
   <entry>
     <id>https://jnrowe.github.io/articles/tips/Formatting_csv_files_in_the_shell.html</id>
@@ -14,7 +14,7 @@
     <author>
       <name>James Rowe</name>
     </author>
-    <content type="html">&lt;div class="section" id="formatting-csv-files-in-the-shell"&gt;
+    <content type="html">&lt;section id="formatting-csv-files-in-the-shell"&gt;
 
 &lt;p&gt;kemi asks in &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;#bash&lt;/span&gt;&lt;/code&gt;:&lt;/p&gt;
 &lt;blockquote&gt;
@@ -90,9 +90,10 @@ computer that we wish to format and calculate totals for could be:&lt;/p&gt;
 &lt;span class="go"&gt;Total sent: 13121144, Total received: 295452635&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
-&lt;/div&gt;
+&lt;/section&gt;
 </content>
     <link href="https://jnrowe.github.io/articles/tips/Formatting_csv_files_in_the_shell.html" rel="alternate"/>
+    <summary>kemi asks in #bash:</summary>
     <category term="csv" label="csv"/>
     <category term="unix" label="unix"/>
     <published>2009-10-10T00:00:00+01:00</published>

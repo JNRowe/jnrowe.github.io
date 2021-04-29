@@ -4,7 +4,8 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17: http://docutils.sourceforge.net/" />
+
     <title>TDD distro development &#8212; JNRowe</title>
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <link rel="stylesheet" href="../_static/alabaster.css" type="text/css" />
@@ -74,13 +75,13 @@
       5 minutes
     </p>
   
-  <div class="section" id="tdd-distro-development">
+  <section id="tdd-distro-development">
 <h1><abbr title="Test Driven Development">TDD</abbr> distro development<a class="headerlink" href="#tdd-distro-development" title="Permalink to this headline">¶</a></h1>
 <p>Using <abbr title="Test Driven Development">TDD</abbr> for distribution development is a hot topic in some of the more
 geeky circles I move in, and I’m very happy about this.  Anything that
 increases the robustness of my desktop computer, my phone or any other device
 I use is a great goal!</p>
-<div class="section" id="why">
+<section id="why">
 <h2>Why?<a class="headerlink" href="#why" title="Permalink to this headline">¶</a></h2>
 <p>This answer should be obvious; more testing is good.  However, what about the
 current system needs improving?</p>
@@ -94,8 +95,8 @@ often discovered before a package is stabilised.</p>
 previously fixed bugs.  This, by itself, is a reason to look at alternatives.
 Fixing the same bug more than once is an horrendous waste of developer
 resources.</p>
-</div>
-<div class="section" id="how">
+</section>
+<section id="how">
 <h2>How?<a class="headerlink" href="#how" title="Permalink to this headline">¶</a></h2>
 <p>We, the fine folks of AST’s London office, already use a test-based
 stabilisation policy in the preparation of our distribution images.  Adding
@@ -169,8 +170,8 @@ For example, the <a class="reference external" href="https://pypi.python.org/pyp
 that are run when bumping or stabilising the package, all of which are cribbed
 from my actual <code class="docutils literal notranslate"><span class="pre">blockdiag</span></code> usage.  This massively reduces the time required
 to evaluate a package at bump time.</p>
-</div>
-<div class="section" id="result">
+</section>
+<section id="result">
 <h2>Result?<a class="headerlink" href="#result" title="Permalink to this headline">¶</a></h2>
 <p>The time it takes to stabilise, or bump, a package may be massively reduced
 while simultaneously increasing the robustness of the packages.  This is a huge
@@ -185,8 +186,8 @@ existing content as input for tests.  The use of existing input makes writing
 the test faster and means each test exercises functionality we actually require,
 but it also means we occasionally can’t submit the data upstream owing to
 licensing concerns.</p>
-</div>
-<div class="section" id="bonus">
+</section>
+<section id="bonus">
 <h2>Bonus<a class="headerlink" href="#bonus" title="Permalink to this headline">¶</a></h2>
 <p>I’ve used the upstream supported <code class="docutils literal notranslate"><span class="pre">shelldoctest</span></code> method for writing tests on
 this page, but you can also easily specify them in <a class="reference external" href="http://docutils.sourceforge.net/docs/user/rst/">reST syntax</a> files too.
@@ -225,8 +226,8 @@ a <code class="docutils literal notranslate"><span class="pre">reST</span></code
 <dd><p>Okay, it was me.  I’ll confess.</p>
 </dd>
 </dl>
-</div>
-</div>
+</section>
+</section>
 
     <hr>
 

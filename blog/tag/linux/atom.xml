@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <id>https://jnrowe.github.io/</id>
   <title>JNRowe - Posts tagged linux</title>
-  <updated>2021-04-18T11:22:09.605953+00:00</updated>
+  <updated>2021-04-29T22:38:02.245284+00:00</updated>
   <link href="https://jnrowe.github.io/"/>
   <link href="https://jnrowe.github.io/blog/tag/linux/atom.xml" rel="self"/>
-  <generator uri="https://ablog.readthedocs.org/" version="0.10.17">ABlog</generator>
+  <generator uri="https://ablog.readthedocs.org/" version="0.10.18">ABlog</generator>
   <subtitle>Ramblings of a tired mind</subtitle>
   <entry>
     <id>https://jnrowe.github.io/articles/tips/Three_mobile_broadband_in_linux.html</id>
@@ -14,7 +14,7 @@
     <author>
       <name>James Rowe</name>
     </author>
-    <content type="html">&lt;div class="section" id="three-mobile-broadband-in-linux"&gt;
+    <content type="html">&lt;section id="three-mobile-broadband-in-linux"&gt;
 
 &lt;p&gt;Steve Lowry is picking up his &lt;a class="reference external" href="http://three.co.uk"&gt;Three&lt;/a&gt; modem this afternoon and asks on our
 internal Linux list if it supports Linux.&lt;/p&gt;
@@ -32,12 +32,12 @@ wait until you plug it in to see what model it actually is.&lt;/p&gt;
 &lt;a class="reference external" href="http://www.gnome.org/projects/NetworkManager/"&gt;NetworkManager&lt;/a&gt; and NetworkManager’s &lt;a class="reference external" href="http://live.gnome.org/NetworkManager/MobileBroadband/ServiceProviders"&gt;mobile broadband provider database&lt;/a&gt;.
 When I tested it on a friend’s install with that setup last month it worked out
 of the box, all you had to do was plug it in and select the network.&lt;/p&gt;
-&lt;div class="section" id="the-route-to-fail"&gt;
+&lt;section id="the-route-to-fail"&gt;
 &lt;h2&gt;The route to fail&lt;/h2&gt;
 &lt;p&gt;If, like me, you’d prefer not to install NetworkManager you can manually
 configure the device using &lt;a class="reference external" href="http://www.samba.org/ppp"&gt;pppd&lt;/a&gt;, and life is even easier now than it was when
 I did it as there is plenty more information available(including this I guess).&lt;/p&gt;
-&lt;div class="section" id="finding-the-apn"&gt;
+&lt;section id="finding-the-apn"&gt;
 &lt;h3&gt;Finding the &lt;abbr title="Access Point Name"&gt;APN&lt;/abbr&gt;&lt;/h3&gt;
 &lt;p&gt;The first thing you need is your provider’s &lt;abbr title="Access Point Name"&gt;APN&lt;/abbr&gt;, and the easiest place to
 find it is from the &lt;a class="reference external" href="http://live.gnome.org/NetworkManager/MobileBroadband/ServiceProviders"&gt;NetworkManager database&lt;/a&gt;.  If yours is not there you’ll
@@ -60,8 +60,8 @@ archivers, and the tool you actually need to extract the &lt;code class="docutil
 &lt;a class="reference external" href="http://synce.sourceforge.net/synce/unshield.php"&gt;unshield&lt;/a&gt;.  Contrary to my first idea &lt;a class="reference external" href="http://www.cabextract.org.uk/"&gt;cabextract&lt;/a&gt; doesn’t work, as these files
 are actually made by &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;installshield&lt;/span&gt;&lt;/code&gt;.&lt;/p&gt;
 &lt;p&gt;With the &lt;abbr title="Access Point Name"&gt;APN&lt;/abbr&gt; in hand all we need to do now is configure our system.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="section" id="kernel"&gt;
+&lt;/section&gt;
+&lt;section id="kernel"&gt;
 &lt;h3&gt;Kernel&lt;/h3&gt;
 &lt;p&gt;If you’re using a vendor supplied kernel the options we need are hopefully
 already enabled.  If they’re not, or you build your own kernels, there are few
@@ -76,8 +76,8 @@ mobile providers in general, partly because the data is already compressed.&lt;/
 &lt;p&gt;Then just rebuild the kernel, and check that the dongle shows up in
 &lt;strong class="command"&gt;dmesg&lt;/strong&gt; output when it is plugged in.  If it does we’re ready for the
 next step.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="section" id="etc-chatscripts-three"&gt;
+&lt;/section&gt;
+&lt;section id="etc-chatscripts-three"&gt;
 &lt;h3&gt;/etc/chatscripts/three&lt;/h3&gt;
 &lt;p&gt;We need a &lt;strong class="command"&gt;pppd&lt;/strong&gt; chatscript for the connection, the format and
 settings of this file can be found in the &lt;em class="manpage"&gt;chat(8)&lt;/em&gt; manpage.  My
@@ -105,8 +105,8 @@ database.&lt;/p&gt;
 &lt;p&gt;Notice the very short value for timeout, I’ve come to that value empirically.
 If the connection isn’t up after 3 seconds it is not coming up, and you’re just
 wasting time before you retry.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="section" id="etc-ppp-peers-three"&gt;
+&lt;/section&gt;
+&lt;section id="etc-ppp-peers-three"&gt;
 &lt;h3&gt;/etc/ppp/peers/three&lt;/h3&gt;
 &lt;p&gt;We also need a peer script, and the format of that file is described in the
 &lt;em class="manpage"&gt;pppd(8)&lt;/em&gt; manpage.  Mine can be used as an example:&lt;/p&gt;
@@ -128,8 +128,8 @@ lcp-echo-failure 0
 you if you’ve configured &lt;strong class="command"&gt;pppd&lt;/strong&gt; manually in the past.  The reason is
 that interface speed for &lt;abbr title="Universal Serial Bus"&gt;USB&lt;/abbr&gt; modems is set by the kernel, and adding a value
 here is pointless.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="section" id="passwords"&gt;
+&lt;/section&gt;
+&lt;section id="passwords"&gt;
 &lt;h3&gt;passwords&lt;/h3&gt;
 &lt;p&gt;We don’t need to add an entry to &lt;code class="file docutils literal notranslate"&gt;&lt;span class="pre"&gt;chap-secrets&lt;/span&gt;&lt;/code&gt; or &lt;code class="file docutils literal notranslate"&gt;&lt;span class="pre"&gt;pap-secrets&lt;/span&gt;&lt;/code&gt; as
 authentication isn’t required, but if you’re following along having chosen to
@@ -137,8 +137,8 @@ use a configuration tool such as &lt;a class="reference external" href="http://h
 they’re silently ignored.&lt;/p&gt;
 &lt;p&gt;I’m told the same applies to &lt;a class="reference external" href="http://alumnit.ca/wiki/?WvDial"&gt;wvdial&lt;/a&gt;, so if it complains about requiring
 a password just add an empty or random string to stop the errors.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="section" id="testing-the-connection"&gt;
+&lt;/section&gt;
+&lt;section id="testing-the-connection"&gt;
 &lt;h3&gt;Testing the connection&lt;/h3&gt;
 &lt;p&gt;To test the connection all we need to do is issue &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;pon&lt;/span&gt; &lt;span class="pre"&gt;three&lt;/span&gt;&lt;/code&gt;, or use the
 graphical tool in your distro if you wish.  The first time you do this you
@@ -162,11 +162,13 @@ from green it has found a network signal and is ready to use.&lt;/p&gt;
 &lt;p&gt;If the connection didn’t work correctly look at the debugging output in syslog
 and check the &lt;strong class="command"&gt;pppd&lt;/strong&gt; manual page to look up the error codes.&lt;/p&gt;
 &lt;p&gt;Happy, erm… mobility.&lt;/p&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
+&lt;/section&gt;
+&lt;/section&gt;
+&lt;/section&gt;
 </content>
     <link href="https://jnrowe.github.io/articles/tips/Three_mobile_broadband_in_linux.html" rel="alternate"/>
+    <summary>Steve Lowry is picking up his Three modem this afternoon and asks on our
+internal Linux list if it supports Linux.</summary>
     <category term="linux" label="linux"/>
     <category term="three" label="three"/>
     <published>2009-10-14T00:00:00+01:00</published>
@@ -178,7 +180,7 @@ and check the &lt;strong class="command"&gt;pppd&lt;/strong&gt; manual page to l
     <author>
       <name>James Rowe</name>
     </author>
-    <content type="html">&lt;div class="section" id="dropping-gentoo"&gt;
+    <content type="html">&lt;section id="dropping-gentoo"&gt;
 
 &lt;p&gt;We’ve been using &lt;a class="reference external" href="http://gentoo.org"&gt;Gentoo&lt;/a&gt; for shipped products since June 2005, and as
 a development platform since September 2004.  A long time, an incredibly long
@@ -191,7 +193,7 @@ and it takes only a little inside knowledge to know why.&lt;/p&gt;
 &lt;p&gt;A couple of people have rightly pointed out that I was a little harsh in
 this document, so I’ve pushed a &lt;span class="xref std std-doc"&gt;followup&lt;/span&gt;.&lt;/p&gt;
 &lt;/div&gt;
-&lt;div class="section" id="landscapes-have-changed"&gt;
+&lt;section id="landscapes-have-changed"&gt;
 &lt;h2&gt;Landscapes have changed&lt;/h2&gt;
 &lt;p&gt;Back when we started using Gentoo it was clearly the best choice for what we
 needed; a easily coercible base on which to construct our Linux devices.  There
@@ -205,8 +207,8 @@ already floating about for most of them.&lt;/p&gt;
 have meant taking on the support costs of the entire stack which nobody wanted
 to commit to.  As it turns out that burden slowly crept up on us over the next
 ten years anyway.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="section" id="take-a-left-in-100-metres"&gt;
+&lt;/section&gt;
+&lt;section id="take-a-left-in-100-metres"&gt;
 &lt;h2&gt;Take a left in 100 metres&lt;/h2&gt;
 &lt;p&gt;Over the years we regrettably diverged heavily from upstream, almost to the
 point that saying we use Gentoo almost feels like a lie.&lt;/p&gt;
@@ -229,8 +231,8 @@ once promised(perhaps in part because of that &lt;abbr title="Contributor Licens
 &lt;p&gt;Had we waited another five months, there would have been another open source
 package manager for Gentoo we could have easily switched to and hacked on.
 There is perhaps a pattern here…&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="section" id="upstreaming-changes"&gt;
+&lt;/section&gt;
+&lt;section id="upstreaming-changes"&gt;
 &lt;h2&gt;Upstreaming changes&lt;/h2&gt;
 &lt;p&gt;Of course, running a non-standard package manager and a thick layer of custom
 packages at the bottom of the stack made contributing changes back upstream very
@@ -266,8 +268,8 @@ like this:&lt;/p&gt;
 &lt;p&gt;That genuinely upsets me greatly.  The amount of potential duplicated effort
 they represent is enormous, and I don’t even want to attempt to put a figure on
 it.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="section" id="supporting-upstream"&gt;
+&lt;/section&gt;
+&lt;section id="supporting-upstream"&gt;
 &lt;h2&gt;Supporting upstream&lt;/h2&gt;
 &lt;p&gt;We’re entirely to blame.  We always planned on supporting upstream in whichever
 way we could.  That fell down for instances beyond sending patches too.&lt;/p&gt;
@@ -289,8 +291,8 @@ conference with a potential sponsor and the same developer.  Evening beers were
 met with other people telling stories about that same person, which was a shame
 as it probably cost them a few good cash and infrastructure sponsors that day
 alone.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="section" id="support-costs"&gt;
+&lt;/section&gt;
+&lt;section id="support-costs"&gt;
 &lt;h2&gt;Support costs&lt;/h2&gt;
 &lt;p&gt;Over time we’ve come to support most of the tree that people refer to as
 &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;gentoo-x86&lt;/span&gt;&lt;/code&gt; ourselves.  The toolchain changes we needed at the time
@@ -298,23 +300,23 @@ necessitated supporting a few packages further up the stack.  Our desire to trim
 the tree of a few categories that were problematic, meant replacing a variety of
 packages with then unavailable dependencies.&lt;/p&gt;
 &lt;p&gt;And there were many other examples too…&lt;/p&gt;
-&lt;div class="section" id="matchbox"&gt;
+&lt;section id="matchbox"&gt;
 &lt;h3&gt;matchbox&lt;/h3&gt;
 &lt;p&gt;We packaged &lt;a class="reference internal" href="#matchbox"&gt;matchbox&lt;/a&gt; and its associated packages a long, long time before they
 hit the official tree.  It was the first real pain point we had with packages
 appearing in the tree after we had already been using them.&lt;/p&gt;
 &lt;p&gt;When they did eventually hit the tree we had to carry workarounds for years.  At
 some point we stopped trying and just scrubbed the ebuilds that got in the way.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="section" id="python"&gt;
+&lt;/section&gt;
+&lt;section id="python"&gt;
 &lt;h3&gt;Python&lt;/h3&gt;
 &lt;p&gt;The state of the Python packaging a few years ago made us take the jump to
 replace or remove anything that packaged a Python module.  Initially very time
 consuming, but it saved an enormous amount of grief.&lt;/p&gt;
 &lt;p&gt;I suspect we could move closer to upstream at this point, but the point is now
 moot.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="section" id="systemd"&gt;
+&lt;/section&gt;
+&lt;section id="systemd"&gt;
 &lt;h3&gt;systemd&lt;/h3&gt;
 &lt;p&gt;We switched to &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;systemd&lt;/span&gt;&lt;/code&gt; before the package was in upstream’s tree, and we
 have had to keep supporting it to this day because of insurmountable packaging
@@ -324,8 +326,8 @@ where differences create issues.  And it clearly means taking on any package
 that depends on &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;openrc&lt;/span&gt;&lt;/code&gt; or Gentoo’s &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;baselayout&lt;/span&gt;&lt;/code&gt; package.  Those packages
 are becoming fewer and fewer by the day though, so that would have become
 a non-issue.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="section" id="x-org"&gt;
+&lt;/section&gt;
+&lt;section id="x-org"&gt;
 &lt;h3&gt;X.org&lt;/h3&gt;
 &lt;p&gt;We had been packaging x.org’s packages to work around some implementation
 differences with upstream since the dawn of modular X.  Mostly just to do with
@@ -333,17 +335,17 @@ how dependencies were specified to start with, but they’re no longer even
 remotely similar.&lt;/p&gt;
 &lt;p&gt;Luckily there isn’t a great deal of churn in the packages we care about for the
 most part, so it never caused a huge time sink.&lt;/p&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="section" id="the-end-is-nigh"&gt;
+&lt;/section&gt;
+&lt;/section&gt;
+&lt;section id="the-end-is-nigh"&gt;
 &lt;h2&gt;The end is nigh&lt;/h2&gt;
 &lt;p&gt;At some point it began to feel like we were maintaining our own distribution
 from end-to-end, and that wasn’t fun.  It also wasn’t what any of us needed to
 do, and the time it was taking measurably ate in to &lt;em&gt;real&lt;/em&gt; project time.&lt;/p&gt;
 &lt;p&gt;The decision to start weaning ourselves off of Gentoo was made back in the
 summer of last year, and it has finally started to come in to effect.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="section" id="the-times-they-are-a-changing"&gt;
+&lt;/section&gt;
+&lt;section id="the-times-they-are-a-changing"&gt;
 &lt;h2&gt;The Times They Are a-Changing&lt;/h2&gt;
 &lt;p&gt;There are plenty of good alternatives out there now for building systems that
 need to run on a variety of architectures.  Some binary, some source-based and
@@ -364,10 +366,13 @@ makes working with Debian a lot easier, so thanks guys!&lt;/p&gt;
 yet no concrete decisions have been made, but I feel like we’re on the right
 track for the next ten years.&lt;/p&gt;
 &lt;p&gt;So long Gentoo, and thanks for all fish!&lt;/p&gt;
-&lt;/div&gt;
-&lt;/div&gt;
+&lt;/section&gt;
+&lt;/section&gt;
 </content>
     <link href="https://jnrowe.github.io/articles/dropping_gentoo.html" rel="alternate"/>
+    <summary>We’ve been using Gentoo for shipped products since June 2005, and as
+a development platform since September 2004.  A long time, an incredibly long
+time in fact.</summary>
     <category term="gentoo" label="gentoo"/>
     <category term="work" label="work"/>
     <category term="linux" label="linux"/>
@@ -380,7 +385,7 @@ track for the next ten years.&lt;/p&gt;
     <author>
       <name>James Rowe</name>
     </author>
-    <content type="html">&lt;div class="section" id="dropping-gentoo-reflex"&gt;
+    <content type="html">&lt;section id="dropping-gentoo-reflex"&gt;
 
 &lt;p&gt;After hitting the publish button on &lt;a class="reference internal" href="../../articles/dropping_gentoo.html#dropping_gentoo"&gt;&lt;span class="std std-ref"&gt;Dropping Gentoo&lt;/span&gt;&lt;/a&gt; a few friends
 commented that I was either unnecessarily harsh about Gentoo or we wasted an
@@ -391,7 +396,7 @@ that is entirely about spotting the downsides to make sure they don’t reoccur.
 And with that in mind I &lt;em&gt;was&lt;/em&gt; being incredibly unfair to Gentoo, both the
 project and by extension the people working on it.&lt;/p&gt;
 &lt;p&gt;There were many, many good points about Gentoo and I’ll nod towards a few now.&lt;/p&gt;
-&lt;div class="section" id="speed"&gt;
+&lt;section id="speed"&gt;
 &lt;h2&gt;Speed&lt;/h2&gt;
 &lt;p&gt;No, no.  Not the “Oh my god, my KDEs are so fast” that many people fairly
 associate with Gentoo users.  I’m talking about the basic package handling
@@ -451,8 +456,8 @@ history can be seen below.&lt;/p&gt;
 &lt;span class="k"&gt;done&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="section" id="documentation"&gt;
+&lt;/section&gt;
+&lt;section id="documentation"&gt;
 &lt;h2&gt;Documentation&lt;/h2&gt;
 &lt;p&gt;The excellent &lt;a class="reference external" href="http://devmanual.gentoo.org/"&gt;devmanual&lt;/a&gt; and the incredible &lt;a class="reference external" href="http://wiki.gentoo.org/wiki/Project:PMS"&gt;Package Manager Specification&lt;/a&gt;
 made life so much easier.  The devmanual was both short enough to be used as
@@ -470,8 +475,8 @@ versions.  &lt;abbr title="Package Manager Specification"&gt;PMS&lt;/abbr&gt;, a
 and stability to newer features.&lt;/p&gt;
 &lt;p&gt;All Gentoo users owe Ciaran McCreesh a few beers for all the hard work he put in
 to those documents, especially in the early days.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="section" id="the-personal-touch"&gt;
+&lt;/section&gt;
+&lt;section id="the-personal-touch"&gt;
 &lt;h2&gt;The personal touch&lt;/h2&gt;
 &lt;p&gt;On a personal note I’ve met some awesome people over the years as a result of
 using Gentoo.  Many of them at the old Gentoo UK conferences, which were always
@@ -484,8 +489,8 @@ contract hire at the one prior to that as well.&lt;/p&gt;
 &lt;p&gt;I’ve even been lucky enough to have a few doors held open for me via people I’ve
 met at Gentoo-themed or Gentoo-heavy events, and I suspect I’d be writing this
 from a less happy place without them.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="section" id="wrapping-up"&gt;
+&lt;/section&gt;
+&lt;section id="wrapping-up"&gt;
 &lt;h2&gt;Wrapping up&lt;/h2&gt;
 &lt;p&gt;It is true that you really can not always see the forest for trees.&lt;/p&gt;
 &lt;p&gt;Had recent events not clouded my vision I would have commented on the train
@@ -514,10 +519,14 @@ duty.  For example using &lt;code class="docutils literal notranslate"&gt;&lt;sp
 unpack a tarball directly over the root filesystem.&lt;/p&gt;
 &lt;/dd&gt;&lt;/dl&gt;
 
-&lt;/div&gt;
-&lt;/div&gt;
+&lt;/section&gt;
+&lt;/section&gt;
 </content>
     <link href="https://jnrowe.github.io/articles/dropping_gentoo_reflex.html" rel="alternate"/>
+    <summary>After hitting the publish button on dropping_gentoo a few friends
+commented that I was either unnecessarily harsh about Gentoo or we wasted an
+enormous amount of time on it.  It definitely was the former, and I feel
+a touch ashamed for implying the latter.</summary>
     <category term="gentoo" label="gentoo"/>
     <category term="work" label="work"/>
     <category term="linux" label="linux"/>
@@ -530,7 +539,7 @@ unpack a tarball directly over the root filesystem.&lt;/p&gt;
     <author>
       <name>James Rowe</name>
     </author>
-    <content type="html">&lt;div class="section" id="visualising-the-progress-of-time"&gt;
+    <content type="html">&lt;section id="visualising-the-progress-of-time"&gt;
 
 &lt;a class="reference external image-reference" href="https://www.progressbarosx.com/"&gt;&lt;img alt="Screenshot of Progress Bar OSX in action" src="../../_images/time_progress.jpg" /&gt;&lt;/a&gt;
 &lt;p&gt;A co-worker was demoing a user session today, and pointed out a neat tool for
@@ -557,12 +566,14 @@ MacOS, so we’ll need to make something similar.&lt;/p&gt;
             emulation.
         &lt;/span&gt;
     &lt;/p&gt;
-&lt;/div&gt;&lt;div class="figure align-default" id="id3"&gt;
+&lt;/div&gt;&lt;figure class="align-default" id="id3"&gt;
 &lt;a class="reference external image-reference" href="../_static/kitt.gif"&gt;&lt;img alt="Multi-band scanner in action" src="../../_images/kitt06.png" /&gt;&lt;/a&gt;
-&lt;p class="caption"&gt;&lt;span class="caption-text"&gt;Click the image for an animated GIF, I’ll spare you the flashing lights in
+&lt;figcaption&gt;
+&lt;p&gt;&lt;span class="caption-text"&gt;Click the image for an animated GIF, I’ll spare you the flashing lights in
 case you wish to read on.&lt;/span&gt;&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="section" id="step-one"&gt;
+&lt;/figcaption&gt;
+&lt;/figure&gt;
+&lt;section id="step-one"&gt;
 &lt;h2&gt;Step one&lt;/h2&gt;
 &lt;p&gt;First we’ll want to display the year:&lt;/p&gt;
 &lt;div class="highlight-sh notranslate"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;gdbar -w &lt;span class="m"&gt;1500&lt;/span&gt; -h &lt;span class="m"&gt;20&lt;/span&gt; &lt;span class="se"&gt;\&lt;/span&gt;
@@ -590,8 +601,8 @@ zero, ie zero on every day but December 31ˢᵗ.&lt;/p&gt;
 &lt;p&gt;We can repeat the same process for day ratio; using &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;date&lt;/span&gt; &lt;span class="pre"&gt;-d&lt;/span&gt; &lt;span class="pre"&gt;&amp;quot;00:00&amp;quot;&lt;/span&gt; &lt;span class="pre"&gt;+%s&lt;/span&gt;&lt;/code&gt; to
 calculate number of seconds passed from the 86400 we’ll see today.  And then
 simply using &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;date&lt;/span&gt; &lt;span class="pre"&gt;+%m&lt;/span&gt;&lt;/code&gt; to get today’s month as a number.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="section" id="step-two"&gt;
+&lt;/section&gt;
+&lt;section id="step-two"&gt;
 &lt;h2&gt;Step two&lt;/h2&gt;
 &lt;p&gt;We can definitely up our game here.  Why not use colours?  We’ll switch to
 &lt;a class="reference external" href="https://www.python.org/"&gt;Python&lt;/a&gt; now, as the gigantic standard library allows us to be lazy.&lt;/p&gt;
@@ -642,8 +653,8 @@ like the following:&lt;/p&gt;
 &lt;p&gt;The &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;onstart=uncollapse&lt;/span&gt;&lt;/code&gt; attribute tell &lt;strong class="command"&gt;dzen2&lt;/strong&gt; that we want to see
 the full output on startup, without it we’d see just the title bar until we
 moved our pointer over the header.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="section" id="step-four"&gt;
+&lt;/section&gt;
+&lt;section id="step-four"&gt;
 &lt;h2&gt;Step four&lt;/h2&gt;
 &lt;p&gt;You can find the script I used &lt;a class="reference download internal" download="" href="../../_downloads/8bb0952b2cf5d96d60e8d4457de4c840/time_progress.py"&gt;&lt;code class="xref download docutils literal notranslate"&gt;&lt;span class="pre"&gt;here&lt;/span&gt;&lt;/code&gt;&lt;/a&gt;.  It isn’t
 pretty, but it will do.  If I come to depend on it I’m sure that I’ll make
@@ -652,8 +663,8 @@ something better.&lt;/p&gt;
 about doing this yourself you should consider buying the &lt;a class="reference external" href="https://www.progressbarosx.com/"&gt;Progress Bar OSX&lt;/a&gt;
 app.  This document wouldn’t exist without it and rewarding creators is
 important, even when they ignore your chosen platform ;)&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="section" id="step"&gt;
+&lt;/section&gt;
+&lt;section id="step"&gt;
 &lt;h2&gt;Step ∞&lt;/h2&gt;
 &lt;p&gt;As always with any code that touches dates &lt;a class="reference external" href="https://en.m.wikipedia.org/wiki/Here_be_dragons"&gt;“Here be dragons”&lt;/a&gt;.  For example,
 I’ll leave it as an exercise for the reader how to handle calculations for days
@@ -672,10 +683,14 @@ years.&lt;/p&gt;
 this is new to you.&lt;/p&gt;
 &lt;/dd&gt;&lt;/dl&gt;
 
-&lt;/div&gt;
-&lt;/div&gt;
+&lt;/section&gt;
+&lt;/section&gt;
 </content>
     <link href="https://jnrowe.github.io/articles/march_toward_death.html" rel="alternate"/>
+    <summary>A co-worker was demoing a user session today, and pointed out a neat tool for
+MacOS that displays the “continual march toward death”.  That tool was
+Progress Bar OSX, and it is pretty cool.  Sadly it is only available for
+MacOS, so we’ll need to make something similar.Screenshot of colourful progress in time</summary>
     <category term="linux" label="linux"/>
     <category term="dzen" label="dzen"/>
     <published>2018-11-13T00:00:00+00:00</published>

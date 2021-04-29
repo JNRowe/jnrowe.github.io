@@ -4,7 +4,8 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17: http://docutils.sourceforge.net/" />
+
     <title>GPS rollover 2019 &#8212; JNRowe</title>
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <link rel="stylesheet" href="../_static/alabaster.css" type="text/css" />
@@ -74,7 +75,7 @@
       4 minutes
     </p>
   
-  <div class="section" id="gps-rollover-2019">
+  <section id="gps-rollover-2019">
 <h1>GPS rollover 2019<a class="headerlink" href="#gps-rollover-2019" title="Permalink to this headline">¶</a></h1>
 <p>Tomorrow we’re going to experience the simultaneously cataclysmic and mundane
 consequences of a <abbr title="Global Positioning System">GPS</abbr> rollover event.  <em>Many</em> things will break, <em>many</em> will
@@ -87,13 +88,13 @@ of date handling never ends.</p>
 hardware I’m involved in building then contact your support channel, they
 are there to help.</p>
 </div>
-<div class="section" id="what-is-the-issue">
+<section id="what-is-the-issue">
 <h2>What is the issue?<a class="headerlink" href="#what-is-the-issue" title="Permalink to this headline">¶</a></h2>
 <p>Since 1981 <abbr title="Global Positioning System">GPS</abbr> signals have included a week number, which is provided as
 a 10-bit field and as such can only store 1024 values(around 19.5 years).
 Every time we hit that limit the week number rolls back to zero, and things may
 fail to work correctly following that.</p>
-<div class="sidebar">
+<aside class="sidebar">
 <p class="sidebar-title">Prior to ‘81</p>
 <p>As a side note very early <abbr title="Global Positioning System">GPS</abbr> transmissions didn’t even include week
 numbers in the signal.  Time was represented simply as a value <em>within</em>
@@ -104,17 +105,17 @@ issues that are caused by this.</p>
 upgrades to the <abbr title="Global Positioning System">GPS</abbr> signal over the approaching fifty years of its
 development.  Coupled with the out of band enhancements such as <abbr title="Wide Area Augmentation System">WAAS</abbr>, the accuracy and uses of <abbr title="Global Positioning System">GPS</abbr>-based
 systems have increased a tremendous amount.</p>
-</div>
+</aside>
 <p>This is the second operational rollover event, the first happened in August
 1999.  We — that is developers of <abbr title="Global Navigation Satellite System">GNSS</abbr>-using systems — <em>are</em> prepared for
 this, but the level of preparedness is unfortunately not uniform or indicative
 of how well we’re handling this.</p>
-</div>
-<div class="section" id="mitigations">
+</section>
+<section id="mitigations">
 <h2>Mitigations<a class="headerlink" href="#mitigations" title="Permalink to this headline">¶</a></h2>
 <p>As this problem is quite well understood there has been an awful lot of effort
 put in to working around it, some quite simple and some quite interesting.</p>
-<div class="section" id="stored-offset">
+<section id="stored-offset">
 <h3>Stored offset<a class="headerlink" href="#stored-offset" title="Permalink to this headline">¶</a></h3>
 <p>The gold standard is systems that could afford the addition of <abbr title="Non-Volatile Random Access Memory">NVRAM</abbr>.  If we have a storage medium then the
 previous known week number is often used as a check against rollover.  If we
@@ -123,8 +124,8 @@ changeover at <em>some</em> point than you <em>shouldn’t</em> experience error
 a rollover.</p>
 <p>The obvious drawback being if a system is dormant for twenty years, but that
 isn’t likely to be a real problem.</p>
-</div>
-<div class="section" id="week-number-offset">
+</section>
+<section id="week-number-offset">
 <h3>Week number offset<a class="headerlink" href="#week-number-offset" title="Permalink to this headline">¶</a></h3>
 <p>One of the most common mechanisms for dealing with rollover has been to bind it
 to the firmware running on the device.  You simply assume the week number is
@@ -143,8 +144,8 @@ problems at various stages of their lives.  In the above example our system
 <em>should</em> work through the epoch change in 2019, but will likely fail in August
 2029 without intervention as we’ll trip over <em>our</em> workaround with our own
 rollover bug causing it to reset to 2010.</p>
-</div>
-<div class="section" id="gnss-voting-comparisons">
+</section>
+<section id="gnss-voting-comparisons">
 <h3><abbr title="Global Navigation Satellite System">GNSS</abbr> voting comparisons<a class="headerlink" href="#gnss-voting-comparisons" title="Permalink to this headline">¶</a></h3>
 <p>Many modern receivers support multiple signals; <abbr title="Global Positioning System">GPS</abbr>, GLONASS, Beidou, &amp;c.
 Given this we can use consensus building to validate information.  If one of
@@ -156,8 +157,8 @@ simply exclude it.</p>
 low quality <abbr title="Real Time Clock">RTC</abbr>, these can also be used as a hint
 towards consensus building too.</p>
 </div>
-</div>
-<div class="section" id="leap-second-heuristic">
+</section>
+<section id="leap-second-heuristic">
 <h3>Leap second heuristic<a class="headerlink" href="#leap-second-heuristic" title="Permalink to this headline">¶</a></h3>
 <p><abbr title="Global Positioning System">GPS</abbr> time is not corrected for leap seconds and as such increasingly drifts
 from <abbr title="Coordinated Universal Time">UTC</abbr> over the years.  However, the current offset from <abbr title="Coordinated Universal Time">UTC</abbr> is
@@ -176,9 +177,9 @@ available immediately following a cold boot of a device.  Depending on
 circumstances the 12 minute wait to acquire the almanac data may not be an
 issue.</p>
 </div>
-</div>
-</div>
-<div class="section" id="what-should-i-do">
+</section>
+</section>
+<section id="what-should-i-do">
 <h2>What should I do?<a class="headerlink" href="#what-should-i-do" title="Permalink to this headline">¶</a></h2>
 <p>First check with your system’s supplier, they <em>should</em> have information on what
 mitigations they have in place and what effects you should see now or at other
@@ -196,8 +197,8 @@ anything beyond report “spoofing detected” if it receives unexpected
 signals, with the exception of a <abbr title="Trust On First Use">TOFU</abbr> event
 following a deep reset.</p>
 </div>
-</div>
-<div class="section" id="should-i-set-an-alarm-for-november-2038">
+</section>
+<section id="should-i-set-an-alarm-for-november-2038">
 <h2>Should I set an alarm for November 2038?<a class="headerlink" href="#should-i-set-an-alarm-for-november-2038" title="Permalink to this headline">¶</a></h2>
 <p>Yes and no.</p>
 <p>The next rollover will occur in 2038, but new message types that use a 13-bit
@@ -223,8 +224,8 @@ co-workers(forgive me!) in this.  People make mistakes, systems fail and
 skies may fall; having a good testing infrastructure is a must.</p>
 </dd>
 </dl>
-</div>
-</div>
+</section>
+</section>
 
     <hr>
 

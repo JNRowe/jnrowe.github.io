@@ -4,7 +4,8 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17: http://docutils.sourceforge.net/" />
+
     <title>Simple notifications in awesome &#8212; JNRowe</title>
     <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/alabaster.css" type="text/css" />
@@ -74,7 +75,7 @@
       5 minutes
     </p>
   
-  <div class="section" id="simple-notifications-in-awesome">
+  <section id="simple-notifications-in-awesome">
 <h1>Simple notifications in awesome<a class="headerlink" href="#simple-notifications-in-awesome" title="Permalink to this headline">¶</a></h1>
 <p>On seeing my window notifications in <a class="reference external" href="https://awesomewm.org/">awesome</a> from a screencast for a new
 project at work Matt Cooper asks:</p>
@@ -146,8 +147,8 @@ specifically any character your font can display.  From time to time I’ve
 experimented with using <code class="docutils literal notranslate"><span class="pre">✔</span></code> and <code class="docutils literal notranslate"><span class="pre">✘</span></code>, but most of the fonts I prefer to use
 don’t display them correctly(if you’re seeing two boxes your fonts don’t
 either).</p>
-</div>
-<div class="section" id="window-creation-notifications">
+</section>
+<section id="window-creation-notifications">
 <h1>Window creation notifications<a class="headerlink" href="#window-creation-notifications" title="Permalink to this headline">¶</a></h1>
 <p>One of the notifications I like to have is for when new windows are opened, this
 way I don’t miss windows opening on tags I’m not currently viewing.</p>
@@ -156,8 +157,8 @@ way I don’t miss windows opening on tags I’m not currently viewing.</p>
     <span class="n">notify</span><span class="o">.</span><span class="n">start</span> <span class="s2">&quot;</span><span class="s">#{@name or &#39;Application&#39;} started</span><span class="s2">&quot;</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="network-notifications">
+</section>
+<section id="network-notifications">
 <h1>Network notifications<a class="headerlink" href="#network-notifications" title="Permalink to this headline">¶</a></h1>
 <p>I also have the following <a class="reference external" href="https://awesomewm.org/apidoc/libraries/gears.html">gears</a> timer set to toggle my network monitor between
 <code class="docutils literal notranslate"><span class="pre">lo</span></code> and <code class="docutils literal notranslate"><span class="pre">ppp0</span></code> depending on whether my remote network interface is up.
@@ -179,7 +180,7 @@ switches the network graph widget to use the appropriate input too.</p>
     <span class="n">notify</span><span class="o">.</span><span class="n">start</span> <span class="s2">&quot;</span><span class="s">PPP0 interface has come #{state}</span><span class="s2">&quot;</span>
 </pre></div>
 </div>
-</div>
+</section>
 
     <hr>
 

@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <id>https://jnrowe.github.io/</id>
   <title>JNRowe - Posts tagged emacs</title>
-  <updated>2021-04-18T11:22:08.552852+00:00</updated>
+  <updated>2021-04-29T22:38:01.684897+00:00</updated>
   <link href="https://jnrowe.github.io/"/>
   <link href="https://jnrowe.github.io/blog/tag/emacs/atom.xml" rel="self"/>
-  <generator uri="https://ablog.readthedocs.org/" version="0.10.17">ABlog</generator>
+  <generator uri="https://ablog.readthedocs.org/" version="0.10.18">ABlog</generator>
   <subtitle>Ramblings of a tired mind</subtitle>
   <entry>
     <id>https://jnrowe.github.io/articles/tips/emacs_gtk_shortcuts.html</id>
@@ -14,7 +14,7 @@
     <author>
       <name>James Rowe</name>
     </author>
-    <content type="html">&lt;div class="section" id="proper-keyboard-shortcuts-in-gtk"&gt;
+    <content type="html">&lt;section id="proper-keyboard-shortcuts-in-gtk"&gt;
 
 &lt;p&gt;If you’re used to the old style &lt;a class="reference external" href="http://www.gtk.org/"&gt;GTK+&lt;/a&gt; keyboard shortcuts, and find yourself
 continually closing windows when you’re trying to delete a word (like me) then
@@ -42,9 +42,9 @@ class &amp;quot;GtkTextView&amp;quot; binding &amp;quot;gtk-emacs-text-entry&amp
 your &lt;code class="file docutils literal notranslate"&gt;&lt;span class="pre"&gt;~/.gtkrc.mine&lt;/span&gt;&lt;/code&gt; so it isn’t overwritten when you change themes.  See
 the comments in your &lt;code class="file docutils literal notranslate"&gt;&lt;span class="pre"&gt;~/.gtkrc-2.0&lt;/span&gt;&lt;/code&gt; if you use either of these theme
 switchers.&lt;/p&gt;
-&lt;div class="figure align-default"&gt;
+&lt;figure class="align-default"&gt;
 &lt;img alt="XFce4 keyboard settings window" src="../../_images/xfce4_keyboard.png" /&gt;
-&lt;/div&gt;
+&lt;/figure&gt;
 &lt;p&gt;If you’re an &lt;a class="reference external" href="http://www.xfce.org/"&gt;XFce&lt;/a&gt; user you can select the Emacs keyboard shortcuts using the
 keyboard settings dialog.&lt;/p&gt;
 &lt;p&gt;If you can’t change the settings for some reason, then you can still use
@@ -52,9 +52,12 @@ a shortcut to delete words.  The default setting, up to at least GTK+ v2.10.9,
 is the finger-stretching &lt;kbd class="kbd compound docutils literal notranslate"&gt;&lt;kbd class="kbd docutils literal notranslate"&gt;&amp;lt;C&lt;/kbd&gt;-&lt;kbd class="kbd docutils literal notranslate"&gt;backspace&amp;gt;&lt;/kbd&gt;&lt;/kbd&gt;.&lt;/p&gt;
 &lt;p&gt;And finally, if you manage to convince upstream that the default behaviour
 should be the settings in the Emacs theme I’ll owe you a few beers!&lt;/p&gt;
-&lt;/div&gt;
+&lt;/section&gt;
 </content>
     <link href="https://jnrowe.github.io/articles/tips/emacs_gtk_shortcuts.html" rel="alternate"/>
+    <summary>If you’re used to the old style GTK+ keyboard shortcuts, and find yourself
+continually closing windows when you’re trying to delete a word (like me) then
+add the following to your ~/.gtkrc-2.0:</summary>
     <category term="software" label="software"/>
     <category term="configs" label="configs"/>
     <category term="GTK+" label="GTK+"/>
@@ -68,7 +71,7 @@ should be the settings in the Emacs theme I’ll owe you a few beers!&lt;/p&gt;
     <author>
       <name>James Rowe</name>
     </author>
-    <content type="html">&lt;div class="section" id="evil-emacs-steals-my-heart"&gt;
+    <content type="html">&lt;section id="evil-emacs-steals-my-heart"&gt;
 
 &lt;p&gt;&lt;em&gt;Many&lt;/em&gt; of my co-workers use &lt;a class="reference external" href="https://www.gnu.org/software/emacs/"&gt;emacs&lt;/a&gt;, it is probably the most popular editor on
 our team and I understand why.&lt;/p&gt;
@@ -79,7 +82,7 @@ catalyst for change, but I am pretty fickle so it may not have even been all
 that important.&lt;/p&gt;
 &lt;p&gt;Lately, I’ve found myself diving back in to &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;emacs&lt;/span&gt;&lt;/code&gt;.  In large part this is
 because of &lt;a class="reference external" href="https://github.com/emacs-evil/evil"&gt;evil&lt;/a&gt;; I can be &lt;em&gt;in&lt;/em&gt; &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;emacs&lt;/span&gt;&lt;/code&gt;, but &lt;em&gt;live&lt;/em&gt; &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;vim&lt;/span&gt;&lt;/code&gt;.&lt;/p&gt;
-&lt;div class="section" id="evil-isnt-always-evil"&gt;
+&lt;section id="evil-isnt-always-evil"&gt;
 &lt;h2&gt;Evil isn’t always evil&lt;/h2&gt;
 &lt;p&gt;So, &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;evil-mode&lt;/span&gt;&lt;/code&gt; &lt;em&gt;is&lt;/em&gt; awesome.&lt;/p&gt;
 &lt;p&gt;The kindest thing I can think to say about it is this: You’ll be angry when it
@@ -120,8 +123,8 @@ didn’t really know what the key might be or when you’d use it.  Be that
 mode, or &lt;a class="reference external" href="https://github.com/gentoo/elogv"&gt;elogv&lt;/a&gt;’s bindings that mean you have to issue &lt;kbd class="kbd docutils literal notranslate"&gt;dd&lt;/kbd&gt; to kill an
 entry.  Frankly, many of the emulation layers often feel like you’re just
 doubling the number of keys you have to press without any benefits&lt;a class="footnote-reference brackets" href="#id4" id="id1"&gt;1&lt;/a&gt;.&lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="section" id="quirking-the-quirky"&gt;
+&lt;/section&gt;
+&lt;section id="quirking-the-quirky"&gt;
 &lt;h2&gt;Quirking the quirky&lt;/h2&gt;
 &lt;img alt="Emacs screenshot" class="align-right" src="../../_images/evil_emacs.png" style="width: 407.5px; height: 270.0px;" /&gt;
 &lt;p&gt;I’ll freely admit I’ve &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;vim&lt;/span&gt;&lt;/code&gt;ified my &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;emacs&lt;/span&gt;&lt;/code&gt;.  I use &lt;a class="reference external" href="https://github.com/emacs-evil/evil"&gt;evil&lt;/a&gt;, my mode line
@@ -140,8 +143,8 @@ switch to &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&
 screenshot in the buffer for &lt;em&gt;this&lt;/em&gt; post.  This example may be quite pointless&lt;a class="footnote-reference brackets" href="#id5" id="id2"&gt;2&lt;/a&gt;, but it can be nice to have &lt;a class="reference external" href="https://www.graphviz.org/"&gt;graphviz&lt;/a&gt; output class hierarchies in to
 a buffer or database schema popups(like below).&lt;/p&gt;
 &lt;img alt="Schema diagram" class="align-left" src="../../_images/immoral_model.png" style="width: 174.5px; height: 141.5px;" /&gt;
-&lt;/div&gt;
-&lt;div class="section" id="walking-the-branches"&gt;
+&lt;/section&gt;
+&lt;section id="walking-the-branches"&gt;
 &lt;h2&gt;Walking the branches&lt;/h2&gt;
 &lt;p&gt;I’ve decided to really dig in this time, not just switch on a whim.  I’m using
 &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;emacs&lt;/span&gt;&lt;/code&gt; and &lt;em&gt;only&lt;/em&gt; &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;emacs&lt;/span&gt;&lt;/code&gt; for a month, followed by &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;vim&lt;/span&gt;&lt;/code&gt; and &lt;em&gt;only&lt;/em&gt;
@@ -169,10 +172,12 @@ is very little point publishing it, as it can be summed up as “James
 pressed &lt;kbd class="kbd compound docutils literal notranslate"&gt;&lt;kbd class="kbd docutils literal notranslate"&gt;&amp;lt;C&lt;/kbd&gt;-&lt;kbd class="kbd docutils literal notranslate"&gt;x&amp;gt;$something&lt;/kbd&gt;&lt;/kbd&gt; and was surprised.”&lt;/p&gt;
 &lt;/dd&gt;
 &lt;/dl&gt;
-&lt;/div&gt;
-&lt;/div&gt;
+&lt;/section&gt;
+&lt;/section&gt;
 </content>
     <link href="https://jnrowe.github.io/articles/evil_emacs_steals_my_heart.html" rel="alternate"/>
+    <summary>Many of my co-workers use emacs, it is probably the most popular editor on
+our team and I understand why.Emacs screenshot</summary>
     <category term="emacs" label="emacs"/>
     <category term="vim" label="vim"/>
     <category term="evil" label="evil"/>
