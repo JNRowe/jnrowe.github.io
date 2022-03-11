@@ -1,5 +1,5 @@
-:date: 2018-01-23
-:tags: life, jury, law
+.. post:: 2018-01-23
+    :tags: life, jury, law
 
 Jury of your pear-shaped objects
 ================================
