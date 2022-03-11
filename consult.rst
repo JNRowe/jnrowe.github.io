@@ -27,8 +27,8 @@ That said, here are the guidelines:
 #. I will *not* sign contracts that attempt to impose restrictions on who I may
    work with or the topics that I can work on.
 #. I will *not* sign contracts unless they are applied according to
-   an EU member state’s laws, with disputes resolved in an EU member state’s
-   court.
+   UK or an EU member state’s laws, with disputes resolved in the
+   jurisdiction’s court.
 #. The first 15 minutes are free, all additional time will be chargeable and
    invoiced. [#]_
 #. I will *not* sign any |NDA|, unless they are time limited. [#]_
