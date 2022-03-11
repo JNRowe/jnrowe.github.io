@@ -229,7 +229,7 @@ combined with its fast and efficient array creation we can solve this with low
 effort.  So, we can prime an empty array and increment each element when it is
 touched by an elf::
 
-    Geometry = namedtuple('Geometry', 'x, y, w h')
+    Geometry = namedtuple('Geometry', 'x, y, w, h')
 
     data: Dict[int, Geometry] = process_input(inputs)
 
