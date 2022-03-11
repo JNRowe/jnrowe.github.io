@@ -64,7 +64,7 @@ a specific style&lt;a class="footnote-reference brackets" href="#id8" id="id1"&g
 a &lt;a class="reference external" href="https://www.gnu.org/software/guile/"&gt;guile&lt;/a&gt; enabled &lt;a class="reference external" href="https://www.gnu.org/software/make/make.html"&gt;GNU make&lt;/a&gt;.  The build servers don’t because &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;guile&lt;/span&gt;&lt;/code&gt;
 support isn’t enabled in the packages for some reason, and the devs that use
 systems which refuse to ship a recent enough versions of &lt;a class="reference external" href="https://www.gnu.org/software/make/make.html"&gt;GNU make&lt;/a&gt; to avoid
-the GPLv3&lt;a class="footnote-reference brackets" href="#id9" id="id2"&gt;2&lt;/a&gt; don’t have it either.&lt;/p&gt;
+the GPL3&lt;a class="footnote-reference brackets" href="#id9" id="id2"&gt;2&lt;/a&gt; don’t have it either.&lt;/p&gt;
 &lt;p&gt;There has to be a better way…&lt;/p&gt;
 &lt;/section&gt;
 &lt;section id="redo"&gt;
@@ -216,7 +216,7 @@ work is below:&lt;/p&gt;
 &lt;span class="na"&gt;deps&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s"&gt;gcc&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
-&lt;p&gt;Of course we’re making trade offs at this point, and they are basically:&lt;/p&gt;
+&lt;p&gt;Of course we’re making a trade-off at this point, and they are basically:&lt;/p&gt;
 &lt;table class="docutils align-default"&gt;
 &lt;colgroup&gt;
 &lt;col style="width: 19%" /&gt;
@@ -346,7 +346,7 @@ whether that was the right way to pin it.&lt;/p&gt;
 &lt;/dd&gt;
 &lt;dt class="label" id="id9"&gt;&lt;span class="brackets"&gt;&lt;a class="fn-backref" href="#id2"&gt;2&lt;/a&gt;&lt;/span&gt;&lt;/dt&gt;
 &lt;dd&gt;&lt;p&gt;For the projects I’m currently working the number of devs using systems
-with pre-GPLv3 make is very low, but it is &lt;em&gt;entirely&lt;/em&gt; dependent on the
+with pre-GPL3 make is very low, but it is &lt;em&gt;entirely&lt;/em&gt; dependent on the
 ecosystem of a given project.&lt;/p&gt;
 &lt;/dd&gt;
 &lt;dt class="label" id="id10"&gt;&lt;span class="brackets"&gt;&lt;a class="fn-backref" href="#id3"&gt;3&lt;/a&gt;&lt;/span&gt;&lt;/dt&gt;
@@ -354,7 +354,7 @@ ecosystem of a given project.&lt;/p&gt;
 website, and there is no known reference implementation.&lt;/p&gt;
 &lt;/dd&gt;
 &lt;dt class="label" id="id11"&gt;&lt;span class="brackets"&gt;&lt;a class="fn-backref" href="#id4"&gt;4&lt;/a&gt;&lt;/span&gt;&lt;/dt&gt;
-&lt;dd&gt;&lt;p&gt;This is defintely not true of &lt;strong class="command"&gt;make&lt;/strong&gt; requirements, I’ve seen many
+&lt;dd&gt;&lt;p&gt;This is definitely not true of &lt;strong class="command"&gt;make&lt;/strong&gt; requirements, I’ve seen many
 ridiculously angry bugs filed when builds only work with &lt;a class="reference external" href="https://www.gnu.org/software/make/make.html"&gt;GNU make&lt;/a&gt;.&lt;/p&gt;
 &lt;/dd&gt;
 &lt;dt class="label" id="id12"&gt;&lt;span class="brackets"&gt;&lt;a class="fn-backref" href="#id5"&gt;5&lt;/a&gt;&lt;/span&gt;&lt;/dt&gt;

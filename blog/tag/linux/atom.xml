@@ -596,7 +596,7 @@ position in year as percentage&lt;/p&gt;&lt;/li&gt;
 &lt;p class="admonition-title"&gt;Warning&lt;/p&gt;
 &lt;p&gt;Be sure to notice that we force &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;number&lt;/span&gt; &lt;span class="pre"&gt;of&lt;/span&gt; &lt;span class="pre"&gt;days&lt;/span&gt; &lt;span class="pre"&gt;in&lt;/span&gt; &lt;span class="pre"&gt;year&lt;/span&gt;&lt;/code&gt; to be a float
 with the addition of &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;.0&lt;/span&gt;&lt;/code&gt;.  Without it the result would be rounded toward
-zero, ie zero on every day but December 31ˢᵗ.&lt;/p&gt;
+zero, ie zero on every day but December 31st.&lt;/p&gt;
 &lt;/div&gt;
 &lt;p&gt;We can repeat the same process for day ratio; using &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;date&lt;/span&gt; &lt;span class="pre"&gt;-d&lt;/span&gt; &lt;span class="pre"&gt;&amp;quot;00:00&amp;quot;&lt;/span&gt; &lt;span class="pre"&gt;+%s&lt;/span&gt;&lt;/code&gt; to
 calculate number of seconds passed from the 86400 we’ll see today.  And then
@@ -672,7 +672,7 @@ with &lt;abbr title="Daylight Saving Time"&gt;DST&lt;/abbr&gt; transitions.&lt;/
 &lt;p class="rubric"&gt;Footnotes&lt;/p&gt;
 &lt;dl class="footnote brackets"&gt;
 &lt;dt class="label" id="id2"&gt;&lt;span class="brackets"&gt;&lt;a class="fn-backref" href="#id1"&gt;1&lt;/a&gt;&lt;/span&gt;&lt;/dt&gt;
-&lt;dd&gt;&lt;p&gt;Calculating the day of year for December 31ˢᵗ allows one to work in leap
+&lt;dd&gt;&lt;p&gt;Calculating the day of year for December 31st allows one to work in leap
 years.&lt;/p&gt;
 &lt;/dd&gt;
 &lt;/dl&gt;

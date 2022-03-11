@@ -711,7 +711,7 @@ implementation either, just another state variable and &lt;code class="docutils 
 &lt;li&gt;&lt;p&gt;&lt;a class="reference external" href="https://adventofcode.com/2019/day/10"&gt;Monitoring Station&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;Part one was easy enough, after having put in some legwork to re-read topics
-I have a tendancy to forget through lack of use.  I took a ten minute diversion
+I have a tendency to forget through lack of use.  I took a ten minute diversion
 to refresh myself on &lt;a class="reference external" href="https://nrich.maths.org/13746"&gt;polar coordinates&lt;/a&gt;&lt;a class="footnote-reference brackets" href="#id6" id="id3"&gt;3&lt;/a&gt;, then a little &lt;a class="reference external" href="https://docs.python.org/3/library/cmath.html#module-cmath" title="(in Python v3.9)"&gt;&lt;code class="xref py py-mod docutils literal notranslate"&gt;&lt;span class="pre"&gt;cmath&lt;/span&gt;&lt;/code&gt;&lt;/a&gt;
 refresher.&lt;/p&gt;
 &lt;p&gt;Research over.  All we need to do is map the asteroid coordinates as complex

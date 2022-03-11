@@ -125,7 +125,7 @@ a specific style<a class="footnote-reference brackets" href="#id8" id="id1">1</a
 a <a class="reference external" href="https://www.gnu.org/software/guile/">guile</a> enabled <a class="reference external" href="https://www.gnu.org/software/make/make.html">GNU make</a>.  The build servers don’t because <code class="docutils literal notranslate"><span class="pre">guile</span></code>
 support isn’t enabled in the packages for some reason, and the devs that use
 systems which refuse to ship a recent enough versions of <a class="reference external" href="https://www.gnu.org/software/make/make.html">GNU make</a> to avoid
-the GPLv3<a class="footnote-reference brackets" href="#id9" id="id2">2</a> don’t have it either.</p>
+the GPL3<a class="footnote-reference brackets" href="#id9" id="id2">2</a> don’t have it either.</p>
 <p>There has to be a better way…</p>
 </section>
 <section id="redo">
@@ -277,7 +277,7 @@ work is below:</p>
 <span class="na">deps</span> <span class="o">=</span> <span class="s">gcc</span>
 </pre></div>
 </div>
-<p>Of course we’re making trade offs at this point, and they are basically:</p>
+<p>Of course we’re making a trade-off at this point, and they are basically:</p>
 <table class="docutils align-default">
 <colgroup>
 <col style="width: 19%" />
@@ -407,7 +407,7 @@ whether that was the right way to pin it.</p>
 </dd>
 <dt class="label" id="id9"><span class="brackets"><a class="fn-backref" href="#id2">2</a></span></dt>
 <dd><p>For the projects I’m currently working the number of devs using systems
-with pre-GPLv3 make is very low, but it is <em>entirely</em> dependent on the
+with pre-GPL3 make is very low, but it is <em>entirely</em> dependent on the
 ecosystem of a given project.</p>
 </dd>
 <dt class="label" id="id10"><span class="brackets"><a class="fn-backref" href="#id3">3</a></span></dt>
@@ -415,7 +415,7 @@ ecosystem of a given project.</p>
 website, and there is no known reference implementation.</p>
 </dd>
 <dt class="label" id="id11"><span class="brackets"><a class="fn-backref" href="#id4">4</a></span></dt>
-<dd><p>This is defintely not true of <strong class="command">make</strong> requirements, I’ve seen many
+<dd><p>This is definitely not true of <strong class="command">make</strong> requirements, I’ve seen many
 ridiculously angry bugs filed when builds only work with <a class="reference external" href="https://www.gnu.org/software/make/make.html">GNU make</a>.</p>
 </dd>
 <dt class="label" id="id12"><span class="brackets"><a class="fn-backref" href="#id5">5</a></span></dt>

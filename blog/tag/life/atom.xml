@@ -163,7 +163,16 @@ I suspect that will remain true in the future.  I like that these decisions are
 defensible to &lt;em&gt;me&lt;/em&gt;, that they &lt;em&gt;must&lt;/em&gt; be defensible to me.  I love that the thing
 that keeps me awake at night is not the thought of the possibly nefarious
 effects of my works, but rather the exceedingly minor issue of not having
-a glistening and well-spec’d M6 in the garage.&lt;/p&gt;
+a glistening &lt;a href="#id2"&gt;&lt;span class="problematic" id="id3"&gt;:wiki:`DB5 &amp;lt;Aston_Martin_DB5&amp;gt;`&lt;/span&gt;&lt;/a&gt; in the garage.&lt;/p&gt;
+&lt;div class="system-message"&gt;
+&lt;p class="system-message-title"&gt;System Message: INFO/1 (&lt;span class="docutils literal"&gt;/home/james/Projects/jnrowe.github.io/thoughts/important_balance.rst&lt;/span&gt;, line 45)&lt;/p&gt;
+&lt;p&gt;No role entry for “wiki” in module “docutils.parsers.rst.languages.en”.
+Trying “wiki” as canonical role name.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="system-message" id="id2"&gt;
+&lt;p class="system-message-title"&gt;System Message: ERROR/3 (&lt;span class="docutils literal"&gt;/home/james/Projects/jnrowe.github.io/thoughts/important_balance.rst&lt;/span&gt;, line 45); &lt;em&gt;&lt;a href="#id3"&gt;backlink&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;Unknown interpreted text role “wiki”.&lt;/p&gt;
+&lt;/div&gt;
 &lt;p&gt;Now, let me sleep.&lt;/p&gt;
 &lt;p class="rubric"&gt;Footnotes&lt;/p&gt;
 &lt;dl class="footnote brackets"&gt;

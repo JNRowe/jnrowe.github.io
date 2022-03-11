@@ -248,9 +248,9 @@ example, we could loop over our inputs with something like the following:</p>
 <span class="pre">/</span> <span class="pre">len(current)</span></code> for a single character change.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>We’re seeing two matches here partly out of laziness, the simplifed version
-above is testing against the set of all inputs which includes the current
-word and thus always has one perfect match.</p>
+<p>We’re seeing two matches here partly out of laziness, the simplified
+version above is testing against the set of all inputs which includes the
+current word and thus always has one perfect match.</p>
 </div>
 </section>
 <section id="day-3">
@@ -439,7 +439,7 @@ and other cools things my version wouldn’t.</p>
 <p>I’ve since benchmarked a couple of alternatives, such as iterating over
 <code class="docutils literal notranslate"><span class="pre">string.ascii_lowercase</span></code> and calling <code class="docutils literal notranslate"><span class="pre">str.replace()</span></code> until the
 string no longer changes.  Many are simpler to reason about and have roughly
-the same runtime, but for paedagogical honesty I’ve kept the <code class="docutils literal notranslate"><span class="pre">deque</span></code> version
+the same runtime, but for pedagogical honesty I’ve kept the <code class="docutils literal notranslate"><span class="pre">deque</span></code> version
 here.</p>
 <p>Anyway, it turns out I was right.  There were going to be some significant
 optimisations to make this work reasonably.  However, they didn’t show up until

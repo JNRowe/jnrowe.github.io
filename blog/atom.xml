@@ -66,7 +66,7 @@ it would be okay if someone’s morals put them in the poor house, but less
 so if they have a cushion to soften the blow.&lt;/p&gt;
 &lt;/section&gt;
 &lt;section id="whats-coming-next"&gt;
-&lt;h2&gt;Whats coming next?&lt;/h2&gt;
+&lt;h2&gt;What’s coming next?&lt;/h2&gt;
 &lt;blockquote class="epigraph"&gt;
 &lt;div&gt;&lt;p&gt;Lisa is a sellout! Lisa is a sellout! Lisa, what’s a sellout?&lt;/p&gt;
 &lt;p class="attribution"&gt;—Ralph Wiggum&lt;/p&gt;
@@ -582,7 +582,7 @@ having to get up at five, I just can’t even imagine what that could be.&lt;/p&
 end up sucked in to old puzzles very easily.&lt;/p&gt;
 &lt;/dd&gt;
 &lt;dt class="label" id="id6"&gt;&lt;span class="brackets"&gt;&lt;a class="fn-backref" href="#id2"&gt;2&lt;/a&gt;&lt;/span&gt;&lt;/dt&gt;
-&lt;dd&gt;&lt;p&gt;Frankly, I’m of the strong opionion that you should be studying up on
+&lt;dd&gt;&lt;p&gt;Frankly, I’m of the strong opinion that you should be studying up on
 &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;itertools&lt;/span&gt;&lt;/code&gt; &lt;em&gt;all&lt;/em&gt; the time anyway.  It just that other Python
 developers aren’t always familiar enough with the module for use in
 large shared code bases, so help to make this a reality!&lt;/p&gt;
@@ -951,7 +951,7 @@ position in year as percentage&lt;/p&gt;&lt;/li&gt;
 &lt;p class="admonition-title"&gt;Warning&lt;/p&gt;
 &lt;p&gt;Be sure to notice that we force &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;number&lt;/span&gt; &lt;span class="pre"&gt;of&lt;/span&gt; &lt;span class="pre"&gt;days&lt;/span&gt; &lt;span class="pre"&gt;in&lt;/span&gt; &lt;span class="pre"&gt;year&lt;/span&gt;&lt;/code&gt; to be a float
 with the addition of &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;.0&lt;/span&gt;&lt;/code&gt;.  Without it the result would be rounded toward
-zero, ie zero on every day but December 31ˢᵗ.&lt;/p&gt;
+zero, ie zero on every day but December 31st.&lt;/p&gt;
 &lt;/div&gt;
 &lt;p&gt;We can repeat the same process for day ratio; using &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;date&lt;/span&gt; &lt;span class="pre"&gt;-d&lt;/span&gt; &lt;span class="pre"&gt;&amp;quot;00:00&amp;quot;&lt;/span&gt; &lt;span class="pre"&gt;+%s&lt;/span&gt;&lt;/code&gt; to
 calculate number of seconds passed from the 86400 we’ll see today.  And then
@@ -1027,7 +1027,7 @@ with &lt;abbr title="Daylight Saving Time"&gt;DST&lt;/abbr&gt; transitions.&lt;/
 &lt;p class="rubric"&gt;Footnotes&lt;/p&gt;
 &lt;dl class="footnote brackets"&gt;
 &lt;dt class="label" id="id2"&gt;&lt;span class="brackets"&gt;&lt;a class="fn-backref" href="#id1"&gt;1&lt;/a&gt;&lt;/span&gt;&lt;/dt&gt;
-&lt;dd&gt;&lt;p&gt;Calculating the day of year for December 31ˢᵗ allows one to work in leap
+&lt;dd&gt;&lt;p&gt;Calculating the day of year for December 31st allows one to work in leap
 years.&lt;/p&gt;
 &lt;/dd&gt;
 &lt;/dl&gt;
@@ -1107,7 +1107,7 @@ a specific style&lt;a class="footnote-reference brackets" href="#id8" id="id1"&g
 a &lt;a class="reference external" href="https://www.gnu.org/software/guile/"&gt;guile&lt;/a&gt; enabled &lt;a class="reference external" href="https://www.gnu.org/software/make/make.html"&gt;GNU make&lt;/a&gt;.  The build servers don’t because &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;guile&lt;/span&gt;&lt;/code&gt;
 support isn’t enabled in the packages for some reason, and the devs that use
 systems which refuse to ship a recent enough versions of &lt;a class="reference external" href="https://www.gnu.org/software/make/make.html"&gt;GNU make&lt;/a&gt; to avoid
-the GPLv3&lt;a class="footnote-reference brackets" href="#id9" id="id2"&gt;2&lt;/a&gt; don’t have it either.&lt;/p&gt;
+the GPL3&lt;a class="footnote-reference brackets" href="#id9" id="id2"&gt;2&lt;/a&gt; don’t have it either.&lt;/p&gt;
 &lt;p&gt;There has to be a better way…&lt;/p&gt;
 &lt;/section&gt;
 &lt;section id="redo"&gt;
@@ -1259,7 +1259,7 @@ work is below:&lt;/p&gt;
 &lt;span class="na"&gt;deps&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s"&gt;gcc&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
-&lt;p&gt;Of course we’re making trade offs at this point, and they are basically:&lt;/p&gt;
+&lt;p&gt;Of course we’re making a trade-off at this point, and they are basically:&lt;/p&gt;
 &lt;table class="docutils align-default"&gt;
 &lt;colgroup&gt;
 &lt;col style="width: 19%" /&gt;
@@ -1389,7 +1389,7 @@ whether that was the right way to pin it.&lt;/p&gt;
 &lt;/dd&gt;
 &lt;dt class="label" id="id9"&gt;&lt;span class="brackets"&gt;&lt;a class="fn-backref" href="#id2"&gt;2&lt;/a&gt;&lt;/span&gt;&lt;/dt&gt;
 &lt;dd&gt;&lt;p&gt;For the projects I’m currently working the number of devs using systems
-with pre-GPLv3 make is very low, but it is &lt;em&gt;entirely&lt;/em&gt; dependent on the
+with pre-GPL3 make is very low, but it is &lt;em&gt;entirely&lt;/em&gt; dependent on the
 ecosystem of a given project.&lt;/p&gt;
 &lt;/dd&gt;
 &lt;dt class="label" id="id10"&gt;&lt;span class="brackets"&gt;&lt;a class="fn-backref" href="#id3"&gt;3&lt;/a&gt;&lt;/span&gt;&lt;/dt&gt;
@@ -1397,7 +1397,7 @@ ecosystem of a given project.&lt;/p&gt;
 website, and there is no known reference implementation.&lt;/p&gt;
 &lt;/dd&gt;
 &lt;dt class="label" id="id11"&gt;&lt;span class="brackets"&gt;&lt;a class="fn-backref" href="#id4"&gt;4&lt;/a&gt;&lt;/span&gt;&lt;/dt&gt;
-&lt;dd&gt;&lt;p&gt;This is defintely not true of &lt;strong class="command"&gt;make&lt;/strong&gt; requirements, I’ve seen many
+&lt;dd&gt;&lt;p&gt;This is definitely not true of &lt;strong class="command"&gt;make&lt;/strong&gt; requirements, I’ve seen many
 ridiculously angry bugs filed when builds only work with &lt;a class="reference external" href="https://www.gnu.org/software/make/make.html"&gt;GNU make&lt;/a&gt;.&lt;/p&gt;
 &lt;/dd&gt;
 &lt;dt class="label" id="id12"&gt;&lt;span class="brackets"&gt;&lt;a class="fn-backref" href="#id5"&gt;5&lt;/a&gt;&lt;/span&gt;&lt;/dt&gt;
@@ -1759,9 +1759,9 @@ example, we could loop over our inputs with something like the following:&lt;/p&
 &lt;span class="pre"&gt;/&lt;/span&gt; &lt;span class="pre"&gt;len(current)&lt;/span&gt;&lt;/code&gt; for a single character change.&lt;/p&gt;
 &lt;div class="admonition note"&gt;
 &lt;p class="admonition-title"&gt;Note&lt;/p&gt;
-&lt;p&gt;We’re seeing two matches here partly out of laziness, the simplifed version
-above is testing against the set of all inputs which includes the current
-word and thus always has one perfect match.&lt;/p&gt;
+&lt;p&gt;We’re seeing two matches here partly out of laziness, the simplified
+version above is testing against the set of all inputs which includes the
+current word and thus always has one perfect match.&lt;/p&gt;
 &lt;/div&gt;
 &lt;/section&gt;
 &lt;section id="day-3"&gt;
@@ -1950,7 +1950,7 @@ and other cools things my version wouldn’t.&lt;/p&gt;
 &lt;p&gt;I’ve since benchmarked a couple of alternatives, such as iterating over
 &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;string.ascii_lowercase&lt;/span&gt;&lt;/code&gt; and calling &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;str.replace()&lt;/span&gt;&lt;/code&gt; until the
 string no longer changes.  Many are simpler to reason about and have roughly
-the same runtime, but for paedagogical honesty I’ve kept the &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;deque&lt;/span&gt;&lt;/code&gt; version
+the same runtime, but for pedagogical honesty I’ve kept the &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;deque&lt;/span&gt;&lt;/code&gt; version
 here.&lt;/p&gt;
 &lt;p&gt;Anyway, it turns out I was right.  There were going to be some significant
 optimisations to make this work reasonably.  However, they didn’t show up until
@@ -2898,7 +2898,7 @@ implementation either, just another state variable and &lt;code class="docutils 
 &lt;li&gt;&lt;p&gt;&lt;a class="reference external" href="https://adventofcode.com/2019/day/10"&gt;Monitoring Station&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;Part one was easy enough, after having put in some legwork to re-read topics
-I have a tendancy to forget through lack of use.  I took a ten minute diversion
+I have a tendency to forget through lack of use.  I took a ten minute diversion
 to refresh myself on &lt;a class="reference external" href="https://nrich.maths.org/13746"&gt;polar coordinates&lt;/a&gt;&lt;a class="footnote-reference brackets" href="#id6" id="id3"&gt;3&lt;/a&gt;, then a little &lt;a class="reference external" href="https://docs.python.org/3/library/cmath.html#module-cmath" title="(in Python v3.9)"&gt;&lt;code class="xref py py-mod docutils literal notranslate"&gt;&lt;span class="pre"&gt;cmath&lt;/span&gt;&lt;/code&gt;&lt;/a&gt;
 refresher.&lt;/p&gt;
 &lt;p&gt;Research over.  All we need to do is map the asteroid coordinates as complex

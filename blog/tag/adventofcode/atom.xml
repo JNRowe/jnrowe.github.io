@@ -243,7 +243,7 @@ having to get up at five, I just can’t even imagine what that could be.&lt;/p&
 end up sucked in to old puzzles very easily.&lt;/p&gt;
 &lt;/dd&gt;
 &lt;dt class="label" id="id6"&gt;&lt;span class="brackets"&gt;&lt;a class="fn-backref" href="#id2"&gt;2&lt;/a&gt;&lt;/span&gt;&lt;/dt&gt;
-&lt;dd&gt;&lt;p&gt;Frankly, I’m of the strong opionion that you should be studying up on
+&lt;dd&gt;&lt;p&gt;Frankly, I’m of the strong opinion that you should be studying up on
 &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;itertools&lt;/span&gt;&lt;/code&gt; &lt;em&gt;all&lt;/em&gt; the time anyway.  It just that other Python
 developers aren’t always familiar enough with the module for use in
 large shared code bases, so help to make this a reality!&lt;/p&gt;
@@ -450,9 +450,9 @@ example, we could loop over our inputs with something like the following:&lt;/p&
 &lt;span class="pre"&gt;/&lt;/span&gt; &lt;span class="pre"&gt;len(current)&lt;/span&gt;&lt;/code&gt; for a single character change.&lt;/p&gt;
 &lt;div class="admonition note"&gt;
 &lt;p class="admonition-title"&gt;Note&lt;/p&gt;
-&lt;p&gt;We’re seeing two matches here partly out of laziness, the simplifed version
-above is testing against the set of all inputs which includes the current
-word and thus always has one perfect match.&lt;/p&gt;
+&lt;p&gt;We’re seeing two matches here partly out of laziness, the simplified
+version above is testing against the set of all inputs which includes the
+current word and thus always has one perfect match.&lt;/p&gt;
 &lt;/div&gt;
 &lt;/section&gt;
 &lt;section id="day-3"&gt;
@@ -641,7 +641,7 @@ and other cools things my version wouldn’t.&lt;/p&gt;
 &lt;p&gt;I’ve since benchmarked a couple of alternatives, such as iterating over
 &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;string.ascii_lowercase&lt;/span&gt;&lt;/code&gt; and calling &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;str.replace()&lt;/span&gt;&lt;/code&gt; until the
 string no longer changes.  Many are simpler to reason about and have roughly
-the same runtime, but for paedagogical honesty I’ve kept the &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;deque&lt;/span&gt;&lt;/code&gt; version
+the same runtime, but for pedagogical honesty I’ve kept the &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;deque&lt;/span&gt;&lt;/code&gt; version
 here.&lt;/p&gt;
 &lt;p&gt;Anyway, it turns out I was right.  There were going to be some significant
 optimisations to make this work reasonably.  However, they didn’t show up until
@@ -1213,7 +1213,7 @@ implementation either, just another state variable and &lt;code class="docutils 
 &lt;li&gt;&lt;p&gt;&lt;a class="reference external" href="https://adventofcode.com/2019/day/10"&gt;Monitoring Station&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;Part one was easy enough, after having put in some legwork to re-read topics
-I have a tendancy to forget through lack of use.  I took a ten minute diversion
+I have a tendency to forget through lack of use.  I took a ten minute diversion
 to refresh myself on &lt;a class="reference external" href="https://nrich.maths.org/13746"&gt;polar coordinates&lt;/a&gt;&lt;a class="footnote-reference brackets" href="#id6" id="id3"&gt;3&lt;/a&gt;, then a little &lt;a class="reference external" href="https://docs.python.org/3/library/cmath.html#module-cmath" title="(in Python v3.9)"&gt;&lt;code class="xref py py-mod docutils literal notranslate"&gt;&lt;span class="pre"&gt;cmath&lt;/span&gt;&lt;/code&gt;&lt;/a&gt;
 refresher.&lt;/p&gt;
 &lt;p&gt;Research over.  All we need to do is map the asteroid coordinates as complex
