@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <id>https://jnrowe.github.io/</id>
   <title>JNRowe - Posts tagged linux</title>
-  <updated>2021-04-29T22:38:02.245284+00:00</updated>
+  <updated>2022-03-11T11:45:56.716260+00:00</updated>
   <link href="https://jnrowe.github.io/"/>
   <link href="https://jnrowe.github.io/blog/tag/linux/atom.xml" rel="self"/>
-  <generator uri="https://ablog.readthedocs.org/" version="0.10.18">ABlog</generator>
+  <generator uri="https://ablog.readthedocs.org/" version="0.10.23">ABlog</generator>
   <subtitle>Ramblings of a tired mind</subtitle>
   <entry>
     <id>https://jnrowe.github.io/articles/tips/Three_mobile_broadband_in_linux.html</id>
@@ -512,8 +512,8 @@ makes dependency handling work among other things.&lt;/p&gt;
 &lt;/dd&gt;
 &lt;/dl&gt;
 &lt;dl class="std option"&gt;
-&lt;dt id="cmdoption-tar-C"&gt;
-&lt;span id="cmdoption-tar-c"&gt;&lt;/span&gt;&lt;code class="sig-name descname"&gt;&lt;span class="pre"&gt;-C&lt;/span&gt;&lt;/code&gt;&lt;code class="sig-prename descclassname"&gt;&lt;/code&gt;&lt;/dt&gt;
+&lt;dt class="sig sig-object std" id="cmdoption-tar-C"&gt;
+&lt;span id="cmdoption-tar-c"&gt;&lt;/span&gt;&lt;span class="sig-name descname"&gt;&lt;span class="pre"&gt;-C&lt;/span&gt;&lt;/span&gt;&lt;span class="sig-prename descclassname"&gt;&lt;/span&gt;&lt;/dt&gt;
 &lt;dd&gt;&lt;p&gt;This option tells &lt;strong class="command"&gt;tar&lt;/strong&gt; to change directory before performing its
 duty.  For example using &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;-C&lt;/span&gt; &lt;span class="pre"&gt;/&lt;/span&gt;&lt;/code&gt; will switch to &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;/&lt;/span&gt;&lt;/code&gt;, and can be used to
 unpack a tarball directly over the root filesystem.&lt;/p&gt;
@@ -677,8 +677,8 @@ years.&lt;/p&gt;
 &lt;/dd&gt;
 &lt;/dl&gt;
 &lt;dl class="std option"&gt;
-&lt;dt id="cmdoption-date-arg-j"&gt;
-&lt;code class="sig-name descname"&gt;&lt;span class="pre"&gt;%j&lt;/span&gt;&lt;/code&gt;&lt;code class="sig-prename descclassname"&gt;&lt;/code&gt;&lt;/dt&gt;
+&lt;dt class="sig sig-object std" id="cmdoption-date-arg-j"&gt;
+&lt;span class="sig-name descname"&gt;&lt;span class="pre"&gt;%j&lt;/span&gt;&lt;/span&gt;&lt;span class="sig-prename descclassname"&gt;&lt;/span&gt;&lt;/dt&gt;
 &lt;dd&gt;&lt;p&gt;Displays the day number of the given year, see &lt;em class="manpage"&gt;strftime(3)&lt;/em&gt; if
 this is new to you.&lt;/p&gt;
 &lt;/dd&gt;&lt;/dl&gt;

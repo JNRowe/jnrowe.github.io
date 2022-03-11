@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <id>https://jnrowe.github.io/</id>
   <title>JNRowe - Posts tagged vcs</title>
-  <updated>2021-04-29T22:38:04.861994+00:00</updated>
+  <updated>2022-03-11T11:45:58.931304+00:00</updated>
   <link href="https://jnrowe.github.io/"/>
   <link href="https://jnrowe.github.io/blog/tag/vcs/atom.xml" rel="self"/>
-  <generator uri="https://ablog.readthedocs.org/" version="0.10.18">ABlog</generator>
+  <generator uri="https://ablog.readthedocs.org/" version="0.10.23">ABlog</generator>
   <subtitle>Ramblings of a tired mind</subtitle>
   <entry>
     <id>https://jnrowe.github.io/articles/rcs.html</id>
@@ -297,49 +297,49 @@ this short text has been helpful to you.&lt;/p&gt;
 &lt;p class="rubric"&gt;Footnotes&lt;/p&gt;
 &lt;p&gt;&lt;abbr title="GNU Revision Control System"&gt;RCS&lt;/abbr&gt; options:&lt;/p&gt;
 &lt;dl class="std option"&gt;
-&lt;dt id="cmdoption-r"&gt;
-&lt;code class="sig-name descname"&gt;&lt;span class="pre"&gt;-r&lt;/span&gt;&lt;/code&gt;&lt;code class="sig-prename descclassname"&gt;&lt;/code&gt;&lt;/dt&gt;
+&lt;dt class="sig sig-object std" id="cmdoption-r"&gt;
+&lt;span class="sig-name descname"&gt;&lt;span class="pre"&gt;-r&lt;/span&gt;&lt;/span&gt;&lt;span class="sig-prename descclassname"&gt;&lt;/span&gt;&lt;/dt&gt;
 &lt;dd&gt;&lt;p&gt;Specify the revision to work with.  Common across all of &lt;abbr title="GNU Revision Control System"&gt;RCS&lt;/abbr&gt;’s tools.&lt;/p&gt;
 &lt;/dd&gt;&lt;/dl&gt;
 
 &lt;p&gt;&lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;blame&lt;/span&gt;&lt;/code&gt; options:&lt;/p&gt;
 &lt;dl class="std option"&gt;
-&lt;dt id="cmdoption-blame-date"&gt;
-&lt;code class="sig-name descname"&gt;&lt;span class="pre"&gt;--date&lt;/span&gt;&lt;/code&gt;&lt;code class="sig-prename descclassname"&gt;&lt;/code&gt;&lt;/dt&gt;
+&lt;dt class="sig sig-object std" id="cmdoption-blame-date"&gt;
+&lt;span class="sig-name descname"&gt;&lt;span class="pre"&gt;--date&lt;/span&gt;&lt;/span&gt;&lt;span class="sig-prename descclassname"&gt;&lt;/span&gt;&lt;/dt&gt;
 &lt;dd&gt;&lt;p&gt;Annotate the revision that closest to, but not after, the given date.&lt;/p&gt;
 &lt;/dd&gt;&lt;/dl&gt;
 
 &lt;dl class="std option"&gt;
-&lt;dt id="cmdoption-blame-revision"&gt;
-&lt;code class="sig-name descname"&gt;&lt;span class="pre"&gt;--revision&lt;/span&gt;&lt;/code&gt;&lt;code class="sig-prename descclassname"&gt;&lt;/code&gt;&lt;/dt&gt;
+&lt;dt class="sig sig-object std" id="cmdoption-blame-revision"&gt;
+&lt;span class="sig-name descname"&gt;&lt;span class="pre"&gt;--revision&lt;/span&gt;&lt;/span&gt;&lt;span class="sig-prename descclassname"&gt;&lt;/span&gt;&lt;/dt&gt;
 &lt;dd&gt;&lt;p&gt;Annotate the revision numerically closest to, but not exceeding, the given
 revision.&lt;/p&gt;
 &lt;/dd&gt;&lt;/dl&gt;
 
 &lt;p&gt;&lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;ci&lt;/span&gt;&lt;/code&gt; options:&lt;/p&gt;
 &lt;dl class="std option"&gt;
-&lt;dt id="cmdoption-ci-r"&gt;
-&lt;code class="sig-name descname"&gt;&lt;span class="pre"&gt;-r&lt;/span&gt;&lt;/code&gt;&lt;code class="sig-prename descclassname"&gt;&lt;/code&gt;&lt;/dt&gt;
+&lt;dt class="sig sig-object std" id="cmdoption-ci-r"&gt;
+&lt;span class="sig-name descname"&gt;&lt;span class="pre"&gt;-r&lt;/span&gt;&lt;/span&gt;&lt;span class="sig-prename descclassname"&gt;&lt;/span&gt;&lt;/dt&gt;
 &lt;dd&gt;&lt;p&gt;Perform checkin, and store with provided revision identifier.&lt;/p&gt;
 &lt;/dd&gt;&lt;/dl&gt;
 
 &lt;dl class="std option"&gt;
-&lt;dt id="cmdoption-ci-u"&gt;
-&lt;code class="sig-name descname"&gt;&lt;span class="pre"&gt;-u&lt;/span&gt;&lt;/code&gt;&lt;code class="sig-prename descclassname"&gt;&lt;/code&gt;&lt;/dt&gt;
+&lt;dt class="sig sig-object std" id="cmdoption-ci-u"&gt;
+&lt;span class="sig-name descname"&gt;&lt;span class="pre"&gt;-u&lt;/span&gt;&lt;/span&gt;&lt;span class="sig-prename descclassname"&gt;&lt;/span&gt;&lt;/dt&gt;
 &lt;dd&gt;&lt;p&gt;Don’t lock the file on checkin.&lt;/p&gt;
 &lt;/dd&gt;&lt;/dl&gt;
 
 &lt;p&gt;&lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;co&lt;/span&gt;&lt;/code&gt; options:&lt;/p&gt;
 &lt;dl class="std option"&gt;
-&lt;dt id="cmdoption-co-l"&gt;
-&lt;code class="sig-name descname"&gt;&lt;span class="pre"&gt;-l&lt;/span&gt;&lt;/code&gt;&lt;code class="sig-prename descclassname"&gt;&lt;/code&gt;&lt;/dt&gt;
+&lt;dt class="sig sig-object std" id="cmdoption-co-l"&gt;
+&lt;span class="sig-name descname"&gt;&lt;span class="pre"&gt;-l&lt;/span&gt;&lt;/span&gt;&lt;span class="sig-prename descclassname"&gt;&lt;/span&gt;&lt;/dt&gt;
 &lt;dd&gt;&lt;p&gt;Lock the file for editing on checkout.&lt;/p&gt;
 &lt;/dd&gt;&lt;/dl&gt;
 
 &lt;p&gt;&lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;rlog&lt;/span&gt;&lt;/code&gt; options:&lt;/p&gt;
 &lt;dl class="std option"&gt;
-&lt;dt id="cmdoption-rlog-r"&gt;
-&lt;code class="sig-name descname"&gt;&lt;span class="pre"&gt;-r&lt;/span&gt;&lt;/code&gt;&lt;code class="sig-prename descclassname"&gt;&lt;/code&gt;&lt;/dt&gt;
+&lt;dt class="sig sig-object std" id="cmdoption-rlog-r"&gt;
+&lt;span class="sig-name descname"&gt;&lt;span class="pre"&gt;-r&lt;/span&gt;&lt;/span&gt;&lt;span class="sig-prename descclassname"&gt;&lt;/span&gt;&lt;/dt&gt;
 &lt;dd&gt;&lt;p&gt;Specify revisions to perform log against, can be a comma separated list of
 ranges.&lt;/p&gt;
 &lt;/dd&gt;&lt;/dl&gt;

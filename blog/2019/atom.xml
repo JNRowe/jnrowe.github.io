@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <id>https://jnrowe.github.io/</id>
   <title>JNRowe - Posted in 2019</title>
-  <updated>2021-04-29T22:37:58.010307+00:00</updated>
+  <updated>2022-03-11T11:45:52.621033+00:00</updated>
   <link href="https://jnrowe.github.io/"/>
   <link href="https://jnrowe.github.io/blog/2019/atom.xml" rel="self"/>
-  <generator uri="https://ablog.readthedocs.org/" version="0.10.18">ABlog</generator>
+  <generator uri="https://ablog.readthedocs.org/" version="0.10.23">ABlog</generator>
   <subtitle>Ramblings of a tired mind</subtitle>
   <entry>
     <id>https://jnrowe.github.io/articles/gps_rollover_2019.html</id>
@@ -382,10 +382,10 @@ whether you choose to flatten the results from each module, or whether you call
 &lt;a class="reference external" href="https://docs.python.org/3/library/functions.html#sum" title="(in Python v3.9)"&gt;&lt;code class="xref py py-func docutils literal notranslate"&gt;&lt;span class="pre"&gt;sum()&lt;/span&gt;&lt;/code&gt;&lt;/a&gt; on per-module &lt;a class="reference external" href="https://docs.python.org/3/library/functions.html#sum" title="(in Python v3.9)"&gt;&lt;code class="xref py py-func docutils literal notranslate"&gt;&lt;span class="pre"&gt;sum()&lt;/span&gt;&lt;/code&gt;&lt;/a&gt; results.&lt;/p&gt;
 &lt;p&gt;In my rush to hit the leaderboard I introduced a really stupid logic bug,
 my original &lt;abbr title="Read–Eval–Print Loop"&gt;REPL&lt;/abbr&gt; code was &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;mod&lt;/span&gt; &lt;span class="pre"&gt;//=&lt;/span&gt; &lt;span class="pre"&gt;3&lt;/span&gt; &lt;span class="pre"&gt;-&lt;/span&gt; &lt;span class="pre"&gt;2&lt;/span&gt;&lt;/code&gt;.  Clearly this won’t work as it is
-simply dividing &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;mod&lt;/span&gt;&lt;/code&gt; by 1.  I’d be number one on the leaderboard for
-idiocy with a bug that foolish, but luckily I’m too stoopid to find it.  I’m
-admitting this in the open to remind myself to think a little more in the
-following days.&lt;/p&gt;
+simply dividing &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;mod&lt;/span&gt;&lt;/code&gt; by 1.  I might be number one on the leaderboard for
+idiocy with a bug that foolish, but luckily I’m too stoopid to find it to
+check.  I’m admitting this in the open to remind myself to think a little more
+in the following days.&lt;/p&gt;
 &lt;/section&gt;
 &lt;section id="day-2"&gt;
 &lt;span id="day-two-label"&gt;&lt;/span&gt;&lt;h2&gt;Day 2&lt;/h2&gt;

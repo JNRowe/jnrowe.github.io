@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <id>https://jnrowe.github.io/</id>
   <title>JNRowe - Posts tagged work</title>
-  <updated>2021-04-29T22:38:05.153778+00:00</updated>
+  <updated>2022-03-11T11:45:59.236784+00:00</updated>
   <link href="https://jnrowe.github.io/"/>
   <link href="https://jnrowe.github.io/blog/tag/work/atom.xml" rel="self"/>
-  <generator uri="https://ablog.readthedocs.org/" version="0.10.18">ABlog</generator>
+  <generator uri="https://ablog.readthedocs.org/" version="0.10.23">ABlog</generator>
   <subtitle>Ramblings of a tired mind</subtitle>
   <entry>
     <id>https://jnrowe.github.io/articles/dropping_gentoo.html</id>
@@ -346,8 +346,8 @@ makes dependency handling work among other things.&lt;/p&gt;
 &lt;/dd&gt;
 &lt;/dl&gt;
 &lt;dl class="std option"&gt;
-&lt;dt id="cmdoption-tar-C"&gt;
-&lt;span id="cmdoption-tar-c"&gt;&lt;/span&gt;&lt;code class="sig-name descname"&gt;&lt;span class="pre"&gt;-C&lt;/span&gt;&lt;/code&gt;&lt;code class="sig-prename descclassname"&gt;&lt;/code&gt;&lt;/dt&gt;
+&lt;dt class="sig sig-object std" id="cmdoption-tar-C"&gt;
+&lt;span id="cmdoption-tar-c"&gt;&lt;/span&gt;&lt;span class="sig-name descname"&gt;&lt;span class="pre"&gt;-C&lt;/span&gt;&lt;/span&gt;&lt;span class="sig-prename descclassname"&gt;&lt;/span&gt;&lt;/dt&gt;
 &lt;dd&gt;&lt;p&gt;This option tells &lt;strong class="command"&gt;tar&lt;/strong&gt; to change directory before performing its
 duty.  For example using &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;-C&lt;/span&gt; &lt;span class="pre"&gt;/&lt;/span&gt;&lt;/code&gt; will switch to &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;/&lt;/span&gt;&lt;/code&gt;, and can be used to
 unpack a tarball directly over the root filesystem.&lt;/p&gt;

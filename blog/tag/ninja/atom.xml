@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <id>https://jnrowe.github.io/</id>
   <title>JNRowe - Posts tagged ninja</title>
-  <updated>2021-04-29T22:38:02.590726+00:00</updated>
+  <updated>2022-03-11T11:45:57.083112+00:00</updated>
   <link href="https://jnrowe.github.io/"/>
   <link href="https://jnrowe.github.io/blog/tag/ninja/atom.xml" rel="self"/>
-  <generator uri="https://ablog.readthedocs.org/" version="0.10.18">ABlog</generator>
+  <generator uri="https://ablog.readthedocs.org/" version="0.10.23">ABlog</generator>
   <subtitle>Ramblings of a tired mind</subtitle>
   <entry>
     <id>https://jnrowe.github.io/articles/redo_ninja_make.html</id>
@@ -22,9 +22,9 @@
 some point.  However, until that imaginary date arrives…&lt;/p&gt;
 &lt;/div&gt;
 &lt;p&gt;I have a fondness for &lt;a class="reference external" href="https://en.m.wikipedia.org/wiki/Make_(software)"&gt;make&lt;/a&gt;, but don’t quite know why.  On some days it is
-&lt;em&gt;the&lt;/em&gt; bane of my life, and I feel we could better.  It is, however, incredibly
-useful and allows us to perform so many of the repetitive tasks we in the
-software world have lucked ourselves in to.&lt;/p&gt;
+&lt;em&gt;the&lt;/em&gt; bane of my life, and I feel we could do better.  It is, however,
+incredibly useful and allows us to easily perform so many of the repetitive
+tasks we in the software world have lucked ourselves in to.&lt;/p&gt;
 &lt;p&gt;One project that I’ve worked on for a decade has &lt;em&gt;ten thousand&lt;/em&gt; lines of hand
 written &lt;code class="file docutils literal notranslate"&gt;&lt;span class="pre"&gt;Makefile&lt;/span&gt;&lt;/code&gt;s, which is just plain ridiculous.  Nobody should be
 hand writing that much build infrastructure, even if it started with good
@@ -47,7 +47,7 @@ common versions of &lt;strong class="command"&gt;make&lt;/strong&gt; will it fai
 a namespace of subcommands(like the &lt;strong&gt;m&lt;/strong&gt;aintainer namespace above) to aid
 when the inevitable errors show up.  Most of the stuff in that file is
 &lt;em&gt;absolutely amazing&lt;/em&gt;, I’m working with a few genuine &lt;strong class="command"&gt;make&lt;/strong&gt; masters.&lt;/p&gt;
-&lt;p&gt;&lt;em&gt;I am not a |make| master&lt;/em&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;I am not a&lt;/em&gt; &lt;strong class="command"&gt;make&lt;/strong&gt; &lt;em&gt;master&lt;/em&gt;.&lt;/p&gt;
 &lt;p&gt;I often find myself forgetting which &lt;strong class="command"&gt;make&lt;/strong&gt; supports some feature, or which one
 fails horribly when you use that one “standard” feature every &lt;strong class="command"&gt;make&lt;/strong&gt; supports.
 Even in the minutia of the build there are things that are subobtimal, for

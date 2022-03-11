@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <id>https://jnrowe.github.io/</id>
   <title>JNRowe - Posts tagged probit</title>
-  <updated>2021-04-29T22:38:02.800446+00:00</updated>
+  <updated>2022-03-11T11:45:57.297290+00:00</updated>
   <link href="https://jnrowe.github.io/"/>
   <link href="https://jnrowe.github.io/blog/tag/probit/atom.xml" rel="self"/>
-  <generator uri="https://ablog.readthedocs.org/" version="0.10.18">ABlog</generator>
+  <generator uri="https://ablog.readthedocs.org/" version="0.10.23">ABlog</generator>
   <subtitle>Ramblings of a tired mind</subtitle>
   <entry>
     <id>https://jnrowe.github.io/articles/probits/index.html</id>
@@ -21,7 +21,7 @@ postmortems, which we lovingly refer to as &lt;abbr title="Project Obituaries"&g
 internally.&lt;/p&gt;
 &lt;section id="background"&gt;
 &lt;h2&gt;Background&lt;/h2&gt;
-&lt;p&gt;I work in heavily structured and standalone project-oriented environment.  In
+&lt;p&gt;I work in a heavily structured and standalone project-oriented environment.  In
 a decade I can count the number of fluid projects on three fingers.  As I write
 this in June 2014 my tier-one project started 21 months ago, and has a delivery
 date locked down to a week in 2015.  We’ll deliver on time or a touch early, our

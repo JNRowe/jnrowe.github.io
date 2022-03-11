@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <id>https://jnrowe.github.io/</id>
   <title>JNRowe - Posts tagged coding</title>
-  <updated>2021-04-29T22:38:00.936614+00:00</updated>
+  <updated>2022-03-11T11:45:55.385202+00:00</updated>
   <link href="https://jnrowe.github.io/"/>
   <link href="https://jnrowe.github.io/blog/tag/coding/atom.xml" rel="self"/>
-  <generator uri="https://ablog.readthedocs.org/" version="0.10.18">ABlog</generator>
+  <generator uri="https://ablog.readthedocs.org/" version="0.10.23">ABlog</generator>
   <subtitle>Ramblings of a tired mind</subtitle>
   <entry>
     <id>https://jnrowe.github.io/articles/advent_of_code.html</id>
@@ -486,7 +486,7 @@ general-purpose data-base applications.”&lt;/p&gt;
 combined with its fast and efficient array creation we can solve this with low
 effort.  So, we can prime an empty array and increment each element when it is
 touched by an elf:&lt;/p&gt;
-&lt;div class="highlight-default notranslate"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;Geometry&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;namedtuple&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;Geometry&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;x, y, w h&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;div class="highlight-default notranslate"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;Geometry&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;namedtuple&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;Geometry&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;x, y, w, h&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 
 &lt;span class="n"&gt;data&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="n"&gt;Dict&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="nb"&gt;int&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;Geometry&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;process_input&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;inputs&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 
@@ -884,10 +884,10 @@ whether you choose to flatten the results from each module, or whether you call
 &lt;a class="reference external" href="https://docs.python.org/3/library/functions.html#sum" title="(in Python v3.9)"&gt;&lt;code class="xref py py-func docutils literal notranslate"&gt;&lt;span class="pre"&gt;sum()&lt;/span&gt;&lt;/code&gt;&lt;/a&gt; on per-module &lt;a class="reference external" href="https://docs.python.org/3/library/functions.html#sum" title="(in Python v3.9)"&gt;&lt;code class="xref py py-func docutils literal notranslate"&gt;&lt;span class="pre"&gt;sum()&lt;/span&gt;&lt;/code&gt;&lt;/a&gt; results.&lt;/p&gt;
 &lt;p&gt;In my rush to hit the leaderboard I introduced a really stupid logic bug,
 my original &lt;abbr title="Read–Eval–Print Loop"&gt;REPL&lt;/abbr&gt; code was &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;mod&lt;/span&gt; &lt;span class="pre"&gt;//=&lt;/span&gt; &lt;span class="pre"&gt;3&lt;/span&gt; &lt;span class="pre"&gt;-&lt;/span&gt; &lt;span class="pre"&gt;2&lt;/span&gt;&lt;/code&gt;.  Clearly this won’t work as it is
-simply dividing &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;mod&lt;/span&gt;&lt;/code&gt; by 1.  I’d be number one on the leaderboard for
-idiocy with a bug that foolish, but luckily I’m too stoopid to find it.  I’m
-admitting this in the open to remind myself to think a little more in the
-following days.&lt;/p&gt;
+simply dividing &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;mod&lt;/span&gt;&lt;/code&gt; by 1.  I might be number one on the leaderboard for
+idiocy with a bug that foolish, but luckily I’m too stoopid to find it to
+check.  I’m admitting this in the open to remind myself to think a little more
+in the following days.&lt;/p&gt;
 &lt;/section&gt;
 &lt;section id="day-2"&gt;
 &lt;span id="day-two-label"&gt;&lt;/span&gt;&lt;h2&gt;Day 2&lt;/h2&gt;
@@ -1426,7 +1426,7 @@ the more manual &lt;code class="docutils literal notranslate"&gt;&lt;span class=
 &lt;a class="reference external" href="https://en.m.wikipedia.org/wiki/Exclusive_or"&gt;XOR&lt;/a&gt; here, and I failed in spite of the fact my editor &lt;a class="reference external" href="https://github.com/ehamberg/vim-cute-python"&gt;shows disjunction
 symbolically&lt;/a&gt;.  &lt;em&gt;And yes&lt;/em&gt;, the “&lt;strong&gt;exactly one of these positions&lt;/strong&gt;” text
 really is in &lt;strong&gt;bold&lt;/strong&gt; on that page.&lt;/p&gt;
-&lt;img alt="vim showing bug is day 2’s solution" src="../../_images/2020-12-02-symbolic.png" /&gt;
+&lt;img alt="vim showing bug in day 2’s solution" src="../../_images/2020-12-02-symbolic.png" /&gt;
 &lt;/section&gt;
 &lt;section id="day-3"&gt;
 &lt;h2&gt;Day 3&lt;/h2&gt;
@@ -1728,7 +1728,7 @@ without a sliding sum:&lt;/p&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
 &lt;p&gt;The above needs a &lt;a class="reference external" href="https://github.com/sharkdp/hyperfine"&gt;hyperfine&lt;/a&gt; benchmark just to spot the difference in runtime
-to the sliding sum version.  Add you can even bring it to within spitting
+to the sliding sum version.  And you can even bring it to within spitting
 distance with an early exit:&lt;/p&gt;
 &lt;div class="highlight-default notranslate"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;itertools&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;accumulate&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;takewhile&lt;/span&gt;
 
@@ -1807,8 +1807,8 @@ toggling:&lt;/p&gt;
 1, such that &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;sum([True,&lt;/span&gt; &lt;span class="pre"&gt;True,&lt;/span&gt; &lt;span class="pre"&gt;False])&lt;/span&gt;&lt;/code&gt; equals 2.&lt;/p&gt;
 &lt;p&gt;For part two, &lt;a class="reference external" href="https://pypi.python.org/pypi/numpy"&gt;numpy&lt;/a&gt; provides a &lt;a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.diagonal.html"&gt;diagonal&lt;/a&gt; method which we can then
 filter for a given value.  In my case it just looks for the first
-non-&lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;None&lt;/span&gt;&lt;/code&gt;, and then it just a matter of changing the four to a five in our
-seat toggling branch.&lt;/p&gt;
+non-&lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;None&lt;/span&gt;&lt;/code&gt;, and then it is simply a matter of changing the four to a five
+in our seat toggling branch.&lt;/p&gt;
 &lt;p&gt;&lt;a class="reference external" href="https://pypi.python.org/pypi/numpy"&gt;numpy&lt;/a&gt; &lt;em&gt;is&lt;/em&gt; cheating, but not using it is needless busywork.&lt;/p&gt;
 &lt;/section&gt;
 &lt;section id="day-12"&gt;
@@ -1918,7 +1918,7 @@ they’re not challenging enough.&lt;/p&gt;
 &lt;/section&gt;
 </content>
     <link href="https://jnrowe.github.io/articles/advent_of_code_2020.html" rel="alternate"/>
-    <summary>I’m done.vim showing bug is day 2’s solution</summary>
+    <summary>I’m done.vim showing bug in day 2’s solution</summary>
     <category term="adventofcode" label="adventofcode"/>
     <category term="coding" label="coding"/>
     <category term="puzzles" label="puzzles"/>

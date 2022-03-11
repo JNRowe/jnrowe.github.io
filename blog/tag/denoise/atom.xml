@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <id>https://jnrowe.github.io/</id>
   <title>JNRowe - Posts tagged denoise</title>
-  <updated>2021-04-29T22:38:01.492373+00:00</updated>
+  <updated>2022-03-11T11:45:55.934373+00:00</updated>
   <link href="https://jnrowe.github.io/"/>
   <link href="https://jnrowe.github.io/blog/tag/denoise/atom.xml" rel="self"/>
-  <generator uri="https://ablog.readthedocs.org/" version="0.10.18">ABlog</generator>
+  <generator uri="https://ablog.readthedocs.org/" version="0.10.23">ABlog</generator>
   <subtitle>Ramblings of a tired mind</subtitle>
   <entry>
     <id>https://jnrowe.github.io/thoughts/disconnect.html</id>
@@ -109,19 +109,19 @@ who aren’t able to access our private server because of geo-filtering, and
 I don’t know how that can be fixed.&lt;/p&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/aside&gt;
-&lt;p&gt;There are a myriad of benefits to dropping the reliance on &lt;abbr title="Software as a Service"&gt;SaaS&lt;/abbr&gt; affairs.  The chance of any of them existing tomorrow is frankly
+&lt;p&gt;There are myriad benefits to dropping the reliance on &lt;abbr title="Software as a Service"&gt;SaaS&lt;/abbr&gt; affairs.  The chance of any of them existing tomorrow is frankly
 not all that great: shuttering, buy-out closures, “pivoting”, &amp;amp;c.  You can
 also retain some level of control over your own data, knowing that for example
 it isn’t being sold or stored in regions with little to no data protection
 regulation.&lt;/p&gt;
-&lt;p&gt;In all honesty, I — no, &lt;em&gt;we&lt;/em&gt; — should have resisted the urge to use so called
-cloud services from the outset.  One doesn’t need to be a fully paid up member
-of the tinfoil hat brigade to know that it is just not acceptable to entrust
-your important data to external companies for the sake of a little convenience
-or a shiny interface.&lt;/p&gt;
+&lt;p&gt;In all honesty, I — no, &lt;em&gt;we&lt;/em&gt; — should have resisted the urge to use cloud
+services from the outset.  One doesn’t need to be a fully paid up member of the
+tinfoil hat brigade to know that it is just not acceptable to entrust your
+important data to external companies for the sake of a little convenience or
+a shiny interface.&lt;/p&gt;
 &lt;p&gt;Killing my internet access for chunks of time really pointed out how much I had
 come to rely on services far beyond my control, and the freedom one feels when
-you regain some of that is very comforting.&lt;/p&gt;
+you regain some of that is really very comforting.&lt;/p&gt;
 &lt;p class="rubric"&gt;Footnotes&lt;/p&gt;
 &lt;dl class="footnote brackets"&gt;
 &lt;dt class="label" id="s1"&gt;&lt;span class="brackets"&gt;&lt;a class="fn-backref" href="#id1"&gt;1&lt;/a&gt;&lt;/span&gt;&lt;/dt&gt;

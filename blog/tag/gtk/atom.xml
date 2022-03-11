@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <id>https://jnrowe.github.io/</id>
   <title>JNRowe - Posts tagged GTK+</title>
-  <updated>2021-04-29T22:37:59.516343+00:00</updated>
+  <updated>2022-03-11T11:45:54.125148+00:00</updated>
   <link href="https://jnrowe.github.io/"/>
   <link href="https://jnrowe.github.io/blog/tag/gtk/atom.xml" rel="self"/>
-  <generator uri="https://ablog.readthedocs.org/" version="0.10.18">ABlog</generator>
+  <generator uri="https://ablog.readthedocs.org/" version="0.10.23">ABlog</generator>
   <subtitle>Ramblings of a tired mind</subtitle>
   <entry>
     <id>https://jnrowe.github.io/articles/tips/emacs_gtk_shortcuts.html</id>
@@ -89,19 +89,19 @@ and not being a &lt;a class="reference external" href="http://www.gnome.org/"&gt
 GTK+ applications you should edit &lt;code class="file docutils literal notranslate"&gt;&lt;span class="pre"&gt;~/.gtkrc-2.0-kde&lt;/span&gt;&lt;/code&gt;.&lt;/p&gt;
 &lt;p&gt;So the question becomes, what were the options in that screenshot, and are there
 any other cool and useful things you can do there?&lt;/p&gt;
-&lt;div class="highlight-cpp notranslate"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;gtk-theme-name = &amp;quot;expose&amp;quot;
-gtk-icon-theme-name = &amp;quot;hicolor&amp;quot;
-gtk-key-theme-name = &amp;quot;Emacs&amp;quot;
+&lt;div class="highlight-cpp notranslate"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;gtk&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;theme&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;name&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s"&gt;&amp;quot;expose&amp;quot;&lt;/span&gt;
+&lt;span class="n"&gt;gtk&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;icon&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;theme&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;name&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s"&gt;&amp;quot;hicolor&amp;quot;&lt;/span&gt;
+&lt;span class="n"&gt;gtk&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;key&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;theme&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;name&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s"&gt;&amp;quot;Emacs&amp;quot;&lt;/span&gt;
 
-binding &amp;quot;some-shortcuts&amp;quot; {
-    bind &amp;quot;&amp;lt;Alt&amp;gt;T&amp;quot; {
-        &amp;quot;location-popup&amp;quot; (&amp;quot;/home/jay/urls&amp;quot;)
-    }
-    bind &amp;quot;&amp;lt;Alt&amp;gt;M&amp;quot; {
-        &amp;quot;location-popup&amp;quot; (&amp;quot;/var/lib/repo/jnrowe-misc&amp;quot;)
-    }
-}
-class &amp;quot;GtkFileChooserDefault&amp;quot; binding &amp;quot;some-shortcuts&amp;quot;
+&lt;span class="n"&gt;binding&lt;/span&gt; &lt;span class="s"&gt;&amp;quot;some-shortcuts&amp;quot;&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+    &lt;span class="n"&gt;bind&lt;/span&gt; &lt;span class="s"&gt;&amp;quot;&amp;lt;Alt&amp;gt;T&amp;quot;&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+        &lt;span class="s"&gt;&amp;quot;location-popup&amp;quot;&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;/home/jay/urls&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+    &lt;span class="p"&gt;}&lt;/span&gt;
+    &lt;span class="n"&gt;bind&lt;/span&gt; &lt;span class="s"&gt;&amp;quot;&amp;lt;Alt&amp;gt;M&amp;quot;&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+        &lt;span class="s"&gt;&amp;quot;location-popup&amp;quot;&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;/var/lib/repo/jnrowe-misc&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+    &lt;span class="p"&gt;}&lt;/span&gt;
+&lt;span class="p"&gt;}&lt;/span&gt;
+&lt;span class="k"&gt;class&lt;/span&gt; &lt;span class="s"&gt;&amp;quot;GtkFileChooserDefault&amp;quot;&lt;/span&gt; &lt;span class="n"&gt;binding&lt;/span&gt; &lt;span class="s"&gt;&amp;quot;some-shortcuts&amp;quot;&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
 &lt;p&gt;Ignoring the &lt;strong class="command"&gt;vim&lt;/strong&gt; &lt;a class="reference external" href="http://vimdoc.sourceforge.net/htmldoc/options.html#modeline"&gt;modeline&lt;/a&gt; from the screenshot the first few

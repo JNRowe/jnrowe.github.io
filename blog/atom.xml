@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <id>https://jnrowe.github.io/</id>
   <title>JNRowe</title>
-  <updated>2021-04-29T22:37:55.831254+00:00</updated>
+  <updated>2022-03-11T11:45:50.484076+00:00</updated>
   <link href="https://jnrowe.github.io/"/>
   <link href="https://jnrowe.github.io/blog/atom.xml" rel="self"/>
-  <generator uri="https://ablog.readthedocs.org/" version="0.10.18">ABlog</generator>
+  <generator uri="https://ablog.readthedocs.org/" version="0.10.23">ABlog</generator>
   <subtitle>Ramblings of a tired mind</subtitle>
   <entry>
     <id>https://jnrowe.github.io/thoughts/brexit_through_the_gift_shop.html</id>
@@ -1032,8 +1032,8 @@ years.&lt;/p&gt;
 &lt;/dd&gt;
 &lt;/dl&gt;
 &lt;dl class="std option"&gt;
-&lt;dt id="cmdoption-date-arg-j"&gt;
-&lt;code class="sig-name descname"&gt;&lt;span class="pre"&gt;%j&lt;/span&gt;&lt;/code&gt;&lt;code class="sig-prename descclassname"&gt;&lt;/code&gt;&lt;/dt&gt;
+&lt;dt class="sig sig-object std" id="cmdoption-date-arg-j"&gt;
+&lt;span class="sig-name descname"&gt;&lt;span class="pre"&gt;%j&lt;/span&gt;&lt;/span&gt;&lt;span class="sig-prename descclassname"&gt;&lt;/span&gt;&lt;/dt&gt;
 &lt;dd&gt;&lt;p&gt;Displays the day number of the given year, see &lt;em class="manpage"&gt;strftime(3)&lt;/em&gt; if
 this is new to you.&lt;/p&gt;
 &lt;/dd&gt;&lt;/dl&gt;
@@ -1065,9 +1065,9 @@ MacOS, so we’ll need to make something similar.Screenshot of colourful progres
 some point.  However, until that imaginary date arrives…&lt;/p&gt;
 &lt;/div&gt;
 &lt;p&gt;I have a fondness for &lt;a class="reference external" href="https://en.m.wikipedia.org/wiki/Make_(software)"&gt;make&lt;/a&gt;, but don’t quite know why.  On some days it is
-&lt;em&gt;the&lt;/em&gt; bane of my life, and I feel we could better.  It is, however, incredibly
-useful and allows us to perform so many of the repetitive tasks we in the
-software world have lucked ourselves in to.&lt;/p&gt;
+&lt;em&gt;the&lt;/em&gt; bane of my life, and I feel we could do better.  It is, however,
+incredibly useful and allows us to easily perform so many of the repetitive
+tasks we in the software world have lucked ourselves in to.&lt;/p&gt;
 &lt;p&gt;One project that I’ve worked on for a decade has &lt;em&gt;ten thousand&lt;/em&gt; lines of hand
 written &lt;code class="file docutils literal notranslate"&gt;&lt;span class="pre"&gt;Makefile&lt;/span&gt;&lt;/code&gt;s, which is just plain ridiculous.  Nobody should be
 hand writing that much build infrastructure, even if it started with good
@@ -1090,7 +1090,7 @@ common versions of &lt;strong class="command"&gt;make&lt;/strong&gt; will it fai
 a namespace of subcommands(like the &lt;strong&gt;m&lt;/strong&gt;aintainer namespace above) to aid
 when the inevitable errors show up.  Most of the stuff in that file is
 &lt;em&gt;absolutely amazing&lt;/em&gt;, I’m working with a few genuine &lt;strong class="command"&gt;make&lt;/strong&gt; masters.&lt;/p&gt;
-&lt;p&gt;&lt;em&gt;I am not a |make| master&lt;/em&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;I am not a&lt;/em&gt; &lt;strong class="command"&gt;make&lt;/strong&gt; &lt;em&gt;master&lt;/em&gt;.&lt;/p&gt;
 &lt;p&gt;I often find myself forgetting which &lt;strong class="command"&gt;make&lt;/strong&gt; supports some feature, or which one
 fails horribly when you use that one “standard” feature every &lt;strong class="command"&gt;make&lt;/strong&gt; supports.
 Even in the minutia of the build there are things that are subobtimal, for
@@ -1795,7 +1795,7 @@ general-purpose data-base applications.”&lt;/p&gt;
 combined with its fast and efficient array creation we can solve this with low
 effort.  So, we can prime an empty array and increment each element when it is
 touched by an elf:&lt;/p&gt;
-&lt;div class="highlight-default notranslate"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;Geometry&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;namedtuple&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;Geometry&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;x, y, w h&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;div class="highlight-default notranslate"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;Geometry&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;namedtuple&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;Geometry&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;x, y, w, h&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 
 &lt;span class="n"&gt;data&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="n"&gt;Dict&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="nb"&gt;int&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;Geometry&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;process_input&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;inputs&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 
@@ -2569,10 +2569,10 @@ whether you choose to flatten the results from each module, or whether you call
 &lt;a class="reference external" href="https://docs.python.org/3/library/functions.html#sum" title="(in Python v3.9)"&gt;&lt;code class="xref py py-func docutils literal notranslate"&gt;&lt;span class="pre"&gt;sum()&lt;/span&gt;&lt;/code&gt;&lt;/a&gt; on per-module &lt;a class="reference external" href="https://docs.python.org/3/library/functions.html#sum" title="(in Python v3.9)"&gt;&lt;code class="xref py py-func docutils literal notranslate"&gt;&lt;span class="pre"&gt;sum()&lt;/span&gt;&lt;/code&gt;&lt;/a&gt; results.&lt;/p&gt;
 &lt;p&gt;In my rush to hit the leaderboard I introduced a really stupid logic bug,
 my original &lt;abbr title="Read–Eval–Print Loop"&gt;REPL&lt;/abbr&gt; code was &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;mod&lt;/span&gt; &lt;span class="pre"&gt;//=&lt;/span&gt; &lt;span class="pre"&gt;3&lt;/span&gt; &lt;span class="pre"&gt;-&lt;/span&gt; &lt;span class="pre"&gt;2&lt;/span&gt;&lt;/code&gt;.  Clearly this won’t work as it is
-simply dividing &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;mod&lt;/span&gt;&lt;/code&gt; by 1.  I’d be number one on the leaderboard for
-idiocy with a bug that foolish, but luckily I’m too stoopid to find it.  I’m
-admitting this in the open to remind myself to think a little more in the
-following days.&lt;/p&gt;
+simply dividing &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;mod&lt;/span&gt;&lt;/code&gt; by 1.  I might be number one on the leaderboard for
+idiocy with a bug that foolish, but luckily I’m too stoopid to find it to
+check.  I’m admitting this in the open to remind myself to think a little more
+in the following days.&lt;/p&gt;
 &lt;/section&gt;
 &lt;section id="day-2"&gt;
 &lt;span id="day-two-label"&gt;&lt;/span&gt;&lt;h2&gt;Day 2&lt;/h2&gt;
@@ -3111,7 +3111,7 @@ the more manual &lt;code class="docutils literal notranslate"&gt;&lt;span class=
 &lt;a class="reference external" href="https://en.m.wikipedia.org/wiki/Exclusive_or"&gt;XOR&lt;/a&gt; here, and I failed in spite of the fact my editor &lt;a class="reference external" href="https://github.com/ehamberg/vim-cute-python"&gt;shows disjunction
 symbolically&lt;/a&gt;.  &lt;em&gt;And yes&lt;/em&gt;, the “&lt;strong&gt;exactly one of these positions&lt;/strong&gt;” text
 really is in &lt;strong&gt;bold&lt;/strong&gt; on that page.&lt;/p&gt;
-&lt;img alt="vim showing bug is day 2’s solution" src="_images/2020-12-02-symbolic.png" /&gt;
+&lt;img alt="vim showing bug in day 2’s solution" src="_images/2020-12-02-symbolic.png" /&gt;
 &lt;/section&gt;
 &lt;section id="day-3"&gt;
 &lt;h2&gt;Day 3&lt;/h2&gt;
@@ -3413,7 +3413,7 @@ without a sliding sum:&lt;/p&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
 &lt;p&gt;The above needs a &lt;a class="reference external" href="https://github.com/sharkdp/hyperfine"&gt;hyperfine&lt;/a&gt; benchmark just to spot the difference in runtime
-to the sliding sum version.  Add you can even bring it to within spitting
+to the sliding sum version.  And you can even bring it to within spitting
 distance with an early exit:&lt;/p&gt;
 &lt;div class="highlight-default notranslate"&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;itertools&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;accumulate&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;takewhile&lt;/span&gt;
 
@@ -3492,8 +3492,8 @@ toggling:&lt;/p&gt;
 1, such that &lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;sum([True,&lt;/span&gt; &lt;span class="pre"&gt;True,&lt;/span&gt; &lt;span class="pre"&gt;False])&lt;/span&gt;&lt;/code&gt; equals 2.&lt;/p&gt;
 &lt;p&gt;For part two, &lt;a class="reference external" href="https://pypi.python.org/pypi/numpy"&gt;numpy&lt;/a&gt; provides a &lt;a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.diagonal.html"&gt;diagonal&lt;/a&gt; method which we can then
 filter for a given value.  In my case it just looks for the first
-non-&lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;None&lt;/span&gt;&lt;/code&gt;, and then it just a matter of changing the four to a five in our
-seat toggling branch.&lt;/p&gt;
+non-&lt;code class="docutils literal notranslate"&gt;&lt;span class="pre"&gt;None&lt;/span&gt;&lt;/code&gt;, and then it is simply a matter of changing the four to a five
+in our seat toggling branch.&lt;/p&gt;
 &lt;p&gt;&lt;a class="reference external" href="https://pypi.python.org/pypi/numpy"&gt;numpy&lt;/a&gt; &lt;em&gt;is&lt;/em&gt; cheating, but not using it is needless busywork.&lt;/p&gt;
 &lt;/section&gt;
 &lt;section id="day-12"&gt;
@@ -3603,7 +3603,7 @@ they’re not challenging enough.&lt;/p&gt;
 &lt;/section&gt;
 </content>
     <link href="https://jnrowe.github.io/articles/advent_of_code_2020.html" rel="alternate"/>
-    <summary>I’m done.vim showing bug is day 2’s solution</summary>
+    <summary>I’m done.vim showing bug in day 2’s solution</summary>
     <category term="adventofcode" label="adventofcode"/>
     <category term="coding" label="coding"/>
     <category term="puzzles" label="puzzles"/>

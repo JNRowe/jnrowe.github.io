@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <id>https://jnrowe.github.io/</id>
   <title>JNRowe - Posts tagged site</title>
-  <updated>2021-04-29T22:38:04.172152+00:00</updated>
+  <updated>2022-03-11T11:45:58.162146+00:00</updated>
   <link href="https://jnrowe.github.io/"/>
   <link href="https://jnrowe.github.io/blog/tag/site/atom.xml" rel="self"/>
-  <generator uri="https://ablog.readthedocs.org/" version="0.10.18">ABlog</generator>
+  <generator uri="https://ablog.readthedocs.org/" version="0.10.23">ABlog</generator>
   <subtitle>Ramblings of a tired mind</subtitle>
   <entry>
     <id>https://jnrowe.github.io/thoughts/the_returned.html</id>
@@ -54,5 +54,44 @@ I had to kill it, but not because of waning enthusiasm as is so often the case.<
     <category term="blog" label="blog"/>
     <category term="site" label="site"/>
     <published>2014-01-27T00:00:00+00:00</published>
+  </entry>
+  <entry>
+    <id>https://jnrowe.github.io/thoughts/comments.html</id>
+    <title>Ugh, why no comments???</title>
+    <updated>2018-01-24T00:00:00+00:00</updated>
+    <author>
+      <name>James Rowe</name>
+    </author>
+    <content type="html">&lt;section id="ugh-why-no-comments"&gt;
+
+&lt;p&gt;Many moons ago, when my blog was hosted elsewhere I built a comment system for
+it.  Comments came in, I learnt things, I was corrected when wrong.  Times were
+good.&lt;/p&gt;
+&lt;p&gt;However, my own personal version of &lt;a class="reference external" href="https://en.m.wikipedia.org/wiki/Eternal_September"&gt;eternal september&lt;/a&gt; occurred at some point
+and the comments became almost valueless(spam or unrelated rants).  I disabled
+them; times were good again.&lt;/p&gt;
+&lt;p&gt;Then back in 2009, I re-added comments via Disqus.  There was almost no spam,
+and the comments felt mostly useful.  Disqus remained for a little while, but
+I never felt comfortable with it.  It forces an &lt;a class="reference external" href="http://donw.io/post/github-comments/"&gt;enormous amount of tracking&lt;/a&gt;
+on visitors, and does so regardless of whether an actual comment is being
+posted.  I disabled it; times were good again again.&lt;/p&gt;
+&lt;section id="but-i-want-to-comment"&gt;
+&lt;h2&gt;But, I want to comment!!!&lt;/h2&gt;
+&lt;p&gt;Cool, I like comments.  I’ve learned a lot of things via comments about this
+site and its previous incarnations.  I absolutely welcome them, but I don’t
+want to wade through spam or enable enormous amounts of tracking on visitors.&lt;/p&gt;
+&lt;p&gt;If you want to comment then drop me a &lt;a class="reference external" href="mailto:jnrowe&amp;#37;&amp;#52;&amp;#48;gmail&amp;#46;com"&gt;mail&lt;/a&gt;, reply via &lt;a class="reference external" href="https://indieweb.org/POSSE"&gt;your own site&lt;/a&gt; or as
+a last resort &lt;a class="reference external" href="https://github.com/JNRowe/jnrowe.github.io/issues"&gt;open an issue&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;If your comment is more of a clarification or a fix, you may even want to
+consider a pull request.  If my friend Matt can &lt;a class="reference external" href="https://github.com/JNRowe/jnrowe.github.io/commit/64539db44dbd7ec562bc83bdf7a672a78c71e939"&gt;do it&lt;/a&gt;, so can you!&lt;/p&gt;
+&lt;/section&gt;
+&lt;/section&gt;
+</content>
+    <link href="https://jnrowe.github.io/thoughts/comments.html" rel="alternate"/>
+    <summary>Many moons ago, when my blog was hosted elsewhere I built a comment system for
+it.  Comments came in, I learnt things, I was corrected when wrong.  Times were
+good.</summary>
+    <category term="site" label="site"/>
+    <published>2018-01-24T00:00:00+00:00</published>
   </entry>
 </feed>

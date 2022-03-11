@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <id>https://jnrowe.github.io/</id>
   <title>JNRowe - Posts tagged X11</title>
-  <updated>2021-04-29T22:37:59.590010+00:00</updated>
+  <updated>2022-03-11T11:45:54.187218+00:00</updated>
   <link href="https://jnrowe.github.io/"/>
   <link href="https://jnrowe.github.io/blog/tag/x11/atom.xml" rel="self"/>
-  <generator uri="https://ablog.readthedocs.org/" version="0.10.18">ABlog</generator>
+  <generator uri="https://ablog.readthedocs.org/" version="0.10.23">ABlog</generator>
   <subtitle>Ramblings of a tired mind</subtitle>
   <entry>
     <id>https://jnrowe.github.io/articles/tips/Sharing_Xresources_between_systems.html</id>
@@ -106,7 +106,7 @@ symbols that are normally exported by &lt;strong class="command"&gt;xrdb&lt;/str
 &lt;p&gt;You can also choose a different preprocessor if &lt;strong class="command"&gt;cpp&lt;/strong&gt; isn’t up to your
 needs by specifying a &lt;strong class="command"&gt;-cpp&lt;/strong&gt; option to &lt;strong class="command"&gt;xrdb&lt;/strong&gt;.  The only
 caveat is that must accept &lt;code class="xref std std-option docutils literal notranslate"&gt;&lt;span class="pre"&gt;-D&lt;/span&gt;&lt;/code&gt; for defines, &lt;code class="xref std std-option docutils literal notranslate"&gt;&lt;span class="pre"&gt;-U&lt;/span&gt;&lt;/code&gt; for symbol
-cancelling and &lt;a class="reference external" href="https://docs.python.org/3/using/cmdline.html#id2" title="(in Python v3.9)"&gt;&lt;code class="xref std std-option docutils literal notranslate"&gt;&lt;span class="pre"&gt;-I&lt;/span&gt;&lt;/code&gt;&lt;/a&gt; for include paths.  An example that does fit these
+cancelling and &lt;a class="reference external" href="https://docs.python.org/3/using/cmdline.html#cmdoption-I" title="(in Python v3.9)"&gt;&lt;code class="xref std std-option docutils literal notranslate"&gt;&lt;span class="pre"&gt;-I&lt;/span&gt;&lt;/code&gt;&lt;/a&gt; for include paths.  An example that does fit these
 restrictions is &lt;a class="reference external" href="http://www.gnu.org/software/m4/m4.html"&gt;m4&lt;/a&gt;, and it might be a good choice if you wish to do more
 advanced things in your configuration file such as fancy filtering or the use
 of loops for defining colour tables.&lt;/p&gt;
