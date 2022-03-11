@@ -1,4 +1,5 @@
-:tags: site
+.. post:: 2018-01-24
+    :tags: site
 
 Ugh, why no comments???
 =======================
