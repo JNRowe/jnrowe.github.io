@@ -159,3 +159,7 @@ Happy :command:`mutt`’ing.
 .. _mutt: http://www.mutt.org/
 .. _Bugzilla: http://www.bugzilla.org/
 .. _vim: http://www.vim.org/
+
+.. spelling::
+
+    ing

@@ -669,3 +669,11 @@ they’re not challenging enough.
 .. _snippets: https://github.com/SirVer/ultisnips/
 .. _no-operation: https://en.m.wikipedia.org/wiki/NOP_(code)
 .. _diagonal: https://numpy.org/doc/stable/reference/generated/numpy.diagonal.html
+
+.. spelling::
+
+    Argghh
+    Coinbase
+    ehm
+    leaderboard
+    uniquify

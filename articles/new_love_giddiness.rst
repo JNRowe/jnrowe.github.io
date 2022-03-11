@@ -158,3 +158,8 @@ I’m genuinely excited.
 .. _DB-5: https://en.m.wikipedia.org/wiki/Aston_Martin_DB5
 .. _Ford Focus: https://en.m.wikipedia.org/wiki/Ford_Focus
 
+.. spelling::
+
+    backends
+    fex
+    transpilation

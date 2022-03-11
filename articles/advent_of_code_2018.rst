@@ -191,9 +191,9 @@ where ``cuttoff`` is the threshold for changes, so ``(len(current) - 1)
 
 .. note::
 
-    We’re seeing two matches here partly out of laziness, the simplifed version
-    above is testing against the set of all inputs which includes the current
-    word and thus always has one perfect match.
+    We’re seeing two matches here partly out of laziness, the simplified
+    version above is testing against the set of all inputs which includes the
+    current word and thus always has one perfect match.
 
 Day 3
 -----
@@ -392,7 +392,7 @@ removes the need to test both ``Aa`` and ``aA`` for example.
 I’ve since benchmarked a couple of alternatives, such as iterating over
 ``string.ascii_lowercase`` and calling ``str.replace()`` until the
 string no longer changes.  Many are simpler to reason about and have roughly
-the same runtime, but for paedagogical honesty I’ve kept the ``deque`` version
+the same runtime, but for pedagogical honesty I’ve kept the ``deque`` version
 here.
 
 Anyway, it turns out I was right.  There were going to be some significant
@@ -568,3 +568,16 @@ diving back in to complete the remaining days ;)
 .. _leaderboard: https://adventofcode.com/2018/leaderboard
 .. _Manhattan distance: https://en.wikipedia.org/wiki/Taxicab_geometry
 .. _snippets: https://github.com/SirVer/ultisnips/
+
+.. spelling::
+
+    Coinbase
+    NumPy
+    cPython
+    ing
+    iterable
+    iterables
+    leaderboard
+    numarray
+    repeatably
+    th

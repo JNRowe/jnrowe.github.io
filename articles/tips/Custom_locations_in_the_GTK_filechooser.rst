@@ -119,3 +119,7 @@ share, for this you can use the ``include`` directive.  An example would be:
 .. _modeline: http://vimdoc.sourceforge.net/htmldoc/options.html#modeline
 .. _bash: http://cnswww.cns.cwru.edu/~chet/bash/bashtop.html
 .. _Xfce: http://www.xfce.org/
+
+.. spelling::
+
+    GTK

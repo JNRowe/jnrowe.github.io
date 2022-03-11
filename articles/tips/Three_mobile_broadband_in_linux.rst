@@ -194,3 +194,7 @@ Happy, erm… mobility.
 .. _wvdial: http://alumnit.ca/wiki/?WvDial
 .. _metalog: http://metalog.sourceforge.net/
 .. _udev: http://www.kernel.org/pub/linux/utils/kernel/hotplug/udev.html
+
+.. spelling::
+
+    syslog

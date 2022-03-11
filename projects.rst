@@ -94,3 +94,17 @@ Git mirrors of projects I’m hacking on
 
 ..
   * `winwrangler <https://github.com/JNRowe/winwrangler>`__: Mirror of the upstream failpad source, converted for Matt
+
+.. spelling::
+
+    Aaargh
+    BTS
+    DWM
+    Lua
+    WM
+    csv
+    cwebber
+    distutils
+    gitorious
+    io
+    pret

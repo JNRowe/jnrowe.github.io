@@ -175,3 +175,9 @@ or [hopefully] intriguing variations.
 .. _lgi: https://github.com/pavouk/lgi
 .. _awesomewm: https://awesomewm.org/
 
+.. spelling::
+
+    autobalance
+    colourschemes
+    lurve
+    vimdoc

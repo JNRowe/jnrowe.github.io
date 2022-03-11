@@ -153,3 +153,13 @@ a mail_!
 .. _vim-orgmode: https://github.com/jceb/vim-orgmode
 .. _neovim: https://neovim.io
 .. _mail: jnrowe@gmail.com
+
+.. spelling::
+
+    Oftentimes
+    Quirking
+    hange
+    ie
+    ified
+    nner
+    ord

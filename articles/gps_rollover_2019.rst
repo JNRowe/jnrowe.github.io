@@ -178,3 +178,6 @@ January of that same year.
 
 .. _2038 problem: https://en.wikipedia.org/wiki/Y2038_problem
 
+.. spelling::
+
+    Beidou

@@ -35,3 +35,7 @@ situations.  This category, and the accompanying index, below are that attempt.
    :glob:
 
    *
+
+.. spelling::
+
+    standalone

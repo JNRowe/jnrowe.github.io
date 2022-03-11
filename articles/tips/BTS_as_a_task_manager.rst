@@ -209,3 +209,7 @@ Feel free to post updates to the gist!
 .. _overlay: https://github.com/JNRowe/jnrowe-misc/
 .. _tarball: http://www.jnrowe.ukfsn.org/_static/be-0.0.193.tar.bz2
 .. _git: http://www.git-scm.com/
+
+.. spelling::
+
+    standalone

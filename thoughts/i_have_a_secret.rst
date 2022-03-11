@@ -152,3 +152,7 @@ then please drop me a mail_.
 .. |DSL| replace:: :abbr:`DSL (Domain Specific Language)`
 .. |ORM| replace:: :abbr:`ORM (Object Relational Mapping)`
 .. |SQL| replace:: :abbr:`SQL (Structured Query Language)`
+
+.. spelling::
+
+    geniuseseses

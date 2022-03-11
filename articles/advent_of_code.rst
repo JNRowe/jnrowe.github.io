@@ -233,7 +233,7 @@ having to get up at five, I just can’t even imagine what that could be.
 
 .. [#] More so as the puzzles from previous years are still online, so you can
        end up sucked in to old puzzles very easily.
-.. [#] Frankly, I’m of the strong opionion that you should be studying up on
+.. [#] Frankly, I’m of the strong opinion that you should be studying up on
        ``itertools`` *all* the time anyway.  It just that other Python
        developers aren’t always familiar enough with the module for use in
        large shared code bases, so help to make this a reality!
@@ -263,3 +263,15 @@ having to get up at five, I just can’t even imagine what that could be.
 .. _day 21: https://adventofcode.com/2017/day/21
 .. _snippets: https://github.com/SirVer/ultisnips
 .. _day 14: https://adventofcode.com/2017/day/14
+
+.. spelling::
+
+    AOC
+    Pythonistas
+    aoc
+    docstring
+    iterable
+    leaderboard
+    leaderboards
+    posthockery
+    th

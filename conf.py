@@ -23,7 +23,7 @@ extensions = (
             'intersphinx',
         ]
     ]
-    + ['sphinxcontrib.%s' % ext for ext in []]
+    + ['sphinxcontrib.%s' % ext for ext in ['spelling']]
     + [
         'ext.%s' % ext
         for ext in [
@@ -169,6 +169,9 @@ intersphinx_mapping = {
 # }}}
 
 # spelling extension settings {{{
+spelling_ignore_acronyms = False
+spelling_ignore_importable_modules = False
+spelling_ignore_python_builtins = False
 spelling_lang = 'en_GB'
 spelling_word_list_filename = 'wordlist.txt'
 # }}}
