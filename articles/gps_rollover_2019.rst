@@ -53,7 +53,6 @@ Mitigations
 As this problem is quite well understood there has been an awful lot of effort
 put in to working around it, some quite simple and some quite interesting.
 
-
 Stored offset
 '''''''''''''
 

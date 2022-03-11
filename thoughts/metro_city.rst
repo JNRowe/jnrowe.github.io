@@ -117,7 +117,6 @@ actively engaging with them.  The simple act of not confronting them is
 normalising the behaviour.  If you’re not calling them out on it, you’re doing
 yourself and society at large a serious injustice.
 
-
 .. _skimmington ride: https://en.m.wikipedia.org/wiki/Charivari
 .. _Page Rank: https://en.m.wikipedia.org/wiki/Pagerank
 .. _Final Fight: https://en.m.wikipedia.org/wiki/Final_Fight
