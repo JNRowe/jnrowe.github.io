@@ -115,22 +115,22 @@ to help me process receipts any more.
       who aren’t able to access our private server because of geo-filtering, and
       I don’t know how that can be fixed.
 
-There are a myriad of benefits to dropping the reliance on :abbr:`SaaS (Software
+There are myriad benefits to dropping the reliance on :abbr:`SaaS (Software
 as a Service)` affairs.  The chance of any of them existing tomorrow is frankly
 not all that great: shuttering, buy-out closures, “pivoting”, &c.  You can
 also retain some level of control over your own data, knowing that for example
 it isn’t being sold or stored in regions with little to no data protection
 regulation.
 
-In all honesty, I — no, *we* — should have resisted the urge to use so called
-cloud services from the outset.  One doesn’t need to be a fully paid up member
-of the tinfoil hat brigade to know that it is just not acceptable to entrust
-your important data to external companies for the sake of a little convenience
-or a shiny interface.
+In all honesty, I — no, *we* — should have resisted the urge to use cloud
+services from the outset.  One doesn’t need to be a fully paid up member of the
+tinfoil hat brigade to know that it is just not acceptable to entrust your
+important data to external companies for the sake of a little convenience or
+a shiny interface.
 
 Killing my internet access for chunks of time really pointed out how much I had
 come to rely on services far beyond my control, and the freedom one feels when
-you regain some of that is very comforting.
+you regain some of that is really very comforting.
 
 .. rubric:: Footnotes
 

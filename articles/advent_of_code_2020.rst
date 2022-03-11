@@ -135,7 +135,7 @@ symbolically`_.  *And yes*, the “\ **exactly one of these positions**\ ” tex
 really is in **bold** on that page.
 
 .. image:: /.images/2020-12-02-symbolic.png
-    :alt: vim showing bug is day 2’s solution
+    :alt: vim showing bug in day 2’s solution
 
 Day 3
 -----
@@ -452,7 +452,7 @@ without a sliding sum::
                 print(min(block) + max(block))
 
 The above needs a hyperfine_ benchmark just to spot the difference in runtime
-to the sliding sum version.  Add you can even bring it to within spitting
+to the sliding sum version.  And you can even bring it to within spitting
 distance with an early exit::
 
     from itertools import accumulate, takewhile
@@ -534,8 +534,8 @@ The ``sum(neighbours)`` call is taking advantage of Python treating ``True`` as
 
 For part two, :pypi:`numpy` provides a `diagonal`_ method which we can then
 filter for a given value.  In my case it just looks for the first
-non-\ ``None``, and then it just a matter of changing the four to a five in our
-seat toggling branch.
+non-\ ``None``, and then it is simply a matter of changing the four to a five
+in our seat toggling branch.
 
 :pypi:`numpy` *is* cheating, but not using it is needless busywork.
 

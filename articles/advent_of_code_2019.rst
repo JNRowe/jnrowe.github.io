@@ -84,10 +84,10 @@ whether you choose to flatten the results from each module, or whether you call
 
 In my rush to hit the leaderboard I introduced a really stupid logic bug,
 my original |REPL| code was ``mod //= 3 - 2``.  Clearly this won’t work as it is
-simply dividing ``mod`` by 1.  I’d be number one on the leaderboard for
-idiocy with a bug that foolish, but luckily I’m too stoopid to find it.  I’m
-admitting this in the open to remind myself to think a little more in the
-following days.
+simply dividing ``mod`` by 1.  I might be number one on the leaderboard for
+idiocy with a bug that foolish, but luckily I’m too stoopid to find it to
+check.  I’m admitting this in the open to remind myself to think a little more
+in the following days.
 
 .. _day-two-label:
 

@@ -11,7 +11,7 @@ internally.
 Background
 ----------
 
-I work in heavily structured and standalone project-oriented environment.  In
+I work in a heavily structured and standalone project-oriented environment.  In
 a decade I can count the number of fluid projects on three fingers.  As I write
 this in June 2014 my tier-one project started 21 months ago, and has a delivery
 date locked down to a week in 2015.  We’ll deliver on time or a touch early, our
