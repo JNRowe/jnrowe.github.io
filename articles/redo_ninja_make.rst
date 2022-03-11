@@ -11,9 +11,9 @@ while $sun; do |make| hay; done
     some point.  However, until that imaginary date arrives…
 
 I have a fondness for make_, but don’t quite know why.  On some days it is
-*the* bane of my life, and I feel we could better.  It is, however, incredibly
-useful and allows us to perform so many of the repetitive tasks we in the
-software world have lucked ourselves in to.
+*the* bane of my life, and I feel we could do better.  It is, however,
+incredibly useful and allows us to easily perform so many of the repetitive
+tasks we in the software world have lucked ourselves in to.
 
 One project that I’ve worked on for a decade has *ten thousand* lines of hand
 written :file:`Makefile`\s, which is just plain ridiculous.  Nobody should be
@@ -43,7 +43,7 @@ a namespace of subcommands(like the **m**\aintainer namespace above) to aid
 when the inevitable errors show up.  Most of the stuff in that file is
 *absolutely amazing*, I’m working with a few genuine |make| masters.
 
-*I am not a |make| master*.
+*I am not a* |make| *master*.
 
 I often find myself forgetting which |make| supports some feature, or which one
 fails horribly when you use that one “standard” feature every |make| supports.
