@@ -1,2 +1,2 @@
 ablog>=0.10
-Sphinx>=3.5
+Sphinx>=4.3
