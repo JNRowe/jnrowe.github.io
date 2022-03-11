@@ -128,3 +128,7 @@ important duty that our legal system requires of us.  And, it may be a little
 fun too!
 
 .. _Cambridge Crown Court: https://en.m.wikipedia.org/wiki/Cambridge_Crown_Court
+
+.. spelling::
+
+    Fanshaw

@@ -48,7 +48,7 @@ I suspect that will remain true in the future.  I like that these decisions are
 defensible to *me*, that they *must* be defensible to me.  I love that the thing
 that keeps me awake at night is not the thought of the possibly nefarious
 effects of my works, but rather the exceedingly minor issue of not having
-a glistening and well-spec’d M6 in the garage.
+a glistening :wiki:`DB5 <Aston_Martin_DB5>` in the garage.
 
 Now, let me sleep.
 
@@ -58,3 +58,8 @@ Now, let me sleep.
 
 .. [#s1] For those values to be strong doesn’t necessarily mean they have to
    line up with your definition of “strong moral values” ;)
+
+.. spelling::
+
+    DB
+    HR

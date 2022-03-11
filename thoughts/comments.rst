@@ -38,3 +38,6 @@ consider a pull request.  If my friend Matt can `do it`_, so can you!
 .. _open an issue: https://github.com/JNRowe/jnrowe.github.io/issues
 .. _do it: https://github.com/JNRowe/jnrowe.github.io/commit/64539db44dbd7ec562bc83bdf7a672a78c71e939
 
+.. spelling::
+
+    Disqus

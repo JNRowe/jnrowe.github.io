@@ -64,7 +64,7 @@ It is still mostly true, our build servers and many developers still don’t hav
 a guile_ enabled `GNU make`_.  The build servers don’t because ``guile``
 support isn’t enabled in the packages for some reason, and the devs that use
 systems which refuse to ship a recent enough versions of `GNU make`_ to avoid
-the GPLv3 [#]_ don’t have it either.
+the GPL3 [#]_ don’t have it either.
 
 There has to be a better way…
 
@@ -237,7 +237,7 @@ work is below:
     depfile = $out.d
     deps = gcc
 
-Of course we’re making trade offs at this point, and they are basically:
+Of course we’re making a trade-off at this point, and they are basically:
 
 +---------+--------------+-------------------------+
 | Tool    | Simple tasks | Complex tasks           |
@@ -360,11 +360,11 @@ this far and need a little help, don’t hesitate to get in :doc:`contact
        if you add a suffix rule, but I’m sure we’ll see some commentary on
        whether that was the right way to pin it.
 .. [#] For the projects I’m currently working the number of devs using systems
-       with pre-GPLv3 make is very low, but it is *entirely* dependent on the
+       with pre-GPL3 make is very low, but it is *entirely* dependent on the
        ecosystem of a given project.
 .. [#] It is defined only in `a collection of short descriptions`_ on djb’s
        website, and there is no known reference implementation.
-.. [#] This is defintely not true of |make| requirements, I’ve seen many
+.. [#] This is definitely not true of |make| requirements, I’ve seen many
        ridiculously angry bugs filed when builds only work with `GNU make`_.
 .. [#] Avery Pennarun’s `Python implementation`_ of |redo| stores it dependency
        data in a sqlite_ database named :file:`.redo/redo.sqlite3`, making it
@@ -420,3 +420,15 @@ this far and need a little help, don’t hesitate to get in :doc:`contact
 .. _premake: https://premake.github.io/
 .. _tup: http://gittup.org/tup
 .. _sqlite: https://sqlite.org/
+
+.. spelling::
+
+    Boyne
+    Pennarun
+    aintainer
+    djb
+    greenlit
+    homedir
+    kati
+    subobtimal
+    º

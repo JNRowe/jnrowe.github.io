@@ -55,3 +55,7 @@ the console too then add the next little snippet to your shell’s startup file:
 .. _bitlbee: http://www.bitlbee.org/
 .. _GNOME: http://www.gnome.org/
 .. _KDE: http://www.kde.org/
+
+.. spelling::
+
+    GTK

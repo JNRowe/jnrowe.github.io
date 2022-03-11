@@ -66,8 +66,8 @@ just found out — independently wealthy through the sale of a :doc:`side projec
 it would be okay if someone’s morals put them in the poor house, but less
 so if they have a cushion to soften the blow.
 
-Whats coming next?
-------------------
+What’s coming next?
+-------------------
 
 .. epigraph::
 
@@ -103,3 +103,8 @@ what can to get through it as best we know how.
 .. [#s1] Yes, that is a terrible bus-factor problem.  The powers that be
          *should* have seen it coming, but probably missed the point where the
          other people with the necessary skills have been moved to Germany.
+
+.. spelling::
+
+    exitter
+    sellout

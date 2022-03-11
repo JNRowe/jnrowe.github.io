@@ -88,3 +88,7 @@ might be a nice idea for a weekend hack.
 .. _rubber duck: https://en.m.wikipedia.org/wiki/Rubber_duck_debugging
 .. _retrospective: https://robertheaton.com/2018/10/02/lessons-from-my-first-20-office-hours/
 .. _mail: jnrowe@gmail.com
+
+.. spelling::
+
+    timezones

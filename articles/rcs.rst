@@ -383,3 +383,7 @@ this short text has been helpful to you.
 .. _direct link: http://tldp.org/HOWTO/RCS.html
 .. _rcsi: http://www.colinbrough.pwp.blueyonder.co.uk/rcsi.README.html
 .. _blame: http://blame.sourceforge.net/
+
+.. spelling::
+
+    checkin

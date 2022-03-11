@@ -153,3 +153,7 @@ basis.
 
 .. [#s1] I really don’t count `this site <http://jnrowe.github.io/>`__, as it
          is just a jumbled content dump with no real purpose.
+
+.. spelling::
+
+    math

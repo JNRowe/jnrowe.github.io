@@ -182,3 +182,7 @@ a ``reST`` formatted file as follows:
 .. _jnrowe-misc: https://github.com/JNRowe/jnrowe-misc
 .. _reST syntax: http://docutils.sourceforge.net/docs/user/rst/
 .. _Sphinx: http://sphinx-doc.org/
+
+.. spelling::
+
+    AST

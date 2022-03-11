@@ -38,9 +38,9 @@ me at this point.
   one huge chunk.
 * Sites with a slightly more tech bias like HackerNews and its ilk are just
   a complete time hole.  Often the really interesting tech stories will bubble
-  up elsewhere in a curated fashion(such as Trivium_), and for example on HN the
-  majority of posts and comments are just US politics or occasionally
-  interesting insights from the SV bubble anyway.
+  up elsewhere in a curated fashion(such as Trivium_), and for example on
+  HackerNews the majority of posts and comments are just US politics or
+  occasionally interesting insights from the Silicon Valley bubble anyway.
 
 I’ll still catch up from a couple of, in my opinion, trusted sources.  That is
 to say I’ll dip in to a few categories on :abbr:`BBC (British Broadcasting

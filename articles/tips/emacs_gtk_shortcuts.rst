@@ -49,3 +49,7 @@ should be the settings in the Emacs theme I’ll owe you a few beers!
 .. _gtk-chtheme: http://plasmasturm.org/code/gtk-chtheme/
 .. _gtk-theme-switch: http://www.muhri.net/nav.php3?node=gts
 .. _XFce: http://www.xfce.org/
+
+.. spelling::
+
+    GTK

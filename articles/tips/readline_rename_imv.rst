@@ -172,3 +172,10 @@ about them.
 .. _quick interactive session: https://linux.die.net/man/1/script
 .. _mail: jnrowe@gmail.com
 .. _mairix: http://www.rpcurnow.force9.co.uk/mairix/
+
+.. spelling::
+
+    HN
+    commandline
+    filemanager
+    inplace

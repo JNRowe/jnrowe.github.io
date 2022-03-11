@@ -237,3 +237,10 @@ Sidenotes
 .. _Atom: http://atomenabled.org/
 .. _YQL: http://developer.yahoo.com/yql/
 .. _The Two-Minute Tutorial: http://developer.yahoo.com/yql/guide/two-minute-tutorial.html
+
+.. spelling::
+
+    Freedesktop
+    Sidenotes
+    Uniquify
+    whitespace

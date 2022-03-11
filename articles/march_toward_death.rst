@@ -74,7 +74,7 @@ The logic should be simple enough to follow(if you’re familiar with
 
    Be sure to notice that we force ``number of days in year`` to be a float
    with the addition of ``.0``.  Without it the result would be rounded toward
-   zero, ie zero on every day but December 31ˢᵗ.
+   zero, ie zero on every day but December 31st.
 
 We can repeat the same process for day ratio; using ``date -d "00:00" +%s`` to
 calculate number of seconds passed from the 86400 we’ll see today.  And then
@@ -167,7 +167,7 @@ with :abbr:`DST (Daylight Saving Time)` transitions.
 
 .. rubric:: Footnotes
 
-.. [#] Calculating the day of year for December 31ˢᵗ allows one to work in leap
+.. [#] Calculating the day of year for December 31st allows one to work in leap
        years.
 
 .. program:: date
@@ -181,3 +181,8 @@ with :abbr:`DST (Daylight Saving Time)` transitions.
 .. _Python: https://www.python.org/
 .. _HLS colour space: https://en.m.wikipedia.org/wiki/HLS_color_space
 .. _“Here be dragons”: https://en.m.wikipedia.org/wiki/Here_be_dragons
+
+.. spelling::
+
+    ie
+    st

@@ -460,7 +460,7 @@ Day 10
 * `Monitoring Station <https://adventofcode.com/2019/day/10>`__
 
 Part one was easy enough, after having put in some legwork to re-read topics
-I have a tendancy to forget through lack of use.  I took a ten minute diversion
+I have a tendency to forget through lack of use.  I took a ten minute diversion
 to refresh myself on `polar coordinates`_ [#]_, then a little :mod:`cmath`
 refresher.
 
@@ -588,3 +588,19 @@ they’re not challenging enough.
 .. _numpy.nonzero(): https://numpy.org/doc/1.16/reference/generated/numpy.nonzero.html
 .. _pygame: http://www.pygame.org/
 .. _Logo: https://en.m.wikipedia.org/wiki/Logo_(programming_language)
+
+.. spelling::
+
+    Coinbase
+    Hrmmph
+    NetworkX
+    brainer
+    bruteforcing
+    cartesian
+    chunker
+    ermutations
+    leaderboard
+    outerloop
+    standalone
+    stdlib
+    stoopid
