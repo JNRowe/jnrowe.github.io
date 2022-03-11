@@ -122,9 +122,9 @@ html_copy_source = False
 
 # extlinks extension settings {{{
 extlinks = {
-    'gist': ('http://gist.github.com/%s', 'gist #'),
-    'pypi': ('https://pypi.python.org/pypi/%s', ''),
-    'µnote': ('https://jnrowe.github.io/mnotes/#%s', ''),
+    'gist': ('http://gist.github.com/%s', 'gist #%s'),
+    'pypi': ('https://pypi.python.org/pypi/%s', '%s'),
+    'µnote': ('https://jnrowe.github.io/mnotes/#%s', '%s'),
 }
 # }}}
 
